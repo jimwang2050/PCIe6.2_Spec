@@ -1,0 +1,12 @@
+# Intermediate processing artifacts (not pushed)
+raw/
+chunks/
+chunks_translated/
+prompts/
+extraction_summary.json
+chunk_plan.json
+*.bak
+.DS_Store
+__pycache__/
+*.pyc
+*.tmp

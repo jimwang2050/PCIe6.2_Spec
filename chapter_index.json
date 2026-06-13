@@ -1,0 +1,24 @@
+{
+  "pdf": "/Users/jianmingwang/Downloads/00_study/02_work/01_book/pcie_all/NCB-PCI_Express_Base_6.2-2024-01-25.pdf",
+  "total_pages": 2111,
+  "spec_title": "PCI Express® Base Specification Revision 6.2",
+  "spec_title_zh": "PCI Express® 基础规范 修订版 6.2",
+  "template": "CXL 3.2 Spec translation (CXL_zh/)",
+  "format": "CXL 3.2 table format — 2-col HTML table, gray-bg Chinese cell, anchor id=\"sec-N-X\", H1 with emoji",
+  "filename_pattern": "PCIe6.2_Spec_chNN_<EnglishTitle>_<中文Title>.md",
+  "chapters": [
+    {"ch": 1,  "en": "Introduction",                                              "zh": "引言",                            "start": 127, "end": 140},
+    {"ch": 2,  "en": "Transaction Layer Specification",                          "zh": "事务层规范",                       "start": 141, "end": 308},
+    {"ch": 3,  "en": "Data Link Layer Specification",                             "zh": "数据链路层规范",                   "start": 309, "end": 350},
+    {"ch": 4,  "en": "Physical Layer Logical Block",                              "zh": "物理层逻辑块",                     "start": 351, "end": 650},
+    {"ch": 5,  "en": "Power Management",                                          "zh": "电源管理",                         "start": 651, "end": 706},
+    {"ch": 6,  "en": "System Architecture",                                       "zh": "系统架构",                         "start": 707, "end": 980},
+    {"ch": 7,  "en": "Software Initialization and Configuration",                "zh": "软件初始化与配置",                 "start": 981, "end": 1408},
+    {"ch": 8,  "en": "Electrical Sub-Block",                                      "zh": "电气子块",                         "start": 1409, "end": 1522},
+    {"ch": 9,  "en": "Single Root I/O Virtualization and Sharing",               "zh": "单根 I/O 虚拟化与共享 (SR-IOV)",   "start": 1523, "end": 1558},
+    {"ch": 10, "en": "Address Translation Services",                             "zh": "地址转换服务 (ATS)",               "start": 1559, "end": 1608},
+    {"ch": 11, "en": "TEE Device Interface Security Protocol",                   "zh": "TEE 设备接口安全协议 (TDISP)",     "start": 1609, "end": 1658},
+    {"ch": 12, "en": "Architectural Out-of-Band Management",                     "zh": "架构带外管理",                     "start": 1659, "end": 1702}
+  ],
+  "out_of_scope": "Appendices A through L (pages 1703-2092) + Acknowledgements"
+}
