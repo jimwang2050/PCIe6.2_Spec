@@ -11,29 +11,29 @@
 
 ## 📊 翻译进度 (Translation Progress)
 
-**已完成**: 12 / 12 章 (117 / 127 chunks 翻译完成, 92%)
-**总文件**: 5.8 MB MD + 318 MB 原图
+**已完成**: 12 / 12 章 (**127 / 127 chunks 100%**)
+**总文件**: 6.2 MB MD + 318 MB 原图
 
 ```text
-[████████████░] 92%  (117/127 chunks)
+[██████████████] 100%  (127/127 chunks)
 ```
 
 ### 章节状态
 
-| Ch | English | 中文 | Pages | Status | File |
-|:-:|---------|------|:-----:|:------:|:----:|
-| 1 | Introduction | 引言 | 127–140 | ✅ Done | [📄](PCIe6.2_Spec_ch01_Introduction_引言.md) |
-| 2 | Transaction Layer Specification | 事务层规范 | 141–308 | ✅ Done | [📄](PCIe6.2_Spec_ch02_Transaction_Layer_Specification_事务层规范.md) |
-| 3 | Data Link Layer Specification | 数据链路层规范 | 309–350 | ✅ Done | [📄](PCIe6.2_Spec_ch03_Data_Link_Layer_Specification_数据链路层规范.md) |
-| 4 | Physical Layer Logical Block | 物理层逻辑块 | 351–650 | ⚠️ 26/27 chunks (1 TODO) | [📄](PCIe6.2_Spec_ch04_Physical_Layer_Logical_Block_物理层逻辑块.md) |
-| 5 | Power Management | 电源管理 | 651–706 | ✅ Done | [📄](PCIe6.2_Spec_ch05_Power_Management_电源管理.md) |
-| 6 | System Architecture | 系统架构 | 707–980 | ✅ Done | [📄](PCIe6.2_Spec_ch06_System_Architecture_系统架构.md) |
-| 7 | Software Initialization and Configuration | 软件初始化与配置 | 981–1408 | ⚠️ 34/43 chunks (9 TODO) | [📄](PCIe6.2_Spec_ch07_Software_Initialization_and_Configuration_软件初始化与配置.md) |
-| 8 | Electrical Sub-Block | 电气子块 | 1409–1522 | ✅ Done | [📄](PCIe6.2_Spec_ch08_Electrical_Sub_Block_电气子块.md) |
-| 9 | Single Root I/O Virtualization (SR-IOV) | SR-IOV 单根 I/O 虚拟化 | 1523–1558 | ✅ Done | [📄](PCIe6.2_Spec_ch09_Single_Root_I_O_Virtualization_and_Sharing_单根IO虚拟化与共享SRIOV.md) |
-| 10 | Address Translation Services (ATS) | ATS 地址转换服务 | 1559–1608 | ✅ Done | [📄](PCIe6.2_Spec_ch10_Address_Translation_Services_地址转换服务ATS.md) |
-| 11 | TEE Device Interface Security Protocol (TDISP) | TDISP TEE 设备接口安全协议 | 1609–1658 | ✅ Done | [📄](PCIe6.2_Spec_ch11_TEE_Device_Interface_Security_Protocol_TEE设备接口安全协议TDISP.md) |
-| 12 | Architectural Out-of-Band Management | 架构带外管理 | 1659–1702 | ✅ Done | [📄](PCIe6.2_Spec_ch12_Architectural_Out_of_Band_Management_架构带外管理.md) |
+| Ch | English | 中文 | Pages | Sections | Status | File |
+|:-:|---------|------|:-----:|:--------:|:------:|:----:|
+| 1 | Introduction | 引言 | 127–140 | 24 | ✅ Done | [📄](PCIe6.2_Spec_ch01_Introduction_引言.md) |
+| 2 | Transaction Layer Specification | 事务层规范 | 141–308 | 83 | ✅ Done | [📄](PCIe6.2_Spec_ch02_Transaction_Layer_Specification_事务层规范.md) |
+| 3 | Data Link Layer Specification | 数据链路层规范 | 309–350 | 18 | ✅ Done | [📄](PCIe6.2_Spec_ch03_Data_Link_Layer_Specification_数据链路层规范.md) |
+| 4 | Physical Layer Logical Block | 物理层逻辑块 | 351–650 | 211 | ✅ Done | [📄](PCIe6.2_Spec_ch04_Physical_Layer_Logical_Block_物理层逻辑块.md) |
+| 5 | Power Management | 电源管理 | 651–706 | 16 | ✅ Done | [📄](PCIe6.2_Spec_ch05_Power_Management_电源管理.md) |
+| 6 | System Architecture | 系统架构 | 707–980 | 209 | ✅ Done | [📄](PCIe6.2_Spec_ch06_System_Architecture_系统架构.md) |
+| 7 | Software Initialization and Configuration | 软件初始化与配置 | 981–1408 | 399 | ✅ Done | [📄](PCIe6.2_Spec_ch07_Software_Initialization_and_Configuration_软件初始化与配置.md) |
+| 8 | Electrical Sub-Block | 电气子块 | 1409–1522 | 66 | ✅ Done | [📄](PCIe6.2_Spec_ch08_Electrical_Sub_Block_电气子块.md) |
+| 9 | Single Root I/O Virtualization (SR-IOV) | SR-IOV 单根 I/O 虚拟化 | 1523–1558 | 20 | ✅ Done | [📄](PCIe6.2_Spec_ch09_Single_Root_I_O_Virtualization_and_Sharing_单根IO虚拟化与共享SRIOV.md) |
+| 10 | Address Translation Services (ATS) | ATS 地址转换服务 | 1559–1608 | 5 | ✅ Done | [📄](PCIe6.2_Spec_ch10_Address_Translation_Services_地址转换服务ATS.md) |
+| 11 | TEE Device Interface Security Protocol (TDISP) | TDISP TEE 设备接口安全协议 | 1609–1658 | 13 | ✅ Done | [📄](PCIe6.2_Spec_ch11_TEE_Device_Interface_Security_Protocol_TEE设备接口安全协议TDISP.md) |
+| 12 | Architectural Out-of-Band Management | 架构带外管理 | 1659–1702 | 54 | ✅ Done | [📄](PCIe6.2_Spec_ch12_Architectural_Out_of_Band_Management_架构带外管理.md) |
 
 ---
 
@@ -174,27 +174,24 @@ PCIe6.2_zh/
 
 ---
 
-## ⚠️ 已知 TODO
+## ✅ 翻译状态: 100% 完成
 
-| 章节 | chunk 范围 | 状态 |
-|------|-----------|------|
-| Ch 4 | `chapter_04_ai` (p.474-482) | ⚠️ Translation API error (1 chunk) |
-| Ch 7 | `chapter_07_bi` ~ `chapter_07_bq` (p.1142-1408) | ⚠️ 9 chunks 翻译中 (rate-limit hit) |
-
-这些 chunks 在章节 MD 中显示为 `⚠️ TODO` 占位段。
-**重新翻译**: 重跑对应 prompt 文件,例如 `prompts/prompt_chapter_07_bi.md`,然后再 `python3 tools/merge_chapters.py`。
+所有 127 个 chunks 已完成翻译。所有 12 章 MD 文件 100% 完整,无 TODO。
 
 ---
 
 ## 📋 Recent Updates (更新日志)
 
-### 2026-06-12 — 首次提交 (Initial Push)
+### 2026-06-14 — v2 完整版 (100%)
 
-- 12 章 MD 文件全部生成 (12 / 12 chapter)
+- **127 / 127 chunks 100% 完成** (12 章, 1576 pages 全部翻译)
+- Re-merge 章节 MD (v1 92% → v2 100%)
+
+### 2026-06-12 — v1 初次提交 (92%)
+
+- 12 章 MD 文件全部生成
 - 117 / 127 chunks 翻译完成 (92%)
 - 1576 张原图抽取到 `figures/chapter_NN/`
-- README + chapter_index + glossary 一并发布
-- Git 身份: `jim wang <jimwang2050@gmail.com>`
 
 ---
 

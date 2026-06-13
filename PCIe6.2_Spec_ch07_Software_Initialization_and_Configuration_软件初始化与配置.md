@@ -32071,102 +32071,8123 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 
 ---
 
-## ⚠️ TODO: chapter_07_bi 未翻译
+<a id="sec-7-9-13-2"></a>
+## 7.9.13.2 TPH Requester Capability Register (Offset 04h) | TPH 请求者能力寄存器（偏移 04h）
 
-本 chunk (`chapter_07_bi_raw.md`) 尚未完成翻译。在最终版本中将包含原文 + 中英对照翻译。
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-- 源文件: `chunks/chapter_07_bi_raw.md` (22,197 bytes)
-- 提示: 重跑此 prompt: `prompts/prompt_chapter_07_bi.md`
+7.9.13.2 TPH Requester Capability Register (Offset 04h)
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.13.2 TPH 请求者能力寄存器（TPH Requester Capability Register，偏移 04h）
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<<<PAGE_BREAK>>> page_1322
+
+**Table 7-258. TPH Requester Capability Register | 表 7-258. TPH 请求者能力寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | No ST Mode Supported - If set indicates that the Function supports the No ST Mode of operation. This mode is required to be supported by all Functions that implement this Capability structure. This bit must have a value of 1b. | RO |
+| 1 | Interrupt Vector Mode Supported - If set indicates that the Function supports the Interrupt Vector Mode of operation. | RO |
+| 2 | Device Specific Mode Supported - If set indicates that the Function supports the Device Specific Mode of operation. | RO |
+| 8 | Extended TPH Requester Supported - If Set indicates that the Function is capable of generating Requests with additional TPH information using the TPH TLP Prefix. See § Section 2.2.7.1.1 for additional details. | RO |
+| 10:9 | ST Table Location - Value indicates if and where the ST Table is located. Defined Encodings are: 00b = ST Table is not present; 01b = ST Table is located in the TPH Requester Extended Capability structure; 10b = ST Table is located in the MSI-X Table (see § Section 7.7.2); 11b = Reserved. A Function that only supports the No ST Mode of operation must have a value of 00b in this field. A Function may report a value of 10b only if it implements an MSI-X Capability. | RO |
+| 26:16 | ST Table Size - Value indicates the maximum number of ST Table entries the Function may use. Software reads this field to determine the ST Table Size N, which is encoded as N-1. For example, a returned value of 000 0000 0011b indicates a table size of four entries. There is an upper limit of 64 entries when the ST Table is located in the TPH Requester Extended Capability structure. When the ST Table is located in the MSI-X Table, this value is limited by the size of the MSI-X Table. This field is only applicable for Functions that implement an ST Table as indicated by the ST Table Location field. Otherwise, the value in this field is undefined. | RO |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-292.** TPH Requester Control Register
+> <img src="figures/chapter_07/fig_1322_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-292.** TPH 请求者控制寄存器
+> <img src="figures/chapter_07/fig_1322_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<a id="sec-7-9-13-3"></a>
+## 7.9.13.3 TPH Requester Control Register (Offset 08h) | TPH 请求者控制寄存器（偏移 08h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.13.3 TPH Requester Control Register (Offset 08h)
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.13.3 TPH 请求者控制寄存器（TPH Requester Control Register，偏移 08h）
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<<<PAGE_BREAK>>> page_1323
+
+**Table 7-259. TPH Requester Control Register | 表 7-259. TPH 请求者控制寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 2:0 | ST Mode Select - selects the ST Mode of operation. Defined encodings are: 000b = No ST Mode; 001b = Interrupt Vector Mode; 010b = Device Specific Mode; others = reserved for future use. Functions that support only the No ST Mode of operation must hardwire this field to 000b. Function operation is undefined if software enables a mode of operation that does not correspond to a mode supported by the Function. The default value of this field is 000b. See § Section 6.17.3 for details on ST modes of operation. | RW |
+| 9:8 | TPH Requester Enable - Controls the ability to issue Request TLPs using either TPH or Extended TPH. Defined encodings are: 00b = Function operating as a Requester is not permitted to issue Requests with TPH or Extended TPH; 01b = Function operating as a Requester is permitted to issue Requests with TPH and is not permitted to issue Requests with Extended TPH; 10b = Reserved; 11b = Function operating as a Requester is permitted to issue Requests with TPH and Extended TPH. Functions that advertise that they do not support Extended TPH are permitted to hardwire bit 9 of this field to 0b. The default value of this field is 00b. | RW |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-293.** TPH ST Table
+> <img src="figures/chapter_07/fig_1323_1.png" width="700">
+
+The TPH ST Table must be implemented in the TPH Requester Extended Capability structure if the value of the ST Table Location field is 01b. For all other values, the ST Entry registers must not be implemented. Each implemented ST Entry is 16 bits. The number of ST Entry registers implemented must be equal to the number of ST Table entries supported by the Function, which is the value of the ST Table Size field plus one.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-293.** TPH ST 表
+> <img src="figures/chapter_07/fig_1323_1.png" width="700">
+
+若 ST Table Location 字段的值为 01b，则 TPH ST 表必须在 TPH 请求者扩展能力结构内实现。对于其他所有值，ST Entry 寄存器不得实现。每个已实现的 ST Entry 为 16 位。已实现的 ST Entry 寄存器的数量必须等于该 Function 所支持的 ST 表条目数（即 ST Table Size 字段的值加一）。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<a id="sec-7-9-13-4"></a>
+## 7.9.13.4 TPH ST Table (Starting from Offset 0Ch) | TPH ST 表（起始偏移 0Ch）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.13.4 TPH ST Table (Starting from Offset 0Ch)
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.13.4 TPH ST 表（TPH ST Table，起始偏移 0Ch）
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<<<PAGE_BREAK>>> page_1324
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-294.** TPH ST Table Entry
+> <img src="figures/chapter_07/fig_1324_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-294.** TPH ST 表条目
+> <img src="figures/chapter_07/fig_1324_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Table 7-260. TPH ST Table Entry | 表 7-260. TPH ST 表条目**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 7:0 | ST Lower - This field contains the lower 8 bits of a Steering Tag. Default value of this field is 00h. | RW |
+| 15:8 | ST Upper - If the Function's Extended TPH Requester Supported bit is Set, then this field contains the upper 8 bits of a Steering Tag. Otherwise, this field is RsvdP. Default value of this field is 00h. | RW |
+
+---
+
+<a id="sec-7-9-14"></a>
+## 7.9.14 DPC Extended Capability | DPC 扩展能力
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The Downstream Port Containment (DPC) Extended Capability is an optional normative capability that provides a mechanism for Downstream Ports to contain uncorrectable errors and enable software to recover from them. See § Section 6.2.11. This capability may be implemented by a Root Port or a Switch Downstream Port. It is not applicable to any other Device/Port type.
+
+If a Downstream Port implements the DPC Extended Capability, that Port must also be capable of reporting the DL_Active state, and indicate so by Setting the Data Link Layer Link Active Reporting Capable bit in the Link Capabilities Register. See § Section 7.5.3.6.
+
+If a Downstream Port implements the DPC Extended Capability, it is strongly recommended for that Port to support ERR_COR Subclass capability, and indicate so by Setting the ERR_COR Subclass Capable bit in the Device Capabilities Register. See § Section 7.5.3.3.
+
+The various RP PIO registers must be implemented only by Root Ports that support RP Extensions for DPC, as indicated by the RP Extensions for DPC bit in the DPC Capability Register.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+下游端口遏制（Downstream Port Containment, DPC）扩展能力是一种可选的规范性能力，为下游端口（Downstream Port）提供遏制不可纠正错误并使软件得以恢复的机制。参见 § Section 6.2.11。此能力可由根端口（Root Port）或交换机下游端口（Switch Downstream Port）实现，不适用于任何其他 Device/Port 类型。
+
+若一个下游端口实现了 DPC 扩展能力，则该端口必须也能报告 DL_Active 状态，并通过在链路能力寄存器（Link Capabilities Register）中设置数据链路层链路激活上报能力位（Data Link Layer Link Active Reporting Capable bit）来表明这一点。参见 § Section 7.5.3.6。
+
+若一个下游端口实现了 DPC 扩展能力，则强烈建议该端口支持 ERR_COR 子类能力（ERR_COR Subclass capability），并通过在设备能力寄存器（Device Capabilities Register）中设置 ERR_COR 子类能力位（ERR_COR Subclass Capable bit）来表明这一点。参见 § Section 7.5.3.3。
+
+各 RP PIO 寄存器只能由支持 DPC RP 扩展（RP Extensions for DPC）的根端口实现，该能力由 DPC 能力寄存器（DPC Capability Register）中的 DPC RP 扩展位指示。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<<<PAGE_BREAK>>> page_1325
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-295.** DPC Extended Capability – Non-Flit Mode
+> <img src="figures/chapter_07/fig_1325_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-295.** DPC 扩展能力 – 非 Flit 模式
+> <img src="figures/chapter_07/fig_1325_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<<<PAGE_BREAK>>> page_1326
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-296.** DPC Extended Capability – Flit Mode
+> <img src="figures/chapter_07/fig_1326_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-296.** DPC 扩展能力 – Flit 模式
+> <img src="figures/chapter_07/fig_1326_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<<<PAGE_BREAK>>> page_1327
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-297.** DPC Extended Capability Header
+> <img src="figures/chapter_07/fig_1327_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-297.** DPC 扩展能力头
+> <img src="figures/chapter_07/fig_1327_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Table 7-261. DPC Extended Capability Header | 表 7-261. DPC 扩展能力头**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 15:0 | PCI Express Extended Capability ID - This field is a PCI-SIG defined ID number that indicates the nature and format of the extended capability. PCI Express Extended Capability ID for the DPC Extended Capability is 001Dh. | RO |
+| 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the capability structure present. Must be 1h for this version of the specification. | RO |
+| 31:20 | Next Capability Offset - This field contains the offset to the next PCI Express Extended Capability structure or 000h if no other items exist in the linked list of capabilities. | RO |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-298.** DPC Capability Register
+> <img src="figures/chapter_07/fig_1327_2.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-298.** DPC 能力寄存器
+> <img src="figures/chapter_07/fig_1327_2.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<a id="sec-7-9-14-1"></a>
+## 7.9.14.1 DPC Extended Capability Header (Offset 00h) | DPC 扩展能力头（偏移 00h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.14.1 DPC Extended Capability Header (Offset 00h)
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.14.1 DPC 扩展能力头（DPC Extended Capability Header，偏移 00h）
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<a id="sec-7-9-14-2"></a>
+## 7.9.14.2 DPC Capability Register (Offset 04h) | DPC 能力寄存器（偏移 04h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.14.2 DPC Capability Register (Offset 04h)
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.14.2 DPC 能力寄存器（DPC Capability Register，偏移 04h）
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<<<PAGE_BREAK>>> page_1328
+
+**Table 7-262. DPC Capability Register | 表 7-262. DPC 能力寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 4:0 | DPC Interrupt Message Number - This field indicates which MSI/MSI-X vector is used for the interrupt message generated in association with the DPC Capability structure. For MSI, the value in this field indicates the offset between the base Message Data and the interrupt message that is generated. Hardware is required to update this field so that it is correct if the number of MSI Messages assigned to the Function changes when software writes to the Multiple Message Enable field in the Message Control Register for MSI. For MSI-X, the value in this field indicates which MSI-X Table entry is used to generate the interrupt message. The entry must be one of the first 32 entries even if the Function implements more than 32 entries. For a given MSI-X implementation, the entry must remain constant. If both MSI and MSI-X are implemented, they are permitted to use different vectors, though software is permitted to enable only one mechanism at a time. If MSI-X is enabled, the value in this field must indicate the vector for MSI-X. If MSI is enabled or neither is enabled, the value in this field must indicate the vector for MSI. If software enables both MSI and MSI-X at the same time, the value in this field is undefined. | RO |
+| 5 | RP Extensions for DPC - If Set, this bit indicates that a Root Port supports a defined set of DPC Extensions that are specific to Root Ports. Switch Downstream Ports must not Set this bit. | RO |
+| 6 | Poisoned TLP Egress Blocking Supported - If Set, this bit indicates that the Root Port or Switch Downstream Port supports the ability to block the transmission of a poisoned TLP from its Egress Port. Root Ports that support RP Extensions for DPC must Set this bit. | RO |
+| 7 | DPC Software Triggering Supported - If Set, this bit indicates that a Root Port or Switch Downstream Port supports the ability for software to trigger DPC. Root Ports that support RP Extensions for DPC must Set this bit. | RO |
+| 11:8 | RP PIO Log Size[3:0] - This field indicates how many DWORDs are allocated for the RP PIO log registers, comprised by the RP PIO Header Log, the RP PIO ImpSpec Log, and RP PIO TLP Prefix Log. If the Root Port does not support RP Extensions for DPC, the value of this field must be Zero. If the Root Port supports RP Extensions for DPC but does not support Flit Mode, the value of this field must be 4 or greater. If the Root Port supports both RP Extensions for DPC and Flit Mode, see § Section 6.2.11.3 for requirements. See § Section 7.9.14.11, § Section 7.9.14.12, and § Section 7.9.14.13. | RO |
+| 12 | DL_Active ERR_COR Signaling Supported - If Set, this bit indicates that the Root Port or Switch Downstream Port supports the ability to signal with ERR_COR when the Link transitions to the DL_Active state. Root Ports that support RP Extensions for DPC must Set this bit. | RO |
+| 13 | RP PIO Log Size[4] - This bit is an extension of RP PIO Log Size[3:0] for use in Flit Mode. If Flit Mode is not supported, this bit is RsvdP. | RO/RsvdP |
+
+---
+
+<<<PAGE_BREAK>>> page_1329
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-299.** DPC Control Register
+> <img src="figures/chapter_07/fig_1329_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-299.** DPC 控制寄存器
+> <img src="figures/chapter_07/fig_1329_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Table 7-263. DPC Control Register | 表 7-263. DPC 控制寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 1:0 | DPC Trigger Enable - This field enables DPC and controls the conditions that cause DPC to be triggered. Defined encodings are: 00b = DPC is disabled; 01b = DPC is enabled and is triggered when the Downstream Port detects an unmasked uncorrectable error or when the Downstream Port receives an ERR_FATAL Message; 10b = DPC is enabled and is triggered when the Downstream Port detects an unmasked uncorrectable error or when the Downstream Port receives an ERR_NONFATAL or ERR_FATAL Message; 11b = Reserved. Default value of this field is 00b. | RW |
+| 2 | DPC Completion Control - This bit controls the Completion Status for Completions formed during DPC. See § Section 2.9.3. Defined encodings are: 0b = Completer Abort (CA) Completion Status; 1b = Unsupported Request (UR) Completion Status. Default value of this bit is 0b. | RW |
+| 3 | DPC Interrupt Enable - When Set, this bit enables the generation of an interrupt to indicate that DPC has been triggered. See § Section 6.2.11.1. Default value of this bit is 0b. | RW |
+| 4 | DPC ERR_COR Enable - When Set, this bit enables the sending of an ERR_COR Message to indicate that DPC has been triggered. See § Section 6.2.11.2. Default value of this bit is 0b. | RW |
+
+---
+
+<a id="sec-7-9-14-3"></a>
+## 7.9.14.3 DPC Control Register (Offset 06h) | DPC 控制寄存器（偏移 06h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.14.3 DPC Control Register (Offset 06h)
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.14.3 DPC 控制寄存器（DPC Control Register，偏移 06h）
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<<<PAGE_BREAK>>> page_1330
+
+**Table 7-263 (cont.). DPC Control Register | 表 7-263（续）. DPC 控制寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 5 | Poisoned TLP Egress Blocking Enable - This bit must be RW if the Poisoned TLP Egress Blocking Supported bit is Set; otherwise, it is permitted to be hardwired to 0b. Software must not Set this bit unless the Poisoned TLP Egress Blocking Supported bit is Set. When Set, this bit enables the associated Egress Port to block the transmission of poisoned TLPs. See § Section 2.7.2.1. Default value of this bit is 0b. | RW/RO |
+| 6 | DPC Software Trigger - This bit must be RW if the DPC Software Triggering Supported bit is Set; otherwise, it is permitted to be hardwired to 0b. If DPC is enabled and the DPC Trigger Status bit is Clear, when software writes 1b to this bit, DPC is triggered. Otherwise, software writing a 1b to this bit has no effect. It is permitted to write 1b to this bit while simultaneously writing updated values to other fields in this register, notably the DPC Trigger Enable field. For this case, the DPC Software Trigger semantics are based on the updated value of the DPC Trigger Enable field. This bit always returns 0b when read. | RW/RO |
+| 7 | DL_Active ERR_COR Enable - This bit must be RW if the DL_Active ERR_COR Signaling Supported bit is Set; otherwise, it is permitted to be hardwired to 0b. Software must not Set this bit unless the DL_Active ERR_COR Signaling Supported bit is Set. When Set, this bit enables the associated Downstream Port to signal with ERR_COR when the Link transitions to the DL_Active state. See § Section 6.2.11.5. Default value of this bit is 0b. | RW/RO |
+| 8 | DPC SIG_SFW Enable - This bit must be implemented if the ERR_COR Subclass Capable bit in the Device Capabilities Register is Set; otherwise, it is permitted to be hardwired to 0b. If the ERR_COR Subclass Capable bit is Clear and software Sets this bit, the behavior is undefined. When Set, this bit enables sending an ERR_COR Message to indicate a DPC event that's been enabled for ERR_COR signaling. See § Section 6.2.11.2 and § Section 6.2.11.5. This is an additional and alternative way to enable overall DPC ERR_COR signaling beyond the Correctable Error Reporting Enable bit in the Device Control Register. This bit does not affect a Function's ability to send ERR_COR Messages other than the ECS SIG_SFW subclass. Default value of this bit is 0b. | RW/RO |
+
+---
+
+<<<PAGE_BREAK>>> page_1331
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-300.** DPC Status Register
+> <img src="figures/chapter_07/fig_1331_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-300.** DPC 状态寄存器
+> <img src="figures/chapter_07/fig_1331_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<a id="sec-7-9-14-4"></a>
+## 7.9.14.4 DPC Status Register (Offset 08h) | DPC 状态寄存器（偏移 08h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.14.4 DPC Status Register (Offset 08h)
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.14.4 DPC 状态寄存器（DPC Status Register，偏移 08h）
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+**Table 7-264. DPC Status Register | 表 7-264. DPC 状态寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | DPC Trigger Status - When Set, this bit indicates that DPC has been triggered, and by definition the Port is "in DPC". DPC is event triggered. While this bit is Set, hardware must direct the LTSSM to the Disabled State. This bit must be cleared before the LTSSM can be released from the Disabled State, after which the Port is no longer in DPC, and the LTSSM must transition to the Detect State. See § Section 6.2.11 for requirements on how long software must leave the Downstream Port in DPC. Once these requirements are met, software is permitted to clear this bit regardless of the state of other status bits associated with the triggering event. After clearing this bit, software must honor timing requirements defined in § Section 6.6.1 with respect to the first Configuration Read following a Conventional Reset. Default value of this bit is 0b. | RW1CS |
+| 2:1 | DPC Trigger Reason - This field indicates why DPC has been triggered. Defined encodings are: 00b = DPC was triggered due to an unmasked uncorrectable error; 01b = DPC was triggered due to receiving an ERR_NONFATAL; 10b = DPC was triggered due to receiving an ERR_FATAL; 11b = DPC was triggered due to a reason that is indicated by the DPC Trigger Reason Extension field. This field is valid only when the DPC Trigger Status bit is Set; otherwise the value of this field is undefined. | ROS |
+| 3 | DPC Interrupt Status - This bit is Set if DPC is triggered while the DPC Interrupt Enable bit is Set. This may cause the generation of an interrupt. See § Section 6.2.11.1. Default value of this bit is 0b. | RW1CS |
+
+---
+
+<<<PAGE_BREAK>>> page_1332
+
+**Table 7-264 (cont.). DPC Status Register | 表 7-264（续）. DPC 状态寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 4 | DPC RP Busy - When the DPC Trigger Status bit is Set and this bit is Set, the Root Port is busy with internal activity that must complete before software is permitted to Clear the DPC Trigger Status bit. If software Clears the DPC Trigger Status bit while this bit is Set, the behavior is undefined. This field is valid only when the DPC Trigger Status bit is Set; otherwise the value of this field is undefined. This bit is applicable only for Root Ports that support RP Extensions for DPC, and is Reserved for Switch Downstream Ports. Default value of this bit is undefined. | RO/RsvdZ |
+| 6:5 | DPC Trigger Reason Extension - This field serves as an extension to the DPC Trigger Reason field. When that field is valid and has a value of 11b, this field indicates why DPC has been triggered. Defined encodings are: 00b = DPC was triggered due to an RP PIO error; 01b = DPC was triggered due to the DPC Software Trigger bit; 10b = Reserved; 11b = Reserved. This field is valid only when the DPC Trigger Status bit is Set and the value of the DPC Trigger Reason field is 11b; otherwise the value of this field is undefined. | ROS |
+| 12:8 | RP PIO First Error Pointer - The value of this field identifies a bit position in the RP PIO Status Register, and this field is considered valid when that bit is Set. When this field is valid, and software writes a 1b to the indicated RP PIO Status bit (thus clearing it), this field must revert to its default value. This field is applicable only for Root Ports that support RP Extensions for DPC, and otherwise is Reserved. If this field is not Reserved, its default value is 1 1111b, indicating a permanently Reserved RP PIO Status bit, thus guaranteeing that this field is not considered valid. | ROS/RsvdZ |
+| 13 | DPC SIG_SFW Status - If the Function supports ERR_COR Subclass capability, this bit must be implemented; otherwise, it must be hardwired to 0b. If implemented, this bit is Set when a SIG_SFW ERR_COR Message is sent to signal a DPC event. See § Section 6.2.11.2 and § Section 6.2.11.5. Default value of this bit is 0b. | RW1CS/RsvdZ |
+
+---
+
+<a id="sec-7-9-14-5"></a>
+## 7.9.14.5 DPC Error Source ID Register (Offset 0Ah) | DPC 错误源 ID 寄存器（偏移 0Ah）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-301.** DPC Error Source ID Register
+> <img src="figures/chapter_07/fig_1332_1.png" width="700">
+
+7.9.14.5 DPC Error Source ID Register (Offset 0Ah)
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-301.** DPC 错误源 ID 寄存器
+> <img src="figures/chapter_07/fig_1332_1.png" width="700">
+
+7.9.14.5 DPC 错误源 ID 寄存器（DPC Error Source ID Register，偏移 0Ah）
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<<<PAGE_BREAK>>> page_1333
+
+**Table 7-265. DPC Error Source ID Register | 表 7-265. DPC 错误源 ID 寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 15:0 | DPC Error Source ID - When the DPC Trigger Reason field indicates that DPC was triggered due to the reception of an ERR_NONFATAL or ERR_FATAL, this register contains the Requester ID of the received Message. Otherwise, the value of this register is undefined. | ROS |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+This register is present only in Root Ports that support RP Extensions for DPC. See § Section 6.2.11.3.
+
+> **Figure 7-302.** RP PIO Status Register
+> <img src="figures/chapter_07/fig_1333_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+此寄存器仅在支持 DPC RP 扩展（RP Extensions for DPC）的根端口中存在。参见 § Section 6.2.11.3。
+
+> **图 7-302.** RP PIO 状态寄存器
+> <img src="figures/chapter_07/fig_1333_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+**Table 7-266. RP PIO Status Register | 表 7-266. RP PIO 状态寄存器**
+
+| Bit Location | Register Description | Attributes | Default |
+|--------------|----------------------|------------|---------|
+| 0 | Cfg UR Cpl - Configuration Request received UR Completion | RW1CS | 0b |
+| 1 | Cfg CA Cpl - Configuration Request received CA Completion | RW1CS | 0b |
+| 2 | Cfg CTO - Configuration Request Completion Timeout | RW1CS | 0b |
+| 8 | I/O UR Cpl - I/O Request received UR Completion | RW1CS | 0b |
+| 9 | I/O CA Cpl - I/O Request received CA Completion | RW1CS | 0b |
+| 10 | I/O CTO - I/O Request Completion Timeout | RW1CS | 0b |
+| 16 | Mem UR Cpl - Memory Request received UR Completion | RW1CS | 0b |
+| 17 | Mem CA Cpl - Memory Request received CA Completion | RW1CS | 0b |
+| 18 | Mem CTO - Memory Request Completion Timeout | RW1CS | 0b |
+| 31 | Permanently_Reserved - Permanently Reserved, since the default RP PIO First Error Pointer field value points to it. | RsvdZ | 0b |
+
+---
+
+<a id="sec-7-9-14-6"></a>
+## 7.9.14.6 RP PIO Status Register (Offset 0Ch) | RP PIO 状态寄存器（偏移 0Ch）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.14.6 RP PIO Status Register (Offset 0Ch)
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.14.6 RP PIO 状态寄存器（RP PIO Status Register，偏移 0Ch）
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<<<PAGE_BREAK>>> page_1334
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+This register is present only in Root Ports that support RP Extensions for DPC. See § Section 6.2.11.3.
+
+> **Figure 7-303.** RP PIO Mask Register
+> <img src="figures/chapter_07/fig_1334_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+此寄存器仅在支持 DPC RP 扩展（RP Extensions for DPC）的根端口中存在。参见 § Section 6.2.11.3。
+
+> **图 7-303.** RP PIO 屏蔽寄存器
+> <img src="figures/chapter_07/fig_1334_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+**Table 7-267. RP PIO Mask Register | 表 7-267. RP PIO 屏蔽寄存器**
+
+| Bit Location | Register Description | Attributes | Default |
+|--------------|----------------------|------------|---------|
+| 0 | Cfg UR Cpl - Configuration Request received UR Completion | RWS | 1b |
+| 1 | Cfg CA Cpl - Configuration Request received CA Completion | RWS | 1b |
+| 2 | Cfg CTO - Configuration Request Completion Timeout | RWS | 1b |
+| 8 | I/O UR Cpl - I/O Request received UR Completion | RWS | 1b |
+| 9 | I/O CA Cpl - I/O Request received CA Completion | RWS | 1b |
+| 10 | I/O CTO - I/O Request Completion Timeout | RWS | 1b |
+| 16 | Mem UR Cpl - Memory Request received UR Completion | RWS | 1b |
+| 17 | Mem CA Cpl - Memory Request received CA Completion | RWS | 1b |
+| 18 | Mem CTO - Memory Request Completion Timeout | RWS | 1b |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+This register is present only in Root Ports that support RP Extensions for DPC. See § Section 6.2.11.3.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+此寄存器仅在支持 DPC RP 扩展（RP Extensions for DPC）的根端口中存在。参见 § Section 6.2.11.3。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
 
 ---
 
 ---
 
-## ⚠️ TODO: chapter_07_bj 未翻译
+<a id="sec-7-9-14-7"></a>
+## 7.9.14.7 RP PIO Mask Register (Offset 10h) | RP PIO 屏蔽寄存器 (偏移 10h)
 
-本 chunk (`chapter_07_bj_raw.md`) 尚未完成翻译。在最终版本中将包含原文 + 中英对照翻译。
+<<<PAGE_BREAK>>> page_1335
 
-- 源文件: `chunks/chapter_07_bj_raw.md` (20,646 bytes)
-- 提示: 重跑此 prompt: `prompts/prompt_chapter_07_bj.md`
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Reserved for future definition.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+保留供未来定义使用。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-14-8"></a>
+## 7.9.14.8 RP PIO Severity Register (Offset 14h) | RP PIO 严重程度寄存器 (偏移 14h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+**Figure 7-304 RP PIO Severity Register**
+
+> <img src="figures/chapter_07/fig_1335_1.png" width="700">
+
+**Table 7-268 RP PIO Severity Register**
+
+| Bit Location | Register Description | Attributes | Default |
+|---|---|---|---|
+| 0 | Cfg UR Cpl - Configuration Request received UR Completion | RWS | 0b |
+| 1 | Cfg CA Cpl - Configuration Request received CA Completion | RWS | 0b |
+| 2 | Cfg CTO - Configuration Request Completion Timeout | RWS | 0b |
+| 8 | I/O UR Cpl - I/O Request received UR Completion | RWS | 0b |
+| 9 | I/O CA Cpl - I/O Request received CA Completion | RWS | 0b |
+| 10 | I/O CTO - I/O Request Completion Timeout | RWS | 0b |
+| 16 | Mem UR Cpl - Memory Request received UR Completion | RWS | 0b |
+| 17 | Mem CA Cpl - Memory Request received CA Completion | RWS | 0b |
+| 18 | Mem CTO - Memory Request Completion Timeout | RWS | 0b |
+
+This register is present only in Root Ports that support RP Extensions for DPC. See § Section 6.2.11.3.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+**图 7-304 RP PIO 严重程度寄存器**
+
+> <img src="figures/chapter_07/fig_1335_1.png" width="700">
+
+**表 7-268 RP PIO 严重程度寄存器**
+
+| 位位置 | 寄存器描述 | 属性 | 默认值 |
+|---|---|---|---|
+| 0 | Cfg UR Cpl —— 配置请求接收到 UR 完成报文 | RWS | 0b |
+| 1 | Cfg CA Cpl —— 配置请求接收到 CA 完成报文 | RWS | 0b |
+| 2 | Cfg CTO —— 配置请求完成超时 | RWS | 0b |
+| 8 | I/O UR Cpl —— I/O 请求接收到 UR 完成报文 | RWS | 0b |
+| 9 | I/O CA Cpl —— I/O 请求接收到 CA 完成报文 | RWS | 0b |
+| 10 | I/O CTO —— I/O 请求完成超时 | RWS | 0b |
+| 16 | Mem UR Cpl —— 内存请求接收到 UR 完成报文 | RWS | 0b |
+| 17 | Mem CA Cpl —— 内存请求接收到 CA 完成报文 | RWS | 0b |
+| 18 | Mem CTO —— 内存请求完成超时 | RWS | 0b |
+
+此寄存器仅存在于支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中。参见 § 第 6.2.11.3 节。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-14-9"></a>
+## 7.9.14.9 RP PIO SysError Register (Offset 18h) | RP PIO 系统错误寄存器 (偏移 18h)
+
+<<<PAGE_BREAK>>> page_1336
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+**Figure 7-305 RP PIO SysError Register**
+
+> <img src="figures/chapter_07/fig_1336_1.png" width="700">
+
+**Table 7-269 RP PIO SysError Register**
+
+| Bit Location | Register Description | Attributes | Default |
+|---|---|---|---|
+| 0 | Cfg UR Cpl - Configuration Request received UR Completion | RWS | 0b |
+| 1 | Cfg CA Cpl - Configuration Request received CA Completion | RWS | 0b |
+| 2 | Cfg CTO - Configuration Request Completion Timeout | RWS | 0b |
+| 8 | I/O UR Cpl - I/O Request received UR Completion | RWS | 0b |
+| 9 | I/O CA Cpl - I/O Request received CA Completion | RWS | 0b |
+| 10 | I/O CTO - I/O Request Completion Timeout | RWS | 0b |
+| 16 | Mem UR Cpl - Memory Request received UR Completion | RWS | 0b |
+| 17 | Mem CA Cpl - Memory Request received CA Completion | RWS | 0b |
+| 18 | Mem CTO - Memory Request Completion Timeout | RWS | 0b |
+
+This register is present only in Root Ports that support RP Extensions for DPC. See § Section 6.2.11.3.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+**图 7-305 RP PIO 系统错误寄存器**
+
+> <img src="figures/chapter_07/fig_1336_1.png" width="700">
+
+**表 7-269 RP PIO 系统错误寄存器**
+
+| 位位置 | 寄存器描述 | 属性 | 默认值 |
+|---|---|---|---|
+| 0 | Cfg UR Cpl —— 配置请求接收到 UR 完成报文 | RWS | 0b |
+| 1 | Cfg CA Cpl —— 配置请求接收到 CA 完成报文 | RWS | 0b |
+| 2 | Cfg CTO —— 配置请求完成超时 | RWS | 0b |
+| 8 | I/O UR Cpl —— I/O 请求接收到 UR 完成报文 | RWS | 0b |
+| 9 | I/O CA Cpl —— I/O 请求接收到 CA 完成报文 | RWS | 0b |
+| 10 | I/O CTO —— I/O 请求完成超时 | RWS | 0b |
+| 16 | Mem UR Cpl —— 内存请求接收到 UR 完成报文 | RWS | 0b |
+| 17 | Mem CA Cpl —— 内存请求接收到 CA 完成报文 | RWS | 0b |
+| 18 | Mem CTO —— 内存请求完成超时 | RWS | 0b |
+
+此寄存器仅存在于支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中。参见 § 第 6.2.11.3 节。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-14-10"></a>
+## 7.9.14.10 RP PIO Exception Register (Offset 1Ch) | RP PIO 异常寄存器 (偏移 1Ch)
+
+<<<PAGE_BREAK>>> page_1337
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+**Figure 7-306 RP PIO Exception Register**
+
+> <img src="figures/chapter_07/fig_1337_1.png" width="700">
+
+**Table 7-270 RP PIO Exception Register**
+
+| Bit Location | Register Description | Attributes | Default |
+|---|---|---|---|
+| 0 | Cfg UR Cpl - Configuration Request received UR Completion | RWS | 0b |
+| 1 | Cfg CA Cpl - Configuration Request received CA Completion | RWS | 0b |
+| 2 | Cfg CTO - Configuration Request Completion Timeout | RWS | 0b |
+| 8 | I/O UR Cpl - I/O Request received UR Completion | RWS | 0b |
+| 9 | I/O CA Cpl - I/O Request received CA Completion | RWS | 0b |
+| 10 | I/O CTO - I/O Request Completion Timeout | RWS | 0b |
+| 16 | Mem UR Cpl - Memory Request received UR Completion | RWS | 0b |
+| 17 | Mem CA Cpl - Memory Request received CA Completion | RWS | 0b |
+| 18 | Mem CTO - Memory Request Completion Timeout | RWS | 0b |
+
+This register is implemented only in Root Ports that support RP Extensions for DPC. The RP PIO Header Log Register contains the header from the Request TLP associated with a recorded RP PIO error. Refer to § Section 6.2.11.3 for further details. In Non-Flit Mode, this register is 16 bytes. In Flit Mode, this register is between 52 and 76 bytes and is split into two portions at Offset 20h and Offset 34h. In both Flit Mode and Non-Flit Mode, this register is formatted identically to the Header Log register in AER. See § Section 7.8.4.8.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+**图 7-306 RP PIO 异常寄存器**
+
+> <img src="figures/chapter_07/fig_1337_1.png" width="700">
+
+**表 7-270 RP PIO 异常寄存器**
+
+| 位位置 | 寄存器描述 | 属性 | 默认值 |
+|---|---|---|---|
+| 0 | Cfg UR Cpl —— 配置请求接收到 UR 完成报文 | RWS | 0b |
+| 1 | Cfg CA Cpl —— 配置请求接收到 CA 完成报文 | RWS | 0b |
+| 2 | Cfg CTO —— 配置请求完成超时 | RWS | 0b |
+| 8 | I/O UR Cpl —— I/O 请求接收到 UR 完成报文 | RWS | 0b |
+| 9 | I/O CA Cpl —— I/O 请求接收到 CA 完成报文 | RWS | 0b |
+| 10 | I/O CTO —— I/O 请求完成超时 | RWS | 0b |
+| 16 | Mem UR Cpl —— 内存请求接收到 UR 完成报文 | RWS | 0b |
+| 17 | Mem CA Cpl —— 内存请求接收到 CA 完成报文 | RWS | 0b |
+| 18 | Mem CTO —— 内存请求完成超时 | RWS | 0b |
+
+此寄存器仅在支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中实现。RP PIO Header Log 寄存器包含与所记录的 RP PIO 错误相关联的请求 TLP (Request TLP) 的包头 (Header)。详见 § 第 6.2.11.3 节。在非 Flit 模式 (Non-Flit Mode) 下,此寄存器为 16 字节。在 Flit 模式 (Flit Mode) 下,此寄存器大小介于 52 与 76 字节之间,并被拆分为偏移 20h 和偏移 34h 两部分。在 Flit 模式和非 Flit 模式下,此寄存器的格式与 AER 中的 Header Log 寄存器完全相同。参见 § 第 7.8.4.8 节。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-14-11"></a>
+## 7.9.14.11 RP PIO Header Log Register (Offset 20h) | RP PIO Header Log 寄存器 (偏移 20h)
+
+<<<PAGE_BREAK>>> page_1338
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+**Figure 7-307 RP PIO Header Log Register**
+
+> <img src="figures/chapter_07/fig_1338_1.png" width="700">
+
+**Table 7-271 RP PIO Header Log Register**
+
+| Bit Location | Register Description | Attributes | Default |
+|---|---|---|---|
+| 127:0 | TLP Header - of the TLP associated with the error | ROS | 0 |
+
+This register is permitted to be implemented only in Root Ports that support RP Extensions for DPC. The RP PIO ImpSpec Log Register, if implemented, contains implementation specific information associated with the recorded error, e.g., indicating the source of the Request TLP. Space is allocated for this register if the value of the RP PIO Log Size field is 5 or greater. If space is allocated for the register, but the register is not implemented, the bits must be hardwired to 0b.
+
+**Figure 7-308 RP PIO ImpSpec Log Register**
+
+> <img src="figures/chapter_07/fig_1338_2.png" width="700">
+
+**Table 7-272 RP PIO ImpSpec Log Register**
+
+| Bit Location | Register Description | Attributes | Default |
+|---|---|---|---|
+| 31:0 | RP PIO ImpSpec Log | ROS | 0 |
+
+This register is permitted to be implemented only in Root Ports that support RP Extensions for DPC.
+
+In Non-Flit Mode, the RP PIO TLP Prefix Log Register contains any End-End TLP Prefixes from the TLP corresponding to a recorded RP PIO error. Refer to § Section 6.2.11.3 for further details.
+
+In Flit Mode, the RP PIO TLP Prefix Log Register does not exist and this configration space is a contination of the RP PIO TLP Header Log Register.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+**图 7-307 RP PIO Header Log 寄存器**
+
+> <img src="figures/chapter_07/fig_1338_1.png" width="700">
+
+**表 7-271 RP PIO Header Log 寄存器**
+
+| 位位置 | 寄存器描述 | 属性 | 默认值 |
+|---|---|---|---|
+| 127:0 | TLP Header —— 与该错误相关联的 TLP 的包头 | ROS | 0 |
+
+此寄存器仅允许在支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中实现。如果实现 RP PIO ImpSpec Log 寄存器,则其包含与所记录错误相关的实现特定信息,例如指明请求 TLP (Request TLP) 的来源。当 RP PIO Log Size 字段的值大于等于 5 时,会为此寄存器分配空间。如果已为此寄存器分配空间但未实现,则这些位必须硬连线 (hardwired) 为 0b。
+
+**图 7-308 RP PIO ImpSpec Log 寄存器**
+
+> <img src="figures/chapter_07/fig_1338_2.png" width="700">
+
+**表 7-272 RP PIO ImpSpec Log 寄存器**
+
+| 位位置 | 寄存器描述 | 属性 | 默认值 |
+|---|---|---|---|
+| 31:0 | RP PIO ImpSpec Log | ROS | 0 |
+
+此寄存器仅允许在支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中实现。
+
+在非 Flit 模式 (Non-Flit Mode) 下,RP PIO TLP Prefix Log 寄存器包含与所记录 RP PIO 错误对应的 TLP 中的所有端到端 TLP 前缀 (End-End TLP Prefixes)。详见 § 第 6.2.11.3 节。
+
+在 Flit 模式 (Flit Mode) 下,不存在 RP PIO TLP Prefix Log 寄存器,该配置空间是 RP PIO TLP Header Log 寄存器的延续。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-14-12"></a>
+## 7.9.14.12 RP PIO ImpSpec Log Register (Offset 30h) | RP PIO ImpSpec Log 寄存器 (偏移 30h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+See § Section 7.9.14.11 above for the register description.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+寄存器描述见上文 § 第 7.9.14.11 节。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-14-13"></a>
+
+<<<PAGE_BREAK>>> page_1339
+
+## 7.9.14.13 RP PIO TLP Prefix Log Register (Offset 34h) | RP PIO TLP Prefix Log 寄存器 (偏移 34h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+If the Root Port supports tracking Non-Posted Requests that contain End-End TLP Prefixes, this register must be implemented, and must be of sufficient size to record the maximum number of End-End TLP Prefixes for any tracked Request. See § Section 2.9.3. The allocated size in DWORDs of the RP PIO TLP Prefix Log Register is the RP PIO Log Size minus 5 if the RP PIO Log Size is 9 or less, or 4 if the RP PIO Log Size is greater than 9. The implemented size of the TLP Prefix Log must be less than or equal to the Root Port's Max End-End TLP Prefixes field value. For the case where the Root Port never transmits Non-Posted Requests containing End-End TLP Prefixes, the allocated and implemented size of the TLP Prefix Log is permitted to be 0. Any DWORDs allocated but not implemented must be hardwired to zero.
+
+This register is formatted identically to the TLP Prefix Log register in AER, although this register's allocated size is variable, whereas the register in AER is always 4 DWORDs. See § Section 7.8.4.12. The First TLP Prefix Log register contains the first End-End TLP Prefix from the TLP, the Second TLP Prefix Log register contains the second End-End TLP Prefix, and so forth. If the TLP contains fewer TLP Prefixes than this register accommodates, any remaining TLP Prefix Log registers must contain zero.
+
+**Figure 7-309 RP PIO TLP Prefix Log Register**
+
+> <img src="figures/chapter_07/fig_1339_1.png" width="700">
+
+**Table 7-273 RP PIO TLP Prefix Log Register**
+
+| Bit Location | Register Description | Attributes | Default |
+|---|---|---|---|
+| 127:0 | RP PIO TLP Prefix Log | ROS | 0 |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+如果根端口 (Root Port) 支持跟踪包含端到端 TLP 前缀 (End-End TLP Prefixes) 的 Non-Posted 请求,则必须实现此寄存器,且其大小必须足以记录任何被跟踪请求的最大端到端 TLP 前缀数。参见 § 第 2.9.3 节。RP PIO TLP Prefix Log 寄存器以 DWORD 为单位分配的大小为:当 RP PIO Log Size 小于等于 9 时,为 RP PIO Log Size 减 5;当 RP PIO Log Size 大于 9 时,为 RP PIO Log Size 减 4。TLP Prefix Log 的实现大小必须小于或等于根端口 (Root Port) 的 Max End-End TLP Prefixes 字段值。对于根端口 (Root Port) 从不发送包含端到端 TLP 前缀 (End-End TLP Prefixes) 的 Non-Posted 请求的情况,TLP Prefix Log 的分配大小和实现大小均允许为 0。任何已分配但未实现的 DWORD 必须硬连线 (hardwired) 为零。
+
+此寄存器的格式与 AER 中的 TLP Prefix Log 寄存器完全相同,但此寄存器的分配大小是可变的,而 AER 中的寄存器始终为 4 个 DWORD。参见 § 第 7.8.4.12 节。First TLP Prefix Log 寄存器包含 TLP 中的第一个端到端 TLP 前缀 (End-End TLP Prefix),Second TLP Prefix Log 寄存器包含第二个端到端 TLP 前缀,依此类推。如果 TLP 包含的 TLP 前缀数量少于本寄存器所能容纳的数量,则任何剩余的 TLP Prefix Log 寄存器必须为零。
+
+**图 7-309 RP PIO TLP Prefix Log 寄存器**
+
+> <img src="figures/chapter_07/fig_1339_1.png" width="700">
+
+**表 7-273 RP PIO TLP Prefix Log 寄存器**
+
+| 位位置 | 寄存器描述 | 属性 | 默认值 |
+|---|---|---|---|
+| 127:0 | RP PIO TLP Prefix Log | ROS | 0 |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-15"></a>
+
+<<<PAGE_BREAK>>> page_1340
+
+## 7.9.15 Precision Time Measurement Extended Capability (PTM Extended Capability) | 精确时间测量扩展能力 (PTM Extended Capability)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The Precision Time Measurement Extended Capability is an optional Extended Capability for discovering and controlling the distribution of a PTM Hierarchy. For Root Complexes, this Capability is required in any Root Port, RCiEP, or RCRB that supports PTM. For Functions associated with an Upstream Port that support PTM, this Capability is required in exactly one Function of that Upstream Port and that Capability controls the PTM behavior of all PTM capable Functions associated with that Upstream Port. For Switch Downstream Ports, PTM behavior is controlled by the same PTM Capability that controls the associated Switch Upstream Port. The PTM Capability is not permitted in Bridges, Switch Downstream Ports, and Root Complex Event Collectors.
+
+For Switches, a single instance of this Capability controls behavior for the entire Switch. If the Upstream Port of the Switch is associated with an MFD, it is not required that the controlling Function be the Function corresponding to the Switch Upstream Port. For a given Switch, if this Capability is present, all Downstream Ports of the Switch must implement the requirements defined in § Section 6.21.3.2.
+
+**Figure 7-310 PTM Extended Capability Structure**
+
+> <img src="figures/chapter_07/fig_1340_1.png" width="700">
+
+**Figure 7-311 PTM Extended Capability Header**
+
+> <img src="figures/chapter_07/fig_1340_2.png" width="700">
+
+**Table 7-274 PTM Extended Capability Header**
+
+| Bit Location | Register Description | Attributes |
+|---|---|---|
+| 15:0 | PCI Express Extended Capability ID - This field is a PCI-SIG defined ID number that indicates the nature and format of the Extended Capability. PCI Express Extended Capability ID for the Precision Time Measurement Capability is 001Fh. | RO |
+| 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. Must be 1h for this version of the specification. | RO |
+| 31:20 | Next Capability Offset - This field contains the offset to the next PCI Express Extended Capability structure or 000h if no other items exist in the linked list of Capabilities. | RO |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+精确时间测量 (Precision Time Measurement, PTM) 扩展能力是一种可选的扩展能力,用于发现和控制 PTM 层级 (PTM Hierarchy) 的分布。对于根复合体 (Root Complex),任何支持 PTM 的根端口 (Root Port)、RCiEP 或 RCRB 都必须具备此能力。对于与支持 PTM 的上游端口 (Upstream Port) 相关联的 Function,此上游端口中必须恰好有一个 Function 具备此能力,且该能力控制与该上游端口相关联的所有具备 PTM 能力的 Function 的 PTM 行为。对于交换机 (Switch) 的下游端口 (Downstream Port),其 PTM 行为由控制该关联交换机上游端口 (Switch Upstream Port) 的同一 PTM 能力来控制。桥 (Bridge)、交换机下游端口 (Switch Downstream Port) 以及根复合体事件收集器 (Root Complex Event Collector) 不允许使用 PTM 能力。
+
+对于交换机 (Switch),此能力的一个单一实例控制整个交换机的行为。如果交换机的上游端口 (Upstream Port) 与 MFD 相关联,则不要求控制 Function 为对应于交换机上游端口 (Switch Upstream Port) 的 Function。对于给定的交换机,如果存在此能力,则该交换机的所有下游端口 (Downstream Port) 必须实现 § 第 6.21.3.2 节中定义的要求。
+
+**图 7-310 PTM 扩展能力结构**
+
+> <img src="figures/chapter_07/fig_1340_1.png" width="700">
+
+**图 7-311 PTM 扩展能力包头**
+
+> <img src="figures/chapter_07/fig_1340_2.png" width="700">
+
+**表 7-274 PTM 扩展能力包头**
+
+| 位位置 | 寄存器描述 | 属性 |
+|---|---|---|
+| 15:0 | PCI Express Extended Capability ID —— 该字段是由 PCI-SIG 定义的 ID 号,用于指示扩展能力的性质和格式。精确时间测量 (PTM) 能力的 PCI Express 扩展能力 ID 为 001Fh。 | RO |
+| 19:16 | Capability Version —— 该字段是由 PCI-SIG 定义的版本号,用于指示所存在能力结构的版本。对于本版本的规范,必须为 1h。 | RO |
+| 31:20 | Next Capability Offset —— 该字段包含指向下一个 PCI Express 扩展能力结构的偏移地址;如果链表中的能力已无其他项,则为 000h。 | RO |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-15-1"></a>
+## 7.9.15.1 PTM Extended Capability Header (Offset 00h) | PTM 扩展能力包头 (偏移 00h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+See § Section 7.9.15 above and § Figure 7-311 / § Table 7-274 for the register description.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+寄存器描述见上文 § 第 7.9.15 节及 § 图 7-311 / § 表 7-274。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-15-2"></a>
+
+<<<PAGE_BREAK>>> page_1341
+
+## 7.9.15.2 PTM Capability Register (Offset 04h) | PTM 能力寄存器 (偏移 04h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+This register describes a Function's support for Precision Time Measurement. Not all fields within this register apply to all Functions capable of implementing PTM.
+
+**Figure 7-312 PTM Capability Register**
+
+> <img src="figures/chapter_07/fig_1341_1.png" width="700">
+
+**Table 7-275 PTM Capability Register**
+
+| Bit Location | Register Description | Attributes |
+|---|---|---|
+| 0 | PTM Requester Capable - Indicates the Function implements the PTM Requester role (see § Section 6.21.3.1). Endpoints and RCiEPs are permitted to Set this bit to indicate that they implement the PTM Requester role. Switch Upstream Ports must Set this bit if the Switch contains one or more of the following: <br/> • A Downstream Port that implements the PTM Responder role. <br/> • An additional Function that implements the PTM Requester role. | HwInit |
+| 1 | PTM Responder Capable - Root Ports and RCRBs are permitted to, and Switches supporting PTM must, Set this bit to indicate they implement the PTM Responder role (see § Section 6.21.3.2). If PTM Root Capable is Set, then this bit must be Set. | HwInit |
+| 2 | PTM Root Capable - Root Ports, RCRBs, and Switches are permitted to Set this bit if they are capable of being a source of PTM Master Time (see § Section 6.21.1). All other Functions must hardwire this bit to 0b. | HwInit |
+| 3 | ePTM Capable - If Set, indicates that this device supports Enhanced Precision Time Measurement (ePTM). This bit MUST@FLIT be Set in all PTM Devices. | HwInit |
+| 4 | PTM Propagation Delay Adaptation Capable – When Set, this field indicates the Port supports the PTM Propagation Delay Adaptation Capability, controlled via the PTM Propagation Delay Adaptation Interpretation B bit in the Link Control Register. For a Switch, when Set in the Upstream Port of the Switch, indicates that the Upstream Port and all Downstream Ports of the Switch support the PTM Propagation Delay Adaptation Capability, controlled per Port via the PTM Propagation Delay Adaptation Interpretation B bit in the Link Control Register of each Port. | HwInit |
+| 15:8 | Local Clock Granularity - Encodings are: <br/> 0000 0000b: Time Source does not implement a local clock. It simply propagates timing information obtained from further Upstream in the PTM Hierarchy when responding to PTM Request messages. <br/> 0000 0001b to 1111 1110b: Indicates the period of this Time Source's local clock in ns. <br/> 1111 1111b: Indicates the period of this Time Source's local clock is greater than 254 ns. | HwInit/RsvdP |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+该寄存器描述 Function 对精确时间测量 (PTM) 的支持情况。该寄存器中的字段并非全部适用于所有能够实现 PTM 的 Function。
+
+**图 7-312 PTM 能力寄存器**
+
+> <img src="figures/chapter_07/fig_1341_1.png" width="700">
+
+**表 7-275 PTM 能力寄存器**
+
+| 位位置 | 寄存器描述 | 属性 |
+|---|---|---|
+| 0 | PTM Requester Capable —— 指示该 Function 实现了 PTM Requester 角色 (参见 § 第 6.21.3.1 节)。允许端点 (Endpoint) 和 RCiEP 置位 (Set) 此位以指示其实现了 PTM Requester 角色。如果交换机 (Switch) 包含以下一项或多项,则其上游端口 (Switch Upstream Port) 必须置位 (Set) 此位: <br/> • 实现了 PTM Responder 角色的下游端口 (Downstream Port)。 <br/> • 另一个实现了 PTM Requester 角色的 Function。 | HwInit |
+| 1 | PTM Responder Capable —— 允许根端口 (Root Port) 和 RCRB 置位 (Set) 此位,支持 PTM 的交换机 (Switch) 必须置位 (Set) 此位,以指示其实现了 PTM Responder 角色 (参见 § 第 6.21.3.2 节)。如果 PTM Root Capable 被置位 (Set),则此位必须被置位 (Set)。 | HwInit |
+| 2 | PTM Root Capable —— 根端口 (Root Port)、RCRB 和交换机 (Switch) 如果能够作为 PTM 主时间 (PTM Master Time) 的源,则允许置位 (Set) 此位 (参见 § 第 6.21.1 节)。所有其他 Function 必须将此位硬连线 (hardwired) 为 0b。 | HwInit |
+| 3 | ePTM Capable —— 置位 (Set) 时,指示该设备支持增强型精确时间测量 (Enhanced Precision Time Measurement, ePTM)。在所有 PTM 设备中,此位 MUST@FLIT 被置位 (Set)。 | HwInit |
+| 4 | PTM Propagation Delay Adaptation Capable —— 置位 (Set) 时,该字段指示端口 (Port) 支持 PTM 传播延迟适配能力 (PTM Propagation Delay Adaptation Capability),该能力通过 Link Control 寄存器中的 PTM Propagation Delay Adaptation Interpretation B 位进行控制。对于交换机 (Switch),在其上游端口 (Switch Upstream Port) 中置位 (Set) 时,指示该上游端口 (Upstream Port) 和交换机的所有下游端口 (Downstream Port) 均支持 PTM 传播延迟适配能力,该能力通过每个端口 (Port) 的 Link Control 寄存器中的 PTM Propagation Delay Adaptation Interpretation B 位按端口 (Port) 进行控制。 | HwInit |
+| 15:8 | Local Clock Granularity —— 编码方式如下: <br/> 0000 0000b:时间源 (Time Source) 未实现本地时钟,仅在响应 PTM 请求消息时转发从 PTM 层级 (PTM Hierarchy) 中更上游获取的定时信息。 <br/> 0000 0001b 至 1111 1110b:指示该时间源 (Time Source) 的本地时钟周期(单位:ns)。 <br/> 1111 1111b:指示该时间源 (Time Source) 的本地时钟周期大于 254 ns。 | HwInit/RsvdP |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-15-3"></a>
+
+<<<PAGE_BREAK>>> page_1342
+
+## 7.9.15.3 PTM Control Register (Offset 08h) | PTM 控制寄存器 (偏移 08h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+If the PTM Root Select bit is Set, this local clock is used to provide PTM Master Time. Otherwise, the Time Source uses this local clock to locally track PTM Master Time received from further Upstream within a PTM Hierarchy.
+
+This field is RsvdP if the PTM Root Capable bit is 0b.
+
+This register controls a Function's participation in the Precision Time Measurement mechanism. Not all fields within this register apply to all Functions capable of implementing PTM.
+
+**Figure 7-313 PTM Control Register**
+
+> <img src="figures/chapter_07/fig_1342_1.png" width="700">
+
+**Table 7-276 PTM Control Register**
+
+| Bit Location | Register Description | Attributes |
+|---|---|---|
+| 0 | PTM Enable - When Set, this Function is permitted to participate in the PTM mechanism according to its selected role(s) (see § Section 6.21.2). Default value is 0b. | RW |
+| 1 | Root Select - When Set, if the PTM Enable bit is also Set, this Time Source is the PTM Root. Within each PTM Hierarchy, it is recommended that system software select only the furthest Upstream Time Source to be the PTM Root. Default value is 0b. If the value of the PTM Root Capable bit is 0b, this bit is permitted to be hardwired to 0b. | RW/RO |
+| 15:8 | Effective Granularity - For Functions implementing the PTM Requester Role, this field provides information relating to the expected accuracy of the PTM clock, but does not otherwise affect the PTM mechanism. <br/> For Endpoints, system software must program this field to the value representing the maximum Local Clock Granularity reported by the PTM Root and all intervening PTM Time Sources. <br/> For RCiEPs, system software must set this field to the value reported in the Local Clock Granularity field by the associated PTM Time Source. <br/> Permitted values: <br/> 0000 0000b: Unknown PTM granularity - one or more Switches between this Function and the PTM Root reported a Local Clock Granularity value of 0000 0000b. <br/> 0000 0001b to 1111 1110b: Indicates the effective PTM granularity in ns. <br/> 1111 1111b: Indicates the effective PTM granularity is greater than 254 ns. <br/> Default value is 0000 0000b. If PTM Requester Capable is Clear, this field is permitted to be hardwired to 0000 0000b. | RW/RO |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+如果 PTM Root Select 位置位 (Set),则使用该本地时钟提供 PTM 主时间 (PTM Master Time)。否则,时间源 (Time Source) 使用该本地时钟在本地跟踪从 PTM 层级 (PTM Hierarchy) 中更上游接收到的 PTM 主时间 (PTM Master Time)。
+
+如果 PTM Root Capable 位为 0b,则该字段为 RsvdP。
+
+该寄存器控制 Function 对精确时间测量 (PTM) 机制的参与。该寄存器中的字段并非全部适用于所有能够实现 PTM 的 Function。
+
+**图 7-313 PTM 控制寄存器**
+
+> <img src="figures/chapter_07/fig_1342_1.png" width="700">
+
+**表 7-276 PTM 控制寄存器**
+
+| 位位置 | 寄存器描述 | 属性 |
+|---|---|---|
+| 0 | PTM Enable —— 置位 (Set) 时,该 Function 允许根据其所选定的角色参与 PTM 机制 (参见 § 第 6.21.2 节)。默认值为 0b。 | RW |
+| 1 | Root Select —— 置位 (Set) 时,如果 PTM Enable 位也被置位 (Set),则该时间源 (Time Source) 为 PTM Root。在每个 PTM 层级 (PTM Hierarchy) 中,建议系统软件仅选择最上游的时间源 (Time Source) 作为 PTM Root。默认值为 0b。如果 PTM Root Capable 位的值为 0b,则允许将此位硬连线 (hardwired) 为 0b。 | RW/RO |
+| 15:8 | Effective Granularity —— 对于实现 PTM Requester 角色的 Function,该字段提供与 PTM 时钟预期精度相关的信息,但不会以其他方式影响 PTM 机制。 <br/> 对于端点 (Endpoint),系统软件必须将该字段编程为由 PTM Root 及所有中间 PTM 时间源 (Time Source) 所报告的最大本地时钟粒度 (Local Clock Granularity) 所对应的值。 <br/> 对于 RCiEP,系统软件必须将该字段设置为关联的 PTM 时间源 (Time Source) 在 Local Clock Granularity 字段中报告的值。 <br/> 允许值: <br/> 0000 0000b:未知 PTM 粒度 —— 该 Function 与 PTM Root 之间的一个或多个交换机 (Switch) 报告了 Local Clock Granularity 值为 0000 0000b。 <br/> 0000 0001b 至 1111 1110b:指示有效 PTM 粒度(单位:ns)。 <br/> 1111 1111b:指示有效 PTM 粒度大于 254 ns。 <br/> 默认值为 0000 0000b。如果 PTM Requester Capable 为清零 (Clear),则允许将该字段硬连线 (hardwired) 为 0000 0000b。 | RW/RO |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-16"></a>
+
+<<<PAGE_BREAK>>> page_1343
+
+## 7.9.16 Readiness Time Reporting Extended Capability | 就绪时间报告扩展能力
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The Readiness Time Reporting Extended Capability provides an optional mechanism for describing the time required for a Device or Function to become Configuration-Ready. In the indicated situations, software is permitted to issue Requests to the Device or Function after waiting for the time advertised in this capability and need not wait for the (longer) times required elsewhere.
+
+Software is permitted to issue requests upon the earliest of:
+- Receiving a Readiness Notifications message (see § Section 6.22).
+- Waiting the appropriate time as specified in this document or in applicable specifications including the [PCI] and the [PCI-PM].
+- Waiting the time indicated in the associated field of this capability.
+- Waiting the time defined by system software or firmware[^184].
+
+Software is permitted to cache values from this capability and to use those cached values as long as the same device operating in the same manner has not changed.
+
+This capability is permitted to be implemented in all Functions.
+
+The capability is optional for PFs and VFs. However, if a VF associated with a given PF contains the capability, all VFs associated with that PF must contain the capability and report the same time values.
+
+For VFs, see § Section 5.10.1). Other Functions must be Configuration-Ready if:
+- The Immediate Readiness bit is Clear and at least Reset Time has elapsed after the completion of Conventional Reset
+  - If the Immediate Readiness bit is Set, Reset Time does not apply, and is Reserved
+- The Function is associated with an Upstream Port and at least DL_Up Time has elapsed after the Downstream Port above that Function reported Data Link Layer Link Active (see § Section 7.5.3.8).
+- The Function supports Function Level Reset and at least FLR Time has elapsed after that Function was issued a Function Level Reset.
+- Immediate_Readiness_on_Return_to_D0 is Clear and at least D3Hot to D0 Time has elapsed after that Function was directed to the D0 state from D3Hot.
+  - If the Immediate_Readiness_on_Return_to_D0 bit is Set, D3Hot to D0 Time does not apply, and is Reserved
+
+When Immediate_Readiness_on_Return_to_D0 is Clear, a Function must be Configuration-Ready when at least D3Hot to D0 Time has elapsed after the Function was directed to the D0 state from D3Hot. In addition, the Function must be in either the D0uninitialized or D0active state, depending on the value of the No_Soft_Reset bit.
+
+[^184]: For example, using ACPI tables to provide the equivalent of this capability.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+就绪时间报告 (Readiness Time Reporting) 扩展能力提供了一种可选机制,用于描述设备 (Device) 或 Function 变为配置就绪 (Configuration-Ready) 所需的时间。在所述情况下,软件在等待该能力中所通告的时间后,即允许向设备 (Device) 或 Function 发出请求 (Requests),而无需等待其他位置规定的(更长的)时间。
+
+允许软件在满足以下最早一项条件时发出请求:
+- 收到 Readiness Notifications 消息 (参见 § 第 6.22 节)。
+- 等待本文档或适用规范 (包括 [PCI] 和 [PCI-PM]) 中规定的相应时间。
+- 等待本能力相关字段中指示的时间。
+- 等待由系统软件或固件定义的时间[^184]。
+
+允许软件缓存来自该能力的值,并在相同设备以相同方式运行且未发生变化期间一直使用这些缓存值。
+
+允许在所有 Function 中实现该能力。
+
+该能力对于 PF 和 VF 是可选的。然而,如果与给定 PF 关联的某个 VF 包含该能力,则与该 PF 关联的所有 VF 都必须包含该能力,并报告相同的时间值。
+
+对于 VF,参见 § 第 5.10.1 节。其他 Function 在满足下列条件时必须处于配置就绪 (Configuration-Ready) 状态:
+- Immediate Readiness 位为清零 (Clear),且常规复位 (Conventional Reset) 完成之后至少已过去 Reset Time(复位时间)
+  - 如果 Immediate Readiness 位置位 (Set),则 Reset Time 不适用,且为保留
+- Function 与上游端口 (Upstream Port) 相关联,且在该 Function 上游的下游端口 (Downstream Port) 报告数据链路层链路活跃 (Data Link Layer Link Active) 之后至少已过去 DL_Up Time (参见 § 第 7.5.3.8 节)。
+- Function 支持功能级复位 (Function Level Reset),且在该 Function 发出功能级复位 (Function Level Reset) 之后至少已过去 FLR Time。
+- Immediate_Readiness_on_Return_to_D0 为清零 (Clear),且在该 Function 从 D3Hot 转入 D0 状态后至少已过去 D3Hot to D0 Time。
+  - 如果 Immediate_Readiness_on_Return_to_D0 位置位 (Set),则 D3Hot to D0 Time 不适用,且为保留
+
+当 Immediate_Readiness_on_Return_to_D0 为清零 (Clear) 时,在 Function 从 D3Hot 转入 D0 状态后,必须至少经过 D3Hot to D0 Time 后该 Function 才进入配置就绪 (Configuration-Ready) 状态。此外,根据 No_Soft_Reset 位的值,该 Function 必须处于 D0uninitialized 或 D0active 状态。
+
+[^184]: 例如,使用 ACPI 表提供与该能力等效的信息。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-16-1"></a>
+
+<<<PAGE_BREAK>>> page_1344
+
+## 7.9.16.1 Readiness Time Reporting Extended Capability Header (Offset 00h) | 就绪时间报告扩展能力包头 (偏移 00h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+If the above conditions do not apply, Function behavior is not determined by the Readiness Time Reporting Extended Capability, and the Function must respond as defined elsewhere (including, for example, no response or a response with Configuration Retry Status).
+
+The time values reported are determined by implementation specific mechanisms. A Valid bit is defined in this capability to permit a device to defer reporting time values, for example to allow hardware initialization through driver-based mechanisms. If the Valid bit remains Clear and 1 minute has elapsed after device driver(s) have started, software is permitted to assume that no values will be reported.
+
+Registers and fields in the Readiness Time Reporting Extended Capability are shown in § Figure 7-314. Time values are encoded in floating point as shown in § Figure 7-315. The actual time value is Value × Multiplier[Scale]. For example, the value A1Eh represents about 1 second (actually 1.006 sec) and the value 80Ah represents about 10 ms (actually 10.240 ms).
+
+**Figure 7-314 Readiness Time Reporting Extended Capability**
+
+> <img src="figures/chapter_07/fig_1344_1.png" width="700">
+
+**Figure 7-315 Readiness Time Encoding**
+
+> <img src="figures/chapter_07/fig_1344_2.png" width="700">
+
+<<<PAGE_BREAK>>> page_1345
+
+§ Figure 7-316 and § Table 7-278 detail allocation of fields in the Extended Capability header.
+
+**Figure 7-316 Readiness Time Reporting Extended Capability Header**
+
+> <img src="figures/chapter_07/fig_1345_1.png" width="700">
+
+**Table 7-278 Readiness Time Reporting Extended Capability Header**
+
+| Bit Location | Register Description | Attributes |
+|---|---|---|
+| 15:0 | PCI Express Extended Capability ID - This field is a PCI-SIG defined ID number that indicates the nature and format of the Extended Capability. Extended Capability ID for the Readiness Time Reporting Extended Capability is 0022h. | RO |
+| 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. Must be 1h for this version of the specification. | RO |
+| 31:20 | Next Capability Offset - This field contains the offset to the next PCI Express Capability structure or 000h if no other items exist in the linked list of Capabilities. For Extended Capabilities implemented in Configuration Space, this offset is relative to the beginning of PCI-compatible Configuration Space and thus must always be either 000h (for terminating list of Capabilities) or greater than 0FFh. | RO |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+如果上述条件不适用,则 Function 的行为不由就绪时间报告 (Readiness Time Reporting) 扩展能力确定,该 Function 必须按照其他位置定义的方式响应 (包括例如,无响应或返回 Configuration Retry Status 的响应)。
+
+所报告的时间值由实现特定机制决定。该能力中定义了一个 Valid 位,以允许设备延迟报告时间值,例如允许通过基于驱动程序的机制进行硬件初始化。如果 Valid 位保持清零 (Clear),且自设备驱动程序启动后已过去 1 分钟,则软件可假设不会再报告任何值。
+
+就绪时间报告 (Readiness Time Reporting) 扩展能力中的寄存器和字段如 § 图 7-314 所示。时间值按 § 图 7-315 所示的浮点格式编码。实际时间值为 Value × Multiplier[Scale]。例如,值 A1Eh 表示约 1 秒 (实际为 1.006 秒),值 80Ah 表示约 10 ms (实际为 10.240 ms)。
+
+**图 7-314 就绪时间报告扩展能力**
+
+> <img src="figures/chapter_07/fig_1344_1.png" width="700">
+
+**图 7-315 就绪时间编码**
+
+> <img src="figures/chapter_07/fig_1344_2.png" width="700">
+
+§ 图 7-316 和 § 表 7-278 详细说明了扩展能力包头中字段的分配。
+
+**图 7-316 就绪时间报告扩展能力包头**
+
+> <img src="figures/chapter_07/fig_1345_1.png" width="700">
+
+**表 7-278 就绪时间报告扩展能力包头**
+
+| 位位置 | 寄存器描述 | 属性 |
+|---|---|---|
+| 15:0 | PCI Express Extended Capability ID —— 该字段是由 PCI-SIG 定义的 ID 号,用于指示扩展能力的性质和格式。就绪时间报告 (Readiness Time Reporting) 扩展能力的扩展能力 ID 为 0022h。 | RO |
+| 19:16 | Capability Version —— 该字段是由 PCI-SIG 定义的版本号,用于指示所存在能力结构的版本。对于本版本的规范,必须为 1h。 | RO |
+| 31:20 | Next Capability Offset —— 该字段包含指向下一个 PCI Express 能力结构的偏移地址;如果链表中的能力已无其他项,则为 000h。对于在配置空间 (Configuration Space) 中实现的扩展能力,该偏移地址相对于 PCI 兼容配置空间 (PCI-compatible Configuration Space) 的起始位置,因此必须始终为 000h (用于终止能力链表) 或大于 0FFh。 | RO |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+§ Figure 7-317 and § Table 7-279 detail allocation of fields in the Readiness Time Reporting 1 Register.
+
+**Figure 7-317 Readiness Time Reporting 1 Register**
+
+> <img src="figures/chapter_07/fig_1345_2.png" width="700">
+
+**Table 7-279 Readiness Time Reporting 1 Register**
+
+| Bit Location | Register Description | Attributes |
+|---|---|---|
+| 11:0 | Reset Time - is the time a non-VF Function requires to become Configuration-Ready after the completion of Conventional Reset. For VF semantics, see § Section 9.3.3.3.1. This field is RsvdP if the Immediate Readiness bit is Set. This field is undefined when the Valid bit is Clear. This field must be less than or equal to the encoded value A1Eh. | HwInit/RsvdP || 11:0 | Reset Time - is the time a non-VF Function requires to become Configuration-Ready after the completion of Conventional Reset. For VF semantics, see § Section 9.3.3.3.1. This field is RsvdP if the Immediate Readiness bit is Set. This field is undefined when the Valid bit is Clear. This field must be less than or equal to the encoded value A1Eh. | HwInit/RsvdP |
+
+---
+
+<a id="sec-7-9-16-2"></a>
+## 7.9.16.2 Readiness Time Reporting 1 Register (Offset 04h) | 就绪时间报告 1 寄存器（偏移 04h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<<<PAGE_BREAK>>> page_1346
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 23:12 | **DL_Up Time** - is the time the Function requires to become Configuration-Ready after the Downstream Port above the Function reports Data Link Layer Link Active. <br>This field is RsvdP in Functions that are not associated with an Upstream Port. <br>For VFs, this field is not applicable and is RsvdP. <br>This field is undefined when the Valid bit is Clear. <br>This field must be less than or equal to the encoded value A1Eh. | HwInit/RsvdP <br>VF RsvdP |
+| 31 | **Valid** - If Set, indicates that all time values in this capability are valid. If Clear, indicates that the time values in this capability are not yet available. <br>Time values may depend on device configuration. Device specific mechanisms, possibly involving the device driver(s), could be involved in determining time values. <br>If this bit remains Clear and 1 minute has elapsed after all associated device driver(s) have started, software is permitted to assume that this bit will never be set. | HwInit |
+
+Figure 7-318 and Table 7-280 detail allocation of fields in the Readiness Time Reporting 2 Register.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+<<<PAGE_BREAK>>> page_1346
+
+| 比特位置 | 寄存器描述 | 属性 |
+|----------|------------|------|
+| 23:12 | **DL_Up Time（DL_Up 时间）** — 是该 Function 在其上游的 Downstream Port 报告数据链路层（Data Link Layer）链路激活（Link Active）之后，达到 Configuration-Ready 状态所需的时间。 <br>对于不与 Upstream Port 关联的 Function，此字段为 RsvdP。 <br>对于 VF，该字段不适用且为 RsvdP。 <br>当 Valid 位为 0 时，此字段未定义。 <br>此字段必须小于或等于编码值 A1Eh。 | HwInit/RsvdP <br>VF RsvdP |
+| 31 | **Valid（有效）** — 若置 1，表示本能力结构中的所有时间值有效。若为 0，表示本能力结构中的时间值尚不可用。 <br>时间值可能依赖于设备配置。设备特定的机制（可能涉及设备驱动程序）可能参与确定时间值。 <br>如果该位在所有相关设备驱动程序启动后 1 分钟内仍保持为 0，则软件可假定该位将永远不会被置 1。 | HwInit |
+
+图 7-318 和表 7-280 详细说明了 Readiness Time Reporting 2 寄存器中各字段的分配。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-16-fig-318"></a>
+## Figure 7-318. Readiness Time Reporting 2 Register | 图 7-318. 就绪时间报告 2 寄存器
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+```
+ 0          11        23       31
++-----------+---------+--------+
+|  FLR Time | D3Hot to| RsvdP  |
+|           | D0 Time |        |
++-----------+---------+--------+
+```
+
+**Figure 7-318 Readiness Time Reporting 2 Register**
+
+</td>
+<td style="background-color:#e8e8e8">
+
+```
+ 0          11        23       31
++-----------+---------+--------+
+|  FLR Time | D3Hot to| 保留   |
+|           | D0 Time |        |
++-----------+---------+--------+
+```
+
+**图 7-318 就绪时间报告 2 寄存器**
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-16-3"></a>
+## 7.9.16.3 Readiness Time Reporting 2 Register (Offset 08h) | 就绪时间报告 2 寄存器（偏移 08h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+**Table 7-280 Readiness Time Reporting 2 Register**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 11:0 | **FLR Time** - is the time that the Function requires to become Configuration-Ready after it was issued an FLR. <br>This field is RsvdP when the Function Level Reset Capability bit is Clear (see § Section 7.5.3.3). <br>This field is undefined when the Valid bit is Clear. <br>This field must be less than or equal to the encoded value A1Eh. | HwInit/RsvdP |
+| 23:12 | **D3Hot to D0 Time** - If Immediate_Readiness_on_Return_to_D0 is Clear, D3Hot to D0 Time is the time that a non-VF Function requires after it is directed from D3Hot to D0 before it is Configuration-Ready and has returned to either D0uninitialized or D0active state. For VF semantics, see § Section 5.10.1. <br>This field is RsvdP if the Immediate_Readiness_on_Return_to_D0 bit is Set. <br>For a VF that does not implement the PCI Power Management Capability, this field is undefined. <br>This field is undefined when the Valid bit is Clear. <br>This field must be less than or equal to the encoded value 80Ah. | HwInit/RsvdP |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+**表 7-280 就绪时间报告 2 寄存器**
+
+| 比特位置 | 寄存器描述 | 属性 |
+|----------|------------|------|
+| 11:0 | **FLR Time（FLR 时间）** — 是该 Function 在被发出 FLR 之后，达到 Configuration-Ready 状态所需的时间。 <br>当 Function Level Reset Capability 位为 0 时（参见 § 第 7.5.3.3 节），此字段为 RsvdP。 <br>当 Valid 位为 0 时，此字段未定义。 <br>此字段必须小于或等于编码值 A1Eh。 | HwInit/RsvdP |
+| 23:12 | **D3Hot to D0 Time（D3Hot 到 D0 时间）** — 如果 Immediate_Readiness_on_Return_to_D0 为 0，则 D3Hot 到 D0 时间是非 VF Function 在被指示从 D3Hot 转换到 D0 之后，达到 Configuration-Ready 并返回到 D0uninitialized 或 D0active 状态所需的时间。有关 VF 语义，请参见 § 第 5.10.1 节。 <br>如果 Immediate_Readiness_on_Return_to_D0 位置 1，则此字段为 RsvdP。 <br>对于未实现 PCI Power Management Capability 的 VF，此字段未定义。 <br>当 Valid 位为 0 时，此字段未定义。 <br>此字段必须小于或等于编码值 80Ah。 | HwInit/RsvdP |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17"></a>
+## 7.9.17 Hierarchy ID Extended Capability | 层级 ID 扩展能力（Hierarchy ID Extended Capability）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<<<PAGE_BREAK>>> page_1347
+
+The Hierarchy ID Extended Capability provides an optional mechanism for passing a unique identifier to Functions within a Hierarchy. At most one instance of this capability is permitted in a Function. This capability is not applicable to Bridges, Root Complex Event Collectors, and RCRBs.
+
+This capability takes three forms:
+
+**In Upstream Ports:**
+
+- This capability is permitted any Function associated with an Upstream Port.
+- This capability is optional in Switch Upstream Ports. Support in Switch Upstream and Downstream Ports is independently optional.
+- This capability is mandatory in Functions that use the Hierarchy ID Message. This includes use by the Function's driver.
+- Functions, other than VFs, that have Hierarchy ID Writeable Clear, must report the Message Requester ID, Hierarchy ID, System GUID Authority ID, and System GUID fields from the most recently received Hierarchy ID Message.
+- All VFs that have Hierarchy ID Writeable Clear, must report the same Hierarchy ID Valid, Message Requester ID, Hierarchy ID, System GUID Authority ID, and System GUID values as their associated PF.
+- PFs must implement this capability if any of their VFs implement this capability.
+- Functions that have Hierarchy ID Writeable Set must report the Hierarchy ID Valid, Message Requester ID, Hierarchy ID, System GUID Authority ID, and System GUID values programmed by software.
+
+**In Downstream Ports:**
+
+- This capability is permitted in any Downstream Port. It is recommended that it be implemented in Root Ports.
+- When present in a Switch Downstream Port, this capability must be implemented in all Downstream Ports of the Switch. Support in Switch Upstream and Downstream Ports is independently optional.
+- In Downstream Ports, the Hierarchy ID, System GUID Authority ID, and System GUID fields are Read / Write and contain the values to send in the Hierarchy ID Message.
+- A Hierarchy ID capability is not affected by Hierarchy ID Messages forwarded through the associated Downstream Port.
+
+**In RCiEPs:**
+
+- VFs that have Hierarchy ID Writeable Clear must report the same Message Requester ID, Hierarchy ID, System GUID Authority ID, and System GUID values as their associated PF.
+- PFs must implement this capability if any of their VFs implement this capability.
+- Functions, other than VFs, that have Hierarchy ID Writeable Clear, must report the same Hierarchy ID Valid, Message Requester ID, Hierarchy ID, System GUID Authority ID, and System GUID values. The source of this information is outside the scope of this specification.
+- Functions that have Hierarchy ID Writeable Set must report the Hierarchy ID Valid, Message Requester ID, Hierarchy ID, System GUID Authority ID, and System GUID values programmed by software.
+
+Figure 7-319 details the layout of the Hierarchy ID Extended Capability.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+<<<PAGE_BREAK>>> page_1347
+
+层级 ID 扩展能力（Hierarchy ID Extended Capability）提供了一种可选机制，用于将唯一标识符传递给层级（Hierarchy）内的 Function。每个 Function 中最多允许此能力的一个实例。该能力不适用于桥（Bridge）、根复合体事件收集器（Root Complex Event Collector）以及 RCRB。
+
+该能力有三种形式：
+
+**在 Upstream Port 中：**
+
+- 任何与 Upstream Port 关联的 Function 都允许实现此能力。
+- 在 Switch Upstream Port 中此能力是可选的。Switch 上 Upstream Port 和 Downstream Port 中的支持彼此独立可选。
+- 使用 Hierarchy ID Message 的 Function 必须实现此能力。这包括由 Function 的驱动程序使用的情况。
+- 除 VF 之外、且 Hierarchy ID Writeable 为 0 的 Function，必须报告从最近接收到的 Hierarchy ID Message 中获取的 Message Requester ID、Hierarchy ID、System GUID Authority ID 和 System GUID 字段。
+- 所有 Hierarchy ID Writeable 为 0 的 VF，必须报告与其关联 PF 相同的 Hierarchy ID Valid、Message Requester ID、Hierarchy ID、System GUID Authority ID 和 System GUID 值。
+- 如果 PF 的任何 VF 实现了此能力，则 PF 必须实现此能力。
+- Hierarchy ID Writeable 为 1 的 Function，必须报告由软件编程的 Hierarchy ID Valid、Message Requester ID、Hierarchy ID、System GUID Authority ID 和 System GUID 值。
+
+**在 Downstream Port 中：**
+
+- 任何 Downstream Port 都允许实现此能力。建议在根端口（Root Port）中实现。
+- 当 Switch Downstream Port 中存在此能力时，Switch 的所有 Downstream Port 必须实现此能力。Switch 上 Upstream Port 和 Downstream Port 中的支持彼此独立可选。
+- 在 Downstream Port 中，Hierarchy ID、System GUID Authority ID 和 System GUID 字段为读/写（Read/Write），其包含要在 Hierarchy ID Message 中发送的值。
+- 层级 ID 能力不受通过其关联 Downstream Port 转发的 Hierarchy ID Message 的影响。
+
+**在 RCiEP 中：**
+
+- Hierarchy ID Writeable 为 0 的 VF，必须报告与其关联 PF 相同的 Message Requester ID、Hierarchy ID、System GUID Authority ID 和 System GUID 值。
+- 如果 PF 的任何 VF 实现了此能力，则 PF 必须实现此能力。
+- 除 VF 之外、且 Hierarchy ID Writeable 为 0 的 Function，必须报告相同的 Hierarchy ID Valid、Message Requester ID、Hierarchy ID、System GUID Authority ID 和 System GUID 值。此信息的来源不在本规范的范围内。
+- Hierarchy ID Writeable 为 1 的 Function，必须报告由软件编程的 Hierarchy ID Valid、Message Requester ID、Hierarchy ID、System GUID Authority ID 和 System GUID 值。
+
+图 7-319 详细说明了 Hierarchy ID 扩展能力的布局。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-fig-319"></a>
+## Figure 7-319. Hierarchy ID Extended Capability | 图 7-319. 层级 ID 扩展能力
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+```
+Byte Offset   0               3
+              +---------------+
++000h         | PCI Express Extended Capability Header |
+              +---------------+
++004h         | Hierarchy ID Status Register           |
+              +---------------+
++008h         | Hierarchy ID Data Register              |
+              +---------------+
++00Ch         | Hierarchy ID GUID 1 Register            |
+              +---------------+
++010h         | Hierarchy ID GUID 2 Register            |
+              +---------------+
++014h         | Hierarchy ID GUID 3 Register            |
+              +---------------+
++018h         | Hierarchy ID GUID 4 Register            |
+              +---------------+
++01Ch         | Hierarchy ID GUID 5 Register            |
+              +---------------+
+```
+
+**Figure 7-319 Hierarchy ID Extended Capability**
+
+Figure 7-320 and Table 7-281 detail allocation of fields in the Hierarchy ID Extended Capability Header.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+```
+字节偏移     0               3
+              +---------------+
++000h         | PCI Express 扩展能力头                  |
+              +---------------+
++004h         | 层级 ID 状态寄存器                       |
+              +---------------+
++008h         | 层级 ID 数据寄存器                       |
+              +---------------+
++00Ch         | 层级 ID GUID 1 寄存器                   |
+              +---------------+
++010h         | 层级 ID GUID 2 寄存器                   |
+              +---------------+
++014h         | 层级 ID GUID 3 寄存器                   |
+              +---------------+
++018h         | 层级 ID GUID 4 寄存器                   |
+              +---------------+
++01Ch         | 层级 ID GUID 5 寄存器                   |
+              +---------------+
+```
+
+**图 7-319 层级 ID 扩展能力**
+
+图 7-320 和表 7-281 详细说明了层级 ID 扩展能力头中各字段的分配。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-fig-320"></a>
+## Figure 7-320. Hierarchy ID Extended Capability Header | 图 7-320. 层级 ID 扩展能力头
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<<<PAGE_BREAK>>> page_1348
+
+```
+ 0           15  16      19  20              31
++-------------+---+-------+------------------+
+| Extended    |   | Cap.  | Next Capability  |
+| Capability  |   | Vers. | Offset           |
+| ID          |   |       |                  |
++-------------+---+-------+------------------+
+```
+
+**Figure 7-320 Hierarchy ID Extended Capability Header**
+
+**Table 7-281 Hierarchy ID Extended Capability Header**
+
+| Bit Location | Description | Attributes |
+|--------------|-------------|------------|
+| 15:0 | **Extended Capability ID** - This field is a PCI-SIG defined ID number that indicates the nature and format of the Extended Capability. <br>PCI Express Extended Capability ID for the Hierarchy ID Extended Capability is 0028h. | RO |
+| 19:16 | **Capability Version** - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. <br>Must be 1h for this version of the specification. | RO |
+| 31:20 | **Next Capability Offset** - This field contains the offset to the next PCI Express Extended Capability structure or 000h if no other items exist in the linked list of Capabilities. For Extended Capabilities in configuration space, this offset is relative to the beginning of PCI-compatible Configuration Space and thus must always be either 000h (for terminating the list of Capabilities) or greater than 0FFh. | RO |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+<<<PAGE_BREAK>>> page_1348
+
+```
+ 0           15  16      19  20              31
++-------------+---+-------+------------------+
+| 扩展能力    |   | 能力  | 下一能力偏移     |
+| ID          |   | 版本  |                  |
++-------------+---+-------+------------------+
+```
+
+**图 7-320 层级 ID 扩展能力头**
+
+**表 7-281 层级 ID 扩展能力头**
+
+| 比特位置 | 描述 | 属性 |
+|----------|------|------|
+| 15:0 | **Extended Capability ID（扩展能力 ID）** — 此字段是 PCI-SIG 定义的 ID 编号，用于指示扩展能力的性质和格式。 <br>层级 ID 扩展能力的 PCI Express 扩展能力 ID 为 0028h。 | RO |
+| 19:16 | **Capability Version（能力版本）** — 此字段是 PCI-SIG 定义的版本号，用于指示当前能力结构的版本。 <br>对于本版本的规范必须为 1h。 | RO |
+| 31:20 | **Next Capability Offset（下一能力偏移）** — 此字段包含到下一个 PCI Express 扩展能力结构的偏移量，如果链接的能力列表中没有其他项则为 000h。对于配置空间中的扩展能力，此偏移相对于 PCI 兼容配置空间的起始位置，因此必须始终为 000h（用于终止能力列表）或大于 0FFh。 | RO |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-1"></a>
+## 7.9.17.1 Hierarchy ID Extended Capability Header (Offset 00h) | 层级 ID 扩展能力头（偏移 00h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Refer to Figure 7-320 and Table 7-281 for field allocation details of the Hierarchy ID Extended Capability Header.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+有关层级 ID 扩展能力头的字段分配详细信息，请参见图 7-320 和表 7-281。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-fig-321"></a>
+## Figure 7-321. Hierarchy ID Status Register | 图 7-321. 层级 ID 状态寄存器
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<<<PAGE_BREAK>>> page_1349
+
+```
+ 0           15  16      27  28  29             30   31
++-------------+---+-------+----+----------------+----+
+| Message     |   | RsvdZ |    | Hierarchy ID   | H  | H
+| Requester   |   |       |    | Writeable      | V  | I
+| ID          |   |       |    |                | F  | D
+|             |   |       |    |                | C  |   |
+|             |   |       |    |                |    | V  |
++-------------+---+-------+----+----------------+----+
+```
+
+**Figure 7-321 Hierarchy ID Status Register**
+
+**Table 7-282 Hierarchy ID Status Register**
+
+| Bit Location | Description | Attributes |
+|--------------|-------------|------------|
+| 15:0 | **Message Requester ID** - In an Upstream Port, this field contains the Requester ID from the most recently received Hierarchy ID Message. This field is meaningful only if Hierarchy ID Valid is 1b. This value identifies the Downstream Port (within this Hierarchy) that sent the Hierarchy ID Message. This information is not considered part of the Hierarchy ID as it can vary within the Hierarchy (e.g., different Root Ports of one Root Complex), but helps in debug situations to identify the provenance of the Hierarchy ID information. <br>In a Downstream Port, this field is RsvdZ. <br>For RCiEPs, this field is RsvdZ. <br>This field defaults to 0000h. | RO/RsvdZ |
+| 28 | **Hierarchy ID Writeable** - This bit is Set to indicate that the Hierarchy ID Data and GUID registers are read/write. This bit is Clear to indicate that the Hierarchy ID and GUID registers are read only. <br>In Downstream Ports this bit is hardwired to 1b. <br>In Upstream Ports, Functions that are not VFs must hardwire this bit to 0b. <br>RCiEPs that are not VFs, must hardwire this bit to either 0b or 1b. <br>VFs in an Upstream Port and Root Complex Integrated VFs are permitted to either: <br>• hardwire this bit to 0b or <br>• implement this bit as read / write with a default value of 0b. | RW/RO |
+| 29 | **Hierarchy ID VF Configurable** - This bit indicates that Hierarchy ID Writeable can be configured. <br>If Hierarchy ID Writeable is implemented as read / write, this bit is 1b. Otherwise this bit is 0b. | RO |
+| 30 | **Hierarchy ID Pending** - In Downstream Ports this requests the transmittion of a Hierarchy ID Message. Setting it requests transmission of a message based on the Hierarchy Data and GUID registers in this capability. This bit is cleared when either the transmit request is satisfied or the Link enters DL_Down. <br>Behavior is undefined if the Hierarchy Data or GUID registers in this capability are written while this bit is Set. <br>In Downstream Ports, this bit is Read / Write defaulting to 0b. <br>In all other Functions, this bit is RsvdZ. | RW/RsvdZ |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+<<<PAGE_BREAK>>> page_1349
+
+```
+ 0           15  16      27  28  29             30   31
++-------------+---+-------+----+----------------+----+
+| Message     |   | 保留  |    | 层级 ID        | H  | H
+| Requester   |   |       |    | 可写           | V  | I
+| ID          |   |       |    |                | F  | D
+|             |   |       |    |                | C  |   |
+|             |   |       |    |                |    | V  |
++-------------+---+-------+----+----------------+----+
+```
+
+**图 7-321 层级 ID 状态寄存器**
+
+**表 7-282 层级 ID 状态寄存器**
+
+| 比特位置 | 描述 | 属性 |
+|----------|------|------|
+| 15:0 | **Message Requester ID（消息请求者 ID）** — 在 Upstream Port 中，此字段包含最近接收到的 Hierarchy ID Message 中的 Requester ID。仅当 Hierarchy ID Valid 为 1b 时此字段才有意义。此值标识发送 Hierarchy ID Message 的（本层级内的）Downstream Port。此信息不视为层级 ID 的一部分，因为它在同一层级内可能变化（例如同一根复合体（Root Complex）的不同根端口），但有助于在调试时识别层级 ID 信息的来源。 <br>在 Downstream Port 中，此字段为 RsvdZ。 <br>对于 RCiEP，此字段为 RsvdZ。 <br>此字段默认值为 0000h。 | RO/RsvdZ |
+| 28 | **Hierarchy ID Writeable（层级 ID 可写）** — 该位置 1 表示 Hierarchy ID Data 和 GUID 寄存器为读/写。该位为 0 表示 Hierarchy ID 和 GUID 寄存器为只读。 <br>在 Downstream Port 中，该位硬连线为 1b。 <br>在 Upstream Port 中，非 VF 的 Function 必须将该位硬连线为 0b。 <br>非 VF 的 RCiEP 必须将该位硬连线为 0b 或 1b。 <br>Upstream Port 中的 VF 和根复合体集成 VF（Root Complex Integrated VF）可任选以下方式： <br>• 将该位硬连线为 0b； <br>• 将该位实现为读/写，默认值为 0b。 | RW/RO |
+| 29 | **Hierarchy ID VF Configurable（层级 ID VF 可配置）** — 此位表示 Hierarchy ID Writeable 可以被配置。 <br>如果 Hierarchy ID Writeable 被实现为读/写，则此位为 1b；否则此位为 0b。 | RO |
+| 30 | **Hierarchy ID Pending（层级 ID 待处理）** — 在 Downstream Port 中，此位用于请求发送 Hierarchy ID Message。置 1 时将基于本能力中的 Hierarchy Data 和 GUID 寄存器请求发送消息。当发送请求被满足或链路（Link）进入 DL_Down 时，该位被清零。 <br>当此位被置 1 时，若写入本能力中的 Hierarchy Data 或 GUID 寄存器，则行为未定义。 <br>在 Downstream Port 中，此位为读/写，默认值为 0b。 <br>在其他所有 Function 中，此位为 RsvdZ。 | RW/RsvdZ |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-2"></a>
+## 7.9.17.2 Hierarchy ID Status Register (Offset 04h) | 层级 ID 状态寄存器（偏移 04h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Refer to Figure 7-321 and Table 7-282 for field allocation details of the Hierarchy ID Status Register.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+有关层级 ID 状态寄存器的字段分配详细信息，请参见图 7-321 和表 7-282。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-fig-322"></a>
+## Figure 7-322. Hierarchy ID Data Register (continued) | 图 7-322. 层级 ID 数据寄存器（续）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<<<PAGE_BREAK>>> page_1350
+
+| Bit Location | Description | Attributes |
+|--------------|-------------|------------|
+| 31 | **Hierarchy ID Valid** - This bit indicates that the remaining fields in this capability are meaningful. <br>In Downstream Ports, this bit is hardwired to 1b. <br>In all other Functions, the following rules apply: <br>• If Hierarchy ID Writeable is Set, this bit is read/write, default 0b. <br>• If Hierarchy ID Writeable is Clear, this bit is read only, default 0b. <br>&nbsp;&nbsp;◦ In VFs, this bit contains the same value as the associated PF. <br>&nbsp;&nbsp;◦ In Functions other than VFs that are associated with an Upstream Port, this bit is Set when a Hierarchy ID Message is received, and Cleared when the Link is DL_Down. <br>&nbsp;&nbsp;◦ In RCiEPs other than VFs, this bit contains a system provided value. The mechanism for determining this value is outside the scope of this specification. | RW/RO |
+
+Figure 7-322 and Table 7-283 detail allocation of fields in the Hierarchy ID Data Register.
+
+```
+ 0           7   8        15  16              31
++-------------+---+-------+------------------+
+| System GUID |   | RsvdP | Hierarchy ID     |
+| Authority   |   |       |                  |
+| ID          |   |       |                  |
++-------------+---+-------+------------------+
+```
+
+**Figure 7-322 Hierarchy ID Data Register**
+
+**Table 7-283 Hierarchy ID Data Register**
+
+| Bit Location | Description | Attributes |
+|--------------|-------------|------------|
+| 7:0 | **System GUID Authority ID** - This field corresponds to the System GUID Authority ID field in the Hierarchy ID Message. See § Section 6.25 for details. <br>This field is meaningful only if Hierarchy ID Valid is 1b. <br>If Hierarchy ID Writeable is Set, this field is read-write and contains the value programmed by software. <br>If Hierarchy ID Writeable is Clear, this field is read only. The value is determined using the rules defined in § Section 7.9.17. <br>This field defaults to 00h. | RO/RW |
+| 31:16 | **Hierarchy ID** - This field corresponds to the Hierarchy ID field in the Hierarchy ID Message. See § Section 6.25 for details. <br>This field is meaningful only if Hierarchy ID Valid is 1b. <br>If Hierarchy ID Writeable is Set, this field is read-write and contains the value programmed by software. <br>If Hierarchy ID Writeable is Clear, this field is read only. The value is determined using the rules defined in § Section 7.9.17. <br>This field defaults to 0000h. | RO/RW |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+<<<PAGE_BREAK>>> page_1350
+
+| 比特位置 | 描述 | 属性 |
+|----------|------|------|
+| 31 | **Hierarchy ID Valid（层级 ID 有效）** — 此位表示本能力中其余字段是否有意义。 <br>在 Downstream Port 中，此位硬连线为 1b。 <br>在其他所有 Function 中，适用以下规则： <br>• 如果 Hierarchy ID Writeable 被置 1，则此位为读/写，默认值为 0b。 <br>• 如果 Hierarchy ID Writeable 为 0，则此位为只读，默认值为 0b。 <br>&nbsp;&nbsp;◦ 在 VF 中，此位包含与关联 PF 相同的值。 <br>&nbsp;&nbsp;◦ 在与 Upstream Port 关联的非 VF Function 中，收到 Hierarchy ID Message 时该位被置 1，当链路为 DL_Down 时该位被清零。 <br>&nbsp;&nbsp;◦ 在非 VF 的 RCiEP 中，此位包含由系统提供的值。用于确定此值的机制不在本规范范围内。 | RW/RO |
+
+图 7-322 和表 7-283 详细说明了层级 ID 数据寄存器中各字段的分配。
+
+```
+ 0           7   8        15  16              31
++-------------+---+-------+------------------+
+| System GUID |   | 保留  | 层级 ID          |
+| Authority   |   |       |                  |
+| ID          |   |       |                  |
++-------------+---+-------+------------------+
+```
+
+**图 7-322 层级 ID 数据寄存器**
+
+**表 7-283 层级 ID 数据寄存器**
+
+| 比特位置 | 描述 | 属性 |
+|----------|------|------|
+| 7:0 | **System GUID Authority ID（系统 GUID 授权 ID）** — 此字段对应于 Hierarchy ID Message 中的 System GUID Authority ID 字段。详情参见 § 第 6.25 节。 <br>仅当 Hierarchy ID Valid 为 1b 时此字段才有意义。 <br>如果 Hierarchy ID Writeable 被置 1，则此字段为读/写，并包含由软件编程的值。 <br>如果 Hierarchy ID Writeable 为 0，则此字段为只读。该值使用 § 第 7.9.17 节中定义的规则确定。 <br>此字段默认值为 00h。 | RO/RW |
+| 31:16 | **Hierarchy ID（层级 ID）** — 此字段对应于 Hierarchy ID Message 中的 Hierarchy ID 字段。详情参见 § 第 6.25 节。 <br>仅当 Hierarchy ID Valid 为 1b 时此字段才有意义。 <br>如果 Hierarchy ID Writeable 被置 1，则此字段为读/写，并包含由软件编程的值。 <br>如果 Hierarchy ID Writeable 为 0，则此字段为只读。该值使用 § 第 7.9.17 节中定义的规则确定。 <br>此字段默认值为 0000h。 | RO/RW |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-3"></a>
+## 7.9.17.3 Hierarchy ID Data Register (Offset 08h) | 层级 ID 数据寄存器（偏移 08h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Refer to Figure 7-322 and Table 7-283 for field allocation details of the Hierarchy ID Data Register.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+有关层级 ID 数据寄存器的字段分配详细信息，请参见图 7-322 和表 7-283。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-fig-323"></a>
+## Figure 7-323. Hierarchy ID GUID 1 Register | 图 7-323. 层级 ID GUID 1 寄存器
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<<<PAGE_BREAK>>> page_1351
+
+```
+ 0           15  16              31
++-------------+---+---------------+
+| System      |   |  RsvdP        |
+| GUID 1      |   |               |
++-------------+---+---------------+
+```
+
+**Figure 7-323 Hierarchy ID GUID 1 Register**
+
+**Table 7-284 Hierarchy ID GUID 1 Register**
+
+| Bit Location | Description | Attributes |
+|--------------|-------------|------------|
+| 15:0 | **System GUID 1** - This field corresponds to bits [143:128] of the System GUID in the Hierarchy ID Message. See § Section 6.25 for details. <br>This field is meaningful only if Hierarchy ID Valid is 1b. <br>If Hierarchy ID Writeable is Set, this field is read-write and contains the value programmed by software. <br>If Hierarchy ID Writeable is Clear, this field is read only. The value is determined using the rules defined in § Section 7.9.17. <br>This field defaults to 0000h. | RO/RW |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+<<<PAGE_BREAK>>> page_1351
+
+```
+ 0           15  16              31
++-------------+---+---------------+
+| System      |   |  保留         |
+| GUID 1      |   |               |
++-------------+---+---------------+
+```
+
+**图 7-323 层级 ID GUID 1 寄存器**
+
+**表 7-284 层级 ID GUID 1 寄存器**
+
+| 比特位置 | 描述 | 属性 |
+|----------|------|------|
+| 15:0 | **System GUID 1（系统 GUID 1）** — 此字段对应于 Hierarchy ID Message 中 System GUID 的 [143:128] 位。详情参见 § 第 6.25 节。 <br>仅当 Hierarchy ID Valid 为 1b 时此字段才有意义。 <br>如果 Hierarchy ID Writeable 被置 1，则此字段为读/写，并包含由软件编程的值。 <br>如果 Hierarchy ID Writeable 为 0，则此字段为只读。该值使用 § 第 7.9.17 节中定义的规则确定。 <br>此字段默认值为 0000h。 | RO/RW |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-fig-324"></a>
+## Figure 7-324. Hierarchy ID GUID 2 Register | 图 7-324. 层级 ID GUID 2 寄存器
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+```
+ 0                       31
++-------------------------+
+|       System GUID 2     |
++-------------------------+
+```
+
+**Figure 7-324 Hierarchy ID GUID 2 Register**
+
+**Table 7-285 Hierarchy ID GUID 2 Register**
+
+| Bit Location | Description | Attributes |
+|--------------|-------------|------------|
+| 31:0 | **System GUID 2** - This field corresponds to bits [127:96] of the System GUID field in the Hierarchy ID Message. See § Section 6.25 for details. <br>This field is meaningful only if Hierarchy ID Valid is 1b. <br>If Hierarchy ID Writeable is Set, this field is read-write and contains the value programmed by software. <br>If Hierarchy ID Writeable is Clear, this field is read only. The value is determined using the rules defined in § Section 7.9.17. <br>This field defaults to 0000 0000h. | RO/RW |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+```
+ 0                       31
++-------------------------+
+|       System GUID 2     |
++-------------------------+
+```
+
+**图 7-324 层级 ID GUID 2 寄存器**
+
+**表 7-285 层级 ID GUID 2 寄存器**
+
+| 比特位置 | 描述 | 属性 |
+|----------|------|------|
+| 31:0 | **System GUID 2（系统 GUID 2）** — 此字段对应于 Hierarchy ID Message 中 System GUID 字段的 [127:96] 位。详情参见 § 第 6.25 节。 <br>仅当 Hierarchy ID Valid 为 1b 时此字段才有意义。 <br>如果 Hierarchy ID Writeable 被置 1，则此字段为读/写，并包含由软件编程的值。 <br>如果 Hierarchy ID Writeable 为 0，则此字段为只读。该值使用 § 第 7.9.17 节中定义的规则确定。 <br>此字段默认值为 0000 0000h。 | RO/RW |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-4"></a>
+## 7.9.17.4 Hierarchy ID GUID 1 Register (Offset 0Ch) | 层级 ID GUID 1 寄存器（偏移 0Ch）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Refer to Figure 7-323 and Table 7-284 for field allocation details of the Hierarchy ID GUID 1 Register.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+有关层级 ID GUID 1 寄存器的字段分配详细信息，请参见图 7-323 和表 7-284。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-5"></a>
+## 7.9.17.5 Hierarchy ID GUID 2 Register (Offset 10h) | 层级 ID GUID 2 寄存器（偏移 10h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Refer to Figure 7-324 and Table 7-285 for field allocation details of the Hierarchy ID GUID 2 Register.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+有关层级 ID GUID 2 寄存器的字段分配详细信息，请参见图 7-324 和表 7-285。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-fig-325"></a>
+## Figure 7-325. Hierarchy ID GUID 3 Register | 图 7-325. 层级 ID GUID 3 寄存器
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<<<PAGE_BREAK>>> page_1352
+
+```
+ 0                       31
++-------------------------+
+|       System GUID 3     |
++-------------------------+
+```
+
+**Figure 7-325 Hierarchy ID GUID 3 Register**
+
+**Table 7-286 Hierarchy ID GUID 3 Register**
+
+| Bit Location | Description | Attributes |
+|--------------|-------------|------------|
+| 31:0 | **System GUID 3** - This field corresponds to bits [95:64] of the System GUID field in the Hierarchy ID Message. See § Section 6.25 for details. <br>This field is meaningful only if Hierarchy ID Valid is 1b. <br>If Hierarchy ID Writeable is Set, this field is read-write and contains the value programmed by software. <br>If Hierarchy ID Writeable is Clear, this field is read only. The value is determined using the rules defined in § Section 7.9.17. <br>This field defaults to 0000 0000h. | RO/RW |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+<<<PAGE_BREAK>>> page_1352
+
+```
+ 0                       31
++-------------------------+
+|       System GUID 3     |
++-------------------------+
+```
+
+**图 7-325 层级 ID GUID 3 寄存器**
+
+**表 7-286 层级 ID GUID 3 寄存器**
+
+| 比特位置 | 描述 | 属性 |
+|----------|------|------|
+| 31:0 | **System GUID 3（系统 GUID 3）** — 此字段对应于 Hierarchy ID Message 中 System GUID 字段的 [95:64] 位。详情参见 § 第 6.25 节。 <br>仅当 Hierarchy ID Valid 为 1b 时此字段才有意义。 <br>如果 Hierarchy ID Writeable 被置 1，则此字段为读/写，并包含由软件编程的值。 <br>如果 Hierarchy ID Writeable 为 0，则此字段为只读。该值使用 § 第 7.9.17 节中定义的规则确定。 <br>此字段默认值为 0000 0000h。 | RO/RW |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-fig-326"></a>
+## Figure 7-326. Hierarchy ID GUID 4 Register | 图 7-326. 层级 ID GUID 4 寄存器
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+```
+ 0                       31
++-------------------------+
+|       System GUID 4     |
++-------------------------+
+```
+
+**Figure 7-326 Hierarchy ID GUID 4 Register**
+
+**Table 7-287 Hierarchy ID GUID 4 Register**
+
+| Bit Location | Description | Attributes |
+|--------------|-------------|------------|
+| 31:0 | **System GUID 4** - This field corresponds to bits [63:32] of the System GUID field in the Hierarchy ID Message. See § Section 6.25 for details. <br>This field is meaningful only if Hierarchy ID Valid is 1b. <br>If Hierarchy ID Writeable is Set, this field is read-write and contains the value programmed by software. <br>If Hierarchy ID Writeable is Clear, this field is read only. The value is determined using the rules defined in § Section 7.9.17. <br>This field defaults to 0000 0000h. | RO/RW |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+```
+ 0                       31
++-------------------------+
+|       System GUID 4     |
++-------------------------+
+```
+
+**图 7-326 层级 ID GUID 4 寄存器**
+
+**表 7-287 层级 ID GUID 4 寄存器**
+
+| 比特位置 | 描述 | 属性 |
+|----------|------|------|
+| 31:0 | **System GUID 4（系统 GUID 4）** — 此字段对应于 Hierarchy ID Message 中 System GUID 字段的 [63:32] 位。详情参见 § 第 6.25 节。 <br>仅当 Hierarchy ID Valid 为 1b 时此字段才有意义。 <br>如果 Hierarchy ID Writeable 被置 1，则此字段为读/写，并包含由软件编程的值。 <br>如果 Hierarchy ID Writeable 为 0，则此字段为只读。该值使用 § 第 7.9.17 节中定义的规则确定。 <br>此字段默认值为 0000 0000h。 | RO/RW |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-6"></a>
+## 7.9.17.6 Hierarchy ID GUID 3 Register (Offset 14h) | 层级 ID GUID 3 寄存器（偏移 14h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Refer to Figure 7-325 and Table 7-286 for field allocation details of the Hierarchy ID GUID 3 Register.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+有关层级 ID GUID 3 寄存器的字段分配详细信息，请参见图 7-325 和表 7-286。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-7"></a>
+## 7.9.17.7 Hierarchy ID GUID 4 Register (Offset 18h) | 层级 ID GUID 4 寄存器（偏移 18h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Refer to Figure 7-326 and Table 7-287 for field allocation details of the Hierarchy ID GUID 4 Register.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+有关层级 ID GUID 4 寄存器的字段分配详细信息，请参见图 7-326 和表 7-287。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-17-fig-327"></a>
+## Figure 7-327. Hierarchy ID GUID 5 Register | 图 7-327. 层级 ID GUID 5 寄存器
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+<<<PAGE_BREAK>>> page_1353
+
+```
+ 0                       31
++-------------------------+
+|       System GUID 5     |
++-------------------------+
+```
+
+**Figure 7-327 Hierarchy ID GUID 5 Register**
+
+**Table 7-288 Hierarchy ID GUID 5 Register**
+
+| Bit Location | Description | Attributes |
+|--------------|-------------|------------|
+| 31:0 | **System GUID 5** - This field corresponds to bits [31:0] of the System GUID field in the Hierarchy ID Message. See § Section 6.25 for details. <br>This field is meaningful only if Hierarchy ID Valid is 1b. <br>If Hierarchy ID Writeable is Set, this field is read-write and contains the value programmed by software. <br>If Hierarchy ID Writeable is Clear, this field is read only. The value is determined using the rules defined in § Section 7.9.17. <br>This field defaults to 0000 0000h. | RO/RW |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+<<<PAGE_BREAK>>> page_1353
+
+```
+ 0                       31
++-------------------------+
+|       System GUID 5     |
++-------------------------+
+```
+
+**图 7-327 层级 ID GUID 5 寄存器**
+
+**表 7-288 层级 ID GUID 5 寄存器**
+
+| 比特位置 | 描述 | 属性 |
+|----------|------|------|
+| 31:0 | **System GUID 5（系统 GUID 5）** — 此字段对应于 Hierarchy ID Message 中 System GUID 字段的 [31:0] 位。详情参见 § 第 6.25 节。 <br>仅当 Hierarchy ID Valid 为 1b 时此字段才有意义。 <br>如果 Hierarchy ID Writeable 被置 1，则此字段为读/写，并包含由软件编程的值。 <br>如果 Hierarchy ID Writeable 为 0，则此字段为只读。该值使用 § 第 7.9.17 节中定义的规则确定。 <br>此字段默认值为 0000 0000h。 | RO/RW |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-18-vpd-intro"></a>
+## 7.9.18 Vital Product Data (VPD) Capability | 重要产品数据（VPD）能力
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Support of VPD is optional. All Functions are permitted to contain the capability. This includes all Functions of a Multi-Function Device associated with an Upstream Port as well as RCiEPs. This also includes PFs and VFs.
+
+Vital Product Data (VPD) is information that uniquely identifies hardware and, potentially, software elements of a system. The VPD can provide the system with information on various Field Replaceable Units such as part number, serial number, and other detailed information. The objective from a system point of view is to make this information available to the system owner and service personnel. VPD typically resides in a storage device (for example, a serial EEPROM) associated with the Function.
+
+VFs and PFs that implement the VPD Capability must ensure that there can be no "data leakage" between VFs and/or PFs via the VPD Capability.
+
+Details of the VPD Data is defined in § Section 6.27.
+
+Access to the VPD is provided using the Capabilities List in Configuration Space. The VPD Capability structure is shown in Figure 7-328.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+对 VPD 的支持是可选的。允许所有 Function 包含该能力。这包括与 Upstream Port 关联的多功能设备（Multi-Function Device）的所有 Function 以及 RCiEP。这同样包括 PF 和 VF。
+
+重要产品数据（VPD, Vital Product Data）是用于唯一标识系统中的硬件以及可能的软件元素的信息。VPD 可向系统提供有关各种现场可更换单元（FRU, Field Replaceable Unit）的信息，例如部件编号、序列号以及其他详细信息。从系统角度看，其目标是将此信息提供给系统所有者和服务人员。VPD 通常驻留在与该 Function 关联的存储设备（例如串行 EEPROM）中。
+
+实现 VPD 能力的 VF 和 PF 必须确保不会通过 VPD 能力在 VF 和/或 PF 之间发生"数据泄漏"。
+
+VPD 数据的详细信息在 § 第 6.27 节中定义。
+
+对 VPD 的访问通过配置空间（Configuration Space）中的能力列表（Capabilities List）提供。VPD 能力结构如图 7-328 所示。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+
+---
+
+<a id="sec-7-9-17-8"></a>
+## 7.9.17.8 Hierarchy ID GUID 5 Register (Offset 1Ch) | 层级 ID GUID 5 寄存器 (偏移 1Ch)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.17.8 Hierarchy ID GUID 5 Register (Offset 1Ch) §
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.17.8 层级 ID GUID 5 寄存器 (偏移 1Ch) §
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-18"></a>
+## 7.9.18 Vital Product Data Capability (VPD Capability) | 重要产品数据能力 (VPD Capability)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.18 Vital Product Data Capability (VPD Capability) §
+§
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.18 重要产品数据能力 (VPD Capability) §
+§
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1354
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+Byte Offset
+Capability ID
+Next Capability Pointer
+VPD Address Register
+VPD Data Register
++000h
++004h
+Figure 7-328 VPD Capability Structure
+
+</td>
+<td style="background-color:#e8e8e8">
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+字节偏移
+Capability ID
+Next Capability Pointer
+VPD Address 寄存器
+VPD Data 寄存器
++000h
++004h
+图 7-328 VPD 能力结构
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The following protocols are used transfer data between the VPD Data field and the VPD storage component.
+
+• To read VPD information:
+1. Issue single write to the VPD Address Register writing the flag bit (F) to 0b and VPD Address with the address to read.
+2. The hardware device will set F to 1b when 4 bytes of data from the storage component have been transferred to VPD Data.
+3. Software can monitor F and, after it becomes 1b, read the VPD information from VPD Data.
+Behavior is undefined if either the VPD Address or VPD Data is written, prior to the flag bit becoming 1b.
+
+• To write VPD information to the read/write portion of the VPD space:
+1. Write the data to VPD Data
+2. Then issue a single write to the VPD Address Register with F set to 1b and VPD Address set to the address where the VPD Data is to be stored.
+3. The software then monitors F and when it is set to 0b (by device hardware), the VPD Data (all 4 bytes) has been transferred from VPD Data to the storage component.
+If either the VPD Address or VPD Data is written, prior to F being becoming 0b, the results of the write operation to the storage component are unpredictable.
+Behavior is undefined if a read or write of the storage component is requested and VPD Address is outside the range of the storage component.
+
+The VPD (both the read only items and the read/write fields) is stored information and will have no direct control of any device operations.
+
+The VPD Address Register is used to request a read or write of the VPD storage component.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+以下协议用于在 VPD Data 字段与 VPD 存储组件之间传输数据。
+
+• 读取 VPD 信息:
+1. 向 VPD Address 寄存器发起单次写入,将标志位 (F) 写为 0b,并将 VPD Address 写为要读取的地址。
+2. 当来自存储组件的 4 字节数据已传输到 VPD Data 时,硬件设备会将 F 置为 1b。
+3. 软件可以监控 F,在 F 变为 1b 之后,从 VPD Data 读取 VPD 信息。
+如果在标志位变为 1b 之前对 VPD Address 或 VPD Data 进行写入,则行为未定义。
+
+• 将 VPD 信息写入 VPD 空间的读/写部分:
+1. 将数据写入 VPD Data。
+2. 然后向 VPD Address 寄存器发起单次写入,F 置为 1b,VPD Address 置为 VPD Data 要存储的目标地址。
+3. 随后软件监控 F,当 F 被设备硬件清为 0b 时,表示 VPD Data(全部 4 字节)已从 VPD Data 传输到存储组件。
+如果在 F 变为 0b 之前对 VPD Address 或 VPD Data 进行写入,则对存储组件的写入操作结果不可预测。
+如果请求对存储组件进行读或写时,VPD Address 超出存储组件的地址范围,则行为未定义。
+
+VPD(包括只读项和读/写字段)是被存储的信息,不会对任何设备操作进行直接控制。
+
+VPD Address 寄存器用于请求对 VPD 存储组件进行读或写。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-18-1"></a>
+## 7.9.18.1 VPD Address Register | VPD Address 寄存器
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.18.1 VPD Address Register §
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.18.1 VPD Address 寄存器 §
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1355
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-329.** VPD Address Register
+> <img src="figures/chapter_07/fig_1355_1.png" width="700">
+
+0
+14
+VPD Address
+15
+F
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-329.** VPD Address 寄存器
+> <img src="figures/chapter_07/fig_1355_1.png" width="700">
+
+0
+14
+VPD Address
+15
+F
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-289. VPD Address Register | 表 7-289. VPD Address 寄存器**
+
+| Bit Location | Description | Attributes |
+|--------------|-------------|------------|
+| 14:0 | VPD Address - DWORD-aligned byte address of the VPD to be accessed. Behavior is undefined if the lowest 2 bits of this field are non-zero. The lowest two bits of the field must be either RW, or RO with a value of 00b. The remaining bits of the field must be RW.<br>Default is implementation specific. | RW/RO (see description) |
+| 15 | F - The F bit is always written along with VPD Address. The value of F indicates the direction of transfer being requested (0b = read, 1b = write). When the transfer is complete, the F bit value changes to indicate completion (1b = read complete, 0b = write complete).<br>Default is implementation specific. | RW |
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-330.** VPD Data Register
+> <img src="figures/chapter_07/fig_1355_2.png" width="700">
+
+0
+31
+VPD Data
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-330.** VPD Data 寄存器
+> <img src="figures/chapter_07/fig_1355_2.png" width="700">
+
+0
+31
+VPD Data
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-290. VPD Data Register | 表 7-290. VPD Data 寄存器**
+
+| Bit Location | Description | Attributes |
+|--------------|-------------|------------|
+| 31:0 | VPD Data - VPD Data can be read through this register. The least significant byte of this register (at offset 04h in this capability structure) corresponds to the byte of VPD at the address specified by VPD Address. Behavior is undefined for any read or write of this register with Byte Enables other than 1111b.<br>Default is implementation specific. | RW |
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The Native PCIe Enclosure Management Extended (NPEM) Capability is an optional extended capability that is permitted to be implemented by Root Ports, Switch Downstream Ports, and Endpoints.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+原生 PCIe 机框管理扩展 (Native PCIe Enclosure Management Extended, NPEM) 能力是一个可选的扩展能力,允许由根端口 (Root Port)、交换机下游端口 (Switch Downstream Port) 以及端点 (Endpoint) 实现。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-18-2"></a>
+## 7.9.18.2 VPD Data Register | VPD Data 寄存器
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.18.2 VPD Data Register §
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.18.2 VPD Data 寄存器 §
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-19"></a>
+## 7.9.19 Native PCIe Enclosure Management Extended Capability (NPEM Extended Capability) | 原生 PCIe 机框管理扩展能力 (NPEM 扩展能力)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.19 Native PCIe Enclosure Management Extended Capability (NPEM Extended Capability) §
+§
+§
+§
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.19 原生 PCIe 机框管理扩展能力 (NPEM 扩展能力) §
+§
+§
+§
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1356
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-331.** NPEM Extended Capability
+> <img src="figures/chapter_07/fig_1356_1.png" width="700">
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+Byte Offset
+PCI Express Extended Capability Header
+NPEM Capability Register
+NPEM Control Register
+NPEM Status Register
++000h
++004h
++008h
++00Ch
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-331.** NPEM 扩展能力
+> <img src="figures/chapter_07/fig_1356_1.png" width="700">
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+字节偏移
+PCI Express 扩展能力头 (Extended Capability Header)
+NPEM Capability 寄存器
+NPEM Control 寄存器
+NPEM Status 寄存器
++000h
++004h
++008h
++00Ch
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-332.** NPEM Extended Capability Header
+> <img src="figures/chapter_07/fig_1356_2.png" width="700">
+
+0
+15
+PCI Express Extended Capability ID
+0029h
+16
+19
+Capability Version
+20
+31
+Next Capability Offset
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-332.** NPEM 扩展能力头
+> <img src="figures/chapter_07/fig_1356_2.png" width="700">
+
+0
+15
+PCI Express 扩展能力 ID (Extended Capability ID)
+0029h
+16
+19
+能力版本 (Capability Version)
+20
+31
+下一能力偏移 (Next Capability Offset)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-291. NPEM Extended Capability Header | 表 7-291. NPEM 扩展能力头**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 15:0 | PCI Express Extended Capability ID - This field is a PCI-SIG defined ID number that indicates the nature and format of the extended capability. PCI Express Extended Capability ID for the NPEM Extended Capability is 0029h. | RO |
+| 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the capability structure present. Must be 1h for this version of the specification. | RO |
+| 31:20 | Next Capability Offset - This field contains the offset to the next PCI Express Extended Capability structure or 000h if no other items exist in the linked list of capabilities. | RO |
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The NPEM Capability Register contains an overall NPEM Capable bit and a bit map of states supported in the implementation. Implementations are required to support OK, Locate, Fail, and Rebuild states if NPEM Capable bit is Set. All other states are optional.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+NPEM Capability 寄存器包含一个总的 NPEM Capable 位,以及实现所支持状态的位图。如果 NPEM Capable 位被置位,则实现必须支持 OK、Locate、Fail 和 Rebuild 状态。其他所有状态都是可选的。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-19-1"></a>
+## 7.9.19.1 NPEM Extended Capability Header (Offset 00h) | NPEM 扩展能力头 (偏移 00h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.19.1 NPEM Extended Capability Header (Offset 00h) §
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.19.1 NPEM 扩展能力头 (偏移 00h) §
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-19-2"></a>
+## 7.9.19.2 NPEM Capability Register (Offset 04h) | NPEM Capability 寄存器 (偏移 04h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.19.2 NPEM Capability Register (Offset 04h) §
+§
+§
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.19.2 NPEM Capability 寄存器 (偏移 04h) §
+§
+§
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1357
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-333.** NPEM Capability Register
+> <img src="figures/chapter_07/fig_1357_1.png" width="700">
+
+0
+NPEM Capable
+1
+NPEM Reset Capable
+2
+NPEM OK Capable
+3
+NPEM Locate Capable
+4
+NPEM Fail Capable
+5
+NPEM Rebuild Capable
+6
+NPEM PFA Capable
+7
+NPEM Hot Spare Capable
+8
+NPEM In A Critical Array Capable
+9
+NPEM In A Failed Array Capable
+10
+NPEM Invalid Device Type Capable
+11
+NPEM Disabled Capable
+12
+23
+RsvdP
+24
+31
+Enclosure-specific Capabilities
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-333.** NPEM Capability 寄存器
+> <img src="figures/chapter_07/fig_1357_1.png" width="700">
+
+0
+NPEM Capable
+1
+NPEM Reset Capable
+2
+NPEM OK Capable
+3
+NPEM Locate Capable
+4
+NPEM Fail Capable
+5
+NPEM Rebuild Capable
+6
+NPEM PFA Capable
+7
+NPEM Hot Spare Capable
+8
+NPEM In A Critical Array Capable
+9
+NPEM In A Failed Array Capable
+10
+NPEM Invalid Device Type Capable
+11
+NPEM Disabled Capable
+12
+23
+RsvdP
+24
+31
+Enclosure-specific Capabilities(机框专用能力)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-292. NPEM Capability Register | 表 7-292. NPEM Capability 寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | NPEM Capable - When Set, this bit indicates that the enclosure has NPEM functionality. | HwInit |
+| 1 | NPEM Reset Capable - A value of 1b indicates support for the optional NPEM Reset mechanism described in § Section 6.28. This capability is independently optional. | HwInit |
+| 2 | NPEM OK Capable - When Set, this bit indicates that enclosure has the ability to indicate the NPEM OK state. This bit must be Set if NPEM Capable is also Set. | HwInit |
+| 3 | NPEM Locate Capable - When Set, this bit indicates that enclosure has the ability to indicate the NPEM Locate state. This bit must be Set if NPEM Capable is also Set. | HwInit |
+| 4 | NPEM Fail Capable - When Set, this bit indicates that enclosure has the ability to indicate the NPEM Fail state. This bit must be Set if NPEM Capable is also Set. | HwInit |
+| 5 | NPEM Rebuild Capable - When Set, this bit indicates that enclosure has the ability to indicate the NPEM Rebuild state. This bit must be Set if NPEM Capable is also Set. | HwInit |
+| 6 | NPEM PFA Capable - When Set, this bit indicates that enclosure has the ability to indicate the NPEM PFA state. This capability is independently optional. | HwInit |
+| 7 | NPEM Hot Spare Capable - When Set, this bit indicates that enclosure has the ability to indicate the NPEM Hot Spare state. This capability is independently optional. | HwInit |
+| 8 | NPEM In A Critical Array Capable - When Set, this bit indicates that enclosure has the ability to indicate the NPEM In A Critical Array state. This capability is independently optional. | HwInit |
+| 9 | NPEM In A Failed Array Capable - When Set, this bit indicates that enclosure has the ability to indicate the NPEM In A Failed Array state. This capability is independently optional. | HwInit |
+| 10 | NPEM Invalid Device Type Capable - When Set, this bit indicates that enclosure has the ability to indicate the NPEM_Invalid_Device_Type state. This capability is independently optional. | HwInit |
+| § | | |
+| § | | |
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1358
+
+**Table 7-292. NPEM Capability Register (continued) | 表 7-292. NPEM Capability 寄存器 (续)**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 11 | NPEM Disabled Capable - When Set, this bit indicates that enclosure has the ability to indicate the NPEM_Disabled state. This capability is independently optional. | HwInit |
+| 31:24 | Enclosure-specific Capabilities - The definition of enclosure-specific bits is outside the scope of this specification. | HwInit |
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The NPEM Control Register contains an overall NPEM Enable bit and a bit map of states that software controls.
+
+Use of Enclosure-specific bits is outside the scope of this specification.
+
+All writes to this register, including writes that do not change the register value, are NPEM commands and should eventually result in a command completion indication in the NPEM Status Register.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+NPEM Control 寄存器包含一个总的 NPEM Enable 位,以及软件所控制状态的位图。
+
+机框专用位的使用超出本规范的范围。
+
+对该寄存器的所有写入(包括不改变寄存器值的写入)都是 NPEM 命令,并最终应在 NPEM Status 寄存器中产生命令完成指示。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-19-3"></a>
+## 7.9.19.3 NPEM Control Register (Offset 08h) | NPEM Control 寄存器 (偏移 08h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-334.** NPEM Control Register
+> <img src="figures/chapter_07/fig_1358_1.png" width="700">
+
+0
+NPEM Enable
+1
+NPEM Initiate Reset
+2
+NPEM OK Control
+3
+NPEM Locate Control
+4
+NPEM Fail Control
+5
+NPEM Rebuild Control
+6
+NPEM PFA Control
+7
+NPEM Hot Spare Control
+8
+NPEM In A Critical Array Control
+9
+NPEM In A Failed Array Control
+10
+NPEM Invalid Device Type Control
+11
+NPEM Disabled Control
+12
+23
+RsvdP
+24
+31
+Enclosure-specific Controls
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-334.** NPEM Control 寄存器
+> <img src="figures/chapter_07/fig_1358_1.png" width="700">
+
+0
+NPEM Enable
+1
+NPEM Initiate Reset
+2
+NPEM OK Control
+3
+NPEM Locate Control
+4
+NPEM Fail Control
+5
+NPEM Rebuild Control
+6
+NPEM PFA Control
+7
+NPEM Hot Spare Control
+8
+NPEM In A Critical Array Control
+9
+NPEM In A Failed Array Control
+10
+NPEM Invalid Device Type Control
+11
+NPEM Disabled Control
+12
+23
+RsvdP
+24
+31
+Enclosure-specific Controls(机框专用控制)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-293. NPEM Control Register | 表 7-293. NPEM Control 寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | NPEM Enable - When Set, this bit enables the NPEM capability. When Clear, this bit disables the NPEM capability. Default value of this bit is 0b.<br>When enabled, this capability operates as defined in this specification. When disabled, the other bits in this capability have no effect and any associated indications are outside the scope of this specification. | RW |
+| 1 | NPEM Initiate Reset - If NPEM Reset Capable bit is 1b, then a write of 1b to this bit initiates NPEM Reset. If NPEM Reset Capable bit is 0b, then this bit is permitted to be read-only with a value of 0b.<br>The value read by software from this bit must always be 0b. | RW/RO |
+| 2 | NPEM OK Control - When Set, this bit specifies that the NPEM OK indication be turned ON. When Clear, this bit specifies that the NPEM OK indication be turned OFF. | RW/RO |
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-19-3-detail"></a>
+## 7.9.19.3 NPEM Control Register (Offset 08h) - continued | NPEM Control 寄存器 (偏移 08h) - 续
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.19.3 NPEM Control Register (Offset 08h) §
+§
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.19.3 NPEM Control 寄存器 (偏移 08h) §
+§
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1359
+
+**Table 7-293. NPEM Control Register (continued) | 表 7-293. NPEM Control 寄存器 (续)**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 2 (cont.) | If NPEM OK Capable bit in NPEM Capability Register is 0b, this bit is permitted to be read-only with a value of 0b. Default value of this bit is 0b. | RW/RO |
+| 3 | NPEM Locate Control - When Set, this bit specifies that the NPEM Locate indication be turned ON. When Clear, this bit specifies that the NPEM Locate indication be turned OFF.<br>If NPEM Locate Capable bit in the NPEM Capability Register is 0b, this bit is permitted to be read-only with a value of 0b. Default value of this bit is 0b. | RW/RO |
+| 4 | NPEM Fail Control - When Set, this bit specifies that the NPEM Fail indication be turned ON. When Clear, this bit specifies that the NPEM Fail indication be turned OFF.<br>If NPEM Fail Capable bit in NPEM Capability Register is 0b, this bit is permitted to be read-only with a value of 0b. Default value of this bit is 0b. | RW/RO |
+| 5 | NPEM Rebuild Control - When Set, this bit specifies that the NPEM Rebuild indication be turned ON. When Clear, this bit specifies that the NPEM Rebuild indication be turned OFF.<br>If NPEM Rebuild Capable bit in NPEM Capability Register is 0b, this bit is permitted to be read-only with a value of 0b. Default value of this bit is 0b. | RW/RO |
+| 6 | NPEM PFA Control - When Set, this bit specifies that the NPEM PFA indication be turned ON. When Clear, this bit specifies that the NPEM PFA indication be turned OFF.<br>If NPEM PFA Capable bit in NPEM Capability Register is 0b, this bit is permitted to be read-only with a value of 0b. Default value of this bit is 0b. | RW/RO |
+| 7 | NPEM Hot Spare Control - When Set, this bit specifies that the NPEM Hot Spare indication be turned ON. When Clear, this bit specifies that the NPEM Hot Spare indication be turned OFF.<br>If NPEM Hot Spare Capable bit in NPEM Capability Register is 0b, this bit is permitted to be read-only with a value of 0b. Default value of this bit is 0b. | RW/RO |
+| 8 | NPEM In A Critical Array Control - When Set, this bit specifies that the NPEM In A Critical Array indication be turned ON. When Clear, this bit specifies that the NPEM In A Ciritical Array indication be turned OFF.<br>If NPEM In A Critical Array Capable bit in NPEM Capability Register is 0b, this bit is permitted to be read-only with a value of 0b. Default value of this bit is 0b. | RW/RO |
+| 9 | NPEM In A Failed Array Control - When Set, this bit specifies that the NPEM In A Failed Array indication be turned ON. When Clear, this bit specifies that the NPEM In A Failed Array indication be turned OFF.<br>If NPEM In A Failed Array Capable bit in NPEM Capability Register is 0b, this bit is permitted to be read-only with a value of 0b. Default value of this bit is 0b. | RW/RO |
+| 10 | NPEM Invalid Device Type Control - When Set, this bit specifies that the NPEM Invaild Device Type indication be turned ON. When Clear, this bit specifies that the NPEM Invalid Device Type indication be turned OFF. | RW/RO |
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1360
+
+**Table 7-293. NPEM Control Register (continued) | 表 7-293. NPEM Control 寄存器 (续)**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 10 (cont.) | If NPEM Invalid Device Type Capable bit in NPEM Capability Register is 0b, this bit is permitted to be read-only with a value of 0b. Default value of this bit is 0b. | RW/RO |
+| 11 | NPEM Disabled Control - When Set, this bit specifies that the NPEM Disabled indication be turned ON. When Clear, this bit specifies that the NPEM Disabled indication be turned OFF.<br>If NPEM Disabled Capable bit in NPEM Capability Register is 0b, this bit is permitted to be read-only with a value of 0b. Default value of this bit is 0b. | RW/RO |
+| 31:24 | Enclosure-specific Controls - The definition of enclosure-specific bits is outside the scope of this specification. Enclosure-specific software is permitted to change the value of this field. Other software must preserve the existing value when writing this register. Default value of this field is 00h. | RW/RO |
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-335.** NPEM Status Register
+> <img src="figures/chapter_07/fig_1360_1.png" width="700">
+
+0
+NPEM Command Completed
+1
+23
+RsvdZ
+24
+31
+Enclosure-specific Status
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-335.** NPEM Status 寄存器
+> <img src="figures/chapter_07/fig_1360_1.png" width="700">
+
+0
+NPEM Command Completed
+1
+23
+RsvdZ
+24
+31
+Enclosure-specific Status(机框专用状态)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-294. NPEM Status Register | 表 7-294. NPEM Status 寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | NPEM Command Completed - This bit is Set when an NPEM command has completed, and the NPEM controller is ready to accept a subsequent command.<br>This bit is permitted to be hardwired to 1b if the enclosure is able to accept writes that update any portion of the NPEM Control register without any delay between successive writes.<br>Default value of this bit is 0b.<br>Software must wait for an NPEM command to complete before issuing the next NPEM command. However, if this bit is not set within 1 second limit on command execution, software is permitted to repeat the NPEM command or issue the next NPEM command. If software issues a write before the Port has completed processing of the previous command and before the 1 second time limit has expired, the Port is permitted to either accept or discard the write. Such a write is considered a programming error, and could result in a discrepancy between the NPEM Control Register and the enclosure element state. To recover from such a programming error and return the enclosure to a consistent state, software must issue a write to the NPEM Control Register which conforms to the NPEM command completion rules. | RW1C / RO |
+| 31:24 | Enclosure-specific Status - The definition of enclosure specific bits is outside the scope of this specification. Enclosure specific software is permitted to write non-zero values to this field. Other software must write 00h to this field. | RsvdZ/RO/RW1C |
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-19-4"></a>
+## 7.9.19.4 NPEM Status Register (Offset 0Ch) | NPEM Status 寄存器 (偏移 0Ch)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.19.4 NPEM Status Register (Offset 0Ch) §
+§
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.19.4 NPEM Status 寄存器 (偏移 0Ch) §
+§
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1361
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The default value of this field is enclosure-specific.
+This field is permitted to be hardwired to 00h.
+
+The Alternate Protocol Extended Capability structure is optional in components that implement Alternate Protocol Negotiation. It is only permitted in:
+• A Function associated with a Downstream Port.
+• Function 0 (and only Function 0) of a Device associated with an Upstream Port.
+§ Figure 7-336 details allocation of register fields in the Alternate Protocol Extended Capability structure.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+该字段的默认值是机框专用的。
+该字段允许硬连线为 00h。
+
+Alternate Protocol 扩展能力结构在实现了 Alternate Protocol Negotiation 的组件中是可选的。它仅允许出现在:
+• 与下游端口 (Downstream Port) 关联的 Function 中。
+• 与上游端口 (Upstream Port) 关联的 Device 的 Function 0(且仅为 Function 0)。
+§ 图 7-336 详细说明了 Alternate Protocol 扩展能力结构中各寄存器的字段分配。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-20"></a>
+## 7.9.20 Alternate Protocol Extended Capability | Alternate Protocol 扩展能力
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.20 Alternate Protocol Extended Capability §
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.20 Alternate Protocol 扩展能力 §
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-20-1"></a>
+## 7.9.20.1 Alternate Protocol Extended Capability Header (Offset 00h) | Alternate Protocol 扩展能力头 (偏移 00h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.20.1 Alternate Protocol Extended Capability Header (Offset 00h) §
+§
+§
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.20.1 Alternate Protocol 扩展能力头 (偏移 00h) §
+§
+§
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-336.** Alternate Protocol Extended Capability
+> <img src="figures/chapter_07/fig_1361_1.png" width="700">
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+Byte Offset
+PCI Express Extended Capability Header
+Alternate Protocol Capabilities Register
+Alternate Protocol Control Register
+Alternate Protocol Data 1 Register
+Alternate Protocol Data 2 Register
++000h
++004h
++008h
++00Ch
++010h
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-336.** Alternate Protocol 扩展能力
+> <img src="figures/chapter_07/fig_1361_1.png" width="700">
+
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+字节偏移
+PCI Express 扩展能力头 (Extended Capability Header)
+Alternate Protocol Capabilities 寄存器
+Alternate Protocol Control 寄存器
+Alternate Protocol Data 1 寄存器
+Alternate Protocol Data 2 寄存器
++000h
++004h
++008h
++00Ch
++010h
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-337.** Alternate Protocol Extended Capability Header
+> <img src="figures/chapter_07/fig_1361_2.png" width="700">
+
+0
+15
+PCI Express Extended Capability ID
+002Bh
+16
+19
+Capability Version
+20
+31
+Next Capability Offset
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-337.** Alternate Protocol 扩展能力头
+> <img src="figures/chapter_07/fig_1361_2.png" width="700">
+
+0
+15
+PCI Express 扩展能力 ID (Extended Capability ID)
+002Bh
+16
+19
+能力版本 (Capability Version)
+20
+31
+下一能力偏移 (Next Capability Offset)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-295. Alternate Protocol Extended Capability Header | 表 7-295. Alternate Protocol 扩展能力头**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 15:0 | PCI Express Extended Capability ID - This field is a PCI-SIG defined ID number that indicates the nature and format of the Extended Capability. | RO |
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1362
+
+**Table 7-295. Alternate Protocol Extended Capability Header (continued) | 表 7-295. Alternate Protocol 扩展能力头 (续)**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 15:0 (cont.) | The Extended Capability ID for the Alternate Protocol Capability is 002Bh. | RO |
+| 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. Must be 1h for this version of the specification. | RO |
+| 31:20 | Next Capability Offset - This field contains the offset to the next PCI Express Capability structure or 000h if no other items exist in the linked list of Capabilities. For Extended Capabilities implemented in Configuration Space, this offset is relative to the beginning of PCI-compatible Configuration Space and thus must always be either 000h (for terminating list of Capabilities) or greater than 0FFh. | RO |
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-338.** Alternate Protocol Capabilities Register
+> <img src="figures/chapter_07/fig_1362_1.png" width="700">
+
+0
+7
+Alternate Protocol Count
+8
+Alternate Protocol Selective Enable Supported
+9
+31
+RsvdP
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-338.** Alternate Protocol Capabilities 寄存器
+> <img src="figures/chapter_07/fig_1362_1.png" width="700">
+
+0
+7
+Alternate Protocol Count
+8
+Alternate Protocol Selective Enable Supported
+9
+31
+RsvdP
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-296. Alternate Protocol Capabilities Register | 表 7-296. Alternate Protocol Capabilities 寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 7:0 | Alternate Protocol Count - Indicates the number of Alternate Protocols or protocols that support Training Set Messages on one or more Lanes of this Link.<br>The value of this field must be greater than or equal to 0. | HwInit |
+| 8 | Alternate Protocol Selective Enable Supported - If Set, the Alternate Protocol Selective Enable Mask Register is present. If Clear, the Alternate Protocol Selective Enable Mask Register is not present and Alternate Protocol Negotiation is controlled soley by the Alternate Protocol Negotiation Global Enable bit.<br>In Upstream Ports, this bit is hardwired to 0b.<br>In Downstream Ports, this bit is HwInit with an implementation specific default value. | RO/HwInit |
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-339.** Alternate Protocol Control Register
+> <img src="figures/chapter_07/fig_1362_2.png" width="700">
+
+0
+7
+Alternate Protocol Index Select
+8
+Alternate Protocol Negotiation Global Enable
+9
+31
+RsvdP
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-339.** Alternate Protocol Control 寄存器
+> <img src="figures/chapter_07/fig_1362_2.png" width="700">
+
+0
+7
+Alternate Protocol Index Select
+8
+Alternate Protocol Negotiation Global Enable
+9
+31
+RsvdP
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-20-2"></a>
+## 7.9.20.2 Alternate Protocol Capabilities Register (Offset 04h) | Alternate Protocol Capabilities 寄存器 (偏移 04h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.20.2 Alternate Protocol Capabilities Register (Offset 04h) §
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.20.2 Alternate Protocol Capabilities 寄存器 (偏移 04h) §
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
 
 ---
 
 ---
 
-## ⚠️ TODO: chapter_07_bk 未翻译
+<a id="sec-7-9-20-3"></a>
+## 7.9.20.3 Alternate Protocol Control Register (Offset 08h) | 替代协议控制寄存器（偏移量 08h）
 
-本 chunk (`chapter_07_bk_raw.md`) 尚未完成翻译。在最终版本中将包含原文 + 中英对照翻译。
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-- 源文件: `chunks/chapter_07_bk_raw.md` (16,552 bytes)
-- 提示: 重跑此 prompt: `prompts/prompt_chapter_07_bk.md`
+§
+
+§
+
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+§
+
+§
+
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<<<PAGE_BREAK>>> page_1363
+
+**Table 7-297. Alternate Protocol Control Register | 表 7-297. 替代协议控制寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 7:0 | Alternate Protocol Index Select - This field determines which Lane and which Alternate Protocol of that Lane is visible in Alternate Protocol Data 1 Register and Alternate Protocol Data 2 Register. The default value of this field is 00h. Unused bits in this field are permitted to be hardwired to 0b. If Alternate Protocol Count is 01h, this field is permitted to be hardwired to 00h. Behavior is undefined if this field is greater than Alternate Protocol Count. Specific Alternate Protocol Index Select values are permitted to be disabled without renumbering other protocol index values. Disabled entries return an Alternate Protocol Vendor ID of FFFFh. | RW |
+| 8 | Alternate Protocol Negotiation Global Enable - When this bit is Set, Alternate Protocol Negotiation is enabled for this Link. When this bit is Clear, Alternate Protocol Negotiation is disabled for this Link. This bit is RW for Downstream Ports. It is HwInit for Upstream Ports. Default is 0b. | RW/HwInit (see description) |
+
+<a id="sec-7-9-20-4"></a>
+## 7.9.20.4 Alternate Protocol Data 1 Register (Offset 0Ch) | 替代协议数据 1 寄存器（偏移量 0Ch）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+§
+
+§
+
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+§
+
+§
+
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<<<PAGE_BREAK>>> page_1364
+
+> **Figure 7-340. Alternate Protocol Data 1 Register | 替代协议数据 1 寄存器**
+> <img src="figures/chapter_07/fig_1364_1.png" width="700">
+
+**Table 7-298. Alternate Protocol Data 1 Register | 表 7-298. 替代协议数据 1 寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 2:0 | Alternate Protocol Usage Information - This field contains the Modified TS Usage associated alternate protocol associated with the Alternate Protocol Index Select value. If Alternate Protocol Vendor ID is FFFFh, the value of this field is undefined. | RO |
+| 15:5 | Alternate Protocol Details - This field contains the Alternate Protocol Details associated alternate protocol associated with the Alternate Protocol Index Select value. If Alternate Protocol Vendor ID is FFFFh, the value of this field is undefined. | RO |
+| 31:16 | Alternate Protocol Vendor ID - This field contains the Vendor ID associated alternate protocol associated with the Alternate Protocol Index Select value. Bits 7:0 of this field contain bits 7:0 of Vendor ID (Symbol 10). Bits 15:8 of this field contain bits 15:8 of Vendor ID (Symbol 11). If Alternate Protocol Index Select is greater than or equal to Alternate Protocol Count, this field contains FFFFh. If Alternate Protocol Index Select is associated with a disabled alternate protocol, this field contains FFFFh. | RO |
+
+<a id="sec-7-9-20-5"></a>
+## 7.9.20.5 Alternate Protocol Data 2 Register (Offset 10h) | 替代协议数据 2 寄存器（偏移量 10h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+> **Figure 7-341. Alternate Protocol Data 2 Register | 替代协议数据 2 寄存器**
+> <img src="figures/chapter_07/fig_1364_2.png" width="700">
+
+**Table 7-299. Alternate Protocol Data 2 Register | 表 7-299. 替代协议数据 2 寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 23:0 | Modified TS Information 2 - This field contains the value for symbols 12 throught 14 for the alternate protocol associated with the Alternate Protocol Index Select value. If Alternate Protocol Vendor ID is FFFFh, the value of this field is undefined. Bits 7:0 contain the value of Symbol 12. Bits 16:8 contain the value of Symbol 13. Bits 23:16 contain the value of Symbol 14. | RO |
+
+<a id="sec-7-9-20-6"></a>
+## 7.9.20.6 Alternate Protocol Selective Enable Mask Register (Offset 14h) | 替代协议选择性使能掩码寄存器（偏移量 14h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+§
+
+§
+
+§
+
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+§
+
+§
+
+§
+
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<<<PAGE_BREAK>>> page_1365
+
+This register is present if Alternate Protocol Selective Enable Supported is Set.
+
+This register consists of a bit mask of size Alternate Protocol Count bits. Each bit corresponds to a valid value of Alternate Protocol Index Select. This register is an integral number of DWORDs in size.
+
+When Alternate Protocol Negotiation Global Enable is Set, a particular bit in this register is Set, and the corresponding Alternate Protocol is not disabled (see Alternate Protocol Index Select), the next Alternate Protocol negotiation is permitted to consider using that Alternate Protocol. When a particular bit in this register is Clear, the next Alternate Protocol negotiation is not permitted to consider using the corresponding Alternate Protocol.
+
+Changes to this field will affect the next Alternate Protocol negotiation and have no effect on current operation of the Link (regardless of current protocol).
+
+> **Figure 7-342. Alternate Protocol Selective Enable Mask Register | 替代协议选择性使能掩码寄存器**
+> <img src="figures/chapter_07/fig_1365_1.png" width="700">
+
+**Table 7-300. Alternate Protocol Selective Enable Mask Register | 表 7-300. 替代协议选择性使能掩码寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | Alternate Protocol Selective Enable Mask - PCI Express - The PCI Express Protocol is always index 00h. The default value of this bit is 1b (i.e., PCI Express is always enabled by default). | RWS |
+| 31:1 | Alternate Protocol Selective Enable Mask - Others - Other bits in this register represent protocols other than PCI Express. The default values of these "other" bits is implementation specific. The width of this field is shown here as 32 bits. The actual width depends on Alternate Protocol Count. Bits in this field corresponding to disabled Alternate Protocol Index values are permitted to be hardwired to 0b. Bits in this field corresponding to Alternate Protocol Index Select values above Alternate Protocol Count are permitted to be hardwired to 0b. | RWS |
+
+<a id="sec-7-9-21"></a>
+## 7.9.21 Conventional PCI Advanced Features Capability (AF) | Conventional PCI 高级功能能力结构 (AF)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+This capability is optional. It is permitted only in Conventional PCI Functions that are integrated into a Root Complex (根复合体). A Function may contain at most one instance of this capability.
+
+§ Figure 7-343 shows the layout of this capability.
+
+Note: Due to document production limitations, this figure shows an 8 byte capability while the actual capability is only 6 bytes long. Bytes 6 and 7 in the figure are not part of the capability.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+此能力结构是可选的。仅允许在集成于根复合体 (Root Complex) 中的 Conventional PCI 功能中使用。一个功能最多只能包含此能力结构的一个实例。
+
+§ 图 7-343 展示了此能力结构的布局。
+
+注：由于文档制作限制，此图显示为 8 字节的能力结构，而实际能力结构仅为 6 字节长。图中的第 6 和第 7 字节不属于该能力结构。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+> **Figure 7-343. Conventional PCI Advanced Features Capability (AF) | Conventional PCI 高级功能能力结构 (AF)**
+> <img src="figures/chapter_07/fig_1365_2.png" width="700">
+
+<a id="sec-7-9-21-1"></a>
+## 7.9.21.1 Advanced Features Capability Header (Offset 00h) | 高级功能能力结构头部（偏移量 00h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+§
+
+§
+
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+§
+
+§
+
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<<<PAGE_BREAK>>> page_1366
+
+> **Figure 7-344. Advanced Features Capability Header | 高级功能能力结构头部**
+> <img src="figures/chapter_07/fig_1366_1.png" width="700">
+
+**Table 7-301. Advanced Features Capability Header | 表 7-301. 高级功能能力结构头部**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 7:0 | CAP_ID - The value of 13h in this field identifies the Function as being AF capable. | RO |
+| 15:8 | NXT_PTR - Pointer to the next item in the capabilities list. Must be 00h for the final item in the list. | RO |
+| 23:16 | LENGTH - AF Structure Length (Bytes). Shall return a value of 06h. | RO |
+
+<a id="sec-7-9-21-2"></a>
+## 7.9.21.2 AF Capabilities Register (Offset 03h) | AF 能力寄存器（偏移量 03h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+> **Figure 7-345. AF Capabilities Register | AF 能力寄存器**
+> <img src="figures/chapter_07/fig_1366_2.png" width="700">
+
+**Table 7-302. AF Capabilities Register | 表 7-302. AF 能力寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | TP_CAP - Set to indicate support for the Transactions Pending (TP) bit. TP_CAP must be Set if FLR_CAP is Set. | HwInit |
+| 1 | FLR_CAP - Set to indicate support for Function Level Reset (INITIATE_FLR). | HwInit |
+| 7:2 | Reserved - Shall be implemented as read only returning a value of 000 0000b. | RO |
+
+<a id="sec-7-9-21-3"></a>
+## 7.9.21.3 Conventional PCI Advanced Features Control Register (Offset 04h) | Conventional PCI 高级功能控制寄存器（偏移量 04h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+§
+
+§
+
+§
+
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+§
+
+§
+
+§
+
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<<<PAGE_BREAK>>> page_1367
+
+> **Figure 7-346. Conventional PCI Advanced Features Control Register | Conventional PCI 高级功能控制寄存器**
+> <img src="figures/chapter_07/fig_1367_1.png" width="700">
+
+**Table 7-303. Conventional PCI Advanced Features Control Register | 表 7-303. Conventional PCI 高级功能控制寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | Function Level Reset (INITIATE_FLR) - A write of 1b initiates a Function Level Reset (FLR). Registers and state information that do not apply to Conventional PCI are exempt from the FLR requirements in this specification (see § Section 6.6.2). The value read by software from this bit shall always be 0b. | RW |
+| 7:1 | Reserved - Shall be implemented as read only returning a value of 000 0000b. | RO |
+
+<a id="sec-7-9-21-4"></a>
+## 7.9.21.4 AF Status Register (Offset 05h) | AF 状态寄存器（偏移量 05h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+> **Figure 7-347. AF Status Register | AF 状态寄存器**
+> <img src="figures/chapter_07/fig_1367_2.png" width="700">
+
+**Table 7-304. AF Status Register | 表 7-304. AF 状态寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | Transactions Pending (TP) - A value of 1b indicates that the Function has issued one or more non-posted transactions which have not been completed, including non-posted transactions that a target has terminated with Retry. A value 0b indicates that all non-posted transactions have been completed. | RO |
+| 7:1 | Reserved - Shall be implemented as read only returning a value of 000 0000b. | RO |
+
+<a id="sec-7-9-22"></a>
+## 7.9.22 SFI Extended Capability | SFI 扩展能力结构
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+§
+
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+§
+
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<<<PAGE_BREAK>>> page_1368
+
+The SFI (System Firmware Intermediary) Extended Capability is an optional capability that provides system firmware with enhanced control over primarily hot-plug mechanisms, and enables system firmware to operate as an intermediary between certain events and the operating system (see § Section 6.7.4). This capability may be implemented by a Root Port or a Switch Downstream Port. It is not applicable to any other Device/Port type.
+
+If a Downstream Port implements the SFI Extended Capability, that Port must support ERR_COR Subclass capability, and indicate so by Setting the ERR_COR Subclass Capable bit in the Device Capabilities Register. See see § Section 7.5.3.3.
+
+> **Figure 7-348. SFI Extended Capability | SFI 扩展能力结构**
+> <img src="figures/chapter_07/fig_1368_1.png" width="700">
+
+<a id="sec-7-9-22-1"></a>
+## 7.9.22.1 SFI Extended Capability Header (Offset 00h) | SFI 扩展能力结构头部（偏移量 00h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+§
+
+§
+
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+§
+
+§
+
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+§ Figure 7-349 and § Table 7-305 detail allocation of fields in the Extended Capability header.
+
+<<<PAGE_BREAK>>> page_1369
+
+> **Figure 7-349. SFI Extended Capability Header | SFI 扩展能力结构头部**
+> <img src="figures/chapter_07/fig_1369_1.png" width="700">
+
+**Table 7-305. SFI Extended Capability Header | 表 7-305. SFI 扩展能力结构头部**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 15:0 | PCI Express Extended Capability ID - This field is a PCI-SIG defined ID number that indicates the nature and format of the Extended Capability. Extended Capability ID for the SFI Extended Capability is 002Ch. | RO |
+| 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. Must be 1h for this version of the specification. | RO |
+| 31:20 | Next Capability Offset - This field contains the offset to the next PCI Express Capability structure or 000h if no other items exist in the linked list of Capabilities. For Extended Capabilities implemented in Configuration Space, this offset is relative to the beginning of PCI-compatible Configuration Space and thus must always be either 000h (for terminating list of Capabilities) or greater than 0FFh. | RO |
+
+<a id="sec-7-9-22-2"></a>
+## 7.9.22.2 SFI Capability Register (Offset 04h) | SFI 能力寄存器（偏移量 04h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+> **Figure 7-350. SFI Capability Register | SFI 能力寄存器**
+> <img src="figures/chapter_07/fig_1369_2.png" width="700">
+
+**Table 7-306. SFI Capability Register | 表 7-306. SFI 能力寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | SFI OOB PD Supported - When Set, this bit indicates that this slot supports reporting the out-of-band presence detect state. If this Downstream Port has no implemented slot (as indicated by the Slot Implemented bit in the PCI Express Capabilities Register), then the value of this bit must be 0b. | HwInit |
+| 15:1 | RsvdP | |
+
+<a id="sec-7-9-22-3"></a>
+## 7.9.22.3 SFI Control Register (Offset 06h) | SFI 控制寄存器（偏移量 06h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+§
+
+§
+
+§
+
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+§
+
+§
+
+§
+
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<<<PAGE_BREAK>>> page_1370
+
+> **Figure 7-351. SFI Control Register | SFI 控制寄存器**
+> <img src="figures/chapter_07/fig_1370_1.png" width="700">
+
+**Table 7-307. SFI Control Register | 表 7-307. SFI 控制寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | SFI PD State Mask - When Set, this bit masks the Presence Detect State bit in the Slot Status Register, making its value 0b, regardless of the actual presence detect state. Otherwise, its value indicates the actual state. If the value of the Presence Detect State bit changes when the SFI PD State Mask bit value changes, this must cause a Presence Detect Changed event (see § Section 6.7.3). Default value of this bit is 0b. | RW |
+| 1 | SFI DLL State Mask - When Set, this bit masks the Data Link Layer Link Active bit in the Link Status Register, making its value 0b, regardless of the actual Data Link Layer state. Otherwise, its value indicates the actual state. If the value of the Data Link Layer Link Active State bit changes when the SFI DLL State Mask bit value changes, this must cause a Data Link Layer State Changed event (see § Section 6.7.3). Default value of this bit is 0b. | RW |
+| 2 | SFI OOB PD Changed Enable - When Set, this bit enables sending an ERR_COR Message for the SFI OOB PD Changed event. See § Section 6.7.4.1 for other necessary conditions. This bit must be RW if the SFI OOB PD Supported bit is Set; otherwise, it is permitted to be hardwired to 0b. If the SFI OOB PD Supported bit is Clear and software Sets this bit, the behavior is undefined. Default value of this bit is 0b. | RW/RO |
+| 3 | SFI DLL State Changed Enable - When Set, this bit enables sending an ERR_COR Message for the SFI DLL State Changed event. See § Section 6.7.4.1 for other necessary conditions. Default value of this bit is 0b. | RW |
+| 5:4 | SFI DPF Control - This field controls the level of Downstream Port Filtering (DPF) enabled on the Downstream Port, governing which Request TLPs targeting Downstream Components get filtered; that is, handled as if the Link is in DL_Down. See § Section 6.7.4.2. Defined encodings are: 00b Disabled, 01b Filter all Request TLPs, 10b Filter only Configuration Request TLPs, 11b Reserved. Default value of this field is 00b. | RW |
+| 6 | SFI HPS Suppress - When Set, this bit forces the Hot-Plug Surprise (HPS) bit in the Slot Capabilities Register to be Clear and disables associated Hot-Plug Surprise functionality. See § Section 6.7.4.4. Default value of this bit is 0b. | RW |
+| 7 | SFI DRS Mask - When Set, this bit masks the DRS Message Received bit in the Link Status 2 Register, making its value 0b, regardless of the actual DRS Message Received state. Otherwise, its value indicates the actual state. If the value of the DRS Message Received bit changes from Clear to Set when the SFI DRS Mask bit is Cleared, this must trigger any notification enabled by the DRS Signaling Control field in the Link Control Register (see § Section 7.5.3.7). Default value of this bit is 0b. | RW |
+| 8 | SFI DRS Signaling Enable - When Set, this bit enables sending an ERR_COR Message for the SFI DRS Received event. See § Section 6.7.4.1 for other necessary conditions. Default value of this bit is 0b. | RW |
+| 9 | SFI DRS Trigger - If the SFI DRS Mask bit is Clear, when software writes a 1b to this bit, the Downstream Port must behave as if a DRS Message was received. Otherwise, software writing a 1b to this bit has no effect. | RW |
+| 15:10 | RsvdP | |
+
+<<<PAGE_BREAK>>> page_1371
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| (continued) | It is permitted to write 1b to this bit while simultaneously writing updated values to other fields in this register, notably the SFI DRS Mask bit. For this case, the SFI DRS Trigger semantics are based on the updated value of the SFI DRS Mask bit. This bit always returns 0b when read. | |
+
+> **Figure 7-352. SFI Status Register | SFI 状态寄存器**
+> <img src="figures/chapter_07/fig_1371_1.png" width="700">
+
+**Table 7-308. SFI Status Register | 表 7-308. SFI 状态寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | SFI PD State - This bit always indicates the actual presence detect state associated with the Presence Detect State bit in the Slot Status Register, even when the value of that bit is being masked by the SFI PD State Mask bit. | RO |
+| 1 | SFI OOB PD State - This bit indicates the out-of-band presence detect state, independent of the in-band presence detect state. This bit must be implemented if the SFI OOB PD Supported bit is Set; otherwise, it is permitted to be hardwired to 0b. | RO |
+| 2 | SFI OOB PD Changed - This bit is Set when the value reported in the SFI OOB PD State bit is changed. | RW1C |
+| 3 | SFI DLL State - This bit always indicates the actual link state associated with the Data Link Layer Link Active bit in the Link Status Register, even when the value of that bit is being masked by the SFI DLL State Mask bit. | RO |
+| 4 | SFI DLL State Changed - This bit is Set when the value reported in the SFI DLL State bit is changed. | RW1C |
+| 5 | SFI DRS Received - This bit always indicates the actual state associated with the DRS Message Received bit in the Link Status 2 Register, even when the value of that bit is being masked by the SFI PD State Mask bit. Clearing the SFI DRS Received bit (by writing a 1b to it) must also cause the actual state associated with the DRS Message Received bit to be Cleared. | RW1C |
+| 15:6 | RsvdZ | |
+
+---
+
+<a id="sec-7-9-22-4"></a>
+## 7.9.22.4 SFI Status Register (Offset 08h) | SFI 状态寄存器 (偏移 08h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.22.4 SFI Status Register (Offset 08h) §
+§
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.22.4 SFI 状态寄存器 (偏移 08h) §
+§
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1372
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-353. SFI CAM Address Register**
+> <img src="figures/chapter_07/fig_1372_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-353. SFI CAM 地址寄存器**
+> <img src="figures/chapter_07/fig_1372_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-309 SFI CAM Address Register | 表 7-309 SFI CAM 地址寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 27:0 | SFI CAM Address - This field specifies the target Bus, Device, and Function Numbers, along with the Extended Register Number and Register Number, in the format specified by § Table 7-1. | RW |
+| 31:28 | RsvdP | RsvdP |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-354. SFI CAM Data Register**
+> <img src="figures/chapter_07/fig_1372_2.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-354. SFI CAM 数据寄存器**
+> <img src="figures/chapter_07/fig_1372_2.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-310 SFI CAM Data Register | 表 7-310 SFI CAM 数据寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 31:0 | SFI CAM Data - When this field is read, the SFI CAM generates and transmits a Configuration Read Request on the Link below this Port. When this field is written, the SFI CAM generates and transmits a Configuration Write Request on the Link below this Port. In both cases, the target of the Configuration Request is determined by the value of the SFI CAM Address Register. See § Section 6.7.4.3 . | RW |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The Subsystem ID and Subsystem Vendor ID Capability is an optional capability used to uniquely identify the add-in card or subsystem where the PCI device resides. It provides a mechanism for add-in card vendors to distinguish their add-in cards from one another even though the add-in cards may have the same PCI bridge on them (and, therefore, the same Vendor ID and Device ID). The format of the capability is shown in § Figure 7-355. The fields are described in § Table 7-311 and § Table 7-312.
+
+This capability is only permitted in Functions with Type 1 Configuration Space Headers.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 ID 能力)是一种可选能力,用于唯一标识 PCI 设备所在的扩展卡或子系统。它为扩展卡厂商提供了一种机制,使其能够区分各自的扩展卡,即使这些扩展卡可能搭载相同的 PCI 桥(因此具有相同的 Vendor ID 和 Device ID)。该能力的格式如 § Figure 7-355 所示,字段说明见 § Table 7-311 和 § Table 7-312。
+
+该能力仅允许在具有 Type 1 配置空间头部的 Function(功能)中使用。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-22-5"></a>
+## 7.9.22.5 SFI CAM Address Register (Offset 0Ch) | SFI CAM 地址寄存器 (偏移 0Ch)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.22.5 SFI CAM Address Register (Offset 0Ch) §
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.22.5 SFI CAM 地址寄存器 (偏移 0Ch) §
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-22-6"></a>
+## 7.9.22.6 SFI CAM Data Register (Offset 10h) | SFI CAM 数据寄存器 (偏移 10h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.22.6 SFI CAM Data Register (Offset 10h) §
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.22.6 SFI CAM 数据寄存器 (偏移 10h) §
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-23"></a>
+## 7.9.23 Subsystem ID and Subsystem Vendor ID Capability | Subsystem ID 与 Subsystem Vendor ID 能力
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.23 Subsystem ID and Subsystem Vendor ID Capability §
+§
+§
+§
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.23 Subsystem ID 与 Subsystem Vendor ID 能力 §
+§
+§
+§
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1373
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-355. Subsystem ID and Subsystem Vendor ID Capability**
+> <img src="figures/chapter_07/fig_1373_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-355. Subsystem ID 与 Subsystem Vendor ID 能力**
+> <img src="figures/chapter_07/fig_1373_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-356. Subsystem ID and Subsystem Vendor ID Capability Header**
+> <img src="figures/chapter_07/fig_1373_2.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-356. Subsystem ID 与 Subsystem Vendor ID 能力头部**
+> <img src="figures/chapter_07/fig_1373_2.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-311 Subsystem ID and Subsystem Vendor ID Capability Header | 表 7-311 Subsystem ID 与 Subsystem Vendor ID 能力头部**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 7:0 | Capability ID - Indicates the PCI Express Capability structure. This field must return a Capability ID of 0Dh indicating that this is a Subsystem ID and Subsystem Vendor ID Capability structure. | RO |
+| 15:8 | Next Capability Pointer - This field contains the offset to the next PCI Capability structure or 00h if no other items exist in the linked list of Capabilities. | RO |
+| 31:16 | RsvdP | RsvdP |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-357. Subsystem ID and Subsystem Vendor ID Capability Data**
+> <img src="figures/chapter_07/fig_1373_3.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-357. Subsystem ID 与 Subsystem Vendor ID 能力数据**
+> <img src="figures/chapter_07/fig_1373_3.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-312 Subsystem ID and Subsystem Vendor ID Capability Data | 表 7-312 Subsystem ID 与 Subsystem Vendor ID 能力数据**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 15:0 | SSVID - The SSVID identifies the manufacturer of the add-in card or subsystem. The SSVID is assigned by PCI-SIG to insure uniqueness (the Vendor ID is used as the SSVID also). This field is read-only. | HwInit |
+| 31:16 | SSID - The SSID identifies the particular add-in card or subsystem and is assigned by the vendor. This field is read-only. | HwInit |
+
+<a id="sec-7-9-23-1"></a>
+## 7.9.23.1 Subsystem ID and Subsystem Vendor ID Capability Header (Offset 00h) | Subsystem ID 与 Subsystem Vendor ID 能力头部 (偏移 00h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.23.1 Subsystem ID and Subsystem Vendor ID Capability Header (Offset 00h) §
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.23.1 Subsystem ID 与 Subsystem Vendor ID 能力头部 (偏移 00h) §
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-23-2"></a>
+## 7.9.23.2 Subsystem ID and Subsystem Vendor ID Capability Data (Offset 04h) | Subsystem ID 与 Subsystem Vendor ID 能力数据 (偏移 04h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.23.2 Subsystem ID and Subsystem Vendor ID Capability Data (Offset 04h) §
+§
+§
+§
+§
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.23.2 Subsystem ID 与 Subsystem Vendor ID 能力数据 (偏移 04h) §
+§
+§
+§
+§
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1374
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The Data Object Exchange (DOE) Extended Capability is an optional Extended Capability for discovering and controlling a mechanism for the exchange of data objects (see § Section 6.30 ). It is permitted for a Function to implement more than one instance of this Extended Capability.
+
+§ Figure 7-358 illustrates the Data Object Exchange Extended Capability structure.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩展能力,用于发现和控制数据对象交换机制(参见 § Section 6.30)。允许某个 Function 实现该扩展能力的多份实例。
+
+§ Figure 7-358 描述了 Data Object Exchange 扩展能力的结构。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-358. Data Object Exchange Extended Capability**
+> <img src="figures/chapter_07/fig_1374_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-358. Data Object Exchange 扩展能力**
+> <img src="figures/chapter_07/fig_1374_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-359. DOE Extended Capability Header**
+> <img src="figures/chapter_07/fig_1374_2.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-359. DOE 扩展能力头部**
+> <img src="figures/chapter_07/fig_1374_2.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-313 DOE Extended Capability Header | 表 7-313 DOE 扩展能力头部**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 15:0 | PCI Express Extended Capability ID – This field is a PCI-SIG defined ID number that indicates the nature and format of the Extended Capability. The Extended Capability ID for the Data Object Exchange Extended Capability is 002Eh. | RO |
+| 19:16 | Capability Version – This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. Must be 2h for this version of the specification. New implementations compliant to the older version of this specification must indicate Capability Version 1h. | RO |
+| 31:20 | Next Capability Offset – This field contains the offset to the next PCI Express Extended Capability structure or 000h if no other items exist in the linked list of Capabilities. | RO |
+
+<a id="sec-7-9-24"></a>
+## 7.9.24 Data Object Exchange Extended Capability | Data Object Exchange 扩展能力
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.24 Data Object Exchange Extended Capability §
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.24 Data Object Exchange 扩展能力 §
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-24-1"></a>
+## 7.9.24.1 DOE Extended Capability Header (Offset 00h) | DOE 扩展能力头部 (偏移 00h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.24.1 DOE Extended Capability Header (Offset 00h) §
+§
+§
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.24.1 DOE 扩展能力头部 (偏移 00h) §
+§
+§
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1375
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-360. DOE Capabilities Register**
+> <img src="figures/chapter_07/fig_1375_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-360. DOE 能力寄存器**
+> <img src="figures/chapter_07/fig_1375_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-314 DOE Capabilities Register | 表 7-314 DOE 能力寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | DOE Interrupt Support – When Set, this bit indicates DOE support of software notification of DOE events using MSI/MSI-X. | HwInit |
+| 11:1 | DOE Interrupt Message Number - When the DOE Interrupt Support bit is Set, this field indicates which MSI/MSI-X vector is used for the interrupt message generated in association with DOE. For MSI, the value in this field indicates the offset between the base Message Data and the interrupt message that is generated. Hardware is required to update this field so that it is correct if the number of MSI Messages assigned to the Function changes when software writes to the Multiple Message Enable field in the Message Control Register for MSI. For MSI-X, the value in this field indicates which MSI-X Table entry is used to generate the interrupt message. For a given MSI-X implementation, the entry must remain constant. If both MSI and MSI-X are implemented, they are permitted to use different vectors, though software is permitted to enable only one mechanism at a time. If MSI-X is enabled, the value in this field must indicate the vector for MSI-X. If MSI is enabled or neither is enabled, the value in this field must indicate the vector for MSI. If software enables both MSI and MSI-X at the same time, the value in this field is undefined. When the DOE Interrupt Support bit is Clear the value in this field is undefined. | RO |
+| 12 | DOE Attention Mechanism Support – This bit, when Set, indicates the DOE instance supports the optional DOE Attention mechanism. | HwInit |
+| 13 | DOE Async Message Support – This bit, when Set, indicates the DOE instance supports the optional DOE Async Message mechanism. | HwInit |
+| 31:14 | RsvdP | RsvdP |
+
+<a id="sec-7-9-24-2"></a>
+## 7.9.24.2 DOE Capabilities Register (Offset 04h) | DOE 能力寄存器 (偏移 04h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.24.2 DOE Capabilities Register (Offset 04h) §
+§
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.24.2 DOE 能力寄存器 (偏移 04h) §
+§
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1376
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-361. DOE Control Register**
+> <img src="figures/chapter_07/fig_1376_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-361. DOE 控制寄存器**
+> <img src="figures/chapter_07/fig_1376_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-315 DOE Control Register | 表 7-315 DOE 控制寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | DOE Abort – A write of 1b to this bit must cause all data object transfer operations associated with this DOE instance to be aborted. Reads from this bit must always return 0b. | RW (see description) |
+| 1 | DOE Interrupt Enable – When this bit is Set, the DOE Interrupt Support bit is Set, and MSI/MSI-X is enabled, the DOE instance must issue an MSI/MSI-X interrupt as defined in § Section 6.30.3 . When DOE Interrupt Support is Clear, this bit is permitted to be Reserved. Default value of this bit is 0b. | RW/RsvdP |
+| 2 | DOE Attention Not Needed – When DOE Attention Mechanism Support is Set, this bit when Set enables the DOE instance to enter and stay in a state where it is not immediately available for use. When this bit is Clear the DOE instance must remain in a responsive state. When DOE Attention Mechanism Support is Clear, this bit is permitted to be Reserved. Default value of this bit is 0b. | RW/RsvdP |
+| 3 | DOE Async Message Enable – If DOE Async Message Support is Set, this bit, when Set, enables the use of the DOE Async Message mechanism. When DOE Async Message Support is Clear, this bit is permitted to be Reserved. Default value of this bit is 0b. | RW/RsvdP |
+| 30:4 | RsvdP | RsvdP |
+| 31 | DOE Go – A write of 1b to this bit indicates to the DOE instance that it can start consuming the data object transferred through the DOE Write Data Mailbox Register. Behavior is undefined if the DOE Go bit is Set before the entire data object has been written to the DOE Write Data Mailbox Register. Behavior is undefined if the DOE Go bit is written with 1b when the DOE Busy bit is Set. Reads from this bit must always return 0b. | RW (see description) |
+
+<a id="sec-7-9-24-3"></a>
+## 7.9.24.3 DOE Control Register (Offset 08h) | DOE 控制寄存器 (偏移 08h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.24.3 DOE Control Register (Offset 08h) §
+§
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.24.3 DOE 控制寄存器 (偏移 08h) §
+§
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1377
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-362. DOE Status Register**
+> <img src="figures/chapter_07/fig_1377_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-362. DOE 状态寄存器**
+> <img src="figures/chapter_07/fig_1377_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-316 DOE Status Register | 表 7-316 DOE 状态寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | DOE Busy — When Set, this bit indicates the DOE instance is temporarily unable to receive a new data object through the DOE Write Data Mailbox Register. The DOE instance must Set this bit when processing a received data object, and Clear this bit when it is able to receive a new data object. The DOE instance must Set this bit following an abort or reset if, as a result of the abort/reset, it is temporarily unable to receive a data object, and then must Clear this bit when it is able to receive a new data object. | RO |
+| 1 | DOE Interrupt Status – If DOE Interrupt Support is Set, then this bit must be Set when an interrupt-triggering event occurs. If DOE Interrupt Support is Clear, this bit is Reserved. Default value of this bit is 0b. | RW1C/RsvdZ |
+| 2 | DOE Error – This bit, when Set, indicates that there has been an internal error associated with a data object received, or that a data object has been received for which the DOE instance is unable to provide a response. The DOE instance must Clear this bit, if it is not already Clear, when 1b is written to the DOE Abort bit in the DOE Control Register. Writing 1b to the DOE Abort bit is the only mechanism for software to Clear this bit. The transition of this bit from Clear to Set is an interrupt triggering event. Default value of this bit is 0b. | RO |
+| 3 | DOE Async Message Status – If DOE Async Message Support is Set, this bit, when Set, indicates the DOE instance has one or more asynchronous messages to transfer. The transition of this bit from Clear to Set is an interrupt triggering event. If DOE Async Message Support is Clear, this bit is Reserved. Default value of this bit is 0b. | RO/RsvdZ |
+| 4 | DOE At Attention – When DOE Attention Mechanism Support is Set, this bit, when Set, indicates the DOE interface is presently in a state of readiness. The transition of this bit from Clear to Set is an interrupt triggering event. | RO |
+| 30:5 | RsvdZ | RsvdZ |
+| 31 | Data Object Ready – When Set, this bit indicates the DOE instance has a data object available to be read by system firmware/software. | RO |
+
+<a id="sec-7-9-24-4"></a>
+## 7.9.24.4 DOE Status Register (Offset 0Ch) | DOE 状态寄存器 (偏移 0Ch)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.24.4 DOE Status Register (Offset 0Ch) §
+§
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.24.4 DOE 状态寄存器 (偏移 0Ch) §
+§
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1378
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 4 | DOE At Attention (continued) – When DOE Attention Mechanism Support is Clear, this bit is Reserved. | RO |
+| 31 | Data Object Ready (continued) – If there is no additional data object ready for transfer, the DOE instance must clear this bit after the entire data object has been transferred, as indicated by software writing to the DOE Read Data Mailbox Register after reading the final DW of the data object. The DOE instance must clear this bit, if not already clear, upon a write of 1b to the DOE Abort bit in the DOE Control Register. The transition of this bit from Clear to Set is an interrupt triggering event. Default value of this bit is 0b. | RO |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 4 | DOE At Attention(续) – 当 DOE Attention Mechanism Support 位为 Clear 时,该位为 Reserved。 | RO |
+| 31 | Data Object Ready(续) – 如果没有其他数据对象准备传输,则在软件读取完数据对象最后一个 DW 后写入 DOE Read Data Mailbox Register 时,DOE 实例必须清除该位。当对 DOE Control Register 中的 DOE Abort 位写入 1b 时,如果该位尚未清除,DOE 实例也必须清除它。该位由 Clear 到 Set 的跳变是中断触发事件。该位的默认值为 0b。 | RO |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-363. DOE Write Data Mailbox Register**
+> <img src="figures/chapter_07/fig_1378_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-363. DOE 写数据邮箱寄存器**
+> <img src="figures/chapter_07/fig_1378_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-317 DOE Write Data Mailbox Register | 表 7-317 DOE 写数据邮箱寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 31:0 | DOE Write Data Mailbox – The DOE instance receives data objects via writes to this register. A successfully completed write to this register adds one DW to the incoming data object. Setting the DOE Go bit in the DOE Control Register indicates to the DOE Instance that the final DW of the data object has been written to this register. Reads of this register must return all 0's. | RW (see description) |
+
+<a id="sec-7-9-24-5"></a>
+## 7.9.24.5 DOE Write Data Mailbox Register (Offset 10h) | DOE 写数据邮箱寄存器 (偏移 10h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.24.5 DOE Write Data Mailbox Register (Offset 10h) §
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.24.5 DOE 写数据邮箱寄存器 (偏移 10h) §
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-24-6"></a>
+## 7.9.24.6 DOE Read Data Mailbox Register (Offset 14h) | DOE 读数据邮箱寄存器 (偏移 14h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.24.6 DOE Read Data Mailbox Register (Offset 14h) §
+§
+§
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.24.6 DOE 读数据邮箱寄存器 (偏移 14h) §
+§
+§
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1379
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-364. DOE Read Data Mailbox Register**
+> <img src="figures/chapter_07/fig_1379_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-364. DOE 读数据邮箱寄存器**
+> <img src="figures/chapter_07/fig_1379_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-318 DOE Read Data Mailbox Register | 表 7-318 DOE 读数据邮箱寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 31:0 | DOE Read Data Mailbox – If the Data Object Ready bit is Set, a read of this register returns the current DW of the data object. A write of any value to this register indicates a successful transfer of the current data object DW, and the DOE instance must return the next DW in the data object upon the next read of this register as long as the Data Object Ready bit remains Set. It is permitted for multiple data objects to be read from this register back-to-back. When this scenario occurs, the Data Object Ready bit will remain Set until this register is written after the final DW is read. A write of any value to this register when the Data Object Ready bit is Clear must have no effect. The value read from this register when the Data Object Ready bit is Clear must be 0000 0000h. | RW (see description) |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Unimplemented Functions possess Transaction ID resources by virtue of their Bus/Device/Function Number space, and therefore associated Requester ID space, and associated Tags, even though there is no Function implemented there to use them. The Shadow Functions Extended Capability is an optional capability that permits a Requester to use the Transaction ID resources of another otherwise unimplemented Function to generate more outstanding Requests than it would otherwise be able to using only the Transaction ID resources of the Function it is associated with. The Requester generates some of its Requests via the Function it is associated with and generates other Requests via the Shadow Function. If the Requester exceeds the Transaction ID resources of a single Function, it is permitted to implement this capability and split its Transaction ID space across that Function and additional Shadow Functions defined by this capability.
+
+A Requester implementing a Shadow Function uses the characteristics and attributes of the Function containing this capability. Requests made via the associated Function will use the associated Function's BDF to populate the Requester ID. Requests made via the Shadow Function will use the BDF calculated from the value in the Shadow Function Number field of the corresponding Shadow Function Instance register entry to populate the Requester ID. Other characteristics and attributes of the Shadow Function are taken from the associated Function's Configuration Space.
+
+The Shadow Function Number field in the Shadow Function Instance register entry for each Shadow Function is used to calculate the value of the Bus/Device/Function number (Bus/Function number for ARI devices) (BDF) for that Shadow Function. That BDF space assigned to the Shadow Function must be available, that is it corresponds to an otherwise unimplemented Function.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+未实现的 Function 凭借其 Bus/Device/Function Number(总线/设备/功能号)空间,以及由此关联的 Requester ID(请求者 ID)空间和 Tag(标签),拥有 Transaction ID(事务 ID)资源,即使这些 Function 实际上并未实现,不会使用这些资源。Shadow Functions Extended Capability(影子功能扩展能力)是一种可选能力,它允许 Requester(请求者)使用另一个未实现 Function 的 Transaction ID 资源,从而生成比仅使用其关联 Function 自身 Transaction ID 资源更多的未完成请求。Requester 通过其关联 Function 发起部分请求,通过 Shadow Function(影子功能)发起其他请求。如果 Requester 超出单个 Function 的 Transaction ID 资源,可实现此能力并将其 Transaction ID 空间拆分到该 Function 和由本能力定义的附加 Shadow Function 之间。
+
+实现 Shadow Function 的 Requester 使用包含此能力的 Function 的特性和属性。通过关联 Function 发出的请求将使用关联 Function 的 BDF 来填充 Requester ID。通过 Shadow Function 发出的请求将使用从对应 Shadow Function Instance 寄存器的 Shadow Function Number 字段计算所得的 BDF 来填充 Requester ID。Shadow Function 的其他特性和属性取自关联 Function 的配置空间。
+
+每个 Shadow Function 的 Shadow Function Instance 寄存器条目中的 Shadow Function Number 字段用于计算该 Shadow Function 的 Bus/Device/Function 号(ARI 设备为 Bus/Function 号)(BDF)。分配给该 Shadow Function 的 BDF 空间必须可用,即对应于一个未实现的 Function。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Additional requirements for implementing Shadow Functions are:
+
+- Any access to the Configuration Space region of the BDF associated with the Shadow Function, without errors that would have different behavior, must be responded to with a Completion with UR status.
+- For non-ARI Devices, the Shadow Function must reside in the same Device as the Function it is shadowing. ARI must be supported if the Shadow Function Number is greater than 7.
+- A Function is permitted to have more than one Shadow Function.
+- A Function is permitted to have at most one instance of this capability.
+- This capability is permitted to be implemented in any Function capable of operating as a Requester.
+- For VFs, the Shadow Functions must be assigned in a manner that accommodates the VF Discovery algorithm (see § Section 9.2.1.2 ).
+- Requesters are permitted to generate Posted Requests that are not Message Signaled Interrupt (MSI/MSI-X) Requests using the Transaction ID space of a Shadow Function.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+实现 Shadow Function 的其他要求如下:
+
+- 对 Shadow Function 关联的 BDF 配置空间区域进行的任何访问,在没有会导致不同行为的错误时,必须以 UR(Unsupported Request,不支持的请求)状态的 Completion(完成报文)响应。
+- 对于非 ARI 设备,Shadow Function 必须驻留于其影子所对应的 Function 所在的同一 Device 中。如果 Shadow Function Number 大于 7,则必须支持 ARI。
+- 允许一个 Function 具有多个 Shadow Function。
+- 允许一个 Function 最多具有本能力的一个实例。
+- 允许在任何能够作为 Requester 工作的 Function 中实现本能力。
+- 对于 VF,Shadow Function 的分配方式必须与 VF 发现算法相适应(参见 § Section 9.2.1.2)。
+- 允许 Requester 使用 Shadow Function 的 Transaction ID 空间生成不是消息信号中断(MSI/MSI-X)请求的 Posted Requests(有数据,无完成请求)。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-25"></a>
+## 7.9.25 Shadow Functions Extended Capability | Shadow Functions 扩展能力
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+7.9.25 Shadow Functions Extended Capability §
+§
+
+</td>
+<td style="background-color:#e8e8e8">
+
+7.9.25 Shadow Functions 扩展能力 §
+§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1380
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+- Requesters are not permitted to generate Message Signaled Interrupt (MSI/MSI-X) Requests using the Transaction ID space of a Shadow Function.
+- Functions utilizing Shadow Functions must be aware that accesses utilizing the Shadow Function's Transaction ID resources appear to the rest of the system with the same semantics as if the access was from any independent Function and deal with those implications.
+- The software for the Translation Agent is responsible for maintaining the integrity of address translation resources. Behavior is undefined if address translation resources are not updated before the Shadow Function's Requester makes a Request.
+- Translation Requests issued by a Shadow Function are cached in the ATC associated with the main Function. When enabled, Functions are permitted to use translations across the "main" and Shadow Functions regardless of which Function issued the associated Translation Request. See § Section 10.2 .
+- The software for handling Page Request Messages is responsible for coordinating usage across Shadow Functions. See § Section 10.4.1 and § Section 10.5.2.5 .
+- Behavior is undefined if software enabling FPB configures a Shadow Function to use the same Requester ID as another Function.
+- For a Multi-Function Device that supports ACS P2P Egress Control, any enabled Shadow Functions must be taken into account when configuring the Egress Control Vector to allow P2P traffic between the Requester and its Shadow Functions, and other Functions in the Device.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+- 不允许 Requester 使用 Shadow Function 的 Transaction ID 空间生成消息信号中断(MSI/MSI-X)请求。
+- 使用 Shadow Function 的 Function 必须意识到,使用 Shadow Function 的 Transaction ID 资源进行的访问对系统其余部分呈现的语义与来自任何独立 Function 的访问相同,必须处理这些影响。
+- Translation Agent(转换代理)的软件负责维护地址转换资源的完整性。如果 Shadow Function 的 Requester 发起请求之前地址转换资源未更新,则行为是未定义的。
+- 由 Shadow Function 发出的 Translation Request(转换请求)缓存在与主 Function 关联的 ATC(Address Translation Cache,地址转换缓存)中。启用后,允许 Function 在"主"Function 与 Shadow Function 之间共用转换结果,无论该 Translation Request 由哪个 Function 发出。参见 § Section 10.2。
+- 处理 Page Request Message(页请求消息)的软件负责协调跨 Shadow Function 的使用。参见 § Section 10.4.1 和 § Section 10.5.2.5。
+- 如果启用 FPB 的软件将 Shadow Function 配置为使用与其他 Function 相同的 Requester ID,则行为是未定义的。
+- 对于支持 ACS P2P Egress Control(ACS 对等出口控制)的多功能设备,在配置 Egress Control Vector(出口控制向量)以允许 Requester 与其 Shadow Function 以及设备中其他 Function 之间的 P2P 流量时,必须考虑所有已使能的 Shadow Function。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Multiple Shadow Functions for a Function are permitted to be assigned by this Capability. The Number of Shadow Functions field in the Shadow Functions Capability register defines the number of Shadow Functions assigned and the number of Shadow Function Instance register entries in the Capability and therefore the length of the Capability structure.
+
+§ Figure 7-365 shows the Shadow Functions Extended Capability structure.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+本能力允许为一个 Function 分配多个 Shadow Function。Shadow Functions Capability 寄存器中的 Number of Shadow Functions 字段定义所分配的 Shadow Function 数量,以及本能力中 Shadow Function Instance 寄存器条目的数量,从而决定能力结构的长度。
+
+§ Figure 7-365 展示了 Shadow Functions 扩展能力的结构。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **IMPLEMENTATION NOTE:**
+> **SHADOW FUNCTION NUMBER PROGRAMMING**
+>
+> The value programmed into the Shadow Function Number field should place the Shadow Function on the same Bus Number as the Function declaring it. Otherwise, ACS Source Validation might not operate appropriately, Completions targeting the Shadow Function might not be routed correctly, or other misbehaviors might occur.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **实现说明:**
+> **SHADOW FUNCTION NUMBER 编程**
+>
+> 编程到 Shadow Function Number 字段中的值应将 Shadow Function 置于与声明它的 Function 相同的 Bus Number 上。否则,ACS Source Validation 可能无法正常工作,发往 Shadow Function 的 Completion 可能无法被正确路由,或可能出现其他异常行为。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<<<PAGE_BREAK>>> page_1381
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+N = the value of the Number of Shadow Functions field.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+N = Number of Shadow Functions 字段的值。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-365. Shadow Functions Extended Capability Structure**
+> <img src="figures/chapter_07/fig_1381_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-365. Shadow Functions 扩展能力结构**
+> <img src="figures/chapter_07/fig_1381_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+§ Figure 7-366 details allocation of the register fields in the Shadow Functions Extended Capability Header; § Table 7-319 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+§ Figure 7-366 详细说明了 Shadow Functions 扩展能力头部寄存器字段的分配;§ Table 7-319 给出相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-366. Shadow Functions Extended Capability Header**
+> <img src="figures/chapter_07/fig_1381_2.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-366. Shadow Functions 扩展能力头部**
+> <img src="figures/chapter_07/fig_1381_2.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Table 7-319 Shadow Functions Extended Capability Header | 表 7-319 Shadow Functions 扩展能力头部**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 15:0 | Shadow Functions Extended Capability ID - Indicates the Shadow Functions Extended Capability structure. This field must return a Capability ID of 002Dh indicating that this is a Shadow Functions Extended Capability structure. | RO |
+| 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. Must be 1h for this version of the specification. | RO |
+| 31:20 | Next Capability Offset - The offset to the next PCI Extended Capability structure or 000h if no other items exist in the linked list of capabilities. | RO |
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+
+---
+
+<a id="sec-7-9-25-1"></a>
+## 7.9.25.1 Shadow Functions Extended Capability Header (Offset 00h) | Shadow Functions 扩展能力头（偏移 00h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Shadow Functions Extended Capability Header (Offset 00h)
+
+</td>
+<td style="background-color:#e8e8e8">
+
+Shadow Functions 扩展能力头（偏移 00h）
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-25"></a>
+## 7.9.25 Shadow Functions Capability | Shadow Functions 能力
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+[figures/chapter_07/fig_1382_1.png]
+
+Figure 7-367 details the allocation of register bits of the Shadow Functions Capability register; Table 7-320 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+[figures/chapter_07/fig_1382_1.png]
+
+图 7-367 详述了 Shadow Functions Capability 寄存器的位分配；表 7-320 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Figure 7-367. Shadow Functions Capability Register | 图 7-367. Shadow Functions 能力寄存器**
+
+**Table 7-320. Shadow Functions Capability Register | 表 7-320. Shadow Functions 能力寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 7:0 | Number of Shadow Functions – This is one less than the number of Shadow Functions implemented by this Function. This defines the number of Shadow Function Instance register entries that are in the Capability, and therefore the length of the Capability structure.<br>The default value for this field is 00h. | HwInit |
+| 31:8 | RsvdP | RsvdP |
+
+[figures/chapter_07/fig_1382_1.png](figures/chapter_07/fig_1382_1.png)
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Figure 7-368 details the allocation of register bits of the Shadow Functions Control register; Table 7-321 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+图 7-368 详述了 Shadow Functions Control 寄存器的位分配；表 7-321 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Figure 7-368. Shadow Functions Control Register | 图 7-368. Shadow Functions 控制寄存器**
+
+**Table 7-321. Shadow Functions Control Register | 表 7-321. Shadow Functions 控制寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | Shadow Functions Enable - When Set, permits the Requester to generate Requests using the Transaction ID resources of all of the Shadow Functions defined by this Capability. See Section 7.9.25 for limitations on the type of Requests permitted.<br>When Clear, the Requester is not permitted to generate Requests using the Transaction ID resources of any of the Shadow Functions defined by this Capability.<br>Behavior is undefined when this bit is Set in Functions with the Phantom Functions Enabled bit Set.<br>Behavior is undefined if the value of this bit is changed while the Function has outstanding Non-Posted Requests.<br>Default is 0b. | RW |
+| 31:1 | RsvdP | RsvdP |
+
+[figures/chapter_07/fig_1382_1.png](figures/chapter_07/fig_1382_1.png)
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-25-2"></a>
+## 7.9.25.2 Shadow Functions Capability Register (Offset 04h) | Shadow Functions 能力寄存器（偏移 04h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Shadow Functions Capability Register (Offset 04h)
+
+</td>
+<td style="background-color:#e8e8e8">
+
+Shadow Functions 能力寄存器（偏移 04h）
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-25-3"></a>
+## 7.9.25.3 Shadow Functions Control Register (Offset 08h) | Shadow Functions 控制寄存器（偏移 08h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Shadow Functions Control Register (Offset 08h)
+
+</td>
+<td style="background-color:#e8e8e8">
+
+Shadow Functions 控制寄存器（偏移 08h）
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-25-4"></a>
+## 7.9.25.4 Shadow Functions Instance Register Entry | Shadow Functions 实例寄存器项
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Figure 7-369 details the allocation of register bits of the Shadow Functions Control register; Table 7-322 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+图 7-369 详述了 Shadow Functions Control 寄存器的位分配；表 7-322 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Figure 7-369. Shadow Functions Instance Register Entry | 图 7-369. Shadow Functions 实例寄存器项**
+
+**Table 7-322. Shadow Functions Instance Register Entry | 表 7-322. Shadow Functions 实例寄存器项**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 15:0 | Shadow Function Number - This is the Bus/Device/Function offset (Bus/Function offset for ARI Devices) of the Shadow Function. Add this value to BDF of the Function with this capability using unsigned, 16-bit arithmetic, ignoring any carry. | HwInit |
+| 31:16 | RsvdP | RsvdP |
+
+[figures/chapter_07/fig_1382_1.png](figures/chapter_07/fig_1382_1.png)
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26"></a>
+## 7.9.26 IDE Extended Capability | IDE 扩展能力
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+All Ports that implement IDE (完整性与数据加密, Integrity and Data Encryption) must implement the IDE Extended Capability. The IDE Extended Capability must consist of the IDE Extended Capability Header, the IDE Capability Register, and the IDE Control Register, followed by zero to 8 Link IDE register blocks, followed by zero to 255 Selective IDE register blocks (see Figure 7-370). All Ports that implement IDE must implement the IDE Extended Capability. The IDE Extended Capability must consist of the IDE Extended Capability Header, the IDE Capability Register, and the IDE Control Register, followed by zero to 8 Link IDE register blocks, followed by zero to 255 Selective IDE register blocks (see Figure 7-370).
+
+It is permitted to implement this extended capability in Functions associated with Downstream Ports, and in Function 0 associated with an Upstream Port. Multi-Function Devices associated with Upstream Ports, including cases where one or more Functions represent the Upstream Port of a Switch (交换机), must be implemented such that Function 0 implements this extended capability representing the Multi-Function Device as a whole.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+所有实现 IDE (完整性与数据加密, Integrity and Data Encryption) 的端口必须实现 IDE 扩展能力。IDE 扩展能力必须由 IDE 扩展能力头、IDE 能力寄存器、IDE 控制寄存器组成，其后跟随 0 到 8 个 Link IDE 寄存器块，再其后跟随 0 到 255 个 Selective IDE 寄存器块（见图 7-370）。所有实现 IDE 的端口必须实现 IDE 扩展能力。IDE 扩展能力必须由 IDE 扩展能力头、IDE 能力寄存器、IDE 控制寄存器组成，其后跟随 0 到 8 个 Link IDE 寄存器块，再其后跟随 0 到 255 个 Selective IDE 寄存器块（见图 7-370）。
+
+允许在以下位置实现此扩展能力：与下游端口 (Downstream Port) 关联的功能中，以及与上游端口 (Upstream Port) 关联的 Function 0 中。与上游端口关联的多功能设备（包括一个或多个功能表示交换机 (Switch) 上游端口的情况）必须按如下方式实现：Function 0 实现此扩展能力以代表整个多功能设备。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Figure 7-370. IDE Extended Capability Structure | 图 7-370. IDE 扩展能力结构**
+
+[figures/chapter_07/fig_1383_1.png](figures/chapter_07/fig_1383_1.png)
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-1"></a>
+## 7.9.26.1 IDE Extended Capability Header (Offset 00h) | IDE 扩展能力头（偏移 00h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The Extended Capability ID for the Integrity and Data Encryption (IDE) Exchange Extended Capability is 0030h.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+完整性数据加密 (Integrity and Data Encryption, IDE) 交换扩展能力的扩展能力 ID 为 0030h。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Figure 7-371. IDE Extended Capability Header | 图 7-371. IDE 扩展能力头**
+
+**Table 7-323. IDE Extended Capability Header | 表 7-323. IDE 扩展能力头**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 15:0 | PCI Express Extended Capability ID – This field is a PCI-SIG defined ID number that indicates the nature and format of the Extended Capability.<br>The Extended Capability ID for the Integrity and Data Encryption (IDE) Exchange Extended Capability is 0030h. | HwInit |
+| 19:16 | Capability Version – This field is a PCI-SIG defined version number that indicates the version of the Capability structure present.<br>Must be 1h for this version of the specification. | HwInit |
+| 31:20 | Next Capability Offset – This field contains the offset to the next PCI Express Extended Capability structure or 000h if no other items exist in the linked list of Capabilities. | HwInit |
+
+[figures/chapter_07/fig_1383_1.png](figures/chapter_07/fig_1383_1.png)
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-2"></a>
+## 7.9.26.2 IDE Capability Register (Offset 04h) | IDE 能力寄存器（偏移 04h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Figure 7-372 details the allocation of register bits of the IDE Capability Register; Table 7-324 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+图 7-372 详述了 IDE 能力寄存器的位分配；表 7-324 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Figure 7-372. IDE Capability Register | 图 7-372. IDE 能力寄存器**
+
+**Table 7-324. IDE Capability Register | 表 7-324. IDE 能力寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | Link IDE Stream Supported – When Set, indicates that the Port supports Link IDE Streams, and that one or more Link IDE Stream Registers block(s) immediately follow the IDE Control Register, per the value in the Number of TCs Supported for Link IDE field.<br>When Clear, there must be no Link IDE Stream Register blocks present. | HwInit / RsvdP |
+| 1 | Selective IDE Streams Supported – When Set, indicates that the Port support Selective IDE Streams, and that one or more Selective IDE Stream Register block(s) are implemented, per the value in the Number of Selective IDE Streams Supported field.<br>When Clear, there must be no Selective IDE Stream Register blocks present. | HwInit / RsvdP |
+| 2 | Flow-Through IDE Stream Supported – For a Switch or Root Port, when Set indicates support for passing Selective IDE Streams to all other Switch or Root Ports.<br>If this bit is Set and both Link IDE Stream Supported and Selective IDE Streams Supported are Clear, then no Link IDE register blocks or Selective IDE register blocks are required.<br>Reserved for Endpoints. | HwInit / RsvdP |
+| 3 | Partial Header Encryption Supported – If Link IDE Stream Supported or Selective IDE Streams Supported are Set, then this bit, when Set, indicates the Port supports partial header encryption.<br>Undefined if Link IDE Stream Supported and Selective IDE Streams Supported are both Clear. | HwInit |
+| 4 | Aggregation Supported – If Link IDE Stream Supported or Selective IDE Streams Supported are Set, then this bit, when Set, indicates the Port supports aggregation.<br>Undefined if Link IDE Stream Supported and Selective IDE Streams Supported are both Clear. | HwInit |
+| 5 | PCRC Supported – When Set, indicates that the Port supports the generation and checking of PCRC. | HwInit |
+| 6 | IDE_KM Protocol Supported – When Set, indicates that the Port supports the IDE_KM protocol in the responder role as defined in Section 6.33.3 | HwInit |
+| 7 | Selective IDE for Configuration Requests Supported – For a Root Port, Switch Upstream Port, or Endpoint Upstream Port, if Selective IDE Streams Supported is Set, then this bit, if Set, indicates that the Port supports the assocation of Configuration Requests with Selective IDE Streams.<br>For a Switch Upstream Port, when Set, this bit indicates the Switch supports Selective IDE for Configuration Requests targeting all Functions of the Switch.<br>This bit is Reserved for Switch Downstream Ports.<br>If Selective IDE Streams Supported is Clear, this bit is Reserved. | HwInit / RsvdP |
+| 12:8 | Supported Algorithms – Indicates the supported algorithms for securing IDE TLPs, encoded as:<br>0 0000b = AES-GCM 256 key size, 96b MAC<br>Others = Reserved | HwInit |
+| 15:13 | Number of TCs Supported for Link IDE – If Link IDE Stream Supported is Set, indicates the number of TCs supported for Link IDE Streams encoded as:<br>000b = One TC supported<br>001b = 2 TCs supported<br>010b = 3 TCs supported<br>011b = 4 TCs supported<br>100b = 5 TCs supported<br>101b = 6 TCs supported<br>110b = 7 TCs supported<br>111b = 8 TCs supported<br>If Link IDE Stream Supported is Clear, this field is undefined. | HwInit |
+| 23:16 | Number of Selective IDE Streams Supported – If Selective IDE Streams Supported is Set then this field indicates number of Selective IDE Streams Supported such that 0=1 Stream.<br>A corresponding number of Selective IDE Stream Register Block(s) must be implemented. If Link IDE Stream Supported is Clear, then these blocks must immediately follow the IDE Control Register. If Link IDE Stream Supported is Set, then these blocks must immediately follow the Link IDE Stream Control and Status Registers.<br>If Selective IDE Streams Supported is Clear, this field is undefined. | HwInit / RsvdP |
+| 24 | TEE-Limited Stream Supported – When Set, indicates that the TEE-Limited Stream control mechanism is supported.<br>If Selective IDE Streams Supported is Clear, this bit is Reserved. | HwInit / RsvdP |
+| 31:25 | RsvdP | RsvdP |
+
+[figures/chapter_07/fig_1385_1.png](figures/chapter_07/fig_1385_1.png)
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-3"></a>
+## 7.9.26.3 IDE Control Register (Offset 08h) | IDE 控制寄存器（偏移 08h）
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Figure 7-373 details the allocation of register bits of the IDE Control Register; Table 7-325 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+图 7-373 详述了 IDE 控制寄存器的位分配；表 7-325 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Figure 7-373. IDE Control Register | 图 7-373. IDE 控制寄存器**
+
+**Table 7-325. IDE Control Register | 表 7-325. IDE 控制寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 2 | Flow-Through IDE Stream Enabled – For Switch Ports and Root Ports, Enables the Port for flow-through operation of TLPs associated with Selective IDE Streams.<br>Reserved for Upstream Ports associated with Endpoints. | RW / RsvdP |
+| 31:3 | RsvdP | RsvdP |
+
+[figures/chapter_07/fig_1387_1.png](figures/chapter_07/fig_1387_1.png)
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-4"></a>
+## 7.9.26.4 Link IDE Register Block | Link IDE 寄存器块
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+A Link IDE register block must consist of one Link IDE Stream Control Register followed by one Link IDE Stream Status Register. If the Link IDE Stream Supported bit in the IDE Capability Register is Set, then this register block must be instantiated once for each Traffic Class (TC) supported as indicated in the Number of TCs Supported for Link IDE field.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+Link IDE 寄存器块必须由一个 Link IDE Stream Control 寄存器和一个 Link IDE Stream Status 寄存器组成。如果 IDE 能力寄存器中的 Link IDE Stream Supported 位被置位，则该寄存器块必须为 Number of TCs Supported for Link IDE 字段所指示的每个流量类 (Traffic Class, TC) 实例化一次。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-4-1"></a>
+## 7.9.26.4.1 Link IDE Stream Control Register | Link IDE Stream 控制寄存器
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Figure 7-374 details the allocation of register bits of the Link IDE Stream Control Register; Table 7-326 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+图 7-374 详述了 Link IDE Stream Control 寄存器的位分配；表 7-326 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Figure 7-374. Link IDE Stream Control Register | 图 7-374. Link IDE Stream 控制寄存器**
+
+**Table 7-326. Link IDE Stream Control Register | 表 7-326. Link IDE Stream 控制寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | Link IDE Stream Enable – When Set, enables Link IDE Stream such that IDE operation will start when triggered by means of the IDE_KM protocol (see Section 6.33.3). When Cleared, must immediately transition the Stream to Insecure.<br>Software must not modify the PCRC Enable bit while this bit is Set; otherwise, the result is undefined.<br>It is permitted for the default value to be 1b if and only if implementation specific means can ensure that the Link IDE Stream will default into a state where operation in the Secure state is possible, otherwise the default value must be 0b. | RW |
+| 3:2 | Tx Aggregation Mode NPR – If Aggregation Supported is Set then this field selects the level of aggregation for Transmitted Non-Posted Requests for this Stream, encoded as:<br>00b = No aggregation<br>01b = Up to 2 Non-Posted Requests<br>10b = Up to 4 Non-Posted Requests<br>11b = Up to 8 Non-Posted Requests<br>Reserved If Aggregation Supported is Clear.<br>Default value is 00b | RW / RsvdP |
+| 5:4 | Tx Aggregation Mode PR – If Aggregation Supported is Set then this field selects the level of aggregation for Transmitted Posted Requests for this Stream, encoded as:<br>00b = No aggregation<br>01b = Up to 2 Posted Requests<br>10b = Up to 4 Posted Requests<br>11b = Up to 8 Posted Requests<br>Reserved If Aggregation Supported is Clear.<br>Default value is 00b | RW / RsvdP |
+| 7:6 | Tx Aggregation Mode CPL – If Aggregation Supported is Set then this field selects the level of aggregation for Trasmitted Completions for this Stream, encoded as:<br>00b = No aggregation<br>01b = Up to 2 Completions<br>10b = Up to 4 Completions<br>11b = Up to 8 Completions<br>Reserved If Aggregation Supported is Clear.<br>Default value is 00b | RW / RsvdP |
+| 8 | PCRC Enable – When Set, Transmitted IDE TLPs associated with this Stream that include P content must include PCRC, and Received TLPs must be checked for PCRC failure.<br>Reserved if PCRC Supported is Clear.<br>Default value is 0b. | RW / RsvdP |
+| 13:10 | Partial Header Encryption Mode – Selects the mode to be used for partial header encryption of IDE TLPs for this IDE Stream. Must be programmed to the same value in both the Partner Ports. Must be configured while Link IDE Stream Enable is Clear. When Link IDE Stream Enable is Set, the setting is sampled, and this field becomes RO with reads returning the sampled value.<br>0000b = No partial header encryption<br>0001b = Address[17:2] Encrypted, and, if present, the First DW BE and Last DW BE fields<br>0010b = Address[25:2] Encrypted, and, if present, the First DW BE and Last DW BE fields<br>0011b = Address[33:2] Encrypted, and, if present, the First DW BE and Last DW BE fields<br>0100b = Address[41:2] Encrypted, and, if present, the First DW BE and Last DW BE fields<br>Others = Reserved<br>If Partial Header Encryption Supported is Clear, this field is Reserved. | RW / RO / RsvdP |
+| 18:14 | Selected Algorithm – Selects the algorithm to be used for securing IDE TLPs for this IDE Stream. Must be programmed to the same value in both the Upstream and Downstream Ports. Must be configured while Link IDE Stream Enable is Clear. When Link IDE Stream Enable is Set, the setting is sampled, and this field becomes RO with reads returning the sampled value.<br>0 0000b = AES-GCM 256 key size, 96b MAC<br>Others = Reserved | RW / RO |
+| 21:19 | TC – System firmware/software must program this field to indicate the TC associated with this Link IDE Register block.<br>Default value is 000b | RW / RsvdP |
+| 31:24 | Stream ID – Indicates the Stream ID associated with this Link IDE Stream. Software must program the same Stream ID into both Ports associated with a given Link IDE Stream. Default value is 00h. | RW |
+
+[figures/chapter_07/fig_1387_1.png](figures/chapter_07/fig_1387_1.png)
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-4-2"></a>
+## 7.9.26.4.2 Link IDE Stream Status Register | Link IDE Stream 状态寄存器
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Figure 7-375 details the allocation of register bits of the Link IDE Stream Status Register; Table 7-327 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+图 7-375 详述了 Link IDE Stream Status 寄存器的位分配；表 7-327 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Figure 7-375. Link IDE Stream Status Register | 图 7-375. Link IDE Stream 状态寄存器**
+
+**Table 7-327. Link IDE Stream Status Register | 表 7-327. Link IDE Stream 状态寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 3:0 | Link IDE Stream State – When Link IDE Stream Enable is Set, this field indicates the state of the Port. Encodings:<br>0000b = Insecure<br>Others = Secure<br>Reserved – Software must handle reserved values as indicating unknown state<br>When Link IDE Stream Enable is Clear, the value of this field must be 0000b. | RO |
+| 30:4 | RsvdZ | RsvdZ |
+| 31 | Received IDE Fail Message – When Set, indicates that one or more IDE Fail Message(s) have been Received for this Stream. | RW1C |
+
+[figures/chapter_07/fig_1389_1.png](figures/chapter_07/fig_1389_1.png)
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-5"></a>
+## 7.9.26.5 Selective IDE Stream Register Block | Selective IDE Stream 寄存器块
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+A Selective IDE Stream register block must consist of one Selective IDE Stream Capability Register, followed by one Selective IDE Stream Control Register, followed by one Selective IDE Stream Status Register, followed by one Selective IDE RID Association register Block, followed by zero or more Selective IDE Address Association Register Block(s). If the Selective IDE Streams Supported bit in the IDE Capability Register is Set, then this register block must be instantiated once for each Selective IDE Stream supported as indicated in the Number of Selective IDE Streams Supported field.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability 寄存器、一个 Selective IDE Stream Control 寄存器、一个 Selective IDE Stream Status 寄存器、一个 Selective IDE RID Association 寄存器块以及零个或多个 Selective IDE Address Association 寄存器块组成。如果 IDE 能力寄存器中的 Selective IDE Streams Supported 位被置位，则该寄存器块必须为 Number of Selective IDE Streams Supported 字段所指示的每个 Selective IDE Stream 实例化一次。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Figure 7-376. Selective IDE Stream Capability Register | 图 7-376. Selective IDE Stream 能力寄存器**
+
+**Table 7-328. Selective IDE Stream Capability Register | 表 7-328. Selective IDE Stream 能力寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 3:0 | Number of Address Association Register Blocks – Indicates the number of Selective IDE Address Association register blocks for this Selective IDE Stream.<br>The number of Selective IDE Address Association register blocks for a given IDE Stream is hardware implementation specific, and is permitted to be any number between 0 and 15. | RO |
+| 31:4 | RsvdP | RsvdP |
+
+[figures/chapter_07/fig_1390_1.png](figures/chapter_07/fig_1390_1.png)
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+**Figure 7-377. Selective IDE Stream Control Register | 图 7-377. Selective IDE Stream 控制寄存器**
+
+[figures/chapter_07/fig_1390_1.png](figures/chapter_07/fig_1390_1.png)
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+
+---
+
+<a id="sec-7-9-26-5-1"></a>
+## 7.9.26.5.1 Selective IDE Stream Capability Register | 选择性 IDE 流能力寄存器
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+(Register definition is referenced from the Selective IDE Stream Extended Capability structure; this sub-section introduces the Capability register layout. Refer to the Selective IDE Stream Extended Capability structure for the overall arrangement.)
+
+</td>
+<td style="background-color:#e8e8e8">
+
+(寄存器定义引用自 Selective IDE Stream 扩展能力结构；本小节介绍 Capability 寄存器的布局。整体安排请参阅 Selective IDE Stream 扩展能力结构。)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-5-2"></a>
+## 7.9.26.5.2 Selective IDE Stream Control Register | 选择性 IDE 流控制寄存器
+
+<<<PAGE_BREAK>>> page_1391
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+**Table 7-329. Selective IDE Stream Control Register**
+
+| Bit Location | Register Description | Attributes |
+|--------------|---------------------|------------|
+| 0 | Selective IDE Stream Enable – When Set, enables this IDE Stream such that IDE operation will start when triggered by means of the IDE_KM protocol (see § Section 6.33.3 ). When Cleared, must immediately transition the Stream to Insecure. Software must configure the following before Setting this bit, and must not modify them while this bit is Set; otherwise, the result is undefined:<br>• Selected Algorithm (below)<br>• PCRC Enable<br>• Requester ID Limit in IDE RID Association Register 1<br>• Requester ID Base, and Segment Base if applicable, in IDE RID Association Register 2<br>• V bit in IDE RID Association Register 2<br>If this bit is Set when the V bit is Clear, the IDE Stream must transition to Insecure.<br>When Cleared, must immediately transition the Stream to Insecure.<br>It is strongly recommended that the IDE Address Association Registers, and the Default Stream bit (if applicable), also be programmed prior to Setting this bit.<br>Default value is 0b. | RW |
+| 3:2 | Tx Aggregation Mode NPR – If Aggregation Supported is Set then this field selects the level of aggregation for Transmitted Non-Posted Requests for this Stream, encoded as:<br>00b – No aggregation<br>01b – Up to 2 Non-Posted Requests<br>10b – Up to 4 Non-Posted Requests<br>11b – Up to 8 Non-Posted Requests<br>00b – Reserved If Aggregation Supported is Clear.<br>01b – Reserved If Aggregation Supported is Clear.<br>10b – Reserved If Aggregation Supported is Clear.<br>11b – Reserved If Aggregation Supported is Clear.<br>Default value is 00b | RW / RsvdP |
+| 5:4 | Tx Aggregation Mode PR – If Aggregation Supported is Set then this field selects the level of aggregation for Transmitted Posted Requests for this Stream, encoded as:<br>00b – No aggregation<br>01b – Up to 2 Posted Requests<br>10b – Up to 4 Posted Requests<br>11b – Up to 8 Posted Requests<br>00b – Reserved If Aggregation Supported is Clear.<br>01b – Reserved If Aggregation Supported is Clear.<br>10b – Reserved If Aggregation Supported is Clear.<br>11b – Reserved If Aggregation Supported is Clear.<br>Default value is 00b | RW / RsvdP |
+| 7:6 | Tx Aggregation Mode CPL – If Aggregation Supported is Set then this field selects the level of aggregation for Trasmitted Completions for this Stream, encoded as:<br>00b – No aggregation<br>01b – Up to 2 Completions<br>10b – Up to 4 Completions<br>11b – Up to 8 Completions<br>00b – Reserved If Aggregation Supported is Clear.<br>01b – Reserved If Aggregation Supported is Clear.<br>10b – Reserved If Aggregation Supported is Clear.<br>11b – Reserved If Aggregation Supported is Clear.<br>Default value is 00b | RW / RsvdP |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+**表 7-329. 选择性 IDE 流控制寄存器 (Selective IDE Stream Control Register)**
+
+| 位位置 | 寄存器描述 | 属性 |
+|--------|------------|------|
+| 0 | Selective IDE Stream Enable(选择性 IDE 流使能)— 置 1 时,使能此 IDE 流,使得 IDE 操作在通过 IDE_KM 协议触发时启动(见 § Section 6.33.3 )。清零时,必须立即将流迁移到 Insecure(不安全)状态。软件必须在置位此位之前配置以下内容,且在此位置 1 期间不得修改,否则结果是未定义的:<br>• Selected Algorithm(见下文)<br>• PCRC Enable<br>• IDE RID Association Register 1 中的 Requester ID Limit<br>• IDE RID Association Register 2 中的 Requester ID Base,以及 Segment Base(若适用)<br>• IDE RID Association Register 2 中的 V 位<br>如果 V 位为 0 时此位被置 1,则 IDE 流必须迁移到 Insecure 状态。<br>当清零时,必须立即将流迁移到 Insecure 状态。<br>强烈建议在置位此位之前也编程 IDE Address Association Registers 以及 Default Stream 位(若适用)。<br>默认值为 0b。 | RW |
+| 3:2 | Tx Aggregation Mode NPR(发送聚合模式 — Non-Posted 请求)— 如果 Aggregation Supported 置 1,则此字段为此流的发送 Non-Posted 请求选择聚合级别,编码如下:<br>00b — 无聚合<br>01b — 最多 2 个 Non-Posted 请求<br>10b — 最多 4 个 Non-Posted 请求<br>11b — 最多 8 个 Non-Posted 请求<br>00b — 若 Aggregation Supported 为 0 则保留。<br>01b — 若 Aggregation Supported 为 0 则保留。<br>10b — 若 Aggregation Supported 为 0 则保留。<br>11b — 若 Aggregation Supported 为 0 则保留。<br>默认值为 00b | RW / RsvdP |
+| 5:4 | Tx Aggregation Mode PR(发送聚合模式 — Posted 请求)— 如果 Aggregation Supported 置 1,则此字段为此流的发送 Posted 请求选择聚合级别,编码如下:<br>00b — 无聚合<br>01b — 最多 2 个 Posted 请求<br>10b — 最多 4 个 Posted 请求<br>11b — 最多 8 个 Posted 请求<br>00b — 若 Aggregation Supported 为 0 则保留。<br>01b — 若 Aggregation Supported 为 0 则保留。<br>10b — 若 Aggregation Supported 为 0 则保留。<br>11b — 若 Aggregation Supported 为 0 则保留。<br>默认值为 00b | RW / RsvdP |
+| 7:6 | Tx Aggregation Mode CPL(发送聚合模式 — 完成报文)— 如果 Aggregation Supported 置 1,则此字段为此流的发送 Completion 选择聚合级别,编码如下:<br>00b — 无聚合<br>01b — 最多 2 个 Completion<br>10b — 最多 4 个 Completion<br>11b — 最多 8 个 Completion<br>00b — 若 Aggregation Supported 为 0 则保留。<br>01b — 若 Aggregation Supported 为 0 则保留。<br>10b — 若 Aggregation Supported 为 0 则保留。<br>11b — 若 Aggregation Supported 为 0 则保留。<br>默认值为 00b | RW / RsvdP |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-5-2-cont"></a>
+## 7.9.26.5.2 Selective IDE Stream Control Register (continued) | 选择性 IDE 流控制寄存器(续)
+
+<<<PAGE_BREAK>>> page_1392
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+**Table 7-329. Selective IDE Stream Control Register (continued)**
+
+| Bit Location | Register Description | Attributes |
+|--------------|---------------------|------------|
+| 8 | PCRC Enable – When Set, Transmitted IDE TLPs associated with this Stream that include P content must include PCRC, and Received TLPs must be checked for PCRC failure.<br>Reserved if PCRC Supported is Clear.<br>Default value is 0b. | RW / RsvdP |
+| 9 | Selective IDE for Configuration Requests Enable –<br>For Root Ports, if Selective IDE for Configuration Requests Supported is Set, then this bit, when Set, must cause the Port to transmit as IDE TLPs associated with this Selective IDE Stream all Configuration Requests for which the destination RID is greater than or equal to the RID Base and less than or equal to the RID Limit in the Selective IDE RID Association Register Block.<br>For Ports other than Root Ports, this bit is Reserved.<br>If Selective IDE for Configuration Requests Supported is Clear, this bit is Reserved.<br>Default value is 0b. | RW / RsvdP |
+| 13:10 | Partial Header Encryption Mode – Selects the mode to be used for partial header encryption of IDE TLPs for this IDE Stream. Must be programmed to the same value in both the Partner Ports. Must be configured while Selective IDE Stream Enable is Clear. When Selective IDE Stream Enable is Set, the setting is sampled, and this field becomes RO with reads returning the sampled value.<br>0000b – No partial header encryption<br>0001b – Address[17:2] Encrypted, and, if present, the First DW BE and Last DW BE fields<br>0010b – Address[25:2] Encrypted, and, if present, the First DW BE and Last DW BE fields<br>0011b – Address[33:2] Encrypted, and, if present, the First DW BE and Last DW BE fields<br>0100b – Address[41:2] Encrypted, and, if present, the First DW BE and Last DW BE fields<br>Others – Reserved<br>If Partial Header Encryption Supported is Clear, this field is Reserved. | RW / RO / RsvdP |
+| 18:14 | Selected Algorithm – Selects the algorithm to be used for securing IDE TLPs for this IDE Stream. Must be programmed to the same value in both Partner Ports. Must be configured while Selective IDE Stream Enable is Clear. When Selective IDE Stream Enable is Set, the setting is sampled, and this field becomes RO with reads returning the sampled value.<br>0 0000b – AES-GCM 256 key size, 96b MAC<br>Others – Reserved | RW / RO |
+| 21:19 | TC – System firmware/software must program this field to indicate the TC associated with this Selective IDE Register block.<br>Default value is 000b | RW |
+| 22 | Default Stream – When Set, TLPs using the Traffic Class indicated in the TC field are associated with this Stream, unless the TLP matches some other Selective IDE Stream for the indicated TC. A Default Stream must have the hierarchy domain's Root Port as its Partner Port; otherwise, the result is undefined<br>It is not permitted to configure more than one Default Stream to be associated with the same TC. If this is done, hardware must select one of the Streams to be associated with the TC – the selection is implementation specific.<br>Applicable for Endpoint Upstream Ports only. Reserved for other Port types.<br>Default value is 0b. | RW / RsvdP |
+| 23 | TEE-Limited Stream – When Set, requires that, for Requests, only those that have the T bit Set are permitted to be associated with this Stream. | RW / RO / RsvdP |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+**表 7-329. 选择性 IDE 流控制寄存器 (Selective IDE Stream Control Register)(续)**
+
+| 位位置 | 寄存器描述 | 属性 |
+|--------|------------|------|
+| 8 | PCRC Enable(PCRC 使能)— 置 1 时,与此流关联且包含 P 内容的发送 IDE TLP 必须包含 PCRC,且对接收的 TLP 必须检查 PCRC 错误。<br>若 PCRC Supported 为 0 则保留。<br>默认值为 0b。 | RW / RsvdP |
+| 9 | Selective IDE for Configuration Requests Enable(选择性 IDE 配置请求使能)—<br>对于 Root Port(根端口),若 Selective IDE for Configuration Requests Supported 置 1,则当此位置 1 时,必须使端口将所有目标 RID 大于等于 RID Base 且小于等于 Selective IDE RID Association Register Block 中 RID Limit 的 Configuration Request(配置请求),作为与此 Selective IDE 流关联的 IDE TLP 进行发送。<br>对于非 Root Port,此位保留。<br>若 Selective IDE for Configuration Requests Supported 为 0,则此位保留。<br>默认值为 0b。 | RW / RsvdP |
+| 13:10 | Partial Header Encryption Mode(部分包头加密模式)— 选择用于此 IDE 流的 IDE TLP 的部分包头加密模式。必须在两个 Partner Port 中编程为相同的值。必须在 Selective IDE Stream Enable 为 0 时配置。当 Selective IDE Stream Enable 置 1 时,该设置被采样,该字段变为 RO,读取返回采样值。<br>0000b — 无部分包头加密<br>0001b — Address[17:2] 加密,且若存在则 First DW BE 和 Last DW BE 字段也加密<br>0010b — Address[25:2] 加密,且若存在则 First DW BE 和 Last DW BE 字段也加密<br>0011b — Address[33:2] 加密,且若存在则 First DW BE 和 Last DW BE 字段也加密<br>0100b — Address[41:2] 加密,且若存在则 First DW BE 和 Last DW BE 字段也加密<br>Others — 保留<br>若 Partial Header Encryption Supported 为 0,则此字段保留。 | RW / RO / RsvdP |
+| 18:14 | Selected Algorithm(所选算法)— 选择用于保护此 IDE 流的 IDE TLP 的算法。必须在两个 Partner Port 中编程为相同的值。必须在 Selective IDE Stream Enable 为 0 时配置。当 Selective IDE Stream Enable 置 1 时,该设置被采样,该字段变为 RO,读取返回采样值。<br>0 0000b — AES-GCM 256 密钥长度,96b MAC<br>Others — 保留 | RW / RO |
+| 21:19 | TC(流量类)— 系统固件/软件必须编程此字段以指示与此 Selective IDE 寄存器块关联的 TC。<br>默认值为 000b | RW |
+| 22 | Default Stream(默认流)— 置 1 时,使用 TC 字段指示的流量类的 TLP 将与此流关联,除非该 TLP 与指定 TC 的其他 Selective IDE 流匹配。Default Stream 必须将层级域的 Root Port 作为其 Partner Port;否则结果是未定义的。<br>不允许将多于一个 Default Stream 配置为与同一 TC 关联。如果这样做,硬件必须选择其中一个流与该 TC 关联——选择是实现特定的。<br>仅适用于 Endpoint(端点)Upstream Port。其他端口类型保留。<br>默认值为 0b。 | RW / RsvdP |
+| 23 | TEE-Limited Stream(TEE 限制流)— 置 1 时,要求仅允许 T 位置 1 的请求与此流关联。 | RW / RO / RsvdP |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-5-2-finish"></a>
+## 7.9.26.5.2 Selective IDE Stream Control Register (continued) | 选择性 IDE 流控制寄存器(续)
+
+<<<PAGE_BREAK>>> page_1393
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+**Table 7-329. Selective IDE Stream Control Register (continued)**
+
+| Bit Location | Register Description | Attributes |
+|--------------|---------------------|------------|
+| 23 (cont.) | TEE-Limited Stream – Must be configured while Selective IDE Stream Enable is Clear, during which time this bit is RW. When Selective IDE Stream Enable is Set set to 1b, the setting is sampled, and this field bit becomes RO with reads returning the sampled value, during the time when Selective IDE Stream Enable remains Set.<br>Reserved if TEE-Limited Stream Supported is Clear.<br>Default value is 0b. | RW / RO / RsvdP |
+| 31:24 | Stream ID – Indicates the Stream ID associated with this Selective IDE Stream. Software must program the same Stream ID into both Ports associated with a given Selective IDE Stream. Default value is 00h. | RW |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+**表 7-329. 选择性 IDE 流控制寄存器 (Selective IDE Stream Control Register)(续)**
+
+| 位位置 | 寄存器描述 | 属性 |
+|--------|------------|------|
+| 23(续) | TEE-Limited Stream(TEE 限制流)— 必须在 Selective IDE Stream Enable 为 0 时配置,此时该位为 RW。当 Selective IDE Stream Enable 置 1 后,该设置被采样,该字段位变为 RO,在 Selective IDE Stream Enable 保持置 1 期间读取返回采样值。<br>若 TEE-Limited Stream Supported 为 0 则保留。<br>默认值为 0b。 | RW / RO / RsvdP |
+| 31:24 | Stream ID(流 ID)— 指示与此 Selective IDE 流关联的 Stream ID。软件必须将与同一 Selective IDE 流关联的两个端口编程为相同的 Stream ID。默认值为 00h。 | RW |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-5-3"></a>
+## 7.9.26.5.3 Selective IDE Stream Status Register | 选择性 IDE 流状态寄存器
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-378.** Selective IDE Stream Status Register
+> <img src="figures/chapter_07/fig_1393_1.png" width="700">
+
+> **Figure 7-378 (Register Layout).** Selective IDE Stream Status Register
+>
+> | Bits 31 | Bits 30:4 | Bits 3:0 |
+> |---------|-----------|----------|
+> | Received IDE Fail Message | RsvdZ | Selective IDE Stream State |
+
+**Table 7-330. Selective IDE Stream Status Register**
+
+| Bit Location | Register Description | Attributes |
+|--------------|---------------------|------------|
+| 3:0 | Selective IDE Stream State – When Selective IDE Stream Enable is Set, this field indicates the state of the Port. Encodings:<br>0000b – Insecure<br>0001b – Secure<br>0010b – Reserved – Software must handle reserved values as indicating unknown state<br>Others – Reserved – Software must handle reserved values as indicating unknown state<br>When Selective IDE Stream Enable is Clear, the value of this field must be 0000b. | RO |
+| 31 | Received IDE Fail Message – When Set, indicates that one or more IDE Fail Message(s) have been Received for this Stream. | RW1C |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-378.** 选择性 IDE 流状态寄存器 (Selective IDE Stream Status Register)
+> <img src="figures/chapter_07/fig_1393_1.png" width="700">
+
+> **图 7-378(寄存器布局)。** 选择性 IDE 流状态寄存器
+>
+> | 位 31 | 位 30:4 | 位 3:0 |
+> |-------|---------|--------|
+> | Received IDE Fail Message(已接收 IDE 失败消息) | RsvdZ | Selective IDE Stream State(选择性 IDE 流状态) |
+
+**表 7-330. 选择性 IDE 流状态寄存器 (Selective IDE Stream Status Register)**
+
+| 位位置 | 寄存器描述 | 属性 |
+|--------|------------|------|
+| 3:0 | Selective IDE Stream State(选择性 IDE 流状态)— 当 Selective IDE Stream Enable 置 1 时,此字段指示端口的状态。编码:<br>0000b — Insecure(不安全)<br>0001b — Secure(安全)<br>0010b — 保留 — 软件必须将保留值视为指示未知状态<br>Others — 保留 — 软件必须将保留值视为指示未知状态<br>当 Selective IDE Stream Enable 为 0 时,此字段的值必须为 0000b。 | RO |
+| 31 | Received IDE Fail Message(已接收 IDE 失败消息)— 置 1 时,指示已为此流接收到一条或多条 IDE Fail Message。 | RW1C |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-5-4"></a>
+## 7.9.26.5.4 Selective IDE RID Association Register Block | 选择性 IDE RID 关联寄存器块
+
+<<<PAGE_BREAK>>> page_1394
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+A Selective IDE RID Association register must consist of one IDE RID Association Register 1 followed by one IDE RID Association Register 2.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+一个 Selective IDE RID Association 寄存器必须由一个 IDE RID Association Register 1 后跟一个 IDE RID Association Register 2 组成。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-5-4-1"></a>
+## 7.9.26.5.4.1 IDE RID Association Register 1 | IDE RID 关联寄存器 1
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-379.** IDE RID Association Register 1 (Offset +00h)
+> <img src="figures/chapter_07/fig_1394_1.png" width="700">
+
+> **Figure 7-379 (Register Layout).** IDE RID Association Register 1 (Offset +00h)
+>
+> | Bits 31:24 | Bits 23:8 | Bits 7:0 |
+> |-----------|-----------|----------|
+> | RsvdP | RID Limit | RsvdP |
+
+**Table 7-331. IDE RID Association Register 1 (Offset +00h)**
+
+| Bit Location | Register Description | Attributes |
+|--------------|---------------------|------------|
+| 23:8 | RID Limit – Indicates the highest value RID in the range associated with this Stream ID at the IDE Partner Port.<br>The Segment Number associated with this field is contained in Segment Base in the IDE RID Association Register 2. | RW |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-379.** IDE RID 关联寄存器 1 (Offset +00h)
+> <img src="figures/chapter_07/fig_1394_1.png" width="700">
+
+> **图 7-379(寄存器布局)。** IDE RID 关联寄存器 1 (Offset +00h)
+>
+> | 位 31:24 | 位 23:8 | 位 7:0 |
+> |----------|---------|--------|
+> | RsvdP | RID Limit(RID 上限) | RsvdP |
+
+**表 7-331. IDE RID 关联寄存器 1 (Offset +00h)**
+
+| 位位置 | 寄存器描述 | 属性 |
+|--------|------------|------|
+| 23:8 | RID Limit(RID 上限)— 指示在 IDE Partner Port 与此 Stream ID 关联的范围内最高的 RID 值。<br>与此字段关联的 Segment Number 包含在 IDE RID Association Register 2 的 Segment Base 中。 | RW |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-5-4-2"></a>
+## 7.9.26.5.4.2 IDE RID Association Register 2 | IDE RID 关联寄存器 2
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-380.** IDE RID Association Register 2 (Offset +04h)
+> <img src="figures/chapter_07/fig_1394_1.png" width="700">
+
+> **Figure 7-380 (Register Layout).** IDE RID Association Register 2 (Offset +04h)
+>
+> | Bits 31:24 | Bits 23:8 | Bits 7:1 | Bit 0 |
+> |-----------|-----------|---------|-------|
+> | Segment Base | RID Base | RsvdP | Valid (V) |
+
+**Table 7-332. IDE RID Association Register 2 (Offset +04h)**
+
+| Bit Location | Register Description | Attributes |
+|--------------|---------------------|------------|
+| 0 | Valid (V) – When Set, indicates the Segment Base, RID Base and RID Limit fields have been programmed.<br>Default is 0b | RW |
+| 23:8 | RID Base – Indicates the lowest value RID in the range associated with this Stream ID at the IDE Partner Port.<br>The Segment Number associated with this field is contained in Segment Base. | RW |
+| 31:24 | Segment Base – In Flit Mode, Indicates the Segment value associated with this Stream ID at the IDE Partner Port.<br>Reserved if Flit Mode is not supported.<br>If this Selective IDE Stream is within an FM subtree whose Segment Captured bits are Clear, software must set this field to 00h, regardless of the Segment Number value associated with the subtree's RP.<br>Default value is 00h. | RW / RsvdP |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-380.** IDE RID 关联寄存器 2 (Offset +04h)
+> <img src="figures/chapter_07/fig_1394_1.png" width="700">
+
+> **图 7-380(寄存器布局)。** IDE RID 关联寄存器 2 (Offset +04h)
+>
+> | 位 31:24 | 位 23:8 | 位 7:1 | 位 0 |
+> |----------|---------|---------|------|
+> | Segment Base(Segment 基址) | RID Base(RID 基址) | RsvdP | Valid (V)(有效位) |
+
+**表 7-332. IDE RID 关联寄存器 2 (Offset +04h)**
+
+| 位位置 | 寄存器描述 | 属性 |
+|--------|------------|------|
+| 0 | Valid (V)(有效位)— 置 1 时,指示 Segment Base、RID Base 和 RID Limit 字段已被编程。<br>默认为 0b | RW |
+| 23:8 | RID Base(RID 基址)— 指示在 IDE Partner Port 与此 Stream ID 关联的范围内最低的 RID 值。<br>与此字段关联的 Segment Number 包含在 Segment Base 中。 | RW |
+| 31:24 | Segment Base(Segment 基址)— 在 Flit Mode(Flit 模式)下,指示在 IDE Partner Port 与此 Stream ID 关联的 Segment 值。<br>如果不支持 Flit Mode 则保留。<br>如果此 Selective IDE Stream 位于 Segment Captured 位为 0 的 FM 子树内,软件必须将此字段设置为 00h,与子树 RP 关联的 Segment Number 值无关。<br>默认值为 00h。 | RW / RsvdP |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-5-5"></a>
+## 7.9.26.5.5 Selective IDE Address Association Register Block | 选择性 IDE 地址关联寄存器块
+
+<<<PAGE_BREAK>>> page_1395
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+A Selective IDE Address Association register must consist of one IDE Address Association Register 1, followed by one IDE Address Association Register 2, followed by one IDE Address Association Register 3.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+一个 Selective IDE Address Association 寄存器必须由一个 IDE Address Association Register 1 后跟一个 IDE Address Association Register 2 再跟一个 IDE Address Association Register 3 组成。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-5-5-1"></a>
+## 7.9.26.5.5.1 IDE Address Association Register 1 | IDE 地址关联寄存器 1
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-381.** IDE Address Association Register 1 (Offset +00h)
+> <img src="figures/chapter_07/fig_1395_1.png" width="700">
+
+> **Figure 7-381 (Register Layout).** IDE Address Association Register 1 (Offset +00h)
+>
+> | Bits 31:20 | Bits 19:8 | Bits 7:1 | Bit 0 |
+> |-----------|-----------|---------|-------|
+> | Memory Limit Lower | Memory Base Lower | RsvdP | V (Valid) |
+
+**Table 7-333. IDE Address Association Register 1 (Offset +00h)**
+
+| Bit Location | Register Description | Attributes |
+|--------------|---------------------|------------|
+| 31:20 | Memory Limit Lower – Corresponds to Address bits [31:20]. Address bits [19:0] are implicitly F_FFFFh. | RW |
+| 19:8 | Memory Base Lower – Corresponds to Address bits [31:20]. Address[19:0] bits are implicitly 0_0000h. | RW |
+| 0 | V (Valid) – When Set, indicates this IDE Stream Association Block is valid, that the address range defined by Memory Base and Memory Limit corresponding to a range of memory addresses assigned to the IDE Partner Port, and that all Transmitted Address Routed TLPs within this address range must be associated with this IDE Stream, subject to rules stated in § Section 6.33.4 .<br>Hardware behavior is undefined if overlapping address ranges are assigned for different IDE Streams.<br>Default is 0b | RW |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-381.** IDE 地址关联寄存器 1 (Offset +00h)
+> <img src="figures/chapter_07/fig_1395_1.png" width="700">
+
+> **图 7-381(寄存器布局)。** IDE 地址关联寄存器 1 (Offset +00h)
+>
+> | 位 31:20 | 位 19:8 | 位 7:1 | 位 0 |
+> |----------|---------|---------|------|
+> | Memory Limit Lower(内存下限低位) | Memory Base Lower(内存基址低位) | RsvdP | V (Valid)(有效位) |
+
+**表 7-333. IDE 地址关联寄存器 1 (Offset +00h)**
+
+| 位位置 | 寄存器描述 | 属性 |
+|--------|------------|------|
+| 31:20 | Memory Limit Lower(内存下限低位)— 对应地址位 [31:20]。地址位 [19:0] 隐含为 F_FFFFh。 | RW |
+| 19:8 | Memory Base Lower(内存基址低位)— 对应地址位 [31:20]。地址位 [19:0] 隐含为 0_0000h。 | RW |
+| 0 | V (Valid)(有效位)— 置 1 时,指示此 IDE Stream Association Block 有效,由 Memory Base 和 Memory Limit 定义的地址范围对应分配给 IDE Partner Port 的一段内存地址范围,且该地址范围内的所有发送地址路由 TLP 必须与此 IDE 流关联,前提是遵循 § Section 6.33.4 中所述的规则。<br>如果为不同的 IDE Stream 分配了重叠的地址范围,硬件行为未定义。<br>默认为 0b | RW |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-5-5-2"></a>
+## 7.9.26.5.5.2 IDE Address Association Register 2 | IDE 地址关联寄存器 2
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-382.** IDE Address Association Register 2 (Offset +04h)
+> <img src="figures/chapter_07/fig_1395_1.png" width="700">
+
+> **Figure 7-382 (Register Layout).** IDE Address Association Register 2 (Offset +04h)
+>
+> | Bits 31:0 |
+> |-----------|
+> | Memory Limit Upper |
+
+**Table 7-334. IDE Address Association Register 2 (Offset +04h)**
+
+| Bit Location | Register Description | Attributes |
+|--------------|---------------------|------------|
+| 31:0 | Memory Limit Upper – Corresponds to Address bits [63:32] | RW |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-382.** IDE 地址关联寄存器 2 (Offset +04h)
+> <img src="figures/chapter_07/fig_1395_1.png" width="700">
+
+> **图 7-382(寄存器布局)。** IDE 地址关联寄存器 2 (Offset +04h)
+>
+> | 位 31:0 |
+> |---------|
+> | Memory Limit Upper(内存上限高位) |
+
+**表 7-334. IDE 地址关联寄存器 2 (Offset +04h)**
+
+| 位位置 | 寄存器描述 | 属性 |
+|--------|------------|------|
+| 31:0 | Memory Limit Upper(内存上限高位)— 对应地址位 [63:32] | RW |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-26-5-5-3"></a>
+## 7.9.26.5.5.3 IDE Address Association Register 3 | IDE 地址关联寄存器 3
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 7-383.** IDE Address Association Register 3 (Offset +04h)
+> <img src="figures/chapter_07/fig_1396_1.png" width="700">
+
+> **Figure 7-383 (Register Layout).** IDE Address Association Register 3 (Offset +04h)
+>
+> | Bits 31:0 |
+> |-----------|
+> | Memory Base Upper |
+
+**Table 7-335. IDE Address Association Register 3 (Offset +04h)**
+
+| Bit Location | Register Description | Attributes |
+|--------------|---------------------|------------|
+| 31:0 | Memory Base Upper – Corresponds to Address bits [63:32] | RW |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 7-383.** IDE 地址关联寄存器 3 (Offset +04h)
+> <img src="figures/chapter_07/fig_1396_1.png" width="700">
+
+> **图 7-383(寄存器布局)。** IDE 地址关联寄存器 3 (Offset +04h)
+>
+> | 位 31:0 |
+> |---------|
+> | Memory Base Upper(内存基址高位) |
+
+**表 7-335. IDE 地址关联寄存器 3 (Offset +04h)**
+
+| 位位置 | 寄存器描述 | 属性 |
+|--------|------------|------|
+| 31:0 | Memory Base Upper(内存基址高位)— 对应地址位 [63:32] | RW |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-27"></a>
+## 7.9.27 Null Capability | 空能力
+
+<<<PAGE_BREAK>>> page_1396
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The Null Capability is a capability structure in PCI-compatible Configuration Space (first 256 bytes) as shown in § Figure 7-384.
+
+The Null Capability contains no registers. This capability is present in the linked list (Next Capability Pointer), but should otherwise be ignored by software. The layout of the information is shown in § Figure 7-384.
+
+A single PCI Express Function is permitted to contain multiple Null Capability structures.
+
+> **Figure 7-384.** Null Capability
+> <img src="figures/chapter_07/fig_1396_1.png" width="700">
+
+> **Figure 7-384 (Register Layout).** Null Capability
+>
+> | Bits 15:8 | Bits 7:0 |
+> |-----------|----------|
+> | Next Capability Pointer | Capability ID = 00h |
+
+**Table 7-336. Null Capability**
+
+| Bit Location | Register Description | Attributes |
+|--------------|---------------------|------------|
+| 7:0 | Capability ID - Indicates the PCI Express Capability structure. This field must return a Capability ID of 00h indicating that this is a Null Capability structure. | RO |
+| 15:8 | Next Capability Pointer - This field contains the offset to the next PCI Capability structure or 00h if no other items exist in the linked list of Capabilities. | RO |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+Null Capability(空能力)是位于 PCI 兼容配置空间(前 256 字节)中的一种能力结构,如 § Figure 7-384 所示。
+
+Null Capability 不包含任何寄存器。该能力出现在链表(Next Capability Pointer)中,但软件应忽略其内容。信息的布局如 § Figure 7-384 所示。
+
+允许单个 PCI Express Function(功能)包含多个 Null Capability 结构。
+
+> **图 7-384.** 空能力 (Null Capability)
+> <img src="figures/chapter_07/fig_1396_1.png" width="700">
+
+> **图 7-384(寄存器布局)。** 空能力
+>
+> | 位 15:8 | 位 7:0 |
+> |---------|---------|
+> | Next Capability Pointer(下一能力指针) | Capability ID = 00h |
+
+**表 7-336. 空能力 (Null Capability)**
+
+| 位位置 | 寄存器描述 | 属性 |
+|--------|------------|------|
+| 7:0 | Capability ID(能力 ID)— 指示 PCI Express Capability 结构。此字段必须返回 00h 的 Capability ID,以指示这是一个 Null Capability 结构。 | RO |
+| 15:8 | Next Capability Pointer(下一能力指针)— 此字段包含指向下一个 PCI Capability 结构的偏移,若链表中不存在其他项则为 00h。 | RO |
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
+
+---
+
+<a id="sec-7-9-28"></a>
+## 7.9.28 Null Extended Capability | 空扩展能力
+
+<<<PAGE_BREAK>>> page_1397
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The Null Extended Capability is an optional Extended Capability that is permitted to be implemented by any PCI Express Function or RCRB. This capability contains no registers. This capability is present in the linked list (Next Capability Offset) but should otherwise be ignored by software.
+
+A single PCI Express Function or RCRB is permitted to contain multiple Null Extended Capability structures.
+
+§ Figure 7-385 details allocation of register fields in the Null Extended Capability; § Table 7-337 provides the respective bit definitions. The Extended Capability ID for the Null Extended Capability is 0000h.
+
+> **Figure 7-385.** Null Extended Capability
+> <img src="figures/chapter_07/fig_1397_1.png" width="700">
+
+> **Figure 7-385 (Register Layout).** Null Extended Capability
+>
+> | Bits 31:20 | Bits 19:16 | Bits 15:0 |
+> |-----------|------------|-----------|
+> | Next Capability Offset | Capability Version | PCI Express Extended Capability ID = 0000h |
+
+**Table 7-337. Null Extended Capability**
+
+| Bit Location | Register Description | Attributes |
+|--------------|---------------------|------------|
+| 15:0 | PCI Express Extended Capability ID - This field is a PCI-SIG defined ID number that indicates the nature and format of the Extended Capability.<br>Extended Capability ID for the Null Extended Capability is 0000h. | RO |
+| 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present.<br>This field is permitted to contain any value. | RO |
+| 31:20 | Next Capability Offset - This field contains the offset to the next PCI Express Capability structure or 000h if no other items exist in the linked list of Capabilities.<br>For Extended Capabilities implemented in Configuration Space, this offset is relative to the beginning of PCI-compatible Configuration Space and thus must always be either 000h (for terminating list of Capabilities) or greater than 0FFh. | RO |
+
+The Streamlined Virtual Channel (SVC) Extended Capability is an optional Extended Capability required for Ports that support capabilities associated with this structure, including UIO. It is permitted, but not required, for Functions in a Port to implement the SVC Extended Capability as well as the MFVC Extended Capability and/or VC Capabilities. See § Section 6.3.5 .
+
+UIO requires the use of the SVC capability and is not supported by the VC or MFVC capabilities. UIO is supported only in Flit Mode, but in Non-Flit Mode the SVC capability can be used by non-UIO traffic.
+
+For an Upstream Port, the SVC Extended Capability structure is permitted to be implemented only in Function 0, and that instance applies to all Functions associated with that Port. The SVC Extended Capability structure is permitted to be implemented in any Downstream Port, or in an RCRB. If the SVC Extended Capability structure is implemented in a USP
+
+</td>
+<td style="background-color:#e8e8e8">
+
+Null Extended Capability(空扩展能力)是一种可选的扩展能力,允许由任何 PCI Express Function 或 RCRB 实现。该能力不包含任何寄存器。该能力出现在链表(Next Capability Offset)中,但软件应忽略其内容。
+
+允许单个 PCI Express Function 或 RCRB 包含多个 Null Extended Capability 结构。
+
+§ Figure 7-385 详述了 Null Extended Capability 中各寄存器字段的分配;§ Table 7-337 给出了相应的位定义。Null Extended Capability 的 Extended Capability ID 为 0000h。
+
+> **图 7-385.** 空扩展能力 (Null Extended Capability)
+> <img src="figures/chapter_07/fig_1397_1.png" width="700">
+
+> **图 7-385(寄存器布局)。** 空扩展能力
+>
+> | 位 31:20 | 位 19:16 | 位 15:0 |
+> |----------|----------|---------|
+> | Next Capability Offset(下一能力偏移) | Capability Version(能力版本) | PCI Express Extended Capability ID = 0000h |
+
+**表 7-337. 空扩展能力 (Null Extended Capability)**
+
+| 位位置 | 寄存器描述 | 属性 |
+|--------|------------|------|
+| 15:0 | PCI Express Extended Capability ID(PCI Express 扩展能力 ID)— 此字段是由 PCI-SIG 定义的 ID 编号,用于指示扩展能力的性质和格式。<br>Null Extended Capability 的 Extended Capability ID 为 0000h。 | RO |
+| 19:16 | Capability Version(能力版本)— 此字段是由 PCI-SIG 定义的版本号,用于指示所呈现的能力结构的版本。<br>此字段允许包含任意值。 | RO |
+| 31:20 | Next Capability Offset(下一能力偏移)— 此字段包含指向下一个 PCI Express Capability 结构的偏移,若链表中不存在其他项则为 000h。<br>对于在配置空间中实现的扩展能力,此偏移相对于 PCI 兼容配置空间的起始处,因此必须始终为 000h(用于终止能力列表)或大于 0FFh。 | RO |
+
+Streamlined Virtual Channel(SVC,精简虚通道)Extended Capability 是一种可选的扩展能力,对于支持与此结构相关的能力(包括 UIO)的端口是必需的。允许(但不要求)端口中的功能同时实现 SVC Extended Capability 与 MFVC Extended Capability 和/或 VC Capabilities。参见 § Section 6.3.5 。
+
+UIO 要求使用 SVC 能力,且 VC 或 MFVC 能力不支持 UIO。UIO 仅在 Flit Mode(Flit 模式)下受支持,但在 Non-Flit Mode(非 Flit 模式)下,SVC 能力可被非 UIO 流量使用。
+
+对于 Upstream Port(上游端口),SVC Extended Capability 结构允许仅在 Function 0 中实现,且该实例适用于与该端口关联的所有功能。SVC Extended Capability 结构允许在任何 Downstream Port(下游端口)或 RCRB 中实现。如果 SVC Extended Capability 结构在 USP 中实现
+
+</td>
+</tr>
+</tbody>
+</table>
+
+[⬆️ 返回目录](#-本章目录-table-of-contents)
 
 ---
 
 ---
 
-## ⚠️ TODO: chapter_07_bl 未翻译
+7.9.29 Streamlined Virtual Channel Extended Capability (SVC) §
+§
+§
 
-本 chunk (`chapter_07_bl_raw.md`) 尚未完成翻译。在最终版本中将包含原文 + 中英对照翻译。
+<<<PAGE_BREAK>>> page_1398
 
-- 源文件: `chunks/chapter_07_bl_raw.md` (18,302 bytes)
-- 提示: 重跑此 prompt: `prompts/prompt_chapter_07_bl.md`
+<a id="sec-7-9-29"></a>
+## 7.9.29 Streamlined Virtual Channel Extended Capability (SVC) | 精简虚通道扩展能力 (SVC)
 
----
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
----
+containing one or more Switch USP Functions, it must be implemented in all associated Switch DSP Functions. A Root Complex is permitted to implement the Extended Capability structure in some Root Ports and not others.
 
-## ⚠️ TODO: chapter_07_bm 未翻译
+The number of (extended) Virtual Channels is indicated by the SVC Extended VC Count field in the SVC Port VC Capability Register 1. Software must interpret this field to determine the availability of extended SVC Resource registers.
 
-本 chunk (`chapter_07_bm_raw.md`) 尚未完成翻译。在最终版本中将包含原文 + 中英对照翻译。
+</td>
+<td style="background-color:#e8e8e8">
 
-- 源文件: `chunks/chapter_07_bm_raw.md` (16,845 bytes)
-- 提示: 重跑此 prompt: `prompts/prompt_chapter_07_bm.md`
+如果某个 交换机 (Switch) 包含一个或多个 USP (上游端口) Function,则其所有关联的 DSP (下游端口) Function 中都必须实现该扩展能力结构。根复合体 (Root Complex) 允许在某些 Root Port 上实现该扩展能力结构,而在其他 Root Port 上不实现。
 
----
+(扩展的)虚通道 (Virtual Channel) 数量由 SVC Port VC Capability Register 1 中的 SVC Extended VC Count 字段指示。软件必须解释该字段以确定扩展 SVC Resource 寄存器的可用性。
 
----
-
-## ⚠️ TODO: chapter_07_bn 未翻译
-
-本 chunk (`chapter_07_bn_raw.md`) 尚未完成翻译。在最终版本中将包含原文 + 中英对照翻译。
-
-- 源文件: `chunks/chapter_07_bn_raw.md` (20,681 bytes)
-- 提示: 重跑此 prompt: `prompts/prompt_chapter_07_bn.md`
-
----
-
----
-
-## ⚠️ TODO: chapter_07_bo 未翻译
-
-本 chunk (`chapter_07_bo_raw.md`) 尚未完成翻译。在最终版本中将包含原文 + 中英对照翻译。
-
-- 源文件: `chunks/chapter_07_bo_raw.md` (17,104 bytes)
-- 提示: 重跑此 prompt: `prompts/prompt_chapter_07_bo.md`
+</td>
+</tr>
+</tbody>
+</table>
 
 ---
 
+**Figure 7-386. Streamlined Virtual Channel Extended Capability Structure | 图 7-386. 精简虚通道扩展能力结构**
+
+> 7-386 图展示了精简虚通道扩展能力 (Streamlined Virtual Channel Extended Capability) 结构的布局。
+
+<a id="sec-7-9-29-1"></a>
+## 7.9.29.1 Streamlined Virtual Channel Extended Capability Header (Offset 00h) | 精简虚通道扩展能力头 (偏移量 00h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Figure 7-387 details allocation of register fields in the Streamlined Virtual Channel Extended Capability Header; Table 7-338 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+图 7-387 详细说明了精简虚通道扩展能力头 (Streamlined Virtual Channel Extended Capability Header) 中寄存器字段的分配;表 7-338 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Figure 7-387. Streamlined Virtual Channel Extended Capability Header | 图 7-387. 精简虚通道扩展能力头**
+
+```
+0                                                                              15
++--------------------------------------------------+
+|     PCI Express Extended Capability ID          |   0035h
++--------------------------------------------------+
+16            19                       20                                       31
++----------------+--------------------------------------------------+
+|  Capability    |        Next Capability Offset                     |
+|   Version      |                                                  |
++----------------+--------------------------------------------------+
+```
+
+**Table 7-338. Streamlined Virtual Channel Extended Capability Header | 表 7-338. 精简虚通道扩展能力头**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 15:0 | **PCI Express Extended Capability ID** - This field is a PCI-SIG defined ID number that indicates the nature and format of the Extended Capability. Extended Capability ID for the Streamlined Virtual Channel Extended Capability is 0035h. | RO |
+| 19:16 | **Capability Version** - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. Must be 1h for this version of the specification. | RO |
+| 31:20 | **Next Capability Offset** - This field contains the offset to the next PCI Express Capability structure or 000h if no other items exist in the linked list of Capabilities. | RO |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+For Extended Capabilities implemented in Configuration Space, this offset is relative to the beginning of PCI-compatible Configuration Space and thus must always be either 000h (for terminating list of Capabilities) or greater than 0FFh.
+
+The SVC Port Capability Register 1 describes the configuration of the Virtual Channels associated with a PCI Express Port.
+
+Figure 7-388 details allocation of register fields in the SVC Port Capability Register 1; Table 7-339 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+对于在配置空间 (Configuration Space) 中实现的扩展能力,该偏移量相对于 PCI 兼容 (PCI-Compatible) 配置空间的起始地址,因此必须始终为 000h(用于终止能力链表)或大于 0FFh。
+
+SVC Port Capability Register 1 描述与一个 PCI Express 端口 (Port) 关联的虚通道 (Virtual Channel) 的配置。
+
+图 7-388 详细说明了 SVC Port Capability Register 1 中寄存器字段的分配;表 7-339 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ---
 
-## ⚠️ TODO: chapter_07_bp 未翻译
+<a id="sec-7-9-29-2"></a>
+## 7.9.29.2 SVC Port Capability Register 1 (Offset 04h) | SVC 端口能力寄存器 1 (偏移量 04h)
 
-本 chunk (`chapter_07_bp_raw.md`) 尚未完成翻译。在最终版本中将包含原文 + 中英对照翻译。
+**Figure 7-388. SVC Port Capability Register 1 | 图 7-388. SVC 端口能力寄存器 1**
 
-- 源文件: `chunks/chapter_07_bp_raw.md` (14,136 bytes)
-- 提示: 重跑此 prompt: `prompts/prompt_chapter_07_bp.md`
+```
+0           2                  3                                                   31
++-----------+-------------------------------------------------------+
+| SVC Ext.  |                                                       |
+|  VC Count |                      RsvdP                           |
++-----------+-------------------------------------------------------+
+```
+
+**Table 7-339. SVC Port Capability Register 1 | 表 7-339. SVC 端口能力寄存器 1**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 2:0 | **SVC Extended VC Count** – Indicates the number of Virtual Channels supported in addition to VC0. This value indicates the number of SVC Resource Capability, Control, and Status registers present in this structure in addition to those for VC0. The minimum value of this field is 0, for devices that only support the default VC. | HwInit |
+| 31:3 | This register is RsvdP. | |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Table 7-340 details allocation of register fields in the SVC Port Control Register; Table 7-340 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+表 7-340 详细说明了 SVC Port Control Register 中寄存器字段的分配;表 7-340 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
 
 ---
 
+<a id="sec-7-9-29-3"></a>
+## 7.9.29.3 SVC Port Capability Register 2 (Offset 08h) | SVC 端口能力寄存器 2 (偏移量 08h)
+
+<a id="sec-7-9-29-4"></a>
+## 7.9.29.4 SVC Port Control Register (Offset 0Ch) | SVC 端口控制寄存器 (偏移量 0Ch)
+
+**Figure 7-389. SVC Port Control Register | 图 7-389. SVC 端口控制寄存器**
+
+```
+0                       1                                                         31
++------+--------------------------------------------------------------------------+
+| VC   |                                                                          |
+| Enab.|                            RsvdP                                        |
+|Compl.|                                                                          |
++------+--------------------------------------------------------------------------+
+```
+
+**Table 7-340. SVC Port Control Register | 表 7-340. SVC 端口控制寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | **VC Enablement Completed** – Setting this bit indicates that software has completed enabling all VCs that are to be used by the Port. Setting this bit is optional. If this bit remains Clear, the Port and all enabled VCs must operate correctly. Default value of this bit is 0b. | RW |
+| 31:1 | Reserved (RsvdP). | |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Table 7-341 details allocation of register fields in the SVC Port Status Register; Table 7-341 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+表 7-341 详细说明了 SVC Port Status Register 中寄存器字段的分配;表 7-341 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
 ---
 
-## ⚠️ TODO: chapter_07_bq 未翻译
+<<<PAGE_BREAK>>> page_1400
 
-本 chunk (`chapter_07_bq_raw.md`) 尚未完成翻译。在最终版本中将包含原文 + 中英对照翻译。
+**Figure 7-390. SVC Port Status Register | 图 7-390. SVC 端口状态寄存器**
 
-- 源文件: `chunks/chapter_07_bq_raw.md` (17,763 bytes)
-- 提示: 重跑此 prompt: `prompts/prompt_chapter_07_bq.md`
+```
+0                       1                                                         31
++--------+------------------------------------------------------------------------+
+| Use VC/|                                                                        |
+|  MFVC  |                            RsvdP                                      |
++--------+------------------------------------------------------------------------+
+```
+
+**Table 7-341. SVC Port Status Register | 表 7-341. SVC 端口状态寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 0 | **Use VC/MFVC** – This bit enables or disables multiple specific VCs in SVC, VC, and MFVC capabilities as required for Section 6.3.5. When this bit is Set, the VC Enable bit for VC0 in each VC/MFVC capability (VC Resource Control Register or MFVC VC Resource Control Register) must be Set, and the SVC VC Enable bit for each VC in its SVC Resource Control Register must be Clear. When this bit is Cleared, the VC Enable bit for each VC resource in each VC/MFVC capability (VC Resource Control Register or MFVC VC Resource Control Register) must immediately be Cleared, and the SVC VC Enable bit for VC0 in its SVC Resource Control Register must immediately be Set. If this Port implements any VC or MFVC capabilities, this bit must have a default value of 1b, and if Cleared, it must remain Clear until the next Conventional Reset. If this Port implements no VC or MFVC capabilities, this bit must be 0b. | RW1C/HwInit |
 
 ---
+
+<a id="sec-7-9-29-5"></a>
+## 7.9.29.5 SVC Port Status Register (Offset 10h) | SVC 端口状态寄存器 (偏移量 10h)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Encoded values for the SVC VC Protocols Supported field:
+
+- **0000b**: Supports same TLP Types and protocols as VC0
+- **0001b**: Supports same TLP Types and protocols as VC0, except for those that are restricted by this document to using only VC0
+- **0010b**: It is permitted to enable UIO on this VC resource; it is not permitted to use non-UIO TLP Types on this VC resource.
+- **0011b**: It is permitted to enable UIO on this VC resource, or to use as a 0001b VC resource, but not both at the same time.
+- **0100b to 1110b**: Reserved
+- **1111b**: Vendor-defined use (outside the scope of this specification)
+
+Figure 7-391 details allocation of register fields in the SVC Resource Capability Register; Table 7-342 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+SVC VC Protocols Supported 字段的编码值:
+
+- **0000b**: 支持与 VC0 相同的 TLP 类型和协议
+- **0001b**: 支持与 VC0 相同的 TLP 类型和协议,例外是本规范限制只能使用 VC0 的那些类型
+- **0010b**: 允许在该 VC 资源上启用 UIO;不允许在该 VC 资源上使用非 UIO TLP 类型。
+- **0011b**: 允许在该 VC 资源上启用 UIO,或作为 0001b VC 资源使用,但不能同时使用两者。
+- **0100b 至 1110b**: 保留
+- **1111b**: 厂商自定义使用(超出本规范范围)
+
+图 7-391 详细说明了 SVC Resource Capability Register 中寄存器字段的分配;表 7-342 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<<<PAGE_BREAK>>> page_1401
+
+<a id="sec-7-9-29-6"></a>
+## 7.9.29.6 SVC Resource Capability Register | SVC 资源能力寄存器
+
+**Figure 7-391. SVC Resource Capability Register | 图 7-391. SVC 资源能力寄存器**
+
+```
+0                       7        8                  11    12         14    15                                 31
++-----------------------+--------+-----------------------+-------------+-------------------------------------+
+|       RsvdP           |        | SVC VC Protocols      |  SVC VC ID  |              RsvdP                  |
++-----------------------+--------+-----------------------+-------------+-------------------------------------+
+```
+
+**Table 7-342. SVC Resource Capability Register | 表 7-342. SVC 资源能力寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 11:8 | **SVC VC Protocols Supported** – Indicates UIO and non-UIO Transaction support for this VC, encoded as: <br>• 0000b - Supports same TLP Types and protocols as VC0 <br>• 0001b - Supports same TLP Types and protocols as VC0, except for those that are restricted by this document to using only VC0 <br>• 0010b - It is permitted to enable UIO on this VC resource; it is not permitted to use non-UIO TLP Types on this VC resource. <br>• 0011b - It is permitted to enable UIO on this VC resource, or to use as a 0001b VC resource, but not both at the same time. <br>• 0100b to 1110b - Reserved <br>• 1111b - Vendor-defined use (outside the scope of this specification) <br>For VC0, must be 0000b. For VC3, if UIO is supported, must be 0010b or 0011b. For VC4, if UIO and VC4 are supported, must be 0010b or 0011b. | HwInit/RsvdP |
+| 14:12 | **SVC VC ID** – This field indicates the VC ID to the VC resource. For the first of SVC Resource Capability Register, this field must be 000b. For other SVC Resource Capability Registers, this field may contain any non-zero value. This field value must be unique across all SVC Resource Capability Registers. | HwInit/RsvdP |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Figure 7-392 details allocation of register fields in the SVC Resource Control Register; Table 7-343 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+图 7-392 详细说明了 SVC Resource Control Register 中寄存器字段的分配;表 7-343 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<a id="sec-7-9-29-7"></a>
+## 7.9.29.7 SVC Resource Control Register | SVC 资源控制寄存器
+
+**Figure 7-392. SVC Resource Control Register | 图 7-392. SVC 资源控制寄存器**
+
+```
+0                       7        8                  11    12                            26    27       29    30         31
++-----------------------+--------+-----------------------+--------------------------------+---+----------+--------+----------+
+|    SVC TC/VC Map      |        | SVC VC Protocol       |              RsvdP              |   |SVC Shared| SVC Sh.|  SVC VC  |
+|                       |        |     Selected          |                                |   | FC Usage |  FC Us.|  Enable  |
+|                       |        |                       |                                |   |  Limit   | Lim En.|          |
++-----------------------+--------+-----------------------+--------------------------------+---+----------+--------+----------+
+```
+
+**Table 7-343. SVC Resource Control Register | 表 7-343. SVC 资源控制寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 7:0 | **SVC TC/VC Map** – This field indicates the TCs that are mapped to the VC resource. This field is valid for all Functions. Bit locations within this field correspond to TC values. In order to remove one or more TCs from the TC/VC Map of an enabled VC, software must ensure that no new or outstanding Requests with the TC labels are targeted at the given Link. Bit 0 of this field must be read-only. It must be Set for the default VC0 and Clear for all other enabled VCs. Default value of this field must be consistent with Table 2-46. | RW / RO |
+| 11:8 | **SVC VC Protocol Selected** – Determines the TLP Types and Protocols to be used with this VC, encoded as: <br>• 0000b - TLP Types and protocols as VC0 (required for VC0 and permitted only for VC0) <br>• 0001b - TLP Types and protocols as VC0, except for those that are restricted by this document to using only VC0 <br>• 0010b - UIO TLP Types and protocols <br>• 0011b to 1110b - Reserved <br>• 1111b - Vendor-defined use (outside the scope of this specification) <br>For VC0, must be hardwired to 0000b. Default value is implementation specific. | RW / RO / RsvdP |
+| 29:27 | **SVC Shared Flow Control Usage Limit** – This field controls what percentage of the available Shared Flow Control a given FC/VC is permitted to consume. This limit is applied independently for each Flow Control credit type. For example, if this field contains 101b and SVC Shared Flow Control Usage Limit Enable is Set, a Posted TLP may not pass the Tx Gate if doing so would cause that VC to consume more than 62.5% of the available Shared Posted Header credits or if doing so would cause that VC to consume more than 62.5% of the available Shared Data credits. If SVC Shared Flow Control Usage Limit Enable is Clear, this field must be ignored, and this VC is permitted to consume all of the shared credits, unless the Transmitter has implementation-specific policy mechanisms to constrain shared credit use. When SVC Shared Flow Control Usage Limit Enable is Set, and this field contains 000b, this VC is not permitted to consume any shared credits. Behavior is undefined when all VCs have SVC Shared Flow Control Usage Limit Enable Set and the sum of the SVC Shared Flow Control Limit values for all VCs is less than 100%. Encodings are: <br>• 000b - 0% <br>• 001b - 12.5% <br>• 010b - 25% <br>• 011b - 37.5% <br>• 100b - 50% <br>• 101b - 62.5% <br>• 110b - 75% <br>• 111b - 87.5% <br>Behavior is undefined if this field changes value while SVC VC Enable and SVC Shared Flow Control Usage Limit Enable are both Set. When SVC Extended VC Count is 0, this field is permitted to be hardwired to any value. When this field is RW, the default value is implementation specific. | RW / RO / RsvdP |
+| 30 | **SVC Shared Flow Control Usage Limit Enable** – When Set, this bit enables use of control of Shared Flow Control consumption at the transmitter for this Virtual Channel. Behavior is undefined of the value of this bit changes while SVC VC Enable is Set. This bit is RsvdP when Flit Mode Supported is Clear. When SVC Extended VC Count is 0, this bit is permitted to be hardwired to 0b. When this bit is RW, the default value is implementation specific. | RW / RO / RsvdP |
+| 31 | **SVC VC Enable** – This bit, when Set, enables this Virtual Channel. The Virtual Channel is disabled when this bit is cleared. Software must use the SVC VC Negotiation Pending bit to check whether the VC negotiation is complete. For VC0, the attribute is RO, and this bit must always have the opposite value from the Use VC/MFVC bit in the SVC Port Status Register. See Section 6.3.5. For other VCs, the default value of this bit is 0b and the attribute is RW. To enable a Virtual Channel in a Port using SVC mechanisms, the SVC VC Enable bit for that Virtual Channel must be Set. The corresponding Virtual Channel in the Link partner Port must be enabled as well, and that Virtual Channel may be in an SVC, VC, or MFVC capability. To disable a Virtual Channel, the Virtual Channel must be disabled in both components on the Link. Software must ensure that no traffic is using a Virtual Channel at the time it is disabled. Software must fully disable a Virtual Channel in both components on a Link before re-enabling the Virtual Channel. | RW / RO |
+
+---
+
+<<<PAGE_BREAK>>> page_1402
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Table 7-344 details allocation of register fields in the VC Resource Status Register; Table 7-344 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+表 7-344 详细说明了 SVC Resource Status Register 中寄存器字段的分配;表 7-344 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<<<PAGE_BREAK>>> page_1403
+
+<a id="sec-7-9-29-8"></a>
+## 7.9.29.8 SVC Resource Status Register | SVC 资源状态寄存器
+
+**Figure 7-393. SVC Resource Status Register | 图 7-393. SVC 资源状态寄存器**
+
+```
+0                       1                                                         31
++-----------------------+----------------------------------------------------------+
+|       RsvdP           |        SVC VC Negotiation Pending          |    RsvdP   |
++-----------------------+----------------------------------------------------------+
+```
+
+<<<PAGE_BREAK>>> page_1404
+
+**Table 7-344. SVC Resource Status Register | 表 7-344. SVC 资源状态寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 1 | **SVC VC Negotiation Pending** – This bit indicates whether the Virtual Channel negotiation (initialization or disabling) is in pending state. This bit is valid for all Functions. The value of this bit is defined only when the Link is in the DL_Active state and the corresponding SVC VC Enable bit is Set. This bit is Set by hardware to indicate that the VC resource has not completed the process of negotiation. This bit is Cleared by hardware after the VC negotiation is complete (on exit from the FC_INIT2 state). For VC0, this bit is permitted to be hardwired to 0b. Before using a Virtual Channel, software must check whether the SVC VC Negotiation Pending bits for that Virtual Channel are Clear in both components on the Link. | RO |
+
+---
+
+<a id="sec-7-9-30"></a>
+## 7.9.30 MMIO Register Block Locator Extended Capability (MRBL) | MMIO 寄存器块定位器扩展能力 (MRBL)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The MMIO Register Block Locator Extended Capability (MRBL) is an optional Extended Capability for discovering register blocks in Memory Space that can be used to exchange various types of data structures between system software and a Function (See Section 6.35 Section 6.35).
+
+It is permitted to implement the MRBL Extended Capability in any type of Function. A single PCI Express Function is permitted to contain at most one instance of this capability.
+
+The number of register blocks included the MRBL structure is described in the MRBL Capabilities Register (Section 7.9.30.2 Section 7.9.30.2). A Function that implements the MRBL Extended Capability shall support at least one MRBL Locator Register (Section 7.9.30.3).
+
+Each register block is described by a MRBL Locator Register (Section 7.9.30.3) to specify the location and type of the registers within Memory Space. Each register block must be contained within the address range covered by the associated BAR. Figure 7-394 illustrates the MRBL Extended Capability structure.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+MMIO 寄存器块定位器扩展能力 (MMIO Register Block Locator Extended Capability, MRBL) 是一项可选的扩展能力,用于发现内存空间 (Memory Space) 中的寄存器块,这些寄存器块可用于在系统软件和 Function 之间交换各种类型的数据结构(参见第 6.35 节 第 6.35 节)。
+
+允许在任何类型的 Function 中实现 MRBL 扩展能力。单个 PCI Express Function 允许包含至多一个该能力的实例。
+
+MRBL 结构中包含的寄存器块数量在 MRBL Capabilities Register 中描述(第 7.9.30.2 节 第 7.9.30.2 节)。实现 MRBL 扩展能力的 Function 应至少支持一个 MRBL Locator Register(第 7.9.30.3 节)。
+
+每个寄存器块由一个 MRBL Locator Register(第 7.9.30.3 节)描述,以指定内存空间中寄存器的位置和类型。每个寄存器块必须包含在关联的 BAR (基址寄存器, Base Address Register) 所覆盖的地址范围内。图 7-394 说明了 MRBL 扩展能力结构。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+**Figure 7-394. MRBL Extended Capability | 图 7-394. MRBL 扩展能力**
+
+```
+Byte Offset       Contents
++--------+
++000h    |  PCI Express Extended Capability Header
++004h    |  MRBL Capabilities Register
++008h    |  MRBL Locator Register (Register Block 1)
++00Ch    |  MRBL Locator Register (Register Block 2)
++010h    |  ...
++014h
++018h
++--------+
+```
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Figure 7-395 details allocation of register fields in the MRBL Extended Capability Header; Table 7-345 provides the respective bit definitions. Refer to Section 7.6.3 for a description of the PCI Express Extended Capability Header. The Extended Capability ID for the MRBL Extended Capability is 0036h.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+图 7-395 详细说明了 MRBL Extended Capability Header 中寄存器字段的分配;表 7-345 给出了相应的位定义。有关 PCI Express 扩展能力头的描述,请参见第 7.6.3 节。MRBL 扩展能力的扩展能力 ID 为 0036h。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<<<PAGE_BREAK>>> page_1405
+
+<a id="sec-7-9-30-1"></a>
+## 7.9.30.1 MRBL Extended Capability Header (Offset 00h) | MRBL 扩展能力头 (偏移量 00h)
+
+**Figure 7-395. MRBL Extended Capability Header | 图 7-395. MRBL 扩展能力头**
+
+```
+0                                                                              15
++--------------------------------------------------+
+|     PCI Express Extended Capability ID          |   0036h
++--------------------------------------------------+
+16            19                       20                                       31
++----------------+--------------------------------------------------+
+|  Capability    |        Next Capability Offset                     |
+|   Version      |                                                  |
++----------------+--------------------------------------------------+
+```
+
+**Table 7-345. MRBL Extended Capability Header | 表 7-345. MRBL 扩展能力头**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 15:0 | **PCI Express Extended Capability ID** - This field is a PCI-SIG defined ID number that indicates the nature and format of the Extended Capability. Extended Capability ID for the MMIO Register Block Locator Extended Capability is 0036h. | RO |
+| 19:16 | **Capability Version** - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. Must be 1h for this version of the specification. | RO |
+| 31:20 | **Next Capability Offset** - This field contains the offset to the next PCI Express Capability structure or 000h if no other items exist in the linked list of Capabilities. For Extended Capabilities implemented in Configuration Space, this offset is relative to the beginning of PCI-compatible Configuration Space and thus must always be either 000h (for terminating list of Capabilities) or greater than 0FFh. | RO |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Figure 7-396 details allocation of register fields in the MRBL Capabilities Register; Table 7-346 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+图 7-396 详细说明了 MRBL Capabilities Register 中寄存器字段的分配;表 7-346 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<a id="sec-7-9-30-2"></a>
+## 7.9.30.2 MRBL Capabilities Register (Offset 04h) | MRBL 能力寄存器 (偏移量 04h)
+
+**Figure 7-396. MRBL Capabilities Register | 图 7-396. MRBL 能力寄存器**
+
+```
+0                                                                              11                                    31
++--------------------------------------------------------------------------------------------------------+
+|                              MRBL Structure Length                                                     |
++--------------------------------------------------------------------------------------------------------+
+```
+
+<<<PAGE_BREAK>>> page_1406
+
+**Table 7-346. MRBL Capabilities Register | 表 7-346. MRBL 能力寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 11:0 | **MRBL Structure Length** – This field indicates the overall size of the MRBL Extended Capability in bytes: 08h + (n*08h) where n is the number of MRBL Locator Registers implemented. | HWInit |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Figure 7-397 details allocation of register fields in the MRBL Locator Register; Table 7-347 provides the respective bit definitions.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+图 7-397 详细说明了 MRBL Locator Register 中寄存器字段的分配;表 7-347 给出了相应的位定义。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<a id="sec-7-9-30-3"></a>
+## 7.9.30.3 MRBL Locator Register (Offset Varies) | MRBL 定位寄存器 (偏移量可变)
+
+**Figure 7-397. MRBL Locator Register | 图 7-397. MRBL 定位寄存器**
+
+```
+0                       2                  3        7        8                          15    16                              31
++-----------------------+-----------------------+--------+-----------------------------+---------------------------------------+
+|    Register BIR       |        RsvdP          |                Register Block ID      |     Register Block Offset Low         |
++-----------------------+-----------------------+--------+-----------------------------+---------------------------------------+
+32                                                                                      63
++--------------------------------------------------------------------------------------+
+|                            Register Block Offset High                                |
++--------------------------------------------------------------------------------------+
+```
+
+**Table 7-347. MRBL Locator Register | 表 7-347. MRBL 定位寄存器**
+
+| Bit Location | Register Description | Attributes |
+|--------------|----------------------|------------|
+| 2:0 | **Register BIR** – Indicates which one of a Function's Base Address Registers, or entry in the Enhanced Allocation capability with a matching BAR Equivalent Indicator (BEI), is used for this register block. Defined encodings are: <br>• 00h - Base Address Register 10h <br>• 01h - Base Address Register 14h <br>• 02h - Base Address Register 18h <br>• 03h - Base Address Register 1Ch <br>• 04h - Base Address Register 20h <br>• 05h - Base Address Register 24h <br>• 06h - Reserved <br>• 07h - Reserved <br>For a 64-bit Base Address Register, the Register BIR indicates the lower DWORD. For Functions with Type 1 Configuration Space headers, BIR values 2 through 5 are Reserved. | HWInit |
+| 15:8 | **Register Block ID** – Identifies the type of registers contained in this register block. Defined encodings are: <br>• 00h - Empty/invalid register block <br>• 01h - MMIO Capabilities Register Block (MCAP) (Section 6.35.1) <br>• 02h-FEh - Reserved <br>• FFh - MMIO Designated Vendor-Specific Register Block (MDVS) (Section 6.35.2) | HWInit |
+| 31:16 | **Register Block Offset Low** – Contains bits [31:16] of the register block address offset within the BAR/BEI indicated by Register BIR. Offset bits [15:0] are 0000h. The value in this field must be ignored if Register Block ID is 00h. | HWInit |
+| 63:32 | **Register Block Offset High** – Contains bits [63:32] of the register block address offset within the BAR/BEI indicated by Register BIR. The value in this field must be ignored if Register Block ID is 00h. | HWInit |
+
+---
+
+<<<PAGE_BREAK>>> page_1407
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+(Continued from MRBL Locator Register description – Register Block Offset High field detail.)
+
+</td>
+<td style="background-color:#e8e8e8">
+
+(接 MRBL 定位寄存器描述 – Register Block Offset High 字段细节。)
+
+</td>
+</tr>
+</tbody>
+</table>
+
+---
+
+<<<PAGE_BREAK>>> page_1408
 
 ---
 
@@ -32467,3 +40488,107 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 - [7.9.12.6 DPA Power Allocation Array | DPA 功率分配数组](#sec-7-9-12-6)
 - [7.9.13 TPH Requester Extended Capability | TPH 请求者扩展能力](#sec-7-9-13)
 - [7.9.13.1 TPH Requester Extended Capability Header (Offset 00h) | TPH 请求者扩展能力头（偏移 00h）](#sec-7-9-13-1)
+- [7.9.13.2 TPH Requester Capability Register (Offset 04h) | TPH 请求者能力寄存器（偏移 04h）](#sec-7-9-13-2)
+- [7.9.13.3 TPH Requester Control Register (Offset 08h) | TPH 请求者控制寄存器（偏移 08h）](#sec-7-9-13-3)
+- [7.9.13.4 TPH ST Table (Starting from Offset 0Ch) | TPH ST 表（起始偏移 0Ch）](#sec-7-9-13-4)
+- [7.9.14 DPC Extended Capability | DPC 扩展能力](#sec-7-9-14)
+- [7.9.14.1 DPC Extended Capability Header (Offset 00h) | DPC 扩展能力头（偏移 00h）](#sec-7-9-14-1)
+- [7.9.14.2 DPC Capability Register (Offset 04h) | DPC 能力寄存器（偏移 04h）](#sec-7-9-14-2)
+- [7.9.14.3 DPC Control Register (Offset 06h) | DPC 控制寄存器（偏移 06h）](#sec-7-9-14-3)
+- [7.9.14.4 DPC Status Register (Offset 08h) | DPC 状态寄存器（偏移 08h）](#sec-7-9-14-4)
+- [7.9.14.5 DPC Error Source ID Register (Offset 0Ah) | DPC 错误源 ID 寄存器（偏移 0Ah）](#sec-7-9-14-5)
+- [7.9.14.6 RP PIO Status Register (Offset 0Ch) | RP PIO 状态寄存器（偏移 0Ch）](#sec-7-9-14-6)
+- [7.9.14.7 RP PIO Mask Register (Offset 10h) | RP PIO 屏蔽寄存器 (偏移 10h)](#sec-7-9-14-7)
+- [7.9.14.8 RP PIO Severity Register (Offset 14h) | RP PIO 严重程度寄存器 (偏移 14h)](#sec-7-9-14-8)
+- [7.9.14.9 RP PIO SysError Register (Offset 18h) | RP PIO 系统错误寄存器 (偏移 18h)](#sec-7-9-14-9)
+- [7.9.14.10 RP PIO Exception Register (Offset 1Ch) | RP PIO 异常寄存器 (偏移 1Ch)](#sec-7-9-14-10)
+- [7.9.14.11 RP PIO Header Log Register (Offset 20h) | RP PIO Header Log 寄存器 (偏移 20h)](#sec-7-9-14-11)
+- [7.9.14.12 RP PIO ImpSpec Log Register (Offset 30h) | RP PIO ImpSpec Log 寄存器 (偏移 30h)](#sec-7-9-14-12)
+- [7.9.15.1 PTM Extended Capability Header (Offset 00h) | PTM 扩展能力包头 (偏移 00h)](#sec-7-9-15-1)
+- [7.9.16.2 Readiness Time Reporting 1 Register (Offset 04h) | 就绪时间报告 1 寄存器（偏移 04h）](#sec-7-9-16-2)
+- [7.9.16.3 Readiness Time Reporting 2 Register (Offset 08h) | 就绪时间报告 2 寄存器（偏移 08h）](#sec-7-9-16-3)
+- [7.9.17 Hierarchy ID Extended Capability | 层级 ID 扩展能力（Hierarchy ID Extended Capability）](#sec-7-9-17)
+- [7.9.17.1 Hierarchy ID Extended Capability Header (Offset 00h) | 层级 ID 扩展能力头（偏移 00h）](#sec-7-9-17-1)
+- [7.9.17.2 Hierarchy ID Status Register (Offset 04h) | 层级 ID 状态寄存器（偏移 04h）](#sec-7-9-17-2)
+- [7.9.17.3 Hierarchy ID Data Register (Offset 08h) | 层级 ID 数据寄存器（偏移 08h）](#sec-7-9-17-3)
+- [7.9.17.4 Hierarchy ID GUID 1 Register (Offset 0Ch) | 层级 ID GUID 1 寄存器（偏移 0Ch）](#sec-7-9-17-4)
+- [7.9.17.5 Hierarchy ID GUID 2 Register (Offset 10h) | 层级 ID GUID 2 寄存器（偏移 10h）](#sec-7-9-17-5)
+- [7.9.17.6 Hierarchy ID GUID 3 Register (Offset 14h) | 层级 ID GUID 3 寄存器（偏移 14h）](#sec-7-9-17-6)
+- [7.9.17.7 Hierarchy ID GUID 4 Register (Offset 18h) | 层级 ID GUID 4 寄存器（偏移 18h）](#sec-7-9-17-7)
+- [7.9.17.8 Hierarchy ID GUID 5 Register (Offset 1Ch) | 层级 ID GUID 5 寄存器 (偏移 1Ch)](#sec-7-9-17-8)
+- [7.9.18 Vital Product Data Capability (VPD Capability) | 重要产品数据能力 (VPD Capability)](#sec-7-9-18)
+- [7.9.18.1 VPD Address Register | VPD Address 寄存器](#sec-7-9-18-1)
+- [7.9.18.2 VPD Data Register | VPD Data 寄存器](#sec-7-9-18-2)
+- [7.9.19 Native PCIe Enclosure Management Extended Capability (NPEM Extended Capability) | 原生 PCIe 机框管理扩展能力 (NPEM 扩展能力)](#sec-7-9-19)
+- [7.9.19.1 NPEM Extended Capability Header (Offset 00h) | NPEM 扩展能力头 (偏移 00h)](#sec-7-9-19-1)
+- [7.9.19.2 NPEM Capability Register (Offset 04h) | NPEM Capability 寄存器 (偏移 04h)](#sec-7-9-19-2)
+- [7.9.19.3 NPEM Control Register (Offset 08h) | NPEM Control 寄存器 (偏移 08h)](#sec-7-9-19-3)
+- [7.9.19.4 NPEM Status Register (Offset 0Ch) | NPEM Status 寄存器 (偏移 0Ch)](#sec-7-9-19-4)
+- [7.9.20 Alternate Protocol Extended Capability | Alternate Protocol 扩展能力](#sec-7-9-20)
+- [7.9.20.1 Alternate Protocol Extended Capability Header (Offset 00h) | Alternate Protocol 扩展能力头 (偏移 00h)](#sec-7-9-20-1)
+- [7.9.20.2 Alternate Protocol Capabilities Register (Offset 04h) | Alternate Protocol Capabilities 寄存器 (偏移 04h)](#sec-7-9-20-2)
+- [7.9.20.3 Alternate Protocol Control Register (Offset 08h) | 替代协议控制寄存器（偏移量 08h）](#sec-7-9-20-3)
+- [7.9.20.4 Alternate Protocol Data 1 Register (Offset 0Ch) | 替代协议数据 1 寄存器（偏移量 0Ch）](#sec-7-9-20-4)
+- [7.9.20.5 Alternate Protocol Data 2 Register (Offset 10h) | 替代协议数据 2 寄存器（偏移量 10h）](#sec-7-9-20-5)
+- [7.9.20.6 Alternate Protocol Selective Enable Mask Register (Offset 14h) | 替代协议选择性使能掩码寄存器（偏移量 14h）](#sec-7-9-20-6)
+- [7.9.21 Conventional PCI Advanced Features Capability (AF) | Conventional PCI 高级功能能力结构 (AF)](#sec-7-9-21)
+- [7.9.21.1 Advanced Features Capability Header (Offset 00h) | 高级功能能力结构头部（偏移量 00h）](#sec-7-9-21-1)
+- [7.9.21.2 AF Capabilities Register (Offset 03h) | AF 能力寄存器（偏移量 03h）](#sec-7-9-21-2)
+- [7.9.21.3 Conventional PCI Advanced Features Control Register (Offset 04h) | Conventional PCI 高级功能控制寄存器（偏移量 04h）](#sec-7-9-21-3)
+- [7.9.21.4 AF Status Register (Offset 05h) | AF 状态寄存器（偏移量 05h）](#sec-7-9-21-4)
+- [7.9.22 SFI Extended Capability | SFI 扩展能力结构](#sec-7-9-22)
+- [7.9.22.1 SFI Extended Capability Header (Offset 00h) | SFI 扩展能力结构头部（偏移量 00h）](#sec-7-9-22-1)
+- [7.9.22.2 SFI Capability Register (Offset 04h) | SFI 能力寄存器（偏移量 04h）](#sec-7-9-22-2)
+- [7.9.22.3 SFI Control Register (Offset 06h) | SFI 控制寄存器（偏移量 06h）](#sec-7-9-22-3)
+- [7.9.22.4 SFI Status Register (Offset 08h) | SFI 状态寄存器 (偏移 08h)](#sec-7-9-22-4)
+- [7.9.22.5 SFI CAM Address Register (Offset 0Ch) | SFI CAM 地址寄存器 (偏移 0Ch)](#sec-7-9-22-5)
+- [7.9.22.6 SFI CAM Data Register (Offset 10h) | SFI CAM 数据寄存器 (偏移 10h)](#sec-7-9-22-6)
+- [7.9.23 Subsystem ID and Subsystem Vendor ID Capability | Subsystem ID 与 Subsystem Vendor ID 能力](#sec-7-9-23)
+- [7.9.23.1 Subsystem ID and Subsystem Vendor ID Capability Header (Offset 00h) | Subsystem ID 与 Subsystem Vendor ID 能力头部 (偏移 00h)](#sec-7-9-23-1)
+- [7.9.23.2 Subsystem ID and Subsystem Vendor ID Capability Data (Offset 04h) | Subsystem ID 与 Subsystem Vendor ID 能力数据 (偏移 04h)](#sec-7-9-23-2)
+- [7.9.24 Data Object Exchange Extended Capability | Data Object Exchange 扩展能力](#sec-7-9-24)
+- [7.9.24.1 DOE Extended Capability Header (Offset 00h) | DOE 扩展能力头部 (偏移 00h)](#sec-7-9-24-1)
+- [7.9.24.2 DOE Capabilities Register (Offset 04h) | DOE 能力寄存器 (偏移 04h)](#sec-7-9-24-2)
+- [7.9.24.3 DOE Control Register (Offset 08h) | DOE 控制寄存器 (偏移 08h)](#sec-7-9-24-3)
+- [7.9.24.4 DOE Status Register (Offset 0Ch) | DOE 状态寄存器 (偏移 0Ch)](#sec-7-9-24-4)
+- [7.9.24.5 DOE Write Data Mailbox Register (Offset 10h) | DOE 写数据邮箱寄存器 (偏移 10h)](#sec-7-9-24-5)
+- [7.9.24.6 DOE Read Data Mailbox Register (Offset 14h) | DOE 读数据邮箱寄存器 (偏移 14h)](#sec-7-9-24-6)
+- [7.9.25 Shadow Functions Extended Capability | Shadow Functions 扩展能力](#sec-7-9-25)
+- [7.9.25.1 Shadow Functions Extended Capability Header (Offset 00h) | Shadow Functions 扩展能力头（偏移 00h）](#sec-7-9-25-1)
+- [7.9.25 Shadow Functions Capability | Shadow Functions 能力](#sec-7-9-25)
+- [7.9.25.2 Shadow Functions Capability Register (Offset 04h) | Shadow Functions 能力寄存器（偏移 04h）](#sec-7-9-25-2)
+- [7.9.25.3 Shadow Functions Control Register (Offset 08h) | Shadow Functions 控制寄存器（偏移 08h）](#sec-7-9-25-3)
+- [7.9.25.4 Shadow Functions Instance Register Entry | Shadow Functions 实例寄存器项](#sec-7-9-25-4)
+- [7.9.26 IDE Extended Capability | IDE 扩展能力](#sec-7-9-26)
+- [7.9.26.1 IDE Extended Capability Header (Offset 00h) | IDE 扩展能力头（偏移 00h）](#sec-7-9-26-1)
+- [7.9.26.2 IDE Capability Register (Offset 04h) | IDE 能力寄存器（偏移 04h）](#sec-7-9-26-2)
+- [7.9.26.3 IDE Control Register (Offset 08h) | IDE 控制寄存器（偏移 08h）](#sec-7-9-26-3)
+- [7.9.26.4 Link IDE Register Block | Link IDE 寄存器块](#sec-7-9-26-4)
+- [7.9.26.4.1 Link IDE Stream Control Register | Link IDE Stream 控制寄存器](#sec-7-9-26-4-1)
+- [7.9.26.4.2 Link IDE Stream Status Register | Link IDE Stream 状态寄存器](#sec-7-9-26-4-2)
+- [7.9.26.5 Selective IDE Stream Register Block | Selective IDE Stream 寄存器块](#sec-7-9-26-5)
+- [7.9.26.5.1 Selective IDE Stream Capability Register | 选择性 IDE 流能力寄存器](#sec-7-9-26-5-1)
+- [7.9.26.5.2 Selective IDE Stream Control Register | 选择性 IDE 流控制寄存器](#sec-7-9-26-5-2)
+- [7.9.26.5.3 Selective IDE Stream Status Register | 选择性 IDE 流状态寄存器](#sec-7-9-26-5-3)
+- [7.9.26.5.4 Selective IDE RID Association Register Block | 选择性 IDE RID 关联寄存器块](#sec-7-9-26-5-4)
+- [7.9.26.5.4.1 IDE RID Association Register 1 | IDE RID 关联寄存器 1](#sec-7-9-26-5-4-1)
+- [7.9.26.5.4.2 IDE RID Association Register 2 | IDE RID 关联寄存器 2](#sec-7-9-26-5-4-2)
+- [7.9.26.5.5 Selective IDE Address Association Register Block | 选择性 IDE 地址关联寄存器块](#sec-7-9-26-5-5)
+- [7.9.26.5.5.1 IDE Address Association Register 1 | IDE 地址关联寄存器 1](#sec-7-9-26-5-5-1)
+- [7.9.26.5.5.2 IDE Address Association Register 2 | IDE 地址关联寄存器 2](#sec-7-9-26-5-5-2)
+- [7.9.26.5.5.3 IDE Address Association Register 3 | IDE 地址关联寄存器 3](#sec-7-9-26-5-5-3)
+- [7.9.27 Null Capability | 空能力](#sec-7-9-27)
+- [7.9.28 Null Extended Capability | 空扩展能力](#sec-7-9-28)
+- [7.9.29 Streamlined Virtual Channel Extended Capability (SVC) | 精简虚通道扩展能力 (SVC)](#sec-7-9-29)
+- [7.9.29.1 Streamlined Virtual Channel Extended Capability Header (Offset 00h) | 精简虚通道扩展能力头 (偏移量 00h)](#sec-7-9-29-1)
+- [7.9.29.2 SVC Port Capability Register 1 (Offset 04h) | SVC 端口能力寄存器 1 (偏移量 04h)](#sec-7-9-29-2)
+- [7.9.29.3 SVC Port Capability Register 2 (Offset 08h) | SVC 端口能力寄存器 2 (偏移量 08h)](#sec-7-9-29-3)
+- [7.9.29.4 SVC Port Control Register (Offset 0Ch) | SVC 端口控制寄存器 (偏移量 0Ch)](#sec-7-9-29-4)
+- [7.9.29.5 SVC Port Status Register (Offset 10h) | SVC 端口状态寄存器 (偏移量 10h)](#sec-7-9-29-5)
+- [7.9.29.6 SVC Resource Capability Register | SVC 资源能力寄存器](#sec-7-9-29-6)
+- [7.9.29.7 SVC Resource Control Register | SVC 资源控制寄存器](#sec-7-9-29-7)
+- [7.9.29.8 SVC Resource Status Register | SVC 资源状态寄存器](#sec-7-9-29-8)
+- [7.9.30 MMIO Register Block Locator Extended Capability (MRBL) | MMIO 寄存器块定位器扩展能力 (MRBL)](#sec-7-9-30)
+- [7.9.30.1 MRBL Extended Capability Header (Offset 00h) | MRBL 扩展能力头 (偏移量 00h)](#sec-7-9-30-1)
+- [7.9.30.2 MRBL Capabilities Register (Offset 04h) | MRBL 能力寄存器 (偏移量 04h)](#sec-7-9-30-2)
+- [7.9.30.3 MRBL Locator Register (Offset Varies) | MRBL 定位寄存器 (偏移量可变)](#sec-7-9-30-3)

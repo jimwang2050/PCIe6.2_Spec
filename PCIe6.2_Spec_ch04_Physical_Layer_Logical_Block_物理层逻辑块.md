@@ -8203,14 +8203,622 @@ The following diagram represents the states where alternate protocol and equaliz
 
 ---
 
-## ⚠️ TODO: chapter_04_ai 未翻译
+<a id="sec-4-2-5-2"></a>
+## 4.2.5.2 Alternate Protocol Negotiation | 替代协议协商
 
-本 chunk (`chapter_04_ai_raw.md`) 尚未完成翻译。在最终版本中将包含原文 + 中英对照翻译。
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
 
-- 源文件: `chunks/chapter_04_ai_raw.md` (25,760 bytes)
-- 提示: 重跑此 prompt: `prompts/prompt_chapter_04_ai.md`
+> **IMPLEMENTATION NOTE:**
+> **ALTERNATE PROTOCOLS SHOULD HAVE AN EDS TOKEN EQUIVALENT**
+>
+> The EDS Token is used in PCI Express to indicate a switch from Data Blocks to Ordered Set blocks. This additional "redundant" information ensures that a random bit error in the 2 bit block header isn't incorrectly interpreted as the end of a data stream. This is one mechanism used by PCI Express to accomplish an undetected data error Hamming Distance of 4.
+>
+> Alternate protocols should have an equivalent mechanism. §
 
----
+</td>
+<td style="background-color:#e8e8e8">
+
+> **实现说明:**
+> **替代协议应具有 EDS 标记 (Token) 的等价机制**
+>
+> EDS 标记 (Token) 在 PCI Express 中用于指示从数据块 (Data Block) 切换到有序集 (Ordered Set) 块。该额外的"冗余"信息可确保 2 位块头中的随机比特错误不会被错误地解释为数据流的结束。这是 PCI Express 用于实现未检测数据错误汉明距离 (Hamming Distance) 为 4 的机制之一。
+>
+> 替代协议应具有等价的机制。§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<<<PAGE_BREAK>>> page_474
+
+<a id="fig-4-46"></a>
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **Figure 4-46.** Alternate Protocol Negotiation and Equalization Bypass LTSSM States
+>
+> <img src="figures/chapter_04/fig_0474_1.png" width="700">
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **图 4-46.** 替代协议协商与均衡旁路 LTSSM 状态
+>
+> <img src="figures/chapter_04/fig_0474_1.png" width="700">
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<a id="sec-4-2-5-2-body"></a>
+## 4.2.5.2 Alternate Protocol Negotiation (cont.) | 替代协议协商(续)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+Downstream Ports manage Alternate Protocol Negotiation and Training Set Messages based on the value of the Modified TS Usage Mode Selected field when the Port is in Configuration.Lanenum.Wait, Configuration.Lanenum.Accept, and Configuration.Complete substates with LinkUp = 0.
+
+Upstream Ports must respond to unsupported Modified TS Usage values by transmitting Modified TS Usage 000b.
+
+If Modified TS Usage Mode Selected is:
+
+**000b**
+No Alternate Protocol Negotiation or Training Set Message occurs. The link will operate as a PCI Express Link.
+
+**001b**
+Training Set Messages are enabled. Modified TS Information 1 and Modified TS Information 2 fields carry the vendor specific messages defined by the Training Set Message Vendor ID field.
+
+**010b**
+Alternate Protocol Negotiation is enabled. Modified TS Information 1 and Modified TS Information 2 fields carry the alternate protocol details defined by the Alternate Protocol Vendor ID field. A protocol request or response is associated with the protocol defined by the Alternate Protocol Vendor ID field.
+
+The Alternate Protocol Negotiation Status field indicates the progress of the negotiation protocol.
+
+**others**
+Reserved §
+
+</td>
+<td style="background-color:#e8e8e8">
+
+当端口处于 `LinkUp = 0` 的 Configuration.Lanenum.Wait、Configuration.Lanenum.Accept 和 Configuration.Complete 子状态时,下游端口 (Downstream Port) 根据 Modified TS Usage Mode Selected 字段的值管理替代协议协商和训练集消息。
+
+上游端口 (Upstream Port) 必须通过发送 Modified TS Usage 000b 来响应其不支持的 Modified TS Usage 值。
+
+如果 Modified TS Usage Mode Selected 为:
+
+**000b**
+不进行替代协议协商或训练集消息。链路将作为 PCI Express 链路运行。
+
+**001b**
+启用训练集消息。Modified TS Information 1 和 Modified TS Information 2 字段携带由 Training Set Message Vendor ID 字段定义的厂商特定消息。
+
+**010b**
+启用替代协议协商。Modified TS Information 1 和 Modified TS Information 2 字段携带由 Alternate Protocol Vendor ID 字段定义的替代协议详细信息。协议请求或响应与 Alternate Protocol Vendor ID 字段定义的协议相关联。
+
+Alternate Protocol Negotiation Status 字段指示协商协议的进度。
+
+**其他**
+保留 §
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<<<PAGE_BREAK>>> page_475
+
+**Table 4-30.** Modified TS Information 1 field in Modified TS1/TS2 Ordered Sets if Modified TS Usage = 010b (Alternate Protocol) | 表 4-30. Modified TS Usage = 010b (替代协议)时,Modified TS1/TS2 有序集中的 Modified TS Information 1 字段
+
+| Bits | Field | Description | 说明 |
+|------|-------|-------------|------|
+| 4:3 | Alternate Protocol Negotiation Status | For Modified TS1 Ordered Sets:<br>00b — DP: Indicates a protocol request from the Downstream Port asking whether the Upstream Port supports a particular alternate protocol.<br>UP: Reserved<br>01b — DP: Reserved<br>UP: Indicates that the Upstream Port does not have an answer for a protocol request yet. This occurs either when it is evaluating the protocol request or it has not received two consecutive Modified TS1s to perform the evaluation. In the former case, Alternate Protocol Vendor ID and Alternate Protocol Details reflect what it received, while Modified TS Information 2 is protocol specific. In the latter case, all 3 fields must be 0.<br>10b — DP: Reserved<br>UP: Indicates that the Upstream Port does not support the requested protocol. Alternate Protocol Vendor ID and Alternate Protocol Details reflect what it received. Modified TS Information 2 must be all 0s.<br>11b — DP: Reserved<br>UP: Indicates that the Upstream Port supports the requested protocol. Alternate Protocol Vendor ID and Alternate Protocol Details reflect what it received, while Modified TS Information 2 field is protocol specific.<br>For Modified TS2 Ordered Sets:<br>00b, 01b, 10b, 11b — DP/UP: Indicates a protocol confirmation from the Downstream Port as well as the Upstream Port. Behavior is undefined if the Downstream Port had not earlier received status 10b for this protocol in this instance of protocol negotiation during the Modified TS1 Ordered Sets. Similarly, behavior is undefined if the Upstream Port had not earlier transmitted status 10b for this protocol in this instance of protocol negotiation during the Modified TS1 Ordered Sets. No protocol is selected unless the Downstream Port sends and receives a protocol confirmation in the Modified TS2 Ordered Sets. If the Downstream Port decides not to use any Alternate Protocol, it must indicate this by transmitting Modified TS2 Ordered Set with Modified TS Usage of 000b or 001b. | 替代协议协商状态 (Alternate Protocol Negotiation Status)<br><br>对于 Modified TS1 有序集:<br>00b — DP: 表示来自下游端口 (DP) 的协议请求,询问上游端口 (UP) 是否支持特定的替代协议。<br>UP: 保留<br>01b — DP: 保留<br>UP: 表示上游端口 (UP) 尚未对协议请求给出答复。这可能发生在它正在评估协议请求时,或尚未收到两个连续的 Modified TS1 来执行评估。在前一种情况下,Alternate Protocol Vendor ID 和 Alternate Protocol Details 反映其接收到的内容,而 Modified TS Information 2 是协议特定的。在后一种情况下,所有 3 个字段必须为 0。<br>10b — DP: 保留<br>UP: 表示上游端口 (UP) 不支持所请求的协议。Alternate Protocol Vendor ID 和 Alternate Protocol Details 反映其接收到的内容。Modified TS Information 2 必须全为 0。<br>11b — DP: 保留<br>UP: 表示上游端口 (UP) 支持所请求的协议。Alternate Protocol Vendor ID 和 Alternate Protocol Details 反映其接收到的内容,而 Modified TS Information 2 字段是协议特定的。<br><br>对于 Modified TS2 有序集:<br>00b、01b、10b、11b — DP/UP: 表示来自下游端口 (DP) 以及上游端口 (UP) 的协议确认。如果在 Modified TS1 有序集期间的本次协议协商实例中,下游端口 (DP) 之前未收到此协议的 10b 状态,则行为未定义。类似地,如果在 Modified TS1 有序集期间的本次协议协商实例中,上游端口 (UP) 之前未发送此协议的 10b 状态,则行为未定义。除非下游端口 (DP) 在 Modified TS2 有序集中发送并接收到协议确认,否则不会选择任何协议。如果下游端口 (DP) 决定不使用任何替代协议,则必须通过发送 Modified TS Usage 为 000b 或 001b 的 Modified TS2 有序集来指示。 |
+| 15:5 | Alternate Protocol Details | Alternate Protocol Details is protocol specific. (Modified TS Usage = 010b). | 替代协议详细信息 (Alternate Protocol Details) 是协议特定的。(Modified TS Usage = 010b)。 |
+
+If Modified TS Usage = 001b, then Modified TS Information 1 and Modified TS Information 2 contain details of the training set messages.
+
+Alternate Protocol Negotiation must be concurrent with the Lane number negotiation. The Downstream Port is responsible for ensuring that they arrive at a consensus on the Alternate Protocol Negotiation prior to transitioning to Configuration.Complete substate. It is permitted to fall back to PCIe protocol if the Alternate Protocol Negotiation does not arrive at a consensus. On a successful negotiation to alternate protocol, the Link moves to L0 at 2.5 GT/s, changes the data rate to the higher data rates, performing equalization, if needed and enters L0 at the highest data rate desired. After §
+
+如果 Modified TS Usage = 001b,则 Modified TS Information 1 和 Modified TS Information 2 包含训练集消息的详细信息。
+
+替代协议协商必须与通道号协商同时进行。下游端口 (DP) 负责确保在转换到 Configuration.Complete 子状态之前,双方就替代协议协商达成共识。如果替代协议协商未达成共识,允许回退到 PCIe 协议。在成功协商到替代协议后,链路以 2.5 GT/s 进入 L0,改变数据速率到更高的数据速率,执行均衡(如果需要),并以期望的最高数据速率进入 L0。在 § 之后
+
+<<<PAGE_BREAK>>> page_476
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+transmitting the SDS Ordered Set in the highest data rate after equalization has been performed, the Data Blocks will carry the alternate protocol and the Link will be under the control of the alternate protocol.
+
+Before a Transmitter enters Electrical Idle, it must always send an Electrical Idle Ordered Set Sequence (EIOSQ), unless otherwise specified. An Electrical Idle Ordered Set Sequence (EIOSQ) is defined as one EIOS if the current Data Rate is 2.5 GT/s, 8.0 GT/s, 16.0 GT/s, 32.0 GT/s, or 64.0 GT/s Data Rate, or two consecutive EIOSs if the current Data Rate is 5.0 GT/s.
+
+When using 8b/10b encoding, an EIOS is a K28.5 (COM) followed by three K28.3 (IDL) Symbols. Transmitters must transmit all Symbols of an EIOS. An EIOS is received when the COM and two of the three IDL Symbols are received. When using 128b/130b encoding, an EIOS is an Ordered Set block, as defined in § Table 4-32. When using 1b/1b encoding, an EIOS is an Ordered Set block, as defined in § Table 4-33. Transmitters must transmit all Symbols of an EIOS if additional EIOSs are to be transmitted following it. Transmitters must transmit Symbols 0-13 of an EIOS, but are permitted to terminate the EIOS anywhere in Symbols 14 or 15, when transitioning to Electrical Idle after it. An EIOS is considered received when Symbols 0-3 of an Ordered Set Block match the definition of an EIOS if the data rate is less than 64.0 GT/s. At 64.0 GT/s, the rules governing receipt of an EIOS appears in § Section 4.2.3.1.5 .
+
+After transmitting the last Symbol of the last Electrical Idle Ordered Set, the Transmitter must be in a valid Electrical Idle state as specified by TTX-IDLE-SET-TO-IDLE (see § Table 8-7).
+
+</td>
+<td style="background-color:#e8e8e8">
+
+在最高数据速率下完成均衡后发送 SDS 有序集,数据块 (Data Block) 将携带替代协议,并且链路将由替代协议控制。
+
+在发送器 (Transmitter) 进入电气空闲 (Electrical Idle) 之前,除非另有规定,否则它必须始终发送电气空闲有序集序列 (Electrical Idle Ordered Set Sequence, EIOSQ)。如果当前数据速率为 2.5 GT/s、8.0 GT/s、16.0 GT/s、32.0 GT/s 或 64.0 GT/s,则 EIOSQ 定义为一个 EIOS;如果当前数据速率为 5.0 GT/s,则定义为两个连续的 EIOS。
+
+当使用 8b/10b 编码时,EIOS 是一个 K28.5 (COM) 后跟三个 K28.3 (IDL) 符号 (Symbol)。发送器必须发送 EIOS 的所有符号。当接收到 COM 和三个 IDL 符号中的两个时,即视为接收到 EIOS。当使用 128b/130b 编码时,EIOS 是一个有序集块 (Ordered Set Block),如 § 表 4-32 所定义。当使用 1b/1b 编码时,EIOS 是一个有序集块 (Ordered Set Block),如 § 表 4-33 所定义。如果要在 EIOS 之后发送额外的 EIOS,则发送器必须发送 EIOS 的所有符号。发送器必须发送 EIOS 的符号 0-13,但当之后过渡到电气空闲时,允许在符号 14 或 15 内的任意位置终止 EIOS。如果数据速率小于 64.0 GT/s,则当有序集块的符号 0-3 匹配 EIOS 的定义时,视为已接收到 EIOS。在 64.0 GT/s 时,关于接收 EIOS 的规则见 § 4.2.3.1.5 节。
+
+在发送最后一个电气空闲有序集 (Electrical Idle Ordered Set) 的最后一个符号后,发送器必须处于由 TTX-IDLE-SET-TO-IDLE(见 § 表 8-7)指定的有效电气空闲状态。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Table 4-31.** Electrical Idle Ordered Set (EIOS) for 2.5 GT/s and 5.0 GT/s Data Rates | 表 4-31. 2.5 GT/s 和 5.0 GT/s 数据速率的电气空闲有序集 (EIOS)
+
+| Symbol Number | Encoded Values | Description | 说明 |
+|---------------|----------------|-------------|------|
+| 0 | K28.5 | COM for Symbol alignment | 用于符号 (Symbol) 对齐的 COM |
+| 1 | K28.3 | IDL | IDL |
+| 2 | K28.3 | IDL | IDL |
+| 3 | K28.3 | IDL | IDL |
+
+**Table 4-32.** Electrical Idle Ordered Set (EIOS) for 128b/130b Encoding | 表 4-32. 128b/130b 编码的电气空闲有序集 (EIOS)
+
+| Symbol Numbers | Value | Description | 说明 |
+|----------------|-------|-------------|------|
+| 0-15 | 66h | EIOS Identifier and Payload | EIOS 标识符和有效负载 |
+
+<a id="sec-4-2-5-3"></a>
+## 4.2.5.3 Electrical Idle Sequences (EIOS and EIEOS) | 电气空闲序列 (EIOS 和 EIEOS)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **IMPLEMENTATION NOTE:**
+> **TRUNCATION OF EIOS ORDERED SET**
+>
+> Truncation in the last EIOS is allowed to help implementations where a transmitter may terminate on an internal clock boundary that may not align on a Symbol boundary due to 128b/130b encoding. Truncation is okay since Receivers will just look at the first four Symbols to conclude it is an EIOS. §
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **实现说明:**
+> **EIOS 有序集的截断**
+>
+> 允许在最后一个 EIOS 中截断,以帮助实现以下场景:由于 128b/130b 编码,发送器可能在内部时钟边界上终止,而该边界可能未在符号 (Symbol) 边界上对齐。截断是可以接受的,因为接收器 (Receiver) 只会查看前四个符号即可断定其为 EIOS。§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<<<PAGE_BREAK>>> page_477
+
+**Table 4-33.** Electrical Idle Ordered Set (EIOS) for 1b/1b Encoding | 表 4-33. 1b/1b 编码的电气空闲有序集 (EIOS)
+
+| Symbol Numbers | Value | Description | 说明 |
+|----------------|-------|-------------|------|
+| 0, 2, 4, 6, 8, 10, 12, 14 | 0Fh | EIOS Identifier and Payload | EIOS 标识符和有效负载 |
+| 1, 3, 5, 7, 9, 11, 13, 15 | F0h | EIOS Identifier and Payload | EIOS 标识符和有效负载 |
+
+**Table 4-34.** Electrical Idle Exit Ordered Set (EIEOS) for 5.0 GT/s Data Rate | 表 4-34. 5.0 GT/s 数据速率的电气空闲退出有序集 (EIEOS)
+
+| Symbol Number | Encoded Values | Description | 说明 |
+|---------------|----------------|-------------|------|
+| 0 | K28.5 | COM for Symbol alignment | 用于符号 (Symbol) 对齐的 COM |
+| 1-14 | K28.7 | EIE - K Symbol with low frequency components for helping achieve exit from Electrical Idle | EIE — 具有低频分量的 K 符号,有助于实现电气空闲退出 |
+| 15 | D10.2 | TS1 Identifier (See Note 1) | TS1 标识符(见注释 1) |
+
+**Notes:**
+1. This symbol is not scrambled. Previous versions of this specification were less clear and some implementations may have incorrectly scrambled this symbol. It is recommended that devices be tolerant of receiving EIEOS in which this symbol is scrambled.
+
+**注释:**
+1. 该符号不加扰 (Scrambling)。此规范的早期版本表述不够清晰,某些实现可能错误地对该符号进行了加扰。建议设备容忍接收此符号已加扰的 EIEOS。
+
+**Table 4-35.** Electrical Idle Exit Ordered Set (EIEOS) for 8.0 GT/s Data Rate | 表 4-35. 8.0 GT/s 数据速率的电气空闲退出有序集 (EIEOS)
+
+| Symbol Numbers | Value | Description | 说明 |
+|----------------|-------|-------------|------|
+| 0, 2, 4, 6, 8, 10, 12, 14 | 00h | Symbol 0: EIEOS Identifier<br>A low frequency pattern that alternates between eight 0s and eight 1s. | Symbol 0:EIEOS 标识符<br>在八个 0 和八个 1 之间交替的低频模式。 |
+| 1, 3, 5, 7, 9, 11, 13, 15 | FFh | A low frequency pattern that alternates between eight 0s and eight 1s. | 在八个 0 和八个 1 之间交替的低频模式。 |
+
+**Table 4-36.** Electrical Idle Exit Ordered Set (EIEOS) for 16.0 GT/s Data Rate | 表 4-36. 16.0 GT/s 数据速率的电气空闲退出有序集 (EIEOS)
+
+| Symbol Numbers | Value | Description | 说明 |
+|----------------|-------|-------------|------|
+| 0, 1, 4, 5, 8, 9, 12, 13 | 00h | Symbol 0: EIEOS Identifier<br>A low frequency pattern that alternates between sixteen 0s and sixteen 1s. | Symbol 0:EIEOS 标识符<br>在十六个 0 和十六个 1 之间交替的低频模式。 |
+| 2, 3, 6, 7, 10, 11, 14, 15 | FFh | A low frequency pattern that alternates between sixteen 0s and sixteen 1s. | 在十六个 0 和十六个 1 之间交替的低频模式。 |
+
+**Table 4-37.** Electrical Idle Exit Ordered Set (EIEOS) for 32.0 GT/s Data Rate | 表 4-37. 32.0 GT/s 数据速率的电气空闲退出有序集 (EIEOS)
+
+| Symbol Numbers | Value | Description | 说明 |
+|----------------|-------|-------------|------|
+| 0, 1, 2, 3, 8, 9, 10, 11 | 00h | Symbol 0: EIEOS Identifier<br>A low frequency pattern that alternates between thirty-two 0s and thirty-two 1s. | Symbol 0:EIEOS 标识符<br>在三十二个 0 和三十二个 1 之间交替的低频模式。 |
+| 4, 5, 6, 7, 12, 13, 14, 15 | FFh | A low frequency pattern that alternates between thirty-two 0s and thirty-two 1s. | 在三十二个 0 和三十二个 1 之间交替的低频模式。 |
+
+<<<PAGE_BREAK>>> page_478
+
+**Table 4-38.** Electrical Idle Exit Ordered Set (EIEOS) for 64.0 GT/s Data Rate | 表 4-38. 64.0 GT/s 数据速率的电气空闲退出有序集 (EIEOS)
+
+| Symbol Numbers | Value | Description | 说明 |
+|----------------|-------|-------------|------|
+| 0 - 7 | 00h | Voltage level 0 for 32 UI | 32 UI 内的电压电平 0 |
+| 8 - 15 | FFh | Voltage level 3 for 32 UI | 32 UI 内的电压电平 3 |
+
+<a id="fig-4-47"></a>
+
+> **Figure 4-47.** Electrical Idle Exit Ordered Set for 8.0 GT/s to 32.0 GT/s Data Rates (EIEOS)
+>
+> <img src="figures/chapter_04/fig_0478_1.png" width="700">
+
+> **图 4-47.** 8.0 GT/s 至 32.0 GT/s 数据速率的电气空闲退出有序集 (EIEOS)
+>
+> <img src="figures/chapter_04/fig_0478_1.png" width="700">
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The Electrical Idle Exit Ordered Set (EIEOS) is transmitted only when operating at speeds other than 2.5 GT/s. It is a low frequency pattern transmitted periodically to help ensure that receiver Electrical Idle exit detection circuitry can detect an exit from Electrical Idle. When using 128b/130b encoding, it is also used for Block Alignment as described in § Section 4.2.2.2.1 . §
+
+</td>
+<td style="background-color:#e8e8e8">
+
+电气空闲退出有序集 (EIEOS) 仅在以 2.5 GT/s 以外的速度运行时发送。它是一种周期性发送的低频模式,用于帮助确保接收器 (Receiver) 电气空闲退出检测电路能够检测到电气空闲的退出。当使用 128b/130b 编码时,它还用于块对齐 (Block Alignment),如 § 4.2.2.2.1 节所述。§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<<<PAGE_BREAK>>> page_479
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+An Electrical Idle Exit Ordered Set Sequence (EIEOSQ) comprises of two consecutive EIEOS for the Data Rate of 32.0 GT/s and one EIEOS for 5.0 GT/s, 8.0 GT/s, and 16.0 GT/s. The two EIEOS at 32.0 GT/s must be back to back and uninterrupted in order to be considered consecutive and form an EIEOSQ. Irrespective of the length of the EIEOSQ, block alignment still occurs on an EIEOS.
+
+At the Data Rate of 64.0 GT/s, an EIEOSQ is defined as follows:
+
+- On entry to Recovery.RcvrLock either from Recovery.Speed or from L1, until either the Receiver detects exit Electrical Idle on all Lanes or it receives two consecutive valid TS1 Ordered Sets on any Lane:
+  - Four consecutive EIEOS, uninterrupted by any other Ordered Set including the Control SKP Ordered Set
+- While increasing Link Width with L0p till the Receiver detects exit Electrical Idle on all Lanes that need to be activated or receives two consecutive valid TS1 Ordered Sets on any Lane that needs to be activated:
+  - Four consecutive EIEOS, uninterrupted by any other Ordered Set including the Control SKP Ordered Set
+- On entry to the Loopback state from electrical idle till the Receiver detects exit Electrical Idle on all Lanes that need to be activated or receives two consecutive valid TS1 Ordered Sets on any Lane:
+  - Four consecutive EIEOS, uninterrupted by any other Ordered Set including the Control SKP Ordered Set
+- While transmitting Compliance Patterns or Modified Compliance Patterns:
+  - One EIEOS
+- Else one EIEOS
+
+When using 8b/10b encoding and operating at 5.0 GT/s, an EIEOSQ, as defined in § Table 4-34, is transmitted in the following situations:
+
+- Before the first TS1 Ordered Set after entering the LTSSM Configuration.Linkwidth.Start state.
+- Before the first TS1 Ordered Set after entering the LTSSM Recovery.RcvrLock state.
+- After every 32 TS1 or TS2 Ordered Sets are transmitted in the LTSSM Configuration.Linkwidth.Start, Recovery.RcvrLock, and Recovery.RcvrCfg states. The TS1/TS2 count is set to 0 when:
+  - An EIEOS is transmitted.
+  - The first TS2 Ordered Set is received while in the LTSSM Recovery.RcvrCfg state.
+
+When using 128b/130b encoding, an EIEOSQ, as defined in § Table 4-35 through § Table 4-37 and § Figure 4-47, is transmitted in the following situations:
+
+- Before the first TS1 Ordered Set after entering the LTSSM Configuration.Linkwidth.Start substate.
+- Before the first TS1 Ordered Set after entering the LTSSM Recovery.RcvrLock substate.
+- Immediately following an EDS Framing Token in Non-Flit Mode when ending a Data Stream and not transmitting an EIOS and not entering the LTSSM Recovery.RcvrLock substate.
+- At the scheduled Ordered Set interval to end a Data Stream in Flit Mode.
+- After every 32 TS1 or TS2 Ordered Sets are transmitted in all LTSSM states which require transmission of TS1 or TS2 Ordered Sets. The TS1/TS2 count is set to 0 when:
+  - An EIEOS is transmitted.
+  - The first TS2 Ordered Set is received while in the LTSSM Recovery.RcvrCfg state.
+  - The first TS2 Ordered Set is received while in the LTSSM Configuration.Complete state.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+电气空闲退出有序集序列 (EIEOSQ) 由两个连续的 EIEOS 组成(数据速率为 32.0 GT/s 时),或由一个 EIEOS 组成(数据速率为 5.0 GT/s、8.0 GT/s 和 16.0 GT/s 时)。32.0 GT/s 下的两个 EIEOS 必须背靠背且不中断才能视为连续并构成 EIEOSQ。无论 EIEOSQ 的长度如何,块对齐 (Block Alignment) 仍然发生在 EIEOS 上。
+
+在 64.0 GT/s 数据速率下,EIEOSQ 定义如下:
+
+- 在从 Recovery.Speed 或 L1 进入 Recovery.RcvrLock 时,直到接收器 (Receiver) 在所有通道 (Lane) 上检测到电气空闲退出,或在任一通道上接收到两个连续的有效 TS1 有序集:
+  - 四个连续的 EIEOS,不被任何其他有序集(包括 Control SKP 有序集)中断
+- 在使用 L0p 增加链路宽度 (Link Width) 时,直到接收器 (Receiver) 在所有需要激活的通道上检测到电气空闲退出,或在任一需要激活的通道上接收到两个连续的有效 TS1 有序集:
+  - 四个连续的 EIEOS,不被任何其他有序集(包括 Control SKP 有序集)中断
+- 在从电气空闲进入 Loopback 状态时,直到接收器 (Receiver) 在所有需要激活的通道上检测到电气空闲退出,或在任一需要激活的通道上接收到两个连续的有效 TS1 有序集:
+  - 四个连续的 EIEOS,不被任何其他有序集(包括 Control SKP 有序集)中断
+- 在发送一致性测试码型 (Compliance Pattern) 或修改后的一致性测试码型 (Modified Compliance Pattern) 时:
+  - 一个 EIEOS
+- 其他情况:一个 EIEOS
+
+当使用 8b/10b 编码并以 5.0 GT/s 运行时,如 § 表 4-34 所定义的 EIEOSQ 在以下情况下发送:
+
+- 在进入 LTSSM Configuration.Linkwidth.Start 状态后,发送第一个 TS1 有序集之前。
+- 在进入 LTSSM Recovery.RcvrLock 状态后,发送第一个 TS1 有序集之前。
+- 在 LTSSM Configuration.Linkwidth.Start、Recovery.RcvrLock 和 Recovery.RcvrCfg 状态中,每发送 32 个 TS1 或 TS2 有序集后。TS1/TS2 计数在以下情况下重置为 0:
+  - 发送 EIEOS。
+  - 在 LTSSM Recovery.RcvrCfg 状态中接收到第一个 TS2 有序集。
+
+当使用 128b/130b 编码时,如 § 表 4-35 至 § 表 4-37 以及 § 图 4-47 所定义的 EIEOSQ 在以下情况下发送:
+
+- 在进入 LTSSM Configuration.Linkwidth.Start 子状态后,发送第一个 TS1 有序集之前。
+- 在进入 LTSSM Recovery.RcvrLock 子状态后,发送第一个 TS1 有序集之前。
+- 在非 Flit 模式 (Non-Flit Mode) 中结束数据流 (Data Stream) 时,紧跟 EDS 帧标记 (Framing Token) 之后,既不发送 EIOS 也不进入 LTSSM Recovery.RcvrLock 子状态。
+- 在 Flit 模式 (Flit Mode) 中,在调度的有序集间隔处以结束数据流 (Data Stream)。
+- 在所有需要发送 TS1 或 TS2 有序集的 LTSSM 状态中,每发送 32 个 TS1 或 TS2 有序集后。TS1/TS2 计数在以下情况下重置为 0:
+  - 发送 EIEOS。
+  - 在 LTSSM Recovery.RcvrCfg 状态中接收到第一个 TS2 有序集。
+  - 在 LTSSM Configuration.Complete 状态中接收到第一个 TS2 有序集。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<<<PAGE_BREAK>>> page_480
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+  - A Downstream Port is in Phase 2 of the LTSSM Recovery.Equalization state and two consecutive TS1 Ordered Sets are received on any Lane with the Reset EIEOS Interval Count bit set.
+  - An Upstream Port is in Phase 3 of the LTSSM Recovery.Equalization state and two consecutive TS1 Ordered Sets are received on any Lane with the Reset EIEOS Interval Count bit set.
+
+- After every 65,536 TS1 Ordered Sets are transmitted in the LTSSM Recovery.Equalization state if the Reset EIEOS Interval Count bit has prevented it from being transmitted for that interval. Implementations are permitted to satisfy this requirement by transmitting an EIEOSQ within two TS1 Ordered Sets of whenever the current scrambling LFSR matches its seed value.
+- As part of an FTS Ordered Set, Compliance Pattern, or Modified Compliance Pattern as described in the relevant sections.
+
+When using 1b/1b encoding, an EIEOSQ, as defined in § Table 4-38 is transmitted in the following situations:
+
+- Before the first TS1 Ordered Set after entering the LTSSM Configuration.Linkwidth.Start substate.
+- Before the first TS1 Ordered Set after entering the LTSSM Recovery.RcvrLock substate.
+- Before the first TS0 Ordered Set after entering Recovery.Equalization substate.
+- At the scheduled Ordered Set interval to indicate the end of the Data Stream.
+- After every 32 TS1, TS2, or TS0 Ordered Sets are transmitted in all LTSSM states which require transmission of TS1, TS2, or TS0 Ordered Sets. The TS1/TS2/TS0 count is set to 0 when:
+  - An EIEOS is transmitted.
+  - The first TS2 Ordered Set is received while in the LTSSM Recovery.RcvrCfg state.
+  - The first TS2 Ordered Set is received while in the LTSSM Configuration.Complete state.
+  - The first TS1 Ordered Set is received while in the LTSSM Recovery.Equalization state if the TS1 Ordered Set is received after TS0 Ordered Sets.
+  - A Downstream Port is in Phase 2 of the LTSSM Recovery.Equalization state and two consecutive TS0 Ordered Sets are received on any Lane with the Reset EIEOS Interval Count bit set.
+  - An Upstream Port is in Phase 3 of the LTSSM Recovery.Equalization state and two consecutive TS1 Ordered Sets are received on any Lane with the Reset EIEOS Interval Count bit set.
+- After every 65,536 TS1 Ordered Sets are transmitted in the LTSSM Recovery.Equalization state if the Reset EIEOS Interval Count bit has prevented it from being transmitted for that interval. Implementations are permitted to satisfy this requirement by transmitting an EIEOSQ within two TS1 Ordered Sets of whenever the current scrambling LFSR matches its seed value.
+- As part of a Compliance Pattern, or Modified Compliance Pattern as described in the relevant sections.
+
+**Example:** An LTSSM enters Recovery.RcvrLock from L0 in 5.0 GT/s data rate. It transmits an EIEOS followed by TS1 Ordered Sets. It transmits 32 TS1 Ordered Sets following which it transmits the second EIEOS. Subsequently it sends two more TS1 Ordered Sets and enters Recovery.RcvrCfg where it transmits the third EIEOS after transmitting 30 TS2 Ordered Sets. It transmits 31 more TS2 Ordered Sets (after the first 30 TS2 Ordered Sets) in Recovery.RcvrCfg when it receives a TS2 Ordered Set. Since it receives its first TS2 Ordered Set, it will reset its EIEOS interval count to 0 and keep transmitting another 16 TS2 Ordered Sets before transitioning to Recovery.Idle. Thus, it did not send an EIEOS in the midst of the last 47 TS2 Ordered Sets since the EIEOS interval count got reset to 0. From Recovery.Idle, the LTSSM transitions to Configuration.Linkwidth.Start and transmits an EIEOS after which it starts transmitting the TS1 Ordered Sets.
+
+While operating in speeds other than 2.5 GT/s, an implementation is permitted to not rely on the output of the Electrical Idle detection circuitry except when receiving the EIEOS during certain LTSSM states or during the receipt of the FTS prepended by the four consecutive EIE Symbols (see § Section 4.2.5.6 ) at the Receiver during Rx L0s or the Modified Compliance Pattern in Polling.Compliance when the circuitry is required to signal an exit from Electrical Idle.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+  - 下游端口 (DP) 处于 LTSSM Recovery.Equalization 状态的 Phase 2,且在任何通道上接收到两个连续的 TS1 有序集,且这些有序集设置了 Reset EIEOS Interval Count 位。
+  - 上游端口 (UP) 处于 LTSSM Recovery.Equalization 状态的 Phase 3,且在任何通道上接收到两个连续的 TS1 有序集,且这些有序集设置了 Reset EIEOS Interval Count 位。
+
+- 如果 Reset EIEOS Interval Count 位阻止了 EIEOSQ 在该间隔内发送,则在 LTSSM Recovery.Equalization 状态中,每发送 65,536 个 TS1 有序集后发送 EIEOSQ。允许实现通过在当前加扰 (Scrambling) LFSR 匹配其种子值时的两个 TS1 有序集内发送 EIEOSQ 来满足此要求。
+- 作为 FTS 有序集、一致性测试码型 (Compliance Pattern) 或修改后的一致性测试码型 (Modified Compliance Pattern) 的一部分,详见相关章节。
+
+当使用 1b/1b 编码时,如 § 表 4-38 所定义的 EIEOSQ 在以下情况下发送:
+
+- 在进入 LTSSM Configuration.Linkwidth.Start 子状态后,发送第一个 TS1 有序集之前。
+- 在进入 LTSSM Recovery.RcvrLock 子状态后,发送第一个 TS1 有序集之前。
+- 在进入 Recovery.Equalization 子状态后,发送第一个 TS0 有序集之前。
+- 在调度的有序集间隔处,用于指示数据流 (Data Stream) 的结束。
+- 在所有需要发送 TS1、TS2 或 TS0 有序集的 LTSSM 状态中,每发送 32 个 TS1、TS2 或 TS0 有序集后。TS1/TS2/TS0 计数在以下情况下重置为 0:
+  - 发送 EIEOS。
+  - 在 LTSSM Recovery.RcvrCfg 状态中接收到第一个 TS2 有序集。
+  - 在 LTSSM Configuration.Complete 状态中接收到第一个 TS2 有序集。
+  - 如果 TS1 有序集是在 TS0 有序集之后接收的,则在 LTSSM Recovery.Equalization 状态中接收到第一个 TS1 有序集。
+  - 下游端口 (DP) 处于 LTSSM Recovery.Equalization 状态的 Phase 2,且在任何通道上接收到两个连续的 TS0 有序集,且这些有序集设置了 Reset EIEOS Interval Count 位。
+  - 上游端口 (UP) 处于 LTSSM Recovery.Equalization 状态的 Phase 3,且在任何通道上接收到两个连续的 TS1 有序集,且这些有序集设置了 Reset EIEOS Interval Count 位。
+- 如果 Reset EIEOS Interval Count 位阻止了 EIEOSQ 在该间隔内发送,则在 LTSSM Recovery.Equalization 状态中,每发送 65,536 个 TS1 有序集后发送 EIEOSQ。允许实现通过在当前加扰 (Scrambling) LFSR 匹配其种子值时的两个 TS1 有序集内发送 EIEOSQ 来满足此要求。
+- 作为一致性测试码型 (Compliance Pattern) 或修改后的一致性测试码型 (Modified Compliance Pattern) 的一部分,详见相关章节。
+
+**示例:** LTSSM 在 5.0 GT/s 数据速率下从 L0 进入 Recovery.RcvrLock。它发送一个 EIEOS,后跟 TS1 有序集。发送 32 个 TS1 有序集后,再发送第二个 EIEOS。随后再发送两个 TS1 有序集,并进入 Recovery.RcvrCfg,在其中发送 30 个 TS2 有序集后发送第三个 EIEOS。在 Recovery.RcvrCfg 中接收到 TS2 有序集时,再发送 31 个 TS2 有序集(在最初的 30 个 TS2 有序集之后)。由于接收到第一个 TS2 有序集,它将 EIEOS 间隔计数重置为 0,并在转换到 Recovery.Idle 之前再发送 16 个 TS2 有序集。因此,在最后 47 个 TS2 有序集中没有发送 EIEOS,因为 EIEOS 间隔计数被重置为 0。从 Recovery.Idle 开始,LTSSM 转换到 Configuration.Linkwidth.Start,并发送一个 EIEOS,之后开始发送 TS1 有序集。
+
+在以 2.5 GT/s 以外的速度运行时,允许实现不依赖电气空闲检测电路的输出,除非在某些 LTSSM 状态期间接收 EIEOS 时,或在 Rx L0s 期间接收器 (Receiver) 接收由四个连续 EIE 符号前置的 FTS 时(见 § 4.2.5.6 节),或在 Polling.Compliance 中当电路需要发信号通知电气空闲退出时接收修改后的一致性测试码型 (Modified Compliance Pattern) 时。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<<<PAGE_BREAK>>> page_481
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+A device is permitted in all speeds of operation to infer Electrical Idle instead of detecting Electrical Idle using analog circuitry. § Table 4-39 summarizes the conditions to infer Electrical Idle in the various substates.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+在所有运行速度下,允许设备推断电气空闲 (Electrical Idle),而不是使用模拟电路检测电气空闲。§ 表 4-39 总结了在不同子状态中推断电气空闲的条件。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+**Table 4-39.** Electrical Idle Inference Conditions | 表 4-39. 电气空闲推断条件
+
+| State | 2.5 GT/s | 5.0 GT/s | 8.0 GT/s and higher data rates | 8.0 GT/s 及更高数据速率 |
+|-------|----------|----------|--------------------------------|--------------------------|
+| L0 | Absence of at least one of: an UpdateFC DLLP, an Optimized_Update_FC (in Flit Mode), or a SKP Ordered Set in a 128 μs window | Absence of at least one of: an UpdateFC DLLP, an Optimized_Update_FC (in Flit Mode), or a SKP Ordered Set in a 128 μs window | Absence of at least one of: an UpdateFC DLLP, an Optimized_Update_FC (in Flit Mode), or a SKP Ordered Set in a 128 μs window | 在 128 μs 窗口内缺少以下至少一项:UpdateFC DLLP、Optimized_Update_FC(在 Flit 模式中)或 SKP 有序集 |
+| Recovery.RcvrCfg | Absence of a TS1 or TS2 Ordered Set in a 1280 UI interval | Absence of a TS1 or TS2 Ordered Set in a 4 ms window | Absence of a TS1 or TS2 Ordered Set in a 4 ms window | 在 1280 UI 间隔内缺少 TS1 或 TS2 有序集 / 在 4 ms 窗口内缺少 TS1 或 TS2 有序集 |
+| Recovery.Speed when successful_speed_negotiation = 1b | Absence of a TS1 or TS2 Ordered Set in a 1280 UI interval | Absence of a TS1 or TS2 Ordered Set in a 4680 UI interval | Absence of a TS1 or TS2 Ordered Set in a 4680 UI interval | 在 1280 UI 间隔内缺少 TS1 或 TS2 有序集 / 在 4680 UI 间隔内缺少 TS1 或 TS2 有序集 |
+| Recovery.Speed when successful_speed_negotiation = 0b | Absence of an exit from Electrical Idle in a 2000 UI interval | Absence of an exit from Electrical Idle in a 16000 UI interval | Absence of an exit from Electrical Idle in a 16000 UI interval | 在 2000 UI 间隔内缺少电气空闲退出 / 在 16000 UI 间隔内缺少电气空闲退出 |
+| Loopback.Active (as Follower) | Absence of an exit from Electrical Idle in a 128 μs window | N/A | N/A | 在 128 μs 窗口内缺少电气空闲退出 / 不适用 / 不适用 |
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+The Electrical Idle exit condition must not be determined based on inference of Electrical Idle condition. For area efficiency, an implementation is permitted to choose to implement a common timeout counter per LTSSM and look for the Electrical Idle inference condition within the common timeout window determined by the common counter for each of the Lanes the LTSSM controls instead of having a timeout counter per Lane.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+电气空闲退出条件不得基于对电气空闲条件的推断来确定。出于面积效率考虑,允许实现选择为每个 LTSSM 实现一个公共超时计数器,并在由公共计数器确定的公共超时窗口内查找 LTSSM 控制的每个通道 (Lane) 的电气空闲推断条件,而不是为每个通道 (Lane) 设置一个超时计数器。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<a id="sec-4-2-5-4"></a>
+## 4.2.5.4 Inferring Electrical Idle | 推断电气空闲
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+> **IMPLEMENTATION NOTE:**
+> **INFERENCE OF ELECTRICAL IDLE**
+>
+> In the L0 state, one or more Flow Control Update DLLPs are expected to be received in a 128 μs window. Also in L0, one or more SKP Ordered Sets are expected to be received in a 128 μs window. As a simplification, it is permitted to use either one (or both) of these indicators to infer Electrical Idle. Hence, the absence of a Flow Control Update DLLP and/or a SKP Ordered Set in any 128 μs window can be inferred as Electrical Idle. In Recovery.RcvrCfg as well as Recovery.Speed with successful speed negotiation, the Receiver should receive TS1 or TS2 Ordered Sets continuously with the exception of the EIEOS and the SKP Ordered Set. Hence, the absence of a TS1 or TS2 Ordered Set in the interval specified above must be treated as Electrical Idle for components that implement the inference mechanism. In the event that the device enters Recovery.Speed with successful_speed_negotiation = 0b, there is a possibility that the device had failed to receive Symbols. Hence, the Electrical Idle inference is done as an absence of exit from Electrical Idle. In data rates other than 2.5 GT/s, Electrical Idle exit is guaranteed only on receipt of an EIEOS. Hence, the window is set to 16000 UI for detecting an exit from Electrical Idle in 5.0 GT/s and above data rates. In 2.5 GT/s data rate, Electrical Idle exit must be detected with every Symbol received. Hence, absence of Electrical Idle exit in a 2000 UI window constitutes an Electrical Idle condition. §
+
+</td>
+<td style="background-color:#e8e8e8">
+
+> **实现说明:**
+> **电气空闲的推断**
+>
+> 在 L0 状态,预期在 128 μs 窗口内接收到一个或多个流控 (Flow Control) 更新 DLLP。同样在 L0 中,预期在 128 μs 窗口内接收到一个或多个 SKP 有序集。为简化起见,允许使用这两个指示器中的任意一个(或两者)来推断电气空闲。因此,在任何 128 μs 窗口中缺少流控 (Flow Control) 更新 DLLP 和/或 SKP 有序集可被推断为电气空闲。在 Recovery.RcvrCfg 以及成功进行速率协商的 Recovery.Speed 中,接收器 (Receiver) 应持续接收 TS1 或 TS2 有序集,EIEOS 和 SKP 有序集除外。因此,对于实现推断机制的组件,在上述指定间隔内缺少 TS1 或 TS2 有序集必须被视为电气空闲。在设备以 successful_speed_negotiation = 0b 进入 Recovery.Speed 的情况下,有可能设备未能接收到符号 (Symbol)。因此,电气空闲推断是通过缺少电气空闲退出来完成的。在 2.5 GT/s 以外的数据速率下,只有在收到 EIEOS 时才能保证电气空闲退出。因此,在 5.0 GT/s 及以上数据速率中,用于检测电气空闲退出的窗口设置为 16000 UI。在 2.5 GT/s 数据速率下,必须对每个接收到的符号 (Symbol) 检测电气空闲退出。因此,在 2000 UI 窗口内缺少电气空闲退出构成电气空闲状态。§
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<<<PAGE_BREAK>>> page_482
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+During the training sequence in Polling, the Receiver looks at Symbols 6-15 of the TS1 and TS2 Ordered Sets as the indicator of Lane polarity inversion (D+ and D- are swapped). If Lane polarity inversion occurs, the TS1 Symbols 6-15 received will be D21.5 as opposed to the expected D10.2. Similarly, if Lane polarity inversion occurs, Symbols 6-15 of the TS2 Ordered Set will be D26.5 as opposed to the expected D5.2. This provides the clear indication of Lane polarity inversion.
+
+If polarity inversion is detected the Receiver must invert the received data. The Transmitter must never invert the transmitted data. Support for Lane Polarity Inversion is required on all PCI Express Receivers across all Lanes independently.
+
+Fast Training Sequence (FTS) is the mechanism that is used for bit and Symbol lock when transitioning from L0s to L0. The FTS is used by the Receiver to detect the exit from Electrical Idle and align the Receiver's bit and Symbol receive circuitry to the incoming data. Refer to § Section 4.2.6 for a description of L0 and L0s.
+
+- At 2.5 GT/s and 5.0 GT/s data rates:
+  A single FTS is comprised of one K28.5 (COM) Symbol followed by three K28.1 Symbols. The maximum number of FTSs (N_FTS) that a component can request is 255, providing a bit time lock of 4 * 255 * 10 * UI. If the data rate is 5.0 GT/s, four consecutive EIE Symbols are transmitted at valid signal levels prior to transmitting the first FTS. These Symbols will help the Receiver detect exit from Electrical Idle. An implementation that does not guarantee proper signaling levels for up to the allowable time on the Transmitter pins (see § Section 4.2.5.6 ) since exiting Electrical Idle condition is required to prepend its first FTS by extra EIE Symbols so that the Receiver can receive at least four EIE Symbols at valid signal levels. Implementations must not transmit more than eight EIE Symbols prior to transmitting the first FTS. A component is permitted to advertise different N_FTS rates at different speeds. At 5.0 GT/s, a component may choose to advertise an appropriate N_FTS number considering that it will receive the four EIE Symbols. 4096 FTSs must be sent when the Extended Synch bit is Set in order to provide external Link monitoring tools with enough time to achieve bit and framing synchronization. SKP Ordered Sets must be scheduled and transmitted between FTSs as necessary to meet the definitions in § Section 4.2.8 with the exception that no SKP Ordered Sets can be transmitted during the first N_FTS FTSs. A single SKP Ordered Set is always sent after the last FTS is transmitted. It is permitted for this SKP Ordered Set to affect or not affect the scheduling of subsequent SKP Ordered Sets for Clock Tolerance Compensation by the Transmitter as described in § Section 4.2.8 . Note that it is possible that two SKP Ordered Sets can be transmitted back to back (one SKP Ordered Set to signify the completion of the 4096 FTSs and one scheduled and transmitted to meet the definitions described in § Section 4.2.8 ).
+
+- At 8.0 GT/s, 16.0 GT/s, or 32.0 GT/s data rates:
+  A single FTS is a 130-bit unscrambled Ordered Set Block, as shown in § Table 4-40. The maximum number of FTSs (N_FTS) that a component can request is 255, providing a bit time lock of 130 * 255 UI (130 * 263 or 273 UI if including the periodic EIEOS). A component is permitted to advertise different N_FTS values at different speeds. On exit from L0s, the transmitter first transmits an EIEOSQ which will help the receiver detect exit from Electrical Idle due to its low frequency content. After that first EIEOSQ, the transmitter must send the required number of FTS (4096 when the Extended Synch bit is Set; otherwise N_FTS), with an EIEOSQ transmitted after every 32 FTS. The FTS sequence will enable the receiver obtain bit lock (and optionally to do Block alignment). When the Extended Synch bit is Set, SKP Ordered Sets must be scheduled and transmitted between FTSs and EIEOSQ as necessary to meet the definitions in § Section 4.2.8 . The last FTS Ordered Set of the FTS sequence, if any (no FTS Ordered Sets are sent if N_FTS is equal to zero), is followed by a final EIEOSQ that will help the receiver acquire Block alignment. Implementations are permitted to send two EIEOS back to back even at a data rate below 32.0 GT/s following the last FTS Ordered Set if the N_FTS is a multiple of 32. The EIEOS resets
+
+</td>
+<td style="background-color:#e8e8e8">
+
+在 Polling 中的训练序列期间,接收器 (Receiver) 将 TS1 和 TS2 有序集的符号 6-15 视为通道 (Lane) 极性反转(D+ 和 D- 交换)的指示符。如果发生通道 (Lane) 极性反转,接收到的 TS1 符号 6-15 将是 D21.5,而不是预期的 D10.2。类似地,如果发生通道 (Lane) 极性反转,TS2 有序集的符号 6-15 将是 D26.5,而不是预期的 D5.2。这为通道 (Lane) 极性反转提供了明确的指示。
+
+如果检测到极性反转,接收器 (Receiver) 必须对接收到的数据进行反转。发送器 (Transmitter) 永远不得反转发送的数据。所有 PCI Express 接收器 (Receiver) 都需要独立支持所有通道 (Lane) 的极性反转。
+
+快速训练序列 (Fast Training Sequence, FTS) 是从 L0s 转换到 L0 时用于比特和符号 (Symbol) 锁定的机制。FTS 由接收器 (Receiver) 用于检测电气空闲退出,并将接收器 (Receiver) 的比特和符号 (Symbol) 接收电路与传入数据对齐。有关 L0 和 L0s 的说明,请参阅 § 4.2.6 节。
+
+- 在 2.5 GT/s 和 5.0 GT/s 数据速率下:
+  单个 FTS 由一个 K28.5 (COM) 符号 (Symbol) 后跟三个 K28.1 符号 (Symbol) 组成。组件可以请求的最大 FTS 数 (N_FTS) 为 255,提供 4 * 255 * 10 * UI 的比特时间锁定。如果数据速率为 5.0 GT/s,则在发送第一个 FTS 之前,会以有效信号电平发送四个连续的 EIE 符号 (Symbol)。这些符号 (Symbol) 将帮助接收器 (Receiver) 检测电气空闲退出。对于无法保证自退出电气空闲条件起在发送器 (Transmitter) 引脚上达到允许时间的适当信号电平(见 § 4.2.5.6 节)的实现,需要在第一个 FTS 之前加上额外的 EIE 符号 (Symbol),以便接收器 (Receiver) 可以在有效信号电平下接收至少四个 EIE 符号 (Symbol)。实现不得在发送第一个 FTS 之前发送超过八个 EIE 符号 (Symbol)。允许组件在不同速度下通告不同的 N_FTS 速率。在 5.0 GT/s 时,组件可考虑将接收四个 EIE 符号 (Symbol) 的因素考虑在内,选择通告适当的 N_FTS 数。当设置 Extended Synch 位时,必须发送 4096 个 FTS,以便为外部链路 (Link) 监控工具提供足够的时间来实现比特和帧同步。必须根据需要调度和发送 FTS 之间的 SKP 有序集,以满足 § 4.2.8 节中的定义,但在第一个 N_FTS 个 FTS 期间不能发送 SKP 有序集。在发送最后一个 FTS 后,始终发送单个 SKP 有序集。允许此 SKP 有序集影响或不影响 § 4.2.8 节所述发送器 (Transmitter) 用于时钟容差补偿的后续 SKP 有序集的调度。请注意,可能存在背靠背发送两个 SKP 有序集的情况(一个 SKP 有序集表示 4096 个 FTS 的完成,另一个按 § 4.2.8 节所述的定义进行调度和发送)。
+
+- 在 8.0 GT/s、16.0 GT/s 或 32.0 GT/s 数据速率下:
+  单个 FTS 是 130 位未加扰的有序集块 (Ordered Set Block),如 § 表 4-40 所示。组件可以请求的最大 FTS 数 (N_FTS) 为 255,提供 130 * 255 UI 的比特时间锁定(如果包括周期性 EIEOS,则为 130 * 263 或 273 UI)。允许组件在不同速度下通告不同的 N_FTS 值。在退出 L0s 时,发送器 (Transmitter) 首先发送 EIEOSQ,这将由于其低频内容帮助接收器 (Receiver) 检测电气空闲退出。在第一个 EIEOSQ 之后,发送器 (Transmitter) 必须发送所需数量的 FTS(当设置 Extended Synch 位时为 4096;否则为 N_FTS),每 32 个 FTS 后发送一个 EIEOSQ。FTS 序列将使接收器 (Receiver) 获得比特锁定(并可选地执行块对齐 (Block Alignment))。当设置 Extended Synch 位时,必须根据需要在 FTS 和 EIEOSQ 之间调度和发送 SKP 有序集,以满足 § 4.2.8 节中的定义。FTS 序列的最后一个 FTS 有序集(如果有,如果 N_FTS 等于零则不发送 FTS 有序集)之后跟一个最终的 EIEOSQ,这将帮助接收器 (Receiver) 获取块对齐 (Block Alignment)。即使在低于 32.0 GT/s 的数据速率下,只要 N_FTS 是 32 的倍数,允许实现在最后一个 FTS 有序集之后背靠背发送两个 EIEOS。EIEOS 重置
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<a id="sec-4-2-5-5"></a>
+## 4.2.5.5 Lane Polarity Inversion | 通道极性反转
+
+[⬆️ Back to Table of Contents](#)
+
 
 ---
 
@@ -22765,6 +23373,10 @@ The following are examples of cases where it might be appropriate to configure t
 - [4.2.4.2 Encoding of Presets | 4.2.4.2 预设的编码](#sec-4-2-4-2)
 - [4.2.5 Link Initialization and Training | 4.2.5 链路初始化与训练](#sec-4-2-5)
 - [4.2.5.1 Training Sequences | 4.2.5.1 训练序列](#sec-4-2-5-1)
+- [4.2.5.2 Alternate Protocol Negotiation | 替代协议协商](#sec-4-2-5-2)
+- [4.2.5.3 Electrical Idle Sequences (EIOS and EIEOS) | 电气空闲序列 (EIOS 和 EIEOS)](#sec-4-2-5-3)
+- [4.2.5.4 Inferring Electrical Idle | 推断电气空闲](#sec-4-2-5-4)
+- [4.2.5.5 Lane Polarity Inversion | 通道极性反转](#sec-4-2-5-5)
 - [4.2.5.6 Fast Training Sequence (FTS) | 快速训练序列 (FTS)](#sec-4-2-5-6)
 - [4.2.5.7 Start of Data Stream Ordered Set (SDS Ordered Set) | 数据流起始有序集 (SDS 有序集)](#sec-4-2-5-7)
 - [4.2.5.8 Link Error Recovery | 链路错误恢复](#sec-4-2-5-8)
