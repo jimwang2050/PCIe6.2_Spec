@@ -1,0 +1,45 @@
+{
+  "per_chapter": {
+    "PCIe6.2_Spec_ch01_Introduction_引言": [
+      "Empty cells: 3, short-ZH: 0, long-ZH: 0, imbalanced: 0"
+    ],
+    "PCIe6.2_Spec_ch02_Transaction_Layer_Specification_事务层规范": [
+      "Empty cells: 0, short-ZH: 0, long-ZH: 0, imbalanced: 1",
+      "TODO/placeholder markers: 30",
+      "EN-only rows (no ZH translation): 1"
+    ],
+    "PCIe6.2_Spec_ch03_Data_Link_Layer_Specification_数据链路层规范": [],
+    "PCIe6.2_Spec_ch04_Physical_Layer_Logical_Block_物理层逻辑块": [
+      "Empty cells: 2, short-ZH: 0, long-ZH: 0, imbalanced: 0",
+      "Duplicate anchors: 3 (e.g. [('sec-4-2-7-4-2', 2), ('sec-4-2-7-4-2-2', 2), ('sec-4-2-7-4-2-1-2', 2)])",
+      "EN-only rows (no ZH translation): 9"
+    ],
+    "PCIe6.2_Spec_ch05_Power_Management_电源管理": [
+      "Empty cells: 5, short-ZH: 0, long-ZH: 0, imbalanced: 0"
+    ],
+    "PCIe6.2_Spec_ch06_System_Architecture_系统架构": [
+      "Empty cells: 3, short-ZH: 0, long-ZH: 0, imbalanced: 0",
+      "TODO/placeholder markers: 6"
+    ],
+    "PCIe6.2_Spec_ch07_Software_Initialization_and_Configuration_软件初始化与配置": [
+      "Empty cells: 2, short-ZH: 0, long-ZH: 23, imbalanced: 0",
+      "Duplicate anchors: 6 (e.g. [('sec-7-9-3-2', 2), ('sec-7-9-8-2', 2), ('sec-7-9-8-3-2', 2)])",
+      "TODO/placeholder markers: 20"
+    ],
+    "PCIe6.2_Spec_ch08_Electrical_Sub_Block_电气子块": [],
+    "PCIe6.2_Spec_ch09_Single_Root_I_O_Virtualization_and_Sharing_单根IO虚拟化与共享SRIOV": [],
+    "PCIe6.2_Spec_ch10_Address_Translation_Services_地址转换服务ATS": [
+      "TODO/placeholder markers: 12"
+    ],
+    "PCIe6.2_Spec_ch11_TEE_Device_Interface_Security_Protocol_TEE设备接口安全协议TDISP": [],
+    "PCIe6.2_Spec_ch12_Architectural_Out_of_Band_Management_架构带外管理": []
+  },
+  "totals": {
+    "empty_cells": 15,
+    "unbalanced_tables": 0,
+    "malformed_anchors": 0,
+    "rows_imbalanced": 1,
+    "todo_markers": 68,
+    "duplicate_anchors": 9
+  }
+}

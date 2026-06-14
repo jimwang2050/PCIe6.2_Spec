@@ -10475,7 +10475,7 @@ L2 中可以积极节省功耗。大多数发送器和接收器可以关闭。
 
 ---
 
-<a id="sec-4-2-6-10"></a>
+<a id="sec-4-2-6-10-2"></a>
 ## 4.2.6.10 Disabled Overview | Disabled 概述
 
 <table>
@@ -13159,8 +13159,8 @@ If the Link is operating at a data rate of 8.0 GT/s or higher, a Receiver must c
 | 16.0 GT/s | Downstream Port 16.0 GT/s Transmitter Preset field of the 16.0 GT/s Lane Equalization Control Register Entry |
 | 32.0 GT/s | Downstream Port 32.0 GT/s Transmitter Preset field of the 32.0 GT/s Lane Equalization Control Register Entry |
 
-<a id="sec-4-2-7-4"></a>
-<a id="sec-4-2-7-4-1"></a>
+<a id="sec-4-2-7-4-2"></a>
+<a id="sec-4-2-7-4-1-2"></a>
 
 ## 4.2.7.4 Recovery | Recovery 状态
 
@@ -13545,7 +13545,7 @@ If this state was entered from Loopback.Entry:
 > **EXAMPLE SHOWING SPEED CHANGE ALGORITHM BETWEEN 2.5 GT/S AND 5.0 GT/S**
 > Suppose a Link connects two greater than 5.0 GT/s capable components, A and B. The Link comes up to the L0 state in 2.5 GT/s data rate. Component A decides to change the speed to greater than 5.0 GT/s, sets the directed_speed_change variable to 1b and enters Recovery.RcvrLock from L0. Component A sends TS1 Ordered Sets with the speed_change bit set to 1b and advertises the 2.5 GT/s, 5.0 GT/s, and 8.0 GT/s data rates. Component B sees the first TS1 in L0 state and enters Recovery.RcvrLock state. Initially, component B sends TS1s with the speed_change set to 0b. Component B will start sending the speed_change indication in its TS1 after it receives eight consecutive TS1 Ordered Sets from component A and advertises all of the data rates it can support. Component B will enter Recovery.RcvrCfg from where it will enter Recovery.Speed. Component A will wait for eight consecutive TS1/TS2 with speed_change bit set from component B before moving to Recovery.RcvrCfg and on to Recovery.Speed. Both component A and component B enter Recovery.Speed and record 8.0 GT/s as the maximum speed they can operate with. The directed_speed_change variable will be reset to 0b when in Recovery.Speed. When they enter Recovery.RcvrLock from Recovery.Speed, they will operate at 8.0 GT/s and send TS1s with speed_change set to 0b. If both sides work well at 8.0 GT/s, they will continue on to Recovery.RcvrCfg and enter L0 through Recovery.Idle at 8.0 GT/s. However, if component B fails to achieve Symbol lock, it will timeout in Recovery.RcvrLock and enters Recovery.Speed. Component A would have moved on to Recovery.RcvrCfg but would see the Electrical Idle after receiving TS1s at 8.0 GT/s after component B enters Recovery.Speed. This will cause component A to move to Recovery.Speed. After entering Recovery.Speed for the second time, both sides will revert back to the speed they operated with prior to entering the Recovery state (2.5 GT/s). Both sides will enter L0 from Recovery in 2.5 GT/s. Component A may initiate the directed_speed_change variable for a second time, requesting 8.0 GT/s data rate in its Data Rate Identifier, go through the same steps, fail to establish the 8.0 GT/s data rate and go back to L0 in 2.5 GT/s data rate. On the third attempt, however, component A may decide to only advertise 2.5 GT/s and 5.0 GT/s data rates and successfully establish the Link at 5.0 GT/s data rate and enter L0 at that speed. However, if either side entered Detect, that side should advertise all of the data rates it can support, since there may have been a hot plug event.
 
-<a id="sec-4-2-7-4-2"></a>
+<a id="sec-4-2-7-4-2-2"></a>
 ## 4.2.7.4.2 Recovery.Equalization | Recovery.Equalization 子状态
 
 </td>
@@ -13615,7 +13615,7 @@ Upon entry to this substate:
 > The other transition happens during Phase 3 for the Upstream Lanes, when the Upstream Port receives EC=11b. Since the Downstream Port sends EC=11b, it is expecting the NRZ to PAM4 transition.
 > We have also made a provision for the Retimer to request extended EQ during Phase 0 & 1 for 64.0 GT/s equalization.
 
-<a id="sec-4-2-7-4-2-1"></a>
+<a id="sec-4-2-7-4-2-1-2"></a>
 ## 4.2.7.4.2.1 Downstream Lanes | Downstream 通道
 
 </td>
