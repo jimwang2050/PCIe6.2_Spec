@@ -1,0 +1,10 @@
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; max-width: 1400px; margin: 20px auto; padding: 0 20px; line-height: 1.6; }
+h1 { border-bottom: 3px solid #1a73e8; padding-bottom: 8px; }
+h2 { border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-top: 24px; }
+table { border-collapse: collapse; margin: 12px 0; }
+th, td { border: 1px solid #ddd; padding: 8px 12px; vertical-align: top; }
+th { background-color: #f0f0f0; }
+img { max-width: 100%; height: auto; border: 1px solid #ddd; }
+blockquote { background: #f5f5f5; padding: 8px 12px; border-left: 3px solid #888; }
+code { background: #f5f5f5; padding: 2px 4px; border-radius: 3px; font-family: "SF Mono", Menlo, monospace; }
+pre { background: #f5f5f5; padding: 12px; border-radius: 4px; overflow-x: auto; }
