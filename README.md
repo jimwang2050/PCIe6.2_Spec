@@ -12,10 +12,18 @@
 ## 📊 翻译进度 (Translation Progress)
 
 **已完成**: 12 / 12 章 (**127 / 127 chunks 100%**)
-**总文件**: 6.2 MB MD + 318 MB 原图
+**总文件**: 6.2 MB MD + 18 MB HTML 预览 + 318 MB 原图
 
 ```text
 [██████████████] 100%  (127/127 chunks)
+```
+
+### 离线阅读 (Local Reading)
+
+```bash
+open preview/index.html    # 浏览器打开阅读
+# 或
+open preview/book.html     # 完整版 (8.4 MB, 含目录)
 ```
 
 ### 章节状态
@@ -181,6 +189,13 @@ PCIe6.2_zh/
 ---
 
 ## 📋 Recent Updates (更新日志)
+
+### 2026-06-14 — v3 完整发布 (HTML + book + QA)
+
+- **HTML 预览**: 14 个独立 HTML 文件 (preview/index.html 索引)
+- **book.md**: 12 章合并单文件 (7.2 MB, 129,341 行)
+- **book.html**: pandoc 渲染完整版 (8.4 MB, 含 TOC)
+- **qa_report.json**: 12 章详细审计数据
 
 ### 2026-06-14 — v2 完整版 (100%)
 
