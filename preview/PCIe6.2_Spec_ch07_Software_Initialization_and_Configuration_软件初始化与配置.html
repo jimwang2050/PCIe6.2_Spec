@@ -3578,11 +3578,6 @@ Configuration Access Mechanism (ECAM).</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-10.</strong> Type 0 配置空间头 (Type 0 Configuration
-Space Header)
-<img src="figures/chapter_07/fig_1005_1.png" width="700"></p>
-</blockquote>
 <p>§ 图 7-10 详细说明了 PCI Express 设备功能 (Function) 的 Type 0
 配置空间头 (Type 0 Configuration Space Header) 寄存器字段分配。</p>
 <p>§ 7.5.1.1 节详细说明了适用于所有配置空间头类型的 PCI Express
@@ -3707,14 +3702,6 @@ without causing errors. Bits 3-0 are read-only.</p>
 (I/O Space)。映射到内存空间 (Memory Space) 的基址寄存器必须在第 0 位返回
 0b（见 § 图 7-11）。映射到 I/O 空间 (I/O Space) 的基址寄存器必须在第 0
 位返回 1b（见 § 图 7-12）。</p>
-<blockquote>
-<p><strong>图 7-11.</strong> 内存基址寄存器 (Base Address Register for
-Memory) <img src="figures/chapter_07/fig_1006_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>图 7-12.</strong> I/O 基址寄存器 (Base Address Register for
-I/O) <img src="figures/chapter_07/fig_1006_2.png" width="700"></p>
-</blockquote>
 <p>映射到 I/O 空间 (I/O Space) 的基址寄存器始终为 32 位宽，第 0
 位硬连线为 1b。第 1 位是保留位 (Reserved)，读取时必须返回
 0b，其他位用于将该功能 (Function) 映射到 I/O 空间 (I/O Space)。</p>
@@ -5040,11 +5027,6 @@ different than that of the Type 0 Configuration Space Header.</p>
 <td style="background-color:#e8e8e8">
 
 <p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1013</p>
-<blockquote>
-<p><strong>图 7-14.</strong> Type 1 配置空间头 (Type 1 Configuration
-Space Header)
-<img src="figures/chapter_07/fig_1013_1.png" width="700"></p>
-</blockquote>
 <p>§ 7.5.1.1 节详细说明了适用于所有配置空间头类型的 PCI Express
 特有寄存器。Type 1 配置空间头特有的寄存器及其 PCI Express
 特有解释在本节中定义。</p>
@@ -53808,10 +53790,6 @@ definitions.</p>
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-254.</strong> RCRB Vendor ID and Device ID 寄存器
-<img src="figures/chapter_07/fig_1294_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -53901,10 +53879,6 @@ Vendor ID and Device ID 寄存器（偏移 04h）</h3>
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-255.</strong> RCRB Capabilities 寄存器
-<img src="figures/chapter_07/fig_1295_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -53973,10 +53947,6 @@ definitions.</p>
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-256.</strong> RCRB Control 寄存器
-<img src="figures/chapter_07/fig_1295_2.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -54165,10 +54135,6 @@ Extended Capability is 0005h.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-257.</strong> Root Complex Link Declaration Extended
-Capability <img src="figures/chapter_07/fig_1297_1.png" width="700"></p>
-</blockquote>
 <p>Root Complex Link Declaration Extended Capability 的扩展能力 ID 为
 0005h。</p>
 </td>
@@ -54192,11 +54158,6 @@ Capability <img src="figures/chapter_07/fig_1297_1.png" width="700"></p>
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-258.</strong> Root Complex Link Declaration Extended
-Capability Header
-<img src="figures/chapter_07/fig_1297_2.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -54313,10 +54274,6 @@ Declaration Extended Capability 的根复合体元素的信息。</p>
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-259.</strong> Element Self Description 寄存器
-<img src="figures/chapter_07/fig_1298_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -54467,10 +54424,6 @@ of a Link Entry and is defined as follows:</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-260.</strong> Link Entry
-<img src="figures/chapter_07/fig_1299_1.png" width="700"></p>
-</blockquote>
 <p>Link Description 寄存器位于 Link Entry 起始处的偏移 00h
 处，定义如下：</p>
 </td>
@@ -54494,10 +54447,6 @@ of a Link Entry and is defined as follows:</p>
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-261.</strong> Link Description 寄存器
-<img src="figures/chapter_07/fig_1299_2.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -54698,10 +54647,6 @@ DWORD 指定目标元素的 RCRB 基址的低 32 位；位 11:0 硬连线为 000
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-262.</strong> Link Type 0 的 Link Address
-<img src="figures/chapter_07/fig_1300_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -54951,11 +54896,6 @@ Extended Capability is 0006h.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-264.</strong> Root Complex Internal Link Control
-Extended Capability
-<img src="figures/chapter_07/fig_1302_1.png" width="700"></p>
-</blockquote>
 <p>Root Complex Internal Link Control Extended Capability 的扩展能力 ID
 为 0006h。</p>
 </td>
@@ -54980,11 +54920,6 @@ Extended Capability
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-265.</strong> Root Complex Internal Link Control
-Extended Capability Header
-<img src="figures/chapter_07/fig_1302_2.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -56211,10 +56146,6 @@ Complex）端口，则指示应转发哪些多播 TLP。所有实现 MC Capabili
 Function 中都必须实现该寄存器。</p>
 <p>§ 图 7-277 详述了 MC_Receive 寄存器中各字段的分配，§ 表 7-247
 给出了相应的位定义。</p>
-<blockquote>
-<p><strong>图 7-277.</strong> MC_Receive 寄存器
-<img src="figures/chapter_07/fig_1314_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -56402,10 +56333,6 @@ TLP。所有实现 MC Capability 结构的 Function
 可以将该寄存器实现为 RsvdP。</p>
 <p>§ 图 7-279 详述了 MC_Block_Untranslated 寄存器中各字段的分配，§ 表
 7-249 给出了相应的位定义。</p>
-<blockquote>
-<p><strong>图 7-279.</strong> MC_Block_Untranslated 寄存器
-<img src="figures/chapter_07/fig_1315_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -56558,10 +56485,6 @@ MC_Overlay_BAR Register (Offset 28h) | MC_Overlay_BAR 寄存器（偏移
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-280.</strong> MC_Overlay_BAR 寄存器
-<img src="figures/chapter_07/fig_1316_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -56625,10 +56548,6 @@ Capability)</p>
 <p>7.9.12 动态功率分配（Dynamic Power Allocation，DPA）扩展能力（DPA
 Capability）</p>
 <p>DPA Capability 结构如 § 图 7-281 所示。</p>
-<blockquote>
-<p><strong>图 7-281.</strong> 动态功率分配扩展能力结构
-<img src="figures/chapter_07/fig_1316_2.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -56661,10 +56580,6 @@ DPA Extended Capability Header (Offset 00h) | DPA 扩展能力头（偏移
 <td style="background-color:#e8e8e8">
 
 <p>7.9.12.1 DPA 扩展能力头（偏移 00h）</p>
-<blockquote>
-<p><strong>图 7-282.</strong> DPA 扩展能力头
-<img src="figures/chapter_07/fig_1317_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -56731,10 +56646,6 @@ DPA Capability Register (Offset 04h) | DPA 能力寄存器（偏移 04h）</h2>
 <td style="background-color:#e8e8e8">
 
 <p>7.9.12.2 DPA 能力寄存器（偏移 04h）</p>
-<blockquote>
-<p><strong>图 7-283.</strong> DPA 能力寄存器
-<img src="figures/chapter_07/fig_1317_2.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -56948,10 +56859,6 @@ DPA Status Register (Offset 0Ch) | DPA 状态寄存器（偏移 0Ch）</h2>
 <td style="background-color:#e8e8e8">
 
 <p>7.9.12.4 DPA 状态寄存器（偏移 0Ch）</p>
-<blockquote>
-<p><strong>图 7-285.</strong> DPA 状态寄存器
-<img src="figures/chapter_07/fig_1319_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -57013,10 +56920,6 @@ DPA Control Register (Offset 0Eh) | DPA 控制寄存器（偏移 0Eh）</h2>
 <td style="background-color:#e8e8e8">
 
 <p>7.9.12.5 DPA 控制寄存器（偏移 0Eh）</p>
-<blockquote>
-<p><strong>图 7-286.</strong> DPA 控制寄存器
-<img src="figures/chapter_07/fig_1319_2.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -57067,10 +56970,6 @@ Clear, this field has no effect on the Function substate.</td>
 <td style="background-color:#e8e8e8">
 
 <p>默认值为 0 0000b。</p>
-<blockquote>
-<p><strong>图 7-287.</strong> DPA 功率分配数组
-<img src="figures/chapter_07/fig_1320_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -57108,11 +57007,6 @@ substates supported by Function, which is Substate_Max plus one.</p>
 寄存器指示其关联子状态（substate）的功率分配值。所实现的 Substate Power
 Allocation 寄存器数量必须等于 Function 所支持的子状态数，即 Substate_Max
 加 1。</p>
-<blockquote>
-<p><strong>图 7-288.</strong> Substate Power Allocation 寄存器（0 至
-Substate_Max）
-<img src="figures/chapter_07/fig_1320_2.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -57286,10 +57180,6 @@ TPH Requester Extended Capability Header (Offset 00h) | TPH
 <td style="background-color:#e8e8e8">
 
 <p>7.9.13.1 TPH 请求者扩展能力头（偏移 00h）</p>
-<blockquote>
-<p><strong>图 7-291.</strong> TPH 请求者能力寄存器
-<img src="figures/chapter_07/fig_1321_3.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -57410,10 +57300,6 @@ this field is undefined.</td>
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-292.</strong> TPH 请求者控制寄存器
-<img src="figures/chapter_07/fig_1322_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -57514,10 +57400,6 @@ one.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-293.</strong> TPH ST 表
-<img src="figures/chapter_07/fig_1323_1.png" width="700"></p>
-</blockquote>
 <p>若 ST Table Location 字段的值为 01b，则 TPH ST 表必须在 TPH
 请求者扩展能力结构内实现。对于其他所有值，ST Entry
 寄存器不得实现。每个已实现的 ST Entry 为 16 位。已实现的 ST Entry
@@ -57574,10 +57456,6 @@ TPH ST Table (Starting from Offset 0Ch) | TPH ST 表（起始偏移 0Ch）</h2>
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-294.</strong> TPH ST 表条目
-<img src="figures/chapter_07/fig_1324_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -57714,10 +57592,6 @@ Mode <img src="figures/chapter_07/fig_1325_1.png" width="700"></p>
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-296.</strong> DPC 扩展能力 – Flit 模式
-<img src="figures/chapter_07/fig_1326_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -57741,10 +57615,6 @@ Mode <img src="figures/chapter_07/fig_1325_1.png" width="700"></p>
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-297.</strong> DPC 扩展能力头
-<img src="figures/chapter_07/fig_1327_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -57801,10 +57671,6 @@ exist in the linked list of capabilities.</td>
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-298.</strong> DPC 能力寄存器
-<img src="figures/chapter_07/fig_1327_2.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -57970,10 +57836,6 @@ is RsvdP.</td>
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-299.</strong> DPC 控制寄存器
-<img src="figures/chapter_07/fig_1329_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -58137,10 +57999,6 @@ other than the ECS SIG_SFW subclass. Default value of this bit is
 <td></td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-300.</strong> DPC 状态寄存器
-<img src="figures/chapter_07/fig_1331_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -58309,10 +58167,6 @@ DPC Error Source ID Register (Offset 0Ah) | DPC 错误源 ID 寄存器（偏移
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-301.</strong> DPC 错误源 ID 寄存器
-<img src="figures/chapter_07/fig_1332_1.png" width="700"></p>
-</blockquote>
 <p>7.9.14.5 DPC 错误源 ID 寄存器（DPC Error Source ID Register，偏移
 0Ah）</p>
 </td>
@@ -58365,10 +58219,6 @@ Extensions for DPC. See § Section 6.2.11.3.</p>
 
 <p>此寄存器仅在支持 DPC RP 扩展（RP Extensions for
 DPC）的根端口中存在。参见 § Section 6.2.11.3。</p>
-<blockquote>
-<p><strong>图 7-302.</strong> RP PIO 状态寄存器
-<img src="figures/chapter_07/fig_1333_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -58500,10 +58350,6 @@ Extensions for DPC. See § Section 6.2.11.3.</p>
 
 <p>此寄存器仅在支持 DPC RP 扩展（RP Extensions for
 DPC）的根端口中存在。参见 § Section 6.2.11.3。</p>
-<blockquote>
-<p><strong>图 7-303.</strong> RP PIO 屏蔽寄存器
-<img src="figures/chapter_07/fig_1334_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -62075,10 +61921,6 @@ Address Register | VPD Address 寄存器</h2>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-329.</strong> VPD Address 寄存器
-<img src="figures/chapter_07/fig_1355_1.png" width="700"></p>
-</blockquote>
 <p>0 14 VPD Address 15 F</p>
 </td>
 </tr>
@@ -62139,10 +61981,6 @@ complete).<br>Default is implementation specific.</td>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-330.</strong> VPD Data 寄存器
-<img src="figures/chapter_07/fig_1355_2.png" width="700"></p>
-</blockquote>
 <p>0 31 VPD Data</p>
 </td>
 </tr>
@@ -62281,10 +62119,6 @@ NPEM Capability Register NPEM Control Register NPEM Status Register
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-331.</strong> NPEM 扩展能力
-<img src="figures/chapter_07/fig_1356_1.png" width="700"></p>
-</blockquote>
 <p>0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
 26 27 28 29 30 31 字节偏移 PCI Express 扩展能力头 (Extended Capability
 Header) NPEM Capability 寄存器 NPEM Control 寄存器 NPEM Status 寄存器
@@ -62316,10 +62150,6 @@ Version 20 31 Next Capability Offset</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-332.</strong> NPEM 扩展能力头
-<img src="figures/chapter_07/fig_1356_2.png" width="700"></p>
-</blockquote>
 <p>0 15 PCI Express 扩展能力 ID (Extended Capability ID) 0029h 16 19
 能力版本 (Capability Version) 20 31 下一能力偏移 (Next Capability
 Offset)</p>
@@ -62476,10 +62306,6 @@ Disabled Capable 12 23 RsvdP 24 31 Enclosure-specific Capabilities</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-333.</strong> NPEM Capability 寄存器
-<img src="figures/chapter_07/fig_1357_1.png" width="700"></p>
-</blockquote>
 <p>0 NPEM Capable 1 NPEM Reset Capable 2 NPEM OK Capable 3 NPEM Locate
 Capable 4 NPEM Fail Capable 5 NPEM Rebuild Capable 6 NPEM PFA Capable 7
 NPEM Hot Spare Capable 8 NPEM In A Critical Array Capable 9 NPEM In A
@@ -62686,10 +62512,6 @@ Disabled Control 12 23 RsvdP 24 31 Enclosure-specific Controls</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-334.</strong> NPEM Control 寄存器
-<img src="figures/chapter_07/fig_1358_1.png" width="700"></p>
-</blockquote>
 <p>0 NPEM Enable 1 NPEM Initiate Reset 2 NPEM OK Control 3 NPEM Locate
 Control 4 NPEM Fail Control 5 NPEM Rebuild Control 6 NPEM PFA Control 7
 NPEM Hot Spare Control 8 NPEM In A Critical Array Control 9 NPEM In A
@@ -62930,10 +62752,6 @@ Status</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-335.</strong> NPEM Status 寄存器
-<img src="figures/chapter_07/fig_1360_1.png" width="700"></p>
-</blockquote>
 <p>0 NPEM Command Completed 1 23 RsvdZ 24 31 Enclosure-specific
 Status(机框专用状态)</p>
 </td>
@@ -63131,10 +62949,6 @@ Register +000h +004h +008h +00Ch +010h</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-336.</strong> Alternate Protocol 扩展能力
-<img src="figures/chapter_07/fig_1361_1.png" width="700"></p>
-</blockquote>
 <p>0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
 26 27 28 29 30 31 字节偏移 PCI Express 扩展能力头 (Extended Capability
 Header) Alternate Protocol Capabilities 寄存器 Alternate Protocol
@@ -63264,10 +63078,6 @@ Supported 9 31 RsvdP</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-338.</strong> Alternate Protocol Capabilities 寄存器
-<img src="figures/chapter_07/fig_1362_1.png" width="700"></p>
-</blockquote>
 <p>0 7 Alternate Protocol Count 8 Alternate Protocol Selective Enable
 Supported 9 31 RsvdP</p>
 </td>
@@ -63331,10 +63141,6 @@ Global Enable 9 31 RsvdP</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-339.</strong> Alternate Protocol Control 寄存器
-<img src="figures/chapter_07/fig_1362_2.png" width="700"></p>
-</blockquote>
 <p>0 7 Alternate Protocol Index Select 8 Alternate Protocol Negotiation
 Global Enable 9 31 RsvdP</p>
 </td>
@@ -67720,10 +67526,6 @@ Association Register 2.</td>
 <td style="background-color:#e8e8e8">
 
 <blockquote>
-<p><strong>图 7-379.</strong> IDE RID 关联寄存器 1 (Offset +00h)
-<img src="figures/chapter_07/fig_1394_1.png" width="700"></p>
-</blockquote>
-<blockquote>
 <p><strong>图 7-379(寄存器布局)。</strong> IDE RID 关联寄存器 1 (Offset
 +00h)</p>
 <table>
@@ -68030,10 +67832,6 @@ address ranges are assigned for different IDE Streams.<br>Default is
 <td style="background-color:#e8e8e8">
 
 <blockquote>
-<p><strong>图 7-381.</strong> IDE 地址关联寄存器 1 (Offset +00h)
-<img src="figures/chapter_07/fig_1395_1.png" width="700"></p>
-</blockquote>
-<blockquote>
 <p><strong>图 7-381(寄存器布局)。</strong> IDE 地址关联寄存器 1 (Offset
 +00h)</p>
 <table>
@@ -68251,10 +68049,6 @@ Association Register 3 (Offset +04h)</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 7-383.</strong> IDE 地址关联寄存器 3 (Offset +04h)
-<img src="figures/chapter_07/fig_1396_1.png" width="700"></p>
-</blockquote>
 <blockquote>
 <p><strong>图 7-383(寄存器布局)。</strong> IDE 地址关联寄存器 3 (Offset
 +04h)</p>
@@ -68541,10 +68335,6 @@ Capability 结构。</p>
 <p>§ Figure 7-385 详述了 Null Extended Capability 中各寄存器字段的分配;§
 Table 7-337 给出了相应的位定义。Null Extended Capability 的 Extended
 Capability ID 为 0000h。</p>
-<blockquote>
-<p><strong>图 7-385.</strong> 空扩展能力 (Null Extended Capability)
-<img src="figures/chapter_07/fig_1397_1.png" width="700"></p>
-</blockquote>
 <blockquote>
 <p><strong>图 7-385(寄存器布局)。</strong> 空扩展能力</p>
 <table>

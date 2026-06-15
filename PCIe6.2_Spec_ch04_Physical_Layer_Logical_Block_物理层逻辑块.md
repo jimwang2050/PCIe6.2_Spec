@@ -285,13 +285,7 @@ The bits of a Symbol are placed on a Lane starting with bit "a" and ending with 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 4-2.** 字符到符号的映射
-> <img src="figures/chapter_04/fig_0354_1.png" width="700">
-
 符号的各个位在通道 (Lane) 上以位 "a" 起始、位 "j" 结束的顺序发送。示例如 § 图 4-3 与 § 图 4-4 所示。
-
-> **图 4-3.** 物理通道上的位传输顺序 — x1 示例
-> <img src="figures/chapter_04/fig_0354_1.png" width="700">
 
 </td>
 </tr>
@@ -351,9 +345,6 @@ The Symbol tables for the valid 8b/10b codes are given in Appendix B. These tabl
 
 </td>
 <td style="background-color:#e8e8e8">
-
-> **图 4-4.** 物理通道上的位传输顺序 — x4 示例
-> <img src="figures/chapter_04/fig_0355_1.png" width="700">
 
 8b/10b 编码方案提供了一组与表示字符的数据符号 (Data Symbols) 不同的特殊符号 (Special Symbols)。这些特殊符号用于本章后述的各种链路管理 (Link Management) 机制。在非 Flit 模式中,特殊符号还用于对 DLLP 和 TLP 进行成帧 (Framing),使用不同的特殊符号以便快速、轻松地区分这两类报文。当 Flit 模式使能时,数据流的每个符号 (字节) 仍然使用 8b/10b 编码,但不使用上述成帧机制。Flit 模式的操作在 § 第 4.2.3.1 节 中描述。即使 Flit 模式使能,在 2.5 GT/s 或 5.0 GT/s 数据速率下,有序集仍然遵循 § 第 4.2.1 节 中给出的描述。
 
@@ -588,15 +579,6 @@ table>
 - EDB 符号用于标记作废 TLP 的结束。EDB 的使用信息见 § 第 3.6.2.1 节。
 - 接收器可选择性地检查对本节规则的违反。这些检查可独立启用 (见 § 第 6.2.3.4 节)。如果进行检查,违反规则将作为接收器错误,作为与该端口关联的可报告错误上报 (见 § 第 6.2 节)。
 
-> **图 4-5.** 应用了成帧符号的 TLP
-> <img src="figures/chapter_04/fig_0358_1.png" width="700">
-
-> **图 4-6.** 应用了成帧符号的 DLLP
-> <img src="figures/chapter_04/fig_0359_1.png" width="700">
-
-> **图 4-7.** x1 链路上成帧后的 TLP
-> <img src="figures/chapter_04/fig_0359_1.png" width="700">
-
 </td>
 </tr>
 </tbody>
@@ -719,9 +701,6 @@ For more information on scrambling, see § Appendix C.
 - 默认情况下,Detect 状态中加扰始终处于使能状态。
 
 有关加扰的更多信息,见 § 附录 C。
-
-> **图 4-10.** 采用 8b/10b 加扰多项式的 LFSR
-> <img src="figures/chapter_04/fig_0361_1.png" width="700">
 
 </td>
 </tr>
@@ -861,9 +840,6 @@ Receivers must not adjust their Block alignment while in this phase. The Data St
 
 </td>
 <td style="background-color:#e8e8e8">
-
-> **图 4-12.** x4 链路中每通道一个 Block 时的比特位置示例
-> <img src="figures/chapter_04/fig_0363_1.png" width="700">
 
 有序集 Block (Ordered Set Block) 由一个 Sync Header 后跟一个 Ordered Set 组成。多通道链路 (multi-Lane Link) 的所有通道必须同时发送相同类型的有序集。有序集的第一个 Symbol 定义有序集的类型。有序集的后续符号由有序集类型定义,在多通道链路的不同通道之间不必完全相同。有序集的详细描述见 § 4.2.5 和 § 4.2.8。除了 SKP 有序集的使用和频率外,Flit 模式和非 Flit 模式的有序集 Block 相同。在 8.0 GT/s 的 Flit 模式下,使用标准 SKP 有序集和控制 SKP 有序集两种。
 
@@ -1083,12 +1059,6 @@ The Physical Layer DLLP layout is shown in § Figure 4-14. Symbols 0 and 1 are t
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 4-13.** 帧定界符布局
-> <img src="figures/chapter_04/fig_0366_1.png" width="700">
-
-> **图 4-14.** TLP 和 DLLP 布局
-> <img src="figures/chapter_04/fig_0368_1.png" width="700">
-
 物理层 DLLP 布局如 § 图 4-14 所示。Symbol 0 和 1 是 SDP Token,Symbol 2 到 7 是数据链路层 DLLP 信息。
 
 </td>
@@ -1255,9 +1225,6 @@ table>
 <tr>
 <td></td>
 <td style="background-color:#e8e8e8">
-
-> **图 4-17.** x8 链路中长度为 66 比特的 SKP 有序集
-> <img src="figures/chapter_04/fig_0369_1.png" width="700">
 
 </td>
 </tr>
@@ -6925,9 +6892,6 @@ The Receive side check is as follows on the 256B flit (as shown in Figure 4-41).
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 4-40.** ECC 解码器功能
-> <img src="figures/chapter_04/fig_0436_1.png" width="700">
-
 接收端的检查过程如下(如图 4-41 所示)。三个 ECC 解码器中的每一个,根据需要执行纠正和错误报告。在 CRC 检查的最后阶段,会做出决定,判断接收到的 flit 可以被接受还是需要重试。
 
 </td>
@@ -6974,9 +6938,6 @@ For Data Rates of 8.0 GT/s and above, the following rules apply:
 
 </td>
 <td style="background-color:#e8e8e8">
-
-> **图 4-41.** 接收端 3 路 ECC 解码及随后的 Flit CRC 检查
-> <img src="figures/chapter_04/fig_0437_1.png" width="700">
 
 对于 2.5 GT/s 或 5.0 GT/s 的数据速率,SKP 有序集的插入间隔不变(例如,在 1180 到 1538 个 Symbol 之间),但插入位置在 Flit 边界处发生。L0p 状态下随链路加宽或变窄可能出现的其他有序集,请参见 § Section 4.2.6.7。
 
@@ -7615,12 +7576,6 @@ In the Loopback state, the Loopback Lead is responsible for communicating the Tr
 >
 > 请注意,某些转换可能未涵盖,例如在给定子状态中从接收 TS0 转换到接收 TS1。
 
-> **图 4-42.** 8.0 GT/s 均衡流程
-> <img src="figures/chapter_04/fig_0448_1.png" width="700">
-
-> **图 4-43.** 16.0 GT/s 均衡流程
-> <img src="figures/chapter_04/fig_0448_2.png" width="700">
-
 </td>
 </tr>
 </tbody>
@@ -7775,9 +7730,6 @@ The explanation of the coefficients and the FIR filter it represents are provide
 > **均衡绕过示例 (EQUALIZATION BYPASS EXAMPLE)**
 >
 > 下面的流程图给出了一个示例流程,说明链路如何在较低数据速率上绕过均衡,并直接进入所支持的最高 NRZ 速率以执行均衡。例如,当 n=5 时,链路可在 Gen 1 数据速率训练到 L0,确认所有组件(包括 Retimers,若有)能够将均衡绕过到 Gen 5,将数据速率切换到 Gen 5,并仅在 Gen 5 执行均衡。
-
-> **图 4-45.** 均衡绕过示例
-> <img src="figures/chapter_04/fig_0450_1.png" width="700">
 
 </td>
 </tr>
@@ -8437,21 +8389,17 @@ The following diagram represents the states where alternate protocol and equaliz
 <tr>
 <td>
 
-> **Figure 4-46.** Alternate Protocol Negotiation and Equalization Bypass LTSSM States
->
-> <img src="figures/chapter_04/fig_0474_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
-
-> **图 4-46.** 替代协议协商与均衡旁路 LTSSM 状态
->
-> <img src="figures/chapter_04/fig_0474_1.png" width="700">
 
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-46.** Alternate Protocol Negotiation with Equalization Bypass LTSSM States
+> <img src="figures/chapter_04/fig_0474_1.png" width="700">
+
 
 <a id="sec-4-2-5-2-body"></a>
 ## 4.2.5.2 Alternate Protocol Negotiation (cont.) | 替代协议协商(续)

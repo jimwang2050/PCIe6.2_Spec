@@ -29740,31 +29740,6 @@ QUERY/KEY_PROG
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 6-57.</strong> Query Response (QUERY_RESP) 数据对象
-<img src="figures/chapter_06/fig_0925_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>图 6-58.</strong> 密钥编程 (KEY_PROG) 数据对象(以 256
-位密钥为例)
-<img src="figures/chapter_06/fig_0925_2.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>图 6-59.</strong> 密钥编程确认 (KP_ACK) 数据对象
-<img src="figures/chapter_06/fig_0926_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>图 6-60.</strong> 密钥集启动 (K_SET_GO) 数据对象
-<img src="figures/chapter_06/fig_0926_2.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>图 6-61.</strong> 密钥集停止 (K_SET_STOP) 数据对象
-<img src="figures/chapter_06/fig_0926_3.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>图 6-62.</strong> 密钥集启动/停止确认 (K_GOSTOP_ACK) 数据对象
-<img src="figures/chapter_06/fig_0926_4.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -30103,8 +30078,6 @@ GET_CERTIFICATE/CERTIFICATE(如需要)<br>SPDM KEY_EXCHANGE
 </table>
 <p>** 当使用 DOE 时,上游端口以非 IDE Completion 响应完成 K_SET_GO(Tx)
 数据对象传输的 Configuration Write,然后触发对 Completion 使用 IDE。</p>
-<p><strong>图 6-63.</strong> IDE_KM 示例
-<img src="figures/chapter_06/fig_0928_1.png" width="700"></p>
 </blockquote>
 </td>
 </tr>
@@ -30299,10 +30272,6 @@ GCM),称为 AES-GCM。对于 IDE TLP,TLP 数据有效负载内容构成"明文"
 Data),也称为 A,如 [AES-GCM] 中所定义。</p>
 <p>消息认证码 (MAC)<sup>143</sup> 的大小,也称为 t,如 [AES-GCM]
 中所定义,必须为 96 位(参见 § 图 6-65)。</p>
-<blockquote>
-<p><strong>图 6-65.</strong> MAC 布局
-<img src="figures/chapter_06/fig_0930_1.png" width="700"></p>
-</blockquote>
 <p>对于 IDE TLP 的流控 (Flow Control) 信用计算,必须将 MAC 视为由 Header
 Credit 覆盖。</p>
 <p>对于 IDE TLP,AES-GCM 可以应用于每个 IDE TLP,或使用聚合将 AES-GCM
@@ -30311,10 +30280,6 @@ Credit 覆盖。</p>
 6-66、§ 图 6-67、§ 图 6-70 和 § 图 6-71)。对于选择性 IDE 流 (Selective
 IDE Stream),本地前缀不得由 MAC 覆盖(参见 § 图 6-68、§ 图 6-69、§ 图 6-72
 和 § 图 6-73)。</p>
-<blockquote>
-<p><strong>图 6-66.</strong> 链接 IDE 流不使用聚合的 IDE TLP 示例(非
-Flit 模式) <img src="figures/chapter_06/fig_0930_2.png" width="700"></p>
-</blockquote>
 <p><sub>143. 在 [AES-GCM] 中称为"认证标签" (authentication tag) 或
 T,此处重命名以避免与其他"标签"用法混淆</sub></p>
 </td>
@@ -30419,24 +30384,6 @@ header encryption.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>图 6-70.</strong> 链接 IDE 流不使用聚合的 IDE TLP 示例(Flit
-模式) <img src="figures/chapter_06/fig_0932_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>图 6-71.</strong> IDE TLP – 链接 IDE 流聚合两个 TLP
-的示例(Flit 模式)
-<img src="figures/chapter_06/fig_0932_2.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>图 6-72.</strong> 选择性 IDE 流不使用聚合的 IDE TLP 示例(Flit
-模式) <img src="figures/chapter_06/fig_0933_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>图 6-73.</strong> IDE TLP – 选择性 IDE 流聚合两个 TLP
-的示例(Flit 模式)
-<img src="figures/chapter_06/fig_0933_2.png" width="700"></p>
-</blockquote>
 <p>输入 A 和 P 必须通过按 § 2.1.2 节定义的字节顺序连接所包含的 TLP
 内容来形成。虽然 A 和 P 内容在这些图中概念上是连接的,但 IDE TLP
 中的内容放置与非 IDE TLP 中相同。一旦构建了 A 和 P 内容,[AES-GCM] 定义了
@@ -30448,10 +30395,6 @@ A 和 P 必须如何填充——此处的填充未在此说明,该填充用于 [
 的某些部分来减少对侧信道攻击潜在暴露的能力,同时以明文形式维护 TLP
 路由和低级 TLP 处理所需的信息。§ 图 6-74
 在高层说明了部分包头加密的应用。</p>
-<blockquote>
-<p><strong>图 6-74.</strong> 部分包头加密的高级流程
-<img src="figures/chapter_06/fig_0934_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -30770,11 +30713,6 @@ unit) 的一部分。如 [AES-GCM] 中定义,当不使用聚合时,对每个 TLP
 6-79)。</li>
 </ul></li>
 </ul>
-<blockquote>
-<p><strong>图 6-79.</strong> 说明 PCRC 在链接 IDE 流(NFM)的两个聚合 IDE
-TLP 上应用的示例
-<img src="figures/chapter_06/fig_0940_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
