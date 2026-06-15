@@ -38,6 +38,8 @@
 <a id="sec-8-overview"></a>
 ## 8. 电气子块 (Electrical Sub-Block)
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -80,10 +82,12 @@ Key attributes of the Electrical Specification Include:
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -213,6 +217,8 @@ PCIe 支持两种 Refclk 数据架构:公共 Refclk (Common Refclk) 和独立 Re
 
 <<<PAGE_BREAK>>> page_1410
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -243,6 +249,8 @@ PCI Express 电气规范将所有测量都参照设备的引脚 (Pin)。然而,�
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
@@ -251,7 +259,7 @@ PCI Express 电气规范将所有测量都参照设备的引脚 (Pin)。然而,�
 >
 > 图 8-1. 非嵌入式 Refclk 下的 Tx 测试板
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -291,6 +299,8 @@ Tx 规范的 6.0 版本还明确支持采用嵌入式 Refclk 的发送器 (Trans
 
 <<<PAGE_BREAK>>> page_1411
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -323,13 +333,15 @@ In order to specify a Transmitter with a uniform set of Tx parameters it is nece
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <a id="sec-8-3-1-1"></a>
 #### 8.3.1.1 引出通道和复制通道 (Breakout and Replica Channels)
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -420,6 +432,8 @@ An example waveform is shown in (§ Figure 8-3). In this waveform the differenti
 <a id="sec-8-3-3"></a>
 ### 8.3.3 Tx 电压参数 (Tx Voltage Parameters)
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -458,6 +472,8 @@ Tx 电压参数包括均衡 (Equalization) 系数、均衡预设 (Preset) 和最
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
@@ -471,7 +487,7 @@ Tx 电压参数包括均衡 (Equalization) 系数、均衡预设 (Preset) 和最
 
 <<<PAGE_BREAK>>> page_1413
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -515,6 +531,8 @@ Tx equalization coefficients for 64.0 GT/s are based on the following FIR filter
 <a id="sec-8-3-3-3"></a>
 #### 8.3.3.3 8.0、16.0、32.0 和 64.0 GT/s 的 Tx 均衡预设 (Tx Equalization Presets for 8.0, 16.0, 32.0, and 64.0 GT/s)
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -541,6 +559,8 @@ The presets defined in (§ Table 8-1) and (§ Table 8-2) are numbered to match t
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
@@ -553,7 +573,7 @@ The presets defined in (§ Table 8-1) and (§ Table 8-2) are numbered to match t
 
 ---
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -598,6 +618,8 @@ The presets defined in (§ Table 8-1) and (§ Table 8-2) are numbered to match t
 
 <<<PAGE_BREAK>>> page_1416
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -632,6 +654,8 @@ The presets defined in (§ Table 8-1) and (§ Table 8-2) are numbered to match t
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
@@ -653,7 +677,7 @@ The presets defined in (§ Table 8-1) and (§ Table 8-2) are numbered to match t
 
 ---
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -704,6 +728,8 @@ Tx equalization de-emphasis values at 2.5 and 5.0 GT/s are measured using the av
 
 <<<PAGE_BREAK>>> page_1417
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -726,6 +752,8 @@ equalized Compliance Pattern is captured by a real-time oscilloscope and the pos
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
@@ -736,7 +764,7 @@ equalized Compliance Pattern is captured by a real-time oscilloscope and the pos
 
 ---
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -869,6 +897,8 @@ The range for a Transmitter's output voltage swing, (specified by Vd) with no eq
 <a id="sec-8-3-3-7-constraints"></a>
 ## Coefficient Constraints for 8.0, 16.0, 32.0, and 64.0 GT/s | 8.0、16.0、32.0 和 64.0 GT/s 的系数约束
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -905,6 +935,8 @@ When the above constraints are applied the resulting coefficient space for 8.0, 
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -913,7 +945,7 @@ When the above constraints are applied the resulting coefficient space for 8.0, 
 <a id="sec-8-3-3-8"></a>
 ## 8.3.3.8 Coefficient Range and Tolerance for 8.0, 16.0, 32.0, and 64.0 GT/s | 8.0、16.0、32.0 和 64.0 GT/s 的系数范围与容差
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -945,6 +977,8 @@ When the above constraints are applied the resulting coefficient space for 8.0, 
 <a id="fig-8-9"></a>
 ## Figure 8-9 Transmit Equalization Coefficient Space Triangular Matrix Example for 8.0, 16.0, and 32.0 GT/s | 图 8-9 8.0、16.0 和 32.0 GT/s 发送均衡系数空间三角矩阵示例
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -973,6 +1007,8 @@ When the above constraints are applied the resulting coefficient space for 8.0, 
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -981,7 +1017,7 @@ When the above constraints are applied the resulting coefficient space for 8.0, 
 <a id="sec-8-3-3-8-64gt"></a>
 ## 64.0 GT/s Coefficient Space Mapping | 64.0 GT/s 系数空间映射
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1051,6 +1087,8 @@ The coefficient space for 64.0 GT/s with each pre-shoot2 coefficient may be mapp
 <a id="sec-8-3-3-9"></a>
 ## 8.3.3.9 EIEOS and VTX-EIEOS-FS and VTX-EIEOS-RS Limits | EIEOS 与 VTX-EIEOS-FS、VTX-EIEOS-RS 限制
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -1089,6 +1127,8 @@ EIEOS 信号仅在 5.0、8.0、16.0、32.0 和 64.0 GT/s 速率下定义。在 5
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1099,7 +1139,7 @@ EIEOS 信号仅在 5.0、8.0、16.0、32.0 和 64.0 GT/s 速率下定义。在 5
 <a id="fig-8-11"></a>
 ## Figure 8-11 Measuring VTX-EIEOS-FS and VTX-EIEOS-RS at 8.0 GT/s | 图 8-11 在 8.0 GT/s 下测量 VTX-EIEOS-FS 和 VTX-EIEOS-RS
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1131,6 +1171,8 @@ EIEOS 信号仅在 5.0、8.0、16.0、32.0 和 64.0 GT/s 速率下定义。在 5
 <a id="sec-8-3-3-10"></a>
 ## 8.3.3.10 Reduced Swing Signaling | 缩减摆幅信号
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -1157,6 +1199,8 @@ PCI Express 发送器可选择性地支持缩减摆幅 (Reduced Swing) 信号。
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1165,7 +1209,7 @@ PCI Express 发送器可选择性地支持缩减摆幅 (Reduced Swing) 信号。
 <a id="sec-8-3-3-11"></a>
 ## 8.3.3.11 Effective Tx Package Loss at 8.0, 16.0, 32.0, and 64.0 GT/s | 8.0、16.0、32.0 和 64.0 GT/s 下 Tx 有效封装损耗
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1197,6 +1241,8 @@ Package loss (including silicon driver bandwidth) is represented by the ps21TX p
 <a id="sec-8-3-3-11-root"></a>
 ## Root Package vs Non-Root Package ps21TX at 16.0 and 32.0 GT/s | 16.0 和 32.0 GT/s 下 Root Package 与 Non-Root Package 的 ps21TX
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -1223,6 +1269,8 @@ The ps21TX parameter is informative for 16.0 GT/s Root Package devices and for N
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1246,7 +1294,7 @@ The ps21TX parameter is informative for 16.0 GT/s Root Package devices and for N
 <a id="sec-8-3-3-11-formfactor"></a>
 ## Form Factor Compliance Note | 外形规格合规说明
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1314,6 +1362,8 @@ Package loss is measured by comparing the 64-zeros/64-ones voltage swing (V111) 
 <a id="sec-8-3-3-11-measurement"></a>
 ## V101 and V111 Measurement Procedure | V101 与 V111 的测量流程
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -1350,6 +1400,8 @@ V101 与 V111 的测量在每个区间末端进行,以最小化码间干扰 (ISI
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1358,7 +1410,7 @@ V101 与 V111 的测量在每个区间末端进行,以最小化码间干扰 (ISI
 <a id="sec-8-3-3-12"></a>
 ## 8.3.3.12 Transmitter Signal-to Noise and Distortion Ratio (SNDRTX) for 64.0 GT/s | 64.0 GT/s 下发送器信噪失真比 (SNDRTX)
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1698,6 +1750,8 @@ $$V_L = \frac{\sum_{i=1}^{8} \mu_{L,i}}{8}$$
 <a id="sec-8-3-4"></a>
 ## 8.3.4 Transmitter Margining | 发送器余量 (Margining)
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -1724,6 +1778,8 @@ There are 8 encoded values for transmit margin from 000b to 111b. Encoding 000b 
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1734,7 +1790,7 @@ There are 8 encoded values for transmit margin from 000b to 111b. Encoding 000b 
 <a id="fig-8-13"></a>
 ## Figure 8-13 2.5 and 5.0 GT/s Transmitter Margining Voltage Levels and Codes | 图 8-13 2.5 和 5.0 GT/s 发送器余量电压电平与编码
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1774,6 +1830,8 @@ There are 8 encoded values for transmit margin from 000b to 111b. Encoding 000b 
 <a id="sec-8-3-4-jitter"></a>
 ## Transmitter Jitter Measurement (preliminary for 8.3.5) | 发送器抖动测量(8.3.5 前的预备内容)
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -1804,6 +1862,8 @@ Direct probing at a Transmitter's pins is not generally feasible, so data is ins
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1822,7 +1882,7 @@ Direct probing at a Transmitter's pins is not generally feasible, so data is ins
 <a id="sec-8-3-5"></a>
 ## 8.3.5 Tx Jitter Parameters | Tx 抖动参数
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1906,6 +1966,8 @@ A Transmitter may operate in the Independent Refclk (IR) mode, in which case the
 <a id="sec-8-3-5-3-cont"></a>
 ## 8.3.5.3 Independent Refclk Measurement and Post Processing (cont.) | 独立 Refclk 测量与后处理 (续)
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -1970,6 +2032,8 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1980,7 +2044,7 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 <a id="sec-8-3-5-4-cont"></a>
 ## 8.3.5.5 Behavioral CDR Characteristics (cont.) | 行为 CDR 特性 (续)
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2056,6 +2120,8 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 <a id="sec-8-3-5-5-fig-8-16"></a>
 ## 8.3.5.5 Behavioral CDR Characteristics — Figure 8-16 & Equation 8-10/8-11 | 行为 CDR 特性 — 图 8-16 与公式 8-10/8-11
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -2112,6 +2178,8 @@ $$H(s) = \frac{s^2}{s^2 + sA + B} \times \frac{s^2 + 2\zeta_2 \omega_0 s + \omeg
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2122,7 +2190,7 @@ $$H(s) = \frac{s^2}{s^2 + sA + B} \times \frac{s^2 + 2\zeta_2 \omega_0 s + \omeg
 <a id="sec-8-3-5-5-eq-8-12-fig-8-17"></a>
 ## 8.3.5.5 Behavioral CDR Characteristics — Equation 8-12 & Figure 8-17 | 行为 CDR 特性 — 公式 8-12 与图 8-17
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2166,6 +2234,8 @@ $$H(s) = \frac{s^2}{s^2 + sA + B} \times \frac{s^2 + 2\zeta_2 \omega_0 s + \omeg
 <a id="sec-8-3-5-5-eq-8-13"></a>
 ## 8.3.5.5 Behavioral CDR Characteristics — Equation 8-13 | 行为 CDR 特性 — 公式 8-13
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -2222,6 +2292,8 @@ $$H(s) = \frac{s^2}{(s + \omega_0)(s + \omega_1)} \times \frac{s^2 + 2\zeta_2 \o
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2232,7 +2304,7 @@ $$H(s) = \frac{s^2}{(s + \omega_0)(s + \omega_1)} \times \frac{s^2 + 2\zeta_2 \o
 <a id="sec-8-3-5-6"></a>
 ## 8.3.5.6 Data Dependent and Uncorrelated Jitter / 8.3.5.7 Data Dependent Jitter | 数据相关与非相关抖动 / 数据相关抖动
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2282,6 +2354,8 @@ While DDJ is not explicitly defined as a parameter in the specification, it is n
 <a id="sec-8-3-5-7-fig-8-18"></a>
 ## 8.3.5.7 Data Dependent Jitter — Figure 8-18 / 8.3.5.8/9/10 | 数据相关抖动 — 图 8-18
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -2366,6 +2440,8 @@ Pulse width jitter is defined as an edge to edge phenomenon on consecutive edges
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2376,7 +2452,7 @@ Pulse width jitter is defined as an edge to edge phenomenon on consecutive edges
 <a id="sec-8-3-5-10-fig-8-20-21"></a>
 ## 8.3.5.10 Uncorrelated Total and Deterministic PWJ — Figures 8-20 & 8-21 | 非相关总与确定性 PWJ — 图 8-20 与 8-21
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2440,6 +2516,8 @@ PWJ 的等价描述可通过参考固定的引导边 (leading edge) 并将两个
 <a id="sec-8-3-6"></a>
 ## 8.3.6 Data Rate Dependent Parameters | 速率相关参数
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -2466,6 +2544,8 @@ For 5.0 GT/s a similar removal of DDj must be performed to obtain UTj. However, 
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2492,7 +2572,7 @@ For 5.0 GT/s a similar removal of DDj must be performed to obtain UTj. However, 
 <a id="sec-8-3-6-cont"></a>
 ## 8.3.6 Data Rate Dependent Parameters (cont.) — Table 8-6 (cont.) | 速率相关参数 (续) — 表 8-6 (续)
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2548,6 +2628,8 @@ For 5.0 GT/s a similar removal of DDj must be performed to obtain UTj. However, 
 <a id="sec-8-3-6-cont-2"></a>
 ## 8.3.6 Data Rate Dependent Parameters (cont.) — Table 8-6 (cont. 2) | 速率相关参数 (续) — 表 8-6 (续 2)
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -2598,6 +2680,8 @@ For 5.0 GT/s a similar removal of DDj must be performed to obtain UTj. However, 
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2608,7 +2692,7 @@ For 5.0 GT/s a similar removal of DDj must be performed to obtain UTj. However, 
 <a id="sec-8-3-6-notes"></a>
 ## 8.3.6 Data Rate Dependent Parameters — Table 8-6 (final) & Notes | 速率相关参数 — 表 8-6 (结尾) 与注释
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2838,6 +2922,8 @@ PLL 带宽和峰值在发送器 (Transmitter) 和接收器 (Receiver) 两侧都�
 <a id="sec-8-3-9-1"></a>
 ### 8.3.9.1 2.5 GT/s 和 5.0 GT/s Tx PLL 带宽与峰值 (2.5 GT/s and 5.0 GT/s Tx PLL Bandwidth and Peaking)
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -2864,11 +2950,13 @@ Two sets of bandwidth and peaking are defined for 5.0 GT/s: 8-16 MHz with 3 dB o
 </tr>
 </tbody>
 </table>
+</div>
+
 
 <a id="sec-8-3-9-2"></a>
 ### 8.3.9.2 8.0 GT/s、16.0 GT/s、32.0 GT/s 和 64.0 GT/s Tx PLL 带宽与峰值 (8.0 GT/s, 16.0 GT/s, 32.0 GT/s, and 64.0 GT/s Tx PLL Bandwidth and Peaking)
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2894,6 +2982,8 @@ The Tx and Rx PLL bandwidth for 8.0 and 16.0 GT/s is 0.5-5 MHz with 1.0 dB of pe
 <a id="sec-8-3-9-3"></a>
 ### 8.3.9.3 串联电容 (Series Capacitors)
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -2916,6 +3006,8 @@ PCI Express 要求使用串联电容以在 Tx 和 Rx 之间提供直流阻断 (D
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2924,7 +3016,7 @@ PCI Express 要求使用串联电容以在 Tx 和 Rx 之间提供直流阻断 (D
 <a id="sec-8-3-10"></a>
 ## 8.3.10 与数据速率无关的 Tx 参数 (Data Rate Independent Tx Parameters)
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3041,6 +3133,8 @@ All Receiver speeds are tested by means of a stressed eye applied over a calibra
 <a id="sec-8-4-1"></a>
 ### 8.4.1 接收器压力眼图规范 (Receiver Stressed Eye Specification)
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -3063,11 +3157,13 @@ The closest practical measurement points to the Rx DUT are the coaxial connector
 </tr>
 </tbody>
 </table>
+</div>
+
 
 <a id="sec-8-4-1-1"></a>
 #### 8.4.1.1 引出通道与复制通道 (Breakout and Replica Channels)
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3100,6 +3196,8 @@ In § Figure 8-26 the stressed eye is observed at TP2 with the signal sources co
 <a id="sec-8-4-1-2"></a>
 #### 8.4.1.2 校准通道插入损耗特性 (Calibration Channel Insertion Loss Characteristics)
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -3122,6 +3220,8 @@ Calibration channels, each with a specified differential insertion loss at one o
 </tr>
 </tbody>
 </table>
+</div>
+
 
 > **Figure 8-27.** Example Calibration Channel IL Mask Excluding Rx Package for 8.0 GT/s
 > <img src="figures/chapter_08/fig_1448_1.png" width="700">
@@ -3171,7 +3271,7 @@ Calibration channels, each with a specified differential insertion loss at one o
 <a id="sec-8-4-1-2-cont"></a>
 #### 8.4.1.2 校准通道插入损耗特性 (续)
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3218,6 +3318,8 @@ Rx 容差互连环境的阻抗目标为:对于 2.5、5.0 和 8.0 GT/s 通道,差
 </tbody>
 </table>
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -3240,8 +3342,10 @@ A calibration channel consists of a differential pair of PCB traces terminated a
 </tr>
 </tbody>
 </table>
+</div>
 
-<table>
+
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3294,6 +3398,8 @@ This section gives an example of a 16.0 GT/s calibration channel that was built 
 </tbody>
 </table>
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -3340,11 +3446,13 @@ Sixteen differential pairs (85 Ohm Nominal Impedance) routed from SMA connectors
 </tr>
 </tbody>
 </table>
+</div>
+
 
 > **Figure 8-28.** Example 16.0 GT/s Calibration Channel
 > <img src="figures/chapter_08/fig_1452_1.png" width="700">
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3410,6 +3518,8 @@ This section gives an example of a 32.0 GT/s calibration channel that was built 
 </tbody>
 </table>
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -3460,11 +3570,13 @@ Sixteen differential pairs (85 Ohm Nominal Impedance) routed on a Megtron-6 PCB 
 </tr>
 </tbody>
 </table>
+</div>
+
 
 > **Figure 8-32.** Example 32.0 GT/s Calibration Channel
 > <img src="figures/chapter_08/fig_1456_1.png" width="700">
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3520,6 +3632,8 @@ The Receiver test requires that the stressed eye characteristics be measured at 
 </tbody>
 </table>
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -3542,8 +3656,10 @@ Behavioral Rx package models are included as part of the post processing to allo
 </tr>
 </tbody>
 </table>
+</div>
 
-<table>
+
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3566,6 +3682,8 @@ The 8.0, 32.0, and 64.0 GT/s stressed eye test for all devices and the 16.0 GT/s
 </tbody>
 </table>
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -3592,8 +3710,10 @@ Post processing shall include a behavioral CDR model with a data rate dependent 
 </tr>
 </tbody>
 </table>
+</div>
 
-<table>
+
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3755,6 +3875,8 @@ CTLE 和 DFE 的 Rx 均衡算法仅用作在校准通道 ISI 及其他信号损�
 
 <<<PAGE_BREAK>>> page_1458
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -3821,12 +3943,14 @@ Figure 8-34 8.0 GT/s 行为级 CTLE 的传递函数
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <<<PAGE_BREAK>>> page_1459
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3911,6 +4035,8 @@ Figure 8-34 8.0 GT/s 行为级 CTLE 的传递函数
 
 <<<PAGE_BREAK>>> page_1460
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -4001,12 +4127,14 @@ FZ2 = |直流增益| × FP2
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <<<PAGE_BREAK>>> page_1461
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4178,6 +4306,8 @@ FZ3 = 7.7 GHz
 
 ---
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -4208,12 +4338,14 @@ At 8.0 GT/s the combination of a 1st order CTLE and a one-tap DFE algorithm is r
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <<<PAGE_BREAK>>> page_1464
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4292,6 +4424,8 @@ At 8.0 GT/s the combination of a 1st order CTLE and a one-tap DFE algorithm is r
 
 ---
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -4322,12 +4456,14 @@ For 64.0 GT/s, the feedback signal yk* can take values of -1, -1/3, +1/3 and +1.
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <<<PAGE_BREAK>>> page_1465
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4382,6 +4518,8 @@ EH/EW 定义的参考点对应于 8.0、16.0、32.0 和 64.0 GT/s 下接收器�
 
 <<<PAGE_BREAK>>> page_1466
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -4484,12 +4622,14 @@ For all EH, EW and eye area measurements performed in receiver calibration the A
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <<<PAGE_BREAK>>> page_1467
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4584,6 +4724,8 @@ Note that because the first tiebreaker is highest loss - most approaches will st
 
 <<<PAGE_BREAK>>> page_1468
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -4610,10 +4752,12 @@ Based upon the data rate at which the Rx is being tested, Rj or Sj and different
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4693,6 +4837,8 @@ Layout (TP1 → TP5/TP4 flow):
 
 <<<PAGE_BREAK>>> page_1469
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -4739,6 +4885,8 @@ Layout (TP1 → TP5/TP4 flow):
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
@@ -4764,7 +4912,7 @@ Layout (TP1 → TP5/TP4 flow):
 
 **Table 8-11 (continued). Notes | 表 8-11 (续) 注释**
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4841,6 +4989,8 @@ Layout (TP1 → TP5/TP4 flow):
 
 ---
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -4879,12 +5029,14 @@ A waveform post processing tool or a channel compliance methodology tool may be 
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <<<PAGE_BREAK>>> page_1471
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5012,6 +5164,8 @@ Receivers operating at 16.0 GT/s in the Independent Refclk (IR) mode use the Sj 
 
 ---
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -5040,13 +5194,15 @@ Receivers operating at 16.0 GT/s in the Common Clock (CC) Refclk mode use the Sj
 </tr>
 </tbody>
 </table>
+</div>
+
 
 > **Figure 8-45.** Sj Mask for Receivers Operating in CC mode at 16.0 GT/s
 > <img src="figures/chapter_08/fig_1473_1.png" width="700">
 
 ---
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5182,6 +5338,8 @@ Receivers operating at 64.0 GT/s in the CC Refclk mode use the Sj mask profile s
 
 ---
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -5210,13 +5368,15 @@ Receivers operating in the CC Refclk mode at 8.0 GT/s shall utilize the Sj profi
 </tr>
 </tbody>
 </table>
+</div>
+
 
 > **Figure 8-50.** Sj Masks for Receivers Operating in CC Mode at 8.0 GT/s
 > <img src="figures/chapter_08/fig_1478_1.png" width="700">
 
 ---
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5386,6 +5546,8 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 
 ---
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -5424,10 +5586,12 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5460,6 +5624,8 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 
 ---
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -5494,10 +5660,12 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5556,6 +5724,8 @@ The measurement methodology and frequency binning for differential and common mo
 <a id="sec-8-4-3-2"></a>
 ## 8.4.3.2 Receiver Return Loss | 接收器回损
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -5578,13 +5748,15 @@ PCI Express components including Retimers that support the 16.0 GT/s or higher r
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <a id="sec-8-4-4"></a>
 ## 8.4.4 Lane Margining at the Receiver - Electrical Requirements | 接收器处通道余量测量 - 电气要求
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5650,6 +5822,8 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 
 ---
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -5684,10 +5858,12 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5742,6 +5918,8 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 
 ---
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -5778,13 +5956,15 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <a id="sec-8-4-5"></a>
 ## 8.4.5 Low Frequency and Miscellaneous Signaling Requirements | 低频及其它信号要求
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5812,6 +5992,8 @@ All PCI Express signal and power supply pins must be tested for ESD protection l
 <a id="sec-8-4-5-1"></a>
 ## 8.4.5.1 ESD Standards | ESD 标准
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -5838,6 +6020,8 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
@@ -5847,7 +6031,7 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 <a id="sec-8-4-5-2"></a>
 ## 8.4.5.2 Channel AC Coupling Capacitors | 通道 AC 耦合电容
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5875,6 +6059,8 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 <a id="sec-8-4-5-3"></a>
 ## 8.4.5.3 Short Circuit Requirements | 短路要求
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -5909,6 +6095,8 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
@@ -5917,7 +6105,7 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 <a id="sec-8-4-5-4"></a>
 ## 8.4.5.4 Transmitter and Receiver Termination | 发送器与接收器端接
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5945,6 +6133,8 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 <a id="sec-8-4-5-5"></a>
 ## 8.4.5.5 Electrical Idle | 电气空闲
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -5995,13 +6185,15 @@ EIOS 的成功接收依据《Physical Layer Logical Block》一章中定义的�
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <a id="sec-8-4-5-6"></a>
 ## 8.4.5.6 DC Common Mode Voltage | DC 共模电压
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6039,6 +6231,8 @@ Transmitter DC common mode voltage is held at the same value during all states u
 <a id="sec-8-4-5-7"></a>
 ## 8.4.5.7 Receiver Detection | 接收器检测
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -6093,13 +6287,15 @@ b. 若发送器端电压的充电速率由发送器阻抗、串联电容、互�
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <a id="sec-8-5"></a>
 ## 8.5 Channel Tolerancing | 通道容差
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6197,6 +6393,8 @@ The basic channel compliance approach is to first acquire the channel's characte
 
 **Table 8-57.** Flow Diagram for Channel Tolerancing at 8.0 and 16.0 GT/s | 表 8-57. 8.0 GT/s 与 16.0 GT/s 通道容差流程图
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -6229,12 +6427,14 @@ For 8.0, 16.0, 32.0, and 64.0 GT/s testing the simulation process must properly 
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <<<PAGE_BREAK>>> page_1491
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6382,6 +6582,8 @@ For 32.0 GT/s, reference package models the die capacitive loads are included in
 
 <<<PAGE_BREAK>>> page_1493
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -6416,6 +6618,8 @@ return loss characteristics of on-die pad for a typical design. The reference im
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
@@ -6494,7 +6698,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 > **Figure 8-77.** 32.0 and 64.0 GT/s Reference Package Port Connections for Pin to Pin Channel Evaluation
 > <img src="figures/chapter_08/fig_1501_1.png" width="700">
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6522,6 +6726,8 @@ return loss characteristics of on-die pad for a typical design. The reference im
 <a id="sec-8-5-1-2"></a>
 ## 8.5.1.2 Measuring Package Performance (16.0 GT/s only) | 封装性能测量(仅适用于 16.0 GT/s)
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -6548,13 +6754,15 @@ Package insertion loss at 16.0 GT/s is an informative spec parameter. Some imple
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <a id="sec-8-5-1-3"></a>
 ## 8.5.1.3 Simulation Tool Requirements | 仿真工具要求
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6585,6 +6793,8 @@ Channel tolerancing is implemented by means of simulation, where the pass/fail c
 
 <<<PAGE_BREAK>>> page_1502
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -6635,13 +6845,15 @@ Output eye parameters: The simulator shall generate a statistically defined outp
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <a id="sec-8-5-1-3-1"></a>
 ## 8.5.1.3.1 Simulation Tool Chain Inputs | 仿真工具链输入
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6795,6 +7007,8 @@ An open source simulation tool shall be provided with the specification as desig
 <a id="sec-8-5-1-4-1"></a>
 ## 8.5.1.4.1 Deriving Voltage and Jitter Parameters | 电压与抖动参数推导
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -6827,6 +7041,8 @@ This section is for informative purposes. The voltage and jitter parameters may 
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
@@ -6848,7 +7064,7 @@ TTX-CH-UDJDD = TTX-UDJ-DD – (TTXUPWJ-DJDD)/2 = 7.00ps
 
 ---
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7006,6 +7222,8 @@ The behavioral receiver selects the combination of Transmitter Equalization, CTL
 <a id="sec-8-5-1-4-3"></a>
 ## 8.5.1.4.3 Pass/Fail Eye Characteristics | Pass/Fail 眼图特性
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -7032,6 +7250,8 @@ The output of the simulation tool shall be in the form of pass/fail characterist
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
@@ -7055,7 +7275,7 @@ The output of the simulation tool shall be in the form of pass/fail characterist
 
 ---
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7175,6 +7395,8 @@ Note that the pass/fail EH and EW limits shown in § Figure 8-79 are identical t
 <a id="sec-8-5-1-4-4"></a>
 ## 8.5.1.4.4 Characterizing Channel Common Mode Noise | 通道共模噪声特性
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -7205,6 +7427,8 @@ Note that the Tx and channel CM noise parameters cannot simply be added to obtai
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
@@ -7213,7 +7437,7 @@ Note that the Tx and channel CM noise parameters cannot simply be added to obtai
 <a id="sec-8-5-1-4-5"></a>
 ## 8.5.1.4.5 Verifying VCH-IDLE-DET-DIFF-pp | 验证 VCH-IDLE-DET-DIFF-pp
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7259,6 +7483,8 @@ VCH-IDLE-DET-DIFF-pp 的定义旨在保证:当发送器 (Transmitter) 发出 EIE
 <a id="sec-8-6"></a>
 ## 8.6 Refclk Specifications | Refclk 规范
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -7289,13 +7515,15 @@ Refclk 的测试设置假设仅有 Refclk 发生器本身存在。测试设置�
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <a id="sec-8-6-1"></a>
 ## 8.6.1 Refclk Test Setup | Refclk 测试设置
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7643,6 +7871,8 @@ Refclks supporting SSC must meet an additional jitter limit over a range of low 
 <a id="sec-8-6-4"></a>
 ## 8.6.4 Refclk Architectures Supported | 支持的 Refclk 架构
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -7665,6 +7895,8 @@ Two Refclk architectures are supported: Common Refclk (CC) and Independent Refcl
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -7675,7 +7907,7 @@ Two Refclk architectures are supported: Common Refclk (CC) and Independent Refcl
 
 <<<PAGE_BREAK>>> page_1516
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7709,6 +7941,8 @@ Note that the PLL and CDR filter functions represent minimally capable approxima
 <a id="sec-8-6-5-1"></a>
 ## 8.6.5.1 PLL Filter Transfer Function Example | PLL 滤波传递函数示例
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -7747,6 +7981,8 @@ $$\frac{\omega_{3dB}}{\omega_n} = \sqrt{\sqrt{\frac{2\zeta^2 + 1}{2}} + 1} + 2\z
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -7755,7 +7991,7 @@ $$\frac{\omega_{3dB}}{\omega_n} = \sqrt{\sqrt{\frac{2\zeta^2 + 1}{2}} + 1} + 2\z
 <a id="fig-8-88"></a>
 ### Figure 8-88 | 图 8-88
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7823,6 +8059,8 @@ For behavioral CDR functions refer to § Section 8.3.5.5
 <a id="sec-8-6-6"></a>
 ## 8.6.6 Common Refclk Rx Architecture (CC) | 共参考时钟接收器架构 (CC)
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -7845,6 +8083,8 @@ This architecture utilizes a single Refclk source that is distributed to both th
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -7853,7 +8093,7 @@ This architecture utilizes a single Refclk source that is distributed to both th
 <a id="fig-8-89"></a>
 ### Figure 8-89 | 图 8-89
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7887,6 +8127,8 @@ This architecture utilizes a single Refclk source that is distributed to both th
 
 <<<PAGE_BREAK>>> page_1518
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -7921,6 +8163,8 @@ At 5.0 GT/s and higher data rates, two possible sets of limits of PLL bandwidth 
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -7931,7 +8175,7 @@ At 5.0 GT/s and higher data rates, two possible sets of limits of PLL bandwidth 
 
 <<<PAGE_BREAK>>> page_1519
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8027,6 +8271,8 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 <a id="fig-8-93"></a>
 ### Figure 8-93 | 图 8-93
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -8077,13 +8323,15 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 </tr>
 </tbody>
 </table>
+</div>
+
 
 ---
 
 <a id="fig-8-94"></a>
 ### Figure 8-94 | 图 8-94
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8139,6 +8387,8 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 <a id="sec-8-6-7"></a>
 ## 8.6.7 Jitter Limits for Refclk Architectures | Refclk 架构的抖动限值
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -8183,6 +8433,8 @@ For 5.0, 8.0, and 16.0 GT/s, jitter is specified as an RMS (Rj) value. These sig
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -8193,7 +8445,7 @@ For 5.0, 8.0, and 16.0 GT/s, jitter is specified as an RMS (Rj) value. These sig
 
 <<<PAGE_BREAK>>> page_1521
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8253,6 +8505,8 @@ For 5.0, 8.0, and 16.0 GT/s, jitter is specified as an RMS (Rj) value. These sig
 
 <<<PAGE_BREAK>>> page_1522
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -8363,6 +8617,8 @@ If a form factor has clocking requirements that cannot be provided in this simpl
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 

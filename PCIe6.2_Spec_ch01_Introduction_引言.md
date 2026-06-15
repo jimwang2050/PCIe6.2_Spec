@@ -37,6 +37,8 @@
 
 ## 1. Introduction | 引言
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -113,6 +115,8 @@ The high-level requirements for this evolving I/O interconnect are as follows:
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -180,7 +184,7 @@ The primary Link attributes for PCI Express Link are:
 <a id="sec-1-1"></a>
 ## 1.1 An Evolving I/O Interconnect | 不断演进的 I/O 互连
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -393,6 +397,8 @@ shown in § Figure 1-2. This figure illustrates a single fabric instance with tw
 2. Terms like “PCIe Gen3” are ambiguous and should be avoided. For example, “gen3” could mean (1) compliant with Base 3.0, (2) compliant with Base 3.1 (last
 revision of 3.x), (3) compliant with Base 3.0 and supporting 8.0 GT/s, (4) compliant with Base 3.0 or later and supporting 8.0 GT/s, ….
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -449,6 +455,8 @@ revision of 3.x), (3) compliant with Base 3.0 and supporting 8.0 GT/s, (4) compl
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -457,7 +465,7 @@ revision of 3.x), (3) compliant with Base 3.0 and supporting 8.0 GT/s, (4) compl
 <a id="sec-1-3"></a>
 ## 1.3 PCI Express Fabric Topology | PCI Express Fabric 拓扑
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -544,6 +552,8 @@ Completer that the RC was the origin of the Request, and subsequently the RC mus
 <a id="sec-1-3-1"></a>
 ## 1.3.1 Root Complex | 根复合体
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -570,6 +580,8 @@ Completer that the RC was the origin of the Request, and subsequently the RC mus
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -629,7 +641,7 @@ A Legacy Endpoint must not issue a Locked Request.
 1.3.2 Endpoints §
 1.3.2.1 Legacy Endpoint Rules §
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -717,6 +729,8 @@ Endpoint refers to a type of Function that can be the Requester or Completer of 
 <a id="sec-1-3-2-1"></a>
 ## 1.3.2.1 Legacy Endpoint Rules | 传统端点规则
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -751,6 +765,8 @@ Endpoint refers to a type of Function that can be the Requester or Completer of 
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -818,7 +834,7 @@ An RCiEP must not generate I/O Requests.
 1.3.2.2 PCI Express Endpoint Rules §
 1.3.2.3 Root Complex Integrated Endpoint Rules §
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -856,6 +872,8 @@ An RCiEP must not generate I/O Requests.
 <a id="sec-1-3-2-2"></a>
 ## 1.3.2.2 PCI Express Endpoint Rules | PCI Express 端点规则
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -898,6 +916,8 @@ An RCiEP must not generate I/O Requests.
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -906,7 +926,7 @@ An RCiEP must not generate I/O Requests.
 <a id="sec-1-3-2-3"></a>
 ## 1.3.2.3 Root Complex Integrated Endpoint Rules | 根复合体集成端点规则
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1009,6 +1029,8 @@ Each enabled Switch Port must comply with the Flow Control specification within 
 1.3.3 Switch §
 §
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -1051,6 +1073,8 @@ Each enabled Switch Port must comply with the Flow Control specification within 
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1059,7 +1083,7 @@ Each enabled Switch Port must comply with the Flow Control specification within 
 <a id="sec-1-3-3"></a>
 ## 1.3.3 Switch | 交换机
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1159,6 +1183,8 @@ Operation §
 3. Since an earlier version of this specification used Sub-Class 06h for this purpose, an implementation is still permitted to use Sub-Class 06h, but this is strongly
 discouraged.
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -1185,6 +1211,8 @@ discouraged.
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1193,7 +1221,7 @@ discouraged.
 <a id="sec-1-3-4"></a>
 ## 1.3.4 Root Complex Event Collector | 根复合体事件收集器
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1267,6 +1295,8 @@ PCI Express 到 PCI/PCI-X 桥 (Bridge) 提供了 PCI Express Fabric 与 PCI/PCI-
 <a id="sec-1-4"></a>
 ## 1.4 Hardware/Software Model for Discovery, Configuration and Operation | 用于发现、配置与操作的硬件/软件模型
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -1299,6 +1329,8 @@ PCI/PCIe 硬件/软件模型包含发现、配置与使用功能 (Function) 所�
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1350,7 +1382,7 @@ level packet information through the layers.
 1.5 PCI Express Layering Overview §
 §
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1481,6 +1513,8 @@ serial-to-parallel conversion, PLL(s), and impedance matching circuitry. It also
 > **Figure 1-5.** Packet Flow Through the Layers
 > <img src="figures/chapter_01/fig_0136_1.png" width="700">
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -1535,6 +1569,8 @@ The Physical Layer includes all circuitry for interface operation, including dri
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1543,7 +1579,7 @@ The Physical Layer includes all circuitry for interface operation, including dri
 <a id="sec-1-5-1"></a>
 ## 1.5.1 Transaction Layer | 事务层
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1581,6 +1617,8 @@ The Transaction Layer supports four address spaces: it includes the three PCI ad
 <a id="sec-1-5-2"></a>
 ## 1.5.2 Data Link Layer | 数据链路层
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -1615,6 +1653,8 @@ The Data Link Layer also generates and consumes packets that are used for Link m
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1623,7 +1663,7 @@ The Data Link Layer also generates and consumes packets that are used for Link m
 <a id="sec-1-5-3"></a>
 ## 1.5.3 Physical Layer | 物理层
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1702,6 +1742,8 @@ Software-controlled power management through mechanisms, as dictated by system s
 1.5.4 Layer Functions and Services §
 1.5.4.1 Transaction Layer Services §
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -1792,6 +1834,8 @@ PCI Express 体系结构预留了"钩子 (hooks)"，以通过速率升级和高�
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1800,7 +1844,7 @@ PCI Express 体系结构预留了"钩子 (hooks)"，以通过速率升级和高�
 <a id="sec-1-5-4"></a>
 ## 1.5.4 Layer Functions and Services | 层的功能与服务
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1826,6 +1870,8 @@ PCI Express 体系结构预留了"钩子 (hooks)"，以通过速率升级和高�
 <a id="sec-1-5-4-1"></a>
 ## 1.5.4.1 Transaction Layer Services | 事务层服务
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -1908,6 +1954,8 @@ The Transaction Layer, in the process of generating and receiving TLPs, exchange
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1966,7 +2014,7 @@ Embedded clock tuning and alignment
 1.5.4.2 Data Link Layer Services §
 1.5.4.3 Physical Layer Services §
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2008,6 +2056,8 @@ Embedded clock tuning and alignment
 <a id="sec-1-5-4-2"></a>
 ## 1.5.4.2 Data Link Layer Services | 数据链路层服务
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -2056,6 +2106,8 @@ The Data Link Layer is responsible for reliably exchanging information with its 
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2064,7 +2116,7 @@ The Data Link Layer is responsible for reliably exchanging information with its 
 <a id="sec-1-5-4-3"></a>
 ## 1.5.4.3 Physical Layer Services | 物理层服务
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2165,6 +2217,8 @@ Data transfer handshake mechanism
 1.5.4.4.1 Transaction/Data Link Interface §
 1.5.4.4.2 Data Link/Physical Interface §
 
+
+<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
@@ -2223,6 +2277,8 @@ Data transfer handshake mechanism
 </tr>
 </tbody>
 </table>
+</div>
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2231,7 +2287,7 @@ Data transfer handshake mechanism
 <a id="sec-1-5-4-4"></a>
 ## 1.5.4.4 Inter-Layer Interfaces | 层间接口
 
-<table>
+table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
