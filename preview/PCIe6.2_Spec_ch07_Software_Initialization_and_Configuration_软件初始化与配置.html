@@ -163,11 +163,6 @@ Function。PCI Express 端点和传统端点 (Legacy Endpoint)
 和根复合体事件收集器不出现在由根复合体启动的层级域内。它们在配置空间中作为根端口的对等实体出现。</p>
 <p>除非另有规定，否则配置空间定义中针对设备的要求既适用于单 Function
 设备，也适用于多功能 (Multi-Function) 设备中的每一个 Function。</p>
-<blockquote>
-<p><strong>Figure 7-1.</strong> PCI Express 根复合体设备映射 (PCI
-Express Root Complex Device Mapping)
-<img src="figures/chapter_07/fig_0981_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -196,11 +191,6 @@ Topology § | 7.1 配置拓扑 §</h2>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>Figure 7-2.</strong> PCI Express 交换机设备映射 (PCI Express
-Switch Device Mapping)
-<img src="figures/chapter_07/fig_0982_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -264,11 +254,6 @@ the Extended Register Address field must be all zeros.</p>
 兼容配置空间可以使用 § 第 7.2.1 节或 § 第 7.2.2
 节定义的任一机制访问。使用任一访问机制进行的访问是等效的。PCI Express
 扩展配置空间只能使用 § 第 7.2.2 节定义的 ECAM 机制访问。</p>
-<blockquote>
-<p><strong>Figure 7-3.</strong> PCI Express 配置空间布局 (PCI Express
-Configuration Space Layout)
-<img src="figures/chapter_07/fig_0983_1.png" width="700"></p>
-</blockquote>
 <p>PCI 兼容的 PCI Express 配置机制支持 [PCI] 中定义的 PCI
 配置空间编程模型。通过遵循该模型，集成 PCI Express
 接口的系统能够保持与传统 PCI 总线枚举和配置软件的兼容性。</p>
@@ -6789,10 +6774,6 @@ Express.</p>
 <p>本节描述构成 PCI 电源管理 (Power Management) 接口结构的寄存器。</p>
 <p>§ Figure 7-17 说明了 PCI 电源管理能力 (Power Management Capability)
 结构的组织。该结构对于所有 PCI Express Function 均为必需。</p>
-<blockquote>
-<p><strong>Figure 7-17.</strong> PCI 电源管理能力结构
-<img src="figures/chapter_07/fig_1021_1.png" width="700"></p>
-</blockquote>
 <table>
 <thead>
 <tr>
@@ -17112,10 +17093,6 @@ points to the next Capability as shown in § Figure 7-42.</p>
 Space Layout
 <img src="figures/chapter_07/fig_1087_1.png" width="700"></p>
 </blockquote>
-<blockquote>
-<p><strong>Figure 7-42.</strong> PCI Express 扩展配置空间布局
-<img src="figures/chapter_07/fig_1087_1.png" width="700"></p>
-</blockquote>
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -17128,15 +17105,6 @@ Extended Capability 链表进行分配,其格式类似于 PCI Capability
 结构。Capability 结构的第一个 DWORD 用于标识该 Capability
 及其版本,并指向下一个 Capability,如图 § 7-42 所示。</p>
 <p>每个 Capability 结构必须按 DWORD 对齐。</p>
-<blockquote>
-<p><strong>Figure 7-42.</strong> PCI Express 扩展配置空间布局
-<img src="figures/chapter_07/fig_1087_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 7-42.</strong> PCI Express Extended Configuration
-Space Layout
-<img src="figures/chapter_07/fig_1087_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -17298,10 +17266,6 @@ interrupts must implement MSI or MSI-X or both.</p>
 Capability Header 开头。§ Figure 7-43 详细说明了 PCI Express Extended
 Capability Header 中各寄存器字段的分配;§ Table 7-39
 提供了相应的位定义。</p>
-<blockquote>
-<p><strong>Figure 7-43.</strong> PCI Express 扩展能力头
-<img src="figures/chapter_07/fig_1088_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 7-39 PCI Express Extended Capability Header | 表 7-39
 PCI Express 扩展能力头</strong></p>
 <table>
@@ -17407,11 +17371,6 @@ permitted to have both an MSI and an MSI-X Capability structure.</p>
 Message Address
 <img src="figures/chapter_07/fig_1089_1.png" width="700"></p>
 </blockquote>
-<blockquote>
-<p><strong>Figure 7-45.</strong> MSI Capability Structure for 64-bit
-Message Address
-<img src="figures/chapter_07/fig_1089_1.png" width="700"></p>
-</blockquote>
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -17419,14 +17378,6 @@ Message Address
 <p>MSI 能力结构如图 § 7-44 和 § 7-45 所示。支持 MSI 的每个设备 Function
 (在多功能设备中) 必须实现其自己的 MSI 能力结构。每个 Function
 禁止实现多个 MSI 能力结构,但允许同时具有 MSI 和 MSI-X 能力结构。</p>
-<blockquote>
-<p><strong>Figure 7-44.</strong> 32 位消息地址的 MSI 能力结构
-<img src="figures/chapter_07/fig_1089_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 7-45.</strong> 64 位消息地址的 MSI 能力结构
-<img src="figures/chapter_07/fig_1089_1.png" width="700"></p>
-</blockquote>
 </td>
 </tr>
 </tbody>
@@ -17453,11 +17404,6 @@ MSI Capability Structures (continued) | MSI 能力结构 (续)</h2>
 Message Address and PVM
 <img src="figures/chapter_07/fig_1090_1.png" width="700"></p>
 </blockquote>
-<blockquote>
-<p><strong>Figure 7-47.</strong> MSI Capability Structure for 64-bit
-Message Address and PVM
-<img src="figures/chapter_07/fig_1090_1.png" width="700"></p>
-</blockquote>
 <p>To request service, an MSI Function writes the contents of the
 Message Data Register for MSI, and if enabled, the Extended Message Data
 Register for MSI, to the address specified by the contents of the
@@ -17479,22 +17425,10 @@ system software control over MSI.</p>
 the PCI Configuration Space Capability list. § Figure 7-48 details
 allocation of register fields in the MSI Capability Header; § Table 7-40
 provides the respective bit definitions.</p>
-<blockquote>
-<p><strong>Figure 7-48.</strong> MSI Capability Header
-<img src="figures/chapter_07/fig_1090_1.png" width="700"></p>
-</blockquote>
 <p>7.7.1.1 MSI Capability Header (Offset 00h) §</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>Figure 7-46.</strong> 32 位消息地址且具有 PVM 的 MSI 能力结构
-<img src="figures/chapter_07/fig_1090_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 7-47.</strong> 64 位消息地址且具有 PVM 的 MSI 能力结构
-<img src="figures/chapter_07/fig_1090_1.png" width="700"></p>
-</blockquote>
 <p>为了请求服务,MSI Function 将 MSI 的 Message Data 寄存器的内容
 (以及启用时的 MSI 的 Extended Message Data 寄存器的内容) 写入 MSI 的
 Message Address 寄存器所指定的地址 (可选地,当使用 64
@@ -17510,10 +17444,6 @@ Function 的能力,并为系统软件提供对 MSI 的控制。</p>
 <p>MSI Capability Header 在 PCI 配置空间 Capability 列表中枚举 MSI
 Capability 结构。§ Figure 7-48 详细说明了 MSI Capability Header
 中各寄存器字段的分配;§ Table 7-40 提供了相应的位定义。</p>
-<blockquote>
-<p><strong>Figure 7-48.</strong> MSI 能力头
-<img src="figures/chapter_07/fig_1090_1.png" width="700"></p>
-</blockquote>
 <p>7.7.1.1 MSI Capability Header (偏移 00h) §</p>
 </td>
 </tr>
@@ -17646,10 +17576,6 @@ Capability ID,表示这是一个 MSI Capability 结构。</td>
 MSI。系统软件允许修改 MSI 的 Message Control
 寄存器的读写位和字段。设备驱动程序不允许修改 MSI 的 Message Control
 寄存器的读写位和字段。</p>
-<blockquote>
-<p><strong>Figure 7-49.</strong> MSI 的消息控制寄存器
-<img src="figures/chapter_07/fig_1091_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 7-41 Message Control Register for MSI | 表 7-41 MSI
 的消息控制寄存器</strong></p>
 <table>
@@ -17905,10 +17831,6 @@ undefined.</td>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>Figure 7-50.</strong> MSI 的消息地址寄存器
-<img src="figures/chapter_07/fig_1093_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 7-42 Message Address Register for MSI | 表 7-42 MSI
 的消息地址寄存器</strong></p>
 <table>
@@ -17958,10 +17880,6 @@ Message Upper Address Register for MSI (Offset 08h) | MSI
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 7-51.</strong> Message Upper Address Register for MSI
-<img src="figures/chapter_07/fig_1093_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 7-43 Message Upper Address Register for MSI | 表 7-43
 MSI 的消息高地址寄存器</strong></p>
 <table>
@@ -17993,10 +17911,6 @@ Address register. Default value of this field is undefined.</td>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>Figure 7-51.</strong> MSI 的消息高地址寄存器
-<img src="figures/chapter_07/fig_1093_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 7-43 Message Upper Address Register for MSI | 表 7-43
 MSI 的消息高地址寄存器</strong></p>
 <table>
@@ -18080,10 +17994,6 @@ undefined.</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>Figure 7-53.</strong> Extended Message Data Register for MSI
-<img src="figures/chapter_07/fig_1094_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 7-45 Extended Message Data Register for MSI | 表 7-45
 MSI 的扩展消息数据寄存器</strong></p>
 <table>
@@ -18113,10 +18023,6 @@ upper 16 bits; otherwise, it uses 0000h for the upper 16 bits.</td>
 </td>
 <td style="background-color:#e8e8e8">
 
-<blockquote>
-<p><strong>Figure 7-52.</strong> MSI 的消息数据寄存器
-<img src="figures/chapter_07/fig_1094_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 7-44 Message Data Register for MSI | 表 7-44 MSI
 的消息数据寄存器</strong></p>
 <table>
@@ -18145,10 +18051,6 @@ Message Enable 编码为 010b 表示 Function 已被分配 4
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>Figure 7-53.</strong> MSI 的扩展消息数据寄存器
-<img src="figures/chapter_07/fig_1094_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 7-45 Extended Message Data Register for MSI | 表 7-45
 MSI 的扩展消息数据寄存器</strong></p>
 <table>
@@ -19617,11 +19519,6 @@ Pending Bits Register for MSI-X PBA Entries | MSI-X PBA
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="fig-7-67"></a></p>
-<blockquote>
-<p><strong>Figure 7-67.</strong> Pending Bits Register for MSI-X PBA
-Entries | MSI-X PBA 条目的挂起位寄存器
-<img src="figures/chapter_07/fig_1104_1.png" width="700"></p>
-</blockquote>
 <p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1105</p>
 <p><strong>Table 7-56. Pending Bits Register for MSI-X PBA Entries | 表
 7-56. MSI-X PBA 条目的挂起位寄存器</strong></p>
@@ -20057,10 +19954,6 @@ id="7732-link-control-3-register-offset-04h--链路控制-3-寄存器偏移-04h"
 Link Control 3 Register (Offset 04h) | 链路控制 3 寄存器（偏移
 04h）</h2>
 <p><a id="fig-7-70"></a></p>
-<blockquote>
-<p><strong>Figure 7-70.</strong> Link Control 3 Register | 链路控制 3
-寄存器 <img src="figures/chapter_07/fig_1107_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 7-58. Link Control 3 Register | 表 7-58. 链路控制 3
 寄存器</strong></p>
 <table>
@@ -20406,17 +20299,7 @@ Maximum Link Width (最大链路宽度) 决定（参见 §
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="fig-7-72"></a></p>
-<blockquote>
-<p><strong>Figure 7-72.</strong> Lane Equalization Control Register |
-通道均衡控制寄存器
-<img src="figures/chapter_07/fig_1109_1.png" width="700"></p>
-</blockquote>
 <p><a id="fig-7-73"></a></p>
-<blockquote>
-<p><strong>Figure 7-73.</strong> Lane Equalization Control Register
-Entry | 通道均衡控制寄存器条目
-<img src="figures/chapter_07/fig_1109_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 7-60. Lane Equalization Control Register Entry | 表
 7-60. 通道均衡控制寄存器条目</strong></p>
 <table>
@@ -20825,11 +20708,6 @@ bit definitions.</p>
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="fig-7-75"></a></p>
-<blockquote>
-<p><strong>Figure 7-75.</strong> Data Link Feature Extended Capability
-Header | 数据链路特性扩展能力头
-<img src="figures/chapter_07/fig_1112_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 7-63. Data Link Feature Extended Capability Header | 表
 7-63. 数据链路特性扩展能力头</strong></p>
 <table>
@@ -67934,10 +67812,6 @@ IDE RID Association Register 2 | IDE RID 关联寄存器 2</h2>
 <td>
 
 <blockquote>
-<p><strong>Figure 7-380.</strong> IDE RID Association Register 2 (Offset
-+04h) <img src="figures/chapter_07/fig_1394_1.png" width="700"></p>
-</blockquote>
-<blockquote>
 <p><strong>Figure 7-380 (Register Layout).</strong> IDE RID Association
 Register 2 (Offset +04h)</p>
 <table>
@@ -68264,11 +68138,6 @@ IDE Address Association Register 2 | IDE 地址关联寄存器 2</h2>
 <td>
 
 <blockquote>
-<p><strong>Figure 7-382.</strong> IDE Address Association Register 2
-(Offset +04h)
-<img src="figures/chapter_07/fig_1395_1.png" width="700"></p>
-</blockquote>
-<blockquote>
 <p><strong>Figure 7-382 (Register Layout).</strong> IDE Address
 Association Register 2 (Offset +04h)</p>
 <table>
@@ -68475,10 +68344,6 @@ ignored by software. The layout of the information is shown in § Figure
 7-384.</p>
 <p>A single PCI Express Function is permitted to contain multiple Null
 Capability structures.</p>
-<blockquote>
-<p><strong>Figure 7-384.</strong> Null Capability
-<img src="figures/chapter_07/fig_1396_1.png" width="700"></p>
-</blockquote>
 <blockquote>
 <p><strong>Figure 7-384 (Register Layout).</strong> Null Capability</p>
 <table>

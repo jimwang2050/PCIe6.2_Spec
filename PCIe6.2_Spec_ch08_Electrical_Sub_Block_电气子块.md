@@ -2065,9 +2065,6 @@ table>
 </td>
 <td style="background-color:#e8e8e8">
 
-> **Figure 8-14. First Order CC Behavioral CDR Transfer Functions | 一阶 CC 行为 CDR 传递函数**
-> <img src="figures/chapter_08/fig_1430_1.png" width="700">
-
 § Figure 8-15 展示了对应 2.5 GT/s 和 5.0 GT/s 的二阶 CDR 传递函数。这些函数分别由 ζ = 0.707、f3dB = 1.5 MHz 和 5.0 MHz 共同定义。8.0 GT/s、16.0 GT/s、32.0 GT/s 和 64.0 GT/s 的行为传递函数近似于 § Section 8.4.2.2.1 所示的分段线性正弦抖动 (Sinusoidal Jitter, Sj) 模板。支持 SRIS 的发送器 (Transmitter) 必须使用这些行为传递函数进行评估。
 
 **注:** 共同时钟 (Common Clock, CC) 和独立参考时钟 (Independent Reference Clock, IR) 架构之间不可互操作 — 尽管可以设计出同时满足两套电气要求的单一接收器 (Receiver)。
@@ -2102,9 +2099,6 @@ table>
 
 </td>
 <td style="background-color:#e8e8e8">
-
-> **Figure 8-15. 2nd Order Behavioral SRIS CDR Transfer Functions for 2.5 GT/s and 5.0 GT/s | 2.5 GT/s 与 5.0 GT/s 的二阶行为 SRIS CDR 传递函数**
-> <img src="figures/chapter_08/fig_1431_1.png" width="700">
 
 </td>
 </tr>
@@ -2154,9 +2148,6 @@ $$H(s) = \frac{s^2}{s^2 + sA + B} \times \frac{s^2 + 2\zeta_2 \omega_0 s + \omeg
 
 </td>
 <td style="background-color:#e8e8e8">
-
-> **Figure 8-16. Behavioral SRIS CDR Function for 8.0 GT/s, and SRIS and CC CDR for 16.0 and 32.0 GT/s | 8.0 GT/s 行为 SRIS CDR,以及 16.0/32.0 GT/s 的 SRIS 和 CC CDR**
-> <img src="figures/chapter_08/fig_1432_1.png" width="700">
 
 **H(s) =**
 
@@ -2216,9 +2207,6 @@ table>
 - B = 4.36 × 10¹² × (2π)²
 
 **Equation 8-12. SRIS and CC Behavioral CDR Parameters at 16.0 GT/s | 16.0 GT/s 的 SRIS 和 CC 行为 CDR 参数**
-
-> **Figure 8-17. Behavioral SRIS and CC CDR for 64.0 GT/s | 64.0 GT/s 的行为 SRIS 和 CC CDR**
-> <img src="figures/chapter_08/fig_1433_1.png" width="700">
 
 </td>
 </tr>
@@ -2410,9 +2398,6 @@ Pulse width jitter is defined as an edge to edge phenomenon on consecutive edges
 - Recovered Data Clock (恢复的数据时钟)
 - DDJ1, DDJ2, DDJ3
 
-> **Figure 8-18. Relation Between Data Edge PDFs and Recovered Data Clock | 数据边沿 PDF 与恢复数据时钟之间的关系**
-> <img src="figures/chapter_08/fig_1435_1.png" width="700">
-
 非相关总抖动 (Uncorrelated Total Jitter, UTJ) 和非相关确定性抖动 (Dual Dirac 模型) (UDJDD) 参考通过 CDR 跟踪功能产生的恢复数据时钟。从每个 PDF 中移除 DDJ 分量,并将码型中所有边沿的 PDF 合并后,即可推导出非相关抖动。通过将 PDF 适当转换为 Q 尺度 (Q-scale),即可得到 § Figure 8-19 所示的图形关系,并由此推导出 TTX-UTJ 和 TTX-UDJDD。需要注意的是,§ Figure 8-19 中两条 PDF 曲线相同,但由 1/RJLH 和 1/RJRH 定义的拟合斜率可能不同。
 
 **A-0821A**
@@ -2424,9 +2409,6 @@ Pulse width jitter is defined as an edge to edge phenomenon on consecutive edges
 - 1.0 UI
 - 1/RJLH
 - 1/RJRH
-
-> **Figure 8-19. Derivation of TTX-UTJ and TTX-UDJDD | TTX-UTJ 与 TTX-UDJDD 的推导**
-> <img src="figures/chapter_08/fig_1435_2.png" width="700">
 
 随机抖动 (Random Jitter) 与数据相关抖动互不相关。TTX-RJ 可由 TTX-UTJ 减去 TTX-UDJDD 得到,在本规范中仅作为信息性参数 (informative) 给出。它通常用作表征 PLL 性能的基准。
 
@@ -2486,9 +2468,6 @@ The PDF of jitter around each non-jittered edge may be converted into the Q-scal
 
 PWJ 的等价描述可通过参考固定的引导边 (leading edge) 并将两个边沿的抖动贡献同时体现在后随边 (trailing edge) 上得到。该方法产生如下图所示的单一 PDF。码型中每个 1 UI 宽脉冲在该 PDF 下将具有不同的中位数,这是由 ISI 和 F/2 抖动引起的。对码型中奇数 UI 和偶数 UI 位置上 1 UI 宽脉冲的中位数分别取平均,再将奇、偶 PDF 按对应中位数平均值归一化后相加,得到奇 UI PDF 和偶 UI PDF。最终的 PDF 由奇 UI 与偶 UI PDF 之和计算得到。其核心思想是:非相关 PWJ 的最终 PDF 应当包含 F/2 或奇/偶 UI 抖动。
 
-> **Figure 8-20. PWJ Relative to Consecutive Edges 1 UI Apart | 相对于间隔 1 UI 的相邻边沿的 PWJ**
-> <img src="figures/chapter_08/fig_1436_1.png" width="700">
-
 每个无抖动边沿周围的抖动 PDF 可转换为 Q 尺度 (见 § Figure 8-21),并以与 TTX-UTJ 和 TTX-UDJDD 推导类似的方式推导出 TTX-UPW-TJ 和 TTX-UPW-DJDD。需要注意的是,PDF 可能并非对称,而我们关心的尾部分布为 RJLH,因为它代表脉冲压缩。
 
 **A-0823A**
@@ -2498,9 +2477,6 @@ PWJ 的等价描述可通过参考固定的引导边 (leading edge) 并将两个
 - TTX-UPW-DJDD
 - TTX-UPW-TJ
 - 1 UI – TTX-UPW-TJ/2
-
-> **Figure 8-21. Definition of TTX-UPW-DJDD and TTX-UPW-TJ Data Rate Dependent Transmitter Parameters | TTX-UPW-DJDD 与 TTX-UPW-TJ 的定义 — 速率相关发送器参数**
-> <img src="figures/chapter_08/fig_1436_2.png" width="700">
 
 </td>
 </tr>
@@ -3967,9 +3943,6 @@ table>
 </td>
 <td style="background-color:#e8e8e8">
 
-> **Figure 8-35.** 8.0 GT/s 行为级 CTLE 的损耗曲线
-> <img src="figures/chapter_08/fig_1459_1.png" width="700">
-
 </td>
 </tr>
 </tbody>
@@ -3993,9 +3966,6 @@ table>
 
 </td>
 <td style="background-color:#e8e8e8">
-
-> **Figure 8-36.** 16.0 GT/s 行为级 CTLE 的损耗曲线
-> <img src="figures/chapter_08/fig_1459_2.png" width="700">
 
 </td>
 </tr>
@@ -4151,9 +4121,6 @@ table>
 </td>
 <td style="background-color:#e8e8e8">
 
-> **Figure 8-37.** 32.0 GT/s 行为级 CTLE 的损耗曲线
-> <img src="figures/chapter_08/fig_1461_1.png" width="700">
-
 </td>
 </tr>
 </tbody>
@@ -4296,9 +4263,6 @@ FZ3 = 7.7 GHz
 </td>
 <td style="background-color:#e8e8e8">
 
-> **Figure 8-38.** 64.0 GT/s 行为级 CTLE 的损耗曲线
-> <img src="figures/chapter_08/fig_1463_1.png" width="700">
-
 </td>
 </tr>
 </tbody>
@@ -4362,9 +4326,6 @@ table>
 </td>
 <td style="background-color:#e8e8e8">
 
-> **Figure 8-39.** 单抽头 DFE 的变量定义与流程图
-> <img src="figures/chapter_08/fig_1464_1.png" width="700">
-
 </td>
 </tr>
 </tbody>
@@ -4413,9 +4374,6 @@ table>
 
 </td>
 <td style="background-color:#e8e8e8">
-
-> **Figure 8-40.** 2 抽头 DFE 的流程图
-> <img src="figures/chapter_08/fig_1464_2.png" width="700">
 
 </td>
 </tr>
@@ -4785,9 +4743,6 @@ Layout (TP1 → TP5/TP4 flow):
 </td>
 <td style="background-color:#e8e8e8">
 
-> **Figure 8-41.** 8.0 GT/s 压力抖动眼图校准的布局
-> <img src="figures/chapter_08/fig_1468_1.png" width="700">
-
 布局 (TP1 → TP5/TP4 流程):
 
 - TP1: 8.0 GT/s PRBS (伪随机二进制序列) 发生器 → 固定 TX EQ
@@ -4866,9 +4821,6 @@ Layout (TP1 → TP5/TP4 flow):
 
 </td>
 <td style="background-color:#e8e8e8">
-
-> **Figure 8-42.** 16.0、32.0 和 64.0 GT/s 压力抖动眼图校准的布局
-> <img src="figures/chapter_08/fig_1469_1.png" width="700">
 
 布局 (TP1 → TP5/TP4 流程):
 
@@ -6471,9 +6423,6 @@ The CPIN and CPAD values used in the package model generation are provided for i
 
 封装模型作为设计资料随本规范一同提供。8.0 GT/s 与 16.0 GT/s 的每个模型都涵盖 CPIN 与 CPAD 寄生电容,并包含一个差分传输线 (t-line) 单元,如图 § Figure 8-58 所示。
 
-> **Figure 8-58.** Tx/Rx 行为级封装模型
-> <img src="figures/chapter_08/fig_1491_1.png" width="700">
-
 用于生成封装模型的 CPIN 与 CPAD 值仅供参考。
 
 </td>
@@ -6607,12 +6556,6 @@ return loss characteristics of on-die pad for a typical design. The reference im
 <td style="background-color:#e8e8e8">
 
 对于典型设计,片上 pad 的回损 (return loss) 特性。32.0 GT/s 与 64.0 GT/s 参考封装模型 S 参数的参考阻抗为 50 Ω。下列各图展示了基于 50 Ω 阻抗的 32.0 GT/s 与 64.0 GT/s 参考封装的插入损耗、回损、FEXT 与 NEXT S 参数曲线。为考虑片上电感线圈约 3 Ω 的 DC 损耗,在 64.0 GT/s 通道一致性仿真中应将 Tx 和 Rx 的 DC 端接设置为 47 Ω。
-
-> **Figure 8-61.** 32.0 GT/s 根参考封装的插入损耗
-> <img src="figures/chapter_08/fig_1493_1.png" width="700">
-
-> **Figure 8-62.** 32.0 GT/s 根参考封装的回损
-> <img src="figures/chapter_08/fig_1493_2.png" width="700">
 
 </td>
 </tr>
@@ -7059,9 +7002,6 @@ TTX-CH-UDJDD = TTX-UDJ-DD – (TTXUPWJ-DJDD)/2 = 7.00ps
 > **Figure 8-78.** Example Derivation of 8.0 GT/s Jitter Parameters for § Table 8-15
 > <img src="figures/chapter_08/fig_1503_1.png" width="700">
 
-> **Figure 8-78.** § Table 8-15 中 8.0 GT/s 抖动参数的推导示例
-> <img src="figures/chapter_08/fig_1503_1.png" width="700">
-
 ---
 
 table>
@@ -7266,8 +7206,6 @@ The output of the simulation tool shall be in the form of pass/fail characterist
 > Mean UI Center Zero Crossing
 > Eye Height
 
-> **Figure 8-79.** EH、EW 模板
-> <img src="figures/chapter_08/fig_1506_1.png" width="700">
 >
 > 眼宽 ± 0.1 UI
 > UI 平均中心零交叉
@@ -7553,9 +7491,6 @@ table>
 > **Figure 8-80.** Oscilloscope Refclk Test Setup for All Cases Except Jitter at 32.0 and 64.0 GT/s
 > <img src="figures/chapter_08/fig_1510_1.png" width="700">
 
-> **Figure 8-80.** 32.0 和 64.0 GT/s 抖动以外所有情形的示波器 Refclk 测试设置
-> <img src="figures/chapter_08/fig_1510_1.png" width="700">
-
 ---
 
 <table>
@@ -7691,15 +7626,9 @@ All specifications in § Table 8-18 are to be measured using a test configuratio
 > **Figure 8-81.** Single-Ended Measurement Points for Absolute Cross Point and Swing
 > <img src="figures/chapter_08/fig_1512_1.png" width="700">
 
-> **Figure 8-81.** 绝对交叉点与摆幅的单端测量点
-> <img src="figures/chapter_08/fig_1512_1.png" width="700">
-
 ---
 
 > **Figure 8-82.** Single-Ended Measurement Points for Delta Cross Point
-> <img src="figures/chapter_08/fig_1512_2.png" width="700">
-
-> **Figure 8-82.** 增量交叉点的单端测量点
 > <img src="figures/chapter_08/fig_1512_2.png" width="700">
 
 ---
@@ -7709,15 +7638,9 @@ All specifications in § Table 8-18 are to be measured using a test configuratio
 > **Figure 8-83.** Single-Ended Measurement Points for Rise and Fall Time Matching
 > <img src="figures/chapter_08/fig_1513_1.png" width="700">
 
-> **Figure 8-83.** 上升与下降时间匹配的单端测量点
-> <img src="figures/chapter_08/fig_1513_1.png" width="700">
-
 ---
 
 > **Figure 8-84.** Differential Measurement Points for Duty Cycle and Period
-> <img src="figures/chapter_08/fig_1513_2.png" width="700">
-
-> **Figure 8-84.** 占空比与周期的差分测量点
 > <img src="figures/chapter_08/fig_1513_2.png" width="700">
 
 ---
@@ -7725,17 +7648,11 @@ All specifications in § Table 8-18 are to be measured using a test configuratio
 > **Figure 8-85.** Differential Measurement Points for Rise and Fall Time
 > <img src="figures/chapter_08/fig_1513_3.png" width="700">
 
-> **Figure 8-85.** 上升与下降时间的差分测量点
-> <img src="figures/chapter_08/fig_1513_3.png" width="700">
-
 ---
 
 <<<PAGE_BREAK>>> page_1514
 
 > **Figure 8-86.** Differential Measurement Points for Ringback
-> <img src="figures/chapter_08/fig_1514_1.png" width="700">
-
-> **Figure 8-86.** 振铃 (Ringback) 的差分测量点
 > <img src="figures/chapter_08/fig_1514_1.png" width="700">
 
 ---

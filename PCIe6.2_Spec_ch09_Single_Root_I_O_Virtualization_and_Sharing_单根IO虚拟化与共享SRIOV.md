@@ -33,8 +33,6 @@
 ---
 
 
-
-
 ## 9. Single Root I/O Virtualization and Sharing § | 单根 I/O 虚拟化与共享 (SR-IOV) §
 
 
@@ -69,9 +67,6 @@ The generic platform configuration is composed of the following components:
 在业界,人们投入了大量努力,通过使用虚拟化技术来提高有效的硬件资源利用率(即应用执行效率)。单根 I/O 虚拟化与共享 (Single Root I/O Virtualization and Sharing, SR-IOV) 使多个系统映像 (System Image, SI) 能够共享 PCI 硬件资源。
 
 为了说明如何使用该技术来提高有效的资源利用率,请考虑 § Figure 9-1 中所示的通用平台配置。
-
-> **Figure 9-1.** 通用平台配置 (Generic Platform Configuration)
-> <img src="figures/chapter_09/fig_1523_1.png" width="700">
 
 通用平台配置由以下组件组成:
 
@@ -128,9 +123,6 @@ The VI takes sole ownership of the underlying hardware. Using a variety of metho
 
 为了在不修改硬件的情况下提高有效的硬件资源利用率,可以运行多个 SI。如 § Figure 9-2 所示,被称为虚拟化中介 (Virtualization Intermediary, VI) 的软件被插入在硬件和 SI 之间。
 
-> **Figure 9-2.** 带有 VI 和多个 SI 的通用平台配置 (Generic Platform Configuration with a VI and Multiple SI)
-> <img src="figures/chapter_09/fig_1524_1.png" width="700">
-
 VI 独占底层硬件的所有权。VI 使用本规范范围之外的各种方法抽象硬件,为每个 SI 提供其自己的虚拟系统。可供每个 SI 使用的实际硬件资源可以根据工作负载或客户特定策略而有所不同。虽然此方法在许多环境中效果良好,但 I/O 密集型工作负载可能会遭受显著的性能下降。每个 I/O 操作(入站或出站)都必须由 VI 拦截并处理,这会增加显著的平台资源开销。
 
 </td>
@@ -183,9 +175,6 @@ SR-IOV 提供了减少这些平台资源开销的工具。SR-IOV 的好处包括
 - 能够将 SR-IOV 与其他 I/O 虚拟化技术(例如地址转换服务 (Address Translation Services, ATS)、地址转换与保护表 (Address Translation and Protection Table, ATPT) 技术以及中断重映射技术)集成,以构建健壮、完整的 I/O 虚拟化解决方案。
 
 § Figure 9-3 展示了一个支持 SR-IOV 的平台示例。
-
-> **Figure 9-3.** 带有 SR-IOV 和 IOV 启用器的通用平台配置 (Generic Platform Configuration with SR-IOV and IOV Enablers)
-> <img src="figures/chapter_09/fig_1526_1.png" width="700">
 
 </td>
 </tr>
@@ -327,9 +316,6 @@ As this figure illustrates, the hardware resources scale with the number of Func
 </td>
 <td style="background-color:#e8e8e8">
 
-> **Figure 9-4.** 多功能设备示例 (Example Multi-Function Device)
-> <img src="figures/chapter_09/fig_1528_1.png" width="700">
-
 此图展示了一个多功能 PCIe 设备的示例,具有以下特征:
 
 - PCIe 设备共享一个公共的 PCIe 链路 (Link)。所有功能共享的链路和 PCIe 功能通过 Function 0 进行管理。
@@ -386,9 +372,6 @@ The example in § Figure 9-5 illustrates a single PF with N VFs. Key observation
 
 </td>
 <td style="background-color:#e8e8e8">
-
-> **Figure 9-5.** 单 PF SR-IOV 设备示例 (Example SR-IOV Single PF Capable Device)
-> <img src="figures/chapter_09/fig_1529_1.png" width="700">
 
 § Figure 9-5 中的示例展示了一个包含 N 个 VF 的单个 PF。需要注意的关键观察点:
 
@@ -496,9 +479,6 @@ Key observations to note:
 </td>
 <td style="background-color:#e8e8e8">
 
-> **Figure 9-6.** 多 PF SR-IOV 设备示例 (Example SR-IOV Multi-PF Capable Device)
-> <img src="figures/chapter_09/fig_1531_1.png" width="700">
-
 需要注意的关键观察点:
 
 - 每个 PF 可以分配零个或多个 VF。设备内所有 PF 的每个 PF 的 VF 数量不需要相同。
@@ -594,9 +574,6 @@ In this last example, § Figure 9-8, a device implementation may mix any number 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **Figure 9-7.** 跨多总线号的 SR-IOV 设备示例 (Example SR-IOV Device with Multiple Bus Numbers)
-> <img src="figures/chapter_09/fig_1533_1.png" width="700">
-
 在最后一个示例 § Figure 9-8 中,设备实现可以混合任意数量的功能、PF 和 VF。
 
 </td>
@@ -638,9 +615,6 @@ Key observations to note:
 
 </td>
 <td style="background-color:#e8e8e8">
-
-> **Figure 9-8.** 混合功能类型的 SR-IOV 设备示例 (Example SR-IOV Device with a Mixture of Function Types)
-> <img src="figures/chapter_09/fig_1534_1.png" width="700">
 
 需要注意的关键观察点:
 
@@ -794,9 +768,6 @@ The First VF Offset and VF Stride fields in the SR-IOV extended capability are 1
 VF 内存空间在 VF Enable 和 VF MSE 都被置位之前不会启用(见 § 第 9.3.3.3.1 节和 § 第 9.3.3.3.4 节)。请注意,更改系统页大小 (System Page Size)(见 § 第 9.3.3.13 节)可能会影响 VF BAR 窗口大小。
 
 § Figure 9-9 展示了 PF 和 VF 内存空间窗口的示例。
-
-> **Figure 9-9.** 单 BAR 设备的 BAR 空间示例 (BAR Space Example for Single BAR Device)
-> <img src="figures/chapter_09/fig_1536_1.png" width="700">
 
 SR-IOV 扩展能力结构中的 First VF Offset 和 VF Stride 字段是 16 位路由 ID 偏移量。这些偏移量用于计算 VF 的路由 ID,但有以下限制:
 
@@ -1210,22 +1181,13 @@ table>
 
 § Table 9-2 defines the SR-IOV Extended Capability header. The Capability ID for the SR-IOV Extended Capability is 0010h.
 
-> **Figure 9-11.** SR-IOV Extended Capability Header
-> <img src="figures/chapter_09/fig_1541_1.png" width="700">
-
 <a id="sec-9-3-3-1"></a>
 #### 9.3.3.1 SR-IOV Extended Capability Header (Offset 00h) § | 9.3.3.1 SR-IOV 扩展能力结构头部(偏移 00h) §
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **Figure 9-10.** SR-IOV 扩展能力结构 (SR-IOV Extended Capability)
-> <img src="figures/chapter_09/fig_1541_1.png" width="700">
-
 § Table 9-2 定义了 SR-IOV 扩展能力结构头部。SR-IOV 扩展能力结构的能力 ID 为 0010h。
-
-> **Figure 9-11.** SR-IOV 扩展能力结构头部 (SR-IOV Extended Capability Header)
-> <img src="figures/chapter_09/fig_1541_1.png" width="700">
 
 <a id="sec-9-3-3-1-cn"></a>
 #### 9.3.3.1 SR-IOV 扩展能力结构头部(偏移 00h) §
@@ -1285,9 +1247,6 @@ table>
 | 31:20 | 下一能力结构偏移 (Next Capability Offset)——此字段包含到下一个 PCI Express 能力结构的偏移;如果链接的能力结构列表中没有其他项,则为 000h。对于在配置空间中实现的扩展能力结构,此偏移相对于 PCI 兼容配置空间的开始,因此必须始终为 000h(用于终止能力结构列表)或大于 0FFh。 | RO |
 
 § Table 9-3 定义了 SR-IOV 能力字段的布局。
-
-> **Figure 9-12.** SR-IOV 能力寄存器 (SR-IOV Capabilities Register)
-> <img src="figures/chapter_09/fig_1542_1.png" width="700">
 
 <a id="sec-9-3-3-2-cn"></a>
 #### 9.3.3.2 SR-IOV 能力寄存器(04h) §
@@ -1536,9 +1495,6 @@ VF 迁移与现已弃用的 MR-IOV 关联。新设计应将此字段硬连线为
 
 </td>
 <td style="background-color:#e8e8e8">
-
-> **Figure 9-13.** SR-IOV 控制寄存器 (SR-IOV Control Register)
-> <img src="figures/chapter_09/fig_1545_1.png" width="700">
 
 **Table 9-4. SR-IOV 控制寄存器 (SR-IOV Control Register)**
 
@@ -1900,9 +1856,6 @@ The initial value of NumVFs is undefined.
 <td style="background-color:#e8e8e8">
 
 § Table 9-5 定义了 SR-IOV 状态字段的布局。
-
-> **Figure 9-14.** SR-IOV 状态 (SR-IOV Status)
-> <img src="figures/chapter_09/fig_1549_1.png" width="700">
 
 **Table 9-5. SR-IOV 状态 (SR-IOV Status)**
 
