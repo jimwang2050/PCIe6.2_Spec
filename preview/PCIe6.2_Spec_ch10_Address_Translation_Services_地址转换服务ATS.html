@@ -557,11 +557,6 @@ executing on the Device to modify the ATC.</li>
 translation within its ATC, the TA initiates the ATS invalidation
 protocol. The invalidation protocol consists of a single Invalidation
 Request and one or more Invalidate Completions.</p>
-<blockquote>
-<p><strong>Figure 10-4.</strong> Invalidation Protocol with a Single
-Invalidation Request and Completion
-<img src="figures/chapter_10/fig_1563_1.png" width="700"></p>
-</blockquote>
 <p>As § Figure 10-4 illustrates, there are essentially three steps in
 the ATS Invalidation protocol:</p>
 <ol type="1">
@@ -627,6 +622,12 @@ b. 功能必须确保发往 RC
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 10-4.</strong> Invalidation Protocol with a Single
+Invalidation Request and Completion
+<img src="figures/chapter_10/fig_1563_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -965,6 +966,26 @@ translated or untranslated addresses. The Address Type (AT) field is
 used to indicate the type of address that is present in the request
 header (see § Figure 10-6, § Figure 10-7, § Figure 10-8, and § Figure
 10-9).</p>
+<p>In NFM, the AT field in the Requests is a redefinition of a reserved
+field in earlier version of this specification. Functions that do not
+implement an ATC will continue to set the AT field to its defined
+reserved value (00b). Functions that implement an ATC will set the AT
+field as listed in § Table 10-1.</p>
+</td>
+<td style="background-color:#e8e8e8">
+
+<p>带 ATC 的功能可以发送包含已转换或未转换地址的内存请求。地址类型
+(Address Type, AT) 字段用于指示请求头中存在的地址类型(参见 § 图 10-6、§
+图 10-7、§ 图 10-8 和 § 图 10-9)。</p>
+<p>在 NFM 中,请求中的 AT
+字段是对本规范早期版本中保留字段的重新定义。未实现 ATC 的功能将继续把 AT
+字段设置为其定义的保留值(00b)。实现 ATC 的功能将按 § 表 10-1 所列设置 AT
+字段。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
 <blockquote>
 <p><strong>Figure 10-6.</strong> Memory Request Header with 64-bit
 Address Highlighting AT field
@@ -985,25 +1006,6 @@ Address Highlighting AT field - FLIT Mode
 Address Highlighting AT field - FLIT Mode
 <img src="figures/chapter_10/fig_1569_1.png" width="700"></p>
 </blockquote>
-<p>In NFM, the AT field in the Requests is a redefinition of a reserved
-field in earlier version of this specification. Functions that do not
-implement an ATC will continue to set the AT field to its defined
-reserved value (00b). Functions that implement an ATC will set the AT
-field as listed in § Table 10-1.</p>
-</td>
-<td style="background-color:#e8e8e8">
-
-<p>带 ATC 的功能可以发送包含已转换或未转换地址的内存请求。地址类型
-(Address Type, AT) 字段用于指示请求头中存在的地址类型(参见 § 图 10-6、§
-图 10-7、§ 图 10-8 和 § 图 10-9)。</p>
-<p>在 NFM 中,请求中的 AT
-字段是对本规范早期版本中保留字段的重新定义。未实现 ATC 的功能将继续把 AT
-字段设置为其定义的保留值(00b)。实现 ATC 的功能将按 § 表 10-1 所列设置 AT
-字段。</p>
-</td>
-</tr>
-</tbody>
-</table>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -1159,16 +1161,8 @@ Flit Mode, OHC-A1 must be included, and the No Write (NW flag is
 contained in OHC-A1).</p>
 <p>Translation Requests have the same completion timeout intervals as
 Read Requests.</p>
-<blockquote>
-<p><strong>Figure 10-12.</strong> Translation Request with 64-bit
-Address - Flit Mode
-<img src="figures/chapter_10/fig_1572_1.png" width="700"><sup>193</sup></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-13.</strong> Translation Request with 32-bit
-Address - Flit Mode
-<img src="figures/chapter_10/fig_1573_1.png" width="700"><sup>194</sup></p>
-</blockquote>
+<p><sup>193</sup></p>
+<p><sup>194</sup></p>
 <p>For a Translation Request, the Relaxed Ordering (RO) bit is
 applicable and permitted to be Set, where it affects the ordering of its
 associated Translation Completions. The remainder of the Attr field is
@@ -1199,6 +1193,17 @@ Write (NW 标志)包含在 OHC-A1 中。</p>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 10-12.</strong> Translation Request with 64-bit
+Address - Flit Mode
+<img src="figures/chapter_10/fig_1572_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-13.</strong> Translation Request with 32-bit
+Address - Flit Mode
+<img src="figures/chapter_10/fig_1573_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -2749,14 +2754,6 @@ Completions sent in this transaction. For the second TLP, the Length and
 Byte Count fields will indicate the same value, and the Lower Address
 value will be 0.</p>
 </blockquote>
-<blockquote>
-<p><strong>Figure 10-15.</strong> Example Translation Completion with 1
-TLP <img src="figures/chapter_10/fig_1580_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-16.</strong> Example Translation Completion with 2
-TLPs <img src="figures/chapter_10/fig_1581_1.png" width="700"></p>
-</blockquote>
 <p>To intermediate components (which do not track the transaction) this
 Completion transaction will be indistinguishable from a Memory Read
 Completion that crosses an RCB.</p>
@@ -2802,6 +2799,15 @@ Count 字段指示相同的值,Lower Address 值为 0。</p>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 10-15.</strong> Example Translation Completion with 1
+TLP <img src="figures/chapter_10/fig_1580_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-16.</strong> Example Translation Completion with 2
+TLPs <img src="figures/chapter_10/fig_1581_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -2969,14 +2975,6 @@ range from the ATC. Invalidate Requests are constrained to cover power
 of 2 multiple of 4096-byte pages.</p>
 <p>The format of an Invalidate Request is shown in § Figure 10-18 and §
 Figure 10-19.</p>
-<blockquote>
-<p><strong>Figure 10-18.</strong> Invalidate Request Message - Non-Flit
-Mode <img src="figures/chapter_10/fig_1584_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-19.</strong> Invalidate Request Message - Flit Mode
-<img src="figures/chapter_10/fig_1585_1.png" width="700"></p>
-</blockquote>
 <p>The Invalidate Request is a MsgD transaction with 64 bits of data.
 Invalidate Request messages may be sent in any TC.</p>
 <p>Invalidation Request Messages optionally include a PASID (see §
@@ -3016,6 +3014,15 @@ Prefix 中的 Execute Requested 和 Privileged Mode Requested 位保留。</li>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 10-18.</strong> Invalidate Request Message - Non-Flit
+Mode <img src="figures/chapter_10/fig_1584_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-19.</strong> Invalidate Request Message - Flit Mode
+<img src="figures/chapter_10/fig_1585_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -3148,15 +3155,6 @@ Request.</p>
 <p>The format of the Invalidate Completion message is shown in § Figure
 10-21 and § Figure 10-22.</p>
 <blockquote>
-<p><strong>Figure 10-21.</strong> Invalidate Completion Message Format -
-Non-Flit Mode
-<img src="figures/chapter_10/fig_1587_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-22.</strong> Invalidate Completion Message - Flit
-Mode <img src="figures/chapter_10/fig_1588_1.png" width="700"></p>
-</blockquote>
-<blockquote>
 <p><strong>IMPLEMENTATION NOTE:</strong> <strong>INVALIDATION REQUESTS
 AND FUNCTION LEVEL RESET &amp; DEVICE POWER STATE TRANSITIONS</strong>
 Invalidation requests received while a Function is undergoing Function
@@ -3287,6 +3285,16 @@ Invalidation 完成报告为 Unexpected Completion (UC)。</p>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 10-21.</strong> Invalidate Completion Message Format -
+Non-Flit Mode
+<img src="figures/chapter_10/fig_1587_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-22.</strong> Invalidate Completion Message - Flit
+Mode <img src="figures/chapter_10/fig_1588_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -4019,14 +4027,6 @@ recommended that Page Request Messages use the Requester ID of the
 <p>The first two DWs of a Page Request Message contain a standard PCIe
 message header. The second two DWs of the message contain page request
 specific data fields.</p>
-<blockquote>
-<p><strong>Figure 10-23.</strong> Page Request Message - Non-Flit Mode
-<img src="figures/chapter_10/fig_1594_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-24.</strong> Page Request Message - Flit Mode
-<img src="figures/chapter_10/fig_1595_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 10-6. Page Request Message Data Fields | 表 10-6
 页请求消息数据字段</strong></p>
 <table>
@@ -4101,6 +4101,15 @@ R 和 W 均清零且 L 置位,则为停止标记(参见 § 第 10.4.1.2.1 节)�
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 10-23.</strong> Page Request Message - Non-Flit Mode
+<img src="figures/chapter_10/fig_1594_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-24.</strong> Page Request Message - Flit Mode
+<img src="figures/chapter_10/fig_1595_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -4493,14 +4502,6 @@ incoming Page Requests for the queue and generates Page Request Group
 Responses with a Response Code of Success to Page Requests with
 L=1.</li>
 </ul>
-<blockquote>
-<p><strong>Figure 10-27.</strong> PRG Response Message - Non-Flit Mode
-<img src="figures/chapter_10/fig_1600_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-28.</strong> PRG Response Message - FLIT Mode
-<img src="figures/chapter_10/fig_1601_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 10-7. PRG Response Message Data Fields | 表 10-7 PRG
 响应消息数据字段</strong></p>
 <table>
@@ -4593,6 +4594,15 @@ Unexpected Completion (UC) 处理,但除此之外不允许记录或发出其他�
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 10-27.</strong> PRG Response Message - Non-Flit Mode
+<img src="figures/chapter_10/fig_1600_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-28.</strong> PRG Response Message - FLIT Mode
+<img src="figures/chapter_10/fig_1601_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -4912,10 +4922,6 @@ ATS Extended Capability § | 10.5.1 ATS Extended Capability §</h3>
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 10-32.</strong> ATS Capability Register (Offset 04h) -
-continued <img src="figures/chapter_10/fig_1603_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 10-10 (continued). ATS Capability Register (Offset 04h)
 | 表 10-10 (续) ATS Capability 寄存器 (Offset 04h)</strong></p>
 <table>
@@ -5068,6 +5074,11 @@ Invalidate 请求中指示的最小 4096 字节块数。这是 2 的幂乘数,�
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 10-32.</strong> ATS Capability Register (Offset 04h) -
+continued <img src="figures/chapter_10/fig_1603_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -5214,14 +5225,6 @@ shared between its PFs and VFs, it sends the requesting Function's ID
 (PF or VF) in the Requester ID field of the Page Request Message, and
 the requesting Function's ID must be in the Destination Device ID field
 of the resulting PRG Response Message.</p>
-<blockquote>
-<p><strong>Figure 10-34.</strong> Page Request Extended Capability
-Structure <img src="figures/chapter_10/fig_1604_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-35.</strong> Page Request Extended Capability
-Header <img src="figures/chapter_10/fig_1605_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 10-13. Page Request Extended Capability Header | 表
 10-13 页请求扩展能力头</strong></p>
 <table>
@@ -5256,10 +5259,6 @@ of capabilities.</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>Figure 10-36.</strong> Page Request Control Register
-<img src="figures/chapter_10/fig_1606_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 10-14. Page Request Control Register | 表 10-14
 页请求控制寄存器</strong></p>
 <table>
@@ -5382,6 +5381,19 @@ Failure 和 Unexpected Page Request Group Index (UPRGI)
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 10-34.</strong> Page Request Extended Capability
+Structure <img src="figures/chapter_10/fig_1604_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-35.</strong> Page Request Extended Capability
+Header <img src="figures/chapter_10/fig_1605_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-36.</strong> Page Request Control Register
+<img src="figures/chapter_10/fig_1606_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -5768,11 +5780,6 @@ shared between its PFs and VFs, it sends the requesting Function's ID
 (PF or VF) in the Requester ID field of the Page Request Message, and
 the requesting Function's ID must be in the Destination Device ID field
 of the resulting PRG Response Message.</p>
-<blockquote>
-<p><strong>Figure 10-39.</strong> Stop Marker Message - Flit Mode
-(reference)
-<img src="figures/chapter_10/fig_1608_1.png" width="700"></p>
-</blockquote>
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -5799,6 +5806,12 @@ VF),并且请求功能的 ID 必须位于结果 PRG 响应消息的 Destination 
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 10-39.</strong> Stop Marker Message - Flit Mode
+(reference)
+<img src="figures/chapter_10/fig_1608_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>

@@ -5912,12 +5912,6 @@ The initiator of the Message is identified with the Requester ID of the Message 
 <tr>
 <td>
 
-> **Figure 2-51.** ERR_COR Message - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0211_1.png" width="700">
-
-> **Figure 2-52.** ERR_COR Message - Flit Mode
-> <img src="figures/chapter_02/fig_0211_2.png" width="700">
-
 - The ERR_COR Subclass (ECS) field is encoded as shown in § Table 2-25, indicating the ERR_COR Message subclass.
 
 </td>
@@ -5935,6 +5929,13 @@ The initiator of the Message is identified with the Requester ID of the Message 
 </tr>
 </tbody>
 </table>
+
+> **Figure 2-51.** ERR_COR Message - Non-Flit Mode
+> <img src="figures/chapter_02/fig_0211_1.png" width="700">
+
+> **Figure 2-52.** ERR_COR Message - Flit Mode
+> <img src="figures/chapter_02/fig_0211_2.png" width="700">
+
 
 **Table 2-25 ERR_COR Subclass (ECS) Field Encodings | 表 2-25 ERR_COR 子类 (ECS) 字段编码**
 
@@ -6222,15 +6223,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 2-53.** Header for Vendor-Defined Messages - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0215_1.png" width="700">
-
-> **Figure 2-54.** Header for Vendor-Defined Messages - Flit Mode
-> <img src="figures/chapter_02/fig_0215_2.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 2-53.** 厂商自定义消息的包头 - 非 Flit 模式 (Non-Flit Mode)
@@ -6243,6 +6236,13 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 2-53.** Header for Vendor-Defined Messages - Non-Flit Mode
+> <img src="figures/chapter_02/fig_0215_1.png" width="700">
+
+> **Figure 2-54.** Header for Vendor-Defined Messages - Flit Mode
+> <img src="figures/chapter_02/fig_0215_2.png" width="700">
+
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -6461,9 +6461,6 @@ DRS 消息的格式见下方 § 图 2-57：
 <tr>
 <td>
 
-> **Figure 2-58.** DRS Message - Flit Mode
-> <img src="figures/chapter_02/fig_0218_1.png" width="700">
-
 The Function Readiness Status (FRS) protocol (see § Section 6.22.2) uses the PCI-SIG-Defined VDM mechanism (see § Section 2.2.8.6.1). The FRS message is a PCI-SIG-Defined VDM (Vendor-Defined Type 1 Message) with no payload.
 
 Beyond the rules for other PCI-SIG-Defined VDMs, the following rules apply to the formation of FRS Messages:
@@ -6528,6 +6525,10 @@ Beyond the rules for other PCI-SIG-Defined VDMs, the following rules apply to th
 </tr>
 </tbody>
 </table>
+
+> **Figure 2-58.** DRS Message - Flit Mode
+> <img src="figures/chapter_02/fig_0218_1.png" width="700">
+
 </div>
 
 
@@ -6592,12 +6593,6 @@ Receivers may optionally check for violations of these rules (but must not check
 
 The format of the FRS Message is shown in § Figure 2-59 and § Figure 2-60 below:
 
-> **Figure 2-59.** FRS Message - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0219_1.png" width="700">
-
-> **Figure 2-60.** FRS Message - Flit Mode
-> <img src="figures/chapter_02/fig_0219_2.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -6613,6 +6608,13 @@ FRS 消息的格式见下方 § 图 2-59 和 § 图 2-60：
 </tr>
 </tbody>
 </table>
+
+> **Figure 2-59.** FRS Message - Non-Flit Mode
+> <img src="figures/chapter_02/fig_0219_1.png" width="700">
+
+> **Figure 2-60.** FRS Message - Flit Mode
+> <img src="figures/chapter_02/fig_0219_2.png" width="700">
+
 
 ---
 
@@ -7014,9 +7016,6 @@ a Malformed TLP.
 <tr>
 <td>
 
-> **Figure 2-68.** PTM ResponseD Message - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0226_1.png" width="700">
-
 <a id="sec-2-2-8-11"></a>
 ### 2.2.8.11 Integrity and Data Encryption (IDE) Messages | 完整性与数据加密 (IDE) 消息
 
@@ -7061,6 +7060,10 @@ IDE 消息与可选的完整性与数据加密 (Integrity and Data Encryption, I
 </tr>
 </tbody>
 </table>
+
+> **Figure 2-68.** PTM ResponseD Message - Non-Flit Mode
+> <img src="figures/chapter_02/fig_0226_1.png" width="700">
+
 </div>
 
 
@@ -7154,15 +7157,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 2-73.** IDE Sync Message for Selective IDE Stream - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0229_1.png" width="700">
-
-> **Figure 2-76.** IDE Fail Message for Link IDE Stream - Flit Mode
-> <img src="figures/chapter_02/fig_0230_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 2-73.** 选择性 IDE 流的 IDE Sync 消息 - 非 Flit 模式 (Non-Flit Mode)
@@ -7187,6 +7182,13 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 2-73.** IDE Sync Message for Selective IDE Stream - Non-Flit Mode
+> <img src="figures/chapter_02/fig_0229_1.png" width="700">
+
+> **Figure 2-76.** IDE Fail Message for Link IDE Stream - Flit Mode
+> <img src="figures/chapter_02/fig_0230_1.png" width="700">
+
 </div>
 
 
@@ -8221,9 +8223,6 @@ OHC-E DW 1、OHC-E DW 0(字节 0、字节 4)
 <tr>
 <td>
 
-> **Figure 2-88.** OHC-E4
-> <img src="figures/chapter_02/fig_0241_1.png" width="700">
-
 | Byte | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 |------|---|---|---|---|---|---|---|---|
 | +0   | R | R | R | R | R | R | R | R |
@@ -8249,6 +8248,10 @@ OHC-E DW 3、OHC-E DW 2、OHC-E DW 1、OHC-E DW 0(字节 0、字节 4、字节 8
 </tr>
 </tbody>
 </table>
+
+> **Figure 2-88.** OHC-E4
+> <img src="figures/chapter_02/fig_0241_1.png" width="700">
+
 </div>
 
 
@@ -9979,18 +9982,17 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 2-93.** Deadlock Examples with Intersystem Interconnects
-> <img src="figures/chapter_02/fig_0264_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 2-93.** Deadlock Examples with Intersystem Interconnects
+> <img src="figures/chapter_02/fig_0264_1.png" width="700">
+
 
 ---
 

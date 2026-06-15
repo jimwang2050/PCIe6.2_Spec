@@ -52,9 +52,6 @@ Within the industry, significant effort has been expended to increase the effect
 
 To illustrate how this technology can be used to increase effective resource utilization, consider the generic platform configuration illustrated in § Figure 9-1.
 
-> **Figure 9-1.** Generic Platform Configuration
-> <img src="figures/chapter_09/fig_1523_1.png" width="700">
-
 The generic platform configuration is composed of the following components:
 
 - PCIe Root Complex (RC), which includes:
@@ -78,6 +75,10 @@ The generic platform configuration is composed of the following components:
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-1.** Generic Platform Configuration
+> <img src="figures/chapter_09/fig_1523_1.png" width="700">
+
 </div>
 
 
@@ -160,9 +161,6 @@ SR-IOV provides tools to reduce these platform resources overheads. The benefits
 
 § Figure 9-3 illustrates an example SR-IOV capable platform.
 
-> **Figure 9-3.** Generic Platform Configuration with SR-IOV and IOV Enablers
-> <img src="figures/chapter_09/fig_1526_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -180,6 +178,10 @@ SR-IOV 提供了减少这些平台资源开销的工具。SR-IOV 的好处包括
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-3.** Generic Platform Configuration with SR-IOV and IOV Enablers
+> <img src="figures/chapter_09/fig_1526_1.png" width="700">
+
 </div>
 
 
@@ -354,9 +356,6 @@ As this figure illustrates, the hardware resources scale with the number of Func
 <tr>
 <td>
 
-> **Figure 9-5.** Example SR-IOV Single PF Capable Device
-> <img src="figures/chapter_09/fig_1529_1.png" width="700">
-
 The example in § Figure 9-5 illustrates a single PF with N VFs. Key observations to note:
 
 - The PF is a PCIe-compliant.
@@ -390,6 +389,10 @@ The example in § Figure 9-5 illustrates a single PF with N VFs. Key observation
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-5.** Example SR-IOV Single PF Capable Device
+> <img src="figures/chapter_09/fig_1529_1.png" width="700">
+
 </div>
 
 
@@ -465,9 +468,6 @@ Another example usage model is illustrated in § Figure 9-6. In this example, th
 <tr>
 <td>
 
-> **Figure 9-6.** Example SR-IOV Multi-PF Capable Device
-> <img src="figures/chapter_09/fig_1531_1.png" width="700">
-
 Key observations to note:
 
 - Each PF can be assigned zero or more VFs. The number of VFs per PF is not required to be identical for all PFs within the device.
@@ -491,6 +491,10 @@ Key observations to note:
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-6.** Example SR-IOV Multi-PF Capable Device
+> <img src="figures/chapter_09/fig_1531_1.png" width="700">
+
 </div>
 
 
@@ -566,9 +570,6 @@ As seen in the prior example, the number of PF and VF can vary based on usage mo
 <tr>
 <td>
 
-> **Figure 9-7.** Example SR-IOV Device with Multiple Bus Numbers
-> <img src="figures/chapter_09/fig_1533_1.png" width="700">
-
 In this last example, § Figure 9-8, a device implementation may mix any number of Functions, PFs, and VFs.
 
 </td>
@@ -580,6 +581,10 @@ In this last example, § Figure 9-8, a device implementation may mix any number 
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-7.** Example SR-IOV Device with Multiple Bus Numbers
+> <img src="figures/chapter_09/fig_1533_1.png" width="700">
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -602,9 +607,6 @@ In this last example, § Figure 9-8, a device implementation may mix any number 
 <tbody>
 <tr>
 <td>
-
-> **Figure 9-8.** Example SR-IOV Device with a Mixture of Function Types
-> <img src="figures/chapter_09/fig_1534_1.png" width="700">
 
 Key observations to note:
 
@@ -672,6 +674,10 @@ VF BAR 的行为与普通 PCI 内存空间 BAR 相同(见 § 第 7.5.1.2.1 节),
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-8.** Example SR-IOV Device with a Mixture of Function Types
+> <img src="figures/chapter_09/fig_1534_1.png" width="700">
+
 </div>
 
 
@@ -745,9 +751,6 @@ VF memory space is not enabled until both VF Enable and VF MSE have been Set (se
 
 § Figure 9-9 shows an example of the PF and VF Memory space apertures.
 
-> **Figure 9-9.** BAR Space Example for Single BAR Device
-> <img src="figures/chapter_09/fig_1536_1.png" width="700">
-
 The First VF Offset and VF Stride fields in the SR-IOV extended capability are 16-bit Routing ID offsets. These offsets are used to compute the Routing IDs for the VFs with the following restrictions:
 
 - The value in NumVFs in a PF (§ Section 9.3.3.7 ) may affect the values in First VF Offset (§ Section 9.3.3.9 ) and VF Stride (§ Section 9.3.3.10 ) of that PF.
@@ -787,6 +790,10 @@ SR-IOV 扩展能力结构中的 First VF Offset 和 VF Stride 字段是 16 位�
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-9.** BAR Space Example for Single BAR Device
+> <img src="figures/chapter_09/fig_1536_1.png" width="700">
+
 </div>
 
 
@@ -1229,9 +1236,6 @@ table>
 
 § Table 9-3 defines the layout of the SR-IOV Capabilities field.
 
-> **Figure 9-12.** SR-IOV Capabilities Register
-> <img src="figures/chapter_09/fig_1542_1.png" width="700">
-
 <a id="sec-9-3-3-2"></a>
 #### 9.3.3.2 SR-IOV Capabilities Register (04h) § | 9.3.3.2 SR-IOV 能力寄存器(04h) §
 
@@ -1255,6 +1259,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-12.** SR-IOV Capabilities Register
+> <img src="figures/chapter_09/fig_1542_1.png" width="700">
+
 </div>
 
 
@@ -1480,9 +1488,6 @@ VF 迁移与现已弃用的 MR-IOV 关联。新设计应将此字段硬连线为
 <tr>
 <td>
 
-> **Figure 9-13.** SR-IOV Control Register
-> <img src="figures/chapter_09/fig_1545_1.png" width="700">
-
 **Table 9-4. SR-IOV Control Register | 表 9-4. SR-IOV 控制寄存器**
 
 | Bit Location | Register Description | Attributes |
@@ -1510,6 +1515,10 @@ VF 迁移与现已弃用的 MR-IOV 关联。新设计应将此字段硬连线为
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-13.** SR-IOV Control Register
+> <img src="figures/chapter_09/fig_1545_1.png" width="700">
+
 </div>
 
 

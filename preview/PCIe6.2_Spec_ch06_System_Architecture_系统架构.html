@@ -791,9 +791,7 @@ ABC-、A-B-C、A-CB 或其他类似组合。</p>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -882,9 +880,7 @@ Message Enable 编码 010b 表示功能允许修改消息数据的位 1 和位 0
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -4157,11 +4153,6 @@ Sequence of Device Error Signaling and Logging Operations |
 
 <p>§ Figure 6-2 shows the sequence of operations related to signaling
 and logging of errors detected by a device.</p>
-<blockquote>
-<p><strong>Figure 6-2.</strong> Flowchart Showing Sequence of Device
-Error Signaling and Logging Operations
-<img src="figures/chapter_06/fig_0732_1.png" width="700"></p>
-</blockquote>
 <p>Flowchart content (read top-to-bottom, left-to-right):</p>
 <ul>
 <li>Start: Error from Table 6-2, 6-3, 6-4, or 6-5 Detected</li>
@@ -4351,6 +4342,12 @@ Error Status 寄存器中置位对应位;(2) 若该位在 Uncorrectable Error Ma
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 6-2.</strong> Flowchart Showing Sequence of Device
+Error Signaling and Logging Operations
+<img src="figures/chapter_06/fig_0732_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <hr />
@@ -7891,9 +7888,7 @@ Round Robin Arbitration Model | 轮询仲裁模型</h2>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -25995,11 +25990,6 @@ DOE Discovery Feature (4th DW) | DOE 发现功能（第 4 个 DW）</h2>
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 6-45.</strong> DOE Discovery Response Data Object
-Contents (4th DW)
-<img src="figures/chapter_06/fig_0892_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 6-32. DOE Discovery Response Data Object Contents (4th
 DW) | 表 6-32. DOE 发现响应数据对象内容（第 4 个 DW）</strong></p>
 <table>
@@ -26212,6 +26202,12 @@ Discovery 响应数据对象内容（第 4 个 DW）。Additional Info 字段的
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 6-45.</strong> DOE Discovery Response Data Object
+Contents (4th DW)
+<img src="figures/chapter_06/fig_0892_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -26814,10 +26810,6 @@ CMA-SPDM</h3>
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 6-47.</strong> Example System Showing Multiple Access
-Mechanisms <img src="figures/chapter_06/fig_0900_1.png" width="700"></p>
-</blockquote>
 <p><strong>Understanding and Implementing CMA-SPDM</strong></p>
 <p>CMA-SPDM is part of a layered architecture to support device and
 platform security (see § Figure 6-46). Building on the DMTF Security
@@ -26841,10 +26833,6 @@ CMA-SPDM even when the PCIe Links are not active and/or Fundamental
 Reset is active. When the PCIe Links are operating, CMA-SPDM can be used
 via [SPDM-MCTP]. The Root Complex can use CMA-SPDM over DOE. It is a
 platform implementation choice of which methods are used.</p>
-<blockquote>
-<p><strong>Figure 6-48.</strong> Example Add-In-Card Supporting CMA-SPDM
-<img src="figures/chapter_06/fig_0901_1.png" width="700"></p>
-</blockquote>
 <p>Correspondingly, a device controller can support CMA-SPDM in multiple
 ways, depending on the associated form-factor and platform requirements
 and implementation choices. For maximum flexibility it may be desirable
@@ -26964,6 +26952,15 @@ href="https://www.opencompute.org/documents/attestation-v1-0-20201104-pdf">https
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 6-47.</strong> Example System Showing Multiple Access
+Mechanisms <img src="figures/chapter_06/fig_0900_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 6-48.</strong> Example Add-In-Card Supporting CMA-SPDM
+<img src="figures/chapter_06/fig_0901_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -27238,11 +27235,6 @@ SPDM message field definitions, starting with SPDM version, Request
 Response Code, Param 1 and Param 2. The Byte mapping of SPDM Messages is
 shown in § Figure 6-49. If required, SPDM Message payloads must be
 padded with 0's to maintain DW alignment, when using DOE.</p>
-<blockquote>
-<p><strong>Figure 6-49.</strong> Byte Mapping of SPDM Messages Including
-Example Payload
-<img src="figures/chapter_06/fig_0904_1.png" width="700"></p>
-</blockquote>
 <p>Without the connection ID, one DOE instance can only have one SPDM
 connection. With the connection ID, one DOE instance can have multiple
 SPDM connections. The maximum valid connection ID can be discovered by
@@ -27327,6 +27319,12 @@ MeasurementHashAlgo,请求者必须支持以下全部算法,响应者必须支�
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 6-49.</strong> Byte Mapping of SPDM Messages Including
+Example Payload
+<img src="figures/chapter_06/fig_0904_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -28554,10 +28552,6 @@ TLP 一起受到保护;在 FM 中,OHC
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 6-53.</strong> IDE Stream State Machine
-<img src="figures/chapter_06/fig_0916_1.png" width="700"></p>
-</blockquote>
 <ul>
 <li>The Insecure state indicates that the necessary steps to operate the
 IDE Stream have not been completed, or that some event has ended the
@@ -28638,6 +28632,11 @@ Insecure。
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 6-53.</strong> IDE Stream State Machine
+<img src="figures/chapter_06/fig_0916_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -29736,34 +29735,7 @@ QUERY/KEY_PROG
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 6-57.</strong> Query Response (QUERY_RESP) Data Object
-<img src="figures/chapter_06/fig_0925_1.png" width="700"></p>
-</blockquote>
 <p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_926</p>
-<blockquote>
-<p><strong>Figure 6-58.</strong> Key Programming (KEY_PROG) Data Object
-with Example 256b Key
-<img src="figures/chapter_06/fig_0925_2.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 6-59.</strong> Key Programming Acknowledgement
-(KP_ACK) Data Object
-<img src="figures/chapter_06/fig_0926_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 6-60.</strong> Key Set Go (K_SET_GO) Data Object
-<img src="figures/chapter_06/fig_0926_2.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 6-61.</strong> Key Set Stop (K_SET_STOP) Data Object
-<img src="figures/chapter_06/fig_0926_3.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 6-62.</strong> Key Set Go/Stop Acknowledgement
-(K_GOSTOP_ACK) Data Object
-<img src="figures/chapter_06/fig_0926_4.png" width="700"></p>
-</blockquote>
 <p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_927</p>
 </td>
 <td style="background-color:#e8e8e8">
@@ -29797,6 +29769,34 @@ with Example 256b Key
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 6-57.</strong> Query Response (QUERY_RESP) Data Object
+<img src="figures/chapter_06/fig_0925_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 6-58.</strong> Key Programming (KEY_PROG) Data Object
+with Example 256b Key
+<img src="figures/chapter_06/fig_0925_2.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 6-59.</strong> Key Programming Acknowledgement
+(KP_ACK) Data Object
+<img src="figures/chapter_06/fig_0926_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 6-60.</strong> Key Set Go (K_SET_GO) Data Object
+<img src="figures/chapter_06/fig_0926_2.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 6-61.</strong> Key Set Stop (K_SET_STOP) Data Object
+<img src="figures/chapter_06/fig_0926_3.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 6-62.</strong> Key Set Go/Stop Acknowledgement
+(K_GOSTOP_ACK) Data Object
+<img src="figures/chapter_06/fig_0926_4.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -30007,8 +30007,6 @@ established</td>
 Write that completes the transfer of the K_SET_GO(Tx) data object for
 Completions with a non-IDE Completion, then triggers the use of IDE for
 Completions.</p>
-<p><strong>Figure 6-63.</strong> IDE_KM Example
-<img src="figures/chapter_06/fig_0928_1.png" width="700"></p>
 </blockquote>
 <p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_929</p>
 </td>
@@ -30112,6 +30110,11 @@ GET_CERTIFICATE/CERTIFICATE(如需要)<br>SPDM KEY_EXCHANGE
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 6-63.</strong> IDE_KM Example
+<img src="figures/chapter_06/fig_0928_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -30274,10 +30277,6 @@ Header and certain other elements (defined below) form the "Additional
 Authenticated Data", also known as A, as defined in [AES-GCM].</p>
 <p>The Message Authentication Code (MAC)<sup>143</sup> size, also known
 as t, as defined in [AES-GCM], must be 96b (see § Figure 6-65).</p>
-<blockquote>
-<p><strong>Figure 6-65.</strong> MAC Layout
-<img src="figures/chapter_06/fig_0930_1.png" width="700"></p>
-</blockquote>
 <p>Flow Control credit accounting for IDE TLPs must handle the MAC as
 covered by the Header Credit.</p>
 <p>For IDE TLPs, AES-GCM can be applied to each IDE TLP, or aggregation
@@ -30287,11 +30286,6 @@ be covered by the MAC (see § Figure 6-66, § Figure 6-67), § Figure 6-70,
 and § Figure 6-71). For Selective IDE Streams, local prefixes must not
 be covered by the MAC (see § Figure 6-68, § Figure 6-69, § Figure 6-72,
 and § Figure 6-73).</p>
-<blockquote>
-<p><strong>Figure 6-66.</strong> Example of IDE TLP for a Link IDE
-Stream without Aggregation (Non-Flit Mode)
-<img src="figures/chapter_06/fig_0930_2.png" width="700"></p>
-</blockquote>
 <p><sub>143. Referred to as "authentication tag" or T in [AES-GCM] but
 renamed here to avoid confusion with other uses of "tag"</sub></p>
 <p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_931</p>
@@ -30327,6 +30321,16 @@ T,此处重命名以避免与其他"标签"用法混淆</sub></p>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 6-65.</strong> MAC Layout
+<img src="figures/chapter_06/fig_0930_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 6-66.</strong> Example of IDE TLP for a Link IDE
+Stream without Aggregation (Non-Flit Mode)
+<img src="figures/chapter_06/fig_0930_2.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -30394,26 +30398,6 @@ Flit 模式) <img src="figures/chapter_06/fig_0931_1.png" width="700"></p>
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 6-70.</strong> Example of IDE TLP for a Link IDE
-Stream without Aggregation (Flit Mode)
-<img src="figures/chapter_06/fig_0932_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 6-71.</strong> IDE TLP – Example Showing Aggregation
-of Two TLPs for a Link IDE Stream (Flit Mode)
-<img src="figures/chapter_06/fig_0932_2.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 6-72.</strong> Example of IDE TLP for a Selective IDE
-Stream without Aggregation (Flit Mode)
-<img src="figures/chapter_06/fig_0933_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 6-73.</strong> IDE TLP – Example Showing Aggregation
-of Two TLPs for a Selective IDE Stream (Flit Mode)
-<img src="figures/chapter_06/fig_0933_2.png" width="700"></p>
-</blockquote>
 <p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_933</p>
 <p>The inputs A and P must be formed by concatenating the included TLP
 content in Byte order as defined in § Section 2.1.2. Although the A and
@@ -30431,10 +30415,6 @@ Header of an IDE Memory Request while maintaining information that is
 required for TLP routing and low-level TLP processing in the clear. §
 Figure 6-74 illustrates, at a high level, the application of partial
 header encryption.</p>
-<blockquote>
-<p><strong>Figure 6-74.</strong> High Level Flow For Partial Header
-Encryption <img src="figures/chapter_06/fig_0934_1.png" width="700"></p>
-</blockquote>
 <p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_934</p>
 </td>
 <td style="background-color:#e8e8e8">
@@ -30476,6 +30456,31 @@ A 和 P 必须如何填充——此处的填充未在此说明,该填充用于 [
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 6-70.</strong> Example of IDE TLP for a Link IDE
+Stream without Aggregation (Flit Mode)
+<img src="figures/chapter_06/fig_0932_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 6-71.</strong> IDE TLP – Example Showing Aggregation
+of Two TLPs for a Link IDE Stream (Flit Mode)
+<img src="figures/chapter_06/fig_0932_2.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 6-72.</strong> Example of IDE TLP for a Selective IDE
+Stream without Aggregation (Flit Mode)
+<img src="figures/chapter_06/fig_0933_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 6-73.</strong> IDE TLP – Example Showing Aggregation
+of Two TLPs for a Selective IDE Stream (Flit Mode)
+<img src="figures/chapter_06/fig_0933_2.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 6-74.</strong> High Level Flow For Partial Header
+Encryption <img src="figures/chapter_06/fig_0934_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -30726,11 +30731,6 @@ the IDE Prefix being Set</li>
 include a MAC also must not include PCRC (see § Figure 6-79).</li>
 </ul></li>
 </ul>
-<blockquote>
-<p><strong>Figure 6-79.</strong> Example Illustrating PCRC Application
-to Two Aggregated IDE TLPs for a Link IDE Stream (NFM)
-<img src="figures/chapter_06/fig_0940_1.png" width="700"></p>
-</blockquote>
 <p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_940</p>
 </td>
 <td style="background-color:#e8e8e8">
@@ -30779,6 +30779,12 @@ TLP 上应用的示例
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 6-79.</strong> Example Illustrating PCRC Application
+to Two Aggregated IDE TLPs for a Link IDE Stream (NFM)
+<img src="figures/chapter_06/fig_0940_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -31655,11 +31661,6 @@ IDE supports having Posted Requests bypass Non-Posted Requests through
 the use of Sub-Streams within a given Stream. There is a similar
 requirement for Posted Request to be able to bypass Completions (not
 illustrated).</p>
-<blockquote>
-<p><strong>Figure 6-80.</strong> Example – Posted Requests Allowed to
-Bypass Non-Posted Requests | 示例——允许 Posted Request 越过 Non-Posted
-Request <img src="figures/chapter_06/fig_0948_1.png" width="700"></p>
-</blockquote>
 <p>§ Figure 6-81 illustrates a case where an attacker attempts to bypass
 a Posted Request with a Non-Posted Request, which could, for example,
 cause the consumption of stale data. This case will be detected through
@@ -31673,18 +31674,6 @@ carry the indication that a Posted Request (P1) was transmitted, and
 this will not match the Receiver's count of Posted Requests received,
 enabling this illegal reordering to be detected.</p>
 <p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_949</p>
-<blockquote>
-<p><strong>Figure 6-81.</strong> Example – Non-Posted Requests Never
-Allowed to Bypass Posted Requests | 示例——Non-Posted Request
-绝不允许越过 Posted Request
-<img src="figures/chapter_06/fig_0949_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 6-82.</strong> Example – Secure Non-Posted Request
-Reordering Not Allowed Over PCIe Fabric | 示例——PCIe Fabric 上不允许
-Secure Non-Posted Request 重排序
-<img src="figures/chapter_06/fig_0949_2.png" width="700"></p>
-</blockquote>
 <p>Without IDE, Non-Posted Requests are allowed to bypass each other,
 but within an IDE Stream, reordering of TLPs of the same type is
 disallowed in order to simplify the operation of the
@@ -31973,6 +31962,24 @@ TLP,或者接收端检测到违反本节任何规则的情况,则属于 IDE Chec
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 6-80.</strong> Example – Posted Requests Allowed to
+Bypass Non-Posted Requests | 示例——允许 Posted Request 越过 Non-Posted
+Request <img src="figures/chapter_06/fig_0948_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 6-81.</strong> Example – Non-Posted Requests Never
+Allowed to Bypass Posted Requests | 示例——Non-Posted Request
+绝不允许越过 Posted Request
+<img src="figures/chapter_06/fig_0949_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 6-82.</strong> Example – Secure Non-Posted Request
+Reordering Not Allowed Over PCIe Fabric | 示例——PCIe Fabric 上不允许
+Secure Non-Posted Request 重排序
+<img src="figures/chapter_06/fig_0949_2.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>

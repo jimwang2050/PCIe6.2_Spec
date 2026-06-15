@@ -340,9 +340,6 @@ Independent of the number of Functions within a Device, the following are requir
 
 When a TA determines that a Function should no longer maintain a translation within its ATC, the TA initiates the ATS invalidation protocol. The invalidation protocol consists of a single Invalidation Request and one or more Invalidate Completions.
 
-> **Figure 10-4.** Invalidation Protocol with a Single Invalidation Request and Completion
-> <img src="figures/chapter_10/fig_1563_1.png" width="700">
-
 As § Figure 10-4 illustrates, there are essentially three steps in the ATS Invalidation protocol:
 1. The system software updates an entry in the tables used by the TA. After the table is changed, the TA determines that a translation should be invalidated in an ATC and initiates an Invalidation Request TLP which is transmitted from the RP to the example single-Function Device. The Invalidate Request communicates an untranslated address range, the TC, and an RP unique tag which is used to correlate Invalidate Completions with the Invalidation Request.
 2. The Function receives the Invalidate Request and invalidates all matching ATC entries. A Function is not required to immediately flush all pending requests upon receipt of an Invalidate Request. If transactions are in a queue waiting to be sent, it is not necessary for the Function to expunge requests from the queue even if those transactions use an address that is being invalidated.
@@ -372,6 +369,10 @@ As § Figure 10-4 illustrates, there are essentially three steps in the ATS Inva
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-4.** Invalidation Protocol with a Single Invalidation Request and Completion
+> <img src="figures/chapter_10/fig_1563_1.png" width="700">
+
 </div>
 
 
@@ -582,18 +583,6 @@ TA 执行转换。ATC 可以缓存这些转换。如果 ATC 与 TA 之间通过 
 
 A Function with an ATC can send Memory Requests that contain either translated or untranslated addresses. The Address Type (AT) field is used to indicate the type of address that is present in the request header (see § Figure 10-6, § Figure 10-7, § Figure 10-8, and § Figure 10-9).
 
-> **Figure 10-6.** Memory Request Header with 64-bit Address Highlighting AT field
-> <img src="figures/chapter_10/fig_1566_1.png" width="700">
-
-> **Figure 10-7.** Memory Request Header with 32-bit Address Highlighting AT field
-> <img src="figures/chapter_10/fig_1567_1.png" width="700">
-
-> **Figure 10-8.** Memory Request Header with 64-bit Address Highlighting AT field - FLIT Mode
-> <img src="figures/chapter_10/fig_1568_1.png" width="700">
-
-> **Figure 10-9.** Memory Request Header with 32-bit Address Highlighting AT field - FLIT Mode
-> <img src="figures/chapter_10/fig_1569_1.png" width="700">
-
 In NFM, the AT field in the Requests is a redefinition of a reserved field in earlier version of this specification. Functions that do not implement an ATC will continue to set the AT field to its defined reserved value (00b). Functions that implement an ATC will set the AT field as listed in § Table 10-1.
 
 </td>
@@ -607,6 +596,19 @@ In NFM, the AT field in the Requests is a redefinition of a reserved field in ea
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-6.** Memory Request Header with 64-bit Address Highlighting AT field
+> <img src="figures/chapter_10/fig_1566_1.png" width="700">
+
+> **Figure 10-7.** Memory Request Header with 32-bit Address Highlighting AT field
+> <img src="figures/chapter_10/fig_1567_1.png" width="700">
+
+> **Figure 10-8.** Memory Request Header with 64-bit Address Highlighting AT field - FLIT Mode
+> <img src="figures/chapter_10/fig_1568_1.png" width="700">
+
+> **Figure 10-9.** Memory Request Header with 32-bit Address Highlighting AT field - FLIT Mode
+> <img src="figures/chapter_10/fig_1569_1.png" width="700">
+
 </div>
 
 
@@ -694,11 +696,9 @@ A Translation Request has a format that is similar to that of a Memory Read<sup>
 
 Translation Requests have the same completion timeout intervals as Read Requests.
 
-> **Figure 10-12.** Translation Request with 64-bit Address - Flit Mode
-> <img src="figures/chapter_10/fig_1572_1.png" width="700"><sup>193</sup>
+<sup>193</sup>
 
-> **Figure 10-13.** Translation Request with 32-bit Address - Flit Mode
-> <img src="figures/chapter_10/fig_1573_1.png" width="700"><sup>194</sup>
+<sup>194</sup>
 
 For a Translation Request, the Relaxed Ordering (RO) bit is applicable and permitted to be Set, where it affects the ordering of its associated Translation Completions. The remainder of the Attr field is Reserved. The Requester of a Translation Request must not depend on the TA to guarantee any specific ordering relationship between Translation Completions and any other Requests or Completions. There are no ordering requirements for a Translation Request. A TA may reorder a Translation Request with respect to any other request.
 
@@ -721,6 +721,13 @@ For a Translation Request, the Relaxed Ordering (RO) bit is applicable and permi
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-12.** Translation Request with 64-bit Address - Flit Mode
+> <img src="figures/chapter_10/fig_1572_1.png" width="700">
+
+> **Figure 10-13.** Translation Request with 32-bit Address - Flit Mode
+> <img src="figures/chapter_10/fig_1573_1.png" width="700">
+
 </div>
 
 
@@ -1697,12 +1704,6 @@ The method for detecting support of, and for enabling, the AMA mechanism in a TA
 > To intermediate components (which do not track the transaction) this TLP will be indistinguishable from a Memory Read Completion ending on an RCB.
 > For Translation Completions consisting of two TLPs, the goal is to make the Completion look as though it is a Memory Read Completion that crosses an RCB. As Such, the first Completion TLP will contain Lower Address & Length values which make the TLP appear to end on an RCB. The Byte Count of the first TLP will indicate the total length of all the Translation Completions sent in this transaction. For the second TLP, the Length and Byte Count fields will indicate the same value, and the Lower Address value will be 0.
 
-> **Figure 10-15.** Example Translation Completion with 1 TLP
-> <img src="figures/chapter_10/fig_1580_1.png" width="700">
-
-> **Figure 10-16.** Example Translation Completion with 2 TLPs
-> <img src="figures/chapter_10/fig_1581_1.png" width="700">
-
 To intermediate components (which do not track the transaction) this Completion transaction will be indistinguishable from a Memory Read Completion that crosses an RCB.
 
 Note that the Length field is measures DWORDs, whereas the Lower Address and Byte Offset fields are measured in Bytes.
@@ -1733,6 +1734,13 @@ AMA 值与完成者关联,且是实现特定的。AMA 值对请求者、请求�
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-15.** Example Translation Completion with 1 TLP
+> <img src="figures/chapter_10/fig_1580_1.png" width="700">
+
+> **Figure 10-16.** Example Translation Completion with 2 TLPs
+> <img src="figures/chapter_10/fig_1581_1.png" width="700">
+
 </div>
 
 
@@ -1842,12 +1850,6 @@ When a translation is changed in the TA and that translation might be contained 
 
 The format of an Invalidate Request is shown in § Figure 10-18 and § Figure 10-19.
 
-> **Figure 10-18.** Invalidate Request Message - Non-Flit Mode
-> <img src="figures/chapter_10/fig_1584_1.png" width="700">
-
-> **Figure 10-19.** Invalidate Request Message - Flit Mode
-> <img src="figures/chapter_10/fig_1585_1.png" width="700">
-
 The Invalidate Request is a MsgD transaction with 64 bits of data. Invalidate Request messages may be sent in any TC.
 
 Invalidation Request Messages optionally include a PASID (see § Section 10.3.8)
@@ -1873,6 +1875,13 @@ Invalidate 请求是带 64 位数据的 MsgD 事务。Invalidate 请求消息可
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-18.** Invalidate Request Message - Non-Flit Mode
+> <img src="figures/chapter_10/fig_1584_1.png" width="700">
+
+> **Figure 10-19.** Invalidate Request Message - Flit Mode
+> <img src="figures/chapter_10/fig_1585_1.png" width="700">
+
 </div>
 
 
@@ -1979,12 +1988,6 @@ When a Function completes an Invalidate operation, it will send one or more Inva
 
 The format of the Invalidate Completion message is shown in § Figure 10-21 and § Figure 10-22.
 
-> **Figure 10-21.** Invalidate Completion Message Format - Non-Flit Mode
-> <img src="figures/chapter_10/fig_1587_1.png" width="700">
-
-> **Figure 10-22.** Invalidate Completion Message - Flit Mode
-> <img src="figures/chapter_10/fig_1588_1.png" width="700">
-
 > **IMPLEMENTATION NOTE:**
 > **INVALIDATION REQUESTS AND FUNCTION LEVEL RESET & DEVICE POWER STATE TRANSITIONS**
 > Invalidation requests received while a Function is undergoing Function Level Reset, or is in (or transitioning to) non-D0 device state, may be dropped by the Function. Similarly, invalidation requests already received but pending at the time of receiving initiate FLR or D-state transition request may be dropped the Function.
@@ -2046,6 +2049,13 @@ TA 如果收到针对某个没有未完成 Invalidation 请求的 ITag 的 Inval
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-21.** Invalidate Completion Message Format - Non-Flit Mode
+> <img src="figures/chapter_10/fig_1587_1.png" width="700">
+
+> **Figure 10-22.** Invalidate Completion Message - Flit Mode
+> <img src="figures/chapter_10/fig_1588_1.png" width="700">
+
 </div>
 
 
@@ -2529,12 +2539,6 @@ A Page Request Interface applies to the "main" Function and its enabled Shadow F
 
 The first two DWs of a Page Request Message contain a standard PCIe message header. The second two DWs of the message contain page request specific data fields.
 
-> **Figure 10-23.** Page Request Message - Non-Flit Mode
-> <img src="figures/chapter_10/fig_1594_1.png" width="700">
-
-> **Figure 10-24.** Page Request Message - Flit Mode
-> <img src="figures/chapter_10/fig_1595_1.png" width="700">
-
 **Table 10-6. Page Request Message Data Fields | 表 10-6 页请求消息数据字段**
 
 | Field | Meaning |
@@ -2560,6 +2564,13 @@ The first two DWs of a Page Request Message contain a standard PCIe message head
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-23.** Page Request Message - Non-Flit Mode
+> <img src="figures/chapter_10/fig_1594_1.png" width="700">
+
+> **Figure 10-24.** Page Request Message - Flit Mode
+> <img src="figures/chapter_10/fig_1595_1.png" width="700">
+
 </div>
 
 
@@ -2818,12 +2829,6 @@ Receipt of a PRG Response Message that contains a PRG Index that is not currentl
 In order to prevent overflow, it is recommended to size Page Request queuing appropriately so that it does not overflow under expected behavior. If an overflow condition occurs, it is permitted to recover and resynchronize Page Request accounting as follows:
 - The TA, upon detecting the overflow condition, stops accepting all incoming Page Requests for the queue and generates Page Request Group Responses with a Response Code of Success to Page Requests with L=1.
 
-> **Figure 10-27.** PRG Response Message - Non-Flit Mode
-> <img src="figures/chapter_10/fig_1600_1.png" width="700">
-
-> **Figure 10-28.** PRG Response Message - FLIT Mode
-> <img src="figures/chapter_10/fig_1601_1.png" width="700">
-
 **Table 10-7. PRG Response Message Data Fields | 表 10-7 PRG 响应消息数据字段**
 
 | Field | Meaning |
@@ -2862,6 +2867,13 @@ In order to prevent overflow, it is recommended to size Page Request queuing app
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-27.** PRG Response Message - Non-Flit Mode
+> <img src="figures/chapter_10/fig_1600_1.png" width="700">
+
+> **Figure 10-28.** PRG Response Message - FLIT Mode
+> <img src="figures/chapter_10/fig_1601_1.png" width="700">
+
 </div>
 
 
@@ -3040,9 +3052,6 @@ table>
 <tr>
 <td>
 
-> **Figure 10-32.** ATS Capability Register (Offset 04h) - continued
-> <img src="figures/chapter_10/fig_1603_1.png" width="700">
-
 **Table 10-10 (continued). ATS Capability Register (Offset 04h) | 表 10-10 (续) ATS Capability 寄存器 (Offset 04h)**
 
 | Bit Location | Register Description | Attributes |
@@ -3082,6 +3091,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-32.** ATS Capability Register (Offset 04h) - continued
+> <img src="figures/chapter_10/fig_1603_1.png" width="700">
+
 </div>
 
 
@@ -3153,12 +3166,6 @@ A Page Request Extended Capability Structure is used to configure the Page Reque
 
 For an SR-IOV device, even though the Page Request Interface is shared between its PFs and VFs, it sends the requesting Function's ID (PF or VF) in the Requester ID field of the Page Request Message, and the requesting Function's ID must be in the Destination Device ID field of the resulting PRG Response Message.
 
-> **Figure 10-34.** Page Request Extended Capability Structure
-> <img src="figures/chapter_10/fig_1604_1.png" width="700">
-
-> **Figure 10-35.** Page Request Extended Capability Header
-> <img src="figures/chapter_10/fig_1605_1.png" width="700">
-
 **Table 10-13. Page Request Extended Capability Header | 表 10-13 页请求扩展能力头**
 
 | Bit Location | Register Description | Attributes |
@@ -3166,9 +3173,6 @@ For an SR-IOV device, even though the Page Request Interface is shared between i
 | 15:0 | PCI Express Extended Capability ID - Indicates that the associated extended capability structure is a Page Request Extended Capability. This field must return a Capability ID of "0013h". | RO |
 | 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. Must be "1h" for this version of the specification. | RO |
 | 31:20 | Next Capability Offset - The offset to the next PCI Extended Capability structure or 000h if no other items exist in the linked list of capabilities. | RO |
-
-> **Figure 10-36.** Page Request Control Register
-> <img src="figures/chapter_10/fig_1606_1.png" width="700">
 
 **Table 10-14. Page Request Control Register | 表 10-14 页请求控制寄存器**
 
@@ -3203,6 +3207,16 @@ Page Request Extended Capability Structure 用于配置页请求接口机制。�
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-34.** Page Request Extended Capability Structure
+> <img src="figures/chapter_10/fig_1604_1.png" width="700">
+
+> **Figure 10-35.** Page Request Extended Capability Header
+> <img src="figures/chapter_10/fig_1605_1.png" width="700">
+
+> **Figure 10-36.** Page Request Control Register
+> <img src="figures/chapter_10/fig_1606_1.png" width="700">
+
 </div>
 
 
@@ -3415,9 +3429,6 @@ When a Function completes an Invalidate operation, it will send one or more Inva
 
 For an SR-IOV device, even though the Page Request Interface is shared between its PFs and VFs, it sends the requesting Function's ID (PF or VF) in the Requester ID field of the Page Request Message, and the requesting Function's ID must be in the Destination Device ID field of the resulting PRG Response Message.
 
-> **Figure 10-39.** Stop Marker Message - Flit Mode (reference)
-> <img src="figures/chapter_10/fig_1608_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -3439,6 +3450,10 @@ PRG 响应消息是由 ID 路由回请求功能的 PCIe 消息请求。系统软
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-39.** Stop Marker Message - Flit Mode (reference)
+> <img src="figures/chapter_10/fig_1608_1.png" width="700">
+
 </div>
 
 

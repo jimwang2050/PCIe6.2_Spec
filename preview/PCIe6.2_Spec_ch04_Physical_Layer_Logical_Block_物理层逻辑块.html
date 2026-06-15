@@ -88,10 +88,6 @@ Layer Logical Block § | 物理层逻辑块 §</h2>
 the signaling technology used for Link data interchange. The Physical
 Layer is divided into the logical and electrical sub-blocks (see §
 Figure 4-1).</p>
-<blockquote>
-<p><strong>Figure 4-1.</strong> Layering Diagram Highlighting Physical
-Layer <img src="figures/chapter_04/fig_0351_1.png" width="700"></p>
-</blockquote>
 <p>§ Chapter 4. describes the logical sub-block and § Chapter 8.
 describes the electrical sub-block.</p>
 <p>The logical sub-block has two main sections: a Transmit section that
@@ -161,6 +157,11 @@ Flit Mode Supported),则选择 Flit 模式;否则选择非 Flit
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 4-1.</strong> Layering Diagram Highlighting Physical
+Layer <img src="figures/chapter_04/fig_0351_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -515,10 +516,6 @@ Register) 中的 Flit Mode Disable 位清 0 时,此位置 1。参见 § 表 4-25
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 4-2.</strong> Character to Symbol Mapping
-<img src="figures/chapter_04/fig_0354_1.png" width="700"></p>
-</blockquote>
 <p>The bits of a Symbol are placed on a Lane starting with bit "a" and
 ending with bit "j". Examples are shown in § Figure 4-3 and § Figure
 4-4.</p>
@@ -540,6 +537,10 @@ ending with bit "j". Examples are shown in § Figure 4-3 and § Figure
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 4-2.</strong> Character to Symbol Mapping
+<img src="figures/chapter_04/fig_0354_1.png" width="700"></p>
+</blockquote>
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
 <hr />
 <p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_354</p>
@@ -560,11 +561,6 @@ Serialization and De-serialization of Data § | 数据的串行化与解串行�
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 4-4.</strong> Bit Transmission Order on Physical Lanes
-- x4 Example
-<img src="figures/chapter_04/fig_0355_1.png" width="700"></p>
-</blockquote>
 <p>The 8b/10b encoding scheme provides Special Symbols that are distinct
 from the Data Symbols used to represent Characters. These Special
 Symbols are used for various Link Management mechanisms described later
@@ -805,6 +801,12 @@ TLP 成帧规则。Flit 模式不支持 PMUX。</p>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 4-4.</strong> Bit Transmission Order on Physical Lanes
+- x4 Example
+<img src="figures/chapter_04/fig_0355_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -1076,14 +1078,6 @@ section. These checks are independently optional (see § Section
 6.2.3.4). If checked, violations are Receiver Errors, and are reported
 errors associated with the Port (see § Section 6.2).</li>
 </ul>
-<blockquote>
-<p><strong>Figure 4-5.</strong> TLP with Framing Symbols Applied
-<img src="figures/chapter_04/fig_0358_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 4-6.</strong> DLLP with Framing Symbols Applied
-<img src="figures/chapter_04/fig_0359_1.png" width="700"></p>
-</blockquote>
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -1140,6 +1134,15 @@ SDP 时,PAD 必须被放置在 Lane 4 到 Lane 7。</li>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 4-5.</strong> TLP with Framing Symbols Applied
+<img src="figures/chapter_04/fig_0358_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 4-6.</strong> DLLP with Framing Symbols Applied
+<img src="figures/chapter_04/fig_0359_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -1259,10 +1262,6 @@ Section 4.2.7.3.5).</li>
 <li>Scrambling is always enabled in Detect by default.</li>
 </ul>
 <p>For more information on scrambling, see § Appendix C.</p>
-<blockquote>
-<p><strong>Figure 4-10.</strong> LFSR with 8b/10b Scrambling Polynomial
-<img src="figures/chapter_04/fig_0361_1.png" width="700"></p>
-</blockquote>
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -1293,6 +1292,11 @@ LFSR 时,接收端的 LFSR 即被初始化。</li>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 4-10.</strong> LFSR with 8b/10b Scrambling Polynomial
+<img src="figures/chapter_04/fig_0361_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -1442,11 +1446,6 @@ Encoding | 通道级编码</h2>
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 4-12.</strong> Example of Bit Placement in a x4 Link
-with One Block per Lane
-<img src="figures/chapter_04/fig_0363_1.png" width="700"></p>
-</blockquote>
 <p>An Ordered Set Block contains a Sync Header followed by one Ordered
 Set. All Lanes of a multi-Lane Link must transmit the same Ordered Set
 type simultaneously. The first Symbol of the Ordered Set defines the
@@ -1527,6 +1526,12 @@ Sync Header,接收器必须返回到未对齐或已对齐阶段。</p>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 4-12.</strong> Example of Bit Placement in a x4 Link
+with One Block per Lane
+<img src="figures/chapter_04/fig_0363_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -1827,14 +1832,6 @@ Block。</td>
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 4-13.</strong> Layout of Framing Tokens
-<img src="figures/chapter_04/fig_0366_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 4-14.</strong> TLP and DLLP Layout
-<img src="figures/chapter_04/fig_0368_1.png" width="700"></p>
-</blockquote>
 <p>The Physical Layer DLLP layout is shown in § Figure 4-14. Symbols 0
 and 1 are the SDP Token, and Symbols 2 through 7 are the Data Link Layer
 DLLP information.</p>
@@ -1856,6 +1853,14 @@ DLLP information.</p>
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 4-13.</strong> Layout of Framing Tokens
+<img src="figures/chapter_04/fig_0366_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 4-14.</strong> TLP and DLLP Layout
+<img src="figures/chapter_04/fig_0368_1.png" width="700"></p>
+</blockquote>
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-4-2-2-3-1-tlp-layout"></a></p>
@@ -2056,13 +2061,7 @@ Other Packets
 </thead>
 <tbody>
 <tr>
-<td>
-
-<blockquote>
-<p><strong>Figure 4-17.</strong> SKP Ordered Set of Length 66-bit in a
-x8 Link <img src="figures/chapter_04/fig_0369_1.png" width="700"></p>
-</blockquote>
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 <blockquote>
@@ -2074,6 +2073,10 @@ x8 Link <img src="figures/chapter_04/fig_0369_1.png" width="700"></p>
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 4-17.</strong> SKP Ordered Set of Length 66-bit in a
+x8 Link <img src="figures/chapter_04/fig_0369_1.png" width="700"></p>
+</blockquote>
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-4-2-2-3-2"></a></p>
@@ -11034,10 +11037,6 @@ Symbol 并执行相应的 CRC 纠正(如果适用)</td>
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 4-40.</strong> ECC Decoder function
-<img src="figures/chapter_04/fig_0436_1.png" width="700"></p>
-</blockquote>
 <p>The Receive side check is as follows on the 256B flit (as shown in
 Figure 4-41). Each of the three ECC decoders, performs correction and
 error reporting as needed. In the final stage of CRC check, a decision
@@ -11057,6 +11056,10 @@ is made whether the received flit can be accepted or retried.</p>
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 4-40.</strong> ECC Decoder function
+<img src="figures/chapter_04/fig_0436_1.png" width="700"></p>
+</blockquote>
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
 <hr />
 <p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_437</p>
@@ -11077,11 +11080,6 @@ id="figure-4-41-3-way-ecc-decode-on-receive-side--图-4-41-接收端-3-路-ecc-�
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 4-41.</strong> 3-way ECC decode followed by CRC check
-of flit on the Receive side
-<img src="figures/chapter_04/fig_0437_1.png" width="700"></p>
-</blockquote>
 <p>For Data Rates of 2.5 GT/s or 5.0 GT/s, the SKP Ordered Set insertion
 interval does not change (e.g., between 1180 and 1538 Symbols), but
 occurs at the Flit boundary. The other Ordered Sets that can occur with
@@ -11147,6 +11145,12 @@ SKP 有序集。</li>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 4-41.</strong> 3-way ECC decode followed by CRC check
+of flit on the Receive side
+<img src="figures/chapter_04/fig_0437_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -12743,14 +12747,6 @@ Sets.</p>
 <p>Note that some transitions may not be covered; such as the transition
 from receiving TS0 to receiving TS1 in a given sub-state.</p>
 </blockquote>
-<blockquote>
-<p><strong>Figure 4-42.</strong> 8.0 GT/s Equalization Flow
-<img src="figures/chapter_04/fig_0448_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 4-43.</strong> 16.0 GT/s Equalization Flow
-<img src="figures/chapter_04/fig_0448_2.png" width="700"></p>
-</blockquote>
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -12786,6 +12782,15 @@ TS1。</p>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 4-42.</strong> 8.0 GT/s Equalization Flow
+<img src="figures/chapter_04/fig_0448_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 4-43.</strong> 16.0 GT/s Equalization Flow
+<img src="figures/chapter_04/fig_0448_2.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -12936,10 +12941,6 @@ L0 in Gen 1 data rate, establish that all components (including
 Retimers, if any) can bypass equalization to Gen 5, change the data rate
 to Gen 5 and just perform equalization at Gen 5.</p>
 </blockquote>
-<blockquote>
-<p><strong>Figure 4-45.</strong> Equalization Bypass Example
-<img src="figures/chapter_04/fig_0450_1.png" width="700"></p>
-</blockquote>
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -12976,6 +12977,11 @@ L0,确认所有组件(包括 Retimers,若有)能够将均衡绕过到 Gen
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 4-45.</strong> Equalization Bypass Example
+<img src="figures/chapter_04/fig_0450_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -32343,9 +32349,7 @@ with ensuring the entire compliance pattern is DC Balanced.</p>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong>
@@ -32469,9 +32473,7 @@ Ordered Set.</p>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong> <strong>128B/130B

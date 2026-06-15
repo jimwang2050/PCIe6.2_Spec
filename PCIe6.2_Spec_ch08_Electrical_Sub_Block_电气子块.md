@@ -874,12 +874,7 @@ The range for a Transmitter's output voltage swing, (specified by Vd) with no eq
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 8-8.** VTX-DIFF-PP and VTX-DIFF-PP-LOW Measurement
-> <img src="figures/chapter_08/fig_1418_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 8-8.** VTX-DIFF-PP 与 VTX-DIFF-PP-LOW 的测量
@@ -889,6 +884,10 @@ The range for a Transmitter's output voltage swing, (specified by Vd) with no eq
 </tr>
 </tbody>
 </table>
+
+> **Figure 8-8.** VTX-DIFF-PP and VTX-DIFF-PP-LOW Measurement
+> <img src="figures/chapter_08/fig_1418_1.png" width="700">
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -990,8 +989,6 @@ table>
 <tr>
 <td>
 
-> **Figure 8-9.** Transmit Equalization Coefficient Space Triangular Matrix Example for 8.0, 16.0, and 32.0 GT/s
-> <img src="figures/chapter_08/fig_1419_1.png" width="700">
 >
 > *Matrix axes:* PS1 (pre-shoot1, Y-axis), DE (de-emphasis, X-axis), BOOST. Second pre-cursor C-2 = 0/24 (PS2 = 0 dB). Cells highlighted in blue are presets required for reduced swing; cells in blue or orange represent presets required for full swing signaling. Presets shown: P0, P1, P2, P3, P4, P5, P6, P7, P8, P9. Boundaries shown: Full Swing Limit / Max Reduced Swing Limit, Min Reduced Swing Limit.*
 
@@ -1007,6 +1004,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 8-9.** Transmit Equalization Coefficient Space Triangular Matrix Example for 8.0, 16.0, and 32.0 GT/s
+> <img src="figures/chapter_08/fig_1419_1.png" width="700">
+
 </div>
 
 
@@ -1060,8 +1061,6 @@ The coefficient space for 64.0 GT/s with each pre-shoot2 coefficient may be mapp
 <tr>
 <td>
 
-> **Figure 8-10.** Transmit Equalization Coefficient Space Triangular Matrix Example for 64.0 GT/s
-> <img src="figures/chapter_08/fig_1420_1.png" width="700">
 >
 > *Three triangular matrices are shown for second pre-cursor values C-2 = 0/24, 1/24, and 2/24. Matrix axes:* PS2 (pre-shoot2), PS1 (pre-shoot1), DE (de-emphasis), BOOST. *Presets shown: Q0, Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9.* Boundaries shown: Full Swing Limit / Max Reduced Swing Limit, Min Reduced Swing Limit.
 
@@ -1077,6 +1076,10 @@ The coefficient space for 64.0 GT/s with each pre-shoot2 coefficient may be mapp
 </tr>
 </tbody>
 </table>
+
+> **Figure 8-10.** Transmit Equalization Coefficient Space Triangular Matrix Example for 64.0 GT/s
+> <img src="figures/chapter_08/fig_1420_1.png" width="700">
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1337,12 +1340,7 @@ Package loss is measured by comparing the 64-zeros/64-ones voltage swing (V111) 
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 8-12.** Compliance Pattern and Resulting Package Loss Test Waveform
-> <img src="figures/chapter_08/fig_1423_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 8-12.** 一致性码型 (Compliance Pattern) 与对应的封装损耗测试波形
@@ -1352,6 +1350,10 @@ Package loss is measured by comparing the 64-zeros/64-ones voltage swing (V111) 
 </tr>
 </tbody>
 </table>
+
+> **Figure 8-12.** Compliance Pattern and Resulting Package Loss Test Waveform
+> <img src="figures/chapter_08/fig_1423_1.png" width="700">
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -3959,18 +3961,17 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 8-36.** Loss Curves for 16.0 GT/s Behavioral CTLE
-> <img src="figures/chapter_08/fig_1459_2.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 8-36.** Loss Curves for 16.0 GT/s Behavioral CTLE
+> <img src="figures/chapter_08/fig_1459_2.png" width="700">
+
 
 ---
 
@@ -4255,18 +4256,17 @@ FZ3 = 7.7 GHz
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 8-38.** Loss Curves for 64.0 GT/s Behavioral CTLE
-> <img src="figures/chapter_08/fig_1463_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 8-38.** Loss Curves for 64.0 GT/s Behavioral CTLE
+> <img src="figures/chapter_08/fig_1463_1.png" width="700">
+
 
 ---
 
@@ -4367,18 +4367,17 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 8-40.** Diagram for 2-tap DFE
-> <img src="figures/chapter_08/fig_1464_2.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 8-40.** Diagram for 2-tap DFE
+> <img src="figures/chapter_08/fig_1464_2.png" width="700">
+
 
 ---
 
@@ -4805,9 +4804,6 @@ Layout (TP1 → TP5/TP4 flow):
 <tr>
 <td>
 
-> **Figure 8-42.** Layout for Calibrating the Stressed Jitter Eye at 16.0, 32.0, and 64.0 GT/s
-> <img src="figures/chapter_08/fig_1469_1.png" width="700">
-
 Layout (TP1 → TP5/TP4 flow):
 
 - TP1: PRBS Generator → Fixed TX EQ
@@ -4837,6 +4833,10 @@ Layout (TP1 → TP5/TP4 flow):
 </tr>
 </tbody>
 </table>
+
+> **Figure 8-42.** Layout for Calibrating the Stressed Jitter Eye at 16.0, 32.0, and 64.0 GT/s
+> <img src="figures/chapter_08/fig_1469_1.png" width="700">
+
 </div>
 
 
@@ -6546,12 +6546,6 @@ For 32.0 GT/s, reference package models the die capacitive loads are included in
 
 return loss characteristics of on-die pad for a typical design. The reference impedance for the 32.0 and 64.0 GT/s reference package model s-parameters is 50 Ω. Figures below show 32.0 and 64.8 GT/s reference package insertion loss, return loss, FEXT, and NEXT S-parameter plots based on 50 Ω impedance. To account for the on-die inductive coil DC loss of about 3 Ω, the Tx and Rx DC termination should be set to 47 Ω in 64.0 GT/s channel compliance simulations.
 
-> **Figure 8-61.** Insertion Loss for Root Reference Package for 32.0 GT/s
-> <img src="figures/chapter_08/fig_1493_1.png" width="700">
-
-> **Figure 8-62.** Return Loss for Root Reference Package for 32.0 GT/s
-> <img src="figures/chapter_08/fig_1493_2.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -6561,6 +6555,13 @@ return loss characteristics of on-die pad for a typical design. The reference im
 </tr>
 </tbody>
 </table>
+
+> **Figure 8-61.** Insertion Loss for Root Reference Package for 32.0 GT/s
+> <img src="figures/chapter_08/fig_1493_1.png" width="700">
+
+> **Figure 8-62.** Return Loss for Root Reference Package for 32.0 GT/s
+> <img src="figures/chapter_08/fig_1493_2.png" width="700">
+
 </div>
 
 

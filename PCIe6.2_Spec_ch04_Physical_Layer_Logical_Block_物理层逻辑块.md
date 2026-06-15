@@ -52,9 +52,6 @@
 
 The Physical Layer isolates the Transaction and Data Link Layers from the signaling technology used for Link data interchange. The Physical Layer is divided into the logical and electrical sub-blocks (see § Figure 4-1).
 
-> **Figure 4-1.** Layering Diagram Highlighting Physical Layer
-> <img src="figures/chapter_04/fig_0351_1.png" width="700">
-
 § Chapter 4. describes the logical sub-block and § Chapter 8. describes the electrical sub-block.
 
 The logical sub-block has two main sections: a Transmit section that prepares outgoing information passed from the Data Link Layer for transmission by the electrical sub-block, and a Receiver section that identifies and prepares received information before passing it to the Data Link Layer.
@@ -88,6 +85,10 @@ PCI Express 使用三种编码 (8b/10b 编码、128b/130b 编码 与 1b/1b 编�
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-1.** Layering Diagram Highlighting Physical Layer
+> <img src="figures/chapter_04/fig_0351_1.png" width="700">
+
 </div>
 
 
@@ -279,9 +280,6 @@ Support for Flit Mode behavior is referenced five times in the specification thr
 <tr>
 <td>
 
-> **Figure 4-2.** Character to Symbol Mapping
-> <img src="figures/chapter_04/fig_0354_1.png" width="700">
-
 The bits of a Symbol are placed on a Lane starting with bit "a" and ending with bit "j". Examples are shown in § Figure 4-3 and § Figure 4-4.
 
 </td>
@@ -299,6 +297,10 @@ The bits of a Symbol are placed on a Lane starting with bit "a" and ending with 
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-2.** Character to Symbol Mapping
+> <img src="figures/chapter_04/fig_0354_1.png" width="700">
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -321,9 +323,6 @@ The bits of a Symbol are placed on a Lane starting with bit "a" and ending with 
 <tbody>
 <tr>
 <td>
-
-> **Figure 4-4.** Bit Transmission Order on Physical Lanes - x4 Example
-> <img src="figures/chapter_04/fig_0355_1.png" width="700">
 
 The 8b/10b encoding scheme provides Special Symbols that are distinct from the Data Symbols used to represent Characters. These Special Symbols are used for various Link Management mechanisms described later in this chapter. Special Symbols are also used to frame DLLPs and TLPs in Non-Flit Mode, using distinct Special Symbols to allow these two types of Packets to be quickly and easily distinguished. When Flit Mode is enabled, each Symbol (Byte) of the Data Stream is still encoded with 8b/10b encoding without the Framing described. The Flit Mode operation is described in § Section 4.2.3.1. Even when Flit Mode is enabled, the Ordered Sets follow the description provided in § Section 4.2.1, when operating in 2.5 GT/s or 5.0 GT/s Data Rates.
 
@@ -385,6 +384,10 @@ The Symbol tables for the valid 8b/10b codes are given in Appendix B. These tabl
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-4.** Bit Transmission Order on Physical Lanes - x4 Example
+> <img src="figures/chapter_04/fig_0355_1.png" width="700">
+
 </div>
 
 
@@ -567,12 +570,6 @@ table>
 - The EDB Symbol is used to mark the end of a nullified TLP. Refer to § Section 3.6.2.1 for information on the usage of EDB.
 - Receivers may optionally check for violations of the rules of this section. These checks are independently optional (see § Section 6.2.3.4). If checked, violations are Receiver Errors, and are reported errors associated with the Port (see § Section 6.2).
 
-> **Figure 4-5.** TLP with Framing Symbols Applied
-> <img src="figures/chapter_04/fig_0358_1.png" width="700">
-
-> **Figure 4-6.** DLLP with Framing Symbols Applied
-> <img src="figures/chapter_04/fig_0359_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -604,6 +601,13 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-5.** TLP with Framing Symbols Applied
+> <img src="figures/chapter_04/fig_0358_1.png" width="700">
+
+> **Figure 4-6.** DLLP with Framing Symbols Applied
+> <img src="figures/chapter_04/fig_0359_1.png" width="700">
+
 </div>
 
 
@@ -698,9 +702,6 @@ The data scrambling rules are the following:
 
 For more information on scrambling, see § Appendix C.
 
-> **Figure 4-10.** LFSR with 8b/10b Scrambling Polynomial
-> <img src="figures/chapter_04/fig_0361_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -726,6 +727,10 @@ For more information on scrambling, see § Appendix C.
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-10.** LFSR with 8b/10b Scrambling Polynomial
+> <img src="figures/chapter_04/fig_0361_1.png" width="700">
+
 </div>
 
 
@@ -838,9 +843,6 @@ The bit transmission order is as follows. A Sync Header represented as 'H1H0' is
 <tr>
 <td>
 
-> **Figure 4-12.** Example of Bit Placement in a x4 Link with One Block per Lane
-> <img src="figures/chapter_04/fig_0363_1.png" width="700">
-
 An Ordered Set Block contains a Sync Header followed by one Ordered Set. All Lanes of a multi-Lane Link must transmit the same Ordered Set type simultaneously. The first Symbol of the Ordered Set defines the type of Ordered Set. Subsequent symbols of the Ordered Set are defined by the Ordered Set type and need not be identical across lanes of a multi-Lane Link. The Ordered Sets are described in detail in § Section 4.2.5 and § Section 4.2.8 . Ordered Set Blocks are the same for both Flit Mode and Non-Flit Mode except for the use and frequency of SKP Ordered Set. In Flit Mode at 8.0 GT/s, both Standard SKP Ordered Sets and Control SKP Ordered Sets are used.
 
 During Link training, the 130 bits of the Electrical Idle Exit Ordered Set (EIEOS) are a unique bit pattern that Receivers use to determine the location of the Block Sync Headers in the received bit stream. Conceptually, Receivers can be in three different phases of Block alignment: Unaligned, Aligned, and Locked. These phases are defined to illustrate the required behavior, but are not meant to specify a required implementation.
@@ -883,6 +885,10 @@ Receivers must not adjust their Block alignment while in this phase. The Data St
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-12.** Example of Bit Placement in a x4 Link with One Block per Lane
+> <img src="figures/chapter_04/fig_0363_1.png" width="700">
+
 </div>
 
 
@@ -1072,12 +1078,6 @@ table>
 <tr>
 <td>
 
-> **Figure 4-13.** Layout of Framing Tokens
-> <img src="figures/chapter_04/fig_0366_1.png" width="700">
-
-> **Figure 4-14.** TLP and DLLP Layout
-> <img src="figures/chapter_04/fig_0368_1.png" width="700">
-
 The Physical Layer DLLP layout is shown in § Figure 4-14. Symbols 0 and 1 are the SDP Token, and Symbols 2 through 7 are the Data Link Layer DLLP information.
 
 </td>
@@ -1095,6 +1095,13 @@ The Physical Layer DLLP layout is shown in § Figure 4-14. Symbols 0 and 1 are t
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-13.** Layout of Framing Tokens
+> <img src="figures/chapter_04/fig_0366_1.png" width="700">
+
+> **Figure 4-14.** TLP and DLLP Layout
+> <img src="figures/chapter_04/fig_0368_1.png" width="700">
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1246,12 +1253,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 4-17.** SKP Ordered Set of Length 66-bit in a x8 Link
-> <img src="figures/chapter_04/fig_0369_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 4-17.** x8 链路中长度为 66 比特的 SKP 有序集
@@ -1261,6 +1263,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-17.** SKP Ordered Set of Length 66-bit in a x8 Link
+> <img src="figures/chapter_04/fig_0369_1.png" width="700">
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -6914,9 +6920,6 @@ ECC 字节的分配如下:
 <tr>
 <td>
 
-> **Figure 4-40.** ECC Decoder function
-> <img src="figures/chapter_04/fig_0436_1.png" width="700">
-
 The Receive side check is as follows on the 256B flit (as shown in Figure 4-41). Each of the three ECC decoders, performs correction and error reporting as needed. In the final stage of CRC check, a decision is made whether the received flit can be accepted or retried.
 
 </td>
@@ -6931,6 +6934,10 @@ The Receive side check is as follows on the 256B flit (as shown in Figure 4-41).
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-40.** ECC Decoder function
+> <img src="figures/chapter_04/fig_0436_1.png" width="700">
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -6953,9 +6960,6 @@ The Receive side check is as follows on the 256B flit (as shown in Figure 4-41).
 <tbody>
 <tr>
 <td>
-
-> **Figure 4-41.** 3-way ECC decode followed by CRC check of flit on the Receive side
-> <img src="figures/chapter_04/fig_0437_1.png" width="700">
 
 For Data Rates of 2.5 GT/s or 5.0 GT/s, the SKP Ordered Set insertion interval does not change (e.g., between 1180 and 1538 Symbols), but occurs at the Flit boundary. The other Ordered Sets that can occur with up-size or down-size with L0p is provided in Section 4.2.6.7.
 
@@ -6989,6 +6993,10 @@ For Data Rates of 8.0 GT/s and above, the following rules apply:
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-41.** 3-way ECC decode followed by CRC check of flit on the Receive side
+> <img src="figures/chapter_04/fig_0437_1.png" width="700">
+
 </div>
 
 
@@ -7593,12 +7601,6 @@ In the Loopback state, the Loopback Lead is responsible for communicating the Tr
 >
 > Note that some transitions may not be covered; such as the transition from receiving TS0 to receiving TS1 in a given sub-state.
 
-> **Figure 4-42.** 8.0 GT/s Equalization Flow
-> <img src="figures/chapter_04/fig_0448_1.png" width="700">
-
-> **Figure 4-43.** 16.0 GT/s Equalization Flow
-> <img src="figures/chapter_04/fig_0448_2.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -7623,6 +7625,13 @@ In the Loopback state, the Loopback Lead is responsible for communicating the Tr
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-42.** 8.0 GT/s Equalization Flow
+> <img src="figures/chapter_04/fig_0448_1.png" width="700">
+
+> **Figure 4-43.** 16.0 GT/s Equalization Flow
+> <img src="figures/chapter_04/fig_0448_2.png" width="700">
+
 </div>
 
 
@@ -7750,9 +7759,6 @@ The explanation of the coefficients and the FIR filter it represents are provide
 >
 > The following flow-chart provides an example flow where a Link may bypass equalization at lower Data Rates and go to the highest supported NRZ rate for equalization. For example, when n=5, the Link can train to L0 in Gen 1 data rate, establish that all components (including Retimers, if any) can bypass equalization to Gen 5, change the data rate to Gen 5 and just perform equalization at Gen 5.
 
-> **Figure 4-45.** Equalization Bypass Example
-> <img src="figures/chapter_04/fig_0450_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -7777,6 +7783,10 @@ The explanation of the coefficients and the FIR filter it represents are provide
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-45.** Equalization Bypass Example
+> <img src="figures/chapter_04/fig_0450_1.png" width="700">
+
 </div>
 
 
@@ -18856,9 +18866,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 **实现说明 (IMPLEMENTATION NOTE):**
@@ -18961,9 +18969,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 **实现说明 (IMPLEMENTATION NOTE):**

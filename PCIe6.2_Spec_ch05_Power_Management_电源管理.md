@@ -806,9 +806,6 @@ The following rules relate to PCI-PM compatible power management:
 
 § Figure 5-2 depicts the process by which a Link transitions into the L1 state as a direct result of power management software programming the Downstream connected component into a lower power state, (either D1, D2, or D3Hot state). This figure and the subsequent description outline the transition process for a single-Function Downstream component that is being programmed to a non-D0 state.
 
-> **Figure 5-2.** Entry into the L1 Link State
-> <img src="figures/chapter_05/fig_0661_1.png" width="700">
-
 The following text provides additional detail for the Link state transition process shown in § Figure 5-2.
 
 **PM Software Request:**
@@ -853,6 +850,10 @@ The following text provides additional detail for the Link state transition proc
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-2.** Entry into the L1 Link State
+> <img src="figures/chapter_05/fig_0661_1.png" width="700">
+
 </div>
 
 
@@ -967,9 +968,6 @@ The physical mechanism for transitioning a Link from L1 to L0 is described in de
 
 L1 exit must be initiated by a component if that component needs to transmit a TLP on the Link. An Upstream component must initiate L1 exit on a Downstream Port even if it does not have the flow control credits needed to transmit the TLP that it needs to transmit. Following L1 exit, the Upstream component must wait to receive the needed credit from the Downstream component. § Figure 5-3 outlines an example sequence that would trigger an Upstream component to initiate transition of the Link to the L0 state.
 
-> **Figure 5-3.** Exit from L1 Link State Initiated by Upstream Component
-> <img src="figures/chapter_05/fig_0664_1.png" width="700">
-
 Sequence of events:
 
 1. Power management software initiates a configuration cycle targeting a PM configuration register (the PowerState field of the PMCSR in this example) within a Function that resides in the Downstream component (e.g., to bring the Function back to the D0 state).
@@ -1012,6 +1010,10 @@ Sequence of events:
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-3.** Exit from L1 Link State Initiated by Upstream Component
+> <img src="figures/chapter_05/fig_0664_1.png" width="700">
+
 </div>
 
 
@@ -1212,9 +1214,6 @@ All components with an Upstream Port must accept and acknowledge the PME_Turn_Of
 > **IMPLEMENTATION NOTE: EXAMPLE OF WAKE# TO BEACON TRANSLATION**
 > Switch components targeting applications that connect "Beacon domains" and "WAKE# domains" must translate the wakeup mechanism appropriately. § Figure 5-4 shows two example systems, each including slots that use the WAKE# wakeup mechanism. In Case 1, WAKE# is input directly to the Power Management Controller, and no translation is required. In Case 2, WAKE# is an input to the Switch, and in response to WAKE# being asserted the Switch must generate a Beacon that is propagated to the Root Complex/Power Management Controller.
 
-> **Figure 5-4.** Conceptual Diagrams Showing Two Example Cases of WAKE# Routing
-> <img src="figures/chapter_05/fig_0666_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -1240,6 +1239,10 @@ Switch 必须在收到每个下游端口的 PME_TO_Ack 报文后才能报告"聚
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-4.** Conceptual Diagrams Showing Two Example Cases of WAKE# Routing
+> <img src="figures/chapter_05/fig_0666_1.png" width="700">
+
 </div>
 
 
@@ -2293,12 +2296,6 @@ Notes:
 1. The transaction Layer Completion Timeout mechanism is not affected by transition to the L1 state (i.e., it must keep counting).
 2. Flow Control Update timers are frozen while the Link is in L1 state to prevent a timer expiration that will unnecessarily transition the Link back to the L0 state.
 
-> **Figure 5-6.** L1 Transition Sequence Ending with a Rejection (L0s Enabled) §
-> <img src="figures/chapter_05/fig_0681_1.png" width="700">
-
-> **Figure 5-7.** L1 Successful Transition Sequence
-> <img src="figures/chapter_05/fig_0681_2.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -2325,6 +2322,13 @@ Notes:
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-6.** L1 Transition Sequence Ending with a Rejection (L0s Enabled) §
+> <img src="figures/chapter_05/fig_0681_1.png" width="700">
+
+> **Figure 5-7.** L1 Successful Transition Sequence
+> <img src="figures/chapter_05/fig_0681_2.png" width="700">
+
 </div>
 
 
@@ -2750,9 +2754,6 @@ Ports that support L1 PM Substates and also support SRIS mode are required to su
 
 Ports that support the L1.2 substate for ASPM L1 must support Latency Tolerance Reporting (LTR).
 
-> **Figure 5-9.** State Diagram for L1 PM Substates
-> <img src="figures/chapter_05/fig_0688_1.png" width="700">
-
 When enabled, the L1 PM Substates mechanism applies the following additional requirements to the CLKREQ# signal:
 
 - The CLKREQ# signal must be supported as a bi-directional open drain signal by both the Upstream and Downstream Ports of the Link. Each Port must have a unique instance of the signal, and the Upstream and Downstream Port CLKREQ# signals must be connected.
@@ -2799,6 +2800,10 @@ L1 PM Substates 建立了一种链路电源管理机制,它创建了 L1 链路�
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-9.** State Diagram for L1 PM Substates
+> <img src="figures/chapter_05/fig_0688_1.png" width="700">
+
 </div>
 
 
@@ -2928,13 +2933,7 @@ If either the Upstream or Downstream Port needs to initiate exit from L1.1, it m
 
 § Figure 5-12 illustrates entry into L1.1 with exit driven by the Upstream Port.
 
-> **Figure 5-12.** Example: L1.1 Waveforms Illustrating Upstream Port Initiated Exit
-> <img src="figures/chapter_05/fig_0693_1.png" width="700">
-
 § Figure 5-13 illustrates entry into L1.1 with exit driven by the Downstream Port.
-
-> **Figure 5-13.** Example: L1.1 Waveforms Illustrating Downstream Port Initiated Exit
-> <img src="figures/chapter_05/fig_0693_2.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -2962,6 +2961,13 @@ If either the Upstream or Downstream Port needs to initiate exit from L1.1, it m
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-12.** Example: L1.1 Waveforms Illustrating Upstream Port Initiated Exit
+> <img src="figures/chapter_05/fig_0693_1.png" width="700">
+
+> **Figure 5-13.** Example: L1.1 Waveforms Illustrating Downstream Port Initiated Exit
+> <img src="figures/chapter_05/fig_0693_2.png" width="700">
+
 </div>
 
 
@@ -3023,9 +3029,6 @@ L1.2 具有不适用于 L1.1 的额外要求。这些要求记录在本节中。
 
 L1.2 has three substates, which are defined below (see § Figure 5-14).
 
-> **Figure 5-14.** L1.2 Substates
-> <img src="figures/chapter_05/fig_0694_1.png" width="700">
-
 L1.2.Entry is a transitional state on entry into L1.2 to allow time for Refclk to turn off and to ensure both Ports have observed CLKREQ# deasserted. The following rules apply to L1.2.Entry:
 
 - Both Upstream and Downstream Ports continue to maintain common mode.
@@ -3058,6 +3061,10 @@ L1.2.Entry 是进入 L1.2 时的过渡状态,以允许 Refclk 关闭的时间并
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-14.** L1.2 Substates
+> <img src="figures/chapter_05/fig_0694_1.png" width="700">
+
 </div>
 
 
@@ -3161,12 +3168,6 @@ The following rules apply for L1.2.Exit using the CLKREQ#-based mechanism:
 
 § Figure 5-17 illustrates the signal relationships and timing constraints associated with L1.2 entry and Downstream Port initiated exit.
 
-> **Figure 5-16.** Example: L1.2 Waveforms Illustrating Upstream Port Initiated Exit
-> <img src="figures/chapter_05/fig_0696_1.png" width="700">
-
-> **Figure 5-17.** Example: L1.2 Waveforms Illustrating Downstream Port Initiated Exit
-> <img src="figures/chapter_05/fig_0696_2.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -3192,6 +3193,13 @@ The following rules apply for L1.2.Exit using the CLKREQ#-based mechanism:
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-16.** Example: L1.2 Waveforms Illustrating Upstream Port Initiated Exit
+> <img src="figures/chapter_05/fig_0696_1.png" width="700">
+
+> **Figure 5-17.** Example: L1.2 Waveforms Illustrating Downstream Port Initiated Exit
+> <img src="figures/chapter_05/fig_0696_2.png" width="700">
+
 </div>
 
 
@@ -3211,9 +3219,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -3627,9 +3633,6 @@ Power Management Messages follow the general rules for all Messages. Power Manag
 
 All PCI-PM power management state changes are explicitly controlled by software except for Fundamental Reset which brings all Functions to the D0uninitialized state. § Figure 5-18 shows all supported state transitions. The unlabeled arcs represent a software initiated state transition (Set Power State operation).
 
-> **Figure 5-18.** Function Power Management State Transitions
-> <img src="figures/chapter_05/fig_0701_1.png" width="700">
-
 § Table 5-14 shows the minimum recovery times that system software must allow between the time that a Function is programmed to change state and the time that the function is next accessed (including Configuration Space), unless Readiness Notifications (see § Section 6.22 ) is used to indicate modified values to system software. For bridge Functions, this delay also constitutes a minimum delay between when the bridge's state is changed and when any Function on the logical bus that it originates can be accessed.
 
 **Table 5-14. PCI Function State Transition Delays | 表 5-14. PCI Function 状态转换延迟**
@@ -3668,6 +3671,10 @@ All PCI-PM power management state changes are explicitly controlled by software 
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-18.** Function Power Management State Transitions
+> <img src="figures/chapter_05/fig_0701_1.png" width="700">
+
 </div>
 
 
@@ -3823,9 +3830,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -3849,9 +3854,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -4019,9 +4022,7 @@ PME 生成事件用于向系统标识请求打开电源的 Function。
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -4045,9 +4046,7 @@ PME 生成事件用于向系统标识请求打开电源的 Function。
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>

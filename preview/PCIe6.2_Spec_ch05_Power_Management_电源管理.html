@@ -1489,10 +1489,6 @@ Downstream connected component into a lower power state, (either D1, D2,
 or D3Hot state). This figure and the subsequent description outline the
 transition process for a single-Function Downstream component that is
 being programmed to a non-D0 state.</p>
-<blockquote>
-<p><strong>Figure 5-2.</strong> Entry into the L1 Link State
-<img src="figures/chapter_05/fig_0661_1.png" width="700"></p>
-</blockquote>
 <p>The following text provides additional detail for the Link state
 transition process shown in § Figure 5-2.</p>
 <p><strong>PM Software Request:</strong></p>
@@ -1565,6 +1561,11 @@ Ordered Sets),它们不计入该空闲时间限制。</p></li>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 5-2.</strong> Entry into the L1 Link State
+<img src="figures/chapter_05/fig_0661_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -1722,11 +1723,6 @@ the Upstream component must wait to receive the needed credit from the
 Downstream component. § Figure 5-3 outlines an example sequence that
 would trigger an Upstream component to initiate transition of the Link
 to the L0 state.</p>
-<blockquote>
-<p><strong>Figure 5-3.</strong> Exit from L1 Link State Initiated by
-Upstream Component
-<img src="figures/chapter_05/fig_0664_1.png" width="700"></p>
-</blockquote>
 <p>Sequence of events:</p>
 <ol type="1">
 <li><p>Power management software initiates a configuration cycle
@@ -1779,6 +1775,12 @@ L0 状态。L1 →L0 转换详见 § 第 4 章。</p></li>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 5-3.</strong> Exit from L1 Link State Initiated by
+Upstream Component
+<img src="figures/chapter_05/fig_0664_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -2087,11 +2089,6 @@ required. In Case 2, WAKE# is an input to the Switch, and in response to
 WAKE# being asserted the Switch must generate a Beacon that is
 propagated to the Root Complex/Power Management Controller.</p>
 </blockquote>
-<blockquote>
-<p><strong>Figure 5-4.</strong> Conceptual Diagrams Showing Two Example
-Cases of WAKE# Routing
-<img src="figures/chapter_05/fig_0666_1.png" width="700"></p>
-</blockquote>
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -2130,6 +2127,12 @@ Switch 的输入,作为对 WAKE# 被断言的响应,Switch
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 5-4.</strong> Conceptual Diagrams Showing Two Example
+Cases of WAKE# Routing
+<img src="figures/chapter_05/fig_0666_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -3884,15 +3887,6 @@ by transition to the L1 state (i.e., it must keep counting).</li>
 to prevent a timer expiration that will unnecessarily transition the
 Link back to the L0 state.</li>
 </ol>
-<blockquote>
-<p><strong>Figure 5-6.</strong> L1 Transition Sequence Ending with a
-Rejection (L0s Enabled) §
-<img src="figures/chapter_05/fig_0681_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 5-7.</strong> L1 Successful Transition Sequence
-<img src="figures/chapter_05/fig_0681_2.png" width="700"></p>
-</blockquote>
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -3943,6 +3937,16 @@ PM_Active_State_Request_L1 DLLP,禁用 DLLP、TLP 发送,并将其发送 Lane
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 5-6.</strong> L1 Transition Sequence Ending with a
+Rejection (L0s Enabled) §
+<img src="figures/chapter_05/fig_0681_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 5-7.</strong> L1 Successful Transition Sequence
+<img src="figures/chapter_05/fig_0681_2.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -4847,10 +4851,6 @@ clocks used by either Port on the Link, and the management of such local
 clocks is implementation specific.</p>
 <p>Ports that support the L1.2 substate for ASPM L1 must support Latency
 Tolerance Reporting (LTR).</p>
-<blockquote>
-<p><strong>Figure 5-9.</strong> State Diagram for L1 PM Substates
-<img src="figures/chapter_05/fig_0688_1.png" width="700"></p>
-</blockquote>
 <p>When enabled, the L1 PM Substates mechanism applies the following
 additional requirements to the CLKREQ# signal:</p>
 <ul>
@@ -4924,6 +4924,11 @@ CLKREQ#;当链路处于任何其他状态时,上游端口必须断言 CLKREQ#。
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 5-9.</strong> State Diagram for L1 PM Substates
+<img src="figures/chapter_05/fig_0688_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -5136,18 +5141,8 @@ advertised by the Upstream Port.</li>
 </ul>
 <p>§ Figure 5-12 illustrates entry into L1.1 with exit driven by the
 Upstream Port.</p>
-<blockquote>
-<p><strong>Figure 5-12.</strong> Example: L1.1 Waveforms Illustrating
-Upstream Port Initiated Exit
-<img src="figures/chapter_05/fig_0693_1.png" width="700"></p>
-</blockquote>
 <p>§ Figure 5-13 illustrates entry into L1.1 with exit driven by the
 Downstream Port.</p>
-<blockquote>
-<p><strong>Figure 5-13.</strong> Example: L1.1 Waveforms Illustrating
-Downstream Port Initiated Exit
-<img src="figures/chapter_05/fig_0693_2.png" width="700"></p>
-</blockquote>
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -5182,6 +5177,17 @@ CLKREQ#,并必须继续断言 CLKREQ#,直到下一次进入 L1 或允许取消�
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 5-12.</strong> Example: L1.1 Waveforms Illustrating
+Upstream Port Initiated Exit
+<img src="figures/chapter_05/fig_0693_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 5-13.</strong> Example: L1.1 Waveforms Illustrating
+Downstream Port Initiated Exit
+<img src="figures/chapter_05/fig_0693_2.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -5238,10 +5244,6 @@ LTSSM 和相应端口状态必须与 L1.0 LTSSM 和端口状态无法区分。</
 
 <p>L1.2 has three substates, which are defined below (see § Figure
 5-14).</p>
-<blockquote>
-<p><strong>Figure 5-14.</strong> L1.2 Substates
-<img src="figures/chapter_05/fig_0694_1.png" width="700"></p>
-</blockquote>
 <p>L1.2.Entry is a transitional state on entry into L1.2 to allow time
 for Refclk to turn off and to ensure both Ports have observed CLKREQ#
 deasserted. The following rules apply to L1.2.Entry:</p>
@@ -5289,6 +5291,11 @@ L1.2.Entry:</p>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 5-14.</strong> L1.2 Substates
+<img src="figures/chapter_05/fig_0694_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -5426,16 +5433,6 @@ exit.</p>
 <p>§ Figure 5-17 illustrates the signal relationships and timing
 constraints associated with L1.2 entry and Downstream Port initiated
 exit.</p>
-<blockquote>
-<p><strong>Figure 5-16.</strong> Example: L1.2 Waveforms Illustrating
-Upstream Port Initiated Exit
-<img src="figures/chapter_05/fig_0696_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 5-17.</strong> Example: L1.2 Waveforms Illustrating
-Downstream Port Initiated Exit
-<img src="figures/chapter_05/fig_0696_2.png" width="700"></p>
-</blockquote>
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -5470,6 +5467,17 @@ Lane 上检测到电气空闲退出以来已过去至少 TCOMMONMODE。</li>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 5-16.</strong> Example: L1.2 Waveforms Illustrating
+Upstream Port Initiated Exit
+<img src="figures/chapter_05/fig_0696_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 5-17.</strong> Example: L1.2 Waveforms Illustrating
+Downstream Port Initiated Exit
+<img src="figures/chapter_05/fig_0696_2.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -5486,9 +5494,7 @@ L1.2.Exit §</h4>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -6196,11 +6202,6 @@ by software except for Fundamental Reset which brings all Functions to
 the D0uninitialized state. § Figure 5-18 shows all supported state
 transitions. The unlabeled arcs represent a software initiated state
 transition (Set Power State operation).</p>
-<blockquote>
-<p><strong>Figure 5-18.</strong> Function Power Management State
-Transitions
-<img src="figures/chapter_05/fig_0701_1.png" width="700"></p>
-</blockquote>
 <p>§ Table 5-14 shows the minimum recovery times that system software
 must allow between the time that a Function is programmed to change
 state and the time that the function is next accessed (including
@@ -6315,6 +6316,12 @@ Function 之间的最小延迟。</p>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 5-18.</strong> Function Power Management State
+Transitions
+<img src="figures/chapter_05/fig_0701_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -6528,9 +6535,7 @@ Power Management § | 5.10 SR-IOV 电源管理 §</h2>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -6553,9 +6558,7 @@ VF Device Power Management States § | 5.10.1 VF 设备电源管理状态 §</h3
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -6767,9 +6770,7 @@ Switches and PCI Express to PCI Bridges § | 5.11.1 Switch 与 PCI Express
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -6791,9 +6792,7 @@ Management Events § | 5.12 电源管理事件 §</h2>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>

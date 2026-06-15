@@ -329,11 +329,6 @@ TDISP Host/Device Reference Architecture | 11.1.1 TDISP
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 11-2.</strong> TDISP Host/Device Reference
-Architecture
-<img src="figures/chapter_11/fig_1613_1.png" width="700"></p>
-</blockquote>
 <p>§ Figure 11-2 illustrates key elements of the TDISP reference
 architecture. Typically, a PF is the resource management entity for a
 TDI and is managed by the PF driver in the VMM. The VMM and the PF
@@ -384,6 +379,12 @@ TCB 中。VMM 使用 PF 来配置要分配给 TVM 的 TDI。TEE-I/O
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 11-2.</strong> TDISP Host/Device Reference
+Architecture
+<img src="figures/chapter_11/fig_1613_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -719,10 +720,6 @@ TDISP TLP Rules and State Machine | 11.2.1 TDISP TLP 规则与状态机</h2>
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 11-4.</strong> TDI Identifier – INTERFACE_ID
-<img src="figures/chapter_11/fig_1617_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 11-1 INTERFACE_ID Definition | 表 11-1 INTERFACE_ID
 定义</strong></p>
 <table>
@@ -759,10 +756,6 @@ Requester Segment Valid, Reserved</td>
 </table>
 <p>Each TDI in the device is associated with a TDISP state machine (see
 § Figure 11-5).</p>
-<blockquote>
-<p><strong>Figure 11-5.</strong> TDISP State Machine
-<img src="figures/chapter_11/fig_1617_2.png" width="700"></p>
-</blockquote>
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -813,6 +806,15 @@ Valid、Reserved</td>
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 11-4.</strong> TDI Identifier – INTERFACE_ID
+<img src="figures/chapter_11/fig_1617_1.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 11-5.</strong> TDISP State Machine
+<img src="figures/chapter_11/fig_1617_2.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
@@ -3509,11 +3511,6 @@ queue depths, etc.</li>
 <p>The following sequence diagram shows the high-level request-response
 message flow for Responder response when it cannot return the entire
 data requested by the Requester in the first response.</p>
-<blockquote>
-<p><strong>Figure 11-7.</strong> Example Flow Where DSM is Unable to
-Return Full Length Report
-<img src="figures/chapter_11/fig_1636_1.png" width="700"></p>
-</blockquote>
 <p><strong>Table 11-16 GET_DEVICE_INTERFACE_REPORT Error Response Codes
 | 表 11-16 GET_DEVICE_INTERFACE_REPORT 错误响应代码</strong></p>
 <table>
@@ -4393,6 +4390,12 @@ TVM 数据关联的密文也不得暴露在设备之外。设备可以额外提�
 </tr>
 </tbody>
 </table>
+
+<blockquote>
+<p><strong>Figure 11-7.</strong> Example Flow Where DSM is Unable to
+Return Full Length Report
+<img src="figures/chapter_11/fig_1636_1.png" width="700"></p>
+</blockquote>
 </div>
 
 <p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>

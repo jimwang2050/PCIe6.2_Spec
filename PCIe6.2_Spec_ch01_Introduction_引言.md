@@ -267,9 +267,6 @@ A Link represents a dual-simplex communications channel between two components. 
 
 A PCI Express Link consists of a PCIe PHY as defined in § Chapter 4.
 
-> **Figure 1-1.** PCI Express Link
-> <img src="figures/chapter_01/fig_0127_1.png" width="700">
-
 The primary Link attributes for PCI Express Link are:
 
 </td>
@@ -285,6 +282,10 @@ PCI Express 链路的主要属性如下：
 </tr>
 </tbody>
 </table>
+
+> **Figure 1-1.** PCI Express Link
+> <img src="figures/chapter_01/fig_0127_1.png" width="700">
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1435,9 +1436,7 @@ PCI Express 使用报文在组件之间传递信息。报文在事务层和数�
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -1839,9 +1838,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -2282,9 +2279,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>

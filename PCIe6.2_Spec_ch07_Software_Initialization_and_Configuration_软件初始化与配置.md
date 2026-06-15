@@ -65,9 +65,6 @@ A PCI Express Endpoint is mapped into Configuration Space as a single Function i
 
 Unless otherwise specified, requirements in the Configuration Space definition for a device apply to single Function devices as well as to each Function individually of a Multi-Function Device.
 
-> **Figure 7-1.** PCI Express Root Complex Device Mapping
-> <img src="figures/chapter_07/fig_0981_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -111,18 +108,20 @@ PCI Express 端点 (Endpoint) 在配置空间中映射为设备 (Device) 中的�
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-2.** PCI Express Switch Device Mapping
-> <img src="figures/chapter_07/fig_0982_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-1.** PCI Express Root Complex Device Mapping
+> <img src="figures/chapter_07/fig_0981_1.png" width="700">
+
+> **Figure 7-2.** PCI Express Switch Device Mapping
+> <img src="figures/chapter_07/fig_0982_1.png" width="700">
+
 </div>
 
 
@@ -640,9 +639,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -2272,9 +2269,6 @@ Command 寄存器和 Status 寄存器中的错误控制/状态寄存器位（分
 <tr>
 <td>
 
-> **Figure 7-10.** Type 0 Configuration Space Header
-> <img src="figures/chapter_07/fig_1005_1.png" width="700">
-
 § Figure 7-10 details allocation for register fields of Type 0 Configuration Space Header for PCI Express device Functions.
 
 § Section 7.5.1.1 details the PCI Express-specific registers that are valid for all Configuration Space Header types. The PCI Express-specific interpretation of registers specific to Type 0 Configuration Space Header is defined in this section.
@@ -2297,6 +2291,10 @@ System software must build a consistent address map before booting the machine t
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-10.** Type 0 Configuration Space Header
+> <img src="figures/chapter_07/fig_1005_1.png" width="700">
+
 </div>
 
 
@@ -2362,12 +2360,6 @@ For VFs, these registers must be hardwired to Zero. See § Section 9.2.1.1.1 and
 
 Bit 0 in all Base Address registers is read-only and used to determine whether the register maps into Memory or I/O Space. Base Address registers that map to Memory Space must return a 0b in bit 0 (see § Figure 7-11). Base Address registers that map to I/O Space must return a 1b in bit 0 (see § Figure 7-12).
 
-> **Figure 7-11.** Base Address Register for Memory
-> <img src="figures/chapter_07/fig_1006_1.png" width="700">
-
-> **Figure 7-12.** Base Address Register for I/O
-> <img src="figures/chapter_07/fig_1006_2.png" width="700">
-
 Base Address registers that map into I/O Space are always 32 bits wide with bit 0 hardwired to 1b. Bit 1 is Reserved and must return 0b on reads and the other bits are used to map the Function into I/O Space.
 
 Base Address registers that map into Memory Space can be 32 bits or 64 bits wide (to support mapping into a 64-bit address space) with bit 0 hardwired to 0b. For Memory Base Address registers, bits 2 and 1 have an encoded meaning as shown in § Table 7-9. Bit 3 should be set to 1b if the data is prefetchable and set to 0b otherwise. A Function is permitted to mark a range as prefetchable if there are no side effects on reads, the Function returns all bytes on reads regardless of the byte enables, and host bridges can merge processor writes into this range without causing errors. Bits 3-0 are read-only.
@@ -2397,6 +2389,13 @@ Base Address registers that map into Memory Space can be 32 bits or 64 bits wide
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-11.** Base Address Register for Memory
+> <img src="figures/chapter_07/fig_1006_1.png" width="700">
+
+> **Figure 7-12.** Base Address Register for I/O
+> <img src="figures/chapter_07/fig_1006_2.png" width="700">
+
 </div>
 
 
@@ -2994,9 +2993,6 @@ These registers do not apply to PCI Express and must be hardwired to Zero.
 
 <<<PAGE_BREAK>>> page_1013
 
-> **Figure 7-14.** Type 1 Configuration Space Header
-> <img src="figures/chapter_07/fig_1013_1.png" width="700">
-
 § Section 7.5.1.1 details the PCI Express-specific registers that are valid for all Configuration Space Header types. The PCI Express-specific interpretation of registers specific to Type 1 Configuration Space Header is defined in this section.
 
 Register interpretations described in this section apply to PCI-PCI Bridge structures representing Switch and Root Ports; other device Functions such as PCI Express to PCI/PCI-X Bridges with Type 1 Configuration Space headers are not covered by this section.
@@ -3021,6 +3017,10 @@ These registers are defined in § Section 7.5.1.2.1. However the number of BARs 
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-14.** Type 1 Configuration Space Header
+> <img src="figures/chapter_07/fig_1013_1.png" width="700">
+
 </div>
 
 
@@ -9535,9 +9535,6 @@ PCI Express Extended Capability structures are allocated using a linked list of 
 
 Each Capability structure must be DWORD aligned.
 
-> **Figure 7-42.** PCI Express Extended Configuration Space Layout
-> <img src="figures/chapter_07/fig_1087_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -9551,6 +9548,10 @@ PCI Express Extended Capability 结构使用可选或必需的 PCI Express Exten
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-42.** PCI Express Extended Configuration Space Layout
+> <img src="figures/chapter_07/fig_1087_1.png" width="700">
+
 </div>
 
 
@@ -9638,9 +9639,6 @@ Extended Capabilities in a Root Complex Register Block always begin at offset 00
 
 All PCI Express Extended Capabilities must begin with a PCI Express Extended Capability Header. § Figure 7-43 details the allocation of register fields of a PCI Express Extended Capability Header; § Table 7-39 provides the respective bit definitions.
 
-> **Figure 7-43.** PCI Express Extended Capability Header
-> <img src="figures/chapter_07/fig_1088_1.png" width="700">
-
 **Table 7-39 PCI Express Extended Capability Header | 表 7-39 PCI Express 扩展能力头**
 
 | Bit Location | Register Description | Attributes |
@@ -9674,6 +9672,10 @@ All PCI Express device Functions that are capable of generating interrupts must 
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-43.** PCI Express Extended Capability Header
+> <img src="figures/chapter_07/fig_1088_1.png" width="700">
+
 </div>
 
 
@@ -9727,9 +9729,6 @@ The MSI Capability structure is described in this section. The MSI-X Capability 
 
 The MSI Capability structure is illustrated in § Figure 7-44 and § Figure 7-45. Each device Function that supports MSI (in a Multi-Function Device) must implement its own MSI Capability structure. More than one MSI Capability structure per Function is prohibited, but a Function is permitted to have both an MSI and an MSI-X Capability structure.
 
-> **Figure 7-44.** MSI Capability Structure for 32-bit Message Address
-> <img src="figures/chapter_07/fig_1089_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -9741,6 +9740,10 @@ MSI 能力结构如图 § 7-44 和 § 7-45 所示。支持 MSI 的每个设备 F
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-44.** MSI Capability Structure for 32-bit Message Address
+> <img src="figures/chapter_07/fig_1089_1.png" width="700">
+
 </div>
 
 
@@ -9818,9 +9821,6 @@ MSI Capability Header 在 PCI 配置空间 Capability 列表中枚举 MSI Capabi
 
 This register provides system software control over MSI. By default, MSI is disabled. If MSI and MSI-X are both disabled, the Function requests servicing using INTx interrupts (if supported). System software can enable MSI by Setting bit 0 of this register. System software is permitted to modify the Message Control Register for MSI's read-write bits and fields. A device driver is not permitted to modify the Message Control Register for MSI's read-write bits and fields.
 
-> **Figure 7-49.** Message Control Register for MSI
-> <img src="figures/chapter_07/fig_1091_1.png" width="700">
-
 **Table 7-41 Message Control Register for MSI | 表 7-41 MSI 的消息控制寄存器**
 
 | Bit Location | Register Description | Attributes |
@@ -9855,6 +9855,10 @@ This register provides system software control over MSI. By default, MSI is disa
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-49.** Message Control Register for MSI
+> <img src="figures/chapter_07/fig_1091_1.png" width="700">
+
 </div>
 
 
@@ -9922,9 +9926,6 @@ table>
 <tr>
 <td>
 
-> **Figure 7-50.** Message Address Register for MSI
-> <img src="figures/chapter_07/fig_1093_1.png" width="700">
-
 **Table 7-42 Message Address Register for MSI | 表 7-42 MSI 的消息地址寄存器**
 
 | Bit Location | Register Description | Attributes |
@@ -9950,6 +9951,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-50.** Message Address Register for MSI
+> <img src="figures/chapter_07/fig_1093_1.png" width="700">
+
 </div>
 
 
@@ -10007,9 +10012,6 @@ table>
 <tr>
 <td>
 
-> **Figure 7-52.** Message Data Register for MSI
-> <img src="figures/chapter_07/fig_1094_1.png" width="700">
-
 **Table 7-44 Message Data Register for MSI | 表 7-44 MSI 的消息数据寄存器**
 
 | Bit Location | Register Description | Attributes |
@@ -10041,6 +10043,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-52.** Message Data Register for MSI
+> <img src="figures/chapter_07/fig_1094_1.png" width="700">
+
 </div>
 
 
@@ -28460,9 +28466,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -29550,12 +29554,7 @@ Figure 7-254 details allocation of register fields in the RCRB Vendor ID and Dev
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-254.** RCRB Vendor ID and Device ID register
-> <img src="figures/chapter_07/fig_1294_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-254.** RCRB Vendor ID and Device ID 寄存器
@@ -29565,6 +29564,10 @@ Figure 7-254 details allocation of register fields in the RCRB Vendor ID and Dev
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-254.** RCRB Vendor ID and Device ID register
+> <img src="figures/chapter_07/fig_1294_1.png" width="700">
+
 
 **Table 7-230. RCRB Vendor ID and Device ID register | 表 7-230. RCRB Vendor ID and Device ID 寄存器**
 
@@ -29601,12 +29604,7 @@ Figure 7-255 details allocation of register fields in the RCRB Capabilities regi
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-255.** RCRB Capabilities register
-> <img src="figures/chapter_07/fig_1295_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-255.** RCRB Capabilities 寄存器
@@ -29616,6 +29614,10 @@ Figure 7-255 details allocation of register fields in the RCRB Capabilities regi
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-255.** RCRB Capabilities register
+> <img src="figures/chapter_07/fig_1295_1.png" width="700">
+
 
 **Table 7-231. RCRB Capabilities register | 表 7-231. RCRB Capabilities 寄存器**
 
@@ -29640,12 +29642,7 @@ Figure 7-256 details allocation of register fields in the RCRB Control register;
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-256.** RCRB Control register
-> <img src="figures/chapter_07/fig_1295_2.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-256.** RCRB Control 寄存器
@@ -29655,6 +29652,10 @@ Figure 7-256 details allocation of register fields in the RCRB Control register;
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-256.** RCRB Control register
+> <img src="figures/chapter_07/fig_1295_2.png" width="700">
+
 
 **Table 7-232. RCRB Control register | 表 7-232. RCRB Control 寄存器**
 
@@ -29766,9 +29767,6 @@ The description of how traffic is routed through such a topology is implementati
 <tr>
 <td>
 
-> **Figure 7-257.** Root Complex Link Declaration Extended Capability
-> <img src="figures/chapter_07/fig_1297_1.png" width="700">
-
 The Extended Capability ID for the Root Complex Link Declaration Extended Capability is 0005h.
 
 </td>
@@ -29784,6 +29782,10 @@ Root Complex Link Declaration Extended Capability 的扩展能力 ID 为 0005h�
 </tbody>
 </table>
 
+> **Figure 7-257.** Root Complex Link Declaration Extended Capability
+> <img src="figures/chapter_07/fig_1297_1.png" width="700">
+
+
 <table>
 <thead>
 <tr>
@@ -29793,12 +29795,7 @@ Root Complex Link Declaration Extended Capability 的扩展能力 ID 为 0005h�
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-258.** Root Complex Link Declaration Extended Capability Header
-> <img src="figures/chapter_07/fig_1297_2.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-258.** Root Complex Link Declaration Extended Capability Header
@@ -29808,6 +29805,10 @@ Root Complex Link Declaration Extended Capability 的扩展能力 ID 为 0005h�
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-258.** Root Complex Link Declaration Extended Capability Header
+> <img src="figures/chapter_07/fig_1297_2.png" width="700">
+
 
 <a id="sec-7-9-8-1-2"></a>
 ### 7.9.8.1 Root Complex Link Declaration Extended Capability Header (Offset 00h)
@@ -29844,12 +29845,7 @@ Element Self Description 寄存器提供关于包含 Root Complex Link Declarati
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-259.** Element Self Description Register
-> <img src="figures/chapter_07/fig_1298_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-259.** Element Self Description 寄存器
@@ -29859,6 +29855,10 @@ Element Self Description 寄存器提供关于包含 Root Complex Link Declarati
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-259.** Element Self Description Register
+> <img src="figures/chapter_07/fig_1298_1.png" width="700">
+
 
 **Table 7-234. Element Self Description Register | 表 7-234. Element Self Description 寄存器**
 
@@ -29907,9 +29907,6 @@ Link Entries start at offset 10h of the Root Complex Link Declaration Extended C
 <tr>
 <td>
 
-> **Figure 7-260.** Link Entry
-> <img src="figures/chapter_07/fig_1299_1.png" width="700">
-
 The Link Description Register is located at offset 00h from the start of a Link Entry and is defined as follows:
 
 </td>
@@ -29925,6 +29922,10 @@ Link Description 寄存器位于 Link Entry 起始处的偏移 00h 处，定义�
 </tbody>
 </table>
 
+> **Figure 7-260.** Link Entry
+> <img src="figures/chapter_07/fig_1299_1.png" width="700">
+
+
 <table>
 <thead>
 <tr>
@@ -29934,12 +29935,7 @@ Link Description 寄存器位于 Link Entry 起始处的偏移 00h 处，定义�
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-261.** Link Description Register
-> <img src="figures/chapter_07/fig_1299_2.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-261.** Link Description 寄存器
@@ -29949,6 +29945,10 @@ Link Description 寄存器位于 Link Entry 起始处的偏移 00h 处，定义�
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-261.** Link Description Register
+> <img src="figures/chapter_07/fig_1299_2.png" width="700">
+
 
 **Table 7-235. Link Description Register | 表 7-235. Link Description 寄存器**
 
@@ -30009,12 +30009,7 @@ For a Link pointing to a memory-mapped RCRB (Link Type bit = 0), the first DWORD
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-262.** Link Address for Link Type 0
-> <img src="figures/chapter_07/fig_1300_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-262.** Link Type 0 的 Link Address
@@ -30024,6 +30019,10 @@ For a Link pointing to a memory-mapped RCRB (Link Type bit = 0), the first DWORD
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-262.** Link Address for Link Type 0
+> <img src="figures/chapter_07/fig_1300_1.png" width="700">
+
 
 For a Link pointing to the Configuration Space of a Root Complex element (Link Type bit = 1), bits in the first DWORD specify the Bus, Device, and Function Number of the target element. As shown in Figure 7-263, bits 2:0 (N) encode the number of bits n associated with the Bus Number, with N = 000b specifying n = 8 and all other encodings specifying
 
@@ -30157,9 +30156,6 @@ Root Complex Internal Link Control Extended Capability 结构定义如图 7-264 
 <tr>
 <td>
 
-> **Figure 7-264.** Root Complex Internal Link Control Extended Capability
-> <img src="figures/chapter_07/fig_1302_1.png" width="700">
-
 The Extended Capability ID for the Root Complex Internal Link Control Extended Capability is 0006h.
 
 </td>
@@ -30175,6 +30171,10 @@ Root Complex Internal Link Control Extended Capability 的扩展能力 ID 为 00
 </tbody>
 </table>
 
+> **Figure 7-264.** Root Complex Internal Link Control Extended Capability
+> <img src="figures/chapter_07/fig_1302_1.png" width="700">
+
+
 <table>
 <thead>
 <tr>
@@ -30184,12 +30184,7 @@ Root Complex Internal Link Control Extended Capability 的扩展能力 ID 为 00
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-265.** Root Complex Internal Link Control Extended Capability Header
-> <img src="figures/chapter_07/fig_1302_2.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-265.** Root Complex Internal Link Control Extended Capability Header
@@ -30199,6 +30194,10 @@ Root Complex Internal Link Control Extended Capability 的扩展能力 ID 为 00
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-265.** Root Complex Internal Link Control Extended Capability Header
+> <img src="figures/chapter_07/fig_1302_2.png" width="700">
+
 
 **Table 7-237. Root Complex Internal Link Control Extended Capability Header | 表 7-237. Root Complex Internal Link Control Extended Capability Header**
 
@@ -31985,9 +31984,6 @@ The MC_Receive Register provides a bit vector denoting which Multicast groups th
 
 § Figure 7-277 details allocation of the fields in the MC_Receive Register and § Table 7-247 provides the respective bit definitions.
 
-> **Figure 7-277.** MC_Receive Register
-> <img src="figures/chapter_07/fig_1314_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -32002,6 +31998,10 @@ MC_Receive 寄存器提供一个位向量，用于指示该 Function 应接受�
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-277.** MC_Receive Register
+> <img src="figures/chapter_07/fig_1314_1.png" width="700">
+
 </div>
 
 
@@ -32133,9 +32133,6 @@ The MC_Block_Untranslated Register is used to determine whether or not a TLP tha
 
 § Figure 7-279 details allocation of the fields in the MC_Block_Untranslated Register and § Table 7-249 provides the respective bit definitions.
 
-> **Figure 7-279.** MC_Block_Untranslated Register
-> <img src="figures/chapter_07/fig_1315_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -32150,6 +32147,10 @@ MC_Block_Untranslated 寄存器用于确定是否应阻止包含未转换地址�
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-279.** MC_Block_Untranslated Register
+> <img src="figures/chapter_07/fig_1315_1.png" width="700">
+
 </div>
 
 
@@ -32262,12 +32263,7 @@ MC_Overlay_BAR 用于指定单播（unicast）地址空间中一个窗口的基�
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-280.** MC_Overlay_BAR Register
-> <img src="figures/chapter_07/fig_1316_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-280.** MC_Overlay_BAR 寄存器
@@ -32277,6 +32273,10 @@ MC_Overlay_BAR 用于指定单播（unicast）地址空间中一个窗口的基�
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-280.** MC_Overlay_BAR Register
+> <img src="figures/chapter_07/fig_1316_1.png" width="700">
+
 
 ---
 
@@ -32307,9 +32307,6 @@ MC_Overlay_BAR 用于指定单播（unicast）地址空间中一个窗口的基�
 
 The DPA Capability structure is shown in § Figure 7-281.
 
-> **Figure 7-281.** Dynamic Power Allocation Extended Capability Structure
-> <img src="figures/chapter_07/fig_1316_2.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -32324,6 +32321,10 @@ DPA Capability 结构如 § 图 7-281 所示。
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-281.** Dynamic Power Allocation Extended Capability Structure
+> <img src="figures/chapter_07/fig_1316_2.png" width="700">
+
 
 <<<PAGE_BREAK>>> page_1317
 
@@ -32343,9 +32344,6 @@ DPA Capability 结构如 § 图 7-281 所示。
 
 7.9.12.1 DPA Extended Capability Header (Offset 00h)
 
-> **Figure 7-282.** DPA Extended Capability Header
-> <img src="figures/chapter_07/fig_1317_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -32358,6 +32356,10 @@ DPA Capability 结构如 § 图 7-281 所示。
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-282.** DPA Extended Capability Header
+> <img src="figures/chapter_07/fig_1317_1.png" width="700">
+
 
 ---
 
@@ -32387,9 +32389,6 @@ DPA Capability 结构如 § 图 7-281 所示。
 
 7.9.12.2 DPA Capability Register (Offset 04h)
 
-> **Figure 7-283.** DPA Capability Register
-> <img src="figures/chapter_07/fig_1317_2.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -32402,6 +32401,10 @@ DPA Capability 结构如 § 图 7-281 所示。
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-283.** DPA Capability Register
+> <img src="figures/chapter_07/fig_1317_2.png" width="700">
+
 
 ---
 
@@ -32510,9 +32513,6 @@ table>
 
 7.9.12.4 DPA Status Register (Offset 0Ch)
 
-> **Figure 7-285.** DPA Status Register
-> <img src="figures/chapter_07/fig_1319_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -32525,6 +32525,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-285.** DPA Status Register
+> <img src="figures/chapter_07/fig_1319_1.png" width="700">
+
 
 ---
 
@@ -32553,9 +32557,6 @@ table>
 
 7.9.12.5 DPA Control Register (Offset 0Eh)
 
-> **Figure 7-286.** DPA Control Register
-> <img src="figures/chapter_07/fig_1319_2.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -32568,6 +32569,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-286.** DPA Control Register
+> <img src="figures/chapter_07/fig_1319_2.png" width="700">
+
 
 ---
 
@@ -32592,9 +32597,6 @@ table>
 
 Default value is 0 0000b.
 
-> **Figure 7-287.** DPA Power Allocation Array
-> <img src="figures/chapter_07/fig_1320_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -32607,6 +32609,10 @@ Default value is 0 0000b.
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-287.** DPA Power Allocation Array
+> <img src="figures/chapter_07/fig_1320_1.png" width="700">
+
 
 ---
 
@@ -32628,9 +32634,6 @@ Default value is 0 0000b.
 
 Each Substate Power Allocation register indicates the power allocation value for its associated substate. The number of Substate Power Allocation registers implemented must be equal to the number of substates supported by Function, which is Substate_Max plus one.
 
-> **Figure 7-288.** Substate Power Allocation Register (0 to Substate_Max)
-> <img src="figures/chapter_07/fig_1320_2.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -32645,6 +32648,10 @@ Each Substate Power Allocation register indicates the power allocation value for
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-288.** Substate Power Allocation Register (0 to Substate_Max)
+> <img src="figures/chapter_07/fig_1320_2.png" width="700">
+
 
 ---
 
@@ -32759,9 +32766,6 @@ table>
 
 7.9.13.1 TPH Requester Extended Capability Header (Offset 00h)
 
-> **Figure 7-291.** TPH Requester Capability Register
-> <img src="figures/chapter_07/fig_1321_3.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -32774,6 +32778,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-291.** TPH Requester Capability Register
+> <img src="figures/chapter_07/fig_1321_3.png" width="700">
+
 
 ---
 
@@ -32833,12 +32841,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-292.** TPH Requester Control Register
-> <img src="figures/chapter_07/fig_1322_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-292.** TPH 请求者控制寄存器
@@ -32848,6 +32851,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-292.** TPH Requester Control Register
+> <img src="figures/chapter_07/fig_1322_1.png" width="700">
+
 
 ---
 
@@ -32901,9 +32908,6 @@ table>
 <tr>
 <td>
 
-> **Figure 7-293.** TPH ST Table
-> <img src="figures/chapter_07/fig_1323_1.png" width="700">
-
 The TPH ST Table must be implemented in the TPH Requester Extended Capability structure if the value of the ST Table Location field is 01b. For all other values, the ST Entry registers must not be implemented. Each implemented ST Entry is 16 bits. The number of ST Entry registers implemented must be equal to the number of ST Table entries supported by the Function, which is the value of the ST Table Size field plus one.
 
 </td>
@@ -32918,6 +32922,10 @@ The TPH ST Table must be implemented in the TPH Requester Extended Capability st
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-293.** TPH ST Table
+> <img src="figures/chapter_07/fig_1323_1.png" width="700">
+
 </div>
 
 
@@ -32962,12 +32970,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-294.** TPH ST Table Entry
-> <img src="figures/chapter_07/fig_1324_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-294.** TPH ST 表条目
@@ -32977,6 +32980,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-294.** TPH ST Table Entry
+> <img src="figures/chapter_07/fig_1324_1.png" width="700">
+
 
 **Table 7-260. TPH ST Table Entry | 表 7-260. TPH ST 表条目**
 
@@ -33071,12 +33078,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-296.** DPC Extended Capability – Flit Mode
-> <img src="figures/chapter_07/fig_1326_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-296.** DPC 扩展能力 – Flit 模式
@@ -33086,6 +33088,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-296.** DPC Extended Capability – Flit Mode
+> <img src="figures/chapter_07/fig_1326_1.png" width="700">
+
 
 ---
 
@@ -33100,12 +33106,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-297.** DPC Extended Capability Header
-> <img src="figures/chapter_07/fig_1327_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-297.** DPC 扩展能力头
@@ -33115,6 +33116,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-297.** DPC Extended Capability Header
+> <img src="figures/chapter_07/fig_1327_1.png" width="700">
+
 
 **Table 7-261. DPC Extended Capability Header | 表 7-261. DPC 扩展能力头**
 
@@ -33133,12 +33138,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-298.** DPC Capability Register
-> <img src="figures/chapter_07/fig_1327_2.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-298.** DPC 能力寄存器
@@ -33148,6 +33148,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-298.** DPC Capability Register
+> <img src="figures/chapter_07/fig_1327_2.png" width="700">
+
 
 ---
 
@@ -33234,12 +33238,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-299.** DPC Control Register
-> <img src="figures/chapter_07/fig_1329_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-299.** DPC 控制寄存器
@@ -33249,6 +33248,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-299.** DPC Control Register
+> <img src="figures/chapter_07/fig_1329_1.png" width="700">
+
 
 **Table 7-263. DPC Control Register | 表 7-263. DPC 控制寄存器**
 
@@ -33313,12 +33316,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-> **Figure 7-300.** DPC Status Register
-> <img src="figures/chapter_07/fig_1331_1.png" width="700">
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 > **图 7-300.** DPC 状态寄存器
@@ -33328,6 +33326,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-300.** DPC Status Register
+> <img src="figures/chapter_07/fig_1331_1.png" width="700">
+
 
 ---
 
@@ -33396,9 +33398,6 @@ table>
 <tr>
 <td>
 
-> **Figure 7-301.** DPC Error Source ID Register
-> <img src="figures/chapter_07/fig_1332_1.png" width="700">
-
 7.9.14.5 DPC Error Source ID Register (Offset 0Ah)
 
 </td>
@@ -33413,6 +33412,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-301.** DPC Error Source ID Register
+> <img src="figures/chapter_07/fig_1332_1.png" width="700">
+
 
 ---
 
@@ -33437,9 +33440,6 @@ table>
 
 This register is present only in Root Ports that support RP Extensions for DPC. See § Section 6.2.11.3.
 
-> **Figure 7-302.** RP PIO Status Register
-> <img src="figures/chapter_07/fig_1333_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -33452,6 +33452,10 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-302.** RP PIO Status Register
+> <img src="figures/chapter_07/fig_1333_1.png" width="700">
+
 
 ---
 
@@ -33515,9 +33519,6 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 
 This register is present only in Root Ports that support RP Extensions for DPC. See § Section 6.2.11.3.
 
-> **Figure 7-303.** RP PIO Mask Register
-> <img src="figures/chapter_07/fig_1334_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -33530,6 +33531,10 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-303.** RP PIO Mask Register
+> <img src="figures/chapter_07/fig_1334_1.png" width="700">
+
 
 ---
 
@@ -35793,9 +35798,6 @@ table>
 <tr>
 <td>
 
-> **Figure 7-329.** VPD Address Register
-> <img src="figures/chapter_07/fig_1355_1.png" width="700">
-
 0
 14
 VPD Address
@@ -35818,6 +35820,10 @@ F
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-329.** VPD Address Register
+> <img src="figures/chapter_07/fig_1355_1.png" width="700">
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -35845,9 +35851,6 @@ F
 <tr>
 <td>
 
-> **Figure 7-330.** VPD Data Register
-> <img src="figures/chapter_07/fig_1355_2.png" width="700">
-
 0
 31
 VPD Data
@@ -35866,6 +35869,10 @@ VPD Data
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-330.** VPD Data Register
+> <img src="figures/chapter_07/fig_1355_2.png" width="700">
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -35989,9 +35996,6 @@ The Native PCIe Enclosure Management Extended (NPEM) Capability is an optional e
 <tr>
 <td>
 
-> **Figure 7-331.** NPEM Extended Capability
-> <img src="figures/chapter_07/fig_1356_1.png" width="700">
-
 0
 1
 2
@@ -36087,6 +36091,10 @@ NPEM Status 寄存器
 </tbody>
 </table>
 
+> **Figure 7-331.** NPEM Extended Capability
+> <img src="figures/chapter_07/fig_1356_1.png" width="700">
+
+
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
 ---
@@ -36101,9 +36109,6 @@ NPEM Status 寄存器
 <tbody>
 <tr>
 <td>
-
-> **Figure 7-332.** NPEM Extended Capability Header
-> <img src="figures/chapter_07/fig_1356_2.png" width="700">
 
 0
 15
@@ -36137,6 +36142,10 @@ PCI Express 扩展能力 ID (Extended Capability ID)
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-332.** NPEM Extended Capability Header
+> <img src="figures/chapter_07/fig_1356_2.png" width="700">
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -36262,9 +36271,6 @@ NPEM Capability 寄存器包含一个总的 NPEM Capable 位,以及实现所支�
 <tr>
 <td>
 
-> **Figure 7-333.** NPEM Capability Register
-> <img src="figures/chapter_07/fig_1357_1.png" width="700">
-
 0
 NPEM Capable
 1
@@ -36337,6 +36343,10 @@ Enclosure-specific Capabilities(机框专用能力)
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-333.** NPEM Capability Register
+> <img src="figures/chapter_07/fig_1357_1.png" width="700">
+
 </div>
 
 
@@ -36430,9 +36440,6 @@ NPEM Control 寄存器包含一个总的 NPEM Enable 位,以及软件所控制�
 <tr>
 <td>
 
-> **Figure 7-334.** NPEM Control Register
-> <img src="figures/chapter_07/fig_1358_1.png" width="700">
-
 0
 NPEM Enable
 1
@@ -36505,6 +36512,10 @@ Enclosure-specific Controls(机框专用控制)
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-334.** NPEM Control Register
+> <img src="figures/chapter_07/fig_1358_1.png" width="700">
+
 </div>
 
 
@@ -36603,9 +36614,6 @@ table>
 <tr>
 <td>
 
-> **Figure 7-335.** NPEM Status Register
-> <img src="figures/chapter_07/fig_1360_1.png" width="700">
-
 0
 NPEM Command Completed
 1
@@ -36634,6 +36642,10 @@ Enclosure-specific Status(机框专用状态)
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-335.** NPEM Status Register
+> <img src="figures/chapter_07/fig_1360_1.png" width="700">
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -36804,9 +36816,6 @@ Alternate Protocol 扩展能力结构在实现了 Alternate Protocol Negotiation
 <tr>
 <td>
 
-> **Figure 7-336.** Alternate Protocol Extended Capability
-> <img src="figures/chapter_07/fig_1361_1.png" width="700">
-
 0
 1
 2
@@ -36905,6 +36914,10 @@ Alternate Protocol Data 2 寄存器
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-336.** Alternate Protocol Extended Capability
+> <img src="figures/chapter_07/fig_1361_1.png" width="700">
+
 </div>
 
 
@@ -36998,9 +37011,6 @@ PCI Express 扩展能力 ID (Extended Capability ID)
 <tr>
 <td>
 
-> **Figure 7-338.** Alternate Protocol Capabilities Register
-> <img src="figures/chapter_07/fig_1362_1.png" width="700">
-
 0
 7
 Alternate Protocol Count
@@ -37030,6 +37040,10 @@ RsvdP
 </tbody>
 </table>
 
+> **Figure 7-338.** Alternate Protocol Capabilities Register
+> <img src="figures/chapter_07/fig_1362_1.png" width="700">
+
+
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
 ---
@@ -37055,9 +37069,6 @@ RsvdP
 <tbody>
 <tr>
 <td>
-
-> **Figure 7-339.** Alternate Protocol Control Register
-> <img src="figures/chapter_07/fig_1362_2.png" width="700">
 
 0
 7
@@ -37087,6 +37098,10 @@ RsvdP
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-339.** Alternate Protocol Control Register
+> <img src="figures/chapter_07/fig_1362_2.png" width="700">
+
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -39906,9 +39921,6 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 <tr>
 <td>
 
-> **Figure 7-379.** IDE RID Association Register 1 (Offset +00h)
-> <img src="figures/chapter_07/fig_1394_1.png" width="700">
-
 > **Figure 7-379 (Register Layout).** IDE RID Association Register 1 (Offset +00h)
 >
 > | Bits 31:24 | Bits 23:8 | Bits 7:0 |
@@ -39943,6 +39955,10 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-379.** IDE RID Association Register 1 (Offset +00h)
+> <img src="figures/chapter_07/fig_1394_1.png" width="700">
+
 </div>
 
 
@@ -40055,9 +40071,6 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 <tr>
 <td>
 
-> **Figure 7-381.** IDE Address Association Register 1 (Offset +00h)
-> <img src="figures/chapter_07/fig_1395_1.png" width="700">
-
 > **Figure 7-381 (Register Layout).** IDE Address Association Register 1 (Offset +00h)
 >
 > | Bits 31:20 | Bits 19:8 | Bits 7:1 | Bit 0 |
@@ -40096,6 +40109,10 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-381.** IDE Address Association Register 1 (Offset +00h)
+> <img src="figures/chapter_07/fig_1395_1.png" width="700">
+
 </div>
 
 
@@ -40172,9 +40189,6 @@ table>
 <tr>
 <td>
 
-> **Figure 7-383.** IDE Address Association Register 3 (Offset +04h)
-> <img src="figures/chapter_07/fig_1396_1.png" width="700">
-
 > **Figure 7-383 (Register Layout).** IDE Address Association Register 3 (Offset +04h)
 >
 > | Bits 31:0 |
@@ -40209,6 +40223,10 @@ table>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-383.** IDE Address Association Register 3 (Offset +04h)
+> <img src="figures/chapter_07/fig_1396_1.png" width="700">
+
 </div>
 
 
@@ -40309,9 +40327,6 @@ A single PCI Express Function or RCRB is permitted to contain multiple Null Exte
 
 § Figure 7-385 details allocation of register fields in the Null Extended Capability; § Table 7-337 provides the respective bit definitions. The Extended Capability ID for the Null Extended Capability is 0000h.
 
-> **Figure 7-385.** Null Extended Capability
-> <img src="figures/chapter_07/fig_1397_1.png" width="700">
-
 > **Figure 7-385 (Register Layout).** Null Extended Capability
 >
 > | Bits 31:20 | Bits 19:16 | Bits 15:0 |
@@ -40368,6 +40383,10 @@ UIO 要求使用 SVC 能力,且 VC 或 MFVC 能力不支持 UIO。UIO 仅在 Fli
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-385.** Null Extended Capability
+> <img src="figures/chapter_07/fig_1397_1.png" width="700">
+
 </div>
 
 

@@ -515,9 +515,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -586,9 +584,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -2889,9 +2885,6 @@ table>
 
 § Figure 6-2 shows the sequence of operations related to signaling and logging of errors detected by a device.
 
-> **Figure 6-2.** Flowchart Showing Sequence of Device Error Signaling and Logging Operations
-> <img src="figures/chapter_06/fig_0732_1.png" width="700">
-
 Flowchart content (read top-to-bottom, left-to-right):
 
 - Start: Error from Table 6-2, 6-3, 6-4, or 6-5 Detected
@@ -3011,6 +3004,10 @@ Abbreviations:
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-2.** Flowchart Showing Sequence of Device Error Signaling and Logging Operations
+> <img src="figures/chapter_06/fig_0732_1.png" width="700">
+
 </div>
 
 
@@ -5263,9 +5260,7 @@ table>
 </thead>
 <tbody>
 <tr>
-<td>
-
-</td>
+<td></td>
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -17205,9 +17200,6 @@ table>
 <tr>
 <td>
 
-> **Figure 6-45.** DOE Discovery Response Data Object Contents (4th DW)
-> <img src="figures/chapter_06/fig_0892_1.png" width="700">
-
 **Table 6-32. DOE Discovery Response Data Object Contents (4th DW) | 表 6-32. DOE 发现响应数据对象内容（第 4 个 DW）**
 
 | Bit Location | Description |
@@ -17257,6 +17249,10 @@ PCI-SIG 定义的数据对象类型在 § Table 6-33 中定义。
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-45.** DOE Discovery Response Data Object Contents (4th DW)
+> <img src="figures/chapter_06/fig_0892_1.png" width="700">
+
 </div>
 
 
@@ -17631,9 +17627,6 @@ CMA-SPDM 安全特性的高级概述及其相关 PCIe 特定要求将在以下�
 <tr>
 <td>
 
-> **Figure 6-47.** Example System Showing Multiple Access Mechanisms
-> <img src="figures/chapter_06/fig_0900_1.png" width="700">
-
 **Understanding and Implementing CMA-SPDM**
 
 CMA-SPDM is part of a layered architecture to support device and platform security (see § Figure 6-46). Building on the DMTF Security Protocol & Data Model specification [SPDM], CMA-SPDM provides a "mapping" of that foundation, with the intent that future [SPDM] enhancements can, in most cases, be implemented without requiring modifications to CMA-SPDM. In addition to device authentication & firmware measurement, capabilities such as mutual authentication and cryptographic key exchange are also possible. Following [SPDM], CMA-SPDM uses the term "requester" to refer to agents initiating CMA-SPDM protocol requests, and "responder" to refer to an agent that ultimately services those requests and generates responses.
@@ -17641,9 +17634,6 @@ CMA-SPDM is part of a layered architecture to support device and platform securi
 Depending on the use models supported, it may be desirable to implement support for more than one way of transporting CMA-SPDM requests and responses.
 
 § Figure 6-48 shows an example of a device that supports multiple platform use models and multple access mechanisms. In this example, there is a System Management Controller that has an out-of-band connection to the other elements in the platform, enabling it to use CMA-SPDM even when the PCIe Links are not active and/or Fundamental Reset is active. When the PCIe Links are operating, CMA-SPDM can be used via [SPDM-MCTP]. The Root Complex can use CMA-SPDM over DOE. It is a platform implementation choice of which methods are used.
-
-> **Figure 6-48.** Example Add-In-Card Supporting CMA-SPDM
-> <img src="figures/chapter_06/fig_0901_1.png" width="700">
 
 Correspondingly, a device controller can support CMA-SPDM in multiple ways, depending on the associated form-factor and platform requirements and implementation choices. For maximum flexibility it may be desirable to support all of the following:
 
@@ -17710,6 +17700,13 @@ CMA/SPDM 的应用众多且多样化。对于复杂环境，安全身份供应�
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-47.** Example System Showing Multiple Access Mechanisms
+> <img src="figures/chapter_06/fig_0900_1.png" width="700">
+
+> **Figure 6-48.** Example Add-In-Card Supporting CMA-SPDM
+> <img src="figures/chapter_06/fig_0901_1.png" width="700">
+
 </div>
 
 
@@ -17913,9 +17910,6 @@ Removed
 
 For the CMA-SPDM data object type or SPDM with connection ID data object type, the SPDM message payloads must start from "Data Object DW 0". The SPDM message payloads must follow [SPDM] specification Generic SPDM message field definitions, starting with SPDM version, Request Response Code, Param 1 and Param 2. The Byte mapping of SPDM Messages is shown in § Figure 6-49. If required, SPDM Message payloads must be padded with 0's to maintain DW alignment, when using DOE.
 
-> **Figure 6-49.** Byte Mapping of SPDM Messages Including Example Payload
-> <img src="figures/chapter_06/fig_0904_1.png" width="700">
-
 Without the connection ID, one DOE instance can only have one SPDM connection. With the connection ID, one DOE instance can have multiple SPDM connections. The maximum valid connection ID can be discovered by using DOE Discovery Data Object Protocol.
 
 Some components provide a debug mode where a debugger is granted access to hardware security properties, allowing the debugger to influence the measurement process itself. It is strongly recommended that components report when a debug mode is active. The reporting mechanism is outside the scope of this specification. It can be SPDM debug and device mode in measurement record or DICE operation flags in DiceTcbInfo.
@@ -17960,6 +17954,10 @@ Some components provide a debug mode where a debugger is granted access to hardw
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-49.** Byte Mapping of SPDM Messages Including Example Payload
+> <img src="figures/chapter_06/fig_0904_1.png" width="700">
+
 </div>
 
 
@@ -18666,9 +18664,6 @@ TEE 的实现可能非常复杂,强烈建议具有适当安全专业知识的开
 <tr>
 <td>
 
-> **Figure 6-53.** IDE Stream State Machine
-> <img src="figures/chapter_06/fig_0916_1.png" width="700">
-
 - The Insecure state indicates that the necessary steps to operate the IDE Stream have not been completed, or that some event has ended the operation of a previously operating IDE Stream.
   - Typically the Insecure will include various conceptual substates that are not directly observable by the hardware, and only the system firmware/software configuring the IDE Stream will have the ability to comprehend when all necessary steps have been completed.
   - The Ready conceptual sub-state of the Insecure state is entered when all necessary configuration has been performed; this condition must be tracked by system firmware/software.
@@ -18698,6 +18693,10 @@ A trusted execution environment (TEE) using IDE must prevent the transmission of
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-53.** IDE Stream State Machine
+> <img src="figures/chapter_06/fig_0916_1.png" width="700">
+
 </div>
 
 
@@ -19266,25 +19265,7 @@ An IDE error condition will occur if system software fails to ensure the correct
 <tr>
 <td>
 
-> **Figure 6-57.** Query Response (QUERY_RESP) Data Object
-> <img src="figures/chapter_06/fig_0925_1.png" width="700">
-
 <<<PAGE_BREAK>>> page_926
-
-> **Figure 6-58.** Key Programming (KEY_PROG) Data Object with Example 256b Key
-> <img src="figures/chapter_06/fig_0925_2.png" width="700">
-
-> **Figure 6-59.** Key Programming Acknowledgement (KP_ACK) Data Object
-> <img src="figures/chapter_06/fig_0926_1.png" width="700">
-
-> **Figure 6-60.** Key Set Go (K_SET_GO) Data Object
-> <img src="figures/chapter_06/fig_0926_2.png" width="700">
-
-> **Figure 6-61.** Key Set Stop (K_SET_STOP) Data Object
-> <img src="figures/chapter_06/fig_0926_3.png" width="700">
-
-> **Figure 6-62.** Key Set Go/Stop Acknowledgement (K_GOSTOP_ACK) Data Object
-> <img src="figures/chapter_06/fig_0926_4.png" width="700">
 
 <<<PAGE_BREAK>>> page_927
 
@@ -19313,6 +19294,25 @@ An IDE error condition will occur if system software fails to ensure the correct
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-57.** Query Response (QUERY_RESP) Data Object
+> <img src="figures/chapter_06/fig_0925_1.png" width="700">
+
+> **Figure 6-58.** Key Programming (KEY_PROG) Data Object with Example 256b Key
+> <img src="figures/chapter_06/fig_0925_2.png" width="700">
+
+> **Figure 6-59.** Key Programming Acknowledgement (KP_ACK) Data Object
+> <img src="figures/chapter_06/fig_0926_1.png" width="700">
+
+> **Figure 6-60.** Key Set Go (K_SET_GO) Data Object
+> <img src="figures/chapter_06/fig_0926_2.png" width="700">
+
+> **Figure 6-61.** Key Set Stop (K_SET_STOP) Data Object
+> <img src="figures/chapter_06/fig_0926_3.png" width="700">
+
+> **Figure 6-62.** Key Set Go/Stop Acknowledgement (K_GOSTOP_ACK) Data Object
+> <img src="figures/chapter_06/fig_0926_4.png" width="700">
+
 </div>
 
 
@@ -19413,9 +19413,6 @@ TLPs secured by IDE are called IDE TLPs. In Non-Flit Mode, all IDE TLPs must use
 >
 > ** When using DOE, the Upstream Port responds to the Configuration Write that completes the transfer of the K_SET_GO(Tx) data object for Completions with a non-IDE Completion, then triggers the use of IDE for Completions.
 >
-> **Figure 6-63.** IDE_KM Example
-> <img src="figures/chapter_06/fig_0928_1.png" width="700">
-
 <<<PAGE_BREAK>>> page_929
 
 </td>
@@ -19453,6 +19450,10 @@ TLPs secured by IDE are called IDE TLPs. In Non-Flit Mode, all IDE TLPs must use
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-63.** IDE_KM Example
+> <img src="figures/chapter_06/fig_0928_1.png" width="700">
+
 </div>
 
 
@@ -19565,15 +19566,9 @@ IDE uses Galois/Counter Mode (GCM) as defined in [AES-GCM], referred to as AES-G
 
 The Message Authentication Code (MAC)<sup>143</sup> size, also known as t, as defined in [AES-GCM], must be 96b (see § Figure 6-65).
 
-> **Figure 6-65.** MAC Layout
-> <img src="figures/chapter_06/fig_0930_1.png" width="700">
-
 Flow Control credit accounting for IDE TLPs must handle the MAC as covered by the Header Credit.
 
 For IDE TLPs, AES-GCM can be applied to each IDE TLP, or aggregation can be used to apply AES-GCM to multiple IDE TLPs, reducing the per-TLP overhead for the IDE TLP MAC. For a Link IDE Stream, local prefixes must be covered by the MAC (see § Figure 6-66, § Figure 6-67), § Figure 6-70, and § Figure 6-71). For Selective IDE Streams, local prefixes must not be covered by the MAC (see § Figure 6-68, § Figure 6-69, § Figure 6-72, and § Figure 6-73).
-
-> **Figure 6-66.** Example of IDE TLP for a Link IDE Stream without Aggregation (Non-Flit Mode)
-> <img src="figures/chapter_06/fig_0930_2.png" width="700">
 
 <sub>143. Referred to as "authentication tag" or T in [AES-GCM] but renamed here to avoid confusion with other uses of "tag"</sub>
 
@@ -19602,6 +19597,13 @@ IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode,
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-65.** MAC Layout
+> <img src="figures/chapter_06/fig_0930_1.png" width="700">
+
+> **Figure 6-66.** Example of IDE TLP for a Link IDE Stream without Aggregation (Non-Flit Mode)
+> <img src="figures/chapter_06/fig_0930_2.png" width="700">
+
 </div>
 
 
@@ -19665,26 +19667,11 @@ table>
 <tr>
 <td>
 
-> **Figure 6-70.** Example of IDE TLP for a Link IDE Stream without Aggregation (Flit Mode)
-> <img src="figures/chapter_06/fig_0932_1.png" width="700">
-
-> **Figure 6-71.** IDE TLP – Example Showing Aggregation of Two TLPs for a Link IDE Stream (Flit Mode)
-> <img src="figures/chapter_06/fig_0932_2.png" width="700">
-
-> **Figure 6-72.** Example of IDE TLP for a Selective IDE Stream without Aggregation (Flit Mode)
-> <img src="figures/chapter_06/fig_0933_1.png" width="700">
-
-> **Figure 6-73.** IDE TLP – Example Showing Aggregation of Two TLPs for a Selective IDE Stream (Flit Mode)
-> <img src="figures/chapter_06/fig_0933_2.png" width="700">
-
 <<<PAGE_BREAK>>> page_933
 
 The inputs A and P must be formed by concatenating the included TLP content in Byte order as defined in § Section 2.1.2. Although the A and P content is conceptually concatenated as illustrated in these figures, the content placement in the IDE TLPs is the same as in non-IDE TLPs. Once the A and P content is constructed, [AES-GCM] defines how A and P must be padded – this padding is not illustrated here, and the padding is used in the [AES-GCM] calculations but is not included in the TLPs transmitted/received. When aggregation is used, the A and P content for aggregated TLPs is conceptually concatenated, for each type of content, prior to padding.
 
 Partial header encryption provides the ability to reduce potential exposure to side-channel attacks by encryption some portions of the Header of an IDE Memory Request while maintaining information that is required for TLP routing and low-level TLP processing in the clear. § Figure 6-74 illustrates, at a high level, the application of partial header encryption.
-
-> **Figure 6-74.** High Level Flow For Partial Header Encryption
-> <img src="figures/chapter_06/fig_0934_1.png" width="700">
 
 <<<PAGE_BREAK>>> page_934
 
@@ -19714,6 +19701,22 @@ Partial header encryption provides the ability to reduce potential exposure to s
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-70.** Example of IDE TLP for a Link IDE Stream without Aggregation (Flit Mode)
+> <img src="figures/chapter_06/fig_0932_1.png" width="700">
+
+> **Figure 6-71.** IDE TLP – Example Showing Aggregation of Two TLPs for a Link IDE Stream (Flit Mode)
+> <img src="figures/chapter_06/fig_0932_2.png" width="700">
+
+> **Figure 6-72.** Example of IDE TLP for a Selective IDE Stream without Aggregation (Flit Mode)
+> <img src="figures/chapter_06/fig_0933_1.png" width="700">
+
+> **Figure 6-73.** IDE TLP – Example Showing Aggregation of Two TLPs for a Selective IDE Stream (Flit Mode)
+> <img src="figures/chapter_06/fig_0933_2.png" width="700">
+
+> **Figure 6-74.** High Level Flow For Partial Header Encryption
+> <img src="figures/chapter_06/fig_0934_1.png" width="700">
+
 </div>
 
 
@@ -19884,9 +19887,6 @@ To enable the detection of faults in the encryption/decryption logic, which occu
   - In FM, the TS field is used to indicate presence of MAC / PCRC (see § Section 2.2.1.2.
   - When aggregation is used, the TLPs of an aggregated unit that do not include a MAC also must not include PCRC (see § Figure 6-79).
 
-> **Figure 6-79.** Example Illustrating PCRC Application to Two Aggregated IDE TLPs for a Link IDE Stream (NFM)
-> <img src="figures/chapter_06/fig_0940_1.png" width="700">
-
 <<<PAGE_BREAK>>> page_940
 
 </td>
@@ -19920,6 +19920,10 @@ IDE 前缀 (NFM) 必须包含在 A 中。所有 OHC 内容 (FM) 必须包含在 
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-79.** Example Illustrating PCRC Application to Two Aggregated IDE TLPs for a Link IDE Stream (NFM)
+> <img src="figures/chapter_06/fig_0940_1.png" width="700">
+
 </div>
 
 
@@ -20359,18 +20363,9 @@ If either subtraction underflows, this is an error – see rules related to erro
 
 § Figure 6-80 illustrates the case where a Posted Request is allowed to bypass a Non-Posted Request, as is required for deadlock avoidance. IDE supports having Posted Requests bypass Non-Posted Requests through the use of Sub-Streams within a given Stream. There is a similar requirement for Posted Request to be able to bypass Completions (not illustrated).
 
-> **Figure 6-80.** Example – Posted Requests Allowed to Bypass Non-Posted Requests | 示例——允许 Posted Request 越过 Non-Posted Request
-> <img src="figures/chapter_06/fig_0948_1.png" width="700">
-
 § Figure 6-81 illustrates a case where an attacker attempts to bypass a Posted Request with a Non-Posted Request, which could, for example, cause the consumption of stale data. This case will be detected through the use of the PR Sent Counter mechanism, through which the Transmitter at source Port associated with the Stream indicates to the Receiver at the Destination Port how many Posted Requests were transmitted between successive Non-Posted Requests. This indication is carried in the IDE TLP Prefix (NFM)/OHC-C (FM), which is integrity protected and so cannot be modified without detection at the Receiver. In this example, NP1 will carry the indication that a Posted Request (P1) was transmitted, and this will not match the Receiver's count of Posted Requests received, enabling this illegal reordering to be detected.
 
 <<<PAGE_BREAK>>> page_949
-
-> **Figure 6-81.** Example – Non-Posted Requests Never Allowed to Bypass Posted Requests | 示例——Non-Posted Request 绝不允许越过 Posted Request
-> <img src="figures/chapter_06/fig_0949_1.png" width="700">
-
-> **Figure 6-82.** Example – Secure Non-Posted Request Reordering Not Allowed Over PCIe Fabric | 示例——PCIe Fabric 上不允许 Secure Non-Posted Request 重排序
-> <img src="figures/chapter_06/fig_0949_2.png" width="700">
 
 Without IDE, Non-Posted Requests are allowed to bypass each other, but within an IDE Stream, reordering of TLPs of the same type is disallowed in order to simplify the operation of the integrity/encryption mechanisms. § Figure 6-82 illustrates that this will cause the reordering of Non-Posted Requests to be detected as an integrity check failure, even though there isn't a security exposure per se.
 
@@ -20506,6 +20501,16 @@ The following rules relate to aggregation (see § Figure 6-67 and § Figure 6-69
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-80.** Example – Posted Requests Allowed to Bypass Non-Posted Requests | 示例——允许 Posted Request 越过 Non-Posted Request
+> <img src="figures/chapter_06/fig_0948_1.png" width="700">
+
+> **Figure 6-81.** Example – Non-Posted Requests Never Allowed to Bypass Posted Requests | 示例——Non-Posted Request 绝不允许越过 Posted Request
+> <img src="figures/chapter_06/fig_0949_1.png" width="700">
+
+> **Figure 6-82.** Example – Secure Non-Posted Request Reordering Not Allowed Over PCIe Fabric | 示例——PCIe Fabric 上不允许 Secure Non-Posted Request 重排序
+> <img src="figures/chapter_06/fig_0949_2.png" width="700">
+
 </div>
 
 
