@@ -3,7 +3,7 @@
 **PCI Express® Base Specification — Revision 6.2, Version 1.0 — January 25, 2024**
 
 > 📄 **Source pages**: 1609–1658 (PDF 1-indexed) | 📁 **File**: `chapter_11_raw.md`
-> 🎨 **Format**: 中英对照双语 · 图表原始保留 · 中文背景色灰色 · GitHub Flavored Markdown
+> 🎨 **Format**: 中英对照双语 · 表格单列 (EN + ZH 上下) · 中文背景色灰色 · GitHub Flavored Markdown
 > 📚 **Template**: CXL 3.2 Spec translation (CXL_zh/)
 
 ---
@@ -28,36 +28,29 @@
 <a id="sec-11-0"></a>
 # 11. TEE Device Interface Security Protocol (TDISP) § | 11. TEE 设备接口安全协议 (TDISP) §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 Trusted Execution Environments (TEEs) that include a composition of resources from one or more devices and the host require mechanisms to establish and manage trust relationships. Here we will use the term TEE-I/O to refer to a conceptual framework for performing such operations. This chapter defines a specific architecture for hosts and devices to participate in TEE-I/O (see § Figure 11-1).
 
 TEE-I/O builds upon existing capabilities for the direct assignment of devices to VMs, such as SR-IOV (§ Chapter 9. ) and ATS (§ Chapter 10. ), to establish Trusted Execution Environment VMs (TVMs). All VMs that are not TVMs are referred to as legacy VMs. In TEE-I/O, the VMM itself may not be trusted by TVMs, and mechanisms are provided to enable the TVM to make trust decisions based on the underlying hardware it is using. Although the VMM is not required to be trusted by TVMs, it continues to perform the resource allocation and system management functions as it does in non-TEE-I/O use models, but in such a way that the results can be tested. The VMM can be blocked from bypassing the security of the affected TVM(s). Legacy VMs that implicitly trust the VMM may co-exist with TVMs in a system.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 可信执行环境 (Trusted Execution Environments, TEE) 包含来自一个或多个设备以及主机的资源组合,需要相应机制来建立和管理信任关系。本章使用术语 "TEE-I/O" 来指代执行此类操作的概念性框架。本章为主机和设备参与 TEE-I/O 定义了一种特定的架构 (见 § Figure 11-1)。
 
 TEE-I/O 构建于已有的能力之上,例如用于将设备直接分配给 VM 的 SR-IOV (§ Chapter 9. ) 和 ATS (§ Chapter 10. ),以建立可信执行环境 VM (Trusted Execution Environment VMs, TVM)。所有不是 TVM 的 VM 统称为传统 VM (Legacy VM)。在 TEE-I/O 中,VMM 本身不一定被 TVM 信任,规范提供了相应机制,使 TVM 能够基于其使用的底层硬件做出信任决策。尽管 VMM 不需要被 TVM 信任,它仍像在非 TEE-I/O 使用模型中一样执行资源分配和系统管理功能,但以一种可以测试其结果的方式进行。VMM 可以被阻止绕过受影响 TVM 的安全性。隐式信任 VMM 的传统 VM 可以与 TVM 在同一系统中共存。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -66,16 +59,14 @@ TEE-I/O 构建于已有的能力之上,例如用于将设备直接分配给 VM �
 <a id="sec-11-1"></a>
 ## 11.1 Overview of the TEE-I/O Security Model as it Relates to Devices § | 11.1 TEE-I/O 安全模型与设备相关的概述 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 TDISP defines requirements for TDIs specifically, and also for the entire Device implementing TDIs, where in a specific instance, a TDI may be an entire Device, a non-IOV Function, a PF (and possibly its subordinate VFs), or a VF. Although it is permitted (and generally expected) that TDIs will be implemented such that they can be assigned to Legacy VMs, such use is not the focus of TDISP.
 
@@ -107,8 +98,8 @@ The hardware assisted I/O virtualization schemes for direct I/O from TVMs to dev
 
 This chapter defines the wire protocol and the security objectives that are required to be implemented by the host and the device to be compatible with the TEE-I/O framework and the capabilities that need to be implemented to achieve specified security objectives. The implementation of such capabilities and the physical manifestation of the logical entities are outside the scope of this specification.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 TDISP 专门为 TDI 定义需求,也为实现 TDI 的整个设备定义需求。在具体的实例中,TDI 可以是整个设备、非 IOV 功能、PF (以及可能的下属 VF),或 VF。尽管允许 (通常也是预期的) TDI 被实现为可以分配给传统 VM,但此类用途并非 TDISP 的关注重点。
 
@@ -140,8 +131,7 @@ TEE-I/O 安全模型不要求 VMM 被 TVM 信任。因此,支持硬件辅助 I/O
 
 本章定义了主机和设备实现 TEE-I/O 框架兼容所需的有线协议和安全目标,以及为实现指定安全目标所需实现的能力。这些能力的实现和逻辑实体的物理表现形式不属于本规范范围。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -154,18 +144,14 @@ TEE-I/O 安全模型不要求 VMM 被 TVM 信任。因此,支持硬件辅助 I/O
 <a id="sec-11-1-1"></a>
 ## 11.1.1 TDISP Host/Device Reference Architecture | 11.1.1 TDISP 主机/设备参考架构
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 > **Figure 11-2.** TDISP Host/Device Reference Architecture
 > <img src="figures/chapter_11/fig_1613_1.png" width="700">
@@ -176,8 +162,8 @@ The device must support mechanisms to lockdown the configurations of the TDI, wh
 
 There are a variety of additional elements of the reference architecture. Software running on a Host CPU must be associated with a TEE via implementation-specific means. Memory can be a system-level resource or associated with a TDI, and is defined as either TEE memory or non-TEE memory. TEE memory must have mechanisms to ensure the confidentiality of TVM data, and may additionally provide integrity properties on the TVM data. Non-TEE memory is not assumed to have any such mechanisms.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 > **图 11-2.** TDISP 主机/设备参考架构
 > <img src="figures/chapter_11/fig_1613_1.png" width="700">
@@ -188,12 +174,9 @@ There are a variety of additional elements of the reference architecture. Softwa
 
 参考架构中还有许多其他元素。在主机 CPU 上运行的软件必须通过实现特定的方式与 TEE 关联。内存可以是系统级资源,也可以与 TDI 关联,被定义为 TEE 内存或非 TEE 内存。TEE 内存必须具有确保 TVM 数据机密性的机制,并且可以额外提供 TVM 数据的完整性属性。非 TEE 内存不被假定具有任何此类机制。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -204,16 +187,14 @@ There are a variety of additional elements of the reference architecture. Softwa
 <a id="sec-11-1-2"></a>
 ## 11.1.2 Memory Address Routing and IDE Stream Requirements | 11.1.2 内存地址路由与 IDE 流 (Stream) 需求
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 System configuration of Memory Address routing mechanisms must be managed so as to ensure correct system operation, as misrouting of TLPs will in many cases result in conditions indistinguishable from an attack, in turn resulting in an error condition, such as a Misrouted IDE TLP error or an IDE Check Failed error. Except when a peer-to-peer connection has been established between two TDIs, all Requests must be routed to the Root Complex, and in some cases this result is achieved by means of Access Control Services (see § Section 6.12 ) mechanisms that modify the routing of TLPs.
 
@@ -235,8 +216,8 @@ The DSM provides the following functions:
 
 The TSM provides the following functions:
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 必须管理内存地址路由机制的系统配置以确保系统正确运行,因为 TLP 的错误路由在许多情况下会产生与攻击难以区分的状况,从而导致错误情况,例如 "IDE TLP 误路由错误 (Misrouted IDE TLP error)" 或 "IDE 检查失败错误 (IDE Check Failed error)"。除非两个 TDI 之间已建立对等连接,否则所有请求都必须路由到根复合体 (Root Complex),在某些情况下通过访问控制服务 (Access Control Services,见 § Section 6.12 ) 修改 TLP 路由机制来实现。
 
@@ -258,8 +239,7 @@ DSM 提供以下功能:
 
 TSM 提供以下功能:
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -272,18 +252,14 @@ TSM 提供以下功能:
 <a id="sec-11-1-3"></a>
 ## 11.1.3 TSM Functions and Secured Messages | 11.1.3 TSM 功能与安全消息
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 1. Provide interfaces to the VMM to assign memory, CPU, and TDI resources to TVMs.
 2. Implements the security mechanisms and access controls (e.g., IOMMU translation tables, etc.) to protect confidentiality and integrity of the TVM data and execution state in the host from entities not in the TCB of the TVM.
@@ -304,8 +280,8 @@ The DSM must track the SPDM session that was used to establish the IDE keys for 
 
 Multiple TDIs (e.g., SR-IOV VFs) in a device may generate or receive transactions over the IDE stream established by the TSM and DSM to secure the communication links between the host and the device. One or more of these TDIs may be assigned to TVMs, and one of more of these TDIs may be assigned to legacy VMs. The TSM manages and tracks the TDISP state associated with the TDIs assigned to TVMs.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 1. 向 VMM 提供接口,以将内存、CPU 和 TDI 资源分配给 TVM。
 2. 实施安全机制和访问控制 (例如 IOMMU 转换表等),以保护主机中 TVM 数据的机密性和完整性以及执行状态免受 TVM TCB 之外实体的侵害。
@@ -326,12 +302,9 @@ DSM 必须跟踪用于为 IDE 流建立 IDE 密钥的 SPDM 会话。为了使 ID
 
 设备中的多个 TDI (例如 SR-IOV VF) 可以在由 TSM 和 DSM 建立的 IDE 流上生成或接收事务,以保护主机与设备之间的通信链路。这些 TDI 中的一个或多个可能被分配给 TVM,也可能被分配给传统 VM。TSM 管理和跟踪与分配给 TVM 的 TDI 相关联的 TDISP 状态。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -342,16 +315,14 @@ DSM 必须跟踪用于为 IDE 流建立 IDE 密钥的 SPDM 会话。为了使 ID
 <a id="sec-11-2"></a>
 ## 11.2 TDISP Rules § | 11.2 TDISP 规则 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 > **Figure 11-3.** Identification of Requests
 > <img src="figures/chapter_11/fig_1616_1.png" width="700">
@@ -360,8 +331,8 @@ As illustrated in § Figure 11-3, a TDI is managed by a specific DSM, and within
 
 The INTERFACE_ID is composed of a FUNCTION_ID field that identifies the function of the device hosting the TDI and a Reserved field provided for future expansion (see § Figure 11-4 and § Table 11-1). Within the FUNCTION_ID, the Function Number and Device Number are assigned by the device/DSM. The Bus Number and Segment Number are assigned during system enumeration and must not be changed for a TDI in CONFIG_LOCKED and RUN (see below). If the Segment Number is known to the device, and Requester Segment Valid is Set, then the Requester Segment value must match the Segment Number for the device. The DSM must ensure that only valid TDIs are addressed.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 > **图 11-3.** 请求标识
 > <img src="figures/chapter_11/fig_1616_1.png" width="700">
@@ -370,8 +341,7 @@ The INTERFACE_ID is composed of a FUNCTION_ID field that identifies the function
 
 INTERFACE_ID 由 FUNCTION_ID 字段和为未来扩展保留的 Reserved 字段组成 (见 § Figure 11-4 和 § Table 11-1)。在 FUNCTION_ID 中,Function Number 和 Device Number 由设备/DSM 分配。Bus Number 和 Segment Number 在系统枚举期间分配,并且对于处于 CONFIG_LOCKED 和 RUN 状态的 TDI 不得更改 (见下文)。如果设备知道 Segment Number,且 Requester Segment Valid 被置位,则 Requester Segment 值必须与设备的 Segment Number 匹配。DSM 必须确保只寻址有效的 TDI。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -384,18 +354,14 @@ INTERFACE_ID 由 FUNCTION_ID 字段和为未来扩展保留的 Reserved 字段�
 <a id="sec-11-2-1"></a>
 ## 11.2.1 TDISP TLP Rules and State Machine | 11.2.1 TDISP TLP 规则与状态机
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 > **Figure 11-4.** TDI Identifier – INTERFACE_ID
 > <img src="figures/chapter_11/fig_1617_1.png" width="700">
@@ -413,8 +379,8 @@ Each TDI in the device is associated with a TDISP state machine (see § Figure 1
 > **Figure 11-5.** TDISP State Machine
 > <img src="figures/chapter_11/fig_1617_2.png" width="700">
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 > **图 11-4.** TDI 标识符 – INTERFACE_ID
 > <img src="figures/chapter_11/fig_1617_1.png" width="700">
@@ -432,12 +398,9 @@ Each TDI in the device is associated with a TDISP state machine (see § Figure 1
 > **图 11-5.** TDISP 状态机
 > <img src="figures/chapter_11/fig_1617_2.png" width="700">
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -445,16 +408,14 @@ Each TDI in the device is associated with a TDISP state machine (see § Figure 1
 
 <<<PAGE_BREAK>>> page_1618
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 The TSM steps the TDI through these security states as part of the TDI security lifecycle management process, such as locking a TDI configuration in preparation for assignment of the TDI to the TVM, transitioning the TDI to the operational state, and detaching the TDI from a TVM. A TDI is considered "locked" in CONFIG_LOCKED, and RUN. A TDI is considered "unlocked" when in ERROR and CONFIG_UNLOCKED.
 
@@ -481,8 +442,8 @@ Security properties for each state and transition rules are as follows:
   - The LOCK_INTERFACE_REQUEST must indicate the Stream ID of the IDE stream to bind to the TDI, if IDE is required to secure the transfers to/from the device.
   - On entry to this state, the DSM must perform all necessary actions to lock the TDI configuration, and then must start tracking the TDI for changes that affect the configuration or the security of the TDI. Changes detected must be treated as an error, and the TDI transitioned to ERROR. An example list of architectural configurations registers that should be locked and tracked is shown in § Section 11.2.6 .
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 TSM 将 TDI 引导经历这些安全状态,作为 TDI 安全生命周期管理过程的一部分,例如锁定 TDI 配置以准备将 TDI 分配给 TVM、将 TDI 转换为运行状态,以及从 TVM 分离 TDI。TDI 在 CONFIG_LOCKED 和 RUN 状态下被视为 "已锁定 (locked)"。TDI 在 ERROR 和 CONFIG_UNLOCKED 状态下被视为 "未锁定 (unlocked)"。
 
@@ -509,8 +470,7 @@ TDISP 要求拒绝某些 TLP,这意味着首先根据适用于所有其他 TLP �
   - 如果需要 IDE 来保护设备的传输,则 LOCK_INTERFACE_REQUEST 必须指示要绑定到 TDI 的 IDE 流的流 ID。
   - 进入此状态时,DSM 必须执行所有必要的操作以锁定 TDI 配置,然后必须开始跟踪 TDI 的影响 TDI 配置或安全的更改。检测到的更改必须视为错误,并将 TDI 转换为 ERROR。应当被锁定和跟踪的架构配置寄存器示例列表见 § Section 11.2.6。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -520,18 +480,14 @@ TDISP 要求拒绝某些 TLP,这意味着首先根据适用于所有其他 TLP �
 
 <<<PAGE_BREAK>>> page_1619
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
   - It is typically required for the DSM to track additional device-specific configurations, such as the configuration of work queues, device specific configurations such as MAC address, storage volume, etc.
   - The TVM may obtain the identity and measurements of the device hosting the TDI from the DSM, and also, if applicable, verify that an IDE stream has been established by the TSM between the host and the device. The TVM may request the TSM to obtain the TDI configurations using the GET_DEVICE_INTERFACE_REPORT request from the DSM. The TVM may then evaluate the device identity and measurements, in addition to the TDI report to determine if the device meets the security requirements of the TVM.
@@ -564,8 +520,8 @@ The TSM is permitted to issue a GET_DEVICE_INTERFACE_REPORT in CONFIG_LOCKED and
 
 The TSM is permitted to issue a GET_DEVICE_INTERFACE_STATE request in all states.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
   - 通常要求 DSM 跟踪额外的设备特定配置,例如工作队列的配置、设备特定配置 (例如 MAC 地址、存储卷等)。
   - TVM 可以从 DSM 获取承载 TDI 的设备的身份和度量,并且在适用的情况下,验证 TSM 是否已在主机和设备之间建立了 IDE 流。TVM 可以请求 TSM 使用从 DSM 的 GET_DEVICE_INTERFACE_REPORT 请求获取 TDI 配置。然后 TVM 可以评估设备身份和度量以及 TDI 报告,以确定设备是否满足 TVM 的安全要求。
@@ -598,12 +554,9 @@ TSM 允许在 CONFIG_LOCKED 和 RUN 中发出 GET_DEVICE_INTERFACE_REPORT。
 
 TSM 允许在所有状态下发出 GET_DEVICE_INTERFACE_STATE 请求。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -614,16 +567,14 @@ TSM 允许在所有状态下发出 GET_DEVICE_INTERFACE_STATE 请求。
 <a id="sec-11-2-2"></a>
 ## 11.2.2 TDISP Message Transport and P2P/IDE Streams | 11.2.2 TDISP 消息传输与 P2P/IDE 流
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 Some TDIs may support peer-to-peer communication with other devices. The Stream ID of the IDE stream(s) used for this communication are configured into the device using the BIND_P2P_STREAM_REQUEST message. This message must only be accepted by the DSM if the TDI is in RUN. The device must be ATS capable, and must have ATS enabled, to support peer-to-peer communication between TVM-assigned TDIs. The TSM and VMM must coordinate the use of ACS mechanisms to redirect device peer-to-peer traffic to the Root Complex, and the TSM must only issue a BIND_P2P_STREAM_REQUEST if the TLPs to be associated with that Selective IDE Stream will, in fact, travel between the two peer devices and not to/from the Root Complex.
 
@@ -649,8 +600,8 @@ The following rules apply to the TDI acting as a Requester:
   - A TDI in RUN must ignore the value of the T bit in Received Completions.
 - Memory Writes other than MSI/MSI-X interrupts must only be issued while in RUN and must Set the T bit.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 某些 TDI 可能支持与其他设备的对等通信。用于此通信的 IDE 流的流 ID 通过 BIND_P2P_STREAM_REQUEST 消息配置到设备中。仅当 TDI 处于 RUN 状态时,DSM 才必须接受此消息。设备必须具备 ATS 能力并启用 ATS 才能支持 TVM 已分配 TDI 之间的对等通信。TSM 和 VMM 必须协调使用 ACS 机制将设备对等流量重定向到根复合体,并且仅当与该 Selective IDE 流关联的 TLP 实际上将在两个对等设备之间传输而不是到/从根复合体时,TSM 才必须发出 BIND_P2P_STREAM_REQUEST。
 
@@ -676,8 +627,7 @@ TDI 不得依赖 I/O 资源和 I/O 请求为 TVM 提供功能。I/O 资源不得
   - 处于 RUN 状态的 TDI 必须忽略接收完成中的 T 位值。
 - 除 MSI/MSI-X 中断外的内存写只能在 RUN 状态下发出,并且必须将 T 位置位。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -687,18 +637,14 @@ TDI 不得依赖 I/O 资源和 I/O 请求为 TVM 提供功能。I/O 资源不得
 
 <<<PAGE_BREAK>>> page_1621
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 The MSI capability in the Configuration Space of the function hosting the TDI is not required to have a trusted configuration. With MSI-X, it is possible for the TVM to program the MSI-X table and MSI-X PBA in a trusted manner. It is permitted for a TDI in CONFIG_LOCKED to issue an MSI/MSI-X interrupt only if the T bit is Clear. TDIs in RUN must observe the following rules:
 - An MSI interrupt must be generated with T bit Clear.
@@ -732,8 +678,8 @@ DOE error conditions only impact TDISP state if the DOE error itself causes an u
 TDISP messages are transported as follows:
 - The Requester (TSM) must use the [SPDM] VENDOR_DEFINED_REQUEST format
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 承载 TDI 的功能的配置空间中的 MSI 能力不需要具有可信配置。使用 MSI-X,TVM 可以以可信方式编程 MSI-X 表和 MSI-X PBA。允许处于 CONFIG_LOCKED 状态的 TDI 仅在 T 位清零时发出 MSI/MSI-X 中断。处于 RUN 状态的 TDI 必须遵守以下规则:
 - MSI 中断必须以 T 位清零生成。
@@ -767,12 +713,9 @@ DOE 错误条件仅在 DOE 错误本身导致不可恢复的情况 (例如使安
 TDISP 消息的传输方式如下:
 - 请求方 (TSM) 必须使用 [SPDM] VENDOR_DEFINED_REQUEST 格式
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -780,16 +723,14 @@ TDISP 消息的传输方式如下:
 
 <<<PAGE_BREAK>>> page_1622
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 - The Responder (DSM) must use the [SPDM] VENDOR_DEFINED_RESPONSE format
 - The StandardID field of VENDOR_DEFINED_REQUEST and VENDOR_DEFINED_RESPONSE message must contain the value assigned in [SPDM] to identify PCI-SIG.
@@ -812,8 +753,8 @@ A Requester must not exceed the number of allowed outstanding requests to a spec
 
 A Requester is permitted to send simultaneous request messages to different Responders.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 - 响应方 (DSM) 必须使用 [SPDM] VENDOR_DEFINED_RESPONSE 格式
 - VENDOR_DEFINED_REQUEST 和 VENDOR_DEFINED_RESPONSE 消息的 StandardID 字段必须包含 [SPDM] 中分配的用于标识 PCI-SIG 的值。
@@ -836,8 +777,7 @@ A Requester is permitted to send simultaneous request messages to different Resp
 
 请求方允许同时向不同的响应方发送请求消息。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -850,18 +790,14 @@ A Requester is permitted to send simultaneous request messages to different Resp
 <a id="sec-11-2-3"></a>
 ## 11.2.3 Requirements for Requesters (TSM) and Responders (DSM) | 11.2.3 请求方 (TSM) 和响应方 (DSM) 的要求
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 A Responder is not required to process more than NUM_REQ_THIS requests at a time. A Responder that is not ready to accept a new request message must either respond with a TDISP_ERROR response message with ERROR_CODE=BUSY or silently discard the request message.
 
@@ -877,8 +813,8 @@ The DSM must track attempts to modify registers or other changeable device confi
 
 Read-only registers, hardware initialized registers, and registers used as selectors for reading out data (e.g., the Power Budgeting Data Select register) are excluded from this table. The DSM must ensure that attempts to modify those registers cannot affect the security of the TDI.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 响应方不需要一次处理超过 NUM_REQ_THIS 个请求。未准备好接受新请求消息的响应方必须以 ERROR_CODE=BUSY 的 TDISP_ERROR 响应消息响应,或静默丢弃请求消息。
 
@@ -894,12 +830,9 @@ DSM 必须跟踪修改影响任何承载 CONFIG_LOCKED 或 RUN 状态下 TDI 的
 
 只读寄存器、硬件初始化寄存器以及用作数据读出选择器的寄存器 (例如 Power Budgeting Data Select 寄存器) 不在本表范围内。DSM 必须确保修改这些寄存器的尝试不会影响 TDI 的安全性。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -958,16 +891,14 @@ DSM 必须跟踪修改影响任何承载 CONFIG_LOCKED 或 RUN 状态下 TDI 的
 <a id="sec-11-2-7"></a>
 ## 11.2.7 TVM Acceptance of a TDI § | 11.2.7 TVM 接受 TDI §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 A TVM must ask the following questions before it accepts a TDI into its TCB:
 
@@ -980,8 +911,8 @@ The TVM queries the TSM using a TSM-provided interface to determine the answers 
 
 If the answer to all of these questions is a yes, then the TVM may accept the TDI into its TCB.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 TVM 在将 TDI 接受到其 TCB 之前必须询问以下问题:
 
@@ -994,8 +925,7 @@ TVM 通过使用 TSM 提供的接口查询 TSM,以确定问题 1、2 和 3 的�
 
 如果所有这些问题的答案都是肯定的,那么 TVM 可以将 TDI 接受到其 TCB。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -1006,18 +936,14 @@ TVM 通过使用 TSM 提供的接口查询 TSM,以确定问题 1、2 和 3 的�
 <a id="sec-11-3"></a>
 ## 11.3 TDISP Message Formats and processing § | 11.3 TDISP 消息格式和处理 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 <a id="sec-11-3-1"></a>
 ### 11.3.1 TDISP Request Codes | 11.3.1 TDISP 请求代码
@@ -1059,8 +985,8 @@ The Request Response Code field in the response message must specify the appropr
 | VDM_RESPONSE | 0B | Optional | Vendor defined message response |
 | TDISP_ERROR | 7F | Required | Error in handling a request |
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 § Table 11-3 定义了 TDISP 请求代码。所有 TDISP 兼容的实现必须使用以下 TDISP 请求代码。不支持的请求代码必须返回 ERROR_CODE=UNSUPPORTED_REQUEST 的 TDISP_ERROR 响应消息。
 
@@ -1099,12 +1025,9 @@ The Request Response Code field in the response message must specify the appropr
 | VDM_RESPONSE | 0B | Optional | 供应商定义的消息响应 |
 | TDISP_ERROR | 7F | Required | 处理请求时的错误 |
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1115,16 +1038,14 @@ The Request Response Code field in the response message must specify the appropr
 <a id="sec-11-3-3"></a>
 ### 11.3.3 TDISP Message Format and Protocol Versioning | 11.3.3 TDISP 消息格式和协议版本控制
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 § Table 11-5 defines the fields that are included in all TDISP messages. Unless otherwise specified, the following rules shall apply to all request and response messages in TDISP:
 
@@ -1164,8 +1085,8 @@ The device must fail the request and return the indicated response code if any o
 | VENDOR_SPECIFIC_ERROR | Error due to a vendor specific reason |
 | INVALID_INTERFACE | The INTERFACE_ID indicated is not within the domain of the DSM |
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 § Table 11-5 定义了所有 TDISP 消息中包含的字段。除非另有规定,以下规则应适用于 TDISP 中的所有请求和响应消息:
 
@@ -1205,8 +1126,7 @@ The device must fail the request and return the indicated response code if any o
 | VENDOR_SPECIFIC_ERROR | 由于供应商特定原因导致的错误 |
 | INVALID_INTERFACE | 所指示的 INTERFACE_ID 不在 DSM 的域内 |
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -1219,18 +1139,14 @@ The device must fail the request and return the indicated response code if any o
 <a id="sec-11-3-4"></a>
 ### 11.3.4 GET_TDISP_VERSION / TDISP_VERSION | 11.3.4 GET_TDISP_VERSION / TDISP_VERSION
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 This request message must retrieve the device's TDISP version. In all future TDISP versions, the TDISP_GET_VERSION and TDISP_VERSION response messages will be backward compatible with all previous versions. The Requester must begin the discovery process by sending a TDISP_GET_VERSION request message with major version 1h. All Responders must always support TDISP_GET_VERSION request message with major version 1h and provide a TDISP_VERSION response containing all supported versions, as the TDISP_GET_VERSION request message table describes. The Requester must consult the TDISP_VERSION response to select a common (typically highest) version supported. The Requester must use the selected version in all future communication of other requests. A Requester must not issue other requests until it has received a successful TDISP_VERSION response and has identified a common version supported by both sides. A Responder must not respond to TDISP_GET_VERSION request message with ERROR_CODE=RESPONSE_NOT_READY.
 
@@ -1266,8 +1182,8 @@ Used to retrieve the Responder's TDISP capabilities. TDISP protocol inherits the
 | 42 | NUM_REQ_THIS | 1 | Number of outstanding Requests permitted by the DSM for this TDI. |
 | 43 | NUM_REQ_ALL | 1 | Number of outstanding Requests permitted by the DSM for all TDIs managed by this DSM. |
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 此请求消息必须检索设备的 TDISP 版本。在所有未来的 TDISP 版本中,TDISP_GET_VERSION 和 TDISP_VERSION 响应消息将与所有先前版本向后兼容。请求方必须通过发送主版本号为 1h 的 TDISP_GET_VERSION 请求消息开始发现过程。所有响应方必须始终支持主版本号为 1h 的 TDISP_GET_VERSION 请求消息,并提供包含所有支持版本的 TDISP_VERSION 响应,具体如 TDISP_GET_VERSION 请求消息表所述。请求方必须参考 TDISP_VERSION 响应以选择共同支持的 (通常为最高) 版本。请求方必须在所有未来其他请求的通信中使用所选版本。请求方在收到成功的 TDISP_VERSION 响应并识别双方共同支持的版本之前,不得发出其他请求。响应方不得以 ERROR_CODE=RESPONSE_NOT_READY 响应 TDISP_GET_VERSION 请求消息。
 
@@ -1303,12 +1219,9 @@ Used to retrieve the Responder's TDISP capabilities. TDISP protocol inherits the
 | 42 | NUM_REQ_THIS | 1 | DSM 允许此 TDI 的未完成请求数。 |
 | 43 | NUM_REQ_ALL | 1 | DSM 允许此 DSM 管理的所有 TDI 的未完成请求数。 |
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1319,16 +1232,14 @@ Used to retrieve the Responder's TDISP capabilities. TDISP protocol inherits the
 <a id="sec-11-3-8"></a>
 ### 11.3.8 LOCK_INTERFACE_REQUEST | 11.3.8 LOCK_INTERFACE_REQUEST
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 The LOCK_INTERFACE_REQUEST is used to move the TDI to CONFIG_LOCKED, provided that the DSM confirms that the device, including elements of Function 0 and the TDI itself, is acceptably configured and in an acceptable state.
 
@@ -1351,8 +1262,8 @@ The device must fail the request if any of the following errors are detected:
 - ST mode selected in TPH Requester Extended Capability, if supported and enabled, does not correspond to a mode supported by the function hosting the TDI.
 - Other device determined errors in the device or TDI configurations
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 LOCK_INTERFACE_REQUEST 用于将 TDI 移至 CONFIG_LOCKED,前提是 DSM 确认设备 (包括 Function 0 的元素和 TDI 本身) 已正确配置并处于可接受状态。
 
@@ -1375,8 +1286,7 @@ LOCK_INTERFACE_REQUEST 用于将 TDI 移至 CONFIG_LOCKED,前提是 DSM 确认�
 - 在 TPH 请求方扩展能力中选择的 ST 模式 (如果支持并启用) 与承载 TDI 的功能支持的模式不对应。
 - 设备或 TDI 配置中的其他设备确定的错误
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -1386,18 +1296,14 @@ LOCK_INTERFACE_REQUEST 用于将 TDI 移至 CONFIG_LOCKED,前提是 DSM 确认�
 
 <<<PAGE_BREAK>>> page_1631
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 The LOCK_INTERFACE_REQUEST binds and configures the following parameters into the TDI:
 
@@ -1415,8 +1321,8 @@ The LOCK_INTERFACE_REQUEST binds and configures the following parameters into th
 
 On successful processing of the request, the device responds with a LOCK_INTERFACE_RESPONSE message.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 LOCK_INTERFACE_REQUEST 将以下参数绑定并配置到 TDI:
 
@@ -1434,12 +1340,9 @@ LOCK_INTERFACE_REQUEST 将以下参数绑定并配置到 TDI:
 
 请求成功处理后,设备以 LOCK_INTERFACE_RESPONSE 消息响应。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1458,16 +1361,14 @@ LOCK_INTERFACE_REQUEST 将以下参数绑定并配置到 TDI:
 | 20 | MMIO_REPORTING_OFFSET | 8 | MMIO ranges reported in all DEVICE_INTERFACE_REPORT is reported with this offset added to the physical address |
 | 28 | BIND_P2P_ADDRESS_MASK | 8 | Mask to be applied to target addresses for peer-to-peer transaction issued by the TDI using the BIND_P2P_STREAM_REQUEST stream (to clear-out any metadata information embedded in the address). This mask must be applied prior to using the Selective IDE Address Association mechanism. This mask is not applicable or applied for Requests bound to the Root Complex. |
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 LOCK_INTERFACE_RESPONSE is provided on successful handling of the LOCK_INTERFACE_REQUEST and the device having moved the TDI to CONFIG_LOCKED. The response message also provides a START_INTERFACE_NONCE that is generated when the TDI is locked. This nonce should be generated by the device in response to moving the TDI to CONFIG_LOCKED. This nonce must be destroyed when the TDI moves to CONFIG_UNLOCKED or ERROR from CONFIG_LOCKED. See § Section 11.3.14 for additional rules regarding this nonce.
 
@@ -1478,8 +1379,8 @@ Generating a LOCK_INTERFACE_RESPONSE implies that the device has successfully co
 - If function hosting the TDI is capable of Address Translation Service (ATS), all ATS requests for the TDI, generated before the lock request was received, have completed, or aborted. The device must invalidate translations cached in the ATC by the Requester ID of the function hosting the TDI.
 - If function hosting the TDI is capable of Page Request Interface Service (PRI), page requests for the TDI, generated before the lock request was received, have received responses or the TDI will discard page responses for outstanding page requests.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 LOCK_INTERFACE_RESPONSE 在 LOCK_INTERFACE_REQUEST 成功处理且设备已将 TDI 移至 CONFIG_LOCKED 时提供。响应消息还提供 TDI 锁定时生成的 START_INTERFACE_NONCE。此 nonce 应由设备响应于将 TDI 移至 CONFIG_LOCKED 而生成。当 TDI 从 CONFIG_LOCKED 移至 CONFIG_UNLOCKED 或 ERROR 时,必须销毁此 nonce。有关此 nonce 的其他规则,见 § Section 11.3.14。
 
@@ -1490,8 +1391,7 @@ LOCK_INTERFACE_RESPONSE 在 LOCK_INTERFACE_REQUEST 成功处理且设备已将 T
 - 如果承载 TDI 的功能具备地址转换服务 (ATS) 能力,则在接收到锁定请求之前为 TDI 生成的所有 ATS 请求都已完成或中止。设备必须使由承载 TDI 的功能的 Requester ID 在 ATC 中缓存的转换无效。
 - 如果承载 TDI 的功能具备页请求接口服务 (PRI) 能力,则在接收到锁定请求之前为 TDI 生成的页请求已收到响应,或者 TDI 将丢弃未完成页请求的页响应。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -1501,397 +1401,14 @@ LOCK_INTERFACE_RESPONSE 在 LOCK_INTERFACE_REQUEST 成功处理且设备已将 T
 
 <<<PAGE_BREAK>>> page_1633
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
-
-- Additional private resources that need to be assigned to the TDI by the DSM at the time of locking the TDI have been successfully allocated and assigned.
-- DSM has carried out necessary actions on the device side to lock the TDI configuration and IDE configuration registers for the default stream. DSM has enabled mechanisms to track changes to the configurations of the TDI and the IDE configuration register for the default stream.
-
-It is permitted for a TDI to return INVALID_DEVICE_CONFIGURATION in response to a LOCK_INTERFACE_REQUEST for implementation-specific reasons.
-
-**Table 11-11 LOCK_INTERFACE_RESPONSE | 表 11-11 LOCK_INTERFACE_RESPONSE**
-
-| Offset | Field | Size (Bytes) | Description |
-|--------|-------|--------------|-------------|
-| Payload (All fields in little endian format) | | | |
-| 16 | START_INTERFACE_NONCE | 32 | Device generated nonce to include in START_INTERFACE_REQUEST message. |
-
-**Table 11-12 LOCK_INTERFACE_REQUEST Error Codes | 表 11-12 LOCK_INTERFACE_REQUEST 错误代码**
-
-| Error Code | Description |
-|---|---|
-| INVALID_REQUEST | Device supports IDE capability and: Keys have not been configured for all sub-streams of the default stream, Keys for the default stream were not configured using the SPDM session on which the LOCK_INTERFACE_REQUEST was received |
-| INSUFFICIENT_ENTROPY | The device fails to generate nonce. |
-| INVALID_INTERFACE_STATE | If the TDI is not in CONFIG_UNLOCKED. |
-| INVALID_DEVICE_CONFIGURATION | Locking the TDI failed due to invalid/unsupported device configurations. |
-
-<a id="sec-11-3-10"></a>
-### 11.3.10 GET_DEVICE_INTERFACE_REPORT | 11.3.10 GET_DEVICE_INTERFACE_REPORT
-
-The GET_DEVICE_INTERFACE_REPORT is used to request a DEVICE_INTERFACE_REPORT from the device. The DEVICE_INTERFACE_REPORT may, in some cases, be larger than the requester can consume in a single response, so the requester is provided with the means to request a specific portion of the overall DEVICE_INTERFACE_REPORT to be sent with a given response.
-
-The device must fail the request if any of the following errors are detected:
-- Interface ID in the request is not hosted by the device
-- TDI is not in CONFIG_LOCKED or RUN
-- Invalid offset specified
-
-**Table 11-13 GET_DEVICE_INTERFACE_REPORT | 表 11-13 GET_DEVICE_INTERFACE_REPORT**
-
-| Offset | Field | Size (Bytes) | Description |
-|--------|-------|--------------|-------------|
-| Payload (All fields in little endian format) | | | |
-
-<<<PAGE_BREAK>>> page_1634
-
-| Offset | Field | Size (Bytes) | Description |
-|--------|-------|--------------|-------------|
-| 16 | OFFSET | 2 | Offset in bytes from the start of the report to where the read request message begins. The responder must send its report starting from this offset. For first GET_DEVICE_INTERFACE_REPORT request, the Requester must set this field to 0. For non-first requests, Offset is the sum of PORTION_LENGTH values in all previous DEVICE_INTERFACE_REPORT responses. |
-| 18 | LENGTH | 2 | Length of report, in bytes, to be returned in the corresponding response. Length is an unsigned 16-bit integer. This value is the smaller of the following values: Capacity of requester's internal buffer for receiving Responder's report, The REMAINDER_LENGTH of the preceding DEVICE_INTERFACE_REPORT response. For the first GET_DEVICE_INTERFACE_REPORT request, the requester must use the capacity of the requester's receiving buffer. If offset=0 and length=FFFFh, the requester is requesting the entire report. The Responder is permitted to provide less than the requested length if the Responder's buffer length is limited. |
-
-**Table 11-14 DEVICE_INTERFACE_REPORT | 表 11-14 DEVICE_INTERFACE_REPORT**
-
-| Offset | Field | Size (Bytes) | Description |
-|--------|-------|--------------|-------------|
-| Payload (All fields in little endian format) | | | |
-| 16 | PORTION_LENGTH | 2 | Number of bytes of this portion of TDI report. This must be less than or equal to LENGTH received as part of the request. For example, the Responder is permitted to set this field to a value less than LENGTH received as part of the request due limitations on the Responder's internal buffer. |
-| 18 | REMAINDER_LENGTH | 2 | Number of bytes of the TDI report that have not been sent yet after the current response. For the last response, this field must be 0 as an indication to the Requester that the entire TDI report has been sent. |
-| 20 | REPORT_BYTES | PORTION_LENGTH | Requested contents of TDI report |
-
-The TDI report is structured as follows:
-
-**Table 11-15 TDI Report Structure | 表 11-15 TDI 报告结构**
-
-| Offset | Field | Size (Bytes) | Description |
-|--------|-------|--------------|-------------|
-| 0 | INTERFACE_INFO | 2 | Bit 0: NO_FW_UPDATE – When 1, indicates that device firmware updates are not permitted while in CONFIG_LOCKED or RUN. When 0, indicates that firmware updates are permitted while in these states. Bit 1: TDI generates DMA requests without PASID. Bit 2: TDI generates DMA requests with PASID. |
-
-<<<PAGE_BREAK>>> page_1635
-
-| Offset | Field | Size (Bytes) | Description |
-|--------|-------|--------------|-------------|
-| (continued INTERFACE_INFO) | | | Bit 3: ATS supported and enabled for the TDI. Bit 4: PRS supported and enabled for the TDI. Bits 15:5: Reserved |
-| 2 | - | 2 | Reserved for future use. |
-| 4 | MSI_X_MESSAGE_CONTROL | 2 | MSI-X capability message control register state. Must be Clear if a) capability is not supported or b) MSI-X table is not locked. |
-| 6 | LNR_CONTROL | 2 | LNR control register from LN Requester Extended Capability. Must be Clear if LNR capability is not supported. LN is deprecated in PCIe Revision 6.0. |
-| 8 | TPH_CONTROL | 4 | TPH Requester Control Register from the TPH Requester Extended Capability. Must be Clear if a) TPH capability is not support or b) MSI-X table is not locked. |
-| 12 | MMIO_RANGE_COUNT (N) | 4 | Number of MMIO Ranges in report |
-| 16 | MMIO_RANGE | N * 16 | Each MMIO Range of the TDI is reported with the MMIO reporting offset added. Base and size in units of 4K pages. 8 bytes – First 4K page with offset added. 4 bytes - Number of 4K pages in this range. 4 bytes – Range Attributes. Bit 0 – MSI-X Table (if range maps MSI-X table). Bit 1 – MSI-X PBA (if range maps MSI-X PBA). Bit 2 – IS_NON_TEE_MEM – must be 1b if the range is non-TEE memory. Bit 3 – IS_MEM_ATTR_UPDATABLE – must be 1b if the attributes of this range is updatable using SET_MMIO_ATTRIBUTE_REQUEST. Bits 15:4: Reserved. Bits 31:16 – Range ID – a device specific identifier. |
-| 16 + N * 16 | DEVICE_SPECIFIC_INFO_LEN (L) | 4 | Number of bytes of device specific information |
-| 16 + N * 16 + 4 | DEVICE_SPECIFIC_INFO | L | Device specific information |
-
-A TDI may generate (a) all DMA requests without PASID, (b) all DMA requests with PASID, or (c) some DMA requests with and others without PASID.
-
-<<<PAGE_BREAK>>> page_1636
-
-The Range ID is used to logically group the ranges reported in the report into logical groups.
-
-MMIO ranges assigned via BAR(s) must be reported in ascending order starting with the lowest numbered BAR such that the first range corresponds to the first BAR and so on. The range ID reports the BAR equivalent Indicator (BEI). Values 0-7 of the Range ID are reserved to indicate the BEI. The device must report the BAR equivalent Indicator (BEI) for ranges associated with a PCIe BAR.
-
-When reporting the MMIO range for a TDI, the MMIO ranges must be reported in the logical order in which the TDI MMIO range is configured such that the first range reported corresponds to first range of pages in the TDI and so on.
-
-The device is permitted to include additional device specific information to the TVM in the report. The device specific information may be used to report configurations of the TDI and/or to enumerate capabilities of the TDI. Example of such device specific information include:
-
-- A network device may include receive-side scaling (RSS) related information such as the RSS hash and mappings to the virtual station interface (VSI) queues, etc.
-- A NVMe device may include information about the associated name spaces, mapping of name space to command queue-pair mappings, etc.
-- Accelerators may report capabilities such as algorithms supported, queue depths, etc.
-
-The following sequence diagram shows the high-level request-response message flow for Responder response when it cannot return the entire data requested by the Requester in the first response.
-
-> **Figure 11-7.** Example Flow Where DSM is Unable to Return Full Length Report
-> <img src="figures/chapter_11/fig_1636_1.png" width="700">
-
-**Table 11-16 GET_DEVICE_INTERFACE_REPORT Error Response Codes | 表 11-16 GET_DEVICE_INTERFACE_REPORT 错误响应代码**
-
-| Error Code | Description |
-|---|---|
-| INVALID_REQUEST | OFFSET is invalid. |
-| INVALID_INTERFACE_STATE | The TDI is not in CONFIG_LOCKED. |
-
----
-
-<<<PAGE_BREAK>>> page_1637
-
-<a id="sec-11-3-12"></a>
-### 11.3.12 GET_DEVICE_INTERFACE_STATE / DEVICE_INTERFACE_STATE | 11.3.12 GET_DEVICE_INTERFACE_STATE / DEVICE_INTERFACE_STATE
-
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-The GET_DEVICE_INTERFACE_STATE is used to request a DEVICE_INTERFACE_STATE from the device.
-
-The device must fail the request if the following error is detected:
-- Interface ID in the request is not hosted by the device.
-
-**Table 11-17 DEVICE_INTERFACE_STATE | 表 11-17 DEVICE_INTERFACE_STATE**
-
-| Offset | Field | Size (Bytes) | Description |
-|--------|-------|--------------|-------------|
-| Payload (All fields in little endian format) | | | |
-| 16 | TDI_STATE | 1 | TDI status: 0 = CONFIG_UNLOCKED, 1 = CONFIG_LOCKED, 2 = RUN, 3 = ERROR, Others = Reserved |
-
-<a id="sec-11-3-14"></a>
-### 11.3.14 START_INTERFACE_REQUEST | 11.3.14 START_INTERFACE_REQUEST
-
-The START_INTERFACE_REQUEST carries the interface ID of the TDI. This request is used to transition the TDI to RUN, where is managed and operated by the TVM.
-
-This request is expected to be generated by the TSM on request from the TVM.
-
-The device must fail the request if any of the following errors are detected:
-- If the interface ID in the request is not hosted by the device.
-- START_INTERFACE_NONCE in the request is not valid i.e., does not match the nonce generated by the device in the LOCK_INTERFACE_RESPONSE.
-- TDI is not in CONFIG_LOCKED.
-
-If no errors are encountered, the device prepares to transition the referenced TDI to RUN. Moving the TDI to RUN may involve device side actions like enabling device side memory encryption, etc. The TDI must also invalidate the START_INTERFACE_NONCE before moving the TDI to RUN such that this nonce cannot be used again.
-
-**Table 11-18 START_INTERFACE_REQUEST | 表 11-18 START_INTERFACE_REQUEST**
-
-| Offset | Field | Size (Bytes) | Description |
-|--------|-------|--------------|-------------|
-| Payload (All fields in little endian format) | | | |
-| 16 | START_INTERFACE_NONCE | 32 | Device generated nonce for message (from LOCK_INTERFACE_RESPONSE) |
-
-**Table 11-19 START_INTERFACE_REQUEST Error Response Codes | 表 11-19 START_INTERFACE_REQUEST 错误响应代码**
-
-| Error Code | Description |
-|---|---|
-| INVALID_NONCE | START_INTERFACE_NONCE mismatch. |
-| INVALID_INTERFACE_STATE | The TDI is not in CONFIG_LOCKED. |
-
-<a id="sec-11-3-16"></a>
-### 11.3.16 STOP_INTERFACE_REQUEST | 11.3.16 STOP_INTERFACE_REQUEST
-
-The STOP_INTERFACE_REQUEST carries the interface ID of the TDI.
-
-The device must fail the request the following error is detected:
-- If the interface ID in the request is not hosted by the device.
-
-In response to the STOP_INTERFACE_REQUEST the following actions must be performed:
-- Abort all in-flight and accepted operations that are being performed by the TDI
-- Wait for outstanding responses for the aborted operations
-- All DMA read and write operations by the TDI are aborted or completed
-- All interrupts from the TDI have been generated
-- If function hosting the TDI is capable of Address Translation Service (ATS), all ATS requests by the TDI have completed or aborted. All translations cached in the device for ATS requests generated by this TDI have been invalidated.
-- If function hosting the TDI is capable of Page Request Interface Service (PRI), no more page requests will be generated by the TDI. Additionally, either page responses have been received for all page requests generated by the TDI or the TDI will discard page responses for outstanding page requests.
-- Scrub internal state of the device to remove secrets associated with the TDI such that those secrets will not be accessible.
-- Reclaim and scrub private resources (e.g., memory encryption keys for device attached memories, etc.) assigned to the TDI.
-
-The Device must generate the STOP_INTERFACE_RESPONSE once these actions are completed.
-
-No request-specific responses are defined
-
-<a id="sec-11-3-18"></a>
-### 11.3.18 BIND_P2P_STREAM_REQUEST | 11.3.18 BIND_P2P_STREAM_REQUEST
-
-A TDI is permitted to support peer-to-peer transactions secured from end-to-end between two devices. Such devices must support configuring one or more selective IDE Stream(s) such that the selective IDE stream configuration registers
-
-<<<PAGE_BREAK>>> page_1638
-
-provide the address and Requester ID ranges for the peer device. Such peer-to-peer IDE streams must be used by a device only if the device supports Address Translation Services and the capability is enabled for the device.
-
-The BIND_P2P_STREAM_REQUEST binds such peer-to-peer stream IDs to the TDI. The device must fail the request if any of the following apply:
-- Interface ID in the request is not hosted by the device
-- TDI does not support binding peer-to-peer streams
-- TDI is not in RUN
-- Stream ID specified does not have IDE keys programmed for all sub streams
-- All IDE keys of the stream identified by the Stream ID were not configured over the SPDM session on which the LOCK_INTERFACE_REQUEST was received
-- Multiple IDE configuration registers have been programmed with the same stream ID
-- IDE configuration register for this stream is configured as the default stream
-- Address and/or RID association registers of this streams IDE configuration registers overlap with other IDE configuration registers
-
-In response to the request, DSM carries out necessary actions on the device side to lock the IDE configurations for the specified stream ID and enables mechanisms to track changes to the IDE configuration registers.
-
-Through a device-specific mechanism the DSM ensures correctness of transaction ordering (i.e., if transactions were previously routed through the default stream ID specified by the LOCK_INTERFACE_REQUEST then the TDI has implemented fences or other mechanism before it starts using the peer-to-peer stream ID specified by this request).
-
-Following processing the request, the device generates the BIND_P2P_STREAM_RESPONSE.
-
-When a TDI generates a transaction, if the transaction's address or Requester ID as applicable matches an IDE configuration register and the stream ID configured is one of the P2P streams bound to the TDI, then the device uses that P2P stream for the transaction. If the transaction does not match one of the P2P IDE streams, then the transaction uses the default stream identified by the stream ID bound using the LOCK_INTERFACE_REQUEST.
-
-All ATS requests and requests with addresses for which translations were not previously obtained from the Translation Agent in the Root Complex must use the default stream identified by the stream ID bound at time of locking the TDI.
-
-**Table 11-20 BIND_P2P_STREAM_REQUEST | 表 11-20 BIND_P2P_STREAM_REQUEST**
-
-| Offset | Field | Size (Bytes) | Description |
-|--------|-------|--------------|-------------|
-| Payload (All fields in little endian format) | | | |
-| 16 | P2P_STREAM_ID | 1 | ID of the P2P stream to bind to this TDI. |
-
-**Table 11-21 BIND_P2P_STREAM_REQUEST Error Codes | 表 11-21 BIND_P2P_STREAM_REQUEST 错误代码**
-
-| Error Code | Description |
-|---|---|
-| INVALID_REQUEST | TDI does not support binding P2P streams. P2P_STREAM_ID is invalid. Keys have not been configured for all sub-streams of the P2P stream. Keys for the stream identified by P2P_STREAM_ID were not configured by the SPDM session on which the LOCK_INTERFACE_REQUEST was received. IDE registers with configurations for the P2P_STREAM_ID is marked as the default stream. Multiple IDE registers are configured with the P2P_STREAM_ID. The IDE registers configured for this P2P_STREAM_ID have overlaps with other valid IDE registers. |
-| INVALID_INTERFACE_STATE | If the TDI is not in RUN. |
-
-<<<PAGE_BREAK>>> page_1639
-
-<a id="sec-11-3-20"></a>
-### 11.3.20 UNBIND_P2P_STREAM_REQUEST | 11.3.20 UNBIND_P2P_STREAM_REQUEST
-
-The UNBIND_P2P_STREAM_REQUEST unbinds a previously bound peer-to-peer stream IDs from the TDI. The device must fail the request if any of the following apply:
-- Interface ID in the request is not hosted by the device
-- TDI does not support binding peer-to-peer streams
-- TDI is not in RUN
-- Stream ID specified was not previously bound to this TDI
-
-Following processing the request, the device generates the UNBIND_P2P_STREAM_RESPONSE.
-
-An UNBIND_P2P_STREAM_RESPONSE implies that the device has successfully completed the following operations:
-- All DMA read and write operations by the TDI using the specified P2P stream are aborted or completed
-- Remove locking made active on the IDE configuration registers for this stream such that the IDE register may be reprogrammed without affecting the security of the TDI
-
-If the device supports continuing the peer-to-peer operations following the unbind then through a device-specific mechanism the device ensures correctness of transaction ordering (i.e., if transactions were previously routed through this p2p stream then the TDI has implemented fences or other mechanism before it starts using the default stream ID).
-
-**Table 11-22 UNBIND_P2P_STREAM_REQUEST | 表 11-22 UNBIND_P2P_STREAM_REQUEST**
-
-| Offset | Field | Size (Bytes) | Description |
-|--------|-------|--------------|-------------|
-| Payload (All fields in little endian format) | | | |
-| 16 | P2P_STREAM_ID | 1 | ID of the P2P stream to unbind from this TDI. |
-
-**Table 11-23 UNBIND_P2P_STREAM_REQUEST Error Codes | 表 11-23 UNBIND_P2P_STREAM_REQUEST 错误代码**
-
-| Error Code | Description |
-|---|---|
-| INVALID_REQUEST | TDI does not support binding P2P streams. P2P_STREAM_ID is invalid. P2P_STREAM_ID was not previously bound to this TDI. |
-| INVALID_INTERFACE_STATE | If the TDI is not in RUN. |
-
-<<<PAGE_BREAK>>> page_1640
-
-<a id="sec-11-3-22"></a>
-### 11.3.22 SET_MMIO_ATTRIBUTE_REQUEST | 11.3.22 SET_MMIO_ATTRIBUTE_REQUEST
-
-The SET_MMIO_ATTRIBUTE_REQUEST enables a TVM to update attributes of one or more MMIO ranges reported in the DEVICE_INTERFACE_REPORT. The MMIO ranges in a TDI that support updateable attributes are device specific.
-
-The device must fail the request if any of the following apply:
-- Interface ID in the request is not hosted by the device
-- TDI does not support updateable MMIO attributes
-- TDI does not support updateable MMIO attributes for the requested MMIO range
-- TDI does not support the specified attribute for the requested MMIO range
-- TDI does not support the value specified for the attribute
-- TDI is not in RUN
-- The MMIO range specified in the request is not associated with TDI
-
-Responding with a failure is not fatal to the TDI and does not lead to a change in the TDI state.
-
-Following processing the request, the device generates the SET_MMIO_ATTRIBUTE_RESPONSE.
-
-IS_NON_TEE_MEM attribute may be updated to 1 to allow sharing the requested MMIO range with an entity not in the TVM trust boundary. Following the successful update of the attribute to 1, the specified MMIO range may be accessed using requests with T bit set to 0 or 1, or using a non-IDE Request. While the processing of the request is outstanding, a device may continue to reject Requests with the T bit Clear that access the MMIO range being updated.
-
-IS_NON_TEE_MEM attribute may be updated to 0 to disallow sharing the MMIO range with an entity not in the TVM trust boundary. Following the successful update of the attribute to 0, the specified MMIO range may only be accessed using Requests with T bit Set, and Requests with T bit Clear must be rejected. While the processing of the request is outstanding, a device is permitted to continue to allow accesses via Requests with the T bit Clear.
-
-A SET_MMIO_ATTRIBUTE_RESPONSE implies that the device has successfully completed updating the attributes for the specified MMIO range and the updated attributes are in affect for all subsequent accesses to this MMIO range.
-
-**Table 11-24 SET_MMIO_ATTRIBUTE_REQUEST | 表 11-24 SET_MMIO_ATTRIBUTE_REQUEST**
-
-| Offset | Field | Size (Bytes) | Description |
-|--------|-------|--------------|-------------|
-| Payload (All fields in little endian format) | | | |
-| 16 | MMIO_RANGE | 16 | Base and size of the MMIO range to update attributes. 8 bytes – First 4K page with offset added. 4 bytes – Number of 4K pages in this range. 4 bytes – Range Attributes. Bits 1:0: Reserved – must be zero. Bit 2: IS_NON_TEE_MEM – set to 1b if the range is non-TEE memory. Bits 15:3: Reserved. Bits 31:16: Range ID – a device specific identifier for the specified range. |
-
-**Table 11-25 SET_MMIO_ATTRIBUTE_REQUEST Error Codes | 表 11-25 SET_MMIO_ATTRIBUTE_REQUEST 错误代码**
-
-| Error Code | Description |
-|---|---|
-| INVALID_REQUEST | TDI does not support updateable MMIO attributes. TDI does not support updateable attributes for requested MMIO range. TDI does not support specified attribute for requested MMIO range. TDI does not support the value specified for the attribute. The range specified in the request is not associated with TDI. |
-| INVALID_INTERFACE_STATE | If the TDI is not in RUN. |
-
-<a id="sec-11-3-24"></a>
-### 11.3.24 TDISP_ERROR | 11.3.24 TDISP_ERROR
-
-The TDISP_ERROR is permitted to be used by the device to complete any of the requests issued to the device.
-
-**Table 11-26 TDISP_ERROR | 表 11-26 TDISP_ERROR**
-
-| Offset | Field | Size (Bytes) | Description |
-|--------|-------|--------------|-------------|
-| Payload (All fields in little endian format) | | | |
-| 16 | ERROR_CODE | 4 | Error Code |
-| 20 | ERROR_DATA | 4 | Error Data |
-| 24 | EXTENDED_ERROR_DATA | Variable | Extended Error Data. |
-
-**Table 11-27 Error Code and Error Data | 表 11-27 错误代码和错误数据**
-
-| Error Code | Value (h) | Description | Error Data | Extended error data |
-|---|---|---|---|---|
-| Reserved | 0000 | Reserved | Reserved | None |
-| INVALID_REQUEST | 0001 | One or more request field is invalid. | Reserved | None |
-| BUSY | 0003 | The Responder received the request message and the Responder decided to ignore the request message, but the Responder may be able to process the request message if the request message is sent again in the future. | Reserved | None |
-| INVALID_INTERFACE_STATE | 0004 | The Responder received the request while in the wrong state, or received an unexpected request. For example, the GET_DEVICE_INTERFACE_REPORT before LOCK_INTERFACE_REQUEST, or any command between multiple GET_DEVICE_INTERFACE_REPORT | Reserved | None |
-| UNSPECIFIED | 0005 | Unspecified error occurred. | Reserved | None |
-| UNSUPPORTED_REQUEST | 0007 | Request code is unsupported | Request code | None |
-| VERSION_MISMATCH | 0041 | The version in not supported | Reserved | None |
-| VENDOR_SPECIFIC_ERROR | 00FF | Vendor defined | Length of extended error data | See required formatting of extended error data for vendor defined errors |
-| INVALID_INTERFACE | 0101 | INTERFACE_ID does not exist. | Reserved | None |
-| INVALID_NONCE | 0102 | The received nonce does not match the expected one. | Reserved | None |
-| INSUFFICIENT_ENTROPY | 0103 | The Responder fails to generate nonce. | Reserved | None |
-| INVALID_DEVICE_CONFIGURATION | 0104 | Invalid/Unsupported device configurations. | Reserved | None |
-
-§ Table 11-28 defines the EXTENDED_ERROR_DATA format for vendor defined TDISP_ERROR response messages:
-
-**Table 11-28 EXTENDED_ERROR_DATA | 表 11-28 EXTENDED_ERROR_DATA**
-
-| Offset | Field | Size (Bytes) | Description |
-|--------|-------|--------------|-------------|
-| 0 | REGISTRY_ID | 1 | ID of the registry assigning the VENDOR_ID. 00h – PCI-SIG assigned vendor ID. 01h – CXL assigned vendor ID. |
-| 1 | VENDOR_ID_LEN | 1 | Length of VENDOR_ID field. |
-| 2 | VENDOR_ID | VENDOR_ID_LEN | VENDOR_ID as assigned by the registry identified by REGISTRY_ID |
-| 2 + VENDOR_ID_LEN | VENDOR_ERR_DATA | Variable | Vendor defined error data. |
-
-§ Table 11-29 defines the VDM_REQUEST format:
-
-**Table 11-29 VDM_REQUEST | 表 11-29 VDM_REQUEST**
-
-| Offset | Field | Size (Bytes) | Description |
-|--------|-------|--------------|-------------|
-| 0 | REGISTRY_ID | 1 | ID of the registry assigning the VENDOR_ID. 00h – PCI-SIG assigned vendor ID. 01h – CXL assigned vendor ID. |
-| 1 | VENDOR_ID_LEN | 1 | Length of VENDOR_ID field. |
-| 2 | VENDOR_ID | VENDOR_ID_LEN | VENDOR_ID as assigned by the registry identified by REGISTRY_ID |
-| 2 + VENDOR_ID_LEN | VENDOR_DATA | Variable | Vendor defined data. |
-
-§ Table 11-30 defines the VDM_RESPONSE format:
-
-**Table 11-30 VDM_RESPONSE | 表 11-30 VDM_RESPONSE**
-
-| Offset | Field | Size (Bytes) | Description |
-|--------|-------|--------------|-------------|
-| 0 | REGISTRY_ID | 1 | ID of the registry assigning the VENDOR_ID. 00h – PCI-SIG assigned vendor ID. 01h – CXL assigned vendor ID. |
-| 1 | VENDOR_ID_LEN | 1 | Length of VENDOR_ID field. |
-| 2 | VENDOR_ID | VENDOR_ID_LEN | VENDOR_ID as assigned by the registry identified by REGISTRY_ID |
-| 2 + VENDOR_ID_LEN | VENDOR_DATA | Variable | Vendor defined data. |
-
-<<<PAGE_BREAK>>> page_1641
-
-<a id="sec-11-4"></a>
-## 11.4 Device Security Requirements § | 11.4 设备安全要求 §
-
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+<tr><td>
 
 A TEE-I/O capable device must implement the [SPDM] as the device secure communication protocol with the host. The device must use SPDM protocol to report the device identity and support the authentication. The security property defined in SPDM specification must be satisfied.
 
@@ -1919,8 +1436,8 @@ Receipt of a Completion with UR/CA or Completion timeout (following recovery ret
 
 Certain devices implement device attached memory where such memory is used by logic in the device to host the TVM data. The device must ensure the confidentiality of the TVM data stored in such memory devices such that the TVM data is not revealed as plaintext outside the device or to entities not in the TVM TCB. To the maximum extent possible the ciphertext associated with the TVM data must not be exposed outside the device. The device may additionally provide integrity properties on the TVM data.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 TEE-I/O 兼容设备必须实现 [SPDM] 作为与主机的设备安全通信协议。设备必须使用 SPDM 协议报告设备身份并支持身份验证。必须满足 SPDM 规范中定义的安全属性。
 
@@ -1948,12 +1465,9 @@ TEE-I/O 兼容设备必须在绑定到这些接口的 IDE 流转换为 Insecure 
 
 某些设备实现设备挂接内存,其中此类内存由设备中的逻辑用于承载 TVM 数据。设备必须确保存储在此类内存设备中的 TVM 数据的机密性,以使 TVM 数据不会以明文形式在设备之外或 TVM TCB 之外的实体中泄露。在最大程度上,与 TVM 数据关联的密文也不得暴露在设备之外。设备可以额外提供 TVM 数据的完整性属性。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1961,16 +1475,14 @@ TEE-I/O 兼容设备必须在绑定到这些接口的 IDE 流转换为 Insecure 
 
 <<<PAGE_BREAK>>> page_1642
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 TEE-I/O capable devices must support [Secure SPDM] to establish a secure communication session between the TSM and DSM. The devices must support the TDI state and the device interface management protocol in TDISP for managing the device security states as they are assigned to TVMs and detached from TVMs.
 
@@ -2012,8 +1524,8 @@ When the debug authorization window is active, the device must not participate i
 
 A conventional reset (cold, warm, or hot) leads to the device changing all its Port registers and state machines to their initialization values, and the TDISP state of all TDIs transitions to CONFIG_UNLOCKED.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 TEE-I/O 兼容设备必须支持 [Secure SPDM] 以在 TSM 和 DSM 之间建立安全通信会话。设备必须支持 TDISP 中的 TDI 状态和设备接口管理协议,以管理设备安全状态,因为它们被分配给 TVM 并从 TVM 分离。
 
@@ -2055,8 +1567,7 @@ TEE-I/O 兼容设备的设计应避免或最小化主机驱动对 TDI 特定配�
 
 常规复位 (冷复位、热复位或热重启) 致使设备将其所有端口寄存器和状态机更改为初始化值,所有 TDI 的 TDISP 状态转换为 CONFIG_UNLOCKED。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -2066,18 +1577,14 @@ TEE-I/O 兼容设备的设计应避免或最小化主机驱动对 TDI 特定配�
 
 <<<PAGE_BREAK>>> page_1643
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 Device reset architecture must ensure that all TVM data, IDE keys, other encryption keys (e.g., P2P links, intra-device interconnects, etc.) and SPDM session keys are cleared such that they are not exposed in plaintext through any mechanism following exit from the reset.
 
@@ -2105,8 +1612,8 @@ ATS Invalidation Request and Invalidation Completion Messages are permitted to u
 
 Page Request Messages must only be issued while in RUN, and must Set the T bit. Page requests from multiple interfaces in RUN are permitted to be grouped into a Page Request Group. A PRG Response must use the same IDE Stream as the
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 设备复位架构必须确保所有 TVM 数据、IDE 密钥、其他加密密钥 (例如 P2P 链路、设备内部互连等) 和 SPDM 会话密钥被清除,使其在退出复位后不会以明文形式通过任何机制泄露。
 
@@ -2134,12 +1641,9 @@ ATS 无效请求和无效完成消息允许使用或不使用 IDE。如果使用
 
 页请求消息仅可在 RUN 状态下发出,并且必须将 T 位置位。允许将来自 RUN 状态下多个接口的页请求分组为页请求组。PRG 响应必须使用与
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2147,16 +1651,14 @@ ATS 无效请求和无效完成消息允许使用或不使用 IDE。如果使用
 
 <<<PAGE_BREAK>>> page_1644
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 corresponding Page Request, and must have the T bit Set. A violation of this rule must result in the TDI transitioning to ERROR.
 
@@ -2180,8 +1682,8 @@ The use of Access Control Services (ACS) mechanisms for redirection must be coor
 - ACS P2P Egress Control
 - ACS Direct Translated P2P
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 对应的页请求相同的 IDE 流,并且必须将 T 位置位。违反此规则必须导致 TDI 转换为 ERROR。
 
@@ -2205,8 +1707,7 @@ TEE-I/O 兼容设备必须强制执行地址转换缓存 (ATC) 的完整性,使�
 - ACS P2P Egress Control
 - ACS Direct Translated P2P
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -2219,18 +1720,14 @@ TEE-I/O 兼容设备必须强制执行地址转换缓存 (ATC) 的完整性,使�
 <a id="sec-11-5"></a>
 ## 11.5 Requirements Placed on Host Security due to TDI Requirements § | 11.5 由 TDI 需求引发的主机安全要求 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 The property of memory being either TEE memory or non-TEE memory, must, as observed by a TVM executing on the host, match the view of memory as observed by a TDI assigned to that TVM. The translation agent (TA) is permitted to use the T bit being 1 to identify requests originated by a TDI in RUN state. The TVM relies on the TSM and TA to translate requests from TVM assigned TDIs such that:
 
@@ -2264,8 +1761,8 @@ The host must provide data containment mechanisms to prevent consumption and fur
 
 It is strongly recommended that the host implement suitable protection schemes such as parity or ECC on its internal data buffers and caches to detect data integrity errors. If uncorrectable data integrity errors were detected, then the host must poison the data to prevent consumption and propagation by TVM, TVM assigned TDIs, or other components in the TVM TCB. The host must scrub registers that log information about the error, such as the syndrome, that could reveal confidential data.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 无论内存是 TEE 内存还是非 TEE 内存的属性,从主机上执行的 TVM 观察到的内存视图必须与分配给该 TVM 的 TDI 观察到的内存视图匹配。转换代理 (TA) 可使用 T 位置 1 来识别由 RUN 状态下的 TDI 发起的请求。TVM 依赖 TSM 和 TA 转换来自 TVM 已分配 TDI 的请求,以便:
 
@@ -2299,12 +1796,9 @@ TSM 必须提供可信机制来确定:
 
 强烈建议主机在其内部数据缓冲区和缓存上实施适当的保护方案 (例如奇偶校验或 ECC) 以检测数据完整性错误。如果检测到不可纠正的数据完整性错误,则主机必须对数据进行中毒处理,以防止 TVM、TVM 已分配 TDI 或 TVM TCB 中的其他组件消耗和传播。主机必须擦除记录错误信息 (例如 syndrome) 的寄存器,这些信息可能泄露机密数据。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2378,16 +1872,14 @@ TSM may provide an interface for the VMM to manage the lifecycle of IDE streams 
 <a id="sec-11-6"></a>
 ## 11.6 Overview of Threat Model and Mitigations § | 11.6 威胁模型和缓解措施概述 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 This section provides a very brief overview. It is strongly recommended that thorough threat model analysis be conducted by competent security expert(s) for all implementations.
 
@@ -2452,8 +1944,8 @@ The adversary may have the ability to launch a maliciously crafted TVM that coll
 
 These threats are mitigated by the use of TDISP.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 本节提供了非常简要的概述。强烈建议对所有实现由合格的安全专家进行彻底的威胁模型分析。
 
@@ -2518,8 +2010,7 @@ These threats are mitigated by the use of TDISP.
 
 这些威胁通过使用 TDISP 来缓解。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -2529,18 +2020,14 @@ These threats are mitigated by the use of TDISP.
 
 <<<PAGE_BREAK>>> page_1648
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 TDISP provides the protocol and security requirements to lock TDI configurations using a LOCK_INTERFACE_REQUEST, obtain a report of the locked TDIs using a GET_DEVICE_INTERFACE_REPORT, securely enabling the memory space and DMA for TVM access using START_INTERFACE_REQUEST. A nonce generated by the device when the TDI is transitioned to CONFIG_LOCKED and verified on request to transition to RUN provide the property that all transitions through the TDISP state machine occur due to TDISP requests generated in the same SPDM secure session.
 
@@ -2554,8 +2041,8 @@ TSM allows a TVM to update MMIO attributes of a TDI using SET_MMIO_ATTRIBUTE_REQ
 
 Devices track configurations of TDIs in CONFIG_LOCKED to detect attempts to reconfigure the TDI. Function level resets transition the TDI to ERROR. Conventional resets require the device to clear residual TVM secrets, IDE secrets, and SPDM session secrets such that they are not accessible to entities outside TVM trust boundary.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 TDISP 提供协议和安全要求,以使用 LOCK_INTERFACE_REQUEST 锁定 TDI 配置,使用 GET_DEVICE_INTERFACE_REPORT 获取锁定 TDI 的报告,使用 START_INTERFACE_REQUEST 安全启用 TVM 访问的内存空间和 DMA。当 TDI 转换为 CONFIG_LOCKED 时由设备生成的 nonce,并在请求转换为 RUN 时进行验证,提供了通过 TDISP 状态机的所有转换都是由于在同一 SPDM 安全会话中生成的 TDISP 请求而发生的属性。
 
@@ -2569,12 +2056,9 @@ TSM 使用主机特定机制来强制执行 DMA 访问控制。TSM 使用 STOP_I
 
 设备跟踪 CONFIG_LOCKED 状态下 TDI 的配置,以检测重新配置 TDI 的企图。功能级复位将 TDI 转换为 ERROR。常规复位要求设备清除残留的 TVM 机密、IDE 机密和 SPDM 会话机密,以使 TVM 信任边界之外的实体无法访问它们。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2600,5 +2084,3 @@ TSM 使用主机特定机制来强制执行 DMA 访问控制。TSM 使用 STOP_I
 - [11.4 Device Security Requirements § | 11.4 设备安全要求 §](#sec-11-4)
 - [11.5 Requirements Placed on Host Security due to TDI Requirements § | 11.5 由 TDI 需求引发的主机安全要求 §](#sec-11-5)
 - [11.6 Overview of Threat Model and Mitigations § | 11.6 威胁模型和缓解措施概述 §](#sec-11-6)
-</table>
-</table>

@@ -3,7 +3,7 @@
 **PCI Express® Base Specification — Revision 6.2, Version 1.0 — January 25, 2024**
 
 > 📄 **Source pages**: 651–706 (PDF 1-indexed) | 📁 **File**: `chapter_05_raw.md`
-> 🎨 **Format**: 中英对照双语 · 图表原始保留 · 中文背景色灰色 · GitHub Flavored Markdown
+> 🎨 **Format**: 中英对照双语 · 表格单列 (EN + ZH 上下) · 中文背景色灰色 · GitHub Flavored Markdown
 > 📚 **Template**: CXL 3.2 Spec translation (CXL_zh/)
 
 ---
@@ -28,7 +28,7 @@
 # 📘 第 5 章　Power Management (Chapter 5. Power Management)
 
 > 📄 **Source pages**: 651–706 | 📁 **File**: `chapter_05.md`
-> 🎨 **Format**: 中英对照双语 · 图表原始保留 · 中文背景色灰色 · GitHub Flavored Markdown
+> 🎨 **Format**: 中英对照双语 · 表格单列 (EN + ZH 上下) · 中文背景色灰色 · GitHub Flavored Markdown
 
 ---
 
@@ -37,18 +37,14 @@
 <a id="sec-5"></a>
 ## 5. Power Management § | 电源管理 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 This chapter describes power management (PM) capabilities and protocols.
 
@@ -83,8 +79,8 @@ The specific definition and requirements associated with Vaux are form-factor sp
 
 Unlike earlier mechanisms, the PCI Express-PM PME mechanism separates the following two PME tasks:
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 本章描述电源管理 (Power Management, PM) 的能力与协议。
 
@@ -119,12 +115,9 @@ PM 定义了 PCI Express 物理链路 (Link) 允许进入的链路电源管理�
 
 与早期机制不同,PCI Express-PM 的 PME 机制将以下两个 PME 任务分开:
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -133,16 +126,14 @@ PM 定义了 PCI Express 物理链路 (Link) 允许进入的链路电源管理�
 <a id="sec-5-1"></a>
 ## 5.1 Overview § | 概述 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 - Reactivation (wakeup) of the associated resources (i.e., re-establishing reference clocks and main power rails to the PCI Express components)
 - Sending a PME Message to the Root Complex to provide the source of the wakeup event
@@ -153,8 +144,8 @@ PCI Express defines Link power management states, replacing the bus power manage
 
 Note that the PCI Express Physical Layer may define additional intermediate states. Refer to § Chapter 4. for more detail on each state and how the Physical Layer handles transitions between states.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 - 重新激活 (Reactivation,即唤醒) 关联资源 (即重建 PCI Express 组件的参考时钟与主电源)
 - 向根复合体 (Root Complex) 发送 PME 报文 (Message),告知唤醒事件的来源
@@ -165,8 +156,7 @@ PCI Express 定义了链路电源管理状态,用以取代 PCI 总线电源管�
 
 注意,PCI Express 物理层可能定义额外的中间状态。各状态的细节及物理层如何处理状态间转换,请参考 § 第 4 章。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -177,18 +167,14 @@ PCI Express 定义了链路电源管理状态,用以取代 PCI 总线电源管�
 <a id="sec-5-2"></a>
 ## 5.2 Link State Power Management § | 链路状态电源管理 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 PCI Express-PM defines the following Link power management states:
 
@@ -235,8 +221,8 @@ The electrical section specifies the electrical properties of drivers and Receiv
 
 § Figure 5-1 shows an overview of L-state transitions that may occur.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 PCI Express-PM 定义以下链路电源管理状态:
 
@@ -283,12 +269,9 @@ PCI Express-PM 定义以下链路电源管理状态:
 
 § 图 5-1 展示了可能发生的 L 状态转换概览。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -365,16 +348,14 @@ All Functions must support the D0 and D3 states (both D3Hot and D3Cold). The D1 
 
 ### 5.3.1 Device Power Management States (D-States) of a Function § | 5.3.1 Function 的设备电源管理状态 (D 状态) §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 All Functions must support the D0 state. D0 is divided into two distinct substates, the "un-initialized" substate and the "active" substate. When a component comes out of Conventional Reset all Functions of the component enter the D0uninitialized state. When a Function completes FLR, it enters the D0uninitialized state. After configuration is complete a Function enters the D0active state, the fully operational state for a PCI Express Function. A Function enters the D0active state whenever any single or combination of the Function's Memory Space Enable, I/O Space Enable, or Bus Master Enable bits have been Set.
 
@@ -398,8 +379,8 @@ The Function will be reset if the Link state has transitioned to the L2/L3 Ready
 
 Unless the Immediate_Readiness_on_Return_to_D0 bit in the PCI-PM Power Management Capabilities register is Set, System Software must allow a minimum recovery time following a D3Hot →D0 transition of at least 10 ms (see § Section 7.9.16 ), prior to accessing the Function.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 所有 Function 必须支持 D0 状态。D0 分为两个不同的子状态: "未初始化 (un-initialized)" 子状态和 "活动 (active)" 子状态。当组件退出常规复位 (Conventional Reset) 时,组件的所有 Function 进入 D0uninitialized 状态。当 Function 完成 FLR 时,它进入 D0uninitialized 状态。配置完成后,Function 进入 D0active 状态,这是 PCI Express Function 的完全工作状态。当 Function 的内存空间使能 (Memory Space Enable)、I/O 空间使能 (I/O Space Enable) 或总线主控使能 (Bus Master Enable) 位中的任一位或任意组合被置位时,Function 即进入 D0active 状态。
 
@@ -423,8 +404,7 @@ D3 支持是必需的 (包括 D3Cold 与 D3Hot 状态)。
 
 除非 PCI-PM 电源管理能力寄存器中的 Immediate_Readiness_on_Return_to_D0 位被置位,否则系统软件必须在 D3Hot →D0 转换后、访问 Function 之前允许至少 10 ms 的最小恢复时间 (见 § 第 7.9.16 节)。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -438,23 +418,20 @@ D3 支持是必需的 (包括 D3Cold 与 D3Hot 状态)。
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 D0 is the operational state of the Function. As described above, D0 has two distinct substates: D0uninitialized and D0active.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 D0 是 Function 的工作状态。如上所述,D0 有两个不同的子状态: D0uninitialized 与 D0active。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -465,38 +442,31 @@ D0 是 Function 的工作状态。如上所述,D0 有两个不同的子状态: D
 <a id="sec-5-3-1-2"></a>
 ### 5.3.1.2 D1 State § | 5.3.1.2 D1 状态 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 D1 is an optional intermediate power saving state. Behavior while in D1 is described above.
 
 > **IMPLEMENTATION NOTE: SWITCH AND ROOT PORT VIRTUAL BRIDGE BEHAVIOR IN NON-D0 STATES**
 > When a Type 1 Function associated with a Switch/Root Port (a "virtual bridge") is in a non-D0 power state, it will emulate the behavior of a conventional PCI bridge in its handling of Memory, I/O, and Configuration Requests and Completions. All Memory and I/O requests flowing Downstream are terminated as Unsupported Requests. All Type 1 Configuration Requests are terminated as Unsupported Requests, however Type 0 Configuration Request handling is unaffected by the virtual bridge D state. Completions flowing in either direction across the virtual bridge are unaffected by the virtual bridge D state. Note that the handling of Messages is not affected by the PM state of the virtual bridge.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 D1 是可选的中间级省电状态。在 D1 中的行为如上所述。
 
 > **实现注: 非 D0 状态下交换机与根端口虚拟桥的行为**
 > 当与 Switch/Root Port 相关联的 Type 1 Function ("虚拟桥") 处于非 D0 电源状态时,它将模拟传统 PCI 桥在处理 Memory、I/O 和 Configuration 请求与完成时的行为。所有向下游流动的 Memory 与 I/O 请求都被作为 Unsupported Request 终止。所有 Type 1 Configuration 请求被作为 Unsupported Request 终止,但 Type 0 Configuration 请求的处理不受虚拟桥 D 状态的影响。跨虚拟桥任意方向流动的 Completion 不受虚拟桥 D 状态的影响。注意,Message 的处理不受虚拟桥 PM 状态的影响。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -505,26 +475,23 @@ D1 是可选的中间级省电状态。在 D1 中的行为如上所述。
 <a id="sec-5-3-1-3"></a>
 ### 5.3.1.3 D2 State § | 5.3.1.3 D2 状态 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 D2 is an optional intermediate power saving state. Behavior while in D2 is described above.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 D2 是可选的中间级省电状态。在 D2 中的行为如上所述。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -537,38 +504,31 @@ D2 是可选的中间级省电状态。在 D2 中的行为如上所述。
 <a id="sec-5-3-1-4"></a>
 ### 5.3.1.4 D3 State § | 5.3.1.4 D3 状态 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 D3 support is required, (both the D3Cold and the D3Hot states).
 
 > **IMPLEMENTATION NOTE: TRANSITIONING TO L2/L3 READY**
 > As described in § Section 5.2, transition to the L2/L3 Ready state is initiated by platform power management software in order to begin the process of removing main power and clocks from the device. As a result, it is expected that a device will transition to D3Cold shortly after its Link transitions to L2/L3 Ready, making the No_Soft_Reset bit, which only applies to D3Hot, irrelevant. While there is no guarantee of this correlation between L2/L3 Ready and D3Cold, system software should ensure that the L2/L3 Ready state is entered only when the intent is to remove device main power. Device Functions, including those that are otherwise capable of maintaining functional context while in D3Hot (i.e., set the No_Soft_Reset bit), are required to re-initialize internal state as described in § Section 2.9.1 when exiting L2/L3 Ready due to the required DL_Down status indication.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 D3 支持是必需的 (包括 D3Cold 与 D3Hot 状态)。
 
 > **实现注: 转换到 L2/L3 Ready**
 > 如 § 第 5.2 节所述,转换到 L2/L3 Ready 状态由平台电源管理软件启动,以开始移除设备主电源与时钟的过程。因此,预计设备在其链路转换到 L2/L3 Ready 后不久将转换到 D3Cold,这使得仅适用于 D3Hot 的 No_Soft_Reset 位变得无关紧要。虽然 L2/L3 Ready 与 D3Cold 之间的关联没有保证,但系统软件应确保仅在打算移除设备主电源时才进入 L2/L3 Ready 状态。设备 Function (包括那些能够在 D3Hot 时保持功能上下文的 Function,即置位 No_Soft_Reset 位的) 在退出 L2/L3 Ready 时,由于必需的 DL_Down 状态指示,需要按照 § 第 2.9.1 节所述重新初始化内部状态。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -577,16 +537,14 @@ D3 支持是必需的 (包括 D3Cold 与 D3Hot 状态)。
 <a id="sec-5-3-1-4-1"></a>
 #### 5.3.1.4.1 D3Hot State § | 5.3.1.4.1 D3Hot 状态 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 component to bootstrap any of its component interfaces (e.g., from serial ROM) prior to being accessible. Attempts to target the Function during the recovery time (including configuration request packets) will result in undefined behavior.
 
@@ -605,8 +563,8 @@ If the device supports PME events, and PME_En is Set, PME context must be preser
 > **IMPLEMENTATION NOTE: DEVICES NOT PERFORMING AN INTERNAL RESET**
 > Bus controllers to non-PCIe buses and resume from D3Hot bus controllers on PCIe buses that serve as interfaces to non-PCIe buses, (e.g., CardBus, USB, and IEEE 1394) are examples of bus controllers that would benefit from not requiring an internal reset upon resume from D3Hot. If this internal reset is not required, the bus controller would not need to perform a downstream bus reset upon resume from D3Hot on its secondary (non-PCIe) bus.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 组件可在访问之前引导其任何组件接口 (例如从串行 ROM)。在恢复时间内访问该 Function (包括配置请求报文) 将导致未定义行为。
 
@@ -625,8 +583,7 @@ D3Hot 状态下的 Function 允许被软件 (写入其 PMCSR PowerState 字段) 
 > **实现注: 不执行内部复位的设备**
 > 非 PCIe 总线的总线控制器以及作为非 PCIe 总线 (例如 CardBus、USB 与 IEEE 1394) 接口的 PCIe 总线上的 D3Hot 恢复总线控制器,是不需要在从 D3Hot 恢复时执行内部复位的总线控制器的示例。如果不需要此内部复位,则总线控制器在从 D3Hot 恢复时不需要在其辅助 (非 PCIe) 总线上执行下游总线复位。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -639,18 +596,14 @@ D3Hot 状态下的 Function 允许被软件 (写入其 PMCSR PowerState 字段) 
 <a id="sec-5-3-1-4-2"></a>
 #### 5.3.1.4.2 D3Cold State § | 5.3.1.4.2 D3Cold 状态 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 A Function transitions to the D3Cold state when its main power is removed. A power-on sequence with its associated Cold Reset transitions a Function from the D3Cold state to the D0uninitialized state, and the power-on defaults will be restored to the Function by hardware just as at initial power up. At this point, software must perform a full initialization of the Function in order to re-establish all functional context, completing the restoration of the Function to its D0active state.
 
@@ -668,8 +621,8 @@ When PME_En is Set, Functions that support wakeup functionality from D3Cold must
 > **IMPLEMENTATION NOTE: PME CONTEXT**
 > Examples of PME context include, but are not limited to, a Function's PME_Status bit, the requesting agent's Requester ID, Caller ID if supported by a modem, IP information for IP directed network packets that trigger a resume event, etc.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 当 Function 的主电源被移除时,Function 转换到 D3Cold 状态。具有相关冷复位 (Cold Reset) 的上电序列将 Function 从 D3Cold 状态转换到 D0uninitialized 状态,且上电默认值会像初始上电时一样由硬件恢复到 Function。此时,软件必须对 Function 执行完全初始化,以重建所有功能上下文,完成 Function 到 D0active 状态的恢复。
 
@@ -687,12 +640,9 @@ When PME_En is Set, Functions that support wakeup functionality from D3Cold must
 > **实现注: PME 上下文**
 > PME 上下文的示例包括但不限于: Function 的 PME_Status 位、请求代理的 Requester ID、调制解调器支持的 Caller ID、触发恢复事件的 IP 定向网络数据包的 IP 信息等。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -701,16 +651,14 @@ When PME_En is Set, Functions that support wakeup functionality from D3Cold must
 <a id="sec-5-3-2"></a>
 ## 5.3.2 PM Software Control of the Link Power Management State § | 5.3.2 链路电源管理状态的 PM 软件控制 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 A Function's PME assertion is acknowledged when system software performs a "write 1 to clear" configuration transaction to the asserting Function's PME_Status bit of its PCI-PM compatible PMCSR.
 
@@ -743,8 +691,8 @@ The following rules relate to PCI-PM compatible power management:
 - The Upstream Port of an ARI Device must not initiate a Link state transition to L1 (on behalf of PCI-PM) until at least one of its Functions has been programmed to a non-D0 state, and all of its Functions are either in a non-D0 state or the D0uninitialized state.
 - With SR-IOV devices, the Link Power State is controlled solely by the setting in the PFs, regardless of the VFs' D-states. VF Power States do not affect the Link Power State.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 当系统软件对发出断言的 Function 的 PCI-PM 兼容 PMCSR 的 PME_Status 位执行"写 1 清零"配置事务时,该 Function 的 PME 断言被确认。
 
@@ -777,8 +725,7 @@ The following rules relate to PCI-PM compatible power management:
 - ARI 设备的上游端口在至少一个 Function 被编程到非 D0 状态、且其所有 Function 都处于非 D0 状态或 D0uninitialized 状态之前,不得启动到 L1 的链路状态转换 (代表 PCI-PM)。
 - 对于 SR-IOV 设备,链路电源状态仅由 PF 的设置控制,与 VF 的 D 状态无关。VF 电源状态不影响链路电源状态。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -791,18 +738,14 @@ The following rules relate to PCI-PM compatible power management:
 <a id="sec-5-3-2-1"></a>
 ### 5.3.2.1 Entry into the L1 State § | 5.3.2.1 进入 L1 状态 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 § Figure 5-2 depicts the process by which a Link transitions into the L1 state as a direct result of power management software programming the Downstream connected component into a lower power state, (either D1, D2, or D3Hot state). This figure and the subsequent description outline the transition process for a single-Function Downstream component that is being programmed to a non-D0 state.
 
@@ -825,8 +768,8 @@ The following text provides additional detail for the Link state transition proc
 
 5. Once all of the Downstream components' TLPs have been acknowledged, the Downstream component starts to transmit PM_Enter_L1 DLLPs. The Downstream component sends this DLLP repeatedly with no more than eight (when using 8b/10b encoding) or 32 (when using 128b/130b encoding) Symbol times of idle between subsequent transmissions of the PM_Enter_L1 DLLP, in Non-Flit Mode. The transmission of other DLLPs and SKP Ordered Sets is permitted at any time between PM_Enter_L1 transmissions, and do not contribute to this idle time limit.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 § 图 5-2 描述了由电源管理软件将下游所连组件编程到较低电源状态 (D1、D2 或 D3Hot 状态) 而直接导致的链路转换到 L1 状态的过程。该图及随后的描述概述了被编程到非 D0 状态的单 Function 下游组件的转换过程。
 
@@ -849,12 +792,9 @@ The following text provides additional detail for the Link state transition proc
 
 5. 一旦下游组件的所有 TLP 都已被确认,下游组件开始发送 PM_Enter_L1 DLLP。组件在非 Flit 模式下,以不超过 8 个 (使用 8b/10b 编码) 或 32 个 (使用 128b/130b 编码) Symbol Time 的空闲间隔重复发送该 DLLP。在 PM_Enter_L1 发送之间的任何时刻允许发送其他 DLLP 和 SKP 有序集 (SKP Ordered Sets),它们不计入该空闲时间限制。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -862,16 +802,14 @@ The following text provides additional detail for the Link state transition proc
 
 <<<PAGE_BREAK>>> page_663
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 The Downstream component continues to transmit the PM_Enter_L1 DLLP as described above until it receives a response from the Upstream component (PM_Request_Ack).
 
@@ -901,8 +839,8 @@ Components on either end of a Link in L1 may optionally disable their internal P
 
 Refer to § Section 5.5 for entry into the L1 PM Substates.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 下游组件如上所述继续发送 PM_Enter_L1 DLLP,直到它收到来自上游组件的响应 (PM_Request_Ack)。
 
@@ -932,8 +870,7 @@ L1 链路两端的组件可选择地禁用其内部 PLL,以节省更多能量。
 
 有关进入 L1 PM Substates 的内容,请参见 § 第 5.5 节。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -946,18 +883,14 @@ L1 链路两端的组件可选择地禁用其内部 PLL,以节省更多能量。
 <a id="sec-5-3-2-2"></a>
 ### 5.3.2.2 Exit from L1 State § | 5.3.2.2 退出 L1 状态 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 L1 exit can be initiated by the component on either end of a Link.
 
@@ -982,8 +915,8 @@ Sequence of events:
 
 5. Once both directions of the Link are back to the active L0 state, the Upstream Port sends the configuration Packet Downstream.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 链路任一端的组件均可启动 L1 退出。
 
@@ -1008,12 +941,9 @@ Sequence of events:
 
 5. 一旦链路的两个方向都恢复到活动的 L0 状态,上游端口将配置报文向下游发送。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1022,16 +952,14 @@ Sequence of events:
 <a id="sec-5-3-2-3"></a>
 ### 5.3.2.3 Entry into the L2/L3 Ready State § | 5.3.2.3 进入 L2/L3 Ready 状态 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 Transition to the L2/L3 Ready state follows a process that is similar to the L1 entry process. There are some minor differences between the two that are spelled out below.
 
@@ -1041,8 +969,8 @@ Transition to the L2/L3 Ready state follows a process that is similar to the L1 
 - Note that the PM_Enter_L23 DLLPs are sent continuously until an acknowledgement is received or power is removed.
 - Refer to § Section 5.2 if the negotiation to L2/L3 Ready is interrupted.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 转换到 L2/L3 Ready 状态遵循与 L1 进入过程类似的过程。两者之间存在一些小差异,如下所述。
 
@@ -1052,8 +980,7 @@ Transition to the L2/L3 Ready state follows a process that is similar to the L1 
 - 注意,PM_Enter_L23 DLLP 持续发送,直到收到确认或电源被移除。
 - 如果到 L2/L3 Ready 的协商被中断,请参考 § 第 5.2 节。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -1064,18 +991,14 @@ Transition to the L2/L3 Ready state follows a process that is similar to the L1 
 <a id="sec-5-3-3"></a>
 ## 5.3.3 Power Management Event Mechanisms § | 5.3.3 电源管理事件机制 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 The PCI Express PME mechanism is software compatible with the [PCI] PME mechanism. Power Management Events are generated by Functions as a means of requesting a PM state change. Power Management Events are typically utilized to revive the system or an individual Function from a low power state.
 
@@ -1092,8 +1015,8 @@ If an RCiEP is associated with a Root Complex Event Collector, any PME indicatio
 
 PME indications that originate from a Root Port itself are reported through the same Root Port.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 PCI Express PME 机制与 [PCI] PME 机制软件兼容。电源管理事件 (Power Management Event) 由 Function 生成,作为请求 PM 状态变更的一种方式。电源管理事件通常用于将系统或单个 Function 从低功耗状态恢复。
 
@@ -1110,12 +1033,9 @@ PCI Express PME 机制与 [PCI] PME 机制软件兼容。电源管理事件 (Pow
 
 源自根端口 (Root Port) 本身的 PME 指示通过同一根端口上报。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1124,16 +1044,14 @@ PCI Express PME 机制与 [PCI] PME 机制软件兼容。电源管理事件 (Pow
 <a id="sec-5-3-3-1"></a>
 ### 5.3.3.1 Motivation § | 5.3.3.1 动机 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 The L2 state is defined as "non-communicating" since component reference clock and main power supply are removed in that state.
 
@@ -1151,8 +1069,8 @@ Systems that allow PME generation from D3Cold state must provide auxiliary power
 
 Regardless of the wakeup mechanism used, once the Link has been re-activated and trained, the requesting agent then propagates a PM_PME Message Upstream to the Root Complex. From a power management point of view, the two wakeup mechanisms provide the same functionality, and are not distinguished elsewhere in this chapter.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 L2 状态被定义为"不通信",因为在该状态下组件参考时钟和主电源被移除。
 
@@ -1170,8 +1088,7 @@ WAKE# 机制使用边带 (sideband) 信令实现唤醒功能。WAKE# 是由请�
 
 无论使用哪种唤醒机制,一旦链路已重新激活并完成训练,请求代理随后将 PM_PME 报文向上游传播到根复合体。从电源管理的角度来看,两种唤醒机制提供相同的功能,本章其余部分不区分它们。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -1184,18 +1101,14 @@ WAKE# 机制使用边带 (sideband) 信令实现唤醒功能。WAKE# 是由请�
 <a id="sec-5-3-3-2"></a>
 ### 5.3.3.2 Link Wakeup § | 5.3.3.2 链路唤醒 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 PCI Express-PM introduces a fence mechanism that serves to initiate the power removal sequence while also coordinating the behavior of the platform's power management controller and PME handling by PCI Express agents.
 
@@ -1215,8 +1128,8 @@ All components with an Upstream Port must accept and acknowledge the PME_Turn_Of
 > **Figure 5-4.** Conceptual Diagrams Showing Two Example Cases of WAKE# Routing
 > <img src="figures/chapter_05/fig_0666_1.png" width="700">
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 PCI Express-PM 引入了一种围栏 (fence) 机制,用于启动电源移除序列,同时协调平台电源管理控制器与 PCI Express 代理的 PME 处理行为。
 
@@ -1236,12 +1149,9 @@ Switch 必须在收到每个下游端口的 PME_TO_Ack 报文后才能报告"聚
 > **图 5-4.** 显示两个示例 WAKE# 路由情况的概念图
 > <img src="figures/chapter_05/fig_0666_1.png" width="700">
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1252,16 +1162,14 @@ Switch 必须在收到每个下游端口的 PME_TO_Ack 报文后才能报告"聚
 <a id="sec-5-3-3-2-1"></a>
 #### 5.3.3.2.1 PME Synchronization § | 5.3.3.2.1 PME 同步 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 A Switch must transition its Upstream Link to the L2/L3 Ready state after all of its Downstream Ports have entered the L2/L3 Ready state.
 
@@ -1275,8 +1183,8 @@ The power delivery manager must wait a minimum of 100 ns after observing all Lin
 > One of the PME_Turn_Off/PME_TO_Ack handshake's key roles is to ensure that all in flight PME Messages are flushed from the PCI Express fabric prior to sleep state power removal. This is guaranteed to occur because PME Messages and the PME_TO_Ack Messages both use the posted request queue within VC0 and so all previously injected PME Messages will be made visible to the system before the PME_TO_Ack is received at the Root Complex. Once all Downstream Ports of the Root Complex receive a PME_TO_Ack Message the Root Complex can then signal the power manager that it is safe to remove power without loss of any PME Messages.
 > Switches create points of hierarchical expansion and, therefore, must wait for all of their connected Downstream Ports to receive a PME_TO_Ack Message before they can send a PME_TO_Ack Message Upstream on behalf of the sub-hierarchy that it has created Downstream. This can be accomplished very simply using common score boarding techniques. For example, once a PME_Turn_Off broadcast Message has been broadcast Downstream of the Switch, the Switch simply checks off each Downstream Port having received a PME_TO_Ack. Once the last of its active Downstream Ports receives a PME_TO_Ack, the Switch will then send a single PME_TO_Ack Message Upstream as a proxy on behalf of the entire sub-hierarchy Downstream of it. Note that once a Downstream Port receives a PME_TO_Ack Message and the Switch has scored its arrival, the Port is then free to drop the packet from its internal queues and free up the corresponding posted request queue FC credits.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 Switch 必须在所有下游端口进入 L2/L3 Ready 状态之后,才将其上游链路转换到 L2/L3 Ready 状态。
 
@@ -1290,8 +1198,7 @@ Switch 必须在所有下游端口进入 L2/L3 Ready 状态之后,才将其上�
 > PME_Turn_Off/PME_TO_Ack 握手的关键作用之一是确保在睡眠状态电源移除之前,所有在途 PME 报文都已从 PCI Express 互连中清除。这一点得到保证,是因为 PME 报文和 PME_TO_Ack 报文都使用 VC0 内的 Posted 请求队列,因此所有先前注入的 PME 报文将在 PME_TO_Ack 被根复合体接收之前对系统可见。一旦根复合体的所有下游端口接收到 PME_TO_Ack 报文,根复合体即可向电源管理器发出信号,表明在不会丢失任何 PME 报文的情况下安全移除电源。
 > Switch 创建层级扩展点,因此必须等待其连接的所有下游端口接收到 PME_TO_Ack 报文,然后才能代表其下游创建的子层级向上游发送 PME_TO_Ack 报文。这可以使用常见的记分板 (scoreboarding) 技术非常简单地实现。例如,一旦 PME_Turn_Off 广播报文已从 Switch 向下游广播,Switch 简单地检查每个下游端口是否已收到 PME_TO_Ack。一旦其活动下游端口中最后一个接收到 PME_TO_Ack,Switch 随后将作为其下游整个子层级的代理向上游发送单个 PME_TO_Ack 报文。注意,一旦下游端口接收到 PME_TO_Ack 报文且 Switch 已记下其到达,该端口可自由地从其内部队列中丢弃该报文并释放相应的 Posted 请求队列 FC 信用。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -1304,36 +1211,29 @@ Switch 必须在所有下游端口进入 L2/L3 Ready 状态之后,才将其上�
 <a id="sec-5-3-3-3"></a>
 ### 5.3.3.3 PM_PME Messages § | 5.3.3.3 PM_PME 报文 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 PM_PME Messages are posted Transaction Layer Packets (TLPs) that inform the power management software which agent within the Hierarchy requests a PM state change. PM_PME Messages, like all other Power Management system Messages, must use the general purpose Traffic Class, TC0.
 
 PM_PME Messages are always routed in the direction of the Root Complex. To send a PM_PME Message on its Upstream Link, a device must transition the Link to the L0 state (if the Link was not in that state already). Unless otherwise noted, the device will keep the Link in the L0 state following the transmission of a PM_PME Message.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 PM_PME 报文是 Posted 事务层包 (TLP),通知电源管理软件层级内哪个代理请求 PM 状态变更。与所有其他电源管理系统报文一样,PM_PME 报文必须使用通用流量类 TC0。
 
 PM_PME 报文始终沿根复合体方向路由。要在其上游链路上发送 PM_PME 报文,设备必须将链路转换到 L0 状态 (如果链路尚未处于该状态)。除非另有说明,设备在发送 PM_PME 报文后将保持链路处于 L0 状态。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1342,16 +1242,14 @@ PM_PME 报文始终沿根复合体方向路由。要在其上游链路上发送 
 <a id="sec-5-3-3-3-1"></a>
 #### 5.3.3.3.1 PM_PME "Backpressure" Deadlock Avoidance § | 5.3.3.3.1 PM_PME "背压"死锁避免 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 A Root Complex is typically implemented with local buffering to store temporarily a finite number of PM_PME Messages that could potentially be simultaneously propagating through the Hierarchy. Given a limited number of PM_PME Messages that can be stored within the Root Complex, there can be backpressure applied to the Upstream directed posted queue in the event that the capacity of this temporary PM_PME Message buffer is exceeded.
 
@@ -1369,8 +1267,8 @@ To ensure that no PM_PME Messages are lost permanently, all agents that are capa
 
 If after 100 ms (+50%/-5%), the PME_Status bit of a requesting agent has not yet been cleared, the PME Service Timeout mechanism expires triggering the PME requesting agent to re-send the temporarily lost PM_PME Message. If at this time the Link is in a non-communicating state, then, prior to re-sending the PM_PME Message, the agent must reactivate the Link as defined in § Section 5.3.3.2.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 根复合体通常实现有本地缓冲,以临时存储可能同时通过层级传播的有限数量的 PM_PME 报文。鉴于根复合体内可存储的 PM_PME 报文数量有限,在该临时 PM_PME 报文缓冲区的容量被超出时,可能对向上游方向的 Posted 队列施加背压。
 
@@ -1388,8 +1286,7 @@ If after 100 ms (+50%/-5%), the PME_Status bit of a requesting agent has not yet
 
 如果在 100 ms (+50%/-5%) 之后,请求代理的 PME_Status 位尚未被清零,则 PME 服务超时机制到期,触发 PME 请求代理重新发送暂时丢失的 PM_PME 报文。如果此时链路处于不通信状态,则在重新发送 PM_PME 报文之前,代理必须按 § 第 5.3.3.2 节所述重新激活链路。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -1402,18 +1299,14 @@ If after 100 ms (+50%/-5%), the PME_Status bit of a requesting agent has not yet
 <a id="sec-5-3-3-4"></a>
 ### 5.3.3.4 PME Rules § | 5.3.3.4 PME 规则 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 - All device Functions must implement the PCI-PM Power Management Capabilities (PMC) register and the PMCSR in accordance with the PCI-PM specification. These registers reside in the PCI-PM compliant PCI Capability List format.
   - PME capable Functions must implement the PME_Status bit, and underlying functional behavior, in their PMCSR.
@@ -1422,8 +1315,8 @@ If after 100 ms (+50%/-5%), the PME_Status bit of a requesting agent has not yet
 - On receiving a PME_Turn_Off Message, the device must block the transmission of PM_PME Messages and transmit a PME_TO_Ack Message Upstream. The component is permitted to send a PM_PME Message after the Link is returned to an L0 state through LDn.
 - Before a Link or a portion of a Hierarchy is transferred into a non-communicating state (i.e., a state from which it cannot issue a PM_PME Message), a PME_Turn_Off Message must be broadcast Downstream.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 - 所有设备 Function 必须按照 PCI-PM 规范实现 PCI-PM 电源管理能力 (Power Management Capabilities, PMC) 寄存器和 PMCSR。这些寄存器驻留在符合 PCI-PM 的 PCI 能力列表格式中。
   - 支持 PME 的 Function 必须在它们的 PMCSR 中实现 PME_Status 位以及底层功能行为。
@@ -1432,12 +1325,9 @@ If after 100 ms (+50%/-5%), the PME_Status bit of a requesting agent has not yet
 - 收到 PME_Turn_Off 报文时,设备必须阻止 PM_PME 报文的发送,并向上游发送 PME_TO_Ack 报文。在链路通过 LDn 返回到 L0 状态之后,允许组件发送 PM_PME 报文。
 - 在链路或层级的某一部分被转换到不通信状态 (即无法发出 PM_PME 报文的状态) 之前,必须向下游广播 PME_Turn_Off 报文。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1446,16 +1336,14 @@ If after 100 ms (+50%/-5%), the PME_Status bit of a requesting agent has not yet
 <a id="sec-5-3-3-5"></a>
 ### 5.3.3.5 PM_PME Delivery State Machine § | 5.3.3.5 PM_PME 传递状态机 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 The following diagram conceptually outlines the PM_PME delivery control state machine. This state machine determines the ability of a Link to service PME events by issuing PM_PME immediately vs. requiring Link wakeup.
 
@@ -1484,8 +1372,8 @@ At initial power-up and associated reset, the Upstream Link enters the Communica
 
 - Following the restoration of power and clock, and the associated reset, the Link resumes a transaction-capable state. The device clears the wakeup signaling, if necessary, and issues a PM_PME Upstream and transitions into the PME Sent state.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 下图概念性地概述了 PM_PME 传递控制状态机。此状态机通过立即发出 PM_PME 还是需要链路唤醒来确定链路处理 PME 事件的能力。
 
@@ -1514,8 +1402,7 @@ At initial power-up and associated reset, the Upstream Link enters the Communica
 
 - 在电源和时钟恢复以及相关复位之后,链路恢复为可处理事务的状态。设备在必要时清零唤醒信令,并向上游发出 PM_PME,然后转换到 PME Sent 状态。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -1528,18 +1415,14 @@ At initial power-up and associated reset, the Upstream Link enters the Communica
 <a id="sec-5-4"></a>
 ## 5.4 Native PCI Express Power Management Mechanisms § | 5.4 原生 PCI Express 电源管理机制 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 The following sections define power management features that require new software. While the presence of these features in new PCI Express designs will not break legacy software compatibility, taking the full advantage of them requires new code to manage them.
 
@@ -1585,8 +1468,8 @@ Note that the components must be capable of changing their behavior during runti
 > **IMPLEMENTATION NOTE: ISOCHRONOUS TRAFFIC AND ASPM**
 > Isochronous traffic requires bounded service latency. ASPM may add latency to isochronous transactions beyond expected limits. A possible solution would be to disable ASPM for devices that are configured with an Isochronous Virtual Channel.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 以下各节定义了需要新软件的电源管理功能。虽然这些功能在新 PCI Express 设计中的存在不会破坏传统软件兼容性,但要充分利用它们需要新代码来管理它们。
 
@@ -1632,12 +1515,9 @@ L1 退出延迟也适用于 L0p,但用于 L0p 时,表示扩展链路宽度所需
 > **实现注: 等时流量与 ASPM**
 > 等时流量需要有限的服务延迟。ASPM 可能将等时事务的延迟增加到超出预期限制。一个可能的解决方案是为配置了等时虚通道 (Isochronous Virtual Channel) 的设备禁用 ASPM。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1648,16 +1528,14 @@ L1 退出延迟也适用于 L0p,但用于 L0p 时,表示扩展链路宽度所需
 <a id="sec-5-4-1"></a>
 ## 5.4.1 Active State Power Management (ASPM) § | 5.4.1 主动状态电源管理 (ASPM) §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 The L1 Link state is optimized for maximum power savings at a cost of longer entry and exit latencies. L1 reduces Link power beyond the L0s state for cases where very low power is required and longer transition times are acceptable. ASPM support for the L1 Link state is optional unless specifically required by a particular form factor.
 
@@ -1667,8 +1545,8 @@ Each component must report its level of support for ASPM in the ASPM Support fie
 
 The L1 exit latency also applies to L0p, but when used for L0p, indicates the time required to widen the Link. The Link remains operational during this time period, but at lower bandwidth.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 L1 链路状态针对最大节能进行了优化,代价是较长的进入与退出延迟。对于需要极低功耗且可接受较长转换时间的场景,L1 可将链路功耗降低到 L0s 状态以下。除非特定外形规格明确要求,否则对 ASPM 而言 L1 链路状态的支持是可选的。
 
@@ -1678,8 +1556,7 @@ L1 链路状态针对最大节能进行了优化,代价是较长的进入与退�
 
 L1 退出延迟也适用于 L0p,但用于 L0p 时,表示扩展链路宽度所需的时间。在此时间段内,链路保持运行,但带宽较低。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -1692,18 +1569,14 @@ L1 退出延迟也适用于 L0p,但用于 L0p 时,表示扩展链路宽度所需
 <a id="sec-5-4-1-1"></a>
 ### 5.4.1.1 L0s ASPM State § | 5.4.1.1 L0s ASPM 状态 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 Device support of the L0s low power Link state is optional unless the applicable form factor specification for the Link explicitly requires it.
 
@@ -1722,8 +1595,8 @@ Transaction Layer and Link Layer timers are not affected by a transition to the 
 > **IMPLEMENTATION NOTE: MINIMIZING L0S EXIT LATENCY**
 > L0s exit latency depends mainly on the ability of the Receiver to quickly acquire bit and Symbol synchronization. Different approaches exist for high-frequency clocking solutions which may differ significantly in their L0s exit latency, and therefore in the efficiency of ASPM. To achieve maximum power savings efficiency with ASPM, L0s exit latency should be kept low by proper selection of the clocking solution.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 除非链路适用的外形规格规范明确要求,否则设备对 L0s 低功耗链路状态的支持是可选的。
 
@@ -1742,12 +1615,9 @@ Transaction Layer and Link Layer timers are not affected by a transition to the 
 > **实现注: 最小化 L0S 退出延迟**
 > L0s 退出延迟主要取决于接收器快速获取位与符号同步的能力。对于高频时钟解决方案存在不同方法,它们的 L0s 退出延迟可能差异很大,因此 ASPM 的效率也差异很大。为了通过 ASPM 实现最大的节能效率,应通过适当选择时钟解决方案来保持较低的 L0s 退出延迟。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1756,16 +1626,14 @@ Transaction Layer and Link Layer timers are not affected by a transition to the 
 <a id="sec-5-4-1-1-1"></a>
 #### 5.4.1.1.1 Entry into the L0s State § | 5.4.1.1.1 进入 L0s 状态 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 Entry into the L0s state is managed separately for each direction of the Link. It is the responsibility of each device at either end of the Link to initiate an entry into the L0s state on its transmitting Lanes. Software must not enable L0s in either direction on a given Link unless components on both sides of the Link each support L0s; otherwise, the result is undefined.
 
@@ -1798,8 +1666,8 @@ A Switch's Downstream Port is determined to be idle if the following conditions 
 
 Refer to § Section 4.2 for details on L0s entry by the Physical Layer.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 L0s 状态的进入是针对链路的每个方向分别管理的。链路的任一端设备有责任启动其发送 Lane 到 L0s 状态的进入。除非链路两端的组件各自支持 L0s,否则软件不得在给定链路的任一方向上启用 L0s;否则,结果是未定义的。
 
@@ -1832,8 +1700,7 @@ Switch 的下游端口在满足以下条件时被确定为空闲:
 
 有关物理层 L0s 进入的详细信息,请参考 § 第 4.2 节。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -1844,18 +1711,14 @@ Switch 的下游端口在满足以下条件时被确定为空闲:
 <a id="sec-5-4-1-1-2"></a>
 #### 5.4.1.1.2 Exit from the L0s State § | 5.4.1.1.2 退出 L0s 状态 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 A component with its Transmitter in L0s must initiate L0s exit when it has a TLP or DLLP to transmit across the Link. Note that a transition from the L0s Link state does not depend on the status (or availability) of FC credits. The Link must be able to reach the L0 state, and to exchange FC credits across the Link. For example, if all credits of some type were consumed when the Link entered L0s, then any component on either side of the Link must still be able to transition the Link to the L0 state when new credits need to be sent across the Link. Note that it may be appropriate for a component to anticipate the end of the idle condition and initiate L0s transmit exit; for example, when an NP request is received.
 
@@ -1873,8 +1736,8 @@ If the Downstream component contains a Switch, it must initiate a transition on 
 
 For example, consider a Switch with an Upstream Port in L0s and a Downstream device in a D1 state. A configuration request packet travels Downstream to the Switch, intending ultimately to reprogram the Downstream device from D1 to D0. The Switch's Upstream Port Link must transition to the L0 state to allow the packet to reach the Switch. The Downstream Link connecting to the device in D1 state will not transition to the L0 state yet; it will remain in the L1 state. The captured packet is checked and routed to the Downstream Port that shares a Link with the Downstream device that is in D1. As described in § Section 4.2, the Switch now transitions the Downstream Link to the L0 state. Note that the transition to the L0 state was triggered by the packet being routed to that particular Downstream L1 Link, and not by the transition of the Upstream Port's Link to the L0 state. If the packet's destination was targeting a different Downstream Link, then that particular Downstream Link would have remained in the L1 state.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 当发送器处于 L0s 状态的组件需要通过链路发送 TLP 或 DLLP 时,必须启动 L0s 退出。注意,从 L0s 链路状态的转换不依赖于 FC 信用的状态 (或可用性)。链路必须能够达到 L0 状态,并在链路上交换 FC 信用。例如,如果在链路进入 L0s 时某些类型的所有信用都被消耗,则链路任一侧的任何组件在需要跨链路发送新信用时,仍必须能够将链路转换到 L0 状态。注意,组件可适当地预期空闲条件的结束并启动 L0s 发送退出;例如,当收到 NP 请求时。
 
@@ -1892,12 +1755,9 @@ For example, consider a Switch with an Upstream Port in L0s and a Downstream dev
 
 例如,考虑一个 Switch,其上游端口处于 L0s,下游设备处于 D1 状态。配置请求报文向下游传播到 Switch,最终目的是将下游设备从 D1 重新编程为 D0。Switch 的上游端口链路必须转换到 L0 状态,以允许报文到达 Switch。连接到 D1 状态设备的下游链路不会转换到 L0 状态;它将保持在 L1 状态。捕获的报文被检查并路由到与处于 D1 状态的下游设备共享链路的上游端口。如 § 第 4.2 节所述,Switch 现在将下游链路转换到 L0 状态。注意,到 L0 状态的转换是由报文被路由到该特定下游 L1 链路触发的,而不是由上游端口的链路到 L0 状态的转换触发的。如果报文的目的地是针对不同的下游链路,则该特定的下游链路将保持在 L1 状态。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1908,30 +1768,27 @@ For example, consider a Switch with an Upstream Port in L0s and a Downstream dev
 <a id="sec-5-4-1-2"></a>
 ### 5.4.1.2 ASPM L0p State § | 5.4.1.2 ASPM L0p 状态 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 L0p is a substate of L0 that provides power savings with short entry latency and a longer exit latency. Local L0p exit latency and remote L0p exit latency are visible to software and are reported in the Local L0p Exit Latency and Remote L0p Exit Latency fields of the Data Link Feature Extended Capability.
 
 L0p is supported in Flit Mode only and can be used only when supported by both Link partners. When supported, ASPM L0p is controlled by the Hardware Autonomous Width Disable bit in the Link Control Register and by several Device Control 3 Register fields. the See § Section 4.2.6.7 for more detail on L0p.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 L0p 是 L0 的子状态,可在较短的进入延迟下提供节能,同时退出延迟较长。本地 L0p 退出延迟与远程 L0p 退出延迟对软件可见,并在数据链路功能扩展能力 (Data Link Feature Extended Capability) 的 Local L0p Exit Latency 和 Remote L0p Exit Latency 字段中报告。
 
 L0p 仅在 Flit 模式下支持,仅在两个链路伙伴都支持时才能使用。在支持时,ASPM L0p 由 Link Control 寄存器中的 Hardware Autonomous Width Disable 位和多个 Device Control 3 寄存器字段控制。有关 L0p 的更多细节,请参见 § 第 4.2.6.7 节。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -1942,18 +1799,14 @@ L0p 仅在 Flit 模式下支持,仅在两个链路伙伴都支持时才能使用
 <a id="sec-5-4-1-3"></a>
 ### 5.4.1.3 ASPM L1 State § | 5.4.1.3 ASPM L1 状态 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 A component may optionally support the ASPM L1 state; a state that provides greater power savings at the expense of longer exit latency. L1 exit latency is visible to software, and reported via the L1 Exit Latency field.
 
@@ -1973,8 +1826,8 @@ Three power management Messages provide support for the ASPM L1 state:
 > In earlier versions of this specification, device support of L0s was mandatory, and there was no architected ASPM Support field value to indicate L1 support without L0s support. Newer hardware components that support only L1 may encounter issues with "legacy software", i.e., software that does not recognize the subsequently defined value for the ASPM Support field.
 > Legacy software that encounters the previously reserved value 10b (L1 Support), may refrain from enabling both L0s and L1, which unfortunately avoids using L1 with new components that support only L1. While this may result in additional power being consumed, it should not cause any functional misbehavior. However, the same issues with respect to legacy software enabling L0s exist for this 10b case as are described in the Implementation Note "Potential Issues With Legacy Software When L0s is Not Supported" in § Section 5.4.1.1.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 组件可选择地支持 ASPM L1 状态;该状态以更长的退出延迟为代价提供更大的节能。L1 退出延迟对软件可见,并通过 L1 Exit Latency 字段报告。
 
@@ -1994,12 +1847,9 @@ Three power management Messages provide support for the ASPM L1 state:
 > 在本规范的早期版本中,设备对 L0s 的支持是强制性的,并且没有架构化 (architected) 的 ASPM Support 字段值可指示在不支持 L0s 的情况下支持 L1。仅支持 L1 的较新硬件组件可能与"传统软件" (即不识别随后为 ASPM Support 字段定义值的软件) 存在兼容问题。
 > 遇到先前保留值 10b (L1 Support) 的传统软件可能避免同时启用 L0s 和 L1,这不幸地避免了在仅支持 L1 的新组件上使用 L1。虽然这可能导致额外的功耗,但不应引起任何功能误操作。但是,关于传统软件启用 L0s 的相同问题在此 10b 情况下也存在,正如 § 第 5.4.1.1 节中实现注"不支持 L0S 时传统软件的潜在问题"中所述。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2010,30 +1860,27 @@ Three power management Messages provide support for the ASPM L1 state:
 <a id="sec-5-4-1-3-1"></a>
 #### 5.4.1.3.1 ASPM Entry into the L1 State § | 5.4.1.3.1 ASPM 进入 L1 状态 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 > **IMPLEMENTATION NOTE: INITIATING L1**
 > This specification does not dictate when a component with an Upstream Port must initiate a transition to the L1 state. The interoperable mechanisms for transitioning into and out of L1 are defined within this specification; however, the specific ASPM policy governing when to transition into L1 is left to the implementer.
 > One possible approach would be for the Downstream device to initiate a transition to the L1 state once the device has both its Receiver and Transmitter in the L0s state (RxL0s and TxL0s) for a set amount of time. Another approach would be for the Downstream device to initiate a transition to the L1 state once the Link has been idle in L0 for a set amount of time. This is particularly useful if L0s entry is not enabled. Still another approach would be for the Downstream device to initiate a transition to the L1 state if it has completed its assigned tasks. Note that a component's L1 invocation policy is in no way limited by these few examples.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 > **实现注: 启动 L1**
 > 本规范不规定具有上游端口的组件何时必须启动到 L1 状态的转换。在本规范中定义了用于转换进出 L1 的可互操作机制;然而,有关何时转换到 L1 的具体 ASPM 策略留给实现者决定。
 > 一种可能的方法是,当下游设备的接收器和发送器都处于 L0s 状态 (RxL0s 和 TxL0s) 达到设定时间后,启动到 L1 状态的转换。另一种方法是,当链路在 L0 状态空闲达到设定时间后,下游设备启动到 L1 状态的转换。如果未启用 L0s 进入,这种方法尤其有用。再一种方法是,如果下游设备已完成其分配的任务,则可启动到 L1 状态的转换。注意,组件的 L1 调用策略绝不限于这几个示例。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -2043,18 +1890,14 @@ table>
 
 <<<PAGE_BREAK>>> page_678
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 Downstream components enabled for ASPM L1 entry negotiate for L1 entry with the Upstream component on the Link.
 
@@ -2105,8 +1948,8 @@ If the Upstream component is not able to accept the request, it must immediately
 - If the request was rejected, it is generally recommended that the Downstream component immediately transition its Transmit Lanes into the L0s state, provided L0s is enabled and that conditions for L0s entry are met.
 - Prior to transmitting a PM_Active_State_Request_L1 DLLP associated with a subsequent ASPM L1 negotiation sequence, the Downstream component must either enter and exit L0s on its Transmitter, or it must wait at least 10 μs from the last transmission of the PM_Active_State_Request_L1 DLLP associated with the preceding ASPM L1 negotiation. This 10 μs timer must count only time spent in the LTSSM L0 and L0s states. The timer must hold in the LTSSM Recovery state. If the Link goes down and comes back up, the timer is ignored and the component is permitted to issue new ASPM L1 request after the Link has come back up.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 启用了 ASPM L1 进入的下游组件与链路上的上游组件协商 L1 进入。
 
@@ -2157,12 +2000,9 @@ Switch 上游端口在以下所有条件都为真时可请求其链路的 L1 进
 - 如果请求被拒绝,通常建议下游组件立即将其发送 Lane 转换到 L0s 状态,前提是 L0s 已启用且满足 L0s 进入条件。
 - 在发送与后续 ASPM L1 协商序列关联的 PM_Active_State_Request_L1 DLLP 之前,下游组件必须在其发送器上进入并退出 L0s,或者必须自与先前 ASPM L1 协商关联的 PM_Active_State_Request_L1 DLLP 最后一次发送起等待至少 10 μs。该 10 μs 定时器必须仅计算在 LTSSM L0 和 L0s 状态中花费的时间。定时器必须在 LTSSM Recovery 状态中保持。如果链路断开并重新连接,则忽略该定时器,并允许组件在链路重新连接后发出新的 ASPM L1 请求。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2170,16 +2010,14 @@ Switch 上游端口在以下所有条件都为真时可请求其链路的 L1 进
 
 <<<PAGE_BREAK>>> page_679
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 transmissions, and do not contribute to this idle time limit. Transmission of SKP Ordered Sets during L1 entry follows the clock tolerance compensation rules in § Section 4.2.8.
 
@@ -2217,8 +2055,8 @@ If the Upstream component is not able to accept the request, it must immediately
 > If the Upstream component is capable of exhibiting the behavior described above, then it is necessary for the Upstream component to recognize the end of an L1 request sequence by detecting a transition to L0s on its Receiver (when supported and enabled) or a break in the reception of PM_Active_State_Request_L1 DLLPs of 9.5 μs measured while in L0/L0s or more as a separation between ASPM L1 requests by the Downstream component.
 > If there is a possibility of ambiguity, the Upstream component should reject the L1 request to avoid potentially creating the ambiguous situation outlined above.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 传输,且不计入该空闲时间限制。L1 进入期间的 SKP 有序集传输遵循 § 第 4.2.8 节中的时钟容差补偿规则。
 
@@ -2256,8 +2094,7 @@ If the Upstream component is not able to accept the request, it must immediately
 > 如果上游组件能够表现出上述行为,则上游组件必须通过检测其接收器到 L0s 的转换 (在支持并启用时) 或在 L0/L0s 中测量 9.5 μs 或以上的 PM_Active_State_Request_L1 DLLP 接收中断来识别 L1 请求序列的结束,作为下游组件的 ASPM L1 请求之间的间隔。
 > 如果存在歧义的可能性,上游组件应拒绝 L1 请求,以避免可能产生上述模糊情况。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -2267,18 +2104,14 @@ If the Upstream component is not able to accept the request, it must immediately
 
 <<<PAGE_BREAK>>> page_681
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 - In Flit Mode, the Upstream component then must wait until it receives a Data Link Layer acknowledgement for the last Flit of the last TLP it had previously sent. The Upstream component must retransmit Flit(s) if required by the Data Link Layer rules.
 - Once all TLPs/Flits have been acknowledged, the Upstream component sends a PM_Request_Ack DLLP Downstream. The Upstream component sends this DLLP repeatedly with no more than eight (when using 8b/10b encoding) or 32 (when using 128b/130b encoding) Symbol times of idle between subsequent transmissions of the PM_Request_Ack DLLP in Non-Flit Mode. The transmission of SKP Ordered Sets must occur as required at any time between PM_Request_Ack transmissions, and do not contribute to this idle time limit. Transmission of SKP Ordered Sets during L1 entry follows the clock tolerance compensation rules in § Section 4.2.8.
@@ -2299,8 +2132,8 @@ Notes:
 > **Figure 5-7.** L1 Successful Transition Sequence
 > <img src="figures/chapter_05/fig_0681_2.png" width="700">
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 - 在 Flit 模式下,上游组件随后必须等待,直到它收到之前发送的最后一个 TLP 的最后一个 Flit 的数据链路层确认。如果数据链路层规则要求,上游组件必须重传 Flit。
 - 一旦所有 TLP/Flit 都已被确认,上游组件向下游发送 PM_Request_Ack DLLP。上游组件在非 Flit 模式下,以不超过 8 个 (使用 8b/10b 编码) 或 32 个 (使用 128b/130b 编码) Symbol Time 的空闲间隔重复发送该 DLLP。在 PM_Request_Ack 发送之间的任何时刻必须根据需要发送 SKP 有序集,且不计入该空闲时间限制。L1 进入期间的 SKP 有序集发送遵循 § 第 4.2.8 节中的时钟容差补偿规则。
@@ -2321,12 +2154,9 @@ Notes:
 > **图 5-7.** 成功 L1 转换序列
 > <img src="figures/chapter_05/fig_0681_2.png" width="700">
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2337,16 +2167,14 @@ Notes:
 <a id="sec-5-4-1-3-2"></a>
 #### 5.4.1.3.2 Exit from the L1 State § | 5.4.1.3.2 退出 L1 状态 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 Components on either end of a Link may initiate an exit from the L1 Link state.
 
@@ -2385,8 +2213,8 @@ If the Downstream component contains a Switch, it must initiate a transition on 
 
 A Switch is required to initiate a transition from L1 state on all of its Downstream Port Links that are currently in L1 after no more than 1 μs from the beginning of a transition from L1 state on its Upstream Port. Refer to § Section 4.2 for details of the Physical Layer signaling during L1 exit. Downstream Port Links that are already in the L0 state do not participate in the exit transition. Downstream Port Links whose Downstream component is in a low power D-state (D1-D3Hot) are also not affected by the L1 exit transitions (i.e., such Links must not be transitioned to the L0 state).
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 链路任一端的组件均可启动从 L1 链路状态的退出。
 
@@ -2425,8 +2253,7 @@ Switch 不需要在其任何其他下游端口链路上启动 L1 退出转换。
 
 Switch 需要在其上游端口上开始 L1 状态转换后,不超过 1 μs 的时间在其当前处于 L1 的所有下游端口链路上启动 L1 状态转换。有关 L1 退出期间物理层信令的详细信息,请参见 § 第 4.2 节。已经处于 L0 状态的下游端口链路不参与退出转换。下游组件处于低功耗 D 状态 (D1-D3Hot) 的下游端口链路也不受 L1 退出转换的影响 (即不得将这些链路转换到 L0 状态)。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -2439,18 +2266,14 @@ Switch 需要在其上游端口上开始 L1 状态转换后,不超过 1 μs 的�
 <a id="sec-5-4-1-4"></a>
 ### 5.4.1.4 ASPM Configuration § | 5.4.1.4 ASPM 配置 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 All Functions must implement the following configuration bits in support of ASPM. Refer to § Chapter 7. for configuration register assignment and access mechanisms.
 
@@ -2523,8 +2346,8 @@ Endpoints also report the additional latency that they can absorb due to the tra
 
 Power management software, using the latency information reported by all components in the Hierarchy, can enable the appropriate level of ASPM by comparing exit latency for each given path from Root to Endpoint against the acceptable latency that each corresponding Endpoint can withstand.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 所有 Function 必须实现以下配置位以支持 ASPM。有关配置寄存器分配和访问机制,请参见 § 第 7 章。
 
@@ -2597,12 +2420,9 @@ Power management software, using the latency information reported by all compone
 
 电源管理软件使用层级中所有组件报告的延迟信息,可通过将从根到端点的每条给定路径的退出延迟与每个相应端点可承受的可接受延迟进行比较,启用适当级别的 ASPM。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2671,16 +2491,14 @@ Power management software enables or disables ASPM in each component by programm
 <a id="sec-5-4-1-4-1"></a>
 #### 5.4.1.4.1 Software Flow for Enabling or Disabling ASPM § | 5.4.1.4.1 启用或禁用 ASPM 的软件流程 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 Following is an example software algorithm that highlights how to enable or disable ASPM in a component.
 
@@ -2691,8 +2509,8 @@ Following is an example software algorithm that highlights how to enable or disa
 - PCI Express system software then reads and calculates the L0s/L1 exit latency for each Endpoint based on the latencies reported by each Port. Refer to § Section 5.4.1.3.2 for an example.
 - For each component with one or more Endpoint Functions, PCI Express system software examines the Endpoint L0s Acceptable Latency /Endpoint L1 Acceptable Latency, as reported by each Endpoint Function in its Link Capabilities Register, and enables or disables L0s /L1 entry (via the ASPM Control field in the Link Control Register) accordingly in some or all of the intervening device Ports on that hierarchy.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 以下示例软件算法重点说明如何在组件中启用或禁用 ASPM。
 
@@ -2703,8 +2521,7 @@ Following is an example software algorithm that highlights how to enable or disa
 - PCI Express 系统软件随后根据每个端口报告的延迟读取并计算每个端点的 L0s/L1 退出延迟。示例请参见 § 第 5.4.1.3.2 节。
 - 对于具有一个或多个端点 Function 的每个组件,PCI Express 系统软件检查每个端点 Function 在其 Link Capabilities 寄存器中报告的 Endpoint L0s Acceptable Latency / Endpoint L1 Acceptable Latency,并相应地启用或禁用该层级上某些或所有中间设备端口的 L0s / L1 进入 (通过 Link Control 寄存器中的 ASPM Control 字段)。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -2717,18 +2534,14 @@ Following is an example software algorithm that highlights how to enable or disa
 <a id="sec-5-5"></a>
 ## 5.5 L1 PM Substates § | 5.5 L1 PM Substates §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 L1 PM Substates establish a Link power management regime that creates lower power substates of the L1 Link state (see § Figure 5-9), and associated mechanisms for using those substates. The L1 PM Substates are:
 
@@ -2761,8 +2574,8 @@ When enabled, the L1 PM Substates mechanism applies the following additional req
 
 If these requirements cannot be satisfied in a particular system, then L1 PM Substates must not be enabled.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 L1 PM Substates 建立了一种链路电源管理机制,它创建了 L1 链路状态的较低功耗子状态 (见 § 图 5-9),以及使用这些子状态的相关机制。L1 PM Substates 为:
 
@@ -2795,12 +2608,9 @@ L1 PM Substates 建立了一种链路电源管理机制,它创建了 L1 链路�
 
 如果特定系统不能满足这些要求,则不得启用 L1 PM Substates。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2830,16 +2640,14 @@ L1 PM Substates 建立了一种链路电源管理机制,它创建了 L1 链路�
 <a id="sec-5-5-1"></a>
 ### 5.5.1 Entry conditions for L1 PM Substates and L1.0 Requirements § | 5.5.1 L1 PM Substates 的进入条件与 L1.0 要求 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 The Link is considered to be in PCI-PM L1.0 when the L1 PM Substate is L1.0 and the LTSSM entered L1 through PCI-PM compatible power management. The Link is considered to be in ASPM L1.0 when the L1 PM Substate is in L1.0 and LTSSM entered L1 through ASPM.
 
@@ -2864,8 +2672,8 @@ When the entry conditions for L1.2 are satisfied, the following rules apply:
 > **IMPLEMENTATION NOTE: AVOIDING UNINTENDED INTERACTIONS BETWEEN L1 PM SUBSTATES AND THE LTSSM**
 > It is often the case that implementation techniques which save power will also increase the latency to return to normal operation. When implementing L1 PM Substates, it is important for the implementer to ensure that any added delays will not negatively interact with other elements of the platform. It is particularly important to ensure that LTSSM timeout conditions are not unintentionally triggered. Although typical implementations will not approach the latencies that would cause such interactions, the responsibility lies with the implementer to ensure that correct overall operation is achieved.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 当 L1 PM Substate 为 L1.0 且 LTSSM 通过 PCI-PM 兼容电源管理进入 L1 时,链路被视为处于 PCI-PM L1.0。当 L1 PM Substate 为 L1.0 且 LTSSM 通过 ASPM 进入 L1 时,链路被视为处于 ASPM L1.0。
 
@@ -2890,8 +2698,7 @@ When the entry conditions for L1.2 are satisfied, the following rules apply:
 > **实现注: 避免 L1 PM SUBSTATES 与 LTSSM 之间的意外交互**
 > 通常,实现节能的技术也会增加恢复正常操作的延迟。在实现 L1 PM Substates 时,实现者必须确保任何增加的延迟不会与平台的其他元素产生负面交互。特别重要的是确保不会意外触发 LTSSM 超时条件。虽然典型的实现不会接近可能引起此类交互的延迟,但实现者有责任确保实现正确的整体操作。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -2904,18 +2711,14 @@ When the entry conditions for L1.2 are satisfied, the following rules apply:
 <a id="sec-5-5-2"></a>
 ### 5.5.2 L1.1 Requirements § | 5.5.2 L1.1 要求 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 If a Downstream Port is in PCI-PM L1.0 and PCI-PM L1.1 Enable and/or PCI-PM L1.2 Enable are Set, or if a Downstream Port is in ASPM L1.0 and ASPM L1.1 Enable and/or ASPM L1.2 Enable are Set, and the Downstream Port initiates an exit to Recovery without having entered L1.1 or L1.2, the Downstream Port must assert CLKREQ# until the Link exits Recovery.
 
@@ -2936,8 +2739,8 @@ If either the Upstream or Downstream Port needs to initiate exit from L1.1, it m
 > **Figure 5-13.** Example: L1.1 Waveforms Illustrating Downstream Port Initiated Exit
 > <img src="figures/chapter_05/fig_0693_2.png" width="700">
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 如果下游端口处于 PCI-PM L1.0 且 PCI-PM L1.1 Enable 和/或 PCI-PM L1.2 Enable 已置位,或下游端口处于 ASPM L1.0 且 ASPM L1.1 Enable 和/或 ASPM L1.2 Enable 已置位,且下游端口在未进入 L1.1 或 L1.2 的情况下启动到 Recovery 的退出,则下游端口必须断言 CLKREQ#,直到链路退出 Recovery。
 
@@ -2958,12 +2761,9 @@ If either the Upstream or Downstream Port needs to initiate exit from L1.1, it m
 > **图 5-13.** 示例: L1.1 波形演示下游端口发起的退出
 > <img src="figures/chapter_05/fig_0693_2.png" width="700">
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2972,30 +2772,27 @@ If either the Upstream or Downstream Port needs to initiate exit from L1.1, it m
 <a id="sec-5-5-2-1"></a>
 #### 5.5.2.1 Exit from L1.1 § | 5.5.2.1 退出 L1.1 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 All Link and PHY state must be maintained during L1.2, or must be restored upon exit using implementation specific means, and the LTSSM and corresponding Port state upon exit from L1.2 must be indistinguishable from the L1.0 LTSSM and Port state.
 
 L1.2 has additional requirements that do not apply to L1.1 These requirements are documented in this section.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 所有链路与 PHY 状态必须在 L1.2 期间保持,或者必须在退出时使用实现特定的方式恢复,并且从 L1.2 退出时的 LTSSM 和相应端口状态必须与 L1.0 LTSSM 和端口状态无法区分。
 
 L1.2 具有不适用于 L1.1 的额外要求。这些要求记录在本节中。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -3008,18 +2805,14 @@ L1.2 具有不适用于 L1.1 的额外要求。这些要求记录在本节中。
 <a id="sec-5-5-3"></a>
 ### 5.5.3 L1.2 Requirements § | 5.5.3 L1.2 要求 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 L1.2 has three substates, which are defined below (see § Figure 5-14).
 
@@ -3036,8 +2829,8 @@ L1.2.Entry is a transitional state on entry into L1.2 to allow time for Refclk t
 
 Note that there is a boundary condition which can occur when one Port asserts CLKREQ# shortly after the other Port deasserts CLKREQ#, but before the first Port has observed CLKREQ# deasserted. This is an unavoidable boundary condition that implementations must handle correctly. An example of this condition is illustrated in § Figure 5-15.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 L1.2 有三个子状态,定义如下 (见 § 图 5-14)。
 
@@ -3054,12 +2847,9 @@ L1.2.Entry 是进入 L1.2 时的过渡状态,以允许 Refclk 关闭的时间并
 
 注意,存在一个边界条件,当一个端口在另一个端口取消断言 CLKREQ# 后不久 (但在第一个端口观察到 CLKREQ# 取消断言之前) 断言 CLKREQ# 时,可能会发生此边界条件。这是一个不可避免的边界条件,实现必须正确处理。§ 图 5-15 演示了此条件的示例。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -3068,16 +2858,14 @@ L1.2.Entry 是进入 L1.2 时的过渡状态,以允许 Refclk 关闭的时间并
 <a id="sec-5-5-3-1"></a>
 #### 5.5.3.1 L1.2.Entry § | 5.5.3.1 L1.2.Entry §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 > **Figure 5-15.** Example: Illustration of Boundary Condition due to Different Sampling of CLKREQ#
 > <img src="figures/chapter_05/fig_0695_1.png" width="700">
@@ -3100,8 +2888,8 @@ This is a transitional state on exit from L1.2 to allow time for both devices to
 - The PHYs of both Upstream and Downstream Ports must be powered.
 - It must not be assumed that common mode has been maintained.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 > **图 5-15.** 示例: 由于 CLKREQ# 不同采样导致的边界条件演示
 > <img src="figures/chapter_05/fig_0695_1.png" width="700">
@@ -3124,8 +2912,7 @@ This is a transitional state on exit from L1.2 to allow time for both devices to
 - 上下游端口的 PHY 必须上电。
 - 不得假设已保持共模。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -3136,18 +2923,14 @@ This is a transitional state on exit from L1.2 to allow time for both devices to
 <a id="sec-5-5-3-2"></a>
 #### 5.5.3.2 L1.2.Idle § | 5.5.3.2 L1.2.Idle §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 The following rules apply for L1.2.Exit using the CLKREQ#-based mechanism:
 
@@ -3167,8 +2950,8 @@ The following rules apply for L1.2.Exit using the CLKREQ#-based mechanism:
 > **Figure 5-17.** Example: L1.2 Waveforms Illustrating Downstream Port Initiated Exit
 > <img src="figures/chapter_05/fig_0696_2.png" width="700">
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 使用基于 CLKREQ# 的机制时,以下规则适用于 L1.2.Exit:
 
@@ -3188,12 +2971,9 @@ The following rules apply for L1.2.Exit using the CLKREQ#-based mechanism:
 > **图 5-17.** 示例: L1.2 波形演示下游端口发起的退出
 > <img src="figures/chapter_05/fig_0696_2.png" width="700">
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -3202,22 +2982,19 @@ The following rules apply for L1.2.Exit using the CLKREQ#-based mechanism:
 <a id="sec-5-5-3-3"></a>
 #### 5.5.3.3 L1.2.Exit § | 5.5.3.3 L1.2.Exit §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -3228,18 +3005,14 @@ table>
 <a id="sec-5-5-3-3-1"></a>
 ##### 5.5.3.3.1 Exit from L1.2 § | 5.5.3.3.1 退出 L1.2 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 L1 PM Substates is considered enabled on a Port when any combination of the ASPM L1.1 Enable, ASPM L1.2 Enable, PCI-PM L1.1 Enable and PCI-PM L1.2 Enable bits associated with that Port are Set.
 
@@ -3261,8 +3034,8 @@ When programming LTR_L1.2_THRESHOLD Value and Scale fields, identical values mus
 
 § Table 5-11 defines the timing parameters associated with the L1.2 substates mechanism.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 当与该端口关联的 ASPM L1.1 Enable、ASPM L1.2 Enable、PCI-PM L1.1 Enable 和 PCI-PM L1.2 Enable 位的任意组合被置位时,认为该端口启用了 L1 PM Substates。
 
@@ -3284,12 +3057,9 @@ TPOWER_ON 和 Common_Mode_Restore_Time 字段必须基于连接两个组件的�
 
 § 表 5-11 定义了与 L1.2 子状态机制相关的时序参数。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -3300,16 +3070,14 @@ TPOWER_ON 和 Common_Mode_Restore_Time 字段必须基于连接两个组件的�
 <a id="sec-5-5-4"></a>
 ### 5.5.4 L1 PM Substates Configuration § | 5.5.4 L1 PM Substates 配置 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 **Table 5-11. L1.2 Timing Parameters | 表 5-11. L1.2 时序参数**
 
@@ -3322,8 +3090,8 @@ table>
 | TPOWER_ON | The minimum amount of time that each component must wait in L1.2.Exit after sampling CLKREQ# asserted before actively driving the interface to ensure no device is ever actively driving into an unpowered component. | Set in the L1 PM Substates Control 2 Register (range from 0 to 3100) | | μs |
 | TL1.2 | Time a Port must stay in L1.2 when CLKREQ# must remain inactive | 4 | | μs |
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 **表 5-11. L1.2 时序参数**
 
@@ -3336,8 +3104,7 @@ table>
 | TPOWER_ON | 在采样到 CLKREQ# 断言后,每个组件在 L1.2.Exit 中必须等待的最小时间,然后才能主动驱动接口,以确保没有设备主动驱动到未上电的组件中。 | 在 L1 PM Substates Control 2 寄存器中设置 (范围从 0 到 3100) | | μs |
 | TL1.2 | 端口在 L1.2 中必须停留且 CLKREQ# 必须保持不活动的时间 | 4 | | μs |
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -3348,18 +3115,14 @@ table>
 <a id="sec-5-5-5"></a>
 ### 5.5.5 L1 PM Substates Timing Parameters § | 5.5.5 L1 PM Substates 时序参数 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 Link Activation is an optional mechanism to temporarily disable L1 Substates. Link Activation is used to bring a Link out of L1.1/L1.2, avoiding potential stalls. An example of one such stall is the stall associated with a Configuration Write to perform a D3Hot to D0 transition. Link Activation can also be used to indirectly indicate to a Device that it should avoid long-latency internal power management during latency-sensitive or time critical operations.
 
@@ -3377,8 +3140,8 @@ The following rules apply to Link Activation:
   - The Link Activation Control bit is Set
   - The Link Activation Status bit is Set. Note that Link Activation interrupts always use the MSI or MSI-X vector indicated by the Interrupt Message Number field in the PCI Express Capabilities Register.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 链路激活 (Link Activation) 是一种可选机制,用于临时禁用 L1 Substates。链路激活用于使链路退出 L1.1/L1.2,以避免潜在的停顿。此类停顿的一个示例是执行 D3Hot 到 D0 转换的配置写相关停顿。链路激活还可用于间接向设备指示,在延迟敏感或时间关键操作期间,应避免使用长延迟的内部电源管理。
 
@@ -3396,12 +3159,9 @@ The following rules apply to Link Activation:
   - Link Activation Control 位置位
   - Link Activation Status 位置位。注意,链路激活中断始终使用 PCI Express Capabilities 寄存器中 Interrupt Message Number 字段指示的 MSI 或 MSI-X 向量。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -3410,16 +3170,14 @@ The following rules apply to Link Activation:
 <a id="sec-5-5-6"></a>
 ### 5.5.6 Link Activation § | 5.5.6 链路激活 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 - If the Port is enabled for level-triggered interrupt signaling using the INTx messages, the virtual INTx wire must be asserted whenever and as long as the following conditions are satisfied:
   - The Interrupt Disable bit in the Command Register is Clear.
@@ -3485,8 +3243,8 @@ The Aux Power PM Enable bit is sticky (see § Section 7.4 ) so its state is pres
 | PME_Turn_Off | Transaction Layer Message |
 | PME_TO_Ack | Transaction Layer Message |
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 - 如果端口已使用 INTx 报文启用电平触发中断信令,则只要满足以下条件,虚拟 INTx 线必须被断言:
   - Command 寄存器中的 Interrupt Disable 位清零。
@@ -3552,8 +3310,7 @@ Aux Power PM Enable 位是粘性位 (见 § 第 7.4 节),因此其状态在 D3Co
 | PME_Turn_Off | 事务层报文 |
 | PME_TO_Ack | 事务层报文 |
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -3569,13 +3326,11 @@ Aux Power PM Enable 位是粘性位 (见 § 第 7.4 节),因此其状态在 D3Co
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 For information on the structure of the power management DLLPs, refer to § Section 3.5.
 
@@ -3587,8 +3342,8 @@ Power Management Messages follow the general rules for all Messages. Power Manag
 - Requester ID - see § Table 2-23 in § Section 2.2.8.2.
 - Traffic Class field must use the default class (TC0).
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 有关电源管理 DLLP 的结构信息,请参见 § 第 3.5 节。
 
@@ -3600,8 +3355,7 @@ Power Management Messages follow the general rules for all Messages. Power Manag
 - Requester ID — 见 § 第 2.2.8.2 节的 § 表 2-23。
 - Traffic Class 字段必须使用默认类 (TC0)。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -3612,18 +3366,14 @@ Power Management Messages follow the general rules for all Messages. Power Manag
 <a id="sec-5-7"></a>
 ## 5.7 Power Management System Messages and DLLPs § | 5.7 电源管理系统报文与 DLLP §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 All PCI-PM power management state changes are explicitly controlled by software except for Fundamental Reset which brings all Functions to the D0uninitialized state. § Figure 5-18 shows all supported state transitions. The unlabeled arcs represent a software initiated state transition (Set Power State operation).
 
@@ -3643,8 +3393,8 @@ All PCI-PM power management state changes are explicitly controlled by software 
 | D2 | D0 | 200 μs |
 | D3Hot | D0 | 10 ms |
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 除基本复位 (Fundamental Reset) 将所有 Function 带到 D0uninitialized 状态外,所有 PCI-PM 电源管理状态更改都由软件显式控制。§ 图 5-18 显示了所有支持的状态转换。未标记的弧线表示软件发起的状态转换 (Set Power State 操作)。
 
@@ -3664,12 +3414,9 @@ All PCI-PM power management state changes are explicitly controlled by software 
 | D2 | D0 | 200 μs |
 | D3Hot | D0 | 10 ms |
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -3680,16 +3427,14 @@ All PCI-PM power management state changes are explicitly controlled by software 
 <a id="sec-5-8"></a>
 ## 5.8 PCI Function Power State Transitions § | 5.8 PCI Function 电源状态转换 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 This section defines power management requirements that are unique to SR-IOV devices.
 
@@ -3697,8 +3442,8 @@ The PCI Power Management Capability as described elsewhere in § Chapter 5. is r
 
 For VFs, the PCI Power Management Capability is optional.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 本节定义 SR-IOV 设备特有的电源管理要求。
 
@@ -3706,8 +3451,7 @@ For VFs, the PCI Power Management Capability is optional.
 
 对于 VF,PCI 电源管理能力是可选的。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -3718,18 +3462,14 @@ For VFs, the PCI Power Management Capability is optional.
 <a id="sec-5-9"></a>
 ## 5.9 State Transition Recovery Time Requirements § | 5.9 状态转换恢复时间要求 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 If a VF does not implement the PCI Power Management Capability, then the VF behaves as if it had been programmed into the equivalent power state of its associated PF.
 
@@ -3764,8 +3504,8 @@ When the PF is placed into the D3Hot state:
 
 When the PF is placed into the D3Cold state VFs no longer exist, any VF specific context is lost and PME events can only be initiated by the PF.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 如果 VF 未实现 PCI 电源管理能力,则 VF 表现得好像已被编程为与其关联 PF 等效的电源状态。
 
@@ -3800,12 +3540,9 @@ PF 的电源管理状态 (D 状态) 对其关联的 VF 具有全局影响。如�
 
 当 PF 被置于 D3Cold 状态时,VF 不再存在,任何 VF 特定的上下文都将丢失,且 PME 事件只能由 PF 启动。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -3814,22 +3551,19 @@ PF 的电源管理状态 (D 状态) 对其关联的 VF 具有全局影响。如�
 <a id="sec-5-10"></a>
 ## 5.10 SR-IOV Power Management § | 5.10 SR-IOV 电源管理 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -3843,19 +3577,16 @@ table>
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -3868,18 +3599,14 @@ table>
 <a id="sec-5-10-2"></a>
 ### 5.10.2 PF Device Power Management States § | 5.10.2 PF 设备电源管理状态 §
 
-
-<div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 With power management under the direction of the operating system, each class of Functions must have a clearly defined criteria for feature availability as well as what functional context must be preserved when operating in each of the power management states. Some example Device-Class specifications have been proposed as part of the ACPI specification for various Functions ranging from audio to network add-in cards. While defining Device-Class specific behavioral policies for most Functions is outside the scope of this specification, defining the required behavior for PCI bridge functions is within the scope of this specification. The definitions here apply to all three types of PCIe Bridges:
 
@@ -3897,8 +3624,8 @@ The shaded regions in § Figure 5-19 illustrate what is discussed in this sectio
 > **IMPLEMENTATION NOTE: NO_SOFT_RESET STRONGLY RECOMMENDED**
 > It is strongly recommended that the No_Soft_Reset bit be Set in all Functions of a Multi-Function Device. As indicated in the bit definition, all implementations that support Flit Mode are required to Set the No_Soft_Reset bit. This recommendation applies to PFs.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 在操作系统的指导下进行电源管理时,每个 Function 类必须具有明确定义的标准,用于功能可用性以及在每个电源管理状态中运行时必须保留哪些功能上下文。ACPI 规范已为从音频到网络扩展卡等各种 Function 提出了一些设备类规范示例。虽然为大多数 Function 定义设备类特定的行为策略超出本规范的范围,但定义 PCI 桥 Function 的必需行为在本规范范围内。此处的定义适用于所有三种类型的 PCIe 桥:
 
@@ -3916,12 +3643,9 @@ The shaded regions in § Figure 5-19 illustrate what is discussed in this sectio
 > **实现注: 强烈建议置位 NO_SOFT_RESET**
 > 强烈建议在多功能设备的所有 Function 中置位 No_Soft_Reset 位。如位定义所示,所有支持 Flit 模式的实现都需要置位 No_Soft_Reset 位。此建议也适用于 PF。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
-</div>
-
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -3932,16 +3656,14 @@ The shaded regions in § Figure 5-19 illustrate what is discussed in this sectio
 <a id="sec-5-11"></a>
 ## 5.11 PCI Bridges and Power Management § | 5.11 PCI 桥与电源管理 §
 
-table>
+<table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
 > **Figure 5-19.** PCI Express Bridge Power Management Diagram
 > <img src="figures/chapter_05/fig_0704_1.png" width="700">
@@ -3969,8 +3691,8 @@ In PCI Express, the Wakeup Event is associated with the WAKE# signal. If support
 
 In PCI Express, after main power has been restored and the Link is trained, the Function(s) that initiated the wakeup (e.g., that asserted WAKE#), sends a PM_PME Message to the Root Complex. The PM_PME Message provides the Root Complex with the identity of the requesting Function(s) without requiring software to poll for the PME_Status bit being Set.
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
 > **图 5-19.** PCI Express 桥电源管理图
 > <img src="figures/chapter_05/fig_0704_1.png" width="700">
@@ -3998,8 +3720,7 @@ PME 生成事件用于向系统标识请求打开电源的 Function。
 
 在 PCI Express 中,在主电源已恢复且链路已训练之后,启动唤醒的 Function (即断言 WAKE# 的 Function) 向根复合体发送 PM_PME 报文。PM_PME 报文向根复合体提供请求 Function 的标识,而不需要软件轮询 PME_Status 位是否被置位。
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -4013,19 +3734,16 @@ PME 生成事件用于向系统标识请求打开电源的 Function。
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -4039,19 +3757,16 @@ PME 生成事件用于向系统标识请求打开电源的 Function。
 <table>
 <thead>
 <tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th>🇬🇧 English / 🇨🇳 中文</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>
+<tr><td>
 
-</td>
-<td style="background-color:#e8e8e8">
+</td></tr>
+<tr><td>
 
-</td>
-</tr>
+</td></tr>
 </tbody>
 </table>
 
@@ -4060,8 +3775,6 @@ PME 生成事件用于向系统标识请求打开电源的 Function。
 ---
 
 <<<PAGE_BREAK>>> page_706
-
-
 
 
 ---
