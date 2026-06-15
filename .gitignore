@@ -5,6 +5,9 @@ chunks_translated/
 prompts/
 extraction_summary.json
 chunk_plan.json
+qa_bilingual_report.json
+tools/pdf_chunks/
+tools/mineru_results/
 *.bak
 .DS_Store
 __pycache__/

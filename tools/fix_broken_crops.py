@@ -31,9 +31,9 @@ def is_broken(f):
         return True
     size_kb = size / 1024
     aspect = w / h if h else 0
-    if size_kb < 5 and (w < 200 or h < 100 or aspect > 6 or aspect < 0.17):
+    if size_kb < 5 and (w < 200 or h < 100 or aspect > 4 or aspect < 0.25):
         return True
-    if aspect > 10 or aspect < 0.1:
+    if aspect > 8 or aspect < 0.12:
         return True
     return False
 
