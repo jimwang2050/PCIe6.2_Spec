@@ -1,0 +1,799 @@
+{
+  "chapter": 4,
+  "page_range": [
+    351,
+    650
+  ],
+  "figures": {
+    "Figure 4-1": {
+      "pages": [
+        351
+      ],
+      "image_file": "fig_0351_1.png",
+      "available": true
+    },
+    "Figure 4-2": {
+      "pages": [
+        354
+      ],
+      "image_file": "fig_0354_1.png",
+      "available": true
+    },
+    "Figure 4-3": {
+      "pages": [
+        354
+      ],
+      "image_file": "fig_0354_1.png",
+      "available": true
+    },
+    "Figure 4-4": {
+      "pages": [
+        355
+      ],
+      "image_file": "fig_0355_1.png",
+      "available": true
+    },
+    "Figure 4-5": {
+      "pages": [
+        358
+      ],
+      "image_file": "fig_0358_1.png",
+      "available": true
+    },
+    "Figure 4-6": {
+      "pages": [
+        359
+      ],
+      "image_file": "fig_0359_1.png",
+      "available": true
+    },
+    "Figure 4-7": {
+      "pages": [
+        359
+      ],
+      "image_file": "fig_0359_1.png",
+      "available": true
+    },
+    "Figure 4-8": {
+      "pages": [
+        360
+      ],
+      "image_file": "fig_0360_1.png",
+      "available": true
+    },
+    "Figure 4-9": {
+      "pages": [
+        360
+      ],
+      "image_file": "fig_0360_1.png",
+      "available": true
+    },
+    "Figure 4-10": {
+      "pages": [
+        361
+      ],
+      "image_file": "fig_0361_1.png",
+      "available": true
+    },
+    "Figure 4-11": {
+      "pages": [
+        362
+      ],
+      "image_file": "fig_0362_1.png",
+      "available": true
+    },
+    "Figure 4-12": {
+      "pages": [
+        363
+      ],
+      "image_file": "fig_0363_1.png",
+      "available": true
+    },
+    "Figure 4-13": {
+      "pages": [
+        366
+      ],
+      "image_file": "fig_0366_1.png",
+      "available": true
+    },
+    "Figure 4-14": {
+      "pages": [
+        368
+      ],
+      "image_file": "fig_0368_1.png",
+      "available": true
+    },
+    "Figure 4-15": {
+      "pages": [
+        368
+      ],
+      "image_file": "fig_0368_1.png",
+      "available": true
+    },
+    "Figure 4-16": {
+      "pages": [
+        368
+      ],
+      "image_file": "fig_0368_1.png",
+      "available": true
+    },
+    "Figure 4-17": {
+      "pages": [
+        369
+      ],
+      "image_file": "fig_0369_1.png",
+      "available": true
+    },
+    "Figure 4-18": {
+      "pages": [
+        376
+      ],
+      "image_file": "fig_0376_1.png",
+      "available": true
+    },
+    "Figure 4-19": {
+      "pages": [
+        378
+      ],
+      "image_file": "fig_0378_1.png",
+      "available": true
+    },
+    "Figure 4-20": {
+      "pages": [
+        380
+      ],
+      "image_file": "fig_0380_1.png",
+      "available": true
+    },
+    "Figure 4-21": {
+      "pages": [
+        383
+      ],
+      "image_file": "fig_0383_1.png",
+      "available": true
+    },
+    "Figure 4-22": {
+      "pages": [
+        384
+      ],
+      "image_file": "fig_0384_1.png",
+      "available": true
+    },
+    "Figure 4-23": {
+      "pages": [
+        384
+      ],
+      "image_file": "fig_0384_1.png",
+      "available": true
+    },
+    "Figure 4-24": {
+      "pages": [
+        385
+      ],
+      "image_file": "fig_0385_1.png",
+      "available": true
+    },
+    "Figure 4-25": {
+      "pages": [
+        386
+      ],
+      "image_file": "fig_0386_1.png",
+      "available": true
+    },
+    "Figure 4-26": {
+      "pages": [
+        394
+      ],
+      "image_file": "fig_0394_1.png",
+      "available": true
+    },
+    "Figure 4-27": {
+      "pages": [
+        399
+      ],
+      "image_file": "fig_0399_1.png",
+      "available": true
+    },
+    "Figure 4-28": {
+      "pages": [
+        400
+      ],
+      "image_file": "fig_0400_1.png",
+      "available": true
+    },
+    "Figure 4-29": {
+      "pages": [
+        404
+      ],
+      "image_file": "fig_0404_1.png",
+      "available": true
+    },
+    "Figure 4-30": {
+      "pages": [
+        404
+      ],
+      "image_file": "fig_0404_1.png",
+      "available": true
+    },
+    "Figure 4-31": {
+      "pages": [
+        405
+      ],
+      "image_file": "fig_0405_1.png",
+      "available": true
+    },
+    "Figure 4-32": {
+      "pages": [
+        406
+      ],
+      "image_file": "fig_0406_1.png",
+      "available": true
+    },
+    "Figure 4-33": {
+      "pages": [
+        424
+      ],
+      "image_file": "fig_0424_1.png",
+      "available": true
+    },
+    "Figure 4-34": {
+      "pages": [
+        429
+      ],
+      "image_file": "fig_0429_1.png",
+      "available": true
+    },
+    "Figure 4-35": {
+      "pages": [
+        431
+      ],
+      "image_file": "fig_0431_1.png",
+      "available": true
+    },
+    "Figure 4-36": {
+      "pages": [
+        432
+      ],
+      "image_file": "fig_0432_1.png",
+      "available": true
+    },
+    "Figure 4-37": {
+      "pages": [
+        433
+      ],
+      "image_file": "fig_0433_1.png",
+      "available": true
+    },
+    "Figure 4-38": {
+      "pages": [
+        433
+      ],
+      "image_file": "fig_0433_1.png",
+      "available": true
+    },
+    "Figure 4-39": {
+      "pages": [
+        434
+      ],
+      "image_file": "fig_0434_1.png",
+      "available": true
+    },
+    "Figure 4-40": {
+      "pages": [
+        436
+      ],
+      "image_file": "fig_0436_1.png",
+      "available": true
+    },
+    "Figure 4-41": {
+      "pages": [
+        437
+      ],
+      "image_file": "fig_0437_1.png",
+      "available": true
+    },
+    "Figure 4-42": {
+      "pages": [
+        448
+      ],
+      "image_file": "fig_0448_1.png",
+      "available": true
+    },
+    "Figure 4-43": {
+      "pages": [
+        448
+      ],
+      "image_file": "fig_0448_1.png",
+      "available": true
+    },
+    "Figure 4-44": {
+      "pages": [
+        449
+      ],
+      "image_file": "fig_0449_1.png",
+      "available": true
+    },
+    "Figure 4-45": {
+      "pages": [
+        450
+      ],
+      "image_file": "fig_0450_1.png",
+      "available": true
+    },
+    "Figure 4-46": {
+      "pages": [
+        474
+      ],
+      "image_file": "fig_0474_1.png",
+      "available": true
+    },
+    "Figure 4-47": {
+      "pages": [
+        478
+      ],
+      "image_file": "fig_0478_1.png",
+      "available": true
+    },
+    "Figure 4-48": {
+      "pages": [
+        497
+      ],
+      "image_file": "fig_0497_1.png",
+      "available": true
+    },
+    "Figure 4-49": {
+      "pages": [
+        500
+      ],
+      "image_file": "fig_0500_1.png",
+      "available": true
+    },
+    "Figure 4-50": {
+      "pages": [
+        502
+      ],
+      "image_file": "fig_0502_1.png",
+      "available": true
+    },
+    "Figure 4-51": {
+      "pages": [
+        510
+      ],
+      "image_file": "fig_0510_1.png",
+      "available": true
+    },
+    "Figure 4-52": {
+      "pages": [
+        528
+      ],
+      "image_file": "fig_0528_1.png",
+      "available": true
+    },
+    "Figure 4-53": {
+      "pages": [
+        560
+      ],
+      "image_file": "fig_0560_1.png",
+      "available": true
+    },
+    "Figure 4-54": {
+      "pages": [
+        566
+      ],
+      "image_file": "fig_0566_1.png",
+      "available": true
+    },
+    "Figure 4-55": {
+      "pages": [
+        568
+      ],
+      "image_file": "fig_0568_1.png",
+      "available": true
+    },
+    "Figure 4-56": {
+      "pages": [
+        569
+      ],
+      "image_file": "fig_0569_1.png",
+      "available": true
+    },
+    "Figure 4-57": {
+      "pages": [
+        577
+      ],
+      "image_file": "fig_0577_1.png",
+      "available": true
+    },
+    "Figure 4-58": {
+      "pages": [
+        585
+      ],
+      "image_file": "fig_0585_1.png",
+      "available": true
+    },
+    "Figure 4-59": {
+      "pages": [
+        586
+      ],
+      "image_file": "fig_0586_1.png",
+      "available": true
+    },
+    "Figure 4-60": {
+      "pages": [
+        586
+      ],
+      "image_file": "fig_0586_1.png",
+      "available": true
+    },
+    "Figure 4-61": {
+      "pages": [
+        602
+      ],
+      "image_file": "fig_0602_1.png",
+      "available": true
+    },
+    "Figure 4-62": {
+      "pages": [
+        617
+      ],
+      "image_file": "fig_0617_1.png",
+      "available": true
+    },
+    "Figure 4-63": {
+      "pages": [
+        647
+      ],
+      "image_file": "fig_0647_1.png",
+      "available": true
+    }
+  },
+  "tables": {
+    "Table 4-1": {
+      "pages": [
+        352
+      ]
+    },
+    "Table 4-2": {
+      "pages": [
+        352
+      ]
+    },
+    "Table 4-3": {
+      "pages": [
+        355
+      ]
+    },
+    "Table 4-4": {
+      "pages": [
+        365
+      ]
+    },
+    "Table 4-6": {
+      "pages": [
+        387
+      ]
+    },
+    "Table 4-7": {
+      "pages": [
+        387
+      ]
+    },
+    "Table 4-8": {
+      "pages": [
+        388
+      ]
+    },
+    "Table 4-9": {
+      "pages": [
+        389
+      ]
+    },
+    "Table 4-10": {
+      "pages": [
+        395
+      ]
+    },
+    "Table 4-11": {
+      "pages": [
+        396
+      ]
+    },
+    "Table 4-12": {
+      "pages": [
+        397
+      ]
+    },
+    "Table 4-13": {
+      "pages": [
+        397
+      ]
+    },
+    "Table 4-14": {
+      "pages": [
+        398
+      ]
+    },
+    "Table 4-15": {
+      "pages": [
+        402
+      ]
+    },
+    "Table 4-16": {
+      "pages": [
+        404
+      ]
+    },
+    "Table 4-17": {
+      "pages": [
+        404
+      ]
+    },
+    "Table 4-18": {
+      "pages": [
+        405
+      ]
+    },
+    "Table 4-19": {
+      "pages": [
+        406
+      ]
+    },
+    "Table 4-21": {
+      "pages": [
+        438
+      ]
+    },
+    "Table 4-22": {
+      "pages": [
+        443
+      ]
+    },
+    "Table 4-23": {
+      "pages": [
+        451
+      ]
+    },
+    "Table 4-24": {
+      "pages": [
+        452
+      ]
+    },
+    "Table 4-25": {
+      "pages": [
+        456
+      ]
+    },
+    "Table 4-26": {
+      "pages": [
+        462
+      ]
+    },
+    "Table 4-27": {
+      "pages": [
+        465
+      ]
+    },
+    "Table 4-28": {
+      "pages": [
+        467
+      ]
+    },
+    "Table 4-29": {
+      "pages": [
+        470
+      ]
+    },
+    "Table 4-30": {
+      "pages": [
+        475
+      ]
+    },
+    "Table 4-31": {
+      "pages": [
+        476
+      ]
+    },
+    "Table 4-32": {
+      "pages": [
+        476
+      ]
+    },
+    "Table 4-33": {
+      "pages": [
+        477
+      ]
+    },
+    "Table 4-34": {
+      "pages": [
+        477
+      ]
+    },
+    "Table 4-35": {
+      "pages": [
+        477
+      ]
+    },
+    "Table 4-36": {
+      "pages": [
+        477
+      ]
+    },
+    "Table 4-37": {
+      "pages": [
+        477
+      ]
+    },
+    "Table 4-38": {
+      "pages": [
+        478
+      ]
+    },
+    "Table 4-39": {
+      "pages": [
+        481
+      ]
+    },
+    "Table 4-40": {
+      "pages": [
+        483
+      ]
+    },
+    "Table 4-41": {
+      "pages": [
+        484
+      ]
+    },
+    "Table 4-42": {
+      "pages": [
+        484
+      ]
+    },
+    "Table 4-43": {
+      "pages": [
+        484
+      ]
+    },
+    "Table 4-44": {
+      "pages": [
+        494
+      ]
+    },
+    "Table 4-48": {
+      "pages": [
+        499
+      ]
+    },
+    "Table 4-49": {
+      "pages": [
+        505
+      ]
+    },
+    "Table 4-51": {
+      "pages": [
+        536
+      ]
+    },
+    "Table 4-52": {
+      "pages": [
+        581
+      ]
+    },
+    "Table 4-53": {
+      "pages": [
+        582
+      ]
+    },
+    "Table 4-54": {
+      "pages": [
+        584
+      ]
+    },
+    "Table 4-55": {
+      "pages": [
+        587
+      ]
+    },
+    "Table 4-59": {
+      "pages": [
+        592
+      ]
+    },
+    "Table 4-62": {
+      "pages": [
+        600
+      ]
+    },
+    "Table 4-63": {
+      "pages": [
+        603
+      ]
+    },
+    "Table 4-64": {
+      "pages": [
+        622
+      ]
+    },
+    "Table 4-65": {
+      "pages": [
+        624
+      ]
+    },
+    "Table 4-66": {
+      "pages": [
+        643
+      ]
+    },
+    "Table 4-67": {
+      "pages": [
+        644
+      ]
+    }
+  },
+  "missing_extractions": [],
+  "multi_figure_pages": [
+    {
+      "page": 354,
+      "figures": [
+        2,
+        3
+      ]
+    },
+    {
+      "page": 359,
+      "figures": [
+        6,
+        7
+      ]
+    },
+    {
+      "page": 360,
+      "figures": [
+        8,
+        9
+      ]
+    },
+    {
+      "page": 368,
+      "figures": [
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "page": 384,
+      "figures": [
+        22,
+        23
+      ]
+    },
+    {
+      "page": 404,
+      "figures": [
+        29,
+        30
+      ]
+    },
+    {
+      "page": 433,
+      "figures": [
+        37,
+        38
+      ]
+    },
+    {
+      "page": 448,
+      "figures": [
+        42,
+        43
+      ]
+    },
+    {
+      "page": 586,
+      "figures": [
+        59,
+        60
+      ]
+    }
+  ]
+}

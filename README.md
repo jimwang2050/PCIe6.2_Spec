@@ -190,6 +190,20 @@ PCIe6.2_zh/
 
 ## 📋 Recent Updates (更新日志)
 
+### 2026-06-16 — ch04 Figure 精裁剪与排版修复 (Round 2)
+
+- **ch4 精裁图抽取**：基于 MinerU `content_list.json` bbox + 抽取图,渲染 **46 张** `*_tight.png` 精裁 PNG,覆盖 40 页 / 46 个 Figure 4-XX
+- **双轨制策略**：`fig_PPPP_NN_tight.png` (精裁) 优先 + `fig_PPPP_NN.png` (全页) 兜底,详见 [`CH4_FIGURE_STRATEGY.md`](CH4_FIGURE_STRATEGY.md)
+- **ch04 MD img 引用升级**：64 个 `<img>` 标签中 **47 个**自动升级为精裁图,17 个保留全页兜底(MinerU 未捕获的图)
+- **Figure 4-24 误分类修复**：MinerU 将 PAM4 信令表误判为 `type=table`,通过同时检查 `image_caption` + `table_caption` 解决
+- **多图页面拆分**：9 个含多张 Figure 的页面(page 354/359/360/368/384/404/433/448/586)按 caption y 坐标顺序生成 _1/_2/_3 后缀
+- **新增文件**:
+  - `tools/ch4_figure_map.py` (扫描脚本)
+  - `tools/ch4_tight_crops.py` (精裁渲染脚本)
+  - `tools/ch4_apply_tight_crops.py` (MD 引用升级脚本)
+  - `ch4_figure_map.json` / `ch4_tight_crops.json` (映射数据)
+  - `CH4_FIGURE_STRATEGY.md` (策略文档)
+
 ### 2026-06-16 — ch04 排版与图引用修复
 
 针对 `PCIe6.2_Spec_ch04_Physical_Layer_Logical_Block_物理层逻辑块.md` 的扫描修复：
