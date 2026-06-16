@@ -99,7 +99,7 @@ PCI Express 使用三种编码 (8b/10b 编码、128b/130b 编码 与 1b/1b 编�
 <a id="sec-4-1"></a>
 ## 4.1 Introduction § | 概述 §
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -209,7 +209,7 @@ The Ordered Set encoding follows the 8b/10b, 128b/130b, and 1b/1b encoding as de
 <a id="sec-4-2-1"></a>
 ## 4.2.1 8b/10b Encoding for 2.5 GT/s and 5.0 GT/s Data Rates § | 2.5 GT/s 与 5.0 GT/s 数据速率下的 8b/10b 编码 §
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -391,7 +391,7 @@ The Symbol tables for the valid 8b/10b codes are given in Appendix B. These tabl
 <a id="sec-4-2-1-1-2"></a>
 ## 4.2.1.1.2 Special Symbols for Framing and Link Management (K Codes) § | 成帧与链路管理的特殊符号 (K 码) §
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -497,7 +497,7 @@ For the following rules, "placed" is defined to mean a requirement on the Transm
 <a id="sec-4-2-1-2"></a>
 ## 4.2.1.2 Framing and Application of Symbols to Lanes § | 符号的成帧与到通道的应用 §
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -603,7 +603,7 @@ table>
 
 <<<PAGE_BREAK>>> page_359
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -722,7 +722,7 @@ For more information on scrambling, see § Appendix C.
 <a id="sec-4-2-2"></a>
 ## 4.2.2 128b/130b Encoding for 8.0 GT/s, 16.0 GT/s, and 32.0 GT/s Data Rates § | 8.0 GT/s、16.0 GT/s 与 32.0 GT/s 数据速率下的 128b/130b 编码 §
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -875,7 +875,7 @@ Receivers must not adjust their Block alignment while in this phase. The Data St
 <a id="sec-4-2-2-2"></a>
 ## 4.2.2.2 Ordered Set Blocks | 有序集块
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -995,7 +995,7 @@ The first Framing Token of a Data Stream is always located in Symbol 0 of Lane 0
 <a id="sec-4-2-2-3-1"></a>
 ## 4.2.2.3.1 Framing Tokens in Non-Flit-Mode | 非 Flit 模式下的帧定界符
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1170,7 +1170,7 @@ TLP Length 字段值在 1152 到 1535(含)之间的报文保留供未来标准�
 <a id="sec-4-2-2-3-1-fig-15-16"></a>
 ### 图 4-15 与图 4-16: TLP/DLLP 传输与作废示例
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1342,7 +1342,7 @@ The following requirements apply to the transmitted Data Stream.
 <a id="sec-4-2-2-3-3"></a>
 ## 4.2.2.3.3 Receiver Framing Requirements in Non-Flit Mode | 非 Flit 模式下的接收器帧定界要求
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1470,7 +1470,7 @@ The following requirements apply to the received Data Stream and the Block type 
 <a id="sec-4-2-2-3-3-cont2"></a>
 ### 非 Flit 模式接收器帧定界要求(续 2)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1564,7 +1564,7 @@ While processing the Data Stream, Receivers must check the Block type received b
 <a id="sec-4-2-2-3-4-cont"></a>
 ### Flit 模式接收器帧定界要求与加扰 (续)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1827,7 +1827,7 @@ When using 128b/130b encoding, all Framing Errors require Link recovery. It is e
 | 6    | 0277CEh |
 | 7    | 1BB807h |
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1915,7 +1915,7 @@ For implementations that descramble prior to putting entries into the elastic bu
 </div>
 
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2015,7 +2015,7 @@ Reset Value = 1.
 <a id="sec-4-2-2-5"></a>
 ## 4.2.2.5 Precoding | 预编码 (Precoding)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2288,7 +2288,7 @@ As per the rules in this section, when precoding is turned on, the 'previous bit
 <a id="sec-4-2-2-6"></a>
 ## 4.2.2.6 Loopback with 128b/130b Code in Non-Flit Mode and Flit Mode | 非 Flit 模式与 Flit 模式下使用 128b/130b 编码的回环
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2380,7 +2380,7 @@ Flit 定义与符号放置由本节规定。
 <a id="sec-4-2-3-1"></a>
 ## 4.2.3.1 1b/1b Encoding for 64.0 GT/s and higher Data Rates | 64.0 GT/s 及更高数据速率下的 1b/1b 编码
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2478,7 +2478,7 @@ At a Flit level, on the Transmit side, CRC is first applied followed by FEC gene
 - Flit Level (Link Wide) – For Flit Mode in all Data Rates — Flit 级别（链路级）—— 适用于所有数据速率的 Flit 模式
 - Symbol (8b) Level per Lane – For 64.0 GT/s and higher Data Rates — 每条 Lane 的符号（8 比特）级 —— 适用于 64.0 GT/s 及更高数据速率
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2560,7 +2560,17 @@ PAM4 即四电平脉冲幅度调制（Pulse Amplitude Modulation 4-levels）。�
 <a id="sec-4-2-3-1-1"></a>
 ## 4.2.3.1.1 PAM4 Signaling | PAM4（四电平脉冲幅度调制）信令
 
-table>
+PAM4 stands for Pulse Amplitude Modulation 4-levels. It is a signaling mechanism where 4 levels (2 bits) are encoded in same Unit Interval (UI) resulting in 3 eyes, as shown in § Figure 4-24. It is deployed only for 64.0 GT/s or higher Data Rates. As described in § Chapter 8., PAM4 helps with the channel loss as it has the same Nyquist frequency as 32.0 GT/s for 64.0 GT/s Data Rate. The four voltage levels 0, 1, 2, and 3, nominally map to -400 mV, -133 mV, +133 mV and +400 mV respectively, and the Gray code encoded values of 00b, 01b, 11b, and 10b respectively, with the little-endian bit order, as shown in § Figure 4-24. The corresponding DC Balance values to be used when designing Ordered Sets to meet the DC balance needs is also shown in § Figure 4-24. The Reduced voltage levels (eye height or EH) and eye width (EW) increases susceptibility to errors. Gray coding is used to help minimize errors within a UI for the voltage levels.
+
+> PAM4 即四电平脉冲幅度调制（Pulse Amplitude Modulation 4-levels）。它是一种信令机制，在同一单位间隔（UI）内编码 4 个电平（2 比特），形成 3 个眼图，如 § 图 4-24 所示。它仅用于 64.0 GT/s 及更高的数据速率。如 § 第 8 章 所述，PAM4 有助于应对信道损耗，因为对于 64.0 GT/s 数据速率，PAM4 与 32.0 GT/s 具有相同的奈奎斯特频率。四个电压电平 0、1、2、3 分别标称映射为 -400 mV、-133 mV、+133 mV 和 +400 mV，相应的格雷编码值分别为 00b、01b、11b、10b（采用小端比特顺序），如 § 图 4-24 所示。在设计有序集以满足直流平衡（DC Balance）需求时所使用的对应直流平衡值也在 § 图 4-24 中示出。降低的电压幅度（眼高 EH，即 Eye Height）和眼宽（EW，即 Eye Width）会增加误码敏感性。格雷编码（Gray Coding）用于在 UI 范围内尽量减少电压电平所产生的误码。
+
+> **Figure 4-24.** PAM4 Signaling at UI level: Voltage levels, 2-bit encoding, and their corresponding DC balance values
+> <img src="figures/chapter_04/fig_0385_1.png" width="700">
+
+**Figure 4-24 | 图 4-24**: UI 级别的 PAM4 信令：电压电平、2 比特编码及其对应的直流平衡值 (PAM4 Signaling at UI level: Voltage levels, 2-bit encoding, and their corresponding DC balance values)
+
+<div style="overflow-x: auto; max-width: 100%;">
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2571,120 +2581,12 @@ table>
 <tr>
 <td>
 
-balance needs is also shown in § Figure 4-24. The Reduced voltage levels (eye height or EH) and eye width (EW) increases susceptibility to errors. Gray coding is used to help minimize errors within a UI for the voltage levels.
-
-Scrambled 2-bit aligned value
-
-Prior to Gray Coding
-
-After Gray Coding
-
-Unscrambled 2-bit as well as TS0 Ordered Sets
-
-Voltage Level
-
-DC-balance Values
-
-10
-
-11
-
-01
-
-00
-
-11
-
-10
-
-01
-
-00
-
-11
-
-10
-
-01
-
-00
-
-3
-
-2
-
-1
-
-0
-
-+3
-
-+1
-
--1
-
--3
-
-Figure 4-24 PAM4 Signaling at UI level: Voltage levels, 2-bit encoding, and their corresponding DC balance values
+With PAM4 encoding, the bit error rate (BER) is expected to be significantly worse than the 10-12 BER target of the lower data rates (2.5, 5.0, 8.0, 16.0, and 32.0 GT/s). In addition, errors are expected to occur in bursts in a Lane and some amount of Lane to Lane correlation is also expected. The electrical spec parameters along with FBER (First Bit Error Rate) < 10-6 described in § Chapter 8. must be met to ensure probability of a Flit error after FEC to be less than 3×10-5.
 
 </td>
 <td style="background-color:#e8e8e8">
 
-直流平衡（DC Balance）的需求也在 § 图 4-24 中示出。降低的电压幅度（眼高，EH，即 Eye Height）和眼宽（EW，即 Eye Width）会增加误码敏感性。格雷编码（Gray Coding）用于在 UI 范围内尽量减少电压电平所产生的误码。
-
-加扰后的 2 比特对齐值
-
-格雷编码前
-
-格雷编码后
-
-未加扰的 2 比特值以及 TS0 有序集
-
-电压电平
-
-直流平衡值
-
-10
-
-11
-
-01
-
-00
-
-11
-
-10
-
-01
-
-00
-
-11
-
-10
-
-01
-
-00
-
-3
-
-2
-
-1
-
-0
-
-+3
-
-+1
-
--1
-
--3
-
-图 4-24 UI 级别的 PAM4 信令：电压电平、2 比特编码及其对应的直流平衡值
+使用 PAM4 编码时，预期误码率（BER）将明显高于较低数据速率（2.5、5.0、8.0、16.0 和 32.0 GT/s）所对应的 10⁻¹² BER 目标。此外，预期错误会成串（burst）地出现在同一通道（Lane）上，并且不同通道之间也会存在一定程度的相关性。必须满足 § 第 8 章 中所描述的电气规范参数以及 FBER（First Bit Error Rate）< 10⁻⁶ 的要求，以保证 FEC（Forward Error Correction，前向纠错）之后的 Flit 错误概率小于 3×10⁻⁵。
 
 </td>
 </tr>
@@ -2924,6 +2826,26 @@ Flit
 
 </td>
 </tr>
+</tbody>
+</table>
+</div>
+
+> **Figure 4-25.** The Sequence of Gray Coding, Precoding, and PAM4 voltage translation on an aligned 2-bit boundary on a per Lane
+> <img src="figures/chapter_04/fig_0386_1.png" width="700">
+>
+> *Note: 该图位于第 386 页底部（4.2.3.1.2 与 4.2.3.1.3 之间）。fig_0386_1.png 为该页文本截图，已包含 § 4-25 图标题，但流程图主体未单独抽取。请以原始 PDF 第 386 页 Figure 4-25 流程图为准（详见 Figure 4-25 在 4.2.3.1.2 末尾的描述）。*
+
+**Figure 4-25 | 图 4-25**: 在按通道对齐的 2 比特边界上，格雷编码、预编码及 PAM4 电压转换的顺序 (The Sequence of Gray Coding, Precoding, and PAM4 voltage translation on an aligned 2-bit boundary on a per Lane)
+
+<div style="overflow-x: auto; max-width: 100%;">
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td>
 
@@ -2952,7 +2874,7 @@ During NRZ-based scrambling, forcing the even bit 2i to be identical to the odd 
 <a id="sec-4-2-3-1-3"></a>
 ## 4.2.3.1.3 Gray Coding at 64.0 GT/s and Higher Data Rates | 64.0 GT/s 及更高数据速率下的格雷编码
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3078,7 +3000,7 @@ Only scrambled bits on a 2-bit aligned boundary are precoded, when both bits are
 <a id="sec-4-2-3-1-5"></a>
 ## 4.2.3.1.5 Ordered Set Blocks at 64.0 GT/s and Higher Data Rates | 64.0 GT/s 及更高数据速率下的有序集块
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3266,7 +3188,7 @@ Since most bytes of TS0/TS1/TS2 Ordered Sets are scrambled (except Symbols 0 and
 <a id="sec-4-2-3-2"></a>
 ## 4.2.3.2 Processing of Ordered Sets During Flit Mode Data Stream | Flit 模式数据流中有序集的处理
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3575,7 +3497,7 @@ FEC 采用 3 路交织的 ECC，每路 ECC 码可纠正 1 字节错误。进行�
 
 ---
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3797,7 +3719,7 @@ It should be noted that every Byte of each TLP as well the DLP is covered by one
 | | ← CRC → | | | | | | | | | | | | | | | | |
 | | ← ECC → | | | | | | | | | | | | | | | | |
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4010,7 +3932,7 @@ If checked, these Flit errors are logged as a Data Link Protocol Error in the re
 <a id="sec-4-2-3-4-2-1"></a>
 ## 4.2.3.4.2.1 Flit Sequence Number and Retry Mechanism | Flit 序列号与重传机制
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4206,7 +4128,7 @@ table>
 
 <<<PAGE_BREAK>>> page_409
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4420,7 +4342,7 @@ table>
 
 <<<PAGE_BREAK>>> page_411
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4638,7 +4560,7 @@ table>
 
 <<<PAGE_BREAK>>> page_413
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4854,7 +4776,7 @@ table>
 
 <<<PAGE_BREAK>>> page_415
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5083,7 +5005,7 @@ The conditions for sending an Explicit Sequence Number Flit were not met.
 <a id="sec-4-2-3-4-2-1-4"></a>
 ## 4.2.3.4.2.1.4 Received Ack and Nak Processing | 已接收 Ack 与 Nak 的处理
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5621,7 +5543,7 @@ def selective_nak_procedure() {
 <a id="sec-4-2-3-4-2-1-5-schedules"></a>
 ## 4.2.3.4.2.1.5 Nak/Ack/Discard Schedule Definitions | Nak/Ack/丢弃调度定义
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5942,7 +5864,7 @@ table>
 <a id="sec-4-2-3-4-2-1-6"></a>
 ## 4.2.3.4.2.1.6 Flit Replay Scheduling | Flit 重放调度
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6238,7 +6160,7 @@ Replay Rollover 场景。
 <a id="sec-impl-note-flit-ack-nak-replay-example"></a>
 ## IMPLEMENTATION NOTE: FLIT ACK/NAK/REPLAY EXAMPLE | 实现说明:FLIT ACK/NAK/REPLAY 示例
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6396,7 +6318,7 @@ For example, suppose a x8 Link receives a selective Nak for Flit number X and th
 <a id="sec-4-2-3-4-3"></a>
 ## 4.2.3.4.3 CRC Bytes in Flit | Flit 中的 CRC 字节
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6582,7 +6504,7 @@ f8: 1b  f9: 36  fa: 6c  fb: d8  fc: ad  fd: 47  fe: 8e  ff: 01
 <a id="sec-4-2-3-4-4-cont"></a>
 ## 4.2.3.4.4 (续) ECC Bytes in Flit | ECC 字节(续)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6772,7 +6694,7 @@ B85      p0    p1    p2    p3    p4    p5    p6    p7      ← 行奇偶校验 [
 <a id="sec-4-2-3-4-4-ecc-mapping"></a>
 ## 4.2.3.4.4 ECC Bytes - Byte Mapping and Decode | ECC 字节 - 字节映射与解码
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6874,7 +6796,7 @@ ECC 字节的分配如下:
 <<<PAGE_BREAK>>> page_436
 
 <a id="fig-4-40"></a>
-## Figure 4-40 ECC Decoder Function | 图 4-40 ECC 解码器功能
+#### Figure 4-40 ECC Decoder Function | 图 4-40 ECC 解码器功能
 
 <table>
 <thead>
@@ -6910,7 +6832,7 @@ The Receive side check is as follows on the 256B flit (as shown in Figure 4-41).
 <<<PAGE_BREAK>>> page_437
 
 <a id="fig-4-41"></a>
-## Figure 4-41 3-way ECC Decode on Receive Side | 图 4-41 接收端 3 路 ECC 解码
+#### Figure 4-41 3-way ECC Decode on Receive Side | 图 4-41 接收端 3 路 ECC 解码
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -6968,7 +6890,7 @@ For Data Rates of 8.0 GT/s and above, the following rules apply:
 <a id="sec-4-2-3-4-5"></a>
 ## 4.2.3.4.5 Ordered Set insertion in Data Stream in Flit Mode | Flit 模式下数据流中的有序集插入
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7066,9 +6988,9 @@ The equalization procedure can be initiated either autonomously or by software. 
 <<<PAGE_BREAK>>> page_439
 
 <a id="sec-4-2-4-equalization-rules"></a>
-## 4.2.4 Equalization Bypass and Highest NRZ Rate | 4.2.4 均衡绕过与最高 NRZ 速率
+### 4.2.4 Equalization Bypass and Highest NRZ Rate | 4.2.4 均衡绕过与最高 NRZ 速率
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7106,7 +7028,7 @@ If one direction of the Link is advertising No Equalization Needed and the other
 <<<PAGE_BREAK>>> page_440
 
 <a id="sec-4-2-4-autonomous"></a>
-## 4.2.4 Autonomous Equalization Mechanism | 4.2.4 自主均衡机制
+### 4.2.4 Autonomous Equalization Mechanism | 4.2.4 自主均衡机制
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -7158,9 +7080,9 @@ Components using the autonomous mechanism must not initiate any autonomous Link 
 <<<PAGE_BREAK>>> page_441
 
 <a id="sec-4-2-4-sw-mechanism"></a>
-## 4.2.4 Software-Based Equalization and DLLP Blocking | 4.2.4 基于软件的均衡与 DLLP 阻塞
+### 4.2.4 Software-Based Equalization and DLLP Blocking | 4.2.4 基于软件的均衡与 DLLP 阻塞
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7216,7 +7138,7 @@ Software may set the Hardware Autonomous Width Disable bit of the Link Control r
 <<<PAGE_BREAK>>> page_442
 
 <a id="sec-4-2-4-eq-problems"></a>
-## 4.2.4 Equalization Setting Problem Reporting | 4.2.4 均衡设置问题上报
+### 4.2.4 Equalization Setting Problem Reporting | 4.2.4 均衡设置问题上报
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -7276,9 +7198,9 @@ Upstream Port 需要在 Recovery.RcvrCfg 状态(参见 § Section 4.2.7.4.1)检�
 <<<PAGE_BREAK>>> page_443
 
 <a id="sec-4-2-4-redo-eq"></a>
-## 4.2.4 Redo Equalization and Rate Change | 4.2.4 重新均衡与速率切换
+### 4.2.4 Redo Equalization and Rate Change | 4.2.4 重新均衡与速率切换
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7322,7 +7244,7 @@ A component may operate at a lower data rate after reporting its equalization pr
 <<<PAGE_BREAK>>> page_444
 
 <a id="sec-4-2-4-table-4-22-cont"></a>
-## 4.2.4 Table 4-22 (Continued) | 4.2.4 表 4-22(续)
+### 4.2.4 Table 4-22 (Continued) | 4.2.4 表 4-22(续)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -7380,9 +7302,9 @@ A component may operate at a lower data rate after reporting its equalization pr
 <<<PAGE_BREAK>>> page_445
 
 <a id="sec-4-2-4-eq-phases"></a>
-## 4.2.4 Equalization Phases 0-3 | 4.2.4 均衡阶段 0-3
+### 4.2.4 Equalization Phases 0-3 | 4.2.4 均衡阶段 0-3
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7440,7 +7362,7 @@ Downstream Port 通过发送 Data Rate 为 8.0 GT/s、16.0 GT/s 和 32.0 GT/s �
 <<<PAGE_BREAK>>> page_446
 
 <a id="sec-4-2-4-phase-2-3"></a>
-## 4.2.4 Phase 2 and Phase 3 | 4.2.4 阶段 2 与阶段 3
+### 4.2.4 Phase 2 and Phase 3 | 4.2.4 阶段 2 与阶段 3
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -7500,9 +7422,9 @@ If a Lane receives a Transmitter Preset value (from a TS0, TS1 or TS2 sequence) 
 <<<PAGE_BREAK>>> page_447
 
 <a id="sec-4-2-4-loopback-compliance"></a>
-## 4.2.4 Loopback and Compliance for Equalization | 4.2.4 均衡的 Loopback 与 Compliance
+### 4.2.4 Loopback and Compliance for Equalization | 4.2.4 均衡的 Loopback 与 Compliance
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7536,7 +7458,7 @@ In the Loopback state, the Loopback Lead is responsible for communicating the Tr
 <<<PAGE_BREAK>>> page_448
 
 <a id="sec-4-2-4-eq-examples"></a>
-## 4.2.4 Equalization Flow Examples | 4.2.4 均衡流程示例
+### 4.2.4 Equalization Flow Examples | 4.2.4 均衡流程示例
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -7585,7 +7507,9 @@ In the Loopback state, the Loopback Lead is responsible for communicating the Tr
 > <img src="figures/chapter_04/fig_0448_1.png" width="700">
 
 > **Figure 4-43.** 16.0 GT/s Equalization Flow
-> <img src="figures/chapter_04/fig_0448_2.png" width="700">
+> <img src="figures/chapter_04/fig_0448_1.png" width="700">
+>
+> *Note: 源图提取时 16.0 GT/s 专用流程图未单独抽取（仅 fig_0448_1.png 可用），此处暂用 8.0 GT/s 流程图占位。请以原始规范第 4-43 图为准。*
 
 </div>
 
@@ -7597,9 +7521,9 @@ In the Loopback state, the Loopback Lead is responsible for communicating the Tr
 <<<PAGE_BREAK>>> page_449
 
 <a id="fig-4-44"></a>
-## Figure 4-44 64.0 GT/s Equalization Flow | 图 4-44 64.0 GT/s 均衡流程
+#### Figure 4-44 64.0 GT/s Equalization Flow | 图 4-44 64.0 GT/s 均衡流程
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7685,7 +7609,7 @@ table>
 <<<PAGE_BREAK>>> page_450
 
 <a id="sec-4-2-4-fir-coefficients"></a>
-## 4.2.4 FIR Coefficients and Equalization Bypass Example | 4.2.4 FIR 系数与均衡绕过示例
+### 4.2.4 FIR Coefficients and Equalization Bypass Example | 4.2.4 FIR 系数与均衡绕过示例
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -7750,9 +7674,9 @@ The explanation of the coefficients and the FIR filter it represents are provide
 ---
 
 <a id="sec-4-2-4-1"></a>
-## 4.2.4.1 Rules for Transmitter Coefficients | 发送器系数规则
+### 4.2.4.1 Rules for Transmitter Coefficients | 发送器系数规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7827,7 +7751,7 @@ Definition of the Transmitter and Receiver Preset Hints appears in § Chapter 8.
 ---
 
 <a id="sec-4-2-4-2"></a>
-## 4.2.4.2 Encoding of Presets | 4.2.4.2 预设的编码
+### 4.2.4.2 Encoding of Presets | 4.2.4.2 预设的编码
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -7921,7 +7845,7 @@ Training does:
 <a id="sec-4-2-5"></a>
 ## 4.2.5 Link Initialization and Training | 4.2.5 链路初始化与训练
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8075,7 +7999,7 @@ TS0、TS1、TS2、Modified TS1 或 Modified TS2 有序集合中的 Reserved 位�
 
 <<<PAGE_BREAK>>> page_453
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8300,7 +8224,7 @@ TS1 有序集合的 Retimer Equalization Extend 位在上游端口 (Upstream Por
 <a id="sec-4-2-5-1-1"></a>
 ### 4.2.5.1 续 (Alternate Protocol Negotiation) | 4.2.5.1 续 (备用协议协商)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8486,7 +8410,7 @@ Alternate Protocol Negotiation must be concurrent with the Lane number negotiati
 
 <<<PAGE_BREAK>>> page_476
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8747,7 +8671,7 @@ When using 128b/130b encoding, an EIEOSQ, as defined in § Table 4-35 through §
 
 <<<PAGE_BREAK>>> page_480
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8914,7 +8838,7 @@ The Electrical Idle exit condition must not be determined based on inference of 
 
 <<<PAGE_BREAK>>> page_482
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9041,7 +8965,7 @@ N_FTS 定义从 L0s 状态过渡到 L0 状态时必须发送的 FTS 数量。在
 </div>
 
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9155,7 +9079,7 @@ The Start of Data Stream (SDS) Ordered Set, described in § Table 4-41, § Table
 <a id="sec-4-2-5-8"></a>
 ## 4.2.5.8 Link Error Recovery | 链路错误恢复
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9250,7 +9174,7 @@ Receiver Error on any or all of Non-Flit Mode framing related errors defined in 
 <a id="sec-4-2-5-9"></a>
 ## 4.2.5.9 Reset | 复位
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9443,7 +9367,7 @@ PCI Express 链路 (Link) 必须由 1、2、4、8 或 16 条并行通道 (Lane) 
 <a id="sec-4-2-5-11-1"></a>
 ## 4.2.5.11.1 Required and Optional Port Behavior | 端口的必需与可选行为
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9522,7 +9446,7 @@ Current and future electromechanical and/or form factor specifications may requi
 <a id="sec-4-2-5-12"></a>
 ## 4.2.5.12 Lane-to-Lane De-skew | 通道间去偏斜
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9643,7 +9567,7 @@ Links are formed at the conclusion of Configuration.
 </div>
 
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9719,7 +9643,7 @@ When operating at a data rate of 16.0 GT/s or higher, a transmitter may send bac
 <a id="sec-4-2-6"></a>
 ## 4.2.6 Link Training and Status State Machine (LTSSM) Descriptions | 链路训练与状态机 (LTSSM) 描述
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9981,7 +9905,7 @@ L0s 允许链路快速进入和退出节能状态,无需经过 Recovery。
 <a id="sec-4-2-6-7"></a>
 ## 4.2.6.7 L0p Overview | L0p 概述
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10110,7 +10034,7 @@ Link partner must consider the request to be abandoned if one of the following c
 <a id="sec-4-2-6-7-2"></a>
 ## 4.2.6.7.2 L0p Ack/Nak Rules | L0p Ack/Nak 规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10243,7 +10167,7 @@ A Port must not initiate a request for a new Link width unless the following con
 <a id="sec-4-2-6-7-4"></a>
 ## 4.2.6.7.4 L0p Down-Size and Up-Size | L0p Down-Size 和 Up-Size
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10374,7 +10298,7 @@ fields in the DLLP are shown in § Table 4-44.
 <a id="sec-4-2-6-7-6"></a>
 ## 4.2.6.7.6 Link Management DLLP Encoding | Link Management DLLP 编码
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10528,7 +10452,7 @@ Payload contains a reserved value.
 <a id="sec-4-2-6-7-8"></a>
 ## 4.2.6.7.8 L0p Flow Example | L0p 流程示例
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10673,7 +10597,7 @@ L2 中可以积极节省功耗。大多数发送器和接收器可以关闭。
 <a id="sec-4-2-6-10-2"></a>
 ## 4.2.6.10 Disabled Overview | Disabled 概述
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10821,7 +10745,7 @@ The Loopback Follower device enters Loopback whenever two consecutive TS1 Ordere
 <a id="sec-4-2-6-12"></a>
 ## 4.2.6.12 Hot Reset Overview | 热复位状态概述
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10902,7 +10826,7 @@ Various Link status bits are monitored through software with the exception of Li
 
 ---
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11019,7 +10943,7 @@ With 1b/1b encoding, the Link and Lane numbers are not sent explicitly in the TS
 <a id="sec-4-2-7-1"></a>
 ## 4.2.7.1 Detect | 检测状态
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11227,7 +11151,7 @@ Detect 子状态机如 § Figure 4-50 所示。
 <a id="sec-4-2-7-2"></a>
 ## 4.2.7.2 Polling | 轮询状态
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11338,7 +11262,7 @@ Polling 子状态机如 § Figure 4-51 所示。
 
 ---
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11426,7 +11350,7 @@ table>
 <a id="sec-4-2-7-2-2"></a>
 ## 4.2.7.2.2 Polling.Compliance | Polling.Compliance(一致性轮询)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11525,7 +11449,7 @@ select_deemphasis variable is Set when the Compliance Preset/De-emphasis field i
 
 ---
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11607,7 +11531,7 @@ The sequence must be set to Setting #1 in the Polling.Configuration state if the
 
 ---
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11739,7 +11663,7 @@ Note: Sending multiple EIOS provides enough robustness such that the other Port 
 
 <<<PAGE_BREAK>>> page_508
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11901,7 +11825,7 @@ This state is unreachable given that the Link comes up to L0 in 2.5 GT/s data ra
 <a id="sec-4-2-7-2-3"></a>
 ## 4.2.7.2.3 Polling.Configuration | Polling.Configuration 子状态
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12003,7 +11927,7 @@ table>
 <a id="sec-4-2-7-3"></a>
 ## 4.2.7.3 Configuration | Configuration 状态
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12103,7 +12027,7 @@ table>
 <a id="sec-4-2-7-3-1"></a>
 ## 4.2.7.3.1 Configuration.Linkwidth.Start | Configuration.Linkwidth.Start 子状态
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12223,7 +12147,7 @@ In the case where the Downstream Lanes are connected to both Downstream Lanes (c
 <a id="sec-4-2-7-3-1-2"></a>
 ## 4.2.7.3.1.2 Upstream Lanes | 上游通道
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12321,7 +12245,7 @@ table>
 <a id="sec-4-2-7-3-1-2-cont"></a>
 ### Upstream Lanes 子状态规则(续) | Upstream Lanes Substate Rules (cont.)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12483,7 +12407,7 @@ table>
 <a id="sec-4-2-7-3-2-2"></a>
 ## 4.2.7.3.2.2 Upstream Lanes | 上游通道
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12574,7 +12498,7 @@ Flit 模式与 Modified TS1/TS2 的使用彼此正交(orthogonal)(即设备可�
 <a id="sec-4-2-7-3-2-modified"></a>
 ### Modified TS1 有序集使用 | Modified TS1 Ordered Set Usage
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12709,7 +12633,7 @@ Notable examples related to the configuration of Upstream Lanes:
 
 <<<PAGE_BREAK>>> page_519
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12870,7 +12794,7 @@ The condition of requiring reception of any Lane number different from when the 
 
 <<<PAGE_BREAK>>> page_521
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -13008,7 +12932,7 @@ consecutively received TS2 Ordered Sets then the Two Retimers Presence Detected 
 
 <sup>82</sup> The common mode being driven does not need to meet the Absolute Delta Between DC Common Mode During L0 and Electrical Idle (VTX-CM-DC-ACTIVE-IDLE-DELTA) specification (see § Table 8-7).
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -13097,7 +13021,7 @@ table>
 
 <<<PAGE_BREAK>>> page_524
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -13250,7 +13174,7 @@ table>
 
 <<<PAGE_BREAK>>> page_526
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -13362,7 +13286,7 @@ table>
 
 <<<PAGE_BREAK>>> page_528
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -13484,7 +13408,7 @@ Recovery 子状态机如 § 图 4-53 所示。对于 64.0 GT/s 数据速率，�
 
 <<<PAGE_BREAK>>> page_530
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -13634,7 +13558,7 @@ Control 3 寄存器的 Perform Equalization 比特被置位，或实现特定的
 
 <<<PAGE_BREAK>>> page_532
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -13754,7 +13678,7 @@ b. 设备在自 L0 进入本子状态后、在接收到第一个 TS Ordered Set 
 
 <<<PAGE_BREAK>>> page_534
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -13872,7 +13796,7 @@ If this state was entered from Loopback.Entry:
 
 <<<PAGE_BREAK>>> page_536
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -14019,7 +13943,7 @@ Upon entry to this substate:
 <a id="sec-4-2-7-4-2-1-1"></a>
 ## 4.2.7.4.2.1.1 Phase 1 of Transmitter Equalization | 发送器均衡 Phase 1
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -14157,7 +14081,7 @@ table>
 <a id="sec-4-2-7-4-2-1-2"></a>
 ## 4.2.7.4.2.1.2 Phase 2 of Transmitter Equalization | 发送器均衡 Phase 2
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -14289,7 +14213,7 @@ setting was accepted and, depending on the results of receiver evaluation, can b
 <a id="sec-4-2-7-4-2-1-3"></a>
 ## 4.2.7.4.2.1.3 Phase 3 of Transmitter Equalization | 发送器均衡 Phase 3
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -14437,7 +14361,7 @@ Upon entry to this substate:
 <a id="sec-4-2-7-4-2-2-cont"></a>
 ## 4.2.7.4.2.2 Upstream Lanes (cont.) | 上游 Lane(续)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -14583,7 +14507,7 @@ Ordered Sets (depending on the Data Rate) for the remainder of the Recovery.Equa
 <a id="sec-4-2-7-4-2-2-2"></a>
 ## 4.2.7.4.2.2.2 Phase 1 of Transmitter Equalization | 发送器均衡 Phase 1(上游)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -14736,7 +14660,7 @@ Next state is Loopback.Entry after a timeout of 48 ms with a tolerance of -0 ms 
 <a id="sec-4-2-7-4-2-2-3-continued"></a>
 ## 4.2.7.4.2.2.3 Phase 2 of Transmitter Equalization (continued) | 发送器均衡 Phase 2(续)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -15020,7 +14944,7 @@ successful_speed_negotiation 置为 0b。
 <a id="sec-4-2-7-4-3"></a>
 ## 4.2.7.4.3 Recovery.Speed | Recovery.Speed 子状态
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -15308,7 +15232,7 @@ c.
 <a id="sec-4-2-7-4-4-continued"></a>
 ## 4.2.7.4.4 Recovery.RcvrCfg (continued) | Recovery.RcvrCfg 子状态(续)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -15496,7 +15420,7 @@ iii.
 <a id="sec-4-2-7-4-4-rcvrcfg-page555"></a>
 ## 4.2.7.4.4 Recovery.RcvrCfg (continued) | Recovery.RcvrCfg 子状态(续)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -15702,7 +15626,7 @@ Link Control 3 寄存器中的 Perform Equalization 位置 1。
 <a id="sec-4-2-7-4-4-rcvrcfg-page557"></a>
 ## 4.2.7.4.4 Recovery.RcvrCfg (continued) | Recovery.RcvrCfg 子状态(续)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -15968,7 +15892,7 @@ i.
 <a id="sec-4-2-7-4-5"></a>
 ## 4.2.7.4.5 Recovery.Idle | Recovery.Idle 子状态
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -16305,7 +16229,7 @@ Recovery.RcvrCfg
 <a id="sec-4-2-7-4-6-L0"></a>
 ## 4.2.7.4.6 L0 State | L0 状态
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -16608,7 +16532,7 @@ L0s 子状态机如 § Figure 4-54 所示。
 <a id="sec-4-2-7-6-1-3"></a>
 #### 4.2.7.6.1.3 Rx_L0s.FTS | Rx_L0s.FTS
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -16761,7 +16685,7 @@ A Transmitter must implement L0s if its Port advertises support for L0s, as indi
 > **Figure 4-54.** L0s Substate Machine
 > <img src="figures/chapter_04/fig_0566_1.png" width="700">
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -16892,7 +16816,7 @@ L1 的入口子状态。所有 L1 子状态的图形化描述请参见 § Figure
 <a id="sec-4-2-7-7-2"></a>
 ## 4.2.7.7.2 L1.Idle | L1.Idle
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -17021,7 +16945,7 @@ L2 子状态机如 § Figure 4-56 所示。
 <a id="sec-4-2-7-8-1"></a>
 ## 4.2.7.8.1 L2.Idle | L2.Idle
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -17124,7 +17048,7 @@ table>
 <a id="sec-4-2-7-9"></a>
 ## 4.2.7.9 Disabled | Disabled
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -17266,7 +17190,7 @@ If the current data rate uses 128b/130b 编码 encoding and Lane numbers have no
 <a id="sec-4-2-7-10-1"></a>
 ## 4.2.7.10.1 Loopback.Entry | Loopback.Entry
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -17432,7 +17356,7 @@ table>
 <a id="sec-4-2-7-10-3"></a>
 ## 4.2.7.10.3 Loopback.Exit | Loopback.Exit
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -17536,7 +17460,7 @@ Note: Generally, Lanes of a Downstream or optional crosslink Port will be direct
 <a id="sec-4-2-8"></a>
 ## 4.2.8 Clock Tolerance Compensation | 时钟容差补偿
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -17656,7 +17580,7 @@ Standard SKP Ordered Set 在 SKP_END 符号之后包含基于 LTSSM 状态和 Bl
 
 <<<PAGE_BREAK>>> page_580
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -17792,7 +17716,7 @@ Control SKP Ordered Set 在最后 4 个符号上与 Standard SKP Ordered Set 不
 | 4*N + 2 | 00-FFh | Bit 7: Margin Parity<br>Bits [6:0]: Refer to § Section 4.2.18.1 |
 | 4*N + 3 | 00-FFh | Bits [7:0]: Refer to § Section 4.2.18.1 |
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -17921,7 +17845,7 @@ Since these 21 bits are not part of a TLP, repeated delivery of the same content
 
 <<<PAGE_BREAK>>> page_584
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -18152,7 +18076,7 @@ Upstream and Downstream Port Receivers compute and act on the parity as follows:
 
 <<<PAGE_BREAK>>> page_588
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -18284,7 +18208,7 @@ Note: When using 128b/130b or 1b/1b encoding, SKP Ordered Sets cannot be transmi
 
 <<<PAGE_BREAK>>> page_590
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -18411,7 +18335,7 @@ This delay sequence on every eighth Lane is then:
 | Symbol: | D | D | K28.5 | D21.5 | K28.5 | D10.2 | D | D |
 |---------|---|---|-------|-------|-------|-------|---|---|
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -18532,7 +18456,7 @@ When upconfiguring Lanes in L0p:
 - Out of phase data Symbol, specifically: "0101010101"
 - Delay Symbol K28.5 (with appropriate disparity)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -18805,7 +18729,7 @@ The payload in each Data Block is the output of the scrambler in that Lane (i.e.
 
 The first block is a very low frequency pattern to help with measurement of the preset settings. The second block is to notify the Lane number and preset encoding the compliance pattern is using along with ensuring the entire compliance pattern is DC Balanced.
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -18908,7 +18832,7 @@ This generates a pattern of alternating 1s and 0s for measuring the transmitter'
 
 The various Ordered Sets (e.g., EIEOS and SKP OS) follow the Ordered Set definition corresponding to the current Data Rate of operation. For example, at 32.0 GT/s Data Rate, the EIEOS is the 32.0 GT/s EIEOS; at 16.0 GT/s Data Rate, the EIEOS is the 16.0 GT/s EIEOS; whereas at 8.0 GT/s Data Rate, the EIEOS is the 8.0 GT/s EIEOS defined earlier. As defined in § Section 4.2.8 , the SKP Ordered Set is the Standard SKP Ordered Set.
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -19062,7 +18986,7 @@ The Compliance Pattern consists of the following repeating sequence of 137 Block
 
 <<<PAGE_BREAK>>> page_598
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -19243,7 +19167,7 @@ Lane Margining at Receiver 不被运行于 2.5 GT/s、5.0 GT/s 或 8.0 GT/s 的�
 <a id="sec-4-2-18"></a>
 ## 4.2.18 Lane Margining at Receiver | 接收端通道裕量测试
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -19333,7 +19257,7 @@ The intended usage for the 15 bits of information in the Control SKP Ordered Set
 <a id="sec-4-2-18-1"></a>
 ## 4.2.18.1 Receiver Number, Margin Type, Usage Model, and Margin Payload Fields | 4.2.18.1 Receiver Number、Margin Type、Usage Model 与 Margin Payload 字段
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -19524,7 +19448,7 @@ In PAM-4 mode, the Step Margin commands apply to all 3 eyes simultaneously.
 <a id="sec-4-2-18-1-1"></a>
 ## 4.2.18.1.1 Step Margin Execution Status | 4.2.18.1.1 Step Margin 执行状态
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -19634,7 +19558,7 @@ For the Step Margin to voltage offset to up/down of default command, the Margin 
 <a id="sec-4-2-18-2"></a>
 ## 4.2.18.2 Margin Command and Response Flow | 4.2.18.2 Margin Command 与响应流程
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -19728,7 +19652,7 @@ The following rules must be followed:
 
 <<<PAGE_BREAK>>> page_606
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -19891,7 +19815,7 @@ table>
 <a id="sec-4-2-18-3"></a>
 ## 4.2.18.3 Flit Mode 8.0 GT/s Margining Behavior | 4.2.18.3 Flit 模式下 8.0 GT/s 的裕量测试行为
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -20020,7 +19944,7 @@ Lane Margining 定义于 16.0 GT/s 及更高的数据速率,2.5、5.0 与 8.0 GT
 <a id="sec-4-2-18-4-continued"></a>
 ## 4.2.18.4 (续) Receiver Margin Testing Requirements | 接收器裕量测试要求
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -20144,7 +20068,7 @@ Read the Margining Lane Status Register.
 <a id="sec-4-2-18-4-step-b3-c3"></a>
 ## 4.2.18.4 (续) Example Software Flow Steps B3 – C3 | 示例软件流程 步骤 B3 – C3
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -20292,7 +20216,7 @@ Broadcast No Command, Clear Error Log, No Command, Go to Normal Settings series 
 <a id="sec-4-3"></a>
 ## 4.3 Retimers | 重定时器 (Retimer)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -20426,7 +20350,7 @@ Pseudo Port 的方向(Upstream 或 Downstream)是在链路伙伴处于 Configura
 <a id="sec-4-3-1"></a>
 ## 4.3.1 Retimer Requirements | 重定时器 (Retimer) 要求
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -20520,7 +20444,7 @@ Retimer 在各高层运行模式下的行为如下:
 <a id="sec-4-3-2"></a>
 ## 4.3.2 Supported Retimer Topologies | 受支持的重定时器 (Retimer) 拓扑
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -20619,7 +20543,7 @@ The following variables are set to the following specified values following a Fu
 <a id="sec-4-3-3-continued"></a>
 ## 4.3.3 (续) Variables | 变量
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -20786,7 +20710,7 @@ Retimer 必须在链路 (Link) 训练过程中动态地确定端口方向、通�
 
 ---
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -20958,7 +20882,7 @@ Otherwise after a 3.0 ms timeout, if the other Pseudo Port is not receiving Orde
 
 ---
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -21142,7 +21066,7 @@ Forwarding 模式下进入电气空闲的规则取决于 Retimer 正在转发的
 
 ---
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -21316,7 +21240,7 @@ RT_G5_EQ_complete 变量在以下情况下被设置为 1b：
 
 ---
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -21506,7 +21430,7 @@ RT_G3_EQ_complete 变量在出现以下任一情况时被设置为 0b：
 <a id="sec-4-3-6-7"></a>
 ## 4.3.6.7 Ordered Set Modification Rules | 有序集修改规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -21674,7 +21598,7 @@ The Retimer shall meet the requirements in § Section 4.2.1.1.3 except as follow
 <a id="sec-4-3-6-8"></a>
 ## 4.3.6.8 DLLP, TLP, Logical Idle, and Flit Modification Rules | DLLP、TLP、逻辑空闲和 Flit 修改规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -21780,7 +21704,7 @@ Retimer 不在任一伪端口上执行接收器检测（Receiver Detection）。
 <a id="sec-4-3-6-10"></a>
 ## 4.3.6.10 8b/10b Scrambling Rules | 8b/10b 加扰规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -21898,7 +21822,7 @@ Retimer 不在任一伪端口上执行接收器检测。
 <a id="sec-4-3-6-12"></a>
 ## 4.3.6.12 Disable Link Rules | 禁用链路规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -22002,7 +21926,7 @@ The Retimer follows these additional rules if any Lane receives eight consecutiv
 <a id="sec-4-3-6-14"></a>
 ## 4.3.6.14 Compliance Receive Rules | 一致性接收规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -22280,7 +22204,7 @@ Retimer 必须以实现特定的方式支持以下寄存器字段：
 <a id="sec-4-3-6-15-cont"></a>
 ## 4.3.6.15 Enter Compliance Rules (continued) | 进入一致性规则（续）
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -22414,7 +22338,7 @@ CompLoadBoard (一致性测试负载板) 规则。
 <a id="sec-4-3-7-1-1"></a>
 ## 4.3.7.1.1 CompLoadBoard.Entry | CompLoadBoard.Entry 状态
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -22530,7 +22454,7 @@ This mode is entered while the Upstream and Downstream Ports on the Link are in 
 <a id="sec-4-3-7-1-3"></a>
 ## 4.3.7.1.3 CompLoadBoard.Exit | CompLoadBoard.Exit 状态
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -22652,7 +22576,7 @@ If the data rate of operation is 64.0 GT/s then the transmitter behaves as descr
 <a id="sec-4-3-7-2-1-1"></a>
 ## 4.3.7.2.1.1 Phase 1 | Phase 1 阶段
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -22734,7 +22658,7 @@ Transmitter behaves as described in § Section 4.2.7.4.2.1.2 except as follows:
 <a id="sec-4-3-7-2-1-3"></a>
 ## 4.3.7.2.1.3 Phase 3 Active | Phase 3 Active 阶段
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -22868,7 +22792,7 @@ If the data rate of operation is 16.0 GT/s or 32.0 GT/s then the transmitter beh
 <a id="sec-4-3-7-2-2-1"></a>
 ## 4.3.7.2.2.1 Phase 0 | Phase 0 阶段
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -22990,7 +22914,7 @@ If the data rate of operation is 16.0 GT/s or 32.0 GT/s then the transmitter beh
 <a id="sec-4-3-7-2-2-3-cont"></a>
 ## 4.3.7.2.2.3 Phase 2 Active (续) | Phase 2 Active（续）
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -23136,7 +23060,7 @@ Retimer (重定时器) 可选地在 8b/10b 编码 和 128b/130b 编码 下支持
 </div>
 
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -23245,7 +23169,7 @@ Retimer 允许在不同数据速率下具有不同的延迟，在这种情况下
 |-----------------|----------|----------|----------|-----------|-----------|-----------|
 |                 | 32       | 32       | 64       | 128       | 256       | 512       |
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -23346,7 +23270,7 @@ A SRIS capable Retimer must provide an implementation specific mechanism to conf
 
 <<<PAGE_BREAK>>> page_645
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -23436,7 +23360,7 @@ The nominal latency would be ½ of the SRIS additional latency, and is the nomin
 
 <<<PAGE_BREAK>>> page_646
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -23655,7 +23579,7 @@ CLKREQC#
 
 <<<PAGE_BREAK>>> page_648
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -23757,7 +23681,7 @@ The following are examples of cases where it might be appropriate to configure t
 
 <<<PAGE_BREAK>>> page_649
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
