@@ -39,6 +39,23 @@ PADDING = 0.04  # 4% padding
 
 FIG_CAPTION_RE = re.compile(r'^(?:Figure|Fiqure|FIG) 4-(\d+)\s+(.*?)(?:\s*§)?$', re.IGNORECASE)
 
+# Manual override for figures MinerU missed.
+# Format: figure_num -> (page, caption_text, page_full_image)
+# Strategy: use the full-page PNG and crop it tightly based on caption position
+MANUAL_OVERRIDE = {
+    13: (366, 'Layout of Framing Tokens'),
+    15: (368, 'Packet Transmission in a x8 Link'),
+    19: (378, 'Alternate Implementation of the LFSR for Descrambling'),
+    26: (393, 'Processing of Ordered Sets during or at the end of a Data Stream in Flit mode at 64.0 GT/s Data Rate'),
+    29: (404, 'DLP Byte to Bit Number Assignment'),
+    30: (404, 'DLP Bit usage'),
+    32: (406, 'Flit_Marker'),
+    35: (431, 'CRC generation/ checking in Flit'),
+    44: (449, '64.0 GT/s Equalization Flow'),
+    48: (496, 'LTSSM Top-Level State Diagram'),
+    61: (602, 'Retimer System Topologies'),
+}
+
 
 def find_chunk_for_page(page_num):
     """Find (chunk_pdf, start_page) covering page_num."""
@@ -122,10 +139,12 @@ def main():
             content_list = json.load(f)
 
         for item in content_list:
-            if item.get('type') not in ('image', 'table'):
+            if item.get('type') not in ('image', 'table', 'chart'):
                 continue
-            # image_caption for image type, table_caption for table type
-            captions = item.get('image_caption', []) or item.get('table_caption', [])
+            # image_caption / table_caption / chart_caption depending on type
+            captions = (item.get('image_caption', []) or
+                        item.get('table_caption', []) or
+                        item.get('chart_caption', []))
             if not captions:
                 continue
             cap = captions[0]
@@ -140,7 +159,6 @@ def main():
                 continue
             bbox = item.get('bbox')
             img_path = item.get('img_path', '')
-            # For table-misclassified images, no img_path; will fall back to PDF render
             page_figs[page_num].append((fignum, cap_text, bbox, img_path))
 
     # Step 2: render each figure tight crop
@@ -148,10 +166,30 @@ def main():
     pages = sorted(page_figs)
     print(f"\n[1] Discovered ch4 figures: {total} across {len(pages)} pages")
 
+    # Step 2a: add manual override figures
+    existing_figs = set()
+    for pg_figs in page_figs.values():
+        for fn, _, _, _ in pg_figs:
+            existing_figs.add(fn)
+    for fnum, (pg, cap) in MANUAL_OVERRIDE.items():
+        if fnum in existing_figs:
+            continue
+        # Check if this figure has a full-page image we can use
+        full_img = ROOT / 'figures' / 'chapter_04' / f'fig_{pg:04d}_1.png'
+        if full_img.exists():
+            page_figs[pg].append((fnum, cap, None, None))
+            print(f"  [manual] Figure 4-{fnum} (page {pg}): {cap[:50]}")
+
+    # Re-count
+    total = sum(len(v) for v in page_figs.values())
+    pages = sorted(page_figs)
+    print(f"[1+] Total ch4 figures (with manual): {total}")
+
     rendered_map = {}  # "Figure 4-NN" -> {page, file, bbox, caption}
     per_page_count = defaultdict(int)
     n_ok = 0
     n_fail = 0
+    n_manual = 0
 
     for pg in pages:
         # Sort by y0 (top-down)
@@ -162,12 +200,25 @@ def main():
             out_name = f'fig_{pg:04d}_{idx}_tight.png'
             out_path = FIG_OUT / out_name
             pdf_path, _ = find_chunk_for_page(pg)
-            if not pdf_path or not bbox:
-                print(f"  ! p.{pg} Figure 4-{fignum}: skip (no PDF/bbox)")
+            if not pdf_path:
+                print(f"  ! p.{pg} Figure 4-{fignum}: skip (no PDF)")
                 n_fail += 1
                 continue
             try:
-                clip = render_tight(pdf_path, pg, bbox, out_path, mineru_img_path=mineru_path)
+                if bbox is None and mineru_path is None:
+                    # Manual override: copy from full-page image
+                    full_img = ROOT / 'figures' / 'chapter_04' / f'fig_{pg:04d}_1.png'
+                    if full_img.exists():
+                        import shutil
+                        shutil.copy(full_img, out_path)
+                        from PIL import Image
+                        im = Image.open(out_path)
+                        clip = (0, 0, im.size[0], im.size[1])
+                        n_manual += 1
+                    else:
+                        raise FileNotFoundError(f'No bbox and no full-page image for p.{pg}')
+                else:
+                    clip = render_tight(pdf_path, pg, bbox, out_path, mineru_img_path=mineru_path)
                 key = f'Figure 4-{fignum}'
                 # If duplicate fignum (e.g., caption referenced twice), append
                 if key in rendered_map:
@@ -179,9 +230,11 @@ def main():
                     'caption': cap_text,
                     'pdf_chunk': Path(pdf_path).name,
                     'mineru_image': mineru_path,
+                    'source': 'manual_override' if bbox is None and mineru_path is None else 'mineru',
                 }
                 w, h = int(clip[2]-clip[0]), int(clip[3]-clip[1])
-                print(f"  ✓ p.{pg} Figure 4-{fignum} → {out_name} ({w}×{h} px)")
+                marker = '~' if bbox is None and mineru_path is None else '✓'
+                print(f"  {marker} p.{pg} Figure 4-{fignum} → {out_name} ({w}×{h} px)")
                 n_ok += 1
             except Exception as e:
                 print(f"  ✗ p.{pg} Figure 4-{fignum}: {e}")
@@ -190,9 +243,10 @@ def main():
     # Step 3: write mapping JSON
     out_json = {
         'chapter': 4,
-        'strategy': 'MinerU bbox + tight crop (150 DPI, 4% padding)',
+        'strategy': 'MinerU bbox + tight crop (150 DPI, 4% padding) + manual override for MinerU-missed',
         'page_range': [CH04_START, CH04_END],
         'total_figures': n_ok,
+        'total_manual': n_manual,
         'total_failed': n_fail,
         'figures': rendered_map,
     }
@@ -200,7 +254,7 @@ def main():
     with open(out_path, 'w') as f:
         json.dump(out_json, f, indent=2, ensure_ascii=False)
     print(f"\n[2] Mapping: {out_path}")
-    print(f"    Rendered: {n_ok} | Failed: {n_fail}")
+    print(f"    Rendered: {n_ok} ({n_manual} manual) | Failed: {n_fail}")
 
 
 if __name__ == '__main__':

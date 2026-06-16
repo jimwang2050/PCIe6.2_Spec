@@ -1,0 +1,103 @@
+{
+  "chapter": 11,
+  "page_range": [
+    1609,
+    1658
+  ],
+  "total_figures": 7,
+  "total_manual": 0,
+  "total_failed": 0,
+  "figures": {
+    "Figure 11-1": {
+      "page": 1610,
+      "file": "fig_1610_1_tight.png",
+      "bbox": [
+        96,
+        111,
+        867,
+        603
+      ],
+      "caption": "Conceptual View with Example Host and Device and Logical Communication Paths",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/664519c76bf9c9c2e0804c7e92cedda7e6ac3fd9ff96a613d9517b1fe65cbe83.jpg"
+    },
+    "Figure 11-2": {
+      "page": 1613,
+      "file": "fig_1613_1_tight.png",
+      "bbox": [
+        96,
+        108,
+        870,
+        593
+      ],
+      "caption": "TDISP Host/Device Reference Architecture",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/851b6f0308356e500b4a638973383f695a4838b643598a10d3be40874f9879fa.jpg"
+    },
+    "Figure 11-3": {
+      "page": 1616,
+      "file": "fig_1616_1_tight.png",
+      "bbox": [
+        98,
+        167,
+        867,
+        520
+      ],
+      "caption": "Identification of Requests",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/801b7eb6b5f5de7ee72cf2d700d1a501249cd2b181e8fac0554efc3ce0f6f45d.jpg"
+    },
+    "Figure 11-4": {
+      "page": 1617,
+      "file": "fig_1617_1_tight.png",
+      "bbox": [
+        102,
+        116,
+        864,
+        155
+      ],
+      "caption": "TDI Identifier - INTERFACE ID",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/6671279d4b9ad802994397d929e9bd8f55be5703561e97e4b13d637d6e9eda12.jpg"
+    },
+    "Figure 11-5": {
+      "page": 1617,
+      "file": "fig_1617_2_tight.png",
+      "bbox": [
+        127,
+        479,
+        872,
+        821
+      ],
+      "caption": "TDISP State Machine",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/3238cb3c64169eb56812189de0c25660b38c433ccd15209d5dd7837c727459e2.jpg"
+    },
+    "Figure 11-6": {
+      "page": 1622,
+      "file": "fig_1622_1_tight.png",
+      "bbox": [
+        102,
+        359,
+        859,
+        568
+      ],
+      "caption": "TDISP Request/Response Encapsulation",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/2daeb9a58698c8a8e22792387056d211e6ef6c11dfb1106ca01da06ef76084c7.jpg"
+    },
+    "Figure 11-7": {
+      "page": 1636,
+      "file": "fig_1636_1_tight.png",
+      "bbox": [
+        184,
+        443,
+        764,
+        707
+      ],
+      "caption": "Example Flow Where DSM is Unable to Return Full Length Report",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/181a907a7543e2c7c0d4b97589b51e9f225f7e5241b7ade3ba671a11fc237814.jpg"
+    }
+  }
+}

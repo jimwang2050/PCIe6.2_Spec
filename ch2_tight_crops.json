@@ -1,0 +1,1208 @@
+{
+  "chapter": 2,
+  "page_range": [
+    141,
+    308
+  ],
+  "total_figures": 92,
+  "total_manual": 0,
+  "total_failed": 0,
+  "figures": {
+    "Figure 2-1": {
+      "page": 141,
+      "file": "fig_0141_1_tight.png",
+      "bbox": [
+        361,
+        209,
+        606,
+        344
+      ],
+      "caption": "Layering Diagram Highlighting the Transaction Layer",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/ab63ce584870f5eacaa27b1cdd566be6c2a750ad394db55c7cc43e0e9e871d9e.jpg"
+    },
+    "Figure 2-3": {
+      "page": 144,
+      "file": "fig_0144_1_tight.png",
+      "bbox": [
+        117,
+        94,
+        846,
+        440
+      ],
+      "caption": "Generic TLP Format - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/bf96caa2faf15e2fae49bb5a613af6e36aee5bc3bc0913342acf1f5236d2ebb1.jpg"
+    },
+    "Figure 2-4": {
+      "page": 145,
+      "file": "fig_0145_1_tight.png",
+      "bbox": [
+        109,
+        627,
+        812,
+        693
+      ],
+      "caption": "Fields Present in All TLPs",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/009a4cff4ae5dc211dbd47f02d6303ecc97628867e3957e49b6a2d2a6bddbe0f.jpg"
+    },
+    "Figure 2-5": {
+      "page": 146,
+      "file": "fig_0146_1_tight.png",
+      "bbox": [
+        107,
+        445,
+        812,
+        511
+      ],
+      "caption": "Fields Present in All Non-Flit Mode TLP Headers",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/a388fb36792300337e90dc535be1274ff06b426863fa9e7c95f91d9e81789002.jpg"
+    },
+    "Figure 2-6": {
+      "page": 148,
+      "file": "fig_0148_1_tight.png",
+      "bbox": [
+        107,
+        736,
+        812,
+        803
+      ],
+      "caption": "First DW of Header Base",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/78e13abd29a8736223ce3af097d42b5efd9a7b64ed68d82074955450f398114c.jpg"
+    },
+    "Figure 2-7": {
+      "page": 161,
+      "file": "fig_0161_1_tight.png",
+      "bbox": [
+        109,
+        99,
+        812,
+        165
+      ],
+      "caption": "OHC-A1",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/0980966608ee0a30b7d20185781fdd015141702663cfa8c63a14cb6d8e15a5e2.jpg"
+    },
+    "Figure 2-8": {
+      "page": 161,
+      "file": "fig_0161_2_tight.png",
+      "bbox": [
+        107,
+        473,
+        812,
+        537
+      ],
+      "caption": "OHC-A2",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/318e68e2641a85c59d9e4e12a8a8d9c2ea8944813ffd9f18195a47c63c65fa95.jpg"
+    },
+    "Figure 2-9": {
+      "page": 161,
+      "file": "fig_0161_3_tight.png",
+      "bbox": [
+        107,
+        689,
+        812,
+        753
+      ],
+      "caption": "OHC-A3",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/e2b6f514ee70e59e7ee7734d1adcd4ec517ef3d80824c281f5199b51293086a6.jpg"
+    },
+    "Figure 2-10": {
+      "page": 162,
+      "file": "fig_0162_1_tight.png",
+      "bbox": [
+        107,
+        99,
+        812,
+        165
+      ],
+      "caption": "OHC-A4",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/5b5e6a8a4fc90e87fa864a6948b45506f4c3733ff8b69580224b02bd9b788f82.jpg"
+    },
+    "Figure 2-11": {
+      "page": 162,
+      "file": "fig_0162_2_tight.png",
+      "bbox": [
+        107,
+        397,
+        812,
+        463
+      ],
+      "caption": "OHC-A5",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/ad22e40f171e27fed0483ceba3ee05ed9bb8c0dd4650f9acd17d44fe3a75e448.jpg"
+    },
+    "Figure 2-12": {
+      "page": 162,
+      "file": "fig_0162_3_tight.png",
+      "bbox": [
+        107,
+        657,
+        812,
+        723
+      ],
+      "caption": "OHC-B",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/20155dcb3c92667a95818ff9a52542af72c0256753c5bb6310a4a70d9e141e5a.jpg"
+    },
+    "Figure 2-14": {
+      "page": 166,
+      "file": "fig_0166_1_tight.png",
+      "bbox": [
+        117,
+        433,
+        857,
+        827
+      ],
+      "caption": "Example Topology Illustrating Multiple Segments and NFM Subtrees",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/7f7b96693cd471c598f126de0aaff7687222c1d1c9fd8e739f6f016aff40ba44.jpg"
+    },
+    "Figure 2-15": {
+      "page": 173,
+      "file": "fig_0173_1_tight.png",
+      "bbox": [
+        320,
+        491,
+        647,
+        630
+      ],
+      "caption": "Examples of Completer Target Memory Access for FetchAdd",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/6311f33e249d36643de1e8d3ca1ed9991c7f585523fed832e9d758f778bf303f.jpg"
+    },
+    "Figure 2-16": {
+      "page": 175,
+      "file": "fig_0175_1_tight.png",
+      "bbox": [
+        107,
+        488,
+        812,
+        614
+      ],
+      "caption": "32-bit Address Routing - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/6911505206e3b750432488b1b68106d6efb1573d56df0603e7979068afb294ae.jpg"
+    },
+    "Figure 2-17": {
+      "page": 175,
+      "file": "fig_0175_2_tight.png",
+      "bbox": [
+        102,
+        688,
+        812,
+        843
+      ],
+      "caption": "64-bit Address Routing - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/82b43b9aa00749caf2b6e83eaa1646014a99daf37ea24bd79bce9014d170fe5b.jpg"
+    },
+    "Figure 2-18": {
+      "page": 176,
+      "file": "fig_0176_1_tight.png",
+      "bbox": [
+        107,
+        99,
+        812,
+        227
+      ],
+      "caption": "32-bit Address Routing - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/ce5993f9a93f36ba46eaf973975545689845f57e36b7e45a6d42dab725a1d37c.jpg"
+    },
+    "Figure 2-19": {
+      "page": 176,
+      "file": "fig_0176_2_tight.png",
+      "bbox": [
+        102,
+        297,
+        813,
+        455
+      ],
+      "caption": "64-bit Address Routing - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/dd4d87a3650f410b6eb799422a4e6d398669cd48dfb04eaff2133b7479c45453.jpg"
+    },
+    "Figure 2-20": {
+      "page": 176,
+      "file": "fig_0176_3_tight.png",
+      "bbox": [
+        101,
+        527,
+        813,
+        715
+      ],
+      "caption": "64-bit Address Routing - Flit Mode - 5 DW",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/2f57ead50f1aab922181fcbffcc616027119423f1e8dff30de4607c4d2a6d7ce.jpg"
+    },
+    "Figure 2-21": {
+      "page": 177,
+      "file": "fig_0177_1_tight.png",
+      "bbox": [
+        101,
+        99,
+        813,
+        318
+      ],
+      "caption": "64-bit Address Routing - Flit Mode - 6 DW",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/f0ad07b7c38b3483b2e36cfcb2a5658f8b2b0dc3de291c8e8a69ded015f6b88e.jpg"
+    },
+    "Figure 2-22": {
+      "page": 177,
+      "file": "fig_0177_2_tight.png",
+      "bbox": [
+        99,
+        388,
+        812,
+        638
+      ],
+      "caption": "64-bit Address Routing - Flit Mode - 7 DW",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/5d91cf5f6c9d5a40364ae423ede5fdbb9bf901f6d7cf879e8b968f74b704ae2b.jpg"
+    },
+    "Figure 2-23": {
+      "page": 179,
+      "file": "fig_0179_1_tight.png",
+      "bbox": [
+        102,
+        621,
+        812,
+        779
+      ],
+      "caption": "Non-ARI ID Routing with 4 DW Header - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/272de8a2683a65f9d4d95e421a90dd39e92372aec19088ac3126baf4a4733dde.jpg"
+    },
+    "Figure 2-24": {
+      "page": 180,
+      "file": "fig_0180_1_tight.png",
+      "bbox": [
+        102,
+        99,
+        812,
+        256
+      ],
+      "caption": "ARI ID Routing with 4 DW Header - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/94080b4fd4679179e9ed19d7533aa62d5179ab7592d6c7153567833bcf2e6029.jpg"
+    },
+    "Figure 2-25": {
+      "page": 180,
+      "file": "fig_0180_2_tight.png",
+      "bbox": [
+        109,
+        328,
+        812,
+        455
+      ],
+      "caption": "Non-ARI ID Routing with 3 DW Header - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/9e99a63aeaf54a9e76c3dcdeace7690c5952d31ab9e5cd0525cd8e4b7cfffe82.jpg"
+    },
+    "Figure 2-26": {
+      "page": 180,
+      "file": "fig_0180_3_tight.png",
+      "bbox": [
+        109,
+        527,
+        812,
+        655
+      ],
+      "caption": "ARI ID Routing with 3 DW Header - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/e4531be9e24c6b318b2264eb1ca287e3a88a8d0d7806afaa0e77f3750cb5f353.jpg"
+    },
+    "Figure 2-27": {
+      "page": 180,
+      "file": "fig_0180_4_tight.png",
+      "bbox": [
+        109,
+        727,
+        812,
+        853
+      ],
+      "caption": "ID Routing with 3 DW Header - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/142da81852adc170b1f5300bae0101002da3ef9de884d6c9199b44e819b8b810.jpg"
+    },
+    "Figure 2-28": {
+      "page": 181,
+      "file": "fig_0181_1_tight.png",
+      "bbox": [
+        102,
+        99,
+        813,
+        256
+      ],
+      "caption": "ID Routing with 4 DW Header - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/bd2e65f612cd6032c0c07928694af86a0cac1aed8ca66ff9037ef6f2d6e1002c.jpg"
+    },
+    "Figure 2-29": {
+      "page": 181,
+      "file": "fig_0181_2_tight.png",
+      "bbox": [
+        101,
+        328,
+        812,
+        516
+      ],
+      "caption": "ID Routing with 5 DW Header - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/d17788d27de60c440fce3be4a02dccfc1274d938bfdcacfb510d4d2cc2d8f391.jpg"
+    },
+    "Figure 2-30": {
+      "page": 181,
+      "file": "fig_0181_3_tight.png",
+      "bbox": [
+        99,
+        588,
+        813,
+        806
+      ],
+      "caption": "ID Routing with 6 DW Header - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/656a349bfd7043237dd3d06b4415e26c1c9bcd4a303251d9940f16c9d81ba71b.jpg"
+    },
+    "Figure 2-31": {
+      "page": 182,
+      "file": "fig_0182_1_tight.png",
+      "bbox": [
+        99,
+        99,
+        813,
+        348
+      ],
+      "caption": "ID Routing with 7 DW Header - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/e76105612b9800b11eb0df7f90805ee71e2b3a43a60cce3f191485812b144777.jpg"
+    },
+    "Figure 2-32": {
+      "page": 183,
+      "file": "fig_0183_1_tight.png",
+      "bbox": [
+        107,
+        390,
+        812,
+        486
+      ],
+      "caption": "Location of Byte Enables in TLP Header - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/c721ddf6281b71c9e6f574b6640c21fdfb2f7a4d96fa6f67c99c150acac21da3.jpg"
+    },
+    "Figure 2-33": {
+      "page": 186,
+      "file": "fig_0186_1_tight.png",
+      "bbox": [
+        161,
+        111,
+        794,
+        253
+      ],
+      "caption": "Transaction Descriptor",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/e6f8c49fa094239447275f02ad84f21deb3cfb4f8c441b9ccefdcb6009e6314f.jpg"
+    },
+    "Figure 2-34": {
+      "page": 186,
+      "file": "fig_0186_2_tight.png",
+      "bbox": [
+        258,
+        414,
+        702,
+        494
+      ],
+      "caption": "Transaction ID",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/98f3dfa9bde75f65761e5cd1d5822f91ee2ae9d02c48a2080c78f010d926a41f.jpg"
+    },
+    "Figure 2-35": {
+      "page": 194,
+      "file": "fig_0194_1_tight.png",
+      "bbox": [
+        410,
+        94,
+        553,
+        171
+      ],
+      "caption": "Attributes Field of Transaction Descriptor S",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/aa985e3f0b24bd05dc63fec6e93f29a04ed830a6145cc446adc63bbc37578e91.jpg"
+    },
+    "Figure 2-36": {
+      "page": 197,
+      "file": "fig_0197_1_tight.png",
+      "bbox": [
+        109,
+        513,
+        812,
+        640
+      ],
+      "caption": "Request Header Format for 64-bit Addressing of Memory",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/6d3da25bf4a964cf016952db599f34dcef09a72333a3691260ef9db8aeb1dec9.jpg"
+    },
+    "Figure 2-38": {
+      "page": 198,
+      "file": "fig_0198_1_tight.png",
+      "bbox": [
+        107,
+        386,
+        812,
+        511
+      ],
+      "caption": "Request Header Format for I/O Transactions - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/7213f10fed4c21789ad058f34f0ac25cb8c0311de87f55393baa16ff6b6cb94a.jpg"
+    },
+    "Figure 2-39": {
+      "page": 199,
+      "file": "fig_0199_1_tight.png",
+      "bbox": [
+        107,
+        186,
+        812,
+        313
+      ],
+      "caption": "Request Header Format for Configuration Transactions - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/8b58cf2531589e3c6c4055e03d9350ab1785eb95df79ba9403d2118afb1635f9.jpg"
+    },
+    "Figure 2-40": {
+      "page": 199,
+      "file": "fig_0199_2_tight.png",
+      "bbox": [
+        107,
+        579,
+        812,
+        645
+      ],
+      "caption": "TPH TLP Prefix",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/ffbbd9947b5bb26b739831f6ef4bfdbf5d109a68e7cc636bc2fa40fd7af6801f.jpg"
+    },
+    "Figure 2-41": {
+      "page": 200,
+      "file": "fig_0200_1_tight.png",
+      "bbox": [
+        101,
+        511,
+        812,
+        667
+      ],
+      "caption": "Location of PH[1:0] in a 4 DW Request Header - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/a38e5502d2d951493b0dea127672898c589d0c2d5032fe7fbede1a37bfb29021.jpg"
+    },
+    "Figure 2-42": {
+      "page": 201,
+      "file": "fig_0201_1_tight.png",
+      "bbox": [
+        107,
+        99,
+        812,
+        226
+      ],
+      "caption": "Location of PH[1:0] in a 3 DW Request Header - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/a72b78920067c308eed8ee33d99491f0c5c500fd9ab9235bae5db25c63450a71.jpg"
+    },
+    "Figure 2-43": {
+      "page": 201,
+      "file": "fig_0201_2_tight.png",
+      "bbox": [
+        107,
+        695,
+        812,
+        791
+      ],
+      "caption": "Location of ST[7:0] in the Memory Write Request Header - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/b4c70457ee4ce1c597123e817807fc725396d632247e12948f147ff1204d89bd.jpg"
+    },
+    "Figure 2-45": {
+      "page": 203,
+      "file": "fig_0203_1_tight.png",
+      "bbox": [
+        102,
+        148,
+        812,
+        305
+      ],
+      "caption": "Flit Mode Mem64 Request",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/ff32fbd94445db9c0507e764c75ec8befb39741f4176ab40d74e64c4af201c19.jpg"
+    },
+    "Figure 2-46": {
+      "page": 203,
+      "file": "fig_0203_2_tight.png",
+      "bbox": [
+        109,
+        377,
+        812,
+        503
+      ],
+      "caption": "Flit Mode Mem32 Request",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/4a2c5eeedb4303d9c60c71896589b8cf866bd7273b9c39aac140045c95b27bf2.jpg"
+    },
+    "Figure 2-47": {
+      "page": 203,
+      "file": "fig_0203_3_tight.png",
+      "bbox": [
+        109,
+        577,
+        812,
+        703
+      ],
+      "caption": "Flit Mode 10 Request",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/35282012aa9b6ff539e3fc65c6caff8bd1c653bfbafa5d574ee53389c18a35ed.jpg"
+    },
+    "Figure 2-48": {
+      "page": 204,
+      "file": "fig_0204_1_tight.png",
+      "bbox": [
+        107,
+        99,
+        812,
+        226
+      ],
+      "caption": "Flit Mode Configuration Request",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/3ff64f19806cd55e5dfc63ed24d0b739d7e710fa0b3c3a9c721639faaceae102.jpg"
+    },
+    "Figure 2-49": {
+      "page": 205,
+      "file": "fig_0205_1_tight.png",
+      "bbox": [
+        102,
+        382,
+        812,
+        539
+      ],
+      "caption": "Message Request Header - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/091153fa714afd2a82844f4ad8fc214a4a5bdeefec7d5cfdb95f62d0e46d0099.jpg"
+    },
+    "Figure 2-50": {
+      "page": 205,
+      "file": "fig_0205_2_tight.png",
+      "bbox": [
+        102,
+        611,
+        812,
+        768
+      ],
+      "caption": "Message Request Header - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/a2a0ef6eb4867d2ccfb5d0b7ffd8caab2e9b3e3c0ef7735e7cb58dda96aab9c7.jpg"
+    },
+    "Figure 2-51": {
+      "page": 212,
+      "file": "fig_0212_1_tight.png",
+      "bbox": [
+        102,
+        99,
+        812,
+        256
+      ],
+      "caption": "ERR\\_COR Message - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/6e0e92606263f965a81f39e7b40830ae55335606d384e177c0fcae9a47053ef6.jpg"
+    },
+    "Figure 2-52": {
+      "page": 212,
+      "file": "fig_0212_2_tight.png",
+      "bbox": [
+        102,
+        328,
+        812,
+        486
+      ],
+      "caption": "ERR\\_COR Message - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/25b92ee378a1a09b02641e5da3e2612f00c6b69965aa120e6de4931d6ae92ae0.jpg"
+    },
+    "Figure 2-53": {
+      "page": 215,
+      "file": "fig_0215_1_tight.png",
+      "bbox": [
+        102,
+        99,
+        812,
+        256
+      ],
+      "caption": "Header for Vendor-Defined Messages - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/a9f2f7583674d44a1ceb795869f29dfe75547341e3b141ac28efb4dacde7b0ef.jpg"
+    },
+    "Figure 2-54": {
+      "page": 215,
+      "file": "fig_0215_2_tight.png",
+      "bbox": [
+        102,
+        328,
+        812,
+        484
+      ],
+      "caption": "Header for Vendor-Defined Messages - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/69bff320e444c3263d41c2495bc7973730b0c16494ee271f4a5ea3115ed66ad7.jpg"
+    },
+    "Figure 2-55": {
+      "page": 216,
+      "file": "fig_0216_1_tight.png",
+      "bbox": [
+        102,
+        415,
+        812,
+        571
+      ],
+      "caption": "Header for PCI-SIG-Defined VDMs - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/8ecf96577219172b433ce5e145a413b23dd65c7dc938099cb84474287481a717.jpg"
+    },
+    "Figure 2-56": {
+      "page": 216,
+      "file": "fig_0216_2_tight.png",
+      "bbox": [
+        101,
+        643,
+        812,
+        801
+      ],
+      "caption": "Header for PCI-SIG-Defined VDMs - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/0be9e36e6237a66fdec23264268696e62f6afe19e54890745e62228b31ca1dfc.jpg"
+    },
+    "Figure 2-57": {
+      "page": 217,
+      "file": "fig_0217_1_tight.png",
+      "bbox": [
+        102,
+        614,
+        812,
+        771
+      ],
+      "caption": "DRS Message - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/1b1cdec757c0f5fda921b257676d715aeab90976720eb678e6a6258403583984.jpg"
+    },
+    "Figure 2-58": {
+      "page": 218,
+      "file": "fig_0218_1_tight.png",
+      "bbox": [
+        102,
+        99,
+        812,
+        256
+      ],
+      "caption": "DRS Message - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/aa2b5e0aa467c9cce1e6dc54ca45ffdf8a6ca1b917fe803bf08235e64f55208d.jpg"
+    },
+    "Figure 2-59": {
+      "page": 219,
+      "file": "fig_0219_1_tight.png",
+      "bbox": [
+        102,
+        401,
+        812,
+        558
+      ],
+      "caption": "FRS Message - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/605c738ca9b96a93ab4d9667afa5f7991bf3e87145cae30125aba31839d6bfca.jpg"
+    },
+    "Figure 2-60": {
+      "page": 219,
+      "file": "fig_0219_2_tight.png",
+      "bbox": [
+        102,
+        631,
+        812,
+        787
+      ],
+      "caption": "FRS Message - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/2577583f437c42974ce7e10f8e110086ba14f74e90e380b7d0ca80047c6cbbd8.jpg"
+    },
+    "Figure 2-61": {
+      "page": 221,
+      "file": "fig_0221_1_tight.png",
+      "bbox": [
+        99,
+        99,
+        813,
+        377
+      ],
+      "caption": "Hierarchy ID Message - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/8b873f8e0b6886416e479346c10a76cbbae458c81edda05cbba5534136a1fd83.jpg"
+    },
+    "Figure 2-62": {
+      "page": 221,
+      "file": "fig_0221_2_tight.png",
+      "bbox": [
+        99,
+        449,
+        813,
+        728
+      ],
+      "caption": "Hierarchy ID Message - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/bce524ca3ac35323b38e41766828405e92f0255ccd6208a32db9cc0249cd100f.jpg"
+    },
+    "Figure 2-63": {
+      "page": 223,
+      "file": "fig_0223_1_tight.png",
+      "bbox": [
+        102,
+        231,
+        812,
+        387
+      ],
+      "caption": "LTR Message - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/e702a29c840244d8d195681b841055ac20aeb037188c18de4967ff3ab0047b3f.jpg"
+    },
+    "Figure 2-64": {
+      "page": 223,
+      "file": "fig_0223_2_tight.png",
+      "bbox": [
+        102,
+        460,
+        812,
+        617
+      ],
+      "caption": "LTR Message - Flit ModeS",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/3887ffc3c7cbdf3d596db537ed110a61272a55b2d15d6c7c0d1eee1d17eda186.jpg"
+    },
+    "Figure 2-65": {
+      "page": 224,
+      "file": "fig_0224_1_tight.png",
+      "bbox": [
+        102,
+        376,
+        812,
+        534
+      ],
+      "caption": "OBFF Message - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/9daa3d4b2ce99f53bd9e719393e038559b1134d19d6646ae00efe781278166a8.jpg"
+    },
+    "Figure 2-66": {
+      "page": 224,
+      "file": "fig_0224_2_tight.png",
+      "bbox": [
+        102,
+        606,
+        812,
+        762
+      ],
+      "caption": "OBFF Message - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/81e866dd843a5b46e7038dcfc0d0a28f38ecaee4fd499636e633554a8ecb529d.jpg"
+    },
+    "Figure 2-67": {
+      "page": 225,
+      "file": "fig_0225_1_tight.png",
+      "bbox": [
+        101,
+        569,
+        812,
+        726
+      ],
+      "caption": "PTM Request/Response Message - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/9312d8e7625afbb5809a89e322bebfd554c7a48a55b017c966f36fbe907931fd.jpg"
+    },
+    "Figure 2-68": {
+      "page": 226,
+      "file": "fig_0226_1_tight.png",
+      "bbox": [
+        102,
+        99,
+        813,
+        286
+      ],
+      "caption": "PTM ResponseD Message - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/0f2be66ff8f5bd4339573d96ea94d8395f6bc55c1e5c208b2ba4381c7f7f826b.jpg"
+    },
+    "Figure 2-69": {
+      "page": 226,
+      "file": "fig_0226_2_tight.png",
+      "bbox": [
+        102,
+        358,
+        812,
+        516
+      ],
+      "caption": "PTM Request/Response Message - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/2e0894fb7a94dc12f85d63e38ffa32d6fe81b93bcad5fdca8a12fd0c67975991.jpg"
+    },
+    "Figure 2-70": {
+      "page": 226,
+      "file": "fig_0226_3_tight.png",
+      "bbox": [
+        101,
+        588,
+        813,
+        775
+      ],
+      "caption": "PTM ResponseD Message - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/d9a3da93eb7fdce032345ff201eb3df2b53f0c28def47aafbdea08b904c1e5c0.jpg"
+    },
+    "Figure 2-72": {
+      "page": 228,
+      "file": "fig_0228_1_tight.png",
+      "bbox": [
+        102,
+        558,
+        812,
+        714
+      ],
+      "caption": "IDE Sync Message for Link IDE Stream - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/ab4aab94075a83b87db9c9f856516722db6bb736a20b3efef80e93bd00e2b5c6.jpg"
+    },
+    "Figure 2-73": {
+      "page": 229,
+      "file": "fig_0229_1_tight.png",
+      "bbox": [
+        102,
+        99,
+        812,
+        256
+      ],
+      "caption": "IDE Sync Message for Selective IDE Stream - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/7be3dc0bde4e8aed16852b55f0fb3c29238de6062cd766bd5c1f7a3d3d1acf3f.jpg"
+    },
+    "Figure 2-74": {
+      "page": 229,
+      "file": "fig_0229_2_tight.png",
+      "bbox": [
+        102,
+        329,
+        812,
+        484
+      ],
+      "caption": "IDE Sync Message for Selective IDE Stream - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/42b10e696cb9a4870136b155584bd1f99aebe41754c4a9e53add872a173821c9.jpg"
+    },
+    "Figure 2-75": {
+      "page": 229,
+      "file": "fig_0229_3_tight.png",
+      "bbox": [
+        102,
+        558,
+        812,
+        714
+      ],
+      "caption": "IDE Fail Message for Link IDE Stream - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/9a44e3157a311abe745a23afb5853253469fb792b609ae59c9b0251f295ccd80.jpg"
+    },
+    "Figure 2-76": {
+      "page": 230,
+      "file": "fig_0230_1_tight.png",
+      "bbox": [
+        102,
+        99,
+        812,
+        256
+      ],
+      "caption": "IDE Fail Message for Link IDE Stream - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/52f0ce9741289bff453e7bf3762b2028ec06edbbc063b50fe762e5a559a17dfc.jpg"
+    },
+    "Figure 2-77": {
+      "page": 230,
+      "file": "fig_0230_2_tight.png",
+      "bbox": [
+        102,
+        328,
+        812,
+        484
+      ],
+      "caption": "IDE Fail Message for Selective IDE Stream - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/e26e94ba5011ab50180110dbd1da61c075e46f273aaf238009aea1b1297ebf19.jpg"
+    },
+    "Figure 2-78": {
+      "page": 230,
+      "file": "fig_0230_3_tight.png",
+      "bbox": [
+        102,
+        558,
+        812,
+        714
+      ],
+      "caption": "IDE Fail Message for Selective IDE Stream - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/bbd3df08fc297777d46b4177eb54c69844de83f8983342df00ae00148fb9220a.jpg"
+    },
+    "Figure 2-79": {
+      "page": 231,
+      "file": "fig_0231_1_tight.png",
+      "bbox": [
+        107,
+        676,
+        812,
+        803
+      ],
+      "caption": "Completion Header Format - Non-Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/6b1c504fa41bd0f21738eb092813a51a5648a819d32c3fc74b1b820f31467428.jpg"
+    },
+    "Figure 2-80": {
+      "page": 232,
+      "file": "fig_0232_1_tight.png",
+      "bbox": [
+        300,
+        343,
+        668,
+        486
+      ],
+      "caption": "(Non-ARI) Completer ID",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/c5feea30671012ef7f3c279602bc0886acde44b856fe3a53c25c1fe5ac1cce79.jpg"
+    },
+    "Figure 2-81": {
+      "page": 232,
+      "file": "fig_0232_2_tight.png",
+      "bbox": [
+        308,
+        555,
+        660,
+        675
+      ],
+      "caption": "ARI Completer ID",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/8103770ec78670e77bb7e179f02996590b3aa0d8be41c1d3c45f98e809947489.jpg"
+    },
+    "Figure 2-82": {
+      "page": 234,
+      "file": "fig_0234_1_tight.png",
+      "bbox": [
+        107,
+        99,
+        812,
+        226
+      ],
+      "caption": "Completion Header Base Format - Flit Mode",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/7f7fe1f4feb7bb03b5862f792888a7bd723d77a4463b31be44bb946dd8ecc9c5.jpg"
+    },
+    "Figure 2-83": {
+      "page": 234,
+      "file": "fig_0234_2_tight.png",
+      "bbox": [
+        107,
+        297,
+        812,
+        424
+      ],
+      "caption": "Completion Header Base Format - UIOWrCpl and UIORdCpl",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/a781b18d0cce9539a226500886c05776a75853f919eb4bf3b2817d16cf93867e.jpg"
+    },
+    "Figure 2-84": {
+      "page": 234,
+      "file": "fig_0234_3_tight.png",
+      "bbox": [
+        107,
+        497,
+        812,
+        623
+      ],
+      "caption": "Completion Header Base Format - UIORdCplD",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/f3e05a644bc0e4ce6087379aad2e5424dc6c21c5c64ac1d5f19f6b7802f6dc0b.jpg"
+    },
+    "Figure 2-85": {
+      "page": 237,
+      "file": "fig_0237_1_tight.png",
+      "bbox": [
+        109,
+        737,
+        941,
+        842
+      ],
+      "caption": "Flit Mode Local TLP Prefix",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/e8989b17f275da8f29fefd893c9e9f8c9e00210e49b4f25e2ecfbeae190872da.jpg"
+    },
+    "Figure 2-86": {
+      "page": 240,
+      "file": "fig_0240_1_tight.png",
+      "bbox": [
+        109,
+        573,
+        812,
+        640
+      ],
+      "caption": "OHC-E1",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/818383317db058ab86bee72641710fb0b5d16dd3099fc9352348921ce247bc0d.jpg"
+    },
+    "Figure 2-87": {
+      "page": 240,
+      "file": "fig_0240_2_tight.png",
+      "bbox": [
+        109,
+        710,
+        813,
+        808
+      ],
+      "caption": "OHC-E2",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/6a307435fd3ea7c38b43538aac2cd5d56e6a5cf991bf1a83d766208aaaf03ebc.jpg"
+    },
+    "Figure 2-90": {
+      "page": 245,
+      "file": "fig_0245_1_tight.png",
+      "bbox": [
+        205,
+        98,
+        769,
+        608
+      ],
+      "caption": "Flowchart for Switch Handling of TLPs S",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/133de8414bfb6e760878317e8c87c788a30cc44a680e11907d04edbebcd9407c.jpg"
+    },
+    "Figure 2-91": {
+      "page": 250,
+      "file": "fig_0250_1_tight.png",
+      "bbox": [
+        120,
+        97,
+        846,
+        652
+      ],
+      "caption": "Flowchart for Handling of Received Request",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/59b1d3968aa01487663eb2137faafd6eb864859713688022e32af832d0a9a9f7.jpg"
+    },
+    "Figure 2-92": {
+      "page": 253,
+      "file": "fig_0253_1_tight.png",
+      "bbox": [
+        196,
+        263,
+        751,
+        467
+      ],
+      "caption": "Example Completion Data when some Byte Enables are Ob",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/67637b1653b223b732e17292abe12b58b9fbf27b295109fe7e1e086707908578.jpg"
+    },
+    "Figure 2-93": {
+      "page": 264,
+      "file": "fig_0264_1_tight.png",
+      "bbox": [
+        516,
+        118,
+        689,
+        392
+      ],
+      "caption": "Deadlock Examples with Intersystem Interconnects",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/d72e13876ba3d09d991b7aba7887f23e3d511632ac2cb7162addf8a7d1393dda.jpg"
+    },
+    "Figure 2-94": {
+      "page": 271,
+      "file": "fig_0271_1_tight.png",
+      "bbox": [
+        114,
+        94,
+        848,
+        410
+      ],
+      "caption": "Virtual Channel Concept - An Illustration",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/3b9dbf8bf2f4b921c2faf892254ec7b9d62e00b7e5500a6dde457824aea628c6.jpg"
+    },
+    "Figure 2-95": {
+      "page": 271,
+      "file": "fig_0271_2_tight.png",
+      "bbox": [
+        129,
+        559,
+        841,
+        784
+      ],
+      "caption": "Virtual Channel Concept - Switch Internals (Upstream Flow)",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/3f9015c5925f0117981d7bc68c149ec15dd155b688f768321fee847f4787318f.jpg"
+    },
+    "Figure 2-96": {
+      "page": 274,
+      "file": "fig_0274_1_tight.png",
+      "bbox": [
+        122,
+        95,
+        839,
+        547
+      ],
+      "caption": "An Example of TC/VC Configurations",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/05059928c182257e15c6c22d21bf3c9434a064132bad51fd84ce9d8e2b3a91ca.jpg"
+    },
+    "Figure 2-97": {
+      "page": 275,
+      "file": "fig_0275_1_tight.png",
+      "bbox": [
+        209,
+        410,
+        766,
+        503
+      ],
+      "caption": "Relationship Between Requester and Ultimate Completer S",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/739bd51c98c5909eb0b007f179ae7e7a8fb704e99e6d65b7a6b9a906356900cb.jpg"
+    },
+    "Figure 2-98": {
+      "page": 284,
+      "file": "fig_0284_1_tight.png",
+      "bbox": [
+        137,
+        421,
+        830,
+        679
+      ],
+      "caption": "Credit Block Example",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/ca3b1d909b1e1e3f0e450c6efed60481748b2e1f49ae80031a6df5ed52b70670.jpg"
+    },
+    "Figure 2-99": {
+      "page": 301,
+      "file": "fig_0301_1_tight.png",
+      "bbox": [
+        282,
+        97,
+        681,
+        747
+      ],
+      "caption": "Calculation of 32-bit ECRC for TLP End to End Data Integrity Protection",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/2582b6c9225ef04d830ac8adc9e5656b5791ca5753fb55c9e76143378392ac45.jpg"
+    }
+  }
+}

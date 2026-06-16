@@ -495,7 +495,7 @@ TLP 内的数据负载以最低地址字节 (§ 图 2-3 中的字节 J) 显示�
 <<<PAGE_BREAK>>> page_144
 
 > **Figure 2-3.** Generic TLP Format - Non-Flit Mode (continued)
-> <img src="figures/chapter_02/fig_0144_1.png" width="700">
+> <img src="figures/chapter_02/fig_0144_1_tight.png" width="700">
 
 <<<PAGE_BREAK>>> page_145
 
@@ -582,7 +582,7 @@ All TLP prefixes and headers contain the following fields (see § Figure 2-4):
 ---
 
 > **Figure 2-4.** Fields Present in All TLPs
-> <img src="figures/chapter_02/fig_0145_1.png" width="700">
+> <img src="figures/chapter_02/fig_0145_1_tight.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -656,7 +656,7 @@ table>
 <<<PAGE_BREAK>>> page_146
 
 > **Figure 2-5.** Fields Present in All Non-Flit Mode TLP Headers
-> <img src="figures/chapter_02/fig_0146_1.png" width="700">
+> <img src="figures/chapter_02/fig_0146_1_tight.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -885,7 +885,7 @@ All Flit Mode TLPs contain the same fields in the first DW of the Header Base (s
 ---
 
 > **Figure 2-6.** First DW of Header Base
-> <img src="figures/chapter_02/fig_0148_1.png" width="700">
+> <img src="figures/chapter_02/fig_0148_1_tight.png" width="700">
 
 <<<PAGE_BREAK>>> page_149
 
@@ -1196,7 +1196,7 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 <<<PAGE_BREAK>>> page_161
 
 > **Figure 2-7.** OHC-A1
-> <img src="figures/chapter_02/fig_0161_1.png" width="700">
+> <img src="figures/chapter_02/fig_0161_1_tight.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1244,7 +1244,7 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 ---
 
 > **Figure 2-8.** OHC-A2
-> <img src="figures/chapter_02/fig_0161_2.png" width="700">
+> <img src="figures/chapter_02/fig_0161_2_tight.png" width="700">
 
 table>
 <thead>
@@ -1278,7 +1278,7 @@ table>
 ---
 
 > **Figure 2-9.** OHC-A3
-> <img src="figures/chapter_02/fig_0161_3.png" width="700">
+> <img src="figures/chapter_02/fig_0161_3_tight.png" width="700">
 
 <table>
 <thead>
@@ -1316,7 +1316,7 @@ table>
 <<<PAGE_BREAK>>> page_162
 
 > **Figure 2-10.** OHC-A4
-> <img src="figures/chapter_02/fig_0162_1.png" width="700">
+> <img src="figures/chapter_02/fig_0162_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -1356,7 +1356,7 @@ table>
 ---
 
 > **Figure 2-11.** OHC-A5
-> <img src="figures/chapter_02/fig_0162_2.png" width="700">
+> <img src="figures/chapter_02/fig_0162_2_tight.png" width="700">
 
 <table>
 <thead>
@@ -1394,7 +1394,7 @@ table>
 ---
 
 > **Figure 2-12.** OHC-B
-> <img src="figures/chapter_02/fig_0162_3.png" width="700">
+> <img src="figures/chapter_02/fig_0162_3_tight.png" width="700">
 
 <table>
 <thead>
@@ -1645,7 +1645,7 @@ Segment 字段的第二个用途是改进错误日志记录。当 FM TLP 包头�
 <<<PAGE_BREAK>>> page_166
 
 > **Figure 2-14.** Example Topology Illustrating Multiple Segments and NFM Subtrees
-> <img src="figures/chapter_02/fig_0166_1.png" width="700">
+> <img src="figures/chapter_02/fig_0166_1_tight.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2151,7 +2151,7 @@ table>
 </table>
 
 > **Figure 2-15.** Examples of Completer Target Memory Access for FetchAdd
-> <img src="figures/chapter_02/fig_0173_1.png" width="700">
+> <img src="figures/chapter_02/fig_0173_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2328,14 +2328,14 @@ TLP 路由主要有三种机制:地址路由、ID 路由和隐式路由。本节
 
 
 > **Figure 2-16.** 32-bit Address Routing - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0175_1.png" width="700">
+> <img src="figures/chapter_02/fig_0175_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
 ---
 
 > **Figure 2-17.** 64-bit Address Routing - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0175_2.png" width="700">
+> <img src="figures/chapter_02/fig_0175_2_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2400,21 +2400,21 @@ table>
 </table>
 
 > **Figure 2-18.** 32-bit Address Routing - Flit Mode
-> <img src="figures/chapter_02/fig_0176_1.png" width="700">
+> <img src="figures/chapter_02/fig_0176_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
 ---
 
 > **Figure 2-19.** 64-bit Address Routing - Flit Mode
-> <img src="figures/chapter_02/fig_0176_2.png" width="700">
+> <img src="figures/chapter_02/fig_0176_2_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
 ---
 
 > **Figure 2-20.** 64-bit Address Routing - Flit Mode - 5 DW
-> <img src="figures/chapter_02/fig_0176_3.png" width="700">
+> <img src="figures/chapter_02/fig_0176_3_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2449,14 +2449,14 @@ table>
 </table>
 
 > **Figure 2-21.** 64-bit Address Routing - Flit Mode - 6 DW
-> <img src="figures/chapter_02/fig_0177_1.png" width="700">
+> <img src="figures/chapter_02/fig_0177_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
 ---
 
 > **Figure 2-22.** 64-bit Address Routing - Flit Mode - 7 DW
-> <img src="figures/chapter_02/fig_0177_2.png" width="700">
+> <img src="figures/chapter_02/fig_0177_2_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2675,7 +2675,7 @@ table>
 
 
 > **Figure 2-23.** Non-ARI ID Routing with 4 DW Header - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0179_1.png" width="700">
+> <img src="figures/chapter_02/fig_0179_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2710,28 +2710,28 @@ table>
 </table>
 
 > **Figure 2-24.** ARI ID Routing with 4 DW Header - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0180_1.png" width="700">
+> <img src="figures/chapter_02/fig_0180_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
 ---
 
 > **Figure 2-25.** Non-ARI ID Routing with 3 DW Header - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0180_2.png" width="700">
+> <img src="figures/chapter_02/fig_0180_2_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
 ---
 
 > **Figure 2-26.** ARI ID Routing with 3 DW Header - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0180_3.png" width="700">
+> <img src="figures/chapter_02/fig_0180_3_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
 ---
 
 > **Figure 2-27.** ID Routing with 3 DW Header - Flit Mode
-> <img src="figures/chapter_02/fig_0180_4.png" width="700">
+> <img src="figures/chapter_02/fig_0180_4_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2766,21 +2766,21 @@ table>
 </table>
 
 > **Figure 2-28.** ID Routing with 4 DW Header - Flit Mode
-> <img src="figures/chapter_02/fig_0181_1.png" width="700">
+> <img src="figures/chapter_02/fig_0181_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
 ---
 
 > **Figure 2-29.** ID Routing with 5 DW Header - Flit Mode
-> <img src="figures/chapter_02/fig_0181_2.png" width="700">
+> <img src="figures/chapter_02/fig_0181_2_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
 ---
 
 > **Figure 2-30.** ID Routing with 6 DW Header - Flit Mode
-> <img src="figures/chapter_02/fig_0181_3.png" width="700">
+> <img src="figures/chapter_02/fig_0181_3_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2815,7 +2815,7 @@ table>
 </table>
 
 > **Figure 2-31.** ID Routing with 7 DW Header - Flit Mode
-> <img src="figures/chapter_02/fig_0182_1.png" width="700">
+> <img src="figures/chapter_02/fig_0182_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2958,13 +2958,11 @@ table>
 <td>
 
 > **Figure 2-32 Location of Byte Enables in TLP Header - Non-Flit Mode**
-> <img src="figures/chapter_02/fig_0183_1.png" width="700">
+> <img src="figures/chapter_02/fig_0183_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 2-32 TLP 包头中字节使能的位置 - 非 Flit 模式**
-> <img src="figures/chapter_02/fig_0183_1.png" width="700">
 
 </td>
 </tr>
@@ -3336,13 +3334,11 @@ A Memory Read Request of 1 DW with no bytes enabled, or "zero-length Read," may 
 <td>
 
 > **Figure 2-33 Transaction Descriptor**
-> <img src="figures/chapter_02/fig_0186_1.png" width="700">
+> <img src="figures/chapter_02/fig_0186_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 2-33 事务描述符**
-> <img src="figures/chapter_02/fig_0186_1.png" width="700">
 
 </td>
 </tr>
@@ -3372,7 +3368,7 @@ A Memory Read Request of 1 DW with no bytes enabled, or "zero-length Read," may 
 <td>
 
 > **Figure 2-34 Transaction ID**
-> <img src="figures/chapter_02/fig_0186_2.png" width="700">
+> <img src="figures/chapter_02/fig_0186_2_tight.png" width="700">
 
 In some cases (defined below) the Traffic Class (TC) is also included in the Transaction ID.
 
@@ -3391,8 +3387,6 @@ The Transaction ID is used to associate Completions with Requests. There are thr
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 2-34 Transaction ID**
-> <img src="figures/chapter_02/fig_0186_2.png" width="700">
 
 在某些情况（见下文定义）下，Traffic Class (TC) 也包含在 Transaction ID 内。
 
@@ -3983,13 +3977,11 @@ Similar implementation approaches for 14-Bit Tags are possible, and they are str
 <td>
 
 > **Figure 2-35 Attributes Field of Transaction Descriptor**
-> <img src="figures/chapter_02/fig_0194_1.png" width="700">
+> <img src="figures/chapter_02/fig_0194_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 2-35 事务描述符的 Attributes 字段**
-> <img src="figures/chapter_02/fig_0194_1.png" width="700">
 
 </td>
 </tr>
@@ -4531,7 +4523,7 @@ For I/O Requests, the following rules apply:
 
 
 > **Figure 2-38.** Request Header Format for I/O Transactions - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0197_1.png" width="700">
+> <img src="figures/chapter_02/fig_0197_1_tight.png" width="700">
 
 table>
 <thead>
@@ -4639,7 +4631,7 @@ table>
 </table>
 
 > **Figure 2-39.** Request Header Format for Configuration Transactions - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0198_1.png" width="700">
+> <img src="figures/chapter_02/fig_0198_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -4838,7 +4830,7 @@ TPH 规则
 
 
 > **Figure 2-41.** Location of PH[1:0] in a 4 DW Request Header - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0199_1.png" width="700">
+> <img src="figures/chapter_02/fig_0199_1_tight.png" width="700">
 
 table>
 <thead>
@@ -4868,7 +4860,7 @@ Figure 2-41: 4 DW Request Header layout in Non-Flit Mode, showing the location o
 <<<PAGE_BREAK>>> page_200
 
 > **Figure 2-42.** Location of PH[1:0] in a 3 DW Request Header - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0200_1.png" width="700">
+> <img src="figures/chapter_02/fig_0200_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -4985,7 +4977,7 @@ Figure 2-43: Non-Flit Mode Memory Write Request header (3 DW) showing the locati
 <<<PAGE_BREAK>>> page_201
 
 > **Figure 2-44.** Location of ST[7:0] in Memory Read, DMWr, and AtomicOp Request Headers - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0201_1.png" width="700">
+> <img src="figures/chapter_02/fig_0201_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -5221,7 +5213,7 @@ Figure 2-47: Flit Mode I/O Request (3 DW). Byte 0: Type=IO. Bytes 4-7: R, Addres
 <<<PAGE_BREAK>>> page_203
 
 > **Figure 2-48.** Flit Mode Configuration Request
-> <img src="figures/chapter_02/fig_0203_1.png" width="700">
+> <img src="figures/chapter_02/fig_0203_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -5374,7 +5366,7 @@ Many types of Messages, including Vendor-Defined Messages, are potentially usabl
 </table>
 
 > **Figure 2-49.** Message Request Header - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0204_1.png" width="700">
+> <img src="figures/chapter_02/fig_0204_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -5917,12 +5909,6 @@ The initiator of the Message is identified with the Requester ID of the Message 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 2-51.** ERR_COR 消息 - 非 Flit 模式 (Non-Flit Mode)
-> <img src="figures/chapter_02/fig_0211_1.png" width="700">
-
-> **图 2-52.** ERR_COR 消息 - Flit 模式 (Flit Mode)
-> <img src="figures/chapter_02/fig_0211_2.png" width="700">
-
 - ERR_COR 子类 (ECS) 字段按 § 表 2-25 中所示进行编码，用于指示 ERR_COR 消息的子类。
 
 </td>
@@ -6226,22 +6212,16 @@ table>
 <td></td>
 <td style="background-color:#e8e8e8">
 
-> **图 2-53.** 厂商自定义消息的包头 - 非 Flit 模式 (Non-Flit Mode)
-> <img src="figures/chapter_02/fig_0215_1.png" width="700">
-
-> **图 2-54.** 厂商自定义消息的包头 - Flit 模式 (Flit Mode)
-> <img src="figures/chapter_02/fig_0215_2.png" width="700">
-
 </td>
 </tr>
 </tbody>
 </table>
 
 > **Figure 2-53.** Header for Vendor-Defined Messages - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0215_1.png" width="700">
+> <img src="figures/chapter_02/fig_0215_1_tight.png" width="700">
 
 > **Figure 2-54.** Header for Vendor-Defined Messages - Flit Mode
-> <img src="figures/chapter_02/fig_0215_2.png" width="700">
+> <img src="figures/chapter_02/fig_0215_2_tight.png" width="700">
 
 
 
@@ -6317,10 +6297,10 @@ Beyond the rules for other Vendor-Defined Type 1 Messages, the following rules a
 - The Subtype field distinguishes the specific PCI-SIG-Defined VDMs. See § Appendix F for a list of PCI-SIG-Defined VDMs.
 
 > **Figure 2-55.** Header for PCI-SIG-Defined VDMs - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0216_1.png" width="700">
+> <img src="figures/chapter_02/fig_0216_1_tight.png" width="700">
 
 > **Figure 2-56.** Header for PCI-SIG-Defined VDMs - Flit Mode
-> <img src="figures/chapter_02/fig_0216_2.png" width="700">
+> <img src="figures/chapter_02/fig_0216_2_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -6337,11 +6317,7 @@ PCI-SIG 定义的 VDM (PCI-SIG-Defined VDMs) 是使用 PCI-SIG® Vendor ID (0001
 - Vendor ID 必须为 0001h，分配给 PCI-SIG。
 - Subtype 字段用于区分具体的 PCI-SIG 定义的 VDM。有关 PCI-SIG 定义的 VDM 列表，请参见 § 附录 F。
 
-> **图 2-55.** PCI-SIG 定义的 VDM 的包头 - 非 Flit 模式 (Non-Flit Mode)
-> <img src="figures/chapter_02/fig_0216_1.png" width="700">
 
-> **图 2-56.** PCI-SIG 定义的 VDM 的包头 - Flit 模式 (Flit Mode)
-> <img src="figures/chapter_02/fig_0216_2.png" width="700">
 
 </td>
 </tr>
@@ -6428,15 +6404,13 @@ table>
 The format of the DRS Message is shown in § Figure 2-57 below:
 
 > **Figure 2-57.** DRS Message - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0217_1.png" width="700">
+> <img src="figures/chapter_02/fig_0217_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
 DRS 消息的格式见下方 § 图 2-57：
 
-> **图 2-57.** DRS 消息 - 非 Flit 模式 (Non-Flit Mode)
-> <img src="figures/chapter_02/fig_0217_1.png" width="700">
 
 </td>
 </tr>
@@ -6491,9 +6465,6 @@ Beyond the rules for other PCI-SIG-Defined VDMs, the following rules apply to th
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 2-58.** DRS 消息 - Flit 模式 (Flit Mode)
-> <img src="figures/chapter_02/fig_0218_1.png" width="700">
-
 功能就绪状态 (Function Readiness Status, FRS) 协议 (参见 § 6.22.2 节) 使用 PCI-SIG 定义的 VDM 机制 (参见 § 2.2.8.6.1 节)。FRS 消息是一种 PCI-SIG 定义的 VDM (厂商自定义 Type 1 消息)，不带负载。
 
 除了适用于其他 PCI-SIG 定义的 VDM 的规则外，FRS 消息的构成还需遵循以下规则：
@@ -6527,7 +6498,7 @@ Beyond the rules for other PCI-SIG-Defined VDMs, the following rules apply to th
 </table>
 
 > **Figure 2-58.** DRS Message - Flit Mode
-> <img src="figures/chapter_02/fig_0218_1.png" width="700">
+> <img src="figures/chapter_02/fig_0218_1_tight.png" width="700">
 
 </div>
 
@@ -6598,22 +6569,16 @@ The format of the FRS Message is shown in § Figure 2-59 and § Figure 2-60 belo
 
 FRS 消息的格式见下方 § 图 2-59 和 § 图 2-60：
 
-> **图 2-59.** FRS 消息 - 非 Flit 模式 (Non-Flit Mode)
-> <img src="figures/chapter_02/fig_0219_1.png" width="700">
-
-> **图 2-60.** FRS 消息 - Flit 模式 (Flit Mode)
-> <img src="figures/chapter_02/fig_0219_2.png" width="700">
-
 </td>
 </tr>
 </tbody>
 </table>
 
 > **Figure 2-59.** FRS Message - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0219_1.png" width="700">
+> <img src="figures/chapter_02/fig_0219_1_tight.png" width="700">
 
 > **Figure 2-60.** FRS Message - Flit Mode
-> <img src="figures/chapter_02/fig_0219_2.png" width="700">
+> <img src="figures/chapter_02/fig_0219_2_tight.png" width="700">
 
 
 ---
@@ -6710,21 +6675,17 @@ table>
 The format of the Hierarchy ID Message is shown in § Figure 2-61 and § Figure 2-62 below:
 
 > **Figure 2-61.** Hierarchy ID Message - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0221_1.png" width="700">
+> <img src="figures/chapter_02/fig_0221_1_tight.png" width="700">
 
 > **Figure 2-62.** Hierarchy ID Message - Flit Mode
-> <img src="figures/chapter_02/fig_0221_2.png" width="700">
+> <img src="figures/chapter_02/fig_0221_2_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
 层级 ID 消息的格式见下方 § 图 2-61 和 § 图 2-62：
 
-> **图 2-61.** 层级 ID 消息 - 非 Flit 模式 (Non-Flit Mode)
-> <img src="figures/chapter_02/fig_0221_1.png" width="700">
 
-> **图 2-62.** 层级 ID 消息 - Flit 模式 (Flit Mode)
-> <img src="figures/chapter_02/fig_0221_2.png" width="700">
 
 </td>
 </tr>
@@ -6866,7 +6827,7 @@ LTR 消息可选地用于上报设备对读/写服务延迟的容忍行为。有
 ---
 
 > **Figure 2-63.** LTR Message - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0223_1.png" width="700">
+> <img src="figures/chapter_02/fig_0223_1_tight.png" width="700">
 
 <<<PAGE_BREAK>>> page_223
 
@@ -6931,7 +6892,7 @@ OBFF 消息可选地用于将平台中心资源状态上报给端点 (Endpoint)�
 ---
 
 > **Figure 2-65.** OBFF Message - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0224_1.png" width="700">
+> <img src="figures/chapter_02/fig_0224_1_tight.png" width="700">
 
 <<<PAGE_BREAK>>> page_224
 
@@ -6999,7 +6960,7 @@ a Malformed TLP.
 ---
 
 > **Figure 2-67.** PTM Request/Response Message - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0225_1.png" width="700">
+> <img src="figures/chapter_02/fig_0225_1_tight.png" width="700">
 
 <<<PAGE_BREAK>>> page_225
 
@@ -7037,15 +6998,6 @@ the IDE Sync Message .
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 2-68.** PTM ResponseD 消息 - 非 Flit 模式 (Non-Flit Mode)
-> <img src="figures/chapter_02/fig_0226_1.png" width="700">
-
-> **图 2-69.** PTM Request/Response 消息 - Flit 模式 (Flit Mode)
-> <img src="figures/chapter_02/fig_0226_1.png" width="700">
-
-> **图 2-70.** PTM ResponseD 消息 - Flit 模式 (Flit Mode)
-> <img src="figures/chapter_02/fig_0226_1.png" width="700">
-
 IDE 消息与可选的完整性与数据加密 (Integrity and Data Encryption, IDE) 机制配合使用 (参见 § 6.33 节)。以下规则适用于 IDE 消息的构造:
 - § 表 2-36 定义了 IDE 消息。
 - IDE 消息不包含数据有效载荷 (TLP 类型为 Msg)。
@@ -7062,7 +7014,7 @@ IDE 消息与可选的完整性与数据加密 (Integrity and Data Encryption, I
 </table>
 
 > **Figure 2-68.** PTM ResponseD Message - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0226_1.png" width="700">
+> <img src="figures/chapter_02/fig_0226_1_tight.png" width="700">
 
 </div>
 
@@ -7142,7 +7094,7 @@ table>
 ---
 
 > **Figure 2-71.** IDE Sync Message for Link IDE Stream - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0228_1.png" width="700">
+> <img src="figures/chapter_02/fig_0228_1_tight.png" width="700">
 
 <<<PAGE_BREAK>>> page_227
 
@@ -7160,34 +7112,16 @@ table>
 <td></td>
 <td style="background-color:#e8e8e8">
 
-> **图 2-73.** 选择性 IDE 流的 IDE Sync 消息 - 非 Flit 模式 (Non-Flit Mode)
-> <img src="figures/chapter_02/fig_0229_1.png" width="700">
-
-> **图 2-74.** 选择性 IDE 流的 IDE Sync 消息 - Flit 模式 (Flit Mode)
-> <img src="figures/chapter_02/fig_0229_1.png" width="700">
-
-> **图 2-75.** 链路 IDE 流的 IDE Fail 消息 - 非 Flit 模式 (Non-Flit Mode)
-> <img src="figures/chapter_02/fig_0229_1.png" width="700">
-
-> **图 2-76.** 链路 IDE 流的 IDE Fail 消息 - Flit 模式 (Flit Mode)
-> <img src="figures/chapter_02/fig_0230_1.png" width="700">
-
-> **图 2-77.** 选择性 IDE 流的 IDE Fail 消息 - 非 Flit 模式 (Non-Flit Mode)
-> <img src="figures/chapter_02/fig_0230_1.png" width="700">
-
-> **图 2-78.** 选择性 IDE 流的 IDE Fail 消息 - Flit 模式 (Flit Mode)
-> <img src="figures/chapter_02/fig_0230_1.png" width="700">
-
 </td>
 </tr>
 </tbody>
 </table>
 
 > **Figure 2-73.** IDE Sync Message for Selective IDE Stream - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0229_1.png" width="700">
+> <img src="figures/chapter_02/fig_0229_1_tight.png" width="700">
 
 > **Figure 2-76.** IDE Fail Message for Link IDE Stream - Flit Mode
-> <img src="figures/chapter_02/fig_0230_1.png" width="700">
+> <img src="figures/chapter_02/fig_0230_1_tight.png" width="700">
 
 </div>
 
@@ -7310,13 +7244,9 @@ check for violations of this rule. See § Section 2.3.2 , second bullet, for det
 </table>
 
 > **Figure 2-80 (Non-ARI) Completer ID**
-> <img src="figures/chapter_02/fig_0231_1.png" width="700">
+> <img src="figures/chapter_02/fig_0231_1_tight.png" width="700">
 
-> **图 2-80 (非 ARI) Completer ID**
-> <img src="figures/chapter_02/fig_0231_1.png" width="700">
 
-> **图 2-81 ARI Completer ID**
-> <img src="figures/chapter_02/fig_0231_1.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -7780,7 +7710,7 @@ table>
 This prefix (see § Figure 2-85) is only permitted when operating in Flit Mode.
 
 > **Figure 2-85.** Flit Mode Local TLP Prefix
-> <img src="figures/chapter_02/fig_0237_1.png" width="700">
+> <img src="figures/chapter_02/fig_0237_1_tight.png" width="700">
 
 | Byte | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 |------|---|---|---|---|---|---|---|---|
@@ -8084,7 +8014,7 @@ RC 不需要支持所有 End-End TLP Prefix Supported 位置位的根端口对�
 </table>
 
 > **Figure 2-86.** OHC-E1
-> <img src="figures/chapter_02/fig_0240_1.png" width="700">
+> <img src="figures/chapter_02/fig_0240_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -8124,7 +8054,7 @@ OHC-E DW 0(字节 0)
 </table>
 
 > **Figure 2-87.** OHC-E2
-> <img src="figures/chapter_02/fig_0240_2.png" width="700">
+> <img src="figures/chapter_02/fig_0240_2_tight.png" width="700">
 
 <table>
 <thead>
@@ -8554,7 +8484,7 @@ Switches must process both TLPs that address resources within the Switch as well
 <<<PAGE_BREAK>>> page_245
 
 > **Figure 2-90.** Flowchart for Switch Handling of TLPs
-> <img src="figures/chapter_02/fig_0245_1.png" width="700">
+> <img src="figures/chapter_02/fig_0245_1_tight.png" width="700">
 
 table>
 <thead>
@@ -8924,7 +8854,7 @@ Request 既不会被软件也不会被其他设备发起到端点。
 <<<PAGE_BREAK>>> page_250
 
 > **Figure 2-91.** Flowchart for Handling of Received Request
-> <img src="figures/chapter_02/fig_0250_1.png" width="700">
+> <img src="figures/chapter_02/fig_0250_1_tight.png" width="700">
 
 table>
 <thead>
@@ -9183,7 +9113,7 @@ table>
 - § Figure 2-92 presents an example of the above. The example assumes a single Completion TLP is returned.
 
 > **Figure 2-92.** Example Completion Data when some Byte Enables are 0b
-> <img src="figures/chapter_02/fig_0253_1.png" width="700">
+> <img src="figures/chapter_02/fig_0253_1_tight.png" width="700">
 
 > **IMPLEMENTATION NOTE: BCM BIT USAGE**
 > To satisfy certain PCI-X protocol constraints, a PCI-X Bridge or PCI-X Completer for a PCI-X burst read in some cases will set the Byte Count field in the first PCI-X transaction of the Split Completion sequence to indicate the size of just that first transaction instead of the entire burst read. When this occurs, the PCI-X Bridge/PCI-X Completer will also Set the BCM bit in that first PCI-X transaction, to indicate that the Byte Count field has been modified from its normal usage. Refer to the [PCI-X] for further details.
@@ -9991,7 +9921,7 @@ table>
 </table>
 
 > **Figure 2-93.** Deadlock Examples with Intersystem Interconnects
-> <img src="figures/chapter_02/fig_0264_1.png" width="700">
+> <img src="figures/chapter_02/fig_0264_1_tight.png" width="700">
 
 
 ---
@@ -10563,8 +10493,6 @@ TC7/VC7 保留
 > **Figure 2-94.** Virtual Channel Concept - An Illustration
 > <img src="figures/chapter_02/fig_0270_1.png" width="700">
 
-> **图 2-94.** 虚通道概念 - 示意
-> <img src="figures/chapter_02/fig_0270_1.png" width="700">
 
 <a id="sec-2-5-1"></a>
 ## 2.5.1 Virtual Channel Identification (VC ID) | 虚通道标识 (VC ID)
@@ -10585,8 +10513,6 @@ Internal to the Switch, every Virtual Channel requires dedicated physical resour
 > **Figure 2-95.** Virtual Channel Concept - Switch Internals (Upstream Flow)
 > <img src="figures/chapter_02/fig_0270_2.png" width="700">
 
-> **图 2-95.** 虚通道概念 - 交换机内部(上游流)
-> <img src="figures/chapter_02/fig_0270_2.png" width="700">
 
 An MFD may implement Virtual Channel resources similar to a subset of those in a Switch, for the purpose of managing the Quality of Service (QoS) for Upstream requests from the different Functions to the device's Upstream Egress Port.
 
@@ -10608,8 +10534,6 @@ Rules for assigning VC ID to VC hardware resources within a Port are as follows:
 
 在交换机内部,每个虚通道都需要专用物理资源(队列/缓冲区和控制逻辑)以支持交换机内部独立的流量流。§ Figure 2-95 概念性地展示了交换机内(在 § Figure 2-94 中)支持上游方向流量流所需的 VC 资源。
 
-> **图 2-95.** 虚通道概念 - 交换机内部(上游流)
-> <img src="figures/chapter_02/fig_0270_2.png" width="700">
 
 多功能设备 (MFD) 可实现类似于交换机中部分 VC 资源的虚通道资源,用于管理来自不同功能 (Function) 的上游请求到设备上游出口端口 (Upstream Egress Port) 的服务质量 (QoS)。
 
@@ -10725,8 +10649,6 @@ The number of VCs supported, and the associated buffering per VC per Port, are n
 > **Figure 2-96.** An Example of TC/VC Configurations
 > <img src="figures/chapter_02/fig_0273_1.png" width="700">
 
-> **图 2-96.** TC/VC 配置示例
-> <img src="figures/chapter_02/fig_0273_1.png" width="700">
 
 ---
 
@@ -10846,7 +10768,7 @@ table>
 Flow Control (FC) is used to prevent overflow of Receiver buffers and to enable compliance with the ordering rules defined in § Section 2.4. Note that the Flow Control mechanism is used by the Requester to track the queue/buffer space available in the agent across the Link as shown in § Figure 2-97. That is, Flow Control is point-to-point (across a Link) and not end-to-end. Flow Control does not imply that a Request has reached its ultimate Completer.
 
 > **Figure 2-97.** Relationship Between Requester and Ultimate Completer
-> <img src="figures/chapter_02/fig_0275_1.png" width="700">
+> <img src="figures/chapter_02/fig_0275_1_tight.png" width="700">
 
 Flow Control is orthogonal to the data integrity mechanisms used to implement reliable information exchange between Transmitter and Receiver. Flow Control can treat the flow of TLP information from Transmitter to Receiver as perfect, since the data integrity mechanisms ensure that corrupted and lost TLPs are corrected through retransmission (see § Section 3.6).
 
@@ -12578,10 +12500,8 @@ Beyond the stated error reporting semantics contained elsewhere in this specific
 <<<PAGE_BREAK>>> page_301
 
 > **Figure 2-99.** Calculation of 32-bit ECRC for TLP End to End Data Integrity Protection
-> <img src="figures/chapter_02/fig_0301_1.png" width="700">
+> <img src="figures/chapter_02/fig_0301_1_tight.png" width="700">
 
-> **图 2-99.** TLP 端到端数据完整性保护的 32 位 ECRC 计算
-> <img src="figures/chapter_02/fig_0301_1.png" width="700">
 
 ---
 

@@ -3006,7 +3006,7 @@ Abbreviations:
 </table>
 
 > **Figure 6-2.** Flowchart Showing Sequence of Device Error Signaling and Logging Operations
-> <img src="figures/chapter_06/fig_0732_1.png" width="700">
+> <img src="figures/chapter_06/fig_0732_1_tight.png" width="700">
 
 </div>
 
@@ -3032,7 +3032,7 @@ table>
 Error Messages have a complex set of associated control and status bits. § Figure 6-3 provides a high-level summary in the form of a pseudo logic diagram for how error Messages are generated, logged, forwarded, and ultimately notified to the system. Not all control and status bits are shown. The logic gates shown in this diagram are intended for conveying general concepts, and not for direct implementation.
 
 > **Figure 6-3.** Pseudo Logic Diagram for Selected Error Message Control and Status Bits
-> <img src="figures/chapter_06/fig_0733_1.png" width="700">
+> <img src="figures/chapter_06/fig_0733_1_tight.png" width="700">
 
 The diagram covers:
 
@@ -4828,7 +4828,7 @@ The following set of figures (§ Figure 6-7 and § Figure 6-8) illustrates traff
 ---
 
 > **Figure 6-7.** An Example of Differentiated Traffic Flow Through a Switch | 流经交换机的差异化流量流示例
-> <img src="figures/chapter_06/fig_0752_1.png" width="700">
+> <img src="figures/chapter_06/fig_0752_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -4934,7 +4934,7 @@ Switch arbitration model defines a required arbitration infrastructure and funct
 ---
 
 > **Figure 6-8.** Switch Arbitration Structure | 交换机仲裁结构
-> <img src="figures/chapter_06/fig_0753_1.png" width="700">
+> <img src="figures/chapter_06/fig_0753_1_tight.png" width="700">
 
 table>
 <thead>
@@ -5340,10 +5340,8 @@ The multi-Function arbitration model defines an optional arbitration infrastruct
 <<<PAGE_BREAK>>> page_757
 
 > **Figure 6-10.** Multi-Function Arbitration Model
-> <img src="figures/chapter_06/fig_0757_1.png" width="700">
+> <img src="figures/chapter_06/fig_0757_1_tight.png" width="700">
 
-> **图 6-10.** 多功能设备仲裁模型 (Multi-Function Arbitration Model)
-> <img src="figures/chapter_06/fig_0757_1.png" width="700">
 
 <a id="sec-6-3-3-3"></a>
 ## 6.3.3.3 Port Arbitration - Arbitration Within VC | 端口仲裁 - VC 内部仲裁
@@ -9385,7 +9383,7 @@ A Root Complex may present one of the following topologies to configuration soft
 <<<PAGE_BREAK>>> page_794
 
 > **Figure 6-11.** Root Complex Represented as a Single Component | 根复合体表示为单一组件
-> <img src="figures/chapter_06/fig_0794_1.png" width="700">
+> <img src="figures/chapter_06/fig_0794_1_tight.png" width="700">
 
 table>
 <thead>
@@ -9435,7 +9433,7 @@ In order for software to correctly program arbitration and other control paramet
 ---
 
 > **Figure 6-12.** Root Complex Represented as Multiple Components | 根复合体表示为多个组件
-> <img src="figures/chapter_06/fig_0794_2.png" width="700">
+> <img src="figures/chapter_06/fig_0794_2_tight.png" width="700">
 
 ---
 
@@ -12385,7 +12383,7 @@ LTR 支持通过 § 第 7 章 所述的报告寄存器和控制寄存器进行�
 <<<PAGE_BREAK>>> page_825
 
 > **Figure 6-15.** Latency Fields Format for LTR Messages | LTR 消息的延迟字段格式
-> <img src="figures/chapter_06/fig_0825_1.png" width="700">
+> <img src="figures/chapter_06/fig_0825_1_tight.png" width="700">
 
 table>
 <thead>
@@ -12676,7 +12674,7 @@ LTR 延迟语义反映了设备所看到的可容忍延迟，按以下一种或�
 <<<PAGE_BREAK>>> page_828
 
 > **Figure 6-17.** Use of LTR and Clock Power Management | LTR 与时钟电源管理的使用
-> <img src="figures/chapter_06/fig_0828_1.png" width="700">
+> <img src="figures/chapter_06/fig_0828_1_tight.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -12799,7 +12797,7 @@ OBFF 消息使用消息路由 (Message Routing) 100b,即"Local - Terminate at Re
 </table>
 
 > **Figure 6-18.** Codes and Equivalent WAKE# Patterns | 代码与等效 WAKE# 模式
-> <img src="figures/chapter_06/fig_0830_1.png" width="700">
+> <img src="figures/chapter_06/fig_0830_1_tight.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -12870,7 +12868,7 @@ It is recommended that Endpoints not assume CPU Active or OBFF windows will rema
 </table>
 
 > **Figure 6-19.** Example Platform Topology Showing a Link Where OBFF is Carried by Messages | 展示 OBFF 由消息承载的链路的示例平台拓扑
-> <img src="figures/chapter_06/fig_0831_1.png" width="700">
+> <img src="figures/chapter_06/fig_0831_1_tight.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -13212,7 +13210,7 @@ A TLP may contain at most one PASID TLP Prefix.
 <<<PAGE_BREAK>>> page_834
 
 > **Figure 6-20.** PASID TLP Prefix | PASID TLP Prefix
-> <img src="figures/chapter_06/fig_0834_1.png" width="700">
+> <img src="figures/chapter_06/fig_0834_1_tight.png" width="700">
 
 **Table 6-15. PASID TLP Prefix | 表 6-15. PASID TLP Prefix**
 
@@ -13640,7 +13638,7 @@ PTM 定义了以下角色：
 
 
 >>> **Figure 6-21.** Example System Topologies using PTM
->>> <img src="figures/chapter_06/fig_0838_1.png" width="700">
+>>> <img src="figures/chapter_06/fig_0838_1_tight.png" width="700">
 
 <<<PAGE_BREAK>>> page_838
 
@@ -13691,7 +13689,7 @@ sends PTM Requests to the Downstream Port on the same Link, which acts on behalf
 </table>
 
 >>> **Figure 6-22.** Precision Time Measurement Link Protocol
->>> <img src="figures/chapter_06/fig_0839_1.png" width="700">
+>>> <img src="figures/chapter_06/fig_0839_1_tight.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -13872,7 +13870,7 @@ to software.
 
 
 >>> **Figure 6-23.** Precision Time Measurement Example
->>> <img src="figures/chapter_06/fig_0841_1.png" width="700">
+>>> <img src="figures/chapter_06/fig_0841_1_tight.png" width="700">
 
 <<<PAGE_BREAK>>> page_842
 
@@ -14155,7 +14153,7 @@ successive PTM dialogs have been completed successfully and without replays.
 </table>
 
 >>> **Figure 6-24.** PTM Requester Operation
->>> <img src="figures/chapter_06/fig_0844_1.png" width="700">
+>>> <img src="figures/chapter_06/fig_0844_1_tight.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -14482,7 +14480,7 @@ a particular physical event if timestamps are captured in the higher layers.
 </table>
 
 >>> **Figure 6-25.** PTM Timestamp Capture Example
->>> <img src="figures/chapter_06/fig_0847_1.png" width="700">
+>>> <img src="figures/chapter_06/fig_0847_1_tight.png" width="700">
 
 ---
 
@@ -14964,7 +14962,7 @@ table>
 <td>
 
 > **Figure 6-26.** Example Illustrating Application of Enhanced Allocation
-> <img src="figures/chapter_06/fig_0853_1.png" width="700">
+> <img src="figures/chapter_06/fig_0853_1_tight.png" width="700">
 
 Figure 6-26 illustrates an example topology that shows where Enhanced Allocation is permitted to be used:
 
@@ -14991,8 +14989,6 @@ Key (with colors):
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 6-26.** 增强分配 (Enhanced Allocation) 应用示例
-> <img src="figures/chapter_06/fig_0853_1.png" width="700">
 
 图 6-26 给出了一个示例拓扑,说明在哪些位置允许使用增强分配 (Enhanced Allocation):
 
@@ -15136,7 +15132,7 @@ When software initializes a PCI Hierarchy, it assigns unique Bus and Device numb
 **EMERGENCY POWER REDUCTION STATE: EXAMPLE ADD-IN CARD**
 
 > **Figure 6-27.** Emergency Power Reduction State: Example Add-in Card
-> <img src="figures/chapter_06/fig_0857_1.png" width="700">
+> <img src="figures/chapter_06/fig_0857_1_tight.png" width="700">
 
 § Figure 6-27 shows an example multi-Device add-in card supporting Emergency Power Reduction. Note that Device C does not support the Emergency Power Reduction State. Device C might be a Switch that fans out to Devices A and B.
 
@@ -15326,35 +15322,29 @@ table>
 A bridge that implements the FPB Capability can itself also be referred to as an FPB. The FPB Capability can be applied to any logical bridge, as illustrated in § Figure 6-28.
 
 > **Figure 6-28.** FPB High Level Diagram and Example Topology
-> <img src="figures/chapter_06/fig_0862_1.png" width="700">
+> <img src="figures/chapter_06/fig_0862_1_tight.png" width="700">
 
 FPB changes the way Bus Numbers are consumed by Switches to reduce waste, by "flattening" the way Bus Numbers are used inside of Switches and by Downstream Ports (see § Figure 6-29).
 
 > **Figure 6-29.** Example Illustrating "Flattening" of a Switch
-> <img src="figures/chapter_06/fig_0863_1.png" width="700">
+> <img src="figures/chapter_06/fig_0863_1_tight.png" width="700">
 
 FPB defines mechanisms for system software to allocate Routing IDs and Memory Space resources in non-contiguous ranges, enabling system software to assign pools of these resources from which it can allocate "bins" to Functions below the FPB. This is done using a bit vector where each bit when Set assigns a corresponding range of resources to the Secondary Side of the bridge (see § Figure 6-30).
 
 > **Figure 6-30.** Vector Mechanism for Address Range Decoding
-> <img src="figures/chapter_06/fig_0864_1.png" width="700">
+> <img src="figures/chapter_06/fig_0864_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
 实现 FPB Capability 的桥本身也可称为 FPB。FPB Capability 可应用于任何逻辑桥,如图 6-28 所示。
 
-> **图 6-28.** FPB 高级别示意图及拓扑示例
-> <img src="figures/chapter_06/fig_0862_1.png" width="700">
 
 FPB 通过"扁平化"交换机 (Switch) 内部以及下游端口 (Downstream Port) 使用 Bus Number 的方式来减少 Switch 对 Bus Number 的浪费(参见图 6-29)。
 
-> **图 6-29.** 交换机"扁平化"示例
-> <img src="figures/chapter_06/fig_0863_1.png" width="700">
 
 FPB 定义了系统软件在不连续范围内分配 Routing ID 和 Memory Space 资源的机制,使系统软件可以分配这些资源的资源池,并从中将"桶 (bins)"分配给 FPB 下方的 Function。这是通过使用一个位向量 (bit vector) 实现的,其中每一位被置位时,会将相应的资源范围分配给桥的 Secondary 侧(参见图 6-30)。
 
-> **图 6-30.** 地址范围解码的向量机制
-> <img src="figures/chapter_06/fig_0864_1.png" width="700">
 
 </td>
 </tr>
@@ -15370,7 +15360,7 @@ This allows system software to assign Routing IDs and/or Memory Space resources 
 FPB is defined to allow both the non-FPB and FPB mechanisms to operate simultaneously, such that, for example, it is possible for system firmware/software to implement a policy where the non-FPB mechanisms continue to be used in parts of the system where the FPB mechanisms are not required (see § Figure 6-31). In this figure, the decode logic is assumed to provide a '1' output when a given TLP is decoded as being associated with the bridge's Secondary Side. The non-FPB decode mechanisms apply as without FPB, so for example only the Bus Number portion (bits 15:8) of a Routing ID is tested by the non-FPB decode logic when evaluating an ID routed TLP.
 
 > **Figure 6-31.** Relationship between FPB and non-FPB Decode Mechanisms
-> <img src="figures/chapter_06/fig_0865_1.png" width="700">
+> <img src="figures/chapter_06/fig_0865_1_tight.png" width="700">
 
 It is important to recognize that, although FPB adds additional ways for a specific bridge to decode a given TLP, FPB does not change anything about the fundamental ways that bridges operate within the Switch and Root Complex architectural structures. FPB uses the same architectural concepts to provide management mechanisms for three different resource types:
 
@@ -15524,7 +15514,7 @@ When ARI is not enabled, the FPB RID mechanism can be applied with different gra
 </table>
 
 > **Figure 6-32.** Routing IDs (RIDs) and Supported Granularities
-> <img src="figures/chapter_06/fig_0867_1.png" width="700">
+> <img src="figures/chapter_06/fig_0867_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -15653,7 +15643,7 @@ FPB MEM Low 机制可以以不同的粒度应用,粒度可由系统软件通过 
 </table>
 
 > **Figure 6-33.** Addresses in Memory Below 4 GB and Effect of Granularity
-> <img src="figures/chapter_06/fig_0869_1.png" width="700">
+> <img src="figures/chapter_06/fig_0869_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -16052,7 +16042,7 @@ VPD 关键字分为两类:只读字段和读/写字段。除非另有说明,关�
 </table>
 
 > **Figure 6-34.** VPD Format
-> <img src="figures/chapter_06/fig_0874_1.png" width="700">
+> <img src="figures/chapter_06/fig_0874_1_tight.png" width="700">
 
 **Table 6-22. Example of Add-in Card Serial Number | 表 6-22. 插卡序列号示例**
 
@@ -16405,7 +16395,7 @@ An enclosure is any platform, box, rack, or set of boxes that contain one or mor
 </table>
 
 > **Figure 6-35.** Example NPEM Configuration using a Downstream Port
-> <img src="figures/chapter_06/fig_0879_1.png" width="700">
+> <img src="figures/chapter_06/fig_0879_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -16431,7 +16421,7 @@ Figure 6-36 shows an example configuration with the NPEM capability located in t
 </table>
 
 > **Figure 6-36.** Example NPEM Configuration using an Upstream Port
-> <img src="figures/chapter_06/fig_0880_1.png" width="700">
+> <img src="figures/chapter_06/fig_0880_1_tight.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -16913,7 +16903,7 @@ Alternatively, for CMA/SPDM and related use cases, the optional Connection ID me
 
 
 > **Figure 6-38.** Stack Diagram Illustration of Multiple Sessions and Connections
-> <img src="figures/chapter_06/fig_0887_1.png" width="700">
+> <img src="figures/chapter_06/fig_0887_1_tight.png" width="700">
 
 table>
 <thead>
@@ -16939,7 +16929,7 @@ In each case, two distinct SPDM uses are shown, A and B, and within each group, 
 </table>
 
 > **Figure 6-39.** Example Showing Relationships of Software and Hardware Elements
-> <img src="figures/chapter_06/fig_0888_1.png" width="700">
+> <img src="figures/chapter_06/fig_0888_1_tight.png" width="700">
 
 ---
 
@@ -16972,7 +16962,7 @@ Data objects must consist of 2 DW to 256K DW, as shown in Figure 6-40.
 </table>
 
 > **Figure 6-40.** DOE Data Object Format
-> <img src="figures/chapter_06/fig_0889_1.png" width="700">
+> <img src="figures/chapter_06/fig_0889_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -16998,7 +16988,7 @@ The first DW of a data object must be formatted as defined in Table 6-28 and ill
 </table>
 
 > **Figure 6-41.** DOE Data Object Header 1
-> <img src="figures/chapter_06/fig_0889_2.png" width="700">
+> <img src="figures/chapter_06/fig_0889_2_tight.png" width="700">
 
 **Table 6-28 DOE Data Object Header 1**
 
@@ -17112,7 +17102,7 @@ The DOE Discovery feature must be implemented, and provides a means for software
 
 
 > **Figure 6-43.** DOE Discovery Request Data Object Contents (3rd DW)
-> <img src="figures/chapter_06/fig_0890_1.png" width="700">
+> <img src="figures/chapter_06/fig_0890_1_tight.png" width="700">
 
 **Table 6-30 DOE Discovery Request Data Object Contents (3rd DW)**
 
@@ -17150,7 +17140,7 @@ table>
 <td>
 
 > **Figure 6-44.** DOE Discovery Response Data Object Contents (3rd DW)
-> <img src="figures/chapter_06/fig_0891_1.png" width="700">
+> <img src="figures/chapter_06/fig_0891_1_tight.png" width="700">
 
 **Table 6-31. DOE Discovery Response Data Object Contents (3rd DW) | 表 6-31. DOE 发现响应数据对象内容（第 3 个 DW）**
 
@@ -17705,7 +17695,7 @@ CMA/SPDM 的应用众多且多样化。对于复杂环境，安全身份供应�
 > <img src="figures/chapter_06/fig_0900_1.png" width="700">
 
 > **Figure 6-48.** Example Add-In-Card Supporting CMA-SPDM
-> <img src="figures/chapter_06/fig_0901_1.png" width="700">
+> <img src="figures/chapter_06/fig_0901_1_tight.png" width="700">
 
 </div>
 
@@ -17956,7 +17946,7 @@ Some components provide a debug mode where a debugger is granted access to hardw
 </table>
 
 > **Figure 6-49.** Byte Mapping of SPDM Messages Including Example Payload
-> <img src="figures/chapter_06/fig_0904_1.png" width="700">
+> <img src="figures/chapter_06/fig_0904_1_tight.png" width="700">
 
 </div>
 
@@ -18353,7 +18343,7 @@ Users of DMWr must understand the functional implications of transaction orderin
 As with all types of "control" mechanisms, it is necessary for all participants to comprehend the specific requirements placed by the particular mechanism, and these will vary between different systems and different device types. In many cases it will be necessary to distinguish Requests issued from different software environments (e.g., from multiple Virtual Machine guests where the guests use different drivers) all sharing the same work queue. PASID is one mechanism that can be used for this purpose, although there are many alternatives (e.g., different ranges of addresses could be assigned to each environment that would be mapped to the same resources in the Completer). In some systems, system and application level software is capable of generating DMWr Requests according to a specific template (§ Figure 6-51), where bits 31:0 are defined by the system architecture, the P bit at bit 31 indicates if user (0b) or supervisor (1b) code triggered the Request, and bits 19:0 of the payload include the PASID to indicate the context in which the Request was generated.
 
 > **Figure 6-51.** Example DMWr Data Payload Template
-> <img src="figures/chapter_06/fig_0910_1.png" width="700">
+> <img src="figures/chapter_06/fig_0910_1_tight.png" width="700">
 
 For performance reasons it is not recommended that DMWr be used for sending bulk data.
 
@@ -18453,7 +18443,7 @@ table>
 <td>
 
 > **Figure 6-52.** IDE Secures TLPs Between Ports
-> <img src="figures/chapter_06/fig_0912_1.png" width="700">
+> <img src="figures/chapter_06/fig_0912_1_tight.png" width="700">
 
 In addition to the in-line securing of TLPs, as a "data plane" capability, IDE defines interoperable mechanisms for establishing Streams and programming keys, as a "control plane" capability, based on industry specifications. For example, for an Endpoint connected directly to the Root Complex (A to B above), one way to establish IDE is to use IDE Key Management (IDE_KM – see § Section 6.33.3) via DOE to allow host Firmware/Software to configure the Ports, including securely programming the IDE keys into both Ports. In another example, for two Endpoints communicating peer to peer (G to H above), the two Endpoints can implement communication directly via [MCTP-VDM] and [Secured-MCTP], where one will take the Requester role and the other the Responder role, and then applying the IDE_KM flow for secure key establishment. In an alternate example, it is also possible for some kind of management controller to apply IDE_KM over a sideband management connection, to program IDE keys in Ports throughout a system. The mechanisms for a management controller to program keys into a Root Complex are outside the scope of this document.
 
@@ -18695,7 +18685,7 @@ A trusted execution environment (TEE) using IDE must prevent the transmission of
 </table>
 
 > **Figure 6-53.** IDE Stream State Machine
-> <img src="figures/chapter_06/fig_0916_1.png" width="700">
+> <img src="figures/chapter_06/fig_0916_1_tight.png" width="700">
 
 </div>
 
@@ -18718,7 +18708,7 @@ table>
 <td>
 
 > **Figure 6-54.** IDE Stream State Machine
-> <img src="figures/chapter_06/fig_0917_1.png" width="700">
+> <img src="figures/chapter_06/fig_0917_1_tight.png" width="700">
 
 TDISP (see § Chapter 11.) defines specific requirements that extend the following rules, that apply broadly to all TEEs using IDE:
 
@@ -18839,7 +18829,7 @@ table>
 **6.33.3 IDE Key Management (IDE_KM)**
 
 > **Figure 6-55.** IDE Key Management (IDE_KM) and Related Specifications & Capabilities
-> <img src="figures/chapter_06/fig_0919_1.png" width="700">
+> <img src="figures/chapter_06/fig_0919_1_tight.png" width="700">
 
 | Legend | Source |
 |--------|--------|
@@ -18874,8 +18864,6 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
 
 **6.33.3 IDE 密钥管理 (IDE_KM)**
 
-> **图 6-55.** IDE 密钥管理 (IDE_KM) 及相关规范与能力
-> <img src="figures/chapter_06/fig_0919_1.png" width="700">
 
 | 图例 | 来源 |
 |--------|--------|
@@ -19240,8 +19228,6 @@ An IDE error condition will occur if system software fails to ensure the correct
   - 在用于初始密钥编程的安全 [SPDM] 会话保持打开期间,通过不同安全 [SPDM] 会话收到的所有 QUERY 和/或 KEY_PROG 请求必须由应答者丢弃,且不得产生响应。
   - 如果用于初始密钥编程的安全 [SPDM] 会话已关闭,则通过不同安全 [SPDM] 会话收到的任何后续 QUERY 和/或 KEY_PROG 请求必须首先使应答者使该 IDE 流的所有密钥无效且不可读,然后将该 IDE 流转为不安全状态,只有之后才能响应 QUERY/KEY_PROG 请求,除非通过实现特定手段可以确保新会话已与执行初始密钥编程的同一请求者建立。
 
-> **图 6-56.** Query (QUERY) 数据对象
-> <img src="figures/chapter_06/fig_0924_1.png" width="700">
 
 </td>
 </tr>
@@ -19272,46 +19258,28 @@ An IDE error condition will occur if system software fails to ensure the correct
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 6-57.** Query Response (QUERY_RESP) 数据对象
-> <img src="figures/chapter_06/fig_0925_1.png" width="700">
-
-> **图 6-58.** 密钥编程 (KEY_PROG) 数据对象(以 256 位密钥为例)
-> <img src="figures/chapter_06/fig_0925_2.png" width="700">
-
-> **图 6-59.** 密钥编程确认 (KP_ACK) 数据对象
-> <img src="figures/chapter_06/fig_0926_1.png" width="700">
-
-> **图 6-60.** 密钥集启动 (K_SET_GO) 数据对象
-> <img src="figures/chapter_06/fig_0926_2.png" width="700">
-
-> **图 6-61.** 密钥集停止 (K_SET_STOP) 数据对象
-> <img src="figures/chapter_06/fig_0926_3.png" width="700">
-
-> **图 6-62.** 密钥集启动/停止确认 (K_GOSTOP_ACK) 数据对象
-> <img src="figures/chapter_06/fig_0926_4.png" width="700">
-
 </td>
 </tr>
 </tbody>
 </table>
 
 > **Figure 6-57.** Query Response (QUERY_RESP) Data Object
-> <img src="figures/chapter_06/fig_0925_1.png" width="700">
+> <img src="figures/chapter_06/fig_0925_1_tight.png" width="700">
 
 > **Figure 6-58.** Key Programming (KEY_PROG) Data Object with Example 256b Key
-> <img src="figures/chapter_06/fig_0925_2.png" width="700">
+> <img src="figures/chapter_06/fig_0925_2_tight.png" width="700">
 
 > **Figure 6-59.** Key Programming Acknowledgement (KP_ACK) Data Object
-> <img src="figures/chapter_06/fig_0926_1.png" width="700">
+> <img src="figures/chapter_06/fig_0926_1_tight.png" width="700">
 
 > **Figure 6-60.** Key Set Go (K_SET_GO) Data Object
-> <img src="figures/chapter_06/fig_0926_2.png" width="700">
+> <img src="figures/chapter_06/fig_0926_2_tight.png" width="700">
 
 > **Figure 6-61.** Key Set Stop (K_SET_STOP) Data Object
-> <img src="figures/chapter_06/fig_0926_3.png" width="700">
+> <img src="figures/chapter_06/fig_0926_3_tight.png" width="700">
 
 > **Figure 6-62.** Key Set Go/Stop Acknowledgement (K_GOSTOP_ACK) Data Object
-> <img src="figures/chapter_06/fig_0926_4.png" width="700">
+> <img src="figures/chapter_06/fig_0926_4_tight.png" width="700">
 
 </div>
 
@@ -19443,16 +19411,13 @@ TLPs secured by IDE are called IDE TLPs. In Non-Flit Mode, all IDE TLPs must use
 >
 > ** 当使用 DOE 时,上游端口以非 IDE Completion 响应完成 K_SET_GO(Tx) 数据对象传输的 Configuration Write,然后触发对 Completion 使用 IDE。
 >
-> **图 6-63.** IDE_KM 示例
-> <img src="figures/chapter_06/fig_0928_1.png" width="700">
-
 </td>
 </tr>
 </tbody>
 </table>
 
 > **Figure 6-63.** IDE_KM Example
-> <img src="figures/chapter_06/fig_0928_1.png" width="700">
+> <img src="figures/chapter_06/fig_0928_1_tight.png" width="700">
 
 </div>
 
@@ -19512,8 +19477,6 @@ In Flit Mode:
 
 **6.33.4 IDE TLP**
 
-> **图 6-64.** IDE TLP 前缀 (NFM)
-> <img src="figures/chapter_06/fig_0929_1.png" width="700">
 
 IDE 前缀 (NFM) 包括:
 
@@ -19581,15 +19544,9 @@ IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode,
 
 消息认证码 (MAC)<sup>143</sup> 的大小,也称为 t,如 [AES-GCM] 中所定义,必须为 96 位(参见 § 图 6-65)。
 
-> **图 6-65.** MAC 布局
-> <img src="figures/chapter_06/fig_0930_1.png" width="700">
-
 对于 IDE TLP 的流控 (Flow Control) 信用计算,必须将 MAC 视为由 Header Credit 覆盖。
 
 对于 IDE TLP,AES-GCM 可以应用于每个 IDE TLP,或使用聚合将 AES-GCM 应用于多个 IDE TLP,从而降低每个 TLP 的 IDE TLP MAC 开销。对于链接 IDE 流 (Link IDE Stream),本地前缀 (local prefix) 必须由 MAC 覆盖(参见 § 图 6-66、§ 图 6-67、§ 图 6-70 和 § 图 6-71)。对于选择性 IDE 流 (Selective IDE Stream),本地前缀不得由 MAC 覆盖(参见 § 图 6-68、§ 图 6-69、§ 图 6-72 和 § 图 6-73)。
-
-> **图 6-66.** 链接 IDE 流不使用聚合的 IDE TLP 示例(非 Flit 模式)
-> <img src="figures/chapter_06/fig_0930_2.png" width="700">
 
 <sub>143. 在 [AES-GCM] 中称为"认证标签" (authentication tag) 或 T,此处重命名以避免与其他"标签"用法混淆</sub>
 
@@ -19599,10 +19556,10 @@ IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode,
 </table>
 
 > **Figure 6-65.** MAC Layout
-> <img src="figures/chapter_06/fig_0930_1.png" width="700">
+> <img src="figures/chapter_06/fig_0930_1_tight.png" width="700">
 
 > **Figure 6-66.** Example of IDE TLP for a Link IDE Stream without Aggregation (Non-Flit Mode)
-> <img src="figures/chapter_06/fig_0930_2.png" width="700">
+> <img src="figures/chapter_06/fig_0930_2_tight.png" width="700">
 
 </div>
 
@@ -19623,27 +19580,21 @@ table>
 <td>
 
 > **Figure 6-67.** IDE TLP – Example Showing Aggregation of Two TLPs for a Link IDE Stream (Non-Flit Mode)
-> <img src="figures/chapter_06/fig_0931_1.png" width="700">
+> <img src="figures/chapter_06/fig_0931_1_tight.png" width="700">
 
 > **Figure 6-68.** IDE TLP – Example of IDE TLP for a Selective IDE Stream without Aggregation (Non-Flit Mode)
-> <img src="figures/chapter_06/fig_0931_2.png" width="700">
+> <img src="figures/chapter_06/fig_0931_2_tight.png" width="700">
 
 > **Figure 6-69.** IDE TLP – Example Showing Aggregation of Two TLPs for a Selective IDE Stream (Non-Flit Mode)
-> <img src="figures/chapter_06/fig_0931_3.png" width="700">
+> <img src="figures/chapter_06/fig_0931_3_tight.png" width="700">
 
 <<<PAGE_BREAK>>> page_932
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 6-67.** IDE TLP – 链接 IDE 流聚合两个 TLP 的示例(非 Flit 模式)
-> <img src="figures/chapter_06/fig_0931_1.png" width="700">
 
-> **图 6-68.** IDE TLP – 选择性 IDE 流不使用聚合的 IDE TLP 示例(非 Flit 模式)
-> <img src="figures/chapter_06/fig_0931_2.png" width="700">
 
-> **图 6-69.** IDE TLP – 选择性 IDE 流聚合两个 TLP 的示例(非 Flit 模式)
-> <img src="figures/chapter_06/fig_0931_3.png" width="700">
 
 </td>
 </tr>
@@ -19678,24 +19629,9 @@ Partial header encryption provides the ability to reduce potential exposure to s
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 6-70.** 链接 IDE 流不使用聚合的 IDE TLP 示例(Flit 模式)
-> <img src="figures/chapter_06/fig_0932_1.png" width="700">
-
-> **图 6-71.** IDE TLP – 链接 IDE 流聚合两个 TLP 的示例(Flit 模式)
-> <img src="figures/chapter_06/fig_0932_2.png" width="700">
-
-> **图 6-72.** 选择性 IDE 流不使用聚合的 IDE TLP 示例(Flit 模式)
-> <img src="figures/chapter_06/fig_0933_1.png" width="700">
-
-> **图 6-73.** IDE TLP – 选择性 IDE 流聚合两个 TLP 的示例(Flit 模式)
-> <img src="figures/chapter_06/fig_0933_2.png" width="700">
-
 输入 A 和 P 必须通过按 § 2.1.2 节定义的字节顺序连接所包含的 TLP 内容来形成。虽然 A 和 P 内容在这些图中概念上是连接的,但 IDE TLP 中的内容放置与非 IDE TLP 中相同。一旦构建了 A 和 P 内容,[AES-GCM] 定义了 A 和 P 必须如何填充——此处的填充未在此说明,该填充用于 [AES-GCM] 计算中,但不包含在发送/接收的 TLP 中。当使用聚合时,聚合 TLP 的 A 和 P 内容在填充之前按每种内容类型概念上连接。
 
 部分包头加密 (Partial Header Encryption) 提供通过加密 IDE 内存请求包头 (Header) 的某些部分来减少对侧信道攻击潜在暴露的能力,同时以明文形式维护 TLP 路由和低级 TLP 处理所需的信息。§ 图 6-74 在高层说明了部分包头加密的应用。
-
-> **图 6-74.** 部分包头加密的高级流程
-> <img src="figures/chapter_06/fig_0934_1.png" width="700">
 
 </td>
 </tr>
@@ -19703,19 +19639,19 @@ Partial header encryption provides the ability to reduce potential exposure to s
 </table>
 
 > **Figure 6-70.** Example of IDE TLP for a Link IDE Stream without Aggregation (Flit Mode)
-> <img src="figures/chapter_06/fig_0932_1.png" width="700">
+> <img src="figures/chapter_06/fig_0932_1_tight.png" width="700">
 
 > **Figure 6-71.** IDE TLP – Example Showing Aggregation of Two TLPs for a Link IDE Stream (Flit Mode)
-> <img src="figures/chapter_06/fig_0932_2.png" width="700">
+> <img src="figures/chapter_06/fig_0932_2_tight.png" width="700">
 
 > **Figure 6-72.** Example of IDE TLP for a Selective IDE Stream without Aggregation (Flit Mode)
-> <img src="figures/chapter_06/fig_0933_1.png" width="700">
+> <img src="figures/chapter_06/fig_0933_1_tight.png" width="700">
 
 > **Figure 6-73.** IDE TLP – Example Showing Aggregation of Two TLPs for a Selective IDE Stream (Flit Mode)
-> <img src="figures/chapter_06/fig_0933_2.png" width="700">
+> <img src="figures/chapter_06/fig_0933_2_tight.png" width="700">
 
 > **Figure 6-74.** High Level Flow For Partial Header Encryption
-> <img src="figures/chapter_06/fig_0934_1.png" width="700">
+> <img src="figures/chapter_06/fig_0934_1_tight.png" width="700">
 
 </div>
 
@@ -19779,17 +19715,17 @@ Rules for partial header encryption:
 <<<PAGE_BREAK>>> page_936
 
 > **Figure 6-76.** Partial Header Encryption in NFM without Byte Enables
-> <img src="figures/chapter_06/fig_0937_1.png" width="700">
+> <img src="figures/chapter_06/fig_0937_1_tight.png" width="700">
 
 <<<PAGE_BREAK>>> page_937
 
 > **Figure 6-77.** Partial Header Encryption in FM with OHC-A1
-> <img src="figures/chapter_06/fig_0938_1.png" width="700">
+> <img src="figures/chapter_06/fig_0938_1_tight.png" width="700">
 
 <<<PAGE_BREAK>>> page_938
 
 > **Figure 6-78.** Partial Header Encryption in FM without OHC-A1
-> <img src="figures/chapter_06/fig_0939_1.png" width="700">
+> <img src="figures/chapter_06/fig_0939_1_tight.png" width="700">
 
 <<<PAGE_BREAK>>> page_939
 
@@ -19836,13 +19772,13 @@ Rules for partial header encryption:
 > <img src="figures/chapter_06/fig_0936_1.png" width="700">
 
 > **图 6-76.** NFM 中不带字节使能的部分包头加密
-> <img src="figures/chapter_06/fig_0937_1.png" width="700">
+> <img src="figures/chapter_06/fig_0937_1_tight.png" width="700">
 
 > **图 6-77.** FM 中带 OHC-A1 的部分包头加密
-> <img src="figures/chapter_06/fig_0938_1.png" width="700">
+> <img src="figures/chapter_06/fig_0938_1_tight.png" width="700">
 
 > **图 6-78.** FM 中不带 OHC-A1 的部分包头加密
-> <img src="figures/chapter_06/fig_0939_1.png" width="700">
+> <img src="figures/chapter_06/fig_0939_1_tight.png" width="700">
 
 </td>
 </tr>
@@ -19913,16 +19849,13 @@ IDE 前缀 (NFM) 必须包含在 A 中。所有 OHC 内容 (FM) 必须包含在 
   - 在 FM 中,TS 字段用于指示 MAC/PCRC 的存在(参见 § 2.2.1.2 节)
   - 当使用聚合时,聚合单元中不包含 MAC 的 TLP 也必须不包含 PCRC(参见 § 图 6-79)。
 
-> **图 6-79.** 说明 PCRC 在链接 IDE 流(NFM)的两个聚合 IDE TLP 上应用的示例
-> <img src="figures/chapter_06/fig_0940_1.png" width="700">
-
 </td>
 </tr>
 </tbody>
 </table>
 
 > **Figure 6-79.** Example Illustrating PCRC Application to Two Aggregated IDE TLPs for a Link IDE Stream (NFM)
-> <img src="figures/chapter_06/fig_0940_1.png" width="700">
+> <img src="figures/chapter_06/fig_0940_1_tight.png" width="700">
 
 </div>
 
@@ -20503,13 +20436,13 @@ The following rules relate to aggregation (see § Figure 6-67 and § Figure 6-69
 </table>
 
 > **Figure 6-80.** Example – Posted Requests Allowed to Bypass Non-Posted Requests | 示例——允许 Posted Request 越过 Non-Posted Request
-> <img src="figures/chapter_06/fig_0948_1.png" width="700">
+> <img src="figures/chapter_06/fig_0948_1_tight.png" width="700">
 
 > **Figure 6-81.** Example – Non-Posted Requests Never Allowed to Bypass Posted Requests | 示例——Non-Posted Request 绝不允许越过 Posted Request
-> <img src="figures/chapter_06/fig_0949_1.png" width="700">
+> <img src="figures/chapter_06/fig_0949_1_tight.png" width="700">
 
 > **Figure 6-82.** Example – Secure Non-Posted Request Reordering Not Allowed Over PCIe Fabric | 示例——PCIe Fabric 上不允许 Secure Non-Posted Request 重排序
-> <img src="figures/chapter_06/fig_0949_2.png" width="700">
+> <img src="figures/chapter_06/fig_0949_2_tight.png" width="700">
 
 </div>
 
@@ -21000,7 +20933,7 @@ MMIO 寄存器块通过 MMIO 寄存器块定位器 (MRBL) 扩展能力 (Extended
 
 
 > **Figure 6-83. MMIO Register Blocks | MMIO 寄存器块**
-> <img src="figures/chapter_06/fig_0957_1.png" width="700">
+> <img src="figures/chapter_06/fig_0957_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -21068,12 +21001,12 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 <td>
 
 > **Figure 6-85. MCAP Array Register Block | MCAP 数组寄存器块**
-> <img src="figures/chapter_06/fig_0959_1.png" width="700">
+> <img src="figures/chapter_06/fig_0959_1_tight.png" width="700">
 
 § Figure 6-86 and § Figure 6-87 detail allocation of register fields registers that form the MCAP Array Register Block; § Table 6-38 and § Table 6-39 provide the respective bit definitions.
 
 > **Figure 6-86. MCAP Array Register 1 | MCAP 数组寄存器 1**
-> <img src="figures/chapter_06/fig_0959_2.png" width="700">
+> <img src="figures/chapter_06/fig_0959_2_tight.png" width="700">
 
 **Table 6-38. MCAP Array Register 1 | 表 6-38. MCAP 数组寄存器 1**
 
@@ -21084,7 +21017,7 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 | 27:24 | MCAP Type – Defines the type associated with any type-specific capabilities (MCAP IDs in the range 4000h-7FFFh) in the MCAP Register Block.<br>Encodings are:<br>0h = The type is inferred from the 24-bit value corresponding to the Class Code of the Function. If the Class Code is not associated with any type-specific capabilities, then no type-specific capabilities shall be present.<br>01h = Reserved.<br>1h-7h = Reserved – Allocated for [CXL].<br>Others = All other encodings are reserved. | RO |
 
 > **Figure 6-87. MCAP Array Register 2 | MCAP 数组寄存器 2**
-> <img src="figures/chapter_06/fig_0960_1.png" width="700">
+> <img src="figures/chapter_06/fig_0960_1_tight.png" width="700">
 
 **Table 6-39. MCAP Array Register 2 | 表 6-39. MCAP 数组寄存器 2**
 
@@ -21139,7 +21072,7 @@ table>
 § Figure 6-88 details allocation of register fields in the MCAP Header Register Block.
 
 > **Figure 6-88. MCAP Header Register Block | MCAP 头寄存器块**
-> <img src="figures/chapter_06/fig_0960_2.png" width="700">
+> <img src="figures/chapter_06/fig_0960_2_tight.png" width="700">
 
 § Figure 6-89 through § Figure 6-92 detail allocation of register fields in the MCAP Header Register Block; § Table 6-40 through § Table 6-43 provides the respective bit definitions.
 
@@ -21154,7 +21087,7 @@ table>
 | 23:16 | MCAP Version – Defines the version of the capability register structure.<br>The MCAP Version is incremented whenever the capability register structure is extended to add more functionality. Backward compatibility shall be maintained during this process. For all values of n, version n+1 may extend version n by replacing fields that are marked as reserved in version n but must not redefine the meaning of existing fields. Software that was written for a lower version may continue to operate on capability structures with a higher version but will not be able to take advantage of new functionality. If backwards compatibility cannot be maintained, a new MCAP ID shall be created. Each field in a capability register structure is assumed to be introduced in version 1 of that structure unless specified otherwise in the field's definition. | RO |
 
 > **Figure 6-90. MCAP Header Register 2 | MCAP 头寄存器 2**
-> <img src="figures/chapter_06/fig_0961_1.png" width="700">
+> <img src="figures/chapter_06/fig_0961_1_tight.png" width="700">
 
 **Table 6-41. MCAP Header Register 2 | 表 6-41. MCAP 头寄存器 2**
 
@@ -21163,7 +21096,7 @@ table>
 | 31:0 | MCAP Offset – Offset of the capability register structure from the start of the MCAP Register Block in bytes. The offset of performance sensitive MCAPs and security sensitive MCAPs shall be 4 KB aligned within Memory Space. | RO |
 
 > **Figure 6-91. MCAP Header Register 3 | MCAP 头寄存器 3**
-> <img src="figures/chapter_06/fig_0961_2.png" width="700">
+> <img src="figures/chapter_06/fig_0961_2_tight.png" width="700">
 
 **Table 6-42. MCAP Header Register 3 | 表 6-42. MCAP 头寄存器 3**
 
@@ -21172,7 +21105,7 @@ table>
 | 31:0 | MCAP Length – Size of the capability register structure in bytes. | RO |
 
 > **Figure 6-92. MCAP Header Register 4 | MCAP 头寄存器 4**
-> <img src="figures/chapter_06/fig_0962_1.png" width="700">
+> <img src="figures/chapter_06/fig_0962_1_tight.png" width="700">
 
 **Table 6-43. MCAP Header Register 4 | 表 6-43. MCAP 头寄存器 4**
 
@@ -21379,7 +21312,7 @@ The flow for executing a command is described below. The term "caller" represent
 § Figure 6-93 illustrates the MMB Registers structure.
 
 > **Figure 6-93. MMB Registers | MMB 寄存器**
-> <img src="figures/chapter_06/fig_0964_1.png" width="700">
+> <img src="figures/chapter_06/fig_0964_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -21414,7 +21347,7 @@ The flow for executing a command is described below. The term "caller" represent
 § Figure 6-94 details allocation of register fields in the MMB Capabilities Register; § Table 6-45 provides the respective bit definitions.
 
 > **Figure 6-94. MMB Capabilities Register | MMB 能力寄存器**
-> <img src="figures/chapter_06/fig_0965_1.png" width="700">
+> <img src="figures/chapter_06/fig_0965_1_tight.png" width="700">
 
 **Table 6-45. MMB Capabilities Register | 表 6-45. MMB 能力寄存器**
 
@@ -21473,7 +21406,7 @@ table>
 § Figure 6-95 details allocation of register fields in the MMB Control Register; § Table 6-46 provides the respective bit definitions.
 
 > **Figure 6-95. MMB Control Register | MMB 控制寄存器**
-> <img src="figures/chapter_06/fig_0966_1.png" width="700">
+> <img src="figures/chapter_06/fig_0966_1_tight.png" width="700">
 
 **Table 6-46. MMB Control Register | 表 6-46. MMB 控制寄存器**
 
@@ -21581,7 +21514,7 @@ MMB 命令寄存器只能在 MMB 控制寄存器（见 § 6.35.1.3.2.2 ）中的
 </table>
 
 > **Figure 6-96. MMB Command Register | MMB 命令寄存器**
-> <img src="figures/chapter_06/fig_0967_1.png" width="700">
+> <img src="figures/chapter_06/fig_0967_1_tight.png" width="700">
 
 **Table 6-47. MMB Command Register | 表 6-47. MMB 命令寄存器**
 
@@ -21878,7 +21811,7 @@ MMB Payload Registers 由调用方在置位 MMB Control Register（见 § 6.35.1
 <<<PAGE_BREAK>>> page_970
 
 > **Figure 6-98. MMB Payload Registers | MMB 有效负载寄存器**
-> <img src="figures/chapter_06/fig_0970_1.png" width="700">
+> <img src="figures/chapter_06/fig_0970_1_tight.png" width="700">
 
 ---
 
@@ -21917,7 +21850,7 @@ Management Message Passthrough（MMPT）能力结构对于支持 MMPT 命令集�
 </table>
 
 > **Figure 6-99. MMPT Registers | MMPT 寄存器**
-> <img src="figures/chapter_06/fig_0970_2.png" width="700">
+> <img src="figures/chapter_06/fig_0970_2_tight.png" width="700">
 
 ---
 
@@ -21953,7 +21886,7 @@ Management Message Passthrough（MMPT）能力结构对于支持 MMPT 命令集�
 ## 6.35.1.4.1.1 MMPT Capabilities Register (Offset 00h) | MMPT 能力寄存器（偏移量 00h）
 
 > **Figure 6-100. MMPT Capabilities Register | MMPT 能力寄存器**
-> <img src="figures/chapter_06/fig_0971_1.png" width="700">
+> <img src="figures/chapter_06/fig_0971_1_tight.png" width="700">
 
 **Table 6-50. MMPT Capabilities Register | 表 6-50. MMPT 能力寄存器**
 
@@ -22123,7 +22056,7 @@ RW/RsvdP
 </table>
 
 > **Figure 6-102. MMPT Receive Message Notification Register | MMPT 接收消息通知寄存器**
-> <img src="figures/chapter_06/fig_0972_1.png" width="700">
+> <img src="figures/chapter_06/fig_0972_1_tight.png" width="700">
 
 **Table 6-52. MMPT Receive Message Notification Register | 表 6-52. MMPT 接收消息通知寄存器**
 
@@ -22207,7 +22140,7 @@ MMIO Designated Vendor-Specific Register Block（MDVS）允许通过使用 MRBL 
 </table>
 
 > **Figure 6-103. MDVS Register Block | MDVS 寄存器块**
-> <img src="figures/chapter_06/fig_0973_1.png" width="700">
+> <img src="figures/chapter_06/fig_0973_1_tight.png" width="700">
 
 ---
 
@@ -22330,7 +22263,7 @@ RO
 </table>
 
 > **Figure 6-105. MDVS Register Block Header Register 2 | MDVS 寄存器块头寄存器 2**
-> <img src="figures/chapter_06/fig_0974_1.png" width="700">
+> <img src="figures/chapter_06/fig_0974_1_tight.png" width="700">
 
 **Table 6-54. MDVS Register Block Header Register 2 | 表 6-54. MDVS 寄存器块头寄存器 2**
 
@@ -22393,7 +22326,7 @@ RO
 </table>
 
 > **Figure 6-106. MDVS Register Block Header Register 3 | MDVS 寄存器块头寄存器 3**
-> <img src="figures/chapter_06/fig_0974_2.png" width="700">
+> <img src="figures/chapter_06/fig_0974_2_tight.png" width="700">
 
 **Table 6-55. MDVS Register Block Header Register 3 | 表 6-55. MDVS 寄存器块头寄存器 3**
 

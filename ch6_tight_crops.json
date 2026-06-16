@@ -1,0 +1,1247 @@
+{
+  "chapter": 6,
+  "page_range": [
+    707,
+    980
+  ],
+  "total_figures": 95,
+  "total_manual": 0,
+  "total_failed": 0,
+  "figures": {
+    "Figure 6-1": {
+      "page": 718,
+      "file": "fig_0718_1_tight.png",
+      "bbox": [
+        111,
+        90,
+        854,
+        419
+      ],
+      "caption": "Error Classification",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/2e8fb38d9858d7e3e5ef1e348ca7909b2afe53b675eebfc9a1af537a3771d0f7.jpg"
+    },
+    "Figure 6-2": {
+      "page": 732,
+      "file": "fig_0732_1_tight.png",
+      "bbox": [
+        155,
+        113,
+        812,
+        845
+      ],
+      "caption": "Flowchart Showing Sequence of Device Error Signaling and Logging Operations S",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/3c76eb48cdf2b8ef529314fdae97b376801b4b28a3d07767337b46c45cf2b116.jpg"
+    },
+    "Figure 6-3": {
+      "page": 733,
+      "file": "fig_0733_1_tight.png",
+      "bbox": [
+        137,
+        234,
+        836,
+        824
+      ],
+      "caption": "Pseudo Logic Diagram for Selected Error Message Control and Status Bits",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/97ecc9c2edce98e8f1f17a954a733475e097d8eae76d547340faa5efbe2e309c.jpg"
+    },
+    "Figure 6-4": {
+      "page": 751,
+      "file": "fig_0751_1_tight.png",
+      "bbox": [
+        326,
+        287,
+        640,
+        430
+      ],
+      "caption": "TC Filtering Example",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/be9b0a7b17f0cfe3b56aa103a1935e14e173f100855439cf017c5dbc3a2525b9.jpg"
+    },
+    "Figure 6-5": {
+      "page": 751,
+      "file": "fig_0751_2_tight.png",
+      "bbox": [
+        295,
+        607,
+        669,
+        693
+      ],
+      "caption": "TC to VC Mapping Example e",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/ebcc6993e5e362659e439c2763a0c6c1e5a9e8f17efcb6b61d3fd60284b6834e.jpg"
+    },
+    "Figure 6-6": {
+      "page": 752,
+      "file": "fig_0752_1_tight.png",
+      "bbox": [
+        308,
+        705,
+        655,
+        849
+      ],
+      "caption": "An Example of Traffic Flow Illustrating Ingress and Egress",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/4d9e753261dc52b5687ca2706b27cb241bf80196fdab45757c06a541056be08f.jpg"
+    },
+    "Figure 6-7": {
+      "page": 753,
+      "file": "fig_0753_1_tight.png",
+      "bbox": [
+        346,
+        189,
+        620,
+        333
+      ],
+      "caption": "An Example of Differentiated Traffic Flow Through a Switch",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/b6fe451fd3da64d638c3c280c0bcdab7f145bb48b365e6d0443b12ae4f5324cc.jpg"
+    },
+    "Figure 6-8": {
+      "page": 753,
+      "file": "fig_0753_2_tight.png",
+      "bbox": [
+        323,
+        688,
+        648,
+        827
+      ],
+      "caption": "Switch Arbitration Structure",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/1e8d4c0fa7b4fe9bcc8dc760984f8b11cbe32c35fb5f317dec33d79b3264b326.jpg"
+    },
+    "Figure 6-9": {
+      "page": 754,
+      "file": "fig_0754_1_tight.png",
+      "bbox": [
+        318,
+        722,
+        655,
+        858
+      ],
+      "caption": "VC ID and Priority Order - An Example",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/5a3b4974595e4b90723426d3113815bc6f4838bab9af6a5da07ac4cdd2584e2c.jpg"
+    },
+    "Figure 6-10": {
+      "page": 757,
+      "file": "fig_0757_1_tight.png",
+      "bbox": [
+        385,
+        94,
+        581,
+        236
+      ],
+      "caption": "Multi-Function Arbitration Model",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/843405b9111f244dff8d8875b55157380fa353b31a1fb6adac16b0a8f5d34e2c.jpg"
+    },
+    "Figure 6-11": {
+      "page": 794,
+      "file": "fig_0794_1_tight.png",
+      "bbox": [
+        303,
+        94,
+        665,
+        198
+      ],
+      "caption": "Root Complex Represented as a Single Component",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/dd94f21e28d4dcff26783eb1d88a5295ca7a3dadb9c87ab5e8047873dfe9ae79.jpg"
+    },
+    "Figure 6-12": {
+      "page": 794,
+      "file": "fig_0794_2_tight.png",
+      "bbox": [
+        387,
+        650,
+        576,
+        790
+      ],
+      "caption": "Root Complex Represented as Multiple Components",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/ddac3eecdf916f3747e82f59478aee3ffb4fe7e8d9dcaaee497418b41106c84b.jpg"
+    },
+    "Figure 6-13": {
+      "page": 809,
+      "file": "fig_0809_1_tight.png",
+      "bbox": [
+        393,
+        222,
+        578,
+        364
+      ],
+      "caption": "Example System Topology with ARI Devices",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/72e3bd1c65ee30688fc0f5f23f400bbf9a17863835d8b5ef39da49d5299ebc54.jpg"
+    },
+    "Figure 6-14": {
+      "page": 810,
+      "file": "fig_0810_1_tight.png",
+      "bbox": [
+        380,
+        265,
+        589,
+        400
+      ],
+      "caption": "Segmentation of the Multicast Address Range",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/d68c2c72a0ed919f80ff1d6ed7bbe1c4b92bc782178a72e2ca63d94f3590306a.jpg"
+    },
+    "Figure 6-15": {
+      "page": 825,
+      "file": "fig_0825_1_tight.png",
+      "bbox": [
+        367,
+        529,
+        665,
+        646
+      ],
+      "caption": "Latency Fields Format for LTR Messages",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/54c944d8bacee22fa0f36b7f979950f9b20501b054e8676f39075eaff073dcef.jpg"
+    },
+    "Figure 6-16": {
+      "page": 828,
+      "file": "fig_0828_1_tight.png",
+      "bbox": [
+        303,
+        337,
+        671,
+        443
+      ],
+      "caption": "CLKREQ# and Clock Power Management",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/9b44633425dcd99c075a2b919ba14b7785d4c8427ca7db681aa6f84288703deb.jpg"
+    },
+    "Figure 6-17": {
+      "page": 829,
+      "file": "fig_0829_1_tight.png",
+      "bbox": [
+        303,
+        117,
+        671,
+        200
+      ],
+      "caption": "Use of LTR and Clock Power Management",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/98b71b7e914aeed595e9856c1fd169e7a46f047dcc30fa087b9b03833feba14e.jpg"
+    },
+    "Figure 6-18": {
+      "page": 830,
+      "file": "fig_0830_1_tight.png",
+      "bbox": [
+        367,
+        547,
+        669,
+        695
+      ],
+      "caption": "Codes and Equivalent WAKE# Patterns",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/62a3b503f213dca1d106142aa3553137068d4036d751d6c586ce7585f4b3eaa8.jpg"
+    },
+    "Figure 6-19": {
+      "page": 831,
+      "file": "fig_0831_1_tight.png",
+      "bbox": [
+        395,
+        209,
+        584,
+        349
+      ],
+      "caption": "Example Platform Topology Showing a Link Where OBFF is Carried by Messages S",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/bfc39136490d82938b79d56627d6ec0cc376209d8d2fae6b7435a5aed64ec57d.jpg"
+    },
+    "Figure 6-20": {
+      "page": 834,
+      "file": "fig_0834_1_tight.png",
+      "bbox": [
+        114,
+        117,
+        751,
+        217
+      ],
+      "caption": "PASID TLP Prefix",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/532c3a631611865ce8092eeaa85a2e0eb78a48835e2338c89d8c458e5ffbe782.jpg"
+    },
+    "Figure 6-21": {
+      "page": 838,
+      "file": "fig_0838_1_tight.png",
+      "bbox": [
+        210,
+        109,
+        779,
+        476
+      ],
+      "caption": "Example System Topologies using PTM",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/467effbba16b36bf9f84f063b9c77a5fb6edbcc424baefe48878c95650918fb1.jpg"
+    },
+    "Figure 6-22": {
+      "page": 839,
+      "file": "fig_0839_1_tight.png",
+      "bbox": [
+        197,
+        123,
+        764,
+        411
+      ],
+      "caption": "Precision Time Measurement Link Protocol",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/c8e53a9ccbd042722395dbf1c82767dc81c6519f22bbd3d5a0d41c7d1056f592.jpg"
+    },
+    "Figure 6-23": {
+      "page": 841,
+      "file": "fig_0841_1_tight.png",
+      "bbox": [
+        209,
+        348,
+        758,
+        613
+      ],
+      "caption": "Precision Time Measurement Example",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/80ee0c2170a25afd1aa014589c42a3b26af3b194ab089cbcfa956cfd82551c56.jpg"
+    },
+    "Figure 6-24": {
+      "page": 844,
+      "file": "fig_0844_1_tight.png",
+      "bbox": [
+        222,
+        237,
+        771,
+        559
+      ],
+      "caption": "PTM Requester Operation",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/e4d6cf28d69bede9290725f7bd150c03529aaf8dd1f8cc42f9df0cf846af53c5.jpg"
+    },
+    "Figure 6-25": {
+      "page": 847,
+      "file": "fig_0847_1_tight.png",
+      "bbox": [
+        181,
+        253,
+        790,
+        662
+      ],
+      "caption": "PTM Timestamp Capture Example",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/5e94d21d9bd8526a15d8c2879798c0b4ab4dda29e736c15e8a602c8d8ee36edc.jpg"
+    },
+    "Figure 6-26": {
+      "page": 853,
+      "file": "fig_0853_1_tight.png",
+      "bbox": [
+        228,
+        117,
+        750,
+        553
+      ],
+      "caption": "Example Illustrating Application of Enhanced Allocation",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/7455b60ff5d5fad4074b772e005006d6821244f5bf74b0af03a3983b64af47e0.jpg"
+    },
+    "Figure 6-27": {
+      "page": 857,
+      "file": "fig_0857_1_tight.png",
+      "bbox": [
+        106,
+        290,
+        864,
+        618
+      ],
+      "caption": "Emergency Power Reduction State: Example Add-in Card",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/302e1c6d19d51d3faade016919536a7aec355bd097845f11918039582a01bcfe.jpg"
+    },
+    "Figure 6-28": {
+      "page": 862,
+      "file": "fig_0862_1_tight.png",
+      "bbox": [
+        84,
+        143,
+        883,
+        482
+      ],
+      "caption": "FPB High Level Diagram and Example Topology",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/b3bb904c732cf7e53b0c9c4926996a337a6351143460cf152b93c27a7600e9b0.jpg"
+    },
+    "Figure 6-29": {
+      "page": 863,
+      "file": "fig_0863_1_tight.png",
+      "bbox": [
+        147,
+        199,
+        750,
+        412
+      ],
+      "caption": "Example Illustrating \"Flattening\" of a Switch",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/d41697cacda0d1fd078a1c1fdf12523d75b9239dc66e81b1306b2d35d553c16e.jpg"
+    },
+    "Figure 6-30": {
+      "page": 864,
+      "file": "fig_0864_1_tight.png",
+      "bbox": [
+        186,
+        94,
+        785,
+        421
+      ],
+      "caption": "Vector Mechanism for Address Range Decoding",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/fef973d911cdfe67805d2c157dd438e2a76a8abbebee4760df55316a32410590.jpg"
+    },
+    "Figure 6-31": {
+      "page": 865,
+      "file": "fig_0865_1_tight.png",
+      "bbox": [
+        176,
+        98,
+        782,
+        354
+      ],
+      "caption": "Relationship between FPB and non-FPB Decode Mechanisms",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/c6cdcc56fdd439cc39ba4330f8f3b60ed2b897fea3528564972fbe8b7c62fbbc.jpg"
+    },
+    "Figure 6-32": {
+      "page": 867,
+      "file": "fig_0867_1_tight.png",
+      "bbox": [
+        197,
+        184,
+        789,
+        435
+      ],
+      "caption": "Routing IDs (RIDs) and Supported Granularities",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/c14dd2af3d14bb87b3b96e89f420285a4c722a5cfde4018495fb5cf735dafdab.jpg"
+    },
+    "Figure 6-33": {
+      "page": 869,
+      "file": "fig_0869_1_tight.png",
+      "bbox": [
+        183,
+        108,
+        779,
+        321
+      ],
+      "caption": "Addresses in Memory Below 4 GB and Effect of Granularity S",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/963475309c4335a2985136c07c6e3a9001611e2f8cd99390311da9da6134a1ab.jpg"
+    },
+    "Figure 6-34": {
+      "page": 874,
+      "file": "fig_0874_1_tight.png",
+      "bbox": [
+        107,
+        229,
+        812,
+        358
+      ],
+      "caption": "VPD Format",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/c33bd52a4832a4008a82d1bfaf493e8119fc3946d3bbf24434ccd77e114ba5f8.jpg"
+    },
+    "Figure 6-35": {
+      "page": 879,
+      "file": "fig_0879_1_tight.png",
+      "bbox": [
+        75,
+        223,
+        890,
+        656
+      ],
+      "caption": "Example NPEM Configuration using a Downstream Port",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/98fb4eea34da8a9e5e6b451f45d80317aabbca7d618219b4d3d621f9a881b6b9.jpg"
+    },
+    "Figure 6-36": {
+      "page": 880,
+      "file": "fig_0880_1_tight.png",
+      "bbox": [
+        75,
+        109,
+        890,
+        542
+      ],
+      "caption": "Example NPEM Configuration using an Upstream Port",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/d9d3f729f4754ebd9cb74761751f826e753951dd96ed57cc38abff919365bf13.jpg"
+    },
+    "Figure 6-38": {
+      "page": 887,
+      "file": "fig_0887_1_tight.png",
+      "bbox": [
+        106,
+        513,
+        872,
+        772
+      ],
+      "caption": "Stack Diagram Illustration of Multiple Sessions and Connections",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/ab4da078fd09680f6bb2892e79c44aaf82277b16137fb1bbef0f3d76a9cc81ec.jpg"
+    },
+    "Figure 6-39": {
+      "page": 888,
+      "file": "fig_0888_1_tight.png",
+      "bbox": [
+        109,
+        176,
+        862,
+        521
+      ],
+      "caption": "Example Showing Relationships of Software and Hardware Elements",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/5cf89dc0a99072f2df1b33002dccbfde1faefbdb8933e7e3031c93913c08e43c.jpg"
+    },
+    "Figure 6-40": {
+      "page": 889,
+      "file": "fig_0889_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        856,
+        286
+      ],
+      "caption": "DOE Data Object Formats",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/d36d658168d8e09ef4c1c6e6d3586be201acdab8b246f7d87dda79f2618d005c.jpg"
+    },
+    "Figure 6-42": {
+      "page": 889,
+      "file": "fig_0889_2_tight.png",
+      "bbox": [
+        127,
+        724,
+        787,
+        789
+      ],
+      "caption": "DOE Data Object Header 2",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/9612bd7333283b2dfa0da37511146db009d273cdf771a8dc1e5e29060146e066.jpg"
+    },
+    "Figure 6-43": {
+      "page": 890,
+      "file": "fig_0890_1_tight.png",
+      "bbox": [
+        122,
+        659,
+        658,
+        702
+      ],
+      "caption": "DOE Discovery Request Data Object Contents (3rd DW)",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/f8ffdbf54a50d46cb0ba567642f9e275642c24b4421bf6451fae7a713ac6a668.jpg"
+    },
+    "Figure 6-44": {
+      "page": 891,
+      "file": "fig_0891_1_tight.png",
+      "bbox": [
+        125,
+        183,
+        692,
+        228
+      ],
+      "caption": "DOE Discovery Response Data Object Contents (3rd DW)",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/5938a69963671962b22981373d001e4dccdf820584bfbfaa3773968f158decfd.jpg"
+    },
+    "Figure 6-45": {
+      "page": 891,
+      "file": "fig_0891_2_tight.png",
+      "bbox": [
+        129,
+        656,
+        722,
+        702
+      ],
+      "caption": "DOE Discovery Response Data Object Contents (4th DW)",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/a0bc9b7e123fca36be4ce5e0103b23d3d19e286f19bcd8ac7553fffd575dcbd4.jpg"
+    },
+    "Figure 6-46": {
+      "page": 898,
+      "file": "fig_0898_1_tight.png",
+      "bbox": [
+        171,
+        119,
+        794,
+        565
+      ],
+      "caption": "CMA-SPDM as Part of a Layered Architecture",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/0c19170bddc69eb88a893004d335c01c999452f3f5fa695faf1d4286dc89dccc.jpg"
+    },
+    "Figure 6-48": {
+      "page": 901,
+      "file": "fig_0901_1_tight.png",
+      "bbox": [
+        117,
+        224,
+        848,
+        453
+      ],
+      "caption": "Example Add-In-Card Supporting CMA-SPDM",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/1cc41d6a87c36da130946b16196737f40e258658cf312d984c5e3a40327512e6.jpg"
+    },
+    "Figure 6-49": {
+      "page": 904,
+      "file": "fig_0904_1_tight.png",
+      "bbox": [
+        230,
+        348,
+        741,
+        484
+      ],
+      "caption": "Byte Mapping of SPDM Messages Including Example Payload",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/a273d5bbb4d058ef67d60367fa36f34e94c4c47ae80a37bf5f163dd0c6e9131f.jpg"
+    },
+    "Figure 6-50": {
+      "page": 905,
+      "file": "fig_0905_1_tight.png",
+      "bbox": [
+        205,
+        657,
+        766,
+        849
+      ],
+      "caption": "Byte Mapping of Secured CMA-SPDM Messages Including Example Payload S",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/e461752659be1ea96ccc7ad7ab29c8db3ea63124ebcc570aea4b6a73d2003ef4.jpg"
+    },
+    "Figure 6-51": {
+      "page": 910,
+      "file": "fig_0910_1_tight.png",
+      "bbox": [
+        133,
+        559,
+        823,
+        594
+      ],
+      "caption": "Example DMWr Data Payload Template",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/a9705ef04e69a6a69786ef857094d7bb443ba7a95dad6d99aa8523c247fbc9ea.jpg"
+    },
+    "Figure 6-52": {
+      "page": 912,
+      "file": "fig_0912_1_tight.png",
+      "bbox": [
+        106,
+        130,
+        792,
+        608
+      ],
+      "caption": "IDE Secures TLPs Between Ports",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/c14e29482b778b62d4a8c89716d13600276220c6ab5c6db922738fedcf314912.jpg"
+    },
+    "Figure 6-53": {
+      "page": 916,
+      "file": "fig_0916_1_tight.png",
+      "bbox": [
+        294,
+        117,
+        671,
+        443
+      ],
+      "caption": "IDE Stream State Machine",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/b3eb1a3d8cff1c75489e3352ec94bb6743b8447308a36661dcc9471b13f92d9f.jpg"
+    },
+    "Figure 6-54": {
+      "page": 917,
+      "file": "fig_0917_1_tight.png",
+      "bbox": [
+        328,
+        114,
+        637,
+        375
+      ],
+      "caption": "IDE Stream State Machine",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/b792a101e3dc46eca22d7dafd172b43ca5fac3c9b8974a31b61654275c8e8f4e.jpg"
+    },
+    "Figure 6-55": {
+      "page": 919,
+      "file": "fig_0919_1_tight.png",
+      "bbox": [
+        171,
+        118,
+        794,
+        566
+      ],
+      "caption": "IDE Key Management (IDE\\_KM) and Related Specifications & Capabilities",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/ec0721d974deb159d40a5d08aeb29612012dd9d4e847ebe6bbc82ac9ced411af.jpg"
+    },
+    "Figure 6-57": {
+      "page": 925,
+      "file": "fig_0925_1_tight.png",
+      "bbox": [
+        109,
+        114,
+        864,
+        380
+      ],
+      "caption": "Query Response (QUERY\\_RESP) Data Object",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/12c4f059412558f25746fbbc4d6b294f64215d3c110cbcf5d3f2106acb1b7970.jpg"
+    },
+    "Figure 6-58": {
+      "page": 925,
+      "file": "fig_0925_2_tight.png",
+      "bbox": [
+        253,
+        483,
+        717,
+        763
+      ],
+      "caption": "Key Programming (KEY\\_PROG) Data Object with Example 256b Key",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/2e9f887a890473a622eab7516f560853876e01670cbb135532f803d1df8323b0.jpg"
+    },
+    "Figure 6-59": {
+      "page": 926,
+      "file": "fig_0926_1_tight.png",
+      "bbox": [
+        254,
+        119,
+        717,
+        215
+      ],
+      "caption": "Key Programming Acknowledgement (KP\\_ACK) Data Object",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/9268fdcdc85d7c2cbf33e34bb6011c26d4f936073fb7d3c6c476cd246347f307.jpg"
+    },
+    "Figure 6-60": {
+      "page": 926,
+      "file": "fig_0926_2_tight.png",
+      "bbox": [
+        254,
+        320,
+        717,
+        412
+      ],
+      "caption": "Key Set Go (K\\_SET\\_GO) Data Object S",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/7795577abea21df4dd1292829b5c67b4504d919e1f8fb920364b5a23b2277eae.jpg"
+    },
+    "Figure 6-61": {
+      "page": 926,
+      "file": "fig_0926_3_tight.png",
+      "bbox": [
+        253,
+        517,
+        717,
+        611
+      ],
+      "caption": "Key Set Stop (K\\_SET\\_STOP) Data Object S",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/fdecd78750db2b93c35930a63435e7c7b97cfe16d3075126af9eb0653382a4dc.jpg"
+    },
+    "Figure 6-62": {
+      "page": 926,
+      "file": "fig_0926_4_tight.png",
+      "bbox": [
+        253,
+        715,
+        717,
+        809
+      ],
+      "caption": "Key Set Go/Stop Acknowledgement (K\\_GOSTOP\\_ACK) Data Object S",
+      "pdf_chunk": "chunk_04_pages_727-926.pdf",
+      "mineru_image": "images/781e92a4673e8a75b576cc6c4dcd1442afcb60450b9d59fa7e038ddde1aa29b7.jpg"
+    },
+    "Figure 6-63": {
+      "page": 928,
+      "file": "fig_0928_1_tight.png",
+      "bbox": [
+        251,
+        229,
+        722,
+        719
+      ],
+      "caption": "IDE\\_KM Example",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/76430dc66f8b705e4b97e08888ebe9e612b6be00a4af45793fb29f585115045b.jpg"
+    },
+    "Figure 6-65": {
+      "page": 930,
+      "file": "fig_0930_1_tight.png",
+      "bbox": [
+        107,
+        196,
+        812,
+        324
+      ],
+      "caption": "MAC Layout",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/9ec93c61fc30a537ed6c88f99dff6b2e7175d176ac9daed7dacbf9056b81adc9.jpg"
+    },
+    "Figure 6-66": {
+      "page": 930,
+      "file": "fig_0930_2_tight.png",
+      "bbox": [
+        104,
+        540,
+        859,
+        732
+      ],
+      "caption": "Example of IDE TLP for a Link IDE Stream without Aggregation (Non-Flit Mode)",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/03b2da85d4cd7deae3adbcee44e3f746f0bfb10e30c76ff1bb951f35bb4f85a5.jpg"
+    },
+    "Figure 6-67": {
+      "page": 931,
+      "file": "fig_0931_1_tight.png",
+      "bbox": [
+        91,
+        108,
+        874,
+        219
+      ],
+      "caption": "IDE TLP - Example Showing Aggregation of Two TLPs for a Link IDE Stream (Non-Flit Mode)",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/da49bc70e1b8e12c19b6647f77d44b3cdb7c92e4b4d93c7f937075f1b5dfe63c.jpg"
+    },
+    "Figure 6-68": {
+      "page": 931,
+      "file": "fig_0931_2_tight.png",
+      "bbox": [
+        104,
+        313,
+        861,
+        503
+      ],
+      "caption": "IDE TLP - Example of IDE TLP for a Selective IDE Stream without Aggregation (Non-Flit Mode)",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/463babd1250aabba55cdbb5d7c4b5dcb7e8abf46c08a063154442091a0787408.jpg"
+    },
+    "Figure 6-69": {
+      "page": 931,
+      "file": "fig_0931_3_tight.png",
+      "bbox": [
+        91,
+        595,
+        875,
+        705
+      ],
+      "caption": "IDE TLP - Example Showing Aggregation of Two TLPs for a Selective IDE Stream (Non-Flit Mode)",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/26070c47abc172625c61a4a8b1a5e946add4a7a570811c6629b1581df73d3260.jpg"
+    },
+    "Figure 6-70": {
+      "page": 932,
+      "file": "fig_0932_1_tight.png",
+      "bbox": [
+        259,
+        123,
+        707,
+        318
+      ],
+      "caption": "Example of IDE TLP for a Link IDE Stream without Aggregation (Flit Mode) S",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/e01e0765180d2c27a3d92f2e187648a9dd21259a82e3574addb5c63223888868.jpg"
+    },
+    "Figure 6-71": {
+      "page": 932,
+      "file": "fig_0932_2_tight.png",
+      "bbox": [
+        104,
+        424,
+        861,
+        614
+      ],
+      "caption": "IDE TLP - Example Showing Aggregation of Two TLPs for a Link IDE Stream (Flit Mode)",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/c90b9fedff9bd37c4528ce26ba216a44228583dfb350082a6e2bda97195c2ac3.jpg"
+    },
+    "Figure 6-72": {
+      "page": 933,
+      "file": "fig_0933_1_tight.png",
+      "bbox": [
+        258,
+        123,
+        707,
+        316
+      ],
+      "caption": "IDE TLP - Example of IDE TLP for a Selective IDE Stream without Aggregation (Flit Mode)",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/e158e32129cacf854c5f1c8092603fc6b9ae5a04086b44e19a53123f7594c198.jpg"
+    },
+    "Figure 6-73": {
+      "page": 933,
+      "file": "fig_0933_2_tight.png",
+      "bbox": [
+        104,
+        424,
+        859,
+        614
+      ],
+      "caption": "IDE TLP - Example Showing Aggregation of Two TLPs for a Selective IDE Stream (Flit Mode)S",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/4d928b65914248998ec590e31e4ef3382b4a54077ec49388731dfded15a6b98d.jpg"
+    },
+    "Figure 6-74": {
+      "page": 934,
+      "file": "fig_0934_1_tight.png",
+      "bbox": [
+        169,
+        116,
+        790,
+        813
+      ],
+      "caption": "High Level Flow For Partial Header Encryption S",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/e4803e9c3ceaf8c86438297d80ae5d8ffe7e67b7e997ffcb184f077dd282ec85.jpg"
+    },
+    "Figure 6-76": {
+      "page": 937,
+      "file": "fig_0937_1_tight.png",
+      "bbox": [
+        101,
+        111,
+        859,
+        463
+      ],
+      "caption": "Partial Header Encryption in NFM without Byte Enables",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/a6ae18320e6b6a469eaa139780c48306eca7690431c8d163aab136e6d2e1d960.jpg"
+    },
+    "Figure 6-77": {
+      "page": 938,
+      "file": "fig_0938_1_tight.png",
+      "bbox": [
+        98,
+        108,
+        862,
+        438
+      ],
+      "caption": "Partial Header Encryption in FM with OHC-A1 s",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/0cb213beed774e50c49c4343665b8e3178db86957ffc739aa2940f9e8befd64c.jpg"
+    },
+    "Figure 6-78": {
+      "page": 939,
+      "file": "fig_0939_1_tight.png",
+      "bbox": [
+        99,
+        109,
+        859,
+        463
+      ],
+      "caption": "Partial Header Encryption in FM without OHC-A1",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/6b43edb1b27d78c4c3574ce25d7fa64b76b29ea0dc8373b708705d92fdd77a3d.jpg"
+    },
+    "Figure 6-79": {
+      "page": 940,
+      "file": "fig_0940_1_tight.png",
+      "bbox": [
+        89,
+        250,
+        874,
+        366
+      ],
+      "caption": "Example Illustrating PCRC Application to Two Aggregated IDE TLPs for a Link IDE Stream (NFM)",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/e784785fd2ba3ce2af85c943d8153049dd55b2fcad4af579e5e21d9f32980ff1.jpg"
+    },
+    "Figure 6-80": {
+      "page": 948,
+      "file": "fig_0948_1_tight.png",
+      "bbox": [
+        132,
+        404,
+        816,
+        564
+      ],
+      "caption": "Example - Posted Requests Allowed to Bypass Non-Posted Requests",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/428eaa2701efea227b79c43320664a674dee6cc3fddc794c891a000bb018cbdc.jpg"
+    },
+    "Figure 6-81": {
+      "page": 949,
+      "file": "fig_0949_1_tight.png",
+      "bbox": [
+        129,
+        143,
+        816,
+        306
+      ],
+      "caption": "Example - Non-Posted Requests Never Allowed to Bypass Posted Requests",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/3a84292b8fa3a799ce4fea55aaf4c12990cd0bff26a7671bf8f624a37657bbc5.jpg"
+    },
+    "Figure 6-82": {
+      "page": 949,
+      "file": "fig_0949_2_tight.png",
+      "bbox": [
+        132,
+        407,
+        826,
+        573
+      ],
+      "caption": "Example - Secure Non-Posted Request Reordering Not Allowed Over PCle Fabric",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/494714614aab62368fecbc80c8f04a6303f7e20f7705c0c89f269d2f69f4beb7.jpg"
+    },
+    "Figure 6-83": {
+      "page": 957,
+      "file": "fig_0957_1_tight.png",
+      "bbox": [
+        256,
+        94,
+        709,
+        731
+      ],
+      "caption": "MMiO Register Blocks",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/1b9e9f3033b20f9c52d1aca36c03467825220aa66bc6ba8e4986a17521114352.jpg"
+    },
+    "Figure 6-85": {
+      "page": 959,
+      "file": "fig_0959_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        856,
+        256
+      ],
+      "caption": "MCAP Array Register Block",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/0b72ee08620510cb288fa93f4738227675504ec9642ce62244425de51b9f6b1f.jpg"
+    },
+    "Figure 6-86": {
+      "page": 959,
+      "file": "fig_0959_2_tight.png",
+      "bbox": [
+        124,
+        405,
+        805,
+        483
+      ],
+      "caption": "MCAP Array Register 1",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/c050e1dd64cf1a7ab0fc48c09b79b98d28e213ffd9521462ef12823353ecedee.jpg"
+    },
+    "Figure 6-87": {
+      "page": 960,
+      "file": "fig_0960_1_tight.png",
+      "bbox": [
+        127,
+        116,
+        722,
+        161
+      ],
+      "caption": "MCAP Array Register 2",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/db0310de843ed693794db60abea641dc157c028a80c78f3fc65f131ad57f23e2.jpg"
+    },
+    "Figure 6-88": {
+      "page": 960,
+      "file": "fig_0960_2_tight.png",
+      "bbox": [
+        132,
+        473,
+        857,
+        616
+      ],
+      "caption": "MCAP Header Register Block",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/d2f6859c412a423dd9176e014ea9e245ccb001c7c79adcea904cc0108a4a34dc.jpg"
+    },
+    "Figure 6-90": {
+      "page": 961,
+      "file": "fig_0961_1_tight.png",
+      "bbox": [
+        127,
+        359,
+        722,
+        404
+      ],
+      "caption": "MCAP Header Register 2",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/eb95905b6db6ed74d39549fd2ca5e844aa4d53bdf986d884da21dbe4b457d494.jpg"
+    },
+    "Figure 6-91": {
+      "page": 961,
+      "file": "fig_0961_2_tight.png",
+      "bbox": [
+        127,
+        640,
+        722,
+        683
+      ],
+      "caption": "MCAP Header Register 3",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/de92414ace76b992c694c743e629adcfa3dfc352d819b68cbe3f891b0b99e969.jpg"
+    },
+    "Figure 6-92": {
+      "page": 962,
+      "file": "fig_0962_1_tight.png",
+      "bbox": [
+        129,
+        116,
+        722,
+        161
+      ],
+      "caption": "MCAP Header Register 4",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/b838443d1afa0f6e5263c42a77e030d28f0e00893c5e4e6308c5f90dd6506cc8.jpg"
+    },
+    "Figure 6-93": {
+      "page": 964,
+      "file": "fig_0964_1_tight.png",
+      "bbox": [
+        130,
+        297,
+        857,
+        685
+      ],
+      "caption": "MMB Registers g",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/186157cee565956a5db6fc2c013cb839a37dd467a9175098c0dee958e98096eb.jpg"
+    },
+    "Figure 6-94": {
+      "page": 965,
+      "file": "fig_0965_1_tight.png",
+      "bbox": [
+        116,
+        109,
+        803,
+        223
+      ],
+      "caption": "MMB Capabilities Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/88a19af21826b15f212c2223c817b35ebabd71c157d463447491c2b93dba9d86.jpg"
+    },
+    "Figure 6-95": {
+      "page": 966,
+      "file": "fig_0966_1_tight.png",
+      "bbox": [
+        117,
+        344,
+        803,
+        444
+      ],
+      "caption": "MMB Control Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/d6e28a27323c125a718a347bc17a1a87af476a9e780f4d601aa58c6ccec63cb1.jpg"
+    },
+    "Figure 6-96": {
+      "page": 967,
+      "file": "fig_0967_1_tight.png",
+      "bbox": [
+        104,
+        392,
+        772,
+        420
+      ],
+      "caption": "MMB Command Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/c46dedad3d2d073f43dadc619d448d592ba04208d301046da5394dc8dd00a66a.jpg"
+    },
+    "Figure 6-98": {
+      "page": 970,
+      "file": "fig_0970_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        856,
+        226
+      ],
+      "caption": "MMB Payload Registers",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/80a9331d0912a2cef23504befb5d4e8cb7a344a06a082cd6a3495d6acff7922c.jpg"
+    },
+    "Figure 6-99": {
+      "page": 970,
+      "file": "fig_0970_2_tight.png",
+      "bbox": [
+        132,
+        540,
+        856,
+        684
+      ],
+      "caption": "MMPT Registers",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/27a40688080c8d0b028fde1d75d941d534eacae8563f947281c8f0ef86c56ecc.jpg"
+    },
+    "Figure 6-101": {
+      "page": 971,
+      "file": "fig_0971_1_tight.png",
+      "bbox": [
+        114,
+        742,
+        789,
+        795
+      ],
+      "caption": "MMPT Control Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/ee3584be6b4a15747ef9b59adafefe3a96b66adf3f39d834775f33a60d63e61f.jpg"
+    },
+    "Figure 6-102": {
+      "page": 972,
+      "file": "fig_0972_1_tight.png",
+      "bbox": [
+        101,
+        397,
+        821,
+        441
+      ],
+      "caption": "MMPT Receive Message Notification Register g",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/1634211b3d6d626766fe4a4d7dc61eb2c311c801bb49d14436b6d60891158e37.jpg"
+    },
+    "Figure 6-103": {
+      "page": 973,
+      "file": "fig_0973_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        856,
+        500
+      ],
+      "caption": "MDvS Register Block",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/8cd2f743c6b30a79e287f1bb53f1b183e0858adb38de0a33f4877849886b22e8.jpg"
+    },
+    "Figure 6-105": {
+      "page": 974,
+      "file": "fig_0974_1_tight.png",
+      "bbox": [
+        119,
+        308,
+        789,
+        363
+      ],
+      "caption": "MDvS Register Block Header Register 2",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/79e8fff4c4df98215dc767e7d870cdff75baeccf0783d985ef5b5239e428c488.jpg"
+    },
+    "Figure 6-106": {
+      "page": 974,
+      "file": "fig_0974_2_tight.png",
+      "bbox": [
+        127,
+        679,
+        722,
+        723
+      ],
+      "caption": "MDvS Register Block Header Register 3",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/c71beb029ac5bfbf5e90de1d60a213dd4a73fcd6fd7e84bb7871b5e75dc6ecea.jpg"
+    }
+  }
+}

@@ -190,6 +190,18 @@ PCIe6.2_zh/
 
 ## 📋 Recent Updates (更新日志)
 
+### 2026-06-16 — 全章节 Figure 精裁剪 + 去重 (Round 3: 模板推广)
+
+- **ch4 模板推广到 ch1-12**: 三套通用化脚本(精裁剪/升级/去重)对 12 章批量运行
+- **精裁图统计**:
+  - 12 章共 **611 个 `<img>` 标签**,其中 **491 (80%)** 升级到 `*_tight.png`,120 个保留全页兜底
+- **跨列重复 img 清理**: ch2 18 对 / ch5 4 对 / ch6 11 对 / ch7 40 对 / ch8 10 对 / ch11 2 对,合计 **85 对** 重复清理
+- **新增通用化脚本**:
+  - `tools/chx_tight_crops.py` (支持任意章节 N→M 范围)
+  - `tools/chx_apply_tight.py` (批量升级 MD 引用)
+  - `tools/chx_dedup_imgs.py` (批量去重)
+- **每章输出**: `ch{N}_tight_crops.json` 映射数据
+
 ### 2026-06-16 — ch04 Figure 精裁剪与排版修复 (Round 2)
 
 - **ch4 精裁图抽取**：基于 MinerU `content_list.json` bbox + 抽取图,渲染 **46 张** `*_tight.png` 精裁 PNG,覆盖 40 页 / 46 个 Figure 4-XX

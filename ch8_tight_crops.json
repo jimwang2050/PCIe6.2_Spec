@@ -1,0 +1,896 @@
+{
+  "chapter": 8,
+  "page_range": [
+    1409,
+    1522
+  ],
+  "total_figures": 68,
+  "total_manual": 0,
+  "total_failed": 0,
+  "figures": {
+    "Figure 8-1": {
+      "page": 1410,
+      "file": "fig_1410_1_tight.png",
+      "bbox": [
+        302,
+        410,
+        665,
+        536
+      ],
+      "caption": "Tx Test Board for Non-Embedded Refclk",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/bd2b5cfdb9337f2975be33eb5c0e9e8dee729fb052ad9179a831d9a5f00a5cd0.jpg"
+    },
+    "Figure 8-2": {
+      "page": 1410,
+      "file": "fig_1410_2_tight.png",
+      "bbox": [
+        362,
+        702,
+        602,
+        838
+      ],
+      "caption": "Tx Test board for Embedded Refclk",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/c4afde40f84ea2556ba7aa6cdd67bd7ae162a6c3c68cbbfeea07cc60e71ba20f.jpg"
+    },
+    "Figure 8-3": {
+      "page": 1412,
+      "file": "fig_1412_1_tight.png",
+      "bbox": [
+        349,
+        169,
+        625,
+        297
+      ],
+      "caption": "Single-ended and Differential Levels",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/a546f5128165cbdea3e5e72e106a09722361d30b34f00bde668e9fc4a8293109.jpg"
+    },
+    "Figure 8-4": {
+      "page": 1413,
+      "file": "fig_1413_1_tight.png",
+      "bbox": [
+        75,
+        154,
+        890,
+        632
+      ],
+      "caption": "Tx Equalization FIR Representation for 8.0, 16.0, and 32.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/05bd3c1911f168b02e2ec120ce1370375db07f9ee6f0fa6979688587516328b0.jpg"
+    },
+    "Figure 8-5": {
+      "page": 1414,
+      "file": "fig_1414_1_tight.png",
+      "bbox": [
+        174,
+        156,
+        756,
+        368
+      ],
+      "caption": "Tx Equalization FIR Representation for 64.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/5c6f8dd0d837e51c0a9ef3ddd006b203ae46de24665fc54381e8619c1078da79.jpg"
+    },
+    "Figure 8-6": {
+      "page": 1415,
+      "file": "fig_1415_1_tight.png",
+      "bbox": [
+        127,
+        138,
+        843,
+        422
+      ],
+      "caption": "Definition of Tx Voltage Levels and Equalization Ratios",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/15e3e8c8581aa76d6d232fe1ff8affd2f05d3eaf82a47f86f60c3de6fce95fda.jpg"
+    },
+    "Figure 8-7": {
+      "page": 1417,
+      "file": "fig_1417_1_tight.png",
+      "bbox": [
+        73,
+        202,
+        892,
+        415
+      ],
+      "caption": "Methodology for measuring Tx equalization coefficients and presets",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/993993663823a81890f0f7a7143f5a1303847d8dfc0918835925d10ecf3ed0fa.jpg"
+    },
+    "Figure 8-8": {
+      "page": 1418,
+      "file": "fig_1418_1_tight.png",
+      "bbox": [
+        96,
+        126,
+        887,
+        425
+      ],
+      "caption": "VTx-DIFF-Pp and VTx-DIFF-PP-Low Measurement",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/e847c1d80f24649e1458a49d1f4210156e8632c7be1ca8efee3f371c46270450.jpg"
+    },
+    "Figure 8-11": {
+      "page": 1422,
+      "file": "fig_1422_1_tight.png",
+      "bbox": [
+        76,
+        111,
+        872,
+        473
+      ],
+      "caption": "Measuring VTx-EIEOs-FS and VTx-EIEos-RS at 8.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/26428b4b52b6577a1d66cf61d1bbd67dc526446eb463075d03d0ec28571326c0.jpg"
+    },
+    "Figure 8-13": {
+      "page": 1427,
+      "file": "fig_1427_1_tight.png",
+      "bbox": [
+        338,
+        94,
+        630,
+        234
+      ],
+      "caption": "2.5 and 5.0 GT/s Transmitter Margining Voltage Levels and CodesS",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/72524581e49b65b5cc10fc72dc8135aabdedea0dd8258e79447fe24ec18af4d7.jpg"
+    },
+    "Figure 8-14": {
+      "page": 1430,
+      "file": "fig_1430_1_tight.png",
+      "bbox": [
+        75,
+        92,
+        892,
+        536
+      ],
+      "caption": "First Order CC Behavioral CDR Transfer Functions S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/82361bbdfee897879be3a22703cb63cc33f6c70a5df798e7826585781458768c.jpg"
+    },
+    "Figure 8-15": {
+      "page": 1431,
+      "file": "fig_1431_1_tight.png",
+      "bbox": [
+        75,
+        99,
+        892,
+        544
+      ],
+      "caption": "2nd Order Behavioral SRIS CDR Transfer Functions for 2.5 GT/s and 5.0 GT/s S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/df840cb4716c83ef7224859fb9e9988ac3710c6a51c071e6768ae9bc50f8bc2d.jpg"
+    },
+    "Figure 8-16": {
+      "page": 1432,
+      "file": "fig_1432_1_tight.png",
+      "bbox": [
+        84,
+        94,
+        890,
+        482
+      ],
+      "caption": "Behavioral SRIS CDR Function for 8.0 GT/s, and SRIS and CC CDR for 16.0 and 32.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/de77a7f1cf36bc049781af37f76117322152b9ff83776a89e806c9c01259151d.jpg"
+    },
+    "Figure 8-17": {
+      "page": 1433,
+      "file": "fig_1433_1_tight.png",
+      "bbox": [
+        78,
+        223,
+        887,
+        681
+      ],
+      "caption": "Behavioral SRIS and CC CDR for 64.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/d20205df01c5af6a3c49614ab3fa2604a2d24abfb97dc1f14081c9192e9e7625.jpg"
+    },
+    "Figure 8-18": {
+      "page": 1435,
+      "file": "fig_1435_1_tight.png",
+      "bbox": [
+        303,
+        97,
+        666,
+        191
+      ],
+      "caption": "Relation Between Data Edge PDFs and Recovered Data Clock",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/9a6662ea9713665aab1b7d09bc9a918ec00c992307d1a8c0107622b19308642e.jpg"
+    },
+    "Figure 8-19": {
+      "page": 1435,
+      "file": "fig_1435_2_tight.png",
+      "bbox": [
+        315,
+        443,
+        665,
+        579
+      ],
+      "caption": "Derivation of TTx-UTJ and TTx-UDJDD",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/2ffc79fad818bfdf271afe9fb87a4b5d9efb7ae3a8e1034279c3342b19a603bb.jpg"
+    },
+    "Figure 8-20": {
+      "page": 1436,
+      "file": "fig_1436_1_tight.png",
+      "bbox": [
+        78,
+        213,
+        887,
+        592
+      ],
+      "caption": "PWJ Relative to Consecutive Edges 1 UI Apart",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/dd054e356c1176517ea581bc188c93252a5bac67aaa4a7141b0a72a62ac4f351.jpg"
+    },
+    "Figure 8-21": {
+      "page": 1436,
+      "file": "fig_1436_2_tight.png",
+      "bbox": [
+        323,
+        726,
+        653,
+        869
+      ],
+      "caption": "Definition of TTx-UPw-DJDD and TTx-UPw-TJ Data Rate Dependent Transmitter Parameters",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/393ef760269adc8359c32b236030973cb816729f7155556e56b10f7a35140997.jpg"
+    },
+    "Figure 8-22": {
+      "page": 1441,
+      "file": "fig_1441_1_tight.png",
+      "bbox": [
+        84,
+        193,
+        875,
+        555
+      ],
+      "caption": "Tx, Rx Differential Return Loss Mask with 50 Ohm Reference",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/a2f01cb9e28686b93337d602cd081c86635b5d3777034cb1db259e098c304f96.jpg"
+    },
+    "Figure 8-23": {
+      "page": 1442,
+      "file": "fig_1442_1_tight.png",
+      "bbox": [
+        73,
+        114,
+        875,
+        479
+      ],
+      "caption": "Tx, Rx Common Mode Return Loss Mask with 50 Ohm Reference S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/fb1c2d8e10fd1f7e673d28902b3b091871b5f4b1c5cdcedc4cfbaaefd6dc4172.jpg"
+    },
+    "Figure 8-24": {
+      "page": 1443,
+      "file": "fig_1443_1_tight.png",
+      "bbox": [
+        81,
+        95,
+        888,
+        469
+      ],
+      "caption": "64.0 GT/s Tx, Rx Differential Return Loss Mask with 50 Ohm Reference",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/dbabba7b3095bb66562998de5c31ec336f68d0837bb675557d49143794115c3e.jpg"
+    },
+    "Figure 8-25": {
+      "page": 1444,
+      "file": "fig_1444_1_tight.png",
+      "bbox": [
+        81,
+        101,
+        887,
+        469
+      ],
+      "caption": "64.0 GT/s Tx, Rx Common Mode Return Loss Mask with 50 Ohm Reference",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/674418e54613297e34a4f620aef6e4c0c75b596aa884f4ba4a096187facf371b.jpg"
+    },
+    "Figure 8-26": {
+      "page": 1447,
+      "file": "fig_1447_1_tight.png",
+      "bbox": [
+        302,
+        324,
+        665,
+        441
+      ],
+      "caption": "Rx Test board Topology for 16.0 and 32.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/fcdfbdce91d97c1d60161f7b514c514a498275e2480bb8493768d70a07f2ccee.jpg"
+    },
+    "Figure 8-27": {
+      "page": 1448,
+      "file": "fig_1448_1_tight.png",
+      "bbox": [
+        111,
+        122,
+        821,
+        568
+      ],
+      "caption": "Example Calibration Channel IL Mask Excluding Rx Package for 8.0 GT/s 5",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/78dfa55aef2ebe341dac050723717249d395622d6cd04fa89cbce3c4e75d05fa.jpg"
+    },
+    "Figure 8-28": {
+      "page": 1452,
+      "file": "fig_1452_1_tight.png",
+      "bbox": [
+        96,
+        117,
+        877,
+        460
+      ],
+      "caption": "Example 16.0 GT/s Calibration Channel",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/3e3328322979b5e8353d9ae508de46f7551b91170b35857028a15a1fefaaddf7.jpg"
+    },
+    "Figure 8-29": {
+      "page": 1452,
+      "file": "fig_1452_2_tight.png",
+      "bbox": [
+        101,
+        593,
+        872,
+        717
+      ],
+      "caption": "Stackup for Example 16.0 GT/s Calibration Channel",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/75a3a92e4ee8e390318e0912f1c27ec2ff0066fba9f21181e6dd1ba7043d3ed1.jpg"
+    },
+    "Figure 8-30": {
+      "page": 1453,
+      "file": "fig_1453_1_tight.png",
+      "bbox": [
+        122,
+        121,
+        862,
+        487
+      ],
+      "caption": "CEM Connector Drill Hole Pad Stack",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/797b59c030b4d9f382578f0de88fb34e55baf06c36ab6777970327a5ab91c351.jpg"
+    },
+    "Figure 8-32": {
+      "page": 1456,
+      "file": "fig_1456_1_tight.png",
+      "bbox": [
+        81,
+        85,
+        885,
+        464
+      ],
+      "caption": "Example 32.0 GT/s Calibration Channel",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/0d140dcf8ca5f6e88392e228c9aa53ef3da4829bd1cd17612987b8ab86a0cb76.jpg"
+    },
+    "Figure 8-33": {
+      "page": 1456,
+      "file": "fig_1456_2_tight.png",
+      "bbox": [
+        101,
+        561,
+        874,
+        666
+      ],
+      "caption": "Stack-up for Example 32.0 GT/s Calibration Channel",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/0d9dc85369550e6ccefd86c804db8d752f0f6d43e17b85a4a2ae878912588fd8.jpg"
+    },
+    "Figure 8-35": {
+      "page": 1459,
+      "file": "fig_1459_1_tight.png",
+      "bbox": [
+        83,
+        99,
+        887,
+        449
+      ],
+      "caption": "Loss Curves for 8.0 GT/s Behavioral CTLE",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/7f1c4e43b5fe53ac53eb2f2ee6f360c2620d7e80d5fb6dbcb52574b479bd6335.jpg"
+    },
+    "Figure 8-36": {
+      "page": 1459,
+      "file": "fig_1459_2_tight.png",
+      "bbox": [
+        76,
+        512,
+        892,
+        849
+      ],
+      "caption": "Loss Curves for 16.0 GT/s Behavioral CTLE",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/95ac1f38489d5f971490449e1f6312925deb05877fa493e5d80025b453e70e81.jpg"
+    },
+    "Figure 8-38": {
+      "page": 1463,
+      "file": "fig_1463_1_tight.png",
+      "bbox": [
+        156,
+        126,
+        825,
+        544
+      ],
+      "caption": "Loss Curves for 64.0 GT/s Behavioral CTLE",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/c4a468eb58ead8af5e7044aaed609a7fac747eb3e7c20d08601eb4809e1c7bce.jpg"
+    },
+    "Figure 8-40": {
+      "page": 1464,
+      "file": "fig_1464_1_tight.png",
+      "bbox": [
+        236,
+        554,
+        723,
+        751
+      ],
+      "caption": "Diagram for 2-tap DFE",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/3a5fc63461cf2689abdf68f18cc661d2343d3bd36aa8301703909575f777ce23.jpg"
+    },
+    "Figure 8-41": {
+      "page": 1468,
+      "file": "fig_1468_1_tight.png",
+      "bbox": [
+        111,
+        234,
+        852,
+        457
+      ],
+      "caption": "Layout for Calibrating the Stressed Jitter Eye at 8.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/ffad3ddf92cbd32d2559d43cd1cfee3d8b438c2250d56650d2874887c343ef0d.jpg"
+    },
+    "Figure 8-42": {
+      "page": 1469,
+      "file": "fig_1469_1_tight.png",
+      "bbox": [
+        117,
+        119,
+        874,
+        334
+      ],
+      "caption": "Layout for Calibrating the Stressed Jitter Eye at 16.0, 32.0, and 64.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/6a9c9b40f3d7a5685ac4a77dd965a5441947fdc4d4e474ce9f2eae043ebf09a0.jpg"
+    },
+    "Figure 8-43": {
+      "page": 1472,
+      "file": "fig_1472_1_tight.png",
+      "bbox": [
+        76,
+        135,
+        890,
+        542
+      ],
+      "caption": "Sj Mask for Receivers Operating in IR mode at 8.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/e1bbc3de1b2b3cde8164d587647e9ca6788ad11cf8ddfa1cec4412ac18308eb3.jpg"
+    },
+    "Figure 8-44": {
+      "page": 1473,
+      "file": "fig_1473_1_tight.png",
+      "bbox": [
+        78,
+        97,
+        890,
+        474
+      ],
+      "caption": "Sj Mask for Receivers Operating in SRIS mode at 16.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/4cfe0123b7ae0118fd8e226f2d73c545761ebfe2ff005b75c8bd77a7eca1ba02.jpg"
+    },
+    "Figure 8-45": {
+      "page": 1474,
+      "file": "fig_1474_1_tight.png",
+      "bbox": [
+        93,
+        101,
+        882,
+        500
+      ],
+      "caption": "Sj Mask for Receivers Operating in CC mode at 16.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/4274f46788d2a88332aa12f33e5de853def2136e3c9c23795f294394552c808d.jpg"
+    },
+    "Figure 8-46": {
+      "page": 1475,
+      "file": "fig_1475_1_tight.png",
+      "bbox": [
+        76,
+        95,
+        892,
+        469
+      ],
+      "caption": "Sj Mask for Receivers Operating in SRIS mode at 32.0 GT/s 5",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/11a5cec020940a6def621ddd4b64f82bc242b89064d7641d30a51c07a266c365.jpg"
+    },
+    "Figure 8-47": {
+      "page": 1476,
+      "file": "fig_1476_1_tight.png",
+      "bbox": [
+        91,
+        101,
+        875,
+        503
+      ],
+      "caption": "Sj Mask for Receivers Operating in CC mode at 32.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/631d2231feb37b6ed427ae29246c28d3af12cafba0bba3e14f78fac3c6f2fb0e.jpg"
+    },
+    "Figure 8-48": {
+      "page": 1477,
+      "file": "fig_1477_1_tight.png",
+      "bbox": [
+        78,
+        99,
+        880,
+        551
+      ],
+      "caption": "Sj Mask for Receivers Operating in SRIS mode at 64.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/255a06074bdf45cd8a130bee633c26fb035a0eac0c6480bea9bdbb8aa9f12293.jpg"
+    },
+    "Figure 8-49": {
+      "page": 1478,
+      "file": "fig_1478_1_tight.png",
+      "bbox": [
+        76,
+        99,
+        882,
+        556
+      ],
+      "caption": "Sj Mask for Receivers Operating in CC mode at 64.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/8bc23801eda649b8d52f5fbfa087ad4bdf12f7ccde66556662300aa8bf3e56c8.jpg"
+    },
+    "Figure 8-50": {
+      "page": 1479,
+      "file": "fig_1479_1_tight.png",
+      "bbox": [
+        76,
+        108,
+        890,
+        450
+      ],
+      "caption": "Sj Masks for Receivers Operating in CC Mode at 8.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/c40ac203bb4feed1df0270859b80838b3c277c7b28a71d90cb5418f76a3f5526.jpg"
+    },
+    "Figure 8-51": {
+      "page": 1480,
+      "file": "fig_1480_1_tight.png",
+      "bbox": [
+        81,
+        102,
+        892,
+        376
+      ],
+      "caption": "Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/dc419b508e726dbbfe7c70e599359f57ef12556dd560dc886f45e011571cb0ee.jpg"
+    },
+    "Figure 8-52": {
+      "page": 1480,
+      "file": "fig_1480_2_tight.png",
+      "bbox": [
+        83,
+        561,
+        890,
+        835
+      ],
+      "caption": "Layout for Jitter Testing for Independent Refclk Rx at 16.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/dd271fe41305f732d34d9d8878e06f16ad1cb27d570dc8a33b3c1c976f28570c.jpg"
+    },
+    "Figure 8-53": {
+      "page": 1483,
+      "file": "fig_1483_1_tight.png",
+      "bbox": [
+        313,
+        455,
+        653,
+        592
+      ],
+      "caption": "Exit from Idle Voltage and Time Margins",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/e7ccd33d34a047a4c6338d760138efa4f9cd83bb77075aebd40735b57699f427.jpg"
+    },
+    "Figure 8-54": {
+      "page": 1484,
+      "file": "fig_1484_1_tight.png",
+      "bbox": [
+        122,
+        208,
+        843,
+        627
+      ],
+      "caption": "Allowed Ranges for Maximum NRZ Timing and Voltage Margin",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/6c27bf16b426a0eab33991bac7d28fa7c276ed5fadcb8b84e8c7f93fe148a8c1.jpg"
+    },
+    "Figure 8-55": {
+      "page": 1485,
+      "file": "fig_1485_1_tight.png",
+      "bbox": [
+        135,
+        106,
+        828,
+        520
+      ],
+      "caption": "Allowed Ranges for Maximum PAM4 Timing and Voltage Margins",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/fff90ce56e8fc918e5dc59a7e24fc7bb07f5ab757c5e6e75fc704a5f918f30d6.jpg"
+    },
+    "Figure 8-56": {
+      "page": 1490,
+      "file": "fig_1490_1_tight.png",
+      "bbox": [
+        81,
+        98,
+        885,
+        301
+      ],
+      "caption": "Flow Diagram for Channel Tolerancing at 2.5 and 5.0 GT/s 5",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/b0b915415420e456ad7477f5ccaf4707601cb43b69db531d730a33681a0724ce.jpg"
+    },
+    "Figure 8-57": {
+      "page": 1490,
+      "file": "fig_1490_2_tight.png",
+      "bbox": [
+        80,
+        468,
+        883,
+        674
+      ],
+      "caption": "Flow Diagram for Channel Tolerancing at 8.0 and 16.0 GT/s S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/a25ec71e755fee231cf6f2eeb4f7294aeda39a5cbd4133f1354bca9e861b61da.jpg"
+    },
+    "Figure 8-58": {
+      "page": 1491,
+      "file": "fig_1491_1_tight.png",
+      "bbox": [
+        119,
+        407,
+        848,
+        598
+      ],
+      "caption": "Tx/Rx Behavioral Package Models",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/475ca087a8b96fb48be5609c924187c883535b3cc559446f918749faef8d0560.jpg"
+    },
+    "Figure 8-59": {
+      "page": 1492,
+      "file": "fig_1492_1_tight.png",
+      "bbox": [
+        129,
+        107,
+        839,
+        280
+      ],
+      "caption": "Behavioral Tx and Rx S-Port Designation for 8.0 and 16.0 GT/s Packages",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/2f2edc19eddde4e2324e7e249c5b0e15baeb7c8b2e53ae1d010f4babedb3b412.jpg"
+    },
+    "Figure 8-60": {
+      "page": 1492,
+      "file": "fig_1492_2_tight.png",
+      "bbox": [
+        98,
+        363,
+        867,
+        773
+      ],
+      "caption": "SDD21 Plots for Root and Non-Root Packages for 16.0 GT/s S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/8fd76958551358a1a6f5efbe64cbb5a4f21ee052a94379df80336718fcbb67f2.jpg"
+    },
+    "Figure 8-77": {
+      "page": 1501,
+      "file": "fig_1501_1_tight.png",
+      "bbox": [
+        89,
+        118,
+        869,
+        420
+      ],
+      "caption": "32.0 and 64.0 GT/s Reference Package Port Connections for Pin to Pin Channel Evaluation",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/08a42da131e0b80310f8ab9a606ae128fbf8c8f712ce74899e3cf9e2692a4bd5.jpg"
+    },
+    "Figure 8-80": {
+      "page": 1510,
+      "file": "fig_1510_1_tight.png",
+      "bbox": [
+        122,
+        101,
+        830,
+        297
+      ],
+      "caption": "Oscilloscope Refclk Test Setup for All Cases Except Jitter at 32.0 and 64.0 GT/s S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/1131b9b82eaa6ef7ca43570f89d57ebbb86114ee5d05f91e4006d756d662d67b.jpg"
+    },
+    "Figure 8-81": {
+      "page": 1512,
+      "file": "fig_1512_1_tight.png",
+      "bbox": [
+        132,
+        329,
+        852,
+        489
+      ],
+      "caption": "Single-Ended Measurement Points for Absolute Cross Point and Swing",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/327e049adb7312b94435d59a6ca738c8a7c8238afa704ee884589c55b4a2bfa4.jpg"
+    },
+    "Figure 8-82": {
+      "page": 1512,
+      "file": "fig_1512_2_tight.png",
+      "bbox": [
+        124,
+        551,
+        854,
+        686
+      ],
+      "caption": "Single-Ended Measurement Points for Delta Cross Point",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/eac5a9a587d6d4a2a14d6237f0721f7de2ba4352ec356c3b418aded55fb7532b.jpg"
+    },
+    "Figure 8-83": {
+      "page": 1513,
+      "file": "fig_1513_1_tight.png",
+      "bbox": [
+        486,
+        92,
+        857,
+        232
+      ],
+      "caption": "Single-Ended Measurement Points for Rise and Fall Time Matching",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/72311676878ccb52a284d753bc8ecb80cfda9ca11d8d4771b1b65f9de7e4d1ae.jpg"
+    },
+    "Figure 8-84": {
+      "page": 1513,
+      "file": "fig_1513_2_tight.png",
+      "bbox": [
+        117,
+        276,
+        854,
+        450
+      ],
+      "caption": "Differential Measurement Points for Duty Cycle and Period",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/19c0c369ec45eae01cb7ece16f49ebfad8dbccffa34376523894f38563981600.jpg"
+    },
+    "Figure 8-85": {
+      "page": 1513,
+      "file": "fig_1513_3_tight.png",
+      "bbox": [
+        120,
+        502,
+        856,
+        671
+      ],
+      "caption": "Differential Measurement Points for Rise and Fall Time",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/e2b221d94e02cc92c40a7d84eaff0fefbf82e4da942587a44758a40ec5995b80.jpg"
+    },
+    "Figure 8-86": {
+      "page": 1514,
+      "file": "fig_1514_1_tight.png",
+      "bbox": [
+        122,
+        92,
+        854,
+        284
+      ],
+      "caption": "Differential Measurement Points for Ringback",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/69a130b7ce885a0c01275436f19ff5b190ea7c7fcec5478162bb45d98091f690.jpg"
+    },
+    "Figure 8-87": {
+      "page": 1515,
+      "file": "fig_1515_1_tight.png",
+      "bbox": [
+        122,
+        361,
+        852,
+        763
+      ],
+      "caption": "Limits for phase jitter from the Reference with 5000 ppm SSC",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/c01b1240fbd57fcab38f9b27603e8d9bedf8af7881de5b01eb5152de2839d10a.jpg"
+    },
+    "Figure 8-88": {
+      "page": 1517,
+      "file": "fig_1517_1_tight.png",
+      "bbox": [
+        73,
+        99,
+        882,
+        402
+      ],
+      "caption": "5 MHz PLL Transfer Function Example",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/54ebbf5ea1e648fb7000373a7c3562befc6f513daab3efbc4310dc719edaacff.jpg"
+    },
+    "Figure 8-89": {
+      "page": 1518,
+      "file": "fig_1518_1_tight.png",
+      "bbox": [
+        75,
+        97,
+        890,
+        469
+      ],
+      "caption": "Common Refclk Rx Architecture for all Data Rates Except 32.0 and 64.0 GT/s S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/18c17ea6c10263508a2a1d0147dfc8f6e4cf204f2a9b28bfea93d7fa1e439e39.jpg"
+    },
+    "Figure 8-90": {
+      "page": 1519,
+      "file": "fig_1519_1_tight.png",
+      "bbox": [
+        78,
+        372,
+        887,
+        484
+      ],
+      "caption": "Common Refclk PLL and CDR Characteristics for 2.5 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/c5e3c6efe9eb9db94852c559e0aded188b3f766ba19ce77647a64ba583b184d5.jpg"
+    },
+    "Figure 8-91": {
+      "page": 1519,
+      "file": "fig_1519_2_tight.png",
+      "bbox": [
+        76,
+        621,
+        888,
+        768
+      ],
+      "caption": "Common Refclk PLL and CDR Characteristics for 5.0 GT/s",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/22ac47d92332faf5d90f964de42de6dbe950939c31f031ab63bb18dbb0c5963f.jpg"
+    },
+    "Figure 8-93": {
+      "page": 1520,
+      "file": "fig_1520_1_tight.png",
+      "bbox": [
+        75,
+        310,
+        890,
+        428
+      ],
+      "caption": "Common Refclk PLL and CDR Characteristics for 32.0 GT/s 5",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/5748f75a73a4232d763812af400655e361b07fc975681b5dbd77d6001e613ae3.jpg"
+    },
+    "Figure 8-94": {
+      "page": 1520,
+      "file": "fig_1520_2_tight.png",
+      "bbox": [
+        75,
+        481,
+        890,
+        599
+      ],
+      "caption": "Common Refclk PLL and CDR Characteristics for 64.0 GT/s 5",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/38a8433ec3ab674a7a7316affb5a2a96a636d4618255bfdc1da9de3a0379d7aa.jpg"
+    }
+  }
+}

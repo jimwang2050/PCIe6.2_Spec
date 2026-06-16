@@ -1,0 +1,428 @@
+{
+  "chapter": 10,
+  "page_range": [
+    1559,
+    1608
+  ],
+  "total_figures": 32,
+  "total_manual": 0,
+  "total_failed": 0,
+  "figures": {
+    "Figure 10-1": {
+      "page": 1560,
+      "file": "fig_1560_1_tight.png",
+      "bbox": [
+        387,
+        191,
+        584,
+        333
+      ],
+      "caption": "Example Illustrating a Platform with TA, ATPT, and ATC Elements g",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/619460e2d119f5f66d65373b1261c657121a41b1c90838925868ba47c558f146.jpg"
+    },
+    "Figure 10-2": {
+      "page": 1560,
+      "file": "fig_1560_2_tight.png",
+      "bbox": [
+        387,
+        546,
+        583,
+        686
+      ],
+      "caption": "Example ATS Translation Request/Completion Exchange S",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/d94951079e60e68fa3794fe8acb5aa53e61f9fadb7bb4c990ea32c0a922645c2.jpg"
+    },
+    "Figure 10-3": {
+      "page": 1562,
+      "file": "fig_1562_1_tight.png",
+      "bbox": [
+        331,
+        717,
+        635,
+        834
+      ],
+      "caption": "Example Multi-Function Device with ATC per Function",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/e51c1eab6fb8a604e6a864cd2630d4c3a2cb9153a97c1fb0d36833cfd47c567f.jpg"
+    },
+    "Figure 10-4": {
+      "page": 1563,
+      "file": "fig_1563_1_tight.png",
+      "bbox": [
+        346,
+        380,
+        625,
+        522
+      ],
+      "caption": "Invalidation Protocol with a Single Invalidation Request and Completion",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/01cf138055f2c98991b0c69ea11c765854dcc975fdebaa604155406aeee0acdd.jpg"
+    },
+    "Figure 10-5": {
+      "page": 1564,
+      "file": "fig_1564_1_tight.png",
+      "bbox": [
+        357,
+        282,
+        614,
+        422
+      ],
+      "caption": "Single Invalidate Request with Multiple Invalidate Completions S",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/17b959796ba8c733a9b8b206dcae0ce4f7246e763e802866362ffc72b0fd0ee5.jpg"
+    },
+    "Figure 10-6": {
+      "page": 1566,
+      "file": "fig_1566_1_tight.png",
+      "bbox": [
+        102,
+        632,
+        812,
+        790
+      ],
+      "caption": "Memory Request Header with 64-bit Address Highlighting AT field",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/b6cbc963ed619e6ff88d24703f24657912a7b1c1ec65f8cf180329dfc4040729.jpg"
+    },
+    "Figure 10-7": {
+      "page": 1567,
+      "file": "fig_1567_1_tight.png",
+      "bbox": [
+        107,
+        99,
+        812,
+        226
+      ],
+      "caption": "Memory Request Header with 32-bit Address Highlighting AT field s",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/79269931d2f143032168652fb3214dda83f253c291376a7cfd6e66f2a0392da6.jpg"
+    },
+    "Figure 10-8": {
+      "page": 1567,
+      "file": "fig_1567_2_tight.png",
+      "bbox": [
+        102,
+        297,
+        812,
+        455
+      ],
+      "caption": "Memory Request Header with 64-bit Address Highlighting AT field - FLIT Mode",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/49a2e4edb5064f58efc0b1fc545194b04ad65c5a1fdd160c464992e65be4e2d4.jpg"
+    },
+    "Figure 10-9": {
+      "page": 1567,
+      "file": "fig_1567_3_tight.png",
+      "bbox": [
+        107,
+        527,
+        812,
+        655
+      ],
+      "caption": "Memory Request Header with 32-bit Address Highlighting AT field - FLIT Mode",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/098f0071849b6e58edabaec81959437bd7ca721d0d719423f97ac978f01c0157.jpg"
+    },
+    "Figure 10-10": {
+      "page": 1568,
+      "file": "fig_1568_1_tight.png",
+      "bbox": [
+        102,
+        482,
+        812,
+        640
+      ],
+      "caption": "Translation Request with 64-bit Address - Non-Flit Mode",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/60385f017d92a6471447307193ecc576637bc79b02b1723c76c7409ab05c44ac.jpg"
+    },
+    "Figure 10-11": {
+      "page": 1569,
+      "file": "fig_1569_1_tight.png",
+      "bbox": [
+        107,
+        99,
+        812,
+        226
+      ],
+      "caption": "Translation Request with 32-bit Address - Non-Flit Mode",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/7fd57f78654d3516478cf110a204eea199dbc3ae318b0629d5526cef7d7d09ee.jpg"
+    },
+    "Figure 10-13": {
+      "page": 1569,
+      "file": "fig_1569_2_tight.png",
+      "bbox": [
+        107,
+        527,
+        812,
+        655
+      ],
+      "caption": "Translation Request with 32-bit Address - Flit Mode 194",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/24c4d7bee8834c83af1eadefc6afbc82e7c747c4f7d89883a126e67a3e3bfdb1.jpg"
+    },
+    "Figure 10-14": {
+      "page": 1573,
+      "file": "fig_1573_1_tight.png",
+      "bbox": [
+        305,
+        559,
+        661,
+        625
+      ],
+      "caption": "Translation Completion Data Entry",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/ed02e71651a91f3915b825901994268d74f628c845f42d87a67c4df96f3de8a7.jpg"
+    },
+    "Figure 10-15": {
+      "page": 1580,
+      "file": "fig_1580_1_tight.png",
+      "bbox": [
+        274,
+        320,
+        691,
+        530
+      ],
+      "caption": "Example Translation Completion with 1 TLP",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/56f565645591c3c96d5f4096f37fe9bcff5e50c6e8560f7d610d12aa9f1fb2dd.jpg"
+    },
+    "Figure 10-16": {
+      "page": 1581,
+      "file": "fig_1581_1_tight.png",
+      "bbox": [
+        245,
+        137,
+        725,
+        526
+      ],
+      "caption": "Example Translation Completion with 2 TLPs",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/dff47fddcb89836aa78e5d34ab12493ffc5e6e504250f1b59b512d454b545c06.jpg"
+    },
+    "Figure 10-17": {
+      "page": 1583,
+      "file": "fig_1583_1_tight.png",
+      "bbox": [
+        171,
+        291,
+        803,
+        502
+      ],
+      "caption": "ATS Memory Attributes Example",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/c917fd84b2be26a5043ff6628bb561c358e6ab7517d38c67cabc97b7acecb69e.jpg"
+    },
+    "Figure 10-18": {
+      "page": 1585,
+      "file": "fig_1585_1_tight.png",
+      "bbox": [
+        333,
+        372,
+        637,
+        453
+      ],
+      "caption": "Invalidate Request Message - Non-Flit Mode S",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/10c7d8c70b1eab90f2475f6fdd24fde44c4c4bbd79be395dfec56eed2413e4fa.jpg"
+    },
+    "Figure 10-19": {
+      "page": 1585,
+      "file": "fig_1585_2_tight.png",
+      "bbox": [
+        102,
+        515,
+        812,
+        672
+      ],
+      "caption": "Invalidate Request Message - Flit Mode",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/1560535720c40bdcf102e2aa93b8cb6547ca3641152986b4b7b0cbc5ae1e3f5e.jpg"
+    },
+    "Figure 10-20": {
+      "page": 1586,
+      "file": "fig_1586_1_tight.png",
+      "bbox": [
+        205,
+        493,
+        743,
+        627
+      ],
+      "caption": "Invalidate Request Message Body",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/5ba1d86586df7fae90ecb0a69df059a7206cb878137b560bbe15b0feca3a0406.jpg"
+    },
+    "Figure 10-21": {
+      "page": 1587,
+      "file": "fig_1587_1_tight.png",
+      "bbox": [
+        333,
+        587,
+        640,
+        670
+      ],
+      "caption": "Invalidate Completion Message Format - Non-Flit Mode",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/967aeabe8964c5fbe07f4552d747af976879661aff9efeccb789451af9ce7c3b.jpg"
+    },
+    "Figure 10-22": {
+      "page": 1588,
+      "file": "fig_1588_1_tight.png",
+      "bbox": [
+        102,
+        99,
+        812,
+        256
+      ],
+      "caption": "Invalidate Completion Message - Flit Mode",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/af5e1afdfe92e538912580ae455b87d43978bd0b2b7d66576afc6929a0328c21.jpg"
+    },
+    "Figure 10-23": {
+      "page": 1595,
+      "file": "fig_1595_1_tight.png",
+      "bbox": [
+        305,
+        210,
+        663,
+        299
+      ],
+      "caption": "Page Request Message - Non-Flit Mode",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/68a1850d73d0657bb3cae2812b491be2a7d971650d5a939fde9df084f9317129.jpg"
+    },
+    "Figure 10-24": {
+      "page": 1595,
+      "file": "fig_1595_2_tight.png",
+      "bbox": [
+        102,
+        363,
+        812,
+        520
+      ],
+      "caption": "Page Request Message - Flit Mode",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/ba9c6513e19c6b71a1636295809900f31d5f649d65f798dac449c436d1d26ff0.jpg"
+    },
+    "Figure 10-25": {
+      "page": 1598,
+      "file": "fig_1598_1_tight.png",
+      "bbox": [
+        227,
+        94,
+        735,
+        232
+      ],
+      "caption": "Stop Marker Message - Non-Flit Mode",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/fa96696083bfddf29ea01b2d49095183702c07f9a683bd755774de7e815f13c5.jpg"
+    },
+    "Figure 10-26": {
+      "page": 1598,
+      "file": "fig_1598_2_tight.png",
+      "bbox": [
+        102,
+        286,
+        812,
+        444
+      ],
+      "caption": "Stop Marker Message - Flit Mode",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/555377b55d251b142adbf0ab4d90c2fd21602f76898ed498e11646c344c4f43d.jpg"
+    },
+    "Figure 10-27": {
+      "page": 1600,
+      "file": "fig_1600_1_tight.png",
+      "bbox": [
+        303,
+        181,
+        663,
+        268
+      ],
+      "caption": "PRG Response Message - Non-Flit Mode",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/4767e737da4dbba84176bdadea079ee343888e7c036a2cade2eee2c5419fae8b.jpg"
+    },
+    "Figure 10-30": {
+      "page": 1602,
+      "file": "fig_1602_1_tight.png",
+      "bbox": [
+        116,
+        109,
+        779,
+        179
+      ],
+      "caption": "ATS Extended Capability Header",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/8e7b8f6f801e91f70a1726340acb079631b6fb1b23a1406637d654efde745458.jpg"
+    },
+    "Figure 10-31": {
+      "page": 1602,
+      "file": "fig_1602_2_tight.png",
+      "bbox": [
+        130,
+        575,
+        702,
+        722
+      ],
+      "caption": "ATS Capability Register (Offset 04h)",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/d96f6b213905c082997d88220d5be51b50d8c7f12a0bc0c8f1683ad16cec7e1e.jpg"
+    },
+    "Figure 10-33": {
+      "page": 1605,
+      "file": "fig_1605_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        856,
+        256
+      ],
+      "caption": "Page Request Extended Capability Structure g",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/8e2992ceeef7955245976756f2c48d08f1cd60b2697d229a433d373d3c7e80ee.jpg"
+    },
+    "Figure 10-34": {
+      "page": 1605,
+      "file": "fig_1605_2_tight.png",
+      "bbox": [
+        116,
+        443,
+        779,
+        511
+      ],
+      "caption": "Page Request Extended Capability Header",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/a2f3f41cc5894100384a2225e0f13e30336b44853c7dfd63e4c8812c67dec47a.jpg"
+    },
+    "Figure 10-35": {
+      "page": 1606,
+      "file": "fig_1606_1_tight.png",
+      "bbox": [
+        132,
+        116,
+        524,
+        205
+      ],
+      "caption": "Page Request Control Register",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/e3329df9359447ffb73db7f3491d32fb3bd1034bfef6cf9e34547b453fb35ea3.jpg"
+    },
+    "Figure 10-36": {
+      "page": 1606,
+      "file": "fig_1606_2_tight.png",
+      "bbox": [
+        129,
+        678,
+        766,
+        800
+      ],
+      "caption": "Page Request Status Register",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/128af1f8c4c4dc9fd0f4adc6f49e8ede4f5087c385049a2dc3911409e9a1950f.jpg"
+    }
+  }
+}

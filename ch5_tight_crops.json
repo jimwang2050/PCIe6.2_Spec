@@ -1,0 +1,246 @@
+{
+  "chapter": 5,
+  "page_range": [
+    651,
+    706
+  ],
+  "total_figures": 18,
+  "total_manual": 0,
+  "total_failed": 0,
+  "figures": {
+    "Figure 5-1": {
+      "page": 654,
+      "file": "fig_0654_1_tight.png",
+      "bbox": [
+        302,
+        367,
+        666,
+        511
+      ],
+      "caption": "Link Power Management State Flow Diagram",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/965bdb06bd069de1d13c0a7afb211557ed099b8cb2e7dac350cc0fa48a8a75c5.jpg"
+    },
+    "Figure 5-2": {
+      "page": 662,
+      "file": "fig_0662_1_tight.png",
+      "bbox": [
+        393,
+        323,
+        573,
+        467
+      ],
+      "caption": "Entry into the L1 Link State",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/bc0844fd1d81089de31f396d7288c06e42cee37044e1e3b38cb02e2f2876b6f5.jpg"
+    },
+    "Figure 5-3": {
+      "page": 664,
+      "file": "fig_0664_1_tight.png",
+      "bbox": [
+        112,
+        325,
+        839,
+        648
+      ],
+      "caption": "Exit from L1 Link State Initiated by Upstream Component",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/da5ecc223ee8aca989c55bb70498fe7de5c7d502f5fcd528b56b2b081a7674aa.jpg"
+    },
+    "Figure 5-4": {
+      "page": 667,
+      "file": "fig_0667_1_tight.png",
+      "bbox": [
+        316,
+        265,
+        658,
+        405
+      ],
+      "caption": "Conceptual Diagrams Showing Two Example Cases of WAKE# Routing",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/3710173e0cb962fa0b2d9b5fb7926b71b5eab24f3f79aeedea89b26c9d36e073.jpg"
+    },
+    "Figure 5-5": {
+      "page": 670,
+      "file": "fig_0670_1_tight.png",
+      "bbox": [
+        112,
+        190,
+        854,
+        595
+      ],
+      "caption": "A Conceptual PME Control State Machine",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/584596881ba29eb4e507dcdedab88a126c7a76148ab2536ec31be21b97cc6643.jpg"
+    },
+    "Figure 5-6": {
+      "page": 681,
+      "file": "fig_0681_1_tight.png",
+      "bbox": [
+        385,
+        665,
+        580,
+        809
+      ],
+      "caption": "L1 Transition Sequence Ending with a Rejection (L0s Enabled)",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/1fcd339daf231c277dd73d8eadfe6da5f4dfa77707ae3988aa74f82b339179aa.jpg"
+    },
+    "Figure 5-7": {
+      "page": 682,
+      "file": "fig_0682_1_tight.png",
+      "bbox": [
+        390,
+        92,
+        576,
+        236
+      ],
+      "caption": "L1 Successful Transition Sequence",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/a5c6821ea2c829ef87410c4055115f041c2ae8c06642d535134044ec55e52203.jpg"
+    },
+    "Figure 5-8": {
+      "page": 683,
+      "file": "fig_0683_1_tight.png",
+      "bbox": [
+        303,
+        90,
+        661,
+        473
+      ],
+      "caption": "Example of L1 Exit Latency Computation",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/9faaad89beb1105906330ee096c8f37d929e44e0d0388cbd89a95ceaf93c1799.jpg"
+    },
+    "Figure 5-9": {
+      "page": 689,
+      "file": "fig_0689_1_tight.png",
+      "bbox": [
+        297,
+        93,
+        668,
+        310
+      ],
+      "caption": "State Diagram for L1 PM Substates",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/5b1f24430ed2894767743d14077a0cbeaa980b51e3e7c3a6d498aead7603f4d0.jpg"
+    },
+    "Figure 5-10": {
+      "page": 690,
+      "file": "fig_0690_1_tight.png",
+      "bbox": [
+        241,
+        347,
+        732,
+        795
+      ],
+      "caption": "Downstream Port with a Single PLL",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/8589ed344bef5dbf6e513759e533754499bf03177e6cb4219b24f7f88022f25f.jpg"
+    },
+    "Figure 5-11": {
+      "page": 691,
+      "file": "fig_0691_1_tight.png",
+      "bbox": [
+        119,
+        256,
+        854,
+        612
+      ],
+      "caption": "Multiple Downstream Ports with a shared PLL",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/fe82230e699e6e04f2b1c5d3ce4f10a2741c1d33ccd3dcc706cec3448e65a02b.jpg"
+    },
+    "Figure 5-13": {
+      "page": 694,
+      "file": "fig_0694_1_tight.png",
+      "bbox": [
+        75,
+        108,
+        892,
+        313
+      ],
+      "caption": "Example: L1.1 Waveforms Illustrating Downstream Port Initiated Exit",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/8d58ae7869bc4e1aba8287c4ae3671217c0c69c3904b66b1bf00a4730ebd81ce.jpg"
+    },
+    "Figure 5-14": {
+      "page": 695,
+      "file": "fig_0695_1_tight.png",
+      "bbox": [
+        238,
+        111,
+        727,
+        463
+      ],
+      "caption": "L1.2 Substates",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/30f8c7a3a8906eb7a89d69241d0b037ff1f138909a6f4f6510e4dd121d0eab73.jpg"
+    },
+    "Figure 5-15": {
+      "page": 696,
+      "file": "fig_0696_1_tight.png",
+      "bbox": [
+        75,
+        112,
+        892,
+        323
+      ],
+      "caption": "Example: Illustration of Boundary Condition due to Different Sampling of CLKREQ#",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/0003163a897e7f336b4a502a09080a2397f309d26f87d5a239a8acb5be947195.jpg"
+    },
+    "Figure 5-16": {
+      "page": 697,
+      "file": "fig_0697_1_tight.png",
+      "bbox": [
+        75,
+        486,
+        892,
+        705
+      ],
+      "caption": "Example: L1.2 Waveforms Illustrating Upstream Port Initiated Exit",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/76abe8d40cbdff5ba6fa3c312c9783f2ee6fb1f146362f9f7839d45e70af04b4.jpg"
+    },
+    "Figure 5-17": {
+      "page": 698,
+      "file": "fig_0698_1_tight.png",
+      "bbox": [
+        75,
+        109,
+        892,
+        327
+      ],
+      "caption": "Example: L1.2 Waveforms Illustrating Downstream Port Initiated Exit",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/fc6bcf06dcf31e3b20da5b6079ac1f6386cb4397fbbb862bb1c1c127c6add876.jpg"
+    },
+    "Figure 5-18": {
+      "page": 702,
+      "file": "fig_0702_1_tight.png",
+      "bbox": [
+        383,
+        218,
+        589,
+        352
+      ],
+      "caption": "Function Power Management State Transitions",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/b88af06f2be3f9c3da23e989ffdf7b268f3af8c349234e11a5514fa4f5fc2eec.jpg"
+    },
+    "Figure 5-19": {
+      "page": 705,
+      "file": "fig_0705_1_tight.png",
+      "bbox": [
+        372,
+        94,
+        596,
+        203
+      ],
+      "caption": "PCI Express Bridge Power Management Diagram",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": "images/009066594c0548676da20796627f7224f974e6d626cf0e3db1f15256181654d0.jpg"
+    }
+  }
+}

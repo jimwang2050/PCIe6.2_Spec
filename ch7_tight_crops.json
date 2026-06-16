@@ -1,0 +1,4237 @@
+{
+  "chapter": 7,
+  "page_range": [
+    981,
+    1408
+  ],
+  "total_figures": 325,
+  "total_manual": 0,
+  "total_failed": 0,
+  "figures": {
+    "Figure 7-1": {
+      "page": 981,
+      "file": "fig_0981_1_tight.png",
+      "bbox": [
+        336,
+        714,
+        632,
+        840
+      ],
+      "caption": "PCI Express Root Complex Device Mapping",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/0f63bdedceba53356e6c94bb07d14b2bbcb0ee430384c796f587a9ebf9bdce6c.jpg"
+    },
+    "Figure 7-2": {
+      "page": 982,
+      "file": "fig_0982_1_tight.png",
+      "bbox": [
+        380,
+        93,
+        588,
+        237
+      ],
+      "caption": "PCI Express Switch Device Mapping 149 S",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/d958820e5bf818510428c4178854717c27d6eb88ed1128e5200739151f153440.jpg"
+    },
+    "Figure 7-3": {
+      "page": 983,
+      "file": "fig_0983_1_tight.png",
+      "bbox": [
+        86,
+        150,
+        877,
+        553
+      ],
+      "caption": "PCl Express Configuration Space Layout",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/bb1a21f01c918cebc38e38661c50d2b437a37ddd5668b81cddcb2f026df75d89.jpg"
+    },
+    "Figure 7-4": {
+      "page": 994,
+      "file": "fig_0994_1_tight.png",
+      "bbox": [
+        130,
+        113,
+        856,
+        621
+      ],
+      "caption": "Common Configuration Space Header",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/08cbe9b3ae81fa945696903f293eaae5832e9233796a165d3d0bec0a28ebdcd4.jpg"
+    },
+    "Figure 7-5": {
+      "page": 995,
+      "file": "fig_0995_1_tight.png",
+      "bbox": [
+        129,
+        540,
+        740,
+        803
+      ],
+      "caption": "Command Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/cbfc12975eff2b6471057ddea528c0701c20a80595ee183ede7f83a7f5918ede.jpg"
+    },
+    "Figure 7-6": {
+      "page": 998,
+      "file": "fig_0998_1_tight.png",
+      "bbox": [
+        132,
+        229,
+        748,
+        549
+      ],
+      "caption": "Status Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/384094c4796fce50787e50e686aaa5d96b69491d62145a498654038a5929e457.jpg"
+    },
+    "Figure 7-8": {
+      "page": 1002,
+      "file": "fig_1002_1_tight.png",
+      "bbox": [
+        73,
+        265,
+        892,
+        595
+      ],
+      "caption": "Header Type Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/d1bdca38b3be788557b46f65f90dc07eeb7cc74fe601383080c0318788840024.jpg"
+    },
+    "Figure 7-9": {
+      "page": 1003,
+      "file": "fig_1003_1_tight.png",
+      "bbox": [
+        73,
+        320,
+        892,
+        608
+      ],
+      "caption": "BIST Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/899560c55f753dfcd41324c35b249c31617d5262a7d7af1dddd87ce9ff8d1f90.jpg"
+    },
+    "Figure 7-10": {
+      "page": 1005,
+      "file": "fig_1005_1_tight.png",
+      "bbox": [
+        130,
+        194,
+        856,
+        703
+      ],
+      "caption": "Type 0 Configuration Space Header g",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/94e9c3a7f11ef66e1bf4ee5ed31e7472e36df831105e144cc51fa135355623a8.jpg"
+    },
+    "Figure 7-11": {
+      "page": 1006,
+      "file": "fig_1006_1_tight.png",
+      "bbox": [
+        122,
+        251,
+        805,
+        343
+      ],
+      "caption": "Base Address Register for Memory",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/61f66c9f2996de93e5e30654cc88211305118600ce927f0fccd1d0fcba0ee5fb.jpg"
+    },
+    "Figure 7-12": {
+      "page": 1006,
+      "file": "fig_1006_2_tight.png",
+      "bbox": [
+        124,
+        425,
+        795,
+        502
+      ],
+      "caption": "Base Address Register for I/0 g",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/56c0337e6c9b90b03b70eb4bd5b5f603344e0a01e8612ca8fbefd08bbb1cb5c7.jpg"
+    },
+    "Figure 7-13": {
+      "page": 1010,
+      "file": "fig_1010_1_tight.png",
+      "bbox": [
+        117,
+        308,
+        784,
+        391
+      ],
+      "caption": "Expansion ROM Base Address Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/3fe803144467312d4fc47d690fc11ec8461d6ca320ad17c5e18da9928ee717c2.jpg"
+    },
+    "Figure 7-14": {
+      "page": 1013,
+      "file": "fig_1013_1_tight.png",
+      "bbox": [
+        130,
+        113,
+        856,
+        621
+      ],
+      "caption": "Type 1 Configuration Space Header",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/bfcce7ca015de92bd1cce34a4de53f19dd1834d9aff2a0a467d218d39090aeec.jpg"
+    },
+    "Figure 7-15": {
+      "page": 1016,
+      "file": "fig_1016_1_tight.png",
+      "bbox": [
+        132,
+        116,
+        746,
+        357
+      ],
+      "caption": "Secondary Status Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/882bcf6e38e6cd1ccdd408b5805959cdd2bcb0b7a68de615180a3d87edc8c822.jpg"
+    },
+    "Figure 7-16": {
+      "page": 1019,
+      "file": "fig_1019_1_tight.png",
+      "bbox": [
+        129,
+        386,
+        738,
+        666
+      ],
+      "caption": "Bridge Control Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/f2c4e442466ebbc79225c61b2b6f0eda6c8e82283df69daff266df6c654c0f45.jpg"
+    },
+    "Figure 7-17": {
+      "page": 1021,
+      "file": "fig_1021_1_tight.png",
+      "bbox": [
+        132,
+        683,
+        856,
+        765
+      ],
+      "caption": "PCI Power Management Capability Structure",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/cd253df336ca5e3dc67f138f989706b91ddade5e186130fbe29435ba091edde6.jpg"
+    },
+    "Figure 7-18": {
+      "page": 1022,
+      "file": "fig_1022_1_tight.png",
+      "bbox": [
+        114,
+        262,
+        810,
+        428
+      ],
+      "caption": "Power Management Capabilities Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/039914a98429393dd433a13da3b7a95b49894a6a36c9e7fac118185ce3967d5d.jpg"
+    },
+    "Figure 7-19": {
+      "page": 1024,
+      "file": "fig_1024_1_tight.png",
+      "bbox": [
+        130,
+        550,
+        717,
+        751
+      ],
+      "caption": "Power Management Control/Status Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/d2d686e0ed606e8cb5ccb31018c6502b3a685f42d47da6d1d0303e28d114820d.jpg"
+    },
+    "Figure 7-20": {
+      "page": 1026,
+      "file": "fig_1026_1_tight.png",
+      "bbox": [
+        132,
+        410,
+        292,
+        457
+      ],
+      "caption": "Power Management Data RegisterS",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/c04e2e9c88965a756bee9df972c4a9b6106d339a64a714c9a3d2d77bbd66e97a.jpg"
+    },
+    "Figure 7-21": {
+      "page": 1028,
+      "file": "fig_1028_1_tight.png",
+      "bbox": [
+        377,
+        715,
+        591,
+        857
+      ],
+      "caption": "PCI Express Capability Structure",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/e31aaee536191ed5de07de9e973f09a3ad9c3f524c6ddc95b41b335e76b18085.jpg"
+    },
+    "Figure 7-22": {
+      "page": 1029,
+      "file": "fig_1029_1_tight.png",
+      "bbox": [
+        130,
+        228,
+        620,
+        319
+      ],
+      "caption": "PCI Express Capability List Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/b4df1baf560ef68998ef7befe8741b231cabf164a868096d57cc7a49364e8edf.jpg"
+    },
+    "Figure 7-23": {
+      "page": 1029,
+      "file": "fig_1029_2_tight.png",
+      "bbox": [
+        130,
+        674,
+        651,
+        840
+      ],
+      "caption": "PCI Express Capabilities Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/4b7a27a71c2a97fb4b1dc5c756a3bb15d8e06068bb0ccc0b87df08c8f59a66d2.jpg"
+    },
+    "Figure 7-24": {
+      "page": 1031,
+      "file": "fig_1031_1_tight.png",
+      "bbox": [
+        117,
+        445,
+        789,
+        702
+      ],
+      "caption": "Device Capabilities Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/a53d32d59ad2fc7733d5f65759d92c6f80667ed738937a2ea6d7a0fa4f0533ec.jpg"
+    },
+    "Figure 7-25": {
+      "page": 1035,
+      "file": "fig_1035_1_tight.png",
+      "bbox": [
+        73,
+        674,
+        892,
+        861
+      ],
+      "caption": "Device Control Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/ebc6e700489700a905d2e6d37fe4510bf31ac0b595c36a5fa0760ee99fafc020.jpg"
+    },
+    "Figure 7-26": {
+      "page": 1042,
+      "file": "fig_1042_1_tight.png",
+      "bbox": [
+        130,
+        400,
+        735,
+        584
+      ],
+      "caption": "Device Status Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/a4ffcbeb0eebd08d66016777ba8fa01e143c3d0f0b85d1b7aa46ed1d55937d2d.jpg"
+    },
+    "Figure 7-27": {
+      "page": 1044,
+      "file": "fig_1044_1_tight.png",
+      "bbox": [
+        111,
+        108,
+        767,
+        284
+      ],
+      "caption": "Link Capabilities Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/9a864f7b5d15cc815f50d9a519a8eebcb89e356fa80f17f8abd0b65323bf2b13.jpg"
+    },
+    "Figure 7-28": {
+      "page": 1048,
+      "file": "fig_1048_1_tight.png",
+      "bbox": [
+        125,
+        114,
+        748,
+        396
+      ],
+      "caption": "Link Control Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/ec159220e3cf24fd46b2c6d77a31e0c1c24d8572cf653716d579c70f7dd2d29b.jpg"
+    },
+    "Figure 7-29": {
+      "page": 1055,
+      "file": "fig_1055_1_tight.png",
+      "bbox": [
+        133,
+        116,
+        720,
+        319
+      ],
+      "caption": "Link Status Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/6f555885d7b98c19869127cb1a5b8ec5ae9ba3fc0b941c26907c8424b57de3e9.jpg"
+    },
+    "Figure 7-30": {
+      "page": 1057,
+      "file": "fig_1057_1_tight.png",
+      "bbox": [
+        114,
+        458,
+        782,
+        652
+      ],
+      "caption": "Slot Capabilities Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/77d558a68bad1a4f81eb64a3056b5d5af5482acb37dec54e65af60b79c9ccf8f.jpg"
+    },
+    "Figure 7-31": {
+      "page": 1060,
+      "file": "fig_1060_1_tight.png",
+      "bbox": [
+        132,
+        116,
+        740,
+        431
+      ],
+      "caption": "Slot Control Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/eef1a5b4b8a2ff4972c174392ada4e504f969f24c88689e9812f67baa6fe58a1.jpg"
+    },
+    "Figure 7-32": {
+      "page": 1063,
+      "file": "fig_1063_1_tight.png",
+      "bbox": [
+        130,
+        116,
+        710,
+        339
+      ],
+      "caption": "Slot Status Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/9cfcd715f3e4c07ea2c2a82936d5e3bc8c33ab92f4b2e6cd9bd5353b077fa244.jpg"
+    },
+    "Figure 7-33": {
+      "page": 1065,
+      "file": "fig_1065_1_tight.png",
+      "bbox": [
+        127,
+        114,
+        736,
+        271
+      ],
+      "caption": "Root Control Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/830e78881d2306f13d424ffba01bd659e82ad2c3513c954d151d16f9a22e6e96.jpg"
+    },
+    "Figure 7-35": {
+      "page": 1067,
+      "file": "fig_1067_1_tight.png",
+      "bbox": [
+        129,
+        114,
+        812,
+        200
+      ],
+      "caption": "Root Status Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/29d4ee738107d34220b610d63eb5e6644d168563b3ba40762c672b0a7931b5c2.jpg"
+    },
+    "Figure 7-36": {
+      "page": 1068,
+      "file": "fig_1068_1_tight.png",
+      "bbox": [
+        112,
+        142,
+        776,
+        469
+      ],
+      "caption": "Device Capabilities 2 Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/bad2c57e5b6ec0e54954da4d6ae8b6c8a2116c3d953019a27b5f2528ec557d2a.jpg"
+    },
+    "Figure 7-37": {
+      "page": 1073,
+      "file": "fig_1073_1_tight.png",
+      "bbox": [
+        132,
+        347,
+        732,
+        627
+      ],
+      "caption": "Device Control 2 Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/261528e00a460a32a81cc65d32bad3ff617d4d2608426d97ece4fa28855d0191.jpg"
+    },
+    "Figure 7-38": {
+      "page": 1077,
+      "file": "fig_1077_1_tight.png",
+      "bbox": [
+        111,
+        151,
+        785,
+        286
+      ],
+      "caption": "Link Capabilities 2 Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/f5ab2f9338fe139b07f530d7305164b7b4a2a0e3e0add262638e37f9c246301c.jpg"
+    },
+    "Figure 7-40": {
+      "page": 1083,
+      "file": "fig_1083_1_tight.png",
+      "bbox": [
+        130,
+        345,
+        743,
+        642
+      ],
+      "caption": "Link Status 2 Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/51afa8e78ee6a61f8f1b7b5002947032cfb3b5fb0f3d8f5a335b563dd5b6a3c6.jpg"
+    },
+    "Figure 7-41": {
+      "page": 1086,
+      "file": "fig_1086_1_tight.png",
+      "bbox": [
+        119,
+        659,
+        795,
+        715
+      ],
+      "caption": "Slot Capabilities 2 Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/2430a70aa6672cf75a88ec75c73cead48e81b46e78f6cf8ba728dca238ce67cb.jpg"
+    },
+    "Figure 7-42": {
+      "page": 1087,
+      "file": "fig_1087_1_tight.png",
+      "bbox": [
+        299,
+        508,
+        665,
+        635
+      ],
+      "caption": "PCI Express Extended Configuration Space Layout",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/a42d7877223c68e85286533eb1fd129be6ca3664fac5c1c2f41d8460aaf8bfb4.jpg"
+    },
+    "Figure 7-43": {
+      "page": 1088,
+      "file": "fig_1088_1_tight.png",
+      "bbox": [
+        116,
+        226,
+        779,
+        294
+      ],
+      "caption": "PCI Express Extended Capability Header",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/efcaff63860e2a369fbd48148a94156637eb555e823999367ee23558d9f06575.jpg"
+    },
+    "Figure 7-44": {
+      "page": 1089,
+      "file": "fig_1089_1_tight.png",
+      "bbox": [
+        132,
+        196,
+        856,
+        308
+      ],
+      "caption": "MSI Capability Structure for 32-bit Message Address",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/c8126daeae7c5177b4e56a1aefb371a84c4ae99f25c12e74dc70dba64f13070f.jpg"
+    },
+    "Figure 7-45": {
+      "page": 1089,
+      "file": "fig_1089_2_tight.png",
+      "bbox": [
+        132,
+        395,
+        856,
+        537
+      ],
+      "caption": "MSI Capability Structure for 64-bit Message Address",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/d76f4fe1b7ef02dba22e7f826fb75559d1ca3920b81cba3b7223b976aa46e2ce.jpg"
+    },
+    "Figure 7-46": {
+      "page": 1089,
+      "file": "fig_1089_3_tight.png",
+      "bbox": [
+        132,
+        625,
+        857,
+        797
+      ],
+      "caption": "MSI Capability Structure for 32-bit Message Address and PVM5",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/6fe4cdd1302661f37cc518000566441a3a3e944d340548eb265ef0da4b936003.jpg"
+    },
+    "Figure 7-48": {
+      "page": 1090,
+      "file": "fig_1090_1_tight.png",
+      "bbox": [
+        129,
+        727,
+        622,
+        816
+      ],
+      "caption": "MSI Capability Header",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/1a6a1ccacd0c4d5ad19237777cdca1992caac42599bcfc63f49ebf523da24f1b.jpg"
+    },
+    "Figure 7-49": {
+      "page": 1091,
+      "file": "fig_1091_1_tight.png",
+      "bbox": [
+        130,
+        382,
+        691,
+        565
+      ],
+      "caption": "Message Control Register for MSI",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/b3935035245602fb3e3320ea5de96beb93a62314da1a69ef585a78becf9e5fa3.jpg"
+    },
+    "Figure 7-50": {
+      "page": 1093,
+      "file": "fig_1093_1_tight.png",
+      "bbox": [
+        127,
+        160,
+        785,
+        226
+      ],
+      "caption": "Message Address Register for MSI",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/d615c4279cf6cd683c6007fd128480e0b8c67d8eea6066c6b305ffef1b65e96e.jpg"
+    },
+    "Figure 7-51": {
+      "page": 1093,
+      "file": "fig_1093_2_tight.png",
+      "bbox": [
+        129,
+        540,
+        722,
+        584
+      ],
+      "caption": "Message Upper Address Register for MSI",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/f7eb87b822664a598966bba1b8e21eab26f7bd73474f15fa3da93444a4144a4d.jpg"
+    },
+    "Figure 7-52": {
+      "page": 1094,
+      "file": "fig_1094_1_tight.png",
+      "bbox": [
+        132,
+        162,
+        450,
+        209
+      ],
+      "caption": "Message Data Register for MSl",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/a20411acd49ed98be1125472c034cc73572759f9735a235f1abb77f8a18a2281.jpg"
+    },
+    "Figure 7-53": {
+      "page": 1094,
+      "file": "fig_1094_2_tight.png",
+      "bbox": [
+        132,
+        626,
+        450,
+        672
+      ],
+      "caption": "Extended Message Data Register for MSl",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/cf114e207d07f0cf85dd4ccd425277996998aaa4d9ce8beaf05265cb2eaf79e0.jpg"
+    },
+    "Figure 7-54": {
+      "page": 1095,
+      "file": "fig_1095_1_tight.png",
+      "bbox": [
+        127,
+        450,
+        722,
+        496
+      ],
+      "caption": "Mask Bits Register for MSI",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/65254f64a04a572c8364c264bfbb68530bbf735d99d7a7bc46bea22bfdcb3eaf.jpg"
+    },
+    "Figure 7-55": {
+      "page": 1096,
+      "file": "fig_1096_1_tight.png",
+      "bbox": [
+        127,
+        117,
+        722,
+        161
+      ],
+      "caption": "Pending Bits Register for MSI",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/3d1dac411405ec39a9d10d6a0a8d7e1d67e3b8f6178fd3f4b8d30eb7d2a8a418.jpg"
+    },
+    "Figure 7-56": {
+      "page": 1096,
+      "file": "fig_1096_2_tight.png",
+      "bbox": [
+        132,
+        712,
+        857,
+        824
+      ],
+      "caption": "MSI-X Capability Structure",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/47cfdd9c763ec2fd4086ea0bb816c7b5fbffeae5833427362632067aa7be2def.jpg"
+    },
+    "Figure 7-57": {
+      "page": 1097,
+      "file": "fig_1097_1_tight.png",
+      "bbox": [
+        130,
+        113,
+        857,
+        530
+      ],
+      "caption": "MSl-X Table Structure",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/9fbe1befc22ae85ede964561307100dbbf0307572c009b33fe6febd5cd679e4d.jpg"
+    },
+    "Figure 7-58": {
+      "page": 1097,
+      "file": "fig_1097_2_tight.png",
+      "bbox": [
+        75,
+        595,
+        893,
+        736
+      ],
+      "caption": "MSI-X PBA Structure",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/90925231da9fb109b5bc196c74be854b8e97acf291a01ff12938fa9901ed1bdd.jpg"
+    },
+    "Figure 7-59": {
+      "page": 1099,
+      "file": "fig_1099_1_tight.png",
+      "bbox": [
+        129,
+        690,
+        622,
+        780
+      ],
+      "caption": "MSI-X Capability Header",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/7456e608b2ad16079b81d34beb624040b36efe805e707aaf1ea914d573ea0e2c.jpg"
+    },
+    "Figure 7-61": {
+      "page": 1101,
+      "file": "fig_1101_1_tight.png",
+      "bbox": [
+        127,
+        160,
+        787,
+        227
+      ],
+      "caption": "Table Offset/Table BIR Register for MSI-X",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/e8674a05d5a6e85e40ff25d0ad6138961b4f891c067093d7025710bd4165f127.jpg"
+    },
+    "Figure 7-62": {
+      "page": 1101,
+      "file": "fig_1101_2_tight.png",
+      "bbox": [
+        127,
+        773,
+        777,
+        839
+      ],
+      "caption": "PBA Offset/PBA BIR Register for MSI-X",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/57ad6f36c3a58b8e5aea8e435d04dfbddb0d38339decb3e2209f6fdfa81fbbf3.jpg"
+    },
+    "Figure 7-63": {
+      "page": 1102,
+      "file": "fig_1102_1_tight.png",
+      "bbox": [
+        73,
+        511,
+        892,
+        722
+      ],
+      "caption": "Message Address Register for MSl-X Table Entries",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/79f385be537522c81829d6f91d54fe3874bebbbe9719ec3b0117801dce2dcaca.jpg"
+    },
+    "Figure 7-67": {
+      "page": 1104,
+      "file": "fig_1104_1_tight.png",
+      "bbox": [
+        104,
+        794,
+        772,
+        821
+      ],
+      "caption": "Pending Bits Register for MSI-X PBA Entries",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/8a4717256052a7862cc98a36f88a23db22215317779b585d9f89acdbd1dce52e.jpg"
+    },
+    "Figure 7-69": {
+      "page": 1107,
+      "file": "fig_1107_1_tight.png",
+      "bbox": [
+        116,
+        154,
+        779,
+        222
+      ],
+      "caption": "Secondary PCI Express Extended Capability Header",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/b223e2a5598b34bd62aba500d20b8b0bbb820ecc643bdc52b8be943a12cc6f70.jpg"
+    },
+    "Figure 7-70": {
+      "page": 1107,
+      "file": "fig_1107_2_tight.png",
+      "bbox": [
+        114,
+        578,
+        771,
+        656
+      ],
+      "caption": "Link Control 3 Register S",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/01e84c2d48f6f05108394041c8463d6a3c455750bae86bd5c9c52620bed2a548.jpg"
+    },
+    "Figure 7-71": {
+      "page": 1108,
+      "file": "fig_1108_1_tight.png",
+      "bbox": [
+        129,
+        728,
+        722,
+        773
+      ],
+      "caption": "Lane Error Status Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/b52fa0200314a7043f977a92036dc47886febc3164f07bdcb5619847f6d52794.jpg"
+    },
+    "Figure 7-72": {
+      "page": 1109,
+      "file": "fig_1109_1_tight.png",
+      "bbox": [
+        338,
+        434,
+        635,
+        515
+      ],
+      "caption": "Lane Equalization Control Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/abb27da272d5686d034293c101f3cdad3c0af9889523a1e763d3a7a51944a42c.jpg"
+    },
+    "Figure 7-73": {
+      "page": 1109,
+      "file": "fig_1109_2_tight.png",
+      "bbox": [
+        129,
+        588,
+        745,
+        742
+      ],
+      "caption": "Lane Equalization Control Register Entry",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/21711749df3d4a8b6d241a614149e89e7bf69b31ef5a22a36b906df679438c7e.jpg"
+    },
+    "Figure 7-74": {
+      "page": 1112,
+      "file": "fig_1112_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        856,
+        226
+      ],
+      "caption": "Data Link Feature Extended Capability",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/32b5b5313345a30ec78fd40bd476a14fec3d94cea3c2f4781ce2693418e10573.jpg"
+    },
+    "Figure 7-75": {
+      "page": 1112,
+      "file": "fig_1112_2_tight.png",
+      "bbox": [
+        116,
+        412,
+        777,
+        479
+      ],
+      "caption": "Data Link Feature Extended Capability Header",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/a8280aa2f20fe363049db5c9549c7d44783214c925eef3d304135aadf5432ca0.jpg"
+    },
+    "Figure 7-77": {
+      "page": 1114,
+      "file": "fig_1114_1_tight.png",
+      "bbox": [
+        73,
+        638,
+        892,
+        882
+      ],
+      "caption": "Data Link Feature Status Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/0132d706d107a8d3d4a65ffa27f8e67d2922ea444b01f1e58f17bf636b2f0ee6.jpg"
+    },
+    "Figure 7-78": {
+      "page": 1116,
+      "file": "fig_1116_1_tight.png",
+      "bbox": [
+        130,
+        210,
+        857,
+        718
+      ],
+      "caption": "Physical Layer 16.0 GT/s Extended Capability",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/f4a0b94dcb47640c9bc76c999c7328a90178ace7430a2b710e71e4928a85ce1c.jpg"
+    },
+    "Figure 7-79": {
+      "page": 1117,
+      "file": "fig_1117_1_tight.png",
+      "bbox": [
+        116,
+        154,
+        779,
+        222
+      ],
+      "caption": "Physical Layer 16.0 GT/s Extended Capability Header S",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/533fa2e3519b196292135637f5ef1ae24b6b7901fe560bc2e3a16f3c794e24f7.jpg"
+    },
+    "Figure 7-80": {
+      "page": 1117,
+      "file": "fig_1117_2_tight.png",
+      "bbox": [
+        129,
+        636,
+        722,
+        681
+      ],
+      "caption": "16.0 GT/s Capabilities Register g",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/4cdc89bf9771ab977a949de317692e90af2758919a51bf20282991ab4021d23d.jpg"
+    },
+    "Figure 7-81": {
+      "page": 1118,
+      "file": "fig_1118_1_tight.png",
+      "bbox": [
+        127,
+        161,
+        722,
+        205
+      ],
+      "caption": "16.0 GT/s Control Register S",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/eb9ca3d71a1ddd0cdd24fa10acffd10fdfe63d64f34ac02ece4f53cbbe0b3149.jpg"
+    },
+    "Figure 7-82": {
+      "page": 1118,
+      "file": "fig_1118_2_tight.png",
+      "bbox": [
+        112,
+        433,
+        769,
+        537
+      ],
+      "caption": "16.0 GT/s Status Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/4d4028786c508295d9282b417c86d51f9c094c6c644af1b5ad52b64b8b3d9d96.jpg"
+    },
+    "Figure 7-84": {
+      "page": 1120,
+      "file": "fig_1120_1_tight.png",
+      "bbox": [
+        127,
+        286,
+        722,
+        332
+      ],
+      "caption": "16.0 GT/s First Retimer Data Parity Mismatch Status Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/20f39a7f505e81fd2b7091e8e8d37333b86835bb53f0204bc9481ae542abc7d6.jpg"
+    },
+    "Figure 7-85": {
+      "page": 1120,
+      "file": "fig_1120_2_tight.png",
+      "bbox": [
+        129,
+        792,
+        722,
+        838
+      ],
+      "caption": "16.0 GT/s Second Retimer Data Parity Mismatch Status Register S",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/43b004142c18bdcaa396f72d78812dab7f1e37ba0d9df22766d7302c181bcb36.jpg"
+    },
+    "Figure 7-86": {
+      "page": 1121,
+      "file": "fig_1121_1_tight.png",
+      "bbox": [
+        129,
+        568,
+        637,
+        656
+      ],
+      "caption": "16.0 GT/s Lane Equalization Control Register Entry",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/6a9c9362d455a10ec65d06e53021d856e28d1de45aa4e8a13706316d11d4d8ae.jpg"
+    },
+    "Figure 7-87": {
+      "page": 1123,
+      "file": "fig_1123_1_tight.png",
+      "bbox": [
+        130,
+        309,
+        857,
+        815
+      ],
+      "caption": "Physical Layer 32.0 GT/s Extended Capability",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/7f223563953167fb21c7cf52d1212c1a30d27972a77cbe5181902f5f44f95cc7.jpg"
+    },
+    "Figure 7-88": {
+      "page": 1124,
+      "file": "fig_1124_1_tight.png",
+      "bbox": [
+        116,
+        154,
+        777,
+        222
+      ],
+      "caption": "Physical Layer 32.0 GT/s Extended Capability Header S",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/37d8b85f2f85564449314b50292237c65c7934af5bccebf8893743dcdd7c1e39.jpg"
+    },
+    "Figure 7-89": {
+      "page": 1124,
+      "file": "fig_1124_2_tight.png",
+      "bbox": [
+        107,
+        626,
+        767,
+        729
+      ],
+      "caption": "32.0 GT/s Capabilities Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/17d23ad2174cf0c5bc973ba6f5421f0f295b4234014e851b205afb4bddb08d9c.jpg"
+    },
+    "Figure 7-90": {
+      "page": 1125,
+      "file": "fig_1125_1_tight.png",
+      "bbox": [
+        111,
+        409,
+        767,
+        484
+      ],
+      "caption": "32.0 GT/s Control Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/3ab2b40c0013e259a7dc21e1df20cab6d0f20377b9bc0a3042e72bcbb2fb8792.jpg"
+    },
+    "Figure 7-91": {
+      "page": 1126,
+      "file": "fig_1126_1_tight.png",
+      "bbox": [
+        112,
+        246,
+        772,
+        416
+      ],
+      "caption": "32.0 GT/s Status Register",
+      "pdf_chunk": "chunk_05_pages_927-1126.pdf",
+      "mineru_image": "images/babc330a1d0fcfe671f50132dcbb898e6d2349e9858cdaae11e5a77f1e8a2106.jpg"
+    },
+    "Figure 7-92": {
+      "page": 1128,
+      "file": "fig_1128_1_tight.png",
+      "bbox": [
+        116,
+        109,
+        782,
+        179
+      ],
+      "caption": "Received Modified TS Data 1 Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/321bb2ac25911bbc4e6d2b5d7eb0f8b717eb4233ccdd52864a396f02d6ef7b01.jpg"
+    },
+    "Figure 7-94": {
+      "page": 1130,
+      "file": "fig_1130_1_tight.png",
+      "bbox": [
+        114,
+        108,
+        779,
+        189
+      ],
+      "caption": "Transmitted Modified TS Data 1 Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/51a8d1a9a2ebf6e8d70bd6f17ad238bb8d4294929cd7e586bf7cd27edcb62255.jpg"
+    },
+    "Figure 7-98": {
+      "page": 1134,
+      "file": "fig_1134_1_tight.png",
+      "bbox": [
+        116,
+        154,
+        779,
+        222
+      ],
+      "caption": "Physical Layer 64.0 GT/s Extended Capability Header S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/30a24fb3e641c3472f4accaec4bdd3567b6810a20a6ebda83d9d3641d886f11d.jpg"
+    },
+    "Figure 7-99": {
+      "page": 1134,
+      "file": "fig_1134_2_tight.png",
+      "bbox": [
+        129,
+        636,
+        722,
+        681
+      ],
+      "caption": "64.0 GT/s Capabilities Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/991bf77f993c3b237f481988ca0b575a5ccead012634e67f762e38a171153a37.jpg"
+    },
+    "Figure 7-100": {
+      "page": 1135,
+      "file": "fig_1135_1_tight.png",
+      "bbox": [
+        127,
+        161,
+        722,
+        205
+      ],
+      "caption": "64.0 GT/s Control RegisterS",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/d22af2b51f1ecba2be2c06dfc3050fa4f109169c9683d491488298906a35ae51.jpg"
+    },
+    "Figure 7-103": {
+      "page": 1138,
+      "file": "fig_1138_1_tight.png",
+      "bbox": [
+        130,
+        279,
+        856,
+        756
+      ],
+      "caption": "Flit Logging Extended Capability Structure",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/4bbc8047cf2c66cb5566b897baa49d9f5a7ea742a5e8ef7af3cddb1910863eb8.jpg"
+    },
+    "Figure 7-104": {
+      "page": 1139,
+      "file": "fig_1139_1_tight.png",
+      "bbox": [
+        116,
+        109,
+        772,
+        179
+      ],
+      "caption": "Flit Logging Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/0b5047f1726332905b83db6731c2c607bac39ef68126278d9062c64bc8b05ae8.jpg"
+    },
+    "Figure 7-105": {
+      "page": 1139,
+      "file": "fig_1139_2_tight.png",
+      "bbox": [
+        109,
+        681,
+        746,
+        827
+      ],
+      "caption": "Flit Error Log 1 Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/aeff076fc05925ccb4111c1e83afbf40432c0afadaa1a2ae3b5055f5cf2d4586.jpg"
+    },
+    "Figure 7-106": {
+      "page": 1141,
+      "file": "fig_1141_1_tight.png",
+      "bbox": [
+        117,
+        645,
+        790,
+        743
+      ],
+      "caption": "Flit Error Log 2 Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/5994bed437fbe4a055efba9b007454542a5c5344aeee1b8b8d32746b67f5ed7f.jpg"
+    },
+    "Figure 7-107": {
+      "page": 1142,
+      "file": "fig_1142_1_tight.png",
+      "bbox": [
+        130,
+        392,
+        705,
+        520
+      ],
+      "caption": "Flit Error Counter Control Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/5bc246d19efabda626a1ac7cd76d63192c3ea5ebb06eb26701c2c4ad7f198eeb.jpg"
+    },
+    "Figure 7-108": {
+      "page": 1143,
+      "file": "fig_1143_1_tight.png",
+      "bbox": [
+        124,
+        333,
+        746,
+        430
+      ],
+      "caption": "Flit Error Counter Status Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/1d3dc40f34065ccd83e1a604843e2a351987be1ed3bcca4cd29be256206dbe75.jpg"
+    },
+    "Figure 7-109": {
+      "page": 1144,
+      "file": "fig_1144_1_tight.png",
+      "bbox": [
+        114,
+        450,
+        772,
+        545
+      ],
+      "caption": "FBER Measurement Control Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/9812f111f29f17987df0d4d2ed6bb7689249018e6bf2d79550fea29a9059a177.jpg"
+    },
+    "Figure 7-110": {
+      "page": 1145,
+      "file": "fig_1145_1_tight.png",
+      "bbox": [
+        127,
+        438,
+        722,
+        482
+      ],
+      "caption": "FBER Measurement Status 1 Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/e5ee798b0d6b16ae1d23ec5b020fb9891c54f0a5e27b0a338cd24b500f88faaa.jpg"
+    },
+    "Figure 7-111": {
+      "page": 1145,
+      "file": "fig_1145_2_tight.png",
+      "bbox": [
+        129,
+        755,
+        722,
+        800
+      ],
+      "caption": "FBER Measurement Status 2 RegisterS",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/c1ff37e47d1da2723d010bd139b40ffd84b0e41df798c75134d7120e03a79c3d.jpg"
+    },
+    "Figure 7-116": {
+      "page": 1147,
+      "file": "fig_1147_1_tight.png",
+      "bbox": [
+        127,
+        773,
+        722,
+        819
+      ],
+      "caption": "FBER Measurement Status 7 RegisterS",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/f977c0a5fc96a3e6a28fd29d2988b36218bfccd9918e840aa9eb11fc4541d8e6.jpg"
+    },
+    "Figure 7-118": {
+      "page": 1148,
+      "file": "fig_1148_1_tight.png",
+      "bbox": [
+        127,
+        577,
+        722,
+        622
+      ],
+      "caption": "FBER Measurement Status 9 Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/7a92a8d5873c9743376542f111e24815aa8ced650e5f626f49daa97c1ec5ff0d.jpg"
+    },
+    "Figure 7-120": {
+      "page": 1149,
+      "file": "fig_1149_1_tight.png",
+      "bbox": [
+        132,
+        560,
+        857,
+        704
+      ],
+      "caption": "Device 3 Extended Capability Structure",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/ab1527d5f17275b3566a10cbb388b205cda6dd3b9fdbad777045f0a26e3c9489.jpg"
+    },
+    "Figure 7-121": {
+      "page": 1150,
+      "file": "fig_1150_1_tight.png",
+      "bbox": [
+        117,
+        109,
+        781,
+        180
+      ],
+      "caption": "Device 3 Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/5552c6e5cabebfac29cc19a9211fa8a0426417d321d0a7081bad47f4b3a020da.jpg"
+    },
+    "Figure 7-122": {
+      "page": 1150,
+      "file": "fig_1150_2_tight.png",
+      "bbox": [
+        117,
+        570,
+        805,
+        727
+      ],
+      "caption": "Device Capabilities 3 RegisterS",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/c234a53093085257af1c7d26a40e478c7270b3df587a592c36459ed695f306f2.jpg"
+    },
+    "Figure 7-123": {
+      "page": 1153,
+      "file": "fig_1153_1_tight.png",
+      "bbox": [
+        116,
+        109,
+        794,
+        251
+      ],
+      "caption": "Device Control 3 Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/780e983296e930052b55f6beca23a30d547520b885d62c93cbf1e9aac03fe191.jpg"
+    },
+    "Figure 7-124": {
+      "page": 1155,
+      "file": "fig_1155_1_tight.png",
+      "bbox": [
+        122,
+        113,
+        812,
+        207
+      ],
+      "caption": "Device Status 3 Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/b88bf7a4dbeaf969a37ac0ecddd1cc75d7e40b874af894f0b92fa1e068ec7997.jpg"
+    },
+    "Figure 7-126": {
+      "page": 1158,
+      "file": "fig_1158_1_tight.png",
+      "bbox": [
+        116,
+        208,
+        777,
+        277
+      ],
+      "caption": "Lane Margining at the Receiver Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/9881e4e85e1118e518faf5929a01fcc8ac67e240829c1e4cc5b13bbf375ddc3a.jpg"
+    },
+    "Figure 7-127": {
+      "page": 1158,
+      "file": "fig_1158_2_tight.png",
+      "bbox": [
+        132,
+        689,
+        679,
+        761
+      ],
+      "caption": "Margining Port Capabilities Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/6bd2fb9b8e79c7544592126723c5cfd1690592056251adc1a5ea4267969f9983.jpg"
+    },
+    "Figure 7-128": {
+      "page": 1159,
+      "file": "fig_1159_1_tight.png",
+      "bbox": [
+        130,
+        241,
+        645,
+        333
+      ],
+      "caption": "Margining Port Status Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/2c1f3543f17b8643dbc0fe6229ffaecbe760d53ac834816429e22361221d7bb2.jpg"
+    },
+    "Figure 7-129": {
+      "page": 1160,
+      "file": "fig_1160_1_tight.png",
+      "bbox": [
+        130,
+        116,
+        578,
+        242
+      ],
+      "caption": "Lane N: Margining Control Register Entry",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/74c09e9a8821a72536e1f7917c47803d6dd09d1012e21335eee3c29b1d5f7594.jpg"
+    },
+    "Figure 7-130": {
+      "page": 1161,
+      "file": "fig_1161_1_tight.png",
+      "bbox": [
+        129,
+        116,
+        629,
+        263
+      ],
+      "caption": "Lane N: Margining Lane Status Register Entry",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/b89ebdcd5db5d995896873180fbcadc108624fbbfd624d1fbc20bf2097003615.jpg"
+    },
+    "Figure 7-131": {
+      "page": 1162,
+      "file": "fig_1162_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        856,
+        256
+      ],
+      "caption": "ACS Extended Capability",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/709700195a4c12a96698f4e3eadd436650e425592494302e70e465d65b5e7e32.jpg"
+    },
+    "Figure 7-132": {
+      "page": 1162,
+      "file": "fig_1162_2_tight.png",
+      "bbox": [
+        116,
+        390,
+        779,
+        459
+      ],
+      "caption": "ACS Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/21e6479d426bd78b5a5bd01b57c0373d3a74fb0388c31d9435b04cfd1a3f5344.jpg"
+    },
+    "Figure 7-134": {
+      "page": 1164,
+      "file": "fig_1164_1_tight.png",
+      "bbox": [
+        130,
+        435,
+        756,
+        696
+      ],
+      "caption": "ACS Control Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/ce415d28a1be208009efeffaef6802cde33c65d19c9ed7bfaa8cfd83ebbf6cfc.jpg"
+    },
+    "Figure 7-135": {
+      "page": 1167,
+      "file": "fig_1167_1_tight.png",
+      "bbox": [
+        127,
+        433,
+        722,
+        478
+      ],
+      "caption": "Egress Control Vector Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/cac7b5b7931727a947804d9874908c884eb5dc9bd83f7dd9598423366fe5669d.jpg"
+    },
+    "Figure 7-136": {
+      "page": 1168,
+      "file": "fig_1168_1_tight.png",
+      "bbox": [
+        130,
+        606,
+        856,
+        750
+      ],
+      "caption": "Power Budgeting Extended Capability",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/2a88d01dbab3e5893006035ec8aa78073dc5300fbe104519cb1cb900f3c6f04e.jpg"
+    },
+    "Figure 7-137": {
+      "page": 1169,
+      "file": "fig_1169_1_tight.png",
+      "bbox": [
+        116,
+        109,
+        779,
+        179
+      ],
+      "caption": "Power Budgeting Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/ef57ecf3f34510398b75d127a07450f92cb42213e8499f64b9d5e1c89e8a1385.jpg"
+    },
+    "Figure 7-138": {
+      "page": 1170,
+      "file": "fig_1170_1_tight.png",
+      "bbox": [
+        130,
+        116,
+        733,
+        263
+      ],
+      "caption": "Power Budgeting Control Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/bd57043b3cf011b8ca394ca661fe667d6870aa7f05d13b60776686f97bbe48fe.jpg"
+    },
+    "Figure 7-139": {
+      "page": 1172,
+      "file": "fig_1172_1_tight.png",
+      "bbox": [
+        119,
+        109,
+        795,
+        265
+      ],
+      "caption": "Power Budgeting Data Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/118f8870898a5eba3cbb4709e759411c0c15c01d843b4150884beee42b9ef701.jpg"
+    },
+    "Figure 7-141": {
+      "page": 1178,
+      "file": "fig_1178_1_tight.png",
+      "bbox": [
+        127,
+        114,
+        795,
+        301
+      ],
+      "caption": "Power Budgeting Sense Detect Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/e68795d9fff87db67c4e78ccbd5a23619c16316d2a6e306c4b746e36b9d52480.jpg"
+    },
+    "Figure 7-142": {
+      "page": 1181,
+      "file": "fig_1181_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        857,
+        195
+      ],
+      "caption": "LTR Extended Capability Structure",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/bba1169007f390aab6453da383e61d221e48f82d3bee8338d62a9d4e2bda13a8.jpg"
+    },
+    "Figure 7-143": {
+      "page": 1181,
+      "file": "fig_1181_2_tight.png",
+      "bbox": [
+        116,
+        329,
+        779,
+        398
+      ],
+      "caption": "LTR Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/ce30c4996e68d8e3d7bf0750454847a8cb98cf1fd29545d79b9143343f196e9c.jpg"
+    },
+    "Figure 7-144": {
+      "page": 1181,
+      "file": "fig_1181_3_tight.png",
+      "bbox": [
+        130,
+        763,
+        635,
+        852
+      ],
+      "caption": "Max Snoop Latency Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/b46fcf4b53841c1c969d821450ae590b9b5315ffbeb657b973deabc0052a0d96.jpg"
+    },
+    "Figure 7-146": {
+      "page": 1183,
+      "file": "fig_1183_1_tight.png",
+      "bbox": [
+        130,
+        170,
+        857,
+        343
+      ],
+      "caption": "L1 PM Substates Extended Capability",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/be034515189714ef29b404af97060e8c88c7ec661b80d03395555e194e157dbf.jpg"
+    },
+    "Figure 7-147": {
+      "page": 1183,
+      "file": "fig_1183_2_tight.png",
+      "bbox": [
+        114,
+        478,
+        779,
+        546
+      ],
+      "caption": "L1 PM Substates Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/94dead0e4d43a2e723514c66864601e9228d9d019c5dc29e795051a2b7be6ec6.jpg"
+    },
+    "Figure 7-148": {
+      "page": 1184,
+      "file": "fig_1184_1_tight.png",
+      "bbox": [
+        117,
+        155,
+        821,
+        358
+      ],
+      "caption": "L1 PM Substates Capabilities Register g",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/9ed7bd4f3b89243286c0fd9780cbbaae2c7ba8efcba1e0bf2bc0c9fc5843f4f4.jpg"
+    },
+    "Figure 7-149": {
+      "page": 1185,
+      "file": "fig_1185_1_tight.png",
+      "bbox": [
+        116,
+        405,
+        776,
+        587
+      ],
+      "caption": "L1 PM Substates Control 1 Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/dc508081e3410a27da7e83cfbe880e1be3a094773ed813fe222248677dfc4e13.jpg"
+    },
+    "Figure 7-150": {
+      "page": 1187,
+      "file": "fig_1187_1_tight.png",
+      "bbox": [
+        125,
+        319,
+        826,
+        416
+      ],
+      "caption": "L1 PM Substates Control 2 Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/613a660bb52ccd4e5140200f59ea25bd420b84451da1bff36da4282702441e8c.jpg"
+    },
+    "Figure 7-151": {
+      "page": 1188,
+      "file": "fig_1188_1_tight.png",
+      "bbox": [
+        122,
+        209,
+        787,
+        268
+      ],
+      "caption": "L1 PM Substates Status Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/e108793cc95a313ebe734f1696cccb61dbc30d3aa976210edca5db8a999ae409.jpg"
+    },
+    "Figure 7-152": {
+      "page": 1189,
+      "file": "fig_1189_1_tight.png",
+      "bbox": [
+        129,
+        112,
+        857,
+        683
+      ],
+      "caption": "Advanced Error Reporting Extended Capability - Functions that do not support Flit Mode Structure",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/b5a1c71135f5b155ed0dad0395acdf6d81f65f76bfa97686ecc1a61b0c0a83f5.jpg"
+    },
+    "Figure 7-154": {
+      "page": 1191,
+      "file": "fig_1191_1_tight.png",
+      "bbox": [
+        116,
+        303,
+        777,
+        371
+      ],
+      "caption": "Advanced Error Reporting Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/da89fb23ff15315a390b8a141ca7605da922d681f118d32eace3874de7c301dc.jpg"
+    },
+    "Figure 7-155": {
+      "page": 1192,
+      "file": "fig_1192_1_tight.png",
+      "bbox": [
+        116,
+        150,
+        777,
+        502
+      ],
+      "caption": "Uncorrectable Error Status Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/53f7a7daac64107da4715dfce0472b7a2a768f6dd93b32b32488bdf3847fad97.jpg"
+    },
+    "Figure 7-156": {
+      "page": 1194,
+      "file": "fig_1194_1_tight.png",
+      "bbox": [
+        116,
+        453,
+        784,
+        811
+      ],
+      "caption": "Uncorrectable Error Mask Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/cba3d7a031a3c47666c65a4bd8fe6f0596ff9bcd3ff092f5ff7c43ec4084f993.jpg"
+    },
+    "Figure 7-157": {
+      "page": 1197,
+      "file": "fig_1197_1_tight.png",
+      "bbox": [
+        114,
+        150,
+        774,
+        496
+      ],
+      "caption": "Uncorrectable Error Severity Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/15d9403e2050d9dca77c1e9bd0c89f608a32e6fc8222628a84b736d4079e9baf.jpg"
+    },
+    "Figure 7-158": {
+      "page": 1199,
+      "file": "fig_1199_1_tight.png",
+      "bbox": [
+        117,
+        544,
+        779,
+        700
+      ],
+      "caption": "Correctable Error Status Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/4051aca13da22a8023bcf47e9c19096f8d2cc56ddbd50ec05d0e0ecc6d282b4f.jpg"
+    },
+    "Figure 7-159": {
+      "page": 1200,
+      "file": "fig_1200_1_tight.png",
+      "bbox": [
+        117,
+        636,
+        787,
+        795
+      ],
+      "caption": "Correctable Error Mask Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/13ef25090e6deda4076be2fa82d12c9a73e96654fb0a2a815ce338b7ccc24af7.jpg"
+    },
+    "Figure 7-160": {
+      "page": 1202,
+      "file": "fig_1202_1_tight.png",
+      "bbox": [
+        111,
+        108,
+        784,
+        299
+      ],
+      "caption": "Advanced Error Capabilities and Control Register g",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/bd1d7bf6d5dce7ada68b4612a3b7dedff1e111d1513e56274ef06f297cd217f3.jpg"
+    },
+    "Figure 7-161": {
+      "page": 1204,
+      "file": "fig_1204_1_tight.png",
+      "bbox": [
+        120,
+        239,
+        848,
+        392
+      ],
+      "caption": "Header Log Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/c2e7540f719b32fdf4695e4e7b4cf33123d3420dc2e05cc02b865d17ab0affaa.jpg"
+    },
+    "Figure 7-163": {
+      "page": 1206,
+      "file": "fig_1206_1_tight.png",
+      "bbox": [
+        112,
+        285,
+        787,
+        444
+      ],
+      "caption": "Root Error Status Register g",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/5d96fee32d9698b9b21f54da89020b6cf92d31c6f4a3544902a1e0713defa3fc.jpg"
+    },
+    "Figure 7-167": {
+      "page": 1210,
+      "file": "fig_1210_1_tight.png",
+      "bbox": [
+        119,
+        344,
+        799,
+        416
+      ],
+      "caption": "Second DW of Enhanced Allocation Capability S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/5996945675bbf7d72a5cd09729e8fa571b3dec41b38aa38cbb1beea934b501ad.jpg"
+    },
+    "Figure 7-168": {
+      "page": 1211,
+      "file": "fig_1211_1_tight.png",
+      "bbox": [
+        119,
+        109,
+        781,
+        251
+      ],
+      "caption": "First DW of Each Entry for Enhanced Allocation Capability",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/4168eddcad809d84a1a513cff7df404293ed3921c9223423ba5ae03e3405954c.jpg"
+    },
+    "Figure 7-169": {
+      "page": 1213,
+      "file": "fig_1213_1_tight.png",
+      "bbox": [
+        116,
+        132,
+        746,
+        290
+      ],
+      "caption": "Format of Entry for Enhanced Allocation Capability",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/0f4416fbe150475e36e7ece1f408ab4a8fe723e38e322a2e74440a1dd8cb3954.jpg"
+    },
+    "Figure 7-170": {
+      "page": 1214,
+      "file": "fig_1214_1_tight.png",
+      "bbox": [
+        114,
+        646,
+        588,
+        801
+      ],
+      "caption": "Example Entry with 64b Base and 64b MaxOffset S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/57fc839be03686deab2a9eebbe946bd9b4968c6228c77d2ec9f7118b28deee3d.jpg"
+    },
+    "Figure 7-172": {
+      "page": 1215,
+      "file": "fig_1215_1_tight.png",
+      "bbox": [
+        117,
+        351,
+        588,
+        476
+      ],
+      "caption": "Example Entry with 32b Base and 64b MaxOffset",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/03e5bdf679333ed11bfb7b0dec8b3e0cb06869701aa2181b443df3abdea6d9e5.jpg"
+    },
+    "Figure 7-173": {
+      "page": 1215,
+      "file": "fig_1215_2_tight.png",
+      "bbox": [
+        117,
+        612,
+        588,
+        709
+      ],
+      "caption": "Example Entry with 32b Base and 32b MaxOffset",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/2d8b1785916e12f3692cf40f7b4af56d9aaab4579ffd1621631feff899318bdf.jpg"
+    },
+    "Figure 7-174": {
+      "page": 1217,
+      "file": "fig_1217_1_tight.png",
+      "bbox": [
+        130,
+        625,
+        857,
+        829
+      ],
+      "caption": "Resizable BAR Extended Capability",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/25166da1b2af96b87e64fd942cd9fb72db9690732893358fcc7f07d895f0c347.jpg"
+    },
+    "Figure 7-175": {
+      "page": 1218,
+      "file": "fig_1218_1_tight.png",
+      "bbox": [
+        116,
+        154,
+        779,
+        222
+      ],
+      "caption": "Resizable BAR Extended Capability Header S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/e7031ae071af9872be83430fb9407003a7e71ecf50a6f64108fb6a8994083976.jpg"
+    },
+    "Figure 7-176": {
+      "page": 1219,
+      "file": "fig_1219_1_tight.png",
+      "bbox": [
+        119,
+        111,
+        799,
+        570
+      ],
+      "caption": "Resizable BAR Capability Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/9248c220217ffcc2b612691d4fc9b38234267f91cea5412c1df221ce84415990.jpg"
+    },
+    "Figure 7-177": {
+      "page": 1221,
+      "file": "fig_1221_1_tight.png",
+      "bbox": [
+        119,
+        417,
+        797,
+        757
+      ],
+      "caption": "Resizable BAR Control Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/1afb43ddd81750d4e26179a5ffd8501ece237c52e17257745957c5717f7b0cc7.jpg"
+    },
+    "Figure 7-178": {
+      "page": 1224,
+      "file": "fig_1224_1_tight.png",
+      "bbox": [
+        130,
+        608,
+        857,
+        814
+      ],
+      "caption": "VF Resizable BAR Extended Capability S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/091f816da541647433b8578f420e98198cd413b3fd8fffd01c9b4a6f22eaf9da.jpg"
+    },
+    "Figure 7-179": {
+      "page": 1225,
+      "file": "fig_1225_1_tight.png",
+      "bbox": [
+        116,
+        154,
+        779,
+        222
+      ],
+      "caption": "VF Resizable BAR Extended Capability Header g",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/24ed0999dfb05816ad0384697f4013c1d87954a155a515f2343d32155f0ff18d.jpg"
+    },
+    "Figure 7-180": {
+      "page": 1226,
+      "file": "fig_1226_1_tight.png",
+      "bbox": [
+        111,
+        108,
+        756,
+        207
+      ],
+      "caption": "VF Resizable BAR Control Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/aae5ac4989bc66b0400077cac31d2afb3647020b06ac684733b5a1ccff883d2a.jpg"
+    },
+    "Figure 7-181": {
+      "page": 1227,
+      "file": "fig_1227_1_tight.png",
+      "bbox": [
+        132,
+        334,
+        856,
+        416
+      ],
+      "caption": "ARI Extended Capability S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/b15ff41aadf3ce59d5971d1090b260e486d53329523e0a3adffff51adce82866.jpg"
+    },
+    "Figure 7-182": {
+      "page": 1227,
+      "file": "fig_1227_2_tight.png",
+      "bbox": [
+        116,
+        549,
+        779,
+        618
+      ],
+      "caption": "ARI Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/50ebf9326090865595d42d33d1770b62d197782d272cd627ccfc3e0a35b20fc4.jpg"
+    },
+    "Figure 7-184": {
+      "page": 1229,
+      "file": "fig_1229_1_tight.png",
+      "bbox": [
+        130,
+        160,
+        700,
+        289
+      ],
+      "caption": "ARI Control Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/502273e34aec950c3755c99915a280ff0f5bc07df429889c48fb80d290fdf8e0.jpg"
+    },
+    "Figure 7-186": {
+      "page": 1230,
+      "file": "fig_1230_1_tight.png",
+      "bbox": [
+        117,
+        571,
+        787,
+        642
+      ],
+      "caption": "PASID Extended Capability Header g",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/74c0c1a6e483e08b3ab44cbb44e7faab31dc74c6eb4a68a840bdd860749ab131.jpg"
+    },
+    "Figure 7-187": {
+      "page": 1231,
+      "file": "fig_1231_1_tight.png",
+      "bbox": [
+        129,
+        213,
+        759,
+        357
+      ],
+      "caption": "PASID Capability Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/2b2afe307fd5a923283bd10cfe48d11acecc81f7fc9d6dee9c83fbc61e0eec20.jpg"
+    },
+    "Figure 7-188": {
+      "page": 1232,
+      "file": "fig_1232_1_tight.png",
+      "bbox": [
+        132,
+        116,
+        741,
+        243
+      ],
+      "caption": "PASID Control Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/59c1fd3147fcdcdf9be3effc71cec17990d20cf35cbd16f6e1a3e55893dae734.jpg"
+    },
+    "Figure 7-189": {
+      "page": 1233,
+      "file": "fig_1233_1_tight.png",
+      "bbox": [
+        132,
+        253,
+        856,
+        397
+      ],
+      "caption": "FRS Queueing Extended Capability",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/bf86f6ee5c6f46ea4a7b6408297ace12c49296b8d757749527f52dc071de68f4.jpg"
+    },
+    "Figure 7-190": {
+      "page": 1233,
+      "file": "fig_1233_2_tight.png",
+      "bbox": [
+        116,
+        530,
+        779,
+        599
+      ],
+      "caption": "FRS Queueing Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/dc3dce2f8d12983dac83b9fca2cec32ca4e9162d8821315ff4ffaca3e5e5f04a.jpg"
+    },
+    "Figure 7-191": {
+      "page": 1234,
+      "file": "fig_1234_1_tight.png",
+      "bbox": [
+        119,
+        156,
+        617,
+        198
+      ],
+      "caption": "FRS Queueing Capability Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/fba93048aa3e0a7407dc37740368d3fce81fdcbee4a0738cd74437d0dce92572.jpg"
+    },
+    "Figure 7-192": {
+      "page": 1234,
+      "file": "fig_1234_2_tight.png",
+      "bbox": [
+        130,
+        724,
+        617,
+        814
+      ],
+      "caption": "FRS Queueing Status Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/6f1c808d7aa15415a120ce80c823145ad8c2bf0bc0bf9b16a4d3772c9ed36d17.jpg"
+    },
+    "Figure 7-193": {
+      "page": 1235,
+      "file": "fig_1235_1_tight.png",
+      "bbox": [
+        132,
+        377,
+        604,
+        448
+      ],
+      "caption": "FRS Queueing Control Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/6114dfc8dd1d90945ea92f9cc2fee506efeae44c91dd3ebef0b7baa2b1be6c12.jpg"
+    },
+    "Figure 7-194": {
+      "page": 1235,
+      "file": "fig_1235_2_tight.png",
+      "bbox": [
+        120,
+        805,
+        640,
+        847
+      ],
+      "caption": "FRS Message Queue Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/f6005313b770554148e2375d2f9b9b1acf0f3b885c7ce96a58ee0a3bf77e07b1.jpg"
+    },
+    "Figure 7-195": {
+      "page": 1236,
+      "file": "fig_1236_1_tight.png",
+      "bbox": [
+        132,
+        457,
+        857,
+        751
+      ],
+      "caption": "FPB Capability Structure",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/0a7752cc5e12a30cabd6eb43332f11241bc8f00a348df98dcc61b39cd04e2b94.jpg"
+    },
+    "Figure 7-196": {
+      "page": 1237,
+      "file": "fig_1237_1_tight.png",
+      "bbox": [
+        127,
+        160,
+        722,
+        205
+      ],
+      "caption": "FPB Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/b5d1e3279010af03f05c773c7f58040da1838e39abebef27c6f89de10d3e1a8b.jpg"
+    },
+    "Figure 7-197": {
+      "page": 1237,
+      "file": "fig_1237_2_tight.png",
+      "bbox": [
+        114,
+        511,
+        803,
+        643
+      ],
+      "caption": "FPB Capabilities Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/052288684588297c4faec37266ae65f408a87a3071c90721fee527293e133c01.jpg"
+    },
+    "Figure 7-198": {
+      "page": 1239,
+      "file": "fig_1239_1_tight.png",
+      "bbox": [
+        117,
+        526,
+        803,
+        598
+      ],
+      "caption": "FPB RID Vector Control 1 Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/e77dc7a4836097510e6cc0d9756136e1affbbcff0c5c433513a4564155aca780.jpg"
+    },
+    "Figure 7-199": {
+      "page": 1241,
+      "file": "fig_1241_1_tight.png",
+      "bbox": [
+        129,
+        116,
+        722,
+        161
+      ],
+      "caption": "FPB RID Vector Control 2 Register g",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/932e8eca2153ae4cf82ab8138ff72c60dbbeb80e97ac5eff56ce11acda6564c6.jpg"
+    },
+    "Figure 7-200": {
+      "page": 1241,
+      "file": "fig_1241_2_tight.png",
+      "bbox": [
+        116,
+        564,
+        808,
+        643
+      ],
+      "caption": "FPB MEM Low Vector Control Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/14c573d8bbb7505656914774c61981a061e0646dd54aaf4483a7b9872a0277e5.jpg"
+    },
+    "Figure 7-201": {
+      "page": 1243,
+      "file": "fig_1243_1_tight.png",
+      "bbox": [
+        73,
+        265,
+        893,
+        886
+      ],
+      "caption": "FPB MEM High Vector Control 1 Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/cf9e7119f90f0b5f905ad069c7006496e36d520c4fa0799430a5f1b642936b7e.jpg"
+    },
+    "Figure 7-203": {
+      "page": 1245,
+      "file": "fig_1245_1_tight.png",
+      "bbox": [
+        120,
+        582,
+        789,
+        656
+      ],
+      "caption": "FPB Vector Access Control Register g",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/4a7e120ba2904f30a9e19405a66c6186c852003d0b058699b06bd9bcbf217b54.jpg"
+    },
+    "Figure 7-204": {
+      "page": 1246,
+      "file": "fig_1246_1_tight.png",
+      "bbox": [
+        129,
+        708,
+        722,
+        753
+      ],
+      "caption": "FPB Vector Access Data Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/04c0c580e16441326d6f602dff8f33ccf3976ddc00a303c7c5970a7aa3deab27.jpg"
+    },
+    "Figure 7-206": {
+      "page": 1248,
+      "file": "fig_1248_1_tight.png",
+      "bbox": [
+        109,
+        108,
+        772,
+        166
+      ],
+      "caption": "Flit Performance Measurement Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/28d3569fb02c47d81d61b7759ae0a76b3f73a547870bc6b020945aadd38e9034.jpg"
+    },
+    "Figure 7-207": {
+      "page": 1248,
+      "file": "fig_1248_2_tight.png",
+      "bbox": [
+        117,
+        570,
+        774,
+        640
+      ],
+      "caption": "Flit Performance Measurement Capability Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/265ea50f1d1f3ceafd61573a0529d9b98c0049b0a570e7a31e6b8a49f6e2d0bc.jpg"
+    },
+    "Figure 7-208": {
+      "page": 1249,
+      "file": "fig_1249_1_tight.png",
+      "bbox": [
+        106,
+        258,
+        740,
+        397
+      ],
+      "caption": "Flit Performance Measurement Control Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/71fbb37fcf4f0123bc05bf6df1274bca61e166d04231b1210f2ad707cda75962.jpg"
+    },
+    "Figure 7-209": {
+      "page": 1251,
+      "file": "fig_1251_1_tight.png",
+      "bbox": [
+        112,
+        411,
+        771,
+        491
+      ],
+      "caption": "Flit Performance Measurement Status Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/e2164e591cbd20010a83818814421bd0c6c359d57f9f71782fa4d8b0683d7f0e.jpg"
+    },
+    "Figure 7-210": {
+      "page": 1252,
+      "file": "fig_1252_1_tight.png",
+      "bbox": [
+        101,
+        686,
+        740,
+        752
+      ],
+      "caption": "LTSSM Performance Measurement Status Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/3c944706472b0bc843a4ddb063c647c201621aeedf45049299edc294d3a69cd4.jpg"
+    },
+    "Figure 7-211": {
+      "page": 1254,
+      "file": "fig_1254_1_tight.png",
+      "bbox": [
+        130,
+        113,
+        857,
+        407
+      ],
+      "caption": "Flit Error Injection Extended Capability Structure",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/082885afc765540a419299b66b804f024047a06cbeeb326758a0bbef59c47810.jpg"
+    },
+    "Figure 7-212": {
+      "page": 1254,
+      "file": "fig_1254_2_tight.png",
+      "bbox": [
+        112,
+        593,
+        756,
+        656
+      ],
+      "caption": "Flit Error Injection Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/0514cde970736e8e4942d43f3044c44513be94f650273dfa32a28db715ffec94.jpg"
+    },
+    "Figure 7-213": {
+      "page": 1255,
+      "file": "fig_1255_1_tight.png",
+      "bbox": [
+        129,
+        290,
+        722,
+        335
+      ],
+      "caption": "Flit Error Injection Capability Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/069976d6c02e44d73edcb8b214191c9f970a70f53b7dc00a870590a837c03a48.jpg"
+    },
+    "Figure 7-214": {
+      "page": 1255,
+      "file": "fig_1255_2_tight.png",
+      "bbox": [
+        112,
+        614,
+        764,
+        748
+      ],
+      "caption": "Flit Error Injection Control 1 Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/4320eb2e44f91c23babaa97bb40abbce72d942e095e42ab384a574cc15c2be78.jpg"
+    },
+    "Figure 7-215": {
+      "page": 1257,
+      "file": "fig_1257_1_tight.png",
+      "bbox": [
+        119,
+        342,
+        784,
+        430
+      ],
+      "caption": "Flit Error Injection Control 2 Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/e8ff28b95af24c9020d864a3935af18e9355d07634a6ae5c16df295b5ef99a2a.jpg"
+    },
+    "Figure 7-216": {
+      "page": 1258,
+      "file": "fig_1258_1_tight.png",
+      "bbox": [
+        117,
+        362,
+        766,
+        433
+      ],
+      "caption": "Flit Error Injection Status Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/40fb26d5995fa11fb81174aa9abe1457fdc57e1341fac1c3ec28f9d18b2998a7.jpg"
+    },
+    "Figure 7-217": {
+      "page": 1259,
+      "file": "fig_1259_1_tight.png",
+      "bbox": [
+        111,
+        219,
+        758,
+        496
+      ],
+      "caption": "Ordered Set Error Injection Control 1 Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/a61809f2082fa71d2eb77c86d20b589015d7a5b4490ecf03e12e626babb17655.jpg"
+    },
+    "Figure 7-218": {
+      "page": 1260,
+      "file": "fig_1260_1_tight.png",
+      "bbox": [
+        127,
+        751,
+        722,
+        796
+      ],
+      "caption": "Ordered Set Error Injection Control 2 Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/b2cc299ac734ebb2dd0663b520dc97151dccd4ad09330cad4d052172c272672b.jpg"
+    },
+    "Figure 7-219": {
+      "page": 1261,
+      "file": "fig_1261_1_tight.png",
+      "bbox": [
+        107,
+        376,
+        756,
+        574
+      ],
+      "caption": "Ordered Set Tx Error Injection Status Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/fa1f551ebdf8b1fc561ed1297e5c2f7b9f99bf64d5f583b803f21524e48755b5.jpg"
+    },
+    "Figure 7-220": {
+      "page": 1262,
+      "file": "fig_1262_1_tight.png",
+      "bbox": [
+        107,
+        563,
+        758,
+        761
+      ],
+      "caption": "Ordered Set Rx Error Injection Status Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/72cd338fe6f02f366bdca7b4bd52796941041f07062eaf1610a12ded9e61b667.jpg"
+    },
+    "Figure 7-221": {
+      "page": 1264,
+      "file": "fig_1264_1_tight.png",
+      "bbox": [
+        370,
+        404,
+        593,
+        545
+      ],
+      "caption": "Virtual Channel Extended Capability Structure",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/d95d7f485ea0e7f3fb2f3daf0bfd340c40f82b18a5630a3669f3fe178cba7579.jpg"
+    },
+    "Figure 7-222": {
+      "page": 1264,
+      "file": "fig_1264_2_tight.png",
+      "bbox": [
+        114,
+        789,
+        779,
+        857
+      ],
+      "caption": "Virtual Channel Extended Capability Header g",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/955cb0046375cc5a175284e65a625d27b34232c93d90fa21cdb01c09a969186b.jpg"
+    },
+    "Figure 7-223": {
+      "page": 1265,
+      "file": "fig_1265_1_tight.png",
+      "bbox": [
+        117,
+        488,
+        769,
+        614
+      ],
+      "caption": "Port VC Capability Register 1",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/7d2bfc2df93eb4e81e2130af0771a8ab2e7e439b5dfb2d9dd2719ea2a9ac3f59.jpg"
+    },
+    "Figure 7-224": {
+      "page": 1266,
+      "file": "fig_1266_1_tight.png",
+      "bbox": [
+        119,
+        573,
+        779,
+        645
+      ],
+      "caption": "Port VC Capability Register 2",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/78c829393cac5bc29b7d1b78e4e70db3446b110402514c6ca83970195097a753.jpg"
+    },
+    "Figure 7-226": {
+      "page": 1268,
+      "file": "fig_1268_1_tight.png",
+      "bbox": [
+        73,
+        489,
+        892,
+        628
+      ],
+      "caption": "Port VC Status Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/3bf3ef7243d58d86f1fc1d3b583c302c7627f369d8b31b17b841bb1679a7e827.jpg"
+    },
+    "Figure 7-227": {
+      "page": 1269,
+      "file": "fig_1269_1_tight.png",
+      "bbox": [
+        117,
+        111,
+        772,
+        241
+      ],
+      "caption": "VC Resource Capability Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/dc38b2939d1706f301cc21dd36d0d4d6b26249b398c0341c3c8e91e4064c4e17.jpg"
+    },
+    "Figure 7-228": {
+      "page": 1270,
+      "file": "fig_1270_1_tight.png",
+      "bbox": [
+        116,
+        334,
+        782,
+        440
+      ],
+      "caption": "VC Resource Control Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/5ac4adbe9e16471d7b199a9c6c4d9a6ded41bf9bc85e2a728c55dffc9ccfc975.jpg"
+    },
+    "Figure 7-229": {
+      "page": 1272,
+      "file": "fig_1272_1_tight.png",
+      "bbox": [
+        130,
+        573,
+        661,
+        664
+      ],
+      "caption": "VC Resource Status Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/89ad409a10f57b74acde8199f52938f113b4e3c868e4acc47cbcb66d02fec170.jpg"
+    },
+    "Figure 7-230": {
+      "page": 1273,
+      "file": "fig_1273_1_tight.png",
+      "bbox": [
+        387,
+        625,
+        580,
+        709
+      ],
+      "caption": "Example VC Arbitration Table with 32 Phases",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/58b57bfa0cac9c1ae24b1dfdcd2785e498b3ea3c4e5ef0d90142c1f922aeacc4.jpg"
+    },
+    "Figure 7-231": {
+      "page": 1275,
+      "file": "fig_1275_1_tight.png",
+      "bbox": [
+        387,
+        95,
+        581,
+        236
+      ],
+      "caption": "Example Port Arbitration Table with 128 Phases and 2-bit Table Entries",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/3fd4fbda476159baa66be0ac5ab8baedab4e2f5e42c87d01e95c75e5b95bdbd1.jpg"
+    },
+    "Figure 7-232": {
+      "page": 1276,
+      "file": "fig_1276_1_tight.png",
+      "bbox": [
+        377,
+        94,
+        591,
+        236
+      ],
+      "caption": "MFVC Capability Structure",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/dc04475e9755366c4f26a94c42bc85d17e2d653b51352aa32983810ce7e129a4.jpg"
+    },
+    "Figure 7-233": {
+      "page": 1276,
+      "file": "fig_1276_2_tight.png",
+      "bbox": [
+        116,
+        463,
+        779,
+        531
+      ],
+      "caption": "MFVC Extended Capability Header S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/2340c6de2015a6f4c80ea20488d2a5568d53c2d3ec5e501be6ff35a399787852.jpg"
+    },
+    "Figure 7-234": {
+      "page": 1277,
+      "file": "fig_1277_1_tight.png",
+      "bbox": [
+        114,
+        222,
+        767,
+        344
+      ],
+      "caption": "MFVC Port VC Capability Register 1",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/e8b32773099640362979dfd5a0fa4d5ba51dfff052dcec9b4940abb13fc9871d.jpg"
+    },
+    "Figure 7-235": {
+      "page": 1278,
+      "file": "fig_1278_1_tight.png",
+      "bbox": [
+        119,
+        224,
+        779,
+        295
+      ],
+      "caption": "MFVC Port VC Capability Register 2",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/5b03efe5eb1f6eadafe1f38f53a2cdde3cc1b001ff3848aba84ab6e05b9a73bd.jpg"
+    },
+    "Figure 7-236": {
+      "page": 1279,
+      "file": "fig_1279_1_tight.png",
+      "bbox": [
+        132,
+        116,
+        638,
+        223
+      ],
+      "caption": "MFVC Port VC Control Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/7975cf7f97536387fe08dde70e6420bf1c6a07bc51f38d475f82df0b322e8524.jpg"
+    },
+    "Figure 7-238": {
+      "page": 1280,
+      "file": "fig_1280_1_tight.png",
+      "bbox": [
+        116,
+        564,
+        771,
+        660
+      ],
+      "caption": "MFVC VC Resource Capability Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/1fd0fa513bedff12ba34453f951f9861d178c2b57bf02f49c0fdba7ffdaa19b5.jpg"
+    },
+    "Figure 7-239": {
+      "page": 1281,
+      "file": "fig_1281_1_tight.png",
+      "bbox": [
+        116,
+        575,
+        782,
+        679
+      ],
+      "caption": "MFVC VC Resource Control Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/64af0e9652f19918217e51f55c4fddee7df6b92f45fe308e281d4d382e5f9ba1.jpg"
+    },
+    "Figure 7-240": {
+      "page": 1283,
+      "file": "fig_1283_1_tight.png",
+      "bbox": [
+        130,
+        762,
+        696,
+        853
+      ],
+      "caption": "MFVC VC Resource Status Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/5ac6c4aa32742d6ab6672357dabc0e3e1085e21493c8eb55e4726e3b5bb0f180.jpg"
+    },
+    "Figure 7-241": {
+      "page": 1286,
+      "file": "fig_1286_1_tight.png",
+      "bbox": [
+        132,
+        351,
+        857,
+        463
+      ],
+      "caption": "Device Serial Number Extended Capability Structure",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/1368ae8e612693f8e28ddeb88fa2ebc9154f54f18b55a830cf27fd9b3749110c.jpg"
+    },
+    "Figure 7-242": {
+      "page": 1286,
+      "file": "fig_1286_2_tight.png",
+      "bbox": [
+        116,
+        666,
+        779,
+        733
+      ],
+      "caption": "Device Serial Number Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/d186a2adb9cc782d15a1559f934580040d96ace4d649cf3b848e5233594c0942.jpg"
+    },
+    "Figure 7-243": {
+      "page": 1287,
+      "file": "fig_1287_1_tight.png",
+      "bbox": [
+        104,
+        410,
+        772,
+        436
+      ],
+      "caption": "Serial Number Register S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/efcae16b51fe5e279ae67732c8093ceb96b73616acebb6740f25434cc0656c1e.jpg"
+    },
+    "Figure 7-245": {
+      "page": 1289,
+      "file": "fig_1289_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        856,
+        287
+      ],
+      "caption": "VSEC Capability Structure S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/622119612119c5e9c5d016565dbfed6f35adbc1f789613e8ce70937855ba122f.jpg"
+    },
+    "Figure 7-246": {
+      "page": 1289,
+      "file": "fig_1289_2_tight.png",
+      "bbox": [
+        116,
+        489,
+        777,
+        558
+      ],
+      "caption": "Vendor-Specific Extended Capability Header g",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/c28792cf1cc3f7fb28f6e1e393250bc68ecfebcf002cbadbab2d02ab4e1ae79b.jpg"
+    },
+    "Figure 7-247": {
+      "page": 1290,
+      "file": "fig_1290_1_tight.png",
+      "bbox": [
+        127,
+        253,
+        785,
+        318
+      ],
+      "caption": "Vendor-Specific Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/38ba7450f8a1b19e135f2124b9a30367b28d8e941bb2d4e6bf9ef184f91e0703.jpg"
+    },
+    "Figure 7-248": {
+      "page": 1291,
+      "file": "fig_1291_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        856,
+        287
+      ],
+      "caption": "Designated Vendor-Specific Extended Capability SS",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/d863333660937db1c775202f299f75bb54b97a66af9417e82898980d613e31b8.jpg"
+    },
+    "Figure 7-249": {
+      "page": 1291,
+      "file": "fig_1291_2_tight.png",
+      "bbox": [
+        116,
+        489,
+        777,
+        558
+      ],
+      "caption": "Designated Vendor-Specific Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/7b2327fdea9bd579cb95fd1bd1c9386b62b18ddc44322ed451d2330065872731.jpg"
+    },
+    "Figure 7-250": {
+      "page": 1292,
+      "file": "fig_1292_1_tight.png",
+      "bbox": [
+        125,
+        237,
+        810,
+        300
+      ],
+      "caption": "Designated Vendor-Specific Header 1",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/65ea94434e9f258e2f9ecf6ec0807cf94dadd6ece42bb17d43dd4eaac2d5b32e.jpg"
+    },
+    "Figure 7-252": {
+      "page": 1293,
+      "file": "fig_1293_1_tight.png",
+      "bbox": [
+        132,
+        330,
+        857,
+        503
+      ],
+      "caption": "RCRB Header Extended Capability Structure S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/909cbc56f65e5a9bc8107bdb65cd88343d3c8c0571d10e3262b770a8ae166bfb.jpg"
+    },
+    "Figure 7-253": {
+      "page": 1293,
+      "file": "fig_1293_2_tight.png",
+      "bbox": [
+        114,
+        707,
+        779,
+        775
+      ],
+      "caption": "RCRB Header Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/9ea0be26b4b2fb43dfb7a29ec6de270ed3719893ea65129a7bf708907009a654.jpg"
+    },
+    "Figure 7-254": {
+      "page": 1294,
+      "file": "fig_1294_1_tight.png",
+      "bbox": [
+        127,
+        479,
+        722,
+        525
+      ],
+      "caption": "RCRB Vendor ID and Device ID register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/8509a8db32616cc5a3ec67fad1a12469c27115f0ddaf2aa65ffff908a9514f3a.jpg"
+    },
+    "Figure 7-255": {
+      "page": 1295,
+      "file": "fig_1295_1_tight.png",
+      "bbox": [
+        75,
+        237,
+        892,
+        321
+      ],
+      "caption": "RCRB Capabilities register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/11f1c89fe6ebbff1edbad54dd89646cc6e90890837626f176b72536c3ac159b6.jpg"
+    },
+    "Figure 7-257": {
+      "page": 1297,
+      "file": "fig_1297_1_tight.png",
+      "bbox": [
+        129,
+        128,
+        856,
+        517
+      ],
+      "caption": "Root Complex Link Declaration Extended Capability",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/780cf13f9c40e24ada9a26dbab4641cdb1a1ba8a8633f9e4c81608ab51d4c6a0.jpg"
+    },
+    "Figure 7-258": {
+      "page": 1297,
+      "file": "fig_1297_2_tight.png",
+      "bbox": [
+        114,
+        685,
+        779,
+        755
+      ],
+      "caption": "Root Complex Link Declaration Extended Capability Header S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/6713545a3093847047b8a1fd0986102a8c4f51607be51f72d31ae41cab7657f9.jpg"
+    },
+    "Figure 7-259": {
+      "page": 1298,
+      "file": "fig_1298_1_tight.png",
+      "bbox": [
+        122,
+        523,
+        795,
+        599
+      ],
+      "caption": "Element Self Description Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/1eac0d08923fc6ab1ffb206f538451d13701b45fde8ee4d923c7eb58485c40ac.jpg"
+    },
+    "Figure 7-260": {
+      "page": 1299,
+      "file": "fig_1299_1_tight.png",
+      "bbox": [
+        308,
+        313,
+        663,
+        406
+      ],
+      "caption": "Link Entry SS",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/5f390f2ec97ec50f0986d1049a1e0e68fddf088637abb73e5fe493663d3f280d.jpg"
+    },
+    "Figure 7-261": {
+      "page": 1299,
+      "file": "fig_1299_2_tight.png",
+      "bbox": [
+        122,
+        571,
+        807,
+        698
+      ],
+      "caption": "Link Description Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/993db8d28c0db7e09bec9a20198d35103e7080d56184e5dca61e94a4d8725d74.jpg"
+    },
+    "Figure 7-262": {
+      "page": 1300,
+      "file": "fig_1300_1_tight.png",
+      "bbox": [
+        307,
+        650,
+        663,
+        738
+      ],
+      "caption": "Link Address for Link Type 0",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/d7fa6b45e5521b5cc14720a3085976996d06439165dd9c730c2bf5af1a49524a.jpg"
+    },
+    "Figure 7-263": {
+      "page": 1301,
+      "file": "fig_1301_1_tight.png",
+      "bbox": [
+        316,
+        343,
+        655,
+        426
+      ],
+      "caption": "Link Address for Link Type 1",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/cce3c5984eb1f348a26503f625d9f1fa1673e50ff9fcc902c65e3d6e1f1111b7.jpg"
+    },
+    "Figure 7-264": {
+      "page": 1302,
+      "file": "fig_1302_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        856,
+        226
+      ],
+      "caption": "Root Complex Internal Link Control Extended Capability",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/df28f13c5dbd577fd670275bdb9b9ec8d5da776bf90ab74c704058039ada5fb8.jpg"
+    },
+    "Figure 7-265": {
+      "page": 1302,
+      "file": "fig_1302_2_tight.png",
+      "bbox": [
+        116,
+        397,
+        779,
+        465
+      ],
+      "caption": "Root Complex Internal Link Control Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/7bf7a489ab225d9100697afd516eca69c02da1900d91b9d970ba54358009dc62.jpg"
+    },
+    "Figure 7-266": {
+      "page": 1303,
+      "file": "fig_1303_1_tight.png",
+      "bbox": [
+        111,
+        108,
+        789,
+        222
+      ],
+      "caption": "Root Complex Link Capabilities Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/c3cbff47ba85ec72c7416b51519bb033184223b86a0c67b14907f48455197ec3.jpg"
+    },
+    "Figure 7-267": {
+      "page": 1305,
+      "file": "fig_1305_1_tight.png",
+      "bbox": [
+        127,
+        718,
+        764,
+        805
+      ],
+      "caption": "Root Complex Link Control Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/f18857a1d2097ee15a8495657a00a948c0106766cd59eac6b3122750d912a522.jpg"
+    },
+    "Figure 7-268": {
+      "page": 1307,
+      "file": "fig_1307_1_tight.png",
+      "bbox": [
+        132,
+        116,
+        616,
+        205
+      ],
+      "caption": "Root Complex Link Status Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/1d22d3cafe8e4982777f40905df6e09cb037846d5e7c99e31866389fb1665336.jpg"
+    },
+    "Figure 7-269": {
+      "page": 1308,
+      "file": "fig_1308_1_tight.png",
+      "bbox": [
+        132,
+        243,
+        856,
+        356
+      ],
+      "caption": "Root Complex Event Collector Endpoint Association Extended Capability S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/5664443cca0e528ce9f0a9b77ee388bc038469a17342ddfd8d9d891923a065c0.jpg"
+    },
+    "Figure 7-270": {
+      "page": 1308,
+      "file": "fig_1308_2_tight.png",
+      "bbox": [
+        114,
+        578,
+        779,
+        645
+      ],
+      "caption": "Root Complex Event Collector Endpoint Association Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/153e8da11c9d027ff623e80e547ea4def3efa18140a6a43c1da95e6466dafdaa.jpg"
+    },
+    "Figure 7-271": {
+      "page": 1309,
+      "file": "fig_1309_1_tight.png",
+      "bbox": [
+        127,
+        593,
+        722,
+        638
+      ],
+      "caption": "RCEC Associated Bus Numbers Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/fdad611010afe1fdbca30955fb0be9318e1cb0b2d82777df67b9bed7902b2ab1.jpg"
+    },
+    "Figure 7-272": {
+      "page": 1311,
+      "file": "fig_1311_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        857,
+        500
+      ],
+      "caption": "Multicast Extended Capability Structure S",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/e38a233c995e6e6e431635557df934f133a70472fb792dc76bc978c7b3c0977f.jpg"
+    },
+    "Figure 7-273": {
+      "page": 1311,
+      "file": "fig_1311_2_tight.png",
+      "bbox": [
+        116,
+        685,
+        779,
+        753
+      ],
+      "caption": "Multicast Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/9808f9bc39a7e564fe52a1378267a2345355a56bb20293c557394e94fd8da4e0.jpg"
+    },
+    "Figure 7-274": {
+      "page": 1312,
+      "file": "fig_1312_1_tight.png",
+      "bbox": [
+        132,
+        387,
+        718,
+        534
+      ],
+      "caption": "Multicast Capability Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/4aba3d906ce2d540f4591175a33f78eda1e1501f867803b74ee1117738c25ac2.jpg"
+    },
+    "Figure 7-275": {
+      "page": 1313,
+      "file": "fig_1313_1_tight.png",
+      "bbox": [
+        130,
+        212,
+        573,
+        301
+      ],
+      "caption": "Multicast Control Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/9a0a5aa2a8cc975abd7a351b42302c5e69bbea15e63de32c82662722d437fd0e.jpg"
+    },
+    "Figure 7-276": {
+      "page": 1313,
+      "file": "fig_1313_2_tight.png",
+      "bbox": [
+        321,
+        657,
+        653,
+        707
+      ],
+      "caption": "MC\\_Base\\_Address Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/c6846d71a380a7e5f266266284289ac7b40313cb391b0fd8d60a7ed1f97ceaa4.jpg"
+    },
+    "Figure 7-277": {
+      "page": 1314,
+      "file": "fig_1314_1_tight.png",
+      "bbox": [
+        321,
+        369,
+        653,
+        411
+      ],
+      "caption": "MC\\_Receive Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/e09aacbd16ada868bcf31dbd2065923dc1873d2e0407afa394d3d9902be0bba7.jpg"
+    },
+    "Figure 7-278": {
+      "page": 1314,
+      "file": "fig_1314_2_tight.png",
+      "bbox": [
+        321,
+        775,
+        653,
+        815
+      ],
+      "caption": "MC\\_Block\\_All Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/97235cb598f3f3bfdc566f3796ef55b161dc02a90dfa4187d27781cacaba5864.jpg"
+    },
+    "Figure 7-279": {
+      "page": 1315,
+      "file": "fig_1315_1_tight.png",
+      "bbox": [
+        321,
+        376,
+        653,
+        424
+      ],
+      "caption": "MC\\_Block\\_Untranslated Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/ea6d0c148298951f92b36f7fe1f3acfa1f989cd7bdeaa77138c03933cb86e4bc.jpg"
+    },
+    "Figure 7-280": {
+      "page": 1316,
+      "file": "fig_1316_1_tight.png",
+      "bbox": [
+        321,
+        98,
+        655,
+        147
+      ],
+      "caption": "MC\\_Overlay\\_BAR Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/e90ef754157370ac669e56892bce41c3fac54f8fabaf5dda34e8db103759b0bb.jpg"
+    },
+    "Figure 7-281": {
+      "page": 1316,
+      "file": "fig_1316_2_tight.png",
+      "bbox": [
+        130,
+        462,
+        857,
+        848
+      ],
+      "caption": "Dynamic Power Allocation Extended Capability Structure",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/d112f8e71ddb88b460e1f724910ab251761d85e7385051155f5976b84b308ceb.jpg"
+    },
+    "Figure 7-282": {
+      "page": 1317,
+      "file": "fig_1317_1_tight.png",
+      "bbox": [
+        116,
+        154,
+        779,
+        222
+      ],
+      "caption": "DPA Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/022f68b78953bcc65223c963fa907cfe7f63f6777767c2ab0e3a01851ca88a67.jpg"
+    },
+    "Figure 7-283": {
+      "page": 1317,
+      "file": "fig_1317_2_tight.png",
+      "bbox": [
+        119,
+        582,
+        784,
+        731
+      ],
+      "caption": "DPA Capability RegisterS",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/b9268ce1cd6e13ca19645ececca88d15e1b5c15bbfde361ee9bb4556dd74fe01.jpg"
+    },
+    "Figure 7-285": {
+      "page": 1319,
+      "file": "fig_1319_1_tight.png",
+      "bbox": [
+        132,
+        161,
+        640,
+        250
+      ],
+      "caption": "DPA Status Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/6ea295120b172ea9b8735cddfa4d1c27ea164ee4dbd6ea512b00e9743bdf918d.jpg"
+    },
+    "Figure 7-286": {
+      "page": 1319,
+      "file": "fig_1319_2_tight.png",
+      "bbox": [
+        130,
+        617,
+        575,
+        686
+      ],
+      "caption": "DPA Control Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/815eafbcf8147930cc0e890b2ca2787fa2735cf29fb0c0ac1c261d7e41eb3790.jpg"
+    },
+    "Figure 7-287": {
+      "page": 1320,
+      "file": "fig_1320_1_tight.png",
+      "bbox": [
+        403,
+        212,
+        568,
+        285
+      ],
+      "caption": "DPA Power Allocation Array",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/df067c900ebeca1ac55ba389961253ae3052bd1080cec2ae68b57f357c30855a.jpg"
+    },
+    "Figure 7-288": {
+      "page": 1320,
+      "file": "fig_1320_2_tight.png",
+      "bbox": [
+        129,
+        438,
+        488,
+        507
+      ],
+      "caption": "Substate Power Allocation Register (0 to Substate\\_Max)",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/48b9c5c1b90e971c9bcd466ccfbf596a6ad0b3dec2c166045bf9677f8e6d4ed6.jpg"
+    },
+    "Figure 7-289": {
+      "page": 1321,
+      "file": "fig_1321_1_tight.png",
+      "bbox": [
+        305,
+        95,
+        660,
+        178
+      ],
+      "caption": "TPH Extended Capability Structure",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/31a7777a004ac01a8288d4edf4011796e1e802a93c700581e0b843eb84529b7f.jpg"
+    },
+    "Figure 7-290": {
+      "page": 1321,
+      "file": "fig_1321_2_tight.png",
+      "bbox": [
+        116,
+        299,
+        779,
+        368
+      ],
+      "caption": "TPH Requester Extended Capability Header",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/bd972307333c254b621af5ab1f6071eb7dc2e926462c3123a0123f3e90842bbc.jpg"
+    },
+    "Figure 7-291": {
+      "page": 1321,
+      "file": "fig_1321_3_tight.png",
+      "bbox": [
+        117,
+        727,
+        799,
+        838
+      ],
+      "caption": "TPH Requester Capability Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/5ac4796aef57b0ad678fbb2bad8b5e405e0ff85df5cd2bae0e7b40ab7cf38f6a.jpg"
+    },
+    "Figure 7-292": {
+      "page": 1322,
+      "file": "fig_1322_1_tight.png",
+      "bbox": [
+        122,
+        724,
+        807,
+        801
+      ],
+      "caption": "TPH Requester Control Register",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/90083b9512b2d2f18fbef2776d740ed67a16a5f6e175d0b7429b0f77434d75d1.jpg"
+    },
+    "Figure 7-295": {
+      "page": 1325,
+      "file": "fig_1325_1_tight.png",
+      "bbox": [
+        130,
+        112,
+        856,
+        652
+      ],
+      "caption": "DPC Extended Capability - Non-Flit Mode",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/33cbb5088ad085bffbc783edf9a747892f0067934ffd5ab03236b0079bf1c7aa.jpg"
+    },
+    "Figure 7-296": {
+      "page": 1326,
+      "file": "fig_1326_1_tight.png",
+      "bbox": [
+        130,
+        113,
+        854,
+        834
+      ],
+      "caption": "DPC Extended Capability - Flit Mode",
+      "pdf_chunk": "chunk_06_pages_1127-1326.pdf",
+      "mineru_image": "images/6b0b726649f727df29bf43234a96f9106f90c93d2f3a713f771a31ea55d653f3.jpg"
+    },
+    "Figure 7-297": {
+      "page": 1327,
+      "file": "fig_1327_1_tight.png",
+      "bbox": [
+        116,
+        154,
+        779,
+        223
+      ],
+      "caption": "DPC Extended Capability Header S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/fa5e6f173cc8251b59212879e09a2058bfd5e7da601c82d4680f3846761809cf.jpg"
+    },
+    "Figure 7-298": {
+      "page": 1327,
+      "file": "fig_1327_2_tight.png",
+      "bbox": [
+        130,
+        587,
+        758,
+        787
+      ],
+      "caption": "DPC Capability Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/3150f16c77812b7060f57e050be3ee5685d3f9b0c1a2f08ee258fdb311ec8c6f.jpg"
+    },
+    "Figure 7-299": {
+      "page": 1329,
+      "file": "fig_1329_1_tight.png",
+      "bbox": [
+        130,
+        160,
+        728,
+        363
+      ],
+      "caption": "DPC Control Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/9a8a496e56b3ca0ca497edfe463cbf4b982bece6fe28b49f27fbcb273d612ac7.jpg"
+    },
+    "Figure 7-300": {
+      "page": 1331,
+      "file": "fig_1331_1_tight.png",
+      "bbox": [
+        132,
+        160,
+        673,
+        382
+      ],
+      "caption": "DPC Status Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/c723152b3cd7c48a4edc8f5b9ea8ebf62bec46b6cdedc788842f1c30620bb19b.jpg"
+    },
+    "Figure 7-301": {
+      "page": 1332,
+      "file": "fig_1332_1_tight.png",
+      "bbox": [
+        132,
+        727,
+        449,
+        773
+      ],
+      "caption": "DPC Error Source ID Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/a34b8645f7e6a70a2622b5c7d3081af4a9dc65e92c27c2cfcbf7562503b9bc5b.jpg"
+    },
+    "Figure 7-302": {
+      "page": 1333,
+      "file": "fig_1333_1_tight.png",
+      "bbox": [
+        125,
+        304,
+        816,
+        512
+      ],
+      "caption": "RP PIO Status RegisterS",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/f9cd66e97fa919e0f03b3f5acb680f5197629ea193d947259e219374d920ee81.jpg"
+    },
+    "Figure 7-303": {
+      "page": 1334,
+      "file": "fig_1334_1_tight.png",
+      "bbox": [
+        127,
+        195,
+        808,
+        404
+      ],
+      "caption": "RP PIO Mask RegisterS",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/726815a9da1459a9cdcbc764d6f481abdad4c059e13e367d7b53680086049e01.jpg"
+    },
+    "Figure 7-304": {
+      "page": 1335,
+      "file": "fig_1335_1_tight.png",
+      "bbox": [
+        127,
+        114,
+        808,
+        323
+      ],
+      "caption": "RP PIO Severity Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/cc400f7be6507ef08b6f2faf5772191fe0cba81de9dfd1acbb0787ccf5542d50.jpg"
+    },
+    "Figure 7-305": {
+      "page": 1336,
+      "file": "fig_1336_1_tight.png",
+      "bbox": [
+        127,
+        114,
+        808,
+        323
+      ],
+      "caption": "RP PIO SysError Register S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/d5fe4c76afcf315a638e25af43c0e80df22e3dd2339107fb1ebf681cc8cf14f2.jpg"
+    },
+    "Figure 7-306": {
+      "page": 1337,
+      "file": "fig_1337_1_tight.png",
+      "bbox": [
+        127,
+        114,
+        808,
+        323
+      ],
+      "caption": "RP PIO Exception Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/98dda6027cd4182eef4a8fd54f7cae32d048fa818739cad7badf62e281eba847.jpg"
+    },
+    "Figure 7-307": {
+      "page": 1338,
+      "file": "fig_1338_1_tight.png",
+      "bbox": [
+        114,
+        92,
+        851,
+        246
+      ],
+      "caption": "RP PIO Header Log Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/0e3b227937ed8c7b4b015927572eeed1c0005eb34e35a09e70ee8f507eeb1c55.jpg"
+    },
+    "Figure 7-309": {
+      "page": 1339,
+      "file": "fig_1339_1_tight.png",
+      "bbox": [
+        114,
+        300,
+        851,
+        455
+      ],
+      "caption": "RP PIO TLP Prefix Log Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/cf70a2192aad9019bb740db5c7350bc611ecfca6e37ac076cdf917cf1a72e6b3.jpg"
+    },
+    "Figure 7-310": {
+      "page": 1340,
+      "file": "fig_1340_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        857,
+        227
+      ],
+      "caption": "PTM Extended Capability Structure",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/b6470dc517beca76a6363f7062409e74523fd1e0e8ea279d365d02287a0cba16.jpg"
+    },
+    "Figure 7-311": {
+      "page": 1340,
+      "file": "fig_1340_2_tight.png",
+      "bbox": [
+        116,
+        359,
+        779,
+        429
+      ],
+      "caption": "PTM Extended Capability Header",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/735ca252ced3612c027b306d70ba137eb8f985511c5097e30afc7cf2a817fc86.jpg"
+    },
+    "Figure 7-312": {
+      "page": 1341,
+      "file": "fig_1341_1_tight.png",
+      "bbox": [
+        112,
+        108,
+        787,
+        227
+      ],
+      "caption": "PTM Capability Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/1a6439bce5200a86dd4ef735bec676cfbdcf58145e70ee9bff998b8f951d2f26.jpg"
+    },
+    "Figure 7-313": {
+      "page": 1342,
+      "file": "fig_1342_1_tight.png",
+      "bbox": [
+        122,
+        329,
+        787,
+        422
+      ],
+      "caption": "PTM Control Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/b8aedfe8774de24fe4951ca27f2e8decba3b29d8be8ad1f6de650e96b00df74b.jpg"
+    },
+    "Figure 7-314": {
+      "page": 1344,
+      "file": "fig_1344_1_tight.png",
+      "bbox": [
+        132,
+        315,
+        856,
+        428
+      ],
+      "caption": "Readiness Time Reporting Extended Capability",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/d4edb25d40e803f8931c9ae67d53ac9accb3e37ed23c862bc138ba784d874eda.jpg"
+    },
+    "Figure 7-315": {
+      "page": 1344,
+      "file": "fig_1344_2_tight.png",
+      "bbox": [
+        130,
+        685,
+        370,
+        733
+      ],
+      "caption": "Readiness Time Encoding",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/06d2f7580bd5a1b43fa001a957a4d91b08aa6a9770f10dfbaa3cbf0e4f808abc.jpg"
+    },
+    "Figure 7-316": {
+      "page": 1345,
+      "file": "fig_1345_1_tight.png",
+      "bbox": [
+        116,
+        109,
+        779,
+        179
+      ],
+      "caption": "Readiness Time Reporting Extended Capability Header",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/3b63cab05969920ddabe59300ccbc470898ceda4486c75857d98ebf47a798f03.jpg"
+    },
+    "Figure 7-317": {
+      "page": 1345,
+      "file": "fig_1345_2_tight.png",
+      "bbox": [
+        125,
+        627,
+        753,
+        690
+      ],
+      "caption": "Readiness Time Reporting 1 Register \\$",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/5181aa1395850a2b803d621f5cbfaf0ea8c597554fc299bf46e34c69062f159a.jpg"
+    },
+    "Figure 7-319": {
+      "page": 1348,
+      "file": "fig_1348_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        857,
+        377
+      ],
+      "caption": "Hierarchy ID Extended Capability",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/09b051067d64284abaefa268c43e8ee2f92dd610aaffeec818799562d8fdcc95.jpg"
+    },
+    "Figure 7-320": {
+      "page": 1348,
+      "file": "fig_1348_2_tight.png",
+      "bbox": [
+        124,
+        553,
+        679,
+        611
+      ],
+      "caption": "Hierarchy ID Extended Capability Header",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/58cea9041f7aaff17845945367e8788bc8a279e603c58fced6345db1c5ac215b.jpg"
+    },
+    "Figure 7-321": {
+      "page": 1349,
+      "file": "fig_1349_1_tight.png",
+      "bbox": [
+        119,
+        193,
+        787,
+        290
+      ],
+      "caption": "Hierarchy ID Status Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/3a96fbbf5a1aa4feb133d7cc4f29dd7b928b55bc45978ef1b6bf339d73a02227.jpg"
+    },
+    "Figure 7-322": {
+      "page": 1350,
+      "file": "fig_1350_1_tight.png",
+      "bbox": [
+        73,
+        579,
+        892,
+        878
+      ],
+      "caption": "Hierarchy ID Data Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/4f8e08951ec1f624b6620c050a994dcdc9793c83a5cf997959d20040ea1c9eaa.jpg"
+    },
+    "Figure 7-329": {
+      "page": 1355,
+      "file": "fig_1355_1_tight.png",
+      "bbox": [
+        132,
+        117,
+        450,
+        165
+      ],
+      "caption": "VPD Address Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/46b66b6e0c7f71c257542e8a9d7b29597d6d98da8ed6b6cea9ea39f6786f9f5f.jpg"
+    },
+    "Figure 7-331": {
+      "page": 1356,
+      "file": "fig_1356_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        856,
+        256
+      ],
+      "caption": "NPEM Extended Capability",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/0db43f198cf7f4ba50f32e998bee1a10c6a5fb646b93c8fc0ed39c52850e67e3.jpg"
+    },
+    "Figure 7-332": {
+      "page": 1356,
+      "file": "fig_1356_2_tight.png",
+      "bbox": [
+        116,
+        390,
+        779,
+        459
+      ],
+      "caption": "NPEM Extended Capability Header",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/77895b90c5f94c8ba80e1ce0403471343d01c237e4ded8f60612e5b284ff36dd.jpg"
+    },
+    "Figure 7-333": {
+      "page": 1357,
+      "file": "fig_1357_1_tight.png",
+      "bbox": [
+        116,
+        109,
+        790,
+        337
+      ],
+      "caption": "NPEM Capability Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/fba6a6c8b98994537224c8ed38b5a1d50bdbcaa205093c8152358571e680060c.jpg"
+    },
+    "Figure 7-334": {
+      "page": 1358,
+      "file": "fig_1358_1_tight.png",
+      "bbox": [
+        116,
+        380,
+        787,
+        606
+      ],
+      "caption": "NPEM Control Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/2e99c508dfa74c9732c2e14211dd9914e939bc548c1fe7845f8d73b5ca477542.jpg"
+    },
+    "Figure 7-336": {
+      "page": 1361,
+      "file": "fig_1361_1_tight.png",
+      "bbox": [
+        130,
+        387,
+        815,
+        560
+      ],
+      "caption": "Alternate Protocol Extended Capability",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/b119c4221caa9694a203f22d55d3567691b63d6894a932a8ca70c02ba25bd7cb.jpg"
+    },
+    "Figure 7-337": {
+      "page": 1361,
+      "file": "fig_1361_2_tight.png",
+      "bbox": [
+        114,
+        695,
+        779,
+        762
+      ],
+      "caption": "Alternate Protocol Extended Capability Header S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/f9c752a5c59b613529ea9e679b4d3dc88ee1761e2a70179d11e647f3c4675529.jpg"
+    },
+    "Figure 7-338": {
+      "page": 1362,
+      "file": "fig_1362_1_tight.png",
+      "bbox": [
+        112,
+        375,
+        769,
+        438
+      ],
+      "caption": "Alternate Protocol Capabilities Register S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/579768a3cb171a72b63fcb6d4c83cfecb76ffdbbb1cf0a80ae88f4a53da63a1a.jpg"
+    },
+    "Figure 7-339": {
+      "page": 1362,
+      "file": "fig_1362_2_tight.png",
+      "bbox": [
+        112,
+        785,
+        769,
+        848
+      ],
+      "caption": "Alternate Protocol Control Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/ebff22b6122456ffd64a0e24a8a4257585749c50afe8d64a3575b192574bcf1c.jpg"
+    },
+    "Figure 7-343": {
+      "page": 1365,
+      "file": "fig_1365_1_tight.png",
+      "bbox": [
+        132,
+        482,
+        816,
+        564
+      ],
+      "caption": "Conventional PCI Advanced Features Capability (AF)",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/755ae4981997d87d098662f0f34c0bd2d316ec88f44224d84f62ca50b017d2fa.jpg"
+    },
+    "Figure 7-344": {
+      "page": 1365,
+      "file": "fig_1365_2_tight.png",
+      "bbox": [
+        132,
+        704,
+        606,
+        753
+      ],
+      "caption": "Advanced Features Capability Header5",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/3e6a9d94882a426eccfe35d87321d9079cec333acd928ccdbf7f0850c090d0fa.jpg"
+    },
+    "Figure 7-347": {
+      "page": 1367,
+      "file": "fig_1367_1_tight.png",
+      "bbox": [
+        73,
+        377,
+        892,
+        508
+      ],
+      "caption": "AF Status Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/17261987b8858507e2e725ef8e759d5de4acffcb8ccd1407db538f283f5ebc0d.jpg"
+    },
+    "Figure 7-348": {
+      "page": 1368,
+      "file": "fig_1368_1_tight.png",
+      "bbox": [
+        132,
+        113,
+        815,
+        286
+      ],
+      "caption": "SFI Extended Capability",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/b2117e23d45066a29038061ad8352931d2aae3865ea8387604603899a4c32616.jpg"
+    },
+    "Figure 7-349": {
+      "page": 1368,
+      "file": "fig_1368_2_tight.png",
+      "bbox": [
+        116,
+        458,
+        779,
+        525
+      ],
+      "caption": "SFI Extended Capability Header",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/403bdbdd03c41b71cce580d1a1e0bc55121e5d1d45cf688eba15996f12d79b64.jpg"
+    },
+    "Figure 7-351": {
+      "page": 1369,
+      "file": "fig_1369_1_tight.png",
+      "bbox": [
+        130,
+        489,
+        673,
+        715
+      ],
+      "caption": "SFI Control Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/d44583c579e0ffe024e02e4cda620531b8dd1cc9884cf6c6635ec912a5e2fe7b.jpg"
+    },
+    "Figure 7-352": {
+      "page": 1371,
+      "file": "fig_1371_1_tight.png",
+      "bbox": [
+        130,
+        281,
+        616,
+        446
+      ],
+      "caption": "SFI Status Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/3a38768023b4cf6ef9c010b2dd8f7e723837a95b5dfcc5e427a03ba6f5cf5f97.jpg"
+    },
+    "Figure 7-354": {
+      "page": 1372,
+      "file": "fig_1372_1_tight.png",
+      "bbox": [
+        129,
+        455,
+        722,
+        501
+      ],
+      "caption": "SFI CAM Data Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/d994df46c927e01ab73570590e83a88bbfbd9c9edf2c9d4f37265cfd35920562.jpg"
+    },
+    "Figure 7-355": {
+      "page": 1373,
+      "file": "fig_1373_1_tight.png",
+      "bbox": [
+        132,
+        114,
+        856,
+        195
+      ],
+      "caption": "Subsystem ID and Subsystem Vendor ID Capability S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/0981bebcc137cd3ee986182aef940ca41a77dc75fc800c31ca1a5eda08558d6b.jpg"
+    },
+    "Figure 7-356": {
+      "page": 1373,
+      "file": "fig_1373_2_tight.png",
+      "bbox": [
+        120,
+        332,
+        789,
+        407
+      ],
+      "caption": "Subsystem ID and Subsystem Vendor ID Capability Header",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/5a0601bd3ba3d7ba87ec7614b88a988b50f496189699d734c06599c56c22b6a5.jpg"
+    },
+    "Figure 7-357": {
+      "page": 1373,
+      "file": "fig_1373_3_tight.png",
+      "bbox": [
+        129,
+        693,
+        722,
+        738
+      ],
+      "caption": "Subsystem ID and Subsystem Vendor ID Capability Data",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/033815883da4a00ccd79aff1990afed25bfdb6a815422afde68be9d81ef81a0f.jpg"
+    },
+    "Figure 7-358": {
+      "page": 1374,
+      "file": "fig_1374_1_tight.png",
+      "bbox": [
+        132,
+        335,
+        857,
+        539
+      ],
+      "caption": "Data Object Exchange Extended Capability",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/23f78c834cc3d9edc0d69d0c221a1a8da70e3d7c2b40f225605688ae68d2e139.jpg"
+    },
+    "Figure 7-359": {
+      "page": 1374,
+      "file": "fig_1374_2_tight.png",
+      "bbox": [
+        116,
+        672,
+        779,
+        741
+      ],
+      "caption": "DOE Extended Capability Header",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/5944f595eb9ddf4182bf4624567624efb62964f3fb89f58d59c6e648e65b31d1.jpg"
+    },
+    "Figure 7-360": {
+      "page": 1375,
+      "file": "fig_1375_1_tight.png",
+      "bbox": [
+        117,
+        329,
+        799,
+        430
+      ],
+      "caption": "DOE Capabilities Register S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/63cb769ff2ddd9112dfed055656af0d37e97c1125d968525a9cbf3ee36e3832b.jpg"
+    },
+    "Figure 7-361": {
+      "page": 1376,
+      "file": "fig_1376_1_tight.png",
+      "bbox": [
+        122,
+        157,
+        805,
+        275
+      ],
+      "caption": "DOE Control Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/cbd4b67c185e24239811795a5c0e810ec9c735d52651d529594321bbb48fe908.jpg"
+    },
+    "Figure 7-362": {
+      "page": 1377,
+      "file": "fig_1377_1_tight.png",
+      "bbox": [
+        122,
+        156,
+        803,
+        292
+      ],
+      "caption": "DOE Status Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/2b8318984211101127b5495ea62b3f255cc77f579a7d47312ef58fa88520b621.jpg"
+    },
+    "Figure 7-363": {
+      "page": 1378,
+      "file": "fig_1378_1_tight.png",
+      "bbox": [
+        127,
+        397,
+        722,
+        443
+      ],
+      "caption": "DOE Write Data Mailbox Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/cd8598735379fb51828aecc6c2f8729590b9a4f4bb003cf481f241102b70b384.jpg"
+    },
+    "Figure 7-365": {
+      "page": 1381,
+      "file": "fig_1381_1_tight.png",
+      "bbox": [
+        130,
+        138,
+        857,
+        372
+      ],
+      "caption": "Shadow Functions Extended Capability Structure",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/33748bf2cdabf65a2f27ff7420bfca14764479e5e8b0c9af13df94c079958ad3.jpg"
+    },
+    "Figure 7-366": {
+      "page": 1381,
+      "file": "fig_1381_2_tight.png",
+      "bbox": [
+        114,
+        559,
+        784,
+        622
+      ],
+      "caption": "Shadow Functions Extended Capability Header S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/9e939a53578bfbb7a423b66cca4b064886bc4de02eb0ff92b0765f807366ba69.jpg"
+    },
+    "Figure 7-367": {
+      "page": 1382,
+      "file": "fig_1382_1_tight.png",
+      "bbox": [
+        73,
+        343,
+        892,
+        448
+      ],
+      "caption": "Shadow Functions Capability RegisterS",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/10df840ccf45849ce594bfb823bdc809a8e5bd469e203e033b1d800469082714.jpg"
+    },
+    "Figure 7-368": {
+      "page": 1382,
+      "file": "fig_1382_2_tight.png",
+      "bbox": [
+        120,
+        594,
+        808,
+        652
+      ],
+      "caption": "Shadow Functions Control Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/91e98219dcecdf53978ac0dabcd3f50e02feedb507f42f56823d73fa90816e15.jpg"
+    },
+    "Figure 7-371": {
+      "page": 1384,
+      "file": "fig_1384_1_tight.png",
+      "bbox": [
+        114,
+        542,
+        779,
+        612
+      ],
+      "caption": "IDE Extended Capability Header",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/61f331c9fc46cea4d1819ca51a04a6633a216e5c9232fc71cbcb5e5617db4a12.jpg"
+    },
+    "Figure 7-372": {
+      "page": 1385,
+      "file": "fig_1385_1_tight.png",
+      "bbox": [
+        109,
+        151,
+        766,
+        333
+      ],
+      "caption": "IDE Capability Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/0e88db5c55819b5e239b47bef522d57d89dd882608304de62c4f7fa9f74e1b01.jpg"
+    },
+    "Figure 7-373": {
+      "page": 1387,
+      "file": "fig_1387_1_tight.png",
+      "bbox": [
+        117,
+        155,
+        797,
+        226
+      ],
+      "caption": "IDE Control Register S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/54c16e6e80373c6a5427fde84e7538b281509c0326c99a583ebf139dcc6b1935.jpg"
+    },
+    "Figure 7-374": {
+      "page": 1387,
+      "file": "fig_1387_2_tight.png",
+      "bbox": [
+        116,
+        588,
+        792,
+        777
+      ],
+      "caption": "Link IDE Stream Control Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/321ac2c75ef1786f44e464ae6398c5c1fcb8244df5cd1a7689918de0829e5b1f.jpg"
+    },
+    "Figure 7-375": {
+      "page": 1389,
+      "file": "fig_1389_1_tight.png",
+      "bbox": [
+        120,
+        535,
+        790,
+        609
+      ],
+      "caption": "Link IDE Stream Status Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/e251ec1395a1c93ecb977985deda89a06f111933af25ca759f71554f1097747d.jpg"
+    },
+    "Figure 7-377": {
+      "page": 1390,
+      "file": "fig_1390_1_tight.png",
+      "bbox": [
+        109,
+        607,
+        766,
+        780
+      ],
+      "caption": "Selective IDE Stream Control Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/7f05d9df130b2055026393454383fc91a7694c539091c9eb0bffdb37ec456fce.jpg"
+    },
+    "Figure 7-378": {
+      "page": 1393,
+      "file": "fig_1393_1_tight.png",
+      "bbox": [
+        119,
+        334,
+        785,
+        407
+      ],
+      "caption": "Selective IDE Stream Status Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/9b1363619843d846d6632cea472dddf84486cc14ec7f821e237c75c0a9129ff4.jpg"
+    },
+    "Figure 7-379": {
+      "page": 1394,
+      "file": "fig_1394_1_tight.png",
+      "bbox": [
+        127,
+        157,
+        722,
+        203
+      ],
+      "caption": "IDE RID Association Register 1 (Offset +00h)",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/3d9cd559b69a5dcbe8d731671874cf781e316e1fc0a2b7baceb341375d21560a.jpg"
+    },
+    "Figure 7-384": {
+      "page": 1396,
+      "file": "fig_1396_1_tight.png",
+      "bbox": [
+        130,
+        559,
+        620,
+        648
+      ],
+      "caption": "Null Capability",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/91e23654682cbfc3037bb994469ee46f0a350809a59f8e3793e04e5622289d6b.jpg"
+    },
+    "Figure 7-385": {
+      "page": 1397,
+      "file": "fig_1397_1_tight.png",
+      "bbox": [
+        116,
+        291,
+        777,
+        359
+      ],
+      "caption": "Null Extended Capability",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/365cd9f4cd2ebbf74e0d47d4d1d228161e5837a7188a2bcf26aad8a024e5acad.jpg"
+    },
+    "Figure 7-386": {
+      "page": 1398,
+      "file": "fig_1398_1_tight.png",
+      "bbox": [
+        93,
+        180,
+        870,
+        391
+      ],
+      "caption": "Streamlined Virtual Channel Extended Capability Structure",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/c6c82bd346c902e080d0e9d6b3392fe0f399293a3318ebd4bd90dffb10d8b0ff.jpg"
+    },
+    "Figure 7-387": {
+      "page": 1398,
+      "file": "fig_1398_2_tight.png",
+      "bbox": [
+        116,
+        565,
+        779,
+        633
+      ],
+      "caption": "Streamlined Virtual Channel Extended Capability Header",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/e213a433b77f320cfb0030c80492bac8ecd08cd2cc3bade7f5667bed43544681.jpg"
+    },
+    "Figure 7-388": {
+      "page": 1399,
+      "file": "fig_1399_1_tight.png",
+      "bbox": [
+        122,
+        337,
+        807,
+        396
+      ],
+      "caption": "SVC Port Capability Register 1",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/a7da9e18c82db9c142bce04b63c9c47b8752c5e05875f12273ccc137814b8d1d.jpg"
+    },
+    "Figure 7-391": {
+      "page": 1401,
+      "file": "fig_1401_1_tight.png",
+      "bbox": [
+        119,
+        208,
+        797,
+        280
+      ],
+      "caption": "SVC Resource Capability Register SS",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/a5b0079e949d3fe22c4b25719769f11a0bb271cf4273c7158432e05721a0f0e5.jpg"
+    },
+    "Figure 7-392": {
+      "page": 1402,
+      "file": "fig_1402_1_tight.png",
+      "bbox": [
+        73,
+        272,
+        893,
+        911
+      ],
+      "caption": "SVC Resource Control Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/9d869f6edc12512c68be8c54c189184eb56487ae6ab1cf6979dc2b1bd7582ac5.jpg"
+    },
+    "Figure 7-393": {
+      "page": 1403,
+      "file": "fig_1403_1_tight.png",
+      "bbox": [
+        119,
+        775,
+        797,
+        848
+      ],
+      "caption": "SVC Resource Status Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/fa1f9b194af2a766cc597ee226c7072e8342173ce3e59bb62c42c9226bead501.jpg"
+    },
+    "Figure 7-394": {
+      "page": 1404,
+      "file": "fig_1404_1_tight.png",
+      "bbox": [
+        132,
+        597,
+        857,
+        830
+      ],
+      "caption": "MRBL Extended Capability S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/11e5698c0c854fe6dfcfc6220a4d350d5d28897ee9062c5b9a7a1e3e56d6024a.jpg"
+    },
+    "Figure 7-395": {
+      "page": 1405,
+      "file": "fig_1405_1_tight.png",
+      "bbox": [
+        116,
+        222,
+        779,
+        291
+      ],
+      "caption": "MRBL Extended Capability Header",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/e02a23a9f5d9c232ce56d3c2e926c613731460f6a3d0ba8f85e53b4604855c1a.jpg"
+    },
+    "Figure 7-396": {
+      "page": 1405,
+      "file": "fig_1405_2_tight.png",
+      "bbox": [
+        129,
+        756,
+        722,
+        801
+      ],
+      "caption": "MRBL Capabilities Register S",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/faf947a2a7377884e8f209b5cb148b7ec3fe8d413aebf65592cdc17cc2b99a64.jpg"
+    },
+    "Figure 7-397": {
+      "page": 1406,
+      "file": "fig_1406_1_tight.png",
+      "bbox": [
+        102,
+        299,
+        815,
+        345
+      ],
+      "caption": "MRBL Locator Register",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/391b63da98750d63faf0f43c99c1f19870d21612d463d3c61aac943bcfb46085.jpg"
+    }
+  }
+}

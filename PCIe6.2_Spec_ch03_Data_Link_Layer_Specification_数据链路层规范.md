@@ -65,7 +65,7 @@ The Data Link Layer acts as an intermediate stage between the Transaction Layer 
 ---
 
 > **Figure 3-1.** Layering Diagram Highlighting the Data Link Layer
-> <img src="figures/chapter_03/fig_0309_1.png" width="700">
+> <img src="figures/chapter_03/fig_0309_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -262,7 +262,7 @@ DLLP 以点对点方式在一对链路的两个组件之间发送。TLP 则从�
 ---
 
 > **Figure 3-2.** Data Link Control and Management State Machine
-> <img src="figures/chapter_03/fig_0311_1.png" width="700">
+> <img src="figures/chapter_03/fig_0311_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -945,7 +945,7 @@ table>
 <<<PAGE_BREAK>>> page_333
 
 > **Figure 3-3.** VC0 Flow Control Initialization Example with 8b/10b Encoding-based Framing
-> <img src="figures/chapter_03/fig_0323_1.png" width="700">
+> <img src="figures/chapter_03/fig_0323_1_tight.png" width="700">
 
 In this example, the Endpoint enters the initialization sequence for VC0 first, followed shortly by the Switch. After the Switch receives a complete set of InitFC1 DLLPs, it transitions to FC_INIT2... Both components have now received at least one InitFC2 DLLP, and the initialization sequence is complete.
 
@@ -1111,7 +1111,7 @@ See § Figure 3-4 and § Figure 3-5 below.
 ---
 
 > **Figure 3-4.** DLLP Type and CRC Fields (Non-Flit Mode)
-> <img src="figures/chapter_03/fig_0325_1.png" width="700">
+> <img src="figures/chapter_03/fig_0325_1_tight.png" width="700">
 
 > **Figure 3-5.** DLLP Type Field (Flit Mode)
 > <img src="figures/chapter_03/fig_0325_2.png" width="700">
@@ -1309,34 +1309,34 @@ In § Figure 3-6 through § Figure 3-15 the 16-bit CRC is not shown. In Non-Flit
 ---
 
 > **Figure 3-6.** Data Link Layer Packet Format for Ack and Nak (Non-Flit Mode)
-> <img src="figures/chapter_03/fig_0329_1.png" width="700">
+> <img src="figures/chapter_03/fig_0329_1_tight.png" width="700">
 
 > **Figure 3-7.** Data Link Layer Packet Format for NOP
-> <img src="figures/chapter_03/fig_0329_2.png" width="700">
+> <img src="figures/chapter_03/fig_0329_2_tight.png" width="700">
 
 > **Figure 3-8.** Data Link Layer Packet Format for NOP2 (Flit Mode)
-> <img src="figures/chapter_03/fig_0329_3.png" width="700">
+> <img src="figures/chapter_03/fig_0329_3_tight.png" width="700">
 
 > **Figure 3-9.** Data Link Layer Packet Format for InitFC1
-> <img src="figures/chapter_03/fig_0330_1.png" width="700">
+> <img src="figures/chapter_03/fig_0330_1_tight.png" width="700">
 
 > **Figure 3-10.** Data Link Layer Packet Format for InitFC2
-> <img src="figures/chapter_03/fig_0330_2.png" width="700">
+> <img src="figures/chapter_03/fig_0330_2_tight.png" width="700">
 
 > **Figure 3-11.** Data Link Layer Packet Format for UpdateFC
-> <img src="figures/chapter_03/fig_0331_1.png" width="700">
+> <img src="figures/chapter_03/fig_0331_1_tight.png" width="700">
 
 > **Figure 3-12.** Data Link Layer Packet Format for Power Management
-> <img src="figures/chapter_03/fig_0331_2.png" width="700">
+> <img src="figures/chapter_03/fig_0331_2_tight.png" width="700">
 
 > **Figure 3-13.** Data Link Layer Packet Format for Vendor-Specific
 > <img src="figures/chapter_03/fig_0331_3.png" width="700">
 
 > **Figure 3-14.** Data Link Layer Packet Format for Data Link Feature DLLP
-> <img src="figures/chapter_03/fig_0332_1.png" width="700">
+> <img src="figures/chapter_03/fig_0332_1_tight.png" width="700">
 
 > **Figure 3-15.** Data Packet Layer Format for Link Management (Flit Mode)
-> <img src="figures/chapter_03/fig_0332_2.png" width="700">
+> <img src="figures/chapter_03/fig_0332_2_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1427,7 +1427,7 @@ The following are the characteristics and rules associated with Data Link Layer 
 <<<PAGE_BREAK>>> page_348
 
 > **Figure 3-16.** Diagram of CRC Calculation for DLLPs
-> <img src="figures/chapter_03/fig_0334_1.png" width="700">
+> <img src="figures/chapter_03/fig_0334_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -1728,7 +1728,7 @@ table>
 ---
 
 > **Figure 3-19.** Calculation of LCRC
-> <img src="figures/chapter_03/fig_0339_1.png" width="700">
+> <img src="figures/chapter_03/fig_0339_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2006,7 +2006,7 @@ Since Ack/Nak and Flow Control DLLPs affect TLPs flowing in the opposite directi
 ---
 
 > **Figure 3-20.** Received DLLP Error Check Flowchart
-> <img src="figures/chapter_03/fig_0343_1.png" width="700">
+> <img src="figures/chapter_03/fig_0343_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2072,7 +2072,7 @@ table>
 ---
 
 > **Figure 3-21.** Ack/Nak DLLP Processing Flowchart
-> <img src="figures/chapter_03/fig_0344_1.png" width="700">
+> <img src="figures/chapter_03/fig_0344_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
@@ -2333,7 +2333,7 @@ The following rules are applied in sequence to describe how received TLPs are pr
 ---
 
 > **Figure 3-22.** Receive Data Link Layer Handling of TLPs Flowchart
-> <img src="figures/chapter_03/fig_0347_1.png" width="700">
+> <img src="figures/chapter_03/fig_0347_1_tight.png" width="700">
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 

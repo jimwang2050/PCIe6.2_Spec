@@ -1,0 +1,77 @@
+{
+  "chapter": 1,
+  "page_range": [
+    127,
+    140
+  ],
+  "total_figures": 5,
+  "total_manual": 0,
+  "total_failed": 0,
+  "figures": {
+    "Figure 1-1": {
+      "page": 128,
+      "file": "fig_0128_1_tight.png",
+      "bbox": [
+        318,
+        699,
+        651,
+        824
+      ],
+      "caption": "PCI Express Link",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/ab25568f21db3cbe8f547999726997733302189bdae436cb810ff642ac4bbb57.jpg"
+    },
+    "Figure 1-2": {
+      "page": 130,
+      "file": "fig_0130_1_tight.png",
+      "bbox": [
+        98,
+        113,
+        866,
+        662
+      ],
+      "caption": "Example PCI Express Topology",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/c88739eb6db2ee4594cdffd7ad7f5fa963c94924def70e9e4c4e67ac6b28d4a7.jpg"
+    },
+    "Figure 1-3": {
+      "page": 133,
+      "file": "fig_0133_1_tight.png",
+      "bbox": [
+        343,
+        554,
+        624,
+        694
+      ],
+      "caption": "Logical Block Diagram of a Switch",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/5aa28c6ebf2d9d12beb58574aae7e43070b25c4f51b76a7a320373800aa3f63c.jpg"
+    },
+    "Figure 1-4": {
+      "page": 135,
+      "file": "fig_0135_1_tight.png",
+      "bbox": [
+        403,
+        473,
+        566,
+        614
+      ],
+      "caption": "High-Level Layering Diagram",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/9108ff7587e8bd5f2d3aee561057d294a3b9820215a2a25da487ff3dd6fa48fc.jpg"
+    },
+    "Figure 1-5": {
+      "page": 136,
+      "file": "fig_0136_1_tight.png",
+      "bbox": [
+        331,
+        93,
+        640,
+        186
+      ],
+      "caption": "Packet Flow Through the Layers",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/d6795cdb402afa43a00a43db813a0a378d962c54bb157d8bd67bd26c651b1ce0.jpg"
+    }
+  }
+}

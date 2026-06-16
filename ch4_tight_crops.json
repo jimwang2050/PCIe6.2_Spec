@@ -1,11 +1,12 @@
 {
   "chapter": 4,
-  "strategy": "MinerU bbox + tight crop (150 DPI, 4% padding)",
+  "strategy": "MinerU bbox + tight crop (150 DPI, 4% padding) + manual override for MinerU-missed",
   "page_range": [
     351,
     650
   ],
-  "total_figures": 46,
+  "total_figures": 59,
+  "total_manual": 10,
   "total_failed": 0,
   "figures": {
     "Figure 4-1": {
@@ -19,7 +20,8 @@
       ],
       "caption": "Layering Diagram Highlighting Physical Layer",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/ce116136c3b9f9aafa9a2438184920aa0a1e5426af2881277184c5cccc786ef2.jpg"
+      "mineru_image": "images/ce116136c3b9f9aafa9a2438184920aa0a1e5426af2881277184c5cccc786ef2.jpg",
+      "source": "mineru"
     },
     "Figure 4-2": {
       "page": 354,
@@ -32,7 +34,8 @@
       ],
       "caption": "Character to Symbol Mapping",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/6ae398587511298a0bc7af64e99db78ac035305db39eca5022d47da026f06920.jpg"
+      "mineru_image": "images/6ae398587511298a0bc7af64e99db78ac035305db39eca5022d47da026f06920.jpg",
+      "source": "mineru"
     },
     "Figure 4-3": {
       "page": 354,
@@ -45,7 +48,8 @@
       ],
       "caption": "Bit Transmission Order on Physical Lanes - x1 Example",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/28328f70e901d03973b710b36b29fa92619167a9c52aae7a0a4169c8ca086469.jpg"
+      "mineru_image": "images/28328f70e901d03973b710b36b29fa92619167a9c52aae7a0a4169c8ca086469.jpg",
+      "source": "mineru"
     },
     "Figure 4-4": {
       "page": 355,
@@ -58,7 +62,8 @@
       ],
       "caption": "Bit Transmission Order on Physical Lanes - x4 Example",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/def8ac2356a9ce806420270a68112a168519ddcdb167448860809e661da9a4b8.jpg"
+      "mineru_image": "images/def8ac2356a9ce806420270a68112a168519ddcdb167448860809e661da9a4b8.jpg",
+      "source": "mineru"
     },
     "Figure 4-5": {
       "page": 358,
@@ -71,7 +76,8 @@
       ],
       "caption": "TLP with Framing Symbols Applied",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/c2769abc71a826488db6abbfc6d9cd3fcf441158e06f7fad94864f30099142aa.jpg"
+      "mineru_image": "images/c2769abc71a826488db6abbfc6d9cd3fcf441158e06f7fad94864f30099142aa.jpg",
+      "source": "mineru"
     },
     "Figure 4-6": {
       "page": 359,
@@ -84,7 +90,8 @@
       ],
       "caption": "DLLP with Framing Symbols Applied",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/d30f7e8be7bf8365700b57e2bc6fe1342f09df407837c5052f3b285430b5d137.jpg"
+      "mineru_image": "images/d30f7e8be7bf8365700b57e2bc6fe1342f09df407837c5052f3b285430b5d137.jpg",
+      "source": "mineru"
     },
     "Figure 4-7": {
       "page": 359,
@@ -97,7 +104,8 @@
       ],
       "caption": "Framed TLP on a x1 Link",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/ceafe0ad39b5d100fc640f6d16cbf0376f4e791f73789947e6d8961c38011db4.jpg"
+      "mineru_image": "images/ceafe0ad39b5d100fc640f6d16cbf0376f4e791f73789947e6d8961c38011db4.jpg",
+      "source": "mineru"
     },
     "Figure 4-8": {
       "page": 360,
@@ -110,7 +118,8 @@
       ],
       "caption": "Framed TLP on a x2 Link",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/62c6f861d5f84a88bed519b4b06949724cc9a4f93e678df2904f205c6ea2493c.jpg"
+      "mineru_image": "images/62c6f861d5f84a88bed519b4b06949724cc9a4f93e678df2904f205c6ea2493c.jpg",
+      "source": "mineru"
     },
     "Figure 4-9": {
       "page": 360,
@@ -123,7 +132,8 @@
       ],
       "caption": "Framed TLP on a x4 Link",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/0ecf2f522f1be68927a994fe62c7700d7bfdb6f7d7455079397a4963f229a538.jpg"
+      "mineru_image": "images/0ecf2f522f1be68927a994fe62c7700d7bfdb6f7d7455079397a4963f229a538.jpg",
+      "source": "mineru"
     },
     "Figure 4-10": {
       "page": 361,
@@ -136,7 +146,8 @@
       ],
       "caption": "LFSR with 8b/10b Scrambling Polynomial",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/3ba409c068be7744ce06ed91175cf51a089c8b44c4e9ed458b34125ca8818c12.jpg"
+      "mineru_image": "images/3ba409c068be7744ce06ed91175cf51a089c8b44c4e9ed458b34125ca8818c12.jpg",
+      "source": "mineru"
     },
     "Figure 4-11": {
       "page": 362,
@@ -149,7 +160,8 @@
       ],
       "caption": "Example of Bit Transmission Order in a x1 Link Showing 130 Bits of a Block",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/d29abf3aa417495c889b759be6dccd03124dce3b62131bdf3f15de1b7e93ac93.jpg"
+      "mineru_image": "images/d29abf3aa417495c889b759be6dccd03124dce3b62131bdf3f15de1b7e93ac93.jpg",
+      "source": "mineru"
     },
     "Figure 4-12": {
       "page": 363,
@@ -162,7 +174,68 @@
       ],
       "caption": "Example of Bit Placement in a x4 Link with One Block per Lane",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/c3001b1e0a91601a6da5f59f1ab4ad7e5b39f2ac78c6676c987d7389cddb9452.jpg"
+      "mineru_image": "images/c3001b1e0a91601a6da5f59f1ab4ad7e5b39f2ac78c6676c987d7389cddb9452.jpg",
+      "source": "mineru"
+    },
+    "Figure 4-13": {
+      "page": 366,
+      "file": "fig_0366_1_tight.png",
+      "bbox": null,
+      "caption": "Layout of Framing Tokens",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": null,
+      "source": "manual_override"
+    },
+    "Figure 4-15": {
+      "page": 368,
+      "file": "fig_0368_1_tight.png",
+      "bbox": null,
+      "caption": "Packet Transmission in a x8 Link",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": null,
+      "source": "manual_override"
+    },
+    "Figure 4-14": {
+      "page": 368,
+      "file": "fig_0368_2_tight.png",
+      "bbox": [
+        316,
+        364,
+        660,
+        502
+      ],
+      "caption": "TLP and DLLP Layout g",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/8500f68a74ff648a75d8d5258de2e664157e852247c7b1643a7807dc9c7fa10a.jpg",
+      "source": "mineru"
+    },
+    "Figure 4-16": {
+      "page": 368,
+      "file": "fig_0368_3_tight.png",
+      "bbox": [
+        310,
+        558,
+        655,
+        695
+      ],
+      "caption": "Nullified TLP Layout in a x8 Link with Other Packets",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/fcd3c5265d18b3fd66c7d00809fc95ff7284c6e6029f5f2c7478d288031e2040.jpg",
+      "source": "mineru"
+    },
+    "Figure 4-17": {
+      "page": 369,
+      "file": "fig_0369_1_tight.png",
+      "bbox": [
+        351,
+        93,
+        616,
+        234
+      ],
+      "caption": "SKP Ordered Set of Length 66-bit in a x8 Link",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/1eb1937016e737995df46a0d9fb91087db510a8001f809dd3e1429e1a133a4dc.jpg",
+      "source": "mineru"
     },
     "Figure 4-18": {
       "page": 376,
@@ -175,7 +248,17 @@
       ],
       "caption": "LFSR with Scrambling Polynomial in 8.0 GT/s and Above Data Rate S",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/37bf51a9dd301c0547e3c72c55fb970b7dabf5b7488721a2a71c946735bca0b0.jpg"
+      "mineru_image": "images/37bf51a9dd301c0547e3c72c55fb970b7dabf5b7488721a2a71c946735bca0b0.jpg",
+      "source": "mineru"
+    },
+    "Figure 4-19": {
+      "page": 378,
+      "file": "fig_0378_1_tight.png",
+      "bbox": null,
+      "caption": "Alternate Implementation of the LFSR for Descrambling",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": null,
+      "source": "manual_override"
     },
     "Figure 4-20": {
       "page": 380,
@@ -188,7 +271,8 @@
       ],
       "caption": "Precoding working the scrambler/ de-scrambler",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/326ce874ca4d7af30d1b6a2f379447c0170bc1287a8bc35474ed6f14c3703f27.jpg"
+      "mineru_image": "images/326ce874ca4d7af30d1b6a2f379447c0170bc1287a8bc35474ed6f14c3703f27.jpg",
+      "source": "mineru"
     },
     "Figure 4-21": {
       "page": 383,
@@ -201,7 +285,8 @@
       ],
       "caption": "Example of Symbol placement in a x4 Link with 1b/1b encoding",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/6261d4d6e186b3a1fade07158bc000e0d927d5ba623e1f4f8e826c66d4d27222.jpg"
+      "mineru_image": "images/6261d4d6e186b3a1fade07158bc000e0d927d5ba623e1f4f8e826c66d4d27222.jpg",
+      "source": "mineru"
     },
     "Figure 4-22": {
       "page": 384,
@@ -214,7 +299,8 @@
       ],
       "caption": "Transmit side at 64.0 GT/s",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/c9de1388617896a59ffba1b60f8c4f97d0005d3456cc268425c5b3975f0e010c.jpg"
+      "mineru_image": "images/c9de1388617896a59ffba1b60f8c4f97d0005d3456cc268425c5b3975f0e010c.jpg",
+      "source": "mineru"
     },
     "Figure 4-23": {
       "page": 384,
@@ -227,7 +313,8 @@
       ],
       "caption": "Receive side at 64.0 GT/s",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/895c2fec12459f77ea717b1131ae63bea43c3240fa87ae336266176d0fcb7ae8.jpg"
+      "mineru_image": "images/895c2fec12459f77ea717b1131ae63bea43c3240fa87ae336266176d0fcb7ae8.jpg",
+      "source": "mineru"
     },
     "Figure 4-24": {
       "page": 385,
@@ -240,7 +327,8 @@
       ],
       "caption": "PAM4 Signaling at UI level: Voltage levels, 2-bit encoding, and their corresponding DC balance values",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/d3d0076646b7c497e086570f773ec664a4b21dcda57271d8e57806414453752b.jpg"
+      "mineru_image": "images/d3d0076646b7c497e086570f773ec664a4b21dcda57271d8e57806414453752b.jpg",
+      "source": "mineru"
     },
     "Figure 4-25": {
       "page": 386,
@@ -253,7 +341,17 @@
       ],
       "caption": "The Sequence of Gray Coding, Precoding, and PAM4 voltage translation on an aligned 2-bit boundary on a per Lane",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/680327d764eb0bb370c1df718c842a552dfdb753f1c623d0f39b449001d5e530.jpg"
+      "mineru_image": "images/680327d764eb0bb370c1df718c842a552dfdb753f1c623d0f39b449001d5e530.jpg",
+      "source": "mineru"
+    },
+    "Figure 4-26": {
+      "page": 393,
+      "file": "fig_0393_1_tight.png",
+      "bbox": null,
+      "caption": "Processing of Ordered Sets during or at the end of a Data Stream in Flit mode at 64.0 GT/s Data Rate",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": null,
+      "source": "manual_override"
     },
     "Figure 4-27": {
       "page": 399,
@@ -266,7 +364,8 @@
       ],
       "caption": "Flit Mode and Non-Flit Mode processing with 8b/10b and 128b/130b encoding on the Transmit side",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/99562b405b6b34b54c04e6e5e74e0bdfbc80d3db09a4ad29230a4251737ce16e.jpg"
+      "mineru_image": "images/99562b405b6b34b54c04e6e5e74e0bdfbc80d3db09a4ad29230a4251737ce16e.jpg",
+      "source": "mineru"
     },
     "Figure 4-28": {
       "page": 400,
@@ -279,7 +378,26 @@
       ],
       "caption": "Flit Mode and Non-Flit Mode processing with 8b/10b and 128b/130b encoding on the Receive side",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/b99362eb46c4a959a25c6641f4c99cf830625800857a4abe41ffa4c83c9078d0.jpg"
+      "mineru_image": "images/b99362eb46c4a959a25c6641f4c99cf830625800857a4abe41ffa4c83c9078d0.jpg",
+      "source": "mineru"
+    },
+    "Figure 4-29": {
+      "page": 404,
+      "file": "fig_0404_1_tight.png",
+      "bbox": null,
+      "caption": "DLP Byte to Bit Number Assignment",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": null,
+      "source": "manual_override"
+    },
+    "Figure 4-30": {
+      "page": 404,
+      "file": "fig_0404_2_tight.png",
+      "bbox": null,
+      "caption": "DLP Bit usage",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": null,
+      "source": "manual_override"
     },
     "Figure 4-31": {
       "page": 405,
@@ -292,7 +410,17 @@
       ],
       "caption": "Optimized\\_Update\\_FC",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/36b8c0229bf7b54dff12eb5ab30d718262498705b3948073955c7cb338c75e5d.jpg"
+      "mineru_image": "images/36b8c0229bf7b54dff12eb5ab30d718262498705b3948073955c7cb338c75e5d.jpg",
+      "source": "mineru"
+    },
+    "Figure 4-32": {
+      "page": 406,
+      "file": "fig_0406_1_tight.png",
+      "bbox": null,
+      "caption": "Flit_Marker",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": null,
+      "source": "manual_override"
     },
     "Figure 4-33": {
       "page": 424,
@@ -305,7 +433,8 @@
       ],
       "caption": "Flit Ack, Nak, and Discard Rules Flow Chart (Zoom-In to View)",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/aaf761d161a0b051fc61b517a11183dd23113d21a8a962ffc402d7120ebb3f55.jpg"
+      "mineru_image": "images/aaf761d161a0b051fc61b517a11183dd23113d21a8a962ffc402d7120ebb3f55.jpg",
+      "source": "mineru"
     },
     "Figure 4-34": {
       "page": 429,
@@ -318,7 +447,17 @@
       ],
       "caption": "Flit Ack/Nak/Replay Example",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/89fc12ba6a2ab80a35436c59057853015d78675e810e40d9325c077929a53404.jpg"
+      "mineru_image": "images/89fc12ba6a2ab80a35436c59057853015d78675e810e40d9325c077929a53404.jpg",
+      "source": "mineru"
+    },
+    "Figure 4-35": {
+      "page": 431,
+      "file": "fig_0431_1_tight.png",
+      "bbox": null,
+      "caption": "CRC generation/ checking in Flit",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": null,
+      "source": "manual_override"
     },
     "Figure 4-40": {
       "page": 436,
@@ -331,7 +470,8 @@
       ],
       "caption": "ECC Decoder function",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/b37c05846f4725c59f54dc8cf2ba6158d5ae34276fe8a73c132821a018072547.jpg"
+      "mineru_image": "images/b37c05846f4725c59f54dc8cf2ba6158d5ae34276fe8a73c132821a018072547.jpg",
+      "source": "mineru"
     },
     "Figure 4-41": {
       "page": 437,
@@ -344,7 +484,8 @@
       ],
       "caption": "3-way ECC decode followed by CRC check of flit on the Receive side",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/c504774c4532a25ed2b1ffef235deaa155ce62e7bfeb688705c6314e95515183.jpg"
+      "mineru_image": "images/c504774c4532a25ed2b1ffef235deaa155ce62e7bfeb688705c6314e95515183.jpg",
+      "source": "mineru"
     },
     "Figure 4-42": {
       "page": 448,
@@ -357,7 +498,8 @@
       ],
       "caption": "8.0 GT/s Equalization Flow",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/055c8757dcd7e14d3728124e78b43ac0ec07f8e6dd86ef649ff1a7bb199843f3.jpg"
+      "mineru_image": "images/055c8757dcd7e14d3728124e78b43ac0ec07f8e6dd86ef649ff1a7bb199843f3.jpg",
+      "source": "mineru"
     },
     "Figure 4-43": {
       "page": 448,
@@ -370,7 +512,17 @@
       ],
       "caption": "16.0 GT/s Equalization Flow",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/910042bfb18a93d872b5bf10078bcd12f51d689e64577aa85f14d5509941c035.jpg"
+      "mineru_image": "images/910042bfb18a93d872b5bf10078bcd12f51d689e64577aa85f14d5509941c035.jpg",
+      "source": "mineru"
+    },
+    "Figure 4-44": {
+      "page": 449,
+      "file": "fig_0449_1_tight.png",
+      "bbox": null,
+      "caption": "64.0 GT/s Equalization Flow",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": null,
+      "source": "manual_override"
     },
     "Figure 4-45": {
       "page": 450,
@@ -383,7 +535,8 @@
       ],
       "caption": "Equalization Bypass Example",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/c49220443cdbd85b7c8020aa09dd3fb70851aa6677f0a2b38b0ffdc501cb57fb.jpg"
+      "mineru_image": "images/c49220443cdbd85b7c8020aa09dd3fb70851aa6677f0a2b38b0ffdc501cb57fb.jpg",
+      "source": "mineru"
     },
     "Figure 4-46": {
       "page": 474,
@@ -396,7 +549,8 @@
       ],
       "caption": "Alternate Protocol Negotiation and Equalization Bypass LTSSM States",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/a765b8a7205fe3800f88320bada3253fc413304448e57ba89868011cefad8119.jpg"
+      "mineru_image": "images/a765b8a7205fe3800f88320bada3253fc413304448e57ba89868011cefad8119.jpg",
+      "source": "mineru"
     },
     "Figure 4-47": {
       "page": 478,
@@ -409,7 +563,8 @@
       ],
       "caption": "Electrical Idle Exit Ordered Set for 8.0 GT/s to 32.0 GT/s Data Rates (EIEOS)",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/19d0704cc551a92c68e674f871f92bbfaa159006f45b1f623cc234799d1bb08e.jpg"
+      "mineru_image": "images/19d0704cc551a92c68e674f871f92bbfaa159006f45b1f623cc234799d1bb08e.jpg",
+      "source": "mineru"
     },
     "Figure 4-48": {
       "page": 497,
@@ -422,7 +577,8 @@
       ],
       "caption": "Example of L0p flow in a x16 Link",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/799f45b54b37dc1977ab6b45f4b4ca7b7fc141301e2dadd230e86c79befc900b.jpg"
+      "mineru_image": "images/799f45b54b37dc1977ab6b45f4b4ca7b7fc141301e2dadd230e86c79befc900b.jpg",
+      "source": "mineru"
     },
     "Figure 4-49": {
       "page": 500,
@@ -435,7 +591,8 @@
       ],
       "caption": "Main State Diagram for Link Training and Status State Machine",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/a1fd98b74fc93c5631365625ebe56eaf036313c38cc0afa35d142e9ae32bb76d.jpg"
+      "mineru_image": "images/a1fd98b74fc93c5631365625ebe56eaf036313c38cc0afa35d142e9ae32bb76d.jpg",
+      "source": "mineru"
     },
     "Figure 4-50": {
       "page": 502,
@@ -448,7 +605,8 @@
       ],
       "caption": "Detect Substate Machine",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/0aaa32098a7047dc5b558228fe660603577743af4fac387ec26a330b152b479f.jpg"
+      "mineru_image": "images/0aaa32098a7047dc5b558228fe660603577743af4fac387ec26a330b152b479f.jpg",
+      "source": "mineru"
     },
     "Figure 4-51": {
       "page": 510,
@@ -461,7 +619,8 @@
       ],
       "caption": "Polling Substate Machine",
       "pdf_chunk": "chunk_02_pages_327-526.pdf",
-      "mineru_image": "images/c197f902d44bd0ef9c50076879ba9c5b62e200849bceecc44aa7219f4a1fe1de.jpg"
+      "mineru_image": "images/c197f902d44bd0ef9c50076879ba9c5b62e200849bceecc44aa7219f4a1fe1de.jpg",
+      "source": "mineru"
     },
     "Figure 4-52": {
       "page": 528,
@@ -474,7 +633,8 @@
       ],
       "caption": "Configuration Substate Machine",
       "pdf_chunk": "chunk_03_pages_527-726.pdf",
-      "mineru_image": "images/e2b5dfc1d28290d79b411fab76df79d75fa19274319c826d47fe62f7fdc53f7c.jpg"
+      "mineru_image": "images/e2b5dfc1d28290d79b411fab76df79d75fa19274319c826d47fe62f7fdc53f7c.jpg",
+      "source": "mineru"
     },
     "Figure 4-53": {
       "page": 560,
@@ -487,7 +647,8 @@
       ],
       "caption": "Recovery Substate Machine",
       "pdf_chunk": "chunk_03_pages_527-726.pdf",
-      "mineru_image": "images/c4212df44ed5d336e17b847ad192a0e3fd25681670ba8b57b1717262629d5ae4.jpg"
+      "mineru_image": "images/c4212df44ed5d336e17b847ad192a0e3fd25681670ba8b57b1717262629d5ae4.jpg",
+      "source": "mineru"
     },
     "Figure 4-54": {
       "page": 566,
@@ -500,7 +661,8 @@
       ],
       "caption": "L0s Substate Machine",
       "pdf_chunk": "chunk_03_pages_527-726.pdf",
-      "mineru_image": "images/c4e069c0f0b9cf38b4778606e7406b9ca41beb42d574f2337d6d8d52b774d15e.jpg"
+      "mineru_image": "images/c4e069c0f0b9cf38b4778606e7406b9ca41beb42d574f2337d6d8d52b774d15e.jpg",
+      "source": "mineru"
     },
     "Figure 4-55": {
       "page": 568,
@@ -513,7 +675,8 @@
       ],
       "caption": "L1 Substate Machine",
       "pdf_chunk": "chunk_03_pages_527-726.pdf",
-      "mineru_image": "images/d1d3b2f75bd34bc39a348bb2733fcf69f85c3ee185129d7932211f6d69222bba.jpg"
+      "mineru_image": "images/d1d3b2f75bd34bc39a348bb2733fcf69f85c3ee185129d7932211f6d69222bba.jpg",
+      "source": "mineru"
     },
     "Figure 4-56": {
       "page": 569,
@@ -526,7 +689,8 @@
       ],
       "caption": "L2 Substate Machine S",
       "pdf_chunk": "chunk_03_pages_527-726.pdf",
-      "mineru_image": "images/b1df6c6532e21354e1c39e662ecb22ef8403c1dbab969b7cab63a4be59eef245.jpg"
+      "mineru_image": "images/b1df6c6532e21354e1c39e662ecb22ef8403c1dbab969b7cab63a4be59eef245.jpg",
+      "source": "mineru"
     },
     "Figure 4-57": {
       "page": 577,
@@ -539,7 +703,8 @@
       ],
       "caption": "Loopback Substate Machine",
       "pdf_chunk": "chunk_03_pages_527-726.pdf",
-      "mineru_image": "images/377c931704c473b71eb9a0ed01414f36dadd6b269bda41a4d6627fa2e027a859.jpg"
+      "mineru_image": "images/377c931704c473b71eb9a0ed01414f36dadd6b269bda41a4d6627fa2e027a859.jpg",
+      "source": "mineru"
     },
     "Figure 4-58": {
       "page": 585,
@@ -552,7 +717,8 @@
       ],
       "caption": "Margin PHY Payload for Control SKP Ordered Set with 1b/1b Encoding",
       "pdf_chunk": "chunk_03_pages_527-726.pdf",
-      "mineru_image": "images/59908a2631246564f7c0c66e1f01649a354d16f2d6248659b3ee2d0a2a9656e2.jpg"
+      "mineru_image": "images/59908a2631246564f7c0c66e1f01649a354d16f2d6248659b3ee2d0a2a9656e2.jpg",
+      "source": "mineru"
     },
     "Figure 4-59": {
       "page": 586,
@@ -565,7 +731,8 @@
       ],
       "caption": "LFSR PHY Payload for Control SKP Ordered Set with 1b/1b Encoding",
       "pdf_chunk": "chunk_03_pages_527-726.pdf",
-      "mineru_image": "images/572a4add5490b0d015ed79fc2be1012126ef07aa3d2a5baf233cd5352d520421.jpg"
+      "mineru_image": "images/572a4add5490b0d015ed79fc2be1012126ef07aa3d2a5baf233cd5352d520421.jpg",
+      "source": "mineru"
     },
     "Figure 4-60": {
       "page": 586,
@@ -578,7 +745,17 @@
       ],
       "caption": "Polling.Compliance PHY Payload for Control SKP Ordered Set with 1b/1b Encoding",
       "pdf_chunk": "chunk_03_pages_527-726.pdf",
-      "mineru_image": "images/4906927241d2c3523c57c486b98d7c6517e89af1e5e55073e81053273ac82b8a.jpg"
+      "mineru_image": "images/4906927241d2c3523c57c486b98d7c6517e89af1e5e55073e81053273ac82b8a.jpg",
+      "source": "mineru"
+    },
+    "Figure 4-61": {
+      "page": 602,
+      "file": "fig_0602_1_tight.png",
+      "bbox": null,
+      "caption": "Retimer System Topologies",
+      "pdf_chunk": "chunk_03_pages_527-726.pdf",
+      "mineru_image": null,
+      "source": "manual_override"
     },
     "Figure 4-62": {
       "page": 617,
@@ -591,7 +768,8 @@
       ],
       "caption": "Supported Retimer Topologies",
       "pdf_chunk": "chunk_03_pages_527-726.pdf",
-      "mineru_image": "images/c18bdc506d5558645e22a882b7c7be69048d9f2ddcec5cec1f9a1edcf500a083.jpg"
+      "mineru_image": "images/c18bdc506d5558645e22a882b7c7be69048d9f2ddcec5cec1f9a1edcf500a083.jpg",
+      "source": "mineru"
     },
     "Figure 4-63": {
       "page": 647,
@@ -604,7 +782,8 @@
       ],
       "caption": "Retimer CLKREQ# Connection Topology",
       "pdf_chunk": "chunk_03_pages_527-726.pdf",
-      "mineru_image": "images/422659dc7f3dea23e5afc655b98be3e0f8a11f9fb9d5f6ceae82d247f7a68c4d.jpg"
+      "mineru_image": "images/422659dc7f3dea23e5afc655b98be3e0f8a11f9fb9d5f6ceae82d247f7a68c4d.jpg",
+      "source": "mineru"
     }
   }
 }

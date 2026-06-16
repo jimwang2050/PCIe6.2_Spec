@@ -1,0 +1,220 @@
+{
+  "chapter": 12,
+  "page_range": [
+    1659,
+    1702
+  ],
+  "total_figures": 16,
+  "total_manual": 0,
+  "total_failed": 0,
+  "figures": {
+    "Figure 12-1": {
+      "page": 1665,
+      "file": "fig_1665_1_tight.png",
+      "bbox": [
+        299,
+        117,
+        656,
+        363
+      ],
+      "caption": "Example PESTI Application",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/e894540ec459df0203e85d689dbc1dc3045531c8c5850024060943ad28fd3c41.jpg"
+    },
+    "Figure 12-2": {
+      "page": 1665,
+      "file": "fig_1665_2_tight.png",
+      "bbox": [
+        297,
+        618,
+        666,
+        708
+      ],
+      "caption": "UART Data Framing S",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/aef257e7c0b4047eff38f5b880456c5921aa1cc2fa815688018880376511018d.jpg"
+    },
+    "Figure 12-3": {
+      "page": 1666,
+      "file": "fig_1666_1_tight.png",
+      "bbox": [
+        129,
+        178,
+        823,
+        406
+      ],
+      "caption": "PESTI Circuit Diagram",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/11894bb4b38e8546e9ed0ace4066b0318c9b16a2e0383b00ca41983e34a01f2d.jpg"
+    },
+    "Figure 12-4": {
+      "page": 1669,
+      "file": "fig_1669_1_tight.png",
+      "bbox": [
+        272,
+        422,
+        692,
+        487
+      ],
+      "caption": "PESTI Broadcast Command",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/c20b47cba903becf34f4a8387d5fd77b5c8fff1743467b1d219e705336a68e1e.jpg"
+    },
+    "Figure 12-5": {
+      "page": 1671,
+      "file": "fig_1671_1_tight.png",
+      "bbox": [
+        184,
+        287,
+        769,
+        497
+      ],
+      "caption": "PESTI Protocol Phases",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/31c52ce83786569fbcea729bc5a838f19246be1000cf2a3ece40bdb4362d8b75.jpg"
+    },
+    "Figure 12-6": {
+      "page": 1673,
+      "file": "fig_1673_1_tight.png",
+      "bbox": [
+        150,
+        279,
+        821,
+        359
+      ],
+      "caption": "PESTI Discovery Command and Response Format",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/5d5a59c4cd057b6c773c378911915bd327b07438fb2275fd55106bb0c3e11038.jpg"
+    },
+    "Figure 12-7": {
+      "page": 1675,
+      "file": "fig_1675_1_tight.png",
+      "bbox": [
+        181,
+        527,
+        790,
+        608
+      ],
+      "caption": "Single Byte PESTI Virtual Wire Exchange",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/44529faa7b171df7aa075517ca2db8b1e73b1719729da222e0145f294d220564.jpg"
+    },
+    "Figure 12-8": {
+      "page": 1675,
+      "file": "fig_1675_2_tight.png",
+      "bbox": [
+        106,
+        765,
+        861,
+        829
+      ],
+      "caption": "Multi-byte PESTI Virtual Wire Exchange g",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/9a7dac64ca26aee4d48a11303070a086fc9a01c5afe125c67a86767c2d83e0d5.jpg"
+    },
+    "Figure 12-10": {
+      "page": 1680,
+      "file": "fig_1680_1_tight.png",
+      "bbox": [
+        174,
+        486,
+        802,
+        566
+      ],
+      "caption": "PESTI Mux Switch Control Format",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/c5e71555bf5439f29cde6d74caa48993b209de73b99327120164dab7637c476f.jpg"
+    },
+    "Figure 12-11": {
+      "page": 1682,
+      "file": "fig_1682_1_tight.png",
+      "bbox": [
+        348,
+        117,
+        612,
+        315
+      ],
+      "caption": "[CEM] form factor example circuit for repurposing legacy JTAG to USB 2.0 mode",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/fd31b41d921668b22aac659d579f63589e6cc93045b4c951933d541b0a6a7600.jpg"
+    },
+    "Figure 12-13": {
+      "page": 1687,
+      "file": "fig_1687_1_tight.png",
+      "bbox": [
+        233,
+        116,
+        733,
+        260
+      ],
+      "caption": "Example of 2-wire Hub Use",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/254468783489e4be285696efece7b010a9da548dc43e93cfcfd8dc0ed18574e0.jpg"
+    },
+    "Figure 12-14": {
+      "page": 1690,
+      "file": "fig_1690_1_tight.png",
+      "bbox": [
+        143,
+        114,
+        790,
+        848
+      ],
+      "caption": "SMBus to I3C Transition Flow",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/466044a4d6b5682e27c82cda7e1301833fd206536f0a52d16234e5dc2312305e.jpg"
+    },
+    "Figure 12-15": {
+      "page": 1692,
+      "file": "fig_1692_1_tight.png",
+      "bbox": [
+        99,
+        113,
+        869,
+        255
+      ],
+      "caption": "Component Timing Diagram for Transition to I3C Signaling Voltage",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/7750876cba77a74b594b70c79a81f34c0f3c34c83e1c5fd0786b412becdf998a.jpg"
+    },
+    "Figure 12-16": {
+      "page": 1694,
+      "file": "fig_1694_1_tight.png",
+      "bbox": [
+        96,
+        208,
+        870,
+        377
+      ],
+      "caption": "SMBus/I2C-based FRU Information Device Writes with Two-Byte Addressing S",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/e4992d0820a42a22afc59ee72234dd1962d477fecfbd637b24a185e48c6f0fda.jpg"
+    },
+    "Figure 12-17": {
+      "page": 1694,
+      "file": "fig_1694_2_tight.png",
+      "bbox": [
+        94,
+        455,
+        874,
+        676
+      ],
+      "caption": "FRU Information Device Reads with Two-Byte Addressing",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/e77bc0c4f97722f9691419a7c03e6b97ae789cb1e42ba0f874face2622e3b6f0.jpg"
+    },
+    "Figure 12-18": {
+      "page": 1701,
+      "file": "fig_1701_1_tight.png",
+      "bbox": [
+        106,
+        114,
+        846,
+        477
+      ],
+      "caption": "Example Tiers Involving Sidebands",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/6b3619336a97aa3e4b670f6f0d03c5fb3daf03ca36c5660ef2a13ff065ab1609.jpg"
+    }
+  }
+}

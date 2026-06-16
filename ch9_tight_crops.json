@@ -1,0 +1,155 @@
+{
+  "chapter": 9,
+  "page_range": [
+    1523,
+    1558
+  ],
+  "total_figures": 11,
+  "total_manual": 0,
+  "total_failed": 0,
+  "figures": {
+    "Figure 9-1": {
+      "page": 1523,
+      "file": "fig_1523_1_tight.png",
+      "bbox": [
+        245,
+        344,
+        717,
+        755
+      ],
+      "caption": "Generic Platform Configuration",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/353dc931b312f50ead46a186492b556df6a684b67ea5bd970ac09824e4469c84.jpg"
+    },
+    "Figure 9-2": {
+      "page": 1524,
+      "file": "fig_1524_1_tight.png",
+      "bbox": [
+        251,
+        303,
+        720,
+        765
+      ],
+      "caption": "Generic Platform Configuration with a VI and Multiple Sl",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/55ade253ebb2508cb4121e0cf3eaf2ba937b3bfe40badd2e940d5b132b4c4291.jpg"
+    },
+    "Figure 9-3": {
+      "page": 1526,
+      "file": "fig_1526_1_tight.png",
+      "bbox": [
+        276,
+        95,
+        704,
+        594
+      ],
+      "caption": "Generic Platform Configuration with SR-IOV and IOV Enablers",
+      "pdf_chunk": "chunk_07_pages_1327-1526.pdf",
+      "mineru_image": "images/78b5d5ee1c35fe9bafede3557909b949480ff1bd978cdf0f27f644fb49336321.jpg"
+    },
+    "Figure 9-4": {
+      "page": 1528,
+      "file": "fig_1528_1_tight.png",
+      "bbox": [
+        187,
+        121,
+        781,
+        337
+      ],
+      "caption": "Example Multi-Function Device",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/2b3a003d160c9c7ae697acad976dd40931501709ebbe799b95f11eb7a983f49d.jpg"
+    },
+    "Figure 9-5": {
+      "page": 1529,
+      "file": "fig_1529_1_tight.png",
+      "bbox": [
+        266,
+        103,
+        710,
+        390
+      ],
+      "caption": "Example SR-IOV Single PF Capable Device",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/5463fd09e3f1ea17cf537722f4b7438610b0a3ff176112a8113128f04009a760.jpg"
+    },
+    "Figure 9-6": {
+      "page": 1531,
+      "file": "fig_1531_1_tight.png",
+      "bbox": [
+        133,
+        122,
+        836,
+        507
+      ],
+      "caption": "Example SR-IOV Multi-PF Capable Device",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/ea109a702250c11c2b3055baf6d26c2c3cfecfd472aed986650db35072ac72ed.jpg"
+    },
+    "Figure 9-7": {
+      "page": 1533,
+      "file": "fig_1533_1_tight.png",
+      "bbox": [
+        125,
+        99,
+        846,
+        530
+      ],
+      "caption": "Example SR-IOV Device with Multiple Bus Numbers",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/4ddeb96abdd77b2e703e5385f1a5547f850a711b189931a29a2e6d5c1f323627.jpg"
+    },
+    "Figure 9-8": {
+      "page": 1534,
+      "file": "fig_1534_1_tight.png",
+      "bbox": [
+        122,
+        94,
+        848,
+        669
+      ],
+      "caption": "Example SR-IOV Device with a Mixture of Function Types",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/78d4fb5d78e531cab54433071416928533e114f1eb80e99be0f6d1fa538c4706.jpg"
+    },
+    "Figure 9-10": {
+      "page": 1541,
+      "file": "fig_1541_1_tight.png",
+      "bbox": [
+        130,
+        113,
+        856,
+        621
+      ],
+      "caption": "SR-IOV Extended Capability",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/05c465573c32d5a46d1978655f557d1b2462723373bcfb9b5f59b4ac6dbb7151.jpg"
+    },
+    "Figure 9-11": {
+      "page": 1541,
+      "file": "fig_1541_2_tight.png",
+      "bbox": [
+        114,
+        790,
+        781,
+        859
+      ],
+      "caption": "SR-IOV Extended Capability Header",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/dcb353a984305db6e28e3974a7499aff0614404401b5e33abacbe91ea51eadc3.jpg"
+    },
+    "Figure 9-12": {
+      "page": 1542,
+      "file": "fig_1542_1_tight.png",
+      "bbox": [
+        114,
+        469,
+        785,
+        577
+      ],
+      "caption": "SR-IOV Capabilities Register",
+      "pdf_chunk": "chunk_08_pages_1527-1702.pdf",
+      "mineru_image": "images/8aa12e5dd75da18f0da2c8c875d015d552573b47a24de3bd843e50b009ff83fd.jpg"
+    }
+  }
+}

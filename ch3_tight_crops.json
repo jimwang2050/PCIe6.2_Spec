@@ -1,0 +1,246 @@
+{
+  "chapter": 3,
+  "page_range": [
+    309,
+    350
+  ],
+  "total_figures": 18,
+  "total_manual": 0,
+  "total_failed": 0,
+  "figures": {
+    "Figure 3-1": {
+      "page": 309,
+      "file": "fig_0309_1_tight.png",
+      "bbox": [
+        183,
+        303,
+        782,
+        622
+      ],
+      "caption": "Layering Diagram Highlighting the Data Link Layer",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/c78675782423cbff04d891e1337496a98de601a615827f0c340a089db7108ab4.jpg"
+    },
+    "Figure 3-2": {
+      "page": 311,
+      "file": "fig_0311_1_tight.png",
+      "bbox": [
+        356,
+        272,
+        609,
+        720
+      ],
+      "caption": "Data Link Control and Management State Machine",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/a0a43c9dbad32d76d9491862df88d7f6502f2b831aa8b362b489e96dbe56cc9f.jpg"
+    },
+    "Figure 3-3": {
+      "page": 323,
+      "file": "fig_0323_1_tight.png",
+      "bbox": [
+        151,
+        118,
+        823,
+        820
+      ],
+      "caption": "VC0 Flow Control Initialization Example with 8b/10b Encoding-based Framing",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/149526b82b451ba96aec369be32c32744ce958e8e759c2ea01fe127d5e78731d.jpg"
+    },
+    "Figure 3-5": {
+      "page": 325,
+      "file": "fig_0325_1_tight.png",
+      "bbox": [
+        109,
+        728,
+        812,
+        795
+      ],
+      "caption": "DLLP Type Field (Flit Mode)",
+      "pdf_chunk": "chunk_01_pages_127-326.pdf",
+      "mineru_image": "images/fb6e29f6f5f22b7d8b5b134fc8ad1f2c63b3f7d1c1fb7657d6c835c6b879ba33.jpg"
+    },
+    "Figure 3-6": {
+      "page": 329,
+      "file": "fig_0329_1_tight.png",
+      "bbox": [
+        107,
+        242,
+        941,
+        349
+      ],
+      "caption": "Data Link Layer Packet Format for Ack and Nak (Non-Flit Mode)",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/d333c09004e2373f9e545262366903b9869aa90ad4f8388b191d272c9d0d6a94.jpg"
+    },
+    "Figure 3-7": {
+      "page": 329,
+      "file": "fig_0329_2_tight.png",
+      "bbox": [
+        109,
+        417,
+        908,
+        506
+      ],
+      "caption": "Data Link Layer Packet Format for NOP",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/ed8481ac801ce6c7d4b75dac45421e0d9b77cf97e6ef8fcde2854be7d6ed09d1.jpg"
+    },
+    "Figure 3-8": {
+      "page": 329,
+      "file": "fig_0329_3_tight.png",
+      "bbox": [
+        109,
+        575,
+        916,
+        681
+      ],
+      "caption": "Data Link Layer Packet Format for NoP2 (Flit Mode) 5",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/52b3280856c9a2dda38779134c0009d01a270cfa30a1f14020afa88736f6d080.jpg"
+    },
+    "Figure 3-9": {
+      "page": 330,
+      "file": "fig_0330_1_tight.png",
+      "bbox": [
+        101,
+        98,
+        910,
+        376
+      ],
+      "caption": "Data Link Layer Packet Format for InitFC1",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/1eaa2779cf656570ae62f79b520c1de9471dedf9f8be8dfaf3220ad13dc9f9f4.jpg"
+    },
+    "Figure 3-10": {
+      "page": 330,
+      "file": "fig_0330_2_tight.png",
+      "bbox": [
+        99,
+        505,
+        908,
+        787
+      ],
+      "caption": "Data Link Layer Packet Format for InitFC2",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/04419ff945c79deee29330b0972491babffd050b1ec5ee66a830c10ab0003335.jpg"
+    },
+    "Figure 3-11": {
+      "page": 331,
+      "file": "fig_0331_1_tight.png",
+      "bbox": [
+        107,
+        98,
+        936,
+        319
+      ],
+      "caption": "Data Link Layer Packet Format for UpdateFC",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/4d1a32e7430beca84a840a7d620377f110149aad51fd9157159e3fd47b888f7e.jpg"
+    },
+    "Figure 3-13": {
+      "page": 331,
+      "file": "fig_0331_2_tight.png",
+      "bbox": [
+        107,
+        648,
+        921,
+        738
+      ],
+      "caption": "Data Link Layer Packet Format for Vendor-Specific",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/d517845db78fd00430be2db83467da82d9c28519c33889e6819a459327c7ff42.jpg"
+    },
+    "Figure 3-14": {
+      "page": 332,
+      "file": "fig_0332_1_tight.png",
+      "bbox": [
+        109,
+        98,
+        926,
+        205
+      ],
+      "caption": "Data Link Layer Packet Format for Data Link Feature DLLP",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/9d3a23b078d3ea7f77d12ff6a944cf3fddbd507c9b5fd7f3f903982809e85aba.jpg"
+    },
+    "Figure 3-15": {
+      "page": 332,
+      "file": "fig_0332_2_tight.png",
+      "bbox": [
+        111,
+        275,
+        923,
+        457
+      ],
+      "caption": "Data Link Packet Layer Format for Link Management (Flit Mode)",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/dcb4e8c521ff95f076dae7ddce2d013d998d6d2dfe0ad8811c615ea0843fd679.jpg"
+    },
+    "Figure 3-16": {
+      "page": 334,
+      "file": "fig_0334_1_tight.png",
+      "bbox": [
+        127,
+        104,
+        839,
+        611
+      ],
+      "caption": "Diagram of CRC Calculation for DLLPs",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/b547cbb15e5d24bf14b5baac085908b224c4039e5750386c7af6791de67c4326.jpg"
+    },
+    "Figure 3-19": {
+      "page": 339,
+      "file": "fig_0339_1_tight.png",
+      "bbox": [
+        254,
+        97,
+        707,
+        833
+      ],
+      "caption": "Calculation of LCRC",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/8789c4242d54609139eb8cbae473f00b8542079c587772436506d0e7d7a02f80.jpg"
+    },
+    "Figure 3-20": {
+      "page": 343,
+      "file": "fig_0343_1_tight.png",
+      "bbox": [
+        428,
+        486,
+        537,
+        627
+      ],
+      "caption": "Received DLLP Error Check Flowchart",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/3ee9bad376f9401d6580982d96c452577e3db45e35f4978a4f0c83cf0a94feb6.jpg"
+    },
+    "Figure 3-21": {
+      "page": 344,
+      "file": "fig_0344_1_tight.png",
+      "bbox": [
+        380,
+        271,
+        584,
+        411
+      ],
+      "caption": "Ack/Nak DLLP Processing Flowchart s",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/d1db4e5024f735fcbd60ae76f61eeb3b15ec79e011d6be47ec51898c3c6e8c3d.jpg"
+    },
+    "Figure 3-22": {
+      "page": 347,
+      "file": "fig_0347_1_tight.png",
+      "bbox": [
+        403,
+        93,
+        563,
+        234
+      ],
+      "caption": "Receive Data Link Layer Handling of TLPs Flowchart",
+      "pdf_chunk": "chunk_02_pages_327-526.pdf",
+      "mineru_image": "images/3b8c226bf8d252624b07e08034199b9e2eef717b6dd5e1fa2644ccebf4bd6fac.jpg"
+    }
+  }
+}

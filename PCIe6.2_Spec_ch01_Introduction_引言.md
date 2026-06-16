@@ -475,7 +475,7 @@ table>
 A fabric is defined as a set of point-to-point Links that interconnect a set of components - an example fabric topology is shown in § Figure 1-2. This figure illustrates a single fabric instance with two Hierarchies composed of a Root Complex (RC), multiple Endpoints, and multiple Switches, interconnected via PCI Express Links.
 
 > **Figure 1-2.** Example PCI Express Topology
-> <img src="figures/chapter_01/fig_0130_1.png" width="700">
+> <img src="figures/chapter_01/fig_0130_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -1090,7 +1090,7 @@ table>
 A Switch is defined as a logical assembly of multiple virtual PCI-to-PCI Bridge devices as illustrated in § Figure 1-3. All Switches are governed by the following base rules.
 
 > **Figure 1-3.** Logical Block Diagram of a Switch
-> <img src="figures/chapter_01/fig_0133_1.png" width="700">
+> <img src="figures/chapter_01/fig_0133_1_tight.png" width="700">
 
 - Switches appear to configuration software as two or more logical PCI-to-PCI Bridges.
 - A Switch forwards transactions using PCI Bridge mechanisms; e.g., address-based routing except when engaged in a Multicast, as defined in § Section 6.14.
@@ -1395,7 +1395,7 @@ This document specifies the architecture in terms of three discrete logical laye
 The fundamental goal of this layering definition is to facilitate the reader's understanding of the specification. Note that this layering does not imply a particular PCI Express implementation.
 
 > **Figure 1-4.** High-Level Layering Diagram
-> <img src="figures/chapter_01/fig_0135_1.png" width="700">
+> <img src="figures/chapter_01/fig_0135_1_tight.png" width="700">
 
 PCI Express uses packets to communicate information between components. Packets are formed in the Transaction and Data Link Layers to carry the information from the transmitting component to the receiving component. As the transmitted packets flow through the other layers, they are extended with additional information necessary to handle packets at those layers. At the receiving side the reverse process occurs and packets get transformed from their Physical Layer representation to the Data Link Layer representation and finally (for Transaction Layer Packets) to the form that can be processed by the Transaction Layer of the receiving device. § Figure 1-5 shows the conceptual flow of transaction level packet information through the layers.
 
@@ -1496,7 +1496,7 @@ serial-to-parallel conversion, PLL(s), and impedance matching circuitry. It also
 §
 
 > **Figure 1-5.** Packet Flow Through the Layers
-> <img src="figures/chapter_01/fig_0136_1.png" width="700">
+> <img src="figures/chapter_01/fig_0136_1_tight.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">

@@ -418,7 +418,7 @@ Flex I/O 接口引脚允许默认为:
 ---
 
 > **Figure 12-1.** Example PESTI Application
-> <img src="figures/chapter_12/fig_1665_1.png" width="700">
+> <img src="figures/chapter_12/fig_1665_1_tight.png" width="700">
 
 ---
 
@@ -818,7 +818,7 @@ PESTI 利用 UART 帧格式,直接在 3.3 V 逻辑电平下运行,是单线、�
 ---
 
 > **Figure 12-2.** UART Data Framing
-> <img src="figures/chapter_12/fig_1665_2.png" width="700">
+> <img src="figures/chapter_12/fig_1665_2_tight.png" width="700">
 
 ---
 
@@ -891,7 +891,7 @@ minimum nominal value of 200 ohm -5% tolerance.
 ---
 
 > **Figure 12-3.** PESTI Circuit Diagram
-> <img src="figures/chapter_12/fig_1666_1.png" width="700">
+> <img src="figures/chapter_12/fig_1666_1_tight.png" width="700">
 
 ---
 
@@ -1275,7 +1275,7 @@ table>
 ---
 
 > **Figure 12-4.** PESTI Broadcast Command
-> <img src="figures/chapter_12/fig_1669_1.png" width="700">
+> <img src="figures/chapter_12/fig_1669_1_tight.png" width="700">
 
 ---
 
@@ -1469,12 +1469,12 @@ requirements.
 ---
 
 > **Figure 12-6.** PESTI Discovery Command and Response Format
-> <img src="figures/chapter_12/fig_1673_1.png" width="700">
+> <img src="figures/chapter_12/fig_1673_1_tight.png" width="700">
 
 ---
 
 > **Figure 12-5.** PESTI Protocol Phases
-> <img src="figures/chapter_12/fig_1671_1.png" width="700">
+> <img src="figures/chapter_12/fig_1671_1_tight.png" width="700">
 
 ---
 
@@ -1586,12 +1586,12 @@ re-entry to the discovery phase.
 ---
 
 > **Figure 12-7.** Single Byte PESTI Virtual Wire Exchange
-> <img src="figures/chapter_12/fig_1675_1.png" width="700">
+> <img src="figures/chapter_12/fig_1675_1_tight.png" width="700">
 
 ---
 
 > **Figure 12-8.** Multi-byte PESTI Virtual Wire Exchange
-> <img src="figures/chapter_12/fig_1675_2.png" width="700">
+> <img src="figures/chapter_12/fig_1675_2_tight.png" width="700">
 
 ---
 
@@ -1860,7 +1860,7 @@ downstream sub-channel so that the PESTI initiator can choose to not close a sus
 - **RSVD**: Reserved for Future Use.
 
 > **Figure 12-10.** PESTI Mux Switch Control Format
-> <img src="figures/chapter_12/fig_1680_1.png" width="700">
+> <img src="figures/chapter_12/fig_1680_1_tight.png" width="700">
 
 ---
 
@@ -1992,7 +1992,7 @@ USB 2.0 作为即插即用、带外管理接口有许多用例,例如:
 ---
 
 > **Figure 12-11.** [CEM] form factor example circuit for repurposing legacy JTAG to USB 2.0 mode
-> <img src="figures/chapter_12/fig_1682_1.png" width="700">
+> <img src="figures/chapter_12/fig_1682_1_tight.png" width="700">
 
 ---
 
@@ -2370,7 +2370,7 @@ d. 使用卸载功能(例如 SMBus 代理)发送和接收异步 SMBus 消息,例
 <<<PAGE_BREAK>>> page_1678
 
 > **Figure 12-13.** Example of 2-wire Hub Use
-> <img src="figures/chapter_12/fig_1687_1.png" width="700">
+> <img src="figures/chapter_12/fig_1687_1_tight.png" width="700">
 
 ---
 
@@ -2576,7 +2576,7 @@ devices on the bus. The host can use this to determine whether to use I3C Basic 
 </table>
 
 > **Figure 12-15.** Component Timing Diagram for Transition to I3C Signaling Voltage
-> <img src="figures/chapter_12/fig_1692_1.png" width="700">
+> <img src="figures/chapter_12/fig_1692_1_tight.png" width="700">
 
 ---
 
@@ -2840,12 +2840,12 @@ write transactions.
 <<<PAGE_BREAK>>> page_1682
 
 > **Figure 12-16.** SMBus/I2C-based FRU Information Device Writes with Two-Byte Addressing
-> <img src="figures/chapter_12/fig_1694_1.png" width="700">
+> <img src="figures/chapter_12/fig_1694_1_tight.png" width="700">
 
 ---
 
 > **Figure 12-17.** FRU Information Device Reads with Two-Byte Addressing
-> <img src="figures/chapter_12/fig_1694_2.png" width="700">
+> <img src="figures/chapter_12/fig_1694_2_tight.png" width="700">
 
 ---
 
@@ -3307,7 +3307,7 @@ Internal Cable Management guidance is defined for usage with [CopprLink].
 ---
 
 > **Figure 12-18.** Example Tiers Involving Sidebands
-> <img src="figures/chapter_12/fig_1701_1.png" width="700">
+> <img src="figures/chapter_12/fig_1701_1_tight.png" width="700">
 
 ---
 

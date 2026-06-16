@@ -129,7 +129,7 @@ The ATS chapter provides a new set of TLP and associated semantics. ATS uses a r
 § Figure 10-2 illustrates the basic flow of an ATS Translation Request operation.
 
 > **Figure 10-2.** Example ATS Translation Request/Completion Exchange
-> <img src="figures/chapter_10/fig_1560_1.png" width="700">
+> <img src="figures/chapter_10/fig_1560_1_tight.png" width="700">
 
 In this example, a Function-specific work request is received by a single-Function PCIe Device. The Function determines through an implementation specific method that caching a translation within its ATC would be beneficial. There are a number of considerations a Function or software can use in making such a determination; for example:
 - Memory address ranges that will be frequently accessed over an extended period of time or whose associated buffer content is subject to a significant update rate
@@ -276,7 +276,7 @@ In contrast to the prior example, § Figure 10-3 illustrates an example Multi-Fu
 - If the ATC implementation shares resources among a set of Functions, then the logical behavior is required to be consistent with fully independent ATC implementations.
 
 > **Figure 10-3.** Example Multi-Function Device with ATC per Function
-> <img src="figures/chapter_10/fig_1562_1.png" width="700">
+> <img src="figures/chapter_10/fig_1562_1_tight.png" width="700">
 
 Independent of the number of Functions within a Device, the following are required:
 
@@ -371,7 +371,7 @@ As § Figure 10-4 illustrates, there are essentially three steps in the ATS Inva
 </table>
 
 > **Figure 10-4.** Invalidation Protocol with a Single Invalidation Request and Completion
-> <img src="figures/chapter_10/fig_1563_1.png" width="700">
+> <img src="figures/chapter_10/fig_1563_1_tight.png" width="700">
 
 </div>
 
@@ -400,7 +400,7 @@ a. An Invalidate Completion is issued for each TC that may have referenced the r
 b. An Invalidate Completion contains the ITAG from Invalidate Request to enable the RC to correlate Invalidate Requests and Completions.
 
 > **Figure 10-5.** Single Invalidate Request with Multiple Invalidate Completions
-> <img src="figures/chapter_10/fig_1564_1.png" width="700">
+> <img src="figures/chapter_10/fig_1564_1_tight.png" width="700">
 
 ATS improves the behavior of DMA based data movement. An associated Page Request Interface (PRI) provides additional advantages by allowing DMA operations to be initiated without requiring that all the data to be moved into or out of system memory be pinned.<sup>190</sup> The overhead associated with pinning memory may be modest, but the negative impact on system performance of removing large portions of memory from the pageable pool can be significant.
 
@@ -598,16 +598,16 @@ In NFM, the AT field in the Requests is a redefinition of a reserved field in ea
 </table>
 
 > **Figure 10-6.** Memory Request Header with 64-bit Address Highlighting AT field
-> <img src="figures/chapter_10/fig_1566_1.png" width="700">
+> <img src="figures/chapter_10/fig_1566_1_tight.png" width="700">
 
 > **Figure 10-7.** Memory Request Header with 32-bit Address Highlighting AT field
-> <img src="figures/chapter_10/fig_1567_1.png" width="700">
+> <img src="figures/chapter_10/fig_1567_1_tight.png" width="700">
 
 > **Figure 10-8.** Memory Request Header with 64-bit Address Highlighting AT field - FLIT Mode
-> <img src="figures/chapter_10/fig_1568_1.png" width="700">
+> <img src="figures/chapter_10/fig_1568_1_tight.png" width="700">
 
 > **Figure 10-9.** Memory Request Header with 32-bit Address Highlighting AT field - FLIT Mode
-> <img src="figures/chapter_10/fig_1569_1.png" width="700">
+> <img src="figures/chapter_10/fig_1569_1_tight.png" width="700">
 
 </div>
 
@@ -726,7 +726,7 @@ For a Translation Request, the Relaxed Ordering (RO) bit is applicable and permi
 > <img src="figures/chapter_10/fig_1572_1.png" width="700">
 
 > **Figure 10-13.** Translation Request with 32-bit Address - Flit Mode
-> <img src="figures/chapter_10/fig_1573_1.png" width="700">
+> <img src="figures/chapter_10/fig_1573_1_tight.png" width="700">
 
 </div>
 
@@ -1736,10 +1736,10 @@ AMA 值与完成者关联,且是实现特定的。AMA 值对请求者、请求�
 </table>
 
 > **Figure 10-15.** Example Translation Completion with 1 TLP
-> <img src="figures/chapter_10/fig_1580_1.png" width="700">
+> <img src="figures/chapter_10/fig_1580_1_tight.png" width="700">
 
 > **Figure 10-16.** Example Translation Completion with 2 TLPs
-> <img src="figures/chapter_10/fig_1581_1.png" width="700">
+> <img src="figures/chapter_10/fig_1581_1_tight.png" width="700">
 
 </div>
 
@@ -1880,7 +1880,7 @@ Invalidate 请求是带 64 位数据的 MsgD 事务。Invalidate 请求消息可
 > <img src="figures/chapter_10/fig_1584_1.png" width="700">
 
 > **Figure 10-19.** Invalidate Request Message - Flit Mode
-> <img src="figures/chapter_10/fig_1585_1.png" width="700">
+> <img src="figures/chapter_10/fig_1585_1_tight.png" width="700">
 
 </div>
 
@@ -1912,7 +1912,7 @@ The address range specified in an Invalidate Request may span one or more STU 40
 The content of the payload is the untranslated address range to be invalidated. The payload format is shown in § Figure 10-20.
 
 > **Figure 10-20.** Invalidate Request Message Body
-> <img src="figures/chapter_10/fig_1586_1.png" width="700">
+> <img src="figures/chapter_10/fig_1586_1_tight.png" width="700">
 
 The S field is used to indicate if the range being invalidated is greater than 4096 bytes. Its meaning is the same as for the Translation Completion (see § Section 10.2.3.1 and § Section 10.2.3.2).
 
@@ -2051,10 +2051,10 @@ TA 如果收到针对某个没有未完成 Invalidation 请求的 ITag 的 Inval
 </table>
 
 > **Figure 10-21.** Invalidate Completion Message Format - Non-Flit Mode
-> <img src="figures/chapter_10/fig_1587_1.png" width="700">
+> <img src="figures/chapter_10/fig_1587_1_tight.png" width="700">
 
 > **Figure 10-22.** Invalidate Completion Message - Flit Mode
-> <img src="figures/chapter_10/fig_1588_1.png" width="700">
+> <img src="figures/chapter_10/fig_1588_1_tight.png" width="700">
 
 </div>
 
@@ -2569,7 +2569,7 @@ The first two DWs of a Page Request Message contain a standard PCIe message head
 > <img src="figures/chapter_10/fig_1594_1.png" width="700">
 
 > **Figure 10-24.** Page Request Message - Flit Mode
-> <img src="figures/chapter_10/fig_1595_1.png" width="700">
+> <img src="figures/chapter_10/fig_1595_1_tight.png" width="700">
 
 </div>
 
@@ -2732,7 +2732,7 @@ The Stop Marker Message bit layout is shown in § Figure 10-25.
 > <img src="figures/chapter_10/fig_1597_1.png" width="700">
 
 > **Figure 10-26.** Stop Marker Message - Flit Mode
-> <img src="figures/chapter_10/fig_1598_1.png" width="700">
+> <img src="figures/chapter_10/fig_1598_1_tight.png" width="700">
 
 A Stop Marker Message is encoded as a Page Request Message for which:
 - In NFM, includes a PASID TLP Prefix. The Execute Requested and Privileged Mode Requested bits are Reserved.
@@ -2869,7 +2869,7 @@ In order to prevent overflow, it is recommended to size Page Request queuing app
 </table>
 
 > **Figure 10-27.** PRG Response Message - Non-Flit Mode
-> <img src="figures/chapter_10/fig_1600_1.png" width="700">
+> <img src="figures/chapter_10/fig_1600_1_tight.png" width="700">
 
 > **Figure 10-28.** PRG Response Message - FLIT Mode
 > <img src="figures/chapter_10/fig_1601_1.png" width="700">
@@ -2994,7 +2994,7 @@ table>
 <td>
 
 > **Figure 10-30.** ATS Extended Capability Header
-> <img src="figures/chapter_10/fig_1602_1.png" width="700">
+> <img src="figures/chapter_10/fig_1602_1_tight.png" width="700">
 
 **Table 10-9. ATS Extended Capability Header | 表 10-9 ATS Extended Capability 头**
 
@@ -3212,10 +3212,10 @@ Page Request Extended Capability Structure 用于配置页请求接口机制。�
 > <img src="figures/chapter_10/fig_1604_1.png" width="700">
 
 > **Figure 10-35.** Page Request Extended Capability Header
-> <img src="figures/chapter_10/fig_1605_1.png" width="700">
+> <img src="figures/chapter_10/fig_1605_1_tight.png" width="700">
 
 > **Figure 10-36.** Page Request Control Register
-> <img src="figures/chapter_10/fig_1606_1.png" width="700">
+> <img src="figures/chapter_10/fig_1606_1_tight.png" width="700">
 
 </div>
 
