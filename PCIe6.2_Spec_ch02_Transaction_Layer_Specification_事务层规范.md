@@ -109,7 +109,7 @@ Transactions form the basis for information transfer between a Requester and Com
 <a id="sec-2-1"></a>
 ## 2.1 Transaction Layer Overview | 事务层概述
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -234,7 +234,7 @@ I/O 事务使用单一地址格式:
 <a id="sec-2-1-1-1"></a>
 ## 2.1.1.1 Memory Transactions | 内存事务
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -390,7 +390,7 @@ Note that these Vendor-Defined Messages are not guaranteed to be interoperable w
 <a id="sec-2-1-2"></a>
 ## 2.1.2 Packet Format Overview | 包格式概述
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -502,7 +502,7 @@ TLP 内的数据负载以最低地址字节 (§ 图 2-3 中的字节 J) 显示�
 <a id="sec-2-2"></a>
 ## 2.2 Transaction Layer Protocol - Packet Definition | 事务层协议 - 包定义
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -626,7 +626,7 @@ TLP 包头的 Fmt、Type、TD 和 Length 字段包含确定 TLP 非前缀部分�
 <a id="sec-2-2-1-1"></a>
 ## 2.2.1.1 Common Packet Header Fields for Non-Flit Mode | 非 Flit 模式的公共包头字段
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -761,7 +761,7 @@ table>
 
 <<<PAGE_BREAK>>> page_147
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -889,7 +889,7 @@ All Flit Mode TLPs contain the same fields in the first DW of the Header Base (s
 
 <<<PAGE_BREAK>>> page_149
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1127,7 +1127,7 @@ Flit 模式下 TC、Attr 和 Length 字段的定义与非 Flit 模式相同。
 
 <<<PAGE_BREAK>>> page_160
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1246,7 +1246,7 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 > **Figure 2-8.** OHC-A2
 > <img src="figures/chapter_02/fig_0161_2_tight.png" width="700">
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1546,7 +1546,7 @@ In Flit Mode, it is possible, and in some cases required, to include Segment fie
 
 <<<PAGE_BREAK>>> page_164
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1686,7 +1686,7 @@ Because Segment fields aren't communicated across Links in NFM, Root Complexes t
 
 <<<PAGE_BREAK>>> page_167
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1822,7 +1822,7 @@ A NFM device could be hot-added into a subtree for which the No NFM Subtree Belo
 
 <<<PAGE_BREAK>>> page_169
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1970,7 +1970,7 @@ Each Switch exists entirely within a single Hierarchy by definition. However, Sw
 
 <<<PAGE_BREAK>>> page_171
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2121,7 +2121,7 @@ table>
 <a id="sec-2-2-2-endian"></a>
 ## 2.2.2 TLPs with Data Payloads (continued) | 含数据负载的 TLP (续)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2244,7 +2244,7 @@ There is no PCI Express requirement that an RC AtomicOp Completer support the ho
 <a id="sec-2-2-3"></a>
 ## 2.2.3 TLP Digest Rules - Non-Flit Mode Only | TLP Digest 规则 —— 仅适用于非 Flit 模式
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2344,7 +2344,7 @@ TLP 路由主要有三种机制:地址路由、ID 路由和隐式路由。本节
 <a id="sec-2-2-4-1"></a>
 ## 2.2.4.1 Address-Based Routing Rules | 基于地址的路由规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2561,7 +2561,7 @@ For correct software operation, full address decoding is required even in system
 <a id="sec-2-2-4-2"></a>
 ## 2.2.4.2 ID Based Routing Rules | 基于 ID 的路由规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2686,7 +2686,7 @@ table>
 <a id="sec-2-2-4-2-figures"></a>
 ## 2.2.4.2 ID Based Routing Rules (continued) | 基于 ID 的路由规则 (续)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2869,7 +2869,7 @@ TLP 字节使能 (Byte Enable) 的一般功能在非 Flit 模式与 Flit 模式�
 <a id="sec-2-2-5"></a>
 ## 2.2.5 First/Last DW Byte Enables Rules | 首/尾 DW 字节使能规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2946,7 +2946,7 @@ As a best practice, it is strongly recommended that devices receiving non-enable
 
 <<<PAGE_BREAK>>> page_183
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3029,7 +3029,7 @@ table>
 
 ---
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3155,7 +3155,7 @@ TH 位置位且目标为非预取内存空间 (Non-Prefetchable Memory Space) �
 
 ---
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3244,7 +3244,7 @@ In all cases where OHC-A is present, the Byte Enable fields must be handled as d
 <a id="sec-2-2-5-2"></a>
 ## 2.2.5.2 Byte Enable Rules for Flit Mode | Flit 模式的字节使能规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3415,7 +3415,7 @@ Transaction ID 用于将完成报文与请求关联起来。共有三组请求/�
 
 <<<PAGE_BREAK>>> page_187
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3533,7 +3533,7 @@ Four Tag sizes are architected for operation: 14-bit, 10-bit, 8-Bit and 5-bit. A
 
 <<<PAGE_BREAK>>> page_189
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3708,7 +3708,7 @@ Note that this rule and the exception are consistent with the existing PCI model
 
 <<<PAGE_BREAK>>> page_191
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3790,7 +3790,7 @@ Phantom Function 在架构上存在诸多限制，包括 ARI Device、虚拟功�
 
 <<<PAGE_BREAK>>> page_192
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3919,7 +3919,7 @@ Attributes 是允许但并不要求对流量处理进行优化的提示。优化
 
 ---
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4091,7 +4091,7 @@ A Root Complex that supports peer-to-peer forwarding TLPs between Root Ports is 
 <a id="sec-2-2-6-4"></a>
 ## 2.2.6.4 Relaxed Ordering and ID-Based Ordering Attributes | 宽松排序与基于 ID 的排序属性
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4163,7 +4163,7 @@ TC 编码定义见 § 表 2-14。
 | 000 | TC0: Best Effort service class (General Purpose I/O)<br>(Default TC - must be supported by every PCI Express device) |
 | 001 to 111 | TC1 to TC7: Differentiated service classes<br>(Differentiation based on Weighted-Round-Robin (WRR) and/or priority) |
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4316,7 +4316,7 @@ Memory, I/O, and Configuration Request Rules
 | FetchAdd, Swap | 1 DW | 2 DW | N/A |  |
 | CAS | 2 DW | 4 DW | 8 DW |  |
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4391,7 +4391,7 @@ table>
 > **Figure 2-36.** Request Header Format for 64-bit Addressing of Memory
 > <img src="figures/chapter_02/fig_0196_1.png" width="700">
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4415,7 +4415,6 @@ Figure 2-36: Layout (4 DW header) for 64-bit memory requests. Byte 0 contains Fm
 </table>
 
 > **Figure 2-37.** Request Header Format for 32-bit Addressing of Memory
-> <img src="figures/chapter_02/fig_0196_2.png" width="700">
 
 <table>
 <thead>
@@ -4525,7 +4524,7 @@ For I/O Requests, the following rules apply:
 > **Figure 2-38.** Request Header Format for I/O Transactions - Non-Flit Mode
 > <img src="figures/chapter_02/fig_0197_1_tight.png" width="700">
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4605,7 +4604,7 @@ For Configuration Requests, the following rules apply:
 
 <<<PAGE_BREAK>>> page_198
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4688,9 +4687,9 @@ MSI/MSI-X 机制使用内存写请求来表示中断消息（见 § 6.1.4 节）
 
 
 > **Figure 2-40.** TPH TLP Prefix
-> <img src="figures/chapter_02/fig_0198_2.png" width="700">
+> <img src="figures/chapter_02/fig_0198_1.png" width="700">
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4832,7 +4831,7 @@ TPH 规则
 > **Figure 2-41.** Location of PH[1:0] in a 4 DW Request Header - Non-Flit Mode
 > <img src="figures/chapter_02/fig_0199_1_tight.png" width="700">
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4947,7 +4946,7 @@ Steering Tag (ST) 字段在 TLP 包头中的映射见 § 图 2-43、§ 图 2-44 
 </table>
 
 > **Figure 2-43.** Location of ST[7:0] in the Memory Write Request Header - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0200_2.png" width="700">
+> <img src="figures/chapter_02/fig_0200_1.png" width="700">
 
 <table>
 <thead>
@@ -5078,7 +5077,7 @@ Except as stated, rules that apply in Non-Flit Mode also apply in Flit Mode.
 <a id="sec-2-2-7-2"></a>
 ## 2.2.7.2 Flit Mode | Flit 模式
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5157,7 +5156,6 @@ Figure 2-45: Flit Mode 64-bit Memory Request (4 DW). Byte 0: Type. Bytes 4-7: AT
 </table>
 
 > **Figure 2-46.** Flit Mode Mem32 Request
-> <img src="figures/chapter_02/fig_0202_2.png" width="700">
 
 <table>
 <thead>
@@ -5183,7 +5181,6 @@ Figure 2-46: Flit Mode 32-bit Memory Request (3 DW). Byte 0: Type. Bytes 4-7: AT
 </table>
 
 > **Figure 2-47.** Flit Mode IO Request
-> <img src="figures/chapter_02/fig_0202_3.png" width="700">
 
 <table>
 <thead>
@@ -5328,7 +5325,7 @@ The following rules apply to all Message Requests. Additional rules specific to 
 
 <<<PAGE_BREAK>>> page_204
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5392,7 +5389,6 @@ Figure 2-49: Non-Flit Mode Message Request Header (4 DW). Byte 0: Fmt=10r2r1r0b,
 </table>
 
 > **Figure 2-50.** Message Request Header - Flit Mode
-> <img src="figures/chapter_02/fig_0204_2.png" width="700">
 
 <table>
 <thead>
@@ -5506,7 +5502,7 @@ A Message Signaled Interrupt (MSI or MSI-X) is the preferred interrupt signaling
 <a id="sec-2-2-8-1"></a>
 ## 2.2.8.1 INTx Interrupt Signaling - Rules | INTx 中断信令 - 规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5722,7 +5718,7 @@ Assert_INTx/Deassert_INTx 消息对为传统 PCI 中断 A、B、C、D 各自构�
 
 <<<PAGE_BREAK>>> page_209
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5806,7 +5802,7 @@ These Messages are used to support PCI Express power management, which is descri
 <a id="sec-2-2-8-2"></a>
 ## 2.2.8.2 Power Management Messages | 电源管理消息
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5920,7 +5916,6 @@ The initiator of the Message is identified with the Requester ID of the Message 
 > <img src="figures/chapter_02/fig_0211_1.png" width="700">
 
 > **Figure 2-52.** ERR_COR Message - Flit Mode
-> <img src="figures/chapter_02/fig_0211_2.png" width="700">
 
 
 **Table 2-25 ERR_COR Subclass (ECS) Field Encodings | 表 2-25 ERR_COR 子类 (ECS) 字段编码**
@@ -6010,7 +6005,7 @@ Unlock 消息用于支持 Lock 事务序列。有关 Lock 事务序列的详细�
 |------|---------------|--------------------|-----------------------------|---------------------|
 | Unlock | 0000 0000 | 011 | t / r / tr / r | Unlock Completer |
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6087,7 +6082,7 @@ Set_Slot_Power_Limit 消息包含一个 DW 的数据负载。该数据负载从�
 <a id="sec-2-2-8-5"></a>
 ## 2.2.8.5 Slot Power Limit Support | 插槽功率限制支持
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6169,7 +6164,7 @@ The Vendor-Defined Messages allow expansion of PCI Express messaging capabilitie
 
 1. Note 1: Transmission by Endpoint/Root Complex/Bridge is implementation specific. Switches must forward received Messages using Routing r[2:0] field values of 000b, 010b, and 011b.
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6273,7 +6268,7 @@ table>
 
 <<<PAGE_BREAK>>> page_216
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6390,7 +6385,7 @@ Receivers may optionally check for violations of these rules (but must not check
 |------|---------------|--------------------|-----------------------------|---------------------|
 | DRS Message | 0111 1111 | 100 | r / t / tr / (—) | Device Readiness Status |
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6508,7 +6503,7 @@ Beyond the rules for other PCI-SIG-Defined VDMs, the following rules apply to th
 <a id="sec-2-2-8-6-3"></a>
 ## 2.2.8.6.3 Function Readiness Status Message (FRS Message) | 功能就绪状态消息 (FRS 消息)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6661,7 +6656,7 @@ For details of the Hierarchy ID, GUID Authority ID, and System GUID fields see �
 |------|---------------|--------------------|-----------------------------|---------------------|
 | Hierarchy ID Message | 0111 1111 | 011 | t / r / tr / (—) | Hierarchy ID |
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6776,7 +6771,7 @@ messages.
 | Ignored Message | 0100 0100 | 100 | | | | | Ignored Message |
 | Ignored Message | 0100 1000 | 100 | | | | | Ignored Message |
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6896,7 +6891,7 @@ OBFF 消息可选地用于将平台中心资源状态上报给端点 (Endpoint)�
 
 <<<PAGE_BREAK>>> page_224
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7054,7 +7049,7 @@ IDE 消息与可选的完整性与数据加密 (Integrity and Data Encryption, I
 
 <<<PAGE_BREAK>>> page_226
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7131,7 +7126,7 @@ table>
 <a id="sec-2-2-9"></a>
 ## 2.2.9 Completion Rules | 完成规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7330,7 +7325,7 @@ Length field.
 
 <<<PAGE_BREAK>>> page_230
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7488,7 +7483,7 @@ BCM 字段存在于非 Flit 模式完成报文中,在 Flit 模式中不予支持
 
 <<<PAGE_BREAK>>> page_232
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7607,7 +7602,7 @@ The following rules apply to Local TLP Prefixes:
 <a id="sec-2-2-10-1"></a>
 ## 2.2.10.1 TLP Prefix General Rules - Non-Flit Mode | TLP Prefix 通用规则 - 非 Flit 模式
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7696,7 +7691,7 @@ As described in § Table 2-38, Types VendPrefixL0 and VendPrefixL1 are defined f
 <a id="sec-2-2-10-2"></a>
 ## 2.2.10.2 Local TLP Prefix Processing | 本地 TLP Prefix 处理
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7859,7 +7854,7 @@ All other encodings are Reserved.
 <a id="sec-2-2-10-4"></a>
 ## 2.2.10.4 End-End TLP Prefix Processing - Non-Flit Mode | End-End TLP Prefix 处理 - 非 Flit 模式
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7970,7 +7965,7 @@ As described in § Table 2-39, Types VendPrefixE0 and VendPrefixE1 are defined f
 <a id="sec-2-2-10-4-1"></a>
 ## 2.2.10.4.1 Vendor Defined End-End TLP Prefix | 厂商定义 End-End TLP Prefix
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8185,7 +8180,7 @@ OHC-E DW 3、OHC-E DW 2、OHC-E DW 1、OHC-E DW 0(字节 0、字节 4、字节 8
 </div>
 
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8282,7 +8277,7 @@ This section describes how all Received TLPs are handled when they are delivered
 
 <<<PAGE_BREAK>>> page_242
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8397,7 +8392,7 @@ Flowchart steps (OM13771B):
 
 ---
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8486,7 +8481,7 @@ Switches must process both TLPs that address resources within the Switch as well
 > **Figure 2-90.** Flowchart for Switch Handling of TLPs
 > <img src="figures/chapter_02/fig_0245_1_tight.png" width="700">
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8575,7 +8570,7 @@ This section describes how Received Requests are handled, following the initial 
 
 <<<PAGE_BREAK>>> page_246
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8717,7 +8712,7 @@ If the Request arrives between the time an FLR has been initiated and the comple
 
 <<<PAGE_BREAK>>> page_248
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8856,7 +8851,7 @@ Request 既不会被软件也不会被其他设备发起到端点。
 > **Figure 2-91.** Flowchart for Handling of Received Request
 > <img src="figures/chapter_02/fig_0250_1_tight.png" width="700">
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8992,7 +8987,7 @@ Flowchart steps (OM13773):
 <a id="sec-2-3-1-1"></a>
 ## 2.3.1.1 Data Return for Non-UIO Read Requests | 非 UIO 读请求的数据返回
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9096,7 +9091,7 @@ table>
 
 <<<PAGE_BREAK>>> page_253
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9258,7 +9253,7 @@ table>
 
 <<<PAGE_BREAK>>> page_256
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9421,7 +9416,7 @@ table>
 <a id="sec-2-3-1-3"></a>
 ## 2.3.1.3 UIO Write Completions | UIO 写完成报文
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9547,7 +9542,7 @@ table>
 
 <<<PAGE_BREAK>>> page_259
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9743,7 +9738,7 @@ Non-Posted Request 是 Read Request 或 NPR with Data。
 
 <<<PAGE_BREAK>>> page_261
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9866,7 +9861,7 @@ table>
 
 <<<PAGE_BREAK>>> page_263
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10011,7 +10006,7 @@ UIO TLP 的排序规则如下(参见 § Table 2-43):
 <a id="sec-2-4-2"></a>
 ## 2.4.2 Ordering Rules for UIO | UIO 排序规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10121,7 +10116,7 @@ If a Requester using a single transaction reads a block of data from a Completer
 <a id="sec-2-4-3-1"></a>
 ## 2.4.3.1 Ordering and Granularity for Non-UIO Reads | 非 UIO 读事务的排序与粒度
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10217,7 +10212,7 @@ If a single write transaction containing multiple DWs and the Relaxed Ordering b
 <a id="sec-2-4-4"></a>
 ## 2.4.4 Update Ordering and Granularity Provided by a Write Transaction | 写事务提供的更新排序与粒度
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10309,7 +10304,7 @@ A Completer is permitted to implement, through a restricted programming model, a
 <a id="sec-2-5"></a>
 ## 2.5 Virtual Channel (VC) Mechanism | 虚通道 (VC, Virtual Channel) 机制
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10497,7 +10492,7 @@ TC7/VC7 保留
 <a id="sec-2-5-1"></a>
 ## 2.5.1 Virtual Channel Identification (VC ID) | 虚通道标识 (VC ID)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10511,7 +10506,6 @@ table>
 Internal to the Switch, every Virtual Channel requires dedicated physical resources (queues/buffers and control logic) that support independent traffic flows inside the Switch. § Figure 2-95 shows conceptually the VC resources within the Switch (shown in § Figure 2-94) that are required to support traffic flow in the Upstream direction.
 
 > **Figure 2-95.** Virtual Channel Concept - Switch Internals (Upstream Flow)
-> <img src="figures/chapter_02/fig_0270_2.png" width="700">
 
 
 An MFD may implement Virtual Channel resources similar to a subset of those in a Switch, for the purpose of managing the Quality of Service (QoS) for Upstream requests from the different Functions to the device's Upstream Egress Port.
@@ -10657,7 +10651,7 @@ The number of VCs supported, and the associated buffering per VC per Port, are n
 <a id="sec-2-5-2-impl"></a>
 ## 2.5.2 TC to VC Mapping (Key Rules Summary) | 2.5.2 TC 到 VC 映射(关键规则总结)
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10754,7 +10748,7 @@ For more details on the VC and TC mechanisms, including configuration, mapping, 
 <a id="sec-2-6"></a>
 ## 2.6 Ordering and Receive Buffer Flow Control | 排序与接收缓冲流控
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10844,7 +10838,7 @@ In this and other sections of this specification, rules are described using conc
 
 <<<PAGE_BREAK>>> page_276
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11070,7 +11064,7 @@ Note: It is possible for multiple VCs to be following the Flow Control initializ
 
 <<<PAGE_BREAK>>> page_278
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11242,7 +11236,7 @@ The [Field Size] parameter used in the following sections is described in § Tab
 
 <<<PAGE_BREAK>>> page_280
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11460,7 +11454,7 @@ SHARED_CREDITS_CONSUMED := (SHARED_CREDITS_CONSUMED + Increment) mod 2[Field Siz
 
 <<<PAGE_BREAK>>> page_282
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11728,7 +11722,7 @@ SCCC + 待发送 TLP 所需信用单元 ≤ (TOTAL_SHARED_CREDITS_AVAILABLE_POST
 
 <<<PAGE_BREAK>>> page_284
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11933,7 +11927,7 @@ CREDITS_RECEIVED := (CREDITS_RECEIVED + Increment) mod 2[Field Size]
 
 <<<PAGE_BREAK>>> page_286
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12121,7 +12115,7 @@ The purpose of having some amount of Dedicated Credit per VC is to ensure that o
 
 <<<PAGE_BREAK>>> page_288
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12285,7 +12279,7 @@ The capability to generate and check ECRC is reported to software, and the abili
 <a id="sec-2-7"></a>
 ## 2.7 End-to-End Data Integrity | 端到端数据完整性
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12458,7 +12452,7 @@ A 32-bit ECRC is calculated for the TLP (End-End TLP Prefixes/OHC, header, and d
 <a id="sec-2-7-1-cont"></a>
 ## 2.7.1 ECRC Rules (continued) | 2.7.1 ECRC 规则（续）
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12592,7 +12586,7 @@ EP 位的使用规则在 § 第 2.7.2.1 节中规定。物理层逻辑块机制�
 <a id="sec-2-7-2-1"></a>
 ## 2.7.2.1 Rules For Use of Data Poisoning | 数据中毒的使用规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12726,7 +12720,7 @@ This document does not define any mechanism for determining which part or parts 
 <a id="sec-2-8"></a>
 ## 2.8 Completion Timeout Mechanism | 完成超时机制
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12820,7 +12814,7 @@ UIO 请求的完成超时到期并不一定表示该请求或该请求的部分�
 <a id="sec-2-9"></a>
 ## 2.9 Link Status Dependencies | 链路状态依赖关系
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12953,7 +12947,7 @@ For an Upstream Port, DL_Down status is handled as a reset by:
 <a id="sec-2-9-2"></a>
 ## 2.9.2 Transaction Layer Behavior in DL_Up Status | DL_Up 状态下的事务层行为
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -13052,7 +13046,7 @@ For any outstanding Non-Posted Requests where DPC being triggered prevents their
 
 ---
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>

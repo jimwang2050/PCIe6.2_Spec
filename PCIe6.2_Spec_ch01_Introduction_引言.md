@@ -182,7 +182,7 @@ The primary Link attributes for PCI Express Link are:
 <a id="sec-1-1"></a>
 ## 1.1 An Evolving I/O Interconnect | 不断演进的 I/O 互连
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -461,7 +461,7 @@ revision of 3.x), (3) compliant with Base 3.0 and supporting 8.0 GT/s, (4) compl
 <a id="sec-1-3"></a>
 ## 1.3 PCI Express Fabric Topology | PCI Express Fabric 拓扑
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -634,7 +634,7 @@ A Legacy Endpoint must not issue a Locked Request.
 1.3.2 Endpoints §
 1.3.2.1 Legacy Endpoint Rules §
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -827,7 +827,7 @@ An RCiEP must not generate I/O Requests.
 1.3.2.2 PCI Express Endpoint Rules §
 1.3.2.3 Root Complex Integrated Endpoint Rules §
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -919,7 +919,7 @@ table>
 <a id="sec-1-3-2-3"></a>
 ## 1.3.2.3 Root Complex Integrated Endpoint Rules | 根复合体集成端点规则
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1076,7 +1076,7 @@ Each enabled Switch Port must comply with the Flow Control specification within 
 <a id="sec-1-3-3"></a>
 ## 1.3.3 Switch | 交换机
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1211,7 +1211,7 @@ discouraged.
 <a id="sec-1-3-4"></a>
 ## 1.3.4 Root Complex Event Collector | 根复合体事件收集器
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1372,7 +1372,7 @@ level packet information through the layers.
 1.5 PCI Express Layering Overview §
 §
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1564,7 +1564,7 @@ The Physical Layer includes all circuitry for interface operation, including dri
 <a id="sec-1-5-1"></a>
 ## 1.5.1 Transaction Layer | 事务层
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1648,7 +1648,7 @@ The Data Link Layer also generates and consumes packets that are used for Link m
 <a id="sec-1-5-3"></a>
 ## 1.5.3 Physical Layer | 物理层
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1829,7 +1829,7 @@ PCI Express 体系结构预留了"钩子 (hooks)"，以通过速率升级和高�
 <a id="sec-1-5-4"></a>
 ## 1.5.4 Layer Functions and Services | 层的功能与服务
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1997,7 +1997,7 @@ Embedded clock tuning and alignment
 1.5.4.2 Data Link Layer Services §
 1.5.4.3 Physical Layer Services §
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2099,7 +2099,7 @@ The Data Link Layer is responsible for reliably exchanging information with its 
 <a id="sec-1-5-4-3"></a>
 ## 1.5.4.3 Physical Layer Services | 物理层服务
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2270,7 +2270,7 @@ Data transfer handshake mechanism
 <a id="sec-1-5-4-4"></a>
 ## 1.5.4.4 Inter-Layer Interfaces | 层间接口
 
-table>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>

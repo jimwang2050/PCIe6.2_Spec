@@ -2644,6 +2644,7 @@ The scrambling mechanism in the 64.0 GT/s Data Rate is identical to that for the
 </tr>
 </tbody>
 </table>
+</div>
 
 ---
 
