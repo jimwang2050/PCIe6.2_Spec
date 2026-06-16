@@ -32,7 +32,8 @@
 
 ---
 
-<<<PAGE_BREAK>>> page_1659
+<!-- 📄 Page 1659 -->
+---
 
 "Sidebands" are physical interfaces other than the high-speed Lanes connecting two Ports, typically used for
 out-of-band platform management functionality. Out-of-band (OOB) management refers to the ability to communicate
@@ -143,7 +144,8 @@ signals often interact with components other than the two that implement the Por
 
 ---
 
-<<<PAGE_BREAK>>> page_1660
+<!-- 📄 Page 1660 -->
+---
 
 <a id="sec-12-2"></a>
 ## 12.2 Framework for Sidebands | 边带框架
@@ -308,7 +310,8 @@ against interconnect size and cost.
 
 ---
 
-<<<PAGE_BREAK>>> page_1661
+<!-- 📄 Page 1661 -->
+---
 
 <a id="sec-12-3-1-1"></a>
 ## SMRST# – SMBus Reset (and similar component reset mechanisms) | SMRST# – SMBus 复位(及类似组件复位机制)
@@ -516,7 +519,8 @@ damage.
 
 ---
 
-<<<PAGE_BREAK>>> page_1662
+<!-- 📄 Page 1662 -->
+---
 
 <a id="sec-12-3-2-2"></a>
 ## 12.3.2.2 Flex I/O Discovery Phase Guidelines | 12.3.2.2 Flex I/O 发现阶段指南
@@ -682,7 +686,8 @@ This section covers the compatibility check step for Flex I/O interfaces.
 
 ---
 
-<<<PAGE_BREAK>>> page_1663
+<!-- 📄 Page 1663 -->
+---
 
 <a id="sec-12-3-2-5"></a>
 ## 12.3.2.5 General Flex I/O Control Guidelines | 12.3.2.5 Flex I/O 一般控制指南
@@ -822,7 +827,8 @@ PESTI 利用 UART 帧格式,直接在 3.3 V 逻辑电平下运行,是单线、�
 
 ---
 
-<<<PAGE_BREAK>>> page_1664
+<!-- 📄 Page 1664 -->
+---
 
 <a id="sec-12-3-3-2"></a>
 ## 12.3.3.2 PESTI Physical Interface | 12.3.3.2 PESTI 物理接口
@@ -916,7 +922,8 @@ minimum nominal value of 200 ohm -5% tolerance.
 
 ---
 
-<<<PAGE_BREAK>>> page_1665
+<!-- 📄 Page 1665 -->
+---
 
 <a id="sec-12-3-3-4"></a>
 ## 12.3.3.4 PESTI DC Specifications | 12.3.3.4 PESTI 直流规范
@@ -1071,7 +1078,8 @@ PESTI 兼容目标必须支持以下命令。
 
 ---
 
-<<<PAGE_BREAK>>> page_1666
+<!-- 📄 Page 1666 -->
+---
 
 <a id="sec-12-3-3-6-1"></a>
 ## 12.3.3.6.1 Discovery Payload Request (DPR) | 12.3.3.6.1 发现有效负载请求 (DPR)
@@ -1192,7 +1200,8 @@ PESTI 事务序列定义为在发起者和目标之间交换的一系列数据�
 
 ---
 
-<<<PAGE_BREAK>>> page_1667
+<!-- 📄 Page 1667 -->
+---
 
 <a id="sec-12-3-3-6-3"></a>
 ## 12.3.3.6.3 PESTI Fanout MUX Control | 12.3.3.6.3 PESTI 扇出 MUX 控制
@@ -1379,7 +1388,8 @@ The following table defines the PESTI initiator control and status registers.
 
 ---
 
-<<<PAGE_BREAK>>> page_1668
+<!-- 📄 Page 1668 -->
+---
 
 <a id="sec-12-3-3-10"></a>
 ## 12.3.3.10 PESTI AC Specifications | 12.3.3.10 PESTI 交流规范
@@ -1433,7 +1443,8 @@ PESTI 交流规范列于下表中。
 
 ---
 
-<<<PAGE_BREAK>>> page_1669
+<!-- 📄 Page 1669 -->
+---
 
 <a id="sec-12-3-3-11"></a>
 ## 12.3.3.11 PESTI Discovery Phase | 12.3.3.11 PESTI 发现阶段
@@ -1496,7 +1507,8 @@ target if DPEN=1.
 
 ---
 
-<<<PAGE_BREAK>>> page_1670
+<!-- 📄 Page 1670 -->
+---
 
 **Discovery Payload**
 
@@ -1539,7 +1551,8 @@ The payload size must be a multiple of eight bytes including the checksum.
 
 ---
 
-<<<PAGE_BREAK>>> page_1671
+<!-- 📄 Page 1671 -->
+---
 
 <a id="sec-12-3-3-12"></a>
 ## 12.3.3.12 PESTI Active Phase | 12.3.3.12 PESTI 活动阶段
@@ -1659,7 +1672,8 @@ Example: CMD=81h, VWOUT_0, PEC, Turnaround, VWIN_0, PEC
 
 ---
 
-<<<PAGE_BREAK>>> page_1672
+<!-- 📄 Page 1672 -->
+---
 
 If the target indicates no PEC support in the discovery payload, then the initiator must not set bit 7 in the CMD nor
 deliver an extra PEC byte following the command. This is because following the turnaround, the target may drive
@@ -1823,7 +1837,8 @@ Example MUX Select commands are permitted to include:
 
 ---
 
-<<<PAGE_BREAK>>> page_1673
+<!-- 📄 Page 1673 -->
+---
 
 Buffer(s) might be necessary if the Target/Snooper and the FET MUX or Switch have significant layout stubs. The
 designer is permitted to choose a switch with active buffers versus a FET switch to avoid reflection effects.
@@ -1927,7 +1942,8 @@ mitigations, although the specific mitigations are implementation specific.
 
 ---
 
-<<<PAGE_BREAK>>> page_1674
+<!-- 📄 Page 1674 -->
+---
 
 <a id="sec-12-4"></a>
 ## 12.4 Managed USB 2.0 | 12.4 托管 USB 2.0
@@ -1996,7 +2012,8 @@ USB 2.0 作为即插即用、带外管理接口有许多用例,例如:
 
 ---
 
-<<<PAGE_BREAK>>> page_1675
+<!-- 📄 Page 1675 -->
+---
 
 <a id="sec-12-5"></a>
 ## 12.5 2-Wire Interface | 12.5 两线制 (2-Wire) 接口
@@ -2160,7 +2177,8 @@ more M.2 form factor slots.
 
 ---
 
-<<<PAGE_BREAK>>> page_1676
+<!-- 📄 Page 1676 -->
+---
 
 **Table 12-12. Baseline SMBus Recommended Default Target Addresses | 表 12-12 基线 SMBus 推荐的默认目标地址**
 
@@ -2186,7 +2204,8 @@ Interposer discovery details are left to the implementer, with designer care nee
 
 ---
 
-<<<PAGE_BREAK>>> page_1677
+<!-- 📄 Page 1677 -->
+---
 
 > **Figure 12-12.** Example of 2-wire, 8-bit addressing for a card carrier with N end form factors in SMBus mode
 > <img src="figures/chapter_12/fig_1685_1.png" width="700">
@@ -2367,7 +2386,8 @@ d. 使用卸载功能(例如 SMBus 代理)发送和接收异步 SMBus 消息,例
 
 ---
 
-<<<PAGE_BREAK>>> page_1678
+<!-- 📄 Page 1678 -->
+---
 
 > **Figure 12-13.** Example of 2-wire Hub Use
 > <img src="figures/chapter_12/fig_1687_1_tight.png" width="700">
@@ -2540,7 +2560,8 @@ resets the I3C Basic interface but does not impact the signaling voltage. See §
 
 ---
 
-<<<PAGE_BREAK>>> page_1679
+<!-- 📄 Page 1679 -->
+---
 
 > **Figure 12-14.** SMBus to I3C Transition Flow
 > <img src="figures/chapter_12/fig_1689_1.png" width="700">
@@ -2641,7 +2662,8 @@ signaling.
 
 ---
 
-<<<PAGE_BREAK>>> page_1680
+<!-- 📄 Page 1680 -->
+---
 
 <a id="sec-12-6"></a>
 ## 12.6 Field Replacement Unit (FRU) Information | 12.6 现场可更换单元 (FRU) 信息
@@ -2764,7 +2786,8 @@ FRU 信息包含在 FRU 信息设备中。以下列表包含 FRU 信息设备的
 
 ---
 
-<<<PAGE_BREAK>>> page_1681
+<!-- 📄 Page 1681 -->
+---
 
 <a id="sec-12-6-1-1"></a>
 ## 12.6.1.1 FRU Information Device Requirements Specific to SMBus/I2C Mode | 12.6.1.1 特定于 SMBus/I2C 模式的 FRU 信息设备要求
@@ -2837,7 +2860,8 @@ write transactions.
 
 ---
 
-<<<PAGE_BREAK>>> page_1682
+<!-- 📄 Page 1682 -->
+---
 
 > **Figure 12-16.** SMBus/I2C-based FRU Information Device Writes with Two-Byte Addressing
 > <img src="figures/chapter_12/fig_1694_1_tight.png" width="700">
@@ -2924,7 +2948,8 @@ available to system management firmware as needed, such as when only auxiliary p
 
 ---
 
-<<<PAGE_BREAK>>> page_1683
+<!-- 📄 Page 1683 -->
+---
 
 The IPMI Platform Management FRU Information Storage Definition ([IPMI-FRU]) allows more than 1 MultiRecord to be in
 a single FRU Information Device. The follow table describes the specific MultiRecord format that applies to all PCI
@@ -2984,7 +3009,8 @@ defined in PCI-SIG MultiRecord Descriptors in other specifications as part of Gr
 
 ---
 
-<<<PAGE_BREAK>>> page_1684
+<!-- 📄 Page 1684 -->
+---
 
 <a id="sec-12-6-3"></a>
 ## 12.6.3 Common PCI-SIG MultiRecord Descriptors | 12.6.3 通用 PCI-SIG MultiRecord 描述符
@@ -3113,7 +3139,8 @@ b. 在具有 x16 上游面向连接器的 CEM 载卡上的四个 M.2 x4 连接�
 
 ---
 
-<<<PAGE_BREAK>>> page_1685
+<!-- 📄 Page 1685 -->
+---
 
 **Table 12-19. Connector Subdivision Combinations Descriptor | 表 12-19 连接器细分组合描述符**
 
@@ -3173,7 +3200,8 @@ b. 在具有 x16 上游面向连接器的 CEM 载卡上的四个 M.2 x4 连接�
 
 ---
 
-<<<PAGE_BREAK>>> page_1686
+<!-- 📄 Page 1686 -->
+---
 
 <a id="sec-12-7"></a>
 ## 12.7 Out-of-Band Control Mechanism | 12.7 带外控制机制
@@ -3242,7 +3270,8 @@ permitted to persist via non-volatile storage).
 
 ---
 
-<<<PAGE_BREAK>>> page_1687
+<!-- 📄 Page 1687 -->
+---
 
 <a id="sec-12-8"></a>
 ## 12.8 Retimer Management | 12.8 Retimer (重定时器) 管理
@@ -3311,7 +3340,8 @@ Internal Cable Management guidance is defined for usage with [CopprLink].
 
 ---
 
-<<<PAGE_BREAK>>> page_1702
+<!-- 📄 Page 1702 -->
+---
 
 ---
 

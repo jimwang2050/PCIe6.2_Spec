@@ -241,11 +241,14 @@ b. 功能必须丢弃可能"过期"的转换完成。过期转换完成可能由
 
 ---
 
-<<<PAGE_BREAK>>> page_1559
+<!-- 📄 Page 1559 -->
+---
 
-<<<PAGE_BREAK>>> page_1560
+<!-- 📄 Page 1560 -->
+---
 
-<<<PAGE_BREAK>>> page_1561
+<!-- 📄 Page 1561 -->
+---
 
 <a id="sec-10-1-2"></a>
 ### 10.1.2 Page Request Interface Extension § | 10.1.2 页请求接口扩展 §
@@ -616,17 +619,23 @@ In NFM, the AT field in the Requests is a redefinition of a reserved field in ea
 
 ---
 
-<<<PAGE_BREAK>>> page_1562
+<!-- 📄 Page 1562 -->
+---
 
-<<<PAGE_BREAK>>> page_1563
+<!-- 📄 Page 1563 -->
+---
 
-<<<PAGE_BREAK>>> page_1564
+<!-- 📄 Page 1564 -->
+---
 
-<<<PAGE_BREAK>>> page_1565
+<!-- 📄 Page 1565 -->
+---
 
-<<<PAGE_BREAK>>> page_1566
+<!-- 📄 Page 1566 -->
+---
 
-<<<PAGE_BREAK>>> page_1567
+<!-- 📄 Page 1567 -->
+---
 
 <a id="sec-10-2-1"></a>
 ### 10.2.1 Memory Requests with Address Type § | 10.2.1 带地址类型的内存请求 §
@@ -829,13 +838,17 @@ Tag 字段的含义与内存读请求中的含义相同。
 
 ---
 
-<<<PAGE_BREAK>>> page_1568
+<!-- 📄 Page 1568 -->
+---
 
-<<<PAGE_BREAK>>> page_1569
+<!-- 📄 Page 1569 -->
+---
 
-<<<PAGE_BREAK>>> page_1570
+<!-- 📄 Page 1570 -->
+---
 
-<<<PAGE_BREAK>>> page_1571
+<!-- 📄 Page 1571 -->
+---
 
 <a id="sec-10-2-2-3"></a>
 #### 10.2.2.3 Tag Field § | 10.2.2.3 Tag 字段 §
@@ -1499,17 +1512,23 @@ Priv 位用于限定 R 和 W。如果 Priv 置位,则 R 和 W 表示授予该功
 
 ---
 
-<<<PAGE_BREAK>>> page_1572
+<!-- 📄 Page 1572 -->
+---
 
-<<<PAGE_BREAK>>> page_1573
+<!-- 📄 Page 1573 -->
+---
 
-<<<PAGE_BREAK>>> page_1574
+<!-- 📄 Page 1574 -->
+---
 
-<<<PAGE_BREAK>>> page_1575
+<!-- 📄 Page 1575 -->
+---
 
-<<<PAGE_BREAK>>> page_1576
+<!-- 📄 Page 1576 -->
+---
 
-<<<PAGE_BREAK>>> page_1577
+<!-- 📄 Page 1577 -->
+---
 
 <a id="sec-10-2-3-6"></a>
 #### 10.2.3.6 Execute Permitted (Exe) § | 10.2.3.6 允许执行 (Exe) §
@@ -1950,23 +1969,32 @@ Global Invalidate 位指示无效化请求消息影响所有 PASID 值(参见 §
 
 ---
 
-<<<PAGE_BREAK>>> page_1578
+<!-- 📄 Page 1578 -->
+---
 
-<<<PAGE_BREAK>>> page_1579
+<!-- 📄 Page 1579 -->
+---
 
-<<<PAGE_BREAK>>> page_1580
+<!-- 📄 Page 1580 -->
+---
 
-<<<PAGE_BREAK>>> page_1581
+<!-- 📄 Page 1581 -->
+---
 
-<<<PAGE_BREAK>>> page_1582
+<!-- 📄 Page 1582 -->
+---
 
-<<<PAGE_BREAK>>> page_1583
+<!-- 📄 Page 1583 -->
+---
 
-<<<PAGE_BREAK>>> page_1584
+<!-- 📄 Page 1584 -->
+---
 
-<<<PAGE_BREAK>>> page_1585
+<!-- 📄 Page 1585 -->
+---
 
-<<<PAGE_BREAK>>> page_1586
+<!-- 📄 Page 1586 -->
+---
 
 <a id="sec-10-3-2"></a>
 ### 10.3.2 Invalidate Completion § | 10.3.2 无效化完成 §
@@ -2433,17 +2461,23 @@ For Invalidation Requests that do not have a PASID, the ATC shall:
 
 ---
 
-<<<PAGE_BREAK>>> page_1587
+<!-- 📄 Page 1587 -->
+---
 
-<<<PAGE_BREAK>>> page_1588
+<!-- 📄 Page 1588 -->
+---
 
-<<<PAGE_BREAK>>> page_1589
+<!-- 📄 Page 1589 -->
+---
 
-<<<PAGE_BREAK>>> page_1590
+<!-- 📄 Page 1590 -->
+---
 
-<<<PAGE_BREAK>>> page_1591
+<!-- 📄 Page 1591 -->
+---
 
-<<<PAGE_BREAK>>> page_1592
+<!-- 📄 Page 1592 -->
+---
 
 <a id="sec-10-4"></a>
 ## 10.4 Page Request Services § | 10.4 页请求服务 §
@@ -2784,17 +2818,23 @@ Behavior is undefined if a Stop Marker Message is received and any of the follow
 
 ---
 
-<<<PAGE_BREAK>>> page_1593
+<!-- 📄 Page 1593 -->
+---
 
-<<<PAGE_BREAK>>> page_1594
+<!-- 📄 Page 1594 -->
+---
 
-<<<PAGE_BREAK>>> page_1595
+<!-- 📄 Page 1595 -->
+---
 
-<<<PAGE_BREAK>>> page_1596
+<!-- 📄 Page 1596 -->
+---
 
-<<<PAGE_BREAK>>> page_1597
+<!-- 📄 Page 1597 -->
+---
 
-<<<PAGE_BREAK>>> page_1598
+<!-- 📄 Page 1598 -->
+---
 
 <a id="sec-10-4-2"></a>
 ### 10.4.2 Page Request Group Response Message § | 10.4.2 页请求组响应消息 §
@@ -3461,25 +3501,35 @@ PRG 响应消息是由 ID 路由回请求功能的 PCIe 消息请求。系统软
 
 ---
 
-<<<PAGE_BREAK>>> page_1599
+<!-- 📄 Page 1599 -->
+---
 
-<<<PAGE_BREAK>>> page_1600
+<!-- 📄 Page 1600 -->
+---
 
-<<<PAGE_BREAK>>> page_1601
+<!-- 📄 Page 1601 -->
+---
 
-<<<PAGE_BREAK>>> page_1602
+<!-- 📄 Page 1602 -->
+---
 
-<<<PAGE_BREAK>>> page_1603
+<!-- 📄 Page 1603 -->
+---
 
-<<<PAGE_BREAK>>> page_1604
+<!-- 📄 Page 1604 -->
+---
 
-<<<PAGE_BREAK>>> page_1605
+<!-- 📄 Page 1605 -->
+---
 
-<<<PAGE_BREAK>>> page_1606
+<!-- 📄 Page 1606 -->
+---
 
-<<<PAGE_BREAK>>> page_1607
+<!-- 📄 Page 1607 -->
+---
 
-<<<PAGE_BREAK>>> page_1608
+<!-- 📄 Page 1608 -->
+---
 
 
 ---
