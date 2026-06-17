@@ -284,6 +284,7 @@ A fabric is defined as a set of point-to-point Links that interconnect a set of 
 
 Fabric (互连网络) 定义为一组点对点链路，它们互连一组组件——一个 Fabric 拓扑示例如图 1-2 所示。该图展示了一个由根复合体 (Root Complex, RC)、多个端点 (Endpoint) 与多个交换机 (Switch) 组成、包含两个层级 (Hierarchy) 并通过 PCI Express 链路互连的 Fabric 实例。
 
+<img src="figures/chapter_01/fig_0130_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -531,6 +532,7 @@ A Switch is defined as a logical assembly of multiple virtual PCI-to-PCI Bridge 
 - 锁定请求必须按 § 6.5 节的规定得到支持。交换机不要求将下游端口 (Downstream Port) 作为发起端口支持锁定请求。
 - 每个已启用的交换机端口必须遵循本文档中的流控 (Flow Control) 规范。
 
+<img src="figures/chapter_01/fig_0133_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -702,6 +704,7 @@ PCI Express 配置模型支持两种机制：
 
 PCI Express 使用报文在组件之间传递信息。报文在事务层和数据链路层中形成，以将信息从发送组件传送到接收组件。当发出的报文流经其他层时，会被附加在该层处理报文所必需的额外信息。在接收端则发生相反的过程：报文从其物理层表示形式转换为数据链路层表示形式，最后 (对于事务层包 TLP 而言) 转换为接收设备事务层可以处理的形式。图 1-5 展示了事务级报文信息流经各层的概念性流程。
 
+<img src="figures/chapter_01/fig_0135_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>

@@ -272,6 +272,7 @@ The VI takes sole ownership of the underlying hardware. Using a variety of metho
 
 VI 独占底层硬件的所有权。VI 使用本规范范围之外的各种方法抽象硬件,为每个 SI 提供其自己的虚拟系统。可供每个 SI 使用的实际硬件资源可以根据工作负载或客户特定策略而有所不同。虽然此方法在许多环境中效果良好,但 I/O 密集型工作负载可能会遭受显著的性能下降。每个 I/O 操作(入站或出站)都必须由 VI 拦截并处理,这会增加显著的平台资源开销。
 
+<img src="figures/chapter_09/fig_1524_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -477,6 +478,7 @@ As this figure illustrates, the hardware resources scale with the number of Func
 
 如图所示,硬件资源随所配置的功能数量而扩展。根据设备的复杂性和大小,每个功能的增量成本会有所不同。为了降低增量硬件成本,可以使用 SR-IOV 构造一个设备,以支持单个 PF 和多个 VF,如图 § Figure 9-5 所示。
 
+<img src="figures/chapter_09/fig_1528_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -1359,6 +1361,7 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 <a id="sec-9-3-3-1-cn"></a>
 #### 9.3.3.1 SR-IOV 扩展能力结构头部(偏移 00h) §
 
+<img src="figures/chapter_09/fig_1541_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -2072,6 +2075,7 @@ NumVFs 的初始值未定义。
 <a id="sec-9-3-3-7-cn"></a>
 #### 9.3.3.7 NumVFs(偏移 10h) §
 
+<img src="figures/chapter_09/fig_1549_1.png" width="700">
 </td>
 </tr>
 </tbody>

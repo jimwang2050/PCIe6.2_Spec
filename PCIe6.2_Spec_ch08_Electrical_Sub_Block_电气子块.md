@@ -2048,6 +2048,7 @@ There are 8 encoded values for transmit margin from 000b to 111b. Encoding 000b 
 > - *满摆幅 (Full Swing, A-0574A):2.5 GT/s -3.5 dB、5.0 GT/s -3.5 dB、5.0 GT/s -6 dB — 电压电平为 1200 mV(眼图外)、800 mV(眼图内)、400 mV(眼图外)、200 mV(眼图内)。*
 > - *缩减摆幅 (Reduced Swing):2.5 GT/s 0 dB、5.0 GT/s 0 dB — 电压电平为 700 mV(眼图外)、400 mV(眼图内)、200 mV(眼图外)、100 mV(眼图内)。*
 
+<img src="figures/chapter_08/fig_1427_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -2301,6 +2302,7 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 
 **注:** 共同时钟 (Common Clock, CC) 和独立参考时钟 (Independent Reference Clock, IR) 架构之间不可互操作 — 尽管可以设计出同时满足两套电气要求的单一接收器 (Receiver)。
 
+<img src="figures/chapter_08/fig_1430_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -2380,6 +2382,7 @@ $$H(s) = \frac{s^2}{s^2 + sA + B} \times \frac{s^2 + 2\zeta_2 \omega_0 s + \omeg
 
 **Equation 8-11. SRIS Behavioral CDR Parameters at 8.0 GT/s | 8.0 GT/s 的 SRIS 行为 CDR 参数**
 
+<img src="figures/chapter_08/fig_1432_1_tight.png" width="700">
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -2432,6 +2435,7 @@ $$H(s) = \frac{s^2}{s^2 + sA + B} \times \frac{s^2 + 2\zeta_2 \omega_0 s + \omeg
 
 **Equation 8-12. SRIS and CC Behavioral CDR Parameters at 16.0 GT/s | 16.0 GT/s 的 SRIS 和 CC 行为 CDR 参数**
 
+<img src="figures/chapter_08/fig_1433_1_tight.png" width="700">
 > **Figure 8-17. Behavioral SRIS and CC CDR for 64.0 GT/s | 64.0 GT/s 的行为 SRIS 和 CC CDR**
 > <img src="figures/chapter_08/fig_1433_1_tight.png" width="700">
 
@@ -2656,6 +2660,7 @@ Pulse width jitter is defined as an edge to edge phenomenon on consecutive edges
 ### 8.3.5.9 随机抖动 (TTX-RJ) (信息性) §
 ### 8.3.5.10 非相关总 PWJ 与确定性 PWJ (TTX-UPW-TJ 与 TTX-UPW-DJDD) §
 
+<img src="figures/chapter_08/fig_1435_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -2717,6 +2722,7 @@ PWJ 的等价描述可通过参考固定的引导边 (leading edge) 并将两个
 - TTX-UPW-TJ
 - 1 UI – TTX-UPW-TJ/2
 
+<img src="figures/chapter_08/fig_1436_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -5005,6 +5011,7 @@ Layout (TP1 → TP5/TP4 flow):
 - TP2P:10^-12 BER 下的 EH/EW (EH 调整)
 - TP5、TP4
 
+<img src="figures/chapter_08/fig_1468_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -6719,6 +6726,7 @@ The CPIN and CPAD values used in the package model generation are provided for i
 
 用于生成封装模型的 CPIN 与 CPAD 值仅供参考。
 
+<img src="figures/chapter_08/fig_1491_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -8085,7 +8093,7 @@ Refclks supporting SSC must meet an additional jitter limit over a range of low 
 
 **图 8-87.** 参考时钟在 5000 ppm SSC 下的相位抖动限值
 
-
+<img src="figures/chapter_08/fig_1515_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -8239,7 +8247,7 @@ $$\frac{\omega_{3dB}}{\omega_n} = \sqrt{\sqrt{\frac{2\zeta^2 + 1}{2}} + 1} + 2\z
 
 **图 8-88.** 5 MHz PLL 传递函数示例
 
-
+<img src="figures/chapter_08/fig_1517_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -8341,7 +8349,7 @@ This architecture utilizes a single Refclk source that is distributed to both th
 
 **图 8-89.** 除 32.0 和 64.0 GT/s 外所有数据速率的共参考时钟接收器架构
 
-
+<img src="figures/chapter_08/fig_1518_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -8451,7 +8459,7 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 
 **图 8-91.** 5.0 GT/s 的共参考时钟 PLL 与 CDR 特性
 
-
+<img src="figures/chapter_08/fig_1519_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -8487,7 +8495,7 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 
 **图 8-92.** 8.0 和 16.0 GT/s 的共参考时钟 PLL 与 CDR 特性
 
-
+<img src="figures/chapter_08/fig_1520_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -8544,7 +8552,7 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 | 32.0 GT/s CC CDR | 16 种组合 |
 | 32.0 GT/s |  |
 
-
+<img src="figures/chapter_08/fig_1520_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -8601,7 +8609,7 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 | 64.0 GT/s CC CDR | 16 种组合 |
 | 64.0 GT/s |  |
 
-
+<img src="figures/chapter_08/fig_1520_1.png" width="700">
 </td>
 </tr>
 </tbody>

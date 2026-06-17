@@ -1620,6 +1620,7 @@ At initial power-up and associated reset, the Upstream Link enters the Communica
 
 - 在电源和时钟恢复以及相关复位之后,链路恢复为可处理事务的状态。设备在必要时清零唤醒信令,并向上游发出 PM_PME,然后转换到 PME Sent 状态。
 
+<img src="figures/chapter_05/fig_0670_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -2535,6 +2536,7 @@ Switch 不需要在其任何其他下游端口链路上启动 L1 退出转换。
 
 Switch 需要在其上游端口上开始 L1 状态转换后,不超过 1 μs 的时间在其当前处于 L1 的所有下游端口链路上启动 L1 状态转换。有关 L1 退出期间物理层信令的详细信息,请参见 § 第 4.2 节。已经处于 L0 状态的下游端口链路不参与退出转换。下游组件处于低功耗 D 状态 (D1-D3Hot) 的下游端口链路也不受 L1 退出转换的影响 (即不得将这些链路转换到 L0 状态)。
 
+<img src="figures/chapter_05/fig_0683_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -3233,6 +3235,7 @@ This is a transitional state on exit from L1.2 to allow time for both devices to
 - 上下游端口的 PHY 必须上电。
 - 不得假设已保持共模。
 
+<img src="figures/chapter_05/fig_0695_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -4108,6 +4111,7 @@ PME 生成事件用于向系统标识请求打开电源的 Function。
 
 在 PCI Express 中,在主电源已恢复且链路已训练之后,启动唤醒的 Function (即断言 WAKE# 的 Function) 向根复合体发送 PM_PME 报文。PM_PME 报文向根复合体提供请求 Function 的标识,而不需要软件轮询 PME_Status 位是否被置位。
 
+<img src="figures/chapter_05/fig_0705_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>

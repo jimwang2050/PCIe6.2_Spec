@@ -399,6 +399,7 @@ The INTERFACE_ID is composed of a FUNCTION_ID field that identifies the function
 
 INTERFACE_ID 由 FUNCTION_ID 字段和为未来扩展保留的 Reserved 字段组成 (见 § Figure 11-4 和 § Table 11-1)。在 FUNCTION_ID 中,Function Number 和 Device Number 由设备/DSM 分配。Bus Number 和 Segment Number 在系统枚举期间分配,并且对于处于 CONFIG_LOCKED 和 RUN 状态的 TDI 不得更改 (见下文)。如果设备知道 Segment Number,且 Requester Segment Valid 被置位,则 Requester Segment 值必须与设备的 Segment Number 匹配。DSM 必须确保只寻址有效的 TDI。
 
+<img src="figures/chapter_11/fig_1616_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -864,6 +865,7 @@ A Requester is permitted to send simultaneous request messages to different Resp
 
 请求方允许同时向不同的响应方发送请求消息。
 
+<img src="figures/chapter_11/fig_1622_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
