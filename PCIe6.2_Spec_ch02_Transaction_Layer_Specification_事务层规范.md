@@ -8,20 +8,218 @@
 
 ---
 
-## 📑 本章目录 (Table of Contents)
 
-> 由合并阶段自动生成。请使用浏览器/GitHub 渲染时,各小节标题链接跳转。
+## 📑 章节索引 (Sections)
+
+| # | Section | 小节 | Page |
+|:-:|:--------|:-----|:----:|
+| 2.1 | Transaction Layer Overview | 事务层概述 | — |
+| 2.1.1 | Address Spaces, Transaction Types, … | 地址空间、事务类型与用途 | — |
+| 2.1.1.1 | Memory Transactions | 内存事务 | — |
+| 2.1.1.2 | I/O Transactions | I/O 事务 | — |
+| 2.1.1.3 | Configuration Transactions | 配置事务 | p.142 |
+| 2.1.1.4 | Message Transactions | 消息事务 | p.142 |
+| 2.1.2 | Packet Format Overview | 包格式概述 | p.142 |
+| 2.2 | Transaction Layer Protocol - Packet… | 事务层协议 - 包定义 | p.145 |
+| 2.2.1 | Common Packet Header Fields | 公共包头字段 | p.145 |
+| 2.2.1.1 | Common Packet Header Fields for Non… | 非 Flit 模式的公共包头字段 | p.145 |
+| 2.2.1.2 | Common Packet Header Fields for Fli… | Flit 模式的公共包头字段 | p.148 |
+| 2.2.2 | TLPs with Data Payloads - Rules | 含数据负载的 TLP - 规则 | p.171 |
+| 2.2.2 | TLPs with Data Payloads (continued) | 含数据负载的 TLP (续) | p.173 |
+| 2.2.2 | TLPs with Data Payloads (continued) | 含数据负载的 TLP (续) | p.174 |
+| 2.2.3 | TLP Digest Rules - Non-Flit Mode On… | TLP Digest 规则 —— 仅适用于非 Flit 模式 | p.174 |
+| 2.2.4 | Routing and Addressing Rules | 路由与寻址规则 | p.175 |
+| 2.2.4.1 | Address-Based Routing Rules | 基于地址的路由规则 | p.175 |
+| 2.2.4.1 | Address-Based Routing Rules (contin… | 基于地址的路由规则 (续) | p.176 |
+| 2.2.4.1 | Address-Based Routing Rules (contin… | 基于地址的路由规则 (续) | p.177 |
+| 2.2.4.1 | Address-Based Routing Rules - Body | 基于地址的路由规则 - 正文 | p.177 |
+| 2.2.4.2 | ID Based Routing Rules | 基于 ID 的路由规则 | p.177 |
+| 2.2.4.2 | ID Based Routing Rules (continued) | 基于 ID 的路由规则 (续) | p.179 |
+| 2.2.4.2 | ID Based Routing Rules (continued) | 基于 ID 的路由规则 (续) | p.180 |
+| 2.2.4.2 | ID Based Routing Rules (continued) | 基于 ID 的路由规则 (续) | p.181 |
+| 2.2.4.2 | ID Based Routing Rules (continued) | 基于 ID 的路由规则 (续) | p.182 |
+| 2.2.5 | First/Last DW Byte Enables Rules - … | 首/尾 DW 字节使能规则 - 引言 | p.182 |
+| 2.2.5 | First/Last DW Byte Enables Rules | 首/尾 DW 字节使能规则 | p.182 |
+| 2.2.5.1 | Byte Enable Rules for Non-Flit Mode | 非 Flit 模式的字节使能规则 | p.182 |
+| 2.2.5.1 | Byte Enable Rules (cont.) | 字节使能规则（续） | p.183 |
+| 2.2.5.2 | Byte Enable Rules for Flit Mode | Flit 模式的字节使能规则 | p.185 |
+| 2.2.6 | Transaction Descriptor | 事务描述符 | p.185 |
+| 2.2.6.1 | Overview | 概述 | p.185 |
+| 2.2.6.2 | Transaction Descriptor - Transactio… | 事务描述符 - Transaction ID 字段 | p.186 |
+| 2.2.6.3 | Transaction Descriptor - Attributes… | 事务描述符 - Attributes 字段 | p.194 |
+| 2.2.6.4 | Relaxed Ordering and ID-Based Order… | 宽松排序与基于 ID 的排序属性 | p.194 |
+| 2.2.6.5 | No Snoop Attribute | No Snoop 属性 | p.194 |
+| 2.2.6.6 | Transaction Descriptor - Traffic Cl… | 事务描述符 - 流量类字段 | p.195 |
+| 2.2.7 | Memory, I/O, and Configuration Requ… | 内存、I/O 和配置请求规则 | p.195 |
+| 2.2.7.1 | Non-Flit Mode | 非 Flit 模式 | p.195 |
+| 2.2.7.1.1 | TPH Rules | TPH 规则 | p.199 |
+| 2.2.7.2 | Flit Mode | Flit 模式 | p.202 |
+| 2.2.8 | Message Request Rules | 消息请求规则 | p.203 |
+| 2.2.8.1 | INTx Interrupt Signaling - Rules | INTx 中断信令 - 规则 | p.205 |
+| 2.2.8.2 | Power Management Messages | 电源管理消息 | p.211 |
+| 2.2.8.3 | Error Signaling Messages | 错误信号消息 | p.211 |
+| 2.2.8.4 | Locked Transactions Support | 锁定事务支持 | p.211 |
+| 2.2.8.5 | Slot Power Limit Support | 插槽功率限制支持 | p.211 |
+| 2.2.8.6 | Vendor-Defined Messages | 厂商自定义消息 (Vendor-Defined Messag… | p.211 |
+| 2.2.8.6.1 | PCI-SIG Defined VDMs | PCI-SIG 定义的 VDM | p.216 |
+| 2.2.8.6.2 | Device Readiness Status (DRS) Messa… | 设备就绪状态 (DRS) 消息 | p.216 |
+| 2.2.8.6.3 | Function Readiness Status Message (… | 功能就绪状态消息 (FRS 消息) | p.216 |
+| 2.2.8.6.4 | Hierarchy ID Message | 层级 ID 消息 | p.220 |
+| 2.2.8.7 | Ignored Messages | 忽略消息 | p.222 |
+| 2.2.8.8 | Latency Tolerance Reporting (LTR) M… | 延迟容忍度上报 (LTR) 消息 | p.222 |
+| 2.2.8.9 | Optimized Buffer Flush/Fill (OBFF) … | 优化的缓冲区冲刷/填充 (OBFF) 消息 | p.223 |
+| 2.2.8.10 | Precision Time Measurement (PTM) Me… | 精确时间测量 (PTM) 消息 | p.224 |
+| 2.2.8.11 | Integrity and Data Encryption (IDE)… | 完整性与数据加密 (IDE) 消息 | p.225 |
+| 2.2.9 | Completion Rules | 完成规则 | p.228 |
+| 2.2.9.1 | Completion Rules for Non-Flit Mode | 非 Flit 模式下的完成规则 | p.228 |
+| 2.2.9.2 | Completion Rules for Flit Mode | Flit 模式下的完成规则 | p.230 |
+| 2.2.10 | TLP Prefix Rules | TLP Prefix 规则 | p.232 |
+| 2.2.10.1 | TLP Prefix General Rules - Non-Flit… | TLP Prefix 通用规则 - 非 Flit 模式 | p.232 |
+| 2.2.10.2 | Local TLP Prefix Processing | 本地 TLP Prefix 处理 | p.237 |
+| 2.2.10.2.1 | Vendor Defined Local TLP Prefix | 厂商定义本地 TLP Prefix | p.237 |
+| 2.2.10.3 | Flit Mode Local TLP Prefix | Flit 模式本地 TLP Prefix | p.238 |
+| 2.2.10.4 | End-End TLP Prefix Processing - Non… | End-End TLP Prefix 处理 - 非 Flit… | p.239 |
+| 2.2.10.4.1 | Vendor Defined End-End TLP Prefix | 厂商定义 End-End TLP Prefix | p.240 |
+| 2.2.10.4.2 | Root Ports with End-End TLP Prefix … | 支持 End-End TLP Prefix 的根端口 | p.240 |
+| 2.2.11 | OHC-E Rules - Flit Mode | OHC-E 规则 - Flit 模式 | p.241 |
+| 2.3 | Handling of Received TLPs | 接收 TLP 的处理 | p.241 |
+| 2.3.1 | Request Handling Rules | 请求处理规则 | p.245 |
+| 2.3.1.1 | Data Return for Non-UIO Read Reques… | 非 UIO 读请求的数据返回 | p.251 |
+| 2.3.1.2 | UIO Read Completions | UIO 读完成报文 | p.256 |
+| 2.3.1.3 | UIO Write Completions | UIO 写完成报文 | p.257 |
+| 2.3.2 | Completion Handling Rules | 完成报文处理规则 | p.257 |
+| 2.4 | Transaction Ordering | 事务排序 | p.259 |
+| 2.4.1 | Transaction Ordering Rules for TLPs… | 不使用 UIO 或 Flow-Through IDE Str… | p.259 |
+| 2.4.2 | Ordering Rules for UIO | UIO 排序规则 | p.265 |
+| 2.4.3 | Update Ordering and Granularity Obs… | 读事务观察到的更新排序与粒度 | p.266 |
+| 2.4.3.1 | Ordering and Granularity for Non-UI… | 非 UIO 读事务的排序与粒度 | p.267 |
+| 2.4.3.2 | Ordering and Granularity for UIO Re… | UIO 读事务的排序与粒度 | p.267 |
+| 2.4.4 | Update Ordering and Granularity Pro… | 写事务提供的更新排序与粒度 | p.267 |
+| 2.4.4.2 | Ordering and Granularity for UIO Wr… | UIO 写事务的排序与粒度 | p.268 |
+| 2.5 | Virtual Channel (VC) Mechanism | 虚通道 (VC, Virtual Channel) 机制 | p.268 |
+| 2.5.1 | Virtual Channel Identification (VC … | 虚通道标识 (VC ID) | p.270 |
+| 2.5.2 | TC to VC Mapping | TC 到 VC 映射 | p.271 |
+| 2.5.2 | TC to VC Mapping (Key Rules Summary… | 2.5.2 TC 到 VC 映射(关键规则总结) | p.272 |
+| 2.5.3 | VC and TC Rules | VC 与 TC 规则 | p.272 |
+| 2.6 | Ordering and Receive Buffer Flow Co… | 排序与接收缓冲流控 | p.275 |
+| 2.6.1 | Flow Control (FC) Rules | 流控 (FC) 规则 | p.275 |
+| 2.6.1.1 | FC Information Tracked by Transmitt… | 2.6.1.1 发送器跟踪的 FC 信息 | p.285 |
+| 2.7 | End-to-End Data Integrity | 端到端数据完整性 | p.289 |
+| 2.7.1 | ECRC Rules | ECRC 规则 | p.298 |
+| 2.7.1 | ECRC Rules (continued) | 2.7.1 ECRC 规则（续） | p.300 |
+| 2.7.2 | Error Forwarding (Data Poisoning) | 错误转发（数据中毒） | p.302 |
+| 2.7.2.1 | Rules For Use of Data Poisoning | 数据中毒的使用规则 | p.303 |
+| 2.7.2.1 | Rules For Use of Data Poisoning (co… | 2.7.2.1 数据中毒的使用规则（续） | p.304 |
+| 2.8 | Completion Timeout Mechanism | 完成超时机制 | p.304 |
+| 2.8 | Completion Timeout Mechanism (conti… | 2.8 完成超时机制（续） | p.305 |
+| 2.9 | Link Status Dependencies | 链路状态依赖关系 | p.305 |
+| 2.9.1 | Transaction Layer Behavior in DL_Do… | DL_Down 状态下的事务层行为 | p.305 |
+| 2.9.2 | Transaction Layer Behavior in DL_Up… | DL_Up 状态下的事务层行为 | p.306 |
+| 2.9.3 | Transaction Layer Behavior During D… | Downstream Port Containment (D… | p.307 |
 
 ## 🖼 本章图表 (Figures)
 
-> 所有图已抽取为 PNG 存放在 `figures/chapter_02/`。
+| Figure | Title | 图标题 | Page |
+|:------:|:------|:-------|:----:|
+| 2 | Serial View of a TLP |  | p.142 |
+| 3 | Generic TLP Format - Non-Flit … |  | p.143 |
+| 3 | Generic TLP Format - Non-Flit … |  | p.144 |
+| 4 | Fields Present in All TLPs |  | p.145 |
+| 5 | Fields Present in All Non-Flit… |  | p.146 |
+| 6 | First DW of Header Base |  | p.148 |
+| 7 | OHC-A1 |  | p.161 |
+| 8 | OHC-A2 |  | p.161 |
+| 9 | OHC-A3 |  | p.161 |
+| 10 | OHC-A4 |  | p.162 |
+| 11 | OHC-A5 |  | p.162 |
+| 12 | OHC-B |  | p.162 |
+| 13 | OHC-C |  | p.163 |
+| 14 | Example Topology Illustrating … |  | p.166 |
+| 15 | Examples of Completer Target M… |  | p.173 |
+| 16 | 32-bit Address Routing - Non-F… |  | p.175 |
+| 17 | 64-bit Address Routing - Non-F… |  | p.175 |
+| 18 | 32-bit Address Routing - Flit … |  | p.176 |
+| 19 | 64-bit Address Routing - Flit … |  | p.176 |
+| 20 | 64-bit Address Routing - Flit … |  | p.176 |
+| 21 | 64-bit Address Routing - Flit … |  | p.177 |
+| 22 | 64-bit Address Routing - Flit … |  | p.177 |
+| 23 | Non-ARI ID Routing with 4 DW H… |  | p.179 |
+| 24 | ARI ID Routing with 4 DW Heade… |  | p.180 |
+| 25 | Non-ARI ID Routing with 3 DW H… |  | p.180 |
+| 26 | ARI ID Routing with 3 DW Heade… |  | p.180 |
+| 27 | ID Routing with 3 DW Header - … |  | p.180 |
+| 28 | ID Routing with 4 DW Header - … |  | p.181 |
+| 29 | ID Routing with 5 DW Header - … |  | p.181 |
+| 30 | ID Routing with 6 DW Header - … |  | p.181 |
+| 31 | ID Routing with 7 DW Header - … |  | p.182 |
+| 36 | Request Header Format for 64-b… |  | p.196 |
+| 37 | Request Header Format for 32-b… |  | p.196 |
+| 38 | Request Header Format for I/O … |  | p.197 |
+| 39 | Request Header Format for Conf… |  | p.198 |
+| 40 | TPH TLP Prefix |  | p.198 |
+| 41 | Location of PH[1:0] in a 4 DW … |  | p.199 |
+| 42 | Location of PH[1:0] in a 3 DW … |  | p.200 |
+| 43 | Location of ST[7:0] in the Mem… |  | p.200 |
+| 44 | Location of ST[7:0] in Memory … |  | p.201 |
+| 45 | Flit Mode Mem64 Request |  | p.202 |
+| 46 | Flit Mode Mem32 Request |  | p.202 |
+| 47 | Flit Mode IO Request |  | p.202 |
+| 48 | Flit Mode Configuration Reques… |  | p.203 |
+| 49 | Message Request Header - Non-F… |  | p.204 |
+| 50 | Message Request Header - Flit … |  | p.204 |
+| 51 | ERR_COR Message - Non-Flit Mod… |  | p.211 |
+| 52 | ERR_COR Message - Flit Mode |  | p.211 |
+| 53 | Header for Vendor-Defined Mess… |  | p.215 |
+| 54 | Header for Vendor-Defined Mess… |  | p.215 |
+| 55 | Header for PCI-SIG-Defined VDM… |  | p.216 |
+| 56 | Header for PCI-SIG-Defined VDM… |  | p.216 |
+| 57 | DRS Message - Non-Flit Mode |  | p.216 |
+| 58 | DRS Message - Flit Mode |  | p.216 |
+| 59 | FRS Message - Non-Flit Mode |  | p.216 |
+| 60 | FRS Message - Flit Mode |  | p.216 |
+| 61 | Hierarchy ID Message - Non-Fli… |  | p.220 |
+| 62 | Hierarchy ID Message - Flit Mo… |  | p.220 |
+| 63 | LTR Message - Non-Flit Mode |  | p.222 |
+| 65 | OBFF Message - Non-Flit Mode |  | p.223 |
+| 67 | PTM Request/Response Message -… |  | p.224 |
+| 68 | PTM ResponseD Message - Non-Fl… |  | p.225 |
+| 71 | IDE Sync Message for Link IDE … |  | p.226 |
+| 73 | IDE Sync Message for Selective… |  | p.227 |
+| 76 | IDE Fail Message for Link IDE … |  | p.227 |
+| 82 | Completion Header Base Format … |  | p.230 |
+| 85 | Flit Mode Local TLP Prefix |  | p.237 |
+| 86 | OHC-E1 |  | p.240 |
+| 87 | OHC-E2 |  | p.240 |
+| 88 | OHC-E4 |  | p.241 |
+| 89 | Flowchart for Handling of Rece… |  | p.243 |
+| 90 | Flowchart for Switch Handling … |  | p.245 |
+| 91 | Flowchart for Handling of Rece… |  | p.250 |
+| 92 | Example Completion Data when s… |  | p.253 |
+| 93 | Deadlock Examples with Intersy… |  | p.264 |
+| 94 | Virtual Channel Concept - An I… |  | p.270 |
+| 95 | Virtual Channel Concept - Swit… |  | p.270 |
+| 96 | An Example of TC/VC Configurat… |  | p.271 |
+| 97 | Relationship Between Requester… |  | p.275 |
+| 99 | Calculation of 32-bit ECRC for… |  | p.301 |
 
 ## 📊 本章表格 (Tables)
 
-> 各章表格以标准 Markdown 表格形式嵌入正文。
+| Table | Title | 表标题 | Page |
+|:-----:|:------|:-------|:----:|
+| 1 | Transaction Types for Differen… | 不同地址空间的事务类型 | — |
+| 2 | Fmt[2:0] Field Values | Fmt[2:0] 字段值 | p.146 |
+| 3 | Fmt[2:0] and Type[4:0] Field E… | Fmt[2:0] 和 Type[4:0] 字段编码 | p.146 |
+| 4 | Length[9:0] Field Encoding | Length[9:0] 字段编码 | p.147 |
+| 5 | Flit Mode TLP Header Type Enco… | Flit 模式 TLP 包头类型编码 | p.149 |
+| 6 | OHC-A Included Fields for OHC-… | OHC-A1 至 OHC-A5 包含的字段 (见 § 图 2… | p.160 |
+| 7 |  | 地址字段映射 (Address Field Mapping) | p.177 |
+| 8 |  | 非 ARI ID 路由的包头字段位置 —— 非 Flit 模… | p.179 |
+| 9 |  | ARI ID 路由的包头字段位置 (Header Field… | p.179 |
+| 55 | Mapping of Bits into ECRC Fiel… | ECRC 字段位映射 | p.299 |
 
 ---
 
+---
 
 ---
 
@@ -4734,6 +4932,9 @@ MSI/MSI-X 机制使用内存写请求来表示中断消息（见 § 6.1.4 节）
 
 
 > **Figure 2-40.** TPH TLP Prefix
+
+> <img src="figures/chapter_02/fig_0199_2_tight.png" width="700">
+
 > <img src="figures/chapter_02/fig_0198_1.png" width="700">
 
 <table>
@@ -4995,6 +5196,9 @@ Steering Tag (ST) 字段在 TLP 包头中的映射见 § 图 2-43、§ 图 2-44 
 </table>
 
 > **Figure 2-43.** Location of ST[7:0] in the Memory Write Request Header - Non-Flit Mode
+
+> <img src="figures/chapter_02/fig_0201_2_tight.png" width="700">
+
 > <img src="figures/chapter_02/fig_0200_1.png" width="700">
 
 <table>
@@ -5208,6 +5412,9 @@ Figure 2-45: Flit Mode 64-bit Memory Request (4 DW). Byte 0: Type. Bytes 4-7: AT
 
 > **Figure 2-46.** Flit Mode Mem32 Request
 
+> <img src="figures/chapter_02/fig_0203_2_tight.png" width="700">
+
+
 <table>
 <thead>
 <tr>
@@ -5232,6 +5439,9 @@ Figure 2-46: Flit Mode 32-bit Memory Request (3 DW). Byte 0: Type. Bytes 4-7: AT
 </table>
 
 > **Figure 2-47.** Flit Mode IO Request
+
+> <img src="figures/chapter_02/fig_0203_3_tight.png" width="700">
+
 
 <table>
 <thead>
@@ -5416,6 +5626,9 @@ Many types of Messages, including Vendor-Defined Messages, are potentially usabl
 </table>
 
 > **Figure 2-49.** Message Request Header - Non-Flit Mode
+
+> <img src="figures/chapter_02/fig_0205_1_tight.png" width="700">
+
 > <img src="figures/chapter_02/fig_0204_1_tight.png" width="700">
 
 <table>
@@ -5442,6 +5655,9 @@ Figure 2-49: Non-Flit Mode Message Request Header (4 DW). Byte 0: Fmt=10r2r1r0b,
 </table>
 
 > **Figure 2-50.** Message Request Header - Flit Mode
+
+> <img src="figures/chapter_02/fig_0205_2_tight.png" width="700">
+
 
 <table>
 <thead>
@@ -5972,9 +6188,15 @@ The initiator of the Message is identified with the Requester ID of the Message 
 </table>
 
 > **Figure 2-51.** ERR_COR Message - Non-Flit Mode
+
+> <img src="figures/chapter_02/fig_0212_1_tight.png" width="700">
+
 > <img src="figures/chapter_02/fig_0211_1.png" width="700">
 
 > **Figure 2-52.** ERR_COR Message - Flit Mode
+
+> <img src="figures/chapter_02/fig_0212_2_tight.png" width="700">
+
 
 
 **Table 2-25 ERR_COR Subclass (ECS) Field Encodings | 表 2-25 ERR_COR 子类 (ECS) 字段编码**
@@ -7433,6 +7655,9 @@ Reserved Completions (as indicated in § Table 2-5), are ID Routed TLPs as defin
 </table>
 
 > **Figure 2-82.** Completion Header Base Format - Flit Mode
+
+> <img src="figures/chapter_02/fig_0234_1_tight.png" width="700">
+
 > <img src="figures/chapter_02/fig_0233_1.png" width="700">
 
 <!-- 📄 Page 231 -->
@@ -10593,6 +10818,9 @@ TC7/VC7 保留
 ---
 
 > **Figure 2-94.** Virtual Channel Concept - An Illustration
+
+> <img src="figures/chapter_02/fig_0271_1_tight.png" width="700">
+
 > <img src="figures/chapter_02/fig_0270_1.png" width="700">
 
 
@@ -10613,6 +10841,9 @@ TC7/VC7 保留
 Internal to the Switch, every Virtual Channel requires dedicated physical resources (queues/buffers and control logic) that support independent traffic flows inside the Switch. § Figure 2-95 shows conceptually the VC resources within the Switch (shown in § Figure 2-94) that are required to support traffic flow in the Upstream direction.
 
 > **Figure 2-95.** Virtual Channel Concept - Switch Internals (Upstream Flow)
+
+> <img src="figures/chapter_02/fig_0271_2_tight.png" width="700">
+
 
 
 An MFD may implement Virtual Channel resources similar to a subset of those in a Switch, for the purpose of managing the Quality of Service (QoS) for Upstream requests from the different Functions to the device's Upstream Egress Port.
@@ -10749,6 +10980,9 @@ The number of VCs supported, and the associated buffering per VC per Port, are n
 § Figure 2-96 provides a graphical illustration of TC to VC mapping in several different Link configurations. For additional considerations on TC/VC, refer to § Section 6.3.
 
 > **Figure 2-96.** An Example of TC/VC Configurations
+
+> <img src="figures/chapter_02/fig_0274_1_tight.png" width="700">
+
 > <img src="figures/chapter_02/fig_0273_1.png" width="700">
 
 

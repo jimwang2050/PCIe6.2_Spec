@@ -8,20 +8,75 @@
 
 ---
 
-## 📑 本章目录 (Table of Contents)
 
-> 由合并阶段自动生成。请使用浏览器/GitHub 渲染时,各小节标题链接跳转。
+## 📑 章节索引 (Sections)
+
+| # | Section | 小节 | Page |
+|:-:|:--------|:-----|:----:|
+| 3.1 | Data Link Layer Overview | 数据链路层概述 | p.309 |
+| 3.2 | Data Link Control and Management St… | 数据链路控制与管理状态机 | p.312 |
+| 3.2.1 | Data Link Control and Management St… | 数据链路控制与管理状态机规则 | p.312 |
+| 3.3 | Data Link Feature Exchange | 数据链路特性交换 | p.313 |
+| 3.4 | Flow Control Initialization Protoco… | 流控初始化协议 | p.313 |
+| 3.4.1 | Flow Control Initialization State M… | 流控初始化状态机规则 | p.313 |
+| 3.4.2 | Scaled Flow Control | 缩放流控 (Scaled Flow Control) | p.333 |
+| 3.5 | Data Link Layer Packets (DLLPs) | 数据链路层包 (DLLP) | p.333 |
+| 3.5.1 | Data Link Layer Packet Rules | 数据链路层包规则 | p.333 |
+| 3.6 | Data Integrity Mechanisms | 数据完整性机制 | p.348 |
+| 3.6.1 | Introduction | 引言 | p.348 |
+| 3.6.2 | LCRC, Sequence Number, and Retry Ma… | LCRC、序列号与重试管理(TLP 发送器) | p.348 |
+| 3.6.2.1 | LCRC and Sequence Number Rules (TLP… | LCRC 和序列号规则(TLP 发送器) | p.348 |
+| 3.6.2.2 | Handling of Received DLLPs (Non-Fli… | 已接收 DLLP 的处理(非 Flit 模式) | p.348 |
+| 3.6.2.3 | Handling of Received DLLPs (Flit Mo… | 已接收 DLLP 的处理(Flit 模式) | p.348 |
+| 3.6.3 | LCRC and Sequence Number (TLP Recei… | LCRC 和序列号(TLP 接收器)(非 Flit 模式) | p.348 |
+| 3.6.3.1 | LCRC and Sequence Number Rules (TLP… | LCRC 和序列号规则(TLP 接收器) | p.348 |
 
 ## 🖼 本章图表 (Figures)
 
-> 所有图已抽取为 PNG 存放在 `figures/chapter_03/`。
+| Figure | Title | 图标题 | Page |
+|:------:|:------|:-------|:----:|
+| 1 | Layering Diagram Highlighting … |  | p.309 |
+| 2 | Data Link Control and Manageme… |  | p.312 |
+| 3 | VC0 Flow Control Initializatio… |  | p.333 |
+| 4 | DLLP Type and CRC Fields (Non-… |  | p.333 |
+| 5 | DLLP Type Field (Flit Mode) |  | p.333 |
+| 6 | Data Link Layer Packet Format … |  | p.333 |
+| 7 | Data Link Layer Packet Format … |  | p.333 |
+| 8 | Data Link Layer Packet Format … |  | p.333 |
+| 9 | Data Link Layer Packet Format … |  | p.333 |
+| 10 | Data Link Layer Packet Format … |  | p.333 |
+| 11 | Data Link Layer Packet Format … |  | p.333 |
+| 12 | Data Link Layer Packet Format … |  | p.333 |
+| 13 | Data Link Layer Packet Format … |  | p.333 |
+| 14 | Data Link Layer Packet Format … |  | p.333 |
+| 15 | Data Packet Layer Format for L… |  | p.333 |
+| 16 | Diagram of CRC Calculation for… |  | p.348 |
+| 17 | TLP with LCRC and TLP Sequence… |  | p.348 |
+| 18 | TLP Following Application of T… |  | p.348 |
+| 19 | Calculation of LCRC |  | p.348 |
+| 20 | Received DLLP Error Check Flow… |  | p.348 |
+| 21 | Ack/Nak DLLP Processing Flowch… |  | p.348 |
+| 22 | Receive Data Link Layer Handli… |  | p.348 |
 
 ## 📊 本章表格 (Tables)
 
-> 各章表格以标准 Markdown 表格形式嵌入正文。
+| Table | Title | 表标题 | Page |
+|:-----:|:------|:-------|:----:|
+| 1 | Data Link Feature Supported Bi… | 表 3-1 数据链路特性支持位定义 | p.313 |
+| 2 | InitFC1 / InitFC2 Options – No… | 表 3-2 InitFC1 / InitFC2 选项 — 非… | p.313 |
+| 3 | InitFC1 / InitFC2 Options – Fl… | 表 3-3 InitFC1 / InitFC2 选项 — F… | p.313 |
+| 4 | Scaled Flow Control Scaling Fa… | 表 3-4 缩放流控缩放因子 | p.333 |
+| 5 | DLLP Type Encodings | 表 3-5 DLLP 类型编码 | p.333 |
+| 6 | HdrScale and DataScale Encodin… | 表 3-6 HdrScale 和 DataScale 编码 | p.333 |
+| 7 | Mapping of Bits into CRC Field | 表 3-7 CRC 字段位映射 | p.333 |
+| 8 | Mapping of Bits into LCRC Fiel… | 表 3-8 LCRC 字段位映射 | p.348 |
+| 10 | Maximum Ack Latency Limits for… | 表 3-10 2.5 GT/s 下的最大 Ack 延迟限制 | p.348 |
+| 11 | Maximum Ack Latency Limits for… | 表 3-11 5.0 GT/s 下的最大 Ack 延迟限制 | p.348 |
+| 12 | Maximum Ack Latency Limits for… | 表 3-12 8.0 GT/s 及更高数据速率下的最大 Ac… | p.348 |
 
 ---
 
+---
 
 ---
 

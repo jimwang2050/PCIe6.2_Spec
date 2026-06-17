@@ -8,20 +8,47 @@
 
 ---
 
-## 📑 本章目录 (Table of Contents)
 
-> 由合并阶段自动生成。请使用浏览器/GitHub 渲染时,各小节标题链接跳转。
+## 📑 章节索引 (Sections)
+
+| # | Section | 小节 | Page |
+|:-:|:--------|:-----|:----:|
+| 1.1 | An Evolving I/O Interconnect | 不断演进的 I/O 互连 | — |
+| 1.2 | PCI Express Link | PCI Express 链路 | — |
+| 1.3 | PCI Express Fabric Topology | PCI Express Fabric 拓扑 | — |
+| 1.3.1 | Root Complex | 根复合体 | — |
+| 1.3.2 | Endpoints | 端点 | — |
+| 1.3.2.1 | Legacy Endpoint Rules | 传统端点规则 | — |
+| 1.3.2.2 | PCI Express Endpoint Rules | PCI Express 端点规则 | — |
+| 1.3.2.3 | Root Complex Integrated Endpoint Ru… | 根复合体集成端点规则 | — |
+| 1.3.3 | Switch | 交换机 | — |
+| 1.3.4 | Root Complex Event Collector | 根复合体事件收集器 | — |
+| 1.3.5 | PCI Express to PCI/PCI-X Bridge | PCI Express 到 PCI/PCI-X 桥 | — |
+| 1.4 | Hardware/Software Model for Discove… | 用于发现、配置与操作的硬件/软件模型 | — |
+| 1.5 | PCI Express Layering Overview | PCI Express 分层概述 | — |
+| 1.5.1 | Transaction Layer | 事务层 | — |
+| 1.5.2 | Data Link Layer | 数据链路层 | — |
+| 1.5.3 | Physical Layer | 物理层 | — |
+| 1.5.4 | Layer Functions and Services | 层的功能与服务 | — |
+| 1.5.4.1 | Transaction Layer Services | 事务层服务 | — |
+| 1.5.4.2 | Data Link Layer Services | 数据链路层服务 | — |
+| 1.5.4.3 | Physical Layer Services | 物理层服务 | — |
+| 1.5.4.4 | Inter-Layer Interfaces | 层间接口 | — |
+| 1.5.4.4.1 | Transaction/Data Link Interface | 事务层/数据链路层接口 | — |
+| 1.5.4.4.2 | Data Link/Physical Interface | 数据链路层/物理层接口 | — |
 
 ## 🖼 本章图表 (Figures)
 
-> 所有图已抽取为 PNG 存放在 `figures/chapter_01/`。
-
-## 📊 本章表格 (Tables)
-
-> 各章表格以标准 Markdown 表格形式嵌入正文。
+| Figure | Title | 图标题 | Page |
+|:------:|:------|:-------|:----:|
+| 1 | PCI Express Link |  | — |
+| 2 | Example PCI Express Topology |  | — |
+| 3 | Logical Block Diagram of a Swi… |  | — |
+| 4 | High-Level Layering Diagram |  | — |
 
 ---
 
+---
 
 ---
 
@@ -224,6 +251,9 @@ PCI Express 链路的主要属性如下：
 </table>
 
 > **Figure 1-1.** PCI Express Link
+
+> <img src="figures/chapter_01/fig_0128_1_tight.png" width="700">
+
 > <img src="figures/chapter_01/fig_0127_1.png" width="700">
 
 

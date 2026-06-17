@@ -8,20 +8,243 @@
 
 ---
 
-## 📑 本章目录 (Table of Contents)
 
-> 由合并阶段自动生成。请使用浏览器/GitHub 渲染时,各小节标题链接跳转。
+## 📑 章节索引 (Sections)
+
+| # | Section | 小节 | Page |
+|:-:|:--------|:-----|:----:|
+| 8.1 | 电气规范介绍 (Electrical Specification In… |  | p.1409 |
+| 8.2 | 互操作性准则 (Interoperability Criteria) |  | p.1409 |
+| 8.2.1 | 数据速率 (Data Rates) |  | p.1409 |
+| 8.2.2 | Refclk 架构 (Refclk Architectures) |  | p.1409 |
+| 8.3 | 发送器规范 (Transmitter Specification) |  | p.1410 |
+| 8.3.1 | 发送器特性测量设置 (Measurement Setup for Ch… |  | p.1410 |
+| 8.3.1.1 | 引出通道和复制通道 (Breakout and Replica Cha… |  | p.1411 |
+| 8.3.2 | 电压电平定义 (Voltage Level Definitions) |  | p.1411 |
+| 8.3.3 | Tx 电压参数 (Tx Voltage Parameters) |  | p.1412 |
+| 8.3.3.1 | 2.5 和 5.0 GT/s 发送器均衡 (2.5 and 5.0 G… |  | p.1412 |
+| 8.3.3.2 | 8.0、16.0、32.0 和 64.0 GT/s 发送器均衡 (8.… |  | p.1412 |
+| 8.3.3.3 | 8.0、16.0、32.0 和 64.0 GT/s 的 Tx 均衡预设… |  | p.1414 |
+| 8.3.3.4 | 测量 2.5 GT/s 和 5.0 GT/s 的 Tx 均衡 (Mea… |  | p.1416 |
+| 8.3.3.5 | 测量 8.0、16.0、32.0 和 64.0 GT/s 的预设 (M… |  | p.1416 |
+| 8.3.3.6 | Method for Measuring VTX-DIFF-PP at… | 2.5 GT/s 和 5.0 GT/s 下 VTX-DIFF… | p.1417 |
+| 8.3.3.7 | Method for Measuring VTX-DIFF-PP at… | 8.0、16.0、32.0 和 64.0 GT/s 下 VT… | p.1417 |
+| 8.3.3.8 | Coefficient Range and Tolerance for… | 8.0、16.0、32.0 和 64.0 GT/s 的系数范… | p.1418 |
+| 8.3.3.9 | EIEOS and VTX-EIEOS-FS and VTX-EIEO… | EIEOS 与 VTX-EIEOS-FS、VTX-EIEOS… | p.1421 |
+| 8.3.3.10 | Reduced Swing Signaling | 缩减摆幅信号 | p.1422 |
+| 8.3.3.11 | Effective Tx Package Loss at 8.0, 1… | 8.0、16.0、32.0 和 64.0 GT/s 下 Tx… | p.1422 |
+| 8.3.3.12 | Transmitter Signal-to Noise and Dis… | 64.0 GT/s 下发送器信噪失真比 (SNDRTX) | p.1424 |
+| 8.3.3.13 | Transmitter Ratio of Level Mismatch… | 64.0 GT/s 下发送器电平失配比 (RLM-TX) | p.1425 |
+| 8.3.4 | Transmitter Margining | 发送器余量 (Margining) | p.1426 |
+| 8.3.5 | Tx Jitter Parameters | Tx 抖动参数 | p.1427 |
+| 8.3.5.1 | Post Processing Steps to Extract Ji… |  | p.1427 |
+| 8.3.5.2 | Applying CTLE or De-embedding § |  | p.1427 |
+| 8.3.5.3 | Independent Refclk Measurement and … |  | p.1427 |
+| 8.3.5.1 | 提取抖动的后处理步骤 § |  | p.1427 |
+| 8.3.5.2 | 应用 CTLE 或去嵌入 § |  | p.1427 |
+| 8.3.5.3 | 独立 Refclk 测量与后处理 § |  | p.1427 |
+| 8.3.5.3 | Independent Refclk Measurement and … | 独立 Refclk 测量与后处理 (续) | p.1428 |
+| 8.3.5.4 | Embedded and Non-Embedded Refclk Me… |  | p.1428 |
+| 8.3.5.5 | Behavioral CDR Characteristics § |  | p.1428 |
+| 8.3.5.4 | 内嵌与非内嵌 Refclk 测量与后处理 § |  | p.1428 |
+| 8.3.5.5 | 行为 CDR 特性 § |  | p.1428 |
+| 8.3.5.5 | Behavioral CDR Characteristics (con… | 行为 CDR 特性 (续) | p.1429 |
+| 8.3.5.5 | Behavioral CDR Characteristics — Fi… | 行为 CDR 特性 — 图 8-15 | p.1430 |
+| 8.3.5.5 | Behavioral CDR Characteristics — Fi… | 行为 CDR 特性 — 图 8-16 与公式 8-10/8-… | p.1431 |
+| 8.3.5.5 | Behavioral CDR Characteristics — Eq… | 行为 CDR 特性 — 公式 8-12 与图 8-17 | p.1432 |
+| 8.3.5.5 | Behavioral CDR Characteristics — Eq… | 行为 CDR 特性 — 公式 8-13 | p.1433 |
+| 8.3.5.6 | Data Dependent and Uncorrelated Jit… | 数据相关与非相关抖动 / 数据相关抖动 | p.1434 |
+| 8.3.5.6 | Data Dependent and Uncorrelated Jit… |  | p.1434 |
+| 8.3.5.7 | Data Dependent Jitter § |  | p.1434 |
+| 8.3.5.6 | 数据相关与非相关抖动 § |  | p.1434 |
+| 8.3.5.7 | 数据相关抖动 § |  | p.1434 |
+| 8.3.5.7 | Data Dependent Jitter — Figure 8-18… | 数据相关抖动 — 图 8-18 | p.1435 |
+| 8.3.5.8 | Uncorrelated Total Jitter and Deter… |  | p.1435 |
+| 8.3.5.9 | Random Jitter (TTX-RJ) (informative… |  | p.1435 |
+| 8.3.5.10 | Uncorrelated Total and Deterministi… |  | p.1435 |
+| 8.3.5.8 | 非相关总抖动和确定性抖动 (Dual Dirac 模型) (TTX-U… |  | p.1435 |
+| 8.3.5.9 | 随机抖动 (TTX-RJ) (信息性) § |  | p.1435 |
+| 8.3.5.10 | 非相关总 PWJ 与确定性 PWJ (TTX-UPW-TJ 与 TTX… |  | p.1435 |
+| 8.3.5.10 | Uncorrelated Total and Deterministi… | 非相关总与确定性 PWJ — 图 8-20 与 8-21 | p.1436 |
+| 8.3.6 | Data Rate Dependent Parameters | 速率相关参数 | p.1437 |
+| 8.3.6 | Data Rate Dependent Parameters (con… | 速率相关参数 (续) — 表 8-6 (续) | p.1438 |
+| 8.3.6 | Data Rate Dependent Parameters (con… | 速率相关参数 (续) — 表 8-6 (续 2) | p.1439 |
+| 8.3.6 | Data Rate Dependent Parameters — Ta… | 速率相关参数 — 表 8-6 (结尾) 与注释 | p.1440 |
+| 8.3.7 | 2.5、5.0、8.0、16.0 和 32.0 GT/s 的 Tx 与… |  | p.1440 |
+| 8.3.7 | 图 8-23 共模回波损耗掩码 (Figure 8-23 Common… |  | p.1440 |
+| 8.3.8 | 64.0 GT/s 的 Tx 与 Rx 回波损耗 (Tx and Rx… |  | p.1440 |
+| 8.3.9 | 发送器 PLL 带宽与峰值 (Transmitter PLL Band… |  | p.1440 |
+| 8.3.9.1 | 2.5 GT/s 和 5.0 GT/s Tx PLL 带宽与峰值 (2… |  | p.1440 |
+| 8.3.9.2 | 8.0 GT/s、16.0 GT/s、32.0 GT/s 和 64.0… |  | p.1440 |
+| 8.3.9.3 | 串联电容 (Series Capacitors) |  | p.1440 |
+| 8.3.10 | 与数据速率无关的 Tx 参数 (Data Rate Independe… |  | p.1440 |
+| 8.3.10 | (续) 与数据速率无关的 Tx 参数 (续表) |  | p.1440 |
+| 8.4 | 接收器规范 (Receiver Specifications) |  | p.1440 |
+| 8.4.1 | 接收器压力眼图规范 (Receiver Stressed Eye Sp… |  | p.1440 |
+| 8.4.1.1 | 引出通道与复制通道 (Breakout and Replica Cha… |  | p.1440 |
+| 8.4.1.2 | 校准通道插入损耗特性 (Calibration Channel Ins… |  | p.1440 |
+| 8.4.1.2 | 校准通道插入损耗特性 (续) |  | p.1440 |
+| 8.4.1.3 | 后处理流程 (Post Processing Procedures) |  | p.1440 |
+| 8.4.1.4 | Behavioral Rx Package Models | 行为级 Rx 封装模型 | p.1440 |
+| 8.4.2.2.1 | Sj Mask | Sj 模板 | p.1471 |
+| 8.4.2.3 | Receiver Refclk Modes | 接收器 Refclk 模式 | p.1479 |
+| 8.4.2.3.1 | Common Refclk Mode | 公共 Refclk 模式 | p.1479 |
+| 8.4.2.3.2 | Independent Refclk Mode | 独立 Refclk 模式 | p.1480 |
+| 8.4.3 | Common Receiver Parameters | 公共接收器参数 | p.1480 |
+| 8.4.3.1 | 5.0 GT/s Exit From Idle Detect (EFI… | 5.0 GT/s 退出空闲检测 (EFI) | p.1483 |
+| 8.4.3.2 | Receiver Return Loss | 接收器回损 | p.1483 |
+| 8.4.4 | Lane Margining at the Receiver - El… | 接收器处通道余量测量 - 电气要求 | p.1483 |
+| 8.4.5 | Low Frequency and Miscellaneous Sig… | 低频及其它信号要求 | p.1487 |
+| 8.4.5.1 | ESD Standards | ESD 标准 | p.1487 |
+| 8.4.5.2 | Channel AC Coupling Capacitors | 通道 AC 耦合电容 | p.1487 |
+| 8.4.5.3 | Short Circuit Requirements | 短路要求 | p.1487 |
+| 8.4.5.4 | Transmitter and Receiver Terminatio… | 发送器与接收器端接 | p.1488 |
+| 8.4.5.5 | Electrical Idle | 电气空闲 | p.1488 |
+| 8.4.5.6 | DC Common Mode Voltage | DC 共模电压 | p.1488 |
+| 8.4.5.7 | Receiver Detection | 接收器检测 | p.1489 |
+| 8.5 | Channel Tolerancing | 通道容差 | p.1489 |
+| 8.5.1 | Channel Compliance Testing | 通道一致性测试 | p.1489 |
+| 8.5.1.1 | Behavioral Transmitter and Receiver… | 行为级发送器与接收器封装模型 | p.1491 |
+| 8.5.1.2 | Measuring Package Performance (16.0… | 封装性能测量(仅适用于 16.0 GT/s) | p.1501 |
+| 8.5.1.3 | Simulation Tool Requirements | 仿真工具要求 | p.1501 |
+| 8.5.1.3.1 | Simulation Tool Chain Inputs | 仿真工具链输入 | p.1502 |
+| 8.5.1.3.2 | Processing Steps | 处理步骤 | p.1503 |
+| 8.5.1.3.3 | Simulation Tool Outputs | 仿真工具输出 | p.1503 |
+| 8.5.1.3.4 | Open Source Simulation Tool | 开源仿真工具 | p.1503 |
+| 8.5.1.4 | Behavioral Transmitter Parameters | 行为级发送器参数 | p.1503 |
+| 8.5.1.4.1 | Deriving Voltage and Jitter Paramet… | 电压与抖动参数推导 | p.1503 |
+| 8.5.1.4.2 | Optimizing Tx/Rx Equalization (8.0,… | 优化 Tx/Rx 均衡(仅限 8.0、16.0、32.0 和… | p.1505 |
+| 8.5.1.4.3 | Pass/Fail Eye Characteristics | Pass/Fail 眼图特性 | p.1505 |
+| 8.5.1.4.4 | Characterizing Channel Common Mode … | 通道共模噪声特性 | p.1508 |
+| 8.5.1.4.5 | Verifying VCH-IDLE-DET-DIFF-pp | 验证 VCH-IDLE-DET-DIFF-pp | p.1509 |
+| 8.6 | Refclk Specifications | Refclk 规范 | p.1509 |
+| 8.6.1 | Refclk Test Setup | Refclk 测试设置 | p.1509 |
+| 8.6.2 | REFCLK AC Specifications | REFCLK AC 规范 | p.1510 |
+| 8.6.3 | Data Rate Independent Refclk Parame… | 与数据速率无关的 Refclk 参数 | p.1514 |
+| 8.6.3.1 | Low Frequency Refclk Jitter Limits | 低频 Refclk 抖动限值 | p.1514 |
+| 8.6.4 | Refclk Architectures Supported | 支持的 Refclk 架构 | p.1515 |
+| 8.6.5 | Filtering Functions Applied to Raw … | 应用于原始数据的滤波函数 | p.1515 |
+| 8.6.5.1 | PLL Filter Transfer Function Exampl… | PLL 滤波传递函数示例 | p.1516 |
+| 8.6.5.2 | CDR Transfer Function Examples | CDR 传递函数示例 | p.1516 |
+| 8.6.6 | Common Refclk Rx Architecture (CC) | 共参考时钟接收器架构 (CC) | p.1517 |
+| 8.6.6.1 | Determining the Number of PLL BW an… | 确定 PLL 带宽和峰化组合数 | p.1517 |
+| 8.6.6.2 | CDR and PLL BW and Peaking Limits f… | 共参考时钟的 CDR 与 PLL 带宽和峰化限值 | p.1518 |
+| 8.6.7 | Jitter Limits for Refclk Architectu… | Refclk 架构的抖动限值 | p.1520 |
+| 8.6.8 | Form Factor Requirements for RefClo… | 外形规格对 RefClock 架构的要求 | p.1521 |
 
 ## 🖼 本章图表 (Figures)
 
-> 所有图已抽取为 PNG 存放在 `figures/chapter_08/`。
+| Figure | Title | 图标题 | Page |
+|:------:|:------|:-------|:----:|
+| 1 | Tx Test Board for Non-Embedded… |  | p.1410 |
+| 2 | Tx Test board for Embedded Ref… |  | p.1410 |
+| 3 | Single-ended and Differential … |  | p.1412 |
+| 4 | Tx Equalization FIR Representa… |  | p.1413 |
+| 5 | Tx Equalization FIR Representa… |  | p.1414 |
+| 6 | Definition of Tx Voltage Level… |  | p.1415 |
+| 7 | Methodology for measuring Tx e… |  | p.1417 |
+| 8 | VTX-DIFF-PP and VTX-DIFF-PP-LO… |  | p.1418 |
+| 9 | Transmit Equalization Coeffici… |  | p.1419 |
+| 10 | Transmit Equalization Coeffici… |  | p.1420 |
+| 11 | Measuring VTX-EIEOS-FS and VTX… |  | p.1422 |
+| 12 | Compliance Pattern and Resulti… |  | p.1423 |
+| 13 | 2.5 and 5.0 GT/s Transmitter M… |  | p.1427 |
+| 22 | Tx, Rx Differential Return Los… |  | p.1440 |
+| 23 | Tx, Rx Common Mode Return Loss… |  | p.1440 |
+| 24 | 64.0 GT/s Tx, Rx Differential … |  | p.1440 |
+| 25 | 64.0 GT/s Tx, Rx Common Mode R… |  | p.1440 |
+| 26 | Rx Test board Topology for 16.… |  | p.1440 |
+| 27 | Example Calibration Channel IL… |  | p.1440 |
+| 28 | Example 16.0 GT/s Calibration … |  | p.1440 |
+| 29 | Stackup for Example 16.0 GT/s … |  | p.1440 |
+| 30 | CEM Connector Drill Hole Pad S… |  | p.1440 |
+| 31 | Pad Stack for SMA Drill Holes |  | p.1440 |
+| 32 | Example 32.0 GT/s Calibration … |  | p.1440 |
+| 33 | Stack-up for Example 32.0 GT/s… |  | p.1440 |
+| 35 | Loss Curves for 8.0 GT/s Behav… |  | p.1459 |
+| 36 | Loss Curves for 16.0 GT/s Beha… |  | p.1459 |
+| 37 | Loss Curves for 32.0 GT/s Beha… |  | p.1461 |
+| 38 | Loss Curves for 64.0 GT/s Beha… |  | p.1463 |
+| 39 | Variables Definition and Diagr… |  | p.1464 |
+| 40 | Diagram for 2-tap DFE |  | p.1464 |
+| 41 | Layout for Calibrating the Str… |  | p.1468 |
+| 42 | Layout for Calibrating the Str… |  | p.1469 |
+| 43 | Sj Mask for Receivers Operatin… |  | p.1472 |
+| 45 | Sj Mask for Receivers Operatin… |  | p.1473 |
+| 46 | Sj Mask for Receivers Operatin… |  | p.1474 |
+| 47 | Sj Mask for Receivers Operatin… |  | p.1475 |
+| 48 | Sj Mask for Receivers Operatin… |  | p.1476 |
+| 49 | Sj Mask for Receivers Operatin… |  | p.1477 |
+| 50 | Sj Masks for Receivers Operati… |  | p.1478 |
+| 51 | Layout for Jitter Testing Comm… |  | p.1479 |
+| 52 | Layout for Jitter Testing for … |  | p.1480 |
+| 53 | Exit from Idle Voltage and Tim… |  | p.1483 |
+| 54 | Allowed Ranges for Maximum NRZ… |  | p.1484 |
+| 55 | Allowed Ranges for Maximum PAM… |  | p.1485 |
+| 56 | Flow Diagram for Channel Toler… |  | p.1490 |
+| 57 | Flow Diagram for Channel Toler… |  | p.1490 |
+| 58 | Tx/Rx Behavioral Package Model… |  | p.1491 |
+| 59 | Behavioral Tx and Rx S-Port De… |  | p.1492 |
+| 60 | SDD21 Plots for Root and Non-R… |  | p.1492 |
+| 61 | Insertion Loss for Root Refere… |  | p.1493 |
+| 62 | Return Loss for Root Reference… |  | p.1493 |
+| 63 | NEXT for Root Reference Packag… |  | p.1494 |
+| 64 | FEXT for Root Reference Packag… |  | p.1494 |
+| 65 | Insertion Loss for Non-Root Re… |  | p.1495 |
+| 66 | Return Loss for Non-Root Refer… |  | p.1495 |
+| 67 | NEXT for Non-Root Reference Pa… |  | p.1496 |
+| 68 | FEXT for Non-Root Reference Pa… |  | p.1496 |
+| 69 | Insertion Loss for Root Refere… |  | p.1497 |
+| 70 | Return Loss for Root Reference… |  | p.1497 |
+| 71 | NEXT for Root Reference Packag… |  | p.1498 |
+| 72 | FEXT for Root Reference Packag… |  | p.1498 |
+| 73 | Insertion Loss for Non-Root Re… |  | p.1499 |
+| 74 | Return Loss for Non-Root Refer… |  | p.1499 |
+| 75 | NEXT for Non-Root Reference Pa… |  | p.1500 |
+| 76 | FEXT for Non-Root Reference Pa… |  | p.1500 |
+| 77 | 32.0 and 64.0 GT/s Reference P… |  | p.1501 |
+| 78 | Example Derivation of 8.0 GT/s… |  | p.1503 |
+| 79 | EH, EW Mask |  | p.1506 |
+| 80 | Oscilloscope Refclk Test Setup… |  | p.1510 |
+| 81 | Single-Ended Measurement Point… |  | p.1512 |
+| 82 | Single-Ended Measurement Point… |  | p.1512 |
+| 83 | Single-Ended Measurement Point… |  | p.1513 |
+| 84 | Differential Measurement Point… |  | p.1513 |
+| 85 | Differential Measurement Point… |  | p.1513 |
+| 86 | Differential Measurement Point… |  | p.1514 |
 
 ## 📊 本章表格 (Tables)
 
-> 各章表格以标准 Markdown 表格形式嵌入正文。
+| Table | Title | 表标题 | Page |
+|:-----:|:------|:-------|:----:|
+| 1 | Tx Preset Ratios and Correspon… | 8.0、16.0 和 32.0 GT/s 的 Tx 预设比率… | p.1415 |
+| 2 | Tx Preset Ratios and Correspon… | 64.0 GT/s 的 Tx 预设比率及对应系数值 | p.1416 |
+| 4 | Recommended De-embedding Cutof… | 推荐的去嵌入截止频率 | p.1427 |
+| 4 | Recommended De-embedding Cutof… | 推荐的去嵌入截止频率 | p.1427 |
+| 5 | Tx Measurement and Post Proces… | 不同 Refclk 下的 Tx 测量与后处理 | p.1428 |
+| 5 | Tx Measurement and Post Proces… | 不同 Refclk 下的 Tx 测量与后处理 | p.1428 |
+| 6 | Data Rate Dependent Transmitte… | 速率相关发送器参数 | p.1437 |
+| 7 | Data Rate Independent Tx Param… | 与数据速率无关的 Tx 参数 | p.1440 |
+| 8 | Calibration Channel IL Limits | 校准通道 IL 限制 | p.1440 |
+| 11 | Stressed Jitter Eye Parameters | 表 8-11 压力抖动眼图参数 | p.1469 |
+| 12 | Common Receiver Parameters | 表 8-12 公共接收器参数 | p.1481 |
+| 13 | Lane Margining | 表 8-13 通道余量 | p.1485 |
+| 14 | Package Model Capacitance Valu… | 封装模型电容值 | p.1491 |
+| 15 | Jitter/Voltage Parameters for … |  | p.1503 |
+| 15 | 通道容差测试的抖动/电压参数 |  | p.1503 |
+| 15 | Jitter/Voltage Parameters for … | 通道容差测试的抖动/电压参数(续) | p.1504 |
+| 15 | Jitter/Voltage Parameters for … | 通道容差测试的抖动/电压参数(续) | p.1505 |
+| 16 | Channel Tolerancing Eye Mask V… |  | p.1506 |
+| 16 | 通道容差测试的眼图模板数值 |  | p.1506 |
+| 16 | Channel Tolerancing Eye Mask V… | 通道容差测试的眼图模板数值 | p.1506 |
+| 16 | Channel Tolerancing Eye Mask V… | 通道容差测试的眼图模板数值(续) | p.1507 |
+| 16 | Channel Tolerancing Eye Mask V… | 通道容差测试的眼图模板数值(续) | p.1508 |
+| 17 | EIEOS Signaling Parameters | EIEOS 信号参数 | p.1509 |
+| 18 | REFCLK DC Specifications and A… | REFCLK DC 规范与 AC 时序要求 | p.1510 |
+| 18 | REFCLK DC Specifications and A… | REFCLK DC 规范与 AC 时序要求(续) | p.1511 |
+| 19 | Data Rate Independent Refclk P… | 与数据速率无关的 Refclk 参数 | p.1514 |
 
 ---
-
 
 ---
 
@@ -5469,6 +5692,9 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 </table>
 
 > **Figure 8-52.** Layout for Jitter Testing for Independent Refclk Rx at 16.0 GT/s
+
+> <img src="figures/chapter_08/fig_1480_2_tight.png" width="700">
+
 > <img src="figures/chapter_08/fig_1480_1_tight.png" width="700">
 
 ---

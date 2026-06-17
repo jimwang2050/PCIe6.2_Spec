@@ -8,20 +8,166 @@
 
 ---
 
-## 📑 本章目录 (Table of Contents)
 
-> 由合并阶段自动生成。请使用浏览器/GitHub 渲染时,各小节标题链接跳转。
+## 📑 章节索引 (Sections)
+
+| # | Section | 小节 | Page |
+|:-:|:--------|:-----|:----:|
+| 9.1 | SR-IOV Architectural Overview § | SR-IOV 架构概述 § | — |
+| 9.1 | SR-IOV Architectural Overview (cont… | SR-IOV 架构概述(续) § | — |
+| 9.1 | SR-IOV Components (cont.) § | SR-IOV 组件(续) § | p.1527 |
+| 9.1 | SR-IOV Components (cont. 2) § | SR-IOV 组件(续 2) § | p.1527 |
+| 9.1.1 | Example Multi-Function Device § | 9.1.1 多功能设备示例 § | p.1528 |
+| 9.1.2 | Example SR-IOV Single PF Capable De… | 9.1.2 单 PF SR-IOV 设备示例 § | p.1529 |
+| 9.1.3 | SR-IOV Single PF Capable Device (co… | 9.1.3 SR-IOV 单 PF 设备(续) § | p.1530 |
+| 9.1.4 | Example SR-IOV Multi-PF Capable Dev… | 9.1.4 多 PF SR-IOV 设备示例 § | p.1531 |
+| 9.1.5 | SR-IOV Function, PF, and VF Mix § | 9.1.5 SR-IOV 功能、PF 和 VF 组合 § | p.1532 |
+| 9.1.6 | Example SR-IOV Device with Multiple… | 9.1.6 跨多总线号的 SR-IOV 设备示例 § | p.1533 |
+| 9.1.7 | Example SR-IOV Device with a Mixtur… | 9.1.7 混合功能类型的 SR-IOV 设备示例 § | p.1534 |
+| 9.2 | SR-IOV Initialization and Resource … | 9.2 SR-IOV 初始化和资源分配 § | p.1534 |
+| 9.2.1 | SR-IOV Resource Discovery § | 9.2.1 SR-IOV 资源发现 § | p.1534 |
+| 9.2.1.1 | Configuring SR-IOV Capabilities § | 9.2.1.1 配置 SR-IOV 功能 § | p.1534 |
+| 9.2.1.1.1 | Configuring the VF BAR Mechanisms § | 9.2.1.1.1 配置 VF BAR 机制 § | p.1534 |
+| 9.2.1 | SR-IOV 资源发现 § |  | p.1534 |
+| 9.2.1.1 | 配置 SR-IOV 功能 § |  | p.1534 |
+| 9.2.1.1.1 | 配置 VF BAR 机制 § |  | p.1534 |
+| 9.2.1.1.1 | Configuring the VF BAR Mechanisms (… | 9.2.1.1.1 配置 VF BAR 机制(续) § | p.1536 |
+| 9.2.1.2 | VF Discovery § | 9.2.1.2 VF 发现 § | p.1536 |
+| 9.2.1.2 | VF 发现 § |  | p.1536 |
+| 9.2.1.2 | VF Discovery (cont.) § | 9.2.1.2 VF 发现(续) § | p.1537 |
+| 9.2.1.2 | VF Discovery (cont. 2) § | 9.2.1.2 VF 发现(续 2) § | p.1538 |
+| 9.2.1.3 | Function Dependency Lists § | 9.2.1.3 功能依赖列表 § | p.1538 |
+| 9.2.1.3 | 功能依赖列表 § |  | p.1538 |
+| 9.2.1.3 | Function Dependency Lists (cont.) § | 9.2.1.3 功能依赖列表(续) § | p.1539 |
+| 9.2.1.4 | Interrupt Resource Allocation § | 9.2.1.4 中断资源分配 § | p.1539 |
+| 9.2.2 | SR-IOV Reset Mechanisms § | 9.2.2 SR-IOV 复位机制 § | p.1539 |
+| 9.2.2.1 | SR-IOV Conventional Reset § | 9.2.2.1 SR-IOV 常规复位 § | p.1539 |
+| 9.2.2.2 | FLR That Targets a VF § | 9.2.2.2 针对 VF 的 FLR § | p.1539 |
+| 9.2.2.3 | FLR That Targets a PF § | 9.2.2.3 针对 PF 的 FLR § | p.1539 |
+| 9.2.3 | IOV Re-initialization and Reallocat… | 9.2.3 IOV 重新初始化和重新分配 § | p.1539 |
+| 9.2.1.4 | 中断资源分配 § |  | p.1539 |
+| 9.2.2 | SR-IOV 复位机制 § |  | p.1539 |
+| 9.2.2.1 | SR-IOV 常规复位 § |  | p.1539 |
+| 9.2.2.2 | 针对 VF 的 FLR § |  | p.1539 |
+| 9.2.2.3 | 针对 PF 的 FLR § |  | p.1539 |
+| 9.2.3 | IOV 重新初始化和重新分配 § |  | p.1539 |
+| 9.2.3 | IOV Re-initialization and Reallocat… | 9.2.3 IOV 重新初始化和重新分配(续) § | p.1540 |
+| 9.3 | Configuration § | 9.3 配置 § | p.1540 |
+| 9.3.1 | SR-IOV Configuration Overview § | 9.3.1 SR-IOV 配置概述 § | p.1540 |
+| 9.3.2 | Configuration Space § | 9.3.2 配置空间 § | p.1540 |
+| 9.3.3 | SR-IOV Extended Capability § | 9.3.3 SR-IOV 扩展能力结构 § | p.1540 |
+| 9.3 | 配置 § |  | p.1540 |
+| 9.3.1 | SR-IOV 配置概述 § |  | p.1540 |
+| 9.3.2 | 配置空间 § |  | p.1540 |
+| 9.3.3 | SR-IOV 扩展能力结构 § |  | p.1540 |
+| 9.3.3 | SR-IOV Extended Capability (Figure … | 9.3.3 SR-IOV 扩展能力结构(Figure 9-1… | p.1541 |
+| 9.3.3.1 | SR-IOV Extended Capability Header (… | 9.3.3.1 SR-IOV 扩展能力结构头部(偏移 00h… | p.1541 |
+| 9.3.3.1 | SR-IOV 扩展能力结构头部(偏移 00h) § |  | p.1541 |
+| 9.3.3.1 | SR-IOV Extended Capability Header (… | 9.3.3.1 SR-IOV 扩展能力结构头部(Table … | p.1542 |
+| 9.3.3.2 | SR-IOV Capabilities Register (04h) … | 9.3.3.2 SR-IOV 能力寄存器(04h) § | p.1542 |
+| 9.3.3.2 | SR-IOV 能力寄存器(04h) § |  | p.1542 |
+| 9.3.3.2 | SR-IOV Capabilities Register (Table… | 9.3.3.2 SR-IOV 能力寄存器(Table 9-3… | p.1542 |
+| 9.3.3.2 | SR-IOV Capabilities Register (cont.… | 9.3.3.2 SR-IOV 能力寄存器(续) § | p.1543 |
+| 9.3.3.2.1 | VF Migration Capable § | 9.3.3.2.1 VF 迁移能力 § | p.1543 |
+| 9.3.3.2.2 | ARI Capable Hierarchy Preserved § | 9.3.3.2.2 ARI 能力层级保留 § | p.1543 |
+| 9.3.3.2.3 | VF Larger-Tag Requester Support § | 9.3.3.2.3 VF 大标签请求者支持 § | p.1543 |
+| 9.3.3.2.1 | VF 迁移能力 § |  | p.1543 |
+| 9.3.3.2.2 | ARI 能力层级保留 § |  | p.1543 |
+| 9.3.3.2.3 | VF 大标签请求者支持 § |  | p.1543 |
+| 9.3.3.2.3 | VF Larger-Tag Requester Support (co… | 9.3.3.2.3 VF 大标签请求者支持(续) § | p.1544 |
+| 9.3.3.2.4 | VF Migration Interrupt Message Numb… | 9.3.3.2.4 VF 迁移中断消息号 § | p.1544 |
+| 9.3.3.3 | SR-IOV Control Register (Offset 08h… | 9.3.3.3 SR-IOV 控制寄存器(偏移 08h) § | p.1544 |
+| 9.3.3.2.4 | VF 迁移中断消息号 § |  | p.1544 |
+| 9.3.3.3 | SR-IOV 控制寄存器(偏移 08h) § |  | p.1544 |
+| 9.3.3.3 | SR-IOV Control Register (Figure 9-1… | 9.3.3.3 SR-IOV 控制寄存器(Figure 9-… | p.1545 |
+| 9.3.3.3 | SR-IOV Control Register (cont.) § | 9.3.3.3 SR-IOV 控制寄存器(续) § | p.1546 |
+| 9.3.3.3.1 | VF Enable § | 9.3.3.3.1 VF 使能 § | p.1546 |
+| 9.3.3.3.1 | VF Enable (cont.) § | 9.3.3.3.1 VF 使能(续) § | p.1547 |
+| 9.3.3.3.2 | VF Migration Enable § | 9.3.3.3.2 VF 迁移使能 § | p.1547 |
+| 9.3.3.3.3 | VF Migration Interrupt Enable § | 9.3.3.3.3 VF 迁移中断使能 § | p.1547 |
+| 9.3.3.3.2 | VF 迁移使能 § |  | p.1547 |
+| 9.3.3.3.3 | VF 迁移中断使能 § |  | p.1547 |
+| 9.3.3.3.4 | VF MSE (Memory Space Enable) § | 9.3.3.3.4 VF MSE(内存空间使能) § | p.1548 |
+| 9.3.3.3.5 | ARI Capable Hierarchy § | 9.3.3.3.5 ARI 能力层级 § | p.1548 |
+| 9.3.3.3.5 | ARI 能力层级 § |  | p.1548 |
+| 9.3.3.4 | SR-IOV Status Register (Offset 0Ah)… | 9.3.3.4 SR-IOV 状态寄存器(偏移 0Ah) § | p.1549 |
+| 9.3.3.4.1 | VF Migration Status § | 9.3.3.4.1 VF 迁移状态 § | p.1549 |
+| 9.3.3.5 | InitialVFs (Offset 0Ch) § | 9.3.3.5 InitialVFs(偏移 0Ch) § | p.1549 |
+| 9.3.3.6 | TotalVFs (Offset 0Eh) § | 9.3.3.6 TotalVFs(偏移 0Eh) § | p.1549 |
+| 9.3.3.7 | NumVFs (Offset 10h) § | 9.3.3.7 NumVFs(偏移 10h) § | p.1549 |
+| 9.3.3.4.1 | VF 迁移状态 § |  | p.1549 |
+| 9.3.3.5 | InitialVFs(偏移 0Ch) § |  | p.1549 |
+| 9.3.3.6 | TotalVFs(偏移 0Eh) § |  | p.1549 |
+| 9.3.3.7 | NumVFs(偏移 10h) § |  | p.1549 |
+| 9.3.3.8 | Function Dependency Link (Offset 12… | 9.3.3.8 功能依赖链接(偏移 12h) § | p.1550 |
+| 9.3.3.8 | Function Dependency Link (cont.) § | 9.3.3.8 功能依赖链接(续) § | p.1551 |
+| 9.3.3.8 | Function Dependency Link (cont. 2) … | 9.3.3.8 功能依赖链接(续 2) § | p.1552 |
+| 9.3.3.9 | First VF Offset (Offset 14h) § | 9.3.3.9 First VF Offset(偏移 14h… | p.1552 |
+| 9.3.3.10 | VF Stride (Offset 16h) § | 9.3.3.10 VF Stride(偏移 16h) § | p.1552 |
+| 9.3.3.11 | VF Device ID (Offset 1Ah) § | 9.3.3.11 VF Device ID(偏移 1Ah) … | p.1552 |
+| 9.3.3.9 | First VF Offset(偏移 14h) § |  | p.1552 |
+| 9.3.3.10 | VF Stride(偏移 16h) § |  | p.1552 |
+| 9.3.3.11 | VF Device ID(偏移 1Ah) § |  | p.1552 |
+| 9.3.3.12 | Supported Page Sizes (Offset 1Ch) § | 9.3.3.12 支持的页大小(偏移 1Ch) § | p.1553 |
+| 9.3.3.13 | System Page Size (Offset 20h) § | 9.3.3.13 系统页大小(偏移 20h) § | p.1553 |
+| 9.3.3.14 | VF BAR0 (Offset 24h), VF BAR1 (Offs… | 9.3.3.14 VF BAR0(偏移 24h)、VF BA… | p.1553 |
+| 9.3.3.13 | 系统页大小(偏移 20h) § |  | p.1553 |
+| 9.3.3.14 | VF BAR0(偏移 24h)、VF BAR1(偏移 28h)、VF … |  | p.1553 |
+| 9.3.3.14 | VF BARx (cont.) § | 9.3.3.14 VF BARx(续) § | p.1554 |
+| 9.3.3.15 | VF Migration State Array Offset (De… | 9.3.3.15 VF 迁移状态数组偏移(已弃用)(偏移 3… | p.1554 |
+| 9.3.4 | PF/VF Configuration Space Header § | 9.3.4 PF/VF 配置空间头部 § | p.1554 |
+| 9.3.5 | PCI Express Capability Changes § | 9.3.5 PCI Express 能力结构变化 § | p.1554 |
+| 9.3.3.15 | VF 迁移状态数组偏移(已弃用)(偏移 3Ch) § |  | p.1554 |
+| 9.3.4 | PF/VF 配置空间头部 § |  | p.1554 |
+| 9.3.5 | PCI Express 能力结构变化 § |  | p.1554 |
+| 9.3.6 | PCI Standard Capabilities § | 9.3.6 PCI 标准能力结构 § | p.1555 |
+| 9.3.7 | PCI Express Extended Capabilities C… | 9.3.7 PCI Express 扩展能力结构变化 § | p.1555 |
+| 9.3.7 | PCI Express Extended Capabilities C… | 9.3.7 PCI Express 扩展能力结构变化(Tab… | p.1556 |
+| 9.3.7 | PCI Express Extended Capabilities (… | 9.3.7 PCI Express 扩展能力结构(续) § | p.1557 |
+| 9.3.7 | PCI Express Extended Capabilities (… | 9.3.7 PCI Express 扩展能力结构(终) § | p.1558 |
 
 ## 🖼 本章图表 (Figures)
 
-> 所有图已抽取为 PNG 存放在 `figures/chapter_09/`。
+| Figure | Title | 图标题 | Page |
+|:------:|:------|:-------|:----:|
+| 1 | Generic Platform Configuration |  | — |
+| 2 | Generic Platform Configuration… |  | — |
+| 3 | Generic Platform Configuration… |  | — |
+| 4 | Example Multi-Function Device |  | p.1528 |
+| 5 | Example SR-IOV Single PF Capab… |  | p.1529 |
+| 6 | Example SR-IOV Multi-PF Capabl… |  | p.1531 |
+| 7 | Example SR-IOV Device with Mul… |  | p.1533 |
+| 8 | Example SR-IOV Device with a M… |  | p.1534 |
+| 9 | BAR Space Example for Single B… |  | p.1536 |
+| 10 | SR-IOV Extended Capability |  | p.1541 |
+| 12 | SR-IOV Capabilities Register |  | p.1542 |
+| 13 | SR-IOV Control Register |  | p.1545 |
+| 14 | SR-IOV Status |  | p.1549 |
 
 ## 📊 本章表格 (Tables)
 
-> 各章表格以标准 Markdown 表格形式嵌入正文。
+| Table | Title | 表标题 | Page |
+|:-----:|:------|:-------|:----:|
+| 1 | VF Routing ID Algorithm | VF 路由 ID 算法 | p.1537 |
+| 1 | VF 路由 ID 算法 (VF Routing ID Alg… |  | p.1537 |
+| 2 | SR-IOV Extended Capability Hea… | SR-IOV 扩展能力结构头部 | p.1542 |
+| 2 | SR-IOV 扩展能力结构头部 (SR-IOV Extend… |  | p.1542 |
+| 3 | SR-IOV Capabilities Register | SR-IOV 能力寄存器 | p.1542 |
+| 3 | SR-IOV 能力寄存器 (SR-IOV Capabilit… |  | p.1542 |
+| 4 | SR-IOV Control Register | SR-IOV 控制寄存器 | p.1545 |
+| 4 | SR-IOV 控制寄存器 (SR-IOV Control R… |  | p.1545 |
+| 5 | SR-IOV Status | SR-IOV 状态 | p.1549 |
+| 5 | SR-IOV 状态 (SR-IOV Status) |  | p.1549 |
+| 8 | BAR Offsets | BAR 偏移 | p.1554 |
+| 8 | BAR 偏移 (BAR Offsets) |  | p.1554 |
+| 9 | SR-IOV Usage of PCI Standard C… | SR-IOV 对 PCI 标准能力结构的使用 | p.1555 |
+| 9 | SR-IOV 对 PCI 标准能力结构的使用 (SR-IOV… |  | p.1555 |
+| 10 | SR-IOV Usage of PCI Express Ex… | SR-IOV 对 PCI Express 扩展能力结构的使用 | p.1556 |
+| 10 | SR-IOV 对 PCI Express 扩展能力结构的使用… |  | p.1556 |
 
 ---
 
+---
 
 ---
 

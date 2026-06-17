@@ -8,20 +8,113 @@
 
 ---
 
-## 📑 本章目录 (Table of Contents)
 
-> 由合并阶段自动生成。请使用浏览器/GitHub 渲染时,各小节标题链接跳转。
+## 📑 章节索引 (Sections)
+
+| # | Section | 小节 | Page |
+|:-:|:--------|:-----|:----:|
+| 5.1 | Overview § | 概述 § | p.651 |
+| 5.2 | Link State Power Management § | 链路状态电源管理 § | p.651 |
+| 5.3 | PCI-PM Software Compatible Mechanis… | PCI-PM 软件兼容机制 § | p.656 |
+| 5.3.1 | Device Power Management States (D-S… | 5.3.1 Function 的设备电源管理状态 (D 状态… | p.656 |
+| 5.3.1.1 | D0 State § | 5.3.1.1 D0 状态 § | p.656 |
+| 5.3.1.2 | D1 State § | 5.3.1.2 D1 状态 § | p.656 |
+| 5.3.1.3 | D2 State § | 5.3.1.3 D2 状态 § | p.656 |
+| 5.3.1.4 | D3 State § | 5.3.1.4 D3 状态 § | p.658 |
+| 5.3.1.4.1 | D3Hot State § | 5.3.1.4.1 D3Hot 状态 § | p.658 |
+| 5.3.1.4.2 | D3Cold State § | 5.3.1.4.2 D3Cold 状态 § | p.660 |
+| 5.3.2 | PM Software Control of the Link Pow… | 5.3.2 链路电源管理状态的 PM 软件控制 § | p.660 |
+| 5.3.2.1 | Entry into the L1 State § | 5.3.2.1 进入 L1 状态 § | p.661 |
+| 5.3.2.2 | Exit from L1 State § | 5.3.2.2 退出 L1 状态 § | p.664 |
+| 5.3.2.3 | Entry into the L2/L3 Ready State § | 5.3.2.3 进入 L2/L3 Ready 状态 § | p.664 |
+| 5.3.3 | Power Management Event Mechanisms § | 5.3.3 电源管理事件机制 § | p.664 |
+| 5.3.3.1 | Motivation § | 5.3.3.1 动机 § | p.664 |
+| 5.3.3.2 | Link Wakeup § | 5.3.3.2 链路唤醒 § | p.666 |
+| 5.3.3.2.1 | PME Synchronization § | 5.3.3.2.1 PME 同步 § | p.667 |
+| 5.3.3.3 | PM_PME Messages § | 5.3.3.3 PM_PME 报文 § | p.668 |
+| 5.3.3.3.1 | PM_PME "Backpressure" Deadlock Avoi… | 5.3.3.3.1 PM_PME "背压"死锁避免 § | p.668 |
+| 5.3.3.4 | PME Rules § | 5.3.3.4 PME 规则 § | p.669 |
+| 5.3.3.5 | PM_PME Delivery State Machine § | 5.3.3.5 PM_PME 传递状态机 § | p.669 |
+| 5.4 | Native PCI Express Power Management… | 5.4 原生 PCI Express 电源管理机制 § | p.671 |
+| 5.4.1 | Active State Power Management (ASPM… | 5.4.1 主动状态电源管理 (ASPM) § | p.672 |
+| 5.4.1.1 | L0s ASPM State § | 5.4.1.1 L0s ASPM 状态 § | p.673 |
+| 5.4.1.1.1 | Entry into the L0s State § | 5.4.1.1.1 进入 L0s 状态 § | p.673 |
+| 5.4.1.1.2 | Exit from the L0s State § | 5.4.1.1.2 退出 L0s 状态 § | p.673 |
+| 5.4.1.2 | ASPM L0p State § | 5.4.1.2 ASPM L0p 状态 § | p.676 |
+| 5.4.1.3 | ASPM L1 State § | 5.4.1.3 ASPM L1 状态 § | p.676 |
+| 5.4.1.3.1 | ASPM Entry into the L1 State § | 5.4.1.3.1 ASPM 进入 L1 状态 § | p.677 |
+| 5.4.1.3.2 | Exit from the L1 State § | 5.4.1.3.2 退出 L1 状态 § | p.682 |
+| 5.4.1.4 | ASPM Configuration § | 5.4.1.4 ASPM 配置 § | p.684 |
+| 5.4.1.4.1 | Software Flow for Enabling or Disab… | 5.4.1.4.1 启用或禁用 ASPM 的软件流程 § | p.686 |
+| 5.5 | L1 PM Substates § | 5.5 L1 PM Substates § | p.688 |
+| 5.5.1 | Entry conditions for L1 PM Substate… | 5.5.1 L1 PM Substates 的进入条件与 L… | p.690 |
+| 5.5.2 | L1.1 Requirements § | 5.5.2 L1.1 要求 § | p.693 |
+| 5.5.2.1 | Exit from L1.1 § | 5.5.2.1 退出 L1.1 § | p.693 |
+| 5.5.3 | L1.2 Requirements § | 5.5.3 L1.2 要求 § | p.694 |
+| 5.5.3.1 | L1.2.Entry § | 5.5.3.1 L1.2.Entry § | p.694 |
+| 5.5.3.2 | L1.2.Idle § | 5.5.3.2 L1.2.Idle § | p.694 |
+| 5.5.3.3 | L1.2.Exit § | 5.5.3.3 L1.2.Exit § | p.694 |
+| 5.5.3.3.1 | Exit from L1.2 § | 5.5.3.3.1 退出 L1.2 § | p.694 |
+| 5.5.4 | L1 PM Substates Configuration § | 5.5.4 L1 PM Substates 配置 § | p.698 |
+| 5.5.5 | L1 PM Substates Timing Parameters § | 5.5.5 L1 PM Substates 时序参数 § | p.698 |
+| 5.5.6 | Link Activation § | 5.5.6 链路激活 § | p.698 |
+| 5.6 | Auxiliary Power Support § | 5.6 辅助电源支持 § | p.701 |
+| 5.7 | Power Management System Messages an… | 5.7 电源管理系统报文与 DLLP § | p.701 |
+| 5.8 | PCI Function Power State Transition… | 5.8 PCI Function 电源状态转换 § | p.702 |
+| 5.9 | State Transition Recovery Time Requ… | 5.9 状态转换恢复时间要求 § | p.702 |
+| 5.10 | SR-IOV Power Management § | 5.10 SR-IOV 电源管理 § | p.702 |
+| 5.10.1 | VF Device Power Management States § | 5.10.1 VF 设备电源管理状态 § | p.702 |
+| 5.10.2 | PF Device Power Management States § | 5.10.2 PF 设备电源管理状态 § | p.703 |
+| 5.11 | PCI Bridges and Power Management § | 5.11 PCI 桥与电源管理 § | p.704 |
+| 5.11.1 | Switches and PCI Express to PCI Bri… | 5.11.1 Switch 与 PCI Express 到 … | p.704 |
+| 5.12 | Power Management Events § | 5.12 电源管理事件 § | p.704 |
 
 ## 🖼 本章图表 (Figures)
 
-> 所有图已抽取为 PNG 存放在 `figures/chapter_05/`。
+| Figure | Title | 图标题 | Page |
+|:------:|:------|:-------|:----:|
+| 1 | Link Power Management State Fl… |  | p.654 |
+| 2 | Entry into the L1 Link State |  | p.661 |
+| 3 | Exit from L1 Link State Initia… |  | p.664 |
+| 4 | Conceptual Diagrams Showing Tw… |  | p.666 |
+| 5 | A Conceptual PME Control State… |  | p.669 |
+| 6 | L1 Transition Sequence Ending … |  | p.681 |
+| 7 | L1 Successful Transition Seque… |  | p.681 |
+| 8 | Example of L1 Exit Latency Com… |  | p.682 |
+| 9 | State Diagram for L1 PM Substa… |  | p.688 |
+| 10 | Downstream Port with a Single … |  | p.690 |
+| 11 | Multiple Downstream Ports with… |  | p.690 |
+| 12 | Example: L1.1 Waveforms Illust… |  | p.693 |
+| 13 | Example: L1.1 Waveforms Illust… |  | p.693 |
+| 14 | L1.2 Substates |  | p.694 |
+| 15 | Example: Illustration of Bound… |  | p.694 |
+| 16 | Example: L1.2 Waveforms Illust… |  | p.694 |
+| 17 | Example: L1.2 Waveforms Illust… |  | p.694 |
+| 18 | Function Power Management Stat… |  | p.701 |
+| 19 | PCI Express Bridge Power Manag… |  | p.704 |
 
 ## 📊 本章表格 (Tables)
 
-> 各章表格以标准 Markdown 表格形式嵌入正文。
+| Table | Title | 表标题 | Page |
+|:-----:|:------|:-------|:----:|
+| 1 | Summary of PCI Express Link Po… | PCI Express 链路电源管理状态汇总 | p.654 |
+| 2 | Relation Between Power Managem… | 链路与组件电源管理状态之间的关系 | p.660 |
+| 3 | Encoding of the ASPM Support | ASPM Support 字段的编码 | p.684 |
+| 4 | Description of the Slot Clock … | Slot Clock Configuration 位的描述 | p.684 |
+| 5 | Description of the Common Cloc… | Common Clock Configuration 位的描… | p.684 |
+| 6 | Encoding of the L0s Exit Laten… | L0s Exit Latency 字段的编码 | p.684 |
+| 7 | Encoding of the L1 Exit Latenc… | L1 Exit Latency 的编码 | p.684 |
+| 8 | Encoding of the Endpoint L0s A… | Endpoint L0s Acceptable Latenc… | p.686 |
+| 9 | Encoding of the Endpoint L1 Ac… | Endpoint L1 Acceptable Latency… | p.686 |
+| 10 | Encoding of the ASPM Control | ASPM Control 的编码 | p.686 |
+| 11 | L1.2 Timing Parameters | L1.2 时序参数 | p.698 |
+| 12 | Aux Power Source and Availabil… | 辅助电源来源与可用性 | p.698 |
+| 13 | Power Management System Messag… | 电源管理系统报文与 DLLP | p.698 |
+| 14 | PCI Function State Transition … | PCI Function 状态转换延迟 | p.701 |
 
 ---
 
+---
 
 ---
 
@@ -855,6 +948,9 @@ The following text provides additional detail for the Link state transition proc
 </table>
 
 > **Figure 5-2.** Entry into the L1 Link State
+
+> <img src="figures/chapter_05/fig_0662_1_tight.png" width="700">
+
 > <img src="figures/chapter_05/fig_0661_1.png" width="700">
 
 </div>
@@ -1241,6 +1337,9 @@ Switch 必须在收到每个下游端口的 PME_TO_Ack 报文后才能报告"聚
 </table>
 
 > **Figure 5-4.** Conceptual Diagrams Showing Two Example Cases of WAKE# Routing
+
+> <img src="figures/chapter_05/fig_0667_1_tight.png" width="700">
+
 > <img src="figures/chapter_05/fig_0666_1.png" width="700">
 
 </div>
@@ -1466,6 +1565,9 @@ If after 100 ms (+50%/-5%), the PME_Status bit of a requesting agent has not yet
 The following diagram conceptually outlines the PM_PME delivery control state machine. This state machine determines the ability of a Link to service PME events by issuing PM_PME immediately vs. requiring Link wakeup.
 
 > **Figure 5-5.** A Conceptual PME Control State Machine
+
+> <img src="figures/chapter_05/fig_0670_1_tight.png" width="700">
+
 > <img src="figures/chapter_05/fig_0669_1.png" width="700">
 
 **Communicating State:**
@@ -2380,6 +2482,9 @@ Following along as above, Link 2 will complete its transition to the L0 state at
 Therefore, among Links 1, 2, and 3, the Link to complete the transition to the L0 state last is Link 1 with a 34 μs delay. This is the delay experienced by the packet that initiated the transition in Endpoint C.
 
 > **Figure 5-8.** Example of L1 Exit Latency Computation
+
+> <img src="figures/chapter_05/fig_0683_1_tight.png" width="700">
+
 > <img src="figures/chapter_05/fig_0682_1_tight.png" width="700">
 
 Switches are not required to initiate an L1 exit transition on any other of their Downstream Port Links.
@@ -2803,6 +2908,9 @@ L1 PM Substates 建立了一种链路电源管理机制,它创建了 L1 链路�
 </table>
 
 > **Figure 5-9.** State Diagram for L1 PM Substates
+
+> <img src="figures/chapter_05/fig_0689_1_tight.png" width="700">
+
 > <img src="figures/chapter_05/fig_0688_1.png" width="700">
 
 </div>
@@ -2825,6 +2933,9 @@ L1 PM Substates 建立了一种链路电源管理机制,它创建了 L1 链路�
 > Example 2: Upstream component with multiple Downstream Ports, with a common shared PLL, connected to separate Downstream components (see § Figure 5-11).
 
 > **Figure 5-11.** Multiple Downstream Ports with a shared PLL
+
+> <img src="figures/chapter_05/fig_0691_1_tight.png" width="700">
+
 
 > In this example configuration, there are three instances of CLKREQ# signal for the Upstream component (A), one per Downstream Port and a common shared CLKREQ# signal for the Upstream component (A). In this topology the Downstream Port CLKREQ# (CLKREQB#, CLKREQC#) signals are used to connect to the CLKREQ# signal of the Upstream Port of the Downstream components (B and C). The common shared CLKREQ# (CLKREQA#) signal for the Upstream component is used to request the reference clock for the shared PLL. The PLL control logic in Upstream component (A) can only be turned off and CLKREQA# be deasserted when both the Downstream Ports are in L1.1 or L1.2 Substates, and all internal (A) consumers of the PLL don't require a clock.
 > It is necessary for board implementers to consider what CLKREQ# topologies will be supported by components in order to make appropriate board level connections to support L1 PM Substates and for the reference clock generation.
@@ -3180,9 +3291,15 @@ The following rules apply for L1.2.Exit using the CLKREQ#-based mechanism:
 </table>
 
 > **Figure 5-16.** Example: L1.2 Waveforms Illustrating Upstream Port Initiated Exit
+
+> <img src="figures/chapter_05/fig_0697_1_tight.png" width="700">
+
 > <img src="figures/chapter_05/fig_0696_1_tight.png" width="700">
 
 > **Figure 5-17.** Example: L1.2 Waveforms Illustrating Downstream Port Initiated Exit
+
+> <img src="figures/chapter_05/fig_0698_1_tight.png" width="700">
+
 
 </div>
 
@@ -3656,6 +3773,9 @@ All PCI-PM power management state changes are explicitly controlled by software 
 </table>
 
 > **Figure 5-18.** Function Power Management State Transitions
+
+> <img src="figures/chapter_05/fig_0702_1_tight.png" width="700">
+
 > <img src="figures/chapter_05/fig_0701_1.png" width="700">
 
 </div>
@@ -3933,6 +4053,9 @@ The shaded regions in § Figure 5-19 illustrate what is discussed in this sectio
 <td>
 
 > **Figure 5-19.** PCI Express Bridge Power Management Diagram
+
+> <img src="figures/chapter_05/fig_0705_1_tight.png" width="700">
+
 > <img src="figures/chapter_05/fig_0704_1.png" width="700">
 
 As can be seen from § Figure 5-19, the PCI Express Bridge behavior described in this chapter is common, from the perspective of the operating system, to host bridges, Switches, and PCI Express to PCI bridges.

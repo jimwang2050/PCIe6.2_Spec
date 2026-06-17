@@ -8,20 +8,113 @@
 
 ---
 
-## 📑 本章目录 (Table of Contents)
 
-> 由合并阶段自动生成。请使用浏览器/GitHub 渲染时,各小节标题链接跳转。
+## 📑 章节索引 (Sections)
+
+| # | Section | 小节 | Page |
+|:-:|:--------|:-----|:----:|
+| 12.1 | Introduction | 引言 | p.1659 |
+| 12.2 | Framework for Sidebands | 边带框架 | p.1660 |
+| 12.3 | Sideband Signaling Mechanisms | 边带信令机制 | p.1660 |
+| 12.3.1 | Discrete Sidebands | 离散边带 | p.1660 |
+| 12.3.2 | Flex I/O Sidebands | 灵活 I/O (Flex I/O) 边带 | p.1661 |
+| 12.3.2.1 | Flex I/O Default State Guidelines | 12.3.2.1 Flex I/O 默认状态指南 | p.1661 |
+| 12.3.2.2 | Flex I/O Discovery Phase Guidelines | 12.3.2.2 Flex I/O 发现阶段指南 | p.1662 |
+| 12.3.2.3 | Flex I/O Compatibility Check Guidel… | 12.3.2.3 Flex I/O 兼容性检查指南 | p.1662 |
+| 12.3.2.4 | Flex I/O Control Negotiation Guidel… | 12.3.2.4 Flex I/O 控制协商指南 | p.1662 |
+| 12.3.2.5 | General Flex I/O Control Guidelines | 12.3.2.5 Flex I/O 一般控制指南 | p.1663 |
+| 12.3.3 | Peripheral Sideband Tunnelling Inte… | 12.3.3 外设边带隧道接口 (PESTI) 边带 | p.1663 |
+| 12.3.3.1 | PESTI Introduction | 12.3.3.1 PESTI 简介 | p.1663 |
+| 12.3.3.2 | PESTI Physical Interface | 12.3.3.2 PESTI 物理接口 | p.1664 |
+| 12.3.3.3 | PESTI Electrical Circuit | 12.3.3.3 PESTI 电气电路 | p.1664 |
+| 12.3.3.4 | PESTI DC Specifications | 12.3.3.4 PESTI 直流规范 | p.1665 |
+| 12.3.3.5 | PESTI Target Detection | 12.3.3.5 PESTI 目标检测 | p.1665 |
+| 12.3.3.6 | PESTI Protocol Commands | 12.3.3.6 PESTI 协议命令 | p.1665 |
+| 12.3.3.6.1 | Discovery Payload Request (DPR) | 12.3.3.6.1 发现有效负载请求 (DPR) | p.1666 |
+| 12.3.3.6.2 | PESTI Virtual Wire Exchange (VWE) | 12.3.3.6.2 PESTI 虚拟线缆交换 (VWE) | p.1666 |
+| 12.3.3.6.3 | PESTI Fanout MUX Control | 12.3.3.6.3 PESTI 扇出 MUX 控制 | p.1667 |
+| 12.3.3.7 | PESTI Initiator Abort | 12.3.3.7 PESTI 发起者中止 | p.1667 |
+| 12.3.3.8 | PESTI Broadcast | 12.3.3.8 PESTI 广播 | p.1667 |
+| 12.3.3.9 | PESTI Initiator Control and Status … | 12.3.3.9 PESTI 发起者控制和状态寄存器 | p.1667 |
+| 12.3.3.10 | PESTI AC Specifications | 12.3.3.10 PESTI 交流规范 | p.1668 |
+| 12.3.3.11 | PESTI Discovery Phase | 12.3.3.11 PESTI 发现阶段 | p.1669 |
+| 12.3.3.12 | PESTI Active Phase | 12.3.3.12 PESTI 活动阶段 | p.1671 |
+| 12.3.3.13 | PESTI Target Reset and Fault Handli… | 12.3.3.13 PESTI 目标复位和故障处理 | p.1672 |
+| 12.3.3.14 | PESTI Fan-Out | 12.3.3.14 PESTI 扇出 | p.1672 |
+| 12.3.3.15 | PESTI Security Considerations | 12.3.3.15 PESTI 安全注意事项 | p.1673 |
+| 12.4 | Managed USB 2.0 | 12.4 托管 USB 2.0 | p.1674 |
+| 12.5 | 2-Wire Interface | 12.5 两线制 (2-Wire) 接口 | p.1675 |
+| 12.5.1 | 2-Wire Interface Use Cases | 12.5.1 2 线接口用例 | p.1675 |
+| 12.5.2 | 2-Wire Addressing | 12.5.2 2 线寻址 | p.1675 |
+| 12.5.3 | 2-wire Bus Sharing | 12.5.3 2 线总线共享 | p.1677 |
+| 12.5.3.1 | 2-wire Multi-Drop Topology | 12.5.3.1 2 线多点拓扑 | p.1677 |
+| 12.5.3.2 | SMBus MUX Use | 12.5.3.2 SMBus MUX 使用 | p.1677 |
+| 12.5.3.3 | 2-wire Hub Use | 12.5.3.3 2 线 Hub 使用 | p.1678 |
+| 12.5.4 | [I3C-Basic] Support on Existing SMB… | 12.5.4 现有 SMBus 信号上的 [I3C-Basi… | p.1678 |
+| 12.5.4.1 | I3C Basic Overview | 12.5.4.1 I3C Basic 概述 | p.1678 |
+| 12.5.4.2 | I3C Basic Discovery and Mode Changi… | 12.5.4.2 I3C Basic 发现和模式更改 | p.1679 |
+| 12.5.4.3 | I3C Basic DC and AC Signal Requirem… | 12.5.4.3 I3C Basic 直流和交流信号要求 | p.1679 |
+| 12.6 | Field Replacement Unit (FRU) Inform… | 12.6 现场可更换单元 (FRU) 信息 | p.1680 |
+| 12.6.1 | FRU Information Device Requirements | 12.6.1 FRU 信息设备要求 | p.1680 |
+| 12.6.1.1 | FRU Information Device Requirements… | 12.6.1.1 特定于 SMBus/I2C 模式的 FRU… | p.1681 |
+| 12.6.1.2 | [SMBus]/[I2C] Access Protocol | 12.6.1.2 [SMBus]/[I2C] 访问协议 | p.1682 |
+| 12.6.2 | FRU Information Format | 12.6.2 FRU 信息格式 | p.1682 |
+| 12.6.3 | Common PCI-SIG MultiRecord Descript… | 12.6.3 通用 PCI-SIG MultiRecord … | p.1684 |
+| 12.6.3.1 | Connector Subdivision (Group ID 0h,… | 12.6.3.1 连接器细分(组 ID 0h,子类型 0h) | p.1684 |
+| 12.7 | Out-of-Band Control Mechanism | 12.7 带外控制机制 | p.1686 |
+| 12.8 | Retimer Management | 12.8 Retimer (重定时器) 管理 | p.1687 |
+| 12.9 | Internal Cable Management | 12.9 内部线缆管理 | p.1687 |
 
 ## 🖼 本章图表 (Figures)
 
-> 所有图已抽取为 PNG 存放在 `figures/chapter_12/`。
+| Figure | Title | 图标题 | Page |
+|:------:|:------|:-------|:----:|
+| 1 | Example PESTI Application |  | p.1661 |
+| 2 | UART Data Framing |  | p.1663 |
+| 3 | PESTI Circuit Diagram |  | p.1664 |
+| 4 | PESTI Broadcast Command |  | p.1667 |
+| 6 | PESTI Discovery Command and Re… |  | p.1669 |
+| 5 | PESTI Protocol Phases |  | p.1669 |
+| 7 | Single Byte PESTI Virtual Wire… |  | p.1671 |
+| 8 | Multi-byte PESTI Virtual Wire … |  | p.1671 |
+| 9 | PESTI Fan-out Methods |  | p.1672 |
+| 10 | PESTI Mux Switch Control Forma… |  | p.1673 |
+| 11 | [CEM] form factor example circ… |  | p.1674 |
+| 12 | Example of 2-wire, 8-bit addre… |  | p.1677 |
+| 13 | Example of 2-wire Hub Use |  | p.1678 |
+| 14 | SMBus to I3C Transition Flow |  | p.1679 |
+| 15 | Component Timing Diagram for T… |  | p.1679 |
+| 16 | SMBus/I2C-based FRU Informatio… |  | p.1682 |
+| 17 | FRU Information Device Reads w… |  | p.1682 |
+| 18 | Example Tiers Involving Sideba… |  | p.1687 |
 
 ## 📊 本章表格 (Tables)
 
-> 各章表格以标准 Markdown 表格形式嵌入正文。
+| Table | Title | 表标题 | Page |
+|:-----:|:------|:-------|:----:|
+| 1 | Relative Comparisons of Typica… | 表 12-1 典型架构带外接口的相对比较 | p.1659 |
+| 2 | PESTI DC Specifications | 表 12-2 PESTI 直流规范 | p.1665 |
+| 3 | PESTI Initiator Control and St… | 表 12-3 PESTI 发起者控制和状态寄存器 | p.1667 |
+| 4 | PESTI Discovery Status State T… | 表 12-4 PESTI 发现状态状态转换 | p.1667 |
+| 5 | PESTI AC Specifications | 表 12-5 PESTI 交流规范 | p.1668 |
+| 6 | PESTI Discovery Payload | 表 12-6 PESTI 发现有效负载 | p.1670 |
+| 7 | Example VWIRE_OUT_0 (Initiator… | 表 12-7 VWIRE_OUT_0 示例(发起者到目标) | p.1671 |
+| 8 | Example VWIRE_IN_0 (Target to … | 表 12-8 VWIRE_IN_0 示例(目标到发起者) | p.1671 |
+| 9 | MSC_CTRL_VAL (Initiator to PES… | 表 12-9 MSC_CTRL_VAL(发起者到 PESTI… | p.1673 |
+| 10 | MSC_STAT_VAL (PESTI Snooper Ta… | 表 12-10 MSC_STAT_VAL(PESTI 侦听者… | p.1673 |
+| 11 | 2-wire Interface Example Usage… | 表 12-11 2 线接口示例用法 | p.1675 |
+| 12 | Baseline SMBus Recommended Def… | 表 12-12 基线 SMBus 推荐的默认目标地址 | p.1676 |
+| 13 | I3C Basic Logic Signaling DC S… | 表 12-13 I3C Basic 逻辑信令直流规范 | p.1679 |
+| 14 | I3C Timing Requirements | 表 12-14 I3C 时序要求 | p.1679 |
+| 15 | PCI-SIG MultiRecord | 表 12-15 PCI-SIG MultiRecord | p.1683 |
+| 16 | PCI-SIG MultiRecord Descriptor | 表 12-16 PCI-SIG MultiRecord 描述… | p.1683 |
+| 18 | Descriptor Sub-Types for Group… | 表 12-18 组 ID 0h 的描述符子类型 | p.1684 |
+| 19 | Connector Subdivision Combinat… | 表 12-19 连接器细分组合描述符 | p.1685 |
+| 20 | Connector Subdivision Descript… | 表 12-20 连接器细分描述符 | p.1685 |
 
 ---
 
+---
 
 ---
 
@@ -2564,6 +2657,9 @@ resets the I3C Basic interface but does not impact the signaling voltage. See §
 ---
 
 > **Figure 12-14.** SMBus to I3C Transition Flow
+
+> <img src="figures/chapter_12/fig_1690_1_tight.png" width="700">
+
 > <img src="figures/chapter_12/fig_1689_1.png" width="700">
 
 ---
