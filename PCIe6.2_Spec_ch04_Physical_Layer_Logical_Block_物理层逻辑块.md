@@ -19862,10 +19862,10 @@ Upstream Port 中,针对该 Upstream Port 的 Margin Command 使用以下 Receiv
 </tbody>
 </table>
 
-<p align="center">
-<img src="figures/chapter_04/fig_0602_1_tight.png" alt="Figure 4-61 Receiver Number Assignment" width="95%">
-<br><em>Figure 4-61: Receiver Number Assignment / 图4-61:接收器编号分配</em>
-</p>
+> **Figure 4-61.** Receiver Number Assignment
+> <img src="figures/chapter_04/fig_0602_1_tight.png" width="95%">
+
+**Figure 4-61 | 图 4-61**: 接收器编号分配 (Receiver Number Assignment)
 
 [⬆️ 返回目录](#-本章目录-table-of-contents)
 
