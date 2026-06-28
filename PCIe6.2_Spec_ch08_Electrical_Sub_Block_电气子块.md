@@ -13,30 +13,30 @@
 
 | # | Section | 小节 | Page |
 |:-:|:--------|:-----|:----:|
-| 8.1 | 电气规范介绍 (Electrical Specification In… |  | p.1409 |
-| 8.2 | 互操作性准则 (Interoperability Criteria) |  | p.1409 |
-| 8.2.1 | 数据速率 (Data Rates) |  | p.1409 |
-| 8.2.2 | Refclk 架构 (Refclk Architectures) |  | p.1409 |
-| 8.3 | 发送器规范 (Transmitter Specification) |  | p.1410 |
-| 8.3.1 | 发送器特性测量设置 (Measurement Setup for Ch… |  | p.1410 |
-| 8.3.1.1 | 引出通道和复制通道 (Breakout and Replica Cha… |  | p.1411 |
-| 8.3.2 | 电压电平定义 (Voltage Level Definitions) |  | p.1411 |
-| 8.3.3 | Tx 电压参数 (Tx Voltage Parameters) |  | p.1412 |
-| 8.3.3.1 | 2.5 和 5.0 GT/s 发送器均衡 (2.5 and 5.0 G… |  | p.1412 |
-| 8.3.3.2 | 8.0、16.0、32.0 和 64.0 GT/s 发送器均衡 (8.… |  | p.1412 |
-| 8.3.3.3 | 8.0、16.0、32.0 和 64.0 GT/s 的 Tx 均衡预设… |  | p.1414 |
-| 8.3.3.4 | 测量 2.5 GT/s 和 5.0 GT/s 的 Tx 均衡 (Mea… |  | p.1416 |
-| 8.3.3.5 | 测量 8.0、16.0、32.0 和 64.0 GT/s 的预设 (M… |  | p.1416 |
-| 8.3.3.6 | Method for Measuring VTX-DIFF-PP at… | 2.5 GT/s 和 5.0 GT/s 下 VTX-DIFF… | p.1417 |
-| 8.3.3.7 | Method for Measuring VTX-DIFF-PP at… | 8.0、16.0、32.0 和 64.0 GT/s 下 VT… | p.1417 |
-| 8.3.3.8 | Coefficient Range and Tolerance for… | 8.0、16.0、32.0 和 64.0 GT/s 的系数范… | p.1418 |
-| 8.3.3.9 | EIEOS and VTX-EIEOS-FS and VTX-EIEO… | EIEOS 与 VTX-EIEOS-FS、VTX-EIEOS… | p.1421 |
-| 8.3.3.10 | Reduced Swing Signaling | 缩减摆幅信号 | p.1422 |
-| 8.3.3.11 | Effective Tx Package Loss at 8.0, 1… | 8.0、16.0、32.0 和 64.0 GT/s 下 Tx… | p.1422 |
-| 8.3.3.12 | Transmitter Signal-to Noise and Dis… | 64.0 GT/s 下发送器信噪失真比 (SNDRTX) | p.1424 |
-| 8.3.3.13 | Transmitter Ratio of Level Mismatch… | 64.0 GT/s 下发送器电平失配比 (RLM-TX) | p.1425 |
-| 8.3.4 | Transmitter Margining | 发送器余量 (Margining) | p.1426 |
-| 8.3.5 | Tx Jitter Parameters | Tx 抖动参数 | p.1427 |
+|  | 8.1 | [电气规范介绍 (Electrical Specification In…](#sec-8-1) | [](#sec-8-1) | p.1409 |
+|  | 8.2 | [互操作性准则 (Interoperability Criteria)](#sec-8-2) | [](#sec-8-2) | p.1409 |
+|  | 8.2.1 | [数据速率 (Data Rates)](#sec-8-2-1) | [](#sec-8-2-1) | p.1409 |
+|  | 8.2.2 | [Refclk 架构 (Refclk Architectures)](#sec-8-2-2) | [](#sec-8-2-2) | p.1409 |
+|  | 8.3 | [发送器规范 (Transmitter Specification)](#sec-8-3) | [](#sec-8-3) | p.1410 |
+|  | 8.3.1 | [发送器特性测量设置 (Measurement Setup for Ch…](#sec-8-3-1) | [](#sec-8-3-1) | p.1410 |
+|  | 8.3.1.1 | [引出通道和复制通道 (Breakout and Replica Cha…](#sec-8-3-1-1) | [](#sec-8-3-1-1) | p.1411 |
+|  | 8.3.2 | [电压电平定义 (Voltage Level Definitions)](#sec-8-3-2) | [](#sec-8-3-2) | p.1411 |
+|  | 8.3.3 | [Tx 电压参数 (Tx Voltage Parameters)](#sec-8-3-3) | [](#sec-8-3-3) | p.1412 |
+|  | 8.3.3.1 | [2.5 和 5.0 GT/s 发送器均衡 (2.5 and 5.0 G…](#sec-8-3-3-1) | [](#sec-8-3-3-1) | p.1412 |
+|  | 8.3.3.2 | [8.0、16.0、32.0 和 64.0 GT/s 发送器均衡 (8.…](#sec-8-3-3-2) | [](#sec-8-3-3-2) | p.1412 |
+|  | 8.3.3.3 | [8.0、16.0、32.0 和 64.0 GT/s 的 Tx 均衡预设…](#sec-8-3-3-3) | [](#sec-8-3-3-3) | p.1414 |
+|  | 8.3.3.4 | [测量 2.5 GT/s 和 5.0 GT/s 的 Tx 均衡 (Mea…](#sec-8-3-3-4) | [](#sec-8-3-3-4) | p.1416 |
+|  | 8.3.3.5 | [测量 8.0、16.0、32.0 和 64.0 GT/s 的预设 (M…](#sec-8-3-3-5) | [](#sec-8-3-3-5) | p.1416 |
+|  | 8.3.3.6 | [Method for Measuring VTX-DIFF-PP at…](#sec-8-3-3-6) | [2.5 GT/s 和 5.0 GT/s 下 VTX-DIFF…](#sec-8-3-3-6) | p.1417 |
+|  | 8.3.3.7 | [Method for Measuring VTX-DIFF-PP at…](#sec-8-3-3-7) | [8.0、16.0、32.0 和 64.0 GT/s 下 VT…](#sec-8-3-3-7) | p.1417 |
+|  | 8.3.3.8 | [Coefficient Range and Tolerance for…](#sec-8-3-3-8) | [8.0、16.0、32.0 和 64.0 GT/s 的系数范…](#sec-8-3-3-8) | p.1418 |
+|  | 8.3.3.9 | [EIEOS and VTX-EIEOS-FS and VTX-EIEO…](#sec-8-3-3-9) | [EIEOS 与 VTX-EIEOS-FS、VTX-EIEOS…](#sec-8-3-3-9) | p.1421 |
+|  | 8.3.3.10 | [Reduced Swing Signaling](#sec-8-3-3-10) | [缩减摆幅信号](#sec-8-3-3-10) | p.1422 |
+|  | 8.3.3.11 | [Effective Tx Package Loss at 8.0, 1…](#sec-8-3-3-11) | [8.0、16.0、32.0 和 64.0 GT/s 下 Tx…](#sec-8-3-3-11) | p.1422 |
+|  | 8.3.3.12 | [Transmitter Signal-to Noise and Dis…](#sec-8-3-3-12) | [64.0 GT/s 下发送器信噪失真比 (SNDRTX)](#sec-8-3-3-12) | p.1424 |
+|  | 8.3.3.13 | [Transmitter Ratio of Level Mismatch…](#sec-8-3-3-13) | [64.0 GT/s 下发送器电平失配比 (RLM-TX)](#sec-8-3-3-13) | p.1425 |
+|  | 8.3.4 | [Transmitter Margining](#sec-8-3-4) | [发送器余量 (Margining)](#sec-8-3-4) | p.1426 |
+|  | 8.3.5 | [Tx Jitter Parameters](#sec-8-3-5) | [Tx 抖动参数](#sec-8-3-5) | p.1427 |
 | 8.3.5.1 | Post Processing Steps to Extract Ji… |  | p.1427 |
 | 8.3.5.2 | Applying CTLE or De-embedding § |  | p.1427 |
 | 8.3.5.3 | Independent Refclk Measurement and … |  | p.1427 |
@@ -53,10 +53,10 @@
 | 8.3.5.5 | Behavioral CDR Characteristics — Fi… | 行为 CDR 特性 — 图 8-16 与公式 8-10/8-… | p.1431 |
 | 8.3.5.5 | Behavioral CDR Characteristics — Eq… | 行为 CDR 特性 — 公式 8-12 与图 8-17 | p.1432 |
 | 8.3.5.5 | Behavioral CDR Characteristics — Eq… | 行为 CDR 特性 — 公式 8-13 | p.1433 |
-| 8.3.5.6 | Data Dependent and Uncorrelated Jit… | 数据相关与非相关抖动 / 数据相关抖动 | p.1434 |
-| 8.3.5.6 | Data Dependent and Uncorrelated Jit… |  | p.1434 |
+|  | 8.3.5.6 | [Data Dependent and Uncorrelated Jit…](#sec-8-3-5-6) | [数据相关与非相关抖动 / 数据相关抖动](#sec-8-3-5-6) | p.1434 |
+|  | 8.3.5.6 | [Data Dependent and Uncorrelated Jit…](#sec-8-3-5-6) | [](#sec-8-3-5-6) | p.1434 |
 | 8.3.5.7 | Data Dependent Jitter § |  | p.1434 |
-| 8.3.5.6 | 数据相关与非相关抖动 § |  | p.1434 |
+|  | 8.3.5.6 | [数据相关与非相关抖动 §](#sec-8-3-5-6) | [](#sec-8-3-5-6) | p.1434 |
 | 8.3.5.7 | 数据相关抖动 § |  | p.1434 |
 | 8.3.5.7 | Data Dependent Jitter — Figure 8-18… | 数据相关抖动 — 图 8-18 | p.1435 |
 | 8.3.5.8 | Uncorrelated Total Jitter and Deter… |  | p.1435 |
@@ -66,71 +66,71 @@
 | 8.3.5.9 | 随机抖动 (TTX-RJ) (信息性) § |  | p.1435 |
 | 8.3.5.10 | 非相关总 PWJ 与确定性 PWJ (TTX-UPW-TJ 与 TTX… |  | p.1435 |
 | 8.3.5.10 | Uncorrelated Total and Deterministi… | 非相关总与确定性 PWJ — 图 8-20 与 8-21 | p.1436 |
-| 8.3.6 | Data Rate Dependent Parameters | 速率相关参数 | p.1437 |
-| 8.3.6 | Data Rate Dependent Parameters (con… | 速率相关参数 (续) — 表 8-6 (续) | p.1438 |
-| 8.3.6 | Data Rate Dependent Parameters (con… | 速率相关参数 (续) — 表 8-6 (续 2) | p.1439 |
-| 8.3.6 | Data Rate Dependent Parameters — Ta… | 速率相关参数 — 表 8-6 (结尾) 与注释 | p.1440 |
-| 8.3.7 | 2.5、5.0、8.0、16.0 和 32.0 GT/s 的 Tx 与… |  | p.1440 |
-| 8.3.7 | 图 8-23 共模回波损耗掩码 (Figure 8-23 Common… |  | p.1440 |
-| 8.3.8 | 64.0 GT/s 的 Tx 与 Rx 回波损耗 (Tx and Rx… |  | p.1440 |
-| 8.3.9 | 发送器 PLL 带宽与峰值 (Transmitter PLL Band… |  | p.1440 |
-| 8.3.9.1 | 2.5 GT/s 和 5.0 GT/s Tx PLL 带宽与峰值 (2… |  | p.1440 |
-| 8.3.9.2 | 8.0 GT/s、16.0 GT/s、32.0 GT/s 和 64.0… |  | p.1440 |
-| 8.3.9.3 | 串联电容 (Series Capacitors) |  | p.1440 |
-| 8.3.10 | 与数据速率无关的 Tx 参数 (Data Rate Independe… |  | p.1440 |
-| 8.3.10 | (续) 与数据速率无关的 Tx 参数 (续表) |  | p.1440 |
-| 8.4 | 接收器规范 (Receiver Specifications) |  | p.1440 |
-| 8.4.1 | 接收器压力眼图规范 (Receiver Stressed Eye Sp… |  | p.1440 |
-| 8.4.1.1 | 引出通道与复制通道 (Breakout and Replica Cha… |  | p.1440 |
-| 8.4.1.2 | 校准通道插入损耗特性 (Calibration Channel Ins… |  | p.1440 |
-| 8.4.1.2 | 校准通道插入损耗特性 (续) |  | p.1440 |
-| 8.4.1.3 | 后处理流程 (Post Processing Procedures) |  | p.1440 |
-| 8.4.1.4 | Behavioral Rx Package Models | 行为级 Rx 封装模型 | p.1440 |
-| 8.4.2.2.1 | Sj Mask | Sj 模板 | p.1471 |
-| 8.4.2.3 | Receiver Refclk Modes | 接收器 Refclk 模式 | p.1479 |
-| 8.4.2.3.1 | Common Refclk Mode | 公共 Refclk 模式 | p.1479 |
-| 8.4.2.3.2 | Independent Refclk Mode | 独立 Refclk 模式 | p.1480 |
-| 8.4.3 | Common Receiver Parameters | 公共接收器参数 | p.1480 |
-| 8.4.3.1 | 5.0 GT/s Exit From Idle Detect (EFI… | 5.0 GT/s 退出空闲检测 (EFI) | p.1483 |
-| 8.4.3.2 | Receiver Return Loss | 接收器回损 | p.1483 |
-| 8.4.4 | Lane Margining at the Receiver - El… | 接收器处通道余量测量 - 电气要求 | p.1483 |
-| 8.4.5 | Low Frequency and Miscellaneous Sig… | 低频及其它信号要求 | p.1487 |
-| 8.4.5.1 | ESD Standards | ESD 标准 | p.1487 |
-| 8.4.5.2 | Channel AC Coupling Capacitors | 通道 AC 耦合电容 | p.1487 |
-| 8.4.5.3 | Short Circuit Requirements | 短路要求 | p.1487 |
-| 8.4.5.4 | Transmitter and Receiver Terminatio… | 发送器与接收器端接 | p.1488 |
-| 8.4.5.5 | Electrical Idle | 电气空闲 | p.1488 |
-| 8.4.5.6 | DC Common Mode Voltage | DC 共模电压 | p.1488 |
-| 8.4.5.7 | Receiver Detection | 接收器检测 | p.1489 |
-| 8.5 | Channel Tolerancing | 通道容差 | p.1489 |
-| 8.5.1 | Channel Compliance Testing | 通道一致性测试 | p.1489 |
-| 8.5.1.1 | Behavioral Transmitter and Receiver… | 行为级发送器与接收器封装模型 | p.1491 |
-| 8.5.1.2 | Measuring Package Performance (16.0… | 封装性能测量(仅适用于 16.0 GT/s) | p.1501 |
-| 8.5.1.3 | Simulation Tool Requirements | 仿真工具要求 | p.1501 |
-| 8.5.1.3.1 | Simulation Tool Chain Inputs | 仿真工具链输入 | p.1502 |
-| 8.5.1.3.2 | Processing Steps | 处理步骤 | p.1503 |
-| 8.5.1.3.3 | Simulation Tool Outputs | 仿真工具输出 | p.1503 |
-| 8.5.1.3.4 | Open Source Simulation Tool | 开源仿真工具 | p.1503 |
-| 8.5.1.4 | Behavioral Transmitter Parameters | 行为级发送器参数 | p.1503 |
-| 8.5.1.4.1 | Deriving Voltage and Jitter Paramet… | 电压与抖动参数推导 | p.1503 |
-| 8.5.1.4.2 | Optimizing Tx/Rx Equalization (8.0,… | 优化 Tx/Rx 均衡(仅限 8.0、16.0、32.0 和… | p.1505 |
-| 8.5.1.4.3 | Pass/Fail Eye Characteristics | Pass/Fail 眼图特性 | p.1505 |
-| 8.5.1.4.4 | Characterizing Channel Common Mode … | 通道共模噪声特性 | p.1508 |
-| 8.5.1.4.5 | Verifying VCH-IDLE-DET-DIFF-pp | 验证 VCH-IDLE-DET-DIFF-pp | p.1509 |
-| 8.6 | Refclk Specifications | Refclk 规范 | p.1509 |
-| 8.6.1 | Refclk Test Setup | Refclk 测试设置 | p.1509 |
-| 8.6.2 | REFCLK AC Specifications | REFCLK AC 规范 | p.1510 |
-| 8.6.3 | Data Rate Independent Refclk Parame… | 与数据速率无关的 Refclk 参数 | p.1514 |
-| 8.6.3.1 | Low Frequency Refclk Jitter Limits | 低频 Refclk 抖动限值 | p.1514 |
-| 8.6.4 | Refclk Architectures Supported | 支持的 Refclk 架构 | p.1515 |
-| 8.6.5 | Filtering Functions Applied to Raw … | 应用于原始数据的滤波函数 | p.1515 |
-| 8.6.5.1 | PLL Filter Transfer Function Exampl… | PLL 滤波传递函数示例 | p.1516 |
-| 8.6.5.2 | CDR Transfer Function Examples | CDR 传递函数示例 | p.1516 |
-| 8.6.6 | Common Refclk Rx Architecture (CC) | 共参考时钟接收器架构 (CC) | p.1517 |
-| 8.6.6.1 | Determining the Number of PLL BW an… | 确定 PLL 带宽和峰化组合数 | p.1517 |
-| 8.6.6.2 | CDR and PLL BW and Peaking Limits f… | 共参考时钟的 CDR 与 PLL 带宽和峰化限值 | p.1518 |
-| 8.6.7 | Jitter Limits for Refclk Architectu… | Refclk 架构的抖动限值 | p.1520 |
-| 8.6.8 | Form Factor Requirements for RefClo… | 外形规格对 RefClock 架构的要求 | p.1521 |
+|  | 8.3.6 | [Data Rate Dependent Parameters](#sec-8-3-6) | [速率相关参数](#sec-8-3-6) | p.1437 |
+|  | 8.3.6 | [Data Rate Dependent Parameters (con…](#sec-8-3-6) | [速率相关参数 (续) — 表 8-6 (续)](#sec-8-3-6) | p.1438 |
+|  | 8.3.6 | [Data Rate Dependent Parameters (con…](#sec-8-3-6) | [速率相关参数 (续) — 表 8-6 (续 2)](#sec-8-3-6) | p.1439 |
+|  | 8.3.6 | [Data Rate Dependent Parameters — Ta…](#sec-8-3-6) | [速率相关参数 — 表 8-6 (结尾) 与注释](#sec-8-3-6) | p.1440 |
+|  | 8.3.7 | [2.5、5.0、8.0、16.0 和 32.0 GT/s 的 Tx 与…](#sec-8-3-7) | [](#sec-8-3-7) | p.1440 |
+|  | 8.3.7 | [图 8-23 共模回波损耗掩码 (Figure 8-23 Common…](#sec-8-3-7) | [](#sec-8-3-7) | p.1440 |
+|  | 8.3.8 | [64.0 GT/s 的 Tx 与 Rx 回波损耗 (Tx and Rx…](#sec-8-3-8) | [](#sec-8-3-8) | p.1440 |
+|  | 8.3.9 | [发送器 PLL 带宽与峰值 (Transmitter PLL Band…](#sec-8-3-9) | [](#sec-8-3-9) | p.1440 |
+|  | 8.3.9.1 | [2.5 GT/s 和 5.0 GT/s Tx PLL 带宽与峰值 (2…](#sec-8-3-9-1) | [](#sec-8-3-9-1) | p.1440 |
+|  | 8.3.9.2 | [8.0 GT/s、16.0 GT/s、32.0 GT/s 和 64.0…](#sec-8-3-9-2) | [](#sec-8-3-9-2) | p.1440 |
+|  | 8.3.9.3 | [串联电容 (Series Capacitors)](#sec-8-3-9-3) | [](#sec-8-3-9-3) | p.1440 |
+|  | 8.3.10 | [与数据速率无关的 Tx 参数 (Data Rate Independe…](#sec-8-3-10) | [](#sec-8-3-10) | p.1440 |
+|  | 8.3.10 | [(续) 与数据速率无关的 Tx 参数 (续表)](#sec-8-3-10) | [](#sec-8-3-10) | p.1440 |
+|  | 8.4 | [接收器规范 (Receiver Specifications)](#sec-8-4) | [](#sec-8-4) | p.1440 |
+|  | 8.4.1 | [接收器压力眼图规范 (Receiver Stressed Eye Sp…](#sec-8-4-1) | [](#sec-8-4-1) | p.1440 |
+|  | 8.4.1.1 | [引出通道与复制通道 (Breakout and Replica Cha…](#sec-8-4-1-1) | [](#sec-8-4-1-1) | p.1440 |
+|  | 8.4.1.2 | [校准通道插入损耗特性 (Calibration Channel Ins…](#sec-8-4-1-2) | [](#sec-8-4-1-2) | p.1440 |
+|  | 8.4.1.2 | [校准通道插入损耗特性 (续)](#sec-8-4-1-2) | [](#sec-8-4-1-2) | p.1440 |
+|  | 8.4.1.3 | [后处理流程 (Post Processing Procedures)](#sec-8-4-1-3) | [](#sec-8-4-1-3) | p.1440 |
+|  | 8.4.1.4 | [Behavioral Rx Package Models](#sec-8-4-1-4) | [行为级 Rx 封装模型](#sec-8-4-1-4) | p.1440 |
+|  | 8.4.2.2.1 | [Sj Mask](#sec-8-4-2-2-1) | [Sj 模板](#sec-8-4-2-2-1) | p.1471 |
+|  | 8.4.2.3 | [Receiver Refclk Modes](#sec-8-4-2-3) | [接收器 Refclk 模式](#sec-8-4-2-3) | p.1479 |
+|  | 8.4.2.3.1 | [Common Refclk Mode](#sec-8-4-2-3-1) | [公共 Refclk 模式](#sec-8-4-2-3-1) | p.1479 |
+|  | 8.4.2.3.2 | [Independent Refclk Mode](#sec-8-4-2-3-2) | [独立 Refclk 模式](#sec-8-4-2-3-2) | p.1480 |
+|  | 8.4.3 | [Common Receiver Parameters](#sec-8-4-3) | [公共接收器参数](#sec-8-4-3) | p.1480 |
+|  | 8.4.3.1 | [5.0 GT/s Exit From Idle Detect (EFI…](#sec-8-4-3-1) | [5.0 GT/s 退出空闲检测 (EFI)](#sec-8-4-3-1) | p.1483 |
+|  | 8.4.3.2 | [Receiver Return Loss](#sec-8-4-3-2) | [接收器回损](#sec-8-4-3-2) | p.1483 |
+|  | 8.4.4 | [Lane Margining at the Receiver - El…](#sec-8-4-4) | [接收器处通道余量测量 - 电气要求](#sec-8-4-4) | p.1483 |
+|  | 8.4.5 | [Low Frequency and Miscellaneous Sig…](#sec-8-4-5) | [低频及其它信号要求](#sec-8-4-5) | p.1487 |
+|  | 8.4.5.1 | [ESD Standards](#sec-8-4-5-1) | [ESD 标准](#sec-8-4-5-1) | p.1487 |
+|  | 8.4.5.2 | [Channel AC Coupling Capacitors](#sec-8-4-5-2) | [通道 AC 耦合电容](#sec-8-4-5-2) | p.1487 |
+|  | 8.4.5.3 | [Short Circuit Requirements](#sec-8-4-5-3) | [短路要求](#sec-8-4-5-3) | p.1487 |
+|  | 8.4.5.4 | [Transmitter and Receiver Terminatio…](#sec-8-4-5-4) | [发送器与接收器端接](#sec-8-4-5-4) | p.1488 |
+|  | 8.4.5.5 | [Electrical Idle](#sec-8-4-5-5) | [电气空闲](#sec-8-4-5-5) | p.1488 |
+|  | 8.4.5.6 | [DC Common Mode Voltage](#sec-8-4-5-6) | [DC 共模电压](#sec-8-4-5-6) | p.1488 |
+|  | 8.4.5.7 | [Receiver Detection](#sec-8-4-5-7) | [接收器检测](#sec-8-4-5-7) | p.1489 |
+|  | 8.5 | [Channel Tolerancing](#sec-8-5) | [通道容差](#sec-8-5) | p.1489 |
+|  | 8.5.1 | [Channel Compliance Testing](#sec-8-5-1) | [通道一致性测试](#sec-8-5-1) | p.1489 |
+|  | 8.5.1.1 | [Behavioral Transmitter and Receiver…](#sec-8-5-1-1) | [行为级发送器与接收器封装模型](#sec-8-5-1-1) | p.1491 |
+|  | 8.5.1.2 | [Measuring Package Performance (16.0…](#sec-8-5-1-2) | [封装性能测量(仅适用于 16.0 GT/s)](#sec-8-5-1-2) | p.1501 |
+|  | 8.5.1.3 | [Simulation Tool Requirements](#sec-8-5-1-3) | [仿真工具要求](#sec-8-5-1-3) | p.1501 |
+|  | 8.5.1.3.1 | [Simulation Tool Chain Inputs](#sec-8-5-1-3-1) | [仿真工具链输入](#sec-8-5-1-3-1) | p.1502 |
+|  | 8.5.1.3.2 | [Processing Steps](#sec-8-5-1-3-2) | [处理步骤](#sec-8-5-1-3-2) | p.1503 |
+|  | 8.5.1.3.3 | [Simulation Tool Outputs](#sec-8-5-1-3-3) | [仿真工具输出](#sec-8-5-1-3-3) | p.1503 |
+|  | 8.5.1.3.4 | [Open Source Simulation Tool](#sec-8-5-1-3-4) | [开源仿真工具](#sec-8-5-1-3-4) | p.1503 |
+|  | 8.5.1.4 | [Behavioral Transmitter Parameters](#sec-8-5-1-4) | [行为级发送器参数](#sec-8-5-1-4) | p.1503 |
+|  | 8.5.1.4.1 | [Deriving Voltage and Jitter Paramet…](#sec-8-5-1-4-1) | [电压与抖动参数推导](#sec-8-5-1-4-1) | p.1503 |
+|  | 8.5.1.4.2 | [Optimizing Tx/Rx Equalization (8.0,…](#sec-8-5-1-4-2) | [优化 Tx/Rx 均衡(仅限 8.0、16.0、32.0 和…](#sec-8-5-1-4-2) | p.1505 |
+|  | 8.5.1.4.3 | [Pass/Fail Eye Characteristics](#sec-8-5-1-4-3) | [Pass/Fail 眼图特性](#sec-8-5-1-4-3) | p.1505 |
+|  | 8.5.1.4.4 | [Characterizing Channel Common Mode …](#sec-8-5-1-4-4) | [通道共模噪声特性](#sec-8-5-1-4-4) | p.1508 |
+|  | 8.5.1.4.5 | [Verifying VCH-IDLE-DET-DIFF-pp](#sec-8-5-1-4-5) | [验证 VCH-IDLE-DET-DIFF-pp](#sec-8-5-1-4-5) | p.1509 |
+|  | 8.6 | [Refclk Specifications](#sec-8-6) | [Refclk 规范](#sec-8-6) | p.1509 |
+|  | 8.6.1 | [Refclk Test Setup](#sec-8-6-1) | [Refclk 测试设置](#sec-8-6-1) | p.1509 |
+|  | 8.6.2 | [REFCLK AC Specifications](#sec-8-6-2) | [REFCLK AC 规范](#sec-8-6-2) | p.1510 |
+|  | 8.6.3 | [Data Rate Independent Refclk Parame…](#sec-8-6-3) | [与数据速率无关的 Refclk 参数](#sec-8-6-3) | p.1514 |
+|  | 8.6.3.1 | [Low Frequency Refclk Jitter Limits](#sec-8-6-3-1) | [低频 Refclk 抖动限值](#sec-8-6-3-1) | p.1514 |
+|  | 8.6.4 | [Refclk Architectures Supported](#sec-8-6-4) | [支持的 Refclk 架构](#sec-8-6-4) | p.1515 |
+|  | 8.6.5 | [Filtering Functions Applied to Raw …](#sec-8-6-5) | [应用于原始数据的滤波函数](#sec-8-6-5) | p.1515 |
+|  | 8.6.5.1 | [PLL Filter Transfer Function Exampl…](#sec-8-6-5-1) | [PLL 滤波传递函数示例](#sec-8-6-5-1) | p.1516 |
+|  | 8.6.5.2 | [CDR Transfer Function Examples](#sec-8-6-5-2) | [CDR 传递函数示例](#sec-8-6-5-2) | p.1516 |
+|  | 8.6.6 | [Common Refclk Rx Architecture (CC)](#sec-8-6-6) | [共参考时钟接收器架构 (CC)](#sec-8-6-6) | p.1517 |
+|  | 8.6.6.1 | [Determining the Number of PLL BW an…](#sec-8-6-6-1) | [确定 PLL 带宽和峰化组合数](#sec-8-6-6-1) | p.1517 |
+|  | 8.6.6.2 | [CDR and PLL BW and Peaking Limits f…](#sec-8-6-6-2) | [共参考时钟的 CDR 与 PLL 带宽和峰化限值](#sec-8-6-6-2) | p.1518 |
+|  | 8.6.7 | [Jitter Limits for Refclk Architectu…](#sec-8-6-7) | [Refclk 架构的抖动限值](#sec-8-6-7) | p.1520 |
+|  | 8.6.8 | [Form Factor Requirements for RefClo…](#sec-8-6-8) | [外形规格对 RefClock 架构的要求](#sec-8-6-8) | p.1521 |
 
 ## 🖼 本章图表 (Figures)
 

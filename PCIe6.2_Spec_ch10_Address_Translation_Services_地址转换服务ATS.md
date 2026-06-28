@@ -13,60 +13,60 @@
 
 | # | Section | 小节 | Page |
 |:-:|:--------|:-----|:----:|
-| 10.1 | ATS Architectural Overview § | 10.1 ATS 架构概述 § | — |
-| 10.1.1 | Address Translation Services (ATS) … | 10.1.1 地址转换服务 (ATS) 概述 § | — |
-| 10.1.2 | Page Request Interface Extension § | 10.1.2 页请求接口扩展 § | p.1561 |
-| 10.1.2 | Page Request Interface Extension (c… | 10.1.2 页请求接口扩展 (续) § | p.1561 |
-| 10.1.2 | Page Request Interface Extension (c… | 10.1.2 页请求接口扩展 (续二) § | p.1561 |
-| 10.1.3 | Process Address Space ID (PASID) § | 10.1.3 进程地址空间 ID (PASID) § | p.1561 |
-| 10.1.4 | ATS Memory Attributes § | 10.1.4 ATS 内存属性 § | p.1561 |
-| 10.2 | ATS Translation Services § | 10.2 ATS 转换服务 § | p.1561 |
-| 10.2.1 | Memory Requests with Address Type § | 10.2.1 带地址类型的内存请求 § | p.1567 |
-| 10.2.2 | Translation Requests § | 10.2.2 转换请求 § | p.1567 |
-| 10.2.2.1 | Attribute Field § | 10.2.2.1 属性字段 § | p.1567 |
-| 10.2.2.2 | Length Field § | 10.2.2.2 Length 字段 § | p.1567 |
-| 10.2.2.3 | Tag Field § | 10.2.2.3 Tag 字段 § | p.1571 |
-| 10.2.2.4 | Untranslated Address Field § | 10.2.2.4 未转换地址字段 § | p.1571 |
-| 10.2.2.5 | No Write (NW) Flag § | 10.2.2.5 No Write (NW) 标志 § | p.1571 |
-| 10.2.2.6 | PASID on Translation Request § | 10.2.2.6 转换请求中的 PASID § | p.1571 |
-| 10.2.2.7 | CXL Src § | 10.2.2.7 CXL Src § | p.1571 |
-| 10.2.3 | Translation Completion § | 10.2.3 转换完成 § | p.1571 |
-| 10.2.3 | Translation Completion Data Fields … | 10.2.3 转换完成数据字段 § | p.1571 |
-| 10.2.3.1 | Translated Address Field § | 10.2.3.1 已转换地址字段 § | p.1571 |
-| 10.2.3.2 | Translation Range Size (S) Field § | 10.2.3.2 转换范围大小 (S) 字段 § | p.1571 |
-| 10.2.3.3 | Non-snooped (N) Field § | 10.2.3.3 非监听 (N) 字段 § | p.1571 |
-| 10.2.3.4 | Untranslated Access Only (U) Field … | 10.2.3.4 仅未转换访问 (U) 字段 § | p.1571 |
-| 10.2.3.5 | Read (R) and Write (W) Fields § | 10.2.3.5 读 (R) 和写 (W) 字段 § | p.1571 |
-| 10.2.3.6 | Execute Permitted (Exe) § | 10.2.3.6 允许执行 (Exe) § | p.1577 |
-| 10.2.3.7 | Privileged Mode Access (Priv) § | 10.2.3.7 特权模式访问 (Priv) § | p.1577 |
-| 10.2.3.8 | Global Mapping (Global) § | 10.2.3.8 全局映射 (Global) § | p.1577 |
-| 10.2.3.9 | ATS Memory Attributes § | 10.2.3.9 ATS 内存属性 § | p.1577 |
-| 10.2.4 | Completions with Multiple Translati… | 10.2.4 包含多个转换的完成 § | p.1577 |
-| 10.3 | ATS Invalidation § | 10.3 ATS 无效化 § | p.1577 |
-| 10.3.1 | Invalidate Request § | 10.3.1 无效化请求 § | p.1577 |
-| 10.3.2 | Invalidate Completion § | 10.3.2 无效化完成 § | p.1586 |
-| 10.3.3 | Invalidate Completion Semantics § | 10.3.3 无效化完成语义 § | p.1586 |
-| 10.3.4 | Request Acceptance Rules § | 10.3.4 请求接受规则 § | p.1586 |
-| 10.3.5 | Invalidate Flow Control § | 10.3.5 无效化流控 § | p.1586 |
-| 10.3.6 | Invalidate Ordering Semantics § | 10.3.6 无效化排序语义 § | p.1586 |
-| 10.3.7 | Implicit Invalidation Events § | 10.3.7 隐式无效化事件 § | p.1586 |
-| 10.3.8 | PASID and Global Invalidate § | 10.3.8 PASID 与全局无效化 § | p.1586 |
-| 10.4 | Page Request Services § | 10.4 页请求服务 § | p.1592 |
-| 10.4.1 | Page Request Message § | 10.4.1 页请求消息 § | p.1592 |
-| 10.4.1.1 | PASID Usage § | 10.4.1.1 PASID 使用 § | p.1592 |
-| 10.4.1.2 | Managing PASID Usage on PRG Request… | 10.4.1.2 在 PRG 请求上管理 PASID 使用 … | p.1592 |
-| 10.4.1.2.1 | Stop Marker Messages § | 10.4.1.2.1 停止标记消息 § | p.1592 |
-| 10.4.2 | Page Request Group Response Message… | 10.4.2 页请求组响应消息 § | p.1598 |
-| 10.4.2.1 | Response Code Field § | 10.4.2.1 响应代码字段 § | p.1598 |
-| 10.4.2.2 | PASID Usage on PRG Responses § | 10.4.2.2 PRG 响应中的 PASID 使用 § | p.1598 |
-| 10.5 | ATS Configuration § | 10.5 ATS 配置 § | p.1598 |
-| 10.5.1 | ATS Extended Capability § | 10.5.1 ATS Extended Capability… | p.1598 |
-| 10.5.1.1 | ATS Extended Capability Header (Off… | 10.5.1.1 ATS Extended Capabili… | p.1598 |
-| 10.5.1.2 | ATS Capability Register (Offset 04h… | 10.5.1.2 ATS Capability 寄存器 (O… | p.1598 |
-| 10.5.1.3 | ATS Control Register (Offset 06h) § | 10.5.1.3 ATS Control 寄存器 (Offs… | p.1598 |
-| 10.5.2 | Page Request Extended Capability St… | 10.5.2 页请求扩展能力结构 § | p.1598 |
-| 10.5.2.1 | Page Request Extended Capability He… | 10.5.2.1 页请求扩展能力头 (Offset 00h)… | p.1598 |
-| 10.5.2.2 | Page Request Control Register (Offs… | 10.5.2.2 页请求控制寄存器 (Offset 04h)… | p.1598 |
+|  | 10.1 | [ATS Architectural Overview §](#sec-10-1) | [10.1 ATS 架构概述 §](#sec-10-1) | — |
+|  | 10.1.1 | [Address Translation Services (ATS) …](#sec-10-1-1) | [10.1.1 地址转换服务 (ATS) 概述 §](#sec-10-1-1) | — |
+|  | 10.1.2 | [Page Request Interface Extension §](#sec-10-1-2) | [10.1.2 页请求接口扩展 §](#sec-10-1-2) | p.1561 |
+|  | 10.1.2 | [Page Request Interface Extension (c…](#sec-10-1-2) | [10.1.2 页请求接口扩展 (续) §](#sec-10-1-2) | p.1561 |
+|  | 10.1.2 | [Page Request Interface Extension (c…](#sec-10-1-2) | [10.1.2 页请求接口扩展 (续二) §](#sec-10-1-2) | p.1561 |
+|  | 10.1.3 | [Process Address Space ID (PASID) §](#sec-10-1-3) | [10.1.3 进程地址空间 ID (PASID) §](#sec-10-1-3) | p.1561 |
+|  | 10.1.4 | [ATS Memory Attributes §](#sec-10-1-4) | [10.1.4 ATS 内存属性 §](#sec-10-1-4) | p.1561 |
+|  | 10.2 | [ATS Translation Services §](#sec-10-2) | [10.2 ATS 转换服务 §](#sec-10-2) | p.1561 |
+|  | 10.2.1 | [Memory Requests with Address Type §](#sec-10-2-1) | [10.2.1 带地址类型的内存请求 §](#sec-10-2-1) | p.1567 |
+|  | 10.2.2 | [Translation Requests §](#sec-10-2-2) | [10.2.2 转换请求 §](#sec-10-2-2) | p.1567 |
+|  | 10.2.2.1 | [Attribute Field §](#sec-10-2-2-1) | [10.2.2.1 属性字段 §](#sec-10-2-2-1) | p.1567 |
+|  | 10.2.2.2 | [Length Field §](#sec-10-2-2-2) | [10.2.2.2 Length 字段 §](#sec-10-2-2-2) | p.1567 |
+|  | 10.2.2.3 | [Tag Field §](#sec-10-2-2-3) | [10.2.2.3 Tag 字段 §](#sec-10-2-2-3) | p.1571 |
+|  | 10.2.2.4 | [Untranslated Address Field §](#sec-10-2-2-4) | [10.2.2.4 未转换地址字段 §](#sec-10-2-2-4) | p.1571 |
+|  | 10.2.2.5 | [No Write (NW) Flag §](#sec-10-2-2-5) | [10.2.2.5 No Write (NW) 标志 §](#sec-10-2-2-5) | p.1571 |
+|  | 10.2.2.6 | [PASID on Translation Request §](#sec-10-2-2-6) | [10.2.2.6 转换请求中的 PASID §](#sec-10-2-2-6) | p.1571 |
+|  | 10.2.2.7 | [CXL Src §](#sec-10-2-2-7) | [10.2.2.7 CXL Src §](#sec-10-2-2-7) | p.1571 |
+|  | 10.2.3 | [Translation Completion §](#sec-10-2-3) | [10.2.3 转换完成 §](#sec-10-2-3) | p.1571 |
+|  | 10.2.3 | [Translation Completion Data Fields …](#sec-10-2-3) | [10.2.3 转换完成数据字段 §](#sec-10-2-3) | p.1571 |
+|  | 10.2.3.1 | [Translated Address Field §](#sec-10-2-3-1) | [10.2.3.1 已转换地址字段 §](#sec-10-2-3-1) | p.1571 |
+|  | 10.2.3.2 | [Translation Range Size (S) Field §](#sec-10-2-3-2) | [10.2.3.2 转换范围大小 (S) 字段 §](#sec-10-2-3-2) | p.1571 |
+|  | 10.2.3.3 | [Non-snooped (N) Field §](#sec-10-2-3-3) | [10.2.3.3 非监听 (N) 字段 §](#sec-10-2-3-3) | p.1571 |
+|  | 10.2.3.4 | [Untranslated Access Only (U) Field …](#sec-10-2-3-4) | [10.2.3.4 仅未转换访问 (U) 字段 §](#sec-10-2-3-4) | p.1571 |
+|  | 10.2.3.5 | [Read (R) and Write (W) Fields §](#sec-10-2-3-5) | [10.2.3.5 读 (R) 和写 (W) 字段 §](#sec-10-2-3-5) | p.1571 |
+|  | 10.2.3.6 | [Execute Permitted (Exe) §](#sec-10-2-3-6) | [10.2.3.6 允许执行 (Exe) §](#sec-10-2-3-6) | p.1577 |
+|  | 10.2.3.7 | [Privileged Mode Access (Priv) §](#sec-10-2-3-7) | [10.2.3.7 特权模式访问 (Priv) §](#sec-10-2-3-7) | p.1577 |
+|  | 10.2.3.8 | [Global Mapping (Global) §](#sec-10-2-3-8) | [10.2.3.8 全局映射 (Global) §](#sec-10-2-3-8) | p.1577 |
+|  | 10.2.3.9 | [ATS Memory Attributes §](#sec-10-2-3-9) | [10.2.3.9 ATS 内存属性 §](#sec-10-2-3-9) | p.1577 |
+|  | 10.2.4 | [Completions with Multiple Translati…](#sec-10-2-4) | [10.2.4 包含多个转换的完成 §](#sec-10-2-4) | p.1577 |
+|  | 10.3 | [ATS Invalidation §](#sec-10-3) | [10.3 ATS 无效化 §](#sec-10-3) | p.1577 |
+|  | 10.3.1 | [Invalidate Request §](#sec-10-3-1) | [10.3.1 无效化请求 §](#sec-10-3-1) | p.1577 |
+|  | 10.3.2 | [Invalidate Completion §](#sec-10-3-2) | [10.3.2 无效化完成 §](#sec-10-3-2) | p.1586 |
+|  | 10.3.3 | [Invalidate Completion Semantics §](#sec-10-3-3) | [10.3.3 无效化完成语义 §](#sec-10-3-3) | p.1586 |
+|  | 10.3.4 | [Request Acceptance Rules §](#sec-10-3-4) | [10.3.4 请求接受规则 §](#sec-10-3-4) | p.1586 |
+|  | 10.3.5 | [Invalidate Flow Control §](#sec-10-3-5) | [10.3.5 无效化流控 §](#sec-10-3-5) | p.1586 |
+|  | 10.3.6 | [Invalidate Ordering Semantics §](#sec-10-3-6) | [10.3.6 无效化排序语义 §](#sec-10-3-6) | p.1586 |
+|  | 10.3.7 | [Implicit Invalidation Events §](#sec-10-3-7) | [10.3.7 隐式无效化事件 §](#sec-10-3-7) | p.1586 |
+|  | 10.3.8 | [PASID and Global Invalidate §](#sec-10-3-8) | [10.3.8 PASID 与全局无效化 §](#sec-10-3-8) | p.1586 |
+|  | 10.4 | [Page Request Services §](#sec-10-4) | [10.4 页请求服务 §](#sec-10-4) | p.1592 |
+|  | 10.4.1 | [Page Request Message §](#sec-10-4-1) | [10.4.1 页请求消息 §](#sec-10-4-1) | p.1592 |
+|  | 10.4.1.1 | [PASID Usage §](#sec-10-4-1-1) | [10.4.1.1 PASID 使用 §](#sec-10-4-1-1) | p.1592 |
+|  | 10.4.1.2 | [Managing PASID Usage on PRG Request…](#sec-10-4-1-2) | [10.4.1.2 在 PRG 请求上管理 PASID 使用 …](#sec-10-4-1-2) | p.1592 |
+|  | 10.4.1.2.1 | [Stop Marker Messages §](#sec-10-4-1-2-1) | [10.4.1.2.1 停止标记消息 §](#sec-10-4-1-2-1) | p.1592 |
+|  | 10.4.2 | [Page Request Group Response Message…](#sec-10-4-2) | [10.4.2 页请求组响应消息 §](#sec-10-4-2) | p.1598 |
+|  | 10.4.2.1 | [Response Code Field §](#sec-10-4-2-1) | [10.4.2.1 响应代码字段 §](#sec-10-4-2-1) | p.1598 |
+|  | 10.4.2.2 | [PASID Usage on PRG Responses §](#sec-10-4-2-2) | [10.4.2.2 PRG 响应中的 PASID 使用 §](#sec-10-4-2-2) | p.1598 |
+|  | 10.5 | [ATS Configuration §](#sec-10-5) | [10.5 ATS 配置 §](#sec-10-5) | p.1598 |
+|  | 10.5.1 | [ATS Extended Capability §](#sec-10-5-1) | [10.5.1 ATS Extended Capability…](#sec-10-5-1) | p.1598 |
+|  | 10.5.1.1 | [ATS Extended Capability Header (Off…](#sec-10-5-1-1) | [10.5.1.1 ATS Extended Capabili…](#sec-10-5-1-1) | p.1598 |
+|  | 10.5.1.2 | [ATS Capability Register (Offset 04h…](#sec-10-5-1-2) | [10.5.1.2 ATS Capability 寄存器 (O…](#sec-10-5-1-2) | p.1598 |
+|  | 10.5.1.3 | [ATS Control Register (Offset 06h) §](#sec-10-5-1-3) | [10.5.1.3 ATS Control 寄存器 (Offs…](#sec-10-5-1-3) | p.1598 |
+|  | 10.5.2 | [Page Request Extended Capability St…](#sec-10-5-2) | [10.5.2 页请求扩展能力结构 §](#sec-10-5-2) | p.1598 |
+|  | 10.5.2.1 | [Page Request Extended Capability He…](#sec-10-5-2-1) | [10.5.2.1 页请求扩展能力头 (Offset 00h)…](#sec-10-5-2-1) | p.1598 |
+|  | 10.5.2.2 | [Page Request Control Register (Offs…](#sec-10-5-2-2) | [10.5.2.2 页请求控制寄存器 (Offset 04h)…](#sec-10-5-2-2) | p.1598 |
 
 ## 🖼 本章图表 (Figures)
 

@@ -13,290 +13,290 @@
 
 | # | Section | 小节 | Page |
 |:-:|:--------|:-----|:----:|
-| 6.1 | Interrupt and PME Support | 中断与 PME 支持 | — |
+|  | 6.1 | [Interrupt and PME Support](#sec-6-1) | [中断与 PME 支持](#sec-6-1) | — |
 | 6.1.1 | Rationale for PCI Express Interrupt… | PCI Express 中断模型的设计理由 | — |
 | 6.1.1 | PCI Express 中断模型的设计理由 |  | — |
-| 6.1.2 | PCI-compatible INTx Emulation | PCI 兼容的 INTx 仿真 | p.708 |
-| 6.1.3 | INTx Emulation Software Model | INTx 仿真的软件模型 | p.708 |
-| 6.1.4 | MSI and MSI-X Operation | MSI 与 MSI-X 操作 | p.708 |
-| 6.1.4.1 | MSI Configuration | MSI 配置 | p.709 |
-| 6.1.4.2 | MSI-X Configuration | MSI-X 配置 | p.710 |
-| 6.1.4.3 | Enabling Operation | 启用操作 | p.711 |
-| 6.1.4.4 | Sending Messages | 发送消息 | p.712 |
-| 6.1.4.5 | Per-vector Masking and Function Mas… | 每向量屏蔽与功能屏蔽 | p.712 |
-| 6.1.4.6 | Hardware/Software Synchronization | 硬件/软件同步 | p.713 |
-| 6.1.4.7 | Message Transaction Reception and O… | 消息事务的接收与排序要求 | p.715 |
-| 6.1.5 | PME Support | PME 支持 | p.715 |
-| 6.1.6 | Native PME Software Model | 原生 PME 软件模型 | p.715 |
-| 6.1.7 | Legacy PME Software Model | 传统 PME 软件模型 | p.716 |
-| 6.1.8 | Operating System Power Management N… | 操作系统电源管理通知 | p.716 |
-| 6.1.9 | PME Routing Between PCI Express and… | PCI Express 与 PCI 层级之间的 PME 路由 | p.716 |
-| 6.1.9 | PME Routing Between PCI Express and… | PCI Express 与 PCI 层级之间的 PME 路由… | p.717 |
-| 6.2 | Error Signaling and Logging | 错误信号与日志记录 | p.717 |
-| 6.2.1 | Scope | 范围 | p.717 |
-| 6.2.2 | Error Classification | 错误分类 | p.717 |
-| 6.2.2.1 | Correctable Errors | 可纠正错误 | p.718 |
-| 6.2.2.2 | Uncorrectable Errors | 不可纠正错误 | p.719 |
-| 6.2.2.2.1 | Fatal Errors | 致命错误 | p.719 |
-| 6.2.2.2.2 | Non-Fatal Errors | 非致命错误 | p.719 |
-| 6.2.3 | Error Signaling | 错误信号发送 | p.719 |
-| 6.2.3.1 | Completion Status | 完成状态 | p.719 |
-| 6.2.3.2 | Error Messages | 错误报文 | p.719 |
-| 6.2.3.2 | Error Messages (continued) | 错误报文(续) | p.720 |
-| 6.2.3.2.1 | Uncorrectable Error Severity Progra… | 不可纠正错误严重性编程(高级错误报告) | p.721 |
-| 6.2.3.2.2 | Masking Individual Errors | 单独掩码错误 | p.721 |
-| 6.2.3.2.3 | Error Pollution | 错误污染 | p.721 |
-| 6.2.3.2.3 | Error Pollution (continued) | 错误污染(续) | p.722 |
-| 6.2.3.2.4 | Advisory Non-Fatal Error Cases | 建议性非致命错误情形 | p.722 |
-| 6.2.3.2.4.1 | Completer Sending a Completion with… | 完成者发送带有 UR/CA 状态的完成报文 | p.722 |
-| 6.2.3.2.4.1 | Completer Sending a Completion with… | 完成者发送带有 UR/CA 状态的完成报文(续) | p.723 |
-| 6.2.3.2.4.2 | Intermediate Receiver § | 6.2.3.2.4.2 中间接收器 § | p.723 |
-| 6.2.3.2.4.3 | Ultimate PCI Express Receiver of a … | 6.2.3.2.4.3 接收到中毒 TLP 或 PCRC 检… | p.723 |
-| 6.2.3.2.4.4 | Requester with Completion Timeout § | 6.2.3.2.4.4 发生完成超时的请求者 § | p.724 |
-| 6.2.3.2.4.5 | Receiver of an Unexpected Completio… | 6.2.3.2.4.5 意外完成报文的接收方 § | p.724 |
-| 6.2.3.2.5 | Requester Receiving a Completion wi… | 6.2.3.2.5 接收到带有 UR/CA 状态完成报文的请… | p.724 |
-| 6.2.3.3 | Error Forwarding (Data Poisoning) § | 6.2.3.3 错误转发 (数据中毒) § | p.724 |
-| 6.2.3.4 | Optional Error Checking § | 6.2.3.4 可选错误检查 § | p.724 |
-| 6.2.4 | Error Logging § | 6.2.4 错误日志记录 § | p.725 |
-| 6.2.4.1 | Root Complex Considerations (Advanc… | 6.2.4.1 根复合体的相关考虑 (高级错误报告) § | p.725 |
-| 6.2.4.1.1 | Error Source Identification § | 6.2.4.1.1 错误源识别 § | p.726 |
-| 6.2.4.1.2 | Interrupt Generation § | 6.2.4.1.2 中断生成 § | p.726 |
-| 6.2.4.2 | Multiple Error Handling (Advanced E… | 6.2.4.2 多错误处理 (高级错误报告扩展能力) § | p.726 |
-| 6.2.4.2 | Multiple Error Handling (continued)… | 6.2.4.2 多错误处理 (续) § | p.727 |
-| 6.2.4.2.1 | Multiple Error Handling in VFs | 多 VF 错误处理 | p.729 |
-| 6.2.4.3 | Advisory Non-Fatal Error Logging | 咨询性非致命错误日志记录 | p.729 |
-| 6.2.4.4 | End-End TLP Prefix Logging - Non-Fl… | 端到端 TLP 前缀日志记录 — 非 Flit 模式 | p.729 |
-| 6.2.5 | Sequence of Device Error Signaling … | 设备错误上报与日志记录操作顺序 | p.729 |
-| 6.2.6 | Error Message Controls | 错误报文 (Error Message) 控制 | p.733 |
-| 6.2.7 | Error Listing and Rules | 错误列表与规则 | p.734 |
-| 6.2.7 | Error Listing and Rules (Table 6-5) | 错误列表与规则(表 6-5) | p.735 |
-| 6.2.7 | Error Listing and Rules (Table 6-5,… | 错误列表与规则(表 6-5,续) | p.736 |
-| 6.2.7 | Error Listing and Rules (Table 6-5,… | 错误列表与规则(表 6-5,续 2) | p.737 |
-| 6.2.7 | Error Listing and Rules (Table 6-5,… | 错误列表与规则(表 6-5,续 3) | p.738 |
-| 6.2.7.1 | Conventional PCI Mapping | 传统 PCI 映射 | p.739 |
-| 6.2.8 | Virtual PCI Bridge Error Handling | 虚拟 PCI 桥错误处理 | p.739 |
-| 6.2.8.1 | Error Message Forwarding and PCI Ma… | 桥的错误报文转发与 PCI 映射 — 规则 | p.739 |
-| 6.2.8.1 | Error Message Forwarding and PCI Ma… | 桥的错误报文转发与 PCI 映射 — 规则(续) | p.740 |
-| 6.2.9 | SR-IOV Baseline Error Handling | SR-IOV 基线错误处理 | p.740 |
-| 6.2.10 | Internal Errors | 内部错误 | p.740 |
-| 6.2.11 | Downstream Port Containment (DPC) | 下游端口遏制 (DPC) | p.741 |
-| 6.2.11 | DPC 续 | DPC(续):Non-Posted Request 响应选择… | p.742 |
-| 6.2.11.1 | DPC Interrupts | DPC 中断 | p.743 |
-| 6.2.11.2 | DPC ERR_COR Signaling | DPC ERR_COR 信令 | p.744 |
-| 6.2.11.3 | Root Port Programmed I/O (RP PIO) E… | 根端口可编程 I/O (RP PIO) 错误控制 | p.745 |
-| 6.2.11.3 | RP PIO Error Controls (续) | RP PIO 错误控制(续) | p.746 |
-| 6.2.11.3 | RP PIO Error Controls (SysError 与 E… | RP PIO 错误控制(SysError 与 Excepti… | p.747 |
-| 6.2.11.4 | Software Triggering of DPC | DPC 的软件触发 | p.748 |
-| 6.2.11.5 | DL_ACTIVE ERR_COR Signaling | DL_ACTIVE ERR_COR 信令 | p.749 |
-| 6.2.11.5 | DL_Active ERR_COR Signaling | DL_Active 正确错误（ERR_COR）信号 | p.749 |
-| 6.3 | Virtual Channel Support | 虚通道（VC）支持 | p.750 |
-| 6.3.1 | Introduction and Scope | 引言与范围 | p.750 |
-| 6.3.2 | TC/VC Mapping and Example Usage | TC/VC 映射与使用示例 | p.750 |
-| 6.3.3 | VC Arbitration | VC 仲裁 | p.751 |
-| 6.3.3.1 | Traffic Flow and Switch Arbitration… | 流量流与交换机仲裁模型 | p.751 |
-| 6.3.3.2 | VC Arbitration - Arbitration Betwee… | VC 仲裁——VC 之间的仲裁 | p.755 |
-| 6.3.3.2.1 | Strict Priority Arbitration Model | 严格优先级仲裁模型 | p.755 |
-| 6.3.3.2.2 | Round Robin Arbitration Model | 轮询仲裁模型 | p.755 |
-| 6.3.3.3 | Port Arbitration - Arbitration With… | 端口仲裁 - VC 内部仲裁 | p.757 |
-| 6.3.3.4 | Multi-Function Devices and Function… | 多功能设备与功能仲裁 | p.757 |
-| 6.3.4 | Isochronous Support | 等时支持 | p.759 |
-| 6.3.4.1 | Rules for Software Configuration | 软件配置规则 | p.759 |
-| 6.5.1 | Introduction | 引言 | p.761 |
-| 6.5.2 | Initiation and Propagation of Locke… | 锁定事务的发起和传播 — 规则 | p.763 |
-| 6.5.3 | Switches and Lock - Rules | 交换机与锁 — 规则 | p.764 |
-| 6.5.4 | PCI Express/PCI Bridges and Lock - … | PCI Express/PCI 桥与锁 — 规则 | p.764 |
-| 6.5.5 | Root Complex and Lock - Rules | 根复合体与锁 — 规则 | p.764 |
-| 6.5.6 | Legacy Endpoints | 传统端点 | p.765 |
-| 6.5.7 | PCI Express Endpoints | PCI Express 端点 | p.765 |
-| 6.6 | PCI Express Reset - Rules | PCI Express 复位 — 规则 | p.765 |
-| 6.6.1 | Conventional Reset | 常规复位 | p.765 |
-| 6.6.1 | Conventional Reset (continued) | 常规复位(续) | p.766 |
-| 6.6.1 | Conventional Reset (continued) | 常规复位(续) | p.767 |
-| 6.6.1 | Conventional Reset (continued) | 常规复位(续) | p.768 |
-| 6.6.2 | Function Level Reset (FLR) | 函数级复位 (FLR) | p.768 |
-| 6.6.2 | Function Level Reset (FLR) (continu… | 函数级复位 (FLR) (续) | p.769 |
-| 6.6.2 | Function Level Reset (FLR) (continu… | 函数级复位 (FLR) (续) | p.769 |
-| 6.6.2 | Function Level Reset (FLR) (continu… | 函数级复位 (FLR) (续) | p.769 |
-| 6.7 | PCI Express Native Hot-Plug | PCI Express 原生热插拔 (Hot-Plug) | p.771 |
-| 6.7.1 | Elements of Hot-Plug | 热插拔 (Hot-Plug) 元素 | p.772 |
-| 6.7.1.1 | Indicators | 指示灯 | p.773 |
-| 6.7.1.1.1 | Attention Indicator | 注意指示灯 | p.774 |
-| 6.7.1.1.2 | Power Indicator | 电源指示灯 | p.774 |
-| 6.7.1.2 | Manually-operated Retention Latch (… | 手动保持闩锁 (MRL) | p.774 |
-| 6.7.1.3 | MRL Sensor | MRL 传感器 | p.774 |
-| 6.7.1.4 | Electromechanical Interlock | 机电互锁 | p.774 |
-| 6.7.1.5 | Attention Button | 注意按钮 | p.775 |
-| 6.7.1.6 | Software User Interface | 软件用户界面 | p.775 |
-| 6.7.1.7 | Slot Numbering | 插槽编号 | p.776 |
-| 6.7.1.8 | Power Controller | 电源控制器 | p.776 |
-| 6.7.2 | Registers Grouped by Hot-Plug Eleme… | 按热插拔元素关联分组的寄存器 | p.777 |
-| 6.7.2.1 | Attention Button Registers | Attention Button 寄存器 | p.777 |
-| 6.7.2.2 | Attention Indicator Registers | Attention Indicator 寄存器 | p.777 |
-| 6.7.2.3 | Power Indicator Registers | Power Indicator 寄存器 | p.777 |
-| 6.7.2.4 | Power Controller Registers | Power Controller 寄存器 | p.777 |
-| 6.7.2.5 | Presence Detect Registers | Presence Detect 寄存器 | p.778 |
-| 6.7.2.6 | MRL Sensor Registers | MRL Sensor 寄存器 | p.778 |
-| 6.7.2.7 | Electromechanical Interlock Registe… | 机电互锁寄存器 | p.778 |
-| 6.7.2.8 | Command Completed Registers | Command Completed 寄存器 | p.778 |
-| 6.7.2.9 | Port Capabilities and Slot Informat… | 端口能力与插槽信息寄存器 | p.778 |
-| 6.7.2.10 | Hot-Plug Interrupt Control Register | 热插拔中断控制寄存器 | p.779 |
-| 6.7.3 | PCI Express Hot-Plug Events | PCI Express 热插拔事件 | p.779 |
-| 6.7.3.1 | Slot Events | 插槽事件 | p.779 |
-| 6.7.3.2 | Command Completed Events | 命令完成事件 | p.779 |
-| 6.7.3.3 | Data Link Layer State Changed Event… | 数据链路层状态变化事件 | p.780 |
-| 6.7.3.4 | Software Notification of Hot-Plug E… | 热插拔事件的软件通知 | p.780 |
-| 6.7.3.4 | Software Notification of Hot-Plug E… | 热插拔事件的软件通知 | p.782 |
-| 6.7.4 | System Firmware Intermediary (SFI) … | 系统固件中介 (SFI) 支持 | p.782 |
-| 6.7.4.1 | SFI ERR_COR Event Signaling | SFI ERR_COR 事件信令 | p.782 |
-| 6.7.4.2 | SFI Downstream Port Filtering (DPF) | SFI 下游端口过滤 (DPF) | p.782 |
-| 6.7.4.3 | SFI CAM | SFI CAM | p.782 |
-| 6.7.4.4 | SFI Interactions with Readiness Not… | SFI 与就绪通知的交互 | p.782 |
-| 6.7.4.5 | SFI Suppression of Hot-Plug Surpris… | SFI 对热插拔意外功能的抑制 | p.782 |
-| 6.7.5 | Firmware Support for Hot-Plug | 热插拔的固件支持 | p.782 |
-| 6.7.6 | Async Removal | 异步移除 | p.782 |
-| 6.8 | Power Budgeting Mechanism | 功率预算机制 | p.782 |
-| 6.8.1 | System Power Budgeting Process Reco… | 系统功率预算流程建议 | p.782 |
-| 6.8.2 | Device Power Considerations | 设备电源考量 | p.782 |
-| 6.8.3 | Power Limit Mechanisms | 电源限制机制 | p.782 |
-| 6.9 | Slot Power Limit Control | 插槽电源限制控制 | p.790 |
-| 6.10 | Root Complex Topology Discovery | 根复合体拓扑发现 | p.793 |
-| 6.11 | Link Speed Management | 链路速度管理 | p.795 |
-| 6.12 | Access Control Services (ACS) | 访问控制服务 (ACS) | p.795 |
-| 6.12.1 | ACS Component Capability Requiremen… | ACS 组件能力要求 | p.796 |
-| 6.12.1.1 | ACS Downstream Ports | ACS 下游端口 | p.796 |
-| 6.12.1.2 | ACS Functions in SR-IOV Capable and… | SR-IOV 与多功能设备中的 ACS 功能 | p.800 |
-| 6.12.1.3 | Functions in Single-Function Device… | 单功能设备中的 Function | p.800 |
-| 6.12.2 | Interoperability | 互操作性 | p.801 |
-| 6.12.3 | ACS Peer-to-Peer Control Interactio… | ACS 对等控制交互 | p.802 |
-| 6.12.4 | ACS Enhanced Capability | ACS 增强能力 | p.803 |
-| 6.12.5 | ACS Violation Error Handling | ACS 违规错误处理 | p.804 |
-| 6.12.5 | ACS Violation Error Handling (conti… | ACS 违规错误处理(续) | p.805 |
-| 6.12.6 | ACS Redirection Impacts on Ordering… | ACS 重定向对排序规则的影响 | p.805 |
-| 6.12.6.1 | Completions Passing Posted Requests | 完成报文超过 Posted 请求 | p.805 |
-| 6.12.6.2 | Requests Passing Posted Requests | 越过 Posted 请求的请求 | p.805 |
-| 6.13 | Alternative Routing-ID Interpretati… | 替代路由 ID 解释 (ARI) | p.807 |
-| 6.13 | Alternative Routing-ID Interpretati… | 替代路由 ID 解释 (ARI) — 续 | p.808 |
-| 6.13 | Alternative Routing-ID Interpretati… | 替代路由 ID 解释 (ARI) — 图 6-13 | p.809 |
-| 6.14 | Multicast Operations | 多播 (Multicast) 操作 | p.810 |
-| 6.14.1 | Multicast TLP Processing | 多播 TLP 处理 | p.810 |
-| 6.14.1 | Multicast TLP Processing — continue… | 多播 TLP 处理 — 续 | p.811 |
-| 6.14.1 | Multicast TLP Processing — continue… | 多播 TLP 处理 — 续 (2) | p.812 |
-| 6.14.3 | Multicast Capability Structure Fiel… | 多播能力结构字段更新 | p.813 |
-| 6.14.2 | Multicast Ordering | 多播排序 | p.813 |
-| 6.14.4 | MC Blocked TLP Processing | MC Blocked TLP 处理 | p.813 |
-| 6.14.5 | MC_Overlay Mechanism | MC_Overlay 机制 | p.813 |
-| 6.15 | Atomic Operations (AtomicOps) | 6.15 原子操作 (AtomicOps) | p.816 |
-| 6.15.1 | AtomicOp Use Models and Benefits | 6.15.1 AtomicOp 的使用模型与优势 | p.816 |
-| 6.15.2 | AtomicOp Transaction Protocol Summa… | 6.15.2 AtomicOp 事务协议摘要 | p.816 |
-| 6.15.3 | Root Complex Support for AtomicOps | 6.15.3 根复合体对 AtomicOp 的支持 | p.820 |
+|  | 6.1.2 | [PCI-compatible INTx Emulation](#sec-6-1-2) | [PCI 兼容的 INTx 仿真](#sec-6-1-2) | p.708 |
+|  | 6.1.3 | [INTx Emulation Software Model](#sec-6-1-3) | [INTx 仿真的软件模型](#sec-6-1-3) | p.708 |
+|  | 6.1.4 | [MSI and MSI-X Operation](#sec-6-1-4) | [MSI 与 MSI-X 操作](#sec-6-1-4) | p.708 |
+|  | 6.1.4.1 | [MSI Configuration](#sec-6-1-4-1) | [MSI 配置](#sec-6-1-4-1) | p.709 |
+|  | 6.1.4.2 | [MSI-X Configuration](#sec-6-1-4-2) | [MSI-X 配置](#sec-6-1-4-2) | p.710 |
+|  | 6.1.4.3 | [Enabling Operation](#sec-6-1-4-3) | [启用操作](#sec-6-1-4-3) | p.711 |
+|  | 6.1.4.4 | [Sending Messages](#sec-6-1-4-4) | [发送消息](#sec-6-1-4-4) | p.712 |
+|  | 6.1.4.5 | [Per-vector Masking and Function Mas…](#sec-6-1-4-5) | [每向量屏蔽与功能屏蔽](#sec-6-1-4-5) | p.712 |
+|  | 6.1.4.6 | [Hardware/Software Synchronization](#sec-6-1-4-6) | [硬件/软件同步](#sec-6-1-4-6) | p.713 |
+|  | 6.1.4.7 | [Message Transaction Reception and O…](#sec-6-1-4-7) | [消息事务的接收与排序要求](#sec-6-1-4-7) | p.715 |
+|  | 6.1.5 | [PME Support](#sec-6-1-5) | [PME 支持](#sec-6-1-5) | p.715 |
+|  | 6.1.6 | [Native PME Software Model](#sec-6-1-6) | [原生 PME 软件模型](#sec-6-1-6) | p.715 |
+|  | 6.1.7 | [Legacy PME Software Model](#sec-6-1-7) | [传统 PME 软件模型](#sec-6-1-7) | p.716 |
+|  | 6.1.8 | [Operating System Power Management N…](#sec-6-1-8) | [操作系统电源管理通知](#sec-6-1-8) | p.716 |
+|  | 6.1.9 | [PME Routing Between PCI Express and…](#sec-6-1-9) | [PCI Express 与 PCI 层级之间的 PME 路由](#sec-6-1-9) | p.716 |
+|  | 6.1.9 | [PME Routing Between PCI Express and…](#sec-6-1-9) | [PCI Express 与 PCI 层级之间的 PME 路由…](#sec-6-1-9) | p.717 |
+|  | 6.2 | [Error Signaling and Logging](#sec-6-2) | [错误信号与日志记录](#sec-6-2) | p.717 |
+|  | 6.2.1 | [Scope](#sec-6-2-1) | [范围](#sec-6-2-1) | p.717 |
+|  | 6.2.2 | [Error Classification](#sec-6-2-2) | [错误分类](#sec-6-2-2) | p.717 |
+|  | 6.2.2.1 | [Correctable Errors](#sec-6-2-2-1) | [可纠正错误](#sec-6-2-2-1) | p.718 |
+|  | 6.2.2.2 | [Uncorrectable Errors](#sec-6-2-2-2) | [不可纠正错误](#sec-6-2-2-2) | p.719 |
+|  | 6.2.2.2.1 | [Fatal Errors](#sec-6-2-2-2-1) | [致命错误](#sec-6-2-2-2-1) | p.719 |
+|  | 6.2.2.2.2 | [Non-Fatal Errors](#sec-6-2-2-2-2) | [非致命错误](#sec-6-2-2-2-2) | p.719 |
+|  | 6.2.3 | [Error Signaling](#sec-6-2-3) | [错误信号发送](#sec-6-2-3) | p.719 |
+|  | 6.2.3.1 | [Completion Status](#sec-6-2-3-1) | [完成状态](#sec-6-2-3-1) | p.719 |
+|  | 6.2.3.2 | [Error Messages](#sec-6-2-3-2) | [错误报文](#sec-6-2-3-2) | p.719 |
+|  | 6.2.3.2 | [Error Messages (continued)](#sec-6-2-3-2) | [错误报文(续)](#sec-6-2-3-2) | p.720 |
+|  | 6.2.3.2.1 | [Uncorrectable Error Severity Progra…](#sec-6-2-3-2-1) | [不可纠正错误严重性编程(高级错误报告)](#sec-6-2-3-2-1) | p.721 |
+|  | 6.2.3.2.2 | [Masking Individual Errors](#sec-6-2-3-2-2) | [单独掩码错误](#sec-6-2-3-2-2) | p.721 |
+|  | 6.2.3.2.3 | [Error Pollution](#sec-6-2-3-2-3) | [错误污染](#sec-6-2-3-2-3) | p.721 |
+|  | 6.2.3.2.3 | [Error Pollution (continued)](#sec-6-2-3-2-3) | [错误污染(续)](#sec-6-2-3-2-3) | p.722 |
+|  | 6.2.3.2.4 | [Advisory Non-Fatal Error Cases](#sec-6-2-3-2-4) | [建议性非致命错误情形](#sec-6-2-3-2-4) | p.722 |
+|  | 6.2.3.2.4.1 | [Completer Sending a Completion with…](#sec-6-2-3-2-4-1) | [完成者发送带有 UR/CA 状态的完成报文](#sec-6-2-3-2-4-1) | p.722 |
+|  | 6.2.3.2.4.1 | [Completer Sending a Completion with…](#sec-6-2-3-2-4-1) | [完成者发送带有 UR/CA 状态的完成报文(续)](#sec-6-2-3-2-4-1) | p.723 |
+|  | 6.2.3.2.4.2 | [Intermediate Receiver §](#sec-6-2-3-2-4-2) | [6.2.3.2.4.2 中间接收器 §](#sec-6-2-3-2-4-2) | p.723 |
+|  | 6.2.3.2.4.3 | [Ultimate PCI Express Receiver of a …](#sec-6-2-3-2-4-3) | [6.2.3.2.4.3 接收到中毒 TLP 或 PCRC 检…](#sec-6-2-3-2-4-3) | p.723 |
+|  | 6.2.3.2.4.4 | [Requester with Completion Timeout §](#sec-6-2-3-2-4-4) | [6.2.3.2.4.4 发生完成超时的请求者 §](#sec-6-2-3-2-4-4) | p.724 |
+|  | 6.2.3.2.4.5 | [Receiver of an Unexpected Completio…](#sec-6-2-3-2-4-5) | [6.2.3.2.4.5 意外完成报文的接收方 §](#sec-6-2-3-2-4-5) | p.724 |
+|  | 6.2.3.2.5 | [Requester Receiving a Completion wi…](#sec-6-2-3-2-5) | [6.2.3.2.5 接收到带有 UR/CA 状态完成报文的请…](#sec-6-2-3-2-5) | p.724 |
+|  | 6.2.3.3 | [Error Forwarding (Data Poisoning) §](#sec-6-2-3-3) | [6.2.3.3 错误转发 (数据中毒) §](#sec-6-2-3-3) | p.724 |
+|  | 6.2.3.4 | [Optional Error Checking §](#sec-6-2-3-4) | [6.2.3.4 可选错误检查 §](#sec-6-2-3-4) | p.724 |
+|  | 6.2.4 | [Error Logging §](#sec-6-2-4) | [6.2.4 错误日志记录 §](#sec-6-2-4) | p.725 |
+|  | 6.2.4.1 | [Root Complex Considerations (Advanc…](#sec-6-2-4-1) | [6.2.4.1 根复合体的相关考虑 (高级错误报告) §](#sec-6-2-4-1) | p.725 |
+|  | 6.2.4.1.1 | [Error Source Identification §](#sec-6-2-4-1-1) | [6.2.4.1.1 错误源识别 §](#sec-6-2-4-1-1) | p.726 |
+|  | 6.2.4.1.2 | [Interrupt Generation §](#sec-6-2-4-1-2) | [6.2.4.1.2 中断生成 §](#sec-6-2-4-1-2) | p.726 |
+|  | 6.2.4.2 | [Multiple Error Handling (Advanced E…](#sec-6-2-4-2) | [6.2.4.2 多错误处理 (高级错误报告扩展能力) §](#sec-6-2-4-2) | p.726 |
+|  | 6.2.4.2 | [Multiple Error Handling (continued)…](#sec-6-2-4-2) | [6.2.4.2 多错误处理 (续) §](#sec-6-2-4-2) | p.727 |
+|  | 6.2.4.2.1 | [Multiple Error Handling in VFs](#sec-6-2-4-2-1) | [多 VF 错误处理](#sec-6-2-4-2-1) | p.729 |
+|  | 6.2.4.3 | [Advisory Non-Fatal Error Logging](#sec-6-2-4-3) | [咨询性非致命错误日志记录](#sec-6-2-4-3) | p.729 |
+|  | 6.2.4.4 | [End-End TLP Prefix Logging - Non-Fl…](#sec-6-2-4-4) | [端到端 TLP 前缀日志记录 — 非 Flit 模式](#sec-6-2-4-4) | p.729 |
+|  | 6.2.5 | [Sequence of Device Error Signaling …](#sec-6-2-5) | [设备错误上报与日志记录操作顺序](#sec-6-2-5) | p.729 |
+|  | 6.2.6 | [Error Message Controls](#sec-6-2-6) | [错误报文 (Error Message) 控制](#sec-6-2-6) | p.733 |
+|  | 6.2.7 | [Error Listing and Rules](#sec-6-2-7) | [错误列表与规则](#sec-6-2-7) | p.734 |
+|  | 6.2.7 | [Error Listing and Rules (Table 6-5)](#sec-6-2-7) | [错误列表与规则(表 6-5)](#sec-6-2-7) | p.735 |
+|  | 6.2.7 | [Error Listing and Rules (Table 6-5,…](#sec-6-2-7) | [错误列表与规则(表 6-5,续)](#sec-6-2-7) | p.736 |
+|  | 6.2.7 | [Error Listing and Rules (Table 6-5,…](#sec-6-2-7) | [错误列表与规则(表 6-5,续 2)](#sec-6-2-7) | p.737 |
+|  | 6.2.7 | [Error Listing and Rules (Table 6-5,…](#sec-6-2-7) | [错误列表与规则(表 6-5,续 3)](#sec-6-2-7) | p.738 |
+|  | 6.2.7.1 | [Conventional PCI Mapping](#sec-6-2-7-1) | [传统 PCI 映射](#sec-6-2-7-1) | p.739 |
+|  | 6.2.8 | [Virtual PCI Bridge Error Handling](#sec-6-2-8) | [虚拟 PCI 桥错误处理](#sec-6-2-8) | p.739 |
+|  | 6.2.8.1 | [Error Message Forwarding and PCI Ma…](#sec-6-2-8-1) | [桥的错误报文转发与 PCI 映射 — 规则](#sec-6-2-8-1) | p.739 |
+|  | 6.2.8.1 | [Error Message Forwarding and PCI Ma…](#sec-6-2-8-1) | [桥的错误报文转发与 PCI 映射 — 规则(续)](#sec-6-2-8-1) | p.740 |
+|  | 6.2.9 | [SR-IOV Baseline Error Handling](#sec-6-2-9) | [SR-IOV 基线错误处理](#sec-6-2-9) | p.740 |
+|  | 6.2.10 | [Internal Errors](#sec-6-2-10) | [内部错误](#sec-6-2-10) | p.740 |
+|  | 6.2.11 | [Downstream Port Containment (DPC)](#sec-6-2-11) | [下游端口遏制 (DPC)](#sec-6-2-11) | p.741 |
+|  | 6.2.11 | [DPC 续](#sec-6-2-11) | [DPC(续):Non-Posted Request 响应选择…](#sec-6-2-11) | p.742 |
+|  | 6.2.11.1 | [DPC Interrupts](#sec-6-2-11-1) | [DPC 中断](#sec-6-2-11-1) | p.743 |
+|  | 6.2.11.2 | [DPC ERR_COR Signaling](#sec-6-2-11-2) | [DPC ERR_COR 信令](#sec-6-2-11-2) | p.744 |
+|  | 6.2.11.3 | [Root Port Programmed I/O (RP PIO) E…](#sec-6-2-11-3) | [根端口可编程 I/O (RP PIO) 错误控制](#sec-6-2-11-3) | p.745 |
+|  | 6.2.11.3 | [RP PIO Error Controls (续)](#sec-6-2-11-3) | [RP PIO 错误控制(续)](#sec-6-2-11-3) | p.746 |
+|  | 6.2.11.3 | [RP PIO Error Controls (SysError 与 E…](#sec-6-2-11-3) | [RP PIO 错误控制(SysError 与 Excepti…](#sec-6-2-11-3) | p.747 |
+|  | 6.2.11.4 | [Software Triggering of DPC](#sec-6-2-11-4) | [DPC 的软件触发](#sec-6-2-11-4) | p.748 |
+|  | 6.2.11.5 | [DL_ACTIVE ERR_COR Signaling](#sec-6-2-11-5) | [DL_ACTIVE ERR_COR 信令](#sec-6-2-11-5) | p.749 |
+|  | 6.2.11.5 | [DL_Active ERR_COR Signaling](#sec-6-2-11-5) | [DL_Active 正确错误（ERR_COR）信号](#sec-6-2-11-5) | p.749 |
+|  | 6.3 | [Virtual Channel Support](#sec-6-3) | [虚通道（VC）支持](#sec-6-3) | p.750 |
+|  | 6.3.1 | [Introduction and Scope](#sec-6-3-1) | [引言与范围](#sec-6-3-1) | p.750 |
+|  | 6.3.2 | [TC/VC Mapping and Example Usage](#sec-6-3-2) | [TC/VC 映射与使用示例](#sec-6-3-2) | p.750 |
+|  | 6.3.3 | [VC Arbitration](#sec-6-3-3) | [VC 仲裁](#sec-6-3-3) | p.751 |
+|  | 6.3.3.1 | [Traffic Flow and Switch Arbitration…](#sec-6-3-3-1) | [流量流与交换机仲裁模型](#sec-6-3-3-1) | p.751 |
+|  | 6.3.3.2 | [VC Arbitration - Arbitration Betwee…](#sec-6-3-3-2) | [VC 仲裁——VC 之间的仲裁](#sec-6-3-3-2) | p.755 |
+|  | 6.3.3.2.1 | [Strict Priority Arbitration Model](#sec-6-3-3-2-1) | [严格优先级仲裁模型](#sec-6-3-3-2-1) | p.755 |
+|  | 6.3.3.2.2 | [Round Robin Arbitration Model](#sec-6-3-3-2-2) | [轮询仲裁模型](#sec-6-3-3-2-2) | p.755 |
+|  | 6.3.3.3 | [Port Arbitration - Arbitration With…](#sec-6-3-3-3) | [端口仲裁 - VC 内部仲裁](#sec-6-3-3-3) | p.757 |
+|  | 6.3.3.4 | [Multi-Function Devices and Function…](#sec-6-3-3-4) | [多功能设备与功能仲裁](#sec-6-3-3-4) | p.757 |
+|  | 6.3.4 | [Isochronous Support](#sec-6-3-4) | [等时支持](#sec-6-3-4) | p.759 |
+|  | 6.3.4.1 | [Rules for Software Configuration](#sec-6-3-4-1) | [软件配置规则](#sec-6-3-4-1) | p.759 |
+|  | 6.5.1 | [Introduction](#sec-6-5-1) | [引言](#sec-6-5-1) | p.761 |
+|  | 6.5.2 | [Initiation and Propagation of Locke…](#sec-6-5-2) | [锁定事务的发起和传播 — 规则](#sec-6-5-2) | p.763 |
+|  | 6.5.3 | [Switches and Lock - Rules](#sec-6-5-3) | [交换机与锁 — 规则](#sec-6-5-3) | p.764 |
+|  | 6.5.4 | [PCI Express/PCI Bridges and Lock - …](#sec-6-5-4) | [PCI Express/PCI 桥与锁 — 规则](#sec-6-5-4) | p.764 |
+|  | 6.5.5 | [Root Complex and Lock - Rules](#sec-6-5-5) | [根复合体与锁 — 规则](#sec-6-5-5) | p.764 |
+|  | 6.5.6 | [Legacy Endpoints](#sec-6-5-6) | [传统端点](#sec-6-5-6) | p.765 |
+|  | 6.5.7 | [PCI Express Endpoints](#sec-6-5-7) | [PCI Express 端点](#sec-6-5-7) | p.765 |
+|  | 6.6 | [PCI Express Reset - Rules](#sec-6-6) | [PCI Express 复位 — 规则](#sec-6-6) | p.765 |
+|  | 6.6.1 | [Conventional Reset](#sec-6-6-1) | [常规复位](#sec-6-6-1) | p.765 |
+|  | 6.6.1 | [Conventional Reset (continued)](#sec-6-6-1) | [常规复位(续)](#sec-6-6-1) | p.766 |
+|  | 6.6.1 | [Conventional Reset (continued)](#sec-6-6-1) | [常规复位(续)](#sec-6-6-1) | p.767 |
+|  | 6.6.1 | [Conventional Reset (continued)](#sec-6-6-1) | [常规复位(续)](#sec-6-6-1) | p.768 |
+|  | 6.6.2 | [Function Level Reset (FLR)](#sec-6-6-2) | [函数级复位 (FLR)](#sec-6-6-2) | p.768 |
+|  | 6.6.2 | [Function Level Reset (FLR) (continu…](#sec-6-6-2) | [函数级复位 (FLR) (续)](#sec-6-6-2) | p.769 |
+|  | 6.6.2 | [Function Level Reset (FLR) (continu…](#sec-6-6-2) | [函数级复位 (FLR) (续)](#sec-6-6-2) | p.769 |
+|  | 6.6.2 | [Function Level Reset (FLR) (continu…](#sec-6-6-2) | [函数级复位 (FLR) (续)](#sec-6-6-2) | p.769 |
+|  | 6.7 | [PCI Express Native Hot-Plug](#sec-6-7) | [PCI Express 原生热插拔 (Hot-Plug)](#sec-6-7) | p.771 |
+|  | 6.7.1 | [Elements of Hot-Plug](#sec-6-7-1) | [热插拔 (Hot-Plug) 元素](#sec-6-7-1) | p.772 |
+|  | 6.7.1.1 | [Indicators](#sec-6-7-1-1) | [指示灯](#sec-6-7-1-1) | p.773 |
+|  | 6.7.1.1.1 | [Attention Indicator](#sec-6-7-1-1-1) | [注意指示灯](#sec-6-7-1-1-1) | p.774 |
+|  | 6.7.1.1.2 | [Power Indicator](#sec-6-7-1-1-2) | [电源指示灯](#sec-6-7-1-1-2) | p.774 |
+|  | 6.7.1.2 | [Manually-operated Retention Latch (…](#sec-6-7-1-2) | [手动保持闩锁 (MRL)](#sec-6-7-1-2) | p.774 |
+|  | 6.7.1.3 | [MRL Sensor](#sec-6-7-1-3) | [MRL 传感器](#sec-6-7-1-3) | p.774 |
+|  | 6.7.1.4 | [Electromechanical Interlock](#sec-6-7-1-4) | [机电互锁](#sec-6-7-1-4) | p.774 |
+|  | 6.7.1.5 | [Attention Button](#sec-6-7-1-5) | [注意按钮](#sec-6-7-1-5) | p.775 |
+|  | 6.7.1.6 | [Software User Interface](#sec-6-7-1-6) | [软件用户界面](#sec-6-7-1-6) | p.775 |
+|  | 6.7.1.7 | [Slot Numbering](#sec-6-7-1-7) | [插槽编号](#sec-6-7-1-7) | p.776 |
+|  | 6.7.1.8 | [Power Controller](#sec-6-7-1-8) | [电源控制器](#sec-6-7-1-8) | p.776 |
+|  | 6.7.2 | [Registers Grouped by Hot-Plug Eleme…](#sec-6-7-2) | [按热插拔元素关联分组的寄存器](#sec-6-7-2) | p.777 |
+|  | 6.7.2.1 | [Attention Button Registers](#sec-6-7-2-1) | [Attention Button 寄存器](#sec-6-7-2-1) | p.777 |
+|  | 6.7.2.2 | [Attention Indicator Registers](#sec-6-7-2-2) | [Attention Indicator 寄存器](#sec-6-7-2-2) | p.777 |
+|  | 6.7.2.3 | [Power Indicator Registers](#sec-6-7-2-3) | [Power Indicator 寄存器](#sec-6-7-2-3) | p.777 |
+|  | 6.7.2.4 | [Power Controller Registers](#sec-6-7-2-4) | [Power Controller 寄存器](#sec-6-7-2-4) | p.777 |
+|  | 6.7.2.5 | [Presence Detect Registers](#sec-6-7-2-5) | [Presence Detect 寄存器](#sec-6-7-2-5) | p.778 |
+|  | 6.7.2.6 | [MRL Sensor Registers](#sec-6-7-2-6) | [MRL Sensor 寄存器](#sec-6-7-2-6) | p.778 |
+|  | 6.7.2.7 | [Electromechanical Interlock Registe…](#sec-6-7-2-7) | [机电互锁寄存器](#sec-6-7-2-7) | p.778 |
+|  | 6.7.2.8 | [Command Completed Registers](#sec-6-7-2-8) | [Command Completed 寄存器](#sec-6-7-2-8) | p.778 |
+|  | 6.7.2.9 | [Port Capabilities and Slot Informat…](#sec-6-7-2-9) | [端口能力与插槽信息寄存器](#sec-6-7-2-9) | p.778 |
+|  | 6.7.2.10 | [Hot-Plug Interrupt Control Register](#sec-6-7-2-10) | [热插拔中断控制寄存器](#sec-6-7-2-10) | p.779 |
+|  | 6.7.3 | [PCI Express Hot-Plug Events](#sec-6-7-3) | [PCI Express 热插拔事件](#sec-6-7-3) | p.779 |
+|  | 6.7.3.1 | [Slot Events](#sec-6-7-3-1) | [插槽事件](#sec-6-7-3-1) | p.779 |
+|  | 6.7.3.2 | [Command Completed Events](#sec-6-7-3-2) | [命令完成事件](#sec-6-7-3-2) | p.779 |
+|  | 6.7.3.3 | [Data Link Layer State Changed Event…](#sec-6-7-3-3) | [数据链路层状态变化事件](#sec-6-7-3-3) | p.780 |
+|  | 6.7.3.4 | [Software Notification of Hot-Plug E…](#sec-6-7-3-4) | [热插拔事件的软件通知](#sec-6-7-3-4) | p.780 |
+|  | 6.7.3.4 | [Software Notification of Hot-Plug E…](#sec-6-7-3-4) | [热插拔事件的软件通知](#sec-6-7-3-4) | p.782 |
+|  | 6.7.4 | [System Firmware Intermediary (SFI) …](#sec-6-7-4) | [系统固件中介 (SFI) 支持](#sec-6-7-4) | p.782 |
+|  | 6.7.4.1 | [SFI ERR_COR Event Signaling](#sec-6-7-4-1) | [SFI ERR_COR 事件信令](#sec-6-7-4-1) | p.782 |
+|  | 6.7.4.2 | [SFI Downstream Port Filtering (DPF)](#sec-6-7-4-2) | [SFI 下游端口过滤 (DPF)](#sec-6-7-4-2) | p.782 |
+|  | 6.7.4.3 | [SFI CAM](#sec-6-7-4-3) | [SFI CAM](#sec-6-7-4-3) | p.782 |
+|  | 6.7.4.4 | [SFI Interactions with Readiness Not…](#sec-6-7-4-4) | [SFI 与就绪通知的交互](#sec-6-7-4-4) | p.782 |
+|  | 6.7.4.5 | [SFI Suppression of Hot-Plug Surpris…](#sec-6-7-4-5) | [SFI 对热插拔意外功能的抑制](#sec-6-7-4-5) | p.782 |
+|  | 6.7.5 | [Firmware Support for Hot-Plug](#sec-6-7-5) | [热插拔的固件支持](#sec-6-7-5) | p.782 |
+|  | 6.7.6 | [Async Removal](#sec-6-7-6) | [异步移除](#sec-6-7-6) | p.782 |
+|  | 6.8 | [Power Budgeting Mechanism](#sec-6-8) | [功率预算机制](#sec-6-8) | p.782 |
+|  | 6.8.1 | [System Power Budgeting Process Reco…](#sec-6-8-1) | [系统功率预算流程建议](#sec-6-8-1) | p.782 |
+|  | 6.8.2 | [Device Power Considerations](#sec-6-8-2) | [设备电源考量](#sec-6-8-2) | p.782 |
+|  | 6.8.3 | [Power Limit Mechanisms](#sec-6-8-3) | [电源限制机制](#sec-6-8-3) | p.782 |
+|  | 6.9 | [Slot Power Limit Control](#sec-6-9) | [插槽电源限制控制](#sec-6-9) | p.790 |
+|  | 6.10 | [Root Complex Topology Discovery](#sec-6-10) | [根复合体拓扑发现](#sec-6-10) | p.793 |
+|  | 6.11 | [Link Speed Management](#sec-6-11) | [链路速度管理](#sec-6-11) | p.795 |
+|  | 6.12 | [Access Control Services (ACS)](#sec-6-12) | [访问控制服务 (ACS)](#sec-6-12) | p.795 |
+|  | 6.12.1 | [ACS Component Capability Requiremen…](#sec-6-12-1) | [ACS 组件能力要求](#sec-6-12-1) | p.796 |
+|  | 6.12.1.1 | [ACS Downstream Ports](#sec-6-12-1-1) | [ACS 下游端口](#sec-6-12-1-1) | p.796 |
+|  | 6.12.1.2 | [ACS Functions in SR-IOV Capable and…](#sec-6-12-1-2) | [SR-IOV 与多功能设备中的 ACS 功能](#sec-6-12-1-2) | p.800 |
+|  | 6.12.1.3 | [Functions in Single-Function Device…](#sec-6-12-1-3) | [单功能设备中的 Function](#sec-6-12-1-3) | p.800 |
+|  | 6.12.2 | [Interoperability](#sec-6-12-2) | [互操作性](#sec-6-12-2) | p.801 |
+|  | 6.12.3 | [ACS Peer-to-Peer Control Interactio…](#sec-6-12-3) | [ACS 对等控制交互](#sec-6-12-3) | p.802 |
+|  | 6.12.4 | [ACS Enhanced Capability](#sec-6-12-4) | [ACS 增强能力](#sec-6-12-4) | p.803 |
+|  | 6.12.5 | [ACS Violation Error Handling](#sec-6-12-5) | [ACS 违规错误处理](#sec-6-12-5) | p.804 |
+|  | 6.12.5 | [ACS Violation Error Handling (conti…](#sec-6-12-5) | [ACS 违规错误处理(续)](#sec-6-12-5) | p.805 |
+|  | 6.12.6 | [ACS Redirection Impacts on Ordering…](#sec-6-12-6) | [ACS 重定向对排序规则的影响](#sec-6-12-6) | p.805 |
+|  | 6.12.6.1 | [Completions Passing Posted Requests](#sec-6-12-6-1) | [完成报文超过 Posted 请求](#sec-6-12-6-1) | p.805 |
+|  | 6.12.6.2 | [Requests Passing Posted Requests](#sec-6-12-6-2) | [越过 Posted 请求的请求](#sec-6-12-6-2) | p.805 |
+|  | 6.13 | [Alternative Routing-ID Interpretati…](#sec-6-13) | [替代路由 ID 解释 (ARI)](#sec-6-13) | p.807 |
+|  | 6.13 | [Alternative Routing-ID Interpretati…](#sec-6-13) | [替代路由 ID 解释 (ARI) — 续](#sec-6-13) | p.808 |
+|  | 6.13 | [Alternative Routing-ID Interpretati…](#sec-6-13) | [替代路由 ID 解释 (ARI) — 图 6-13](#sec-6-13) | p.809 |
+|  | 6.14 | [Multicast Operations](#sec-6-14) | [多播 (Multicast) 操作](#sec-6-14) | p.810 |
+|  | 6.14.1 | [Multicast TLP Processing](#sec-6-14-1) | [多播 TLP 处理](#sec-6-14-1) | p.810 |
+|  | 6.14.1 | [Multicast TLP Processing — continue…](#sec-6-14-1) | [多播 TLP 处理 — 续](#sec-6-14-1) | p.811 |
+|  | 6.14.1 | [Multicast TLP Processing — continue…](#sec-6-14-1) | [多播 TLP 处理 — 续 (2)](#sec-6-14-1) | p.812 |
+|  | 6.14.3 | [Multicast Capability Structure Fiel…](#sec-6-14-3) | [多播能力结构字段更新](#sec-6-14-3) | p.813 |
+|  | 6.14.2 | [Multicast Ordering](#sec-6-14-2) | [多播排序](#sec-6-14-2) | p.813 |
+|  | 6.14.4 | [MC Blocked TLP Processing](#sec-6-14-4) | [MC Blocked TLP 处理](#sec-6-14-4) | p.813 |
+|  | 6.14.5 | [MC_Overlay Mechanism](#sec-6-14-5) | [MC_Overlay 机制](#sec-6-14-5) | p.813 |
+|  | 6.15 | [Atomic Operations (AtomicOps)](#sec-6-15) | [6.15 原子操作 (AtomicOps)](#sec-6-15) | p.816 |
+|  | 6.15.1 | [AtomicOp Use Models and Benefits](#sec-6-15-1) | [6.15.1 AtomicOp 的使用模型与优势](#sec-6-15-1) | p.816 |
+|  | 6.15.2 | [AtomicOp Transaction Protocol Summa…](#sec-6-15-2) | [6.15.2 AtomicOp 事务协议摘要](#sec-6-15-2) | p.816 |
+|  | 6.15.3 | [Root Complex Support for AtomicOps](#sec-6-15-3) | [6.15.3 根复合体对 AtomicOp 的支持](#sec-6-15-3) | p.820 |
 | 6.15.3.1 | Root Ports with AtomicOp Completer … |  | p.820 |
 | 6.15.3.2 | Root Ports with AtomicOp Routing Ca… |  | p.820 |
 | 6.15.3.1 | 具有 AtomicOp 完成者能力的根端口 |  | p.820 |
 | 6.15.3.2 | 具有 AtomicOp 路由能力的根端口 |  | p.820 |
-| 6.15.3.3 | RCs with AtomicOp Requester Capabil… | 支持 AtomicOp 请求者能力的根复合体 | p.820 |
-| 6.15.4 | Switch Support for AtomicOps | 交换机对 AtomicOp 的支持 | p.820 |
-| 6.16 | Dynamic Power Allocation (DPA) Capa… | 动态功率分配 (DPA) 能力 | p.821 |
-| 6.16.1 | DPA Capability with Multi-Function … | 多功能设备的 DPA Capability | p.822 |
-| 6.17 | TLP Processing Hints (TPH) | TLP 处理提示 (TPH) | p.822 |
-| 6.17.1 | Processing Hints | 处理提示 | p.822 |
-| 6.17.2 | Steering Tags | 转向标签 | p.823 |
-| 6.17.3 | ST Modes of Operation | ST 操作模式 | p.823 |
-| 6.17.4 | TPH Capability | TPH 能力 | p.824 |
-| 6.18 | Latency Tolerance Reporting (LTR) M… | 延迟容忍度报告 (LTR) 机制 | p.824 |
-| 6.19 | Optimized Buffer Flush/Fill (OBFF) … | 优化缓冲区刷新/填充 (OBFF) 机制 | p.829 |
-| 6.19.1 | OBFF Variation A and Variation B | OBFF 变体 A 与变体 B | p.831 |
-| 6.20 | PASID | PASID (进程地址空间标识符) | p.832 |
-| 6.20.1 | Managing PASID Usage | PASID 使用管理 | p.832 |
-| 6.20.2 | PASID Information Layout | PASID 信息布局 | p.832 |
-| 6.20.2.3 | Execute Requested | Execute Requested (请求执行权限) | p.835 |
-| 6.20.2.4 | Privileged Mode Requested | Privileged Mode Requested (请求特… | p.836 |
-| 6.20.2.4 | Privileged Mode Requested | 特权模式请求 | p.836 |
-| 6.21 | Precision Time Measurement (PTM) Me… | 精确时间测量 (PTM) 机制 | p.837 |
-| 6.21.1 | Introduction | 概述 | p.837 |
-| 6.21.2 | PTM Link Protocol | PTM 链路协议 | p.838 |
-| 6.21.3 | Configuration and Operational Requi… | 配置与运行要求 | p.842 |
-| 6.21.3.1 | PTM Requester Role | PTM 请求者角色 | p.843 |
-| 6.21.3.2 | PTM Responder Role | PTM 响应者角色 | p.845 |
-| 6.21.3.3 | PTM Time Source Role - Rules Specif… | PTM 时间源角色 — 交换机特定规则 | p.846 |
-| 6.22 | Readiness Notifications (RN) | 就绪通知 (RN) | p.847 |
-| 6.22.1 | Device Readiness Status (DRS) | 设备就绪状态 (DRS) | p.850 |
-| 6.22.2 | Function Readiness Status (FRS) | Function 就绪状态 (FRS) | p.850 |
-| 6.22.3 | FRS Queuing | FRS 队列 | p.850 |
-| 6.23 | Enhanced Allocation | 增强分配 (EA) | p.850 |
-| 6.24 | Emergency Power Reduction State | 紧急降功耗状态 | p.850 |
-| 6.25 | Hierarchy ID Message | 层级 ID 报文 | p.850 |
-| 6.26 | Flattening Portal Bridge (FPB) | 扁平化门户桥 (FPB) | p.850 |
-| 6.26.1 | Introduction | 概述 | p.850 |
-| 6.26.2 | Hardware and Software Requirements | 硬件与软件要求 | p.865 |
-| 6.26.2 | (续) FPB RID 机制规则 | FPB RID Mechanism Rules | p.867 |
-| 6.26.2 | (续) Switch 上游端口相关 FPB 规则 | FPB Rules for Switch Upstream … | p.868 |
-| 6.26.2 | (续) FPB MEM Low 机制规则 | FPB MEM Low Mechanism Rules | p.869 |
-| 6.26.2 | (续) FPB MEM High 机制规则 | FPB MEM High Mechanism Rules | p.870 |
-| 6.26.2 | (续) 实现说明:FPB 地址解码 | IMPLEMENTATION NOTE: FPB ADDRE… | p.871 |
-| 6.26.2 | (续) 实现说明:FPB 的硬件与软件考量 | IMPLEMENTATION NOTE: HARDWARE … | p.872 |
-| 6.27 | Vital Product Data (VPD) | 重要产品数据 (VPD) | p.873 |
-| 6.27 | (续) VPD 标签与示例 | VPD Tags and Example | p.873 |
-| 6.27.1 | VPD Format | VPD 格式 | p.874 |
-| 6.27.2 | VPD Definitions | VPD 定义 | p.875 |
-| 6.27.2.1 | VPD Large and Small Resource Data T… | VPD 大资源和小资源数据标签 | p.875 |
-| 6.27.2.2 | Read-Only Fields | 只读字段 | p.875 |
-| 6.27.2.3 | Read/Write Fields | 读/写字段 | p.877 |
-| 6.27.2.4 | VPD Example | VPD 示例 | p.877 |
-| 6.28 | Native PCIe Enclosure Management | 原生 PCIe 机箱管理 | p.878 |
-| 6.29 | Conventional PCI Advanced Features … | 传统 PCI 高级特性操作 | p.883 |
-| 6.30 | Data Object Exchange (DOE) | 数据对象交换 (DOE) | p.884 |
-| 6.30.1 | Data Objects and Features | 数据对象与特性 | p.888 |
-| 6.30.1.1 | DOE Discovery Feature | DOE 发现功能 | p.890 |
-| 6.30.1.1 | DOE Discovery Feature (4th DW) | DOE 发现功能（第 4 个 DW） | p.892 |
-| 6.30.1.2 | DOE Async Message | DOE 异步消息 | p.893 |
-| 6.30.2 | Operation | 运行 | p.894 |
-| 6.30.3 | Interrupt Generation | 中断生成 | p.896 |
-| 6.31 | Component Measurement and Authentic… | 组件度量与认证 (CMA-SPDM) | p.897 |
-| 6.31.1 | Removed | 6.31.1 已删除 | p.903 |
-| 6.31.2 | Removed | 已移除 | p.903 |
-| 6.31.3 | CMA-SPDM Rules | CMA-SPDM 规则 | p.903 |
-| 6.31.4 | Secured CMA-SPDM | 安全 CMA-SPDM | p.905 |
-| 6.32 | Deferrable Memory Write | 可延迟内存写 (DMWr) | p.906 |
-| 6.33 | Integrity & Data Encryption (IDE) | 完整性与数据加密 (IDE) | p.911 |
-| 6.33.1 | IDE Stream and TEE State Machines | IDE 流与 TEE 状态机 | p.915 |
-| 6.33.2 | IDE Stream Establishment | IDE 流建立 | p.918 |
-| 6.33.3 | IDE Key Management (IDE_KM) | IDE 密钥管理 (IDE_KM) | p.919 |
-| 6.33.4 | IDE TLPs | IDE TLP | p.929 |
-| 6.33.5 | IDE TLP Sub-Streams | IDE TLP 子流 | p.945 |
-| 6.33.6 | IDE TLP Aggregation | IDE TLP 聚合 | p.950 |
-| 6.33.7 | Flow-Through Selective IDE Streams | Flow-Through Selective IDE Str… | p.950 |
-| 6.33.8 | Other IDE Rules | 其他 IDE 规则 | p.950 |
-| 6.34 | Unordered IO (UIO) | 无序 IO (UIO) | p.955 |
-| 6.34.1 | UIO Rules | UIO 规则 | p.955 |
-| 6.35 | MMIO Register Blocks | MMIO 寄存器块 | p.955 |
-| 6.35.1 | MMIO Capabilities Register Block (M… | MMIO 能力寄存器块 (MCAP) | p.955 |
-| 6.35.1.1 | MCAP Array Register (Offset 00h) | MCAP 数组寄存器 (偏移 00h) | p.955 |
-| 6.35.1.2 | MCAP Header Register Block (Offset … | MCAP 头寄存器块 (偏移可变) | p.955 |
-| 6.35.1.3 | MMIO Mailbox Capability (MMB) (Offs… | MMIO 邮箱能力 (MMB) (偏移: 可变) | p.955 |
-| 6.35.1.3.1 | MMB Operation | MMB 操作 | p.955 |
-| 6.35.1.3.2 | MMB Registers | MMB 寄存器 | p.955 |
-| 6.35.1.3.2.1 | MMB Capabilities Register (Offset 0… | MMB 能力寄存器 (偏移 00h) | p.955 |
-| 6.35.1.3.2.2 | MMB Control Register (Offset 04h) | MMB 控制寄存器 (偏移 04h) | p.955 |
-| 6.35.1.3.2.2 | MMB Control Register (Offset 04h) | MMB 控制寄存器（偏移量 04h） | p.955 |
-| 6.35.1.3.2.3 | MMB Command Register (Offset 08h) | MMB 命令寄存器（偏移量 08h） | p.967 |
-| 6.35.1.3.2.4 | MMB Status Register (Offset 10h) | MMB 状态寄存器（偏移量 10h） | p.968 |
-| 6.35.1.3.2.4.1 | MMB Command Return Codes | MMB 命令返回代码 | p.969 |
-| 6.35.1.3.2.5 | MMB Payload Registers (Offset 20h) | MMB 有效负载寄存器（偏移量 20h） | p.969 |
-| 6.35.1.4 | Management Message Passthrough (MMP… | Management Message Passthrough… | p.970 |
-| 6.35.1.4.1 | MMPT Registers | MMPT 寄存器 | p.970 |
-| 6.35.1.4.1.1 | MMPT Capabilities Register (Offset … | MMPT 能力寄存器（偏移量 00h） | p.970 |
-| 6.35.1.4.1.2 | MMPT Control Register (Offset 04h) | MMPT 控制寄存器（偏移量 04h） | p.971 |
-| 6.35.1.4.1.3 | MMPT Receive Message Notification R… | MMPT 接收消息通知寄存器（偏移量 08h） | p.972 |
-| 6.35.2 | MMIO Designated Vendor-Specific Reg… | MMIO 指定供应商特定寄存器块（MDVS） | p.973 |
-| 6.35.2.1 | MDVS Register Block Header Register… | MDVS 寄存器块头寄存器 1（偏移量 00h） | p.973 |
-| 6.35.3 | MDVS Register Block Header Register… | MDVS 寄存器块头部寄存器 2（偏移 04h） | p.974 |
-| 6.35.4 | MDVS Register Block Header Register… | MDVS 寄存器块头部寄存器 3（偏移 08h） | p.974 |
-| 6.36 | MMB Command Interface | MMB 命令接口 | p.975 |
-| 6.36.1 | Management Message Passthrough (MMP… | 管理消息透传（MMPT） | p.975 |
-| 6.36.1.1 | MMPT Send Message (Opcode 0100h) | MMPT 发送消息（操作码 0100h） | p.976 |
-| 6.36.1.1.1 | MMPT Send Message Operation | MMPT 发送消息操作 | p.977 |
-| 6.36.1.2 | MMPT Receive Message (Opcode 0101h) | MMPT 接收消息（操作码 0101h） | p.978 |
-| 6.36.1.2.1 | MMPT Receive Message Operation | MMPT 接收消息操作 | p.979 |
+|  | 6.15.3.3 | [RCs with AtomicOp Requester Capabil…](#sec-6-15-3-3) | [支持 AtomicOp 请求者能力的根复合体](#sec-6-15-3-3) | p.820 |
+|  | 6.15.4 | [Switch Support for AtomicOps](#sec-6-15-4) | [交换机对 AtomicOp 的支持](#sec-6-15-4) | p.820 |
+|  | 6.16 | [Dynamic Power Allocation (DPA) Capa…](#sec-6-16) | [动态功率分配 (DPA) 能力](#sec-6-16) | p.821 |
+|  | 6.16.1 | [DPA Capability with Multi-Function …](#sec-6-16-1) | [多功能设备的 DPA Capability](#sec-6-16-1) | p.822 |
+|  | 6.17 | [TLP Processing Hints (TPH)](#sec-6-17) | [TLP 处理提示 (TPH)](#sec-6-17) | p.822 |
+|  | 6.17.1 | [Processing Hints](#sec-6-17-1) | [处理提示](#sec-6-17-1) | p.822 |
+|  | 6.17.2 | [Steering Tags](#sec-6-17-2) | [转向标签](#sec-6-17-2) | p.823 |
+|  | 6.17.3 | [ST Modes of Operation](#sec-6-17-3) | [ST 操作模式](#sec-6-17-3) | p.823 |
+|  | 6.17.4 | [TPH Capability](#sec-6-17-4) | [TPH 能力](#sec-6-17-4) | p.824 |
+|  | 6.18 | [Latency Tolerance Reporting (LTR) M…](#sec-6-18) | [延迟容忍度报告 (LTR) 机制](#sec-6-18) | p.824 |
+|  | 6.19 | [Optimized Buffer Flush/Fill (OBFF) …](#sec-6-19) | [优化缓冲区刷新/填充 (OBFF) 机制](#sec-6-19) | p.829 |
+|  | 6.19.1 | [OBFF Variation A and Variation B](#sec-6-19-1) | [OBFF 变体 A 与变体 B](#sec-6-19-1) | p.831 |
+|  | 6.20 | [PASID](#sec-6-20) | [PASID (进程地址空间标识符)](#sec-6-20) | p.832 |
+|  | 6.20.1 | [Managing PASID Usage](#sec-6-20-1) | [PASID 使用管理](#sec-6-20-1) | p.832 |
+|  | 6.20.2 | [PASID Information Layout](#sec-6-20-2) | [PASID 信息布局](#sec-6-20-2) | p.832 |
+|  | 6.20.2.3 | [Execute Requested](#sec-6-20-2-3) | [Execute Requested (请求执行权限)](#sec-6-20-2-3) | p.835 |
+|  | 6.20.2.4 | [Privileged Mode Requested](#sec-6-20-2-4) | [Privileged Mode Requested (请求特…](#sec-6-20-2-4) | p.836 |
+|  | 6.20.2.4 | [Privileged Mode Requested](#sec-6-20-2-4) | [特权模式请求](#sec-6-20-2-4) | p.836 |
+|  | 6.21 | [Precision Time Measurement (PTM) Me…](#sec-6-21) | [精确时间测量 (PTM) 机制](#sec-6-21) | p.837 |
+|  | 6.21.1 | [Introduction](#sec-6-21-1) | [概述](#sec-6-21-1) | p.837 |
+|  | 6.21.2 | [PTM Link Protocol](#sec-6-21-2) | [PTM 链路协议](#sec-6-21-2) | p.838 |
+|  | 6.21.3 | [Configuration and Operational Requi…](#sec-6-21-3) | [配置与运行要求](#sec-6-21-3) | p.842 |
+|  | 6.21.3.1 | [PTM Requester Role](#sec-6-21-3-1) | [PTM 请求者角色](#sec-6-21-3-1) | p.843 |
+|  | 6.21.3.2 | [PTM Responder Role](#sec-6-21-3-2) | [PTM 响应者角色](#sec-6-21-3-2) | p.845 |
+|  | 6.21.3.3 | [PTM Time Source Role - Rules Specif…](#sec-6-21-3-3) | [PTM 时间源角色 — 交换机特定规则](#sec-6-21-3-3) | p.846 |
+|  | 6.22 | [Readiness Notifications (RN)](#sec-6-22) | [就绪通知 (RN)](#sec-6-22) | p.847 |
+|  | 6.22.1 | [Device Readiness Status (DRS)](#sec-6-22-1) | [设备就绪状态 (DRS)](#sec-6-22-1) | p.850 |
+|  | 6.22.2 | [Function Readiness Status (FRS)](#sec-6-22-2) | [Function 就绪状态 (FRS)](#sec-6-22-2) | p.850 |
+|  | 6.22.3 | [FRS Queuing](#sec-6-22-3) | [FRS 队列](#sec-6-22-3) | p.850 |
+|  | 6.23 | [Enhanced Allocation](#sec-6-23) | [增强分配 (EA)](#sec-6-23) | p.850 |
+|  | 6.24 | [Emergency Power Reduction State](#sec-6-24) | [紧急降功耗状态](#sec-6-24) | p.850 |
+|  | 6.25 | [Hierarchy ID Message](#sec-6-25) | [层级 ID 报文](#sec-6-25) | p.850 |
+|  | 6.26 | [Flattening Portal Bridge (FPB)](#sec-6-26) | [扁平化门户桥 (FPB)](#sec-6-26) | p.850 |
+|  | 6.26.1 | [Introduction](#sec-6-26-1) | [概述](#sec-6-26-1) | p.850 |
+|  | 6.26.2 | [Hardware and Software Requirements](#sec-6-26-2) | [硬件与软件要求](#sec-6-26-2) | p.865 |
+|  | 6.26.2 | [(续) FPB RID 机制规则](#sec-6-26-2) | [FPB RID Mechanism Rules](#sec-6-26-2) | p.867 |
+|  | 6.26.2 | [(续) Switch 上游端口相关 FPB 规则](#sec-6-26-2) | [FPB Rules for Switch Upstream …](#sec-6-26-2) | p.868 |
+|  | 6.26.2 | [(续) FPB MEM Low 机制规则](#sec-6-26-2) | [FPB MEM Low Mechanism Rules](#sec-6-26-2) | p.869 |
+|  | 6.26.2 | [(续) FPB MEM High 机制规则](#sec-6-26-2) | [FPB MEM High Mechanism Rules](#sec-6-26-2) | p.870 |
+|  | 6.26.2 | [(续) 实现说明:FPB 地址解码](#sec-6-26-2) | [IMPLEMENTATION NOTE: FPB ADDRE…](#sec-6-26-2) | p.871 |
+|  | 6.26.2 | [(续) 实现说明:FPB 的硬件与软件考量](#sec-6-26-2) | [IMPLEMENTATION NOTE: HARDWARE …](#sec-6-26-2) | p.872 |
+|  | 6.27 | [Vital Product Data (VPD)](#sec-6-27) | [重要产品数据 (VPD)](#sec-6-27) | p.873 |
+|  | 6.27 | [(续) VPD 标签与示例](#sec-6-27) | [VPD Tags and Example](#sec-6-27) | p.873 |
+|  | 6.27.1 | [VPD Format](#sec-6-27-1) | [VPD 格式](#sec-6-27-1) | p.874 |
+|  | 6.27.2 | [VPD Definitions](#sec-6-27-2) | [VPD 定义](#sec-6-27-2) | p.875 |
+|  | 6.27.2.1 | [VPD Large and Small Resource Data T…](#sec-6-27-2-1) | [VPD 大资源和小资源数据标签](#sec-6-27-2-1) | p.875 |
+|  | 6.27.2.2 | [Read-Only Fields](#sec-6-27-2-2) | [只读字段](#sec-6-27-2-2) | p.875 |
+|  | 6.27.2.3 | [Read/Write Fields](#sec-6-27-2-3) | [读/写字段](#sec-6-27-2-3) | p.877 |
+|  | 6.27.2.4 | [VPD Example](#sec-6-27-2-4) | [VPD 示例](#sec-6-27-2-4) | p.877 |
+|  | 6.28 | [Native PCIe Enclosure Management](#sec-6-28) | [原生 PCIe 机箱管理](#sec-6-28) | p.878 |
+|  | 6.29 | [Conventional PCI Advanced Features …](#sec-6-29) | [传统 PCI 高级特性操作](#sec-6-29) | p.883 |
+|  | 6.30 | [Data Object Exchange (DOE)](#sec-6-30) | [数据对象交换 (DOE)](#sec-6-30) | p.884 |
+|  | 6.30.1 | [Data Objects and Features](#sec-6-30-1) | [数据对象与特性](#sec-6-30-1) | p.888 |
+|  | 6.30.1.1 | [DOE Discovery Feature](#sec-6-30-1-1) | [DOE 发现功能](#sec-6-30-1-1) | p.890 |
+|  | 6.30.1.1 | [DOE Discovery Feature (4th DW)](#sec-6-30-1-1) | [DOE 发现功能（第 4 个 DW）](#sec-6-30-1-1) | p.892 |
+|  | 6.30.1.2 | [DOE Async Message](#sec-6-30-1-2) | [DOE 异步消息](#sec-6-30-1-2) | p.893 |
+|  | 6.30.2 | [Operation](#sec-6-30-2) | [运行](#sec-6-30-2) | p.894 |
+|  | 6.30.3 | [Interrupt Generation](#sec-6-30-3) | [中断生成](#sec-6-30-3) | p.896 |
+|  | 6.31 | [Component Measurement and Authentic…](#sec-6-31) | [组件度量与认证 (CMA-SPDM)](#sec-6-31) | p.897 |
+|  | 6.31.1 | [Removed](#sec-6-31-1) | [6.31.1 已删除](#sec-6-31-1) | p.903 |
+|  | 6.31.2 | [Removed](#sec-6-31-2) | [已移除](#sec-6-31-2) | p.903 |
+|  | 6.31.3 | [CMA-SPDM Rules](#sec-6-31-3) | [CMA-SPDM 规则](#sec-6-31-3) | p.903 |
+|  | 6.31.4 | [Secured CMA-SPDM](#sec-6-31-4) | [安全 CMA-SPDM](#sec-6-31-4) | p.905 |
+|  | 6.32 | [Deferrable Memory Write](#sec-6-32) | [可延迟内存写 (DMWr)](#sec-6-32) | p.906 |
+|  | 6.33 | [Integrity & Data Encryption (IDE)](#sec-6-33) | [完整性与数据加密 (IDE)](#sec-6-33) | p.911 |
+|  | 6.33.1 | [IDE Stream and TEE State Machines](#sec-6-33-1) | [IDE 流与 TEE 状态机](#sec-6-33-1) | p.915 |
+|  | 6.33.2 | [IDE Stream Establishment](#sec-6-33-2) | [IDE 流建立](#sec-6-33-2) | p.918 |
+|  | 6.33.3 | [IDE Key Management (IDE_KM)](#sec-6-33-3) | [IDE 密钥管理 (IDE_KM)](#sec-6-33-3) | p.919 |
+|  | 6.33.4 | [IDE TLPs](#sec-6-33-4) | [IDE TLP](#sec-6-33-4) | p.929 |
+|  | 6.33.5 | [IDE TLP Sub-Streams](#sec-6-33-5) | [IDE TLP 子流](#sec-6-33-5) | p.945 |
+|  | 6.33.6 | [IDE TLP Aggregation](#sec-6-33-6) | [IDE TLP 聚合](#sec-6-33-6) | p.950 |
+|  | 6.33.7 | [Flow-Through Selective IDE Streams](#sec-6-33-7) | [Flow-Through Selective IDE Str…](#sec-6-33-7) | p.950 |
+|  | 6.33.8 | [Other IDE Rules](#sec-6-33-8) | [其他 IDE 规则](#sec-6-33-8) | p.950 |
+|  | 6.34 | [Unordered IO (UIO)](#sec-6-34) | [无序 IO (UIO)](#sec-6-34) | p.955 |
+|  | 6.34.1 | [UIO Rules](#sec-6-34-1) | [UIO 规则](#sec-6-34-1) | p.955 |
+|  | 6.35 | [MMIO Register Blocks](#sec-6-35) | [MMIO 寄存器块](#sec-6-35) | p.955 |
+|  | 6.35.1 | [MMIO Capabilities Register Block (M…](#sec-6-35-1) | [MMIO 能力寄存器块 (MCAP)](#sec-6-35-1) | p.955 |
+|  | 6.35.1.1 | [MCAP Array Register (Offset 00h)](#sec-6-35-1-1) | [MCAP 数组寄存器 (偏移 00h)](#sec-6-35-1-1) | p.955 |
+|  | 6.35.1.2 | [MCAP Header Register Block (Offset …](#sec-6-35-1-2) | [MCAP 头寄存器块 (偏移可变)](#sec-6-35-1-2) | p.955 |
+|  | 6.35.1.3 | [MMIO Mailbox Capability (MMB) (Offs…](#sec-6-35-1-3) | [MMIO 邮箱能力 (MMB) (偏移: 可变)](#sec-6-35-1-3) | p.955 |
+|  | 6.35.1.3.1 | [MMB Operation](#sec-6-35-1-3-1) | [MMB 操作](#sec-6-35-1-3-1) | p.955 |
+|  | 6.35.1.3.2 | [MMB Registers](#sec-6-35-1-3-2) | [MMB 寄存器](#sec-6-35-1-3-2) | p.955 |
+|  | 6.35.1.3.2.1 | [MMB Capabilities Register (Offset 0…](#sec-6-35-1-3-2-1) | [MMB 能力寄存器 (偏移 00h)](#sec-6-35-1-3-2-1) | p.955 |
+|  | 6.35.1.3.2.2 | [MMB Control Register (Offset 04h)](#sec-6-35-1-3-2-2) | [MMB 控制寄存器 (偏移 04h)](#sec-6-35-1-3-2-2) | p.955 |
+|  | 6.35.1.3.2.2 | [MMB Control Register (Offset 04h)](#sec-6-35-1-3-2-2) | [MMB 控制寄存器（偏移量 04h）](#sec-6-35-1-3-2-2) | p.955 |
+|  | 6.35.1.3.2.3 | [MMB Command Register (Offset 08h)](#sec-6-35-1-3-2-3) | [MMB 命令寄存器（偏移量 08h）](#sec-6-35-1-3-2-3) | p.967 |
+|  | 6.35.1.3.2.4 | [MMB Status Register (Offset 10h)](#sec-6-35-1-3-2-4) | [MMB 状态寄存器（偏移量 10h）](#sec-6-35-1-3-2-4) | p.968 |
+|  | 6.35.1.3.2.4.1 | [MMB Command Return Codes](#sec-6-35-1-3-2-4-1) | [MMB 命令返回代码](#sec-6-35-1-3-2-4-1) | p.969 |
+|  | 6.35.1.3.2.5 | [MMB Payload Registers (Offset 20h)](#sec-6-35-1-3-2-5) | [MMB 有效负载寄存器（偏移量 20h）](#sec-6-35-1-3-2-5) | p.969 |
+|  | 6.35.1.4 | [Management Message Passthrough (MMP…](#sec-6-35-1-4) | [Management Message Passthrough…](#sec-6-35-1-4) | p.970 |
+|  | 6.35.1.4.1 | [MMPT Registers](#sec-6-35-1-4-1) | [MMPT 寄存器](#sec-6-35-1-4-1) | p.970 |
+|  | 6.35.1.4.1.1 | [MMPT Capabilities Register (Offset …](#sec-6-35-1-4-1-1) | [MMPT 能力寄存器（偏移量 00h）](#sec-6-35-1-4-1-1) | p.970 |
+|  | 6.35.1.4.1.2 | [MMPT Control Register (Offset 04h)](#sec-6-35-1-4-1-2) | [MMPT 控制寄存器（偏移量 04h）](#sec-6-35-1-4-1-2) | p.971 |
+|  | 6.35.1.4.1.3 | [MMPT Receive Message Notification R…](#sec-6-35-1-4-1-3) | [MMPT 接收消息通知寄存器（偏移量 08h）](#sec-6-35-1-4-1-3) | p.972 |
+|  | 6.35.2 | [MMIO Designated Vendor-Specific Reg…](#sec-6-35-2) | [MMIO 指定供应商特定寄存器块（MDVS）](#sec-6-35-2) | p.973 |
+|  | 6.35.2.1 | [MDVS Register Block Header Register…](#sec-6-35-2-1) | [MDVS 寄存器块头寄存器 1（偏移量 00h）](#sec-6-35-2-1) | p.973 |
+|  | 6.35.3 | [MDVS Register Block Header Register…](#sec-6-35-3) | [MDVS 寄存器块头部寄存器 2（偏移 04h）](#sec-6-35-3) | p.974 |
+|  | 6.35.4 | [MDVS Register Block Header Register…](#sec-6-35-4) | [MDVS 寄存器块头部寄存器 3（偏移 08h）](#sec-6-35-4) | p.974 |
+|  | 6.36 | [MMB Command Interface](#sec-6-36) | [MMB 命令接口](#sec-6-36) | p.975 |
+|  | 6.36.1 | [Management Message Passthrough (MMP…](#sec-6-36-1) | [管理消息透传（MMPT）](#sec-6-36-1) | p.975 |
+|  | 6.36.1.1 | [MMPT Send Message (Opcode 0100h)](#sec-6-36-1-1) | [MMPT 发送消息（操作码 0100h）](#sec-6-36-1-1) | p.976 |
+|  | 6.36.1.1.1 | [MMPT Send Message Operation](#sec-6-36-1-1-1) | [MMPT 发送消息操作](#sec-6-36-1-1-1) | p.977 |
+|  | 6.36.1.2 | [MMPT Receive Message (Opcode 0101h)](#sec-6-36-1-2) | [MMPT 接收消息（操作码 0101h）](#sec-6-36-1-2) | p.978 |
+|  | 6.36.1.2.1 | [MMPT Receive Message Operation](#sec-6-36-1-2-1) | [MMPT 接收消息操作](#sec-6-36-1-2-1) | p.979 |
 
 ## 🖼 本章图表 (Figures)
 

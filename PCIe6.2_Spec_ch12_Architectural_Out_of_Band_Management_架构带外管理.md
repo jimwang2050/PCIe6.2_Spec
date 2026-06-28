@@ -13,57 +13,57 @@
 
 | # | Section | 小节 | Page |
 |:-:|:--------|:-----|:----:|
-| 12.1 | Introduction | 引言 | p.1659 |
-| 12.2 | Framework for Sidebands | 边带框架 | p.1660 |
-| 12.3 | Sideband Signaling Mechanisms | 边带信令机制 | p.1660 |
-| 12.3.1 | Discrete Sidebands | 离散边带 | p.1660 |
-| 12.3.2 | Flex I/O Sidebands | 灵活 I/O (Flex I/O) 边带 | p.1661 |
-| 12.3.2.1 | Flex I/O Default State Guidelines | 12.3.2.1 Flex I/O 默认状态指南 | p.1661 |
-| 12.3.2.2 | Flex I/O Discovery Phase Guidelines | 12.3.2.2 Flex I/O 发现阶段指南 | p.1662 |
-| 12.3.2.3 | Flex I/O Compatibility Check Guidel… | 12.3.2.3 Flex I/O 兼容性检查指南 | p.1662 |
-| 12.3.2.4 | Flex I/O Control Negotiation Guidel… | 12.3.2.4 Flex I/O 控制协商指南 | p.1662 |
-| 12.3.2.5 | General Flex I/O Control Guidelines | 12.3.2.5 Flex I/O 一般控制指南 | p.1663 |
-| 12.3.3 | Peripheral Sideband Tunnelling Inte… | 12.3.3 外设边带隧道接口 (PESTI) 边带 | p.1663 |
-| 12.3.3.1 | PESTI Introduction | 12.3.3.1 PESTI 简介 | p.1663 |
-| 12.3.3.2 | PESTI Physical Interface | 12.3.3.2 PESTI 物理接口 | p.1664 |
-| 12.3.3.3 | PESTI Electrical Circuit | 12.3.3.3 PESTI 电气电路 | p.1664 |
-| 12.3.3.4 | PESTI DC Specifications | 12.3.3.4 PESTI 直流规范 | p.1665 |
-| 12.3.3.5 | PESTI Target Detection | 12.3.3.5 PESTI 目标检测 | p.1665 |
-| 12.3.3.6 | PESTI Protocol Commands | 12.3.3.6 PESTI 协议命令 | p.1665 |
-| 12.3.3.6.1 | Discovery Payload Request (DPR) | 12.3.3.6.1 发现有效负载请求 (DPR) | p.1666 |
-| 12.3.3.6.2 | PESTI Virtual Wire Exchange (VWE) | 12.3.3.6.2 PESTI 虚拟线缆交换 (VWE) | p.1666 |
-| 12.3.3.6.3 | PESTI Fanout MUX Control | 12.3.3.6.3 PESTI 扇出 MUX 控制 | p.1667 |
-| 12.3.3.7 | PESTI Initiator Abort | 12.3.3.7 PESTI 发起者中止 | p.1667 |
-| 12.3.3.8 | PESTI Broadcast | 12.3.3.8 PESTI 广播 | p.1667 |
-| 12.3.3.9 | PESTI Initiator Control and Status … | 12.3.3.9 PESTI 发起者控制和状态寄存器 | p.1667 |
-| 12.3.3.10 | PESTI AC Specifications | 12.3.3.10 PESTI 交流规范 | p.1668 |
-| 12.3.3.11 | PESTI Discovery Phase | 12.3.3.11 PESTI 发现阶段 | p.1669 |
-| 12.3.3.12 | PESTI Active Phase | 12.3.3.12 PESTI 活动阶段 | p.1671 |
-| 12.3.3.13 | PESTI Target Reset and Fault Handli… | 12.3.3.13 PESTI 目标复位和故障处理 | p.1672 |
-| 12.3.3.14 | PESTI Fan-Out | 12.3.3.14 PESTI 扇出 | p.1672 |
-| 12.3.3.15 | PESTI Security Considerations | 12.3.3.15 PESTI 安全注意事项 | p.1673 |
-| 12.4 | Managed USB 2.0 | 12.4 托管 USB 2.0 | p.1674 |
-| 12.5 | 2-Wire Interface | 12.5 两线制 (2-Wire) 接口 | p.1675 |
-| 12.5.1 | 2-Wire Interface Use Cases | 12.5.1 2 线接口用例 | p.1675 |
-| 12.5.2 | 2-Wire Addressing | 12.5.2 2 线寻址 | p.1675 |
-| 12.5.3 | 2-wire Bus Sharing | 12.5.3 2 线总线共享 | p.1677 |
-| 12.5.3.1 | 2-wire Multi-Drop Topology | 12.5.3.1 2 线多点拓扑 | p.1677 |
-| 12.5.3.2 | SMBus MUX Use | 12.5.3.2 SMBus MUX 使用 | p.1677 |
-| 12.5.3.3 | 2-wire Hub Use | 12.5.3.3 2 线 Hub 使用 | p.1678 |
-| 12.5.4 | [I3C-Basic] Support on Existing SMB… | 12.5.4 现有 SMBus 信号上的 [I3C-Basi… | p.1678 |
-| 12.5.4.1 | I3C Basic Overview | 12.5.4.1 I3C Basic 概述 | p.1678 |
-| 12.5.4.2 | I3C Basic Discovery and Mode Changi… | 12.5.4.2 I3C Basic 发现和模式更改 | p.1679 |
-| 12.5.4.3 | I3C Basic DC and AC Signal Requirem… | 12.5.4.3 I3C Basic 直流和交流信号要求 | p.1679 |
-| 12.6 | Field Replacement Unit (FRU) Inform… | 12.6 现场可更换单元 (FRU) 信息 | p.1680 |
-| 12.6.1 | FRU Information Device Requirements | 12.6.1 FRU 信息设备要求 | p.1680 |
-| 12.6.1.1 | FRU Information Device Requirements… | 12.6.1.1 特定于 SMBus/I2C 模式的 FRU… | p.1681 |
-| 12.6.1.2 | [SMBus]/[I2C] Access Protocol | 12.6.1.2 [SMBus]/[I2C] 访问协议 | p.1682 |
-| 12.6.2 | FRU Information Format | 12.6.2 FRU 信息格式 | p.1682 |
-| 12.6.3 | Common PCI-SIG MultiRecord Descript… | 12.6.3 通用 PCI-SIG MultiRecord … | p.1684 |
-| 12.6.3.1 | Connector Subdivision (Group ID 0h,… | 12.6.3.1 连接器细分(组 ID 0h,子类型 0h) | p.1684 |
-| 12.7 | Out-of-Band Control Mechanism | 12.7 带外控制机制 | p.1686 |
-| 12.8 | Retimer Management | 12.8 Retimer (重定时器) 管理 | p.1687 |
-| 12.9 | Internal Cable Management | 12.9 内部线缆管理 | p.1687 |
+|  | 12.1 | [Introduction](#sec-12-1) | [引言](#sec-12-1) | p.1659 |
+|  | 12.2 | [Framework for Sidebands](#sec-12-2) | [边带框架](#sec-12-2) | p.1660 |
+|  | 12.3 | [Sideband Signaling Mechanisms](#sec-12-3) | [边带信令机制](#sec-12-3) | p.1660 |
+|  | 12.3.1 | [Discrete Sidebands](#sec-12-3-1) | [离散边带](#sec-12-3-1) | p.1660 |
+|  | 12.3.2 | [Flex I/O Sidebands](#sec-12-3-2) | [灵活 I/O (Flex I/O) 边带](#sec-12-3-2) | p.1661 |
+|  | 12.3.2.1 | [Flex I/O Default State Guidelines](#sec-12-3-2-1) | [12.3.2.1 Flex I/O 默认状态指南](#sec-12-3-2-1) | p.1661 |
+|  | 12.3.2.2 | [Flex I/O Discovery Phase Guidelines](#sec-12-3-2-2) | [12.3.2.2 Flex I/O 发现阶段指南](#sec-12-3-2-2) | p.1662 |
+|  | 12.3.2.3 | [Flex I/O Compatibility Check Guidel…](#sec-12-3-2-3) | [12.3.2.3 Flex I/O 兼容性检查指南](#sec-12-3-2-3) | p.1662 |
+|  | 12.3.2.4 | [Flex I/O Control Negotiation Guidel…](#sec-12-3-2-4) | [12.3.2.4 Flex I/O 控制协商指南](#sec-12-3-2-4) | p.1662 |
+|  | 12.3.2.5 | [General Flex I/O Control Guidelines](#sec-12-3-2-5) | [12.3.2.5 Flex I/O 一般控制指南](#sec-12-3-2-5) | p.1663 |
+|  | 12.3.3 | [Peripheral Sideband Tunnelling Inte…](#sec-12-3-3) | [12.3.3 外设边带隧道接口 (PESTI) 边带](#sec-12-3-3) | p.1663 |
+|  | 12.3.3.1 | [PESTI Introduction](#sec-12-3-3-1) | [12.3.3.1 PESTI 简介](#sec-12-3-3-1) | p.1663 |
+|  | 12.3.3.2 | [PESTI Physical Interface](#sec-12-3-3-2) | [12.3.3.2 PESTI 物理接口](#sec-12-3-3-2) | p.1664 |
+|  | 12.3.3.3 | [PESTI Electrical Circuit](#sec-12-3-3-3) | [12.3.3.3 PESTI 电气电路](#sec-12-3-3-3) | p.1664 |
+|  | 12.3.3.4 | [PESTI DC Specifications](#sec-12-3-3-4) | [12.3.3.4 PESTI 直流规范](#sec-12-3-3-4) | p.1665 |
+|  | 12.3.3.5 | [PESTI Target Detection](#sec-12-3-3-5) | [12.3.3.5 PESTI 目标检测](#sec-12-3-3-5) | p.1665 |
+|  | 12.3.3.6 | [PESTI Protocol Commands](#sec-12-3-3-6) | [12.3.3.6 PESTI 协议命令](#sec-12-3-3-6) | p.1665 |
+|  | 12.3.3.6.1 | [Discovery Payload Request (DPR)](#sec-12-3-3-6-1) | [12.3.3.6.1 发现有效负载请求 (DPR)](#sec-12-3-3-6-1) | p.1666 |
+|  | 12.3.3.6.2 | [PESTI Virtual Wire Exchange (VWE)](#sec-12-3-3-6-2) | [12.3.3.6.2 PESTI 虚拟线缆交换 (VWE)](#sec-12-3-3-6-2) | p.1666 |
+|  | 12.3.3.6.3 | [PESTI Fanout MUX Control](#sec-12-3-3-6-3) | [12.3.3.6.3 PESTI 扇出 MUX 控制](#sec-12-3-3-6-3) | p.1667 |
+|  | 12.3.3.7 | [PESTI Initiator Abort](#sec-12-3-3-7) | [12.3.3.7 PESTI 发起者中止](#sec-12-3-3-7) | p.1667 |
+|  | 12.3.3.8 | [PESTI Broadcast](#sec-12-3-3-8) | [12.3.3.8 PESTI 广播](#sec-12-3-3-8) | p.1667 |
+|  | 12.3.3.9 | [PESTI Initiator Control and Status …](#sec-12-3-3-9) | [12.3.3.9 PESTI 发起者控制和状态寄存器](#sec-12-3-3-9) | p.1667 |
+|  | 12.3.3.10 | [PESTI AC Specifications](#sec-12-3-3-10) | [12.3.3.10 PESTI 交流规范](#sec-12-3-3-10) | p.1668 |
+|  | 12.3.3.11 | [PESTI Discovery Phase](#sec-12-3-3-11) | [12.3.3.11 PESTI 发现阶段](#sec-12-3-3-11) | p.1669 |
+|  | 12.3.3.12 | [PESTI Active Phase](#sec-12-3-3-12) | [12.3.3.12 PESTI 活动阶段](#sec-12-3-3-12) | p.1671 |
+|  | 12.3.3.13 | [PESTI Target Reset and Fault Handli…](#sec-12-3-3-13) | [12.3.3.13 PESTI 目标复位和故障处理](#sec-12-3-3-13) | p.1672 |
+|  | 12.3.3.14 | [PESTI Fan-Out](#sec-12-3-3-14) | [12.3.3.14 PESTI 扇出](#sec-12-3-3-14) | p.1672 |
+|  | 12.3.3.15 | [PESTI Security Considerations](#sec-12-3-3-15) | [12.3.3.15 PESTI 安全注意事项](#sec-12-3-3-15) | p.1673 |
+|  | 12.4 | [Managed USB 2.0](#sec-12-4) | [12.4 托管 USB 2.0](#sec-12-4) | p.1674 |
+|  | 12.5 | [2-Wire Interface](#sec-12-5) | [12.5 两线制 (2-Wire) 接口](#sec-12-5) | p.1675 |
+|  | 12.5.1 | [2-Wire Interface Use Cases](#sec-12-5-1) | [12.5.1 2 线接口用例](#sec-12-5-1) | p.1675 |
+|  | 12.5.2 | [2-Wire Addressing](#sec-12-5-2) | [12.5.2 2 线寻址](#sec-12-5-2) | p.1675 |
+|  | 12.5.3 | [2-wire Bus Sharing](#sec-12-5-3) | [12.5.3 2 线总线共享](#sec-12-5-3) | p.1677 |
+|  | 12.5.3.1 | [2-wire Multi-Drop Topology](#sec-12-5-3-1) | [12.5.3.1 2 线多点拓扑](#sec-12-5-3-1) | p.1677 |
+|  | 12.5.3.2 | [SMBus MUX Use](#sec-12-5-3-2) | [12.5.3.2 SMBus MUX 使用](#sec-12-5-3-2) | p.1677 |
+|  | 12.5.3.3 | [2-wire Hub Use](#sec-12-5-3-3) | [12.5.3.3 2 线 Hub 使用](#sec-12-5-3-3) | p.1678 |
+|  | 12.5.4 | [[I3C-Basic] Support on Existing SMB…](#sec-12-5-4) | [12.5.4 现有 SMBus 信号上的 [I3C-Basi…](#sec-12-5-4) | p.1678 |
+|  | 12.5.4.1 | [I3C Basic Overview](#sec-12-5-4-1) | [12.5.4.1 I3C Basic 概述](#sec-12-5-4-1) | p.1678 |
+|  | 12.5.4.2 | [I3C Basic Discovery and Mode Changi…](#sec-12-5-4-2) | [12.5.4.2 I3C Basic 发现和模式更改](#sec-12-5-4-2) | p.1679 |
+|  | 12.5.4.3 | [I3C Basic DC and AC Signal Requirem…](#sec-12-5-4-3) | [12.5.4.3 I3C Basic 直流和交流信号要求](#sec-12-5-4-3) | p.1679 |
+|  | 12.6 | [Field Replacement Unit (FRU) Inform…](#sec-12-6) | [12.6 现场可更换单元 (FRU) 信息](#sec-12-6) | p.1680 |
+|  | 12.6.1 | [FRU Information Device Requirements](#sec-12-6-1) | [12.6.1 FRU 信息设备要求](#sec-12-6-1) | p.1680 |
+|  | 12.6.1.1 | [FRU Information Device Requirements…](#sec-12-6-1-1) | [12.6.1.1 特定于 SMBus/I2C 模式的 FRU…](#sec-12-6-1-1) | p.1681 |
+|  | 12.6.1.2 | [[SMBus]/[I2C] Access Protocol](#sec-12-6-1-2) | [12.6.1.2 [SMBus]/[I2C] 访问协议](#sec-12-6-1-2) | p.1682 |
+|  | 12.6.2 | [FRU Information Format](#sec-12-6-2) | [12.6.2 FRU 信息格式](#sec-12-6-2) | p.1682 |
+|  | 12.6.3 | [Common PCI-SIG MultiRecord Descript…](#sec-12-6-3) | [12.6.3 通用 PCI-SIG MultiRecord …](#sec-12-6-3) | p.1684 |
+|  | 12.6.3.1 | [Connector Subdivision (Group ID 0h,…](#sec-12-6-3-1) | [12.6.3.1 连接器细分(组 ID 0h,子类型 0h)](#sec-12-6-3-1) | p.1684 |
+|  | 12.7 | [Out-of-Band Control Mechanism](#sec-12-7) | [12.7 带外控制机制](#sec-12-7) | p.1686 |
+|  | 12.8 | [Retimer Management](#sec-12-8) | [12.8 Retimer (重定时器) 管理](#sec-12-8) | p.1687 |
+|  | 12.9 | [Internal Cable Management](#sec-12-9) | [12.9 内部线缆管理](#sec-12-9) | p.1687 |
 
 ## 🖼 本章图表 (Figures)
 

@@ -13,23 +13,23 @@
 
 | # | Section | 小节 | Page |
 |:-:|:--------|:-----|:----:|
-| 3.1 | Data Link Layer Overview | 数据链路层概述 | p.309 |
-| 3.2 | Data Link Control and Management St… | 数据链路控制与管理状态机 | p.312 |
-| 3.2.1 | Data Link Control and Management St… | 数据链路控制与管理状态机规则 | p.312 |
-| 3.3 | Data Link Feature Exchange | 数据链路特性交换 | p.313 |
-| 3.4 | Flow Control Initialization Protoco… | 流控初始化协议 | p.313 |
-| 3.4.1 | Flow Control Initialization State M… | 流控初始化状态机规则 | p.313 |
-| 3.4.2 | Scaled Flow Control | 缩放流控 (Scaled Flow Control) | p.333 |
-| 3.5 | Data Link Layer Packets (DLLPs) | 数据链路层包 (DLLP) | p.333 |
-| 3.5.1 | Data Link Layer Packet Rules | 数据链路层包规则 | p.333 |
-| 3.6 | Data Integrity Mechanisms | 数据完整性机制 | p.348 |
-| 3.6.1 | Introduction | 引言 | p.348 |
-| 3.6.2 | LCRC, Sequence Number, and Retry Ma… | LCRC、序列号与重试管理(TLP 发送器) | p.348 |
-| 3.6.2.1 | LCRC and Sequence Number Rules (TLP… | LCRC 和序列号规则(TLP 发送器) | p.348 |
-| 3.6.2.2 | Handling of Received DLLPs (Non-Fli… | 已接收 DLLP 的处理(非 Flit 模式) | p.348 |
-| 3.6.2.3 | Handling of Received DLLPs (Flit Mo… | 已接收 DLLP 的处理(Flit 模式) | p.348 |
-| 3.6.3 | LCRC and Sequence Number (TLP Recei… | LCRC 和序列号(TLP 接收器)(非 Flit 模式) | p.348 |
-| 3.6.3.1 | LCRC and Sequence Number Rules (TLP… | LCRC 和序列号规则(TLP 接收器) | p.348 |
+|  | 3.1 | [Data Link Layer Overview](#sec-3-1) | [数据链路层概述](#sec-3-1) | p.309 |
+|  | 3.2 | [Data Link Control and Management St…](#sec-3-2) | [数据链路控制与管理状态机](#sec-3-2) | p.312 |
+|  | 3.2.1 | [Data Link Control and Management St…](#sec-3-2-1) | [数据链路控制与管理状态机规则](#sec-3-2-1) | p.312 |
+|  | 3.3 | [Data Link Feature Exchange](#sec-3-3) | [数据链路特性交换](#sec-3-3) | p.313 |
+|  | 3.4 | [Flow Control Initialization Protoco…](#sec-3-4) | [流控初始化协议](#sec-3-4) | p.313 |
+|  | 3.4.1 | [Flow Control Initialization State M…](#sec-3-4-1) | [流控初始化状态机规则](#sec-3-4-1) | p.313 |
+|  | 3.4.2 | [Scaled Flow Control](#sec-3-4-2) | [缩放流控 (Scaled Flow Control)](#sec-3-4-2) | p.333 |
+|  | 3.5 | [Data Link Layer Packets (DLLPs)](#sec-3-5) | [数据链路层包 (DLLP)](#sec-3-5) | p.333 |
+|  | 3.5.1 | [Data Link Layer Packet Rules](#sec-3-5-1) | [数据链路层包规则](#sec-3-5-1) | p.333 |
+|  | 3.6 | [Data Integrity Mechanisms](#sec-3-6) | [数据完整性机制](#sec-3-6) | p.348 |
+|  | 3.6.1 | [Introduction](#sec-3-6-1) | [引言](#sec-3-6-1) | p.348 |
+|  | 3.6.2 | [LCRC, Sequence Number, and Retry Ma…](#sec-3-6-2) | [LCRC、序列号与重试管理(TLP 发送器)](#sec-3-6-2) | p.348 |
+|  | 3.6.2.1 | [LCRC and Sequence Number Rules (TLP…](#sec-3-6-2-1) | [LCRC 和序列号规则(TLP 发送器)](#sec-3-6-2-1) | p.348 |
+|  | 3.6.2.2 | [Handling of Received DLLPs (Non-Fli…](#sec-3-6-2-2) | [已接收 DLLP 的处理(非 Flit 模式)](#sec-3-6-2-2) | p.348 |
+|  | 3.6.2.3 | [Handling of Received DLLPs (Flit Mo…](#sec-3-6-2-3) | [已接收 DLLP 的处理(Flit 模式)](#sec-3-6-2-3) | p.348 |
+|  | 3.6.3 | [LCRC and Sequence Number (TLP Recei…](#sec-3-6-3) | [LCRC 和序列号(TLP 接收器)(非 Flit 模式)](#sec-3-6-3) | p.348 |
+|  | 3.6.3.1 | [LCRC and Sequence Number Rules (TLP…](#sec-3-6-3-1) | [LCRC 和序列号规则(TLP 接收器)](#sec-3-6-3-1) | p.348 |
 
 ## 🖼 本章图表 (Figures)
 

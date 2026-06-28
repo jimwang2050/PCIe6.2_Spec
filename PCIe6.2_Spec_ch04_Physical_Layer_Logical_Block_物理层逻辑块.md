@@ -13,274 +13,274 @@
 
 | # | Section | 小节 | Page |
 |:-:|:--------|:-----|:----:|
-| 4.1 | Introduction § | 概述 § | p.351 |
-| 4.2 | Logical Sub-block § | 逻辑子块 § | p.351 |
-| 4.2.1 | 8b/10b Encoding for 2.5 GT/s and 5.… | 2.5 GT/s 与 5.0 GT/s 数据速率下的 8b/… | p.353 |
-| 4.2.1.1 | Symbol Encoding § | 符号编码 § | p.353 |
-| 4.2.1.1.1 | Serialization and De-serialization … | 数据的串行化与解串行化 § | p.354 |
-| 4.2.1.1.2 | Special Symbols for Framing and Lin… | 成帧与链路管理的特殊符号 (K 码) § | p.355 |
-| 4.2.1.1.3 | 8b/10b Decode Rules § | 8b/10b 解码规则 § | p.355 |
-| 4.2.1.2 | Framing and Application of Symbols … | 符号的成帧与到通道的应用 § | p.357 |
-| 4.2.1.2.1 | Framing and Application of Symbols … | 非 Flit 模式下 TLP 和 DLLP 的成帧与到通道的… | p.357 |
-| 4.2.1.3 | Data Scrambling § | 数据加扰 § | p.360 |
-| 4.2.2 | 128b/130b Encoding for 8.0 GT/s, 16… | 8.0 GT/s、16.0 GT/s 与 32.0 GT/s… | p.361 |
-| 4.2.2.1 | Lane Level Encoding | 通道级编码 | p.362 |
-| 4.2.2.2 | Ordered Set Blocks | 有序集块 | p.362 |
-| 4.2.2.2.1 | Block Alignment | 块对齐 | p.362 |
-| 4.2.2.3 | Data Blocks | 数据块 | p.362 |
-| 4.2.2.3.1 | Framing Tokens in Non-Flit-Mode | 非 Flit 模式下的帧定界符 | p.362 |
-| 4.2.2.3.2 | Transmitter Framing Requirements in… | 非 Flit 模式下的发送器帧定界要求 | p.369 |
-| 4.2.2.3.3 | Receiver Framing Requirements in No… | 非 Flit 模式下的接收器帧定界要求 | p.370 |
-| 4.2.2.3.4 | Receiver Framing Requirements in Fl… | Flit 模式下的接收器帧定界要求 | p.372 |
-| 4.2.2.3.5 | Recovery from Framing Errors in Non… | 非 Flit 模式与 Flit 模式下的帧错误恢复 | p.373 |
-| 4.2.2.4 | Scrambling in Non-Flit Mode and Fli… | 非 Flit 模式与 Flit 模式下的加扰 | p.373 |
-| 4.2.2.5 | Precoding | 预编码 (Precoding) | p.378 |
-| 4.2.2.5.1 | Precoding at 32.0 GT/s Data Rate | 32.0 GT/s 数据速率下的预编码 | p.380 |
-| 4.2.2.6 | Loopback with 128b/130b Code in Non… | 非 Flit 模式与 Flit 模式下使用 128b/130… | p.380 |
-| 4.2.3 | Flit Mode Operation | Flit 模式操作 | p.380 |
-| 4.2.3.1 | 1b/1b Encoding for 64.0 GT/s and hi… | 64.0 GT/s 及更高数据速率下的 1b/1b 编码 | p.380 |
-| 4.2.3.1.1 | PAM4 Signaling | PAM4（四电平脉冲幅度调制）信令 | p.384 |
-| 4.2.3.1.2 | 1b/1b Scrambling | 1b/1b 加扰 | p.384 |
-| 4.2.3.1.3 | Gray Coding at 64.0 GT/s and Higher… | 64.0 GT/s 及更高数据速率下的格雷编码 | p.384 |
-| 4.2.3.1.4 | Precoding at 64.0 GT/s and Higher D… | 64.0 GT/s 及更高数据速率下的预编码 | p.384 |
-| 4.2.3.1.5 | Ordered Set Blocks at 64.0 GT/s and… | 64.0 GT/s 及更高数据速率下的有序集块 | p.384 |
-| 4.2.3.1.6 | Alignment at Block/Flit Level for 1… | 1b/1b 编码下的块/Flit 级对齐 | p.384 |
-| 4.2.3.2 | Processing of Ordered Sets During F… | Flit 模式数据流中有序集的处理 | p.384 |
-| 4.2.3.3 | Data Stream in Flit Mode | Flit 模式数据流 | p.384 |
-| 4.2.3.4 | Bytes in Flit Layout | Flit 布局中的字节 | p.384 |
-| 4.2.3.4.1 | TLP Bytes in Flit | Flit 中的 TLP 字节 | p.384 |
-| 4.2.3.4.2 | DLP Bytes in Flit | Flit 中的 DLP 字节 | p.403 |
-| 4.2.3.4.2.1 | Flit Sequence Number and Retry Mech… | Flit 序列号与重传机制 | p.407 |
-| 4.2.3.4.2.1.1 | IDLE Flit Handshake Phase | IDLE Flit 握手阶段 | p.413 |
-| 4.2.3.4.2.1.2 | Sequence Number Handshake Phase | 序列号握手阶段 | p.413 |
-| 4.2.3.4.2.1.3 | Normal Flit Exchange Phase | 正常 Flit 交换阶段 | p.415 |
-| 4.2.3.4.2.1.4 | Received Ack and Nak Processing | 已接收 Ack 与 Nak 的处理 | p.415 |
-| 4.2.3.4.2.1.5 | Ack, Nak, and Discard Rules | Ack、Nak 与丢弃规则 | p.416 |
-| 4.2.3.4.2.1.5 | Nak/Ack/Discard Schedule Definition… | Nak/Ack/丢弃调度定义 | p.418 |
-| 4.2.3.4.2.1.6 | Flit Replay Scheduling | Flit 重放调度 | p.424 |
-| 4.2.3.4.2.1.7 | Flit Replay Transmit Rules | Flit 重放发送规则 | p.426 |
-| 4.2.3.4.3 | CRC Bytes in Flit | Flit 中的 CRC 字节 | p.430 |
-| 4.2.3.4.4 | ECC Bytes in Flit | Flit 中的 ECC 字节 | p.431 |
-| 4.2.3.4.4 | (续) ECC Bytes in Flit | ECC 字节(续) | p.433 |
-| 4.2.3.4.4 | ECC Bytes - FEC Check Bits Arrangem… | ECC 字节 - FEC 校验位排列 | p.434 |
-| 4.2.3.4.4 | ECC Bytes - Byte Mapping and Decode | ECC 字节 - 字节映射与解码 | p.435 |
-| 4.2.3.4.5 | Ordered Set insertion in Data Strea… | Flit 模式下数据流中的有序集插入 | p.437 |
-| 4.2.4 | Link Equalization Procedure for 8.0… | 4.2.4 8.0 GT/s 及更高数据速率的链路均衡 (E… | p.438 |
-| 4.2.4 | Equalization Bypass and Highest NRZ… | 4.2.4 均衡绕过与最高 NRZ 速率 | p.439 |
-| 4.2.4 | Autonomous Equalization Mechanism | 4.2.4 自主均衡机制 | p.440 |
-| 4.2.4 | Software-Based Equalization and DLL… | 4.2.4 基于软件的均衡与 DLLP 阻塞 | p.441 |
-| 4.2.4 | Equalization Setting Problem Report… | 4.2.4 均衡设置问题上报 | p.442 |
-| 4.2.4 | Redo Equalization and Rate Change | 4.2.4 重新均衡与速率切换 | p.443 |
-| 4.2.4 | Table 4-22 (Continued) | 4.2.4 表 4-22(续) | p.444 |
-| 4.2.4 | Equalization Phases 0-3 | 4.2.4 均衡阶段 0-3 | p.445 |
-| 4.2.4 | Phase 2 and Phase 3 | 4.2.4 阶段 2 与阶段 3 | p.446 |
-| 4.2.4 | Loopback and Compliance for Equaliz… | 4.2.4 均衡的 Loopback 与 Complianc… | p.447 |
-| 4.2.4 | Equalization Flow Examples | 4.2.4 均衡流程示例 | p.448 |
-| 4.2.4 | FIR Coefficients and Equalization B… | 4.2.4 FIR 系数与均衡绕过示例 | p.450 |
-| 4.2.4.1 | Rules for Transmitter Coefficients | 发送器系数规则 | p.450 |
-| 4.2.4.2 | Encoding of Presets | 4.2.4.2 预设的编码 | p.450 |
-| 4.2.5 | Link Initialization and Training | 4.2.5 链路初始化与训练 | p.452 |
-| 4.2.5.1 | Training Sequences | 4.2.5.1 训练序列 | p.452 |
-| 4.2.5.1 | 续 (Alternate Protocol Negotiation) | 4.2.5.1 续 (备用协议协商) | p.459 |
-| 4.2.5.2 | Alternate Protocol Negotiation | 替代协议协商 | p.459 |
-| 4.2.5.2 | Alternate Protocol Negotiation (con… | 替代协议协商(续) | p.474 |
-| 4.2.5.3 | Electrical Idle Sequences (EIOS and… | 电气空闲序列 (EIOS 和 EIEOS) | p.476 |
-| 4.2.5.4 | Inferring Electrical Idle | 推断电气空闲 | p.481 |
-| 4.2.5.5 | Lane Polarity Inversion | 通道极性反转 | p.482 |
-| 4.2.5.6 | Fast Training Sequence (FTS) | 快速训练序列 (FTS) | p.482 |
-| 4.2.5.7 | Start of Data Stream Ordered Set (S… | 数据流起始有序集 (SDS 有序集) | p.484 |
-| 4.2.5.8 | Link Error Recovery | 链路错误恢复 | p.484 |
-| 4.2.5.9 | Reset | 复位 | p.485 |
-| 4.2.5.9.1 | Fundamental Reset | 基本复位 | p.485 |
-| 4.2.5.9.2 | Hot Reset | 热复位 | p.486 |
-| 4.2.5.10 | Link Data Rate Negotiation | 链路数据速率协商 | p.486 |
-| 4.2.5.11 | Link Width and Lane Sequence Negoti… | 链路宽度与通道序列协商 | p.486 |
-| 4.2.5.11.1 | Required and Optional Port Behavior | 端口的必需与可选行为 | p.486 |
-| 4.2.5.12 | Lane-to-Lane De-skew | 通道间去偏斜 | p.487 |
-| 4.2.5.13 | Lane vs. Link Training | 通道训练与链路训练 | p.488 |
-| 4.2.6 | Link Training and Status State Mach… | 链路训练与状态机 (LTSSM) 描述 | p.488 |
-| 4.2.6.1 | Detect Overview | Detect 概述 | p.489 |
-| 4.2.6.2 | Polling Overview | Polling 概述 | p.489 |
-| 4.2.6.3 | Configuration Overview | Configuration 概述 | p.489 |
-| 4.2.6.4 | Recovery Overview | Recovery 概述 | p.489 |
-| 4.2.6.5 | L0 Overview | L0 概述 | p.489 |
-| 4.2.6.6 | L0s Overview | L0s 概述 | p.490 |
-| 4.2.6.7 | L0p Overview | L0p 概述 | p.490 |
-| 4.2.6.7.1 | L0p Request/Response Rules | L0p 请求/响应规则 | p.490 |
-| 4.2.6.7.2 | L0p Ack/Nak Rules | L0p Ack/Nak 规则 | p.491 |
-| 4.2.6.7.3 | L0p Priority Rules | L0p 优先级规则 | p.491 |
-| 4.2.6.7.4 | L0p Down-Size and Up-Size | L0p Down-Size 和 Up-Size | p.492 |
-| 4.2.6.7.5 | L0p Down-Size Lane Deactivation | L0p Down-Size 通道去激活 | p.492 |
-| 4.2.6.7.6 | Link Management DLLP Encoding | Link Management DLLP 编码 | p.493 |
-| 4.2.6.7.7 | Link Management DLLP Encoding (cont… | Link Management DLLP 编码(续) | p.494 |
-| 4.2.6.7.8 | L0p Flow Example | L0p 流程示例 | p.495 |
-| 4.2.6.8 | L1 Overview | L1 概述 | p.496 |
-| 4.2.6.9 | L2 Overview | L2 概述 | p.497 |
-| 4.2.6.10 | Disabled Overview | Disabled 概述 | p.497 |
-| 4.2.6.10 | Disabled Overview | 禁用状态概述 | p.497 |
-| 4.2.6.11 | Loopback Overview | 回环状态概述 | p.498 |
-| 4.2.6.12 | Hot Reset Overview | 热复位状态概述 | p.498 |
-| 4.2.7 | Link Training and Status State Rule… | 链路训练与状态机规则 | p.498 |
-| 4.2.7.1 | Detect | 检测状态 | p.500 |
-| 4.2.7.1.1 | Detect.Quiet | Detect.Quiet(静默检测) | p.500 |
-| 4.2.7.1.2 | Detect.Active | Detect.Active(主动检测) | p.501 |
-| 4.2.7.2 | Polling | 轮询状态 | p.501 |
-| 4.2.7.2.1 | Polling.Active | Polling.Active(主动轮询) | p.501 |
-| 4.2.7.2.1 | Polling.Active (continued) | Polling.Active(续) | p.503 |
-| 4.2.7.2.2 | Polling.Compliance | Polling.Compliance(一致性轮询) | p.504 |
-| 4.2.7.2.2 | Polling.Compliance (continued) | Polling.Compliance(续) | p.505 |
-| 4.2.7.2.3 | Polling.Configuration | Polling.Configuration 子状态 | p.509 |
-| 4.2.7.2.4 | Polling.Speed | Polling.Speed 子状态 | p.509 |
-| 4.2.7.3 | Configuration | Configuration 状态 | p.510 |
-| 4.2.7.3.1 | Configuration.Linkwidth.Start | Configuration.Linkwidth.Start … | p.511 |
-| 4.2.7.3.1.1 | Downstream Lanes | 下游通道 | p.511 |
-| 4.2.7.3.1.2 | Upstream Lanes | 上游通道 | p.512 |
-| 4.2.7.3.2 | Configuration.Linkwidth.Accept | Configuration.Linkwidth.Accept… | p.514 |
-| 4.2.7.3.2.1 | Downstream Lanes | 下游通道 | p.514 |
-| 4.2.7.3.2.2 | Upstream Lanes | 上游通道 | p.515 |
-| 4.2.7.3.3 | Configuration.Lanenum.Accept | Configuration.Lanenum.Accept 子… | p.517 |
-| 4.2.7.3.3.1 | Downstream Lanes | 下游通道 | p.518 |
-| 4.2.7.3.3.2 | Upstream Lanes | 上游通道 | p.519 |
-| 4.2.7.3.4 | Configuration.Lanenum.Wait | Configuration.Lanenum.Wait 子状态 | p.520 |
-| 4.2.7.3.4.1 | Downstream Lanes | 下游通道 | p.520 |
-| 4.2.7.3.4.2 | Upstream Lanes | 上游通道 | p.520 |
-| 4.2.7.3.5 | Configuration.Complete | Configuration.Complete 子状态 | p.521 |
-| 4.2.7.3.5.1 | Downstream Lanes | 下游通道 | p.521 |
-| 4.2.7.3.5.2 | Upstream Lanes | 上游通道 | p.523 |
-| 4.2.7.3.6 | Configuration.Idle | Configuration.Idle 子状态 | p.525 |
-| 4.2.7.4 | Recovery | Recovery 状态 | p.529 |
-| 4.2.7.4.1 | Recovery.RcvrLock | Recovery.RcvrLock 子状态 | p.529 |
-| 4.2.7.4 | Recovery | Recovery 状态 | p.529 |
-| 4.2.7.4.1 | Recovery.RcvrLock | Recovery.RcvrLock 子状态 | p.529 |
-| 4.2.7.4.2 | Recovery.Equalization | Recovery.Equalization 子状态 | p.535 |
-| 4.2.7.4.2 | Recovery.Equalization | Recovery.Equalization 子状态 | p.535 |
-| 4.2.7.4.2.1 | Downstream Lanes | Downstream 通道 | p.536 |
-| 4.2.7.4.2.1 | Downstream Lanes | Downstream 通道 | p.536 |
-| 4.2.7.4.2.1.1 | Phase 1 of Transmitter Equalization | 发送器均衡 Phase 1 | p.537 |
-| 4.2.7.4.2.1.1 | Phase 1 of Transmitter Equalization… | 发送器均衡 Phase 1(续) | p.538 |
-| 4.2.7.4.2.1.2 | Phase 2 of Transmitter Equalization | 发送器均衡 Phase 2 | p.539 |
-| 4.2.7.4.2.1.2 | Phase 2 of Transmitter Equalization… | 发送器均衡 Phase 2(续) | p.540 |
-| 4.2.7.4.2.1.3 | Phase 3 of Transmitter Equalization | 发送器均衡 Phase 3 | p.541 |
-| 4.2.7.4.2.2 | Upstream Lanes | 上游 Lane | p.542 |
-| 4.2.7.4.2.2 | Upstream Lanes (cont.) | 上游 Lane(续) | p.543 |
-| 4.2.7.4.2.2.1 | Phase 0 of Transmitter Equalization | 发送器均衡 Phase 0 | p.544 |
-| 4.2.7.4.2.2.2 | Phase 1 of Transmitter Equalization | 发送器均衡 Phase 1(上游) | p.545 |
-| 4.2.7.4.2.2.3 | Phase 2 of Transmitter Equalization | 发送器均衡 Phase 2 | p.546 |
-| 4.2.7.4.2.2.3 | Phase 2 of Transmitter Equalization… | 发送器均衡 Phase 2(续) | p.548 |
-| 4.2.7.4.2.2.4 | Phase 3 of Transmitter Equalization | 发送器均衡 Phase 3 | p.548 |
-| 4.2.7.4.3 | Recovery.Speed | Recovery.Speed 子状态 | p.550 |
-| 4.2.7.4.4 | Recovery.RcvrCfg | Recovery.RcvrCfg 子状态 | p.551 |
-| 4.2.7.4.4 | Recovery.RcvrCfg (continued) | Recovery.RcvrCfg 子状态(续) | p.553 |
-| 4.2.7.4.4 | Recovery.RcvrCfg (continued) | Recovery.RcvrCfg 子状态(续) | p.554 |
-| 4.2.7.4.4 | Recovery.RcvrCfg (continued) | Recovery.RcvrCfg 子状态(续) | p.555 |
-| 4.2.7.4.4 | Recovery.RcvrCfg (continued) | Recovery.RcvrCfg 子状态(续) | p.556 |
-| 4.2.7.4.4 | Recovery.RcvrCfg (continued) | Recovery.RcvrCfg 子状态(续) | p.557 |
-| 4.2.7.4.4 | Recovery.RcvrCfg (continued) | Recovery.RcvrCfg 子状态(续) | p.558 |
-| 4.2.7.4.5 | Recovery.Idle | Recovery.Idle 子状态 | p.559 |
-| 4.2.7.4.5 | Recovery.Idle (continued) | Recovery.Idle 子状态(续) | p.560 |
+|  | 4.1 | [Introduction §](#sec-4-1) | [概述 §](#sec-4-1) | p.351 |
+|  | 4.2 | [Logical Sub-block §](#sec-4-2) | [逻辑子块 §](#sec-4-2) | p.351 |
+|  | 4.2.1 | [8b/10b Encoding for 2.5 GT/s and 5.…](#sec-4-2-1) | [2.5 GT/s 与 5.0 GT/s 数据速率下的 8b/…](#sec-4-2-1) | p.353 |
+|  | 4.2.1.1 | [Symbol Encoding §](#sec-4-2-1-1) | [符号编码 §](#sec-4-2-1-1) | p.353 |
+|  | 4.2.1.1.1 | [Serialization and De-serialization …](#sec-4-2-1-1-1) | [数据的串行化与解串行化 §](#sec-4-2-1-1-1) | p.354 |
+|  | 4.2.1.1.2 | [Special Symbols for Framing and Lin…](#sec-4-2-1-1-2) | [成帧与链路管理的特殊符号 (K 码) §](#sec-4-2-1-1-2) | p.355 |
+|  | 4.2.1.1.3 | [8b/10b Decode Rules §](#sec-4-2-1-1-3) | [8b/10b 解码规则 §](#sec-4-2-1-1-3) | p.355 |
+|  | 4.2.1.2 | [Framing and Application of Symbols …](#sec-4-2-1-2) | [符号的成帧与到通道的应用 §](#sec-4-2-1-2) | p.357 |
+|  | 4.2.1.2.1 | [Framing and Application of Symbols …](#sec-4-2-1-2-1) | [非 Flit 模式下 TLP 和 DLLP 的成帧与到通道的…](#sec-4-2-1-2-1) | p.357 |
+|  | 4.2.1.3 | [Data Scrambling §](#sec-4-2-1-3) | [数据加扰 §](#sec-4-2-1-3) | p.360 |
+|  | 4.2.2 | [128b/130b Encoding for 8.0 GT/s, 16…](#sec-4-2-2) | [8.0 GT/s、16.0 GT/s 与 32.0 GT/s…](#sec-4-2-2) | p.361 |
+|  | 4.2.2.1 | [Lane Level Encoding](#sec-4-2-2-1) | [通道级编码](#sec-4-2-2-1) | p.362 |
+|  | 4.2.2.2 | [Ordered Set Blocks](#sec-4-2-2-2) | [有序集块](#sec-4-2-2-2) | p.362 |
+|  | 4.2.2.2.1 | [Block Alignment](#sec-4-2-2-2-1) | [块对齐](#sec-4-2-2-2-1) | p.362 |
+|  | 4.2.2.3 | [Data Blocks](#sec-4-2-2-3) | [数据块](#sec-4-2-2-3) | p.362 |
+|  | 4.2.2.3.1 | [Framing Tokens in Non-Flit-Mode](#sec-4-2-2-3-1) | [非 Flit 模式下的帧定界符](#sec-4-2-2-3-1) | p.362 |
+|  | 4.2.2.3.2 | [Transmitter Framing Requirements in…](#sec-4-2-2-3-2) | [非 Flit 模式下的发送器帧定界要求](#sec-4-2-2-3-2) | p.369 |
+|  | 4.2.2.3.3 | [Receiver Framing Requirements in No…](#sec-4-2-2-3-3) | [非 Flit 模式下的接收器帧定界要求](#sec-4-2-2-3-3) | p.370 |
+|  | 4.2.2.3.4 | [Receiver Framing Requirements in Fl…](#sec-4-2-2-3-4) | [Flit 模式下的接收器帧定界要求](#sec-4-2-2-3-4) | p.372 |
+|  | 4.2.2.3.5 | [Recovery from Framing Errors in Non…](#sec-4-2-2-3-5) | [非 Flit 模式与 Flit 模式下的帧错误恢复](#sec-4-2-2-3-5) | p.373 |
+|  | 4.2.2.4 | [Scrambling in Non-Flit Mode and Fli…](#sec-4-2-2-4) | [非 Flit 模式与 Flit 模式下的加扰](#sec-4-2-2-4) | p.373 |
+|  | 4.2.2.5 | [Precoding](#sec-4-2-2-5) | [预编码 (Precoding)](#sec-4-2-2-5) | p.378 |
+|  | 4.2.2.5.1 | [Precoding at 32.0 GT/s Data Rate](#sec-4-2-2-5-1) | [32.0 GT/s 数据速率下的预编码](#sec-4-2-2-5-1) | p.380 |
+|  | 4.2.2.6 | [Loopback with 128b/130b Code in Non…](#sec-4-2-2-6) | [非 Flit 模式与 Flit 模式下使用 128b/130…](#sec-4-2-2-6) | p.380 |
+|  | 4.2.3 | [Flit Mode Operation](#sec-4-2-3) | [Flit 模式操作](#sec-4-2-3) | p.380 |
+|  | 4.2.3.1 | [1b/1b Encoding for 64.0 GT/s and hi…](#sec-4-2-3-1) | [64.0 GT/s 及更高数据速率下的 1b/1b 编码](#sec-4-2-3-1) | p.380 |
+|  | 4.2.3.1.1 | [PAM4 Signaling](#sec-4-2-3-1-1) | [PAM4（四电平脉冲幅度调制）信令](#sec-4-2-3-1-1) | p.384 |
+|  | 4.2.3.1.2 | [1b/1b Scrambling](#sec-4-2-3-1-2) | [1b/1b 加扰](#sec-4-2-3-1-2) | p.384 |
+|  | 4.2.3.1.3 | [Gray Coding at 64.0 GT/s and Higher…](#sec-4-2-3-1-3) | [64.0 GT/s 及更高数据速率下的格雷编码](#sec-4-2-3-1-3) | p.384 |
+|  | 4.2.3.1.4 | [Precoding at 64.0 GT/s and Higher D…](#sec-4-2-3-1-4) | [64.0 GT/s 及更高数据速率下的预编码](#sec-4-2-3-1-4) | p.384 |
+|  | 4.2.3.1.5 | [Ordered Set Blocks at 64.0 GT/s and…](#sec-4-2-3-1-5) | [64.0 GT/s 及更高数据速率下的有序集块](#sec-4-2-3-1-5) | p.384 |
+|  | 4.2.3.1.6 | [Alignment at Block/Flit Level for 1…](#sec-4-2-3-1-6) | [1b/1b 编码下的块/Flit 级对齐](#sec-4-2-3-1-6) | p.384 |
+|  | 4.2.3.2 | [Processing of Ordered Sets During F…](#sec-4-2-3-2) | [Flit 模式数据流中有序集的处理](#sec-4-2-3-2) | p.384 |
+|  | 4.2.3.3 | [Data Stream in Flit Mode](#sec-4-2-3-3) | [Flit 模式数据流](#sec-4-2-3-3) | p.384 |
+|  | 4.2.3.4 | [Bytes in Flit Layout](#sec-4-2-3-4) | [Flit 布局中的字节](#sec-4-2-3-4) | p.384 |
+|  | 4.2.3.4.1 | [TLP Bytes in Flit](#sec-4-2-3-4-1) | [Flit 中的 TLP 字节](#sec-4-2-3-4-1) | p.384 |
+|  | 4.2.3.4.2 | [DLP Bytes in Flit](#sec-4-2-3-4-2) | [Flit 中的 DLP 字节](#sec-4-2-3-4-2) | p.403 |
+|  | 4.2.3.4.2.1 | [Flit Sequence Number and Retry Mech…](#sec-4-2-3-4-2-1) | [Flit 序列号与重传机制](#sec-4-2-3-4-2-1) | p.407 |
+|  | 4.2.3.4.2.1.1 | [IDLE Flit Handshake Phase](#sec-4-2-3-4-2-1-1) | [IDLE Flit 握手阶段](#sec-4-2-3-4-2-1-1) | p.413 |
+|  | 4.2.3.4.2.1.2 | [Sequence Number Handshake Phase](#sec-4-2-3-4-2-1-2) | [序列号握手阶段](#sec-4-2-3-4-2-1-2) | p.413 |
+|  | 4.2.3.4.2.1.3 | [Normal Flit Exchange Phase](#sec-4-2-3-4-2-1-3) | [正常 Flit 交换阶段](#sec-4-2-3-4-2-1-3) | p.415 |
+|  | 4.2.3.4.2.1.4 | [Received Ack and Nak Processing](#sec-4-2-3-4-2-1-4) | [已接收 Ack 与 Nak 的处理](#sec-4-2-3-4-2-1-4) | p.415 |
+|  | 4.2.3.4.2.1.5 | [Ack, Nak, and Discard Rules](#sec-4-2-3-4-2-1-5) | [Ack、Nak 与丢弃规则](#sec-4-2-3-4-2-1-5) | p.416 |
+|  | 4.2.3.4.2.1.5 | [Nak/Ack/Discard Schedule Definition…](#sec-4-2-3-4-2-1-5) | [Nak/Ack/丢弃调度定义](#sec-4-2-3-4-2-1-5) | p.418 |
+|  | 4.2.3.4.2.1.6 | [Flit Replay Scheduling](#sec-4-2-3-4-2-1-6) | [Flit 重放调度](#sec-4-2-3-4-2-1-6) | p.424 |
+|  | 4.2.3.4.2.1.7 | [Flit Replay Transmit Rules](#sec-4-2-3-4-2-1-7) | [Flit 重放发送规则](#sec-4-2-3-4-2-1-7) | p.426 |
+|  | 4.2.3.4.3 | [CRC Bytes in Flit](#sec-4-2-3-4-3) | [Flit 中的 CRC 字节](#sec-4-2-3-4-3) | p.430 |
+|  | 4.2.3.4.4 | [ECC Bytes in Flit](#sec-4-2-3-4-4) | [Flit 中的 ECC 字节](#sec-4-2-3-4-4) | p.431 |
+|  | 4.2.3.4.4 | [(续) ECC Bytes in Flit](#sec-4-2-3-4-4) | [ECC 字节(续)](#sec-4-2-3-4-4) | p.433 |
+|  | 4.2.3.4.4 | [ECC Bytes - FEC Check Bits Arrangem…](#sec-4-2-3-4-4) | [ECC 字节 - FEC 校验位排列](#sec-4-2-3-4-4) | p.434 |
+|  | 4.2.3.4.4 | [ECC Bytes - Byte Mapping and Decode](#sec-4-2-3-4-4) | [ECC 字节 - 字节映射与解码](#sec-4-2-3-4-4) | p.435 |
+|  | 4.2.3.4.5 | [Ordered Set insertion in Data Strea…](#sec-4-2-3-4-5) | [Flit 模式下数据流中的有序集插入](#sec-4-2-3-4-5) | p.437 |
+|  | 4.2.4 | [Link Equalization Procedure for 8.0…](#sec-4-2-4) | [4.2.4 8.0 GT/s 及更高数据速率的链路均衡 (E…](#sec-4-2-4) | p.438 |
+|  | 4.2.4 | [Equalization Bypass and Highest NRZ…](#sec-4-2-4) | [4.2.4 均衡绕过与最高 NRZ 速率](#sec-4-2-4) | p.439 |
+|  | 4.2.4 | [Autonomous Equalization Mechanism](#sec-4-2-4) | [4.2.4 自主均衡机制](#sec-4-2-4) | p.440 |
+|  | 4.2.4 | [Software-Based Equalization and DLL…](#sec-4-2-4) | [4.2.4 基于软件的均衡与 DLLP 阻塞](#sec-4-2-4) | p.441 |
+|  | 4.2.4 | [Equalization Setting Problem Report…](#sec-4-2-4) | [4.2.4 均衡设置问题上报](#sec-4-2-4) | p.442 |
+|  | 4.2.4 | [Redo Equalization and Rate Change](#sec-4-2-4) | [4.2.4 重新均衡与速率切换](#sec-4-2-4) | p.443 |
+|  | 4.2.4 | [Table 4-22 (Continued)](#sec-4-2-4) | [4.2.4 表 4-22(续)](#sec-4-2-4) | p.444 |
+|  | 4.2.4 | [Equalization Phases 0-3](#sec-4-2-4) | [4.2.4 均衡阶段 0-3](#sec-4-2-4) | p.445 |
+|  | 4.2.4 | [Phase 2 and Phase 3](#sec-4-2-4) | [4.2.4 阶段 2 与阶段 3](#sec-4-2-4) | p.446 |
+|  | 4.2.4 | [Loopback and Compliance for Equaliz…](#sec-4-2-4) | [4.2.4 均衡的 Loopback 与 Complianc…](#sec-4-2-4) | p.447 |
+|  | 4.2.4 | [Equalization Flow Examples](#sec-4-2-4) | [4.2.4 均衡流程示例](#sec-4-2-4) | p.448 |
+|  | 4.2.4 | [FIR Coefficients and Equalization B…](#sec-4-2-4) | [4.2.4 FIR 系数与均衡绕过示例](#sec-4-2-4) | p.450 |
+|  | 4.2.4.1 | [Rules for Transmitter Coefficients](#sec-4-2-4-1) | [发送器系数规则](#sec-4-2-4-1) | p.450 |
+|  | 4.2.4.2 | [Encoding of Presets](#sec-4-2-4-2) | [4.2.4.2 预设的编码](#sec-4-2-4-2) | p.450 |
+|  | 4.2.5 | [Link Initialization and Training](#sec-4-2-5) | [4.2.5 链路初始化与训练](#sec-4-2-5) | p.452 |
+|  | 4.2.5.1 | [Training Sequences](#sec-4-2-5-1) | [4.2.5.1 训练序列](#sec-4-2-5-1) | p.452 |
+|  | 4.2.5.1 | [续 (Alternate Protocol Negotiation)](#sec-4-2-5-1) | [4.2.5.1 续 (备用协议协商)](#sec-4-2-5-1) | p.459 |
+|  | 4.2.5.2 | [Alternate Protocol Negotiation](#sec-4-2-5-2) | [替代协议协商](#sec-4-2-5-2) | p.459 |
+|  | 4.2.5.2 | [Alternate Protocol Negotiation (con…](#sec-4-2-5-2) | [替代协议协商(续)](#sec-4-2-5-2) | p.474 |
+|  | 4.2.5.3 | [Electrical Idle Sequences (EIOS and…](#sec-4-2-5-3) | [电气空闲序列 (EIOS 和 EIEOS)](#sec-4-2-5-3) | p.476 |
+|  | 4.2.5.4 | [Inferring Electrical Idle](#sec-4-2-5-4) | [推断电气空闲](#sec-4-2-5-4) | p.481 |
+|  | 4.2.5.5 | [Lane Polarity Inversion](#sec-4-2-5-5) | [通道极性反转](#sec-4-2-5-5) | p.482 |
+|  | 4.2.5.6 | [Fast Training Sequence (FTS)](#sec-4-2-5-6) | [快速训练序列 (FTS)](#sec-4-2-5-6) | p.482 |
+|  | 4.2.5.7 | [Start of Data Stream Ordered Set (S…](#sec-4-2-5-7) | [数据流起始有序集 (SDS 有序集)](#sec-4-2-5-7) | p.484 |
+|  | 4.2.5.8 | [Link Error Recovery](#sec-4-2-5-8) | [链路错误恢复](#sec-4-2-5-8) | p.484 |
+|  | 4.2.5.9 | [Reset](#sec-4-2-5-9) | [复位](#sec-4-2-5-9) | p.485 |
+|  | 4.2.5.9.1 | [Fundamental Reset](#sec-4-2-5-9-1) | [基本复位](#sec-4-2-5-9-1) | p.485 |
+|  | 4.2.5.9.2 | [Hot Reset](#sec-4-2-5-9-2) | [热复位](#sec-4-2-5-9-2) | p.486 |
+|  | 4.2.5.10 | [Link Data Rate Negotiation](#sec-4-2-5-10) | [链路数据速率协商](#sec-4-2-5-10) | p.486 |
+|  | 4.2.5.11 | [Link Width and Lane Sequence Negoti…](#sec-4-2-5-11) | [链路宽度与通道序列协商](#sec-4-2-5-11) | p.486 |
+|  | 4.2.5.11.1 | [Required and Optional Port Behavior](#sec-4-2-5-11-1) | [端口的必需与可选行为](#sec-4-2-5-11-1) | p.486 |
+|  | 4.2.5.12 | [Lane-to-Lane De-skew](#sec-4-2-5-12) | [通道间去偏斜](#sec-4-2-5-12) | p.487 |
+|  | 4.2.5.13 | [Lane vs. Link Training](#sec-4-2-5-13) | [通道训练与链路训练](#sec-4-2-5-13) | p.488 |
+|  | 4.2.6 | [Link Training and Status State Mach…](#sec-4-2-6) | [链路训练与状态机 (LTSSM) 描述](#sec-4-2-6) | p.488 |
+|  | 4.2.6.1 | [Detect Overview](#sec-4-2-6-1) | [Detect 概述](#sec-4-2-6-1) | p.489 |
+|  | 4.2.6.2 | [Polling Overview](#sec-4-2-6-2) | [Polling 概述](#sec-4-2-6-2) | p.489 |
+|  | 4.2.6.3 | [Configuration Overview](#sec-4-2-6-3) | [Configuration 概述](#sec-4-2-6-3) | p.489 |
+|  | 4.2.6.4 | [Recovery Overview](#sec-4-2-6-4) | [Recovery 概述](#sec-4-2-6-4) | p.489 |
+|  | 4.2.6.5 | [L0 Overview](#sec-4-2-6-5) | [L0 概述](#sec-4-2-6-5) | p.489 |
+|  | 4.2.6.6 | [L0s Overview](#sec-4-2-6-6) | [L0s 概述](#sec-4-2-6-6) | p.490 |
+|  | 4.2.6.7 | [L0p Overview](#sec-4-2-6-7) | [L0p 概述](#sec-4-2-6-7) | p.490 |
+|  | 4.2.6.7.1 | [L0p Request/Response Rules](#sec-4-2-6-7-1) | [L0p 请求/响应规则](#sec-4-2-6-7-1) | p.490 |
+|  | 4.2.6.7.2 | [L0p Ack/Nak Rules](#sec-4-2-6-7-2) | [L0p Ack/Nak 规则](#sec-4-2-6-7-2) | p.491 |
+|  | 4.2.6.7.3 | [L0p Priority Rules](#sec-4-2-6-7-3) | [L0p 优先级规则](#sec-4-2-6-7-3) | p.491 |
+|  | 4.2.6.7.4 | [L0p Down-Size and Up-Size](#sec-4-2-6-7-4) | [L0p Down-Size 和 Up-Size](#sec-4-2-6-7-4) | p.492 |
+|  | 4.2.6.7.5 | [L0p Down-Size Lane Deactivation](#sec-4-2-6-7-5) | [L0p Down-Size 通道去激活](#sec-4-2-6-7-5) | p.492 |
+|  | 4.2.6.7.6 | [Link Management DLLP Encoding](#sec-4-2-6-7-6) | [Link Management DLLP 编码](#sec-4-2-6-7-6) | p.493 |
+|  | 4.2.6.7.7 | [Link Management DLLP Encoding (cont…](#sec-4-2-6-7-7) | [Link Management DLLP 编码(续)](#sec-4-2-6-7-7) | p.494 |
+|  | 4.2.6.7.8 | [L0p Flow Example](#sec-4-2-6-7-8) | [L0p 流程示例](#sec-4-2-6-7-8) | p.495 |
+|  | 4.2.6.8 | [L1 Overview](#sec-4-2-6-8) | [L1 概述](#sec-4-2-6-8) | p.496 |
+|  | 4.2.6.9 | [L2 Overview](#sec-4-2-6-9) | [L2 概述](#sec-4-2-6-9) | p.497 |
+|  | 4.2.6.10 | [Disabled Overview](#sec-4-2-6-10) | [Disabled 概述](#sec-4-2-6-10) | p.497 |
+|  | 4.2.6.10 | [Disabled Overview](#sec-4-2-6-10) | [禁用状态概述](#sec-4-2-6-10) | p.497 |
+|  | 4.2.6.11 | [Loopback Overview](#sec-4-2-6-11) | [回环状态概述](#sec-4-2-6-11) | p.498 |
+|  | 4.2.6.12 | [Hot Reset Overview](#sec-4-2-6-12) | [热复位状态概述](#sec-4-2-6-12) | p.498 |
+|  | 4.2.7 | [Link Training and Status State Rule…](#sec-4-2-7) | [链路训练与状态机规则](#sec-4-2-7) | p.498 |
+|  | 4.2.7.1 | [Detect](#sec-4-2-7-1) | [检测状态](#sec-4-2-7-1) | p.500 |
+|  | 4.2.7.1.1 | [Detect.Quiet](#sec-4-2-7-1-1) | [Detect.Quiet(静默检测)](#sec-4-2-7-1-1) | p.500 |
+|  | 4.2.7.1.2 | [Detect.Active](#sec-4-2-7-1-2) | [Detect.Active(主动检测)](#sec-4-2-7-1-2) | p.501 |
+|  | 4.2.7.2 | [Polling](#sec-4-2-7-2) | [轮询状态](#sec-4-2-7-2) | p.501 |
+|  | 4.2.7.2.1 | [Polling.Active](#sec-4-2-7-2-1) | [Polling.Active(主动轮询)](#sec-4-2-7-2-1) | p.501 |
+|  | 4.2.7.2.1 | [Polling.Active (continued)](#sec-4-2-7-2-1) | [Polling.Active(续)](#sec-4-2-7-2-1) | p.503 |
+|  | 4.2.7.2.2 | [Polling.Compliance](#sec-4-2-7-2-2) | [Polling.Compliance(一致性轮询)](#sec-4-2-7-2-2) | p.504 |
+|  | 4.2.7.2.2 | [Polling.Compliance (continued)](#sec-4-2-7-2-2) | [Polling.Compliance(续)](#sec-4-2-7-2-2) | p.505 |
+|  | 4.2.7.2.3 | [Polling.Configuration](#sec-4-2-7-2-3) | [Polling.Configuration 子状态](#sec-4-2-7-2-3) | p.509 |
+|  | 4.2.7.2.4 | [Polling.Speed](#sec-4-2-7-2-4) | [Polling.Speed 子状态](#sec-4-2-7-2-4) | p.509 |
+|  | 4.2.7.3 | [Configuration](#sec-4-2-7-3) | [Configuration 状态](#sec-4-2-7-3) | p.510 |
+|  | 4.2.7.3.1 | [Configuration.Linkwidth.Start](#sec-4-2-7-3-1) | [Configuration.Linkwidth.Start …](#sec-4-2-7-3-1) | p.511 |
+|  | 4.2.7.3.1.1 | [Downstream Lanes](#sec-4-2-7-3-1-1) | [下游通道](#sec-4-2-7-3-1-1) | p.511 |
+|  | 4.2.7.3.1.2 | [Upstream Lanes](#sec-4-2-7-3-1-2) | [上游通道](#sec-4-2-7-3-1-2) | p.512 |
+|  | 4.2.7.3.2 | [Configuration.Linkwidth.Accept](#sec-4-2-7-3-2) | [Configuration.Linkwidth.Accept…](#sec-4-2-7-3-2) | p.514 |
+|  | 4.2.7.3.2.1 | [Downstream Lanes](#sec-4-2-7-3-2-1) | [下游通道](#sec-4-2-7-3-2-1) | p.514 |
+|  | 4.2.7.3.2.2 | [Upstream Lanes](#sec-4-2-7-3-2-2) | [上游通道](#sec-4-2-7-3-2-2) | p.515 |
+|  | 4.2.7.3.3 | [Configuration.Lanenum.Accept](#sec-4-2-7-3-3) | [Configuration.Lanenum.Accept 子…](#sec-4-2-7-3-3) | p.517 |
+|  | 4.2.7.3.3.1 | [Downstream Lanes](#sec-4-2-7-3-3-1) | [下游通道](#sec-4-2-7-3-3-1) | p.518 |
+|  | 4.2.7.3.3.2 | [Upstream Lanes](#sec-4-2-7-3-3-2) | [上游通道](#sec-4-2-7-3-3-2) | p.519 |
+|  | 4.2.7.3.4 | [Configuration.Lanenum.Wait](#sec-4-2-7-3-4) | [Configuration.Lanenum.Wait 子状态](#sec-4-2-7-3-4) | p.520 |
+|  | 4.2.7.3.4.1 | [Downstream Lanes](#sec-4-2-7-3-4-1) | [下游通道](#sec-4-2-7-3-4-1) | p.520 |
+|  | 4.2.7.3.4.2 | [Upstream Lanes](#sec-4-2-7-3-4-2) | [上游通道](#sec-4-2-7-3-4-2) | p.520 |
+|  | 4.2.7.3.5 | [Configuration.Complete](#sec-4-2-7-3-5) | [Configuration.Complete 子状态](#sec-4-2-7-3-5) | p.521 |
+|  | 4.2.7.3.5.1 | [Downstream Lanes](#sec-4-2-7-3-5-1) | [下游通道](#sec-4-2-7-3-5-1) | p.521 |
+|  | 4.2.7.3.5.2 | [Upstream Lanes](#sec-4-2-7-3-5-2) | [上游通道](#sec-4-2-7-3-5-2) | p.523 |
+|  | 4.2.7.3.6 | [Configuration.Idle](#sec-4-2-7-3-6) | [Configuration.Idle 子状态](#sec-4-2-7-3-6) | p.525 |
+|  | 4.2.7.4 | [Recovery](#sec-4-2-7-4) | [Recovery 状态](#sec-4-2-7-4) | p.529 |
+|  | 4.2.7.4.1 | [Recovery.RcvrLock](#sec-4-2-7-4-1) | [Recovery.RcvrLock 子状态](#sec-4-2-7-4-1) | p.529 |
+|  | 4.2.7.4 | [Recovery](#sec-4-2-7-4) | [Recovery 状态](#sec-4-2-7-4) | p.529 |
+|  | 4.2.7.4.1 | [Recovery.RcvrLock](#sec-4-2-7-4-1) | [Recovery.RcvrLock 子状态](#sec-4-2-7-4-1) | p.529 |
+|  | 4.2.7.4.2 | [Recovery.Equalization](#sec-4-2-7-4-2) | [Recovery.Equalization 子状态](#sec-4-2-7-4-2) | p.535 |
+|  | 4.2.7.4.2 | [Recovery.Equalization](#sec-4-2-7-4-2) | [Recovery.Equalization 子状态](#sec-4-2-7-4-2) | p.535 |
+|  | 4.2.7.4.2.1 | [Downstream Lanes](#sec-4-2-7-4-2-1) | [Downstream 通道](#sec-4-2-7-4-2-1) | p.536 |
+|  | 4.2.7.4.2.1 | [Downstream Lanes](#sec-4-2-7-4-2-1) | [Downstream 通道](#sec-4-2-7-4-2-1) | p.536 |
+|  | 4.2.7.4.2.1.1 | [Phase 1 of Transmitter Equalization](#sec-4-2-7-4-2-1-1) | [发送器均衡 Phase 1](#sec-4-2-7-4-2-1-1) | p.537 |
+|  | 4.2.7.4.2.1.1 | [Phase 1 of Transmitter Equalization…](#sec-4-2-7-4-2-1-1) | [发送器均衡 Phase 1(续)](#sec-4-2-7-4-2-1-1) | p.538 |
+|  | 4.2.7.4.2.1.2 | [Phase 2 of Transmitter Equalization](#sec-4-2-7-4-2-1-2) | [发送器均衡 Phase 2](#sec-4-2-7-4-2-1-2) | p.539 |
+|  | 4.2.7.4.2.1.2 | [Phase 2 of Transmitter Equalization…](#sec-4-2-7-4-2-1-2) | [发送器均衡 Phase 2(续)](#sec-4-2-7-4-2-1-2) | p.540 |
+|  | 4.2.7.4.2.1.3 | [Phase 3 of Transmitter Equalization](#sec-4-2-7-4-2-1-3) | [发送器均衡 Phase 3](#sec-4-2-7-4-2-1-3) | p.541 |
+|  | 4.2.7.4.2.2 | [Upstream Lanes](#sec-4-2-7-4-2-2) | [上游 Lane](#sec-4-2-7-4-2-2) | p.542 |
+|  | 4.2.7.4.2.2 | [Upstream Lanes (cont.)](#sec-4-2-7-4-2-2) | [上游 Lane(续)](#sec-4-2-7-4-2-2) | p.543 |
+|  | 4.2.7.4.2.2.1 | [Phase 0 of Transmitter Equalization](#sec-4-2-7-4-2-2-1) | [发送器均衡 Phase 0](#sec-4-2-7-4-2-2-1) | p.544 |
+|  | 4.2.7.4.2.2.2 | [Phase 1 of Transmitter Equalization](#sec-4-2-7-4-2-2-2) | [发送器均衡 Phase 1(上游)](#sec-4-2-7-4-2-2-2) | p.545 |
+|  | 4.2.7.4.2.2.3 | [Phase 2 of Transmitter Equalization](#sec-4-2-7-4-2-2-3) | [发送器均衡 Phase 2](#sec-4-2-7-4-2-2-3) | p.546 |
+|  | 4.2.7.4.2.2.3 | [Phase 2 of Transmitter Equalization…](#sec-4-2-7-4-2-2-3) | [发送器均衡 Phase 2(续)](#sec-4-2-7-4-2-2-3) | p.548 |
+|  | 4.2.7.4.2.2.4 | [Phase 3 of Transmitter Equalization](#sec-4-2-7-4-2-2-4) | [发送器均衡 Phase 3](#sec-4-2-7-4-2-2-4) | p.548 |
+|  | 4.2.7.4.3 | [Recovery.Speed](#sec-4-2-7-4-3) | [Recovery.Speed 子状态](#sec-4-2-7-4-3) | p.550 |
+|  | 4.2.7.4.4 | [Recovery.RcvrCfg](#sec-4-2-7-4-4) | [Recovery.RcvrCfg 子状态](#sec-4-2-7-4-4) | p.551 |
+|  | 4.2.7.4.4 | [Recovery.RcvrCfg (continued)](#sec-4-2-7-4-4) | [Recovery.RcvrCfg 子状态(续)](#sec-4-2-7-4-4) | p.553 |
+|  | 4.2.7.4.4 | [Recovery.RcvrCfg (continued)](#sec-4-2-7-4-4) | [Recovery.RcvrCfg 子状态(续)](#sec-4-2-7-4-4) | p.554 |
+|  | 4.2.7.4.4 | [Recovery.RcvrCfg (continued)](#sec-4-2-7-4-4) | [Recovery.RcvrCfg 子状态(续)](#sec-4-2-7-4-4) | p.555 |
+|  | 4.2.7.4.4 | [Recovery.RcvrCfg (continued)](#sec-4-2-7-4-4) | [Recovery.RcvrCfg 子状态(续)](#sec-4-2-7-4-4) | p.556 |
+|  | 4.2.7.4.4 | [Recovery.RcvrCfg (continued)](#sec-4-2-7-4-4) | [Recovery.RcvrCfg 子状态(续)](#sec-4-2-7-4-4) | p.557 |
+|  | 4.2.7.4.4 | [Recovery.RcvrCfg (continued)](#sec-4-2-7-4-4) | [Recovery.RcvrCfg 子状态(续)](#sec-4-2-7-4-4) | p.558 |
+|  | 4.2.7.4.5 | [Recovery.Idle](#sec-4-2-7-4-5) | [Recovery.Idle 子状态](#sec-4-2-7-4-5) | p.559 |
+|  | 4.2.7.4.5 | [Recovery.Idle (continued)](#sec-4-2-7-4-5) | [Recovery.Idle 子状态(续)](#sec-4-2-7-4-5) | p.560 |
 | 4.2.7.4.6 | L0 State | L0 状态 | p.561 |
-| 4.2.7.5 | L0 | L0 | p.561 |
-| 4.2.7.6 | L0s | L0s | p.563 |
-| 4.2.7.6.1 | Receiver L0s | 接收器 L0s | p.563 |
-| 4.2.7.6.1.1 | Rx_L0s.Entry | Rx_L0s.Entry | p.563 |
-| 4.2.7.6.1.2 | Rx_L0s.Idle | Rx_L0s.Idle | p.563 |
-| 4.2.7.6.1.3 | Rx_L0s.FTS | Rx_L0s.FTS | p.563 |
-| 4.2.7.6.2 | Transmitter L0s | 发送器 L0s | p.563 |
-| 4.2.7.6.2.1 | Tx_L0s.Entry | Tx_L0s.Entry | p.563 |
-| 4.2.7.6.2.2 | Tx_L0s.Idle | Tx_L0s.Idle | p.563 |
-| 4.2.7.6.2.3 | Tx_L0s.FTS | Tx_L0s.FTS | p.565 |
-| 4.2.7.7 | L1 | L1 | p.566 |
-| 4.2.7.7.1 | L1.Entry | L1.Entry | p.567 |
-| 4.2.7.7.2 | L1.Idle | L1.Idle | p.567 |
-| 4.2.7.8 | L2 | L2 | p.568 |
-| 4.2.7.8.1 | L2.Idle | L2.Idle | p.568 |
-| 4.2.7.8.2 | L2.TransmitWake | L2.TransmitWake | p.569 |
-| 4.2.7.9 | Disabled | Disabled | p.570 |
-| 4.2.7.10 | Loopback | Loopback | p.571 |
-| 4.2.7.10.1 | Loopback.Entry | Loopback.Entry | p.572 |
-| 4.2.7.10.2 | Loopback.Active | Loopback.Active | p.573 |
-| 4.2.7.10.3 | Loopback.Exit | Loopback.Exit | p.574 |
-| 4.2.7.11 | Hot Reset | 热复位 | p.578 |
-| 4.2.8 | Clock Tolerance Compensation | 时钟容差补偿 | p.578 |
-| 4.2.8.1 | SKP Ordered Set for 8b/10b Encoding | 8b/10b 编码的 SKP Ordered Set | p.579 |
-| 4.2.8.2 | SKP Ordered Set for 128b/130b Encod… | 128b/130b 编码的 SKP Ordered Set | p.579 |
-| 4.2.8.3 | SKP Ordered Set for 1b/1b Encoding | 1b/1b 编码的 SKP Ordered Set | p.583 |
-| 4.2.8.4 | Rules for Transmitters | 发送器规则 | p.587 |
-| 4.2.8.5 | Rules for Receivers | 接收器规则 | p.590 |
-| 4.2.9 | Compliance Pattern in 8b/10b Encodi… | 8b/10b 编码下的一致性测试码型 | p.591 |
-| 4.2.10 | Modified Compliance Pattern in 8b/1… | 8b/10b 编码下修改后的一致性测试码型 | p.592 |
-| 4.2.11 | Compliance Pattern in 128b/130b Enc… | 128b/130b 编码下的一致性测试码型 | p.593 |
-| 4.2.11 | (Continued) | 4.2.11（续） | p.594 |
-| 4.2.12 | Modified Compliance Pattern in 128b… | 128b/130b 编码下修改后的一致性测试码型 | p.595 |
-| 4.2.13 | Jitter Measurement Pattern in 128b/… | 128b/130b 编码下的抖动测量码型 | p.596 |
-| 4.2.14 | Compliance Pattern in 1b/1b Encodin… | 1b/1b 编码下的一致性测试码型 | p.596 |
-| 4.2.15 | Modified Compliance Pattern in 1b/1… | 1b/1b 编码下修改后的一致性测试码型 | p.597 |
-| 4.2.16 | Jitter Measurement Pattern in 1b/1b… | 1b/1b 编码中的抖动测量码型 | p.598 |
-| 4.2.17 | Toggle Patterns in 1b/1b encoding | 1b/1b 编码中的翻转码型 | p.598 |
-| 4.2.18 | Lane Margining at Receiver | 接收端通道裕量测试 | p.598 |
-| 4.2.18.1 | Receiver Number, Margin Type, Usage… | 4.2.18.1 Receiver Number、Margi… | p.600 |
-| 4.2.18.1.1 | Step Margin Execution Status | 4.2.18.1.1 Step Margin 执行状态 | p.604 |
-| 4.2.18.1.2 | Margin Payload for Step Margin Comm… | 4.2.18.1.2 Step Margin 命令的 Mar… | p.604 |
-| 4.2.18.2 | Margin Command and Response Flow | 4.2.18.2 Margin Command 与响应流程 | p.605 |
-| 4.2.18.3 | Flit Mode 8.0 GT/s Margining Behavi… | 4.2.18.3 Flit 模式下 8.0 GT/s 的裕量… | p.608 |
-| 4.2.18.4 | Receiver Margin Testing Requirement… | 接收器裕量测试要求 | p.608 |
-| 4.2.18.4 | (续) Receiver Margin Testing Require… | 接收器裕量测试要求 | p.611 |
-| 4.2.18.4 | (续) Implementation Note: Example So… | 实现说明:接收器通道裕量测试的示例软件流程 | p.612 |
-| 4.2.18.4 | (续) Example Software Flow Steps B3 … | 示例软件流程 步骤 B3 – C3 | p.613 |
-| 4.2.18.4 | (续) Example Software Flow Steps C5 … | 示例软件流程 步骤 C5 – C8 | p.614 |
-| 4.3 | Retimers | 重定时器 (Retimer) | p.614 |
-| 4.3 | (续) Retimers | 重定时器 (Retimer) | p.615 |
-| 4.3.1 | Retimer Requirements | 重定时器 (Retimer) 要求 | p.615 |
-| 4.3.1 | (续) Retimer Requirements | 重定时器 (Retimer) 要求 | p.616 |
-| 4.3.2 | Supported Retimer Topologies | 受支持的重定时器 (Retimer) 拓扑 | p.616 |
-| 4.3.3 | Variables | 变量 | p.617 |
-| 4.3.3 | (续) Variables | 变量 | p.618 |
-| 4.3.4 | Receiver Impedance Propagation Rule… | 接收器阻抗传播规则 | p.618 |
-| 4.3.6 | Forwarding Rules | 转发规则 | p.618 |
-| 4.3.6.1 | Forwarding Type Rules | 转发类型规则 | p.618 |
-| 4.3.6.2 | Orientation, Lane Numbers, and Data… | 方向、通道号与数据流模式规则 | p.618 |
-| 4.3.6.7 | Ordered Set Modification Rules | 有序集修改规则 | p.627 |
-| 4.3.6.7 | Ordered Set Modification Rules (con… | 有序集修改规则（续） | p.628 |
-| 4.3.6.8 | DLLP, TLP, Logical Idle, and Flit M… | DLLP、TLP、逻辑空闲和 Flit 修改规则 | p.629 |
-| 4.3.6.9 | 8b/10b Encoding Rules | 8b/10b 编码规则 | p.629 |
-| 4.3.6.10 | 8b/10b Scrambling Rules | 8b/10b 加扰规则 | p.630 |
-| 4.3.6.11 | Hot Reset Rules | 热复位规则 | p.630 |
-| 4.3.6.12 | Disable Link Rules | 禁用链路规则 | p.631 |
-| 4.3.6.13 | Loopback | 回环 | p.631 |
-| 4.3.6.14 | Compliance Receive Rules | 一致性接收规则 | p.632 |
-| 4.3.6.14 | Compliance Receive Rules (continued… | 一致性接收规则（续） | p.633 |
-| 4.3.6.15 | Enter Compliance Rules | 进入一致性规则 | p.634 |
-| 4.3.6.15 | Enter Compliance Rules (continued) | 进入一致性规则（续） | p.635 |
-| 4.3.7 | Execution Mode Rules | 执行模式规则 | p.637 |
-| 4.3.7.1.1 | CompLoadBoard.Entry | CompLoadBoard.Entry 状态 | p.637 |
-| 4.3.7.1.2 | CompLoadBoard.Pattern | CompLoadBoard.Pattern 状态 | p.637 |
-| 4.3.7.1.3 | CompLoadBoard.Exit | CompLoadBoard.Exit 状态 | p.638 |
-| 4.3.7.2 | Link Equalization Rules | 链路均衡规则 | p.638 |
-| 4.3.7.2.1.1 | Phase 1 | Phase 1 阶段 | p.639 |
-| 4.3.7.2.1.2 | Phase 2 | Phase 2 阶段 | p.639 |
-| 4.3.7.2.1.3 | Phase 3 Active | Phase 3 Active 阶段 | p.639 |
-| 4.3.7.2.1.4 | Phase 3 Passive | Phase 3 Passive 阶段 | p.639 |
-| 4.3.7.2.2.1 | Phase 0 | Phase 0 阶段 | p.640 |
-| 4.3.7.2.2.2 | Phase 1 Active | Phase 1 Active 阶段 | p.640 |
-| 4.3.7.2.2.3 | Phase 2 Active | Phase 2 Active 阶段 | p.640 |
-| 4.3.7.2.2.3 | Phase 2 Active (续) | Phase 2 Active（续） | p.641 |
-| 4.3.7.2.2.4 | Phase 2 Passive | 第 2 阶段被动 | p.641 |
-| 4.3.7.2.2.5 | Phase 3 | 第 3 阶段 | p.641 |
-| 4.3.7.2.3 | Force Timeout | 强制超时 | p.641 |
-| 4.3.7.3 | Follower Loopback | Follower Loopback | p.642 |
-| 4.3.7.3.1 | Follower Loopback.Entry | Follower Loopback.Entry | p.642 |
-| 4.3.7.3.2 | Follower Loopback.Active | Follower Loopback.Active | p.642 |
-| 4.3.7.3.3 | Follower Loopback.Exit | Follower Loopback.Exit | p.643 |
-| 4.3.8 | Retimer Latency | Retimer 延迟 | p.643 |
-| 4.3.8.1 | Measurement | 测量方法 | p.643 |
-| 4.3.8.2 | Maximum Limit on Retimer Latency | Retimer 延迟的最大限制 | p.643 |
-| 4.3.8.3 | Impacts on Upstream and Downstream … | 对上游端口和下游端口的影响 | p.643 |
-| 4.3.9 | SRIS | SRIS | p.644 |
-| 4.3.10 | L1 PM Substates Support | L1 PM 子状态支持 | p.646 |
-| 4.3.11 | Retimer Configuration Parameters | Retimer 配置参数 | p.647 |
-| 4.3.11.1 | Global Parameters | 全局参数 | p.648 |
-| 4.3.11.2 | Per Physical Pseudo Port Parameters | 按物理 Pseudo Port 参数 | p.648 |
-| 4.3.12 | In Band Register Access | 带内寄存器访问 | p.649 |
+|  | 4.2.7.5 | [L0](#sec-4-2-7-5) | [L0](#sec-4-2-7-5) | p.561 |
+|  | 4.2.7.6 | [L0s](#sec-4-2-7-6) | [L0s](#sec-4-2-7-6) | p.563 |
+|  | 4.2.7.6.1 | [Receiver L0s](#sec-4-2-7-6-1) | [接收器 L0s](#sec-4-2-7-6-1) | p.563 |
+|  | 4.2.7.6.1.1 | [Rx_L0s.Entry](#sec-4-2-7-6-1-1) | [Rx_L0s.Entry](#sec-4-2-7-6-1-1) | p.563 |
+|  | 4.2.7.6.1.2 | [Rx_L0s.Idle](#sec-4-2-7-6-1-2) | [Rx_L0s.Idle](#sec-4-2-7-6-1-2) | p.563 |
+|  | 4.2.7.6.1.3 | [Rx_L0s.FTS](#sec-4-2-7-6-1-3) | [Rx_L0s.FTS](#sec-4-2-7-6-1-3) | p.563 |
+|  | 4.2.7.6.2 | [Transmitter L0s](#sec-4-2-7-6-2) | [发送器 L0s](#sec-4-2-7-6-2) | p.563 |
+|  | 4.2.7.6.2.1 | [Tx_L0s.Entry](#sec-4-2-7-6-2-1) | [Tx_L0s.Entry](#sec-4-2-7-6-2-1) | p.563 |
+|  | 4.2.7.6.2.2 | [Tx_L0s.Idle](#sec-4-2-7-6-2-2) | [Tx_L0s.Idle](#sec-4-2-7-6-2-2) | p.563 |
+|  | 4.2.7.6.2.3 | [Tx_L0s.FTS](#sec-4-2-7-6-2-3) | [Tx_L0s.FTS](#sec-4-2-7-6-2-3) | p.565 |
+|  | 4.2.7.7 | [L1](#sec-4-2-7-7) | [L1](#sec-4-2-7-7) | p.566 |
+|  | 4.2.7.7.1 | [L1.Entry](#sec-4-2-7-7-1) | [L1.Entry](#sec-4-2-7-7-1) | p.567 |
+|  | 4.2.7.7.2 | [L1.Idle](#sec-4-2-7-7-2) | [L1.Idle](#sec-4-2-7-7-2) | p.567 |
+|  | 4.2.7.8 | [L2](#sec-4-2-7-8) | [L2](#sec-4-2-7-8) | p.568 |
+|  | 4.2.7.8.1 | [L2.Idle](#sec-4-2-7-8-1) | [L2.Idle](#sec-4-2-7-8-1) | p.568 |
+|  | 4.2.7.8.2 | [L2.TransmitWake](#sec-4-2-7-8-2) | [L2.TransmitWake](#sec-4-2-7-8-2) | p.569 |
+|  | 4.2.7.9 | [Disabled](#sec-4-2-7-9) | [Disabled](#sec-4-2-7-9) | p.570 |
+|  | 4.2.7.10 | [Loopback](#sec-4-2-7-10) | [Loopback](#sec-4-2-7-10) | p.571 |
+|  | 4.2.7.10.1 | [Loopback.Entry](#sec-4-2-7-10-1) | [Loopback.Entry](#sec-4-2-7-10-1) | p.572 |
+|  | 4.2.7.10.2 | [Loopback.Active](#sec-4-2-7-10-2) | [Loopback.Active](#sec-4-2-7-10-2) | p.573 |
+|  | 4.2.7.10.3 | [Loopback.Exit](#sec-4-2-7-10-3) | [Loopback.Exit](#sec-4-2-7-10-3) | p.574 |
+|  | 4.2.7.11 | [Hot Reset](#sec-4-2-7-11) | [热复位](#sec-4-2-7-11) | p.578 |
+|  | 4.2.8 | [Clock Tolerance Compensation](#sec-4-2-8) | [时钟容差补偿](#sec-4-2-8) | p.578 |
+|  | 4.2.8.1 | [SKP Ordered Set for 8b/10b Encoding](#sec-4-2-8-1) | [8b/10b 编码的 SKP Ordered Set](#sec-4-2-8-1) | p.579 |
+|  | 4.2.8.2 | [SKP Ordered Set for 128b/130b Encod…](#sec-4-2-8-2) | [128b/130b 编码的 SKP Ordered Set](#sec-4-2-8-2) | p.579 |
+|  | 4.2.8.3 | [SKP Ordered Set for 1b/1b Encoding](#sec-4-2-8-3) | [1b/1b 编码的 SKP Ordered Set](#sec-4-2-8-3) | p.583 |
+|  | 4.2.8.4 | [Rules for Transmitters](#sec-4-2-8-4) | [发送器规则](#sec-4-2-8-4) | p.587 |
+|  | 4.2.8.5 | [Rules for Receivers](#sec-4-2-8-5) | [接收器规则](#sec-4-2-8-5) | p.590 |
+|  | 4.2.9 | [Compliance Pattern in 8b/10b Encodi…](#sec-4-2-9) | [8b/10b 编码下的一致性测试码型](#sec-4-2-9) | p.591 |
+|  | 4.2.10 | [Modified Compliance Pattern in 8b/1…](#sec-4-2-10) | [8b/10b 编码下修改后的一致性测试码型](#sec-4-2-10) | p.592 |
+|  | 4.2.11 | [Compliance Pattern in 128b/130b Enc…](#sec-4-2-11) | [128b/130b 编码下的一致性测试码型](#sec-4-2-11) | p.593 |
+|  | 4.2.11 | [(Continued)](#sec-4-2-11) | [4.2.11（续）](#sec-4-2-11) | p.594 |
+|  | 4.2.12 | [Modified Compliance Pattern in 128b…](#sec-4-2-12) | [128b/130b 编码下修改后的一致性测试码型](#sec-4-2-12) | p.595 |
+|  | 4.2.13 | [Jitter Measurement Pattern in 128b/…](#sec-4-2-13) | [128b/130b 编码下的抖动测量码型](#sec-4-2-13) | p.596 |
+|  | 4.2.14 | [Compliance Pattern in 1b/1b Encodin…](#sec-4-2-14) | [1b/1b 编码下的一致性测试码型](#sec-4-2-14) | p.596 |
+|  | 4.2.15 | [Modified Compliance Pattern in 1b/1…](#sec-4-2-15) | [1b/1b 编码下修改后的一致性测试码型](#sec-4-2-15) | p.597 |
+|  | 4.2.16 | [Jitter Measurement Pattern in 1b/1b…](#sec-4-2-16) | [1b/1b 编码中的抖动测量码型](#sec-4-2-16) | p.598 |
+|  | 4.2.17 | [Toggle Patterns in 1b/1b encoding](#sec-4-2-17) | [1b/1b 编码中的翻转码型](#sec-4-2-17) | p.598 |
+|  | 4.2.18 | [Lane Margining at Receiver](#sec-4-2-18) | [接收端通道裕量测试](#sec-4-2-18) | p.598 |
+|  | 4.2.18.1 | [Receiver Number, Margin Type, Usage…](#sec-4-2-18-1) | [4.2.18.1 Receiver Number、Margi…](#sec-4-2-18-1) | p.600 |
+|  | 4.2.18.1.1 | [Step Margin Execution Status](#sec-4-2-18-1-1) | [4.2.18.1.1 Step Margin 执行状态](#sec-4-2-18-1-1) | p.604 |
+|  | 4.2.18.1.2 | [Margin Payload for Step Margin Comm…](#sec-4-2-18-1-2) | [4.2.18.1.2 Step Margin 命令的 Mar…](#sec-4-2-18-1-2) | p.604 |
+|  | 4.2.18.2 | [Margin Command and Response Flow](#sec-4-2-18-2) | [4.2.18.2 Margin Command 与响应流程](#sec-4-2-18-2) | p.605 |
+|  | 4.2.18.3 | [Flit Mode 8.0 GT/s Margining Behavi…](#sec-4-2-18-3) | [4.2.18.3 Flit 模式下 8.0 GT/s 的裕量…](#sec-4-2-18-3) | p.608 |
+|  | 4.2.18.4 | [Receiver Margin Testing Requirement…](#sec-4-2-18-4) | [接收器裕量测试要求](#sec-4-2-18-4) | p.608 |
+|  | 4.2.18.4 | [(续) Receiver Margin Testing Require…](#sec-4-2-18-4) | [接收器裕量测试要求](#sec-4-2-18-4) | p.611 |
+|  | 4.2.18.4 | [(续) Implementation Note: Example So…](#sec-4-2-18-4) | [实现说明:接收器通道裕量测试的示例软件流程](#sec-4-2-18-4) | p.612 |
+|  | 4.2.18.4 | [(续) Example Software Flow Steps B3 …](#sec-4-2-18-4) | [示例软件流程 步骤 B3 – C3](#sec-4-2-18-4) | p.613 |
+|  | 4.2.18.4 | [(续) Example Software Flow Steps C5 …](#sec-4-2-18-4) | [示例软件流程 步骤 C5 – C8](#sec-4-2-18-4) | p.614 |
+|  | 4.3 | [Retimers](#sec-4-3) | [重定时器 (Retimer)](#sec-4-3) | p.614 |
+|  | 4.3 | [(续) Retimers](#sec-4-3) | [重定时器 (Retimer)](#sec-4-3) | p.615 |
+|  | 4.3.1 | [Retimer Requirements](#sec-4-3-1) | [重定时器 (Retimer) 要求](#sec-4-3-1) | p.615 |
+|  | 4.3.1 | [(续) Retimer Requirements](#sec-4-3-1) | [重定时器 (Retimer) 要求](#sec-4-3-1) | p.616 |
+|  | 4.3.2 | [Supported Retimer Topologies](#sec-4-3-2) | [受支持的重定时器 (Retimer) 拓扑](#sec-4-3-2) | p.616 |
+|  | 4.3.3 | [Variables](#sec-4-3-3) | [变量](#sec-4-3-3) | p.617 |
+|  | 4.3.3 | [(续) Variables](#sec-4-3-3) | [变量](#sec-4-3-3) | p.618 |
+|  | 4.3.4 | [Receiver Impedance Propagation Rule…](#sec-4-3-4) | [接收器阻抗传播规则](#sec-4-3-4) | p.618 |
+|  | 4.3.6 | [Forwarding Rules](#sec-4-3-6) | [转发规则](#sec-4-3-6) | p.618 |
+|  | 4.3.6.1 | [Forwarding Type Rules](#sec-4-3-6-1) | [转发类型规则](#sec-4-3-6-1) | p.618 |
+|  | 4.3.6.2 | [Orientation, Lane Numbers, and Data…](#sec-4-3-6-2) | [方向、通道号与数据流模式规则](#sec-4-3-6-2) | p.618 |
+|  | 4.3.6.7 | [Ordered Set Modification Rules](#sec-4-3-6-7) | [有序集修改规则](#sec-4-3-6-7) | p.627 |
+|  | 4.3.6.7 | [Ordered Set Modification Rules (con…](#sec-4-3-6-7) | [有序集修改规则（续）](#sec-4-3-6-7) | p.628 |
+|  | 4.3.6.8 | [DLLP, TLP, Logical Idle, and Flit M…](#sec-4-3-6-8) | [DLLP、TLP、逻辑空闲和 Flit 修改规则](#sec-4-3-6-8) | p.629 |
+|  | 4.3.6.9 | [8b/10b Encoding Rules](#sec-4-3-6-9) | [8b/10b 编码规则](#sec-4-3-6-9) | p.629 |
+|  | 4.3.6.10 | [8b/10b Scrambling Rules](#sec-4-3-6-10) | [8b/10b 加扰规则](#sec-4-3-6-10) | p.630 |
+|  | 4.3.6.11 | [Hot Reset Rules](#sec-4-3-6-11) | [热复位规则](#sec-4-3-6-11) | p.630 |
+|  | 4.3.6.12 | [Disable Link Rules](#sec-4-3-6-12) | [禁用链路规则](#sec-4-3-6-12) | p.631 |
+|  | 4.3.6.13 | [Loopback](#sec-4-3-6-13) | [回环](#sec-4-3-6-13) | p.631 |
+|  | 4.3.6.14 | [Compliance Receive Rules](#sec-4-3-6-14) | [一致性接收规则](#sec-4-3-6-14) | p.632 |
+|  | 4.3.6.14 | [Compliance Receive Rules (continued…](#sec-4-3-6-14) | [一致性接收规则（续）](#sec-4-3-6-14) | p.633 |
+|  | 4.3.6.15 | [Enter Compliance Rules](#sec-4-3-6-15) | [进入一致性规则](#sec-4-3-6-15) | p.634 |
+|  | 4.3.6.15 | [Enter Compliance Rules (continued)](#sec-4-3-6-15) | [进入一致性规则（续）](#sec-4-3-6-15) | p.635 |
+|  | 4.3.7 | [Execution Mode Rules](#sec-4-3-7) | [执行模式规则](#sec-4-3-7) | p.637 |
+|  | 4.3.7.1.1 | [CompLoadBoard.Entry](#sec-4-3-7-1-1) | [CompLoadBoard.Entry 状态](#sec-4-3-7-1-1) | p.637 |
+|  | 4.3.7.1.2 | [CompLoadBoard.Pattern](#sec-4-3-7-1-2) | [CompLoadBoard.Pattern 状态](#sec-4-3-7-1-2) | p.637 |
+|  | 4.3.7.1.3 | [CompLoadBoard.Exit](#sec-4-3-7-1-3) | [CompLoadBoard.Exit 状态](#sec-4-3-7-1-3) | p.638 |
+|  | 4.3.7.2 | [Link Equalization Rules](#sec-4-3-7-2) | [链路均衡规则](#sec-4-3-7-2) | p.638 |
+|  | 4.3.7.2.1.1 | [Phase 1](#sec-4-3-7-2-1-1) | [Phase 1 阶段](#sec-4-3-7-2-1-1) | p.639 |
+|  | 4.3.7.2.1.2 | [Phase 2](#sec-4-3-7-2-1-2) | [Phase 2 阶段](#sec-4-3-7-2-1-2) | p.639 |
+|  | 4.3.7.2.1.3 | [Phase 3 Active](#sec-4-3-7-2-1-3) | [Phase 3 Active 阶段](#sec-4-3-7-2-1-3) | p.639 |
+|  | 4.3.7.2.1.4 | [Phase 3 Passive](#sec-4-3-7-2-1-4) | [Phase 3 Passive 阶段](#sec-4-3-7-2-1-4) | p.639 |
+|  | 4.3.7.2.2.1 | [Phase 0](#sec-4-3-7-2-2-1) | [Phase 0 阶段](#sec-4-3-7-2-2-1) | p.640 |
+|  | 4.3.7.2.2.2 | [Phase 1 Active](#sec-4-3-7-2-2-2) | [Phase 1 Active 阶段](#sec-4-3-7-2-2-2) | p.640 |
+|  | 4.3.7.2.2.3 | [Phase 2 Active](#sec-4-3-7-2-2-3) | [Phase 2 Active 阶段](#sec-4-3-7-2-2-3) | p.640 |
+|  | 4.3.7.2.2.3 | [Phase 2 Active (续)](#sec-4-3-7-2-2-3) | [Phase 2 Active（续）](#sec-4-3-7-2-2-3) | p.641 |
+|  | 4.3.7.2.2.4 | [Phase 2 Passive](#sec-4-3-7-2-2-4) | [第 2 阶段被动](#sec-4-3-7-2-2-4) | p.641 |
+|  | 4.3.7.2.2.5 | [Phase 3](#sec-4-3-7-2-2-5) | [第 3 阶段](#sec-4-3-7-2-2-5) | p.641 |
+|  | 4.3.7.2.3 | [Force Timeout](#sec-4-3-7-2-3) | [强制超时](#sec-4-3-7-2-3) | p.641 |
+|  | 4.3.7.3 | [Follower Loopback](#sec-4-3-7-3) | [Follower Loopback](#sec-4-3-7-3) | p.642 |
+|  | 4.3.7.3.1 | [Follower Loopback.Entry](#sec-4-3-7-3-1) | [Follower Loopback.Entry](#sec-4-3-7-3-1) | p.642 |
+|  | 4.3.7.3.2 | [Follower Loopback.Active](#sec-4-3-7-3-2) | [Follower Loopback.Active](#sec-4-3-7-3-2) | p.642 |
+|  | 4.3.7.3.3 | [Follower Loopback.Exit](#sec-4-3-7-3-3) | [Follower Loopback.Exit](#sec-4-3-7-3-3) | p.643 |
+|  | 4.3.8 | [Retimer Latency](#sec-4-3-8) | [Retimer 延迟](#sec-4-3-8) | p.643 |
+|  | 4.3.8.1 | [Measurement](#sec-4-3-8-1) | [测量方法](#sec-4-3-8-1) | p.643 |
+|  | 4.3.8.2 | [Maximum Limit on Retimer Latency](#sec-4-3-8-2) | [Retimer 延迟的最大限制](#sec-4-3-8-2) | p.643 |
+|  | 4.3.8.3 | [Impacts on Upstream and Downstream …](#sec-4-3-8-3) | [对上游端口和下游端口的影响](#sec-4-3-8-3) | p.643 |
+|  | 4.3.9 | [SRIS](#sec-4-3-9) | [SRIS](#sec-4-3-9) | p.644 |
+|  | 4.3.10 | [L1 PM Substates Support](#sec-4-3-10) | [L1 PM 子状态支持](#sec-4-3-10) | p.646 |
+|  | 4.3.11 | [Retimer Configuration Parameters](#sec-4-3-11) | [Retimer 配置参数](#sec-4-3-11) | p.647 |
+|  | 4.3.11.1 | [Global Parameters](#sec-4-3-11-1) | [全局参数](#sec-4-3-11-1) | p.648 |
+|  | 4.3.11.2 | [Per Physical Pseudo Port Parameters](#sec-4-3-11-2) | [按物理 Pseudo Port 参数](#sec-4-3-11-2) | p.648 |
+|  | 4.3.12 | [In Band Register Access](#sec-4-3-12) | [带内寄存器访问](#sec-4-3-12) | p.649 |
 
 ## 🖼 本章图表 (Figures)
 

@@ -13,465 +13,465 @@
 
 | # | Section | 小节 | Page |
 |:-:|:--------|:-----|:----:|
-| 7.1 | Configuration Topology § | 7.1 配置拓扑 § | p.981 |
-| 7.2 | PCI Express Configuration Mechanism… | 7.2 PCI Express 配置机制 § | p.982 |
-| 7.2.1 | PCI-compatible Configuration Mechan… | 7.2.1 PCI 兼容配置机制 § | p.983 |
-| 7.2.2 | PCI Express Enhanced Configuration … | 7.2.2 PCI Express 增强配置访问机制 (EC… | p.984 |
-| 7.2.2.1 | Host Bridge Requirements § | 7.2.2.1 主桥 (Host Bridge) 要求 § | p.987 |
-| 7.2.2.2 | PCI Express Device Requirements § | 7.2.2.2 PCI Express 设备要求 § | p.987 |
-| 7.2.3 | Root Complex Register Block (RCRB) … | 7.2.3 根复合体寄存器块 (RCRB) § | p.988 |
-| 7.3 | Configuration Transaction Rules § | 7.3 配置事务规则 § | p.988 |
-| 7.3.1 | Device Number § | 7.3.1 设备号 (Device Number) § | p.988 |
-| 7.3.1 | Device Number (continued) § | 7.3.1 设备号 (Device Number)（续）§ | p.989 |
-| 7.3.2 | Configuration Transaction Addressin… | 配置事务寻址 | p.989 |
-| 7.3.3 | Configuration Request Routing Rules | 配置请求路由规则 | p.989 |
-| 7.3.4 | PCI Special Cycles | PCI 特殊周期 | p.990 |
-| 7.4 | Configuration Register Types | 配置寄存器类型 | p.990 |
-| 7.5 | PCI and PCIe Capabilities Required … | 基础规范要求所有端口支持的 PCI 和 PCIe 能力 | p.991 |
-| 7.5.1 | PCI-Compatible Configuration Regist… | PCI 兼容配置寄存器 | p.991 |
-| 7.5.1.1 | Type 0/1 Common Configuration Space | Type 0/1 公共配置空间 | p.991 |
-| 7.5.1.1.1 | Vendor ID Register (Offset 00h) | Vendor ID 寄存器（偏移 00h） | p.991 |
-| 7.5.1.1.2 | Device ID Register (Offset 02h) | Device ID 寄存器（偏移 02h） | p.995 |
-| 7.5.1.1.3 | Command Register (Offset 04h) | Command 寄存器（偏移 04h） | p.995 |
-| 7.5.1.1.4 | Status Register (Offset 06h) | Status 寄存器（偏移 06h） | p.998 |
-| 7.5.1.1.4 | Status Register (Offset 06h) | 状态寄存器（偏移量 06h） | p.998 |
-| 7.5.1.1.5 | Revision ID Register (Offset 08h) | 修订版本 ID 寄存器（偏移量 08h） | p.1000 |
-| 7.5.1.1.6 | Class Code Register (Offset 09h) | 类别代码寄存器（偏移量 09h） | p.1000 |
-| 7.5.1.1.7 | Cache Line Size Register (Offset 0C… | Cache 行大小寄存器（偏移量 0Ch） | p.1001 |
-| 7.5.1.1.8 | Latency Timer Register (Offset 0Dh) | 延迟定时器寄存器（偏移量 0Dh） | p.1001 |
-| 7.5.1.1.9 | Header Type Register (Offset 0Eh) | 头类型寄存器（偏移量 0Eh） | p.1001 |
-| 7.5.1.1.10 | BIST Register (Offset 0Fh) | BIST 寄存器（偏移量 0Fh） | p.1002 |
-| 7.5.1.1.11 | Capabilities Pointer (Offset 34h) | 能力指针（偏移量 34h） | p.1003 |
-| 7.5.1.1.12 | Interrupt Line Register (Offset 3Ch… | 中断线寄存器（偏移量 3Ch） | p.1003 |
-| 7.5.1.1.13 | Interrupt Pin Register (Offset 3Dh) | 中断引脚寄存器（偏移量 3Dh） | p.1004 |
-| 7.5.1.1.14 | Error Control/Status Register Summa… | 错误控制/状态寄存器总结 | p.1004 |
-| 7.5.1.1.14 | Error Registers | 错误寄存器 | p.1005 |
-| 7.5.1.2 | Type 0 Configuration Space Header | Type 0 配置空间头 | p.1005 |
-| 7.5.1.2.1 | Base Address Registers (Offset 10h … | 基址寄存器 (BAR) (偏移 10h - 24h) | p.1005 |
-| 7.5.1.2.1 | Base Address Registers (continued) | 基址寄存器（续） | p.1006 |
-| 7.5.1.2.1 | Prefetchable Bit Guidance | 可预取位指导 | p.1007 |
-| 7.5.1.2.2 | Cardbus CIS Pointer Register (Offse… | Cardbus CIS 指针寄存器 (偏移 28h) | p.1008 |
-| 7.5.1.2.3 | Subsystem Vendor ID Register/Subsys… | 子系统供应商 ID 寄存器/子系统 ID 寄存器 (偏移 2… | p.1009 |
-| 7.5.1.2.4 | Expansion ROM Base Address Register… | 扩展 ROM 基址寄存器 (偏移 30h) | p.1009 |
-| 7.5.1.2.5 | Min_Gnt Register/Max_Lat Register (… | Min_Gnt 寄存器/Max_Lat 寄存器 (偏移 3E… | p.1012 |
-| 7.5.1.3 | Type 1 Configuration Space Header | Type 1 配置空间头 | p.1012 |
-| 7.5.1.3 | Type 1 Configuration Space Header (… | Type 1 配置空间头（图表） | p.1012 |
-| 7.5.1.3.1 | Type 1 Base Address Registers (Offs… | Type 1 基址寄存器 (偏移 10h-14h) | p.1013 |
-| 7.5.1.3.1 | Type 1 Base Address Registers (Offs… | Type 1 基址寄存器 (偏移 10h-14h) (续) | p.1014 |
-| 7.5.1.3.7 | Secondary Status Register (Offset 1… | Secondary Status 寄存器 (偏移 1Eh) | p.1015 |
-| 7.5.1.3.7 | Secondary Status Register (continue… | Secondary Status 寄存器 (续) | p.1016 |
-| 7.5.1.3.8 | Memory Base Register/Memory Limit R… | Memory Base 寄存器 / Memory Limit… | p.1017 |
+|  | 7.1 | [Configuration Topology §](#sec-7-1) | [7.1 配置拓扑 §](#sec-7-1) | p.981 |
+|  | 7.2 | [PCI Express Configuration Mechanism…](#sec-7-2) | [7.2 PCI Express 配置机制 §](#sec-7-2) | p.982 |
+|  | 7.2.1 | [PCI-compatible Configuration Mechan…](#sec-7-2-1) | [7.2.1 PCI 兼容配置机制 §](#sec-7-2-1) | p.983 |
+|  | 7.2.2 | [PCI Express Enhanced Configuration …](#sec-7-2-2) | [7.2.2 PCI Express 增强配置访问机制 (EC…](#sec-7-2-2) | p.984 |
+|  | 7.2.2.1 | [Host Bridge Requirements §](#sec-7-2-2-1) | [7.2.2.1 主桥 (Host Bridge) 要求 §](#sec-7-2-2-1) | p.987 |
+|  | 7.2.2.2 | [PCI Express Device Requirements §](#sec-7-2-2-2) | [7.2.2.2 PCI Express 设备要求 §](#sec-7-2-2-2) | p.987 |
+|  | 7.2.3 | [Root Complex Register Block (RCRB) …](#sec-7-2-3) | [7.2.3 根复合体寄存器块 (RCRB) §](#sec-7-2-3) | p.988 |
+|  | 7.3 | [Configuration Transaction Rules §](#sec-7-3) | [7.3 配置事务规则 §](#sec-7-3) | p.988 |
+|  | 7.3.1 | [Device Number §](#sec-7-3-1) | [7.3.1 设备号 (Device Number) §](#sec-7-3-1) | p.988 |
+|  | 7.3.1 | [Device Number (continued) §](#sec-7-3-1) | [7.3.1 设备号 (Device Number)（续）§](#sec-7-3-1) | p.989 |
+|  | 7.3.2 | [Configuration Transaction Addressin…](#sec-7-3-2) | [配置事务寻址](#sec-7-3-2) | p.989 |
+|  | 7.3.3 | [Configuration Request Routing Rules](#sec-7-3-3) | [配置请求路由规则](#sec-7-3-3) | p.989 |
+|  | 7.3.4 | [PCI Special Cycles](#sec-7-3-4) | [PCI 特殊周期](#sec-7-3-4) | p.990 |
+|  | 7.4 | [Configuration Register Types](#sec-7-4) | [配置寄存器类型](#sec-7-4) | p.990 |
+|  | 7.5 | [PCI and PCIe Capabilities Required …](#sec-7-5) | [基础规范要求所有端口支持的 PCI 和 PCIe 能力](#sec-7-5) | p.991 |
+|  | 7.5.1 | [PCI-Compatible Configuration Regist…](#sec-7-5-1) | [PCI 兼容配置寄存器](#sec-7-5-1) | p.991 |
+|  | 7.5.1.1 | [Type 0/1 Common Configuration Space](#sec-7-5-1-1) | [Type 0/1 公共配置空间](#sec-7-5-1-1) | p.991 |
+|  | 7.5.1.1.1 | [Vendor ID Register (Offset 00h)](#sec-7-5-1-1-1) | [Vendor ID 寄存器（偏移 00h）](#sec-7-5-1-1-1) | p.991 |
+|  | 7.5.1.1.2 | [Device ID Register (Offset 02h)](#sec-7-5-1-1-2) | [Device ID 寄存器（偏移 02h）](#sec-7-5-1-1-2) | p.995 |
+|  | 7.5.1.1.3 | [Command Register (Offset 04h)](#sec-7-5-1-1-3) | [Command 寄存器（偏移 04h）](#sec-7-5-1-1-3) | p.995 |
+|  | 7.5.1.1.4 | [Status Register (Offset 06h)](#sec-7-5-1-1-4) | [Status 寄存器（偏移 06h）](#sec-7-5-1-1-4) | p.998 |
+|  | 7.5.1.1.4 | [Status Register (Offset 06h)](#sec-7-5-1-1-4) | [状态寄存器（偏移量 06h）](#sec-7-5-1-1-4) | p.998 |
+|  | 7.5.1.1.5 | [Revision ID Register (Offset 08h)](#sec-7-5-1-1-5) | [修订版本 ID 寄存器（偏移量 08h）](#sec-7-5-1-1-5) | p.1000 |
+|  | 7.5.1.1.6 | [Class Code Register (Offset 09h)](#sec-7-5-1-1-6) | [类别代码寄存器（偏移量 09h）](#sec-7-5-1-1-6) | p.1000 |
+|  | 7.5.1.1.7 | [Cache Line Size Register (Offset 0C…](#sec-7-5-1-1-7) | [Cache 行大小寄存器（偏移量 0Ch）](#sec-7-5-1-1-7) | p.1001 |
+|  | 7.5.1.1.8 | [Latency Timer Register (Offset 0Dh)](#sec-7-5-1-1-8) | [延迟定时器寄存器（偏移量 0Dh）](#sec-7-5-1-1-8) | p.1001 |
+|  | 7.5.1.1.9 | [Header Type Register (Offset 0Eh)](#sec-7-5-1-1-9) | [头类型寄存器（偏移量 0Eh）](#sec-7-5-1-1-9) | p.1001 |
+|  | 7.5.1.1.10 | [BIST Register (Offset 0Fh)](#sec-7-5-1-1-10) | [BIST 寄存器（偏移量 0Fh）](#sec-7-5-1-1-10) | p.1002 |
+|  | 7.5.1.1.11 | [Capabilities Pointer (Offset 34h)](#sec-7-5-1-1-11) | [能力指针（偏移量 34h）](#sec-7-5-1-1-11) | p.1003 |
+|  | 7.5.1.1.12 | [Interrupt Line Register (Offset 3Ch…](#sec-7-5-1-1-12) | [中断线寄存器（偏移量 3Ch）](#sec-7-5-1-1-12) | p.1003 |
+|  | 7.5.1.1.13 | [Interrupt Pin Register (Offset 3Dh)](#sec-7-5-1-1-13) | [中断引脚寄存器（偏移量 3Dh）](#sec-7-5-1-1-13) | p.1004 |
+|  | 7.5.1.1.14 | [Error Control/Status Register Summa…](#sec-7-5-1-1-14) | [错误控制/状态寄存器总结](#sec-7-5-1-1-14) | p.1004 |
+|  | 7.5.1.1.14 | [Error Registers](#sec-7-5-1-1-14) | [错误寄存器](#sec-7-5-1-1-14) | p.1005 |
+|  | 7.5.1.2 | [Type 0 Configuration Space Header](#sec-7-5-1-2) | [Type 0 配置空间头](#sec-7-5-1-2) | p.1005 |
+|  | 7.5.1.2.1 | [Base Address Registers (Offset 10h …](#sec-7-5-1-2-1) | [基址寄存器 (BAR) (偏移 10h - 24h)](#sec-7-5-1-2-1) | p.1005 |
+|  | 7.5.1.2.1 | [Base Address Registers (continued)](#sec-7-5-1-2-1) | [基址寄存器（续）](#sec-7-5-1-2-1) | p.1006 |
+|  | 7.5.1.2.1 | [Prefetchable Bit Guidance](#sec-7-5-1-2-1) | [可预取位指导](#sec-7-5-1-2-1) | p.1007 |
+|  | 7.5.1.2.2 | [Cardbus CIS Pointer Register (Offse…](#sec-7-5-1-2-2) | [Cardbus CIS 指针寄存器 (偏移 28h)](#sec-7-5-1-2-2) | p.1008 |
+|  | 7.5.1.2.3 | [Subsystem Vendor ID Register/Subsys…](#sec-7-5-1-2-3) | [子系统供应商 ID 寄存器/子系统 ID 寄存器 (偏移 2…](#sec-7-5-1-2-3) | p.1009 |
+|  | 7.5.1.2.4 | [Expansion ROM Base Address Register…](#sec-7-5-1-2-4) | [扩展 ROM 基址寄存器 (偏移 30h)](#sec-7-5-1-2-4) | p.1009 |
+|  | 7.5.1.2.5 | [Min_Gnt Register/Max_Lat Register (…](#sec-7-5-1-2-5) | [Min_Gnt 寄存器/Max_Lat 寄存器 (偏移 3E…](#sec-7-5-1-2-5) | p.1012 |
+|  | 7.5.1.3 | [Type 1 Configuration Space Header](#sec-7-5-1-3) | [Type 1 配置空间头](#sec-7-5-1-3) | p.1012 |
+|  | 7.5.1.3 | [Type 1 Configuration Space Header (…](#sec-7-5-1-3) | [Type 1 配置空间头（图表）](#sec-7-5-1-3) | p.1012 |
+|  | 7.5.1.3.1 | [Type 1 Base Address Registers (Offs…](#sec-7-5-1-3-1) | [Type 1 基址寄存器 (偏移 10h-14h)](#sec-7-5-1-3-1) | p.1013 |
+|  | 7.5.1.3.1 | [Type 1 Base Address Registers (Offs…](#sec-7-5-1-3-1) | [Type 1 基址寄存器 (偏移 10h-14h) (续)](#sec-7-5-1-3-1) | p.1014 |
+|  | 7.5.1.3.7 | [Secondary Status Register (Offset 1…](#sec-7-5-1-3-7) | [Secondary Status 寄存器 (偏移 1Eh)](#sec-7-5-1-3-7) | p.1015 |
+|  | 7.5.1.3.7 | [Secondary Status Register (continue…](#sec-7-5-1-3-7) | [Secondary Status 寄存器 (续)](#sec-7-5-1-3-7) | p.1016 |
+|  | 7.5.1.3.8 | [Memory Base Register/Memory Limit R…](#sec-7-5-1-3-8) | [Memory Base 寄存器 / Memory Limit…](#sec-7-5-1-3-8) | p.1017 |
 | 7.5.1.3.9 | Prefetchable Memory Base/Prefetchab… | Prefetchable Memory Base / Pre… | p.1018 |
-| 7.5.1.3.10 | Prefetchable Base Upper 32 Bits/Pre… | Prefetchable Base Upper 32 Bit… | p.1018 |
-| 7.5.1.3.11 | I/O Base Upper 16 Bits/I/O Limit Up… | I/O Base Upper 16 Bits / I/O L… | p.1018 |
-| 7.5.1.3.12 | Expansion ROM Base Address Register… | Expansion ROM 基址寄存器 (偏移 38h) | p.1019 |
-| 7.5.1.3.13 | Bridge Control Register (Offset 3Eh… | Bridge Control 寄存器 (偏移 3Eh) | p.1019 |
-| 7.5.1.3.13 | Bridge Control Register (continued) | Bridge Control 寄存器 (续) | p.1020 |
-| 7.5.1.3.13 | Bridge Control Register (continued) | Bridge Control 寄存器 (续) | p.1021 |
-| 7.5.1.4 | PCI Power Management Capability Str… | PCI 电源管理能力结构 | p.1021 |
-| 7.5.2 | PCI Power Management Capability Str… | PCI 电源管理能力结构 | p.1022 |
-| 7.5.2.1 | Power Management Capabilities Regis… | 电源管理能力寄存器（偏移量 00h） | p.1022 |
-| 7.5.2.2 | Power Management Control/Status Reg… | 电源管理控制/状态寄存器（偏移量 04h） | p.1024 |
-| 7.5.2.3 | Power Management Data Register (Off… | 电源管理数据寄存器（偏移量 07h） | p.1026 |
-| 7.5.3 | PCI Express Capability Structure | PCI Express 能力结构 | p.1028 |
-| 7.5.3.1 | PCI Express Capability List Registe… | PCI Express 能力列表寄存器（偏移量 00h） | p.1029 |
-| 7.5.3.2 | PCI Express Capabilities Register (… | PCI Express 能力寄存器（偏移量 02h） | p.1029 |
-| 7.5.3.3 | Device Capabilities Register (Offse… | 设备能力寄存器 (Device Capabilities R… | p.1031 |
-| 7.5.3.4 | Device Control Register (Offset 08h… | 设备控制寄存器 (Device Control Regist… | p.1035 |
-| 7.5.3.5 | Device Status Register (Offset 0Ah) | 设备状态寄存器 (Device Status Registe… | p.1042 |
-| 7.5.3.6 | Link Capabilities Register (Offset … | 链路能力寄存器 (Link Capabilities Reg… | p.1043 |
-| 7.5.3.7 | Link Control Register (Offset 10h) | 链路控制寄存器（偏移 10h） | p.1047 |
-| 7.5.3.8 | Link Status Register (Offset 12h) | 链路状态寄存器（偏移 12h） | p.1055 |
-| 7.5.3.9 | Slot Capabilities Register (Offset … | 插槽能力寄存器（偏移 14h） | p.1057 |
-| 7.5.3.10 | Slot Control Register | 插槽控制寄存器 (Offset 18h) | p.1059 |
-| 7.5.3.11 | Slot Status Register | 插槽状态寄存器 (Offset 1Ah) | p.1062 |
-| 7.5.3.12 | Root Control Register | 根复合体控制寄存器 (Offset 1Ch) | p.1064 |
-| 7.5.3.13 | Root Capabilities Register | 根复合体能力寄存器 (Offset 1Eh) | p.1066 |
-| 7.5.3.14 | Root Status Register | 根复合体状态寄存器 (Offset 20h) | p.1066 |
-| 7.5.3.15 | Device Capabilities 2 Register | 设备能力 2 寄存器 (Offset 24h) | p.1067 |
-| 7.5.3.16 | Device Control 2 Register (Offset 2… | Device Control 2 寄存器(偏移 28h) | p.1073 |
-| 7.5.3.17 | Device Status 2 Register (Offset 2A… | Device Status 2 寄存器(偏移 2Ah) | p.1076 |
-| 7.5.3.18 | Link Capabilities 2 Register (Offse… | Link Capabilities 2 寄存器(偏移 2Ch… | p.1077 |
-| 7.5.3.19 | Link Control 2 Register (Offset 30h… | Link Control 2 寄存器(偏移 30h) | p.1080 |
-| 7.5.3.20 | Link Status 2 Register (Offset 32h) | Link Status 2 寄存器(偏移 32h) | p.1083 |
-| 7.5.3.21 | Slot Capabilities 2 Register (Offse… | Slot Capabilities 2 寄存器 (偏移 34… | p.1086 |
-| 7.5.3.21 | Slot Capabilities 2 Register (Offse… | Slot Capabilities 2 寄存器 (偏移 34… | p.1086 |
-| 7.6 | PCI Express Extended Capabilities | PCI Express 扩展能力 | p.1086 |
-| 7.6.1 | Extended Capabilities in Configurat… | 配置空间中的扩展能力 | p.1086 |
-| 7.6.2 | Extended Capabilities in the Root C… | 根复合体寄存器块中的扩展能力 | p.1086 |
-| 7.6.3 | PCI Express Extended Capability Hea… | PCI Express 扩展能力头 | p.1086 |
-| 7.7 | PCI and PCIe Capabilities Required … | 基础规范在某些情况下要求的 PCI 和 PCIe 能力 | p.1086 |
-| 7.7.1 | MSI Capability Structures | MSI 能力结构 | p.1086 |
-| 7.7.1 | MSI Capability Structures (continue… | MSI 能力结构 (续) | p.1086 |
-| 7.7.1.1 | MSI Capability Header (Offset 00h) | MSI 能力头 (偏移 00h) | p.1086 |
-| 7.7.1.2 | Message Control Register for MSI (O… | MSI 的消息控制寄存器 (偏移 02h) | p.1086 |
-| 7.7.1.3 | Message Address Register for MSI (O… | MSI 的消息地址寄存器 (偏移 04h) | p.1086 |
-| 7.7.1.4 | Message Upper Address Register for … | MSI 的消息高地址寄存器 (偏移 08h) | p.1086 |
-| 7.7.1.5 | Message Data Register for MSI (Offs… | MSI 的消息数据寄存器 (偏移 08h 或 0Ch) | p.1086 |
-| 7.7.1.6 | Extended Message Data Register for … | MSI 扩展消息数据寄存器(可选) | p.1086 |
-| 7.7.1.7 | Mask Bits Register for MSI (Offset … | MSI Mask Bits 寄存器(偏移 0Ch 或 10h… | p.1086 |
-| 7.7.1.8 | Pending Bits Register for MSI (Offs… | MSI Pending Bits 寄存器(偏移 10h 或 … | p.1086 |
-| 7.7.2 | MSI-X Capability and Table Structur… | MSI-X 能力结构与表结构 | p.1086 |
-| 7.7.2.1 | MSI-X Capability Header (Offset 00h… | MSI-X Capability Header(偏移 00h… | p.1086 |
-| 7.7.2.2 | Message Control Register for MSI-X … | MSI-X Message Control 寄存器(偏移 0… | p.1086 |
-| 7.7.2.3 | Table Offset/Table BIR Register for… | MSI-X Table Offset/Table BIR 寄… | p.1086 |
-| 7.7.2.4 | PBA Offset/PBA BIR Register for MSI… | MSI-X PBA Offset/PBA BIR 寄存器(偏… | p.1086 |
-| 7.7.2.5 | Message Address Register for MSI-X … | MSI-X Table 条目 Message Address… | p.1086 |
-| 7.7.2.6 | Message Upper Address Register for … | MSI-X Table 条目 Message Upper A… | p.1086 |
-| 7.7.2.7 | Message Data Register for MSI-X Tab… | MSI-X 表条目的消息数据寄存器 | p.1086 |
-| 7.7.2.8 | Vector Control Register for MSI-X T… | MSI-X 表条目的向量控制寄存器 | p.1086 |
-| 7.7.2.9 | Pending Bits Register for MSI-X PBA… | MSI-X PBA 条目的挂起位寄存器 | p.1104 |
-| 7.7.3 | Secondary PCI Express Extended Capa… | 次级 PCI Express 扩展能力 | p.1105 |
-| 7.7.3.1 | Secondary PCI Express Extended Capa… | 次级 PCI Express 扩展能力头（偏移 00h） | p.1107 |
-| 7.7.3.2 | Link Control 3 Register (Offset 04h… | 链路控制 3 寄存器（偏移 04h） | p.1107 |
-| 7.7.3.3 | Lane Error Status Register (Offset … | 通道错误状态寄存器（偏移 08h） | p.1108 |
-| 7.7.3.4 | Lane Equalization Control Register … | 通道均衡控制寄存器（偏移 0Ch） | p.1109 |
-| 7.7.4 | Data Link Feature Extended Capabili… | 数据链路特性扩展能力 | p.1111 |
-| 7.7.4.1 | Data Link Feature Extended Capabili… | 数据链路特性扩展能力头（偏移 00h） | p.1112 |
-| 7.7.4.2 | Data Link Feature Capabilities Regi… | 数据链路特性能力寄存器（偏移 04h） | p.1113 |
-| 7.7.4.3 | Data Link Feature Status Register (… | 数据链路特性状态寄存器(偏移量 08h) | p.1114 |
-| 7.7.5 | Physical Layer 16.0 GT/s Extended C… | 物理层 16.0 GT/s 扩展能力结构 | p.1114 |
-| 7.7.5.1 | Physical Layer 16.0 GT/s Extended C… | 物理层 16.0 GT/s 扩展能力结构头(偏移量 00h) | p.1117 |
-| 7.7.5.2 | 16.0 GT/s Capabilities Register (Of… | 16.0 GT/s 能力寄存器(偏移量 04h) | p.1117 |
-| 7.7.5.3 | 16.0 GT/s Control Register (Offset … | 16.0 GT/s 控制寄存器(偏移量 08h) | p.1118 |
-| 7.7.5.4 | 16.0 GT/s Status Register (Offset 0… | 16.0 GT/s 状态寄存器(偏移量 0Ch) | p.1118 |
-| 7.7.5.5 | 16.0 GT/s Local Data Parity Mismatc… | 16.0 GT/s 本地数据奇偶校验不匹配状态寄存器(偏移量… | p.1119 |
-| 7.7.5.6 | 16.0 GT/s First Retimer Data Parity… | 16.0 GT/s 第一个重定时器数据奇偶校验不匹配状态寄存… | p.1120 |
-| 7.7.5.7 | 16.0 GT/s Second Retimer Data Parit… | 16.0 GT/s 第二个重定时器数据奇偶校验不匹配状态寄存… | p.1120 |
-| 7.7.5.8 | Physical Layer 16.0 GT/s Reserved (… | 物理层 16.0 GT/s 保留(偏移量 1Ch) | p.1121 |
-| 7.7.5.9 | 16.0 GT/s Lane Equalization Control… | 16.0 GT/s 通道均衡控制寄存器(偏移量 20h 至 … | p.1121 |
-| 7.7.6 | Physical Layer 32.0 GT/s Extended C… | 物理层 32.0 GT/s 扩展能力结构(介绍) | p.1122 |
-| 7.7.6 | Physical Layer 32.0 GT/s Extended C… | 物理层 32.0 GT/s 扩展能力 | p.1122 |
-| 7.7.6.1 | Physical Layer 32.0 GT/s Extended C… | 物理层 32.0 GT/s 扩展能力头（偏移 00h） | p.1123 |
-| 7.7.6.2 | 32.0 GT/s Capabilities Register (Of… | 32.0 GT/s 能力寄存器（偏移 04h） | p.1124 |
-| 7.7.6.3 | 32.0 GT/s Control Register (Offset … | 32.0 GT/s 控制寄存器（偏移 08h） | p.1124 |
-| 7.7.6.4 | 32.0 GT/s Status Register (Offset 0… | 32.0 GT/s 状态寄存器（偏移 0Ch） | p.1125 |
-| 7.7.6.5 | Received Modified TS Data 1 Registe… | 接收 Modified TS 数据 1 寄存器（偏移 10h… | p.1126 |
-| 7.7.6.6 | Received Modified TS Data 2 Registe… | 接收 Modified TS 数据 2 寄存器（偏移 14h… | p.1128 |
-| 7.7.6.7 | Transmitted Modified TS Data 1 Regi… | 发送 Modified TS 数据 1 寄存器（偏移 18h… | p.1129 |
-| 7.7.6.8 | Transmitted Modified TS Data 2 Regi… | 发送 Modified TS 数据 2 寄存器（偏移 1Ch… | p.1130 |
-| 7.7.6.9 | 32.0 GT/s Lane Equalization Control… | 32.0 GT/s 通道均衡控制寄存器(偏移 20h) | p.1131 |
-| 7.7.6.9 | (continued) | 7.7.6.9 (续) | p.1133 |
-| 7.7.7 | Physical Layer 64.0 GT/s Extended C… | 7.7.7 物理层 64.0 GT/s 扩展能力 | p.1133 |
-| 7.7.7.1 | Physical Layer 64.0 GT/s Extended C… | 7.7.7.1 物理层 64.0 GT/s 扩展能力 Hea… | p.1134 |
-| 7.7.7.2 | 64.0 GT/s Capabilities Register (Of… | 7.7.7.2 64.0 GT/s 能力寄存器(偏移 04h… | p.1134 |
-| 7.7.7.3 | 64.0 GT/s Control Register (Offset … | 7.7.7.3 64.0 GT/s 控制寄存器(偏移 08h… | p.1135 |
-| 7.7.7.4 | 64.0 GT/s Status Register (Offset 0… | 7.7.7.4 64.0 GT/s 状态寄存器(偏移 0Ch… | p.1135 |
-| 7.7.7.4 | 64.0 GT/s Status Register (Offset 0… | 7.7.7.4 64.0 GT/s 状态寄存器(偏移 0Ch… | p.1136 |
-| 7.7.7.5 | 64.0 GT/s Lane Equalization Control… | 7.7.7.5 64.0 GT/s 通道均衡控制寄存器(偏移… | p.1136 |
-| 7.7.7.5 | 64.0 GT/s Lane Equalization Control… | 7.7.7.5 64.0 GT/s 通道均衡控制寄存器 — … | p.1137 |
-| 7.7.8 | Flit Logging Extended Capability | 7.7.8 Flit 日志扩展能力 | p.1138 |
-| 7.7.8.1 | Flit Logging Extended Capability He… | 7.7.8.1 Flit 日志扩展能力 Header(偏移 … | p.1138 |
-| 7.7.8.1 | Flit Logging Extended Capability He… | 7.7.8.1 Flit 日志扩展能力 Header — 字… | p.1139 |
-| 7.7.8.2 | Flit Error Log 1 Register (Offset 0… | 7.7.8.2 Flit 错误日志 1 寄存器(偏移 04h… | p.1139 |
-| 7.7.8.2 | Flit Error Log 1 Register - Field D… | 7.7.8.2 Flit 错误日志 1 寄存器 — 字段定义 | p.1140 |
-| 7.7.8.2 | Flit Error Log 1 Register - Field D… | 7.7.8.2 Flit 错误日志 1 寄存器 — 字段定义… | p.1141 |
-| 7.7.8.3 | Flit Error Log 2 Register (Offset 0… | Flit 错误日志 2 寄存器（偏移 08h） | p.1141 |
-| 7.7.8.4 | Flit Error Counter Control Register… | Flit 错误计数控制寄存器（偏移 0Ch） | p.1142 |
-| 7.7.8.4 | Flit Error Counter Control Register… | Flit 错误计数控制寄存器（偏移 0Ch）— 续 | p.1143 |
-| 7.7.8.5 | Flit Error Counter Status Register … | Flit 错误计数状态寄存器（偏移 0Eh） | p.1144 |
-| 7.7.8.6 | FBER Measurement Control Register (… | FBER 测量控制寄存器（偏移 10h） | p.1145 |
-| 7.7.8.7 | FBER Measurement Status 1 Register … | FBER 测量状态 1 寄存器（偏移 14h） | p.1146 |
-| 7.7.8.8 | FBER Measurement Status 2 Register … | FBER 测量状态 2 寄存器（偏移 18h） | p.1146 |
-| 7.7.8.9 | FBER Measurement Status 3 Register … | FBER 测量状态 3 寄存器（偏移 1Ch） | p.1147 |
-| 7.7.8.10 | FBER Measurement Status 4 Register … | FBER 测量状态 4 寄存器（偏移 20h） | p.1147 |
-| 7.7.8.11 | FBER Measurement Status 5 Register … | FBER 测量状态 5 寄存器（偏移 24h） | p.1147 |
-| 7.7.8.12 | FBER Measurement Status 6 Register … | FBER 测量状态 6 寄存器（偏移 28h） | p.1148 |
-| 7.7.8.13 | FBER Measurement Status 7 Register … | FBER 测量状态 7 寄存器（偏移 2Ch） | p.1148 |
-| 7.7.8.14 | FBER Measurement Status 8 Register … | FBER 测量状态 8 寄存器（偏移 30h） | p.1149 |
-| 7.7.8.15 | FBER Measurement Status 9 Register … | FBER 测量状态 9 寄存器（偏移 34h） | p.1150 |
-| 7.7.8.16 | FBER Measurement Status 10 Register… | FBER 测量状态 10 寄存器（偏移 38h） | p.1150 |
-| 7.7.9 | Device 3 Extended Capability Struct… | Device 3 扩展能力结构 | p.1150 |
-| 7.7.9.2 | Device Capabilities 3 Register (Off… | Device 能力 3 寄存器 (偏移 04h) | p.1150 |
-| 7.7.9.3 | Device Control 3 Register (Offset 0… | Device 控制 3 寄存器 (偏移 08h) | p.1152 |
-| 7.7.9.4 | Device Status 3 Register (Offset 0C… | Device 状态 3 寄存器 (偏移 0Ch) | p.1155 |
-| 7.7.10 | Lane Margining at the Receiver Exte… | 接收器通道裕度扩展能力 (Lane Margining at… | p.1155 |
-| 7.7.10.1 | Lane Margining at the Receiver Exte… | 接收器通道裕度扩展能力头 (偏移 00h) | p.1158 |
-| 7.7.10.2 | Margining Port Capabilities Registe… | 裕度端口能力寄存器 (偏移 04h) | p.1158 |
-| 7.7.10.3 | Margining Port Status Register (Off… | 裕度端口状态寄存器 (偏移 06h) | p.1159 |
-| 7.7.10.4 | Margining Lane Control Register (Of… | Margining Lane 控制寄存器（偏移 08h） | p.1159 |
-| 7.7.10.5 | Margining Lane Status Register (Off… | Margining Lane 状态寄存器（偏移 0Ah） | p.1159 |
-| 7.7.11 | ACS Extended Capability | ACS 扩展能力（Access Control Servic… | p.1161 |
-| 7.7.11.1 | ACS Extended Capability Header (Off… | ACS 扩展能力头（偏移 00h） | p.1161 |
-| 7.7.11.2 | ACS Capability Register (Offset 04h… | ACS 能力寄存器（偏移 04h） | p.1162 |
-| 7.7.11.3 | ACS Control Register (Offset 06h) | ACS 控制寄存器（偏移 06h） | p.1164 |
-| 7.7.11.4 | Egress Control Vector Register (Off… | Egress Control Vector 寄存器（偏移 0… | p.1166 |
-| 7.8 | Common PCI and PCIe Capabilities | 通用 PCI 与 PCIe 能力 | p.1168 |
-| 7.8.1 | Power Budgeting Extended Capability | 功耗预算（Power Budgeting）扩展能力 | p.1168 |
-| 7.8.1.1 | Power Budgeting Extended Capability… | 功耗预算扩展能力头(偏移 00h) | p.1168 |
-| 7.8.1.2 | Power Budgeting Data Select Registe… | 功耗预算数据选择寄存器(偏移 04h) | p.1168 |
-| 7.8.1.3 | Power Budgeting Control Register (O… | 功耗预算控制寄存器(偏移 06h) | p.1168 |
-| 7.8.1.4 | Power Budgeting Data Register (Offs… | 功耗预算数据寄存器(偏移 08h) | p.1168 |
-| 7.8.1.5 | Power Budgeting Capability Register… | 功耗预算能力寄存器(偏移 0Ch) | p.1168 |
-| 7.8.1.6 | Power Budgeting Sense Detect Regist… | 功耗预算感应检测寄存器(偏移 0Dh) | p.1168 |
-| 7.8.2 | Latency Tolerance Reporting (LTR) E… | 延迟容忍报告 (LTR) 扩展能力 | p.1168 |
-| 7.8.2.1 | LTR Extended Capability Header (Off… | LTR 扩展能力头(偏移 00h) | p.1168 |
-| 7.8.2.2 | Max Snoop Latency Register (Offset … | 最大监听延迟寄存器(偏移 04h) | p.1168 |
-| 7.8.2.3 | Max No-Snoop Latency Register (Offs… | 最大非监听延迟寄存器(偏移 06h) | p.1182 |
-| 7.8.3 | L1 PM Substates Extended Capability | L1 PM 子状态扩展能力 | p.1182 |
-| 7.8.3.1 | L1 PM Substates Extended Capability… | L1 PM 子状态扩展能力头(偏移 00h) | p.1183 |
-| 7.8.3.2 | L1 PM Substates Capabilities Regist… | L1 PM 子状态能力寄存器(偏移 04h) | p.1184 |
-| 7.8.3.3 | L1 PM Substates Control 1 Register … | L1 PM 子状态控制 1 寄存器(偏移 08h) | p.1185 |
-| 7.8.3.4 | L1 PM Substates Control 2 Register … | L1 PM 子状态控制 2 寄存器(偏移 0Ch) | p.1187 |
-| 7.8.3.5 | L1 PM Substates Status Register (Of… | L1 PM 子状态寄存器(偏移 10h) | p.1188 |
-| 7.8.4 | Advanced Error Reporting Extended C… | 高级错误报告扩展能力 | p.1188 |
-| 7.8.4.1 | Advanced Error Reporting Extended C… | 高级错误报告扩展能力头(偏移 00h) | p.1191 |
-| 7.8.4.2 | Uncorrectable Error Status Register… | 不可纠正错误状态寄存器（偏移 04h） | p.1191 |
+|  | 7.5.1.3.10 | [Prefetchable Base Upper 32 Bits/Pre…](#sec-7-5-1-3-10) | [Prefetchable Base Upper 32 Bit…](#sec-7-5-1-3-10) | p.1018 |
+|  | 7.5.1.3.11 | [I/O Base Upper 16 Bits/I/O Limit Up…](#sec-7-5-1-3-11) | [I/O Base Upper 16 Bits / I/O L…](#sec-7-5-1-3-11) | p.1018 |
+|  | 7.5.1.3.12 | [Expansion ROM Base Address Register…](#sec-7-5-1-3-12) | [Expansion ROM 基址寄存器 (偏移 38h)](#sec-7-5-1-3-12) | p.1019 |
+|  | 7.5.1.3.13 | [Bridge Control Register (Offset 3Eh…](#sec-7-5-1-3-13) | [Bridge Control 寄存器 (偏移 3Eh)](#sec-7-5-1-3-13) | p.1019 |
+|  | 7.5.1.3.13 | [Bridge Control Register (continued)](#sec-7-5-1-3-13) | [Bridge Control 寄存器 (续)](#sec-7-5-1-3-13) | p.1020 |
+|  | 7.5.1.3.13 | [Bridge Control Register (continued)](#sec-7-5-1-3-13) | [Bridge Control 寄存器 (续)](#sec-7-5-1-3-13) | p.1021 |
+|  | 7.5.1.4 | [PCI Power Management Capability Str…](#sec-7-5-1-4) | [PCI 电源管理能力结构](#sec-7-5-1-4) | p.1021 |
+|  | 7.5.2 | [PCI Power Management Capability Str…](#sec-7-5-2) | [PCI 电源管理能力结构](#sec-7-5-2) | p.1022 |
+|  | 7.5.2.1 | [Power Management Capabilities Regis…](#sec-7-5-2-1) | [电源管理能力寄存器（偏移量 00h）](#sec-7-5-2-1) | p.1022 |
+|  | 7.5.2.2 | [Power Management Control/Status Reg…](#sec-7-5-2-2) | [电源管理控制/状态寄存器（偏移量 04h）](#sec-7-5-2-2) | p.1024 |
+|  | 7.5.2.3 | [Power Management Data Register (Off…](#sec-7-5-2-3) | [电源管理数据寄存器（偏移量 07h）](#sec-7-5-2-3) | p.1026 |
+|  | 7.5.3 | [PCI Express Capability Structure](#sec-7-5-3) | [PCI Express 能力结构](#sec-7-5-3) | p.1028 |
+|  | 7.5.3.1 | [PCI Express Capability List Registe…](#sec-7-5-3-1) | [PCI Express 能力列表寄存器（偏移量 00h）](#sec-7-5-3-1) | p.1029 |
+|  | 7.5.3.2 | [PCI Express Capabilities Register (…](#sec-7-5-3-2) | [PCI Express 能力寄存器（偏移量 02h）](#sec-7-5-3-2) | p.1029 |
+|  | 7.5.3.3 | [Device Capabilities Register (Offse…](#sec-7-5-3-3) | [设备能力寄存器 (Device Capabilities R…](#sec-7-5-3-3) | p.1031 |
+|  | 7.5.3.4 | [Device Control Register (Offset 08h…](#sec-7-5-3-4) | [设备控制寄存器 (Device Control Regist…](#sec-7-5-3-4) | p.1035 |
+|  | 7.5.3.5 | [Device Status Register (Offset 0Ah)](#sec-7-5-3-5) | [设备状态寄存器 (Device Status Registe…](#sec-7-5-3-5) | p.1042 |
+|  | 7.5.3.6 | [Link Capabilities Register (Offset …](#sec-7-5-3-6) | [链路能力寄存器 (Link Capabilities Reg…](#sec-7-5-3-6) | p.1043 |
+|  | 7.5.3.7 | [Link Control Register (Offset 10h)](#sec-7-5-3-7) | [链路控制寄存器（偏移 10h）](#sec-7-5-3-7) | p.1047 |
+|  | 7.5.3.8 | [Link Status Register (Offset 12h)](#sec-7-5-3-8) | [链路状态寄存器（偏移 12h）](#sec-7-5-3-8) | p.1055 |
+|  | 7.5.3.9 | [Slot Capabilities Register (Offset …](#sec-7-5-3-9) | [插槽能力寄存器（偏移 14h）](#sec-7-5-3-9) | p.1057 |
+|  | 7.5.3.10 | [Slot Control Register](#sec-7-5-3-10) | [插槽控制寄存器 (Offset 18h)](#sec-7-5-3-10) | p.1059 |
+|  | 7.5.3.11 | [Slot Status Register](#sec-7-5-3-11) | [插槽状态寄存器 (Offset 1Ah)](#sec-7-5-3-11) | p.1062 |
+|  | 7.5.3.12 | [Root Control Register](#sec-7-5-3-12) | [根复合体控制寄存器 (Offset 1Ch)](#sec-7-5-3-12) | p.1064 |
+|  | 7.5.3.13 | [Root Capabilities Register](#sec-7-5-3-13) | [根复合体能力寄存器 (Offset 1Eh)](#sec-7-5-3-13) | p.1066 |
+|  | 7.5.3.14 | [Root Status Register](#sec-7-5-3-14) | [根复合体状态寄存器 (Offset 20h)](#sec-7-5-3-14) | p.1066 |
+|  | 7.5.3.15 | [Device Capabilities 2 Register](#sec-7-5-3-15) | [设备能力 2 寄存器 (Offset 24h)](#sec-7-5-3-15) | p.1067 |
+|  | 7.5.3.16 | [Device Control 2 Register (Offset 2…](#sec-7-5-3-16) | [Device Control 2 寄存器(偏移 28h)](#sec-7-5-3-16) | p.1073 |
+|  | 7.5.3.17 | [Device Status 2 Register (Offset 2A…](#sec-7-5-3-17) | [Device Status 2 寄存器(偏移 2Ah)](#sec-7-5-3-17) | p.1076 |
+|  | 7.5.3.18 | [Link Capabilities 2 Register (Offse…](#sec-7-5-3-18) | [Link Capabilities 2 寄存器(偏移 2Ch…](#sec-7-5-3-18) | p.1077 |
+|  | 7.5.3.19 | [Link Control 2 Register (Offset 30h…](#sec-7-5-3-19) | [Link Control 2 寄存器(偏移 30h)](#sec-7-5-3-19) | p.1080 |
+|  | 7.5.3.20 | [Link Status 2 Register (Offset 32h)](#sec-7-5-3-20) | [Link Status 2 寄存器(偏移 32h)](#sec-7-5-3-20) | p.1083 |
+|  | 7.5.3.21 | [Slot Capabilities 2 Register (Offse…](#sec-7-5-3-21) | [Slot Capabilities 2 寄存器 (偏移 34…](#sec-7-5-3-21) | p.1086 |
+|  | 7.5.3.21 | [Slot Capabilities 2 Register (Offse…](#sec-7-5-3-21) | [Slot Capabilities 2 寄存器 (偏移 34…](#sec-7-5-3-21) | p.1086 |
+|  | 7.6 | [PCI Express Extended Capabilities](#sec-7-6) | [PCI Express 扩展能力](#sec-7-6) | p.1086 |
+|  | 7.6.1 | [Extended Capabilities in Configurat…](#sec-7-6-1) | [配置空间中的扩展能力](#sec-7-6-1) | p.1086 |
+|  | 7.6.2 | [Extended Capabilities in the Root C…](#sec-7-6-2) | [根复合体寄存器块中的扩展能力](#sec-7-6-2) | p.1086 |
+|  | 7.6.3 | [PCI Express Extended Capability Hea…](#sec-7-6-3) | [PCI Express 扩展能力头](#sec-7-6-3) | p.1086 |
+|  | 7.7 | [PCI and PCIe Capabilities Required …](#sec-7-7) | [基础规范在某些情况下要求的 PCI 和 PCIe 能力](#sec-7-7) | p.1086 |
+|  | 7.7.1 | [MSI Capability Structures](#sec-7-7-1) | [MSI 能力结构](#sec-7-7-1) | p.1086 |
+|  | 7.7.1 | [MSI Capability Structures (continue…](#sec-7-7-1) | [MSI 能力结构 (续)](#sec-7-7-1) | p.1086 |
+|  | 7.7.1.1 | [MSI Capability Header (Offset 00h)](#sec-7-7-1-1) | [MSI 能力头 (偏移 00h)](#sec-7-7-1-1) | p.1086 |
+|  | 7.7.1.2 | [Message Control Register for MSI (O…](#sec-7-7-1-2) | [MSI 的消息控制寄存器 (偏移 02h)](#sec-7-7-1-2) | p.1086 |
+|  | 7.7.1.3 | [Message Address Register for MSI (O…](#sec-7-7-1-3) | [MSI 的消息地址寄存器 (偏移 04h)](#sec-7-7-1-3) | p.1086 |
+|  | 7.7.1.4 | [Message Upper Address Register for …](#sec-7-7-1-4) | [MSI 的消息高地址寄存器 (偏移 08h)](#sec-7-7-1-4) | p.1086 |
+|  | 7.7.1.5 | [Message Data Register for MSI (Offs…](#sec-7-7-1-5) | [MSI 的消息数据寄存器 (偏移 08h 或 0Ch)](#sec-7-7-1-5) | p.1086 |
+|  | 7.7.1.6 | [Extended Message Data Register for …](#sec-7-7-1-6) | [MSI 扩展消息数据寄存器(可选)](#sec-7-7-1-6) | p.1086 |
+|  | 7.7.1.7 | [Mask Bits Register for MSI (Offset …](#sec-7-7-1-7) | [MSI Mask Bits 寄存器(偏移 0Ch 或 10h…](#sec-7-7-1-7) | p.1086 |
+|  | 7.7.1.8 | [Pending Bits Register for MSI (Offs…](#sec-7-7-1-8) | [MSI Pending Bits 寄存器(偏移 10h 或 …](#sec-7-7-1-8) | p.1086 |
+|  | 7.7.2 | [MSI-X Capability and Table Structur…](#sec-7-7-2) | [MSI-X 能力结构与表结构](#sec-7-7-2) | p.1086 |
+|  | 7.7.2.1 | [MSI-X Capability Header (Offset 00h…](#sec-7-7-2-1) | [MSI-X Capability Header(偏移 00h…](#sec-7-7-2-1) | p.1086 |
+|  | 7.7.2.2 | [Message Control Register for MSI-X …](#sec-7-7-2-2) | [MSI-X Message Control 寄存器(偏移 0…](#sec-7-7-2-2) | p.1086 |
+|  | 7.7.2.3 | [Table Offset/Table BIR Register for…](#sec-7-7-2-3) | [MSI-X Table Offset/Table BIR 寄…](#sec-7-7-2-3) | p.1086 |
+|  | 7.7.2.4 | [PBA Offset/PBA BIR Register for MSI…](#sec-7-7-2-4) | [MSI-X PBA Offset/PBA BIR 寄存器(偏…](#sec-7-7-2-4) | p.1086 |
+|  | 7.7.2.5 | [Message Address Register for MSI-X …](#sec-7-7-2-5) | [MSI-X Table 条目 Message Address…](#sec-7-7-2-5) | p.1086 |
+|  | 7.7.2.6 | [Message Upper Address Register for …](#sec-7-7-2-6) | [MSI-X Table 条目 Message Upper A…](#sec-7-7-2-6) | p.1086 |
+|  | 7.7.2.7 | [Message Data Register for MSI-X Tab…](#sec-7-7-2-7) | [MSI-X 表条目的消息数据寄存器](#sec-7-7-2-7) | p.1086 |
+|  | 7.7.2.8 | [Vector Control Register for MSI-X T…](#sec-7-7-2-8) | [MSI-X 表条目的向量控制寄存器](#sec-7-7-2-8) | p.1086 |
+|  | 7.7.2.9 | [Pending Bits Register for MSI-X PBA…](#sec-7-7-2-9) | [MSI-X PBA 条目的挂起位寄存器](#sec-7-7-2-9) | p.1104 |
+|  | 7.7.3 | [Secondary PCI Express Extended Capa…](#sec-7-7-3) | [次级 PCI Express 扩展能力](#sec-7-7-3) | p.1105 |
+|  | 7.7.3.1 | [Secondary PCI Express Extended Capa…](#sec-7-7-3-1) | [次级 PCI Express 扩展能力头（偏移 00h）](#sec-7-7-3-1) | p.1107 |
+|  | 7.7.3.2 | [Link Control 3 Register (Offset 04h…](#sec-7-7-3-2) | [链路控制 3 寄存器（偏移 04h）](#sec-7-7-3-2) | p.1107 |
+|  | 7.7.3.3 | [Lane Error Status Register (Offset …](#sec-7-7-3-3) | [通道错误状态寄存器（偏移 08h）](#sec-7-7-3-3) | p.1108 |
+|  | 7.7.3.4 | [Lane Equalization Control Register …](#sec-7-7-3-4) | [通道均衡控制寄存器（偏移 0Ch）](#sec-7-7-3-4) | p.1109 |
+|  | 7.7.4 | [Data Link Feature Extended Capabili…](#sec-7-7-4) | [数据链路特性扩展能力](#sec-7-7-4) | p.1111 |
+|  | 7.7.4.1 | [Data Link Feature Extended Capabili…](#sec-7-7-4-1) | [数据链路特性扩展能力头（偏移 00h）](#sec-7-7-4-1) | p.1112 |
+|  | 7.7.4.2 | [Data Link Feature Capabilities Regi…](#sec-7-7-4-2) | [数据链路特性能力寄存器（偏移 04h）](#sec-7-7-4-2) | p.1113 |
+|  | 7.7.4.3 | [Data Link Feature Status Register (…](#sec-7-7-4-3) | [数据链路特性状态寄存器(偏移量 08h)](#sec-7-7-4-3) | p.1114 |
+|  | 7.7.5 | [Physical Layer 16.0 GT/s Extended C…](#sec-7-7-5) | [物理层 16.0 GT/s 扩展能力结构](#sec-7-7-5) | p.1114 |
+|  | 7.7.5.1 | [Physical Layer 16.0 GT/s Extended C…](#sec-7-7-5-1) | [物理层 16.0 GT/s 扩展能力结构头(偏移量 00h)](#sec-7-7-5-1) | p.1117 |
+|  | 7.7.5.2 | [16.0 GT/s Capabilities Register (Of…](#sec-7-7-5-2) | [16.0 GT/s 能力寄存器(偏移量 04h)](#sec-7-7-5-2) | p.1117 |
+|  | 7.7.5.3 | [16.0 GT/s Control Register (Offset …](#sec-7-7-5-3) | [16.0 GT/s 控制寄存器(偏移量 08h)](#sec-7-7-5-3) | p.1118 |
+|  | 7.7.5.4 | [16.0 GT/s Status Register (Offset 0…](#sec-7-7-5-4) | [16.0 GT/s 状态寄存器(偏移量 0Ch)](#sec-7-7-5-4) | p.1118 |
+|  | 7.7.5.5 | [16.0 GT/s Local Data Parity Mismatc…](#sec-7-7-5-5) | [16.0 GT/s 本地数据奇偶校验不匹配状态寄存器(偏移量…](#sec-7-7-5-5) | p.1119 |
+|  | 7.7.5.6 | [16.0 GT/s First Retimer Data Parity…](#sec-7-7-5-6) | [16.0 GT/s 第一个重定时器数据奇偶校验不匹配状态寄存…](#sec-7-7-5-6) | p.1120 |
+|  | 7.7.5.7 | [16.0 GT/s Second Retimer Data Parit…](#sec-7-7-5-7) | [16.0 GT/s 第二个重定时器数据奇偶校验不匹配状态寄存…](#sec-7-7-5-7) | p.1120 |
+|  | 7.7.5.8 | [Physical Layer 16.0 GT/s Reserved (…](#sec-7-7-5-8) | [物理层 16.0 GT/s 保留(偏移量 1Ch)](#sec-7-7-5-8) | p.1121 |
+|  | 7.7.5.9 | [16.0 GT/s Lane Equalization Control…](#sec-7-7-5-9) | [16.0 GT/s 通道均衡控制寄存器(偏移量 20h 至 …](#sec-7-7-5-9) | p.1121 |
+|  | 7.7.6 | [Physical Layer 32.0 GT/s Extended C…](#sec-7-7-6) | [物理层 32.0 GT/s 扩展能力结构(介绍)](#sec-7-7-6) | p.1122 |
+|  | 7.7.6 | [Physical Layer 32.0 GT/s Extended C…](#sec-7-7-6) | [物理层 32.0 GT/s 扩展能力](#sec-7-7-6) | p.1122 |
+|  | 7.7.6.1 | [Physical Layer 32.0 GT/s Extended C…](#sec-7-7-6-1) | [物理层 32.0 GT/s 扩展能力头（偏移 00h）](#sec-7-7-6-1) | p.1123 |
+|  | 7.7.6.2 | [32.0 GT/s Capabilities Register (Of…](#sec-7-7-6-2) | [32.0 GT/s 能力寄存器（偏移 04h）](#sec-7-7-6-2) | p.1124 |
+|  | 7.7.6.3 | [32.0 GT/s Control Register (Offset …](#sec-7-7-6-3) | [32.0 GT/s 控制寄存器（偏移 08h）](#sec-7-7-6-3) | p.1124 |
+|  | 7.7.6.4 | [32.0 GT/s Status Register (Offset 0…](#sec-7-7-6-4) | [32.0 GT/s 状态寄存器（偏移 0Ch）](#sec-7-7-6-4) | p.1125 |
+|  | 7.7.6.5 | [Received Modified TS Data 1 Registe…](#sec-7-7-6-5) | [接收 Modified TS 数据 1 寄存器（偏移 10h…](#sec-7-7-6-5) | p.1126 |
+|  | 7.7.6.6 | [Received Modified TS Data 2 Registe…](#sec-7-7-6-6) | [接收 Modified TS 数据 2 寄存器（偏移 14h…](#sec-7-7-6-6) | p.1128 |
+|  | 7.7.6.7 | [Transmitted Modified TS Data 1 Regi…](#sec-7-7-6-7) | [发送 Modified TS 数据 1 寄存器（偏移 18h…](#sec-7-7-6-7) | p.1129 |
+|  | 7.7.6.8 | [Transmitted Modified TS Data 2 Regi…](#sec-7-7-6-8) | [发送 Modified TS 数据 2 寄存器（偏移 1Ch…](#sec-7-7-6-8) | p.1130 |
+|  | 7.7.6.9 | [32.0 GT/s Lane Equalization Control…](#sec-7-7-6-9) | [32.0 GT/s 通道均衡控制寄存器(偏移 20h)](#sec-7-7-6-9) | p.1131 |
+|  | 7.7.6.9 | [(continued)](#sec-7-7-6-9) | [7.7.6.9 (续)](#sec-7-7-6-9) | p.1133 |
+|  | 7.7.7 | [Physical Layer 64.0 GT/s Extended C…](#sec-7-7-7) | [7.7.7 物理层 64.0 GT/s 扩展能力](#sec-7-7-7) | p.1133 |
+|  | 7.7.7.1 | [Physical Layer 64.0 GT/s Extended C…](#sec-7-7-7-1) | [7.7.7.1 物理层 64.0 GT/s 扩展能力 Hea…](#sec-7-7-7-1) | p.1134 |
+|  | 7.7.7.2 | [64.0 GT/s Capabilities Register (Of…](#sec-7-7-7-2) | [7.7.7.2 64.0 GT/s 能力寄存器(偏移 04h…](#sec-7-7-7-2) | p.1134 |
+|  | 7.7.7.3 | [64.0 GT/s Control Register (Offset …](#sec-7-7-7-3) | [7.7.7.3 64.0 GT/s 控制寄存器(偏移 08h…](#sec-7-7-7-3) | p.1135 |
+|  | 7.7.7.4 | [64.0 GT/s Status Register (Offset 0…](#sec-7-7-7-4) | [7.7.7.4 64.0 GT/s 状态寄存器(偏移 0Ch…](#sec-7-7-7-4) | p.1135 |
+|  | 7.7.7.4 | [64.0 GT/s Status Register (Offset 0…](#sec-7-7-7-4) | [7.7.7.4 64.0 GT/s 状态寄存器(偏移 0Ch…](#sec-7-7-7-4) | p.1136 |
+|  | 7.7.7.5 | [64.0 GT/s Lane Equalization Control…](#sec-7-7-7-5) | [7.7.7.5 64.0 GT/s 通道均衡控制寄存器(偏移…](#sec-7-7-7-5) | p.1136 |
+|  | 7.7.7.5 | [64.0 GT/s Lane Equalization Control…](#sec-7-7-7-5) | [7.7.7.5 64.0 GT/s 通道均衡控制寄存器 — …](#sec-7-7-7-5) | p.1137 |
+|  | 7.7.8 | [Flit Logging Extended Capability](#sec-7-7-8) | [7.7.8 Flit 日志扩展能力](#sec-7-7-8) | p.1138 |
+|  | 7.7.8.1 | [Flit Logging Extended Capability He…](#sec-7-7-8-1) | [7.7.8.1 Flit 日志扩展能力 Header(偏移 …](#sec-7-7-8-1) | p.1138 |
+|  | 7.7.8.1 | [Flit Logging Extended Capability He…](#sec-7-7-8-1) | [7.7.8.1 Flit 日志扩展能力 Header — 字…](#sec-7-7-8-1) | p.1139 |
+|  | 7.7.8.2 | [Flit Error Log 1 Register (Offset 0…](#sec-7-7-8-2) | [7.7.8.2 Flit 错误日志 1 寄存器(偏移 04h…](#sec-7-7-8-2) | p.1139 |
+|  | 7.7.8.2 | [Flit Error Log 1 Register - Field D…](#sec-7-7-8-2) | [7.7.8.2 Flit 错误日志 1 寄存器 — 字段定义](#sec-7-7-8-2) | p.1140 |
+|  | 7.7.8.2 | [Flit Error Log 1 Register - Field D…](#sec-7-7-8-2) | [7.7.8.2 Flit 错误日志 1 寄存器 — 字段定义…](#sec-7-7-8-2) | p.1141 |
+|  | 7.7.8.3 | [Flit Error Log 2 Register (Offset 0…](#sec-7-7-8-3) | [Flit 错误日志 2 寄存器（偏移 08h）](#sec-7-7-8-3) | p.1141 |
+|  | 7.7.8.4 | [Flit Error Counter Control Register…](#sec-7-7-8-4) | [Flit 错误计数控制寄存器（偏移 0Ch）](#sec-7-7-8-4) | p.1142 |
+|  | 7.7.8.4 | [Flit Error Counter Control Register…](#sec-7-7-8-4) | [Flit 错误计数控制寄存器（偏移 0Ch）— 续](#sec-7-7-8-4) | p.1143 |
+|  | 7.7.8.5 | [Flit Error Counter Status Register …](#sec-7-7-8-5) | [Flit 错误计数状态寄存器（偏移 0Eh）](#sec-7-7-8-5) | p.1144 |
+|  | 7.7.8.6 | [FBER Measurement Control Register (…](#sec-7-7-8-6) | [FBER 测量控制寄存器（偏移 10h）](#sec-7-7-8-6) | p.1145 |
+|  | 7.7.8.7 | [FBER Measurement Status 1 Register …](#sec-7-7-8-7) | [FBER 测量状态 1 寄存器（偏移 14h）](#sec-7-7-8-7) | p.1146 |
+|  | 7.7.8.8 | [FBER Measurement Status 2 Register …](#sec-7-7-8-8) | [FBER 测量状态 2 寄存器（偏移 18h）](#sec-7-7-8-8) | p.1146 |
+|  | 7.7.8.9 | [FBER Measurement Status 3 Register …](#sec-7-7-8-9) | [FBER 测量状态 3 寄存器（偏移 1Ch）](#sec-7-7-8-9) | p.1147 |
+|  | 7.7.8.10 | [FBER Measurement Status 4 Register …](#sec-7-7-8-10) | [FBER 测量状态 4 寄存器（偏移 20h）](#sec-7-7-8-10) | p.1147 |
+|  | 7.7.8.11 | [FBER Measurement Status 5 Register …](#sec-7-7-8-11) | [FBER 测量状态 5 寄存器（偏移 24h）](#sec-7-7-8-11) | p.1147 |
+|  | 7.7.8.12 | [FBER Measurement Status 6 Register …](#sec-7-7-8-12) | [FBER 测量状态 6 寄存器（偏移 28h）](#sec-7-7-8-12) | p.1148 |
+|  | 7.7.8.13 | [FBER Measurement Status 7 Register …](#sec-7-7-8-13) | [FBER 测量状态 7 寄存器（偏移 2Ch）](#sec-7-7-8-13) | p.1148 |
+|  | 7.7.8.14 | [FBER Measurement Status 8 Register …](#sec-7-7-8-14) | [FBER 测量状态 8 寄存器（偏移 30h）](#sec-7-7-8-14) | p.1149 |
+|  | 7.7.8.15 | [FBER Measurement Status 9 Register …](#sec-7-7-8-15) | [FBER 测量状态 9 寄存器（偏移 34h）](#sec-7-7-8-15) | p.1150 |
+|  | 7.7.8.16 | [FBER Measurement Status 10 Register…](#sec-7-7-8-16) | [FBER 测量状态 10 寄存器（偏移 38h）](#sec-7-7-8-16) | p.1150 |
+|  | 7.7.9 | [Device 3 Extended Capability Struct…](#sec-7-7-9) | [Device 3 扩展能力结构](#sec-7-7-9) | p.1150 |
+|  | 7.7.9.2 | [Device Capabilities 3 Register (Off…](#sec-7-7-9-2) | [Device 能力 3 寄存器 (偏移 04h)](#sec-7-7-9-2) | p.1150 |
+|  | 7.7.9.3 | [Device Control 3 Register (Offset 0…](#sec-7-7-9-3) | [Device 控制 3 寄存器 (偏移 08h)](#sec-7-7-9-3) | p.1152 |
+|  | 7.7.9.4 | [Device Status 3 Register (Offset 0C…](#sec-7-7-9-4) | [Device 状态 3 寄存器 (偏移 0Ch)](#sec-7-7-9-4) | p.1155 |
+|  | 7.7.10 | [Lane Margining at the Receiver Exte…](#sec-7-7-10) | [接收器通道裕度扩展能力 (Lane Margining at…](#sec-7-7-10) | p.1155 |
+|  | 7.7.10.1 | [Lane Margining at the Receiver Exte…](#sec-7-7-10-1) | [接收器通道裕度扩展能力头 (偏移 00h)](#sec-7-7-10-1) | p.1158 |
+|  | 7.7.10.2 | [Margining Port Capabilities Registe…](#sec-7-7-10-2) | [裕度端口能力寄存器 (偏移 04h)](#sec-7-7-10-2) | p.1158 |
+|  | 7.7.10.3 | [Margining Port Status Register (Off…](#sec-7-7-10-3) | [裕度端口状态寄存器 (偏移 06h)](#sec-7-7-10-3) | p.1159 |
+|  | 7.7.10.4 | [Margining Lane Control Register (Of…](#sec-7-7-10-4) | [Margining Lane 控制寄存器（偏移 08h）](#sec-7-7-10-4) | p.1159 |
+|  | 7.7.10.5 | [Margining Lane Status Register (Off…](#sec-7-7-10-5) | [Margining Lane 状态寄存器（偏移 0Ah）](#sec-7-7-10-5) | p.1159 |
+|  | 7.7.11 | [ACS Extended Capability](#sec-7-7-11) | [ACS 扩展能力（Access Control Servic…](#sec-7-7-11) | p.1161 |
+|  | 7.7.11.1 | [ACS Extended Capability Header (Off…](#sec-7-7-11-1) | [ACS 扩展能力头（偏移 00h）](#sec-7-7-11-1) | p.1161 |
+|  | 7.7.11.2 | [ACS Capability Register (Offset 04h…](#sec-7-7-11-2) | [ACS 能力寄存器（偏移 04h）](#sec-7-7-11-2) | p.1162 |
+|  | 7.7.11.3 | [ACS Control Register (Offset 06h)](#sec-7-7-11-3) | [ACS 控制寄存器（偏移 06h）](#sec-7-7-11-3) | p.1164 |
+|  | 7.7.11.4 | [Egress Control Vector Register (Off…](#sec-7-7-11-4) | [Egress Control Vector 寄存器（偏移 0…](#sec-7-7-11-4) | p.1166 |
+|  | 7.8 | [Common PCI and PCIe Capabilities](#sec-7-8) | [通用 PCI 与 PCIe 能力](#sec-7-8) | p.1168 |
+|  | 7.8.1 | [Power Budgeting Extended Capability](#sec-7-8-1) | [功耗预算（Power Budgeting）扩展能力](#sec-7-8-1) | p.1168 |
+|  | 7.8.1.1 | [Power Budgeting Extended Capability…](#sec-7-8-1-1) | [功耗预算扩展能力头(偏移 00h)](#sec-7-8-1-1) | p.1168 |
+|  | 7.8.1.2 | [Power Budgeting Data Select Registe…](#sec-7-8-1-2) | [功耗预算数据选择寄存器(偏移 04h)](#sec-7-8-1-2) | p.1168 |
+|  | 7.8.1.3 | [Power Budgeting Control Register (O…](#sec-7-8-1-3) | [功耗预算控制寄存器(偏移 06h)](#sec-7-8-1-3) | p.1168 |
+|  | 7.8.1.4 | [Power Budgeting Data Register (Offs…](#sec-7-8-1-4) | [功耗预算数据寄存器(偏移 08h)](#sec-7-8-1-4) | p.1168 |
+|  | 7.8.1.5 | [Power Budgeting Capability Register…](#sec-7-8-1-5) | [功耗预算能力寄存器(偏移 0Ch)](#sec-7-8-1-5) | p.1168 |
+|  | 7.8.1.6 | [Power Budgeting Sense Detect Regist…](#sec-7-8-1-6) | [功耗预算感应检测寄存器(偏移 0Dh)](#sec-7-8-1-6) | p.1168 |
+|  | 7.8.2 | [Latency Tolerance Reporting (LTR) E…](#sec-7-8-2) | [延迟容忍报告 (LTR) 扩展能力](#sec-7-8-2) | p.1168 |
+|  | 7.8.2.1 | [LTR Extended Capability Header (Off…](#sec-7-8-2-1) | [LTR 扩展能力头(偏移 00h)](#sec-7-8-2-1) | p.1168 |
+|  | 7.8.2.2 | [Max Snoop Latency Register (Offset …](#sec-7-8-2-2) | [最大监听延迟寄存器(偏移 04h)](#sec-7-8-2-2) | p.1168 |
+|  | 7.8.2.3 | [Max No-Snoop Latency Register (Offs…](#sec-7-8-2-3) | [最大非监听延迟寄存器(偏移 06h)](#sec-7-8-2-3) | p.1182 |
+|  | 7.8.3 | [L1 PM Substates Extended Capability](#sec-7-8-3) | [L1 PM 子状态扩展能力](#sec-7-8-3) | p.1182 |
+|  | 7.8.3.1 | [L1 PM Substates Extended Capability…](#sec-7-8-3-1) | [L1 PM 子状态扩展能力头(偏移 00h)](#sec-7-8-3-1) | p.1183 |
+|  | 7.8.3.2 | [L1 PM Substates Capabilities Regist…](#sec-7-8-3-2) | [L1 PM 子状态能力寄存器(偏移 04h)](#sec-7-8-3-2) | p.1184 |
+|  | 7.8.3.3 | [L1 PM Substates Control 1 Register …](#sec-7-8-3-3) | [L1 PM 子状态控制 1 寄存器(偏移 08h)](#sec-7-8-3-3) | p.1185 |
+|  | 7.8.3.4 | [L1 PM Substates Control 2 Register …](#sec-7-8-3-4) | [L1 PM 子状态控制 2 寄存器(偏移 0Ch)](#sec-7-8-3-4) | p.1187 |
+|  | 7.8.3.5 | [L1 PM Substates Status Register (Of…](#sec-7-8-3-5) | [L1 PM 子状态寄存器(偏移 10h)](#sec-7-8-3-5) | p.1188 |
+|  | 7.8.4 | [Advanced Error Reporting Extended C…](#sec-7-8-4) | [高级错误报告扩展能力](#sec-7-8-4) | p.1188 |
+|  | 7.8.4.1 | [Advanced Error Reporting Extended C…](#sec-7-8-4-1) | [高级错误报告扩展能力头(偏移 00h)](#sec-7-8-4-1) | p.1191 |
+|  | 7.8.4.2 | [Uncorrectable Error Status Register…](#sec-7-8-4-2) | [不可纠正错误状态寄存器（偏移 04h）](#sec-7-8-4-2) | p.1191 |
 | 7.8.4.3 | Uncorrectable Error Mask Register —… | 7.8.4.3 不可纠正错误屏蔽寄存器 — 引言 | p.1194 |
 | 7.8.4.4 | Uncorrectable Error Severity Regist… | 7.8.4.4 不可纠正错误严重性寄存器 — 引言 | p.1197 |
 | 7.8.4.5 | Correctable Error Status Register —… | 7.8.4.5 可纠正错误状态寄存器 — 引言 | p.1199 |
 | 7.8.4.6 | Correctable Error Mask Register — I… | 7.8.4.6 可纠正错误屏蔽寄存器 — 引言 | p.1200 |
 | 7.8.4.7 | Advanced Error Capabilities and Con… | 7.8.4.7 高级错误能力与控制寄存器 — 引言 | p.1202 |
 | 7.8.4.8 | Header Log Register — Introduction | 7.8.4.8 包头日志寄存器 — 引言 | p.1203 |
-| 7.8.4.9 | Root Error Command Register (Offset… | 根错误命令寄存器（偏移 2Ch） | p.1204 |
-| 7.8.4.10 | Root Error Status Register (Offset … | 根错误状态寄存器（偏移 30h） | p.1204 |
-| 7.8.4.11 | Error Source Identification Registe… | 错误源标识寄存器（偏移 34h） | p.1208 |
-| 7.8.4.12 | TLP Prefix Log Register (Offset 38h… | TLP 前缀日志寄存器（偏移 38h） | p.1208 |
-| 7.8.5 | Enhanced Allocation Capability Stru… | 增强分配能力结构（EA） | p.1208 |
-| 7.8.5.1 | Enhanced Allocation Capability Firs… | 增强分配能力首 DW（偏移 00h） | p.1208 |
-| 7.8.5.2 | Enhanced Allocation Capability Seco… | 增强分配能力第二 DW（偏移 04h）[仅 Type 1 功… | p.1208 |
-| 7.8.5.3 | Enhanced Allocation Per-Entry Forma… | 增强分配逐条目格式（偏移 04h 或 08h） | p.1208 |
-| 7.8.6 | Resizable BAR Extended Capability | 可调整 BAR 扩展能力（Resizable BAR Ext… | p.1216 |
-| 7.8.6.1 | Resizable BAR Extended Capability H… | 可变大小 BAR 扩展能力头（偏移 00h） | p.1216 |
-| 7.8.6.2 | Resizable BAR Capability Register | 可变大小 BAR 能力寄存器 | p.1216 |
-| 7.8.6.3 | Resizable BAR Control Register | 可变大小 BAR 控制寄存器 | p.1221 |
-| 7.8.7 | VF Resizable BAR Extended Capabilit… | VF 可变大小 BAR 扩展能力 | p.1223 |
-| 7.8.7.1 | VF Resizable BAR Extended Capabilit… | VF 可变大小 BAR 扩展能力头（偏移 00h） | p.1225 |
-| 7.8.7.2 | VF Resizable BAR Capability Registe… | VF 可变大小 BAR 能力寄存器（偏移 04h） | p.1225 |
-| 7.8.7.3 | VF Resizable BAR Control Register (… | VF 可变大小 BAR 控制寄存器（偏移 08h） | p.1225 |
-| 7.8.8 | ARI Extended Capability | ARI 扩展能力 | p.1227 |
-| 7.8.8.1 | ARI Extended Capability Header (Off… | ARI 扩展能力头（偏移 00h） | p.1227 |
-| 7.8.8.1 | Figure 7-183 ARI Capability Registe… | 图 7-183 ARI 能力寄存器 | p.1228 |
-| 7.8.8.2 | ARI Capability Register (Offset 04h… | ARI 能力寄存器（偏移 04h） | p.1228 |
-| 7.8.8.2 | Figure 7-184 ARI Control Register | 图 7-184 ARI 控制寄存器 | p.1229 |
-| 7.8.8.3 | ARI Control Register (Offset 06h) | ARI 控制寄存器（偏移 06h） | p.1229 |
-| 7.8.9 | PASID Extended Capability Structure | PASID 扩展能力结构 | p.1229 |
-| 7.8.9.1 | PASID Extended Capability Header (O… | PASID 扩展能力头（偏移 00h） | p.1230 |
-| 7.8.9.2 | PASID Capability Register (Offset 0… | PASID 能力寄存器（偏移 04h） | p.1231 |
-| 7.8.9.3 | PASID Control Register (Offset 06h) | PASID 控制寄存器（偏移 06h） | p.1231 |
-| 7.8.10 | FRS Queueing Extended Capability | FRS 排队扩展能力 | p.1233 |
-| 7.8.10.1 | FRS Queueing Extended Capability He… | FRS 排队扩展能力头（偏移 00h） | p.1233 |
-| 7.8.10.2 | FRS Queueing Capability Register (O… | FRS 排队能力寄存器（偏移 04h） | p.1234 |
-| 7.8.10.3 | FRS Queueing Status Register (Offse… | FRS 排队状态寄存器（偏移 08h） | p.1234 |
-| 7.8.10.4 | FRS Queueing Control Register (Offs… | FRS 排队控制寄存器 (Offset 0Ah) | p.1235 |
-| 7.8.10.5 | FRS Message Queue Register (Offset … | FRS 报文队列寄存器 (Offset 0Ch) | p.1235 |
-| 7.8.11 | Flattening Portal Bridge (FPB) Capa… | 7.8.11 扁平化门户桥 (FPB) 能力 | p.1236 |
-| 7.8.11.1 | FPB Capability Header (Offset 00h) | 7.8.11.1 FPB 能力头 (Offset 00h) | p.1237 |
-| 7.8.11.2 | FPB Capabilities Register (Offset 0… | 7.8.11.2 FPB 能力寄存器 (Offset 04h… | p.1237 |
-| 7.8.11.3 | FPB RID Vector Control 1 Register (… | 7.8.11.3 FPB RID 向量控制 1 寄存器 (O… | p.1239 |
-| 7.8.11.4 | FPB RID Vector Control 2 Register (… | 7.8.11.4 FPB RID 向量控制 2 寄存器 (O… | p.1240 |
-| 7.8.11.5 | FPB MEM Low Vector Control Register… | 7.8.11.5 FPB MEM Low 向量控制寄存器 (… | p.1241 |
-| 7.8.11.6 | FPB MEM High Vector Control 1 Regis… | 7.8.11.6 FPB MEM High 向量控制 1 寄… | p.1242 |
-| 7.8.11.7 | FPB MEM High Vector Control 2 Regis… | 7.8.11.7 FPB MEM High 向量控制 2 寄… | p.1244 |
-| 7.8.11.8 | FPB Vector Access Control Register … | 7.8.11.8 FPB 向量访问控制寄存器 (Offset… | p.1245 |
-| 7.8.11.9 | FPB Vector Access Data Register (Of… | 7.8.11.9 FPB 向量访问数据寄存器 (Offset… | p.1246 |
-| 7.8.12 | Flit Performance Measurement Extend… | Flit 性能测量扩展能力 | p.1247 |
-| 7.8.12.1 | Flit Performance Measurement Extend… | Flit 性能测量扩展能力头（偏移 00h） | p.1247 |
-| 7.8.12.2 | Flit Performance Measurement Capabi… | Flit 性能测量能力寄存器（偏移 04h） | p.1248 |
-| 7.8.12.3 | Flit Performance Measurement Contro… | Flit 性能测量控制寄存器（偏移 08h） | p.1249 |
-| 7.8.13 | Flit Error Injection Extended Capab… | Flit 错误注入扩展能力 | p.1253 |
-| 7.9 | Additional PCI and PCIe Capabilitie… | 7.9 其他 PCI 和 PCIe 能力 | p.1263 |
-| 7.9.1 | Virtual Channel Extended Capability | 7.9.1 虚通道扩展能力 | p.1263 |
-| 7.9.1.3 | Port VC Capability Register 2 (Offs… | 端口 VC 能力寄存器 2 (偏移量 08h) | p.1267 |
-| 7.9.1.4 | Port VC Control Register (Offset 0C… | 端口 VC 控制寄存器 (偏移量 0Ch) | p.1267 |
-| 7.9.1.5 | Port VC Status Register (Offset 0Eh… | 端口 VC 状态寄存器 (偏移量 0Eh) | p.1269 |
-| 7.9.1.6 | VC Resource Capability Register | VC 资源能力寄存器 | p.1269 |
-| 7.9.1.7 | VC Resource Control Register | VC 资源控制寄存器 | p.1270 |
-| 7.9.1.8 | VC Resource Status Register | VC 资源状态寄存器 | p.1272 |
-| 7.9.1.9 | VC Arbitration Table | VC 仲裁表 | p.1273 |
-| 7.9.1.10 | Port Arbitration Table | 端口仲裁表 | p.1274 |
-| 7.9.2 | Multi-Function Virtual Channel Exte… | 多功能虚通道扩展能力 | p.1275 |
-| 7.9.2.1 | MFVC Extended Capability Header (Of… | MFVC 扩展能力头 (偏移量 00h) | p.1276 |
-| 7.9.2.2 | MFVC Port VC Capability Register 1 … | MFVC 端口 VC 能力寄存器 1 (偏移量 04h) | p.1277 |
-| 7.9.2.3 | MFVC Port VC Capability Register 2 … | MFVC 端口 VC 能力寄存器 2 (偏移量 08h) | p.1278 |
-| 7.9.2.4 | MFVC Port VC Control Register (Offs… | MFVC 端口 VC 控制寄存器 (偏移量 0Ch) | p.1278 |
-| 7.9.2.5 | MFVC Port VC Status Register (Offse… | MFVC 端口 VC 状态寄存器 (偏移量 0Eh) | p.1279 |
-| 7.9.2.6 | MFVC VC Resource Capability Registe… | MFVC VC 资源能力寄存器 | p.1280 |
-| 7.9.2.7 | MFVC VC Resource Control Register | MFVC VC 资源控制寄存器 | p.1281 |
-| 7.9.2.7 | MFVC VC Resource Control Register (… | MFVC VC 资源控制寄存器(续) | p.1282 |
-| 7.9.2.8 | MFVC VC Resource Status Register | MFVC VC 资源状态寄存器 | p.1283 |
-| 7.9.2.9 | MFVC VC Arbitration Table | MFVC VC 仲裁表 | p.1284 |
-| 7.9.2.10 | Function Arbitration Table | Function 仲裁表 | p.1284 |
-| 7.9.2.10 | Function Arbitration Table (continu… | Function 仲裁表(续) | p.1285 |
-| 7.9.3 | Device Serial Number Extended Capab… | 设备序列号扩展能力 | p.1290 |
-| 7.9.3 | Device Serial Number Extended Capab… | 设备序列号扩展能力 | p.1290 |
-| 7.9.3.1 | Device Serial Number Extended Capab… | 设备序列号扩展能力包头(偏移 00h) | p.1286 |
-| 7.9.3.2 | Serial Number Register (Offset 04h) | 序列号寄存器(偏移 04h) | p.1287 |
-| 7.9.4 | Vendor-Specific Capability | 厂商特定能力 | p.1287 |
-| 7.9.5 | Vendor-Specific Extended Capability | 厂商特定扩展能力 | p.1288 |
-| 7.9.5.1 | Vendor-Specific Extended Capability… | 厂商特定扩展能力包头(偏移 00h) | p.1289 |
-| 7.9.5.2 | Vendor-Specific Header (Offset 04h) | 厂商特定包头(偏移 04h) | p.1290 |
-| 7.9.6 | Designated Vendor-Specific Extended… | 指定厂商特定扩展能力 (DVSEC) | p.1290 |
-| 7.9.6.1 | Designated Vendor-Specific Extended… | 指定厂商特定扩展能力包头(偏移 00h) | p.1291 |
-| 7.9.6.2 | Designated Vendor-Specific Header 1… | 指定厂商特定包头 1(偏移 04h) | p.1292 |
-| 7.9.6.3 | Designated Vendor-Specific Header 2… | 指定厂商特定包头 2(偏移 08h) | p.1292 |
-| 7.9.7 | RCRB Header Extended Capability | RCRB 头扩展能力 | p.1293 |
-| 7.9.7.1 | RCRB Header Extended Capability Hea… |  | p.1293 |
-| 7.9.7.1 | RCRB 头扩展能力头（偏移 00h） |  | p.1293 |
-| 7.9.7.2 | RCRB Vendor ID and Device ID regist… |  | p.1294 |
+|  | 7.8.4.9 | [Root Error Command Register (Offset…](#sec-7-8-4-9) | [根错误命令寄存器（偏移 2Ch）](#sec-7-8-4-9) | p.1204 |
+|  | 7.8.4.10 | [Root Error Status Register (Offset …](#sec-7-8-4-10) | [根错误状态寄存器（偏移 30h）](#sec-7-8-4-10) | p.1204 |
+|  | 7.8.4.11 | [Error Source Identification Registe…](#sec-7-8-4-11) | [错误源标识寄存器（偏移 34h）](#sec-7-8-4-11) | p.1208 |
+|  | 7.8.4.12 | [TLP Prefix Log Register (Offset 38h…](#sec-7-8-4-12) | [TLP 前缀日志寄存器（偏移 38h）](#sec-7-8-4-12) | p.1208 |
+|  | 7.8.5 | [Enhanced Allocation Capability Stru…](#sec-7-8-5) | [增强分配能力结构（EA）](#sec-7-8-5) | p.1208 |
+|  | 7.8.5.1 | [Enhanced Allocation Capability Firs…](#sec-7-8-5-1) | [增强分配能力首 DW（偏移 00h）](#sec-7-8-5-1) | p.1208 |
+|  | 7.8.5.2 | [Enhanced Allocation Capability Seco…](#sec-7-8-5-2) | [增强分配能力第二 DW（偏移 04h）[仅 Type 1 功…](#sec-7-8-5-2) | p.1208 |
+|  | 7.8.5.3 | [Enhanced Allocation Per-Entry Forma…](#sec-7-8-5-3) | [增强分配逐条目格式（偏移 04h 或 08h）](#sec-7-8-5-3) | p.1208 |
+|  | 7.8.6 | [Resizable BAR Extended Capability](#sec-7-8-6) | [可调整 BAR 扩展能力（Resizable BAR Ext…](#sec-7-8-6) | p.1216 |
+|  | 7.8.6.1 | [Resizable BAR Extended Capability H…](#sec-7-8-6-1) | [可变大小 BAR 扩展能力头（偏移 00h）](#sec-7-8-6-1) | p.1216 |
+|  | 7.8.6.2 | [Resizable BAR Capability Register](#sec-7-8-6-2) | [可变大小 BAR 能力寄存器](#sec-7-8-6-2) | p.1216 |
+|  | 7.8.6.3 | [Resizable BAR Control Register](#sec-7-8-6-3) | [可变大小 BAR 控制寄存器](#sec-7-8-6-3) | p.1221 |
+|  | 7.8.7 | [VF Resizable BAR Extended Capabilit…](#sec-7-8-7) | [VF 可变大小 BAR 扩展能力](#sec-7-8-7) | p.1223 |
+|  | 7.8.7.1 | [VF Resizable BAR Extended Capabilit…](#sec-7-8-7-1) | [VF 可变大小 BAR 扩展能力头（偏移 00h）](#sec-7-8-7-1) | p.1225 |
+|  | 7.8.7.2 | [VF Resizable BAR Capability Registe…](#sec-7-8-7-2) | [VF 可变大小 BAR 能力寄存器（偏移 04h）](#sec-7-8-7-2) | p.1225 |
+|  | 7.8.7.3 | [VF Resizable BAR Control Register (…](#sec-7-8-7-3) | [VF 可变大小 BAR 控制寄存器（偏移 08h）](#sec-7-8-7-3) | p.1225 |
+|  | 7.8.8 | [ARI Extended Capability](#sec-7-8-8) | [ARI 扩展能力](#sec-7-8-8) | p.1227 |
+|  | 7.8.8.1 | [ARI Extended Capability Header (Off…](#sec-7-8-8-1) | [ARI 扩展能力头（偏移 00h）](#sec-7-8-8-1) | p.1227 |
+|  | 7.8.8.1 | [Figure 7-183 ARI Capability Registe…](#sec-7-8-8-1) | [图 7-183 ARI 能力寄存器](#sec-7-8-8-1) | p.1228 |
+|  | 7.8.8.2 | [ARI Capability Register (Offset 04h…](#sec-7-8-8-2) | [ARI 能力寄存器（偏移 04h）](#sec-7-8-8-2) | p.1228 |
+|  | 7.8.8.2 | [Figure 7-184 ARI Control Register](#sec-7-8-8-2) | [图 7-184 ARI 控制寄存器](#sec-7-8-8-2) | p.1229 |
+|  | 7.8.8.3 | [ARI Control Register (Offset 06h)](#sec-7-8-8-3) | [ARI 控制寄存器（偏移 06h）](#sec-7-8-8-3) | p.1229 |
+|  | 7.8.9 | [PASID Extended Capability Structure](#sec-7-8-9) | [PASID 扩展能力结构](#sec-7-8-9) | p.1229 |
+|  | 7.8.9.1 | [PASID Extended Capability Header (O…](#sec-7-8-9-1) | [PASID 扩展能力头（偏移 00h）](#sec-7-8-9-1) | p.1230 |
+|  | 7.8.9.2 | [PASID Capability Register (Offset 0…](#sec-7-8-9-2) | [PASID 能力寄存器（偏移 04h）](#sec-7-8-9-2) | p.1231 |
+|  | 7.8.9.3 | [PASID Control Register (Offset 06h)](#sec-7-8-9-3) | [PASID 控制寄存器（偏移 06h）](#sec-7-8-9-3) | p.1231 |
+|  | 7.8.10 | [FRS Queueing Extended Capability](#sec-7-8-10) | [FRS 排队扩展能力](#sec-7-8-10) | p.1233 |
+|  | 7.8.10.1 | [FRS Queueing Extended Capability He…](#sec-7-8-10-1) | [FRS 排队扩展能力头（偏移 00h）](#sec-7-8-10-1) | p.1233 |
+|  | 7.8.10.2 | [FRS Queueing Capability Register (O…](#sec-7-8-10-2) | [FRS 排队能力寄存器（偏移 04h）](#sec-7-8-10-2) | p.1234 |
+|  | 7.8.10.3 | [FRS Queueing Status Register (Offse…](#sec-7-8-10-3) | [FRS 排队状态寄存器（偏移 08h）](#sec-7-8-10-3) | p.1234 |
+|  | 7.8.10.4 | [FRS Queueing Control Register (Offs…](#sec-7-8-10-4) | [FRS 排队控制寄存器 (Offset 0Ah)](#sec-7-8-10-4) | p.1235 |
+|  | 7.8.10.5 | [FRS Message Queue Register (Offset …](#sec-7-8-10-5) | [FRS 报文队列寄存器 (Offset 0Ch)](#sec-7-8-10-5) | p.1235 |
+|  | 7.8.11 | [Flattening Portal Bridge (FPB) Capa…](#sec-7-8-11) | [7.8.11 扁平化门户桥 (FPB) 能力](#sec-7-8-11) | p.1236 |
+|  | 7.8.11.1 | [FPB Capability Header (Offset 00h)](#sec-7-8-11-1) | [7.8.11.1 FPB 能力头 (Offset 00h)](#sec-7-8-11-1) | p.1237 |
+|  | 7.8.11.2 | [FPB Capabilities Register (Offset 0…](#sec-7-8-11-2) | [7.8.11.2 FPB 能力寄存器 (Offset 04h…](#sec-7-8-11-2) | p.1237 |
+|  | 7.8.11.3 | [FPB RID Vector Control 1 Register (…](#sec-7-8-11-3) | [7.8.11.3 FPB RID 向量控制 1 寄存器 (O…](#sec-7-8-11-3) | p.1239 |
+|  | 7.8.11.4 | [FPB RID Vector Control 2 Register (…](#sec-7-8-11-4) | [7.8.11.4 FPB RID 向量控制 2 寄存器 (O…](#sec-7-8-11-4) | p.1240 |
+|  | 7.8.11.5 | [FPB MEM Low Vector Control Register…](#sec-7-8-11-5) | [7.8.11.5 FPB MEM Low 向量控制寄存器 (…](#sec-7-8-11-5) | p.1241 |
+|  | 7.8.11.6 | [FPB MEM High Vector Control 1 Regis…](#sec-7-8-11-6) | [7.8.11.6 FPB MEM High 向量控制 1 寄…](#sec-7-8-11-6) | p.1242 |
+|  | 7.8.11.7 | [FPB MEM High Vector Control 2 Regis…](#sec-7-8-11-7) | [7.8.11.7 FPB MEM High 向量控制 2 寄…](#sec-7-8-11-7) | p.1244 |
+|  | 7.8.11.8 | [FPB Vector Access Control Register …](#sec-7-8-11-8) | [7.8.11.8 FPB 向量访问控制寄存器 (Offset…](#sec-7-8-11-8) | p.1245 |
+|  | 7.8.11.9 | [FPB Vector Access Data Register (Of…](#sec-7-8-11-9) | [7.8.11.9 FPB 向量访问数据寄存器 (Offset…](#sec-7-8-11-9) | p.1246 |
+|  | 7.8.12 | [Flit Performance Measurement Extend…](#sec-7-8-12) | [Flit 性能测量扩展能力](#sec-7-8-12) | p.1247 |
+|  | 7.8.12.1 | [Flit Performance Measurement Extend…](#sec-7-8-12-1) | [Flit 性能测量扩展能力头（偏移 00h）](#sec-7-8-12-1) | p.1247 |
+|  | 7.8.12.2 | [Flit Performance Measurement Capabi…](#sec-7-8-12-2) | [Flit 性能测量能力寄存器（偏移 04h）](#sec-7-8-12-2) | p.1248 |
+|  | 7.8.12.3 | [Flit Performance Measurement Contro…](#sec-7-8-12-3) | [Flit 性能测量控制寄存器（偏移 08h）](#sec-7-8-12-3) | p.1249 |
+|  | 7.8.13 | [Flit Error Injection Extended Capab…](#sec-7-8-13) | [Flit 错误注入扩展能力](#sec-7-8-13) | p.1253 |
+|  | 7.9 | [Additional PCI and PCIe Capabilitie…](#sec-7-9) | [7.9 其他 PCI 和 PCIe 能力](#sec-7-9) | p.1263 |
+|  | 7.9.1 | [Virtual Channel Extended Capability](#sec-7-9-1) | [7.9.1 虚通道扩展能力](#sec-7-9-1) | p.1263 |
+|  | 7.9.1.3 | [Port VC Capability Register 2 (Offs…](#sec-7-9-1-3) | [端口 VC 能力寄存器 2 (偏移量 08h)](#sec-7-9-1-3) | p.1267 |
+|  | 7.9.1.4 | [Port VC Control Register (Offset 0C…](#sec-7-9-1-4) | [端口 VC 控制寄存器 (偏移量 0Ch)](#sec-7-9-1-4) | p.1267 |
+|  | 7.9.1.5 | [Port VC Status Register (Offset 0Eh…](#sec-7-9-1-5) | [端口 VC 状态寄存器 (偏移量 0Eh)](#sec-7-9-1-5) | p.1269 |
+|  | 7.9.1.6 | [VC Resource Capability Register](#sec-7-9-1-6) | [VC 资源能力寄存器](#sec-7-9-1-6) | p.1269 |
+|  | 7.9.1.7 | [VC Resource Control Register](#sec-7-9-1-7) | [VC 资源控制寄存器](#sec-7-9-1-7) | p.1270 |
+|  | 7.9.1.8 | [VC Resource Status Register](#sec-7-9-1-8) | [VC 资源状态寄存器](#sec-7-9-1-8) | p.1272 |
+|  | 7.9.1.9 | [VC Arbitration Table](#sec-7-9-1-9) | [VC 仲裁表](#sec-7-9-1-9) | p.1273 |
+|  | 7.9.1.10 | [Port Arbitration Table](#sec-7-9-1-10) | [端口仲裁表](#sec-7-9-1-10) | p.1274 |
+|  | 7.9.2 | [Multi-Function Virtual Channel Exte…](#sec-7-9-2) | [多功能虚通道扩展能力](#sec-7-9-2) | p.1275 |
+|  | 7.9.2.1 | [MFVC Extended Capability Header (Of…](#sec-7-9-2-1) | [MFVC 扩展能力头 (偏移量 00h)](#sec-7-9-2-1) | p.1276 |
+|  | 7.9.2.2 | [MFVC Port VC Capability Register 1 …](#sec-7-9-2-2) | [MFVC 端口 VC 能力寄存器 1 (偏移量 04h)](#sec-7-9-2-2) | p.1277 |
+|  | 7.9.2.3 | [MFVC Port VC Capability Register 2 …](#sec-7-9-2-3) | [MFVC 端口 VC 能力寄存器 2 (偏移量 08h)](#sec-7-9-2-3) | p.1278 |
+|  | 7.9.2.4 | [MFVC Port VC Control Register (Offs…](#sec-7-9-2-4) | [MFVC 端口 VC 控制寄存器 (偏移量 0Ch)](#sec-7-9-2-4) | p.1278 |
+|  | 7.9.2.5 | [MFVC Port VC Status Register (Offse…](#sec-7-9-2-5) | [MFVC 端口 VC 状态寄存器 (偏移量 0Eh)](#sec-7-9-2-5) | p.1279 |
+|  | 7.9.2.6 | [MFVC VC Resource Capability Registe…](#sec-7-9-2-6) | [MFVC VC 资源能力寄存器](#sec-7-9-2-6) | p.1280 |
+|  | 7.9.2.7 | [MFVC VC Resource Control Register](#sec-7-9-2-7) | [MFVC VC 资源控制寄存器](#sec-7-9-2-7) | p.1281 |
+|  | 7.9.2.7 | [MFVC VC Resource Control Register (…](#sec-7-9-2-7) | [MFVC VC 资源控制寄存器(续)](#sec-7-9-2-7) | p.1282 |
+|  | 7.9.2.8 | [MFVC VC Resource Status Register](#sec-7-9-2-8) | [MFVC VC 资源状态寄存器](#sec-7-9-2-8) | p.1283 |
+|  | 7.9.2.9 | [MFVC VC Arbitration Table](#sec-7-9-2-9) | [MFVC VC 仲裁表](#sec-7-9-2-9) | p.1284 |
+|  | 7.9.2.10 | [Function Arbitration Table](#sec-7-9-2-10) | [Function 仲裁表](#sec-7-9-2-10) | p.1284 |
+|  | 7.9.2.10 | [Function Arbitration Table (continu…](#sec-7-9-2-10) | [Function 仲裁表(续)](#sec-7-9-2-10) | p.1285 |
+|  | 7.9.3 | [Device Serial Number Extended Capab…](#sec-7-9-3) | [设备序列号扩展能力](#sec-7-9-3) | p.1290 |
+|  | 7.9.3 | [Device Serial Number Extended Capab…](#sec-7-9-3) | [设备序列号扩展能力](#sec-7-9-3) | p.1290 |
+|  | 7.9.3.1 | [Device Serial Number Extended Capab…](#sec-7-9-3-1) | [设备序列号扩展能力包头(偏移 00h)](#sec-7-9-3-1) | p.1286 |
+|  | 7.9.3.2 | [Serial Number Register (Offset 04h)](#sec-7-9-3-2) | [序列号寄存器(偏移 04h)](#sec-7-9-3-2) | p.1287 |
+|  | 7.9.4 | [Vendor-Specific Capability](#sec-7-9-4) | [厂商特定能力](#sec-7-9-4) | p.1287 |
+|  | 7.9.5 | [Vendor-Specific Extended Capability](#sec-7-9-5) | [厂商特定扩展能力](#sec-7-9-5) | p.1288 |
+|  | 7.9.5.1 | [Vendor-Specific Extended Capability…](#sec-7-9-5-1) | [厂商特定扩展能力包头(偏移 00h)](#sec-7-9-5-1) | p.1289 |
+|  | 7.9.5.2 | [Vendor-Specific Header (Offset 04h)](#sec-7-9-5-2) | [厂商特定包头(偏移 04h)](#sec-7-9-5-2) | p.1290 |
+|  | 7.9.6 | [Designated Vendor-Specific Extended…](#sec-7-9-6) | [指定厂商特定扩展能力 (DVSEC)](#sec-7-9-6) | p.1290 |
+|  | 7.9.6.1 | [Designated Vendor-Specific Extended…](#sec-7-9-6-1) | [指定厂商特定扩展能力包头(偏移 00h)](#sec-7-9-6-1) | p.1291 |
+|  | 7.9.6.2 | [Designated Vendor-Specific Header 1…](#sec-7-9-6-2) | [指定厂商特定包头 1(偏移 04h)](#sec-7-9-6-2) | p.1292 |
+|  | 7.9.6.3 | [Designated Vendor-Specific Header 2…](#sec-7-9-6-3) | [指定厂商特定包头 2(偏移 08h)](#sec-7-9-6-3) | p.1292 |
+|  | 7.9.7 | [RCRB Header Extended Capability](#sec-7-9-7) | [RCRB 头扩展能力](#sec-7-9-7) | p.1293 |
+|  | 7.9.7.1 | [RCRB Header Extended Capability Hea…](#sec-7-9-7-1) | [](#sec-7-9-7-1) | p.1293 |
+|  | 7.9.7.1 | [RCRB 头扩展能力头（偏移 00h）](#sec-7-9-7-1) | [](#sec-7-9-7-1) | p.1293 |
+|  | 7.9.7.2 | [RCRB Vendor ID and Device ID regist…](#sec-7-9-7-2) | [](#sec-7-9-7-2) | p.1294 |
 | 7.9.7.3 | RCRB Capabilities register (Offset … |  | p.1294 |
-| 7.9.7.2 | RCRB Vendor ID and Device ID 寄存器（偏移… |  | p.1294 |
+|  | 7.9.7.2 | [RCRB Vendor ID and Device ID 寄存器（偏移…](#sec-7-9-7-2) | [](#sec-7-9-7-2) | p.1294 |
 | 7.9.7.3 | RCRB Capabilities 寄存器（偏移 08h） |  | p.1294 |
-| 7.9.7.4 | RCRB Control register (Offset 0Ch) |  | p.1295 |
-| 7.9.8 | Root Complex Link Declaration Exten… |  | p.1295 |
-| 7.9.7.4 | RCRB Control 寄存器（偏移 0Ch） |  | p.1295 |
-| 7.9.8 | Root Complex Link Declaration Exten… |  | p.1295 |
-| 7.9.8.1 | Root Complex Link Declaration Exten… |  | p.1297 |
-| 7.9.8.1 | Root Complex Link Declaration Exten… |  | p.1297 |
-| 7.9.8.2 | Element Self Description Register (… |  | p.1298 |
-| 7.9.8.2 | Element Self Description 寄存器（偏移 04h… |  | p.1298 |
-| 7.9.8.3 | Link Entries |  | p.1299 |
-| 7.9.8.3.1 | Link Description Register |  | p.1299 |
-| 7.9.8.3 | Link Entries（链路条目） |  | p.1299 |
-| 7.9.8.3.1 | Link Description 寄存器 |  | p.1299 |
-| 7.9.8.3.2 | Link Address |  | p.1300 |
-| 7.9.8.3.2.1 | Link Address for Link Type 0 |  | p.1300 |
-| 7.9.8.3.2.2 | Link Address for Link Type 1 |  | p.1300 |
-| 7.9.8.3.2 | Link Address（链路地址） |  | p.1300 |
-| 7.9.8.3.2.1 | Link Type 0 的 Link Address |  | p.1300 |
-| 7.9.8.3.2.2 | Link Type 1 的 Link Address |  | p.1300 |
-| 7.9.9 | Root Complex Internal Link Control … |  | p.1301 |
-| 7.9.9 | Root Complex Internal Link Control … |  | p.1301 |
-| 7.9.9.1 | Root Complex Internal Link Control … | 根复合体内部链路控制扩展能力头(偏移量 00h) | p.1302 |
-| 7.9.9.2 | Root Complex Link Capabilities Regi… | 根复合体链路能力寄存器(偏移量 04h) | p.1302 |
-| 7.9.9.3 | Root Complex Link Control Register … | 根复合体链路控制寄存器(偏移量 08h) | p.1305 |
-| 7.9.9.4 | Root Complex Link Status Register (… | 根复合体链路状态寄存器(偏移量 0Ah) | p.1305 |
-| 7.9.10 | Root Complex Event Collector Endpoi… | 根复合体事件收集器端点关联扩展能力 | p.1307 |
-| 7.9.10.1 | Root Complex Event Collector Endpoi… | 根复合体事件收集器端点关联扩展能力头(偏移量 00h) | p.1308 |
-| 7.9.10.2 | Association Bitmap for RCiEPs (Offs… | RCiEP 关联位图(偏移量 04h) | p.1309 |
-| 7.9.10.3 | RCEC Associated Bus Numbers Registe… | RCEC 关联总线号寄存器(偏移量 08h) | p.1309 |
-| 7.9.11 | Multicast Extended Capability | 组播扩展能力 | p.1310 |
-| 7.9.11.1 | Multicast Extended Capability Heade… | 组播扩展能力头(偏移量 00h) | p.1311 |
-| 7.9.11.2 | Multicast Capability Register (Offs… | 组播能力寄存器(偏移量 04h) | p.1313 |
-| 7.9.11.3 | Multicast Control Register (Offset … | 多播控制寄存器（偏移 06h） | p.1313 |
-| 7.9.11.4 | MC_Base_Address Register (Offset 08… | MC_Base_Address 寄存器（偏移 08h） | p.1313 |
-| 7.9.11.5 | MC_Receive Register (Offset 10h) | MC_Receive 寄存器（偏移 10h） | p.1314 |
-| 7.9.11.6 | MC_Block_All Register (Offset 18h) | MC_Block_All 寄存器（偏移 18h） | p.1314 |
-| 7.9.11.7 | MC_Block_Untranslated Register (Off… | MC_Block_Untranslated 寄存器（偏移 2… | p.1315 |
-| 7.9.11.8 | MC_Overlay_BAR Register (Offset 28h… | MC_Overlay_BAR 寄存器（偏移 28h） | p.1315 |
-| 7.9.12 | Dynamic Power Allocation Extended C… | 动态功率分配扩展能力（DPA 能力） | p.1316 |
-| 7.9.12.1 | DPA Extended Capability Header (Off… | DPA 扩展能力头（偏移 00h） | p.1317 |
-| 7.9.12.2 | DPA Capability Register (Offset 04h… | DPA 能力寄存器（偏移 04h） | p.1317 |
-| 7.9.12.3 | DPA Latency Indicator Register (Off… | DPA 延迟指示寄存器（偏移 08h） | p.1318 |
-| 7.9.12.4 | DPA Status Register (Offset 0Ch) | DPA 状态寄存器（偏移 0Ch） | p.1319 |
-| 7.9.12.5 | DPA Control Register (Offset 0Eh) | DPA 控制寄存器（偏移 0Eh） | p.1319 |
-| 7.9.12.6 | DPA Power Allocation Array | DPA 功率分配数组 | p.1320 |
-| 7.9.13 | TPH Requester Extended Capability | TPH 请求者扩展能力 | p.1320 |
-| 7.9.13.1 | TPH Requester Extended Capability H… | TPH 请求者扩展能力头（偏移 00h） | p.1321 |
-| 7.9.13.2 | TPH Requester Capability Register (… | TPH 请求者能力寄存器（偏移 04h） | p.1321 |
-| 7.9.13.3 | TPH Requester Control Register (Off… | TPH 请求者控制寄存器（偏移 08h） | p.1322 |
-| 7.9.13.4 | TPH ST Table (Starting from Offset … | TPH ST 表（起始偏移 0Ch） | p.1323 |
-| 7.9.14 | DPC Extended Capability | DPC 扩展能力 | p.1324 |
-| 7.9.14.1 | DPC Extended Capability Header (Off… | DPC 扩展能力头（偏移 00h） | p.1327 |
-| 7.9.14.2 | DPC Capability Register (Offset 04h… | DPC 能力寄存器（偏移 04h） | p.1327 |
-| 7.9.14.3 | DPC Control Register (Offset 06h) | DPC 控制寄存器（偏移 06h） | p.1329 |
-| 7.9.14.4 | DPC Status Register (Offset 08h) | DPC 状态寄存器（偏移 08h） | p.1331 |
-| 7.9.14.5 | DPC Error Source ID Register (Offse… | DPC 错误源 ID 寄存器（偏移 0Ah） | p.1332 |
-| 7.9.14.6 | RP PIO Status Register (Offset 0Ch) | RP PIO 状态寄存器（偏移 0Ch） | p.1333 |
-| 7.9.14.7 | RP PIO Mask Register (Offset 10h) | RP PIO 屏蔽寄存器 (偏移 10h) | p.1334 |
-| 7.9.14.8 | RP PIO Severity Register (Offset 14… | RP PIO 严重程度寄存器 (偏移 14h) | p.1335 |
-| 7.9.14.9 | RP PIO SysError Register (Offset 18… | RP PIO 系统错误寄存器 (偏移 18h) | p.1335 |
-| 7.9.14.10 | RP PIO Exception Register (Offset 1… | RP PIO 异常寄存器 (偏移 1Ch) | p.1336 |
-| 7.9.14.11 | RP PIO Header Log Register (Offset … | RP PIO Header Log 寄存器 (偏移 20h) | p.1337 |
-| 7.9.14.12 | RP PIO ImpSpec Log Register (Offset… | RP PIO ImpSpec Log 寄存器 (偏移 30h… | p.1338 |
-| 7.9.14.13 | RP PIO TLP Prefix Log Register (Off… | RP PIO TLP Prefix Log 寄存器 (偏移 … | p.1339 |
-| 7.9.15 | Precision Time Measurement Extended… | 精确时间测量扩展能力 (PTM Extended Capab… | p.1340 |
-| 7.9.15.1 | PTM Extended Capability Header (Off… | PTM 扩展能力包头 (偏移 00h) | p.1340 |
-| 7.9.15.2 | PTM Capability Register (Offset 04h… | PTM 能力寄存器 (偏移 04h) | p.1341 |
-| 7.9.15.3 | PTM Control Register (Offset 08h) | PTM 控制寄存器 (偏移 08h) | p.1342 |
-| 7.9.16 | Readiness Time Reporting Extended C… | 就绪时间报告扩展能力 | p.1343 |
-| 7.9.16.1 | Readiness Time Reporting Extended C… | 就绪时间报告扩展能力包头 (偏移 00h) | p.1344 |
-| 7.9.16.2 | Readiness Time Reporting 1 Register… | 就绪时间报告 1 寄存器（偏移 04h） | p.1345 |
-| 7.9.16.3 | Readiness Time Reporting 2 Register… | 就绪时间报告 2 寄存器（偏移 08h） | p.1346 |
-| 7.9.17 | Hierarchy ID Extended Capability | 层级 ID 扩展能力（Hierarchy ID Extend… | p.1346 |
-| 7.9.17.1 | Hierarchy ID Extended Capability He… | 层级 ID 扩展能力头（偏移 00h） | p.1348 |
-| 7.9.17.2 | Hierarchy ID Status Register (Offse… | 层级 ID 状态寄存器（偏移 04h） | p.1349 |
-| 7.9.17.3 | Hierarchy ID Data Register (Offset … | 层级 ID 数据寄存器（偏移 08h） | p.1350 |
-| 7.9.17.4 | Hierarchy ID GUID 1 Register (Offse… | 层级 ID GUID 1 寄存器（偏移 0Ch） | p.1351 |
-| 7.9.17.5 | Hierarchy ID GUID 2 Register (Offse… | 层级 ID GUID 2 寄存器（偏移 10h） | p.1351 |
-| 7.9.17.6 | Hierarchy ID GUID 3 Register (Offse… | 层级 ID GUID 3 寄存器（偏移 14h） | p.1352 |
-| 7.9.17.7 | Hierarchy ID GUID 4 Register (Offse… | 层级 ID GUID 4 寄存器（偏移 18h） | p.1352 |
-| 7.9.18 | Vital Product Data (VPD) Capability | 重要产品数据（VPD）能力 | p.1353 |
-| 7.9.17.8 | Hierarchy ID GUID 5 Register (Offse… | 层级 ID GUID 5 寄存器 (偏移 1Ch) | p.1353 |
-| 7.9.18 | Vital Product Data Capability (VPD … | 重要产品数据能力 (VPD Capability) | p.1353 |
-| 7.9.18.1 | VPD Address Register | VPD Address 寄存器 | p.1354 |
-| 7.9.18.2 | VPD Data Register | VPD Data 寄存器 | p.1355 |
-| 7.9.19 | Native PCIe Enclosure Management Ex… | 原生 PCIe 机框管理扩展能力 (NPEM 扩展能力) | p.1355 |
-| 7.9.19.1 | NPEM Extended Capability Header (Of… | NPEM 扩展能力头 (偏移 00h) | p.1356 |
-| 7.9.19.2 | NPEM Capability Register (Offset 04… | NPEM Capability 寄存器 (偏移 04h) | p.1356 |
-| 7.9.19.3 | NPEM Control Register (Offset 08h) | NPEM Control 寄存器 (偏移 08h) | p.1358 |
-| 7.9.19.3 | NPEM Control Register (Offset 08h) … | NPEM Control 寄存器 (偏移 08h) - 续 | p.1358 |
-| 7.9.19.4 | NPEM Status Register (Offset 0Ch) | NPEM Status 寄存器 (偏移 0Ch) | p.1360 |
-| 7.9.20 | Alternate Protocol Extended Capabil… | Alternate Protocol 扩展能力 | p.1361 |
-| 7.9.20.1 | Alternate Protocol Extended Capabil… | Alternate Protocol 扩展能力头 (偏移 0… | p.1361 |
-| 7.9.20.2 | Alternate Protocol Capabilities Reg… | Alternate Protocol Capabilitie… | p.1362 |
-| 7.9.20.3 | Alternate Protocol Control Register… | 替代协议控制寄存器（偏移量 08h） | p.1362 |
-| 7.9.20.4 | Alternate Protocol Data 1 Register … | 替代协议数据 1 寄存器（偏移量 0Ch） | p.1363 |
-| 7.9.20.5 | Alternate Protocol Data 2 Register … | 替代协议数据 2 寄存器（偏移量 10h） | p.1364 |
-| 7.9.20.6 | Alternate Protocol Selective Enable… | 替代协议选择性使能掩码寄存器（偏移量 14h） | p.1364 |
-| 7.9.21 | Conventional PCI Advanced Features … | Conventional PCI 高级功能能力结构 (AF) | p.1365 |
-| 7.9.21.1 | Advanced Features Capability Header… | 高级功能能力结构头部（偏移量 00h） | p.1365 |
-| 7.9.21.2 | AF Capabilities Register (Offset 03… | AF 能力寄存器（偏移量 03h） | p.1366 |
-| 7.9.21.3 | Conventional PCI Advanced Features … | Conventional PCI 高级功能控制寄存器（偏移量… | p.1366 |
-| 7.9.21.4 | AF Status Register (Offset 05h) | AF 状态寄存器（偏移量 05h） | p.1367 |
-| 7.9.22 | SFI Extended Capability | SFI 扩展能力结构 | p.1367 |
-| 7.9.22.1 | SFI Extended Capability Header (Off… | SFI 扩展能力结构头部（偏移量 00h） | p.1368 |
-| 7.9.22.2 | SFI Capability Register (Offset 04h… | SFI 能力寄存器（偏移量 04h） | p.1369 |
-| 7.9.22.3 | SFI Control Register (Offset 06h) | SFI 控制寄存器（偏移量 06h） | p.1369 |
-| 7.9.22.4 | SFI Status Register (Offset 08h) | SFI 状态寄存器 (偏移 08h) | p.1371 |
-| 7.9.22.5 | SFI CAM Address Register (Offset 0C… | SFI CAM 地址寄存器 (偏移 0Ch) | p.1372 |
-| 7.9.22.6 | SFI CAM Data Register (Offset 10h) | SFI CAM 数据寄存器 (偏移 10h) | p.1372 |
-| 7.9.23 | Subsystem ID and Subsystem Vendor I… | Subsystem ID 与 Subsystem Vendo… | p.1372 |
-| 7.9.23.1 | Subsystem ID and Subsystem Vendor I… | Subsystem ID 与 Subsystem Vendo… | p.1373 |
-| 7.9.23.2 | Subsystem ID and Subsystem Vendor I… | Subsystem ID 与 Subsystem Vendo… | p.1373 |
-| 7.9.24 | Data Object Exchange Extended Capab… | Data Object Exchange 扩展能力 | p.1374 |
-| 7.9.24.1 | DOE Extended Capability Header (Off… | DOE 扩展能力头部 (偏移 00h) | p.1374 |
-| 7.9.24.2 | DOE Capabilities Register (Offset 0… | DOE 能力寄存器 (偏移 04h) | p.1375 |
-| 7.9.24.3 | DOE Control Register (Offset 08h) | DOE 控制寄存器 (偏移 08h) | p.1376 |
-| 7.9.24.4 | DOE Status Register (Offset 0Ch) | DOE 状态寄存器 (偏移 0Ch) | p.1377 |
-| 7.9.24.5 | DOE Write Data Mailbox Register (Of… | DOE 写数据邮箱寄存器 (偏移 10h) | p.1378 |
-| 7.9.24.6 | DOE Read Data Mailbox Register (Off… | DOE 读数据邮箱寄存器 (偏移 14h) | p.1378 |
-| 7.9.25 | Shadow Functions Extended Capabilit… | Shadow Functions 扩展能力 | p.1379 |
-| 7.9.25.1 | Shadow Functions Extended Capabilit… | Shadow Functions 扩展能力头（偏移 00h） | p.1381 |
-| 7.9.25 | Shadow Functions Capability | Shadow Functions 能力 | p.1381 |
-| 7.9.25.2 | Shadow Functions Capability Registe… | Shadow Functions 能力寄存器（偏移 04h） | p.1381 |
-| 7.9.25.3 | Shadow Functions Control Register (… | Shadow Functions 控制寄存器（偏移 08h） | p.1381 |
-| 7.9.25.4 | Shadow Functions Instance Register … | Shadow Functions 实例寄存器项 | p.1381 |
-| 7.9.26 | IDE Extended Capability | IDE 扩展能力 | p.1381 |
-| 7.9.26.1 | IDE Extended Capability Header (Off… | IDE 扩展能力头（偏移 00h） | p.1381 |
-| 7.9.26.2 | IDE Capability Register (Offset 04h… | IDE 能力寄存器（偏移 04h） | p.1381 |
-| 7.9.26.3 | IDE Control Register (Offset 08h) | IDE 控制寄存器（偏移 08h） | p.1381 |
-| 7.9.26.4 | Link IDE Register Block | Link IDE 寄存器块 | p.1381 |
-| 7.9.26.4.1 | Link IDE Stream Control Register | Link IDE Stream 控制寄存器 | p.1381 |
-| 7.9.26.4.2 | Link IDE Stream Status Register | Link IDE Stream 状态寄存器 | p.1381 |
-| 7.9.26.5 | Selective IDE Stream Register Block | Selective IDE Stream 寄存器块 | p.1381 |
-| 7.9.26.5.1 | Selective IDE Stream Capability Reg… | 选择性 IDE 流能力寄存器 | p.1381 |
-| 7.9.26.5.2 | Selective IDE Stream Control Regist… | 选择性 IDE 流控制寄存器 | p.1381 |
-| 7.9.26.5.2 | Selective IDE Stream Control Regist… | 选择性 IDE 流控制寄存器(续) | p.1391 |
-| 7.9.26.5.2 | Selective IDE Stream Control Regist… | 选择性 IDE 流控制寄存器(续) | p.1392 |
-| 7.9.26.5.3 | Selective IDE Stream Status Registe… | 选择性 IDE 流状态寄存器 | p.1393 |
-| 7.9.26.5.4 | Selective IDE RID Association Regis… | 选择性 IDE RID 关联寄存器块 | p.1393 |
-| 7.9.26.5.4.1 | IDE RID Association Register 1 | IDE RID 关联寄存器 1 | p.1394 |
-| 7.9.26.5.4.2 | IDE RID Association Register 2 | IDE RID 关联寄存器 2 | p.1394 |
-| 7.9.26.5.5 | Selective IDE Address Association R… | 选择性 IDE 地址关联寄存器块 | p.1394 |
-| 7.9.26.5.5.1 | IDE Address Association Register 1 | IDE 地址关联寄存器 1 | p.1395 |
-| 7.9.26.5.5.2 | IDE Address Association Register 2 | IDE 地址关联寄存器 2 | p.1395 |
-| 7.9.26.5.5.3 | IDE Address Association Register 3 | IDE 地址关联寄存器 3 | p.1395 |
-| 7.9.27 | Null Capability | 空能力 | p.1395 |
-| 7.9.28 | Null Extended Capability | 空扩展能力 | p.1396 |
-| 7.9.29 | Streamlined Virtual Channel Extende… | 精简虚通道扩展能力 (SVC) | p.1398 |
-| 7.9.29.1 | Streamlined Virtual Channel Extende… | 精简虚通道扩展能力头 (偏移量 00h) | p.1398 |
-| 7.9.29.2 | SVC Port Capability Register 1 (Off… | SVC 端口能力寄存器 1 (偏移量 04h) | p.1398 |
-| 7.9.29.3 | SVC Port Capability Register 2 (Off… | SVC 端口能力寄存器 2 (偏移量 08h) | p.1398 |
-| 7.9.29.4 | SVC Port Control Register (Offset 0… | SVC 端口控制寄存器 (偏移量 0Ch) | p.1398 |
-| 7.9.29.5 | SVC Port Status Register (Offset 10… | SVC 端口状态寄存器 (偏移量 10h) | p.1400 |
-| 7.9.29.6 | SVC Resource Capability Register | SVC 资源能力寄存器 | p.1401 |
-| 7.9.29.7 | SVC Resource Control Register | SVC 资源控制寄存器 | p.1401 |
-| 7.9.29.8 | SVC Resource Status Register | SVC 资源状态寄存器 | p.1403 |
-| 7.9.30 | MMIO Register Block Locator Extende… | MMIO 寄存器块定位器扩展能力 (MRBL) | p.1404 |
-| 7.9.30.1 | MRBL Extended Capability Header (Of… | MRBL 扩展能力头 (偏移量 00h) | p.1405 |
-| 7.9.30.2 | MRBL Capabilities Register (Offset … | MRBL 能力寄存器 (偏移量 04h) | p.1405 |
-| 7.9.30.3 | MRBL Locator Register (Offset Varie… | MRBL 定位寄存器 (偏移量可变) | p.1406 |
+|  | 7.9.7.4 | [RCRB Control register (Offset 0Ch)](#sec-7-9-7-4) | [](#sec-7-9-7-4) | p.1295 |
+|  | 7.9.8 | [Root Complex Link Declaration Exten…](#sec-7-9-8) | [](#sec-7-9-8) | p.1295 |
+|  | 7.9.7.4 | [RCRB Control 寄存器（偏移 0Ch）](#sec-7-9-7-4) | [](#sec-7-9-7-4) | p.1295 |
+|  | 7.9.8 | [Root Complex Link Declaration Exten…](#sec-7-9-8) | [](#sec-7-9-8) | p.1295 |
+|  | 7.9.8.1 | [Root Complex Link Declaration Exten…](#sec-7-9-8-1) | [](#sec-7-9-8-1) | p.1297 |
+|  | 7.9.8.1 | [Root Complex Link Declaration Exten…](#sec-7-9-8-1) | [](#sec-7-9-8-1) | p.1297 |
+|  | 7.9.8.2 | [Element Self Description Register (…](#sec-7-9-8-2) | [](#sec-7-9-8-2) | p.1298 |
+|  | 7.9.8.2 | [Element Self Description 寄存器（偏移 04h…](#sec-7-9-8-2) | [](#sec-7-9-8-2) | p.1298 |
+|  | 7.9.8.3 | [Link Entries](#sec-7-9-8-3) | [](#sec-7-9-8-3) | p.1299 |
+|  | 7.9.8.3.1 | [Link Description Register](#sec-7-9-8-3-1) | [](#sec-7-9-8-3-1) | p.1299 |
+|  | 7.9.8.3 | [Link Entries（链路条目）](#sec-7-9-8-3) | [](#sec-7-9-8-3) | p.1299 |
+|  | 7.9.8.3.1 | [Link Description 寄存器](#sec-7-9-8-3-1) | [](#sec-7-9-8-3-1) | p.1299 |
+|  | 7.9.8.3.2 | [Link Address](#sec-7-9-8-3-2) | [](#sec-7-9-8-3-2) | p.1300 |
+|  | 7.9.8.3.2.1 | [Link Address for Link Type 0](#sec-7-9-8-3-2-1) | [](#sec-7-9-8-3-2-1) | p.1300 |
+|  | 7.9.8.3.2.2 | [Link Address for Link Type 1](#sec-7-9-8-3-2-2) | [](#sec-7-9-8-3-2-2) | p.1300 |
+|  | 7.9.8.3.2 | [Link Address（链路地址）](#sec-7-9-8-3-2) | [](#sec-7-9-8-3-2) | p.1300 |
+|  | 7.9.8.3.2.1 | [Link Type 0 的 Link Address](#sec-7-9-8-3-2-1) | [](#sec-7-9-8-3-2-1) | p.1300 |
+|  | 7.9.8.3.2.2 | [Link Type 1 的 Link Address](#sec-7-9-8-3-2-2) | [](#sec-7-9-8-3-2-2) | p.1300 |
+|  | 7.9.9 | [Root Complex Internal Link Control …](#sec-7-9-9) | [](#sec-7-9-9) | p.1301 |
+|  | 7.9.9 | [Root Complex Internal Link Control …](#sec-7-9-9) | [](#sec-7-9-9) | p.1301 |
+|  | 7.9.9.1 | [Root Complex Internal Link Control …](#sec-7-9-9-1) | [根复合体内部链路控制扩展能力头(偏移量 00h)](#sec-7-9-9-1) | p.1302 |
+|  | 7.9.9.2 | [Root Complex Link Capabilities Regi…](#sec-7-9-9-2) | [根复合体链路能力寄存器(偏移量 04h)](#sec-7-9-9-2) | p.1302 |
+|  | 7.9.9.3 | [Root Complex Link Control Register …](#sec-7-9-9-3) | [根复合体链路控制寄存器(偏移量 08h)](#sec-7-9-9-3) | p.1305 |
+|  | 7.9.9.4 | [Root Complex Link Status Register (…](#sec-7-9-9-4) | [根复合体链路状态寄存器(偏移量 0Ah)](#sec-7-9-9-4) | p.1305 |
+|  | 7.9.10 | [Root Complex Event Collector Endpoi…](#sec-7-9-10) | [根复合体事件收集器端点关联扩展能力](#sec-7-9-10) | p.1307 |
+|  | 7.9.10.1 | [Root Complex Event Collector Endpoi…](#sec-7-9-10-1) | [根复合体事件收集器端点关联扩展能力头(偏移量 00h)](#sec-7-9-10-1) | p.1308 |
+|  | 7.9.10.2 | [Association Bitmap for RCiEPs (Offs…](#sec-7-9-10-2) | [RCiEP 关联位图(偏移量 04h)](#sec-7-9-10-2) | p.1309 |
+|  | 7.9.10.3 | [RCEC Associated Bus Numbers Registe…](#sec-7-9-10-3) | [RCEC 关联总线号寄存器(偏移量 08h)](#sec-7-9-10-3) | p.1309 |
+|  | 7.9.11 | [Multicast Extended Capability](#sec-7-9-11) | [组播扩展能力](#sec-7-9-11) | p.1310 |
+|  | 7.9.11.1 | [Multicast Extended Capability Heade…](#sec-7-9-11-1) | [组播扩展能力头(偏移量 00h)](#sec-7-9-11-1) | p.1311 |
+|  | 7.9.11.2 | [Multicast Capability Register (Offs…](#sec-7-9-11-2) | [组播能力寄存器(偏移量 04h)](#sec-7-9-11-2) | p.1313 |
+|  | 7.9.11.3 | [Multicast Control Register (Offset …](#sec-7-9-11-3) | [多播控制寄存器（偏移 06h）](#sec-7-9-11-3) | p.1313 |
+|  | 7.9.11.4 | [MC_Base_Address Register (Offset 08…](#sec-7-9-11-4) | [MC_Base_Address 寄存器（偏移 08h）](#sec-7-9-11-4) | p.1313 |
+|  | 7.9.11.5 | [MC_Receive Register (Offset 10h)](#sec-7-9-11-5) | [MC_Receive 寄存器（偏移 10h）](#sec-7-9-11-5) | p.1314 |
+|  | 7.9.11.6 | [MC_Block_All Register (Offset 18h)](#sec-7-9-11-6) | [MC_Block_All 寄存器（偏移 18h）](#sec-7-9-11-6) | p.1314 |
+|  | 7.9.11.7 | [MC_Block_Untranslated Register (Off…](#sec-7-9-11-7) | [MC_Block_Untranslated 寄存器（偏移 2…](#sec-7-9-11-7) | p.1315 |
+|  | 7.9.11.8 | [MC_Overlay_BAR Register (Offset 28h…](#sec-7-9-11-8) | [MC_Overlay_BAR 寄存器（偏移 28h）](#sec-7-9-11-8) | p.1315 |
+|  | 7.9.12 | [Dynamic Power Allocation Extended C…](#sec-7-9-12) | [动态功率分配扩展能力（DPA 能力）](#sec-7-9-12) | p.1316 |
+|  | 7.9.12.1 | [DPA Extended Capability Header (Off…](#sec-7-9-12-1) | [DPA 扩展能力头（偏移 00h）](#sec-7-9-12-1) | p.1317 |
+|  | 7.9.12.2 | [DPA Capability Register (Offset 04h…](#sec-7-9-12-2) | [DPA 能力寄存器（偏移 04h）](#sec-7-9-12-2) | p.1317 |
+|  | 7.9.12.3 | [DPA Latency Indicator Register (Off…](#sec-7-9-12-3) | [DPA 延迟指示寄存器（偏移 08h）](#sec-7-9-12-3) | p.1318 |
+|  | 7.9.12.4 | [DPA Status Register (Offset 0Ch)](#sec-7-9-12-4) | [DPA 状态寄存器（偏移 0Ch）](#sec-7-9-12-4) | p.1319 |
+|  | 7.9.12.5 | [DPA Control Register (Offset 0Eh)](#sec-7-9-12-5) | [DPA 控制寄存器（偏移 0Eh）](#sec-7-9-12-5) | p.1319 |
+|  | 7.9.12.6 | [DPA Power Allocation Array](#sec-7-9-12-6) | [DPA 功率分配数组](#sec-7-9-12-6) | p.1320 |
+|  | 7.9.13 | [TPH Requester Extended Capability](#sec-7-9-13) | [TPH 请求者扩展能力](#sec-7-9-13) | p.1320 |
+|  | 7.9.13.1 | [TPH Requester Extended Capability H…](#sec-7-9-13-1) | [TPH 请求者扩展能力头（偏移 00h）](#sec-7-9-13-1) | p.1321 |
+|  | 7.9.13.2 | [TPH Requester Capability Register (…](#sec-7-9-13-2) | [TPH 请求者能力寄存器（偏移 04h）](#sec-7-9-13-2) | p.1321 |
+|  | 7.9.13.3 | [TPH Requester Control Register (Off…](#sec-7-9-13-3) | [TPH 请求者控制寄存器（偏移 08h）](#sec-7-9-13-3) | p.1322 |
+|  | 7.9.13.4 | [TPH ST Table (Starting from Offset …](#sec-7-9-13-4) | [TPH ST 表（起始偏移 0Ch）](#sec-7-9-13-4) | p.1323 |
+|  | 7.9.14 | [DPC Extended Capability](#sec-7-9-14) | [DPC 扩展能力](#sec-7-9-14) | p.1324 |
+|  | 7.9.14.1 | [DPC Extended Capability Header (Off…](#sec-7-9-14-1) | [DPC 扩展能力头（偏移 00h）](#sec-7-9-14-1) | p.1327 |
+|  | 7.9.14.2 | [DPC Capability Register (Offset 04h…](#sec-7-9-14-2) | [DPC 能力寄存器（偏移 04h）](#sec-7-9-14-2) | p.1327 |
+|  | 7.9.14.3 | [DPC Control Register (Offset 06h)](#sec-7-9-14-3) | [DPC 控制寄存器（偏移 06h）](#sec-7-9-14-3) | p.1329 |
+|  | 7.9.14.4 | [DPC Status Register (Offset 08h)](#sec-7-9-14-4) | [DPC 状态寄存器（偏移 08h）](#sec-7-9-14-4) | p.1331 |
+|  | 7.9.14.5 | [DPC Error Source ID Register (Offse…](#sec-7-9-14-5) | [DPC 错误源 ID 寄存器（偏移 0Ah）](#sec-7-9-14-5) | p.1332 |
+|  | 7.9.14.6 | [RP PIO Status Register (Offset 0Ch)](#sec-7-9-14-6) | [RP PIO 状态寄存器（偏移 0Ch）](#sec-7-9-14-6) | p.1333 |
+|  | 7.9.14.7 | [RP PIO Mask Register (Offset 10h)](#sec-7-9-14-7) | [RP PIO 屏蔽寄存器 (偏移 10h)](#sec-7-9-14-7) | p.1334 |
+|  | 7.9.14.8 | [RP PIO Severity Register (Offset 14…](#sec-7-9-14-8) | [RP PIO 严重程度寄存器 (偏移 14h)](#sec-7-9-14-8) | p.1335 |
+|  | 7.9.14.9 | [RP PIO SysError Register (Offset 18…](#sec-7-9-14-9) | [RP PIO 系统错误寄存器 (偏移 18h)](#sec-7-9-14-9) | p.1335 |
+|  | 7.9.14.10 | [RP PIO Exception Register (Offset 1…](#sec-7-9-14-10) | [RP PIO 异常寄存器 (偏移 1Ch)](#sec-7-9-14-10) | p.1336 |
+|  | 7.9.14.11 | [RP PIO Header Log Register (Offset …](#sec-7-9-14-11) | [RP PIO Header Log 寄存器 (偏移 20h)](#sec-7-9-14-11) | p.1337 |
+|  | 7.9.14.12 | [RP PIO ImpSpec Log Register (Offset…](#sec-7-9-14-12) | [RP PIO ImpSpec Log 寄存器 (偏移 30h…](#sec-7-9-14-12) | p.1338 |
+|  | 7.9.14.13 | [RP PIO TLP Prefix Log Register (Off…](#sec-7-9-14-13) | [RP PIO TLP Prefix Log 寄存器 (偏移 …](#sec-7-9-14-13) | p.1339 |
+|  | 7.9.15 | [Precision Time Measurement Extended…](#sec-7-9-15) | [精确时间测量扩展能力 (PTM Extended Capab…](#sec-7-9-15) | p.1340 |
+|  | 7.9.15.1 | [PTM Extended Capability Header (Off…](#sec-7-9-15-1) | [PTM 扩展能力包头 (偏移 00h)](#sec-7-9-15-1) | p.1340 |
+|  | 7.9.15.2 | [PTM Capability Register (Offset 04h…](#sec-7-9-15-2) | [PTM 能力寄存器 (偏移 04h)](#sec-7-9-15-2) | p.1341 |
+|  | 7.9.15.3 | [PTM Control Register (Offset 08h)](#sec-7-9-15-3) | [PTM 控制寄存器 (偏移 08h)](#sec-7-9-15-3) | p.1342 |
+|  | 7.9.16 | [Readiness Time Reporting Extended C…](#sec-7-9-16) | [就绪时间报告扩展能力](#sec-7-9-16) | p.1343 |
+|  | 7.9.16.1 | [Readiness Time Reporting Extended C…](#sec-7-9-16-1) | [就绪时间报告扩展能力包头 (偏移 00h)](#sec-7-9-16-1) | p.1344 |
+|  | 7.9.16.2 | [Readiness Time Reporting 1 Register…](#sec-7-9-16-2) | [就绪时间报告 1 寄存器（偏移 04h）](#sec-7-9-16-2) | p.1345 |
+|  | 7.9.16.3 | [Readiness Time Reporting 2 Register…](#sec-7-9-16-3) | [就绪时间报告 2 寄存器（偏移 08h）](#sec-7-9-16-3) | p.1346 |
+|  | 7.9.17 | [Hierarchy ID Extended Capability](#sec-7-9-17) | [层级 ID 扩展能力（Hierarchy ID Extend…](#sec-7-9-17) | p.1346 |
+|  | 7.9.17.1 | [Hierarchy ID Extended Capability He…](#sec-7-9-17-1) | [层级 ID 扩展能力头（偏移 00h）](#sec-7-9-17-1) | p.1348 |
+|  | 7.9.17.2 | [Hierarchy ID Status Register (Offse…](#sec-7-9-17-2) | [层级 ID 状态寄存器（偏移 04h）](#sec-7-9-17-2) | p.1349 |
+|  | 7.9.17.3 | [Hierarchy ID Data Register (Offset …](#sec-7-9-17-3) | [层级 ID 数据寄存器（偏移 08h）](#sec-7-9-17-3) | p.1350 |
+|  | 7.9.17.4 | [Hierarchy ID GUID 1 Register (Offse…](#sec-7-9-17-4) | [层级 ID GUID 1 寄存器（偏移 0Ch）](#sec-7-9-17-4) | p.1351 |
+|  | 7.9.17.5 | [Hierarchy ID GUID 2 Register (Offse…](#sec-7-9-17-5) | [层级 ID GUID 2 寄存器（偏移 10h）](#sec-7-9-17-5) | p.1351 |
+|  | 7.9.17.6 | [Hierarchy ID GUID 3 Register (Offse…](#sec-7-9-17-6) | [层级 ID GUID 3 寄存器（偏移 14h）](#sec-7-9-17-6) | p.1352 |
+|  | 7.9.17.7 | [Hierarchy ID GUID 4 Register (Offse…](#sec-7-9-17-7) | [层级 ID GUID 4 寄存器（偏移 18h）](#sec-7-9-17-7) | p.1352 |
+|  | 7.9.18 | [Vital Product Data (VPD) Capability](#sec-7-9-18) | [重要产品数据（VPD）能力](#sec-7-9-18) | p.1353 |
+|  | 7.9.17.8 | [Hierarchy ID GUID 5 Register (Offse…](#sec-7-9-17-8) | [层级 ID GUID 5 寄存器 (偏移 1Ch)](#sec-7-9-17-8) | p.1353 |
+|  | 7.9.18 | [Vital Product Data Capability (VPD …](#sec-7-9-18) | [重要产品数据能力 (VPD Capability)](#sec-7-9-18) | p.1353 |
+|  | 7.9.18.1 | [VPD Address Register](#sec-7-9-18-1) | [VPD Address 寄存器](#sec-7-9-18-1) | p.1354 |
+|  | 7.9.18.2 | [VPD Data Register](#sec-7-9-18-2) | [VPD Data 寄存器](#sec-7-9-18-2) | p.1355 |
+|  | 7.9.19 | [Native PCIe Enclosure Management Ex…](#sec-7-9-19) | [原生 PCIe 机框管理扩展能力 (NPEM 扩展能力)](#sec-7-9-19) | p.1355 |
+|  | 7.9.19.1 | [NPEM Extended Capability Header (Of…](#sec-7-9-19-1) | [NPEM 扩展能力头 (偏移 00h)](#sec-7-9-19-1) | p.1356 |
+|  | 7.9.19.2 | [NPEM Capability Register (Offset 04…](#sec-7-9-19-2) | [NPEM Capability 寄存器 (偏移 04h)](#sec-7-9-19-2) | p.1356 |
+|  | 7.9.19.3 | [NPEM Control Register (Offset 08h)](#sec-7-9-19-3) | [NPEM Control 寄存器 (偏移 08h)](#sec-7-9-19-3) | p.1358 |
+|  | 7.9.19.3 | [NPEM Control Register (Offset 08h) …](#sec-7-9-19-3) | [NPEM Control 寄存器 (偏移 08h) - 续](#sec-7-9-19-3) | p.1358 |
+|  | 7.9.19.4 | [NPEM Status Register (Offset 0Ch)](#sec-7-9-19-4) | [NPEM Status 寄存器 (偏移 0Ch)](#sec-7-9-19-4) | p.1360 |
+|  | 7.9.20 | [Alternate Protocol Extended Capabil…](#sec-7-9-20) | [Alternate Protocol 扩展能力](#sec-7-9-20) | p.1361 |
+|  | 7.9.20.1 | [Alternate Protocol Extended Capabil…](#sec-7-9-20-1) | [Alternate Protocol 扩展能力头 (偏移 0…](#sec-7-9-20-1) | p.1361 |
+|  | 7.9.20.2 | [Alternate Protocol Capabilities Reg…](#sec-7-9-20-2) | [Alternate Protocol Capabilitie…](#sec-7-9-20-2) | p.1362 |
+|  | 7.9.20.3 | [Alternate Protocol Control Register…](#sec-7-9-20-3) | [替代协议控制寄存器（偏移量 08h）](#sec-7-9-20-3) | p.1362 |
+|  | 7.9.20.4 | [Alternate Protocol Data 1 Register …](#sec-7-9-20-4) | [替代协议数据 1 寄存器（偏移量 0Ch）](#sec-7-9-20-4) | p.1363 |
+|  | 7.9.20.5 | [Alternate Protocol Data 2 Register …](#sec-7-9-20-5) | [替代协议数据 2 寄存器（偏移量 10h）](#sec-7-9-20-5) | p.1364 |
+|  | 7.9.20.6 | [Alternate Protocol Selective Enable…](#sec-7-9-20-6) | [替代协议选择性使能掩码寄存器（偏移量 14h）](#sec-7-9-20-6) | p.1364 |
+|  | 7.9.21 | [Conventional PCI Advanced Features …](#sec-7-9-21) | [Conventional PCI 高级功能能力结构 (AF)](#sec-7-9-21) | p.1365 |
+|  | 7.9.21.1 | [Advanced Features Capability Header…](#sec-7-9-21-1) | [高级功能能力结构头部（偏移量 00h）](#sec-7-9-21-1) | p.1365 |
+|  | 7.9.21.2 | [AF Capabilities Register (Offset 03…](#sec-7-9-21-2) | [AF 能力寄存器（偏移量 03h）](#sec-7-9-21-2) | p.1366 |
+|  | 7.9.21.3 | [Conventional PCI Advanced Features …](#sec-7-9-21-3) | [Conventional PCI 高级功能控制寄存器（偏移量…](#sec-7-9-21-3) | p.1366 |
+|  | 7.9.21.4 | [AF Status Register (Offset 05h)](#sec-7-9-21-4) | [AF 状态寄存器（偏移量 05h）](#sec-7-9-21-4) | p.1367 |
+|  | 7.9.22 | [SFI Extended Capability](#sec-7-9-22) | [SFI 扩展能力结构](#sec-7-9-22) | p.1367 |
+|  | 7.9.22.1 | [SFI Extended Capability Header (Off…](#sec-7-9-22-1) | [SFI 扩展能力结构头部（偏移量 00h）](#sec-7-9-22-1) | p.1368 |
+|  | 7.9.22.2 | [SFI Capability Register (Offset 04h…](#sec-7-9-22-2) | [SFI 能力寄存器（偏移量 04h）](#sec-7-9-22-2) | p.1369 |
+|  | 7.9.22.3 | [SFI Control Register (Offset 06h)](#sec-7-9-22-3) | [SFI 控制寄存器（偏移量 06h）](#sec-7-9-22-3) | p.1369 |
+|  | 7.9.22.4 | [SFI Status Register (Offset 08h)](#sec-7-9-22-4) | [SFI 状态寄存器 (偏移 08h)](#sec-7-9-22-4) | p.1371 |
+|  | 7.9.22.5 | [SFI CAM Address Register (Offset 0C…](#sec-7-9-22-5) | [SFI CAM 地址寄存器 (偏移 0Ch)](#sec-7-9-22-5) | p.1372 |
+|  | 7.9.22.6 | [SFI CAM Data Register (Offset 10h)](#sec-7-9-22-6) | [SFI CAM 数据寄存器 (偏移 10h)](#sec-7-9-22-6) | p.1372 |
+|  | 7.9.23 | [Subsystem ID and Subsystem Vendor I…](#sec-7-9-23) | [Subsystem ID 与 Subsystem Vendo…](#sec-7-9-23) | p.1372 |
+|  | 7.9.23.1 | [Subsystem ID and Subsystem Vendor I…](#sec-7-9-23-1) | [Subsystem ID 与 Subsystem Vendo…](#sec-7-9-23-1) | p.1373 |
+|  | 7.9.23.2 | [Subsystem ID and Subsystem Vendor I…](#sec-7-9-23-2) | [Subsystem ID 与 Subsystem Vendo…](#sec-7-9-23-2) | p.1373 |
+|  | 7.9.24 | [Data Object Exchange Extended Capab…](#sec-7-9-24) | [Data Object Exchange 扩展能力](#sec-7-9-24) | p.1374 |
+|  | 7.9.24.1 | [DOE Extended Capability Header (Off…](#sec-7-9-24-1) | [DOE 扩展能力头部 (偏移 00h)](#sec-7-9-24-1) | p.1374 |
+|  | 7.9.24.2 | [DOE Capabilities Register (Offset 0…](#sec-7-9-24-2) | [DOE 能力寄存器 (偏移 04h)](#sec-7-9-24-2) | p.1375 |
+|  | 7.9.24.3 | [DOE Control Register (Offset 08h)](#sec-7-9-24-3) | [DOE 控制寄存器 (偏移 08h)](#sec-7-9-24-3) | p.1376 |
+|  | 7.9.24.4 | [DOE Status Register (Offset 0Ch)](#sec-7-9-24-4) | [DOE 状态寄存器 (偏移 0Ch)](#sec-7-9-24-4) | p.1377 |
+|  | 7.9.24.5 | [DOE Write Data Mailbox Register (Of…](#sec-7-9-24-5) | [DOE 写数据邮箱寄存器 (偏移 10h)](#sec-7-9-24-5) | p.1378 |
+|  | 7.9.24.6 | [DOE Read Data Mailbox Register (Off…](#sec-7-9-24-6) | [DOE 读数据邮箱寄存器 (偏移 14h)](#sec-7-9-24-6) | p.1378 |
+|  | 7.9.25 | [Shadow Functions Extended Capabilit…](#sec-7-9-25) | [Shadow Functions 扩展能力](#sec-7-9-25) | p.1379 |
+|  | 7.9.25.1 | [Shadow Functions Extended Capabilit…](#sec-7-9-25-1) | [Shadow Functions 扩展能力头（偏移 00h）](#sec-7-9-25-1) | p.1381 |
+|  | 7.9.25 | [Shadow Functions Capability](#sec-7-9-25) | [Shadow Functions 能力](#sec-7-9-25) | p.1381 |
+|  | 7.9.25.2 | [Shadow Functions Capability Registe…](#sec-7-9-25-2) | [Shadow Functions 能力寄存器（偏移 04h）](#sec-7-9-25-2) | p.1381 |
+|  | 7.9.25.3 | [Shadow Functions Control Register (…](#sec-7-9-25-3) | [Shadow Functions 控制寄存器（偏移 08h）](#sec-7-9-25-3) | p.1381 |
+|  | 7.9.25.4 | [Shadow Functions Instance Register …](#sec-7-9-25-4) | [Shadow Functions 实例寄存器项](#sec-7-9-25-4) | p.1381 |
+|  | 7.9.26 | [IDE Extended Capability](#sec-7-9-26) | [IDE 扩展能力](#sec-7-9-26) | p.1381 |
+|  | 7.9.26.1 | [IDE Extended Capability Header (Off…](#sec-7-9-26-1) | [IDE 扩展能力头（偏移 00h）](#sec-7-9-26-1) | p.1381 |
+|  | 7.9.26.2 | [IDE Capability Register (Offset 04h…](#sec-7-9-26-2) | [IDE 能力寄存器（偏移 04h）](#sec-7-9-26-2) | p.1381 |
+|  | 7.9.26.3 | [IDE Control Register (Offset 08h)](#sec-7-9-26-3) | [IDE 控制寄存器（偏移 08h）](#sec-7-9-26-3) | p.1381 |
+|  | 7.9.26.4 | [Link IDE Register Block](#sec-7-9-26-4) | [Link IDE 寄存器块](#sec-7-9-26-4) | p.1381 |
+|  | 7.9.26.4.1 | [Link IDE Stream Control Register](#sec-7-9-26-4-1) | [Link IDE Stream 控制寄存器](#sec-7-9-26-4-1) | p.1381 |
+|  | 7.9.26.4.2 | [Link IDE Stream Status Register](#sec-7-9-26-4-2) | [Link IDE Stream 状态寄存器](#sec-7-9-26-4-2) | p.1381 |
+|  | 7.9.26.5 | [Selective IDE Stream Register Block](#sec-7-9-26-5) | [Selective IDE Stream 寄存器块](#sec-7-9-26-5) | p.1381 |
+|  | 7.9.26.5.1 | [Selective IDE Stream Capability Reg…](#sec-7-9-26-5-1) | [选择性 IDE 流能力寄存器](#sec-7-9-26-5-1) | p.1381 |
+|  | 7.9.26.5.2 | [Selective IDE Stream Control Regist…](#sec-7-9-26-5-2) | [选择性 IDE 流控制寄存器](#sec-7-9-26-5-2) | p.1381 |
+|  | 7.9.26.5.2 | [Selective IDE Stream Control Regist…](#sec-7-9-26-5-2) | [选择性 IDE 流控制寄存器(续)](#sec-7-9-26-5-2) | p.1391 |
+|  | 7.9.26.5.2 | [Selective IDE Stream Control Regist…](#sec-7-9-26-5-2) | [选择性 IDE 流控制寄存器(续)](#sec-7-9-26-5-2) | p.1392 |
+|  | 7.9.26.5.3 | [Selective IDE Stream Status Registe…](#sec-7-9-26-5-3) | [选择性 IDE 流状态寄存器](#sec-7-9-26-5-3) | p.1393 |
+|  | 7.9.26.5.4 | [Selective IDE RID Association Regis…](#sec-7-9-26-5-4) | [选择性 IDE RID 关联寄存器块](#sec-7-9-26-5-4) | p.1393 |
+|  | 7.9.26.5.4.1 | [IDE RID Association Register 1](#sec-7-9-26-5-4-1) | [IDE RID 关联寄存器 1](#sec-7-9-26-5-4-1) | p.1394 |
+|  | 7.9.26.5.4.2 | [IDE RID Association Register 2](#sec-7-9-26-5-4-2) | [IDE RID 关联寄存器 2](#sec-7-9-26-5-4-2) | p.1394 |
+|  | 7.9.26.5.5 | [Selective IDE Address Association R…](#sec-7-9-26-5-5) | [选择性 IDE 地址关联寄存器块](#sec-7-9-26-5-5) | p.1394 |
+|  | 7.9.26.5.5.1 | [IDE Address Association Register 1](#sec-7-9-26-5-5-1) | [IDE 地址关联寄存器 1](#sec-7-9-26-5-5-1) | p.1395 |
+|  | 7.9.26.5.5.2 | [IDE Address Association Register 2](#sec-7-9-26-5-5-2) | [IDE 地址关联寄存器 2](#sec-7-9-26-5-5-2) | p.1395 |
+|  | 7.9.26.5.5.3 | [IDE Address Association Register 3](#sec-7-9-26-5-5-3) | [IDE 地址关联寄存器 3](#sec-7-9-26-5-5-3) | p.1395 |
+|  | 7.9.27 | [Null Capability](#sec-7-9-27) | [空能力](#sec-7-9-27) | p.1395 |
+|  | 7.9.28 | [Null Extended Capability](#sec-7-9-28) | [空扩展能力](#sec-7-9-28) | p.1396 |
+|  | 7.9.29 | [Streamlined Virtual Channel Extende…](#sec-7-9-29) | [精简虚通道扩展能力 (SVC)](#sec-7-9-29) | p.1398 |
+|  | 7.9.29.1 | [Streamlined Virtual Channel Extende…](#sec-7-9-29-1) | [精简虚通道扩展能力头 (偏移量 00h)](#sec-7-9-29-1) | p.1398 |
+|  | 7.9.29.2 | [SVC Port Capability Register 1 (Off…](#sec-7-9-29-2) | [SVC 端口能力寄存器 1 (偏移量 04h)](#sec-7-9-29-2) | p.1398 |
+|  | 7.9.29.3 | [SVC Port Capability Register 2 (Off…](#sec-7-9-29-3) | [SVC 端口能力寄存器 2 (偏移量 08h)](#sec-7-9-29-3) | p.1398 |
+|  | 7.9.29.4 | [SVC Port Control Register (Offset 0…](#sec-7-9-29-4) | [SVC 端口控制寄存器 (偏移量 0Ch)](#sec-7-9-29-4) | p.1398 |
+|  | 7.9.29.5 | [SVC Port Status Register (Offset 10…](#sec-7-9-29-5) | [SVC 端口状态寄存器 (偏移量 10h)](#sec-7-9-29-5) | p.1400 |
+|  | 7.9.29.6 | [SVC Resource Capability Register](#sec-7-9-29-6) | [SVC 资源能力寄存器](#sec-7-9-29-6) | p.1401 |
+|  | 7.9.29.7 | [SVC Resource Control Register](#sec-7-9-29-7) | [SVC 资源控制寄存器](#sec-7-9-29-7) | p.1401 |
+|  | 7.9.29.8 | [SVC Resource Status Register](#sec-7-9-29-8) | [SVC 资源状态寄存器](#sec-7-9-29-8) | p.1403 |
+|  | 7.9.30 | [MMIO Register Block Locator Extende…](#sec-7-9-30) | [MMIO 寄存器块定位器扩展能力 (MRBL)](#sec-7-9-30) | p.1404 |
+|  | 7.9.30.1 | [MRBL Extended Capability Header (Of…](#sec-7-9-30-1) | [MRBL 扩展能力头 (偏移量 00h)](#sec-7-9-30-1) | p.1405 |
+|  | 7.9.30.2 | [MRBL Capabilities Register (Offset …](#sec-7-9-30-2) | [MRBL 能力寄存器 (偏移量 04h)](#sec-7-9-30-2) | p.1405 |
+|  | 7.9.30.3 | [MRBL Locator Register (Offset Varie…](#sec-7-9-30-3) | [MRBL 定位寄存器 (偏移量可变)](#sec-7-9-30-3) | p.1406 |
 
 ## 🖼 本章图表 (Figures)
 

@@ -13,109 +13,109 @@
 
 | # | Section | 小节 | Page |
 |:-:|:--------|:-----|:----:|
-| 2.1 | Transaction Layer Overview | 事务层概述 | — |
-| 2.1.1 | Address Spaces, Transaction Types, … | 地址空间、事务类型与用途 | — |
-| 2.1.1.1 | Memory Transactions | 内存事务 | — |
-| 2.1.1.2 | I/O Transactions | I/O 事务 | — |
-| 2.1.1.3 | Configuration Transactions | 配置事务 | p.142 |
-| 2.1.1.4 | Message Transactions | 消息事务 | p.142 |
-| 2.1.2 | Packet Format Overview | 包格式概述 | p.142 |
-| 2.2 | Transaction Layer Protocol - Packet… | 事务层协议 - 包定义 | p.145 |
-| 2.2.1 | Common Packet Header Fields | 公共包头字段 | p.145 |
-| 2.2.1.1 | Common Packet Header Fields for Non… | 非 Flit 模式的公共包头字段 | p.145 |
-| 2.2.1.2 | Common Packet Header Fields for Fli… | Flit 模式的公共包头字段 | p.148 |
-| 2.2.2 | TLPs with Data Payloads - Rules | 含数据负载的 TLP - 规则 | p.171 |
-| 2.2.2 | TLPs with Data Payloads (continued) | 含数据负载的 TLP (续) | p.173 |
-| 2.2.2 | TLPs with Data Payloads (continued) | 含数据负载的 TLP (续) | p.174 |
-| 2.2.3 | TLP Digest Rules - Non-Flit Mode On… | TLP Digest 规则 —— 仅适用于非 Flit 模式 | p.174 |
-| 2.2.4 | Routing and Addressing Rules | 路由与寻址规则 | p.175 |
-| 2.2.4.1 | Address-Based Routing Rules | 基于地址的路由规则 | p.175 |
-| 2.2.4.1 | Address-Based Routing Rules (contin… | 基于地址的路由规则 (续) | p.176 |
-| 2.2.4.1 | Address-Based Routing Rules (contin… | 基于地址的路由规则 (续) | p.177 |
-| 2.2.4.1 | Address-Based Routing Rules - Body | 基于地址的路由规则 - 正文 | p.177 |
-| 2.2.4.2 | ID Based Routing Rules | 基于 ID 的路由规则 | p.177 |
-| 2.2.4.2 | ID Based Routing Rules (continued) | 基于 ID 的路由规则 (续) | p.179 |
-| 2.2.4.2 | ID Based Routing Rules (continued) | 基于 ID 的路由规则 (续) | p.180 |
-| 2.2.4.2 | ID Based Routing Rules (continued) | 基于 ID 的路由规则 (续) | p.181 |
-| 2.2.4.2 | ID Based Routing Rules (continued) | 基于 ID 的路由规则 (续) | p.182 |
-| 2.2.5 | First/Last DW Byte Enables Rules - … | 首/尾 DW 字节使能规则 - 引言 | p.182 |
-| 2.2.5 | First/Last DW Byte Enables Rules | 首/尾 DW 字节使能规则 | p.182 |
-| 2.2.5.1 | Byte Enable Rules for Non-Flit Mode | 非 Flit 模式的字节使能规则 | p.182 |
-| 2.2.5.1 | Byte Enable Rules (cont.) | 字节使能规则（续） | p.183 |
-| 2.2.5.2 | Byte Enable Rules for Flit Mode | Flit 模式的字节使能规则 | p.185 |
-| 2.2.6 | Transaction Descriptor | 事务描述符 | p.185 |
-| 2.2.6.1 | Overview | 概述 | p.185 |
-| 2.2.6.2 | Transaction Descriptor - Transactio… | 事务描述符 - Transaction ID 字段 | p.186 |
-| 2.2.6.3 | Transaction Descriptor - Attributes… | 事务描述符 - Attributes 字段 | p.194 |
-| 2.2.6.4 | Relaxed Ordering and ID-Based Order… | 宽松排序与基于 ID 的排序属性 | p.194 |
-| 2.2.6.5 | No Snoop Attribute | No Snoop 属性 | p.194 |
-| 2.2.6.6 | Transaction Descriptor - Traffic Cl… | 事务描述符 - 流量类字段 | p.195 |
-| 2.2.7 | Memory, I/O, and Configuration Requ… | 内存、I/O 和配置请求规则 | p.195 |
-| 2.2.7.1 | Non-Flit Mode | 非 Flit 模式 | p.195 |
-| 2.2.7.1.1 | TPH Rules | TPH 规则 | p.199 |
-| 2.2.7.2 | Flit Mode | Flit 模式 | p.202 |
-| 2.2.8 | Message Request Rules | 消息请求规则 | p.203 |
-| 2.2.8.1 | INTx Interrupt Signaling - Rules | INTx 中断信令 - 规则 | p.205 |
-| 2.2.8.2 | Power Management Messages | 电源管理消息 | p.211 |
-| 2.2.8.3 | Error Signaling Messages | 错误信号消息 | p.211 |
-| 2.2.8.4 | Locked Transactions Support | 锁定事务支持 | p.211 |
-| 2.2.8.5 | Slot Power Limit Support | 插槽功率限制支持 | p.211 |
-| 2.2.8.6 | Vendor-Defined Messages | 厂商自定义消息 (Vendor-Defined Messag… | p.211 |
-| 2.2.8.6.1 | PCI-SIG Defined VDMs | PCI-SIG 定义的 VDM | p.216 |
-| 2.2.8.6.2 | Device Readiness Status (DRS) Messa… | 设备就绪状态 (DRS) 消息 | p.216 |
-| 2.2.8.6.3 | Function Readiness Status Message (… | 功能就绪状态消息 (FRS 消息) | p.216 |
-| 2.2.8.6.4 | Hierarchy ID Message | 层级 ID 消息 | p.220 |
-| 2.2.8.7 | Ignored Messages | 忽略消息 | p.222 |
-| 2.2.8.8 | Latency Tolerance Reporting (LTR) M… | 延迟容忍度上报 (LTR) 消息 | p.222 |
-| 2.2.8.9 | Optimized Buffer Flush/Fill (OBFF) … | 优化的缓冲区冲刷/填充 (OBFF) 消息 | p.223 |
-| 2.2.8.10 | Precision Time Measurement (PTM) Me… | 精确时间测量 (PTM) 消息 | p.224 |
-| 2.2.8.11 | Integrity and Data Encryption (IDE)… | 完整性与数据加密 (IDE) 消息 | p.225 |
-| 2.2.9 | Completion Rules | 完成规则 | p.228 |
-| 2.2.9.1 | Completion Rules for Non-Flit Mode | 非 Flit 模式下的完成规则 | p.228 |
-| 2.2.9.2 | Completion Rules for Flit Mode | Flit 模式下的完成规则 | p.230 |
-| 2.2.10 | TLP Prefix Rules | TLP Prefix 规则 | p.232 |
-| 2.2.10.1 | TLP Prefix General Rules - Non-Flit… | TLP Prefix 通用规则 - 非 Flit 模式 | p.232 |
-| 2.2.10.2 | Local TLP Prefix Processing | 本地 TLP Prefix 处理 | p.237 |
-| 2.2.10.2.1 | Vendor Defined Local TLP Prefix | 厂商定义本地 TLP Prefix | p.237 |
-| 2.2.10.3 | Flit Mode Local TLP Prefix | Flit 模式本地 TLP Prefix | p.238 |
-| 2.2.10.4 | End-End TLP Prefix Processing - Non… | End-End TLP Prefix 处理 - 非 Flit… | p.239 |
-| 2.2.10.4.1 | Vendor Defined End-End TLP Prefix | 厂商定义 End-End TLP Prefix | p.240 |
-| 2.2.10.4.2 | Root Ports with End-End TLP Prefix … | 支持 End-End TLP Prefix 的根端口 | p.240 |
-| 2.2.11 | OHC-E Rules - Flit Mode | OHC-E 规则 - Flit 模式 | p.241 |
-| 2.3 | Handling of Received TLPs | 接收 TLP 的处理 | p.241 |
-| 2.3.1 | Request Handling Rules | 请求处理规则 | p.245 |
-| 2.3.1.1 | Data Return for Non-UIO Read Reques… | 非 UIO 读请求的数据返回 | p.251 |
-| 2.3.1.2 | UIO Read Completions | UIO 读完成报文 | p.256 |
-| 2.3.1.3 | UIO Write Completions | UIO 写完成报文 | p.257 |
-| 2.3.2 | Completion Handling Rules | 完成报文处理规则 | p.257 |
-| 2.4 | Transaction Ordering | 事务排序 | p.259 |
-| 2.4.1 | Transaction Ordering Rules for TLPs… | 不使用 UIO 或 Flow-Through IDE Str… | p.259 |
-| 2.4.2 | Ordering Rules for UIO | UIO 排序规则 | p.265 |
-| 2.4.3 | Update Ordering and Granularity Obs… | 读事务观察到的更新排序与粒度 | p.266 |
-| 2.4.3.1 | Ordering and Granularity for Non-UI… | 非 UIO 读事务的排序与粒度 | p.267 |
-| 2.4.3.2 | Ordering and Granularity for UIO Re… | UIO 读事务的排序与粒度 | p.267 |
-| 2.4.4 | Update Ordering and Granularity Pro… | 写事务提供的更新排序与粒度 | p.267 |
-| 2.4.4.2 | Ordering and Granularity for UIO Wr… | UIO 写事务的排序与粒度 | p.268 |
-| 2.5 | Virtual Channel (VC) Mechanism | 虚通道 (VC, Virtual Channel) 机制 | p.268 |
-| 2.5.1 | Virtual Channel Identification (VC … | 虚通道标识 (VC ID) | p.270 |
-| 2.5.2 | TC to VC Mapping | TC 到 VC 映射 | p.271 |
-| 2.5.2 | TC to VC Mapping (Key Rules Summary… | 2.5.2 TC 到 VC 映射(关键规则总结) | p.272 |
-| 2.5.3 | VC and TC Rules | VC 与 TC 规则 | p.272 |
-| 2.6 | Ordering and Receive Buffer Flow Co… | 排序与接收缓冲流控 | p.275 |
-| 2.6.1 | Flow Control (FC) Rules | 流控 (FC) 规则 | p.275 |
-| 2.6.1.1 | FC Information Tracked by Transmitt… | 2.6.1.1 发送器跟踪的 FC 信息 | p.285 |
-| 2.7 | End-to-End Data Integrity | 端到端数据完整性 | p.289 |
-| 2.7.1 | ECRC Rules | ECRC 规则 | p.298 |
-| 2.7.1 | ECRC Rules (continued) | 2.7.1 ECRC 规则（续） | p.300 |
-| 2.7.2 | Error Forwarding (Data Poisoning) | 错误转发（数据中毒） | p.302 |
-| 2.7.2.1 | Rules For Use of Data Poisoning | 数据中毒的使用规则 | p.303 |
-| 2.7.2.1 | Rules For Use of Data Poisoning (co… | 2.7.2.1 数据中毒的使用规则（续） | p.304 |
-| 2.8 | Completion Timeout Mechanism | 完成超时机制 | p.304 |
-| 2.8 | Completion Timeout Mechanism (conti… | 2.8 完成超时机制（续） | p.305 |
-| 2.9 | Link Status Dependencies | 链路状态依赖关系 | p.305 |
-| 2.9.1 | Transaction Layer Behavior in DL_Do… | DL_Down 状态下的事务层行为 | p.305 |
-| 2.9.2 | Transaction Layer Behavior in DL_Up… | DL_Up 状态下的事务层行为 | p.306 |
-| 2.9.3 | Transaction Layer Behavior During D… | Downstream Port Containment (D… | p.307 |
+|  | 2.1 | [Transaction Layer Overview](#sec-2-1) | [事务层概述](#sec-2-1) | — |
+|  | 2.1.1 | [Address Spaces, Transaction Types, …](#sec-2-1-1) | [地址空间、事务类型与用途](#sec-2-1-1) | — |
+|  | 2.1.1.1 | [Memory Transactions](#sec-2-1-1-1) | [内存事务](#sec-2-1-1-1) | — |
+|  | 2.1.1.2 | [I/O Transactions](#sec-2-1-1-2) | [I/O 事务](#sec-2-1-1-2) | — |
+|  | 2.1.1.3 | [Configuration Transactions](#sec-2-1-1-3) | [配置事务](#sec-2-1-1-3) | p.142 |
+|  | 2.1.1.4 | [Message Transactions](#sec-2-1-1-4) | [消息事务](#sec-2-1-1-4) | p.142 |
+|  | 2.1.2 | [Packet Format Overview](#sec-2-1-2) | [包格式概述](#sec-2-1-2) | p.142 |
+|  | 2.2 | [Transaction Layer Protocol - Packet…](#sec-2-2) | [事务层协议 - 包定义](#sec-2-2) | p.145 |
+|  | 2.2.1 | [Common Packet Header Fields](#sec-2-2-1) | [公共包头字段](#sec-2-2-1) | p.145 |
+|  | 2.2.1.1 | [Common Packet Header Fields for Non…](#sec-2-2-1-1) | [非 Flit 模式的公共包头字段](#sec-2-2-1-1) | p.145 |
+|  | 2.2.1.2 | [Common Packet Header Fields for Fli…](#sec-2-2-1-2) | [Flit 模式的公共包头字段](#sec-2-2-1-2) | p.148 |
+|  | 2.2.2 | [TLPs with Data Payloads - Rules](#sec-2-2-2) | [含数据负载的 TLP - 规则](#sec-2-2-2) | p.171 |
+|  | 2.2.2 | [TLPs with Data Payloads (continued)](#sec-2-2-2) | [含数据负载的 TLP (续)](#sec-2-2-2) | p.173 |
+|  | 2.2.2 | [TLPs with Data Payloads (continued)](#sec-2-2-2) | [含数据负载的 TLP (续)](#sec-2-2-2) | p.174 |
+|  | 2.2.3 | [TLP Digest Rules - Non-Flit Mode On…](#sec-2-2-3) | [TLP Digest 规则 —— 仅适用于非 Flit 模式](#sec-2-2-3) | p.174 |
+|  | 2.2.4 | [Routing and Addressing Rules](#sec-2-2-4) | [路由与寻址规则](#sec-2-2-4) | p.175 |
+|  | 2.2.4.1 | [Address-Based Routing Rules](#sec-2-2-4-1) | [基于地址的路由规则](#sec-2-2-4-1) | p.175 |
+|  | 2.2.4.1 | [Address-Based Routing Rules (contin…](#sec-2-2-4-1) | [基于地址的路由规则 (续)](#sec-2-2-4-1) | p.176 |
+|  | 2.2.4.1 | [Address-Based Routing Rules (contin…](#sec-2-2-4-1) | [基于地址的路由规则 (续)](#sec-2-2-4-1) | p.177 |
+|  | 2.2.4.1 | [Address-Based Routing Rules - Body](#sec-2-2-4-1) | [基于地址的路由规则 - 正文](#sec-2-2-4-1) | p.177 |
+|  | 2.2.4.2 | [ID Based Routing Rules](#sec-2-2-4-2) | [基于 ID 的路由规则](#sec-2-2-4-2) | p.177 |
+|  | 2.2.4.2 | [ID Based Routing Rules (continued)](#sec-2-2-4-2) | [基于 ID 的路由规则 (续)](#sec-2-2-4-2) | p.179 |
+|  | 2.2.4.2 | [ID Based Routing Rules (continued)](#sec-2-2-4-2) | [基于 ID 的路由规则 (续)](#sec-2-2-4-2) | p.180 |
+|  | 2.2.4.2 | [ID Based Routing Rules (continued)](#sec-2-2-4-2) | [基于 ID 的路由规则 (续)](#sec-2-2-4-2) | p.181 |
+|  | 2.2.4.2 | [ID Based Routing Rules (continued)](#sec-2-2-4-2) | [基于 ID 的路由规则 (续)](#sec-2-2-4-2) | p.182 |
+|  | 2.2.5 | [First/Last DW Byte Enables Rules - …](#sec-2-2-5) | [首/尾 DW 字节使能规则 - 引言](#sec-2-2-5) | p.182 |
+|  | 2.2.5 | [First/Last DW Byte Enables Rules](#sec-2-2-5) | [首/尾 DW 字节使能规则](#sec-2-2-5) | p.182 |
+|  | 2.2.5.1 | [Byte Enable Rules for Non-Flit Mode](#sec-2-2-5-1) | [非 Flit 模式的字节使能规则](#sec-2-2-5-1) | p.182 |
+|  | 2.2.5.1 | [Byte Enable Rules (cont.)](#sec-2-2-5-1) | [字节使能规则（续）](#sec-2-2-5-1) | p.183 |
+|  | 2.2.5.2 | [Byte Enable Rules for Flit Mode](#sec-2-2-5-2) | [Flit 模式的字节使能规则](#sec-2-2-5-2) | p.185 |
+|  | 2.2.6 | [Transaction Descriptor](#sec-2-2-6) | [事务描述符](#sec-2-2-6) | p.185 |
+|  | 2.2.6.1 | [Overview](#sec-2-2-6-1) | [概述](#sec-2-2-6-1) | p.185 |
+|  | 2.2.6.2 | [Transaction Descriptor - Transactio…](#sec-2-2-6-2) | [事务描述符 - Transaction ID 字段](#sec-2-2-6-2) | p.186 |
+|  | 2.2.6.3 | [Transaction Descriptor - Attributes…](#sec-2-2-6-3) | [事务描述符 - Attributes 字段](#sec-2-2-6-3) | p.194 |
+|  | 2.2.6.4 | [Relaxed Ordering and ID-Based Order…](#sec-2-2-6-4) | [宽松排序与基于 ID 的排序属性](#sec-2-2-6-4) | p.194 |
+|  | 2.2.6.5 | [No Snoop Attribute](#sec-2-2-6-5) | [No Snoop 属性](#sec-2-2-6-5) | p.194 |
+|  | 2.2.6.6 | [Transaction Descriptor - Traffic Cl…](#sec-2-2-6-6) | [事务描述符 - 流量类字段](#sec-2-2-6-6) | p.195 |
+|  | 2.2.7 | [Memory, I/O, and Configuration Requ…](#sec-2-2-7) | [内存、I/O 和配置请求规则](#sec-2-2-7) | p.195 |
+|  | 2.2.7.1 | [Non-Flit Mode](#sec-2-2-7-1) | [非 Flit 模式](#sec-2-2-7-1) | p.195 |
+|  | 2.2.7.1.1 | [TPH Rules](#sec-2-2-7-1-1) | [TPH 规则](#sec-2-2-7-1-1) | p.199 |
+|  | 2.2.7.2 | [Flit Mode](#sec-2-2-7-2) | [Flit 模式](#sec-2-2-7-2) | p.202 |
+|  | 2.2.8 | [Message Request Rules](#sec-2-2-8) | [消息请求规则](#sec-2-2-8) | p.203 |
+|  | 2.2.8.1 | [INTx Interrupt Signaling - Rules](#sec-2-2-8-1) | [INTx 中断信令 - 规则](#sec-2-2-8-1) | p.205 |
+|  | 2.2.8.2 | [Power Management Messages](#sec-2-2-8-2) | [电源管理消息](#sec-2-2-8-2) | p.211 |
+|  | 2.2.8.3 | [Error Signaling Messages](#sec-2-2-8-3) | [错误信号消息](#sec-2-2-8-3) | p.211 |
+|  | 2.2.8.4 | [Locked Transactions Support](#sec-2-2-8-4) | [锁定事务支持](#sec-2-2-8-4) | p.211 |
+|  | 2.2.8.5 | [Slot Power Limit Support](#sec-2-2-8-5) | [插槽功率限制支持](#sec-2-2-8-5) | p.211 |
+|  | 2.2.8.6 | [Vendor-Defined Messages](#sec-2-2-8-6) | [厂商自定义消息 (Vendor-Defined Messag…](#sec-2-2-8-6) | p.211 |
+|  | 2.2.8.6.1 | [PCI-SIG Defined VDMs](#sec-2-2-8-6-1) | [PCI-SIG 定义的 VDM](#sec-2-2-8-6-1) | p.216 |
+|  | 2.2.8.6.2 | [Device Readiness Status (DRS) Messa…](#sec-2-2-8-6-2) | [设备就绪状态 (DRS) 消息](#sec-2-2-8-6-2) | p.216 |
+|  | 2.2.8.6.3 | [Function Readiness Status Message (…](#sec-2-2-8-6-3) | [功能就绪状态消息 (FRS 消息)](#sec-2-2-8-6-3) | p.216 |
+|  | 2.2.8.6.4 | [Hierarchy ID Message](#sec-2-2-8-6-4) | [层级 ID 消息](#sec-2-2-8-6-4) | p.220 |
+|  | 2.2.8.7 | [Ignored Messages](#sec-2-2-8-7) | [忽略消息](#sec-2-2-8-7) | p.222 |
+|  | 2.2.8.8 | [Latency Tolerance Reporting (LTR) M…](#sec-2-2-8-8) | [延迟容忍度上报 (LTR) 消息](#sec-2-2-8-8) | p.222 |
+|  | 2.2.8.9 | [Optimized Buffer Flush/Fill (OBFF) …](#sec-2-2-8-9) | [优化的缓冲区冲刷/填充 (OBFF) 消息](#sec-2-2-8-9) | p.223 |
+|  | 2.2.8.10 | [Precision Time Measurement (PTM) Me…](#sec-2-2-8-10) | [精确时间测量 (PTM) 消息](#sec-2-2-8-10) | p.224 |
+|  | 2.2.8.11 | [Integrity and Data Encryption (IDE)…](#sec-2-2-8-11) | [完整性与数据加密 (IDE) 消息](#sec-2-2-8-11) | p.225 |
+|  | 2.2.9 | [Completion Rules](#sec-2-2-9) | [完成规则](#sec-2-2-9) | p.228 |
+|  | 2.2.9.1 | [Completion Rules for Non-Flit Mode](#sec-2-2-9-1) | [非 Flit 模式下的完成规则](#sec-2-2-9-1) | p.228 |
+|  | 2.2.9.2 | [Completion Rules for Flit Mode](#sec-2-2-9-2) | [Flit 模式下的完成规则](#sec-2-2-9-2) | p.230 |
+|  | 2.2.10 | [TLP Prefix Rules](#sec-2-2-10) | [TLP Prefix 规则](#sec-2-2-10) | p.232 |
+|  | 2.2.10.1 | [TLP Prefix General Rules - Non-Flit…](#sec-2-2-10-1) | [TLP Prefix 通用规则 - 非 Flit 模式](#sec-2-2-10-1) | p.232 |
+|  | 2.2.10.2 | [Local TLP Prefix Processing](#sec-2-2-10-2) | [本地 TLP Prefix 处理](#sec-2-2-10-2) | p.237 |
+|  | 2.2.10.2.1 | [Vendor Defined Local TLP Prefix](#sec-2-2-10-2-1) | [厂商定义本地 TLP Prefix](#sec-2-2-10-2-1) | p.237 |
+|  | 2.2.10.3 | [Flit Mode Local TLP Prefix](#sec-2-2-10-3) | [Flit 模式本地 TLP Prefix](#sec-2-2-10-3) | p.238 |
+|  | 2.2.10.4 | [End-End TLP Prefix Processing - Non…](#sec-2-2-10-4) | [End-End TLP Prefix 处理 - 非 Flit…](#sec-2-2-10-4) | p.239 |
+|  | 2.2.10.4.1 | [Vendor Defined End-End TLP Prefix](#sec-2-2-10-4-1) | [厂商定义 End-End TLP Prefix](#sec-2-2-10-4-1) | p.240 |
+|  | 2.2.10.4.2 | [Root Ports with End-End TLP Prefix …](#sec-2-2-10-4-2) | [支持 End-End TLP Prefix 的根端口](#sec-2-2-10-4-2) | p.240 |
+|  | 2.2.11 | [OHC-E Rules - Flit Mode](#sec-2-2-11) | [OHC-E 规则 - Flit 模式](#sec-2-2-11) | p.241 |
+|  | 2.3 | [Handling of Received TLPs](#sec-2-3) | [接收 TLP 的处理](#sec-2-3) | p.241 |
+|  | 2.3.1 | [Request Handling Rules](#sec-2-3-1) | [请求处理规则](#sec-2-3-1) | p.245 |
+|  | 2.3.1.1 | [Data Return for Non-UIO Read Reques…](#sec-2-3-1-1) | [非 UIO 读请求的数据返回](#sec-2-3-1-1) | p.251 |
+|  | 2.3.1.2 | [UIO Read Completions](#sec-2-3-1-2) | [UIO 读完成报文](#sec-2-3-1-2) | p.256 |
+|  | 2.3.1.3 | [UIO Write Completions](#sec-2-3-1-3) | [UIO 写完成报文](#sec-2-3-1-3) | p.257 |
+|  | 2.3.2 | [Completion Handling Rules](#sec-2-3-2) | [完成报文处理规则](#sec-2-3-2) | p.257 |
+|  | 2.4 | [Transaction Ordering](#sec-2-4) | [事务排序](#sec-2-4) | p.259 |
+|  | 2.4.1 | [Transaction Ordering Rules for TLPs…](#sec-2-4-1) | [不使用 UIO 或 Flow-Through IDE Str…](#sec-2-4-1) | p.259 |
+|  | 2.4.2 | [Ordering Rules for UIO](#sec-2-4-2) | [UIO 排序规则](#sec-2-4-2) | p.265 |
+|  | 2.4.3 | [Update Ordering and Granularity Obs…](#sec-2-4-3) | [读事务观察到的更新排序与粒度](#sec-2-4-3) | p.266 |
+|  | 2.4.3.1 | [Ordering and Granularity for Non-UI…](#sec-2-4-3-1) | [非 UIO 读事务的排序与粒度](#sec-2-4-3-1) | p.267 |
+|  | 2.4.3.2 | [Ordering and Granularity for UIO Re…](#sec-2-4-3-2) | [UIO 读事务的排序与粒度](#sec-2-4-3-2) | p.267 |
+|  | 2.4.4 | [Update Ordering and Granularity Pro…](#sec-2-4-4) | [写事务提供的更新排序与粒度](#sec-2-4-4) | p.267 |
+|  | 2.4.4.2 | [Ordering and Granularity for UIO Wr…](#sec-2-4-4-2) | [UIO 写事务的排序与粒度](#sec-2-4-4-2) | p.268 |
+|  | 2.5 | [Virtual Channel (VC) Mechanism](#sec-2-5) | [虚通道 (VC, Virtual Channel) 机制](#sec-2-5) | p.268 |
+|  | 2.5.1 | [Virtual Channel Identification (VC …](#sec-2-5-1) | [虚通道标识 (VC ID)](#sec-2-5-1) | p.270 |
+|  | 2.5.2 | [TC to VC Mapping](#sec-2-5-2) | [TC 到 VC 映射](#sec-2-5-2) | p.271 |
+|  | 2.5.2 | [TC to VC Mapping (Key Rules Summary…](#sec-2-5-2) | [2.5.2 TC 到 VC 映射(关键规则总结)](#sec-2-5-2) | p.272 |
+|  | 2.5.3 | [VC and TC Rules](#sec-2-5-3) | [VC 与 TC 规则](#sec-2-5-3) | p.272 |
+|  | 2.6 | [Ordering and Receive Buffer Flow Co…](#sec-2-6) | [排序与接收缓冲流控](#sec-2-6) | p.275 |
+|  | 2.6.1 | [Flow Control (FC) Rules](#sec-2-6-1) | [流控 (FC) 规则](#sec-2-6-1) | p.275 |
+|  | 2.6.1.1 | [FC Information Tracked by Transmitt…](#sec-2-6-1-1) | [2.6.1.1 发送器跟踪的 FC 信息](#sec-2-6-1-1) | p.285 |
+|  | 2.7 | [End-to-End Data Integrity](#sec-2-7) | [端到端数据完整性](#sec-2-7) | p.289 |
+|  | 2.7.1 | [ECRC Rules](#sec-2-7-1) | [ECRC 规则](#sec-2-7-1) | p.298 |
+|  | 2.7.1 | [ECRC Rules (continued)](#sec-2-7-1) | [2.7.1 ECRC 规则（续）](#sec-2-7-1) | p.300 |
+|  | 2.7.2 | [Error Forwarding (Data Poisoning)](#sec-2-7-2) | [错误转发（数据中毒）](#sec-2-7-2) | p.302 |
+|  | 2.7.2.1 | [Rules For Use of Data Poisoning](#sec-2-7-2-1) | [数据中毒的使用规则](#sec-2-7-2-1) | p.303 |
+|  | 2.7.2.1 | [Rules For Use of Data Poisoning (co…](#sec-2-7-2-1) | [2.7.2.1 数据中毒的使用规则（续）](#sec-2-7-2-1) | p.304 |
+|  | 2.8 | [Completion Timeout Mechanism](#sec-2-8) | [完成超时机制](#sec-2-8) | p.304 |
+|  | 2.8 | [Completion Timeout Mechanism (conti…](#sec-2-8) | [2.8 完成超时机制（续）](#sec-2-8) | p.305 |
+|  | 2.9 | [Link Status Dependencies](#sec-2-9) | [链路状态依赖关系](#sec-2-9) | p.305 |
+|  | 2.9.1 | [Transaction Layer Behavior in DL_Do…](#sec-2-9-1) | [DL_Down 状态下的事务层行为](#sec-2-9-1) | p.305 |
+|  | 2.9.2 | [Transaction Layer Behavior in DL_Up…](#sec-2-9-2) | [DL_Up 状态下的事务层行为](#sec-2-9-2) | p.306 |
+|  | 2.9.3 | [Transaction Layer Behavior During D…](#sec-2-9-3) | [Downstream Port Containment (D…](#sec-2-9-3) | p.307 |
 
 ## 🖼 本章图表 (Figures)
 

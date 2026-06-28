@@ -13,31 +13,31 @@
 
 | # | Section | 小节 | Page |
 |:-:|:--------|:-----|:----:|
-| 11.1 | Overview of the TEE-I/O Security Mo… | 11.1 TEE-I/O 安全模型与设备相关的概述 § | — |
-| 11.1.1 | TDISP Host/Device Reference Archite… | 11.1.1 TDISP 主机/设备参考架构 | p.1613 |
-| 11.1.2 | Memory Address Routing and IDE Stre… | 11.1.2 内存地址路由与 IDE 流 (Stream) … | p.1614 |
-| 11.1.3 | TSM Functions and Secured Messages | 11.1.3 TSM 功能与安全消息 | p.1615 |
-| 11.2 | TDISP Rules § | 11.2 TDISP 规则 § | p.1616 |
-| 11.2.1 | TDISP TLP Rules and State Machine | 11.2.1 TDISP TLP 规则与状态机 | p.1617 |
-| 11.2.2 | TDISP Message Transport and P2P/IDE… | 11.2.2 TDISP 消息传输与 P2P/IDE 流 | p.1620 |
-| 11.2.3 | Requirements for Requesters (TSM) a… | 11.2.3 请求方 (TSM) 和响应方 (DSM) 的要… | p.1623 |
-| 11.2.7 | TVM Acceptance of a TDI § | 11.2.7 TVM 接受 TDI § | p.1626 |
-| 11.3 | TDISP Message Formats and processin… | 11.3 TDISP 消息格式和处理 § | p.1626 |
-| 11.3.1 | TDISP Request Codes | 11.3.1 TDISP 请求代码 | p.1626 |
-| 11.3.3 | TDISP Message Format and Protocol V… | 11.3.3 TDISP 消息格式和协议版本控制 | p.1628 |
-| 11.3.4 | GET_TDISP_VERSION / TDISP_VERSION | 11.3.4 GET_TDISP_VERSION / TDI… | p.1629 |
-| 11.3.8 | LOCK_INTERFACE_REQUEST | 11.3.8 LOCK_INTERFACE_REQUEST | p.1630 |
-| 11.3.10 | GET_DEVICE_INTERFACE_REPORT | 11.3.10 GET_DEVICE_INTERFACE_R… | p.1633 |
-| 11.3.12 | GET_DEVICE_INTERFACE_STATE / DEVICE… | 11.3.12 GET_DEVICE_INTERFACE_S… | p.1637 |
-| 11.3.14 | START_INTERFACE_REQUEST | 11.3.14 START_INTERFACE_REQUES… | p.1637 |
-| 11.3.16 | STOP_INTERFACE_REQUEST | 11.3.16 STOP_INTERFACE_REQUEST | p.1637 |
-| 11.3.18 | BIND_P2P_STREAM_REQUEST | 11.3.18 BIND_P2P_STREAM_REQUES… | p.1637 |
-| 11.3.20 | UNBIND_P2P_STREAM_REQUEST | 11.3.20 UNBIND_P2P_STREAM_REQU… | p.1639 |
-| 11.3.22 | SET_MMIO_ATTRIBUTE_REQUEST | 11.3.22 SET_MMIO_ATTRIBUTE_REQ… | p.1640 |
-| 11.3.24 | TDISP_ERROR | 11.3.24 TDISP_ERROR | p.1640 |
-| 11.4 | Device Security Requirements § | 11.4 设备安全要求 § | p.1641 |
-| 11.5 | Requirements Placed on Host Securit… | 11.5 由 TDI 需求引发的主机安全要求 § | p.1645 |
-| 11.6 | Overview of Threat Model and Mitiga… | 11.6 威胁模型和缓解措施概述 § | p.1647 |
+|  | 11.1 | [Overview of the TEE-I/O Security Mo…](#sec-11-1) | [11.1 TEE-I/O 安全模型与设备相关的概述 §](#sec-11-1) | — |
+|  | 11.1.1 | [TDISP Host/Device Reference Archite…](#sec-11-1-1) | [11.1.1 TDISP 主机/设备参考架构](#sec-11-1-1) | p.1613 |
+|  | 11.1.2 | [Memory Address Routing and IDE Stre…](#sec-11-1-2) | [11.1.2 内存地址路由与 IDE 流 (Stream) …](#sec-11-1-2) | p.1614 |
+|  | 11.1.3 | [TSM Functions and Secured Messages](#sec-11-1-3) | [11.1.3 TSM 功能与安全消息](#sec-11-1-3) | p.1615 |
+|  | 11.2 | [TDISP Rules §](#sec-11-2) | [11.2 TDISP 规则 §](#sec-11-2) | p.1616 |
+|  | 11.2.1 | [TDISP TLP Rules and State Machine](#sec-11-2-1) | [11.2.1 TDISP TLP 规则与状态机](#sec-11-2-1) | p.1617 |
+|  | 11.2.2 | [TDISP Message Transport and P2P/IDE…](#sec-11-2-2) | [11.2.2 TDISP 消息传输与 P2P/IDE 流](#sec-11-2-2) | p.1620 |
+|  | 11.2.3 | [Requirements for Requesters (TSM) a…](#sec-11-2-3) | [11.2.3 请求方 (TSM) 和响应方 (DSM) 的要…](#sec-11-2-3) | p.1623 |
+|  | 11.2.7 | [TVM Acceptance of a TDI §](#sec-11-2-7) | [11.2.7 TVM 接受 TDI §](#sec-11-2-7) | p.1626 |
+|  | 11.3 | [TDISP Message Formats and processin…](#sec-11-3) | [11.3 TDISP 消息格式和处理 §](#sec-11-3) | p.1626 |
+|  | 11.3.1 | [TDISP Request Codes](#sec-11-3-1) | [11.3.1 TDISP 请求代码](#sec-11-3-1) | p.1626 |
+|  | 11.3.3 | [TDISP Message Format and Protocol V…](#sec-11-3-3) | [11.3.3 TDISP 消息格式和协议版本控制](#sec-11-3-3) | p.1628 |
+|  | 11.3.4 | [GET_TDISP_VERSION / TDISP_VERSION](#sec-11-3-4) | [11.3.4 GET_TDISP_VERSION / TDI…](#sec-11-3-4) | p.1629 |
+|  | 11.3.8 | [LOCK_INTERFACE_REQUEST](#sec-11-3-8) | [11.3.8 LOCK_INTERFACE_REQUEST](#sec-11-3-8) | p.1630 |
+|  | 11.3.10 | [GET_DEVICE_INTERFACE_REPORT](#sec-11-3-10) | [11.3.10 GET_DEVICE_INTERFACE_R…](#sec-11-3-10) | p.1633 |
+|  | 11.3.12 | [GET_DEVICE_INTERFACE_STATE / DEVICE…](#sec-11-3-12) | [11.3.12 GET_DEVICE_INTERFACE_S…](#sec-11-3-12) | p.1637 |
+|  | 11.3.14 | [START_INTERFACE_REQUEST](#sec-11-3-14) | [11.3.14 START_INTERFACE_REQUES…](#sec-11-3-14) | p.1637 |
+|  | 11.3.16 | [STOP_INTERFACE_REQUEST](#sec-11-3-16) | [11.3.16 STOP_INTERFACE_REQUEST](#sec-11-3-16) | p.1637 |
+|  | 11.3.18 | [BIND_P2P_STREAM_REQUEST](#sec-11-3-18) | [11.3.18 BIND_P2P_STREAM_REQUES…](#sec-11-3-18) | p.1637 |
+|  | 11.3.20 | [UNBIND_P2P_STREAM_REQUEST](#sec-11-3-20) | [11.3.20 UNBIND_P2P_STREAM_REQU…](#sec-11-3-20) | p.1639 |
+|  | 11.3.22 | [SET_MMIO_ATTRIBUTE_REQUEST](#sec-11-3-22) | [11.3.22 SET_MMIO_ATTRIBUTE_REQ…](#sec-11-3-22) | p.1640 |
+|  | 11.3.24 | [TDISP_ERROR](#sec-11-3-24) | [11.3.24 TDISP_ERROR](#sec-11-3-24) | p.1640 |
+|  | 11.4 | [Device Security Requirements §](#sec-11-4) | [11.4 设备安全要求 §](#sec-11-4) | p.1641 |
+|  | 11.5 | [Requirements Placed on Host Securit…](#sec-11-5) | [11.5 由 TDI 需求引发的主机安全要求 §](#sec-11-5) | p.1645 |
+|  | 11.6 | [Overview of Threat Model and Mitiga…](#sec-11-6) | [11.6 威胁模型和缓解措施概述 §](#sec-11-6) | p.1647 |
 
 ## 🖼 本章图表 (Figures)
 
