@@ -30,18 +30,18 @@ open preview/book.html     # 完整版 (8.4 MB, 含目录)
 
 | Ch | English | 中文 | Pages | Sections | Status | File |
 |:-:|---------|------|:-----:|:--------:|:------:|:----:|
-| 1 | Introduction | 引言 | 127–140 | 24 | ✅ Done | [📄](PCIe6.2_Spec_ch01_Introduction_引言.md) |
-| 2 | Transaction Layer Specification | 事务层规范 | 141–308 | 83 | ✅ Done | [📄](PCIe6.2_Spec_ch02_Transaction_Layer_Specification_事务层规范.md) |
-| 3 | Data Link Layer Specification | 数据链路层规范 | 309–350 | 18 | ✅ Done | [📄](PCIe6.2_Spec_ch03_Data_Link_Layer_Specification_数据链路层规范.md) |
-| 4 | Physical Layer Logical Block | 物理层逻辑块 | 351–650 | 211 | ✅ Done | [📄](PCIe6.2_Spec_ch04_Physical_Layer_Logical_Block_物理层逻辑块.md) |
-| 5 | Power Management | 电源管理 | 651–706 | 16 | ✅ Done | [📄](PCIe6.2_Spec_ch05_Power_Management_电源管理.md) |
-| 6 | System Architecture | 系统架构 | 707–980 | 209 | ✅ Done | [📄](PCIe6.2_Spec_ch06_System_Architecture_系统架构.md) |
-| 7 | Software Initialization and Configuration | 软件初始化与配置 | 981–1408 | 399 | ✅ Done | [📄](PCIe6.2_Spec_ch07_Software_Initialization_and_Configuration_软件初始化与配置.md) |
-| 8 | Electrical Sub-Block | 电气子块 | 1409–1522 | 66 | ✅ Done | [📄](PCIe6.2_Spec_ch08_Electrical_Sub_Block_电气子块.md) |
-| 9 | Single Root I/O Virtualization (SR-IOV) | SR-IOV 单根 I/O 虚拟化 | 1523–1558 | 20 | ✅ Done | [📄](PCIe6.2_Spec_ch09_Single_Root_I_O_Virtualization_and_Sharing_单根IO虚拟化与共享SRIOV.md) |
-| 10 | Address Translation Services (ATS) | ATS 地址转换服务 | 1559–1608 | 5 | ✅ Done | [📄](PCIe6.2_Spec_ch10_Address_Translation_Services_地址转换服务ATS.md) |
-| 11 | TEE Device Interface Security Protocol (TDISP) | TDISP TEE 设备接口安全协议 | 1609–1658 | 13 | ✅ Done | [📄](PCIe6.2_Spec_ch11_TEE_Device_Interface_Security_Protocol_TEE设备接口安全协议TDISP.md) |
-| 12 | Architectural Out-of-Band Management | 架构带外管理 | 1659–1702 | 54 | ✅ Done | [📄](PCIe6.2_Spec_ch12_Architectural_Out_of_Band_Management_架构带外管理.md) |
+| 1 | [Introduction](#sec-1-0) | [引言](#sec-1-0) | 127–140 | 24 | ✅ Done | [📄](PCIe6.2_Spec_ch01_Introduction_引言.md) |
+| 2 | [Transaction Layer Specification](#sec-2-0) | [事务层规范](#sec-2-0) | 141–308 | 83 | ✅ Done | [📄](PCIe6.2_Spec_ch02_Transaction_Layer_Specification_事务层规范.md) |
+| 3 | [Data Link Layer Specification](#sec-3-0) | [数据链路层规范](#sec-3-0) | 309–350 | 18 | ✅ Done | [📄](PCIe6.2_Spec_ch03_Data_Link_Layer_Specification_数据链路层规范.md) |
+| 4 | [Physical Layer Logical Block](#sec-4-0) | [物理层逻辑块](#sec-4-0) | 351–650 | 211 | ✅ Done | [📄](PCIe6.2_Spec_ch04_Physical_Layer_Logical_Block_物理层逻辑块.md) |
+| 5 | [Power Management](#sec-5-0) | [电源管理](#sec-5-0) | 651–706 | 16 | ✅ Done | [📄](PCIe6.2_Spec_ch05_Power_Management_电源管理.md) |
+| 6 | [System Architecture](#sec-6-0) | [系统架构](#sec-6-0) | 707–980 | 209 | ✅ Done | [📄](PCIe6.2_Spec_ch06_System_Architecture_系统架构.md) |
+| 7 | [Software Initialization and Configuration](#sec-7-0) | [软件初始化与配置](#sec-7-0) | 981–1408 | 399 | ✅ Done | [📄](PCIe6.2_Spec_ch07_Software_Initialization_and_Configuration_软件初始化与配置.md) |
+| 8 | [Electrical Sub-Block](#sec-8-0) | [电气子块](#sec-8-0) | 1409–1522 | 66 | ✅ Done | [📄](PCIe6.2_Spec_ch08_Electrical_Sub_Block_电气子块.md) |
+| 9 | [Single Root I/O Virtualization (SR-IOV)](#sec-9-0) | [SR-IOV 单根 I/O 虚拟化](#sec-9-0) | 1523–1558 | 20 | ✅ Done | [📄](PCIe6.2_Spec_ch09_Single_Root_I_O_Virtualization_and_Sharing_单根IO虚拟化与共享SRIOV.md) |
+| 10 | [Address Translation Services (ATS)](#sec-10-0) | [ATS 地址转换服务](#sec-10-0) | 1559–1608 | 5 | ✅ Done | [📄](PCIe6.2_Spec_ch10_Address_Translation_Services_地址转换服务ATS.md) |
+| 11 | [TEE Device Interface Security Protocol (TDISP)](#sec-11-0) | [TDISP TEE 设备接口安全协议](#sec-11-0) | 1609–1658 | 13 | ✅ Done | [📄](PCIe6.2_Spec_ch11_TEE_Device_Interface_Security_Protocol_TEE设备接口安全协议TDISP.md) |
+| 12 | [Architectural Out-of-Band Management](#sec-12-0) | [架构带外管理](#sec-12-0) | 1659–1702 | 54 | ✅ Done | [📄](PCIe6.2_Spec_ch12_Architectural_Out_of_Band_Management_架构带外管理.md) |
 
 ---
 

@@ -927,6 +927,7 @@
 ---
 
 <a id="sec-7"></a>
+<a id="sec-7-0"></a>
 ## 7. Software Initialization and Configuration § | 7. 软件初始化与配置 §
 
 
