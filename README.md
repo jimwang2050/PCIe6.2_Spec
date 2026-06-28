@@ -62,6 +62,9 @@ PCIe6.2_zh/
 ├── PCIe6.2_Spec_ch10_Address_Translation_Services_地址转换服务ATS.md
 ├── PCIe6.2_Spec_ch11_TEE_Device_Interface_Security_Protocol_TEE设备接口安全协议TDISP.md
 ├── PCIe6.2_Spec_ch12_Architectural_Out_of_Band_Management_架构带外管理.md
+├── tight_crops/                                      # Figure 精裁映射（12 章）
+│   ├── ch1_tight_crops.json  ... ch12_tight_crops.json
+│   └── ch4_figure_map.json                        # ch04 专用映射
 ├── figures/                                          # 12 章原图 (318 MB)
 │   ├── chapter_01/  fig_0127_1.png ... fig_0140_1.png
 │   ├── chapter_02/  fig_0141_1.png ... fig_0308_1.png  (168 pages)
@@ -69,12 +72,16 @@ PCIe6.2_zh/
 │   └── chapter_12/  fig_1659_1.png ... fig_1702_1.png
 ├── glossary.json                                     # 252 个 PCIe/CXL 术语对照
 ├── chapter_index.json                                # 章节页范围索引
-└── tools/                                            # 复现脚本
+├── chunk_plan.json                                  # chunk 切分计划
+├── extraction_summary.json                           # PDF 抽取摘要
+└── tools/                                           # 复现脚本
     ├── extract_pcie6_2.py                            # PDF → 文本+图表
     ├── chunk_chapters.py                             # 按章节切分 chunk
-    ├── build_glossary.py                             # 构建术语表
-    ├── build_translation_prompt.py                   # 生成翻译 prompt
-    └── merge_chapters.py                             # 合并 chunk → 章节 MD
+    ├── build_glossary.py                            # 构建术语表
+    ├── build_translation_prompt.py                  # 生成翻译 prompt
+    ├── merge_chapters.py                            # 合并 chunk → 章节 MD
+    ├── fix_toc_links.py                            # TOC 小节跳转链接修复
+    └── *.py                                         # 其他工具脚本
 ```
 
 ---
