@@ -478,7 +478,7 @@
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -547,7 +547,7 @@ PCI Express 在中断支持方面采用从 PCI 演进而来的方法。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -582,7 +582,7 @@ PCI Express 在中断支持方面采用从 PCI 演进而来的方法。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -618,7 +618,7 @@ PCI Express 仿真 PCI 中断机制，包括 PCI 设备功能（Function）的 P
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -650,7 +650,7 @@ Note that similarly to physical interrupt signals, the INTx emulation mechanism 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -698,7 +698,7 @@ MSI-X 定义了基本 MSI 功能的另一种可选扩展。与 MSI 相比，MSI-
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -768,7 +768,7 @@ MSI/MSI-X 事务的请求者（Requester）必须将事务描述符的 No Snoop 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -800,7 +800,7 @@ MSI/MSI-X 事务的请求者（Requester）必须将事务描述符的 No Snoop 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -840,7 +840,7 @@ If the Extended Message Data Capable bit is Set and system software supports 32-
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -896,7 +896,7 @@ For each MSI-X Table entry that will be used, software fills in the Message Addr
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -956,7 +956,7 @@ To maintain backward compatibility, the MSI Enable bit in the Message Control Re
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -982,7 +982,7 @@ To maintain backward compatibility, the MSI Enable bit in the Message Control Re
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1026,7 +1026,7 @@ How a Function uses multiple vectors (when allocated) is device dependent. A Fun
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1048,7 +1048,7 @@ How a Function uses multiple vectors (when allocated) is device dependent. A Fun
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1104,7 +1104,7 @@ MSI-X 中的 PVM 由每个 MSI-X Table 表项中的 Mask 位控制。虽然更�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1157,7 +1157,7 @@ If a Function sends messages with the same vector multiple times before being ac
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1192,7 +1192,7 @@ If a Function sends messages with the same vector multiple times before being ac
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1247,7 +1247,7 @@ This alternative has the potential side effect of one vector's interrupt service
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1285,7 +1285,7 @@ MSI 或 MSI-X 消息本质上是一条 Posted Request（有数据、无完成报
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1317,7 +1317,7 @@ PCI Express 支持来自原生（native）PCI Express 设备以及支持 PME 的
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1366,7 +1366,7 @@ Note that all other interrupt sources within the same Function will assert the s
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1418,7 +1418,7 @@ Root Complex Event Collectors provide support for the above described functional
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1458,7 +1458,7 @@ In order to maintain compatibility with non-PCI Express-aware system software, s
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1488,7 +1488,7 @@ PME-capable conventional PCI and PCI-X devices assert the PME# pin to signal a p
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1523,7 +1523,7 @@ If the PME# signal from a PCI or PCI-X device is routed directly to the Root Com
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1559,7 +1559,7 @@ Since RCiEPs are not contained in any of the hierarchy domains originated by Roo
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1609,7 +1609,7 @@ PCI Express 错误可分为两类：Uncorrectable Error（不可纠正错误）�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1644,7 +1644,7 @@ In this document, errors which must be checked and errors which may optionally b
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1729,7 +1729,7 @@ ERR_NONFATAL
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1784,7 +1784,7 @@ Note that it is the responsibility of the agent detecting the error to signal th
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1820,7 +1820,7 @@ Error Messages are sent to the Root Complex for reporting the detection of error
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1850,7 +1850,7 @@ Fatal errors are uncorrectable error conditions which render the particular Link
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1880,7 +1880,7 @@ Non-fatal errors are uncorrectable errors which cause a particular transaction t
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1920,7 +1920,7 @@ Note that it is the responsibility of the agent detecting the error to signal th
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1952,7 +1952,7 @@ The Completion Status field (when status is not Successful Completion) in the Co
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1987,7 +1987,7 @@ Error Messages are sent to the Root Complex for reporting the detection of error
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2071,7 +2071,7 @@ Software should recognize that a single transaction can be signaled by multiple 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2113,7 +2113,7 @@ For devices implementing the Advanced Error Reporting Extended Capability the Un
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2145,7 +2145,7 @@ If an individual error is masked when it is detected, its error status bit is st
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2198,7 +2198,7 @@ For errors detected in the Transaction layer and Uncorrectable Internal Errors, 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2288,7 +2288,7 @@ handle this case as an Advisory Non-Fatal Error.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2332,7 +2332,7 @@ This section covers Advisory Non-Fatal Error handling for errors managed by the 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2377,7 +2377,7 @@ handle this case as an Advisory Non-Fatal Error.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2452,7 +2452,7 @@ A Receiver must not handle this case as an Advisory Non-Fatal Error if either of
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2496,7 +2496,7 @@ A Receiver must not handle this case as an Advisory Non-Fatal Error if either of
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2551,7 +2551,7 @@ This section applies to Requesters other than Root Ports performing programmed I
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2591,7 +2591,7 @@ Note that automatic recovery by the Requester from a Completion Timeout is gener
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2627,7 +2627,7 @@ If the unexpected Completion was a result of misrouting, the Completion Timeout 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2667,7 +2667,7 @@ If the Requester needs to report the error, the Requester must do so solely thro
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2699,7 +2699,7 @@ Error Forwarding, also known as data poisoning, is indicated by setting the EP b
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2742,7 +2742,7 @@ Unless otherwise specified, implementation specific criteria are used in determi
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2818,7 +2818,7 @@ The following PCI Express errors are not Function-specific:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2863,7 +2863,7 @@ For both Root Ports and Root Complex Event Collectors, in order for a received e
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2895,7 +2895,7 @@ The Root Error Command register allows further control of Root Complex response 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2951,7 +2951,7 @@ Note that Advanced Error Reporting MSI/MSI-X interrupts always use the vector in
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3000,7 +3000,7 @@ If multiple header recording is supported and enabled, and the First Error Point
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3032,7 +3032,7 @@ If multiple header recording is supported and enabled, and the First Error Point
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3083,7 +3083,7 @@ The setting of Multiple Header Recording Capable and the checking for Header Log
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3115,7 +3115,7 @@ The setting of Multiple Header Recording Capable and the checking for Header Log
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3202,7 +3202,7 @@ If hardware relies on this definition of the FEP being valid to determine when i
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3272,7 +3272,7 @@ AER 仅记录端到端 TLP 前缀 (End-End TLP Prefix)。本地 TLP 前缀 (Loca
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3310,7 +3310,7 @@ End-End TLP Prefixes are logged in the TLP Prefix Log register. The underlying T
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3340,7 +3340,7 @@ End-End TLP Prefixes are logged in the TLP Prefix Log register. The underlying T
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3487,7 +3487,7 @@ Abbreviations:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3582,7 +3582,7 @@ The diagram covers:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3689,7 +3689,7 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3746,7 +3746,7 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3795,7 +3795,7 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3846,7 +3846,7 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3901,7 +3901,7 @@ For all errors listed above, the appropriate status bit(s) must be set upon dete
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3939,7 +3939,7 @@ PCI Command 寄存器中包含用于控制 PCI 错误上报的位。但是,PCI C
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4001,7 +4001,7 @@ With software/firmware that sets the SERR# Enable bit but leaves the Unsupported
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4066,7 +4066,7 @@ With software/firmware that sets the SERR# Enable bit but leaves the Unsupported
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4115,7 +4115,7 @@ The following error handling control bits are only implemented in the PF. They a
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4185,7 +4185,7 @@ Each VF must use its own Routing ID when signaling errors.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4236,7 +4236,7 @@ Corrected Internal Errors 与 Uncorrectable Internal Errors 的上报是彼此�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4309,7 +4309,7 @@ DPC 默认禁用,除非由软件通过 DPC Trigger Enable 字段使能,否则不
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4396,7 +4396,7 @@ DPC 默认禁用,除非由软件通过 DPC Trigger Enable 字段使能,否则不
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4491,7 +4491,7 @@ The Port may optionally send an interrupt message if interrupt generation has be
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4548,7 +4548,7 @@ For a given DPC trigger event, if a Port is going to send both an ERR_COR Messag
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4587,7 +4587,7 @@ RP PIO 错误控制寄存器可对 Root Port 所追踪的 Non-Posted Requests �
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4656,7 +4656,7 @@ RP PIO Status、Mask 和 Severity 寄存器的行为与 AER 中的 Uncorrectable
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4741,7 +4741,7 @@ RP PIO Exception 寄存器提供了一种在某些由处理器指令产生的、
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4818,7 +4818,7 @@ Root Port 对所追踪的、除接收 UR 和 CA Completions 之外发生错误�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4873,7 +4873,7 @@ For a given DL_ACTIVE event, if a Port is going to send both an ERR_COR Message 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4912,7 +4912,7 @@ It is recommended that operating systems use Data Link Layer State Changed inter
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4962,7 +4962,7 @@ This section covers VC mechanisms from the system perspective. It addresses the 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5008,7 +5008,7 @@ Some examples to illustrate:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5051,7 +5051,7 @@ TC 过滤的图形示例如 § 图 6-4 所示，其中 TC(2:6) 未被映射到�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5120,7 +5120,7 @@ TC[0:1] / TC7
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5189,7 +5189,7 @@ TC[0:6] / TC7
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5254,7 +5254,7 @@ PCI Express 链路 RX
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5294,7 +5294,7 @@ In a simple configuration, where only VC0 is supported, traffic differentiation 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5324,7 +5324,7 @@ The following set of figures (§ Figure 6-7 and § Figure 6-8) illustrates traff
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5390,7 +5390,7 @@ OM14284
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5433,7 +5433,7 @@ Switch arbitration model defines a required arbitration infrastructure and funct
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5492,7 +5492,7 @@ VC 0 / VC 1
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5524,7 +5524,7 @@ The following two steps conceptually describe routing of traffic received by the
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5614,7 +5614,7 @@ VC 0 / 第 1 个 VC / 低
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5661,7 +5661,7 @@ Flow control credits are exchanged between two Ports connected to the same Link.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5723,7 +5723,7 @@ WRR 方案的一个关键使用模型是支持 QoS 策略——通过使用不�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5753,7 +5753,7 @@ WRR 方案的一个关键使用模型是支持 QoS 策略——通过使用不�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5779,7 +5779,7 @@ WRR 方案的一个关键使用模型是支持 QoS 策略——通过使用不�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5850,7 +5850,7 @@ The multi-Function arbitration model defines an optional arbitration infrastruct
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5900,7 +5900,7 @@ Finally, if the MFVC Extended Capability structure supports VC Arbitration, this
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5965,7 +5965,7 @@ Finally, if the MFVC Extended Capability structure supports VC Arbitration, this
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6040,7 +6040,7 @@ However, as stated in this specification, if a Multi-Function Device supports TC
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6082,7 +6082,7 @@ However, as stated in this specification, if a Multi-Function Device supports TC
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6162,7 +6162,7 @@ A Multi-Function Device that includes an MFVC Extended Capability structure prov
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6238,7 +6238,7 @@ SVC 能力与 VC/MFVC 能力不兼容,且硬件机制确保对于给定的 Port,
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6313,7 +6313,7 @@ Transactions Pending 位 (事务挂起位) 提供了一种在每个 Function 基
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6397,7 +6397,7 @@ Locked transaction sequences are generated by the Host CPU(s) as one or more rea
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6459,7 +6459,7 @@ Note: This sort of split-lock access is not supported by PCI Express and softwar
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6489,7 +6489,7 @@ PCI Express/PCI 桥的要求与交换机类似,不同之处在于,由于 PCI Exp
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6521,7 +6521,7 @@ A Root Complex is permitted to support locked transactions as a Requester. If lo
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6579,7 +6579,7 @@ Note that this requirement applies to all possible sources of Requests within th
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6611,7 +6611,7 @@ PCI Express 端点不支持锁。PCI Express 端点必须将 MRdLk 请求视为"
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6647,7 +6647,7 @@ Conventional Reset includes all reset mechanisms other than Function Level Reset
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6691,7 +6691,7 @@ In all form factors and system硬件 configurations, there must, at some level, 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6765,7 +6765,7 @@ The first set of rules addresses requirements for components and devices:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6837,7 +6837,7 @@ Note: This delay is analogous to the Trhfa parameter specified for PCI/PCI-X, an
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6897,7 +6897,7 @@ begin Link training immediately after its hot reset completes. This behavior is 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6959,7 +6959,7 @@ Additional parameters may be specified.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7091,7 +7091,7 @@ FLR 按如下方式修改本规范所描述的函数状态:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7143,7 +7143,7 @@ Note that upon receipt of an FLR, a device Function may either clear all transac
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7187,7 +7187,7 @@ Since FLR modifies Function state not described by this specification (in additi
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7243,7 +7243,7 @@ PCI Express 架构旨在原生支持电缆、插卡 (add-in cards) 和模块的�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7296,7 +7296,7 @@ FLR 会导致函数丢失对所有未完成 (outstanding) 非 Posted 请求的�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7399,7 +7399,7 @@ The Downstream Port must not change the state of an indicator unless commanded t
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7558,7 +7558,7 @@ The Power Indicator, which must be green in color, indicates the power state of 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7631,7 +7631,7 @@ The blinking Power Indicator also provides visual feedback to the operator when 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7661,7 +7661,7 @@ Refer to § Section 6.7.1 for the Attention Indicator description.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7691,7 +7691,7 @@ Refer to § Section 6.7.1 for the Power Indicator description.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7723,7 +7723,7 @@ MRL（手动保持闩锁，Manually-operated Retention Latch）是一种手动�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7793,7 +7793,7 @@ If an MRL Sensor is implemented without a corresponding MRL Sensor input on the 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7832,7 +7832,7 @@ The current state of the electromechanical interlock must be reflected at all ti
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7876,7 +7876,7 @@ If an operation initiated by an Attention Button fails for any reason, it is rec
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7927,7 +7927,7 @@ using either the software user interface or the Attention Button while a hot-plu
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7984,7 +7984,7 @@ The Slot Numbering Capability, as defined in the PCI-to-PCI Bridge Specification
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8068,7 +8068,7 @@ Power Fault Detected (Slot Status 寄存器) - 当在插槽或适配器处检测
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8112,7 +8112,7 @@ The following sections list the registers associated with each hot-plug element.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8154,7 +8154,7 @@ Refer to the following register field descriptions for Attention Button:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8194,7 +8194,7 @@ Refer to the following register field descriptions for Attention Indicator:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8234,7 +8234,7 @@ Refer to the following register field descriptions for Power Indicator:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8284,7 +8284,7 @@ Refer to the following register field descriptions for Power Controller:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8330,7 +8330,7 @@ Refer to the following register field descriptions for Presence Detect:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8374,7 +8374,7 @@ Refer to the following register field descriptions for MRL Sensor:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8416,7 +8416,7 @@ Refer to the following register field descriptions for Electromechanical Interlo
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8458,7 +8458,7 @@ Refer to the following register field descriptions for Command Completed:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8508,7 +8508,7 @@ Refer to the following register field descriptions for Port Capabilities and Slo
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8548,7 +8548,7 @@ Refer to the following register field descriptions for Hot-Plug Interrupt Contro
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8616,7 +8616,7 @@ If enabled through the associated enable field, slot events must generate a soft
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8652,7 +8652,7 @@ Refer to § Section 6.7.2 for the list of slot events and their associated regis
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8714,7 +8714,7 @@ If enabled through the associated enable field, the completion of a command must
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8758,7 +8758,7 @@ The Data Link Layer State Changed event must occur within 1 second of the event 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8864,7 +8864,7 @@ Note that the Hot-Plug Controller generates the wakeup on behalf of the hot-plug
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8926,7 +8926,7 @@ DPF 的一个关键用例是保证像总线扫描这样的异步系统软件活�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8964,7 +8964,7 @@ SFI Capability 能够屏蔽已接收的设备就绪状态 (Device Readiness Stat
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9006,7 +9006,7 @@ DPC 为 DL_Active 实现 ERR_COR 信令,而 SFI 为 SFI DLL State Changed 实现
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9068,7 +9068,7 @@ SFI 配置访问方法 (Configuration Access Method, CAM) 提供了一种手段,
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9118,7 +9118,7 @@ SFI Capability 能够屏蔽已接收的设备就绪状态 (Device Readiness Stat
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9172,7 +9172,7 @@ When Configuration RRS Software Visibility is enabled, the SFI CAM still works c
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9248,7 +9248,7 @@ Although SFI is not intended to be used by operating system software, it is reco
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9280,7 +9280,7 @@ Some systems that include hot-plug capable Root Ports and Switches that are rele
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9346,7 +9346,7 @@ Requester 可能会因已被接受但永远不会由被移除的 Completer 完�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9418,7 +9418,7 @@ DPC provides a robust mechanism for supporting async removal. The TLP stream cle
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9479,7 +9479,7 @@ DPC 提供了一种支持异步移除的健壮机制。TLP 流在触发 DPC 的�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9556,7 +9556,7 @@ add-in card 不得消耗超过系统所授予的功率。定义了六种向 add-
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9590,7 +9590,7 @@ The Power Limit mechanism is optional. Support is indicated by the Power Limit S
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9647,7 +9647,7 @@ Out of Band Power Limit Enable 和 Out of Band Power Limit PM Sub State 值使�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9689,7 +9689,7 @@ PCI Express 提供了一种机制，用于软件控制适配器 (adapter)（与�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9753,7 +9753,7 @@ The following rules cover the Slot Power Limit control mechanism:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9841,7 +9841,7 @@ The following rules cover the Slot Power Limit control mechanism:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9891,7 +9891,7 @@ The following rules cover the Slot Power Limit control mechanism:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9930,7 +9930,7 @@ A Root Complex may present one of the following topologies to configuration soft
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9990,7 +9990,7 @@ In order for software to correctly program arbitration and other control paramet
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10052,7 +10052,7 @@ Note that this will take the Link to a DL_Down state and therefore cannot be don
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10088,7 +10088,7 @@ RCiEP 中 ACS 的实现是允许的，但不是必需的。明确允许在单个
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10158,7 +10158,7 @@ ACS 绝不适用于 PCI Express-PCI 桥 Function 或根复合体事件收集器 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10200,7 +10200,7 @@ When enabled, the Downstream Port tests the Bus Number from the Requester ID of 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10274,7 +10274,7 @@ ACS P2P Request Redirect 与 ACS P2P Egress Control 和 ACS Direct Translated P2
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10322,7 +10322,7 @@ ACS P2P Completion Redirect 不与控制请求的 ACS 控件交互。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10404,7 +10404,7 @@ ACS P2P Egress Control 与 ACS P2P Request Redirect 和 ACS Direct Translated P2
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10485,7 +10485,7 @@ ACS USP Memory Target Access 决定如何处理由交换机下游端口入方向
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10523,7 +10523,7 @@ This section applies to Multi-Function Device ACS Functions, with the exception 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10641,7 +10641,7 @@ ACS P2P Egress Control 与 ACS P2P Request Redirect 和 ACS Direct Translated P2
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10689,7 +10689,7 @@ No ACS capabilities are applicable, and the Function must not implement an ACS E
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10780,7 +10780,7 @@ If ACS Direct Translated P2P is enabled in a Port/Function, peer-to-peer Memory 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10862,7 +10862,7 @@ ACS Enhanced Capability 是一组额外的 ACS 控制机制,旨在提升 ACS 所
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10940,7 +10940,7 @@ ACS Enhanced Capability 引入的重定向机制可处理更多情况。带重�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10974,7 +10974,7 @@ ACS Enhanced Capability 引入的重定向机制可处理更多情况。带重�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11024,7 +11024,7 @@ If ACS P2P Request Redirect and RC P2P Request Retargeting are not being used, t
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11081,7 +11081,7 @@ If software enables ACS P2P Request Redirect, RC P2P Request Retargeting, or bot
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11116,7 +11116,7 @@ If software enables ACS P2P Request Redirect, RC P2P Request Retargeting, or bot
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11167,7 +11167,7 @@ ARI 由一组新的可选能力和控制寄存器位控制。这些位提供：
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11214,7 +11214,7 @@ ACS Direct Translated P2P 的目的是在使用地址转换服务 (ATS, Address 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11295,7 +11295,7 @@ With an ARI Device, the Phantom Functions Supported field within each Function's
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11330,7 +11330,7 @@ Extended Tag Field Enable 位、10-Bit Tag Requester Enable 位和 14-Bit Tag Re
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11365,7 +11365,7 @@ Following a hot-plug event below a Downstream Port, it is strongly recommended t
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11400,7 +11400,7 @@ It is strongly recommended that firmware not have the ARI Forwarding Enable bit 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11438,7 +11438,7 @@ Multicast Capability 结构定义了一个多播地址范围，将该范围划�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11507,7 +11507,7 @@ The Multicast Group is extracted from the address in the TLP using any Function'
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11542,7 +11542,7 @@ Components next check the MC_Block_All and the MC_Block_Untranslated bits corres
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11583,7 +11583,7 @@ For similar reasons, with Multicast-capable Switch components where the Upstream
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11622,7 +11622,7 @@ Unless available address space is limited, resource allocation software may be a
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11665,7 +11665,7 @@ No new ordering rules are defined for processing Multicast TLPs. All Multicast T
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11712,7 +11712,7 @@ ACS P2P Request Redirect 和 ACS Direct Translated P2P 机制提供了一种方�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11746,7 +11746,7 @@ Multicast Capability 结构中的某些字段可随时更改。其他字段在�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11778,7 +11778,7 @@ For Multi-Function Upstream Switch Ports Multicast TLPs received by one Switch o
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11829,7 +11829,7 @@ Downstream Port 的 MC_Overlay 机制适用于离开该 Port 的 TLP。Upstream 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11914,7 +11914,7 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11954,7 +11954,7 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11990,7 +11990,7 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12029,7 +12029,7 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12073,7 +12073,7 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12113,7 +12113,7 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12213,7 +12213,7 @@ AtomicOp 还支持无锁的统计计数器,例如设备可以原子地递增计�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12287,7 +12287,7 @@ Detailed protocol rules and requirements for AtomicOps are distributed throughou
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12340,7 +12340,7 @@ As with other PCI Express Transactions, the support for peer-to-peer routing of 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12405,7 +12405,7 @@ If a Switch supports AtomicOp routing capability for any of its Ports, it must d
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12455,7 +12455,7 @@ The RC register-based mechanism offers the advantage of working for all AtomicOp
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12495,7 +12495,7 @@ DPA 定义了一组功率子状态 (power substate)，每个子状态都有一�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12561,7 +12561,7 @@ Function 初始化时，将在子状态 0 所关联的功率分配范围内运�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12593,7 +12593,7 @@ Due to the variety of applications and the wide range of maximum power required 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12629,7 +12629,7 @@ Power allocation for VFs is managed using their associated PF's DPA Capability, 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12681,7 +12681,7 @@ TLP 处理提示 (TLP Processing Hints, TPH) 是一种可选特性，它在 Requ
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12713,7 +12713,7 @@ Functions that intend to target a TLP towards a specific processing resource suc
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12773,7 +12773,7 @@ TPH Requester Extended Capability 结构中的 ST Table Location 字段指示 Fu
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12823,7 +12823,7 @@ TPH 能力是可选的规范性要求。每个能够生成带 TPH 的 Request TL
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12879,7 +12879,7 @@ In the Device Specific Mode of operation, the assignment of the Steering Tags to
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12911,7 +12911,7 @@ TPH 仅提供额外信息以实现针对内存空间 (Memory Space) 的 Request 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12962,7 +12962,7 @@ LTR 支持通过 § 第 7 章 所述的报告寄存器和控制寄存器进行�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12999,7 +12999,7 @@ No-Snoop Latency（无窥探延迟）与 Snoop Latency（窥探延迟）：如 �
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13071,7 +13071,7 @@ It is strongly recommended that Endpoints send no more than two LTR Messages wit
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13159,7 +13159,7 @@ The RC is permitted to delay processing of device Request TLPs provided it satis
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13201,7 +13201,7 @@ Typically, the Link will be in ASPM L1, and, if Clock Power Management (Clock PM
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13261,7 +13261,7 @@ LTR 延迟语义反映了设备所看到的可容忍延迟，按以下一种或�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13323,7 +13323,7 @@ Note that LTR may be enabled in environments where not all Endpoints support LTR
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13387,7 +13387,7 @@ OBFF 消息使用消息路由 (Message Routing) 100b,即"Local - Terminate at Re
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13427,7 +13427,7 @@ OBFF 指示反映中央资源电源管理 (Power Management) 状态的转换:当
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13459,7 +13459,7 @@ It is recommended that Endpoints not assume CPU Active or OBFF windows will rema
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13515,7 +13515,7 @@ When a Switch is propagating OBFF indications Downstream, it is strongly encoura
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13551,7 +13551,7 @@ Downstream Ports can be configured to transmit OBFF Messages in two ways, which 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13588,7 +13588,7 @@ When enabling Ports for OBFF, it is recommended that all Upstream Ports be enabl
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13630,7 +13630,7 @@ When enabling Ports for OBFF, it is recommended that all Upstream Ports be enabl
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13688,7 +13688,7 @@ PASID 的使用仅在明确使能时方可进行。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13768,7 +13768,7 @@ A TLP may contain at most one PASID TLP Prefix.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13814,7 +13814,7 @@ A TLP may contain at most one PASID TLP Prefix.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13866,7 +13866,7 @@ PASID 字段宽度为 20 位。端点 (Endpoint) 和根复合体 (Root Complex) 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13926,7 +13926,7 @@ For address translation related TLPs, usage of this field is defined in Address 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13970,7 +13970,7 @@ For Root Complexes, the following rules apply:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -14006,7 +14006,7 @@ For Root Complexes, the following rules apply:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -14060,7 +14060,7 @@ For address translation related TLPs, usage of this bit is defined in Address Tr
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -14123,7 +14123,7 @@ For Completers, the following rules apply:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -14161,7 +14161,7 @@ For address translation related TLPs, usage of this bit is defined in Address Tr
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -14240,7 +14240,7 @@ PTM 定义了以下角色：
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -14286,7 +14286,7 @@ sends PTM Requests to the Downstream Port on the same Link, which acts on behalf
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -14360,7 +14360,7 @@ t1、t2、t3、t4 和 t2' 表示在 PTM 对话期间采集的时间戳，如图 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -14397,7 +14397,7 @@ specific.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -14475,7 +14475,7 @@ to software.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -14598,7 +14598,7 @@ Data Byte 3 contains Propagation Delay [7:0] (least significant byte)
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -14666,7 +14666,7 @@ compatibly interpret the Propagation Delay value.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -14754,7 +14754,7 @@ successive PTM dialogs have been completed successfully and without replays.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -14810,7 +14810,7 @@ successive PTM dialogs have been completed successfully and without replays.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -14927,7 +14927,7 @@ expected to take more than 10 μs.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -14959,7 +14959,7 @@ Responder must not exceed that reported in the Local Clock Granularity field of 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -15031,7 +15031,7 @@ granularity of this clock as defined in the PTM Capabilities structure (§ Secti
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -15089,7 +15089,7 @@ a particular physical event if timestamps are captured in the higher layers.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -15134,7 +15134,7 @@ however such software/firmware mechanisms are outside the scope of this specific
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -15255,7 +15255,7 @@ below it, then this hybrid approach for determining Configuration Ready is recom
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -15389,7 +15389,7 @@ DRS 消息协议要求包括以下内容：
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -15431,7 +15431,7 @@ Additional requirements for Root Ports and Switch Downstream Ports include:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -15495,7 +15495,7 @@ Functions are permitted to transmit DRS Messages before they have been assigned 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -15553,7 +15553,7 @@ It is only permitted to apply EA to certain functions, based on the hierarchical
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -15646,7 +15646,7 @@ Any resource allocated using EA must not overlap with any other resource allocat
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -15743,7 +15743,7 @@ When software initializes a PCI Hierarchy, it assigns unique Bus and Device numb
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -15872,7 +15872,7 @@ In mechanism 5, VF information is configured by software (probably the VI). Both
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -15912,7 +15912,7 @@ For ARI Functions associated with an Upstream Port, the Routing ID consists of a
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16023,7 +16023,7 @@ The following rules apply when any of the FPB mechanisms are used:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16082,7 +16082,7 @@ The following rules apply when any of the FPB mechanisms are used:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16148,7 +16148,7 @@ When ARI is not enabled, the FPB RID mechanism can be applied with different gra
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16211,7 +16211,7 @@ This is a special case, but the concept is not unique to FPB, and is a reflectio
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16279,7 +16279,7 @@ FPB MEM Low 机制可以以不同的粒度应用,粒度可由系统软件通过 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16340,7 +16340,7 @@ The following rules apply to the FPB MEM High mechanism:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16419,7 +16419,7 @@ FPB 使用位向量机制来解码路由 ID (Routing ID) 范围以及 4 GB 以�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16484,7 +16484,7 @@ FPB 包含为 Requester ID 和内存空间启用不连续资源范围分配/再�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16553,7 +16553,7 @@ PCI Express 的 VPD 与 [PCI-3.0] 中的定义一致。该定义反过来又基�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16613,7 +16613,7 @@ A small example of the resource data type tags used in a typical VPD is shown in
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16697,7 +16697,7 @@ VPD 关键字分为两类:只读字段和读/写字段。除非另有说明,关�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16757,7 +16757,7 @@ VPD 包含在四种类型的大型和小型 Resource Data Tag 中。以下标签
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16803,7 +16803,7 @@ VPD 包含在四种类型的大型和小型 Resource Data Tag 中。以下标签
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16851,7 +16851,7 @@ VPD 包含在四种类型的大型和小型 Resource Data Tag 中。以下标签
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16881,7 +16881,7 @@ The following is an example of a typical VPD.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -16986,7 +16986,7 @@ The following is an example of a typical VPD.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17028,7 +17028,7 @@ An enclosure is any platform, box, rack, or set of boxes that contain one or mor
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17056,7 +17056,7 @@ Figure 6-36 shows an example configuration with the NPEM capability located in t
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17088,7 +17088,7 @@ This specification defines the software interface provided by the NPEM capabilit
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17131,7 +17131,7 @@ NPEM 提供了一种机制，使系统软件能够通过 NPEM 复位 (NPEM Reset
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17190,7 +17190,7 @@ Table 6-27 shows an example of NPEM states and a possible meaning that some encl
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17231,7 +17231,7 @@ For the case where an NPEM command has not completed when software polls the bit
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17301,7 +17301,7 @@ FLR 启动后，Function 必须在 100 ms 内完成 FLR。如果软件在 Transa
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17358,7 +17358,7 @@ When an FLR is initiated, the targeted Function must behave as follows:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17387,7 +17387,7 @@ The Transactions Pending (TP) bit indicates that the Function has issued one or 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17435,7 +17435,7 @@ FLR 会导致 Function 失去对任何挂起 (outstanding non-posted) 事务的�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17505,7 +17505,7 @@ It is permitted to use DOE when a Function is in non-D0 states, although it is p
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17545,7 +17545,7 @@ Alternatively, for CMA/SPDM and related use cases, the optional Connection ID me
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17579,7 +17579,7 @@ In each case, two distinct SPDM uses are shown, A and B, and within each group, 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17605,7 +17605,7 @@ Data objects must consist of 2 DW to 256K DW, as shown in Figure 6-40.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17645,7 +17645,7 @@ The first DW of a data object must be formatted as defined in Table 6-28 and ill
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17692,7 +17692,7 @@ The Second DW of a data object must be formatted as defined in Table 6-29 and il
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17771,7 +17771,7 @@ The DOE Discovery feature must be implemented, and provides a means for software
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17824,7 +17824,7 @@ The DOE Discovery feature must be implemented, and provides a means for software
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17904,7 +17904,7 @@ PCI-SIG 定义的数据对象类型在 § Table 6-33 中定义。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -17991,7 +17991,7 @@ DOE 实例必须仅在接收到 Async Message GET 后才返回 Async Message REQ
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -18082,7 +18082,7 @@ DOE 错误涵盖 DOE 自身运行中的错误，但如下所述，不包括与�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -18147,7 +18147,7 @@ DOE Busy 位可用于指示 DOE 响应者暂时无法接受数据对象。DOE �
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -18190,7 +18190,7 @@ DOE 实例被允许支持 DOE 中断的生成，这由 DOE Capabilities 寄存�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -18264,7 +18264,7 @@ CMA-SPDM 安全特性的高级概述及其相关 PCIe 特定要求将在以下�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -18368,7 +18368,7 @@ CMA/SPDM 的应用众多且多样化。对于复杂环境，安全身份供应�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -18477,7 +18477,7 @@ CMA-SPDM 不适用于根端口 (Root Port)，根端口不得实现 CMA-SPDM。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -18510,7 +18510,7 @@ This section has been removed.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -18542,7 +18542,7 @@ Removed
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -18629,7 +18629,7 @@ Some components provide a debug mode where a debugger is granted access to hardw
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -18685,7 +18685,7 @@ For the Secured CMA-SPDM data object type or Secured CMA-SPDM with connection ID
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -18753,7 +18753,7 @@ For the Secured CMA-SPDM data object type or Secured CMA-SPDM with connection ID
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -18793,7 +18793,7 @@ As with AtomicOps (See § Section 6.15), the use model for DMWr requires that, f
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -18867,7 +18867,7 @@ DMWr 请求的目标如果不是 DMWr Completer(即 DMWr Completer Supported 位
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -18945,7 +18945,7 @@ The following requirements apply to Root Complexes and Switches that support DMW
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -18993,7 +18993,7 @@ The following requirements apply to DMWr Requesters:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -19064,7 +19064,7 @@ DMWr 的使用者必须理解事务排序的功能影响。DMWr 请求是带数�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -19104,7 +19104,7 @@ IDE 在两个端口之间建立 IDE 流（IDE Stream）(见 § Figure 6-52)。ID
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -19142,7 +19142,7 @@ Policies for establishing trust between elements in a platform are outside the s
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -19174,7 +19174,7 @@ apply security policy mechanisms, or to apply some policy mechanisms prior to es
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -19261,7 +19261,7 @@ IDE 在两个端口之间保护 TLP 流量。TLP 内容在通过终端 Partner �
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -19321,7 +19321,7 @@ TEE 的实现可能非常复杂,强烈建议具有适当安全专业知识的开
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -19375,7 +19375,7 @@ A trusted execution environment (TEE) using IDE must prevent the transmission of
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -19436,7 +19436,7 @@ TDISP(见 § Chapter 11.)定义了扩展以下规则的具体要求,这些规则
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -19497,7 +19497,7 @@ IDE 密钥管理 (IDE Key Management, IDE_KM) 基于 [SPDM] 和 [Secured-SPDM],�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -19586,7 +19586,7 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -19660,7 +19660,7 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -19734,7 +19734,7 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -19818,7 +19818,7 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -19929,7 +19929,7 @@ An IDE error condition will occur if system software fails to ensure the correct
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -19979,7 +19979,7 @@ An IDE error condition will occur if system software fails to ensure the correct
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -20037,7 +20037,7 @@ Rules related to keys:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -20122,7 +20122,7 @@ TLPs secured by IDE are called IDE TLPs. In Non-Flit Mode, all IDE TLPs must use
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -20209,7 +20209,7 @@ IDE 前缀 (NFM) 包括:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -20264,7 +20264,7 @@ IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode,
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -20304,7 +20304,7 @@ IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode,
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -20359,7 +20359,7 @@ Partial header encryption provides the ability to reduce potential exposure to s
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -20495,7 +20495,7 @@ Rules for partial header encryption:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -20569,7 +20569,7 @@ IDE 前缀 (NFM) 必须包含在 A 中。所有 OHC 内容 (FM) 必须包含在 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -20678,7 +20678,7 @@ IDE 前缀 (NFM) 必须包含在 A 中。所有 OHC 内容 (FM) 必须包含在 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -20770,7 +20770,7 @@ These rules apply to Selective IDE Stream TLPs:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -20864,7 +20864,7 @@ These rules apply to TLPs other than IDE Fail Messages:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -20940,7 +20940,7 @@ With [AES-GCM] it is desirable to maintain TLPs in-order so that the Transmitter
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -21174,7 +21174,7 @@ The following rules relate to aggregation (see § Figure 6-67 and § Figure 6-69
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -21242,7 +21242,7 @@ Although Switches/RCs must not reorder IDE TLPs within a Flow-Through IDE Stream
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -21332,7 +21332,7 @@ Switch/RC 只能将 IDE TLP 通过 Flow-Through IDE Stream Enabled 位置 1 的 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -21531,7 +21531,7 @@ UIO 使硬件能够保持与 PCI/PCIe producer-consumer 模型的完全向后兼
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -21589,7 +21589,7 @@ UIO 允许非树形拓扑与多路径支持。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -21621,7 +21621,7 @@ UIO 允许非树形拓扑与多路径支持。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -21668,7 +21668,7 @@ MMIO 寄存器块通过 MMIO 寄存器块定位器 (MRBL) 扩展能力 (Extended
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -21716,7 +21716,7 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -21786,7 +21786,7 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -21901,7 +21901,7 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -21957,7 +21957,7 @@ MMB 命令不会跨越常规复位 (Conventional Reset) 继续执行。FLR 不�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22027,7 +22027,7 @@ The flow for executing a command is described below. The term "caller" represent
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22063,7 +22063,7 @@ The flow for executing a command is described below. The term "caller" represent
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22123,7 +22123,7 @@ The flow for executing a command is described below. The term "caller" represent
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22178,7 +22178,7 @@ The flow for executing a command is described below. The term "caller" represent
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22223,7 +22223,7 @@ MMB 命令寄存器只能在 MMB 控制寄存器（见 § 6.35.1.3.2.2 ）中的
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22253,7 +22253,7 @@ MMB 命令寄存器只能在 MMB 控制寄存器（见 § 6.35.1.3.2.2 ）中的
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22314,7 +22314,7 @@ RW
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22346,7 +22346,7 @@ Reports information about the state of the MMB and the last command executed sin
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22413,7 +22413,7 @@ RO
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22450,7 +22450,7 @@ For legacy compatibility with OS software, platform firmware should clear the MM
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22510,7 +22510,7 @@ PCI-SIG 定义的命令返回代码仅对 PCI-SIG 定义的命令有效。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22554,7 +22554,7 @@ MMB Payload Registers 由调用方在置位 MMB Control Register（见 § 6.35.1
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22593,7 +22593,7 @@ Management Message Passthrough（MMPT）能力结构对于支持 MMPT 命令集�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22628,7 +22628,7 @@ Management Message Passthrough（MMPT）能力结构对于支持 MMPT 命令集�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22693,7 +22693,7 @@ RO/RsvdP
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22726,7 +22726,7 @@ RO/RsvdP
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22770,7 +22770,7 @@ RW/RsvdP
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22800,7 +22800,7 @@ RW/RsvdP
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22855,7 +22855,7 @@ RO
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22886,7 +22886,7 @@ MMIO Designated Vendor-Specific Register Block（MDVS）允许通过使用 MRBL 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22913,7 +22913,7 @@ MMIO Designated Vendor-Specific Register Block（MDVS）允许通过使用 MRBL 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22951,7 +22951,7 @@ RO
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -22978,7 +22978,7 @@ RO
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23006,7 +23006,7 @@ RO
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23041,7 +23041,7 @@ RO
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23069,7 +23069,7 @@ RO
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23108,7 +23108,7 @@ RO
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23136,7 +23136,7 @@ RO
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23177,7 +23177,7 @@ RO
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23218,7 +23218,7 @@ Notes:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23250,7 +23250,7 @@ Management messages may be initiated from the host to the Function using the Sen
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23280,7 +23280,7 @@ Management messages may be initiated from the host to the Function using the Sen
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23307,7 +23307,7 @@ Bits[2:0]
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23341,7 +23341,7 @@ If the management message transfer is interrupted by a Conventional Reset, error
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23400,7 +23400,7 @@ Possible MMB Command Return Code values (see § Section 6.35.1.3.2.4.1 ):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23430,7 +23430,7 @@ Possible MMB Command Return Code values (see § Section 6.35.1.3.2.4.1 ):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23480,7 +23480,7 @@ Bits[31:3]
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23534,7 +23534,7 @@ Table 6-57 fields (Chinese description):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23568,7 +23568,7 @@ The flow for transferring a management message from the host to the Function is 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23621,7 +23621,7 @@ The flow for transferring a management message from the host to the Function is 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23660,7 +23660,7 @@ The flow for transferring a management message from the host to the Function is 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23723,7 +23723,7 @@ Possible MMB Command Return Code values (§ Section 6.35.1.3.2.4.1 ):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23775,7 +23775,7 @@ Table 6-59 fields (Chinese description):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -23812,7 +23812,7 @@ Table 6-59 fields (Chinese description):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>

@@ -148,7 +148,7 @@
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -224,7 +224,7 @@ This specification will provide the interoperability that allows PCIe Devices to
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -284,7 +284,7 @@ ATS 章节引入了一组新的 TLP 及相关语义。ATS 使用设备与根复�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -375,7 +375,7 @@ b. 功能必须丢弃可能"过期"的转换完成。过期转换完成可能由
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -447,7 +447,7 @@ Independent of the number of Functions within a Device, the following are requir
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -509,7 +509,7 @@ As § Figure 10-4 illustrates, there are essentially three steps in the ATS Inva
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -571,7 +571,7 @@ PRI 在功能上独立于 ATS 的其他方面。即,支持 ATS 的设备无需�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -657,7 +657,7 @@ ATC 可选择性地支持带 PASID 的已转换请求。当 Translated Requests 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -697,7 +697,7 @@ TA 执行转换。ATC 可以缓存这些转换。如果 ATC 与 TA 之间通过 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -770,7 +770,7 @@ In NFM, the AT field in the Requests is a redefinition of a reserved field in ea
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -820,7 +820,7 @@ AT 字段仅对内存请求以及 Flit 模式下的地址路由消息有定义�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -880,7 +880,7 @@ For a Translation Request, the Relaxed Ordering (RO) bit is applicable and permi
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -942,7 +942,7 @@ Tag 字段的含义与内存读请求中的含义相同。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -988,7 +988,7 @@ Tag 字段的含义与内存读请求中的含义相同。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1044,7 +1044,7 @@ Tag 字段的含义与内存读请求中的含义相同。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1088,7 +1088,7 @@ TA 可以忽略 No Write 标志;然而,如果 TA 以标记为只读的转换响�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1136,7 +1136,7 @@ PASID Extended Capability 指示功能是否支持并已启用以发送和接收
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1174,7 +1174,7 @@ TA 为每个转换请求发送一个转换完成(Cpl 或 CplD)。本规范描述
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1210,7 +1210,7 @@ TA 为每个转换请求发送一个转换完成(Cpl 或 CplD)。本规范描述
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1292,7 +1292,7 @@ Lower Address 字段包含一个计算值,使报文与 RCB 语义一致。如果
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1372,7 +1372,7 @@ Lower Address 字段包含一个计算值,使报文与 RCB 语义一致。如果
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1416,7 +1416,7 @@ A Function is not allowed to make an entry into its ATC unless the entry is in a
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1496,7 +1496,7 @@ If a Function receives a Translation Completion with a Translation Size field sm
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1544,7 +1544,7 @@ Future revisions of this specification are expected to deprecate the U bit.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1580,7 +1580,7 @@ Note: One of the possible uses of this field is to avoid unnecessary invalidatio
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1666,7 +1666,7 @@ Priv 位用于限定 R 和 W。如果 Priv 置位,则 R 和 W 表示授予该功
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1710,7 +1710,7 @@ This value may be cached if R is Set.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1786,7 +1786,7 @@ R、W 和 Exe 的特权和非特权模式版本是独立的。ATC 可以缓存 R
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1834,7 +1834,7 @@ Functions that use this bit must also have the Global Invalidate Supported bit S
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1903,7 +1903,7 @@ AMA 值与完成者关联,且是实现特定的。AMA 值对请求者、请求�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1985,7 +1985,7 @@ ATC 允许请求 TA 为虚拟连续的地址范围提供转换。它通过将转
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2047,7 +2047,7 @@ Invalidate 请求是带 64 位数据的 MsgD 事务。Invalidate 请求消息可
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2138,7 +2138,7 @@ Global Invalidate 位指示无效化请求消息影响所有 PASID 值(参见 §
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2231,7 +2231,7 @@ TA 如果收到针对某个没有未完成 Invalidation 请求的 ITag 的 Inval
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2311,7 +2311,7 @@ Invalidation 完成行为独立于关联的 Invalidate 请求是发给该功能�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2361,7 +2361,7 @@ Due to the variety of caching architectures and queuing strategies, implementati
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2409,7 +2409,7 @@ Each Function is required to implement sufficient queuing to ensure it can hold 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2463,7 +2463,7 @@ ATC 必须针对所有到达的 Invalidate 请求"监听"其未完成转换请�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2537,7 +2537,7 @@ No explicit Invalidate Completion message is sent when these implied invalidate 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2619,7 +2619,7 @@ For Invalidation Requests that do not have a PASID, the ATC shall:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2695,7 +2695,7 @@ PRG 响应消息是由 ID 路由回请求功能的 PCIe 消息请求。系统软
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2755,7 +2755,7 @@ The first two DWs of a Page Request Message contain a standard PCIe message head
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2827,7 +2827,7 @@ PASID Extended Capability 指示功能是否支持 PASID TLP Prefix(NFM)或带 P
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2885,7 +2885,7 @@ Note: Steps 4 and 5 may be performed in either order, or in parallel.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2985,7 +2985,7 @@ Behavior is undefined if a Stop Marker Message is received and any of the follow
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3068,7 +3068,7 @@ In order to prevent overflow, it is recommended to size Page Request queuing app
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3130,7 +3130,7 @@ When a PASID is attached to PRG Response Messages, the Execute Requested and Pri
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3166,7 +3166,7 @@ Each Function that supports ATS (capable of generating Translation Requests) mus
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3226,7 +3226,7 @@ Each Function that supports ATS (capable of generating Translation Requests) mus
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3290,7 +3290,7 @@ Each Function that supports ATS (capable of generating Translation Requests) mus
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3336,7 +3336,7 @@ Each Function that supports ATS (capable of generating Translation Requests) mus
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3418,7 +3418,7 @@ Page Request Extended Capability Structure 用于配置页请求接口机制。�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3464,7 +3464,7 @@ Page Request Extended Capability Structure 用于配置页请求接口机制。�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3528,7 +3528,7 @@ Stop Marker Messages consume buffering but are not included in this allocation (
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3596,7 +3596,7 @@ Outstanding Page Request Allocation 寄存器(Offset 0Ch)包含关联页请求�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>

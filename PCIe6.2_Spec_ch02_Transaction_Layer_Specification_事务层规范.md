@@ -231,15 +231,15 @@
 ---
 
 
+<a id="sec-2-0"></a>
 ## 2. Transaction Layer Specification | 事务层规范
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -311,7 +311,7 @@ Transactions form the basis for information transfer between a Requester and Com
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -343,7 +343,7 @@ Transactions form the basis for information transfer between a Requester and Com
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -436,7 +436,7 @@ I/O 事务使用单一地址格式:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -478,7 +478,7 @@ Certain Memory Transactions are required to use only 64-bit address formats.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -515,7 +515,7 @@ I/O 事务使用单一地址格式:短地址格式,即 32 位地址。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -553,7 +553,7 @@ Configuration Transactions are used to access configuration registers of Functio
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -593,7 +593,7 @@ Note that these Vendor-Defined Messages are not guaranteed to be interoperable w
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -639,7 +639,7 @@ TLP 前缀、TLP 包头和 TLP 摘要的详细布局 (以 § 图 2-3 中的通�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -708,7 +708,7 @@ TLP 内的数据负载以最低地址字节 (§ 图 2-3 中的字节 J) 显示�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -754,7 +754,7 @@ UIO TLP 是与 UIO 虚通道 (Virtual Channel) 相关联的 TLP。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -792,7 +792,7 @@ All TLP prefixes and headers contain the following fields (see § Figure 2-4):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -832,7 +832,7 @@ TLP 包头的 Fmt、Type、TD 和 Length 字段包含确定 TLP 非前缀部分�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -867,7 +867,7 @@ TLP 包头的 Fmt、Type、TD 和 Length 字段包含确定 TLP 非前缀部分�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -969,7 +969,7 @@ TLP 包头的 Fmt、Type、TD 和 Length 字段包含确定 TLP 非前缀部分�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1044,7 +1044,7 @@ Flit 模式与非 Flit 模式 TLP 之间的其他显著差异包括:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1099,7 +1099,7 @@ All Flit Mode TLPs contain the same fields in the first DW of the Header Base (s
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1281,7 +1281,7 @@ UIO TLP 在"描述"列中标为 UIO。在描述列中标记为"保留"的项没�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1339,7 +1339,7 @@ Flit 模式下 TC、Attr 和 Length 字段的定义与非 Flit 模式相同。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1413,7 +1413,7 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1459,7 +1459,7 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1493,7 +1493,7 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1532,7 +1532,7 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1572,7 +1572,7 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1610,7 +1610,7 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1648,7 +1648,7 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1690,7 +1690,7 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1762,7 +1762,7 @@ In Flit Mode, it is possible, and in some cases required, to include Segment fie
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1832,7 +1832,7 @@ Segment 字段的第二个用途是改进错误日志记录。当 FM TLP 包头�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1867,7 +1867,7 @@ Segment 字段的第二个用途是改进错误日志记录。当 FM TLP 包头�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1905,7 +1905,7 @@ Because Segment fields aren't communicated across Links in NFM, Root Complexes t
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1971,7 +1971,7 @@ A NFM device could be hot-added into a subtree for which the No NFM Subtree Belo
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2043,7 +2043,7 @@ A NFM device could be hot-added into a subtree for which the No NFM Subtree Belo
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2119,7 +2119,7 @@ Each Switch exists entirely within a single Hierarchy by definition. However, Sw
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2193,7 +2193,7 @@ Each Switch exists entirely within a single Hierarchy by definition. However, Sw
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2270,7 +2270,7 @@ Each Switch exists entirely within a single Hierarchy by definition. However, Sw
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2345,7 +2345,7 @@ Each Switch exists entirely within a single Hierarchy by definition. However, Sw
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2389,7 +2389,7 @@ Each Switch exists entirely within a single Hierarchy by definition. However, Sw
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2469,7 +2469,7 @@ There is no PCI Express requirement that an RC AtomicOp Completer support the ho
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2506,7 +2506,7 @@ There is no PCI Express requirement that an RC AtomicOp Completer support the ho
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2570,7 +2570,7 @@ TLP 路由主要有三种机制:地址路由、ID 路由和隐式路由。本节
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2603,7 +2603,7 @@ TLP 路由主要有三种机制:地址路由、ID 路由和隐式路由。本节
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2653,7 +2653,7 @@ TLP 路由主要有三种机制:地址路由、ID 路由和隐式路由。本节
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2695,7 +2695,7 @@ TLP 路由主要有三种机制:地址路由、ID 路由和隐式路由。本节
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2789,7 +2789,7 @@ For correct software operation, full address decoding is required even in system
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2832,7 +2832,7 @@ For correct software operation, full address decoding is required even in system
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2916,7 +2916,7 @@ For correct software operation, full address decoding is required even in system
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2973,7 +2973,7 @@ For correct software operation, full address decoding is required even in system
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3023,7 +3023,7 @@ For correct software operation, full address decoding is required even in system
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3058,7 +3058,7 @@ For correct software operation, full address decoding is required even in system
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3101,7 +3101,7 @@ TLP 字节使能 (Byte Enable) 的一般功能在非 Flit 模式与 Flit 模式�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3143,7 +3143,7 @@ As a best practice, it is strongly recommended that devices receiving non-enable
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3179,7 +3179,7 @@ As a best practice, it is strongly recommended that devices receiving non-enable
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3211,7 +3211,7 @@ As a best practice, it is strongly recommended that devices receiving non-enable
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3262,7 +3262,7 @@ As a best practice, it is strongly recommended that devices receiving non-enable
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3298,7 +3298,7 @@ TH 位置位且目标为非预取内存空间 (Non-Prefetchable Memory Space) �
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3352,7 +3352,7 @@ TH 位置位且目标为非预取内存空间 (Non-Prefetchable Memory Space) �
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3389,7 +3389,7 @@ TH 位置位且目标为非预取内存空间 (Non-Prefetchable Memory Space) �
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3427,7 +3427,7 @@ A Memory Write Request of 1 DW with no bytes enabled, or "zero-length Write," ma
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3479,7 +3479,7 @@ In all cases where OHC-A is present, the Byte Enable fields must be handled as d
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3521,7 +3521,7 @@ The Transaction Descriptor is a mechanism for carrying Transaction information b
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3557,7 +3557,7 @@ A Memory Read Request of 1 DW with no bytes enabled, or "zero-length Read," may 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3592,7 +3592,7 @@ A Memory Read Request of 1 DW with no bytes enabled, or "zero-length Read," may 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3653,7 +3653,7 @@ Transaction ID 用于将完成报文与请求关联起来。共有三组请求/�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3723,7 +3723,7 @@ Four Tag sizes are architected for operation: 14-bit, 10-bit, 8-Bit and 5-bit. A
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3773,7 +3773,7 @@ Four Tag sizes are architected for operation: 14-bit, 10-bit, 8-Bit and 5-bit. A
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3836,7 +3836,7 @@ Four Tag sizes are architected for operation: 14-bit, 10-bit, 8-Bit and 5-bit. A
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3870,7 +3870,7 @@ Four Tag sizes are architected for operation: 14-bit, 10-bit, 8-Bit and 5-bit. A
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3950,7 +3950,7 @@ Note that this rule and the exception are consistent with the existing PCI model
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3985,7 +3985,7 @@ Note that this rule and the exception are consistent with the existing PCI model
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4033,7 +4033,7 @@ Phantom Function 在架构上存在诸多限制，包括 ARI Device、虚拟功�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4120,7 +4120,7 @@ RTT = 事务往返时间
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4163,7 +4163,7 @@ Attributes 是允许但并不要求对流量处理进行优化的提示。优化
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4210,7 +4210,7 @@ Similar implementation approaches for 14-Bit Tags are possible, and they are str
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4237,7 +4237,7 @@ Similar implementation approaches for 14-Bit Tags are possible, and they are str
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4279,7 +4279,7 @@ Similar implementation approaches for 14-Bit Tags are possible, and they are str
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4337,7 +4337,7 @@ A Root Complex that supports peer-to-peer forwarding TLPs between Root Ports is 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4369,7 +4369,7 @@ Relaxed Ordering and ID-Based Ordering Attributes
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4409,7 +4409,7 @@ TC 编码定义见 § 表 2-14。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4452,7 +4452,7 @@ The following rule applies to all Memory, I/O, and Configuration Requests. Addit
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4482,7 +4482,7 @@ Transaction Descriptor - Traffic Class Field
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4514,7 +4514,7 @@ Memory, I/O, and Configuration Request Rules
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4563,7 +4563,7 @@ Memory, I/O, and Configuration Request Rules
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4607,7 +4607,7 @@ Memory, I/O, and Configuration Request Rules
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4639,7 +4639,7 @@ Memory, I/O, and Configuration Request Rules
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4664,7 +4664,7 @@ Figure 2-36: Layout (4 DW header) for 64-bit memory requests. Byte 0 contains Fm
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4687,7 +4687,7 @@ Figure 2-37: Layout (3 DW header) for 32-bit memory requests. Byte 0 contains Fm
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4725,7 +4725,7 @@ For I/O Requests, the following rules apply:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4773,7 +4773,7 @@ For I/O Requests, the following rules apply:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4798,7 +4798,7 @@ Figure 2-38: Non-Flit Mode I/O Request header (3 DW). Byte 0 contains Fmt=0010b 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4854,7 +4854,7 @@ For Configuration Requests, the following rules apply:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4882,7 +4882,7 @@ For Configuration Requests, the following rules apply:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4907,7 +4907,7 @@ Figure 2-39: Non-Flit Mode Configuration Request header (3 DW). Byte 0: Fmt=0000
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4942,7 +4942,7 @@ MSI/MSI-X 机制使用内存写请求来表示中断消息（见 § 6.1.4 节）
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4965,7 +4965,7 @@ Figure 2-40: TPH TLP Prefix (4 bytes). Byte 0 (after the header) is decoded to d
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5008,7 +5008,7 @@ Figure 2-40: TPH TLP Prefix (4 bytes). Byte 0 (after the header) is decoded to d
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5037,7 +5037,7 @@ TPH 规则
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5085,7 +5085,7 @@ TPH 规则
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5116,7 +5116,7 @@ Figure 2-41: 4 DW Request Header layout in Non-Flit Mode, showing the location o
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5145,7 +5145,7 @@ Figure 2-42: 3 DW Request Header layout in Non-Flit Mode, showing the location o
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5177,7 +5177,7 @@ Figure 2-42: 3 DW Request Header layout in Non-Flit Mode, showing the location o
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5206,7 +5206,7 @@ Steering Tag (ST) 字段在 TLP 包头中的映射见 § 图 2-43、§ 图 2-44 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5237,7 +5237,7 @@ Figure 2-43: Non-Flit Mode Memory Write Request header (3 DW) showing the locati
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5268,7 +5268,7 @@ Figure 2-44: Non-Flit Mode Memory Read / DMWr / AtomicOp Request header (3 DW) s
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5337,7 +5337,7 @@ Except as stated, rules that apply in Non-Flit Mode also apply in Flit Mode.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5364,7 +5364,7 @@ Flit 模式
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5392,7 +5392,7 @@ Flit 模式
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5420,7 +5420,7 @@ Figure 2-45: Flit Mode 64-bit Memory Request (4 DW). Byte 0: Type. Bytes 4-7: AT
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5448,7 +5448,7 @@ Figure 2-46: Flit Mode 32-bit Memory Request (3 DW). Byte 0: Type. Bytes 4-7: AT
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5479,7 +5479,7 @@ Figure 2-47: Flit Mode I/O Request (3 DW). Byte 0: Type=IO. Bytes 4-7: R, Addres
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5507,7 +5507,7 @@ Figure 2-48: Flit Mode Configuration Request (3 DW). Byte 0: Type=Cfg. Bytes 4-7
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5593,7 +5593,7 @@ The following rules apply to all Message Requests. Additional rules specific to 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5636,7 +5636,7 @@ Many types of Messages, including Vendor-Defined Messages, are potentially usabl
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5664,7 +5664,7 @@ Figure 2-49: Non-Flit Mode Message Request Header (4 DW). Byte 0: Fmt=10r2r1r0b,
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5687,7 +5687,7 @@ Figure 2-50: Flit Mode Message Request Header. Byte 0: Type=0110r2r1r0b. Bytes 4
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5721,7 +5721,7 @@ In addition to address and ID routing, Messages support several other routing me
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5777,7 +5777,7 @@ A Message Signaled Interrupt (MSI or MSI-X) is the preferred interrupt signaling
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5833,7 +5833,7 @@ INTx 中断信令 - 规则
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5869,7 +5869,7 @@ INTx 中断信令 - 规则
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5899,7 +5899,7 @@ INTx 中断信令 - 规则
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5997,7 +5997,7 @@ Assert_INTx/Deassert_INTx 消息对为传统 PCI 中断 A、B、C、D 各自构�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6045,7 +6045,7 @@ These Messages are used to support PCI Express power management, which is descri
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6082,7 +6082,7 @@ These Messages are used to support PCI Express power management, which is descri
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6137,7 +6137,7 @@ Error Signaling Messages are used to signal errors that occur on specific transa
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6169,7 +6169,7 @@ The initiator of the Message is identified with the Requester ID of the Message 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6213,7 +6213,7 @@ The initiator of the Message is identified with the Requester ID of the Message 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6250,7 +6250,7 @@ Unlock 消息用于支持 Lock 事务序列。有关 Lock 事务序列的详细�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6291,7 +6291,7 @@ Unlock 消息用于支持 Lock 事务序列。有关 Lock 事务序列的详细�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6332,7 +6332,7 @@ This Message is used to convey a slot power limitation value from a Downstream P
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6368,7 +6368,7 @@ Set_Slot_Power_Limit 消息包含一个 DW 的数据负载。该数据负载从�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6402,7 +6402,7 @@ For more details on Power Limit control mechanism see § Section 6.9.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6450,7 +6450,7 @@ The Vendor-Defined Messages allow expansion of PCI Express messaging capabilitie
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6482,7 +6482,7 @@ The Vendor-Defined Messages allow expansion of PCI Express messaging capabilitie
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6508,7 +6508,7 @@ The Vendor-Defined Messages allow expansion of PCI Express messaging capabilitie
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6556,7 +6556,7 @@ The Vendor-Defined Messages allow expansion of PCI Express messaging capabilitie
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6613,7 +6613,7 @@ PCI-SIG 定义的 VDM (PCI-SIG-Defined VDMs) 是使用 PCI-SIG® Vendor ID (0001
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6672,7 +6672,7 @@ Receivers may optionally check for violations of these rules (but must not check
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6706,7 +6706,7 @@ DRS 消息的格式见下方 § 图 2-57：
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6790,7 +6790,7 @@ Beyond the rules for other PCI-SIG-Defined VDMs, the following rules apply to th
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6833,7 +6833,7 @@ Receivers may optionally check for violations of these rules (but must not check
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6873,7 +6873,7 @@ FRS 消息的格式见下方 § 图 2-59 和 § 图 2-60：
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6944,7 +6944,7 @@ For details of the Hierarchy ID, GUID Authority ID, and System GUID fields see �
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6974,7 +6974,7 @@ The format of the Hierarchy ID Message is shown in § Figure 2-61 and § Figure 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7010,7 +7010,7 @@ The messages listed in § Table 2-32 were previously used for a mechanism (Hot-P
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7059,7 +7059,7 @@ messages.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7117,7 +7117,7 @@ LTR 消息可选地用于上报设备对读/写服务延迟的容忍行为。有
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7181,7 +7181,7 @@ OBFF 消息可选地用于将平台中心资源状态上报给端点 (Endpoint)�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7252,7 +7252,7 @@ a Malformed TLP.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7341,7 +7341,7 @@ IDE 消息与可选的完整性与数据加密 (Integrity and Data Encryption, I
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7388,7 +7388,7 @@ IDE 消息与可选的完整性与数据加密 (Integrity and Data Encryption, I
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7420,7 +7420,7 @@ IDE 消息与可选的完整性与数据加密 (Integrity and Data Encryption, I
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7509,7 +7509,7 @@ check for violations of this rule. See § Section 2.3.2 , second bullet, for det
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7540,7 +7540,7 @@ check for violations of this rule. See § Section 2.3.2 , second bullet, for det
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7621,7 +7621,7 @@ Length field.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7668,7 +7668,7 @@ Reserved Completions (as indicated in § Table 2-5), are ID Routed TLPs as defin
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7784,7 +7784,7 @@ BCM 字段存在于非 Flit 模式完成报文中,在 Flit 模式中不予支持
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7832,7 +7832,7 @@ use TLP Type UIORdCpl
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7903,7 +7903,7 @@ The following rules apply to Local TLP Prefixes:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7949,7 +7949,7 @@ All other encodings are Reserved.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7993,7 +7993,7 @@ As described in § Table 2-38, Types VendPrefixL0 and VendPrefixL1 are defined f
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8045,7 +8045,7 @@ Flit 模式本地 TLP Prefix: 1 0 0 0 1 1 0 1(字节 0)
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8088,7 +8088,7 @@ Flit 模式本地 TLP Prefix: 1 0 0 0 1 1 0 1(字节 0)
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8159,7 +8159,7 @@ All other encodings are Reserved.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8230,7 +8230,7 @@ As described in § Table 2-39, Types VendPrefixE0 and VendPrefixE1 are defined f
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8271,7 +8271,7 @@ As described in § Table 2-39, Types VendPrefixE0 and VendPrefixE1 are defined f
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8317,7 +8317,7 @@ RC 不需要支持所有 End-End TLP Prefix Supported 位置位的根端口对�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8357,7 +8357,7 @@ OHC-E DW 0(字节 0)
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8401,7 +8401,7 @@ OHC-E DW 1、OHC-E DW 0(字节 0、字节 4)
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8444,7 +8444,7 @@ OHC-E DW 1、OHC-E DW 0(字节 0、字节 4)
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8487,7 +8487,7 @@ OHC-E DW 3、OHC-E DW 2、OHC-E DW 1、OHC-E DW 0(字节 0、字节 4、字节 8
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8545,7 +8545,7 @@ RC 对根端口之间包含 OHC-E 内容的 TLP 进行对等路由的支持是�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8585,7 +8585,7 @@ This section describes how all Received TLPs are handled when they are delivered
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8650,7 +8650,7 @@ This is a reported error associated with the Receiving Port (see § Section 6.2)
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8701,7 +8701,7 @@ Flowchart steps (OM13771B):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8745,7 +8745,7 @@ Switches must process both TLPs that address resources within the Switch as well
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8792,7 +8792,7 @@ Switches must process both TLPs that address resources within the Switch as well
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8842,7 +8842,7 @@ Flowchart steps (OM13772A):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8882,7 +8882,7 @@ This section describes how Received Requests are handled, following the initial 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8946,7 +8946,7 @@ This section describes how Received Requests are handled, following the initial 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9026,7 +9026,7 @@ If the Request arrives between the time an FLR has been initiated and the comple
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9090,7 +9090,7 @@ If the Request arrives between the time an FLR has been initiated and the comple
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9167,7 +9167,7 @@ Request 既不会被软件也不会被其他设备发起到端点。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9229,7 +9229,7 @@ Flowchart steps (OM13773):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9304,7 +9304,7 @@ Flowchart steps (OM13773):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9336,7 +9336,7 @@ Flowchart steps (OM13773):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9410,7 +9410,7 @@ Flowchart steps (OM13773):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9504,7 +9504,7 @@ Flowchart steps (OM13773):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9576,7 +9576,7 @@ Flowchart steps (OM13773):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9638,7 +9638,7 @@ Flowchart steps (OM13773):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9670,7 +9670,7 @@ Flowchart steps (OM13773):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9740,7 +9740,7 @@ Flowchart steps (OM13773):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9770,7 +9770,7 @@ Flowchart steps (OM13773):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9802,7 +9802,7 @@ Flowchart steps (OM13773):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9868,7 +9868,7 @@ Flowchart steps (OM13773):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9928,7 +9928,7 @@ Flowchart steps (OM13773):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9958,7 +9958,7 @@ Flowchart steps (OM13773):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -9999,7 +9999,7 @@ Flowchart steps (OM13773):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10066,7 +10066,7 @@ Non-Posted Request 是 Read Request 或 NPR with Data。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10131,7 +10131,7 @@ Non-Posted Request 是 Read Request 或 NPR with Data。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10191,7 +10191,7 @@ Non-Posted Request 是 Read Request 或 NPR with Data。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10229,7 +10229,7 @@ Non-Posted Request 是 Read Request 或 NPR with Data。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10257,7 +10257,7 @@ Non-Posted Request 是 Read Request 或 NPR with Data。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10338,7 +10338,7 @@ UIO TLP 的排序规则如下(参见 § Table 2-43):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10405,7 +10405,7 @@ UIO TLP 的死锁避免规则见 § Table 2-44 和 § Table 2-45。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10450,7 +10450,7 @@ If a Requester using a single transaction reads a block of data from a Completer
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10498,7 +10498,7 @@ A Root Complex serving as a Completer to a single Memory Read that requests mult
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10546,7 +10546,7 @@ If a single write transaction containing multiple DWs and the Relaxed Ordering b
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10595,7 +10595,7 @@ As an example of update ordering and granularity, if a Requester writes a QW to 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10639,7 +10639,7 @@ A Completer is permitted to implement, through a restricted programming model, a
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10740,7 +10740,7 @@ SVC 通过硬件要求与软件指导相结合,为架构定义的 TC/VC 应用�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10832,7 +10832,7 @@ TC7/VC7 保留
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -10905,7 +10905,7 @@ PCI Express 端口可支持 1 到 8 个虚通道 – 每个端口独立配置/�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11000,7 +11000,7 @@ The number of VCs supported, and the associated buffering per VC per Port, are n
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11053,7 +11053,7 @@ Here is a summary of key rules associated with the TC/VC mechanism:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11098,7 +11098,7 @@ For more details on the VC and TC mechanisms, including configuration, mapping, 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11150,7 +11150,7 @@ MFD 内部使用的流控机制不在本规范范围内。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11190,7 +11190,7 @@ In this and other sections of this specification, rules are described using conc
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11330,7 +11330,7 @@ Note: size of data returned is never more than 4 (aligned) DWs.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11418,7 +11418,7 @@ Note: It is possible for multiple VCs to be following the Flow Control initializ
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11506,7 +11506,7 @@ Note: It is possible for multiple VCs to be following the Flow Control initializ
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11592,7 +11592,7 @@ The [Field Size] parameter used in the following sections is described in § Tab
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11716,7 +11716,7 @@ If Shared credits are infinite for a given FC/VC, Shared and Dedicated credits i
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11812,7 +11812,7 @@ SHARED_CREDITS_CONSUMED := (SHARED_CREDITS_CONSUMED + Increment) mod 2[Field Siz
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -11972,7 +11972,7 @@ SUM_SHARED_CREDIT_LIMIT = (从 i=0 到 7 对 SHARED_CREDIT_LIMIT[i] 求和) mod 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12082,7 +12082,7 @@ SCCC + 待发送 TLP 所需信用单元 ≤ (TOTAL_SHARED_CREDITS_AVAILABLE_POST
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12193,7 +12193,7 @@ CREDITS_ALLOCATED := (CREDITS_ALLOCATED + Increment) mod 2[Field Size]
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12289,7 +12289,7 @@ CREDITS_RECEIVED := (CREDITS_RECEIVED + Increment) mod 2[Field Size]
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12407,7 +12407,7 @@ temp2[i] ≡ CREDITS_RECEIVED_POSTED[i] + CREDITS_RECEIVED_COMPLETION[i]
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12479,7 +12479,7 @@ The purpose of having some amount of Dedicated Credit per VC is to ensure that o
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12535,7 +12535,7 @@ For a Multi-Function Device where different Functions have different Rx_MPS_Limi
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12644,7 +12644,7 @@ The capability to generate and check ECRC is reported to software, and the abili
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12679,7 +12679,7 @@ The capability to generate and check ECRC is reported to software, and the abili
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12820,7 +12820,7 @@ A 32-bit ECRC is calculated for the TLP (End-End TLP Prefixes/OHC, header, and d
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12876,7 +12876,7 @@ Beyond the stated error reporting semantics contained elsewhere in this specific
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -12957,7 +12957,7 @@ EP 位的使用规则在 § 第 2.7.2.1 节中规定。物理层逻辑块机制�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13036,7 +13036,7 @@ EP 位的使用规则在 § 第 2.7.2.1 节中规定。物理层逻辑块机制�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13092,7 +13092,7 @@ This document does not define any mechanism for determining which part or parts 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13147,7 +13147,7 @@ For a Memory Read Request, if some, but not all, requested data is returned befo
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13187,7 +13187,7 @@ UIO 请求的完成超时到期并不一定表示该请求或该请求的部分�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13250,7 +13250,7 @@ DL_Down 状态表示与链路上另一个组件无连接，或者与另一组件
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13321,7 +13321,7 @@ For an Upstream Port, DL_Down status is handled as a reset by:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13362,7 +13362,7 @@ DL_Up 状态表示已与相关链路上另一个组件建立连接。本节规�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -13422,7 +13422,7 @@ For any outstanding Non-Posted Requests where DPC being triggered prevents their
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>

@@ -97,7 +97,7 @@
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -136,7 +136,7 @@ The Data Link Layer acts as an intermediate stage between the Transaction Layer 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -188,7 +188,7 @@ The Data Link Layer is responsible for reliably conveying TLPs supplied by the T
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -275,7 +275,7 @@ DLLP 以点对点方式在一对链路的两个组件之间发送。TLP 则从�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -334,7 +334,7 @@ DLLP 以点对点方式在一对链路的两个组件之间发送。TLP 则从�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -418,7 +418,7 @@ Rules per state:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -544,7 +544,7 @@ Rules per state:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -666,7 +666,7 @@ Data Link Features and their corresponding bit locations are shown in § Table 3
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -720,7 +720,7 @@ VC 初始化流程中有两个状态:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -885,7 +885,7 @@ VC 初始化流程中有两个状态:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1046,7 +1046,7 @@ Legend – DLLP Type field: P, NP or Cpl. 1 = InitFC1, 2 = InitFC2.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1121,7 +1121,7 @@ The following rules apply when Scaled Flow Control is activated for the Link:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1206,7 +1206,7 @@ See § Figure 3-4 and § Figure 3-5 below.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1330,7 +1330,7 @@ In § Figure 3-6 through § Figure 3-15 the 16-bit CRC is not shown. In Non-Flit
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1424,7 +1424,7 @@ In § Figure 3-6 through § Figure 3-15 the 16-bit CRC is not shown. In Non-Flit
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1535,7 +1535,7 @@ The following are the characteristics and rules associated with Data Link Layer 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1571,7 +1571,7 @@ The format of a TLP with the TLP Sequence Number and LCRC code applied is shown 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1668,7 +1668,7 @@ TLP 通过数据链路层的发送路径(§ Figure 3-1 中标记为 1 和 3 的�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1742,7 +1742,7 @@ The following rules describe how a TLP is prepared for transmission before being
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1833,7 +1833,7 @@ The following rules describe how a TLP is prepared for transmission before being
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1943,7 +1943,7 @@ When a replay is initiated, either due to reception of a Nak or due to REPLAY_TI
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2053,7 +2053,7 @@ TLP 发送器和一致性测试必须以在 TLP 发送器端口测量得到的�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2109,7 +2109,7 @@ Since Ack/Nak and Flow Control DLLPs affect TLPs flowing in the opposite directi
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2180,7 +2180,7 @@ Since Ack/Nak and Flow Control DLLPs affect TLPs flowing in the opposite directi
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2248,7 +2248,7 @@ Since Flow Control DLLPs affect TLPs flowing in the opposite direction across th
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2312,7 +2312,7 @@ The following counter, flag, and timer are used to explain the remaining rules i
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2436,7 +2436,7 @@ The following rules are applied in sequence to describe how received TLPs are pr
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>

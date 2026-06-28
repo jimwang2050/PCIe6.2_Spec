@@ -268,7 +268,7 @@
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -315,7 +315,7 @@ Key attributes of the Electrical Specification Include:
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -359,7 +359,7 @@ PCIe 支持两种 Refclk 数据架构:公共 Refclk (Common Refclk) 和独立 Re
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -390,7 +390,7 @@ Refer to the list of key attributes and the introductory paragraphs above (§ Se
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -418,7 +418,7 @@ A device must support 2.5 GT/s and is not permitted to skip support for any data
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -448,7 +448,7 @@ PCIe 支持两种 Refclk 数据架构:公共 Refclk (Common Refclk) 和独立 Re
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -488,7 +488,7 @@ PCI Express 电气规范将所有测量都参照设备的引脚 (Pin)。然而,�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -531,7 +531,7 @@ Tx 规范的 6.0 版本还明确支持采用嵌入式 Refclk 的发送器 (Trans
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -571,7 +571,7 @@ In order to specify a Transmitter with a uniform set of Tx parameters it is nece
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -628,7 +628,7 @@ VTX-AC-CM-PP = max(VD+ + VD-)/2 - min(VD+ + VD-)/2
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -665,7 +665,7 @@ An example waveform is shown in (§ Figure 8-3). In this waveform the differenti
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -719,7 +719,7 @@ Tx 电压参数包括均衡 (Equalization) 系数、均衡预设 (Preset) 和最
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -766,7 +766,7 @@ Tx equalization coefficients for 64.0 GT/s are based on the following FIR filter
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -807,7 +807,7 @@ The presets defined in (§ Table 8-1) and (§ Table 8-2) are numbered to match t
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -855,7 +855,7 @@ The presets defined in (§ Table 8-1) and (§ Table 8-2) are numbered to match t
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -912,7 +912,7 @@ The presets defined in (§ Table 8-1) and (§ Table 8-2) are numbered to match t
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -966,7 +966,7 @@ Tx equalization de-emphasis values at 2.5 and 5.0 GT/s are measured using the av
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1000,7 +1000,7 @@ equalized Compliance Pattern is captured by a real-time oscilloscope and the pos
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1039,7 +1039,7 @@ The range for a Transmitter's output voltage swing, (specified by Vd) with no eq
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1069,7 +1069,7 @@ The range for a Transmitter's output voltage swing, (specified by Vd) with no eq
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1102,7 +1102,7 @@ The range for a Transmitter's output voltage swing, (specified by Vd) with no eq
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1132,7 +1132,7 @@ The range for a Transmitter's output voltage swing, (specified by Vd) with no eq
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1178,7 +1178,7 @@ When the above constraints are applied the resulting coefficient space for 8.0, 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1213,7 +1213,7 @@ When the above constraints are applied the resulting coefficient space for 8.0, 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1251,7 +1251,7 @@ When the above constraints are applied the resulting coefficient space for 8.0, 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1284,7 +1284,7 @@ The coefficient space for 64.0 GT/s with each pre-shoot2 coefficient may be mapp
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1325,7 +1325,7 @@ The coefficient space for 64.0 GT/s with each pre-shoot2 coefficient may be mapp
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1376,7 +1376,7 @@ EIEOS 信号仅在 5.0、8.0、16.0、32.0 和 64.0 GT/s 速率下定义。在 5
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1408,7 +1408,7 @@ EIEOS 信号仅在 5.0、8.0、16.0、32.0 和 64.0 GT/s 速率下定义。在 5
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1444,7 +1444,7 @@ PCI Express 发送器可选择性地支持缩减摆幅 (Reduced Swing) 信号。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1479,7 +1479,7 @@ Package loss (including silicon driver bandwidth) is represented by the ps21TX p
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1530,7 +1530,7 @@ The ps21TX parameter is informative for 16.0 GT/s Root Package devices and for N
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1564,7 +1564,7 @@ Package loss is measured by comparing the 64-zeros/64-ones voltage swing (V111) 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1597,7 +1597,7 @@ Package loss is measured by comparing the 64-zeros/64-ones voltage swing (V111) 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1643,7 +1643,7 @@ V101 与 V111 的测量在每个区间末端进行,以最小化码间干扰 (ISI
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1681,7 +1681,7 @@ The parameter σn measures the uncorrelated RMS amplitude noise of each symbol l
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1718,7 +1718,7 @@ $$\sigma_{L,i}^{2} = \frac{1}{N_k} \sum_{k=1}^{N_k} (V_{L,i,k} - \mu_{L,i})^2$$
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1760,7 +1760,7 @@ $$\mu_{L,i} = \frac{1}{N_k} \sum_{k=1}^{N_k} V_{L,i,k}$$
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1798,7 +1798,7 @@ $$\sigma_L = \sqrt{\frac{\sum_{i=1}^{8} \sigma_{L,i}^{2}}{8}}$$
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1836,7 +1836,7 @@ Tx SNDR 由下式定义,其中 pmax 为 p(k) 的最大值。
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1870,7 +1870,7 @@ $$SNDR = 10 \times \log_{10}\left(\frac{p_{max}^2}{\sigma_e^2 + \sigma_n^2}\righ
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1903,7 +1903,7 @@ Transmitter linearity is defined as a function of the mean signal levels (V0, V1
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1951,7 +1951,7 @@ RLM = min((3 × ES1), (3 × ES2), (2 − 3 × ES1), (2 − 3 × ES2))
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1987,7 +1987,7 @@ $$V_L = \frac{\sum_{i=1}^{8} \mu_{L,i}}{8}$$
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2026,7 +2026,7 @@ There are 8 encoded values for transmit margin from 000b to 111b. Encoding 000b 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2067,7 +2067,7 @@ There are 8 encoded values for transmit margin from 000b to 111b. Encoding 000b 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2117,7 +2117,7 @@ Direct probing at a Transmitter's pins is not generally feasible, so data is ins
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2204,7 +2204,7 @@ A Transmitter may operate in the Independent Refclk (IR) mode, in which case the
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2281,7 +2281,7 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2322,7 +2322,7 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2356,7 +2356,7 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2423,7 +2423,7 @@ $$H(s) = \frac{s^2}{s^2 + sA + B} \times \frac{s^2 + 2\zeta_2 \omega_0 s + \omeg
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2468,7 +2468,7 @@ $$H(s) = \frac{s^2}{s^2 + sA + B} \times \frac{s^2 + 2\zeta_2 \omega_0 s + \omeg
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2537,7 +2537,7 @@ $$H(s) = \frac{s^2}{(s + \omega_0)(s + \omega_1)} \times \frac{s^2 + 2\zeta_2 \o
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2590,7 +2590,7 @@ While DDJ is not explicitly defined as a parameter in the specification, it is n
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2682,7 +2682,7 @@ Pulse width jitter is defined as an edge to edge phenomenon on consecutive edges
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2744,7 +2744,7 @@ PWJ 的等价描述可通过参考固定的引导边 (leading edge) 并将两个
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2799,7 +2799,7 @@ For 5.0 GT/s a similar removal of DDj must be performed to obtain UTj. However, 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2858,7 +2858,7 @@ For 5.0 GT/s a similar removal of DDj must be performed to obtain UTj. However, 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2921,7 +2921,7 @@ For 5.0 GT/s a similar removal of DDj must be performed to obtain UTj. However, 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2996,7 +2996,7 @@ Return loss measurements for the Tx and Rx are essentially identical, so both ar
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3029,7 +3029,7 @@ channel's contribution to RL be de-embedded, thereby associating the return loss
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3066,7 +3066,7 @@ Microprobing the package may be required to measure RL accurately. §
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3092,7 +3092,7 @@ Microprobing the package may be required to measure RL accurately. §
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3125,7 +3125,7 @@ Microprobing the package may be required to measure RL accurately. §
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3153,7 +3153,7 @@ PLL 带宽和峰值在发送器 (Transmitter) 和接收器 (Receiver) 两侧都�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3185,7 +3185,7 @@ Two sets of bandwidth and peaking are defined for 5.0 GT/s: 8-16 MHz with 3 dB o
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3213,7 +3213,7 @@ The Tx and Rx PLL bandwidth for 8.0 and 16.0 GT/s is 0.5-5 MHz with 1.0 dB of pe
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3245,7 +3245,7 @@ PCI Express 要求使用串联电容以在 Tx 和 Rx 之间提供直流阻断 (D
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3286,7 +3286,7 @@ The following table (Table 8-7) defines Tx parameters that are independent of da
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3336,7 +3336,7 @@ The following table (continued from Table 8-7) defines additional data rate inde
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3364,7 +3364,7 @@ All Receiver speeds are tested by means of a stressed eye applied over a calibra
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3392,7 +3392,7 @@ The closest practical measurement points to the Rx DUT are the coaxial connector
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3427,7 +3427,7 @@ In § Figure 8-26 the stressed eye is observed at TP2 with the signal sources co
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3500,7 +3500,7 @@ Calibration channels, each with a specified differential insertion loss at one o
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3549,7 +3549,7 @@ Rx 容差互连环境的阻抗目标为:对于 2.5、5.0 和 8.0 GT/s 通道,差
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3574,7 +3574,7 @@ A calibration channel consists of a differential pair of PCB traces terminated a
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3604,7 +3604,7 @@ While the 8.0 GT/s, 16.0 GT/s, 32.0 GT/s, and 64.0 GT/s S-parameter masks do not
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3629,7 +3629,7 @@ This section gives an example of a 16.0 GT/s calibration channel that was built 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3681,7 +3681,7 @@ Sixteen differential pairs (85 Ohm Nominal Impedance) routed from SMA connectors
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3724,7 +3724,7 @@ CEM 连接器钻孔的焊盘叠层 (pad stack) 如 § Figure 8-30 所示,SMA 钻
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3749,7 +3749,7 @@ This section gives an example of a 32.0 GT/s calibration channel that was built 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3805,7 +3805,7 @@ Sixteen differential pairs (85 Ohm Nominal Impedance) routed on a Megtron-6 PCB 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3838,7 +3838,7 @@ The stack-up for both 85 Ohm boards is shown in § Figure 8-33 where 65% is the 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3863,7 +3863,7 @@ The Receiver test requires that the stressed eye characteristics be measured at 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3888,7 +3888,7 @@ Behavioral Rx package models are included as part of the post processing to allo
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3913,7 +3913,7 @@ The 8.0, 32.0, and 64.0 GT/s stressed eye test for all devices and the 16.0 GT/s
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3942,7 +3942,7 @@ Post processing shall include a behavioral CDR model with a data rate dependent 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3969,7 +3969,7 @@ As measured at TP2, stressed eyes at 8.0, 16.0, 32.0, and 64.0 GT/s will usually
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4002,7 +4002,7 @@ CTLE 和 DFE 的 Rx 均衡算法仅用作在校准通道 ISI 及其他信号损�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4027,7 +4027,7 @@ CTLE 和 DFE 的 Rx 均衡算法仅用作在校准通道 ISI 及其他信号损�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4052,7 +4052,7 @@ CTLE 和 DFE 的 Rx 均衡算法仅用作在校准通道 ISI 及其他信号损�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4077,7 +4077,7 @@ CTLE 和 DFE 的 Rx 均衡算法仅用作在校准通道 ISI 及其他信号损�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4107,7 +4107,7 @@ CTLE 和 DFE 的 Rx 均衡算法仅用作在校准通道 ISI 及其他信号损�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4181,7 +4181,7 @@ Figure 8-34 8.0 GT/s 行为级 CTLE 的传递函数
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4205,7 +4205,7 @@ Figure 8-34 8.0 GT/s 行为级 CTLE 的传递函数
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4228,7 +4228,7 @@ Figure 8-34 8.0 GT/s 行为级 CTLE 的传递函数
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4262,7 +4262,7 @@ Figure 8-34 8.0 GT/s 行为级 CTLE 的传递函数
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4360,7 +4360,7 @@ FZ2 = |直流增益| × FP2
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4384,7 +4384,7 @@ FZ2 = |直流增益| × FP2
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4416,7 +4416,7 @@ FZ2 = |直流增益| × FP2
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4504,7 +4504,7 @@ FZ3 = 7.7 GHz
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4529,7 +4529,7 @@ FZ3 = 7.7 GHz
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4567,7 +4567,7 @@ At 8.0 GT/s the combination of a 1st order CTLE and a one-tap DFE algorithm is r
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4591,7 +4591,7 @@ At 8.0 GT/s the combination of a 1st order CTLE and a one-tap DFE algorithm is r
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4616,7 +4616,7 @@ At 8.0 GT/s the combination of a 1st order CTLE and a one-tap DFE algorithm is r
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4641,7 +4641,7 @@ At 8.0 GT/s the combination of a 1st order CTLE and a one-tap DFE algorithm is r
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4679,7 +4679,7 @@ For 64.0 GT/s, the feedback signal yk* can take values of -1, -1/3, +1/3 and +1.
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4737,7 +4737,7 @@ EH/EW 定义的参考点对应于 8.0、16.0、32.0 和 64.0 GT/s 下接收器�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4847,7 +4847,7 @@ For all EH, EW and eye area measurements performed in receiver calibration the A
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4945,7 +4945,7 @@ Note that because the first tiebreaker is highest loss - most approaches will st
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4976,7 +4976,7 @@ Based upon the data rate at which the Rx is being tested, Rj or Sj and different
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5023,7 +5023,7 @@ Layout (TP1 → TP5/TP4 flow):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5057,7 +5057,7 @@ Layout (TP1 → TP5/TP4 flow):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5129,7 +5129,7 @@ Layout (TP1 → TP5/TP4 flow):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5208,7 +5208,7 @@ Layout (TP1 → TP5/TP4 flow):
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5254,7 +5254,7 @@ A waveform post processing tool or a channel compliance methodology tool may be 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5323,7 +5323,7 @@ The SJ (pp value) profiles shown in § Figure 8-43, § Figure 8-44, § Figure 8-
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5357,7 +5357,7 @@ Receivers operating at 8.0 GT/s in the IR mode use the Sj mask profile shown in 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5386,7 +5386,7 @@ Receivers operating at 16.0 GT/s in the Independent Refclk (IR) mode use the Sj 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5424,7 +5424,7 @@ Receivers operating at 16.0 GT/s in the Common Clock (CC) Refclk mode use the Sj
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5460,7 +5460,7 @@ Receivers operating at 32.0 GT/s in the IR mode use the Sj mask profile shown in
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5496,7 +5496,7 @@ Receivers operating at 32.0 GT/s in the CC Refclk mode use the Sj mask profile s
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5532,7 +5532,7 @@ Receivers operating at 64.0 GT/s in the IR mode use the Sj mask profile shown in
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5570,7 +5570,7 @@ Receivers operating at 64.0 GT/s in the CC Refclk mode use the Sj mask profile s
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5608,7 +5608,7 @@ Receivers operating in the CC Refclk mode at 8.0 GT/s shall utilize the Sj profi
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5642,7 +5642,7 @@ A Rx is permitted to support one or both of two clock modes: CC and IR although 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5673,7 +5673,7 @@ A Rx is permitted to support one or both of two clock modes: CC and IR although 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5713,7 +5713,7 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5741,7 +5741,7 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5789,7 +5789,7 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5834,7 +5834,7 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5869,7 +5869,7 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5910,7 +5910,7 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5941,7 +5941,7 @@ EFI 检测电路的能力难以随数据速率按比例缩放,因此 5.0、8.0�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5971,7 +5971,7 @@ The measurement methodology and frequency binning for differential and common mo
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6001,7 +6001,7 @@ PCI Express components including Retimers that support the 16.0 GT/s or higher r
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6035,7 +6035,7 @@ For simplicity, the margin commands and requirements described in § Section 4.2
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6073,7 +6073,7 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6112,7 +6112,7 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6171,7 +6171,7 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6217,7 +6217,7 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6247,7 +6247,7 @@ All PCI Express signal and power supply pins must be tested for ESD protection l
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6284,7 +6284,7 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6314,7 +6314,7 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6359,7 +6359,7 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6389,7 +6389,7 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6447,7 +6447,7 @@ EIOS 的成功接收依据《Physical Layer Logical Block》一章中定义的�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6488,7 +6488,7 @@ Transmitter DC common mode voltage is held at the same value during all states u
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6550,7 +6550,7 @@ b. 若发送器端电压的充电速率由发送器阻抗、串联电容、互�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6586,7 +6586,7 @@ The key components and processes of channel tolerancing are illustrated in § Fi
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6619,7 +6619,7 @@ The key components and processes of channel tolerancing are illustrated in § Fi
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6651,7 +6651,7 @@ The basic channel compliance approach is to first acquire the channel's characte
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6691,7 +6691,7 @@ For 8.0, 16.0, 32.0, and 64.0 GT/s testing the simulation process must properly 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6745,7 +6745,7 @@ The CPIN and CPAD values used in the package model generation are provided for i
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6773,7 +6773,7 @@ For ease of incorporation into the post processing flow the 8.0 and 16.0 behavio
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6807,7 +6807,7 @@ For ease of incorporation into the post processing flow the 8.0 and 16.0 behavio
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6841,7 +6841,7 @@ For 32.0 GT/s, reference package models the die capacitive loads are included in
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6950,7 +6950,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -6980,7 +6980,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7014,7 +7014,7 @@ Package insertion loss at 16.0 GT/s is an informative spec parameter. Some imple
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7048,7 +7048,7 @@ Channel tolerancing is implemented by means of simulation, where the pass/fail c
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7106,7 +7106,7 @@ Output eye parameters: The simulator shall generate a statistically defined outp
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7141,7 +7141,7 @@ Output eye parameters: The simulator shall generate a statistically defined outp
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7173,7 +7173,7 @@ DFE coefficients for each sample location and selecting the result producing the
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7205,7 +7205,7 @@ An open source simulation tool shall be provided with the specification as desig
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7233,7 +7233,7 @@ An open source simulation tool shall be provided with the specification as desig
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7263,7 +7263,7 @@ An open source simulation tool shall be provided with the specification as desig
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7315,7 +7315,7 @@ TTX-CH-UDJDD = TTX-UDJ-DD – (TTXUPWJ-DJDD)/2 = 7.00ps
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7443,7 +7443,7 @@ A channel must be tested at all data rates, with the corresponding Tx jitter par
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7477,7 +7477,7 @@ The behavioral receiver selects the combination of Transmitter Equalization, CTL
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7527,7 +7527,7 @@ The output of the simulation tool shall be in the form of pass/fail characterist
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7651,7 +7651,7 @@ Note that the pass/fail EH and EW limits shown in § Figure 8-79 are identical t
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7692,7 +7692,7 @@ Note that the Tx and channel CM noise parameters cannot simply be added to obtai
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7740,7 +7740,7 @@ VCH-IDLE-DET-DIFF-pp 的定义旨在保证:当发送器 (Transmitter) 发出 EIE
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7778,7 +7778,7 @@ Refclk 的测试设置假设仅有 Refclk 发生器本身存在。测试设置�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7811,7 +7811,7 @@ Refclk 的测试设置假设仅有 Refclk 发生器本身存在。测试设置�
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7856,7 +7856,7 @@ All specifications in § Table 8-18 are to be measured using a test configuratio
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -7979,7 +7979,7 @@ All specifications in § Table 8-18 are to be measured using a test configuratio
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8030,7 +8030,7 @@ A number of Refclk parameters are data rate independent and are listed in the ta
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8073,7 +8073,7 @@ A number of Refclk parameters are data rate independent and are listed in the ta
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8112,7 +8112,7 @@ Refclks supporting SSC must meet an additional jitter limit over a range of low 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8147,7 +8147,7 @@ Two Refclk architectures are supported: Common Refclk (CC) and Independent Refcl
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8183,7 +8183,7 @@ Note that the PLL and CDR filter functions represent minimally capable approxima
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8231,7 +8231,7 @@ $$\frac{\omega_{3dB}}{\omega_n} = \sqrt{\sqrt{\frac{2\zeta^2 + 1}{2}} + 1} + 2\z
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8265,7 +8265,7 @@ $$\frac{\omega_{3dB}}{\omega_n} = \sqrt{\sqrt{\frac{2\zeta^2 + 1}{2}} + 1} + 2\z
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8301,7 +8301,7 @@ For behavioral CDR functions refer to § Section 8.3.5.5
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8333,7 +8333,7 @@ This architecture utilizes a single Refclk source that is distributed to both th
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8369,7 +8369,7 @@ This architecture utilizes a single Refclk source that is distributed to both th
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8416,7 +8416,7 @@ At 5.0 GT/s and higher data rates, two possible sets of limits of PLL bandwidth 
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8479,7 +8479,7 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8512,7 +8512,7 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8569,7 +8569,7 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8626,7 +8626,7 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8683,7 +8683,7 @@ For 5.0, 8.0, and 16.0 GT/s, jitter is specified as an RMS (Rj) value. These sig
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -8746,7 +8746,7 @@ For 5.0, 8.0, and 16.0 GT/s, jitter is specified as an RMS (Rj) value. These sig
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
