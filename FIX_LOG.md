@@ -60,6 +60,21 @@
 
 ---
 
+### ✅ FIX-006: ch07 Table 7-19 HTML 表格嵌套修复
+
+- **问题**: Table 7-19 寄存器描述表中存在 2 处 orphan `</td>` 闭合标签（line 5291 / line 5303），导致 GitHub 无法渲染该表格
+- **根因**: EN 单元格内容（超长 Description 列）直接内嵌了 markdown 表格结构，破坏了 HTML 表格嵌套
+- **修复**: 从 commit `578292e`（干净版本）精确移除 4 行 orphan 标签：
+  - L5291: orphan `</td>`
+  - L5292: orphan `<td style="background-color:#e8e8e8">`
+  - L5303: orphan `</td>`
+  - L5304: orphan `</tr>`
+- **Commit**: `5b8ebe9`
+- **文件大小**: 2,154,423 → 2,154,368 bytes（−55 bytes）
+- **验证**: HTML 标签平衡（table=723/723, tr=1520/1520, td=864/1611, tbody=723/723）
+
+---
+
 ## 待修复清单（按优先级）
 
 ### P0 — 严重
