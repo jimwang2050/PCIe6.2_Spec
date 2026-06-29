@@ -473,7 +473,9 @@
 |  | 7.9.30.2 | [MRBL Capabilities Register (Offset …](#sec-7-9-30-2) | [MRBL 能力寄存器 (偏移量 04h)](#sec-7-9-30-2) | p.1405 |
 |  | 7.9.30.3 | [MRBL Locator Register (Offset Varie…](#sec-7-9-30-3) | [MRBL 定位寄存器 (偏移量可变)](#sec-7-9-30-3) | p.1406 |
 
-## 🖼 本章图表 (Figures)
+<details>
+<summary>🖼 本章图表 (Figures)</summary>
+
 
 | Figure | Title | 图标题 | Page |
 |:------:|:------|:-------|:----:|
@@ -614,7 +616,11 @@
 | 383 | IDE Address Association Regist… |  | p.1395 |
 | 385 | Null Extended Capability |  | p.1397 |
 
-## 📊 本章表格 (Tables)
+</details>
+
+<details>
+<summary>📊 本章表格 (Tables)</summary>
+
 
 | Table | Title | 表标题 | Page |
 |:-----:|:------|:-------|:----:|
@@ -912,6 +918,8 @@
 | 345 | MRBL Extended Capability Heade… | MRBL 扩展能力头 | p.1405 |
 | 346 | MRBL Capabilities Register | MRBL 能力寄存器 | p.1406 |
 | 347 | MRBL Locator Register | MRBL 定位寄存器 | p.1406 |
+
+</details>
 
 ---
 
