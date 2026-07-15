@@ -1583,7 +1583,7 @@ PCI Express errors can be classified as two types: Uncorrectable errors and Corr
 
 在本文档中，标识了必须检查的错误和可以选择性检查的错误。每种这样的错误都与某个端口（Port）或某个特定设备（多功能设备中的 Function）相关联，这种关联在错误描述中一同给出。本节将讨论错误的分类与报告方式。
 
-本节解释 PCI Express 组件的错误信号传递和日志记录要求。这包括发生在 PCI Express 接口本身的错误、为响应在 PCI Express 上发起的事务而发生的错误，以及发生在组件内部但与 PCI Express 接口相关的错误。本节不聚焦于组件内部发生且与 PCI Express 接口无关的错误。这类错误更适合通过使用设备特定中断的专有方法处理。
+本节解释 PCI Express 组件的错误信号传递和日志记录要求。这包括发生在 PCI Express 接口本身的错误、为响应在 PCI Express 上发起的事务而发生的错误，以及发生在组件内部但与 PCI Express 接口相关的错误。本节不聚焦于组件内部发生且与 PCI Express 接口无关的错误。这类错误更适合通过使用设备特定中断的专有方法进行处理。
 
 PCI Express 定义了两种错误报告范式：baseline capability（基线能力）和 Advanced Error Reporting（AER，高级错误报告）能力。基线能力对所有 PCI Express 设备都是必需的，它定义了最低的错误报告要求。AER 能力定义了更健壮的错误报告，并通过一个特定的 PCI Express Capability 结构实现（该可选能力的定义见第 7.8.4 节）。本节明确指出基线能力与 AER 能力之间所有错误处理的差异。
 
@@ -1698,15 +1698,15 @@ ERR_NONFATAL
 致命 (Fatal)
 图 6-1 错误分类 (Error Classification)
 
-将错误严重性划分为致命 (Fatal)、不可纠正 (Uncorrectable) 和可纠正 (Correctable)，为平台提供了将错误映射到适当处理机制的机制。例如，平台可能选择以低优先级、性能监控软件来响应可纠正错误。此类软件可以统计可纠正错误的发生频率，并提供链路 (Link) 完整性信息。另一方面，平台设计者也可能选择将致命错误映射到系统级复位 (Reset)。将这些 PCI Express 严重性级别映射到平台级严重性级别，由平台设计者自行决定。
+将错误严重性划分为致命 (Fatal)、不可纠正 (Uncorrectable) 和可纠正 (Correctable),为平台提供了将错误映射到适当处理机制的机制。例如,平台可能选择以低优先级、性能监控软件来响应可纠正错误。此类软件可以统计可纠正错误的发生频率,并提供链路 (Link) 完整性信息。另一方面,平台设计者也可能选择将致命错误映射到系统级复位 (Reset)。将这些 PCI Express 严重性级别映射到平台级严重性级别,由平台设计者自行决定。
 
-可纠正错误包括硬件可在不丢失任何信息的情况下自行恢复的错误条件。硬件会纠正这些错误，不需要软件介入。例如,TLP 中的 LCRC 错误可以通过数据链路层重试 (Data Link Level Retry) 纠正，该错误即被视为可纠正错误。统计链路级可纠正错误的频率，有助于分析链路 (Link) 的完整性。
+可纠正错误包括硬件可在不丢失任何信息的情况下自行恢复的错误条件。硬件会纠正这些错误,不需要软件介入。例如,TLP 中的 LCRC 错误可以通过数据链路层重试 (Data Link Level Retry) 纠正,该错误即被视为可纠正错误。统计链路级可纠正错误的频率,有助于分析链路 (Link) 的完整性。
 
-可纠正错误还包括事务级的情况:一个代理 (agent) 检测到 TLP 的错误，但由另一个代理负责在需要时采取任何恢复操作，例如使用后续的事务重新尝试该操作。检测代理可以被配置为将该错误报告为可纠正错误，因为恢复代理可能能够纠正它。如果确实需要恢复操作，但恢复代理决定不尝试恢复，则恢复代理必须将该错误报告为不可纠正错误。
+可纠正错误还包括事务级的情况:一个代理 (agent) 检测到 TLP 的错误,但由另一个代理负责在需要时采取任何恢复操作,例如使用后续的事务重新尝试该操作。检测代理可以被配置为将该错误报告为可纠正错误,因为恢复代理可能能够纠正它。如果确实需要恢复操作,但恢复代理决定不尝试恢复,则恢复代理必须将该错误报告为不可纠正错误。
 
-下游端口遏制 (Downstream Port Containment, DPC) 的触发本身并不作为一种错误处理，但它可以像可纠正错误一样发出信号，因为利用 DPC 的软件有时可以从触发 DPC 的不可纠正错误中恢复。参见 § 6.2.11 节。用于 DPC 信令的 ERR_COR 报文 (Message) 旨在面向系统固件 (system firmware)，可以通过 ERR_COR Subclass 字段予以指明。
+下游端口遏制 (Downstream Port Containment, DPC) 的触发本身并不作为一种错误处理,但它可以像可纠正错误一样发出信号,因为利用 DPC 的软件有时可以从触发 DPC 的不可纠正错误中恢复。参见 § 6.2.11 节。用于 DPC 信令的 ERR_COR 报文 (Message) 旨在面向系统固件 (system firmware),可以通过 ERR_COR Subclass 字段予以指明。
 
-类似地，系统固件中介 (System Firmware Intermediary, SFI) 能力也可以使用 ERR_COR 向系统固件发出信号，并且必须通过 ERR_COR Subclass 字段予以指明。参见 § 6.7.4 节。
+类似地,系统固件中介 (System Firmware Intermediary, SFI) 能力也可以使用 ERR_COR 向系统固件发出信号,并且必须通过 ERR_COR Subclass 字段予以指明。参见 § 6.7.4 节。
 
 </td>
 </tr>
@@ -1751,15 +1751,15 @@ Note that it is the responsibility of the agent detecting the error to signal th
 </td>
 <td style="background-color:#e8e8e8">
 
-不可纠正错误是那些影响接口功能的错误条件。本规范未定义纠正这些错误的机制。报告不可纠正错误类似于在 PCI/PCI-X 中断言 SERR#。为了使系统能更稳健地处理错误，本规范进一步将不可纠正错误划分为致命 (Fatal) 和非致命 (Non-fatal) 两类。
+不可纠正错误是那些影响接口功能的错误条件。本规范未定义纠正这些错误的机制。报告不可纠正错误类似于在 PCI/PCI-X 中断言 SERR#。为了使系统能更稳健地处理错误,本规范进一步将不可纠正错误划分为致命 (Fatal) 和非致命 (Non-fatal) 两类。
 
-致命错误是不可纠正的错误条件，会导致特定链路 (Link) 及相关硬件变得不可靠。对于致命错误，可能需要复位链路上的组件才能恢复正常运行。平台对致命错误的处理以及限制其影响的措施，因平台实现而异。
+致命错误是不可纠正的错误条件,会导致特定链路 (Link) 及相关硬件变得不可靠。对于致命错误,可能需要复位链路上的组件才能恢复正常运行。平台对致命错误的处理以及限制其影响的措施,因平台实现而异。
 
-非致命错误是不可纠正的错误，会导致特定事务变得不可靠，但链路在其他方面功能正常。将非致命错误与致命错误分离，可使设备中的请求者/接收者 (Requester/Receiver) 逻辑或系统管理软件有机会在不复位链路上组件、不打扰其他正在执行事务的情况下，从错误中恢复。与出错事务无关的设备不受该错误影响。
+非致命错误是不可纠正的错误,会导致特定事务变得不可靠,但链路在其他方面功能正常。将非致命错误与致命错误分离,可使设备中的请求者/接收者 (Requester/Receiver) 逻辑或系统管理软件有机会在不复位链路上组件、不打扰其他正在执行事务的情况下,从错误中恢复。与出错事务无关的设备不受该错误影响。
 
-检测到错误的代理可以通过三种互补机制向系统或其他设备发出错误通知。第一种机制是通过完成状态 (Completion Status)，第二种机制是使用带内错误报文 (in-band error Messages)，第三种机制是使用错误转发 (Error Forwarding, 也称为数据中毒, data poisoning)。
+检测到错误的代理可以通过三种互补机制向系统或其他设备发出错误通知。第一种机制是通过完成状态 (Completion Status),第二种机制是使用带内错误报文 (in-band error Messages),第三种机制是使用错误转发 (Error Forwarding, 也称为数据中毒, data poisoning)。
 
-请注意，由检测到错误的代理负责恰当地发出错误信号。
+请注意,由检测到错误的代理负责恰当地发出错误信号。
 
 § 6.2.7 节描述了所有错误以及在检测到错误时硬件被要求做出的响应。
 
@@ -1798,9 +1798,9 @@ Error Messages are sent to the Root Complex for reporting the detection of error
 </td>
 <td style="background-color:#e8e8e8">
 
-完成报文头 (Completion header) 中的完成状态 (Completion Status) 字段(当状态不是成功完成 (Successful Completion) 时)表示关联的请求 (Request) 失败(参见 § 2.2.8.10 节)。这是错误报告的一种方法，它使请求者 (Requester) 能够将错误与特定请求相关联。换句话说，由于非 Posted 请求 (Non-Posted Requests) 在完成报文返回之前不被视为已完成，完成状态字段使请求者有机会在某个更高级别的协议(本规范范围之外)中"修复"该问题。例如，如果对可预取内存空间 (Memory Space) 发出读请求，并且完成报文返回了不支持请求 (Unsupported Request) 的完成状态，则请求者选择重新发出该读请求，不会违反本规范。请注意，从 PCI Express 的角度来看，重新发出的读请求是一个独立的新请求，在 PCI Express 上，初始请求与重新发出的请求之间没有关系。
+完成报文头 (Completion header) 中的完成状态 (Completion Status) 字段(当状态不是成功完成 (Successful Completion) 时)表示关联的请求 (Request) 失败(参见 § 2.2.8.10 节)。这是错误报告的一种方法,它使请求者 (Requester) 能够将错误与特定请求相关联。换句话说,由于非 Posted 请求 (Non-Posted Requests) 在完成报文返回之前不被视为已完成,完成状态字段使请求者有机会在某个更高级别的协议(本规范范围之外)中"修复"该问题。例如,如果对可预取内存空间 (Memory Space) 发出读请求,并且完成报文返回了不支持请求 (Unsupported Request) 的完成状态,则请求者选择重新发出该读请求,不会违反本规范。请注意,从 PCI Express 的角度来看,重新发出的读请求是一个独立的新请求,在 PCI Express 上,初始请求与重新发出的请求之间没有关系。
 
-错误报文 (Error Messages) 会按照错误的严重性，发送到根复合体 (Root Complex) 来报告错误的检测。
+错误报文 (Error Messages) 会按照错误的严重性,发送到根复合体 (Root Complex) 来报告错误的检测。
 
 </td>
 </tr>
@@ -1832,7 +1832,7 @@ Fatal errors are uncorrectable error conditions which render the particular Link
 </td>
 <td style="background-color:#e8e8e8">
 
-致命错误是不可纠正的错误条件，会导致特定链路 (Link) 及相关硬件变得不可靠。对于致命错误，可能需要复位链路上的组件才能恢复正常运行。平台对致命错误的处理以及限制其影响的措施，因平台实现而异。
+致命错误是不可纠正的错误条件,会导致特定链路 (Link) 及相关硬件变得不可靠。对于致命错误,可能需要复位链路上的组件才能恢复正常运行。平台对致命错误的处理以及限制其影响的措施,因平台实现而异。
 
 </td>
 </tr>
@@ -1862,7 +1862,7 @@ Non-fatal errors are uncorrectable errors which cause a particular transaction t
 </td>
 <td style="background-color:#e8e8e8">
 
-非致命错误是不可纠正的错误，会导致特定事务变得不可靠，但链路在其他方面功能正常。将非致命错误与致命错误分离，可使设备中的请求者/接收者 (Requester/Receiver) 逻辑或系统管理软件有机会在不复位链路上组件、不打扰其他正在执行事务的情况下，从错误中恢复。与出错事务无关的设备不受该错误影响。
+非致命错误是不可纠正的错误,会导致特定事务变得不可靠,但链路在其他方面功能正常。将非致命错误与致命错误分离,可使设备中的请求者/接收者 (Requester/Receiver) 逻辑或系统管理软件有机会在不复位链路上组件、不打扰其他正在执行事务的情况下,从错误中恢复。与出错事务无关的设备不受该错误影响。
 
 </td>
 </tr>
@@ -1896,9 +1896,9 @@ Note that it is the responsibility of the agent detecting the error to signal th
 </td>
 <td style="background-color:#e8e8e8">
 
-检测到错误的代理可以通过三种互补机制向系统或其他设备发出错误通知。第一种机制是通过完成状态 (Completion Status)，第二种机制是使用带内错误报文 (in-band error Messages)，第三种机制是使用错误转发 (Error Forwarding, 也称为数据中毒, data poisoning)。
+检测到错误的代理可以通过三种互补机制向系统或其他设备发出错误通知。第一种机制是通过完成状态 (Completion Status),第二种机制是使用带内错误报文 (in-band error Messages),第三种机制是使用错误转发 (Error Forwarding, 也称为数据中毒, data poisoning)。
 
-请注意，由检测到错误的代理负责恰当地发出错误信号。
+请注意,由检测到错误的代理负责恰当地发出错误信号。
 
 § 6.2.7 节描述了所有错误以及在检测到错误时硬件被要求做出的响应。
 
@@ -1932,7 +1932,7 @@ The Completion Status field (when status is not Successful Completion) in the Co
 </td>
 <td style="background-color:#e8e8e8">
 
-完成报文头 (Completion header) 中的完成状态 (Completion Status) 字段(当状态不是成功完成 (Successful Completion) 时)表示关联的请求 (Request) 失败(参见 § 2.2.8.10 节)。这是错误报告的一种方法，它使请求者 (Requester) 能够将错误与特定请求相关联。换句话说，由于非 Posted 请求 (Non-Posted Requests) 在完成报文返回之前不被视为已完成，完成状态字段使请求者有机会在某个更高级别的协议(本规范范围之外)中"修复"该问题。例如，如果对可预取内存空间 (Memory Space) 发出读请求，并且完成报文返回了不支持请求 (Unsupported Request) 的完成状态，则请求者选择重新发出该读请求，不会违反本规范。请注意，从 PCI Express 的角度来看，重新发出的读请求是一个独立的新请求，在 PCI Express 上，初始请求与重新发出的请求之间没有关系。
+完成报文头 (Completion header) 中的完成状态 (Completion Status) 字段(当状态不是成功完成 (Successful Completion) 时)表示关联的请求 (Request) 失败(参见 § 2.2.8.10 节)。这是错误报告的一种方法,它使请求者 (Requester) 能够将错误与特定请求相关联。换句话说,由于非 Posted 请求 (Non-Posted Requests) 在完成报文返回之前不被视为已完成,完成状态字段使请求者有机会在某个更高级别的协议(本规范范围之外)中"修复"该问题。例如,如果对可预取内存空间 (Memory Space) 发出读请求,并且完成报文返回了不支持请求 (Unsupported Request) 的完成状态,则请求者选择重新发出该读请求,不会违反本规范。请注意,从 PCI Express 的角度来看,重新发出的读请求是一个独立的新请求,在 PCI Express 上,初始请求与重新发出的请求之间没有关系。
 
 </td>
 </tr>
@@ -1964,7 +1964,7 @@ Error Messages are sent to the Root Complex for reporting the detection of error
 </td>
 <td style="background-color:#e8e8e8">
 
-错误报文 (Error Messages) 会按照错误的严重性，发送到根复合体 (Root Complex) 来报告错误的检测。
+错误报文 (Error Messages) 会按照错误的严重性,发送到根复合体 (Root Complex) 来报告错误的检测。
 
 </td>
 </tr>
@@ -2026,29 +2026,29 @@ Software should recognize that a single transaction can be signaled by multiple 
 
 源自 PCI Express 或传统端点 (Legacy Endpoints) 的错误报文被发送到对应的根端口 (Root Ports)。源自根端口本身的错误通过同一根端口上报。
 
-如果实现了可选的根复合体事件收集器 (Root Complex Event Collector)，则源自 RCiEP 的错误被发送到对应的根复合体事件收集器。源自根复合体事件收集器自身的错误通过同一根复合体事件收集器上报。根复合体事件收集器必须将其所支持的 RCiEP 作为其能力的一部分进行声明;每个 RCiEP 不得与多于一个根复合体事件收集器相关联。
+如果实现了可选的根复合体事件收集器 (Root Complex Event Collector),则源自 RCiEP 的错误被发送到对应的根复合体事件收集器。源自根复合体事件收集器自身的错误通过同一根复合体事件收集器上报。根复合体事件收集器必须将其所支持的 RCiEP 作为其能力的一部分进行声明;每个 RCiEP 不得与多于一个根复合体事件收集器相关联。
 
-当检测到多个同严重性的错误时，具有相同请求者 ID (Requester ID) 的对应错误报文可以针对不同同严重性错误进行合并。对于每个严重性级别检测到的错误，至少必须发送一个错误报文。但是请注意，在某些情况下，某错误的检测会阻止上报某些其他错误。参见 § 6.2.3.2.3 节。另请注意 § 6.2.4 节中关于多功能设备 (Multi-Function Devices) 中非功能特定错误的特殊规则。
+当检测到多个同严重性的错误时,具有相同请求者 ID (Requester ID) 的对应错误报文可以针对不同同严重性错误进行合并。对于每个严重性级别检测到的错误,至少必须发送一个错误报文。但是请注意,在某些情况下,某错误的检测会阻止上报某些其他错误。参见 § 6.2.3.2.3 节。另请注意 § 6.2.4 节中关于多功能设备 (Multi-Function Devices) 中非功能特定错误的特殊规则。
 
 **Table 6-1. Error Messages | 表 6-1. 错误报文**
 
 | 错误报文 (Error Message) | 描述 (Description) |
 |---------------|-------------|
-| ERR_COR | 当功能 (Function) 或设备在 PCI Express 接口上检测到可纠正错误 (correctable error) 时，发出此报文。可纠正错误的定义见 § 6.2.2.1 节。 |
-| ERR_NONFATAL | 当功能或设备在 PCI Express 接口上检测到非致命的不可纠正错误 (Non-fatal, uncorrectable error) 时，发出此报文。非致命的不可纠正错误的定义见 § 6.2.2.2.2 节。 |
-| ERR_FATAL | 当功能或设备在 PCI Express 接口上检测到致命的不可纠正错误 (Fatal, uncorrectable error) 时，发出此报文。致命的不可纠正错误的定义见 § 6.2.2.2.1 节。 |
+| ERR_COR | 当功能 (Function) 或设备在 PCI Express 接口上检测到可纠正错误 (correctable error) 时,发出此报文。可纠正错误的定义见 § 6.2.2.1 节。 |
+| ERR_NONFATAL | 当功能或设备在 PCI Express 接口上检测到非致命的不可纠正错误 (Non-fatal, uncorrectable error) 时,发出此报文。非致命的不可纠正错误的定义见 § 6.2.2.2.2 节。 |
+| ERR_FATAL | 当功能或设备在 PCI Express 接口上检测到致命的不可纠正错误 (Fatal, uncorrectable error) 时,发出此报文。致命的不可纠正错误的定义见 § 6.2.2.2.1 节。 |
 
-对于这些报文，根复合体 (Root Complex) 通过报文头的请求者 ID (Requester ID) 来识别报文的发起者。根复合体将这些错误报文转换为平台级事件。
+对于这些报文,根复合体 (Root Complex) 通过报文头的请求者 ID (Requester ID) 来识别报文的发起者。根复合体将这些错误报文转换为平台级事件。
 
 > **实现说明:ERR_COR、ERR_NONFATAL 和 ERR_FATAL 的使用**
 
-在 [PCIe-1.0a] 中，一个给定的错误要么是可纠正的、要么是非致命的、要么是致命的。假设信号发送已启用，可纠正错误始终使用 ERR_COR 发送，非致命错误始终使用 ERR_NONFATAL 发送，致命错误始终使用 ERR_FATAL 发送。
+在 [PCIe-1.0a] 中,一个给定的错误要么是可纠正的、要么是非致命的、要么是致命的。假设信号发送已启用,可纠正错误始终使用 ERR_COR 发送,非致命错误始终使用 ERR_NONFATAL 发送,致命错误始终使用 ERR_FATAL 发送。
 
-在支持基于角色的错误报告 (Role-Based Error Reporting) 的后续规范中，非致命错误有时使用 ERR_NONFATAL 发送，有时使用 ERR_COR 发送，有时根本不发信号，这取决于检测错误的代理的角色以及该代理是否实现了 AER(参见 § 6.2.3.2.4 节)。在某些平台上，发送 ERR_NONFATAL 会阻止其他代理尝试恢复或确定错误的最终处置。对于检测代理不是确定错误最终处置的合适代理的情况，具有 AER 的检测代理可以使用 ERR_COR 发送非致命错误信号，作为对软件的通知性建议。对于检测代理是合适代理的情况，该代理使用 ERR_NONFATAL 发送非致命错误信号。
+在支持基于角色的错误报告 (Role-Based Error Reporting) 的后续规范中,非致命错误有时使用 ERR_NONFATAL 发送,有时使用 ERR_COR 发送,有时根本不发信号,这取决于检测错误的代理的角色以及该代理是否实现了 AER(参见 § 6.2.3.2.4 节)。在某些平台上,发送 ERR_NONFATAL 会阻止其他代理尝试恢复或确定错误的最终处置。对于检测代理不是确定错误最终处置的合适代理的情况,具有 AER 的检测代理可以使用 ERR_COR 发送非致命错误信号,作为对软件的通知性建议。对于检测代理是合适代理的情况,该代理使用 ERR_NONFATAL 发送非致命错误信号。
 
-对于通常为非致命的某个不可纠正错误，如果软件希望在检测到该错误时避免层级 (hierarchy) 继续运行，软件可以配置实现了 AER 的检测代理将该错误的严重性升级为致命。检测代理(若启用)将始终使用 ERR_FATAL 发送致命错误信号，无论该代理的角色如何。
+对于通常为非致命的某个不可纠正错误,如果软件希望在检测到该错误时避免层级 (hierarchy) 继续运行,软件可以配置实现了 AER 的检测代理将该错误的严重性升级为致命。检测代理(若启用)将始终使用 ERR_FATAL 发送致命错误信号,无论该代理的角色如何。
 
-软件应当认识到，单个事务可以被多个代理使用不同类型的错误报文发出信号。例如，中毒的 TLP (poisoned TLP) 可能被中间的接收者 (intermediate Receivers) 用 ERR_COR 发出信号，而最终目的地的接收者 (ultimate destination Receiver) 可能用 ERR_NONFATAL 发出信号。
+软件应当认识到,单个事务可以被多个代理使用不同类型的错误报文发出信号。例如,中毒的 TLP (poisoned TLP) 可能被中间的接收者 (intermediate Receivers) 用 ERR_COR 发出信号,而最终目的地的接收者 (ultimate destination Receiver) 可能用 ERR_NONFATAL 发出信号。
 
 </td>
 </tr>
@@ -2089,13 +2089,13 @@ For devices implementing the Advanced Error Reporting Extended Capability the Un
 </td>
 <td style="background-color:#e8e8e8">
 
-对于实现了高级错误报告扩展能力 (Advanced Error Reporting Extended Capability) 的设备功能 (Function)，不可纠正错误严重性 (Uncorrectable Error Severity) 寄存器允许将每个不可纠正错误编程为致命 (Fatal) 或非致命 (Non-Fatal)。使用本规范定义的 PCI Express 机制，不可纠正错误是不可恢复的。然而，某些平台或设备可能将特定错误视为对链路 (Link) 或设备的致命错误，而另一平台则可能认为该错误是非致命的。不可纠正错误严重性寄存器的默认值是本规范的起点，但如果设备驱动程序或平台软件需要更稳健的错误处理，可以重新编程该寄存器。
+对于实现了高级错误报告扩展能力 (Advanced Error Reporting Extended Capability) 的设备功能 (Function),不可纠正错误严重性 (Uncorrectable Error Severity) 寄存器允许将每个不可纠正错误编程为致命 (Fatal) 或非致命 (Non-Fatal)。使用本规范定义的 PCI Express 机制,不可纠正错误是不可恢复的。然而,某些平台或设备可能将特定错误视为对链路 (Link) 或设备的致命错误,而另一平台则可能认为该错误是非致命的。不可纠正错误严重性寄存器的默认值是本规范的起点,但如果设备驱动程序或平台软件需要更稳健的错误处理,可以重新编程该寄存器。
 
 基线错误处理 (Baseline error handling) 不支持严重性编程。
 
-§ 6.2.7 节列出了本规范所管辖的所有错误，并描述了上述各类错误报文在何时被发出。这些错误报文按类别(可纠正、非致命、致命)的发送是使用设备控制 (Device Control) 寄存器的 Reporting Enable 位(参见 § 7.5.3.4 节)或 PCI 命令 (PCI Command) 寄存器的 SERR# Enable 位(参见 § 7.5.1.1.3 节)来启用的。
+§ 6.2.7 节列出了本规范所管辖的所有错误,并描述了上述各类错误报文在何时被发出。这些错误报文按类别(可纠正、非致命、致命)的发送是使用设备控制 (Device Control) 寄存器的 Reporting Enable 位(参见 § 7.5.3.4 节)或 PCI 命令 (PCI Command) 寄存器的 SERR# Enable 位(参见 § 7.5.1.1.3 节)来启用的。
 
-对于实现了高级错误报告扩展能力的设备，不可纠正错误掩码 (Uncorrectable Error Mask) 寄存器和可纠正错误掩码 (Correctable Error Mask) 寄存器允许独立地掩码每个错误条件。如果某类错误的报文在设备控制寄存器和 PCI 命令寄存器的组合设置下未被启用，则无论相应掩码寄存器的值如何，都不会发送该类报文。
+对于实现了高级错误报告扩展能力的设备,不可纠正错误掩码 (Uncorrectable Error Mask) 寄存器和可纠正错误掩码 (Correctable Error Mask) 寄存器允许独立地掩码每个错误条件。如果某类错误的报文在设备控制寄存器和 PCI 命令寄存器的组合设置下未被启用,则无论相应掩码寄存器的值如何,都不会发送该类报文。
 
 </td>
 </tr>
@@ -2125,7 +2125,7 @@ If an individual error is masked when it is detected, its error status bit is st
 </td>
 <td style="background-color:#e8e8e8">
 
-如果在检测到某个单独错误时该错误被掩码，则其错误状态位仍然会被置位，但不会向根复合体 (Root Complex) 发送任何错误报告报文，并且该错误也不会记录在 Header Log、TLP Prefix Log 或 First Error Pointer 中。
+如果在检测到某个单独错误时该错误被掩码,则其错误状态位仍然会被置位,但不会向根复合体 (Root Complex) 发送任何错误报告报文,并且该错误也不会记录在 Header Log、TLP Prefix Log 或 First Error Pointer 中。
 
 </td>
 </tr>
@@ -2166,11 +2166,11 @@ For errors detected in the Transaction layer and Uncorrectable Internal Errors, 
 </td>
 <td style="background-color:#e8e8e8">
 
-如果对某一事务的错误条件未被隔离为最显著的那一次，就可能发生错误污染 (error pollution)。例如，假设物理层 (Physical Layer) 检测到一个接收错误 (Receiver Error)。该错误在物理层被检测到，并向根复合体 (Root Complex) 上报。为了避免该错误向上传播并在更高层(例如数据链路层的 TLP 错误)引发后续错误，从而使确定错误根本原因变得更加困难，同一报文的后续错误将不会由数据链路层或事务层上报。类似地，当数据链路层检测到错误时，同一报文的后续错误也不会由事务层上报。此行为仅适用于与特定报文相关联的错误——其他错误仍按每次发生进行上报。
+如果对某一事务的错误条件未被隔离为最显著的那一次,就可能发生错误污染 (error pollution)。例如,假设物理层 (Physical Layer) 检测到一个接收错误 (Receiver Error)。该错误在物理层被检测到,并向根复合体 (Root Complex) 上报。为了避免该错误向上传播并在更高层(例如数据链路层的 TLP 错误)引发后续错误,从而使确定错误根本原因变得更加困难,同一报文的后续错误将不会由数据链路层或事务层上报。类似地,当数据链路层检测到错误时,同一报文的后续错误也不会由事务层上报。此行为仅适用于与特定报文相关联的错误——其他错误仍按每次发生进行上报。
 
-已纠正的内部错误 (Corrected Internal Errors) 是指其影响已被组件掩码或绕过的错误;详见 § 6.2.10 节。因此，已纠正的内部错误不参与错误污染，应在被检测到时予以报告。
+已纠正的内部错误 (Corrected Internal Errors) 是指其影响已被组件掩码或绕过的错误;详见 § 6.2.10 节。因此,已纠正的内部错误不参与错误污染,应在被检测到时予以报告。
 
-对于事务层检测到的错误以及不可纠正的内部错误 (Uncorrectable Internal Errors)，允许并建议对单个已接收 TLP 最多只报告一个错误，并应采用以下优先级(从高到低):
+对于事务层检测到的错误以及不可纠正的内部错误 (Uncorrectable Internal Errors),允许并建议对单个已接收 TLP 最多只报告一个错误,并应采用以下优先级(从高到低):
 
 - 不可纠正的内部错误 (Uncorrectable Internal Error)
 - 接收者溢出 (Receiver Overflow)
@@ -2249,19 +2249,19 @@ handle this case as an Advisory Non-Fatal Error.
 - PCRC 检查失败 (PCRC Check Failed)
 - 收到中毒 TLP 或中毒 TLP 出口被阻止 (Poisoned TLP Received or Poisoned TLP Egress Blocked)
 
-完成超时 (Completion Timeout) 错误不在上述优先级列表中，因为它不是通过处理已接收的 TLP 检测到的。
+完成超时 (Completion Timeout) 错误不在上述优先级列表中,因为它不是通过处理已接收的 TLP 检测到的。
 
-列在同一项目下的错误是互斥的，因此它们的相对顺序无关紧要。
+列在同一项目下的错误是互斥的,因此它们的相对顺序无关紧要。
 
-在某些情况下，非致命错误的检测者并不是确定该错误是否可恢复、或者是否需要任何恢复操作的合适代理。例如，如果软件尝试从不存在的设备或功能执行配置读，则完成中的 UR 状态会将该错误告知软件，软件不需要完成者再额外发送 ERR_NONFATAL 报文来上报该错误。事实上，在某些平台上，使用 ERR_NONFATAL 发出错误信号会导致系统错误 (System Error)，从而破坏正常的软件探测。
+在某些情况下,非致命错误的检测者并不是确定该错误是否可恢复、或者是否需要任何恢复操作的合适代理。例如,如果软件尝试从不存在的设备或功能执行配置读,则完成中的 UR 状态会将该错误告知软件,软件不需要完成者再额外发送 ERR_NONFATAL 报文来上报该错误。事实上,在某些平台上,使用 ERR_NONFATAL 发出错误信号会导致系统错误 (System Error),从而破坏正常的软件探测。
 
-"建议性非致命错误" (Advisory Non-Fatal Error) 情形主要由检测代理(请求者、完成者或接收者)的角色以及具体的错误决定。在这些情况下，具有 AER 的代理(若启用)通过发送 ERR_COR 报文作为对软件的通知性建议，而不是发送 ERR_NONFATAL,来发出非致命错误信号。没有 AER 的代理在这些情况下不发送错误报文，因为收到 ERR_COR 的软件将无法将建议性非致命错误情形与用于评估链路完整性的可纠正错误情形区分开来。
+"建议性非致命错误" (Advisory Non-Fatal Error) 情形主要由检测代理(请求者、完成者或接收者)的角色以及具体的错误决定。在这些情况下,具有 AER 的代理(若启用)通过发送 ERR_COR 报文作为对软件的通知性建议,而不是发送 ERR_NONFATAL,来发出非致命错误信号。没有 AER 的代理在这些情况下不发送错误报文,因为收到 ERR_COR 的软件将无法将建议性非致命错误情形与用于评估链路完整性的可纠正错误情形区分开来。
 
-以下是建议性非致命错误的具体情形。请注意，单个 TLP 中可能同时存在来自相同或不同错误类别(可纠正、非致命、致命)的多个错误。例如，意外的完成报文 (unexpected Completion) 可能同时是中毒的。有关上报多个错误的要求和建议，请参见 § 6.2.3.2.3 节。对于上述示例，建议上报意外完成，而不上报收到中毒 TLP。
+以下是建议性非致命错误的具体情形。请注意,单个 TLP 中可能同时存在来自相同或不同错误类别(可纠正、非致命、致命)的多个错误。例如,意外的完成报文 (unexpected Completion) 可能同时是中毒的。有关上报多个错误的要求和建议,请参见 § 6.2.3.2.3 节。对于上述示例,建议上报意外完成,而不上报收到中毒 TLP。
 
-如果软件希望具有 AER 的代理将通常的建议性非致命错误情形处理得更为严重，软件可以将该不可纠正错误的严重性升级为致命，在这种情况下，该代理(若启用)将使用 ERR_FATAL 发出错误信号。
+如果软件希望具有 AER 的代理将通常的建议性非致命错误情形处理得更为严重,软件可以将该不可纠正错误的严重性升级为致命,在这种情况下,该代理(若启用)将使用 ERR_FATAL 发出错误信号。
 
-本节涵盖了由 PCI Express 扩展能力 (Extended Capability) 和 AER 所管理的错误的建议性非致命错误处理。§ 6.2.11.3 节涵盖了支持 DPC 的 RP 扩展的根端口 (Root Ports) 的 RP PIO 错误处理机制。RP PIO 建议性错误在概念上类似于 AER 建议性非致命错误，但适用于不同的错误情形，并由不同的控制位管理。
+本节涵盖了由 PCI Express 扩展能力 (Extended Capability) 和 AER 所管理的错误的建议性非致命错误处理。§ 6.2.11.3 节涵盖了支持 DPC 的 RP 扩展的根端口 (Root Ports) 的 RP PIO 错误处理机制。RP PIO 建议性错误在概念上类似于 AER 建议性非致命错误,但适用于不同的错误情形,并由不同的控制位管理。
 
 完成者 (Completer) 通常通过发送带有"不支持的请求"或"完成者中止" (UR/CA) 状态的完成报文来为非 Posted 请求 (Non-Posted Request) 发出不可纠正错误信号。
 
@@ -2306,13 +2306,13 @@ This section covers Advisory Non-Fatal Error handling for errors managed by the 
 </td>
 <td style="background-color:#e8e8e8">
 
-"建议性非致命错误" (Advisory Non-Fatal Error) 情形主要由检测代理(请求者、完成者或接收者)的角色以及具体的错误决定。在这些情况下，具有 AER 的代理(若启用)通过发送 ERR_COR 报文作为对软件的通知性建议，而不是发送 ERR_NONFATAL,来发出非致命错误信号。没有 AER 的代理在这些情况下不发送错误报文，因为收到 ERR_COR 的软件将无法将建议性非致命错误情形与用于评估链路完整性的可纠正错误情形区分开来。
+"建议性非致命错误" (Advisory Non-Fatal Error) 情形主要由检测代理(请求者、完成者或接收者)的角色以及具体的错误决定。在这些情况下,具有 AER 的代理(若启用)通过发送 ERR_COR 报文作为对软件的通知性建议,而不是发送 ERR_NONFATAL,来发出非致命错误信号。没有 AER 的代理在这些情况下不发送错误报文,因为收到 ERR_COR 的软件将无法将建议性非致命错误情形与用于评估链路完整性的可纠正错误情形区分开来。
 
-以下是建议性非致命错误的具体情形。请注意，单个 TLP 中可能同时存在来自相同或不同错误类别(可纠正、非致命、致命)的多个错误。例如，意外的完成报文 (unexpected Completion) 可能同时是中毒的。有关上报多个错误的要求和建议，请参见 § 6.2.3.2.3 节。对于上述示例，建议上报意外完成，而不上报收到中毒 TLP。
+以下是建议性非致命错误的具体情形。请注意,单个 TLP 中可能同时存在来自相同或不同错误类别(可纠正、非致命、致命)的多个错误。例如,意外的完成报文 (unexpected Completion) 可能同时是中毒的。有关上报多个错误的要求和建议,请参见 § 6.2.3.2.3 节。对于上述示例,建议上报意外完成,而不上报收到中毒 TLP。
 
-如果软件希望具有 AER 的代理将通常的建议性非致命错误情形处理得更为严重，软件可以将该不可纠正错误的严重性升级为致命，在这种情况下，该代理(若启用)将使用 ERR_FATAL 发出错误信号。
+如果软件希望具有 AER 的代理将通常的建议性非致命错误情形处理得更为严重,软件可以将该不可纠正错误的严重性升级为致命,在这种情况下,该代理(若启用)将使用 ERR_FATAL 发出错误信号。
 
-本节涵盖了由 PCI Express 扩展能力 (Extended Capability) 和 AER 所管理的错误的建议性非致命错误处理。§ 6.2.11.3 节涵盖了支持 DPC 的 RP 扩展的根端口 (Root Ports) 的 RP PIO 错误处理机制。RP PIO 建议性错误在概念上类似于 AER 建议性非致命错误，但适用于不同的错误情形，并由不同的控制位管理。
+本节涵盖了由 PCI Express 扩展能力 (Extended Capability) 和 AER 所管理的错误的建议性非致命错误处理。§ 6.2.11.3 节涵盖了支持 DPC 的 RP 扩展的根端口 (Root Ports) 的 RP PIO 错误处理机制。RP PIO 建议性错误在概念上类似于 AER 建议性非致命错误,但适用于不同的错误情形,并由不同的控制位管理。
 
 </td>
 </tr>
@@ -2409,26 +2409,26 @@ A Receiver must not handle this case as an Advisory Non-Fatal Error if either of
 </td>
 <td style="background-color:#e8e8e8">
 
-即使该特定事务存在不可纠正错误，完成者也必须将此情形作为建议性非致命错误来处理，因为请求者 (Requester) 在收到带有 UR/CA 状态的完成报文时，负责使用请求者特定的机制在必要时上报该错误(参见 § 6.2.3.2.5 节)。
+即使该特定事务存在不可纠正错误,完成者也必须将此情形作为建议性非致命错误来处理,因为请求者 (Requester) 在收到带有 UR/CA 状态的完成报文时,负责使用请求者特定的机制在必要时上报该错误(参见 § 6.2.3.2.5 节)。
 
 当一个接收者 (Receiver) 不作为某个 TLP 的最终 PCI Express 目的地时,
-108 如果该接收者检测到该 TLP 的非致命错误，
+108 如果该接收者检测到该 TLP 的非致命错误,
 则这个"中间"接收者必须将此情形作为建议性非致命错误来处理。
 109 具有 AER 的接收者(若启用)通过发送 ERR_COR 报文来发出错误信号。没有 AER 的接收者针对此情形不发送任何错误报文。针对根复合体 (Root Complexes, RCs) 的中间接收者情形的例外情况见下文。
 
-中间接收者情形的一个示例是:交换机 (Switch) 在转发某个 TLP 时检测到中毒 (poison) 或错误的 ECRC。即使在该 TLP 路由的此处，这是一个不可纠正的(但非致命的)错误，中间接收者也将其作为建议性非致命错误处理，以使 TLP 的最终接收者(即对 Request TLP 而言的完成者，或对 Completion TLP 而言的请求者)能够根据其错误设置，更恰当地处理该错误。例如，某个完成者在检测到内存写请求 (Memory Write Request) 中的中毒时,
-110 可能将该错误掩码(因此不上报)，而同一层级中的另一个完成者可能会使用 ERR_NONFATAL 上报该错误。
+中间接收者情形的一个示例是:交换机 (Switch) 在转发某个 TLP 时检测到中毒 (poison) 或错误的 ECRC。即使在该 TLP 路由的此处,这是一个不可纠正的(但非致命的)错误,中间接收者也将其作为建议性非致命错误处理,以使 TLP 的最终接收者(即对 Request TLP 而言的完成者,或对 Completion TLP 而言的请求者)能够根据其错误设置,更恰当地处理该错误。例如,某个完成者在检测到内存写请求 (Memory Write Request) 中的中毒时,
+110 可能将该错误掩码(因此不上报),而同一层级中的另一个完成者可能会使用 ERR_NONFATAL 上报该错误。
 
-中毒 TLP 出口被阻止 (Poisoned TLP Egress Blocked) 错误从不作为中间接收者情形处理，因为它不是在处理已接收 TLP 的过程中被检测到的。
+中毒 TLP 出口被阻止 (Poisoned TLP Egress Blocked) 错误从不作为中间接收者情形处理,因为它不是在处理已接收 TLP 的过程中被检测到的。
 
-如果 RC 检测到某个 TLP 的非致命错误，该 TLP 通常会在根端口之间以对等方式转发，但 RC 不支持随转发的报文一起传递错误相关信息(例如 TLP Digest、EP 位或等效信息)，则 RC 必须(若启用)使用 ERR_NONFATAL 发出错误信号，并且还必须不转发该事务。一个示例是:RC 需要在根端口之间以对等方式转发一个中毒的 TLP,但 RC 的内部互连 (fabric) 不支持中毒指示 (poison indication)。
+如果 RC 检测到某个 TLP 的非致命错误,该 TLP 通常会在根端口之间以对等方式转发,但 RC 不支持随转发的报文一起传递错误相关信息(例如 TLP Digest、EP 位或等效信息),则 RC 必须(若启用)使用 ERR_NONFATAL 发出错误信号,并且还必须不转发该事务。一个示例是:RC 需要在根端口之间以对等方式转发一个中毒的 TLP,但 RC 的内部互连 (fabric) 不支持中毒指示 (poison indication)。
 
-当中毒 TLP 被其最终 PCI Express 目的地接收时，如果严重性为非致命，并且接收者合法地选择不将此情形作为不可纠正错误处理(见下文)，则接收者必须将此情形作为建议性非致命错误来处理。
-111 当某个 IDE TLP 在其最终目的端口 (ultimate destination Port) 被判定为具有 PCRC 检查失败错误时，如果严重性为非致命，并且接收者以允许继续运行的方式处理该中毒数据，则接收者必须将此情形作为建议性非致命错误来处理。具有 AER 的接收者(若启用)通过发送 ERR_COR 报文来发出错误信号。没有 AER 的接收者针对此情形不发送任何错误报文。
+当中毒 TLP 被其最终 PCI Express 目的地接收时,如果严重性为非致命,并且接收者合法地选择不将此情形作为不可纠正错误处理(见下文),则接收者必须将此情形作为建议性非致命错误来处理。
+111 当某个 IDE TLP 在其最终目的端口 (ultimate destination Port) 被判定为具有 PCRC 检查失败错误时,如果严重性为非致命,并且接收者以允许继续运行的方式处理该中毒数据,则接收者必须将此情形作为建议性非致命错误来处理。具有 AER 的接收者(若启用)通过发送 ERR_COR 报文来发出错误信号。没有 AER 的接收者针对此情形不发送任何错误报文。
 
-在以下任一情况下，接收者不得将此情形作为建议性非致命错误处理:
+在以下任一情况下,接收者不得将此情形作为建议性非致命错误处理:
 
-- 在正确配置的情况下，将该错误作为可纠正错误处理并继续运行可能导致静默数据损坏 (silent data corruption)。
+- 在正确配置的情况下,将该错误作为可纠正错误处理并继续运行可能导致静默数据损坏 (silent data corruption)。
 - § 2.7.2.1 节的规则要求将此情形作为不可纠正错误处理。
 
 </td>
@@ -2470,13 +2470,13 @@ A Receiver must not handle this case as an Advisory Non-Fatal Error if either of
 </td>
 <td style="background-color:#e8e8e8">
 
-105. 如果完成方 (Completer) 在完成报文 (Completion) 中返回数据，且该数据已损坏或可疑，完成方被允许使用错误转发 (Error Forwarding, 数据中毒, Data Poisoning) 机制来指示该错误，而不是将其作为不支持的请求 (UR) 或完成中止 (CA) 处理。
+105. 如果完成方 (Completer) 在完成报文 (Completion) 中返回数据,且该数据已损坏或可疑,完成方被允许使用错误转发 (Error Forwarding, 数据中毒, Data Poisoning) 机制来指示该错误,而不是将其作为不支持的请求 (UR) 或完成中止 (CA) 处理。
 
-106. 某些其他错误 (例如 ACS 违例) 与 Non-Posted 请求 (Non-Posted Request) 同时发生时，也会导致完成方发送带有 UR 或 CA 状态的完成报文。如果该错误 (例如 ACS 违例) 的严重程度为非致命 (non-fatal)，则完成方还必须将此情形作为建议性非致命错误 (Advisory Non-Fatal Error) 处理。但是，关于某些必须作为不可纠正错误 (uncorrectable error) 处理的带中毒数据 (Poisoned data) 的请求，请参阅 § 2.7.2.1 节。
+106. 某些其他错误 (例如 ACS 违例) 与 Non-Posted 请求 (Non-Posted Request) 同时发生时,也会导致完成方发送带有 UR 或 CA 状态的完成报文。如果该错误 (例如 ACS 违例) 的严重程度为非致命 (non-fatal),则完成方还必须将此情形作为建议性非致命错误 (Advisory Non-Fatal Error) 处理。但是,关于某些必须作为不可纠正错误 (uncorrectable error) 处理的带中毒数据 (Poisoned data) 的请求,请参阅 § 2.7.2.1 节。
 
-107. 如果严重程度为致命 (fatal)，则该错误不是建议性非致命错误，且必须 (若已使能) 使用 ERR_FATAL 来指示。
+107. 如果严重程度为致命 (fatal),则该错误不是建议性非致命错误,且必须 (若已使能) 使用 ERR_FATAL 来指示。
 
-108. 如果接收方 (Receiver) 未实现 ECRC 检查 (ECRC Checking)，或 ECRC 检查未使能，则接收方将不会检测到 ECRC 错误 (ECRC Error)。
+108. 如果接收方 (Receiver) 未实现 ECRC 检查 (ECRC Checking),或 ECRC 检查未使能,则接收方将不会检测到 ECRC 错误 (ECRC Error)。
 
 </td>
 </tr>
@@ -2518,17 +2518,17 @@ This section applies to Requesters other than Root Ports performing programmed I
 </td>
 <td style="background-color:#e8e8e8">
 
-109. 如果严重程度为致命 (fatal)，则该错误不是建议性非致命错误，且必须 (若已使能) 使用 ERR_FATAL 来指示。
+109. 如果严重程度为致命 (fatal),则该错误不是建议性非致命错误,且必须 (若已使能) 使用 ERR_FATAL 来指示。
 
-110. 有关适用于带中毒的内存写请求 (Memory Write Request) 的特殊规则，请参阅 § 2.7.2.1 节。
+110. 有关适用于带中毒的内存写请求 (Memory Write Request) 的特殊规则,请参阅 § 2.7.2.1 节。
 
-111. 如果严重程度为致命 (fatal)，则该错误不是建议性非致命错误，且必须 (若已使能) 使用 ERR_FATAL 来指示。
+111. 如果严重程度为致命 (fatal),则该错误不是建议性非致命错误,且必须 (若已使能) 使用 ERR_FATAL 来指示。
 
-示例之一:根复合体 (Root Complex) 接收到一条目标是主机内存的、带中毒的内存写 TLP。如果根复合体将该中毒数据连同其指示一起传播到主机内存，则 (若已使能) 使用 ERR_COR 来指示该错误。如果根复合体未将中毒传播到主机内存，则 (若已使能) 使用 ERR_NONFATAL 来指示该错误。
+示例之一:根复合体 (Root Complex) 接收到一条目标是主机内存的、带中毒的内存写 TLP。如果根复合体将该中毒数据连同其指示一起传播到主机内存,则 (若已使能) 使用 ERR_COR 来指示该错误。如果根复合体未将中毒传播到主机内存,则 (若已使能) 使用 ERR_NONFATAL 来指示该错误。
 
-另一示例:请求者 (Requester) 接收到一条带中毒的内存读完成 TLP。如果请求者在内部传播该中毒数据，或像处理带有 UR/CA 状态的完成报文那样处理该错误，则 (若已使能) 使用 ERR_COR 来指示该错误。如果请求者未以允许继续操作的方式处理该中毒，则 (若已使能) 使用 ERR_NONFATAL 来指示该错误。
+另一示例:请求者 (Requester) 接收到一条带中毒的内存读完成 TLP。如果请求者在内部传播该中毒数据,或像处理带有 UR/CA 状态的完成报文那样处理该错误,则 (若已使能) 使用 ERR_COR 来指示该错误。如果请求者未以允许继续操作的方式处理该中毒,则 (若已使能) 使用 ERR_NONFATAL 来指示该错误。
 
-本节适用于执行程序化 I/O (PIO) 的根端口 (Root Port) 以外的请求者。有关支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口中相关的 RP PIO 功能，请参阅 § 6.2.11.3 节。
+本节适用于执行程序化 I/O (PIO) 的根端口 (Root Port) 以外的请求者。有关支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口中相关的 RP PIO 功能,请参阅 § 6.2.11.3 节。
 
 </td>
 </tr>
@@ -2567,11 +2567,11 @@ Note that automatic recovery by the Requester from a Completion Timeout is gener
 </td>
 <td style="background-color:#e8e8e8">
 
-当 Non-Posted 请求 (Non-Posted Request) 的请求者 (Requester) 在等待相关完成报文 (Completion) 时发生超时，请求者被允许通过发起一条单独的、后续的请求 (Request) 来尝试从错误中恢复。请求者被允许进行零次、一次或多次 (有限次) 恢复尝试，但如果不再进行恢复尝试，则必须 (若已使能) 通过不可纠正错误报文 (uncorrectable error Message) 来指示该错误。
+当 Non-Posted 请求 (Non-Posted Request) 的请求者 (Requester) 在等待相关完成报文 (Completion) 时发生超时,请求者被允许通过发起一条单独的、后续的请求 (Request) 来尝试从错误中恢复。请求者被允许进行零次、一次或多次 (有限次) 恢复尝试,但如果不再进行恢复尝试,则必须 (若已使能) 通过不可纠正错误报文 (uncorrectable error Message) 来指示该错误。
 
-如果完成超时的严重程度为非致命 (non-fatal)，且请求者选择通过发起新请求来尝试恢复，则请求者必须首先将当前错误情形作为建议性非致命错误 (Advisory Non-Fatal Error) 处理。<sup>112</sup> 支持 AER 的请求者 (若已使能) 通过发送 ERR_COR 报文来指示该错误。不支持 AER 的请求者则不会为此情形发送任何错误报文。
+如果完成超时的严重程度为非致命 (non-fatal),且请求者选择通过发起新请求来尝试恢复,则请求者必须首先将当前错误情形作为建议性非致命错误 (Advisory Non-Fatal Error) 处理。<sup>112</sup> 支持 AER 的请求者 (若已使能) 通过发送 ERR_COR 报文来指示该错误。不支持 AER 的请求者则不会为此情形发送任何错误报文。
 
-请注意，请求者从完成超时中进行自动恢复一般仅在该 Non-Posted 请求无副作用时才可行，但也可能取决于本规范范围之外的其他考虑因素。
+请注意,请求者从完成超时中进行自动恢复一般仅在该 Non-Posted 请求无副作用时才可行,但也可能取决于本规范范围之外的其他考虑因素。
 
 </td>
 </tr>
@@ -2605,9 +2605,9 @@ If the unexpected Completion was a result of misrouting, the Completion Timeout 
 </td>
 <td style="background-color:#e8e8e8">
 
-当接收方 (Receiver) 收到意外的完成报文 (Unexpected Completion)，且该意外完成报文错误的严重程度为非致命 (non-fatal) 时，接收方必须将此情形作为建议性非致命错误 (Advisory Non-Fatal Error) 处理。<sup>113</sup> 支持 AER 的接收方 (若已使能) 通过发送 ERR_COR 报文来指示该错误。不支持 AER 的接收方则不会为此情形发送任何错误报文。
+当接收方 (Receiver) 收到意外的完成报文 (Unexpected Completion),且该意外完成报文错误的严重程度为非致命 (non-fatal) 时,接收方必须将此情形作为建议性非致命错误 (Advisory Non-Fatal Error) 处理。<sup>113</sup> 支持 AER 的接收方 (若已使能) 通过发送 ERR_COR 报文来指示该错误。不支持 AER 的接收方则不会为此情形发送任何错误报文。
 
-如果该意外完成报文是错误路由 (misrouting) 的结果，则相关请求者 (Requester) 处的完成超时机制最终会触发，请求者可以选择尝试恢复。通过让意外完成报文的接收方将该错误作为建议性非致命错误处理，可以避免干扰请求者的恢复。
+如果该意外完成报文是错误路由 (misrouting) 的结果,则相关请求者 (Requester) 处的完成超时机制最终会触发,请求者可以选择尝试恢复。通过让意外完成报文的接收方将该错误作为建议性非致命错误处理,可以避免干扰请求者的恢复。
 
 </td>
 </tr>
@@ -2643,11 +2643,11 @@ If the Requester needs to report the error, the Requester must do so solely thro
 </td>
 <td style="background-color:#e8e8e8">
 
-当请求者 (Requester) 接收到一条带有 UR/CA 状态的完成报文 (Completion) 时，通常完成方 (Completer) 已将该错误作为建议性非致命错误 (Advisory Non-Fatal Error) 处理——前提是完成方处的错误严重程度为非致命 (non-fatal) (见 § 6.2.3.2.4.1 节)。请求者必须确定是否需要采取任何错误恢复动作、采取何种类型的恢复动作，以及是否需要上报该错误。
+当请求者 (Requester) 接收到一条带有 UR/CA 状态的完成报文 (Completion) 时,通常完成方 (Completer) 已将该错误作为建议性非致命错误 (Advisory Non-Fatal Error) 处理——前提是完成方处的错误严重程度为非致命 (non-fatal) (见 § 6.2.3.2.4.1 节)。请求者必须确定是否需要采取任何错误恢复动作、采取何种类型的恢复动作,以及是否需要上报该错误。
 
-如果请求者需要上报该错误，则请求者必须仅通过请求者特定的机制 (Requester-specific mechanism) 来完成。例如，许多设备具有关联的设备驱动程序 (device driver)，可向软件上报错误。作为另一个重要示例，在某些平台上，根复合体 (Root Complex) 在配置读完成 (Configuration Read Completion) 带有 UR/CA 状态时，会向软件返回全 1。
+如果请求者需要上报该错误,则请求者必须仅通过请求者特定的机制 (Requester-specific mechanism) 来完成。例如,许多设备具有关联的设备驱动程序 (device driver),可向软件上报错误。作为另一个重要示例,在某些平台上,根复合体 (Root Complex) 在配置读完成 (Configuration Read Completion) 带有 UR/CA 状态时,会向软件返回全 1。
 
-§ 6.2.11.3 节涵盖支持 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中的 RP PIO 控制。除 RP PIO 机制外，不允许请求者使用 PCI Express 日志记录和错误报文 (error Message) 信令来上报该错误。
+§ 6.2.11.3 节涵盖支持 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中的 RP PIO 控制。除 RP PIO 机制外,不允许请求者使用 PCI Express 日志记录和错误报文 (error Message) 信令来上报该错误。
 
 </td>
 </tr>
@@ -2679,7 +2679,7 @@ Error Forwarding, also known as data poisoning, is indicated by setting the EP b
 </td>
 <td style="background-color:#e8e8e8">
 
-错误转发 (Error Forwarding)，也称为数据中毒 (Data Poisoning)，通过在 TLP 中置位 EP 位来表示。请参阅 § 2.7.2 节。这是 PCI Express 中另一种错误报告方法，它使 TLP 的接收方 (Receiver) 能够将错误与特定的请求 (Request) 或完成报文 (Completion) 相关联。与完成状态 (Completion Status) 机制不同，错误转发既可用于包含数据的请求，也可用于包含数据的完成报文。此外，沿 TLP 路由的"中间"接收方 (intermediate Receiver) 而不仅仅是最终目的地处的接收方，都需要检测并 (若已使能) 上报收到了该中毒 TLP (Poisoned TLP)。这有助于软件确定路径上的某个特定交换机 (Switch) 是否对该 TLP 注入了中毒。
+错误转发 (Error Forwarding),也称为数据中毒 (Data Poisoning),通过在 TLP 中置位 EP 位来表示。请参阅 § 2.7.2 节。这是 PCI Express 中另一种错误报告方法,它使 TLP 的接收方 (Receiver) 能够将错误与特定的请求 (Request) 或完成报文 (Completion) 相关联。与完成状态 (Completion Status) 机制不同,错误转发既可用于包含数据的请求,也可用于包含数据的完成报文。此外,沿 TLP 路由的"中间"接收方 (intermediate Receiver) 而不仅仅是最终目的地处的接收方,都需要检测并 (若已使能) 上报收到了该中毒 TLP (Poisoned TLP)。这有助于软件确定路径上的某个特定交换机 (Switch) 是否对该 TLP 注入了中毒。
 
 </td>
 </tr>
@@ -2715,11 +2715,11 @@ Unless otherwise specified, implementation specific criteria are used in determi
 </td>
 <td style="background-color:#e8e8e8">
 
-本规范包含多项可选的错误检查。除非另有规定，否则如果未执行某项可选错误检查而错误确实发生，则行为未定义 (undefined)。
+本规范包含多项可选的错误检查。除非另有规定,否则如果未执行某项可选错误检查而错误确实发生,则行为未定义 (undefined)。
 
-当某项可选错误检查涉及多条规则时，除非另有规定，否则每条规则都是独立可选的。实现可以检查所有规则、全部不检查或检查其中任意组合。
+当某项可选错误检查涉及多条规则时,除非另有规定,否则每条规则都是独立可选的。实现可以检查所有规则、全部不检查或检查其中任意组合。
 
-除非另有规定，否则在确定是否执行某项可选错误检查时，使用实现特定的 (implementation specific) 标准。
+除非另有规定,否则在确定是否执行某项可选错误检查时,使用实现特定的 (implementation specific) 标准。
 
 </td>
 </tr>
@@ -2776,13 +2776,13 @@ The following PCI Express errors are not Function-specific:
 </td>
 <td style="background-color:#e8e8e8">
 
-§ 6.2.7 节列出了本规范所管辖的所有错误，并针对每种错误规定了日志记录要求。不支持高级错误报告 (Advanced Error Reporting) 扩展能力 (Extended Capability) 的设备功能 (Device Function)，仅记录设备状态 (Device Status) 寄存器中指示已检测到错误的位。请注意，某些错误也会通过 PCI 兼容 (PCI-Compatible, Type 00h 和 01h) 配置寄存器中的报告机制来上报。§ 7.5.1 节描述了本节所描述的不同类型错误条件如何影响这些寄存器位。
+§ 6.2.7 节列出了本规范所管辖的所有错误,并针对每种错误规定了日志记录要求。不支持高级错误报告 (Advanced Error Reporting) 扩展能力 (Extended Capability) 的设备功能 (Device Function),仅记录设备状态 (Device Status) 寄存器中指示已检测到错误的位。请注意,某些错误也会通过 PCI 兼容 (PCI-Compatible, Type 00h 和 01h) 配置寄存器中的报告机制来上报。§ 7.5.1 节描述了本节所描述的不同类型错误条件如何影响这些寄存器位。
 
-对于支持高级错误报告扩展能力的设备功能,§ 表 6-3、§ 表 6-4 与 § 表 6-5 中的每个错误分别对应不可纠正错误状态 (Uncorrectable Error Status) 寄存器或可纠正错误状态 (Correctable Error Status) 寄存器中的特定位。软件通过这些寄存器更精确地确定发生了哪种错误以及其严重程度。对于特定的事务层 (Transaction Layer) 错误和不可纠正的内部错误 (Uncorrectable Internal Errors)，会记录相关的 TLP 包头 (TLP header)。
+对于支持高级错误报告扩展能力的设备功能,§ 表 6-3、§ 表 6-4 与 § 表 6-5 中的每个错误分别对应不可纠正错误状态 (Uncorrectable Error Status) 寄存器或可纠正错误状态 (Correctable Error Status) 寄存器中的特定位。软件通过这些寄存器更精确地确定发生了哪种错误以及其严重程度。对于特定的事务层 (Transaction Layer) 错误和不可纠正的内部错误 (Uncorrectable Internal Errors),会记录相关的 TLP 包头 (TLP header)。
 
-在非 SR-IOV 设备的多功能设备 (Multi-Function Device) 中，不属于该设备内任何单一功能 (Function) 的 PCI Express 错误，必须记录在该设备所有功能对应的状态和日志寄存器中。
+在非 SR-IOV 设备的多功能设备 (Multi-Function Device) 中,不属于该设备内任何单一功能 (Function) 的 PCI Express 错误,必须记录在该设备所有功能对应的状态和日志寄存器中。
 
-在 SR-IOV 设备中，被识别为非功能特定 (non-Function-specific) 的错误必须记录在所有物理功能 (PF) 中，而不能记录在其关联的虚拟功能 (VF) 中。此类错误还必须记录在任何非 IOV 功能中。
+在 SR-IOV 设备中,被识别为非功能特定 (non-Function-specific) 的错误必须记录在所有物理功能 (PF) 中,而不能记录在其关联的虚拟功能 (VF) 中。此类错误还必须记录在任何非 IOV 功能中。
 
 以下 PCI Express 错误不是功能特定的:
 
@@ -2790,15 +2790,15 @@ The following PCI Express errors are not Function-specific:
 - 所有数据链路层 (Data Link Layer) 错误
 - 以下事务层 (Transaction Layer) 错误:
   - ECRC 检查失败 (ECRC Check Failed)
-  - 不支持的请求 (Unsupported Request, UR)，由没有功能认领该 TLP 引起
+  - 不支持的请求 (Unsupported Request, UR),由没有功能认领该 TLP 引起
   - 接收方溢出 (Receiver Overflow)
   - 流控协议错误 (Flow Control Protocol Error)
   - 畸形 TLP (Malformed TLP)
-  - 意外的完成报文 (Unexpected Completion)，由没有功能认领该完成报文引起
-  - 意外的完成报文，由交换机 (Switch) 无法转发的完成报文引起，且入端口 (Ingress Port) 是与多功能设备关联的交换机上游端口 (Switch Upstream Port)
-  - 某些事务层错误 (例如收到中毒 TLP, Poisoned TLP Received) 可能是功能特定的，也可能不是，这取决于相关 TLP 目标是该设备中的单一功能还是所有功能。
+  - 意外的完成报文 (Unexpected Completion),由没有功能认领该完成报文引起
+  - 意外的完成报文,由交换机 (Switch) 无法转发的完成报文引起,且入端口 (Ingress Port) 是与多功能设备关联的交换机上游端口 (Switch Upstream Port)
+  - 某些事务层错误 (例如收到中毒 TLP, Poisoned TLP Received) 可能是功能特定的,也可能不是,这取决于相关 TLP 目标是该设备中的单一功能还是所有功能。
 - 一些内部错误 (Internal Errors)
-  - 内部错误是否为功能特定的，由实现自行确定。
+  - 内部错误是否为功能特定的,由实现自行确定。
 
 </td>
 </tr>
@@ -2836,13 +2836,13 @@ For both Root Ports and Root Complex Event Collectors, in order for a received e
 </td>
 <td style="background-color:#e8e8e8">
 
-在检测到这些错误之一时，多功能设备 (Multi-Function Device) 应当为给定严重程度最多生成一条错误报告报文 (error reporting Message)，其中该报文必须报告设备中已使能报告该特定类型错误的某一功能的请求者 ID (Requester ID)。如果没有功能被使能以发送报告报文，则该设备不发送报告报文。如果所有已使能报告的功能为该错误设置了相同的严重等级，则只发送一条错误报文。如果所有已使能报告的功能为该错误设置的严重等级不相同，则针对每个严重等级各发送一条错误报文。当软件检测到这些错误之一时，负责扫描多功能设备中的所有功能。
+在检测到这些错误之一时,多功能设备 (Multi-Function Device) 应当为给定严重程度最多生成一条错误报告报文 (error reporting Message),其中该报文必须报告设备中已使能报告该特定类型错误的某一功能的请求者 ID (Requester ID)。如果没有功能被使能以发送报告报文,则该设备不发送报告报文。如果所有已使能报告的功能为该错误设置了相同的严重等级,则只发送一条错误报文。如果所有已使能报告的功能为该错误设置的严重等级不相同,则针对每个严重等级各发送一条错误报文。当软件检测到这些错误之一时,负责扫描多功能设备中的所有功能。
 
-除上述日志记录外，支持高级错误报告扩展能力的根端口 (Root Port) 或根复合体事件收集器 (Root Complex Event Collector) 必须实现错误源识别 (Error Source Identification) 寄存器，该寄存器记录根端口或根复合体事件收集器接收到的第一条 ERR_NONFATAL/ERR_FATAL (不可纠正错误) 与 ERR_COR (可纠正错误) 报文的请求者 ID。面向高级错误报告编写的系统软件可以使用根错误状态 (Root Error Status) 寄存器来确定哪些字段保存有效信息。
+除上述日志记录外,支持高级错误报告扩展能力的根端口 (Root Port) 或根复合体事件收集器 (Root Complex Event Collector) 必须实现错误源识别 (Error Source Identification) 寄存器,该寄存器记录根端口或根复合体事件收集器接收到的第一条 ERR_NONFATAL/ERR_FATAL (不可纠正错误) 与 ERR_COR (可纠正错误) 报文的请求者 ID。面向高级错误报告编写的系统软件可以使用根错误状态 (Root Error Status) 寄存器来确定哪些字段保存有效信息。
 
-如果 RCiEP 与根复合体事件收集器关联，则该 RCiEP 必须通过该根复合体事件收集器上报其错误。
+如果 RCiEP 与根复合体事件收集器关联,则该 RCiEP 必须通过该根复合体事件收集器上报其错误。
 
-对于根端口和根复合体事件收集器，为了使接收到的错误报文或内部生成的错误报文被记录到根错误状态寄存器和错误源识别寄存器中，该错误报文必须被"发送" (transmitted)。有关接收到的报文如何被转发和发送的信息，请参阅 § 6.2.8.1 节。内部生成的错误报文通过命令 (Command) 寄存器中的 SERR# 使能位 (用于 ERR_NONFATAL 和 ERR_FATAL) 或设备控制 (Device Control) 寄存器中的报告使能位 (用于 ERR_COR、ERR_NONFATAL 和 ERR_FATAL) 使能发送。
+对于根端口和根复合体事件收集器,为了使接收到的错误报文或内部生成的错误报文被记录到根错误状态寄存器和错误源识别寄存器中,该错误报文必须被"发送" (transmitted)。有关接收到的报文如何被转发和发送的信息,请参阅 § 6.2.8.1 节。内部生成的错误报文通过命令 (Command) 寄存器中的 SERR# 使能位 (用于 ERR_NONFATAL 和 ERR_FATAL) 或设备控制 (Device Control) 寄存器中的报告使能位 (用于 ERR_COR、ERR_NONFATAL 和 ERR_FATAL) 使能发送。
 
 </td>
 </tr>
@@ -2875,7 +2875,7 @@ The Root Error Command register allows further control of Root Complex response 
 </td>
 <td style="background-color:#e8e8e8">
 
-根错误命令 (Root Error Command) 寄存器允许比基本的根复合体能力更精细地控制根复合体对可纠正、非致命和致命错误报文 (Correctable、Non-Fatal 和 Fatal error Message) 的响应，即针对这三种错误报文分别使能或禁止生成中断。通过 PCI Express 能力结构 (PCI Express Capability structure) 可以禁止在响应错误报文时生成系统错误。
+根错误命令 (Root Error Command) 寄存器允许比基本的根复合体能力更精细地控制根复合体对可纠正、非致命和致命错误报文 (Correctable、Non-Fatal 和 Fatal error Message) 的响应,即针对这三种错误报文分别使能或禁止生成中断。通过 PCI Express 能力结构 (PCI Express Capability structure) 可以禁止在响应错误报文时生成系统错误。
 
 </td>
 </tr>
@@ -2919,19 +2919,19 @@ Note that Advanced Error Reporting MSI/MSI-X interrupts always use the vector in
 </td>
 <td style="background-color:#e8e8e8">
 
-如果根端口 (Root Port) 或根复合体事件收集器 (Root Complex Event Collector) 通过 INTx 报文使能了电平触发 (level-triggered) 的中断信令，则只要同时满足以下所有条件，虚拟 INTx 线 (virtual INTx wire) 必须被断言 (assert):
+如果根端口 (Root Port) 或根复合体事件收集器 (Root Complex Event Collector) 通过 INTx 报文使能了电平触发 (level-triggered) 的中断信令,则只要同时满足以下所有条件,虚拟 INTx 线 (virtual INTx wire) 必须被断言 (assert):
 
 - 命令 (Command) 寄存器中的中断禁止 (Interrupt Disable) 位被设置为 0b。
-- 根错误命令 (Root Error Command) 寄存器中至少一个错误报告使能位，以及其在根错误状态 (Root Error Status) 寄存器中关联的错误报文已接收 (error Messages Received) 位，均被设置为 1b。
+- 根错误命令 (Root Error Command) 寄存器中至少一个错误报告使能位,以及其在根错误状态 (Root Error Status) 寄存器中关联的错误报文已接收 (error Messages Received) 位,均被设置为 1b。
 
-请注意，同一功能 (Function) 内的所有其他中断源在请求服务时，也会断言同一根虚拟 INTx 线。
+请注意,同一功能 (Function) 内的所有其他中断源在请求服务时,也会断言同一根虚拟 INTx 线。
 
-如果根端口或根复合体事件收集器通过 MSI 或 MSI-X 使能了边沿触发 (edge-triggered) 的中断信令，则每当以下条件的逻辑与 (logical AND) 由 FALSE 跳变为 TRUE 时，必须发送一条中断报文:
+如果根端口或根复合体事件收集器通过 MSI 或 MSI-X 使能了边沿触发 (edge-triggered) 的中断信令,则每当以下条件的逻辑与 (logical AND) 由 FALSE 跳变为 TRUE 时,必须发送一条中断报文:
 
 - 关联的向量 (vector) 未被屏蔽 (若 MSI 不支持 PVM,则不适用)。
-- 根错误命令寄存器中至少一个错误报告使能位，以及其在根错误状态寄存器中关联的错误报文已接收位，均被设置为 1b。
+- 根错误命令寄存器中至少一个错误报告使能位,以及其在根错误状态寄存器中关联的错误报文已接收位,均被设置为 1b。
 
-请注意，高级错误报告 (Advanced Error Reporting) 的 MSI/MSI-X 中断始终使用根错误状态寄存器中"高级错误中断报文号 (Advanced Error Interrupt Message Number)" 字段所指示的向量。
+请注意,高级错误报告 (Advanced Error Reporting) 的 MSI/MSI-X 中断始终使用根错误状态寄存器中"高级错误中断报文号 (Advanced Error Interrupt Message Number)" 字段所指示的向量。
 
 </td>
 </tr>
@@ -2971,15 +2971,15 @@ If multiple header recording is supported and enabled, and the First Error Point
 </td>
 <td style="background-color:#e8e8e8">
 
-对于高级错误报告 (Advanced Error Reporting) 扩展能力，不可纠正错误状态 (Uncorrectable Error Status) 寄存器和可纠正错误状态 (Correctable Error Status) 寄存器会累积对应于该特定 PCI Express 接口的错误集合。这些位将保持置位，直到被软件显式清除或被复位。由于不可纠正错误状态寄存器中可能同时置位多个位，因此首个错误指针 (First Error Pointer, FEP) (在有效时) 指向所记录的最早的不可纠正错误。当不可纠正错误状态寄存器中相应位被置位时，首个错误指针有效;当不可纠正错误状态寄存器中相应位未置位或是未定义位时，首个错误指针无效。
+对于高级错误报告 (Advanced Error Reporting) 扩展能力,不可纠正错误状态 (Uncorrectable Error Status) 寄存器和可纠正错误状态 (Correctable Error Status) 寄存器会累积对应于该特定 PCI Express 接口的错误集合。这些位将保持置位,直到被软件显式清除或被复位。由于不可纠正错误状态寄存器中可能同时置位多个位,因此首个错误指针 (First Error Pointer, FEP) (在有效时) 指向所记录的最早的不可纠正错误。当不可纠正错误状态寄存器中相应位被置位时,首个错误指针有效;当不可纠正错误状态寄存器中相应位未置位或是未定义位时,首个错误指针无效。
 
-高级错误报告扩展能力提供了为需要包头记录 (header logging) 的错误记录包头 (header) 的能力 <sup>114</sup>。实现可以支持记录多个包头，但至少必须支持记录一个包头的能力。支持多包头记录的能力由"多包头记录能力 (Multiple Header Recording Capable)"位指示，并由高级错误能力与控制 (Advanced Error Capabilities and Control) 寄存器中的"多包头记录使能 (Multiple Header Recording Enable)"位使能。当支持并使能多包头记录时，错误将按照它们被检测到的顺序进行记录。
+高级错误报告扩展能力提供了为需要包头记录 (header logging) 的错误记录包头 (header) 的能力 <sup>114</sup>。实现可以支持记录多个包头,但至少必须支持记录一个包头的能力。支持多包头记录的能力由"多包头记录能力 (Multiple Header Recording Capable)"位指示,并由高级错误能力与控制 (Advanced Error Capabilities and Control) 寄存器中的"多包头记录使能 (Multiple Header Recording Enable)"位使能。当支持并使能多包头记录时,错误将按照它们被检测到的顺序进行记录。
 
-当检测到未屏蔽的不可纠正错误时，如果没有可用的包头记录资源，则其错误状态位被置位 (Set)，但该错误不会被记录。如果在检测到不可纠正错误时该错误已被屏蔽，则其错误状态位被置位，但该错误也不会被记录。
+当检测到未屏蔽的不可纠正错误时,如果没有可用的包头记录资源,则其错误状态位被置位 (Set),但该错误不会被记录。如果在检测到不可纠正错误时该错误已被屏蔽,则其错误状态位被置位,但该错误也不会被记录。
 
-当软件准备消除由首个错误指针指示的已记录错误时，软件向所指示的错误状态位写入 1b 以清除它，这会使硬件释放相关的记录资源。如果该错误的另一个实例仍被记录，则硬件被允许 (但不是必须) 保持该错误状态位置位。如果仍有任何错误实例被记录，硬件必须立即更新包头日志 (Header Log)、TLP 前缀日志 (TLP Prefix Log)、TLP 前缀日志存在 (TLP Prefix Log Present) 位、首个错误指针和不可纠正错误状态寄存器，以反映下一条已记录的错误。如果不再有其他错误被记录，建议硬件将首个错误指针更新为指向一个它永远不会置位的状态位，例如保留 (Reserved) 状态位。请参见下面的实现说明。
+当软件准备消除由首个错误指针指示的已记录错误时,软件向所指示的错误状态位写入 1b 以清除它,这会使硬件释放相关的记录资源。如果该错误的另一个实例仍被记录,则硬件被允许 (但不是必须) 保持该错误状态位置位。如果仍有任何错误实例被记录,硬件必须立即更新包头日志 (Header Log)、TLP 前缀日志 (TLP Prefix Log)、TLP 前缀日志存在 (TLP Prefix Log Present) 位、首个错误指针和不可纠正错误状态寄存器,以反映下一条已记录的错误。如果不再有其他错误被记录,建议硬件将首个错误指针更新为指向一个它永远不会置位的状态位,例如保留 (Reserved) 状态位。请参见下面的实现说明。
 
-当支持并使能了多包头记录，且首个错误指针有效时，建议软件不要向"首个错误指针"所指示位之外的其他任何状态位写入 1b <sup>115</sup>。如果软件向这些非指示位写入了 1b,则硬件被允许 (但不是必须) 清除任何相关的已记录错误。
+当支持并使能了多包头记录,且首个错误指针有效时,建议软件不要向"首个错误指针"所指示位之外的其他任何状态位写入 1b <sup>115</sup>。如果软件向这些非指示位写入了 1b,则硬件被允许 (但不是必须) 清除任何相关的已记录错误。
 
 </td>
 </tr>
@@ -3012,7 +3012,7 @@ If multiple header recording is supported and enabled, and the First Error Point
 </td>
 <td style="background-color:#e8e8e8">
 
-114. 如果某功能 (Function) 支持 TLP 前缀 (TLP Prefix)，则其 AER 能力结构也会在每个记录的包头中同时记录任何伴随的 TLP 前缀。所有对"包头记录"的引用也隐含了对"TLP 前缀记录"的引用。
+114. 如果某功能 (Function) 支持 TLP 前缀 (TLP Prefix),则其 AER 能力结构也会在每个记录的包头中同时记录任何伴随的 TLP 前缀。所有对"包头记录"的引用也隐含了对"TLP 前缀记录"的引用。
 
 </td>
 </tr>
@@ -3052,11 +3052,11 @@ The setting of Multiple Header Recording Capable and the checking for Header Log
 </td>
 <td style="background-color:#e8e8e8">
 
-如果软件观察到首个错误指针无效，并且软件希望清除因先前包头记录资源溢出而被置位的任何未屏蔽状态位，则软件应意识到以下竞态条件:如果在软件清除这些状态位之前，这些错误的任何新实例恰好被记录，则一条或多条新记录的错误可能会丢失。
+如果软件观察到首个错误指针无效,并且软件希望清除因先前包头记录资源溢出而被置位的任何未屏蔽状态位,则软件应意识到以下竞态条件:如果在软件清除这些状态位之前,这些错误的任何新实例恰好被记录,则一条或多条新记录的错误可能会丢失。
 
-当支持并使能了多包头记录时，软件在清除"多包头记录使能"位时必须特别小心。如果软件在首个错误指针有效时清除该位，则硬件行为未定义。在清除"多包头记录使能"位之前，建议软件临时屏蔽所有不可纠正错误，然后重复地消除首个错误指针所指示的每个错误。
+当支持并使能了多包头记录时,软件在清除"多包头记录使能"位时必须特别小心。如果软件在首个错误指针有效时清除该位,则硬件行为未定义。在清除"多包头记录使能"位之前,建议软件临时屏蔽所有不可纠正错误,然后重复地消除首个错误指针所指示的每个错误。
 
-由于实现只能记录有限数量的包头，因此软件必须及时处理首个错误指针、包头日志 (Header Log) 和 TLP 前缀日志寄存器，以限制对后续错误遗漏这些信息的风险。当检测到需要包头记录的错误，且要么实现所支持的已记录包头数已达到上限，要么"多包头记录使能"位未被置位且首个错误指针有效时，就会发生包头日志溢出 (Header Log Overflow)。
+由于实现只能记录有限数量的包头,因此软件必须及时处理首个错误指针、包头日志 (Header Log) 和 TLP 前缀日志寄存器,以限制对后续错误遗漏这些信息的风险。当检测到需要包头记录的错误,且要么实现所支持的已记录包头数已达到上限,要么"多包头记录使能"位未被置位且首个错误指针有效时,就会发生包头日志溢出 (Header Log Overflow)。
 
 实现可选择性地检查此条件并上报"包头日志溢出 (Header Log Overflow)"错误。这是一种与检测该错误的功能 (Function) 相关联的上报错误。
 
@@ -3095,7 +3095,7 @@ The setting of Multiple Header Recording Capable and the checking for Header Log
 </td>
 <td style="background-color:#e8e8e8">
 
-115. 被屏蔽错误的状态位是一个例外。软件可以在确定它们没有已记录包头的情况下安全地清除它们，例如自上次首个错误指针无效以来它们一直保持被屏蔽时，即属于这种情况。
+115. 被屏蔽错误的状态位是一个例外。软件可以在确定它们没有已记录包头的情况下安全地清除它们,例如自上次首个错误指针无效以来它们一直保持被屏蔽时,即属于这种情况。
 
 </td>
 </tr>
@@ -3151,31 +3151,31 @@ If hardware relies on this definition of the FEP being valid to determine when i
 </td>
 <td style="background-color:#e8e8e8">
 
-物理功能 (PF) 的包头日志 (Header Log) 空间独立于其关联虚拟功能 (VF) 的包头日志空间，且必须使用专用的存储空间实现。
+物理功能 (PF) 的包头日志 (Header Log) 空间独立于其关联虚拟功能 (VF) 的包头日志空间,且必须使用专用的存储空间实现。
 
-实现了 AER 的虚拟功能可在与单个物理功能关联的所有虚拟功能之间共享包头日志空间。尤其在共享包头日志空间时，虚拟功能可能没有空间来记录与某个错误关联的包头。在这种情况下，功能 (Function) 必须按照 § 6.2.4.2 节的要求更新不可纠正错误状态寄存器和高级错误能力与控制寄存器;然而，当读取包头日志寄存器时，它必须返回全 1,以指示存在溢出情况且未记录任何包头。如果 PCI Express 能力寄存器中"支持 Flit 模式 (Flit Mode Supported)"被置位，则除了返回全 1 之外，关联的"已记录 TLP 大小 (Logged TLP Size)"字段还必须包含 0。
+实现了 AER 的虚拟功能可在与单个物理功能关联的所有虚拟功能之间共享包头日志空间。尤其在共享包头日志空间时,虚拟功能可能没有空间来记录与某个错误关联的包头。在这种情况下,功能 (Function) 必须按照 § 6.2.4.2 节的要求更新不可纠正错误状态寄存器和高级错误能力与控制寄存器;然而,当读取包头日志寄存器时,它必须返回全 1,以指示存在溢出情况且未记录任何包头。如果 PCI Express 能力寄存器中"支持 Flit 模式 (Flit Mode Supported)"被置位,则除了返回全 1 之外,关联的"已记录 TLP 大小 (Logged TLP Size)"字段还必须包含 0。
 
-在该虚拟功能的"首个错误指针"有效期间，其包头日志条目应当被锁定并保持有效。根据 § 6.2.4.2 节的定义，当不可纠正错误状态寄存器中相应位被置位时，首个错误指针寄存器有效。
+在该虚拟功能的"首个错误指针"有效期间,其包头日志条目应当被锁定并保持有效。根据 § 6.2.4.2 节的定义,当不可纠正错误状态寄存器中相应位被置位时,首个错误指针寄存器有效。
 
 **实现说明 (IMPLEMENTATION NOTE):**
 **首个错误指针寄存器的有效性 (FIRST ERROR POINTER REGISTER BEING VALID)**
 
-首个错误指针 (First Error Pointer, FEP) 字段在不可纠正错误状态寄存器中相应位被置位时被定义为有效。为避免与某些情况产生歧义，建议如下:
+首个错误指针 (First Error Pointer, FEP) 字段在不可纠正错误状态寄存器中相应位被置位时被定义为有效。为避免与某些情况产生歧义,建议如下:
 
-- 在记录了某个不可纠正错误后，当软件通过写入 1b 来清除不可纠正错误状态寄存器中的相应位时，硬件应将 FEP 更新为指向一个它永远不会置位的状态位，例如保留 (Reserved) 状态位。(这假设该功能当前没有其他已记录的错误需要上报，如果它支持多包头记录则可能会出现这种情况。)
-- FEP 的默认值应指向一个硬件永远不会置位的状态位，例如保留状态位。
+- 在记录了某个不可纠正错误后,当软件通过写入 1b 来清除不可纠正错误状态寄存器中的相应位时,硬件应将 FEP 更新为指向一个它永远不会置位的状态位,例如保留 (Reserved) 状态位。(这假设该功能当前没有其他已记录的错误需要上报,如果它支持多包头记录则可能会出现这种情况。)
+- FEP 的默认值应指向一个硬件永远不会置位的状态位,例如保留状态位。
 
-如果不遵循上述建议，以下为使用不支持的请求 (UR) 产生歧义的示例情形:
+如果不遵循上述建议,以下为使用不支持的请求 (UR) 产生歧义的示例情形:
 
 - 当系统固件进行其配置空间 (Configuration Space) 探测时,UR 和建议性非致命错误 (Advisory Non-Fatal Error) 处于未屏蔽状态。
-- 该功能因正常探测而遇到 UR,记录该错误，并将 FEP 设置为指向 UR。
-- 系统固件清除 UR 状态位，而硬件使 FEP 继续指向 UR。
-- 操作系统引导完成后，它屏蔽 UR。
-- 正常探测将 UR 状态位置位，但由于 UR 已被屏蔽，该错误不会被记录。
+- 该功能因正常探测而遇到 UR,记录该错误,并将 FEP 设置为指向 UR。
+- 系统固件清除 UR 状态位,而硬件使 FEP 继续指向 UR。
+- 操作系统引导完成后,它屏蔽 UR。
+- 正常探测将 UR 状态位置位,但由于 UR 已被屏蔽,该错误不会被记录。
 
-此时，会出现这样的歧义:FEP 指向一个已置位的状态位 (因而表现为有效)，但实际上并没有需要软件处理的已记录错误。
+此时,会出现这样的歧义:FEP 指向一个已置位的状态位 (因而表现为有效),但实际上并没有需要软件处理的已记录错误。
 
-如果硬件依赖"FEP 有效"这一定义来决定何时可以记录新错误，则该功能可能会因错误地判断为"没有可用的记录资源"而无法记录新的未屏蔽错误。依赖其他内部状态来决定何时可以记录新错误的硬件实现可能不存在此问题;然而，硬件实现仍应遵循上述建议，以避免将此类歧义呈现给软件。
+如果硬件依赖"FEP 有效"这一定义来决定何时可以记录新错误,则该功能可能会因错误地判断为"没有可用的记录资源"而无法记录新的未屏蔽错误。依赖其他内部状态来决定何时可以记录新错误的硬件实现可能不存在此问题;然而,硬件实现仍应遵循上述建议,以避免将此类歧义呈现给软件。
 
 </td>
 </tr>
@@ -3234,23 +3234,23 @@ Only End-End TLP Prefixes are logged by AER. Logging of Local TLP Prefixes may o
 </td>
 <td style="background-color:#e8e8e8">
 
-寄存器被置位(1)。当包头日志 (Header Log) 条目被锁定后，对于该 VF 或任何其他 VF,新增的错误均不得覆盖已锁定的条目。当包头条目被解锁后，该条目可被用于记录任何共享该包头日志的 VF 的新错误。
+寄存器被置位(1)。当包头日志 (Header Log) 条目被锁定后,对于该 VF 或任何其他 VF,新增的错误均不得覆盖已锁定的条目。当包头条目被解锁后,该条目可被用于记录任何共享该包头日志的 VF 的新错误。
 
-§ Section 6.2.3.2.4 描述了咨询性非致命错误 (Advisory Non-Fatal Error) 情形:在这种情况下，实现了 AER (Advanced Error Reporting) 的代理检测到非致命严重性的不可纠正错误时，使用 ERR_COR(而非 ERR_NONFATAL) 来上报该错误(若已使能)。对于相同情形，未实现 AER 的代理则不发送任何错误报文 (Message)。本节后续讨论均假定代理实现了 AER。
+§ Section 6.2.3.2.4 描述了咨询性非致命错误 (Advisory Non-Fatal Error) 情形:在这种情况下,实现了 AER (Advanced Error Reporting) 的代理检测到非致命严重性的不可纠正错误时,使用 ERR_COR(而非 ERR_NONFATAL) 来上报该错误(若已使能)。对于相同情形,未实现 AER 的代理则不发送任何错误报文 (Message)。本节后续讨论均假定代理实现了 AER。
 
-对于咨询性非致命错误情形，由于不可纠正错误通过可纠正错误报文 (Message) 来上报，因此同时涉及可纠正错误和不可纠正错误的控制/状态/屏蔽位均适用。§ Figure 6-2 给出了该流程的流程图 (flowchart)。下面列出记录咨询性非致命错误时需要特别关注的几个方面。
+对于咨询性非致命错误情形,由于不可纠正错误通过可纠正错误报文 (Message) 来上报,因此同时涉及可纠正错误和不可纠正错误的控制/状态/屏蔽位均适用。§ Figure 6-2 给出了该流程的流程图 (flowchart)。下面列出记录咨询性非致命错误时需要特别关注的几个方面。
 
-首先，该不可纠正错误的严重性必须为非致命 (non-fatal)，具体由 Uncorrectable Error Severity (不可纠正错误严重性) 寄存器中对应位决定。若严重性为致命 (fatal)，则该错误不构成咨询性非致命错误，将(若已使能)以 ERR_FATAL 上报。
+首先,该不可纠正错误的严重性必须为非致命 (non-fatal),具体由 Uncorrectable Error Severity (不可纠正错误严重性) 寄存器中对应位决定。若严重性为致命 (fatal),则该错误不构成咨询性非致命错误,将(若已使能)以 ERR_FATAL 上报。
 
-其次，具体的错误情形必须是 § Section 6.2.3.2.4 中所列的咨询性非致命错误情形之一。否则该错误不构成咨询性非致命错误，将(若已使能)以不可纠正错误报文 (Message) 上报。
+其次,具体的错误情形必须是 § Section 6.2.3.2.4 中所列的咨询性非致命错误情形之一。否则该错误不构成咨询性非致命错误,将(若已使能)以不可纠正错误报文 (Message) 上报。
 
-接着，在 Correctable Error Status (可纠正错误状态) 寄存器中置位 (Set) Advisory Non-Fatal Error Status 位以指示该咨询性错误的出现，并检查 Correctable Error Mask (可纠正错误屏蔽) 寄存器中的 Advisory Non-Fatal Error Mask 位;若该位已置位，则不再做进一步处理。
+接着,在 Correctable Error Status (可纠正错误状态) 寄存器中置位 (Set) Advisory Non-Fatal Error Status 位以指示该咨询性错误的出现,并检查 Correctable Error Mask (可纠正错误屏蔽) 寄存器中的 Advisory Non-Fatal Error Mask 位;若该位已置位,则不再做进一步处理。
 
-若 Advisory Non-Fatal Error Mask 位为清零状态，则继续记录日志:在 Uncorrectable Error Status (不可纠正错误状态) 寄存器中置位与该咨询性错误对应的"相应"位。若 Uncorrectable Error Mask (不可纠正错误屏蔽) 寄存器中对应的不可纠正错误位为清零状态，且该错误需要记录包头，则在资源允许的前提下记录其前缀 (Prefix) 和包头 (Header)。参见 § Section 6.2.4.2。
+若 Advisory Non-Fatal Error Mask 位为清零状态,则继续记录日志:在 Uncorrectable Error Status (不可纠正错误状态) 寄存器中置位与该咨询性错误对应的"相应"位。若 Uncorrectable Error Mask (不可纠正错误屏蔽) 寄存器中对应的不可纠正错误位为清零状态,且该错误需要记录包头,则在资源允许的前提下记录其前缀 (Prefix) 和包头 (Header)。参见 § Section 6.2.4.2。
 
-最后，若 Device Control (设备控制) 寄存器中的 Correctable Error Reporting Enable 位已置位，则发送 ERR_COR 报文 (Message)。
+最后,若 Device Control (设备控制) 寄存器中的 Correctable Error Reporting Enable 位已置位,则发送 ERR_COR 报文 (Message)。
 
-对于任何同时支持 TLP 前缀 (TLP Prefix) 和 AER 的设备功能 (Function)，与出错 TLP 关联的 TLP 前缀将按照与 Header Log 寄存器相同的规则记录到 TLP Prefix Log 寄存器中(以保证当 First Error Pointer 有效时,TLP Prefix Log 和 Header Log 寄存器中的内容始终对应 First Error Pointer 所指出的错误)。
+对于任何同时支持 TLP 前缀 (TLP Prefix) 和 AER 的设备功能 (Function),与出错 TLP 关联的 TLP 前缀将按照与 Header Log 寄存器相同的规则记录到 TLP Prefix Log 寄存器中(以保证当 First Error Pointer 有效时,TLP Prefix Log 和 Header Log 寄存器中的内容始终对应 First Error Pointer 所指出的错误)。
 
 TLP Prefix Log Present 位(参见 § Section 7.8.4.7)用于指示 TLP Prefix Log 寄存器(参见 § Section 7.8.4.12)中是否包含信息。
 
@@ -3288,11 +3288,11 @@ End-End TLP Prefixes are logged in the TLP Prefix Log register. The underlying T
 </td>
 <td style="background-color:#e8e8e8">
 
-端到端 TLP 前缀 (End-End TLP Prefix) 记录在 TLP Prefix Log 寄存器中。其下层的 TLP 包头 (Header) 记录在 Header Log 寄存器中，但有两种例外情况:
+端到端 TLP 前缀 (End-End TLP Prefix) 记录在 TLP Prefix Log 寄存器中。其下层的 TLP 包头 (Header) 记录在 Header Log 寄存器中,但有两种例外情况:
 
-- 若 Extended Fmt Field Supported 位已置位(参见 § Section 7.5.3.15)，不支持端到端 TLP 前缀的 Function 在收到包含端到端 TLP 前缀的 TLP 时，必须上报 Malformed TLP(畸形 TLP)，且 Header Log 寄存器必须包含该 TLP 的前 4 个 DW(先放入端到端 TLP 前缀，再按可容纳的数量放入 TLP 包头)。
+- 若 Extended Fmt Field Supported 位已置位(参见 § Section 7.5.3.15),不支持端到端 TLP 前缀的 Function 在收到包含端到端 TLP 前缀的 TLP 时,必须上报 Malformed TLP(畸形 TLP),且 Header Log 寄存器必须包含该 TLP 的前 4 个 DW(先放入端到端 TLP 前缀,再按可容纳的数量放入 TLP 包头)。
 
-- 若 Function 收到的 TLP 中端到端 TLP 前缀的数量超过其 Max End-End TLP Prefixes 字段所指示的数量，则必须按错误方式处理该 TLP(具体参见 § Section 2.2.10.4)，并将首个溢出的端到端 TLP 前缀存储在 Header Log 寄存器的第 1 个 DW 中,Header Log 寄存器的其余部分内容未定义 (undefined)。
+- 若 Function 收到的 TLP 中端到端 TLP 前缀的数量超过其 Max End-End TLP Prefixes 字段所指示的数量,则必须按错误方式处理该 TLP(具体参见 § Section 2.2.10.4),并将首个溢出的端到端 TLP 前缀存储在 Header Log 寄存器的第 1 个 DW 中,Header Log 寄存器的其余部分内容未定义 (undefined)。
 
 </td>
 </tr>
@@ -3322,7 +3322,7 @@ End-End TLP Prefixes are logged in the TLP Prefix Log register. The underlying T
 </td>
 <td style="background-color:#e8e8e8">
 
-(参见上文 6.2.4.3 节的描述;非 Flit 模式 (Non-Flit Mode) 下的日志记录遵循相同规则:端到端 TLP 前缀记录在 TLP Prefix Log 寄存器中，下层 TLP 包头则按前述两条例外规则存储在 Header Log 寄存器中。)
+(参见上文 6.2.4.3 节的描述;非 Flit 模式 (Non-Flit Mode) 下的日志记录遵循相同规则:端到端 TLP 前缀记录在 TLP Prefix Log 寄存器中,下层 TLP 包头则按前述两条例外规则存储在 Header Log 寄存器中。)
 
 </td>
 </tr>
@@ -3407,7 +3407,7 @@ Abbreviations:
 </td>
 <td style="background-color:#e8e8e8">
 
-§ Figure 6-2 给出了设备检测到错误后，与之相关的上报和记录操作流程。
+§ Figure 6-2 给出了设备检测到错误后,与之相关的上报和记录操作流程。
 
 流程图内容(自上而下、自左向右阅读):
 
@@ -3417,7 +3417,7 @@ Abbreviations:
     - 在 Device Status 寄存器中置位 Correctable Error Detected 位
     - 若为 UR,则在 Device Status 寄存器中置位 Unsupported Request Detected 位
     - 在 Correctable Error Status 寄存器中置位对应的位
-    - 若为咨询性非致命错误(参见 § Section 6.2.3.2.4):(1) 在 Uncorrectable Error Status 寄存器中置位对应位;(2) 若该位在 Uncorrectable Error Mask 寄存器中未屏蔽，则按需记录前缀和包头，并更新前缀和包头相关上报字段及寄存器
+    - 若为咨询性非致命错误(参见 § Section 6.2.3.2.4):(1) 在 Uncorrectable Error Status 寄存器中置位对应位;(2) 若该位在 Uncorrectable Error Mask 寄存器中未屏蔽,则按需记录前缀和包头,并更新前缀和包头相关上报字段及寄存器
     - 判断:在 Correctable Error Mask 寄存器中是否被屏蔽?
       - 否 → 继续
       - 是 → 结束
@@ -3434,7 +3434,7 @@ Abbreviations:
         - 在 Device Status 寄存器中置位 Fatal/Non-Fatal Error Detected 位
         - 若为 UR,则在 Device Status 寄存器中置位 Unsupported Request Detected 位
         - 在 Uncorrectable Error Status 寄存器中置位对应位
-        - 按需记录前缀和包头，并更新前缀和包头相关上报字段及寄存器
+        - 按需记录前缀和包头,并更新前缀和包头相关上报字段及寄存器
         - 判断:在 Uncorrectable Error Mask 寄存器中是否被屏蔽?
           - 否 → 继续
           - 是 → 结束
@@ -3470,7 +3470,6 @@ Abbreviations:
 </table>
 
 > **Figure 6-2.** Flowchart Showing Sequence of Device Error Signaling and Logging Operations
-> **图 6-2.** 设备错误信令与记录操作流程顺序图
 > <img src="figures/chapter_06/fig_0732_1_tight.png" width="700">
 
 </div>
@@ -3498,7 +3497,6 @@ Abbreviations:
 Error Messages have a complex set of associated control and status bits. § Figure 6-3 provides a high-level summary in the form of a pseudo logic diagram for how error Messages are generated, logged, forwarded, and ultimately notified to the system. Not all control and status bits are shown. The logic gates shown in this diagram are intended for conveying general concepts, and not for direct implementation.
 
 > **Figure 6-3.** Pseudo Logic Diagram for Selected Error Message Control and Status Bits
-> **图 6-3.** 选定错误消息控制与状态位的伪逻辑图
 > <img src="figures/chapter_06/fig_0733_1_tight.png" width="700">
 
 The diagram covers:
@@ -3533,7 +3531,7 @@ The diagram covers:
 </td>
 <td style="background-color:#e8e8e8">
 
-错误报文 (Error Message) 涉及一组复杂的控制和状态位。§ Figure 6-3 以伪逻辑图 (pseudo logic diagram) 形式给出了高层概要，展示错误报文是如何生成、记录、转发并最终通知到系统的。图中并未列出所有控制和状态位。该图中的逻辑门仅用于传达一般概念，不直接用于实现。
+错误报文 (Error Message) 涉及一组复杂的控制和状态位。§ Figure 6-3 以伪逻辑图 (pseudo logic diagram) 形式给出了高层概要,展示错误报文是如何生成、记录、转发并最终通知到系统的。图中并未列出所有控制和状态位。该图中的逻辑门仅用于传达一般概念,不直接用于实现。
 
 该图涵盖:
 
@@ -3635,17 +3633,17 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 
 § Table 6-2 至 § Table 6-4 列出本规范定义的所有 PCI Express 错误。每种错误均给出简称、硬件检测方式、默认严重性以及检测到该错误的代理 (agent) 所应采取的动作。这些动作构成了 PCI Express 错误上报与日志记录的规则。
 
-"默认严重性"列指定了未经任何软件重新配置 (reprogramming) 时该错误的默认严重性。对于支持 AER Extended Capability (高级错误报告扩展能力) 的设备功能 (Function)，可通过 Error Severity 寄存器将不可纠正错误的严重性配置为致命 (Fatal) 或非致命 (Non-fatal)。不支持 AER Extended Capability 的设备功能使用默认关联，且不可重新配置。
+"默认严重性"列指定了未经任何软件重新配置 (reprogramming) 时该错误的默认严重性。对于支持 AER Extended Capability (高级错误报告扩展能力) 的设备功能 (Function),可通过 Error Severity 寄存器将不可纠正错误的严重性配置为致命 (Fatal) 或非致命 (Non-fatal)。不支持 AER Extended Capability 的设备功能使用默认关联,且不可重新配置。
 
-对于实现 Downstream Port Containment (DPC,下游端口遏制) 并已使能该功能的下游端口 (Downstream Port)，若错误触发了 DPC,则其检测代理的动作会有所不同。后续表格未描述 DPC 行为，详见 § Section 6.2.11。
+对于实现 Downstream Port Containment (DPC,下游端口遏制) 并已使能该功能的下游端口 (Downstream Port),若错误触发了 DPC,则其检测代理的动作会有所不同。后续表格未描述 DPC 行为,详见 § Section 6.2.11。
 
 **Table 6-2. PCI Express 通用错误列表 | Table 6-2. General PCI Express Error List**
 
 | 错误名称 (Error Name) | 错误类型(默认严重性) | 检测代理动作 ¹¹⁶ | 引用 (References) |
 |---|---|---|---|
-| Corrected Internal Error(已纠正内部错误) | Correctable(可纠正，默认屏蔽) | Component:向根复合体 (Root Complex) 发送 ERR_COR。 | § Section 6.2.10 |
-| Uncorrectable Internal Error(不可纠正内部错误) | Uncorrectable(致命，默认屏蔽) | Component:向根复合体 (Root Complex) 发送 ERR_FATAL。可选地，记录与该错误相关的第一个 TLP 的前缀/包头。 | § Section 6.2.10 |
-| Header Log Overflow(包头日志溢出) | Correctable(可纠正，默认屏蔽) | Component:向根复合体 (Root Complex) 发送 ERR_COR。 | § Section 6.2.4.2 |
+| Corrected Internal Error(已纠正内部错误) | Correctable(可纠正,默认屏蔽) | Component:向根复合体 (Root Complex) 发送 ERR_COR。 | § Section 6.2.10 |
+| Uncorrectable Internal Error(不可纠正内部错误) | Uncorrectable(致命,默认屏蔽) | Component:向根复合体 (Root Complex) 发送 ERR_FATAL。可选地,记录与该错误相关的第一个 TLP 的前缀/包头。 | § Section 6.2.10 |
+| Header Log Overflow(包头日志溢出) | Correctable(可纠正,默认屏蔽) | Component:向根复合体 (Root Complex) 发送 ERR_COR。 | § Section 6.2.4.2 |
 
 **Table 6-3. 物理层错误列表 | Table 6-3. Physical Layer Error List**
 
@@ -3661,16 +3659,16 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 | Bad DLLP(错误 DLLP) | Correctable(可纠正) | Receiver:向根复合体 (Root Complex) 发送 ERR_COR。 | § Section 3.6.2.2 及 § Section 3.6.2.3 |
 | Replay Timer Timeout(重放定时器超时) | Correctable(可纠正) | Transmitter:向根复合体 (Root Complex) 发送 ERR_COR。 | § Section 3.6.2.1、§ Section 4.2.3.4.2.1 |
 | REPLAY_NUM Rollover(重放号翻转) | Correctable(可纠正) | Transmitter:向根复合体 (Root Complex) 发送 ERR_COR。 | § Section 3.6.2.1、§ Section 4.2.3.4.2.1 |
-| Data Link Protocol Error(数据链路协议错误) | Uncorrectable(致命) | 若启用检查，则向根复合体 (Root Complex) 发送 ERR_FATAL。 | § Section 3.6.2.2、§ Section 3.6.2.3、§ Section 4.2.3.4.2.1 |
-| Surprise Down(意外下线) | Uncorrectable(致命) | 若启用检查，则向根复合体 (Root Complex) 发送 ERR_FATAL。 | § Section 3.2.1 |
+| Data Link Protocol Error(数据链路协议错误) | Uncorrectable(致命) | 若启用检查,则向根复合体 (Root Complex) 发送 ERR_FATAL。 | § Section 3.6.2.2、§ Section 3.6.2.3、§ Section 4.2.3.4.2.1 |
+| Surprise Down(意外下线) | Uncorrectable(致命) | 若启用检查,则向根复合体 (Root Complex) 发送 ERR_FATAL。 | § Section 3.2.1 |
 
 ---
 
-¹¹⁶ 在这些表中，检测代理动作假定所有使能位均处于"使能"状态;对于 AER,则假定屏蔽位已禁用，严重性位保持默认值。实际动作必须根据这些位的真实设置进行相应调整。
+¹¹⁶ 在这些表中,检测代理动作假定所有使能位均处于"使能"状态;对于 AER,则假定屏蔽位已禁用,严重性位保持默认值。实际动作必须根据这些位的真实设置进行相应调整。
 
-¹¹⁷ 在这些表中，检测代理动作假定所有使能位均处于"使能"状态;对于 AER,则假定屏蔽位已禁用，严重性位保持默认值。实际动作必须根据这些位的真实设置进行相应调整。
+¹¹⁷ 在这些表中,检测代理动作假定所有使能位均处于"使能"状态;对于 AER,则假定屏蔽位已禁用,严重性位保持默认值。实际动作必须根据这些位的真实设置进行相应调整。
 
-¹¹⁸ 在这些表中，检测代理动作假定所有使能位均处于"使能"状态;对于 AER,则假定屏蔽位已禁用，严重性位保持默认值。实际动作必须根据这些位的真实设置进行相应调整。
+¹¹⁸ 在这些表中,检测代理动作假定所有使能位均处于"使能"状态;对于 AER,则假定屏蔽位已禁用,严重性位保持默认值。实际动作必须根据这些位的真实设置进行相应调整。
 
 </td>
 </tr>
@@ -3719,13 +3717,13 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 
 | 错误名称 (Error Name) | 错误类型(默认严重性) | 检测代理动作 ¹¹⁹ | 引用 (References) |
 |---|---|---|---|
-| Poisoned TLP Received(收到中毒 TLP) | Uncorrectable(非致命) | Receiver:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.2 和 § Section 6.2.3.2.4.3 中描述的咨询性非致命错误情形，则发送 ERR_COR。记录该中毒 TLP 的前缀/包头。¹²⁰ | § Section 2.7.2.1 |
-| Poisoned TLP Egress Blocked(中毒 TLP 出口被阻止) | Uncorrectable(非致命) | Downstream Port Transmitter:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形，则发送 ERR_COR。记录该中毒 TLP 的前缀/包头。 | § Section 2.7.2.1 |
-| ECRC Check Failed(ECRC 校验失败) | Uncorrectable(非致命) | Receiver(若支持 ECRC 校验):向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 和 § Section 6.2.3.2.4.2 中描述的咨询性非致命错误情形，则发送 ERR_COR。记录出现 ECRC 错误的 TLP 的前缀/包头。 | § Section 2.7.1 |
+| Poisoned TLP Received(收到中毒 TLP) | Uncorrectable(非致命) | Receiver:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.2 和 § Section 6.2.3.2.4.3 中描述的咨询性非致命错误情形,则发送 ERR_COR。记录该中毒 TLP 的前缀/包头。¹²⁰ | § Section 2.7.2.1 |
+| Poisoned TLP Egress Blocked(中毒 TLP 出口被阻止) | Uncorrectable(非致命) | Downstream Port Transmitter:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形,则发送 ERR_COR。记录该中毒 TLP 的前缀/包头。 | § Section 2.7.2.1 |
+| ECRC Check Failed(ECRC 校验失败) | Uncorrectable(非致命) | Receiver(若支持 ECRC 校验):向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 和 § Section 6.2.3.2.4.2 中描述的咨询性非致命错误情形,则发送 ERR_COR。记录出现 ECRC 错误的 TLP 的前缀/包头。 | § Section 2.7.1 |
 
 ---
 
-¹¹⁹ 在这些表中，检测代理动作假定所有使能位均处于"使能"状态;对于 AER,则假定屏蔽位已禁用，严重性位保持默认值。实际动作必须根据这些位的真实设置进行相应调整。
+¹¹⁹ 在这些表中,检测代理动作假定所有使能位均处于"使能"状态;对于 AER,则假定屏蔽位已禁用,严重性位保持默认值。实际动作必须根据这些位的真实设置进行相应调整。
 
 ¹²⁰ 仅 AER(Advanced Error Handling)。
 
@@ -3772,11 +3770,11 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 
 | 错误名称 (Error Name) | 错误类型(默认严重性) | 检测代理动作 | 引用 (References) |
 |---|---|---|---|
-| Unsupported Request (UR)(不支持的请求) | Uncorrectable(非致命) | Request Receiver:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形，则发送 ERR_COR。记录引起该错误的 TLP 的前缀/包头。 | § Table F-1、§ Section 2.3.1、§ Section 2.3.2、§ Section 2.7.2.1、§ Section 2.9.1、§ Section 5.3.1、§ Section 6.2.3.1、§ Section 6.2.6、§ Section 6.2.8.1、§ Section 6.5.7、§ Section 7.3.1、§ Section 7.3.3、§ Section 7.5.1.1.3、§ Section 7.5.1.1.4 |
-| Completion Timeout(完成超时) | Uncorrectable(非致命) | Requester:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.4 中描述的咨询性非致命错误情形，则发送 ERR_COR。若 Advanced Error Capabilities and Control 寄存器中的 Completion Timeout Prefix/Header Log Capable 位已置位，则记录发生该错误的 Request TLP 的前缀/包头。 | § Section 2.8 |
-| Completer Abort(完成方中止) | Uncorrectable(非致命) | Completer:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形，则发送 ERR_COR。记录发生该错误的 Request 的前缀/包头。 | § Section 2.3.1 |
+| Unsupported Request (UR)(不支持的请求) | Uncorrectable(非致命) | Request Receiver:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形,则发送 ERR_COR。记录引起该错误的 TLP 的前缀/包头。 | § Table F-1、§ Section 2.3.1、§ Section 2.3.2、§ Section 2.7.2.1、§ Section 2.9.1、§ Section 5.3.1、§ Section 6.2.3.1、§ Section 6.2.6、§ Section 6.2.8.1、§ Section 6.5.7、§ Section 7.3.1、§ Section 7.3.3、§ Section 7.5.1.1.3、§ Section 7.5.1.1.4 |
+| Completion Timeout(完成超时) | Uncorrectable(非致命) | Requester:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.4 中描述的咨询性非致命错误情形,则发送 ERR_COR。若 Advanced Error Capabilities and Control 寄存器中的 Completion Timeout Prefix/Header Log Capable 位已置位,则记录发生该错误的 Request TLP 的前缀/包头。 | § Section 2.8 |
+| Completer Abort(完成方中止) | Uncorrectable(非致命) | Completer:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形,则发送 ERR_COR。记录发生该错误的 Request 的前缀/包头。 | § Section 2.3.1 |
 | Unexpected Completion(意外完成) | Uncorrectable(非致命) | Receiver:向根复合体 (Root Complex) 发送 ERR_COR。这是 § Section 6.2.3.2.4.5 中描述的咨询性非致命错误情形。记录发生该错误的 Completion 的前缀/包头。 | § Section 2.3.2 |
-| ACS Violation(ACS 违规) | Uncorrectable(非致命) | Receiver(若启用检查):向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形，则发送 ERR_COR。 | (续下表) |
+| ACS Violation(ACS 违规) | Uncorrectable(非致命) | Receiver(若启用检查):向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形,则发送 ERR_COR。 | (续下表) |
 
 </td>
 </tr>
@@ -3826,8 +3824,8 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 | MC Blocked TLP(MC 阻止的 TLP) | Uncorrectable(非致命) | Receiver(若启用检查):向根复合体 (Root Complex) 发送 ERR_NONFATAL。记录发生该错误的 Request TLP 的前缀/包头。 | § Section 6.14.4 |
 | AtomicOp Egress Blocked(AtomicOp 出口被阻止) | Uncorrectable(非致命) | Egress Port:向根复合体 (Root Complex) 发送 ERR_COR。这是 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形。记录发生该错误的 AtomicOp Request 的前缀/包头。 | § Section 6.15.2 |
 | DMWr Request Egress Blocked(DMWr 请求出口被阻止) | Uncorrectable(非致命) | Egress Port:向根复合体 (Root Complex) 发送 ERR_COR。这是 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形。记录发生该错误的 DMWr Request 的前缀/包头。 | § Section 6.32 |
-| TLP Translation Egress Blocked(TLP 转换出口被阻止) | Uncorrectable(非致命) | Egress Port:错误上报方面，按 § Section 2.2.1.2 处理 PR/NPR/CPL FC 类型;错误记录方面，按 § Section 2.2.1.2 处理 PR/NPR/CPL FC 类型。记录在 Egress Port 上无法转换为 Non-Flit Mode 发送的 Flit Mode TLP 的前缀/包头。 | § Section 2.2.1.2 |
-| TLP Prefix Blocked(TLP 前缀被阻止) | Uncorrectable(非致命) | Egress Port:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形，则发送 ERR_COR。记录发生该错误的 TLP 的前缀/包头。 | § Section 2.2.10.4 |
+| TLP Translation Egress Blocked(TLP 转换出口被阻止) | Uncorrectable(非致命) | Egress Port:错误上报方面,按 § Section 2.2.1.2 处理 PR/NPR/CPL FC 类型;错误记录方面,按 § Section 2.2.1.2 处理 PR/NPR/CPL FC 类型。记录在 Egress Port 上无法转换为 Non-Flit Mode 发送的 Flit Mode TLP 的前缀/包头。 | § Section 2.2.1.2 |
+| TLP Prefix Blocked(TLP 前缀被阻止) | Uncorrectable(非致命) | Egress Port:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形,则发送 ERR_COR。记录发生该错误的 TLP 的前缀/包头。 | § Section 2.2.10.4 |
 
 </td>
 </tr>
@@ -3880,9 +3878,9 @@ For all errors listed above, the appropriate status bit(s) must be set upon dete
 | Malformed TLP(畸形 TLP) | Uncorrectable(致命) | Receiver:向根复合体 (Root Complex) 发送 ERR_FATAL。记录发生该错误的 TLP 的前缀/包头。 | § Section 2.2.2、§ Section 2.2.3、§ Section 2.2.5、§ Section 2.2.7、§ Section 2.2.8.1、§ Section 2.2.8.2、§ Section 2.2.8.3、§ Section 2.2.8.4、§ Section 2.2.8.5、§ Section 2.2.8.10、§ Section 2.2.10、§ Section 2.2.10.2、§ Section 2.2.10.4、§ Section 2.3、§ Section 2.3.1、§ Section 2.3.1.1、§ Section 2.3.2、§ Section 2.5、§ Section 2.5.3、§ Section 2.6.1、§ Section 2.6.1.2、§ Section 6.2.4.4、§ Section 6.3.2 |
 | IDE Check Failed(IDE 校验失败) | Uncorrectable(致命) | Receiving IDE Terminus:进入 Insecure 状态。该流 (stream) 上此后所有 IDE TLP 均视为 MAC 校验失败。向根复合体 (root complex) 发送 ERR_FATAL。向 Partner Port 发送 IDE Fail Message。记录发生该错误的 TLP 的前缀/包头。 | § Section 6.33 |
 | Misrouted IDE TLP(误路由的 IDE TLP) | Uncorrectable(非致命) | Ingress/Egress Port:向根复合体 (Root Complex) 发送 ERR_NONFATAL。记录发生该错误的 TLP 的前缀/包头。 | § Section 6.33 |
-| PCRC Check Failed(PCRC 校验失败) | Uncorrectable(非致命) | Receiving IDE Terminus:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.3 中描述的咨询性非致命错误情形，则发送 ERR_COR。记录发生该错误的 TLP 的前缀/包头。 | § Section 6.33 |
+| PCRC Check Failed(PCRC 校验失败) | Uncorrectable(非致命) | Receiving IDE Terminus:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.3 中描述的咨询性非致命错误情形,则发送 ERR_COR。记录发生该错误的 TLP 的前缀/包头。 | § Section 6.33 |
 
-对于上述所有错误，必须在检测到错误时置位相应的状态位。对于 Unsupported Request (UR)，还需使用额外的检测与上报使能位(参见 § Section 6.2.5)。
+对于上述所有错误,必须在检测到错误时置位相应的状态位。对于 Unsupported Request (UR),还需使用额外的检测与上报使能位(参见 § Section 6.2.5)。
 
 </td>
 </tr>
@@ -3921,7 +3919,7 @@ The PCI command register has bits which control PCI error reporting. However, th
 
 为了与传统 PCI 驱动程序和软件保持兼容,PCI Express 错误情形在合适的情况下必须映射到 PCI Status (PCI 状态) 寄存器的相应位上以进行错误上报。
 
-也就是说，当检测到某些 PCI Express 错误时，会在 PCI Status 寄存器中置位 (Set) 相应位，以向传统 PCI 软件报告该错误。尽管 PCI Express 错误会置位 PCI Status 寄存器，但清除 PCI Status 寄存器并不会清除 Uncorrectable Error Status 和 Correctable Error Status 寄存器中的位。反之，清除 Uncorrectable Error Status 和 Correctable Error Status 寄存器中的位也不会清除 PCI Status 寄存器。
+也就是说,当检测到某些 PCI Express 错误时,会在 PCI Status 寄存器中置位 (Set) 相应位,以向传统 PCI 软件报告该错误。尽管 PCI Express 错误会置位 PCI Status 寄存器,但清除 PCI Status 寄存器并不会清除 Uncorrectable Error Status 和 Correctable Error Status 寄存器中的位。反之,清除 Uncorrectable Error Status 和 Correctable Error Status 寄存器中的位也不会清除 PCI Status 寄存器。
 
 PCI Command 寄存器中包含用于控制 PCI 错误上报的位。但是,PCI Command 寄存器并不影响 PCI Express 错误寄存器的置位。
 
@@ -3971,15 +3969,15 @@ With software/firmware that sets the SERR# Enable bit but leaves the Unsupported
 
 虚拟 PCI 桥 (Virtual PCI Bridge) 配置头与根复合体 (Root Complex) 或交换机 (Switch) 中的每个 PCI Express 端口相关联。对于这些情况,PCI Express 错误概念需要恰当地映射到 PCI 错误上报结构上。
 
-一般而言,TLP 要么从虚拟 PCI 桥的一侧传递到另一侧，要么在桥的入口 (ingress) 侧按适用于 TLP 最终接收方的相同规则处理。以下规则涵盖 PCI Express 特有的错误相关情形。有关错误报文 (Error Message) 控制的概念性概述，请参见 § Section 6.2.6。
+一般而言,TLP 要么从虚拟 PCI 桥的一侧传递到另一侧,要么在桥的入口 (ingress) 侧按适用于 TLP 最终接收方的相同规则处理。以下规则涵盖 PCI Express 特有的错误相关情形。有关错误报文 (Error Message) 控制的概念性概述,请参见 § Section 6.2.6。
 
 **实现说明 (IMPLEMENTATION NOTE):**
 
 **设备 UR 上报与传统及 1.0A 软件的兼容性**
 
-对于不实现基于角色的错误上报 (Role-Based Error Reporting) 的 [PCIe-1.0a] 设备功能 (Function)¹²¹,Device Control (设备控制) 寄存器中的 Unsupported Request Reporting Enable 位若为清零状态，则该 Function 不会发送任何错误报文 (Message) 来上报 UR 错误。对于实现了 Role-Based Error Reporting 的 Function,若 Command (命令) 寄存器中的 SERR# Enable 位已置位，则即使 Unsupported Request Reporting Enable 位为清零状态，该 Function 也会被隐式使能¹²²,从而可发送 ERR_NONFATAL 或 ERR_FATAL 报文 (Message) 来上报 UR 错误。这对为 [PCIe-1.0a] 设备编写的软件(或固件)带来了向后兼容性问题。
+对于不实现基于角色的错误上报 (Role-Based Error Reporting) 的 [PCIe-1.0a] 设备功能 (Function)¹²¹,Device Control (设备控制) 寄存器中的 Unsupported Request Reporting Enable 位若为清零状态,则该 Function 不会发送任何错误报文 (Message) 来上报 UR 错误。对于实现了 Role-Based Error Reporting 的 Function,若 Command (命令) 寄存器中的 SERR# Enable 位已置位,则即使 Unsupported Request Reporting Enable 位为清零状态,该 Function 也会被隐式使能¹²²,从而可发送 ERR_NONFATAL 或 ERR_FATAL 报文 (Message) 来上报 UR 错误。这对为 [PCIe-1.0a] 设备编写的软件(或固件)带来了向后兼容性问题。
 
-对于那些置位了 SERR# Enable 位、但保持 Unsupported Request Reporting Enable 和 Correctable Error Reporting Enable 位清零的软件/固件而言，实现 Role-Based Error Reporting 的 Function 在遇到 UR 错误时，若该 Request 为 non-posted,则不发送任何错误报文 (Message);若该 Request 为 posted,则以 ERR_NONFATAL 上报该错误。non-posted Request 下的行为支持 PC 兼容的配置空间 (Configuration Space) 探测;而 posted Request 下的行为则恢复与 PCI 和 PCI-X 的错误上报兼容性，避免在该领域出现潜在的数据静默损坏 (silent data corruption)。因此，基于角色的错误上报设备向后兼容预期的传统及 [PCIe-1.0a] 软件与固件。
+对于那些置位了 SERR# Enable 位、但保持 Unsupported Request Reporting Enable 和 Correctable Error Reporting Enable 位清零的软件/固件而言,实现 Role-Based Error Reporting 的 Function 在遇到 UR 错误时,若该 Request 为 non-posted,则不发送任何错误报文 (Message);若该 Request 为 posted,则以 ERR_NONFATAL 上报该错误。non-posted Request 下的行为支持 PC 兼容的配置空间 (Configuration Space) 探测;而 posted Request 下的行为则恢复与 PCI 和 PCI-X 的错误上报兼容性,避免在该领域出现潜在的数据静默损坏 (silent data corruption)。因此,基于角色的错误上报设备向后兼容预期的传统及 [PCIe-1.0a] 软件与固件。
 
 ---
 
@@ -4031,23 +4029,23 @@ With software/firmware that sets the SERR# Enable bit but leaves the Unsupported
 </td>
 <td style="background-color:#e8e8e8">
 
-- 若 Request 未寻址到映射到桥内部空间 (Bridge internal space) 或桥出口侧 (egress side) 的地址空间，则该 Request 在入口 (ingress) 侧被作为 Unsupported Request (不支持的请求) 终止。
+- 若 Request 未寻址到映射到桥内部空间 (Bridge internal space) 或桥出口侧 (egress side) 的地址空间,则该 Request 在入口 (ingress) 侧被作为 Unsupported Request (不支持的请求) 终止。
 - 中毒 TLP (Poisoned TLP) 的转发遵循与非中毒 TLP 相同的规则。
   - 向下游 (Downstream) 转发中毒 Request 时:
     - 在 Status (状态) 寄存器中置位 Detected Parity Error 位。
-    - 若 Bridge Control (桥控制) 寄存器中的 Parity Error Response Enable 位已置位，则在 Secondary Status (次级状态) 寄存器中置位 Master Data Parity Error 位。
+    - 若 Bridge Control (桥控制) 寄存器中的 Parity Error Response Enable 位已置位,则在 Secondary Status (次级状态) 寄存器中置位 Master Data Parity Error 位。
   - 向下游转发中毒 Completion 时:
     - 在 Status 寄存器中置位 Detected Parity Error 位。
-    - 若 Command (命令) 寄存器中的 Parity Error Response 位已置位，则在 Status 寄存器中置位 Master Data Parity Error 位。
+    - 若 Command (命令) 寄存器中的 Parity Error Response 位已置位,则在 Status 寄存器中置位 Master Data Parity Error 位。
   - 向上游 (Upstream) 转发中毒 Request 时:
     - 在 Secondary Status 寄存器中置位 Detected Parity Error 位。
-    - 若 Command 寄存器中的 Parity Error Response 位已置位，则在 Status 寄存器中置位 Master Data Parity Error 位。
+    - 若 Command 寄存器中的 Parity Error Response 位已置位,则在 Status 寄存器中置位 Master Data Parity Error 位。
   - 向上游转发中毒 Completion 时:
     - 在 Secondary Status 寄存器中置位 Detected Parity Error 位。
-    - 若 Bridge Control 寄存器中的 Parity Error Response Enable 位已置位，则在 Secondary Status 寄存器中置位 Master Data Parity Error 位。
-- 若 Bridge Control 寄存器中的 SERR# Enable 位已置位，则 ERR_COR、ERR_NONFATAL 和 ERR_FATAL 从次级接口 (secondary interface) 转发到主接口 (primary interface)。转发错误报文 (Message) 的桥不得在 Device Status (设备状态) 寄存器中置位对应的 Error Detected 位。被转发的错误报文在主接口上的发送受多个位控制，如 § Figure 6-3 所示。
-- 对于根端口 (Root Port)，从次级接口转发到主接口的错误报文必须由主接口"发送"使能，才能通过 Root Control (根控制) 寄存器触发系统错误 (System Error)，或者(在存在 AER Extended Capability 的情况下)通过 Root Error Command (根错误命令) 寄存器上报并记录到 Root Error Status (根错误状态) 寄存器和 Error Source Identification (错误源标识) 寄存器中。
-- 对于根复合体事件收集器 (Root Complex Event Collector,技术上不是桥),"接收"自关联 RCiEP 的错误报文必须经"发送"使能，才能通过 Root Control 寄存器触发系统错误，或者(在存在 AER Extended Capability 的情况下)通过 Root Error Command 寄存器上报并记录到 Root Error Status 寄存器和 Error Source Identification 寄存器中。
+    - 若 Bridge Control 寄存器中的 Parity Error Response Enable 位已置位,则在 Secondary Status 寄存器中置位 Master Data Parity Error 位。
+- 若 Bridge Control 寄存器中的 SERR# Enable 位已置位,则 ERR_COR、ERR_NONFATAL 和 ERR_FATAL 从次级接口 (secondary interface) 转发到主接口 (primary interface)。转发错误报文 (Message) 的桥不得在 Device Status (设备状态) 寄存器中置位对应的 Error Detected 位。被转发的错误报文在主接口上的发送受多个位控制,如 § Figure 6-3 所示。
+- 对于根端口 (Root Port),从次级接口转发到主接口的错误报文必须由主接口"发送"使能,才能通过 Root Control (根控制) 寄存器触发系统错误 (System Error),或者(在存在 AER Extended Capability 的情况下)通过 Root Error Command (根错误命令) 寄存器上报并记录到 Root Error Status (根错误状态) 寄存器和 Error Source Identification (错误源标识) 寄存器中。
+- 对于根复合体事件收集器 (Root Complex Event Collector,技术上不是桥),"接收"自关联 RCiEP 的错误报文必须经"发送"使能,才能通过 Root Control 寄存器触发系统错误,或者(在存在 AER Extended Capability 的情况下)通过 Root Error Command 寄存器上报并记录到 Root Error Status 寄存器和 Error Source Identification 寄存器中。
 
 </td>
 </tr>
@@ -4088,7 +4086,7 @@ The following error handling control bits are only implemented in the PF. They a
 </td>
 <td style="background-color:#e8e8e8">
 
-所有 SR-IOV (单根 I/O 虚拟化) 设备必须支持基线能力，但允许根据降低实现成本与复杂度的目标做一定修改。
+所有 SR-IOV (单根 I/O 虚拟化) 设备必须支持基线能力,但允许根据降低实现成本与复杂度的目标做一定修改。
 
 以下错误处理控制位仅在 PF (Physical Function,物理功能) 中实现。它们在 VF (Virtual Function,虚拟功能) 中为 RsvdP(保留为 Preserved),VF 必须使用其关联 PF 中的控制位来管理自身的错误处理行为。
 
@@ -4207,15 +4205,15 @@ Internal Errors that can be associated with a specific PCI Express interface are
 </td>
 <td style="background-color:#e8e8e8">
 
-Internal Error (内部错误) 是与 PCI Express 接口相关联、发生于组件内部、且可能无法归因于 PCI Express 接口本身上的某个包或事件、或代表在 PCI Express 上发起的事务的错误。哪些算作内部错误由具体实现决定，不在本规范范围之内。
+Internal Error (内部错误) 是与 PCI Express 接口相关联、发生于组件内部、且可能无法归因于 PCI Express 接口本身上的某个包或事件、或代表在 PCI Express 上发起的事务的错误。哪些算作内部错误由具体实现决定,不在本规范范围之内。
 
 内部错误可分为 Corrected Internal Errors (已纠正内部错误) 或 Uncorrectable Internal Errors (不可纠正内部错误)。已纠正内部错误是组件内部发生的、已被硬件屏蔽或绕过、且没有任何信息丢失或不当操作的错误。可能的已纠正内部错误示例:由 Error Correcting Code (ECC, 纠错码) 纠正的内部包缓冲区存储器错误。不可纠正内部错误是组件内部发生的、导致组件不当操作的错误。可能的不可纠正内部错误示例:无法由 ECC 纠正的存储器错误。从不可纠正内部错误恢复的唯一方法是复位或硬件更换。
 
-Corrected Internal Errors 与 Uncorrectable Internal Errors 的上报是彼此独立的选项。如果要上报其中任何一种，则必须实现 AER (高级错误上报)。
+Corrected Internal Errors 与 Uncorrectable Internal Errors 的上报是彼此独立的选项。如果要上报其中任何一种,则必须实现 AER (高级错误上报)。
 
-对于 Uncorrectable Internal Errors,包头日志记录是可选的。当记录包头时，该包头是因 Uncorrectable Internal Error 而丢失或损坏的第一个 TLP。当未实现包头日志记录或包头不可用时，记录一个全 1 的包头。
+对于 Uncorrectable Internal Errors,包头日志记录是可选的。当记录包头时,该包头是因 Uncorrectable Internal Error 而丢失或损坏的第一个 TLP。当未实现包头日志记录或包头不可用时,记录一个全 1 的包头。
 
-可以关联到特定 PCI Express 接口的内部错误由与该 Port 关联的 Function 上报。Switch (交换机) 内检测到的、且无法关联到特定 PCI Express 接口的内部错误由 Upstream Port (上游端口) 上报。在所有其他多 Port 组件(例如根复合体 (Root Complex))中，无法关联到特定 PCI Express 接口的内部错误的上报不在本规范范围之内。
+可以关联到特定 PCI Express 接口的内部错误由与该 Port 关联的 Function 上报。Switch (交换机) 内检测到的、且无法关联到特定 PCI Express 接口的内部错误由 Upstream Port (上游端口) 上报。在所有其他多 Port 组件(例如根复合体 (Root Complex))中,无法关联到特定 PCI Express 接口的内部错误的上报不在本规范范围之内。
 
 </td>
 </tr>
@@ -4269,24 +4267,24 @@ After software releases the Downstream Port from DPC, the Port's LTSSM must tran
 </td>
 <td style="background-color:#e8e8e8">
 
-Downstream Port Containment (DPC, 下游端口遏制) 是 Downstream Port (下游端口) 的一项可选规范性特性。当在该 Port 处或之下检测到未屏蔽的不可纠正错误时,DPC 停止该 Downstream Port 下方的 PCI Express 流量，以避免任何数据损坏的潜在扩散，并在软件实现时支持 Containment Error Recovery (CER, 遏制错误恢复)。
+Downstream Port Containment (DPC, 下游端口遏制) 是 Downstream Port (下游端口) 的一项可选规范性特性。当在该 Port 处或之下检测到未屏蔽的不可纠正错误时,DPC 停止该 Downstream Port 下方的 PCI Express 流量,以避免任何数据损坏的潜在扩散,并在软件实现时支持 Containment Error Recovery (CER, 遏制错误恢复)。
 
-Downstream Port 通过实现 DPC Extended Capability 结构来指示对 DPC 的支持，该结构包含所有 DPC 控制与状态位。参见 § Section 7.9.14 。
+Downstream Port 通过实现 DPC Extended Capability 结构来指示对 DPC 的支持,该结构包含所有 DPC 控制与状态位。参见 § Section 7.9.14 。
 
-DPC 默认禁用，除非由软件通过 DPC Trigger Enable 字段使能，否则不能被触发。当 DPC Trigger Enable 字段设为 01b 时,DPC 被使能，并在 Downstream Port 检测到未屏蔽的不可纠正错误、或 Downstream Port 接收到 ERR_FATAL Message 时被触发。当 DPC Trigger Enable 字段设为 10b 时,DPC 被使能，并在 Downstream Port 检测到未屏蔽的不可纠正错误、或 Downstream Port 接收到 ERR_NONFATAL 或 ERR_FATAL Message 时被触发。除了由 PCI Express Extended Capability 和 Advanced Error Reporting (AER, 高级错误上报) 管理的不可纠正错误类型外,RP PIO 错误也可作为不可纠正错误处理。参见 § Section 6.2.11.3 。§ Section 6.2.11.4 还描述了软件或固件触发 DPC 的机制。
+DPC 默认禁用,除非由软件通过 DPC Trigger Enable 字段使能,否则不能被触发。当 DPC Trigger Enable 字段设为 01b 时,DPC 被使能,并在 Downstream Port 检测到未屏蔽的不可纠正错误、或 Downstream Port 接收到 ERR_FATAL Message 时被触发。当 DPC Trigger Enable 字段设为 10b 时,DPC 被使能,并在 Downstream Port 检测到未屏蔽的不可纠正错误、或 Downstream Port 接收到 ERR_NONFATAL 或 ERR_FATAL Message 时被触发。除了由 PCI Express Extended Capability 和 Advanced Error Reporting (AER, 高级错误上报) 管理的不可纠正错误类型外,RP PIO 错误也可作为不可纠正错误处理。参见 § Section 6.2.11.3 。§ Section 6.2.11.4 还描述了软件或固件触发 DPC 的机制。
 
-当 DPC 因收到不可纠正错误 Message 而被触发时，该 Message 中的 Requester ID (请求者 ID) 会被记录到 DPC Error Source ID 寄存器中，且该 Message 被丢弃，不会向上游转发。当 DPC 由未屏蔽的不可纠正错误触发时，该错误不会再以不可纠正错误 Message 发信号，即便是其他情况下本应使能。然而,DPC 触发后，如果使能的话,DPC 可发信号中断或发送 ERR_COR Message。参见 § Section 6.2.11.1 和 § Section 6.2.11.2 。
+当 DPC 因收到不可纠正错误 Message 而被触发时,该 Message 中的 Requester ID (请求者 ID) 会被记录到 DPC Error Source ID 寄存器中,且该 Message 被丢弃,不会向上游转发。当 DPC 由未屏蔽的不可纠正错误触发时,该错误不会再以不可纠正错误 Message 发信号,即便是其他情况下本应使能。然而,DPC 触发后,如果使能的话,DPC 可发信号中断或发送 ERR_COR Message。参见 § Section 6.2.11.1 和 § Section 6.2.11.2 。
 
-当 DPC 被触发时,Downstream Port 立即将 DPC Trigger Status 位置 1,并设置 DPC Trigger Reason 字段以指示触发条件(未屏蔽的不可纠正错误、ERR_NONFATAL、ERR_FATAL、RP_PIO 错误或软件触发)，然后通过将 LTSSM (链路训练与状态机) 引导至 Disabled 状态来禁用其 Link (链路)。一旦 LTSSM 进入 Disabled 状态，它将保持在该状态，直到 DPC Trigger Status 位被清除。为了确保 LTSSM 有时间进入 Disabled 状态、或至少在各种错误条件下将 Link 断开，软件必须使 Downstream Port 保持在 DPC 状态，直到 Link Status 寄存器中的 Data Link Layer Link Active 位读出 0b;否则结果未定义。参见 § Section 7.5.3.8 。有关 DPC 期间事务层行为的其他重要细节，参见 § Section 2.9.3 。
+当 DPC 被触发时,Downstream Port 立即将 DPC Trigger Status 位置 1,并设置 DPC Trigger Reason 字段以指示触发条件(未屏蔽的不可纠正错误、ERR_NONFATAL、ERR_FATAL、RP_PIO 错误或软件触发),然后通过将 LTSSM (链路训练与状态机) 引导至 Disabled 状态来禁用其 Link (链路)。一旦 LTSSM 进入 Disabled 状态,它将保持在该状态,直到 DPC Trigger Status 位被清除。为了确保 LTSSM 有时间进入 Disabled 状态、或至少在各种错误条件下将 Link 断开,软件必须使 Downstream Port 保持在 DPC 状态,直到 Link Status 寄存器中的 Data Link Layer Link Active 位读出 0b;否则结果未定义。参见 § Section 7.5.3.8 。有关 DPC 期间事务层行为的其他重要细节,参见 § Section 2.9.3 。
 
-在支持 RP Extensions for DPC 的 Root Port 中触发 DPC 后,Root Port 可能需要一些时间来静默和清理其内部活动，例如与 DMA 读请求相关的活动。当 DPC Trigger Status 位置 1 且 DPC RP Busy 位置 1 时，软件必须使 Root Port 保持在 DPC 状态，直到 DPC RP Busy 位读出 0b。
+在支持 RP Extensions for DPC 的 Root Port 中触发 DPC 后,Root Port 可能需要一些时间来静默和清理其内部活动,例如与 DMA 读请求相关的活动。当 DPC Trigger Status 位置 1 且 DPC RP Busy 位置 1 时,软件必须使 Root Port 保持在 DPC 状态,直到 DPC RP Busy 位读出 0b。
 
-在软件将 Downstream Port 从 DPC 中释放后，该 Port 的 LTSSM 必须转移到 Detect 状态，在该状态 Link 将尝试重训练。软件可以使用 Data Link Layer State Changed 中断、DL_ACTIVE ERR_COR 信令，或同时使用两者，在 Link 重新进入 DL_Active 状态时发信号通知。参见 § Section 6.7.3.3 和 § Section 6.2.11.5 。
+在软件将 Downstream Port 从 DPC 中释放后,该 Port 的 LTSSM 必须转移到 Detect 状态,在该状态 Link 将尝试重训练。软件可以使用 Data Link Layer State Changed 中断、DL_ACTIVE ERR_COR 信令,或同时使用两者,在 Link 重新进入 DL_Active 状态时发信号通知。参见 § Section 6.7.3.3 和 § Section 6.2.11.5 。
 
 > **实现说明:**
 > **数据值为全 1**
 >
-> 许多平台(包括那些支持 RP Extensions for DPC 的平台)在与 PCI Express Configuration、I/O 或 Memory Read Request 相关的错误发生时，可以向软件返回全 1 的数据值。在 DPC 期间,Downstream Port 丢弃发往该 Link 的请求并以错误完成它们(即，以 Unsupported Request (UR, 不支持请求) 或 Completer Abort (CA, 完成方中止) 完成状态)。通过以读取某个已知数据值(非全 1)地址的读操作结束一系列 MMIO 或配置空间操作，软件可以判断 Completer 是否已被移除或 DPC 是否已被触发。
+> 许多平台(包括那些支持 RP Extensions for DPC 的平台)在与 PCI Express Configuration、I/O 或 Memory Read Request 相关的错误发生时,可以向软件返回全 1 的数据值。在 DPC 期间,Downstream Port 丢弃发往该 Link 的请求并以错误完成它们(即,以 Unsupported Request (UR, 不支持请求) 或 Completer Abort (CA, 完成方中止) 完成状态)。通过以读取某个已知数据值(非全 1)地址的读操作结束一系列 MMIO 或配置空间操作,软件可以判断 Completer 是否已被移除或 DPC 是否已被触发。
 >
 > 另请参见实现说明 "Use of RP PIO Advisory Error Handling"
 
@@ -4354,28 +4352,28 @@ DPC 默认禁用，除非由软件通过 DPC Trigger Enable 字段使能，否�
 >
 > DPC Completion Control 位决定 Downstream Port 在 DPC 期间如何响应接收到的 Non-Posted Request (NPR, 非 Posted 请求)。该选择需要考虑平台其余部分如何处理 Containment Error Recovery (CER, 遏制错误恢复)。
 >
-> 虽然平台中具体的 CER 策略细节不在本规范范围之内，但以下是基于一般性考虑的一些指导原则。
+> 虽然平台中具体的 CER 策略细节不在本规范范围之内,但以下是基于一般性考虑的一些指导原则。
 >
-> 如果平台或驱动不支持 CER 策略，建议选择 UR Completions,这也是设备不在场时的标准行为。
+> 如果平台或驱动不支持 CER 策略,建议选择 UR Completions,这也是设备不在场时的标准行为。
 >
-> 如果 CER 策略依赖软件通过查看 PIO 读返回的全 1 值来检测遏制，那么 UR Completion 可能是更合适的选择，前提是 RP 为那些返回 UR Completions 的 PIO 读合成一个全 1 的返回值。这种全 1 合成需要针对发往 Configuration Space、Memory Space 以及可能还有 I/O Space 的 PIO 读。
+> 如果 CER 策略依赖软件通过查看 PIO 读返回的全 1 值来检测遏制,那么 UR Completion 可能是更合适的选择,前提是 RP 为那些返回 UR Completions 的 PIO 读合成一个全 1 的返回值。这种全 1 合成需要针对发往 Configuration Space、Memory Space 以及可能还有 I/O Space 的 PIO 读。
 >
-> 如果 CER 策略采用一种对 PIO 读中 UR 和 CA Completions 做不同处理的机制，那么 CA Completion 可能是更合适的选择。从 PCIe 设备返回的 CA Completions 通常表示设备编程模型违规，这可能需要触发 Port 遏制和错误恢复。
+> 如果 CER 策略采用一种对 PIO 读中 UR 和 CA Completions 做不同处理的机制,那么 CA Completion 可能是更合适的选择。从 PCIe 设备返回的 CA Completions 通常表示设备编程模型违规,这可能需要触发 Port 遏制和错误恢复。
 
 ---
 
 > **实现说明:**
 > **DPC 触发条件的选择**
 >
-> Non-Fatal Error (非致命错误) 是指示某个特定 TLP 不可靠的不可纠正错误，通常相关 Function 不应继续其正常操作。Fatal Error (致命错误) 是指示某条特定 Link 及其相关硬件不可靠的不可纠正错误，通常该 Link 下方的整个层级都不应继续正常操作。Non-Fatal 与 Fatal 错误之间的这种区别，结合 Root Port 错误遏制能力，有时可用于选择适当的 DPC 触发条件。
+> Non-Fatal Error (非致命错误) 是指示某个特定 TLP 不可靠的不可纠正错误,通常相关 Function 不应继续其正常操作。Fatal Error (致命错误) 是指示某条特定 Link 及其相关硬件不可靠的不可纠正错误,通常该 Link 下方的整个层级都不应继续正常操作。Non-Fatal 与 Fatal 错误之间的这种区别,结合 Root Port 错误遏制能力,有时可用于选择适当的 DPC 触发条件。
 >
 > 以下假设设备之间不存在 peer-to-peer 流量。
 >
-> 一些 RC (根复合体) 实现了一种专有特性，在此统称为 "Function Level Containment" (FLC, 功能级遏制)。这不是 PCI Express 的架构化特性。实现 FLC 的 Root Port 能够在该流量中检测到 Non-Fatal Error 时，遏制与特定 Function 关联的流量。带 FLC 的 Root Port 下方的 Switch Downstream Port 应配置为:在 Downstream Port 自身检测到未屏蔽的不可纠正错误时，或在该 Downstream Port 接收到 ERR_FATAL Message 时触发 DPC。
+> 一些 RC (根复合体) 实现了一种专有特性,在此统称为 "Function Level Containment" (FLC, 功能级遏制)。这不是 PCI Express 的架构化特性。实现 FLC 的 Root Port 能够在该流量中检测到 Non-Fatal Error 时,遏制与特定 Function 关联的流量。带 FLC 的 Root Port 下方的 Switch Downstream Port 应配置为:在 Downstream Port 自身检测到未屏蔽的不可纠正错误时,或在该 Downstream Port 接收到 ERR_FATAL Message 时触发 DPC。
 >
 > 在此模式下,Switch Downstream Port 把它所收到的 ERR_NONFATAL Messages 直接向上游转发而不触发 DPC。这使得 Root Port FLC 可处理使特定 Function 不可靠的 Non-Fatal Error,同时 Switch Downstream Port DPC 可处理使层级域的某个子树不可靠的错误。Downstream Port 仍需对其检测到的所有未屏蔽的不可纠正错误触发 DPC,因为它产生的 ERR_NONFATAL 将具有其自身的 Requester ID,而 Root Port 中的 FLC 硬件将无法确定 Switch Downstream Port 之下哪个特定 Function 应对该 Non-Fatal Error 负责。
 >
-> 不带 FLC 的 Root Port 下方的 Switch Downstream Port 应配置为:在 Switch Downstream Port 检测到未屏蔽的不可纠正错误时、或在该 Switch Downstream Port 接收到 ERR_NONFATAL 或 ERR_FATAL Message 时触发 DPC。这使得 DPC 能将该错误遏制在 Link 之下受影响的层级内，并允许层级域中未受影响的部分继续正常运行。
+> 不带 FLC 的 Root Port 下方的 Switch Downstream Port 应配置为:在 Switch Downstream Port 检测到未屏蔽的不可纠正错误时、或在该 Switch Downstream Port 接收到 ERR_NONFATAL 或 ERR_FATAL Message 时触发 DPC。这使得 DPC 能将该错误遏制在 Link 之下受影响的层级内,并允许层级域中未受影响的部分继续正常运行。
 
 </td>
 </tr>
@@ -4442,35 +4440,35 @@ The Port may optionally send an interrupt message if interrupt generation has be
 
 支持 DPC 的 Downstream Port 必须支持 DPC 中断的产生。DPC 中断由 DPC Control 寄存器中的 DPC Interrupt Enable 位使能。DPC 中断由 DPC Status 寄存器中的 DPC Interrupt Status 位指示。
 
-如果 Port 已使用 INTx messages 使能了电平触发的中断信令，那么当且仅当以下条件全部满足时，虚拟 INTx 线必须被置位(并保持置位):
+如果 Port 已使用 INTx messages 使能了电平触发的中断信令,那么当且仅当以下条件全部满足时,虚拟 INTx 线必须被置位(并保持置位):
 
 - Command 寄存器中 Interrupt Disable 位的值为 0b。
 - DPC Interrupt Enable 位的值为 1b。
 - DPC Interrupt Status 位的值为 1b。
 
-请注意，同一 Function 内的所有其他中断源在请求服务时也会置位同一根虚拟 INTx 线。
+请注意,同一 Function 内的所有其他中断源在请求服务时也会置位同一根虚拟 INTx 线。
 
-如果 Port 已使用 MSI 或 MSI-X 使能了边沿触发的中断信令，那么每当以下条件的逻辑 AND 由 FALSE 转为 TRUE 时，必须发送一个中断消息:
+如果 Port 已使用 MSI 或 MSI-X 使能了边沿触发的中断信令,那么每当以下条件的逻辑 AND 由 FALSE 转为 TRUE 时,必须发送一个中断消息:
 
 - 关联的 vector 未被屏蔽(若 MSI 不支持 PVM 则不适用)。
 - DPC Interrupt Enable 位的值为 1b。
 - DPC Interrupt Status 位的值为 1b。
 
-如果中断产生曾被禁用，而当中断产生随后被使能时，上述条件的逻辑 AND 为 TRUE,则 Port 可选地发送一个中断消息。
+如果中断产生曾被禁用,而当中断产生随后被使能时,上述条件的逻辑 AND 为 TRUE,则 Port 可选地发送一个中断消息。
 
 > **实现说明:**
 > **软件轮询 DPC RP BUSY 位**
 >
-> DPC RP Busy 位是硬件向软件表明 RP 在进行内部清理与静默活动期间需保持在 DPC 遏制状态的一种机制。虽然这些活动的具体细节由实现决定，但通常在数微秒或更短时间内即可完成。
+> DPC RP Busy 位是硬件向软件表明 RP 在进行内部清理与静默活动期间需保持在 DPC 遏制状态的一种机制。虽然这些活动的具体细节由实现决定,但通常在数微秒或更短时间内即可完成。
 >
-> 然而在最坏情况下，例如大型系统中某些内部错误可能出现的场景，该忙等待期可能会显著延长，甚至可能达到数秒。如果软件无法在当前软件上下文中容忍这种较长的延迟，软件可能需要借助定时器中断，安排在中断上下文中进行轮询。
+> 然而在最坏情况下,例如大型系统中某些内部错误可能出现的场景,该忙等待期可能会显著延长,甚至可能达到数秒。如果软件无法在当前软件上下文中容忍这种较长的延迟,软件可能需要借助定时器中断,安排在中断上下文中进行轮询。
 
 ---
 
 > **实现说明:**
 > **DPC 控制权的确定**
 >
-> 在某些配置中 DPC 可由平台固件控制，在另一些配置中则可由操作系统控制。DPC 功能与 Advanced Error Reporting 的功能紧密相关。为了避免平台固件或操作系统谁拥有 DPC 控制权的冲突，建议平台固件和操作系统始终将 DPC 的控制与 Advanced Error Reporting 的控制相关联。
+> 在某些配置中 DPC 可由平台固件控制,在另一些配置中则可由操作系统控制。DPC 功能与 Advanced Error Reporting 的功能紧密相关。为了避免平台固件或操作系统谁拥有 DPC 控制权的冲突,建议平台固件和操作系统始终将 DPC 的控制与 Advanced Error Reporting 的控制相关联。
 
 </td>
 </tr>
@@ -4516,18 +4514,18 @@ For a given DPC trigger event, if a Port is going to send both an ERR_COR Messag
 </td>
 <td style="background-color:#e8e8e8">
 
-中断消息将使用 DPC Capability 寄存器中 DPC Interrupt Message Number 字段所指示的 vector。该 vector 可以与本 Function 内其他中断源使用的 vector 相同，也可以不同。
+中断消息将使用 DPC Capability 寄存器中 DPC Interrupt Message Number 字段所指示的 vector。该 vector 可以与本 Function 内其他中断源使用的 vector 相同,也可以不同。
 
-支持 DPC 的 Downstream Port 必须支持 ERR_COR 信令，无论其是否支持 Advanced Error Reporting (AER)。DPC ERR_COR 信令由 DPC Control 寄存器中的 DPC ERR_COR Enable 位使能。DPC 触发由 DPC Status 寄存器中的 DPC Trigger Status 位指示。DPC ERR_COR 信令与 DPC 中断彼此独立管理，且允许同时使用两种机制。
+支持 DPC 的 Downstream Port 必须支持 ERR_COR 信令,无论其是否支持 Advanced Error Reporting (AER)。DPC ERR_COR 信令由 DPC Control 寄存器中的 DPC ERR_COR Enable 位使能。DPC 触发由 DPC Status 寄存器中的 DPC Trigger Status 位指示。DPC ERR_COR 信令与 DPC 中断彼此独立管理,且允许同时使用两种机制。
 
-如果 DPC ERR_COR Enable 位置 1,且 Device Control 寄存器中的 Correctable Error Reporting Enable 位或 DPC Control 寄存器中的 DPC SIG_SFW Enable 位置 1,则每当 DPC Trigger Status 位由清零转为置 1 时,Port 必须发送一个 ERR_COR Message。DPC ERR_COR 信令不得将 Device Status 寄存器中的 Correctable Error Detected 位置 1,因为此事件不作为错误处理。如果 Downstream Port 支持 ERR_COR Subclass 能力，则此 DPC ERR_COR 信令事件必须将 DPC Status 寄存器中的 DPC SIG_SFW Status 位置 1,并同时将 ERR_COR Message 中的 ERR_COR Subclass 字段设为指示 ECS SIG_SFW。
+如果 DPC ERR_COR Enable 位置 1,且 Device Control 寄存器中的 Correctable Error Reporting Enable 位或 DPC Control 寄存器中的 DPC SIG_SFW Enable 位置 1,则每当 DPC Trigger Status 位由清零转为置 1 时,Port 必须发送一个 ERR_COR Message。DPC ERR_COR 信令不得将 Device Status 寄存器中的 Correctable Error Detected 位置 1,因为此事件不作为错误处理。如果 Downstream Port 支持 ERR_COR Subclass 能力,则此 DPC ERR_COR 信令事件必须将 DPC Status 寄存器中的 DPC SIG_SFW Status 位置 1,并同时将 ERR_COR Message 中的 ERR_COR Subclass 字段设为指示 ECS SIG_SFW。
 
-对于给定的 DPC 触发事件，如果 Port 计划同时发送 ERR_COR Message 和 MSI/MSI-X 事务，则 Port 必须在发送 MSI/MSI-X 事务之前先发送 ERR_COR Message。若使用 INTx 机制发信号 DPC 中断，则无对应要求，因为 INTx Messages 在经过路由单元时，不一定与 ERR_COR Messages 保持有序。
+对于给定的 DPC 触发事件,如果 Port 计划同时发送 ERR_COR Message 和 MSI/MSI-X 事务,则 Port 必须在发送 MSI/MSI-X 事务之前先发送 ERR_COR Message。若使用 INTx 机制发信号 DPC 中断,则无对应要求,因为 INTx Messages 在经过路由单元时,不一定与 ERR_COR Messages 保持有序。
 
 > **实现说明:**
 > **DPC ERR_COR 信令的使用**
 >
-> 建议操作系统在 DPC 触发时使用 DPC 中断进行信令通知。尽管 DPC ERR_COR 信令指示的是同一事件,DPC ERR_COR 信令主要供系统固件使用，当系统固件需要被通知以便自行记录该事件或提供 firmware first 服务时使用。
+> 建议操作系统在 DPC 触发时使用 DPC 中断进行信令通知。尽管 DPC ERR_COR 信令指示的是同一事件,DPC ERR_COR 信令主要供系统固件使用,当系统固件需要被通知以便自行记录该事件或提供 firmware first 服务时使用。
 
 </td>
 </tr>
@@ -4564,9 +4562,9 @@ A UR or CA error logged in AER is the result of the Root Port operating in the r
 </td>
 <td style="background-color:#e8e8e8">
 
-RP PIO 错误控制寄存器可对 Root Port 所追踪的 Non-Posted Requests 遭遇特定不可纠正或可建议 (advisory) 错误时的行为进行细粒度控制。关于哪些 Non-Posted Requests 被追踪，参见 § Section 2.9.3 。针对接收完成状态为 Unsupported Request (UR Cpl)、接收完成状态为 Completer Abort (CA Cpl) 以及 Completion Timeout (CTO) 错误，各存在一组控制与状态位。对 Configuration Requests、I/O Requests 和 Memory Requests 分别存在独立的错误位集合。这种更细的粒度可对该子集不可纠正错误(UR Cpl、CA Cpl、CTO)进行更精确的错误处理。举一个关键示例:Memory Read Requests 的 UR Cpl 错误可被配置为触发 DPC 以进行适当的遏制和错误处理，而 Configuration Requests 的 UR Cpl 错误可被配置为返回全 1(不触发 DPC)，用于正常的探测与枚举。
+RP PIO 错误控制寄存器可对 Root Port 所追踪的 Non-Posted Requests 遭遇特定不可纠正或可建议 (advisory) 错误时的行为进行细粒度控制。关于哪些 Non-Posted Requests 被追踪,参见 § Section 2.9.3 。针对接收完成状态为 Unsupported Request (UR Cpl)、接收完成状态为 Completer Abort (CA Cpl) 以及 Completion Timeout (CTO) 错误,各存在一组控制与状态位。对 Configuration Requests、I/O Requests 和 Memory Requests 分别存在独立的错误位集合。这种更细的粒度可对该子集不可纠正错误(UR Cpl、CA Cpl、CTO)进行更精确的错误处理。举一个关键示例:Memory Read Requests 的 UR Cpl 错误可被配置为触发 DPC 以进行适当的遏制和错误处理,而 Configuration Requests 的 UR Cpl 错误可被配置为返回全 1(不触发 DPC),用于正常的探测与枚举。
 
-记录在 AER 中的 UR 或 CA 错误，源于 Root Port 充当 Completer,对接收到的 Non-Posted Request 返回 Completion。相比之下，记录为 RP PIO 错误的 UR Cpl 或 CA Cpl 错误，源于 Root Port 充当 Requester,对已发出的 Non-Posted Request 接收 Completion。记录在 AER 与 RP PIO 中的 CTO 错误都源于 Root Port 充当 Requester,不过 RP PIO 错误控制按空间(space)粒度支持。视控制寄存器设置的不同,
+记录在 AER 中的 UR 或 CA 错误,源于 Root Port 充当 Completer,对接收到的 Non-Posted Request 返回 Completion。相比之下,记录为 RP PIO 错误的 UR Cpl 或 CA Cpl 错误,源于 Root Port 充当 Requester,对已发出的 Non-Posted Request 接收 Completion。记录在 AER 与 RP PIO 中的 CTO 错误都源于 Root Port 充当 Requester,不过 RP PIO 错误控制按空间(space)粒度支持。视控制寄存器设置的不同,
 
 </td>
 </tr>
@@ -4618,24 +4616,24 @@ Each unmasked RP PIO error is handled either as uncorrectable or advisory, as de
 </td>
 <td style="background-color:#e8e8e8">
 
-CTO 错误可以记录在 AER 寄存器、RP PIO 寄存器或两者之中。如果软件在 RP PIO 中取消对 CTO 错误的屏蔽，建议软件在 AER 中屏蔽 CTO 错误，以避免意外的交互。
+CTO 错误可以记录在 AER 寄存器、RP PIO 寄存器或两者之中。如果软件在 RP PIO 中取消对 CTO 错误的屏蔽,建议软件在 AER 中屏蔽 CTO 错误,以避免意外的交互。
 
-RP PIO Header Log 寄存器、RP PIO ImpSpec Log 寄存器和 RP PIO TLP Prefix Log 寄存器统称为 RP PIO 日志寄存器。RP PIO Header Log 寄存器必须实现;RP PIO ImpSpec Log 寄存器和 RP PIO TLP Prefix Log 寄存器是可选的。RP PIO Log Size 字段指示为 RP PIO 日志寄存器分配了多少个 DWORD,据此可计算出 RP PIO TLP Prefix Log 寄存器的分配大小。参见 § Section 7.9.14.2 。RP PIO 日志寄存器始终记录来自 PIO Request 的信息，而不是任何相关的 Completion。
+RP PIO Header Log 寄存器、RP PIO ImpSpec Log 寄存器和 RP PIO TLP Prefix Log 寄存器统称为 RP PIO 日志寄存器。RP PIO Header Log 寄存器必须实现;RP PIO ImpSpec Log 寄存器和 RP PIO TLP Prefix Log 寄存器是可选的。RP PIO Log Size 字段指示为 RP PIO 日志寄存器分配了多少个 DWORD,据此可计算出 RP PIO TLP Prefix Log 寄存器的分配大小。参见 § Section 7.9.14.2 。RP PIO 日志寄存器始终记录来自 PIO Request 的信息,而不是任何相关的 Completion。
 
-当 Flit Mode Supported 置 1 且链路运行于 Flit 模式时,RP PIO Header Log 寄存器按 RP PIO Log Size 字段的指示扩展至更多的 DW。软件必须解析 Type 和 OHC 字段，以确定记录在 RP PIO Header Log 寄存器中的 TLP 的大小与布局。不要求硬件支持记录大于该 Port 所支持最大尺寸的 TLP Header。也不要求硬件支持记录该 Port 不支持的 OHC 类型。TLP Trailers 不记录在 RP PIO Header Log 寄存器中。RP PIO Header Log 寄存器的所需最小大小由该 Port 所实现的最大 Header Base Size(最大定义值为 7 DW ——参见 § Table 2-5)加上该 Port 所实现的最大 OHC 数量(最大定义值为 7 DW)决定。硬件必须将 RP PIO Header Log 寄存器中超出记录最大所支持 TLP Header 所需 DW 之外的 DW 硬连线为零，且 Advanced Error Reporting Extended Capability 的总长度相应减少。与 Non-Flit 模式中一样,Local TLP Prefixes 不被记录。
+当 Flit Mode Supported 置 1 且链路运行于 Flit 模式时,RP PIO Header Log 寄存器按 RP PIO Log Size 字段的指示扩展至更多的 DW。软件必须解析 Type 和 OHC 字段,以确定记录在 RP PIO Header Log 寄存器中的 TLP 的大小与布局。不要求硬件支持记录大于该 Port 所支持最大尺寸的 TLP Header。也不要求硬件支持记录该 Port 不支持的 OHC 类型。TLP Trailers 不记录在 RP PIO Header Log 寄存器中。RP PIO Header Log 寄存器的所需最小大小由该 Port 所实现的最大 Header Base Size(最大定义值为 7 DW ——参见 § Table 2-5)加上该 Port 所实现的最大 OHC 数量(最大定义值为 7 DW)决定。硬件必须将 RP PIO Header Log 寄存器中超出记录最大所支持 TLP Header 所需 DW 之外的 DW 硬连线为零,且 Advanced Error Reporting Extended Capability 的总长度相应减少。与 Non-Flit 模式中一样,Local TLP Prefixes 不被记录。
 
 RP PIO Status、Mask 和 Severity 寄存器的行为与 AER 中的 Uncorrectable Error Status、Mask 和 Severity 寄存器类似。参见 § Section 7.8.4.2 、§ Section 7.8.4.3 和 § Section 7.8.4.4 >。当 RP PIO 错误在未屏蔽状态下被检测到时,RP PIO Status 寄存器中的相应位被置 1,且该错误被记录到 RP PIO 日志寄存器中(假设 RP PIO 错误日志资源可用)。当 RP PIO 错误在屏蔽状态下被检测到时,RP PIO Status 寄存器中的相应位仍会被置 1,但该错误不会触发 DPC,且不被记录到 RP PIO 日志寄存器中。
 
-每个未屏蔽的 RP PIO 错误按 uncorrectable 或 advisory 处理，由 RP PIO Severity 寄存器中相应位的值决定。如果关联的 Severity 位置 1,则按不可纠正错误处理，触发 DPC(假设 DPC 已使能)，并以 DPC 中断和/或 ERR_COR(若使能)发信号通知。如果关联的 Severity 位清零，则按 advisory 处理(不触发 DPC)，并以 ERR_COR(若使能)发信号。
+每个未屏蔽的 RP PIO 错误按 uncorrectable 或 advisory 处理,由 RP PIO Severity 寄存器中相应位的值决定。如果关联的 Severity 位置 1,则按不可纠正错误处理,触发 DPC(假设 DPC 已使能),并以 DPC 中断和/或 ERR_COR(若使能)发信号通知。如果关联的 Severity 位清零,则按 advisory 处理(不触发 DPC),并以 ERR_COR(若使能)发信号。
 
 > **实现说明:**
 > **RP PIO 可建议 (advisory) 错误处理的使用**
 >
 > 每个 RP PIO 错误可按不可纠正或可建议 (advisory) 错误处理。不可纠正错误处理通常记录该错误、触发 DPC,并以 DPC 中断、ERR_COR 或两者同时发信号。可建议错误处理通常记录该错误并以 ERR_COR 发信号。
 >
-> 在某些情况下，软件可以使用 RP PIO advisory 错误处理来稳健地处理 RP PIO 错误，而不必承担 DPC 在 RP 中被触发所造成的破坏。如果针对某错误未启用 RP PIO Exception,则每次错误发生时都会返回全 1 值。如果该错误未触发 DPC,软件可能无法确定某 PIO 读所返回的全 1 值到底是 Completion 实际返回的数据值，还是表示该 PIO 读发生了错误。如果软件为该错误启用 advisory 错误处理，该错误的每次出现都将被记录，从而使软件能够区分这两种情况。
+> 在某些情况下,软件可以使用 RP PIO advisory 错误处理来稳健地处理 RP PIO 错误,而不必承担 DPC 在 RP 中被触发所造成的破坏。如果针对某错误未启用 RP PIO Exception,则每次错误发生时都会返回全 1 值。如果该错误未触发 DPC,软件可能无法确定某 PIO 读所返回的全 1 值到底是 Completion 实际返回的数据值,还是表示该 PIO 读发生了错误。如果软件为该错误启用 advisory 错误处理,该错误的每次出现都将被记录,从而使软件能够区分这两种情况。
 >
-> 当 Switch Downstream Port 触发 DPC 时，会在 RP 中产生一个或多个 Completion Timeout 作为副作用(参见 § Section 2.9.3)，此时使用 RP PIO advisory 错误处理尤其有益。如果 RP 将 Completion Timeout 错误按 advisory 处理，可避免 DPC 在 RP 中被触发，从而允许其他 Switch Downstream Port 继续工作。
+> 当 Switch Downstream Port 触发 DPC 时,会在 RP 中产生一个或多个 Completion Timeout 作为副作用(参见 § Section 2.9.3),此时使用 RP PIO advisory 错误处理尤其有益。如果 RP 将 Completion Timeout 错误按 advisory 处理,可避免 DPC 在 RP 中被触发,从而允许其他 Switch Downstream Port 继续工作。
 
 </td>
 </tr>
@@ -4695,30 +4693,30 @@ If an RP PIO error occurs with a processor-generated read or AtomicOp Request, a
 </td>
 <td style="background-color:#e8e8e8">
 
-RP PIO First Error Pointer、RP PIO Header Log 和 RP PIO TLP Prefix Log 的行为与 AER 中的 First Error Pointer、Header Log 和 TLP Prefix Log 类似。当 RP PIO First Error Pointer 的值指向 RP PIO Status 寄存器中已置 1 的位时，定义其为有效。当 RP PIO First Error Pointer 有效时,RP PIO 日志寄存器中包含与所指示错误关联的信息。RP PIO ImpSpec Log(若实现)包含实现特定的信息，例如 Request TLP 的来源。
+RP PIO First Error Pointer、RP PIO Header Log 和 RP PIO TLP Prefix Log 的行为与 AER 中的 First Error Pointer、Header Log 和 TLP Prefix Log 类似。当 RP PIO First Error Pointer 的值指向 RP PIO Status 寄存器中已置 1 的位时,定义其为有效。当 RP PIO First Error Pointer 有效时,RP PIO 日志寄存器中包含与所指示错误关联的信息。RP PIO ImpSpec Log(若实现)包含实现特定的信息,例如 Request TLP 的来源。
 
-与 AER 不同，在 AER 中 CTO 错误信息记录到 AER 日志寄存器中是可选的,RP PIO 实现必须支持将 RP PIO CTO 错误信息记录到 RP PIO 日志寄存器中。
+与 AER 不同,在 AER 中 CTO 错误信息记录到 AER 日志寄存器中是可选的,RP PIO 实现必须支持将 RP PIO CTO 错误信息记录到 RP PIO 日志寄存器中。
 
-如果在收到的、与未完成 PIO Request 关联的 Completion TLP 中检测到错误，则用于管理该错误处理的 RP PIO 错误控制位集合的确定方式类似。DPC Completion Control 位决定适用 UR 还是 CA,Space(Configuration、I/O 或 Memory)则为关联 PIO Request 的 Space。例如，如果 DPC Completion Control 位被配置为 CA,且 Root Port 收到针对 PIO Memory Read Request 的中毒 Completion,则使用 RP PIO 控制与状态寄存器中的 Mem CA Cpl 位(位 17)处理该错误。
+如果在收到的、与未完成 PIO Request 关联的 Completion TLP 中检测到错误,则用于管理该错误处理的 RP PIO 错误控制位集合的确定方式类似。DPC Completion Control 位决定适用 UR 还是 CA,Space(Configuration、I/O 或 Memory)则为关联 PIO Request 的 Space。例如,如果 DPC Completion Control 位被配置为 CA,且 Root Port 收到针对 PIO Memory Read Request 的中毒 Completion,则使用 RP PIO 控制与状态寄存器中的 Mem CA Cpl 位(位 17)处理该错误。
 
 RP PIO SysError 寄存器提供了一种在 RP PIO 错误发生时产生 System Error (系统错误) 的机制。如果在未屏蔽的 RP PIO 错误被检测到时,RP PIO SysError 寄存器中其关联位置 1,则产生 System Error。
 
-RP PIO Exception 寄存器提供了一种在某些由处理器指令产生的、所追踪的 Non-Posted Requests 发生错误时，产生同步处理器异常 (synchronous processor exception) <sup>123</sup> 的机制。参见 § Section 2.9.3 。该 Exception 必须支持所有此类被追踪的读请求，并可选择支持 Configuration 写、I/O 写和 AtomicOp Requests。如果检测到 <sup>124</sup> 某个 Exception 支持的 Non-Posted Request 发生错误，或为其合成了一个 Completion,且 RP PIO Exception 寄存器中其关联位置 1,则产生该 Non-Posted Request 的处理器指令必须接受同步异常。即便 RP PIO 或 AER 控制将该错误指定为按 masked 或 advisory 处理，此规则仍然适用。
+RP PIO Exception 寄存器提供了一种在某些由处理器指令产生的、所追踪的 Non-Posted Requests 发生错误时,产生同步处理器异常 (synchronous processor exception) <sup>123</sup> 的机制。参见 § Section 2.9.3 。该 Exception 必须支持所有此类被追踪的读请求,并可选择支持 Configuration 写、I/O 写和 AtomicOp Requests。如果检测到 <sup>124</sup> 某个 Exception 支持的 Non-Posted Request 发生错误,或为其合成了一个 Completion,且 RP PIO Exception 寄存器中其关联位置 1,则产生该 Non-Posted Request 的处理器指令必须接受同步异常。即便 RP PIO 或 AER 控制将该错误指定为按 masked 或 advisory 处理,此规则仍然适用。
 
-处理器指令接受同步异常的具体细节因处理器而异，但该机制至少必须能在产生该 Non-Posted Request 的指令完成之前，或在该指令紧接其后，中断正常的处理器指令流。其目的是使系统固件或操作系统(两者皆有或其一)中的异常处理例程能够检查异常的原因，并在必要时采取纠正措施。
+处理器指令接受同步异常的具体细节因处理器而异,但该机制至少必须能在产生该 Non-Posted Request 的指令完成之前,或在该指令紧接其后,中断正常的处理器指令流。其目的是使系统固件或操作系统(两者皆有或其一)中的异常处理例程能够检查异常的原因,并在必要时采取纠正措施。
 
-如果在使用处理器生成的读或 AtomicOp Request 时发生 RP PIO 错误，且 RP PIO Exception 寄存器的值未引起异常，则对产生该 Request 的指令必须返回全 1 值。
+如果在使用处理器生成的读或 AtomicOp Request 时发生 RP PIO 错误,且 RP PIO Exception 寄存器的值未引起异常,则对产生该 Request 的指令必须返回全 1 值。
 
 > **实现说明:**
 > **同步异常的实现**
 >
-> 同步异常的具体实现机制因处理器和平台而异。一种可能的实现是:对遇到错误的读或 AtomicOp Request,将返回给处理器的数据进行 Poisoning (中毒)。该方法可能对这些 Request 有效，但对 Configuration 和 I/O 写 Request 可能无效，因为它们不返回数据。
+> 同步异常的具体实现机制因处理器和平台而异。一种可能的实现是:对遇到错误的读或 AtomicOp Request,将返回给处理器的数据进行 Poisoning (中毒)。该方法可能对这些 Request 有效,但对 Configuration 和 I/O 写 Request 可能无效,因为它们不返回数据。
 >
-> 另一种可能的实现是:针对处理器生成的 Non-Posted Requests 的响应事务，以其他类型的失败指示来标记 Request 已失败，例如 "hard fail" 响应。该方法对所有处理器生成的 Non-Posted Requests 都更可能有效。
+> 另一种可能的实现是:针对处理器生成的 Non-Posted Requests 的响应事务,以其他类型的失败指示来标记 Request 已失败,例如 "hard fail" 响应。该方法对所有处理器生成的 Non-Posted Requests 都更可能有效。
 
 ---
 
-<sup>123</sup> "Exception" 一词在本文中用作通用术语，涵盖处理器所使用的多种机制，包括中断 (interrupts)、陷阱 (traps)、机器检查 (machine checks)、指令中止 (instruction aborts) 等。
+<sup>123</sup> "Exception" 一词在本文中用作通用术语,涵盖处理器所使用的多种机制,包括中断 (interrupts)、陷阱 (traps)、机器检查 (machine checks)、指令中止 (instruction aborts) 等。
 
 <sup>124</sup> 这包括 Completion TLP 本身的任何错误(例如 Malformed TLP)或 Completion Status 不是 Successful Completion 的情况。
 
@@ -4774,30 +4772,30 @@ If a Port is already in DPC when a 1b is written to the DPC Software Trigger bit
 </td>
 <td style="background-color:#e8e8e8">
 
-Root Port 对所追踪的、除接收 UR 和 CA Completions 之外发生错误的 Non-Posted Requests 的错误处理，由 AER 和 RP PIO 错误控制共同决定。示例包括 CTO <sup>125</sup>、Poisoned TLP Received 和 Malformed TLP。对于 AER 管理的某一错误，关联的 AER Mask 和 Severity 位决定该错误必须按不可纠正错误处理、按 Advisory Non-Fatal Error 处理，还是按 masked 错误处理。
+Root Port 对所追踪的、除接收 UR 和 CA Completions 之外发生错误的 Non-Posted Requests 的错误处理,由 AER 和 RP PIO 错误控制共同决定。示例包括 CTO <sup>125</sup>、Poisoned TLP Received 和 Malformed TLP。对于 AER 管理的某一错误,关联的 AER Mask 和 Severity 位决定该错误必须按不可纠正错误处理、按 Advisory Non-Fatal Error 处理,还是按 masked 错误处理。
 
-- 如果 AER 管理的错误按不可纠正错误处理(参见 § Section 6.2.2.2 )，则触发 DPC。RP PIO SysError 与 RP PIO Exception 位中与该 Request 类型和 Completion Status 关联的位适用。
-- 如果 AER 管理的错误按 Advisory Non-Fatal Error 处理(参见 § Section 6.2.3.2.4 )，则不触发 DPC。RP PIO SysError 与 RP PIO Exception 位仍然适用。
-- 如果 AER 管理的错误按 masked 错误处理(参见 § Section 6.2.3.2.2 )，则不触发 DPC。RP PIO SysError 位不适用，但 RP PIO Exception 位仍然适用。
+- 如果 AER 管理的错误按不可纠正错误处理(参见 § Section 6.2.2.2 ),则触发 DPC。RP PIO SysError 与 RP PIO Exception 位中与该 Request 类型和 Completion Status 关联的位适用。
+- 如果 AER 管理的错误按 Advisory Non-Fatal Error 处理(参见 § Section 6.2.3.2.4 ),则不触发 DPC。RP PIO SysError 与 RP PIO Exception 位仍然适用。
+- 如果 AER 管理的错误按 masked 错误处理(参见 § Section 6.2.3.2.2 ),则不触发 DPC。RP PIO SysError 位不适用,但 RP PIO Exception 位仍然适用。
 
-如果 DPC Capability 寄存器中的 DPC Software Triggering Supported 位置 1,则软件可以通过向 DPC Control 寄存器中的 DPC Software Trigger 位写入 1b 来触发 DPC,前提是 DPC 已使能且该 Port 当前不在 DPC 状态。该机制预期可用于软件和/或固件的开发与测试。它也支持这样的使用模式:软件或固件检查 RP PIO Exceptions 或 RP PIO advisory 错误，并根据情况决定是否触发 DPC。
+如果 DPC Capability 寄存器中的 DPC Software Triggering Supported 位置 1,则软件可以通过向 DPC Control 寄存器中的 DPC Software Trigger 位写入 1b 来触发 DPC,前提是 DPC 已使能且该 Port 当前不在 DPC 状态。该机制预期可用于软件和/或固件的开发与测试。它也支持这样的使用模式:软件或固件检查 RP PIO Exceptions 或 RP PIO advisory 错误,并根据情况决定是否触发 DPC。
 
 当此机制触发 DPC 时,DPC Status 寄存器中的 DPC Trigger Reason 和 DPC Trigger Reason Extension 字段将以此作为原因进行指示。
 
-如果某 Port 已处于 DPC 状态，此时向 DPC Software Trigger 位写入 1b,则该 Port 保持在 DPC 状态，且 DPC Trigger Reason 和 DPC Trigger Reason Extension 字段不会被修改。
+如果某 Port 已处于 DPC 状态,此时向 DPC Software Trigger 位写入 1b,则该 Port 保持在 DPC 状态,且 DPC Trigger Reason 和 DPC Trigger Reason Extension 字段不会被修改。
 
 > **实现说明:**
 > **RP PIO MASK 位行为与基本原理**
 >
 > 对于某个 RP PIO 错误,RP PIO Mask 寄存器中的关联屏蔽位以与 AER 屏蔽位高度类似的方式影响其状态位的设置、错误日志记录和错误信令。
 >
-> 某 RP PIO 错误的 SysError 产生主要由 RP PIO SysError 寄存器中的关联位控制，但也以关联的 RP PIO 屏蔽位清零为前提。之所以选择这种行为，是为了与 AER 保持一致，而且在不记录原因的情况下产生 SysError 是不良实践。
+> 某 RP PIO 错误的 SysError 产生主要由 RP PIO SysError 寄存器中的关联位控制,但也以关联的 RP PIO 屏蔽位清零为前提。之所以选择这种行为,是为了与 AER 保持一致,而且在不记录原因的情况下产生 SysError 是不良实践。
 >
-> 某 RP PIO 错误的 Exception 产生独立于关联的 RP PIO 屏蔽位值。预期存在这样的使用模式:某个 RP PIO 错误需要产生 Exception 而不记录 RP PIO 错误，也不触发 DPC。
+> 某 RP PIO 错误的 Exception 产生独立于关联的 RP PIO 屏蔽位值。预期存在这样的使用模式:某个 RP PIO 错误需要产生 Exception 而不记录 RP PIO 错误,也不触发 DPC。
 
 ---
 
-<sup>125</sup> CTO 错误在 AER 和 RP PIO 中都有状态位和屏蔽位，但 RP PIO 为 3 个 Space 各提供独立的位集合。AER 中的其他错误在 RP PIO 中没有对应错误。
+<sup>125</sup> CTO 错误在 AER 和 RP PIO 中都有状态位和屏蔽位,但 RP PIO 为 3 个 Space 各提供独立的位集合。AER 中的其他错误在 RP PIO 中没有对应错误。
 
 </td>
 </tr>
@@ -4843,18 +4841,18 @@ For a given DL_ACTIVE event, if a Port is going to send both an ERR_COR Message 
 </td>
 <td style="background-color:#e8e8e8">
 
-对该特性的支持由 DPC Capability 寄存器中的 DL_Active ERR_COR Signaling Supported 位指示。该特性由 DPC Control 寄存器中的 DL_ACTIVE ERR_COR Enable 位使能。DL_ACTIVE 状态由 Link Status 寄存器中的 Data Link Layer Link Active 位指示。DL_ACTIVE ERR_COR 信令与 Data Link Layer State Changed 中断彼此独立管理，且允许同时使用两种机制。
+对该特性的支持由 DPC Capability 寄存器中的 DL_Active ERR_COR Signaling Supported 位指示。该特性由 DPC Control 寄存器中的 DL_ACTIVE ERR_COR Enable 位使能。DL_ACTIVE 状态由 Link Status 寄存器中的 Data Link Layer Link Active 位指示。DL_ACTIVE ERR_COR 信令与 Data Link Layer State Changed 中断彼此独立管理,且允许同时使用两种机制。
 
-如果 DL_ACTIVE ERR_COR Enable 位置 1,且 Device Control 寄存器中的 Correctable Error Reporting Enable 位或 DPC Control 寄存器中的 DPC SIG_SFW Enable 位置 1,则每当 Link 进入 DL_Active 状态时,Port 必须发送一个 ERR_COR Message。DL_ACTIVE ERR_COR 信令不得将 Device Status 寄存器中的 Correctable Error Detected 位置 1,因为此事件不作为错误处理。如果 Downstream Port 支持 ERR_COR Subclass 能力，则此 DPC ERR_COR 信令事件必须将 DPC Status 寄存器中的 DPC SIG_SFW Status 位置 1,并同时将 ERR_COR Message 中的 ERR_COR Subclass 字段设为指示 ECS SIG_SFW。与 Data Link Layer State Changed 中断不同,DL_ACTIVE ERR_COR 信令仅指示 Link 进入 DL_Active 状态，并不指示 Link 离开 DL_Active 状态。
+如果 DL_ACTIVE ERR_COR Enable 位置 1,且 Device Control 寄存器中的 Correctable Error Reporting Enable 位或 DPC Control 寄存器中的 DPC SIG_SFW Enable 位置 1,则每当 Link 进入 DL_Active 状态时,Port 必须发送一个 ERR_COR Message。DL_ACTIVE ERR_COR 信令不得将 Device Status 寄存器中的 Correctable Error Detected 位置 1,因为此事件不作为错误处理。如果 Downstream Port 支持 ERR_COR Subclass 能力,则此 DPC ERR_COR 信令事件必须将 DPC Status 寄存器中的 DPC SIG_SFW Status 位置 1,并同时将 ERR_COR Message 中的 ERR_COR Subclass 字段设为指示 ECS SIG_SFW。与 Data Link Layer State Changed 中断不同,DL_ACTIVE ERR_COR 信令仅指示 Link 进入 DL_Active 状态,并不指示 Link 离开 DL_Active 状态。
 
-对于给定的 DL_ACTIVE 事件，如果 Port 计划同时发送 ERR_COR Message 和 MSI/MSI-X 事务，则 Port 必须在发送 MSI/MSI-X 事务之前先发送 ERR_COR Message。若使用 INTx 机制发信号 DL_ACTIVE 中断，则无对应要求，因为 INTx Messages 在经过路由单元时，不一定与 ERR_COR Messages 保持有序。
+对于给定的 DL_ACTIVE 事件,如果 Port 计划同时发送 ERR_COR Message 和 MSI/MSI-X 事务,则 Port 必须在发送 MSI/MSI-X 事务之前先发送 ERR_COR Message。若使用 INTx 机制发信号 DL_ACTIVE 中断,则无对应要求,因为 INTx Messages 在经过路由单元时,不一定与 ERR_COR Messages 保持有序。
 
 > **实现说明:**
 > **避免在 DPC 场景下使用 Disable Link 与 Hot-Plug Surprise**
 >
-> 建议软件在 DPC 已使能但尚未触发时，不要将 Link Control 寄存器中的 Link Disable 位置 1。将 Link Disable 位置 1 会导致 Link 进入 DL_Down,从而引入与 DPC 类似的某些语义，但又缺乏其他语义。如果 DPC 已使能，任何后续到达的 Posted Requests 仍可能触发 DPC。如果 DPC 已使能，建议软件通过向 DPC Control 寄存器中可选的 DPC Software Trigger 位写入 1b 的方式来禁用 Link。如果未实现 DPC Software Trigger 位，软件应先禁用 DPC,再使用 Link Disable。如果操作系统正在执行此操作但 DPC 由系统固件拥有，则操作系统应与系统固件协调 DPC 的禁用。
+> 建议软件在 DPC 已使能但尚未触发时,不要将 Link Control 寄存器中的 Link Disable 位置 1。将 Link Disable 位置 1 会导致 Link 进入 DL_Down,从而引入与 DPC 类似的某些语义,但又缺乏其他语义。如果 DPC 已使能,任何后续到达的 Posted Requests 仍可能触发 DPC。如果 DPC 已使能,建议软件通过向 DPC Control 寄存器中可选的 DPC Software Trigger 位写入 1b 的方式来禁用 Link。如果未实现 DPC Software Trigger 位,软件应先禁用 DPC,再使用 Link Disable。如果操作系统正在执行此操作但 DPC 由系统固件拥有,则操作系统应与系统固件协调 DPC 的禁用。
 >
-> 不建议 DPC 与 Hot-Plug Surprise 机制(由 Slot Capabilities 寄存器中 Hot-Plug Surprise 位置 1 来指示)同时使用。该位置 1 会阻塞 Surprise Down 错误的上报，阻止 DPC 被该重要错误触发，从而大大削弱 DPC 的收益。参见 § Section 6.7.4.5 以获取支持这两种机制的插槽的指导。
+> 不建议 DPC 与 Hot-Plug Surprise 机制(由 Slot Capabilities 寄存器中 Hot-Plug Surprise 位置 1 来指示)同时使用。该位置 1 会阻塞 Surprise Down 错误的上报,阻止 DPC 被该重要错误触发,从而大大削弱 DPC 的收益。参见 § Section 6.7.4.5 以获取支持这两种机制的插槽的指导。
 
 </td>
 </tr>
@@ -4889,7 +4887,7 @@ It is recommended that operating systems use Data Link Layer State Changed inter
 </td>
 <td style="background-color:#e8e8e8">
 
-**实现说明 (IMPLEMENTATION NOTE):**
+**实现注意事项：**
 **DL_ACTIVE ERR_COR 信号的使用**
 建议操作系统在 DL_ACTIVE 状态发生变化时，使用数据链路层状态变化（Data Link Layer State Changed）中断进行信号通知。虽然 DL_ACTIVE ERR_COR 信号指示了同一事件集合的一个子集，但 DL_ACTIVE ERR_COR 信号的主要使用者是系统固件——当固件需要被通知以便执行下游端口（Downstream Port）配置或提供 Firmware First 服务时使用。
 
@@ -5044,7 +5042,6 @@ TC 过滤的图形示例如 § 图 6-4 所示，其中 TC(2:6) 未被映射到�
 ---
 
 > **Figure 6-4.** TC Filtering Example | TC 过滤示例
-> **图 6-4.** TC 过滤示例
 
 > <img src="figures/chapter_06/fig_0751_1_tight.png" width="700">
 
@@ -5273,7 +5270,7 @@ In a simple configuration, where only VC0 is supported, traffic differentiation 
 </td>
 <td style="background-color:#e8e8e8">
 
-**实现说明 (IMPLEMENTATION NOTE):**
+**实现注意事项：**
 **单一 VC 上的多个 TC**
 单个 VC 的实现也可受益于使用多个 TC。TC 提供排序域，可用于在端点或根复合体内部区分流量，而与所支持的 VC 数量无关。
 
@@ -5321,7 +5318,6 @@ The following set of figures (§ Figure 6-7 and § Figure 6-8) illustrates traff
 ---
 
 > **Figure 6-7.** An Example of Differentiated Traffic Flow Through a Switch | 流经交换机的差异化流量流示例
-> **图 6-7.** 流经交换机的差异化流量流示例
 > <img src="figures/chapter_06/fig_0752_1_tight.png" width="700">
 
 <table>
@@ -5428,7 +5424,6 @@ Switch arbitration model defines a required arbitration infrastructure and funct
 ---
 
 > **Figure 6-8.** Switch Arbitration Structure | 交换机仲裁结构
-> **图 6-8.** 交换机仲裁结构
 
 > <img src="figures/chapter_06/fig_0753_2_tight.png" width="700">
 
@@ -5637,7 +5632,7 @@ Flow control credits are exchanged between two Ports connected to the same Link.
 </td>
 <td style="background-color:#e8e8e8">
 
-**实现说明 (IMPLEMENTATION NOTE):**
+**实现注意事项：**
 **出口端口处的 VC 控制逻辑**
 每个出口端口处的 VC 控制逻辑包括：
 - VC 流控（Flow Control）逻辑
@@ -5845,7 +5840,6 @@ The multi-Function arbitration model defines an optional arbitration infrastruct
 ---
 
 > **Figure 6-10.** Multi-Function Arbitration Model
-> **图 6-10.** 多功能仲裁模型
 > <img src="figures/chapter_06/fig_0757_1_tight.png" width="700">
 
 
@@ -5878,15 +5872,15 @@ Finally, if the MFVC Extended Capability structure supports VC Arbitration, this
 </td>
 <td style="background-color:#e8e8e8">
 
-源自某个 Function (功能) 的上游请求 (Upstream Request) 的 QoS 管理过程如下。首先，由 Function 特定的机制为该请求分配一个 TC (流量类, Traffic Class)。例如，设备驱动程序可能将某个 Function 配置为将其所有请求打上 TC7 的标签。接下来，如果该 Function 包含 VC 扩展能力结构 (VC Extended Capability structure)，它将指定 TC/VC 映射到该 Function 的某个 VC 资源 (可能是该 Function 唯一的 VC 资源) 上。此外,VC 扩展能力结构还支持该 Function 的 VC 资源的使能与配置。
+源自某个 Function (功能) 的上游请求 (Upstream Request) 的 QoS 管理过程如下。首先,由 Function 特定的机制为该请求分配一个 TC (流量类, Traffic Class)。例如,设备驱动程序可能将某个 Function 配置为将其所有请求打上 TC7 的标签。接下来,如果该 Function 包含 VC 扩展能力结构 (VC Extended Capability structure),它将指定 TC/VC 映射到该 Function 的某个 VC 资源 (可能是该 Function 唯一的 VC 资源) 上。此外,VC 扩展能力结构还支持该 Function 的 VC 资源的使能与配置。
 
-如果该 Function 是一个交换机 (Switch) 并且目标 VC 资源支持端口仲裁 (Port Arbitration)，此机制将决定该交换机的多个下游入口端口 (Downstream Ingress Port) 如何对该 VC 资源进行仲裁。如果端口仲裁机制支持基于时间的 WRR (加权轮询, Weighted Round-Robin)，它还将管理来自每个下游入口端口的请求注入速率。
+如果该 Function 是一个交换机 (Switch) 并且目标 VC 资源支持端口仲裁 (Port Arbitration),此机制将决定该交换机的多个下游入口端口 (Downstream Ingress Port) 如何对该 VC 资源进行仲裁。如果端口仲裁机制支持基于时间的 WRR (加权轮询, Weighted Round-Robin),它还将管理来自每个下游入口端口的请求注入速率。
 
-如果该 Function 支持 VC 仲裁 (VC Arbitration)，此机制将管理该 Function 的多个 VC 资源如何对通往 MFVC 资源的概念性内部链路 (Internal Link) 进行仲裁。
+如果该 Function 支持 VC 仲裁 (VC Arbitration),此机制将管理该 Function 的多个 VC 资源如何对通往 MFVC 资源的概念性内部链路 (Internal Link) 进行仲裁。
 
-一旦请求报文概念性地到达 MFVC 资源,TLP (事务层包, Transaction Layer Packet) 包头中的地址/路由信息将决定该请求是上游 (Upstream) 转发还是对端 (peer-to-peer) 转发到另一个 Function。对于对端转发的情形,QoS 管理由未架构化的设备特定机制处理。对于上游转发的情形,MFVC 扩展能力结构中的 TC/VC 映射将决定该请求将目标定位于哪个 VC 资源。MFVC 扩展能力结构还支持多功能设备粘合逻辑 (multi-Function glue logic) 中 VC 资源的使能与配置。如果目标 VC 资源支持功能仲裁 (Function Arbitration)，此机制将管理多个 Function 如何对该 VC 资源进行仲裁。如果功能仲裁机制支持基于时间的 WRR,它将管理每个 Function 对该 VC 资源的请求注入速率。
+一旦请求报文概念性地到达 MFVC 资源,TLP (事务层包, Transaction Layer Packet) 包头中的地址/路由信息将决定该请求是上游 (Upstream) 转发还是对端 (peer-to-peer) 转发到另一个 Function。对于对端转发的情形,QoS 管理由未架构化的设备特定机制处理。对于上游转发的情形,MFVC 扩展能力结构中的 TC/VC 映射将决定该请求将目标定位于哪个 VC 资源。MFVC 扩展能力结构还支持多功能设备粘合逻辑 (multi-Function glue logic) 中 VC 资源的使能与配置。如果目标 VC 资源支持功能仲裁 (Function Arbitration),此机制将管理多个 Function 如何对该 VC 资源进行仲裁。如果功能仲裁机制支持基于时间的 WRR,它将管理每个 Function 对该 VC 资源的请求注入速率。
 
-最后，如果 MFVC 扩展能力结构支持 VC 仲裁，此机制将管理 MFVC 的多个 VC 如何竞争该设备的上游出口端口 (Upstream Egress Port)。无论 VC 仲裁策略如何，与每个 VC 关联的管理/控制逻辑在将待处理流量 (pending traffic) 呈现给仲裁机制之前，必须遵守事务排序 (transaction ordering) 和流控 (Flow Control) 规则。
+最后,如果 MFVC 扩展能力结构支持 VC 仲裁,此机制将管理 MFVC 的多个 VC 如何竞争该设备的上游出口端口 (Upstream Egress Port)。无论 VC 仲裁策略如何,与每个 VC 关联的管理/控制逻辑在将待处理流量 (pending traffic) 呈现给仲裁机制之前,必须遵守事务排序 (transaction ordering) 和流控 (Flow Control) 规则。
 
 §
 
@@ -6003,9 +5997,9 @@ However, as stated in this specification, if a Multi-Function Device supports TC
 </td>
 <td style="background-color:#e8e8e8">
 
-为等时 (isochronous) 数据传输提供服务要求系统不仅提供保证的数据带宽，还要求提供确定性的服务延迟。等时支持机制的定义为:确保等时流量 (isochronous traffic) 在相关时间段内获得其分配的带宽，同时防止系统中其他流量出现饥饿 (starvation) 现象。等时支持机制适用于端点 (Endpoint) 与根复合体 (Root Complex) 之间的通信，以及对端 (peer-to-peer) 通信。
+为等时 (isochronous) 数据传输提供服务要求系统不仅提供保证的数据带宽,还要求提供确定性的服务延迟。等时支持机制的定义为:确保等时流量 (isochronous traffic) 在相关时间段内获得其分配的带宽,同时防止系统中其他流量出现饥饿 (starvation) 现象。等时支持机制适用于端点 (Endpoint) 与根复合体 (Root Complex) 之间的通信,以及对端 (peer-to-peer) 通信。
 
-等时服务通过正确使用 TC 事务标签、VC 数据传输协议以及 TC-to-VC 映射等机制实现。端到端等时服务要求软件在请求者 (Requester) 与完成者 (Completer) 之间的路径上设置正确的配置。本节描述了为提供端到端等时服务，软件配置所必须遵守的规则，以及硬件组件所必须遵循的规则。有关等时应用和等时服务设计指南的更多信息和背景资料，请参阅附录 A。
+等时服务通过正确使用 TC 事务标签、VC 数据传输协议以及 TC-to-VC 映射等机制实现。端到端等时服务要求软件在请求者 (Requester) 与完成者 (Completer) 之间的路径上设置正确的配置。本节描述了为提供端到端等时服务,软件配置所必须遵守的规则,以及硬件组件所必须遵循的规则。有关等时应用和等时服务设计指南的更多信息和背景资料,请参阅附录 A。
 
 系统软件在为等时流量配置 PCI Express Fabric 时必须遵守以下规则:
 - 软件必须为等时事务 (isochronous transaction) 指定一个或多个 TC。
@@ -6013,15 +6007,15 @@ However, as stated in this specification, if a Multi-Function Device supports TC
 - 软件必须将用于支持等时流量的所有 VC 资源配置为以满足应用目标所需的带宽和延迟进行服务 (仲裁)。这可以通过严格优先级 (strict priority)、WRR (加权轮询) 或硬件固定仲裁 (hardware-fixed arbitration) 来实现。
 - 软件不应在给定的 VC 上将等时流量与非等时流量混合。
 - 软件必须遵守由 Port 或 RCRB 所报告的 Maximum Time Slots 能力。
-- 软件不得将所有链路 (Link) 容量分配给等时流量。这是为了确保其他非等时事务所需的前向推进 (forward progress)，以避免误判事务超时 (transaction timeout)。
-- 软件必须限制支持等时的每条路径的 Max_Payload_Size,以满足等时延迟。例如，从具有等时能力的设备到根复合体的路径上的所有流量应被限制为不超过满足等时延迟要求所需的 Max_Payload_Size 的报文。
+- 软件不得将所有链路 (Link) 容量分配给等时流量。这是为了确保其他非等时事务所需的前向推进 (forward progress),以避免误判事务超时 (transaction timeout)。
+- 软件必须限制支持等时的每条路径的 Max_Payload_Size,以满足等时延迟。例如,从具有等时能力的设备到根复合体的路径上的所有流量应被限制为不超过满足等时延迟要求所需的 Max_Payload_Size 的报文。
 
 **实现说明 (IMPLEMENTATION NOTE):**
 **不包含 MFVC 扩展能力结构的多功能设备 (MULTI-FUNCTION DEVICES WITHOUT THE MFVC EXTENDED CAPABILITY STRUCTURE)**
 
-如果某个多功能设备 (Multi-Function Device) 缺少 MFVC 扩展能力结构 (MFVC Extended Capability structure)，则该多功能设备不同 Function 之间数据流的仲裁不在本规范的范围之内。
+如果某个多功能设备 (Multi-Function Device) 缺少 MFVC 扩展能力结构 (MFVC Extended Capability structure),则该多功能设备不同 Function 之间数据流的仲裁不在本规范的范围之内。
 
-然而，如本规范所述，如果某个多功能设备支持 TC0 之外的 TC,并且未实现 MFVC 扩展能力结构，则要求在 Function 0 中实现单个 VC 扩展能力结构 (VC Extended Capability structure)，以为该链路 (Link) 提供架构化的 TC/VC 映射。
+然而,如本规范所述,如果某个多功能设备支持 TC0 之外的 TC,并且未实现 MFVC 扩展能力结构,则要求在 Function 0 中实现单个 VC 扩展能力结构 (VC Extended Capability structure),以为该链路 (Link) 提供架构化的 TC/VC 映射。
 
 §
 
@@ -6128,21 +6122,21 @@ A Multi-Function Device that includes an MFVC Extended Capability structure prov
 
 需要等时服务的请求者 (Requester) 必须遵守以下规则:
 - 读请求的 Length 字段 (长度) 中的值绝不能超过 Max_Payload_Size。
-- 如果等时流量目标是根复合体 (Root Complex)，且 RCRB 表明:在不要求所有事务都设置 No Snoop (无监听) 属性位的情况下，无法满足等时带宽和延迟要求 (该情况由设置 Reject Snoop Transactions 位来指示)，则必须在 TLP 包头中设置该位，否则该事务将被拒绝。
+- 如果等时流量目标是根复合体 (Root Complex),且 RCRB 表明:在不要求所有事务都设置 No Snoop (无监听) 属性位的情况下,无法满足等时带宽和延迟要求 (该情况由设置 Reject Snoop Transactions 位来指示),则必须在 TLP 包头中设置该位,否则该事务将被拒绝。
 
 提供等时服务的完成者 (Completer) 必须遵守以下规则:
-- 在正常工作条件下，完成者不应将流控 (Flow Control) 引起的反压 (backpressure) 施加于均匀注入的等时请求。
+- 在正常工作条件下,完成者不应将流控 (Flow Control) 引起的反压 (backpressure) 施加于均匀注入的等时请求。
 - 完成者必须将其等时带宽能力上报到 VC 资源能力寄存器 (VC Resource Capability register) 中的 Maximum Time Slots 字段。注意:完成者必须考虑部分写 (partial write) 的影响。
 - 完成者必须遵守最大等时事务延迟。
 - 作为完成者的根复合体必须实现至少一个 RCRB,并为相关联的 VC 支持基于时间的端口仲裁 (time-based Port Arbitration)。注意:基于时间的端口仲裁仅适用于请求事务。
 
-提供等时服务的交换机 (Switch) 必须遵守以下规则。同样的规则也适用于支持根端口 (Root Port) 之间对端等时数据流的根复合体，在本节中简称为 "P2P-RC"。
-- 配置为等时的交换机或 P2P-RC 端口，在正常工作条件下，不应将流控引起的反压施加于均匀注入的等时请求。
+提供等时服务的交换机 (Switch) 必须遵守以下规则。同样的规则也适用于支持根端口 (Root Port) 之间对端等时数据流的根复合体,在本节中简称为 "P2P-RC"。
+- 配置为等时的交换机或 P2P-RC 端口,在正常工作条件下,不应将流控引起的反压施加于均匀注入的等时请求。
 - 配置为等时的交换机或 P2P-RC 端口必须遵守最大等时事务延迟。
-- 交换机或 P2P-RC 组件必须为支持等时流量的一个或多个 VC 的每个端口支持基于时间的端口仲裁。注意:基于时间的端口仲裁适用于请求事务，但不适用于完成事务 (Completion)。
+- 交换机或 P2P-RC 组件必须为支持等时流量的一个或多个 VC 的每个端口支持基于时间的端口仲裁。注意:基于时间的端口仲裁适用于请求事务,但不适用于完成事务 (Completion)。
 
 包含提供等时服务的 MFVC 扩展能力结构的多功能设备必须遵守以下规则:
-- 配置为等时运行的 MFVC 粘合逻辑 (glue logic)，在正常工作条件下，不应将反压施加于来自其 Function 的均匀注入的等时请求。
+- 配置为等时运行的 MFVC 粘合逻辑 (glue logic),在正常工作条件下,不应将反压施加于来自其 Function 的均匀注入的等时请求。
 
 §
 6.3.4.2 请求者规则 (Rules for Requesters) §
@@ -6202,26 +6196,26 @@ The details of stop mechanism implementation depend on the device hardware, devi
 </td>
 <td style="background-color:#e8e8e8">
 
-- MFVC 扩展能力结构必须为每个能够支持等时流量的 VC 支持基于时间的功能仲裁 (time-based Function Arbitration)。注意:基于时间的功能仲裁仅适用于上游请求事务 (Upstream request transaction);它不适用于任何下游 (Downstream) 或对端请求事务，也不适用于任何完成事务 (Completion)。
+- MFVC 扩展能力结构必须为每个能够支持等时流量的 VC 支持基于时间的功能仲裁 (time-based Function Arbitration)。注意:基于时间的功能仲裁仅适用于上游请求事务 (Upstream request transaction);它不适用于任何下游 (Downstream) 或对端请求事务,也不适用于任何完成事务 (Completion)。
 
-缺少 MFVC 扩展能力结构的多功能设备，没有架构化的机制为其多个 Function 同时提供等时服务。
+缺少 MFVC 扩展能力结构的多功能设备,没有架构化的机制为其多个 Function 同时提供等时服务。
 
-虚通道扩展能力 (VC capability, Virtual Channel Extended Capability) 和多功能虚通道扩展能力 (MFVC capability, Multi-Function Virtual Channel Extended Capability) 统称为 VC/MFVC 能力。端口 (Port) 可以实现精简虚通道扩展能力 (SVC capability, Streamlined Virtual Channel Extended Capability) 以及一个或多个 VC/MFVC 能力。在链路训练 (Link training) 期间，每个 VC/MFVC 能力中的 VC0 将自动初始化，而 SVC 能力中的 VC0 将保持禁用状态。这确保了与未识别 SVC 的软件的向后兼容性 (backward compatibility)。
+虚通道扩展能力 (VC capability, Virtual Channel Extended Capability) 和多功能虚通道扩展能力 (MFVC capability, Multi-Function Virtual Channel Extended Capability) 统称为 VC/MFVC 能力。端口 (Port) 可以实现精简虚通道扩展能力 (SVC capability, Streamlined Virtual Channel Extended Capability) 以及一个或多个 VC/MFVC 能力。在链路训练 (Link training) 期间,每个 VC/MFVC 能力中的 VC0 将自动初始化,而 SVC 能力中的 VC0 将保持禁用状态。这确保了与未识别 SVC 的软件的向后兼容性 (backward compatibility)。
 
-SVC 能力与 VC/MFVC 能力不兼容，且硬件机制确保对于给定的 Port,SVC 能力永远不会与 VC/MFVC 能力同时启用。
+SVC 能力与 VC/MFVC 能力不兼容,且硬件机制确保对于给定的 Port,SVC 能力永远不会与 VC/MFVC 能力同时启用。
 
-支持 SVC 的软件可自行选择在同时实现了两者的 Port 上，何时使用 SVC 能力而非 VC/MFVC 能力。在配置 VC/MFVC 能力之前，软件需清除 (Clear) SVC Port Status 寄存器中的 Use VC/MFVC 位。这样做会立即清除每个 VC/MFVC 能力 (VC Resource Control Register 或 MFVC VC Resource Control Register) 中每个 VC 资源的 VC Enable 位。这也会在 SVC Resource Control Register 中将 VC0 的 SVC VC Enable 位置位 (Set)。Use VC/MFVC 位将保持清除状态，直到下一次常规复位 (Conventional Reset)。这提供了一种简化且一致的操作状态，降低了硬件和软件的复杂性。
+支持 SVC 的软件可自行选择在同时实现了两者的 Port 上,何时使用 SVC 能力而非 VC/MFVC 能力。在配置 VC/MFVC 能力之前,软件需清除 (Clear) SVC Port Status 寄存器中的 Use VC/MFVC 位。这样做会立即清除每个 VC/MFVC 能力 (VC Resource Control Register 或 MFVC VC Resource Control Register) 中每个 VC 资源的 VC Enable 位。这也会在 SVC Resource Control Register 中将 VC0 的 SVC VC Enable 位置位 (Set)。Use VC/MFVC 位将保持清除状态,直到下一次常规复位 (Conventional Reset)。这提供了一种简化且一致的操作状态,降低了硬件和软件的复杂性。
 
-如果某个 Port 仅实现 SVC 能力而不实现 VC/MFVC 能力，则 SVC Port Status 寄存器中的 Use VC/MFVC 位必须硬连线 (hardwired) 为 0b。在链路训练期间,SVC 能力中的 VC0 会自动初始化。有关所需语义的更多详细信息，请参阅 Use VC/MFVC 位的描述。
+如果某个 Port 仅实现 SVC 能力而不实现 VC/MFVC 能力,则 SVC Port Status 寄存器中的 Use VC/MFVC 位必须硬连线 (hardwired) 为 0b。在链路训练期间,SVC 能力中的 VC0 会自动初始化。有关所需语义的更多详细信息,请参阅 Use VC/MFVC 位的描述。
 
-系统软件需要一种"停止" (stop) 机制，以确保系统中某个特定设备没有未完成的事务 (outstanding transaction)。例如，如果没有这样的机制，在系统运行期间重新分配 Bus Number 可能会导致某个设备的 Requester ID (请求者 ID,其中包含 Bus Number) 发生改变，而此时该设备的请求 (Request) 或完成 (Completion) 仍在传输中，因此可能因 Requester ID 的改变而变得无效。同样，在热插拔 (Hot-Plug) 有序移除 (orderly removal) 期间，也需要能够确保没有未完成的事务。
+系统软件需要一种"停止" (stop) 机制,以确保系统中某个特定设备没有未完成的事务 (outstanding transaction)。例如,如果没有这样的机制,在系统运行期间重新分配 Bus Number 可能会导致某个设备的 Requester ID (请求者 ID,其中包含 Bus Number) 发生改变,而此时该设备的请求 (Request) 或完成 (Completion) 仍在传输中,因此可能因 Requester ID 的改变而变得无效。同样,在热插拔 (Hot-Plug) 有序移除 (orderly removal) 期间,也需要能够确保没有未完成的事务。
 
-停止机制的具体实现细节取决于设备硬件、设备驱动程序软件和系统软件。然而，为了支持系统软件对 Fabric (互连网络) 的管理，必须支持的基本能力包括:
+停止机制的具体实现细节取决于设备硬件、设备驱动程序软件和系统软件。然而,为了支持系统软件对 Fabric (互连网络) 的管理,必须支持的基本能力包括:
 - 阻止设备生成新的请求 (Request)
 - 阻止向该设备发起请求
 - 确定由该设备服务的所有请求都已完成
-- 确定由该设备发起的所有 Non-Posted 请求 (无数据，需完成) 已完成
-- 确定由该设备发起的所有 Posted 请求 (有数据，无完成) 已到达其目的地
+- 确定由该设备发起的所有 Non-Posted 请求 (无数据,需完成) 已完成
+- 确定由该设备发起的所有 Posted 请求 (有数据,无完成) 已到达其目的地
 
 6.3.5 SVC 与 VC/MFVC 能力共存 (SVC and VC/MFVC Capability Coexistence) §
 6.4 设备同步 (Device Synchronization) §
@@ -6276,24 +6270,24 @@ If a memory read is used to "flush" outstanding transactions, but no actual read
 </td>
 <td style="background-color:#e8e8e8">
 
-驱动程序和/或系统软件阻止设备发起新请求的能力，由每个设备 Function 的命令寄存器 (Command register,见第 7.5.1.1.3 节) 中的 Bus Master Enable、SERR# Enable 和 Interrupt Disable 等位以及其他类似控制位支持。
+驱动程序和/或系统软件阻止设备发起新请求的能力,由每个设备 Function 的命令寄存器 (Command register,见第 7.5.1.1.3 节) 中的 Bus Master Enable、SERR# Enable 和 Interrupt Disable 等位以及其他类似控制位支持。
 
-向该设备发出的请求 (Requests issued to the device) 通常由驱动程序直接控制，因此系统软件可通过指示驱动程序停止生成这些请求来阻止这些请求 (此通信的具体细节因系统软件而异)。类似地，由该设备服务的请求 (Requests serviced by the device) 通常也由设备驱动程序控制，因此确定此类请求的完成情况通常较为简单。
+向该设备发出的请求 (Requests issued to the device) 通常由驱动程序直接控制,因此系统软件可通过指示驱动程序停止生成这些请求来阻止这些请求 (此通信的具体细节因系统软件而异)。类似地,由该设备服务的请求 (Requests serviced by the device) 通常也由设备驱动程序控制,因此确定此类请求的完成情况通常较为简单。
 
-Transactions Pending 位 (事务挂起位) 提供了一种在每个 Function 基础上一致的方法，供软件确定由该设备发出的所有 Non-Posted 请求 (无数据，需完成) 都已完成 (见 § 第 7.5.3.5 节)。
+Transactions Pending 位 (事务挂起位) 提供了一种在每个 Function 基础上一致的方法,供软件确定由该设备发出的所有 Non-Posted 请求 (无数据,需完成) 都已完成 (见 § 第 7.5.3.5 节)。
 
-确定 Posted 请求 (有数据，无完成) 已到达其目的地的方法是:生成一个用于"刷新" (flush) 所有未完成请求 (outstanding Request) 的事务。使用 TC0 对系统内存的写入会通过主机的设备读取进行刷新，因此不需要显式的刷新协议。使用 TC0 之外的 TC 进行写入时，需要某种类型的刷新同步机制 (flush synchronization mechanism)。该机制本身对于设备及其驱动软件是实现特定的 (implementation specific)。然而，在所有情况下，设备硬件和软件的实现者都应充分理解 § 第 2.4 节中描述的排序 (ordering) 规则。如果由该设备发起的任何请求设置了 Relaxed Ordering (松散排序) 或 ID-Based Ordering (基于 ID 的排序, IDO) 属性，这一点尤其重要。
+确定 Posted 请求 (有数据,无完成) 已到达其目的地的方法是:生成一个用于"刷新" (flush) 所有未完成请求 (outstanding Request) 的事务。使用 TC0 对系统内存的写入会通过主机的设备读取进行刷新,因此不需要显式的刷新协议。使用 TC0 之外的 TC 进行写入时,需要某种类型的刷新同步机制 (flush synchronization mechanism)。该机制本身对于设备及其驱动软件是实现特定的 (implementation specific)。然而,在所有情况下,设备硬件和软件的实现者都应充分理解 § 第 2.4 节中描述的排序 (ordering) 规则。如果由该设备发起的任何请求设置了 Relaxed Ordering (松散排序) 或 ID-Based Ordering (基于 ID 的排序, IDO) 属性,这一点尤其重要。
 
-设备间的对端 (peer-to-peer) 交互即使所有通信都通过 TC0 进行，也需要相关设备之间采用显式同步协议 (explicit synchronization protocol)。对于给定的系统，必须建立用于管理对端交互的模型。系统软件以及设备硬件和软件必须遵守此模型。阻止请求生成和确定请求完成的要求与非对端交互的要求相同，然而确定 Posted 请求已到达对端目的设备需要一种显式同步机制。该机制本身对于设备、其驱动软件以及用于建立和解除对端通信的模型是实现特定的。
+设备间的对端 (peer-to-peer) 交互即使所有通信都通过 TC0 进行,也需要相关设备之间采用显式同步协议 (explicit synchronization protocol)。对于给定的系统,必须建立用于管理对端交互的模型。系统软件以及设备硬件和软件必须遵守此模型。阻止请求生成和确定请求完成的要求与非对端交互的要求相同,然而确定 Posted 请求已到达对端目的设备需要一种显式同步机制。该机制本身对于设备、其驱动软件以及用于建立和解除对端通信的模型是实现特定的。
 
-需要 Locked Transaction (锁定事务) 支持以防止在使用会导致访问 I/O 设备的遗留软件 (legacy software) 的系统中出现死锁 (deadlock)。注意:某些 CPU 在执行隐式触发锁定的指令时，可能会产生锁定访问 (locked access)。一些遗留软件误用这些事务，并在不需要独占访问时也生成锁定序列。由于对 I/O 设备的锁定访问除了上述问题外还可能引入潜在死锁并导致严重的性能下降，因此禁止 PCI Express 端点 (Endpoint) 支持锁定访问，并且新软件不得使用会导致对 I/O 设备进行锁定访问的指令。遗留端点 (Legacy Endpoint) 仅出于与现有软件的兼容性而支持锁定访问。
+需要 Locked Transaction (锁定事务) 支持以防止在使用会导致访问 I/O 设备的遗留软件 (legacy software) 的系统中出现死锁 (deadlock)。注意:某些 CPU 在执行隐式触发锁定的指令时,可能会产生锁定访问 (locked access)。一些遗留软件误用这些事务,并在不需要独占访问时也生成锁定序列。由于对 I/O 设备的锁定访问除了上述问题外还可能引入潜在死锁并导致严重的性能下降,因此禁止 PCI Express 端点 (Endpoint) 支持锁定访问,并且新软件不得使用会导致对 I/O 设备进行锁定访问的指令。遗留端点 (Legacy Endpoint) 仅出于与现有软件的兼容性而支持锁定访问。
 
 **实现说明 (IMPLEMENTATION NOTE):**
 **刷新机制 (FLUSH MECHANISMS)**
 
-在像端点仅通过 TC0 与主存通信这样的简单情况下,"刷新" (flush) 可以简单地通过对端点进行读取来实现。如果端点使用 TC0 之外的 TC 向主存发起写入，则"刷新"可以通过在相应 TC 上对主存执行的内存读来实现。内存读操作需要在端点所使用的所有 TC 上执行。
+在像端点仅通过 TC0 与主存通信这样的简单情况下,"刷新" (flush) 可以简单地通过对端点进行读取来实现。如果端点使用 TC0 之外的 TC 向主存发起写入,则"刷新"可以通过在相应 TC 上对主存执行的内存读来实现。内存读操作需要在端点所使用的所有 TC 上执行。
 
-如果使用内存读操作来"刷新"未完成的事务，但实际上不需要进行读取，则可使用 § 第 2.2.5 节中所述的零长度读取 (zero-length read) 语义。
+如果使用内存读操作来"刷新"未完成的事务,但实际上不需要进行读取,则可使用 § 第 2.2.5 节中所述的零长度读取 (zero-length read) 语义。
 
 §
 6.5 锁定事务 (Locked Transactions) §
@@ -6360,30 +6354,30 @@ Locked transaction sequences are generated by the Host CPU(s) as one or more rea
 <!-- 📄 Page 763 -->
 ---
 
-在 PCI Express 上，只有根复合体 (Root Complex) 才允许发起锁定请求 (Locked Requests)。不支持由端点 (Endpoint) 和桥 (Bridge) 发起的锁定请求。这与 [PCI] (附录 F — 排他访问) 中所列出的关于锁定事务使用的限制一致。
+在 PCI Express 上,只有根复合体 (Root Complex) 才允许发起锁定请求 (Locked Requests)。不支持由端点 (Endpoint) 和桥 (Bridge) 发起的锁定请求。这与 [PCI] (附录 F — 排他访问) 中所列出的关于锁定事务使用的限制一致。
 
-本节规定支持从 Host CPU 到传统端点 (Legacy Endpoint) 的锁定访问的相关规则，包括这些事务通过交换机 (Switch) 和 PCI Express/PCI 桥的传播。
+本节规定支持从 Host CPU 到传统端点 (Legacy Endpoint) 的锁定访问的相关规则,包括这些事务通过交换机 (Switch) 和 PCI Express/PCI 桥的传播。
 
-锁定事务序列由 Host CPU 生成，形式为一次或多次读操作，随后是对相同位置的多写操作。当建立锁定后，根复合体与被锁定的传统端点或桥之间的路径将阻塞所有其他流量。
+锁定事务序列由 Host CPU 生成,形式为一次或多次读操作,随后是对相同位置的多写操作。当建立锁定后,根复合体与被锁定的传统端点或桥之间的路径将阻塞所有其他流量。
 
-- 锁定事务序列或尝试性锁定事务序列在 PCI Express 上使用"锁定"类型的读请求/完成报文 (MRdLk/CplDLk) 发起，并以 Unlock 消息 (Unlock Message) 终止
+- 锁定事务序列或尝试性锁定事务序列在 PCI Express 上使用"锁定"类型的读请求/完成报文 (MRdLk/CplDLk) 发起,并以 Unlock 消息 (Unlock Message) 终止
   - 以非"成功完成" (Successful Completion) 状态完成的锁定请求不建立锁 (后续章节将详细说明)
-  - 无论与锁定序列关联的任何完成报文 (Completion) 的状态如何，所有锁定序列和尝试性锁定序列都必须通过传输 Unlock 消息来终止
+  - 无论与锁定序列关联的任何完成报文 (Completion) 的状态如何,所有锁定序列和尝试性锁定序列都必须通过传输 Unlock 消息来终止
   - MRdLk、CplDLk 和 Unlock 语义仅允许用于默认流量类 TC0
-  - 在单个层级 (Hierarchy) 域内，任意时刻只允许一个锁定事务序列尝试在进行中
-- Unlock 消息从根复合体沿锁定事务路径向下发送到完成者 (Completer)，也可以从根复合体向所有端点和桥进行广播
+  - 在单个层级 (Hierarchy) 域内,任意时刻只允许一个锁定事务序列尝试在进行中
+- Unlock 消息从根复合体沿锁定事务路径向下发送到完成者 (Completer),也可以从根复合体向所有端点和桥进行广播
   - 任何未参与锁定序列的设备必须忽略此消息
 - 任何违反锁定事务发起和传播规则的行为都可能导致未定义的设备和/或系统行为
   - 锁定事务序列通过 PCI Express 的发起和传播执行方式如下:
   - 锁定事务序列以 MRdLk 请求开始
     - 锁定事务序列中任何后续读操作也必须使用 MRdLk 请求
-    - 任何 MRdLk 请求的完成报文，对于成功的请求使用 CplDLk 完成类型，对于不成功的请求使用 CplLk 完成类型
-  - 如果与锁定序列关联的任何读操作未成功完成，则请求者 (Requester) 必须假定锁的原子性已不再得到保证，并且请求者与完成者之间的路径不再被锁定
+    - 任何 MRdLk 请求的完成报文,对于成功的请求使用 CplDLk 完成类型,对于不成功的请求使用 CplLk 完成类型
+  - 如果与锁定序列关联的任何读操作未成功完成,则请求者 (Requester) 必须假定锁的原子性已不再得到保证,并且请求者与完成者之间的路径不再被锁定
   - 锁定序列的所有写操作使用 MWr 请求
   - Unlock 消息用于指示锁定序列的结束
     - 交换机将 Unlock 消息传播到锁定的出口端口 (Egress Port)
-  - 在接收到 Unlock 消息时，传统端点或桥若处于锁定状态必须解除自身锁定
-    - 若未处于锁定状态，或者接收方是不支持锁的 PCI Express 端点或桥，则该 Unlock 消息被忽略并丢弃
+  - 在接收到 Unlock 消息时,传统端点或桥若处于锁定状态必须解除自身锁定
+    - 若未处于锁定状态,或者接收方是不支持锁的 PCI Express 端点或桥,则该 Unlock 消息被忽略并丢弃
 
 </td>
 </tr>
@@ -6433,18 +6427,18 @@ Note: This sort of split-lock access is not supported by PCI Express and softwar
 <!-- 📄 Page 764 -->
 ---
 
-交换机必须将锁定序列相关的事务与其他事务区分开，以防止其他事务干扰锁并可能导致死锁。以下规则说明了如何实现。请注意，锁定访问仅限于 TC0,而 TC0 始终映射到 VC0。
+交换机必须将锁定序列相关的事务与其他事务区分开,以防止其他事务干扰锁并可能导致死锁。以下规则说明了如何实现。请注意,锁定访问仅限于 TC0,而 TC0 始终映射到 VC0。
 
-- 当交换机将 MRdLk 请求从入口端口 (Ingress Port,最接近根复合体) 传播到出口端口时，它必须阻塞所有映射到默认虚通道 (VC0) 的请求向出口端口传播
-  - 如果该入口端口接收到后续 MRdLk 请求且目标为不同的出口端口，则交换机的行为未定义
+- 当交换机将 MRdLk 请求从入口端口 (Ingress Port,最接近根复合体) 传播到出口端口时,它必须阻塞所有映射到默认虚通道 (VC0) 的请求向出口端口传播
+  - 如果该入口端口接收到后续 MRdLk 请求且目标为不同的出口端口,则交换机的行为未定义
 
-注:PCI Express 不支持这种"分裂锁定"(split-lock) 访问，软件不得引发此类锁定访问。此类访问可能导致系统死锁。
+注:PCI Express 不支持这种"分裂锁定"(split-lock) 访问,软件不得引发此类锁定访问。此类访问可能导致系统死锁。
 
-- 当第一个 MRdLk 请求的 CplDLk 返回时，如果完成报文指示为"成功完成"状态，则交换机必须阻塞来自所有其他端口的请求向锁定访问所涉及的两个端口中的任意一个传播，出口端口上映射到非 VC0 的请求除外
-- 锁定序列所涉及的两个端口必须保持上述阻塞状态，直到交换机在(初始 MRdLk 请求所在的)入口端口接收到 Unlock 消息
+- 当第一个 MRdLk 请求的 CplDLk 返回时,如果完成报文指示为"成功完成"状态,则交换机必须阻塞来自所有其他端口的请求向锁定访问所涉及的两个端口中的任意一个传播,出口端口上映射到非 VC0 的请求除外
+- 锁定序列所涉及的两个端口必须保持上述阻塞状态,直到交换机在(初始 MRdLk 请求所在的)入口端口接收到 Unlock 消息
   - Unlock 消息必须转发到锁定的出口端口
   - Unlock 消息可向所有其他端口广播
-  - 入口端口在 Unlock 消息到达时即解除阻塞，而被阻塞的出口端口在 Unlock 消息从出口端口发出传输后解除阻塞
+  - 入口端口在 Unlock 消息到达时即解除阻塞,而被阻塞的出口端口在 Unlock 消息从出口端口发出传输后解除阻塞
     - 未参与锁定访问的端口不受 Unlock 消息影响
 
 </td>
@@ -6477,7 +6471,7 @@ The requirements for PCI Express/PCI Bridges are similar to those for Switches, 
 </td>
 <td style="background-color:#e8e8e8">
 
-PCI Express/PCI 桥的要求与交换机类似，不同之处在于，由于 PCI Express/PCI 桥仅使用默认的虚通道和流量类，在锁定访问期间所有其他流量都被阻塞。PCI Express/PCI 桥 PCI 总线一侧的要求与 PCI/PCI 桥的要求一致 (参见 [PCI-to-PCI-Bridge] 和 [PCIe-to-PCI-PCI-X-Bridge])。
+PCI Express/PCI 桥的要求与交换机类似,不同之处在于,由于 PCI Express/PCI 桥仅使用默认的虚通道和流量类,在锁定访问期间所有其他流量都被阻塞。PCI Express/PCI 桥 PCI 总线一侧的要求与 PCI/PCI 桥的要求一致 (参见 [PCI-to-PCI-Bridge] 和 [PCIe-to-PCI-PCI-X-Bridge])。
 
 </td>
 </tr>
@@ -6507,7 +6501,7 @@ A Root Complex is permitted to support locked transactions as a Requester. If lo
 </td>
 <td style="background-color:#e8e8e8">
 
-允许根复合体 (Root Complex) 作为请求者支持锁定事务。如果支持锁定事务，则根复合体必须遵循 § 6.5.2 节所描述的序列来执行锁定访问。根复合体用于将 PCI Express 连接到 Host CPU 的机制不在本文档范围之内。
+允许根复合体 (Root Complex) 作为请求者支持锁定事务。如果支持锁定事务,则根复合体必须遵循 § 6.5.2 节所描述的序列来执行锁定访问。根复合体用于将 PCI Express 连接到 Host CPU 的机制不在本文档范围之内。
 
 </td>
 </tr>
@@ -6552,18 +6546,18 @@ Note that this requirement applies to all possible sources of Requests within th
 </td>
 <td style="background-color:#e8e8e8">
 
-允许传统端点 (Legacy Endpoint) 支持锁定访问，但不鼓励使用。如果支持锁定访问，传统端点必须按以下方式处理:
+允许传统端点 (Legacy Endpoint) 支持锁定访问,但不鼓励使用。如果支持锁定访问,传统端点必须按以下方式处理:
 
-- 当传统端点以"成功完成"状态发送锁定访问中第一个读请求的第一个完成报文时，它进入锁定状态
+- 当传统端点以"成功完成"状态发送锁定访问中第一个读请求的第一个完成报文时,它进入锁定状态
   - 如果完成状态不是"成功完成",则传统端点不会进入锁定状态
 
 <!-- 📄 Page 765 -->
 ---
 
-  - 一旦锁定，传统端点必须保持锁定状态，直到接收到 Unlock 消息
-- 在锁定期间，传统端点不得使用映射到默认虚通道 (VC0) 的 TC 发出任何请求
+  - 一旦锁定,传统端点必须保持锁定状态,直到接收到 Unlock 消息
+- 在锁定期间,传统端点不得使用映射到默认虚通道 (VC0) 的 TC 发出任何请求
 
-请注意，当端点内存在多个可能的请求源时，此要求适用于端点内所有可能的请求源。
+请注意,当端点内存在多个可能的请求源时,此要求适用于端点内所有可能的请求源。
 
   - 可以使用映射到非默认虚通道的 VC 的 TC 发出请求
 
@@ -6671,13 +6665,13 @@ In all form factors and system硬件 configurations, there must, at some level, 
 </td>
 <td style="background-color:#e8e8e8">
 
-在所有外形规格 (Form Factor) 和系统硬件配置中，必须在某一层级存在一个硬件机制，用于将所有端口状态设置或恢复到本文档所规定的初始条件 — 该机制称为"基本复位" (Fundamental Reset)。该机制可以采用系统向组件或适配器卡提供的辅助信号形式，在这种情况下该信号必须命名为 PERST#,并必须符合 § 4.2.5.9.1 节所规定的规则。当 PERST# 提供给组件或适配器时，该信号必须被组件或适配器用作基本复位。当 PERST# 未提供给组件或适配器时，基本复位由组件或适配器自主生成，其具体细节不在本文档范围之内。如果基本复位由组件或适配器自主生成，并且平台向组件/适配器供电，则当所供电力超出外形规格或系统所规定的限值时，组件/适配器必须对自身生成一次基本复位。
+在所有外形规格 (Form Factor) 和系统硬件配置中,必须在某一层级存在一个硬件机制,用于将所有端口状态设置或恢复到本文档所规定的初始条件 — 该机制称为"基本复位" (Fundamental Reset)。该机制可以采用系统向组件或适配器卡提供的辅助信号形式,在这种情况下该信号必须命名为 PERST#,并必须符合 § 4.2.5.9.1 节所规定的规则。当 PERST# 提供给组件或适配器时,该信号必须被组件或适配器用作基本复位。当 PERST# 未提供给组件或适配器时,基本复位由组件或适配器自主生成,其具体细节不在本文档范围之内。如果基本复位由组件或适配器自主生成,并且平台向组件/适配器供电,则当所供电力超出外形规格或系统所规定的限值时,组件/适配器必须对自身生成一次基本复位。
 
 - 常规复位有三种不同类型:冷复位 (Cold)、热复位 (Warm) 和热复位 (Hot):
   - 必须在组件上电之后发生基本复位。这称为冷复位 (Cold Reset)。
-  - 在某些情况下，基本复位机制可以由硬件触发，无需对组件进行断电再上电。这称为热复位 (Warm Reset)。
+  - 在某些情况下,基本复位机制可以由硬件触发,无需对组件进行断电再上电。这称为热复位 (Warm Reset)。
   - 本文档不规定生成热复位或冷复位的方法。
-  - 存在一种链路 (Link) 上的带内 (in-band) 机制用于跨链路传播常规复位。这称为热复位 (Hot Reset)，在 § 4.2.5.9.2 节描述。
+  - 存在一种链路 (Link) 上的带内 (in-band) 机制用于跨链路传播常规复位。这称为热复位 (Hot Reset),在 § 4.2.5.9.2 节描述。
 
 </td>
 </tr>
@@ -6730,28 +6724,28 @@ The first set of rules addresses requirements for components and devices:
 </td>
 <td style="background-color:#e8e8e8">
 
-存在一种软件可用的带内机制，用于强制将链路置于电气空闲 (Electrical Idle) 状态，即"禁用"链路。禁用的 LTSSM 状态在 § 4.2.6.10 节描述，链路禁用控制位在
+存在一种软件可用的带内机制,用于强制将链路置于电气空闲 (Electrical Idle) 状态,即"禁用"链路。禁用的 LTSSM 状态在 § 4.2.6.10 节描述,链路禁用控制位在
 
 <!-- 📄 Page 766 -->
 ---
 
-§ 7.5.3.7 节描述，下游端口抑制 (Downstream Port Containment) 机制在 § 6.2.11 节描述。禁用链路会导致下游组件经历一次热复位。
+§ 7.5.3.7 节描述,下游端口抑制 (Downstream Port Containment) 机制在 § 6.2.11 节描述。禁用链路会导致下游组件经历一次热复位。
 
-有关数据链路层 (Data Link Layer) 上报 DL_Down 状态的影响，以及这些影响与热复位的关系，请参阅 § 2.9 节的附加要求。
+有关数据链路层 (Data Link Layer) 上报 DL_Down 状态的影响,以及这些影响与热复位的关系,请参阅 § 2.9 节的附加要求。
 
-- 退出任何类型的常规复位(冷、热或热)时，所有端口寄存器和状态机必须被设置为其初始化值，如本文档所规定，粘性寄存器 (sticky register) 除外 (见 § 7.4 节)
-  - 注意，从设备的角度来看，任何类型的常规复位(冷、热、热、或 DL_Down) 在事务层及以上产生的影响与常规 PCI 中 RST# 信号的置位与撤销相同
-- 退出基本复位时，物理层将尝试建立链路 (见 § 4.2.6 节)。一旦链路上的两个组件都进入初始链路训练 (Link Training) 状态，它们将依次进行物理层链路初始化，然后进行 VC0 的流控 (Flow Control) 初始化，使数据链路层和事务层准备好使用该链路
+- 退出任何类型的常规复位(冷、热或热)时,所有端口寄存器和状态机必须被设置为其初始化值,如本文档所规定,粘性寄存器 (sticky register) 除外 (见 § 7.4 节)
+  - 注意,从设备的角度来看,任何类型的常规复位(冷、热、热、或 DL_Down) 在事务层及以上产生的影响与常规 PCI 中 RST# 信号的置位与撤销相同
+- 退出基本复位时,物理层将尝试建立链路 (见 § 4.2.6 节)。一旦链路上的两个组件都进入初始链路训练 (Link Training) 状态,它们将依次进行物理层链路初始化,然后进行 VC0 的流控 (Flow Control) 初始化,使数据链路层和事务层准备好使用该链路
   - 在完成 VC0 的流控初始化之后,TLP 和 DLLP 便可跨链路传输
 
-退出常规复位后，某些设备在能够响应所接收的请求之前可能需要额外的时间。特别是对于配置请求 (Configuration Request)，组件和设备必须以确定性方式行为，以下规则涉及此问题。
+退出常规复位后,某些设备在能够响应所接收的请求之前可能需要额外的时间。特别是对于配置请求 (Configuration Request),组件和设备必须以确定性方式行为,以下规则涉及此问题。
 
 第一组规则针对组件和设备的要求:
 
-- 支持 5.0 GT/s 以上链路速度的组件，必须在基本复位结束后的 100 ms 内进入 LTSSM Detect 状态(链路训练见 § 4.2.5 节)。仅支持 5.0 GT/s 及以下链路速度的组件必须在 20 ms 内完成。所有组件都强烈建议尽量缩短此时间。这也适用于 Retimer (重定时器)，见 § 4.3.4 节
-  - 注:在某些系统中，链路上的组件可能在不同时刻退出基本复位。每个组件必须根据其自身视角的基本复位结束时刻，在适用时间范围内满足进入初始活动链路训练状态的要求
-- 链路训练完成 (进入 DL_Active 状态，见 § 3.2 节) 后，组件必须能够接收并处理 TLP 和 DLLP
-- 在设备退出常规复位后，设备必须在 1.0 s 内能够接收配置请求，并在该请求有效时返回"成功完成"。此时间与链路训练完成的速度无关。如果使用就绪通知 (Readiness Notifications) 机制 (见 § 6.22 节)，此时间可以更短，或在适当的系统支持下更长
+- 支持 5.0 GT/s 以上链路速度的组件,必须在基本复位结束后的 100 ms 内进入 LTSSM Detect 状态(链路训练见 § 4.2.5 节)。仅支持 5.0 GT/s 及以下链路速度的组件必须在 20 ms 内完成。所有组件都强烈建议尽量缩短此时间。这也适用于 Retimer (重定时器),见 § 4.3.4 节
+  - 注:在某些系统中,链路上的组件可能在不同时刻退出基本复位。每个组件必须根据其自身视角的基本复位结束时刻,在适用时间范围内满足进入初始活动链路训练状态的要求
+- 链路训练完成 (进入 DL_Active 状态,见 § 3.2 节) 后,组件必须能够接收并处理 TLP 和 DLLP
+- 在设备退出常规复位后,设备必须在 1.0 s 内能够接收配置请求,并在该请求有效时返回"成功完成"。此时间与链路训练完成的速度无关。如果使用就绪通知 (Readiness Notifications) 机制 (见 § 6.22 节),此时间可以更短,或在适当的系统支持下更长
 
 </td>
 </tr>
@@ -6805,25 +6799,25 @@ Note: This delay is analogous to the Trhfa parameter specified for PCI/PCI-X, an
 
 第二组规则针对施加于系统的要求:
 
-- 为了让组件能够执行内部初始化，系统软件必须在一个或多个设备退出常规复位后等待规定的最小时长，才被允许向这些设备发出配置请求，除非使用了就绪通知机制 (见 § 6.22 节)。如果系统软件通过本文档范围之外的方式知晓特定设备的要求，则也可免于这些最短等待时长的要求
-- 如果设备/函数通过"立即就绪" (Immediate Readiness) 指示，系统软件可以立即向该设备/函数发出配置请求 (见 § 3.3 节和 § 7.9.16 节，介绍了允许指示立即就绪支持的两种方式)
+- 为了让组件能够执行内部初始化,系统软件必须在一个或多个设备退出常规复位后等待规定的最小时长,才被允许向这些设备发出配置请求,除非使用了就绪通知机制 (见 § 6.22 节)。如果系统软件通过本文档范围之外的方式知晓特定设备的要求,则也可免于这些最短等待时长的要求
+- 如果设备/函数通过"立即就绪" (Immediate Readiness) 指示,系统软件可以立即向该设备/函数发出配置请求 (见 § 3.3 节和 § 7.9.16 节,介绍了允许指示立即就绪支持的两种方式)
 - 如果下游端口的 DRS 消息接收 (DRS Message Received) 位已置 1,系统软件可以立即向该下游端口下方的设备/函数发出配置请求
 
 <!-- 📄 Page 767 -->
 ---
 
 - 支持 Flit 模式 (Flit Mode) 的设备必须实现 DRS
-- 由于 DRS MUST@FLIT 必须支持，系统软件可使用下游端口中的"下游组件存在" (Downstream Component Presence) 和"Flit 模式状态" (Flit Mode Status) 字段来确定所连接设备是否支持 DRS。在系统软件无法确定所连接设备或所连接设备上游的下游端口是否支持 DRS 的情况下:
-  - 对于不支持 5.0 GT/s 以上链路速度的下游端口，软件必须在退出常规复位后等待至少 100 ms,然后才能向该端口正下方的设备发送配置请求
-  - 对于支持 5.0 GT/s 以上链路速度的下游端口，软件必须在链路训练完成后等待至少 100 ms,然后才能向该端口正下方的设备发送配置请求。软件可通过轮询数据链路层链路激活位或设置关联中断来确定链路训练何时完成 (见 § 6.7.3.3 节)。强烈建议软件在下游端口支持时使用此机制
-  - 对于实现了"就绪时间报告扩展能力" (Readiness Time Reporting Extended Capability) 的设备，如果其报告的复位时间 (Reset Time) 短于 100 ms,则软件在常规复位后等待所报告的复位时间即可向该设备发送配置请求
-  - 系统必须保证所有预期在引导时对软件可见的组件，能够在基于根复合体处常规复位结束的适用最小时长内准备好接收配置请求 — 如何实现此保证不在本文档范围之内
+- 由于 DRS MUST@FLIT 必须支持,系统软件可使用下游端口中的"下游组件存在" (Downstream Component Presence) 和"Flit 模式状态" (Flit Mode Status) 字段来确定所连接设备是否支持 DRS。在系统软件无法确定所连接设备或所连接设备上游的下游端口是否支持 DRS 的情况下:
+  - 对于不支持 5.0 GT/s 以上链路速度的下游端口,软件必须在退出常规复位后等待至少 100 ms,然后才能向该端口正下方的设备发送配置请求
+  - 对于支持 5.0 GT/s 以上链路速度的下游端口,软件必须在链路训练完成后等待至少 100 ms,然后才能向该端口正下方的设备发送配置请求。软件可通过轮询数据链路层链路激活位或设置关联中断来确定链路训练何时完成 (见 § 6.7.3.3 节)。强烈建议软件在下游端口支持时使用此机制
+  - 对于实现了"就绪时间报告扩展能力" (Readiness Time Reporting Extended Capability) 的设备,如果其报告的复位时间 (Reset Time) 短于 100 ms,则软件在常规复位后等待所报告的复位时间即可向该设备发送配置请求
+  - 系统必须保证所有预期在引导时对软件可见的组件,能够在基于根复合体处常规复位结束的适用最小时长内准备好接收配置请求 — 如何实现此保证不在本文档范围之内
   - 强烈建议软件仅在启用"配置 RRS 软件可见" (Configuration RRS Software Visibility) 时才使用 100 ms 等待时长。否则可能导致完成超时、平台超时或较长的处理器指令停顿。请参阅 § 2.3.1 节中"配置请求的请求重试状态"实现说明
-  - 除非使用就绪通知机制，否则根复合体和/或系统软件必须在设备退出常规复位后允许至少 1.0 s,然后才能在有效配置请求未返回"成功完成"状态时判定该设备已损坏。此时间与链路训练完成的速度无关
+  - 除非使用就绪通知机制,否则根复合体和/或系统软件必须在设备退出常规复位后允许至少 1.0 s,然后才能在有效配置请求未返回"成功完成"状态时判定该设备已损坏。此时间与链路训练完成的速度无关
 
-注:此延迟类似于为 PCI/PCI-X 规定的 Trhfa 参数，目的是为需要自初始化的设备提供充足的时间。
+注:此延迟类似于为 PCI/PCI-X 规定的 Trhfa 参数,目的是为需要自初始化的设备提供充足的时间。
 
-- 当尝试通过 PCI Express/PCI(-X) 桥对 PCI 或 PCI-X 总线段上的设备进行配置访问时，必须遵循 Trhfa 时序参数
+- 当尝试通过 PCI Express/PCI(-X) 桥对 PCI 或 PCI-X 总线段上的设备进行配置访问时,必须遵循 Trhfa 时序参数
 
 </td>
 </tr>
@@ -6870,15 +6864,15 @@ begin Link training immediately after its hot reset completes. This behavior is 
 </td>
 <td style="background-color:#e8e8e8">
 
-对于第二组规则，如果系统软件不能直接观察基本复位的状态 (例如热插拔场景;见 § 6.7 节)，则软件必须基于一个已知在基本复位结束后发生的事件来确定这些时序参数。
+对于第二组规则,如果系统软件不能直接观察基本复位的状态 (例如热插拔场景;见 § 6.7 节),则软件必须基于一个已知在基本复位结束后发生的事件来确定这些时序参数。
 
-当链路处于正常运行状态时，以下规则适用:
+当链路处于正常运行状态时,以下规则适用:
 
-- 不论出于何种原因，正常运行的链路断开时，事务层和数据链路层将进入 DL_Inactive 状态 (见 § 2.9 节和 § 3.2.1 节)
-- 对于任何根端口或交换机的下游端口，设置与该端口关联的桥控制寄存器 (Bridge Control Register) 中的"次级总线复位" (Secondary Bus Reset) 位必须导致发出一次热复位 (见 § 4.2.5.9.2 节)
-- 对于交换机，以下情况必须在所有下游端口上发出热复位:
+- 不论出于何种原因,正常运行的链路断开时,事务层和数据链路层将进入 DL_Inactive 状态 (见 § 2.9 节和 § 3.2.1 节)
+- 对于任何根端口或交换机的下游端口,设置与该端口关联的桥控制寄存器 (Bridge Control Register) 中的"次级总线复位" (Secondary Bus Reset) 位必须导致发出一次热复位 (见 § 4.2.5.9.2 节)
+- 对于交换机,以下情况必须在所有下游端口上发出热复位:
   - 设置与上游端口关联的桥控制寄存器中的"次级总线复位"位
-  - 上游端口的数据链路层上报 DL_Down 状态。在支持 5.0 GT/s 以上链路速度的交换机中，上游端口必须将每个下游端口的 LTSSM 引导至 Hot Reset 状态，但不将 LTSSM 保持在该状态。这使得每个下游端口能够在其热复位完成后立即开始链路训练。建议所有交换机都采用此行为
+  - 上游端口的数据链路层上报 DL_Down 状态。在支持 5.0 GT/s 以上链路速度的交换机中,上游端口必须将每个下游端口的 LTSSM 引导至 Hot Reset 状态,但不将 LTSSM 保持在该状态。这使得每个下游端口能够在其热复位完成后立即开始链路训练。建议所有交换机都采用此行为
 
 <!-- 📄 Page 768 -->
 ---
@@ -6930,9 +6924,9 @@ Additional parameters may be specified.
 </td>
 <td style="background-color:#e8e8e8">
 
-基本复位的某些方面在本文档中规定，其他方面则由平台、外形规格和/或实现特定。具体平台、外形规格或应用场景可能要求额外规定系统中各组件之间基本复位的时序和/或顺序关系。例如，可能要求机箱内的所有 PCI Express 组件在同一时刻 (在一定容差范围内) 观察基本复位的置位与撤销。在多机箱环境中，可能有必要规定包含根复合体的机箱最后退出基本复位。
+基本复位的某些方面在本文档中规定,其他方面则由平台、外形规格和/或实现特定。具体平台、外形规格或应用场景可能要求额外规定系统中各组件之间基本复位的时序和/或顺序关系。例如,可能要求机箱内的所有 PCI Express 组件在同一时刻 (在一定容差范围内) 观察基本复位的置位与撤销。在多机箱环境中,可能有必要规定包含根复合体的机箱最后退出基本复位。
 
-在所有提供电源和 PERST# 的情况下，必须定义以下参数:
+在所有提供电源和 PERST# 的情况下,必须定义以下参数:
 
 - Tpvperl — 在电源变为有效后,PERST# 必须至少保持置位该时长
 - Tperst — 当置位时,PERST# 必须至少保持置位该时长
@@ -6941,7 +6935,7 @@ Additional parameters may be specified.
 
 可以规定其他参数。
 
-在所有提供参考时钟的情况下，必须定义以下参数:
+在所有提供参考时钟的情况下,必须定义以下参数:
 
 - Tperst-clk — 在任何所提供的参考时钟稳定后,PERST# 必须至少保持置位该时长
 
@@ -7029,11 +7023,11 @@ FLR modifies the Function state described by this specification as follows:
 
 FLR 机制使软件能够以函数 (Function) 级别的粒度静默并复位端点硬件。三个示例使用模型说明了此功能带来的好处:
 
-- 在某些系统中，控制某个函数的软件实体可能停止正常运行。为防止数据损坏，有必要停止该函数正在执行的所有 PCI Express 操作和外部 I/O (非 PCI Express) 操作。其他已定义的复位操作不能保证停止外部 I/O 操作
-- 在将硬件从一个分区迁移到另一个分区的分区化环境中，必须确保硬件不保留任何先前分区的残留"信息",例如用户委托给第一个分区但不委托给第二个分区的秘密信息。此外，鉴于函数种类繁多，有必要以与函数无关的方式完成此操作
-- 当系统软件正在拆除某个函数的软件栈并随后重建该软件栈时，有时需要将状态恢复到未初始化状态，再重建该函数的软件栈
+- 在某些系统中,控制某个函数的软件实体可能停止正常运行。为防止数据损坏,有必要停止该函数正在执行的所有 PCI Express 操作和外部 I/O (非 PCI Express) 操作。其他已定义的复位操作不能保证停止外部 I/O 操作
+- 在将硬件从一个分区迁移到另一个分区的分区化环境中,必须确保硬件不保留任何先前分区的残留"信息",例如用户委托给第一个分区但不委托给第二个分区的秘密信息。此外,鉴于函数种类繁多,有必要以与函数无关的方式完成此操作
+- 当系统软件正在拆除某个函数的软件栈并随后重建该软件栈时,有时需要将状态恢复到未初始化状态,再重建该函数的软件栈
 
-FLR 的实现是可选的 (非必需)，但强烈建议实现。
+FLR 的实现是可选的 (非必需),但强烈建议实现。
 
 FLR 适用于每个函数。FLR 操作仅影响目标函数。FLR 不得影响链路 (Link) 状态。
 
@@ -7042,7 +7036,7 @@ FLR 按如下方式修改本规范所描述的函数状态:
 <!-- 📄 Page 769 -->
 ---
 
-- 函数寄存器和函数特定的状态机必须被设置为其初始化值，如本文档所规定，但以下情况除外，这些情况下值不受 FLR 影响:
+- 函数寄存器和函数特定的状态机必须被设置为其初始化值,如本文档所规定,但以下情况除外,这些情况下值不受 FLR 影响:
   - sticky 类型的寄存器 (ROS、RWS、RW1CS)
   - 定义为 HwInit 类型的寄存器
   - 以下其他字段或寄存器:
@@ -7119,17 +7113,17 @@ Note that upon receipt of an FLR, a device Function may either clear all transac
 </td>
 <td style="background-color:#e8e8e8">
 
-请注意，用于使函数能够在 PCI Express 上发起请求的控制位将被清零，包括 Bus Master Enable、MSI Enable 等，这实际上会使该函数在链路上变为静默 (quiescent)。
+请注意,用于使函数能够在 PCI Express 上发起请求的控制位将被清零,包括 Bus Master Enable、MSI Enable 等,这实际上会使该函数在链路上变为静默 (quiescent)。
 
-请注意，与链路功能相关的端口状态机(包括物理层和数据链路层中的状态机) 不会被 FLR 复位,VC0 在 FLR 之后仍保持已初始化状态。
+请注意,与链路功能相关的端口状态机(包括物理层和数据链路层中的状态机) 不会被 FLR 复位,VC0 在 FLR 之后仍保持已初始化状态。
 
 - 函数所置位的任何未完成 (outstanding) 的 INTx 中断必须在启动 FLR 之前通过发送相应的 Deassert_INTx 消息 (Deassert_INTx Message) 来撤销
 
-请注意，当 FLR 被发起以复位多功能设备 (Multi-Function Device) 的某个函数时，如果另一个函数继续置位匹配的 INTx,则不会发送 Deassert_INTx 消息。
+请注意,当 FLR 被发起以复位多功能设备 (Multi-Function Device) 的某个函数时,如果另一个函数继续置位匹配的 INTx,则不会发送 Deassert_INTx 消息。
 
-通过向"启动函数级复位" (Initiate Function Level Reset) 位写入 1b 来启动 FLR 后，函数必须在 100 ms 内完成 FLR。如果软件在"事务待处理" (Transactions Pending) 位为 1b 时发起 FLR,则软件必须为任何关联完成报文的到达留出充足时间，或者在合理确定任何剩余的完成报文将永远不会到达之前，不得初始化该函数。为此，建议软件至少允许与设备上 FLR 之前"完成超时" (Completion Timeout) 值所提供的时间一样长。如果在发出 FLR 时该函数上的"完成超时"被禁用，则该延迟取决于系统，但必须不小于 100 ms。如果实现了"函数就绪状态" (Function Readiness Status, FRS — 见 § 6.22.2 节)，则系统软件在收到指示"配置就绪" (Configuration-Ready) 的 FRS 消息后，即可立即向该函数发出配置请求，但这并不一定表示该函数发起的未完成请求已经完成。
+通过向"启动函数级复位" (Initiate Function Level Reset) 位写入 1b 来启动 FLR 后,函数必须在 100 ms 内完成 FLR。如果软件在"事务待处理" (Transactions Pending) 位为 1b 时发起 FLR,则软件必须为任何关联完成报文的到达留出充足时间,或者在合理确定任何剩余的完成报文将永远不会到达之前,不得初始化该函数。为此,建议软件至少允许与设备上 FLR 之前"完成超时" (Completion Timeout) 值所提供的时间一样长。如果在发出 FLR 时该函数上的"完成超时"被禁用,则该延迟取决于系统,但必须不小于 100 ms。如果实现了"函数就绪状态" (Function Readiness Status, FRS — 见 § 6.22.2 节),则系统软件在收到指示"配置就绪" (Configuration-Ready) 的 FRS 消息后,即可立即向该函数发出配置请求,但这并不一定表示该函数发起的未完成请求已经完成。
 
-请注意，在收到 FLR 时，设备函数可以选择清除所有事务状态(包括"事务待处理")，或将"完成超时"设置为其默认值，以便所有未完成事务在 FLR 执行期间超时。无论如何，在 FLR 完成时,"事务待处理"位必须被清零。
+请注意,在收到 FLR 时,设备函数可以选择清除所有事务状态(包括"事务待处理"),或将"完成超时"设置为其默认值,以便所有未完成事务在 FLR 执行期间超时。无论如何,在 FLR 完成时,"事务待处理"位必须被清零。
 
 </td>
 </tr>
@@ -7167,13 +7161,13 @@ Since FLR modifies Function state not described by this specification (in additi
 </td>
 <td style="background-color:#e8e8e8">
 
-由于 FLR 会修改本规范未描述的函数状态(以及本规范所描述的状态)，有必要使用一组标准来规定 FLR 的行为，当这些标准应用于函数时，表明该函数已满足 FLR 的要求。必须使用函数相关的知识应用以下标准来评估该函数对 FLR 的响应行为:
+由于 FLR 会修改本规范未描述的函数状态(以及本规范所描述的状态),有必要使用一组标准来规定 FLR 的行为,当这些标准应用于函数时,表明该函数已满足 FLR 的要求。必须使用函数相关的知识应用以下标准来评估该函数对 FLR 的响应行为:
 
 - 函数不得在其控制的任何外部接口上呈现为已初始化且主机处于活动状态的适配器。终止外部接口上活动所需的具体步骤不在本文档范围之内
-  - 例如，网络适配器不得响应那些需要主机系统对适配器进行初始化或与活动主机系统进行交互的查询，但允许执行其在设计上不需主机初始化或交互即可执行的动作。如果该网络适配器包含多个在同一外部网络接口上工作的函数，则本规则仅影响与被 FLR 复位的特定函数相关的方面
+  - 例如,网络适配器不得响应那些需要主机系统对适配器进行初始化或与活动主机系统进行交互的查询,但允许执行其在设计上不需主机初始化或交互即可执行的动作。如果该网络适配器包含多个在同一外部网络接口上工作的函数,则本规则仅影响与被 FLR 复位的特定函数相关的方面
 - 函数不得在其自身内保留可能包含与该函数先前使用相关的秘密信息的、软件可读的状态。分配给该函数的主机主存不得被该函数修改
-  - 例如，具有可被主机软件直接或间接读取的内部存储器的函数必须清除或随机化该存储器
-- 函数必须返回到一种状态，使得对函数 PCI Express 接口的正常配置将使通常与该函数关联的驱动程序能够使用该函数
+  - 例如,具有可被主机软件直接或间接读取的内部存储器的函数必须清除或随机化该存储器
+- 函数必须返回到一种状态,使得对函数 PCI Express 接口的正常配置将使通常与该函数关联的驱动程序能够使用该函数
 
 </td>
 </tr>
@@ -7217,19 +7211,19 @@ The PCI Express architecture is designed to natively support both hot-add and ho
 </td>
 <td style="background-color:#e8e8e8">
 
-当 FLR 被发起时，目标函数必须按以下方式行为:
+当 FLR 被发起时,目标函数必须按以下方式行为:
 
-- 函数必须返回启动 FLR 操作的配置写操作的完成报文，然后再启动 FLR
+- 函数必须返回启动 FLR 操作的配置写操作的完成报文,然后再启动 FLR
 - 当 FLR 正在进行中时:
 
 <!-- 📄 Page 771 -->
 ---
 
-  - 如果收到请求 (Request)，允许将该请求静默丢弃 (在更新流控信用之后)，而不将其记录或报告为错误
-  - 如果收到完成报文 (Completion)，允许将该完成报文作为"意外完成" (Unexpected Completion) 处理，或将其静默丢弃 (在更新流控信用之后)，而不将其记录或报告为错误
-  - 虽然函数被要求在上述时间限制内完成 FLR 操作，但随后的函数特定初始化序列可能需要额外的时间。如果需要额外时间，则当在上述时间限制之后收到配置请求时，函数必须返回"请求重试状态" (Request Retry Status, RRS) 完成状态。在函数以非 RRS 的完成状态响应一次配置请求之后，在该函数被再次复位之前，不允许以 RRS 响应配置请求
+  - 如果收到请求 (Request),允许将该请求静默丢弃 (在更新流控信用之后),而不将其记录或报告为错误
+  - 如果收到完成报文 (Completion),允许将该完成报文作为"意外完成" (Unexpected Completion) 处理,或将其静默丢弃 (在更新流控信用之后),而不将其记录或报告为错误
+  - 虽然函数被要求在上述时间限制内完成 FLR 操作,但随后的函数特定初始化序列可能需要额外的时间。如果需要额外时间,则当在上述时间限制之后收到配置请求时,函数必须返回"请求重试状态" (Request Retry Status, RRS) 完成状态。在函数以非 RRS 的完成状态响应一次配置请求之后,在该函数被再次复位之前,不允许以 RRS 响应配置请求
 
-PCI Express 架构旨在原生支持电缆、插卡 (add-in cards) 和模块的热添加与热移除 ("热插拔" / Hot-Plug)。PCI Express 原生热插拔提供了一套"工具箱"机制，允许通过自洽的基础设施支持不同的用户/操作员模型。这些机制既可用于实现依赖于与操作系统协调的有序添加/移除 (例如传统 PCI 热插拔)，也可用于异步移除 — 即不与操作系统严格同步的移除。本节定义热插拔机制集，并规定热插拔的组成元素 (如指示灯和按钮) 在系统中实现时必须具备的行为。
+PCI Express 架构旨在原生支持电缆、插卡 (add-in cards) 和模块的热添加与热移除 ("热插拔" / Hot-Plug)。PCI Express 原生热插拔提供了一套"工具箱"机制,允许通过自洽的基础设施支持不同的用户/操作员模型。这些机制既可用于实现依赖于与操作系统协调的有序添加/移除 (例如传统 PCI 热插拔),也可用于异步移除 — 即不与操作系统严格同步的移除。本节定义热插拔机制集,并规定热插拔的组成元素 (如指示灯和按钮) 在系统中实现时必须具备的行为。
 
 </td>
 </tr>
@@ -7270,13 +7264,13 @@ Software can avoid data corruption from stale Completions in a variety of ways. 
 </td>
 <td style="background-color:#e8e8e8">
 
-FLR 会导致函数丢失对所有未完成 (outstanding) 非 Posted 请求的跟踪。此后到达的相应完成报文被称为"陈旧" (stale) 完成报文。如果软件在存在未完成请求时发出 FLR,然后未等待潜在的陈旧完成报文就重新使能该函数运行，之后到达的任何陈旧完成报文都可能被该函数误认为是 FLR 之后所发出请求的完成报文，从而导致数据损坏。
+FLR 会导致函数丢失对所有未完成 (outstanding) 非 Posted 请求的跟踪。此后到达的相应完成报文被称为"陈旧" (stale) 完成报文。如果软件在存在未完成请求时发出 FLR,然后未等待潜在的陈旧完成报文就重新使能该函数运行,之后到达的任何陈旧完成报文都可能被该函数误认为是 FLR 之后所发出请求的完成报文,从而导致数据损坏。
 
 软件可以通过多种方式避免陈旧完成报文造成的数据损坏。以下是一种可能的算法:
 
-1. 执行 FLR 的软件与其他可能直接访问该函数的软件进行同步，并确保在此算法执行期间不发生此类访问
-2. 软件清空整个命令寄存器 (Command register)，禁止该函数发出任何新请求
-3. 软件轮询设备状态寄存器 (Device Status register) 中的"事务待处理" (Transactions Pending) 位，直到其清零，或直到软件合理确信与任何剩余未完成事务关联的完成报文将永远不会到达。在许多平台上,"事务待处理"位通常会在几毫秒内清零，因此软件可以选择在此初始期间使用紧凑的软件循环进行轮询。在少数情况下，如果"事务待处理"位在此期间未清零，则软件需要轮询一个长得多的、平台特定的周期 (可能为秒级)，因此软件可以选择使用基于定时器的中断轮询机制进行此轮询
+1. 执行 FLR 的软件与其他可能直接访问该函数的软件进行同步,并确保在此算法执行期间不发生此类访问
+2. 软件清空整个命令寄存器 (Command register),禁止该函数发出任何新请求
+3. 软件轮询设备状态寄存器 (Device Status register) 中的"事务待处理" (Transactions Pending) 位,直到其清零,或直到软件合理确信与任何剩余未完成事务关联的完成报文将永远不会到达。在许多平台上,"事务待处理"位通常会在几毫秒内清零,因此软件可以选择在此初始期间使用紧凑的软件循环进行轮询。在少数情况下,如果"事务待处理"位在此期间未清零,则软件需要轮询一个长得多的、平台特定的周期 (可能为秒级),因此软件可以选择使用基于定时器的中断轮询机制进行此轮询
 4. 软件启动 FLR
 5. 软件等待 100 ms
 6. 软件重新配置该函数并使能其正常运行
@@ -8032,29 +8026,29 @@ Power Fault Detected (Slot Status Register) - This bit is Set when a power fault
 <!-- 📄 Page 777 -->
 ---
 
-如 § 第 6.7.3.3 节 所述。关闭电源后，软件必须等待至少 1 秒，然后才能执行任何依赖于热插拔 (Hot-Plug) 插槽电源已移除的操作。例如，在完成 1 秒等待之前，不允许软件关闭电源指示灯 (如果存在) 或尝试打开电源控制器。
+如 § 第 6.7.3.3 节 所述。关闭电源后,软件必须等待至少 1 秒,然后才能执行任何依赖于热插拔 (Hot-Plug) 插槽电源已移除的操作。例如,在完成 1 秒等待之前,不允许软件关闭电源指示灯 (如果存在) 或尝试打开电源控制器。
 
-本节描述的寄存器按热插拔 (Hot-Plug) 元素分组，以便汇总实现每个元素相关的所有寄存器。与实现热插拔能力插槽的每个下游端口 (Downstream Port) 相关的寄存器字段位于 PCI Express 能力结构 (Capability structure) 的 Device Capabilities、Slot Capabilities、Slot Control、Slot Status 和 Slot Capabilities 2 寄存器中 (见 § 第 7.5.3 节 )。报告适配器上与设备功能 (Function) 关联的热插拔元素是否存在的寄存器位于 Device Capabilities 寄存器中 (也在 PCI Express 能力结构中)。
+本节描述的寄存器按热插拔 (Hot-Plug) 元素分组,以便汇总实现每个元素相关的所有寄存器。与实现热插拔能力插槽的每个下游端口 (Downstream Port) 相关的寄存器字段位于 PCI Express 能力结构 (Capability structure) 的 Device Capabilities、Slot Capabilities、Slot Control、Slot Status 和 Slot Capabilities 2 寄存器中 (见 § 第 7.5.3 节 )。报告适配器上与设备功能 (Function) 关联的热插拔元素是否存在的寄存器位于 Device Capabilities 寄存器中 (也在 PCI Express 能力结构中)。
 
 Attention Button Present (Slot Capabilities 寄存器和 Device Capabilities 寄存器) - 该位指示 Attention Button (注意按钮) 是否由机箱电气控制 (Slot Capabilities 寄存器) 或由适配器电气控制 (Device Capabilities 寄存器)。
 
-Attention Button Pressed (Slot Status 寄存器) - 当由机箱电气控制的 Attention Button 被按下时，该位被置 1。
+Attention Button Pressed (Slot Status 寄存器) - 当由机箱电气控制的 Attention Button 被按下时,该位被置 1。
 
-Attention Button Pressed Enable (Slot Control 寄存器) - 当置 1 时，该位使能在 Attention Button Pressed 事件上的软件通知 (见 § 第 6.7.3.4 节 )。
+Attention Button Pressed Enable (Slot Control 寄存器) - 当置 1 时,该位使能在 Attention Button Pressed 事件上的软件通知 (见 § 第 6.7.3.4 节 )。
 
 Attention Indicator Present (Slot Capabilities 寄存器和 Device Capabilities 寄存器) - 该位指示 Attention Indicator (注意指示灯) 是否由机箱电气控制 (Slot Capabilities 寄存器) 或由适配器电气控制 (Device Capabilities 寄存器)。
 
-Attention Indicator Control (Slot Control 寄存器) - 写入时，将由机箱电气控制的 Attention Indicator 设置为所写入的状态。
+Attention Indicator Control (Slot Control 寄存器) - 写入时,将由机箱电气控制的 Attention Indicator 设置为所写入的状态。
 
 Power Indicator Present (Slot Capabilities 寄存器和 Device Capabilities 寄存器) - 该位指示 Power Indicator (电源指示灯) 是否由机箱电气控制 (Slot Capabilities 寄存器) 或由适配器电气控制 (Device Capabilities 寄存器)。
 
-Power Indicator Control (Slot Control 寄存器) - 写入时，将由机箱电气控制的 Power Indicator 设置为所写入的状态。
+Power Indicator Control (Slot Control 寄存器) - 写入时,将由机箱电气控制的 Power Indicator 设置为所写入的状态。
 
 Power Controller Present (Slot Capabilities 寄存器) - 该位指示是否实现了 Power Controller (电源控制器)。
 
 Power Controller Control (Slot Control 寄存器) - 根据所写入的值打开或关闭 Power Controller。
 
-Power Fault Detected (Slot Status 寄存器) - 当在插槽或适配器处检测到电源故障时，该位被置 1。
+Power Fault Detected (Slot Status 寄存器) - 当在插槽或适配器处检测到电源故障时,该位被置 1。
 
 §
 
@@ -8136,7 +8130,7 @@ Refer to the following register field descriptions for Attention Button:
 </td>
 <td style="background-color:#e8e8e8">
 
-有关 Attention Button 的寄存器字段说明，请参阅以下内容:
+有关 Attention Button 的寄存器字段说明,请参阅以下内容:
 
 - Attention Button Present (Slot Capabilities 寄存器和 Device Capabilities 寄存器)
 - Attention Button Pressed (Slot Status 寄存器)
@@ -8177,7 +8171,7 @@ Refer to the following register field descriptions for Attention Indicator:
 </td>
 <td style="background-color:#e8e8e8">
 
-有关 Attention Indicator 的寄存器字段说明，请参阅以下内容:
+有关 Attention Indicator 的寄存器字段说明,请参阅以下内容:
 
 - Attention Indicator Present (Slot Capabilities 寄存器和 Device Capabilities 寄存器)
 - Attention Indicator Control (Slot Control 寄存器)
@@ -8217,7 +8211,7 @@ Refer to the following register field descriptions for Power Indicator:
 </td>
 <td style="background-color:#e8e8e8">
 
-有关 Power Indicator 的寄存器字段说明，请参阅以下内容:
+有关 Power Indicator 的寄存器字段说明,请参阅以下内容:
 
 - Power Indicator Present (Slot Capabilities 寄存器和 Device Capabilities 寄存器)
 - Power Indicator Control (Slot Control 寄存器)
@@ -8265,7 +8259,7 @@ Refer to the following register field descriptions for Power Controller:
 <!-- 📄 Page 778 -->
 ---
 
-有关 Power Controller 的寄存器字段说明，请参阅以下内容:
+有关 Power Controller 的寄存器字段说明,请参阅以下内容:
 
 - Power Controller Present (Slot Capabilities 寄存器)
 - Power Controller Control (Slot Control 寄存器)
@@ -8310,7 +8304,7 @@ Refer to the following register field descriptions for Presence Detect:
 </td>
 <td style="background-color:#e8e8e8">
 
-有关 Presence Detect (存在检测) 的寄存器字段说明，请参阅以下内容:
+有关 Presence Detect (存在检测) 的寄存器字段说明,请参阅以下内容:
 
 - In-Band PD Disable Supported (Slot Capabilities 2 寄存器)
 - In-Band PD Disable (Slot Control 寄存器)
@@ -8355,7 +8349,7 @@ Refer to the following register field descriptions for MRL Sensor:
 </td>
 <td style="background-color:#e8e8e8">
 
-有关 MRL Sensor (手动保留门锁传感器) 的寄存器字段说明，请参阅以下内容:
+有关 MRL Sensor (手动保留门锁传感器) 的寄存器字段说明,请参阅以下内容:
 
 - MRL Sensor Present (Slot Capabilities 寄存器)
 - MRL Sensor Changed (Slot Status 寄存器)
@@ -8398,7 +8392,7 @@ Refer to the following register field descriptions for Electromechanical Interlo
 </td>
 <td style="background-color:#e8e8e8">
 
-有关 Electromechanical Interlock (机电互锁) 的寄存器字段说明，请参阅以下内容:
+有关 Electromechanical Interlock (机电互锁) 的寄存器字段说明,请参阅以下内容:
 
 - Electromechanical Interlock Present (Slot Capabilities 寄存器)
 - Electromechanical Interlock Status (Slot Status 寄存器)
@@ -8440,7 +8434,7 @@ Refer to the following register field descriptions for Command Completed:
 </td>
 <td style="background-color:#e8e8e8">
 
-有关 Command Completed (命令完成) 的寄存器字段说明，请参阅以下内容:
+有关 Command Completed (命令完成) 的寄存器字段说明,请参阅以下内容:
 
 - No Command Completed Support (Slot Capabilities 寄存器)
 - Command Completed (Slot Status 寄存器)
@@ -8489,7 +8483,7 @@ Refer to the following register field descriptions for Port Capabilities and Slo
 <!-- 📄 Page 779 -->
 ---
 
-有关 Port Capabilities (端口能力) 和 Slot Information (插槽信息) 的寄存器字段说明，请参阅以下内容:
+有关 Port Capabilities (端口能力) 和 Slot Information (插槽信息) 的寄存器字段说明,请参阅以下内容:
 
 - Slot Implemented (PCI Express Capabilities 寄存器)
 - Physical Slot Number (Slot Capabilities 寄存器)
@@ -8530,7 +8524,7 @@ Refer to the following register field descriptions for Hot-Plug Interrupt Contro
 </td>
 <td style="background-color:#e8e8e8">
 
-有关 Hot-Plug Interrupt Control (热插拔中断控制) 的寄存器字段说明，请参阅以下内容:
+有关 Hot-Plug Interrupt Control (热插拔中断控制) 的寄存器字段说明,请参阅以下内容:
 
 - Hot-Plug Interrupt Enable (Slot Control 寄存器)
 
@@ -8594,13 +8588,13 @@ If enabled through the associated enable field, slot events must generate a soft
 - 命令完成事件 (Command Completed Events)
 - 数据链路层状态变化事件 (Data Link Layer State Changed Events)
 
-上述每个事件都有一个状态 (status) 字段，用于指示事件已发生但尚未被软件处理;以及一个使能 (enable) 字段，用于指示该事件是否已使能软件通知。某些事件还具有能力 (capability) 字段，用于指示该端口 (Port) 上是否支持该事件类型。这些字段按事件类型的分组列于 § 第 6.7.2 节 ，每个单独字段的描述见 § 第 7.5.3 节 。
+上述每个事件都有一个状态 (status) 字段,用于指示事件已发生但尚未被软件处理;以及一个使能 (enable) 字段,用于指示该事件是否已使能软件通知。某些事件还具有能力 (capability) 字段,用于指示该端口 (Port) 上是否支持该事件类型。这些字段按事件类型的分组列于 § 第 6.7.2 节 ,每个单独字段的描述见 § 第 7.5.3 节 。
 
-具有热插拔能力的下游端口会监视其控制的插槽，以上述插槽事件。当检测到这些插槽事件之一时，端口通过置位与该事件关联的状态字段来指示事件已发生。此时，事件处于挂起 (pending) 状态，直到软件清除该状态字段为止。
+具有热插拔能力的下游端口会监视其控制的插槽,以上述插槽事件。当检测到这些插槽事件之一时,端口通过置位与该事件关联的状态字段来指示事件已发生。此时,事件处于挂起 (pending) 状态,直到软件清除该状态字段为止。
 
-一旦某个插槽事件在特定插槽上挂起，则在该事件被清除之前，该插槽上同类型的所有后续事件将被忽略。端口必须继续监视该插槽上的所有其他插槽事件类型，并在它们发生时予以报告。
+一旦某个插槽事件在特定插槽上挂起,则在该事件被清除之前,该插槽上同类型的所有后续事件将被忽略。端口必须继续监视该插槽上的所有其他插槽事件类型,并在它们发生时予以报告。
 
-如果通过关联的使能字段使能，插槽事件必须生成软件通知。如果事件未在该端口上支持 (由关联的能力字段指示)，则软件不得使能该事件的软件通知。向软件报告此通知的机制在 § 第 6.7.3.4 节 中描述。
+如果通过关联的使能字段使能,插槽事件必须生成软件通知。如果事件未在该端口上支持 (由关联的能力字段指示),则软件不得使能该事件的软件通知。向软件报告此通知的机制在 § 第 6.7.3.4 节 中描述。
 
 §
 
@@ -8636,7 +8630,7 @@ Refer to § Section 6.7.2 for the list of slot events and their associated regis
 </td>
 <td style="background-color:#e8e8e8">
 
-有关插槽事件及其关联寄存器字段的列表，请参阅 § 第 6.7.2 节 。
+有关插槽事件及其关联寄存器字段的列表,请参阅 § 第 6.7.2 节 。
 
 §
 
@@ -8688,17 +8682,17 @@ If enabled through the associated enable field, the completion of a command must
 <!-- 📄 Page 780 -->
 ---
 
-由于某些热插拔 (Hot-Plug) 元素的状态变化可能不是瞬时发生的，因此 PCI Express 支持热插拔命令和命令完成事件。所有支持热插拔的端口都必须支持热插拔命令，以及 (如果报告了该能力) 命令完成事件。
+由于某些热插拔 (Hot-Plug) 元素的状态变化可能不是瞬时发生的,因此 PCI Express 支持热插拔命令和命令完成事件。所有支持热插拔的端口都必须支持热插拔命令,以及 (如果报告了该能力) 命令完成事件。
 
-软件通过发出针对端口的 Slot Control 寄存器任何部分的写事务 (write transaction) 来向支持热插拔的下游端口 (Downstream Port) 发出命令。对 Slot Control 寄存器的单次写入被视为单个命令，即使该写入影响 Slot Control 寄存器中的多个字段。作为对该事务的响应，端口必须执行所请求的操作，然后置位命令完成事件关联的状态字段。
+软件通过发出针对端口的 Slot Control 寄存器任何部分的写事务 (write transaction) 来向支持热插拔的下游端口 (Downstream Port) 发出命令。对 Slot Control 寄存器的单次写入被视为单个命令,即使该写入影响 Slot Control 寄存器中的多个字段。作为对该事务的响应,端口必须执行所请求的操作,然后置位命令完成事件关联的状态字段。
 
-即使在发出命令时状态字段已置 1,端口也必须正常处理该命令。如果单个命令导致启动多个操作，则这些操作的执行顺序未指定。与单次命令执行关联的所有操作耗时不得超过 1 秒。
+即使在发出命令时状态字段已置 1,端口也必须正常处理该命令。如果单个命令导致启动多个操作,则这些操作的执行顺序未指定。与单次命令执行关联的所有操作耗时不得超过 1 秒。
 
-如果 Slot Capabilities 寄存器的 No Command Completed Support 字段值为 1b,表示不支持命令完成事件，则支持热插拔的端口必须处理针对其 Slot Control 寄存器任何部分的写事务，而不依赖于之前的 Slot Control 写入。允许软件连续发出多个 Slot Control 写入，写入之间无任何延迟。
+如果 Slot Capabilities 寄存器的 No Command Completed Support 字段值为 1b,表示不支持命令完成事件,则支持热插拔的端口必须处理针对其 Slot Control 寄存器任何部分的写事务,而不依赖于之前的 Slot Control 写入。允许软件连续发出多个 Slot Control 写入,写入之间无任何延迟。
 
-如果支持命令完成事件，则软件必须等待命令完成后才能发出下一条命令。但是，如果在 1 秒命令执行时限之后状态字段仍未置 1,则允许软件重复该命令或发出下一条命令。如果软件在端口完成对先前命令的处理之前、在 1 秒时限到期之前发出写入，则端口可选择接受或丢弃该写入。此类写入被视为编程错误 (programming error)，可能导致 Slot Control 寄存器与热插拔元素状态之间出现差异。为了从此编程错误中恢复并将控制器恢复到一致状态，软件必须发出符合命令完成规则的 Slot Control 寄存器写入。
+如果支持命令完成事件,则软件必须等待命令完成后才能发出下一条命令。但是,如果在 1 秒命令执行时限之后状态字段仍未置 1,则允许软件重复该命令或发出下一条命令。如果软件在端口完成对先前命令的处理之前、在 1 秒时限到期之前发出写入,则端口可选择接受或丢弃该写入。此类写入被视为编程错误 (programming error),可能导致 Slot Control 寄存器与热插拔元素状态之间出现差异。为了从此编程错误中恢复并将控制器恢复到一致状态,软件必须发出符合命令完成规则的 Slot Control 寄存器写入。
 
-如果通过关联的使能字段使能，命令的完成必须生成软件通知。此规则的一个例外是:由于对 Slot Control 寄存器的写入禁用了命令完成事件的软件通知而产生的命令。此类命令必须按上述方式处理，但不得生成软件通知。
+如果通过关联的使能字段使能,命令的完成必须生成软件通知。此规则的一个例外是:由于对 Slot Control 寄存器的写入禁用了命令完成事件的软件通知而产生的命令。此类命令必须按上述方式处理,但不得生成软件通知。
 
 §
 
@@ -8738,11 +8732,11 @@ The Data Link Layer State Changed event must occur within 1 second of the event 
 </td>
 <td style="background-color:#e8e8e8">
 
-数据链路层状态变化事件 (Data Link Layer State Changed event) 提供 Link Status 寄存器中数据链路层 (Data Link Layer) Link Active 位的状态已发生变化的指示。对于支持热插拔 (Hot-Plug) 的下游端口 (Downstream Port)，必须支持数据链路层状态变化事件以及这些事件的软件通知。如果支持此事件，则当 Data Link Layer Link Active 位的值发生变化时，端口会置位与该事件关联的状态字段。
+数据链路层状态变化事件 (Data Link Layer State Changed event) 提供 Link Status 寄存器中数据链路层 (Data Link Layer) Link Active 位的状态已发生变化的指示。对于支持热插拔 (Hot-Plug) 的下游端口 (Downstream Port),必须支持数据链路层状态变化事件以及这些事件的软件通知。如果支持此事件,则当 Data Link Layer Link Active 位的值发生变化时,端口会置位与该事件关联的状态字段。
 
-此事件允许软件间接地确定何时已将电源施加到新热插拔的适配器。软件必须在 Data Link Layer Link Active 位读为 1b 之后等待 100 ms,才能启动对热添加设备的配置访问 (见 § 第 6.6 节 )。在 Data Link Layer Link Active 位读为 1b 之后，软件必须留出 1 秒时间，然后才被允许判定一个热插拔设备 (该设备对有效配置请求 (Configuration Request) 未能返回成功完成 (Successful Completion)) 是损坏的设备 (见 § 第 6.6 节 )。
+此事件允许软件间接地确定何时已将电源施加到新热插拔的适配器。软件必须在 Data Link Layer Link Active 位读为 1b 之后等待 100 ms,才能启动对热添加设备的配置访问 (见 § 第 6.6 节 )。在 Data Link Layer Link Active 位读为 1b 之后,软件必须留出 1 秒时间,然后才被允许判定一个热插拔设备 (该设备对有效配置请求 (Configuration Request) 未能返回成功完成 (Successful Completion)) 是损坏的设备 (见 § 第 6.6 节 )。
 
-数据链路层状态变化事件必须在启动热插拔的事件发生后 1 秒内发生。如果支持 Power Controller,则超时时间从软件发起向 Slot Control 寄存器的写入以打开电源时开始计算。如果支持 Power Disable 机制，则超时时间从该机制被取消置位 (电源恢复) 时开始计算。如果两种机制都不支持，则超时时间从存在检测 (Presence Detect) 插槽事件开始计算。如果数据链路层状态变化事件未在 1 秒内发生，允许软件对热添加操作进行超时处理。软件在超时之后采取的操作是特定于实现的 (implementation specific)。
+数据链路层状态变化事件必须在启动热插拔的事件发生后 1 秒内发生。如果支持 Power Controller,则超时时间从软件发起向 Slot Control 寄存器的写入以打开电源时开始计算。如果支持 Power Disable 机制,则超时时间从该机制被取消置位 (电源恢复) 时开始计算。如果两种机制都不支持,则超时时间从存在检测 (Presence Detect) 插槽事件开始计算。如果数据链路层状态变化事件未在 1 秒内发生,允许软件对热添加操作进行超时处理。软件在超时之后采取的操作是特定于实现的 (implementation specific)。
 
 §
 
@@ -8812,35 +8806,35 @@ Note that the Hot-Plug Controller generates the wakeup on behalf of the hot-plug
 <!-- 📄 Page 781 -->
 ---
 
-支持热插拔 (Hot-Plug) 的下游端口 (Downstream Port) 必须支持在热插拔事件上产生中断。如第 6.7.3.1 节和第 6.7.3.2 节所述，每个热插拔事件都有一个用于中断生成的使能 (enable) 位，以及一个状态 (status) 位，用于指示事件已发生但尚未被软件处理。Slot Control 寄存器中还有一个 Hot-Plug Interrupt Enable 位，作为所有热插拔事件的主使能/禁止位。
+支持热插拔 (Hot-Plug) 的下游端口 (Downstream Port) 必须支持在热插拔事件上产生中断。如第 6.7.3.1 节和第 6.7.3.2 节所述,每个热插拔事件都有一个用于中断生成的使能 (enable) 位,以及一个状态 (status) 位,用于指示事件已发生但尚未被软件处理。Slot Control 寄存器中还有一个 Hot-Plug Interrupt Enable 位,作为所有热插拔事件的主使能/禁止位。
 
-如果端口使用 INTx 消息使能了电平触发 (level-triggered) 中断信号，则在以下条件满足期间，虚拟 INTx 信号线必须被置位 (asserted):
+如果端口使用 INTx 消息使能了电平触发 (level-triggered) 中断信号,则在以下条件满足期间,虚拟 INTx 信号线必须被置位 (asserted):
 
 - Command 寄存器中的 Interrupt Disable 位设置为 0b。
 - Slot Control 寄存器中的 Hot-Plug Interrupt Enable 位设置为 1b。
 - Slot Status 寄存器中至少一个热插拔事件状态位及其在 Slot Control 寄存器中的关联使能位都被设置为 1b。
 
-请注意，同一功能 (Function) 内的所有其他中断源在请求服务时也会置位同一虚拟 INTx 信号线。
+请注意,同一功能 (Function) 内的所有其他中断源在请求服务时也会置位同一虚拟 INTx 信号线。
 
-如果端口使用 MSI 或 MSI-X 使能了边沿触发 (edge-triggered) 中断信号，则每当以下条件的逻辑 AND 从 FALSE 跃迁为 TRUE 时，必须发送一条中断消息:
+如果端口使用 MSI 或 MSI-X 使能了边沿触发 (edge-triggered) 中断信号,则每当以下条件的逻辑 AND 从 FALSE 跃迁为 TRUE 时,必须发送一条中断消息:
 
 - 关联的向量未被屏蔽 (unmasked) (如果 MSI 不支持 PVM 则不适用)。
 - Slot Control 寄存器中的 Hot-Plug Interrupt Enable 位设置为 1b。
 - Slot Status 寄存器中至少一个热插拔事件状态位及其在 Slot Control 寄存器中的关联使能位都被设置为 1b。
 
-请注意,PME 和 Hot-Plug Event 中断 (当两者均实现时) 始终共享同一个 MSI 或 MSI-X 向量，由 PCI Express Capabilities 寄存器中的 Interrupt Message Number 字段指示。
+请注意,PME 和 Hot-Plug Event 中断 (当两者均实现时) 始终共享同一个 MSI 或 MSI-X 向量,由 PCI Express Capabilities 寄存器中的 Interrupt Message Number 字段指示。
 
-当存在中断生成被禁止期间发生的热插拔事件、且中断生成随后被使能时，端口可选择性地发送一条 MSI。
+当存在中断生成被禁止期间发生的热插拔事件、且中断生成随后被使能时,端口可选择性地发送一条 MSI。
 
-如果相关外形规格 (form factor) 规范要求唤醒 (wake) 生成，则支持热插拔的下游端口必须支持在系统处于睡眠状态或端口处于设备状态 D1、D2 或 D3Hot 时，在热插拔事件上生成唤醒事件 (使用 PME 机制)。
+如果相关外形规格 (form factor) 规范要求唤醒 (wake) 生成,则支持热插拔的下游端口必须支持在系统处于睡眠状态或端口处于设备状态 D1、D2 或 D3Hot 时,在热插拔事件上生成唤醒事件 (使用 PME 机制)。
 
-如 § 第 6.7.3.1 节 所述，软件通过使能事件的软件通知来使能热插拔事件生成唤醒事件。请注意，为了使软件能够在保持唤醒生成使能的同时禁止中断生成，必须清除 Hot-Plug Interrupt Enable 位。对于支持唤醒生成的外形规格，当以下三个条件同时满足时，必须生成唤醒事件:
+如 § 第 6.7.3.1 节 所述,软件通过使能事件的软件通知来使能热插拔事件生成唤醒事件。请注意,为了使软件能够在保持唤醒生成使能的同时禁止中断生成,必须清除 Hot-Plug Interrupt Enable 位。对于支持唤醒生成的外形规格,当以下三个条件同时满足时,必须生成唤醒事件:
 
 - 已使能事件的状态寄存器从 Clear 跃迁为 Set
 - 端口处于设备状态 D1、D2 或 D3Hot,且
 - 端口电源管理控制/状态 (Power Management Control/Status) 寄存器中的 PME_En 位被置 1
 
-请注意，热插拔控制器 (Hot-Plug Controller) 代表热插拔设备生成唤醒，并且该设备无需具备辅助电源 (或主电源)。
+请注意,热插拔控制器 (Hot-Plug Controller) 代表热插拔设备生成唤醒,并且该设备无需具备辅助电源 (或主电源)。
 
 §
 
@@ -8898,19 +8892,19 @@ One key use case for DPF is guaranteeing that asynchronous system software activ
 </td>
 <td style="background-color:#e8e8e8">
 
-系统固件中介 (System Firmware Intermediary, SFI) Capability 是下游端口 (Downstream Port) 的一项可选规范性特性。SFI 的部分功能专注于可热插拔的插槽(由 Slot Capabilities 寄存器中的 Hot-Plug Capable 位置 1 表示)，而其他一些 SFI 功能在该场景之外也有用处。如果下游端口支持 SFI Capability 结构，则以下位必须置 1:
+系统固件中介 (System Firmware Intermediary, SFI) Capability 是下游端口 (Downstream Port) 的一项可选规范性特性。SFI 的部分功能专注于可热插拔的插槽(由 Slot Capabilities 寄存器中的 Hot-Plug Capable 位置 1 表示),而其他一些 SFI 功能在该场景之外也有用处。如果下游端口支持 SFI Capability 结构,则以下位必须置 1:
 
 - Link Capabilities 寄存器中的 Data Link Layer Link Active Reporting Capable 位
 - Link Capabilities 2 寄存器中的 DRS Supported 位
 - Device Capabilities 寄存器中的 ERR_COR Subclass Capable 位
 
-SFI Capability 不支持产生 INTx 或 MSI/MSI-X 中断，因为该 Capability 供系统固件使用。
+SFI Capability 不支持产生 INTx 或 MSI/MSI-X 中断,因为该 Capability 供系统固件使用。
 
-具有 SFI 的下游端口必须支持 ERR_COR 信号机制，无论其是否支持高级错误报告 (Advanced Error Reporting, AER)。SFI ERR_COR 事件信令由 SFI Control 寄存器中的 SFI OOB PD Changed Enable、SFI DLL State Changed Enable 和 SFI DRS Signaling Enable 位独立使能。这些事件由 SFI Status 寄存器中的 SFI OOB PD Changed、SFI DLL State Changed 和 SFI DRS Received 位指示。
+具有 SFI 的下游端口必须支持 ERR_COR 信号机制,无论其是否支持高级错误报告 (Advanced Error Reporting, AER)。SFI ERR_COR 事件信令由 SFI Control 寄存器中的 SFI OOB PD Changed Enable、SFI DLL State Changed Enable 和 SFI DRS Signaling Enable 位独立使能。这些事件由 SFI Status 寄存器中的 SFI OOB PD Changed、SFI DLL State Changed 和 SFI DRS Received 位指示。
 
-如果 Device Control 寄存器中的 Correctable Error Reporting Enable 位置 1,则每当某个已使能条件被满足时，端口必须发送一条 ERR_COR Message。SFI ERR_COR 事件信令不得置位 Device Status 寄存器中的 Correctable Error Detected 位，因为此事件不作为错误处理。
+如果 Device Control 寄存器中的 Correctable Error Reporting Enable 位置 1,则每当某个已使能条件被满足时,端口必须发送一条 ERR_COR Message。SFI ERR_COR 事件信令不得置位 Device Status 寄存器中的 Correctable Error Detected 位,因为此事件不作为错误处理。
 
-下游端口过滤 (Downstream Port Filtering, DPF) 是一种机制，允许下游端口像链路处于 DL_Down 状态那样处理目标为其下游组件 (Component) 的特定 Request TLP。参见 § Section 2.9.1 。
+下游端口过滤 (Downstream Port Filtering, DPF) 是一种机制,允许下游端口像链路处于 DL_Down 状态那样处理目标为其下游组件 (Component) 的特定 Request TLP。参见 § Section 2.9.1 。
 
 DPF 提供两种过滤目标为下游端口下方组件的 Request TLP 的模式。第一种模式过滤所有此类 Request TLP;第二种模式仅过滤 Configuration Request TLP。其他 TLP 不得被 DPF 过滤或阻塞。
 
@@ -8947,7 +8941,7 @@ Rules:
 </td>
 <td style="background-color:#e8e8e8">
 
-SFI Capability 能够屏蔽已接收的设备就绪状态 (Device Readiness Status, DRS) Message 的报告，并可模拟其已被接收。当使用 SFI 的下游端口过滤 (DPF) 机制阻止操作系统 (OS) 看到下游端口下方某个设备或子层级 (sub-hierarchy) 时，此功能非常有用。
+SFI Capability 能够屏蔽已接收的设备就绪状态 (Device Readiness Status, DRS) Message 的报告,并可模拟其已被接收。当使用 SFI 的下游端口过滤 (DPF) 机制阻止操作系统 (OS) 看到下游端口下方某个设备或子层级 (sub-hierarchy) 时,此功能非常有用。
 
 规则:
 - 当 SFI DRS Mask 位置 1 时,Link Status 2 寄存器中 DRS Message Received 位的值必须为 0b。
@@ -8990,7 +8984,7 @@ DPC implements ERR_COR signaling for DL_Active, whereas SFI implements ERR_COR s
 **实现说明 (IMPLEMENTATION NOTE):**
 **DPC DL_ACTIVE 与 SFI DLL STATE CHANGED 的 ERR_COR 信令**
 
-DPC 为 DL_Active 实现 ERR_COR 信令，而 SFI 为 SFI DLL State Changed 实现 ERR_COR 信令，二者是相关但不完全相同的条件。DL_Active 条件发生在 Link Status 寄存器中 Data Link Layer Link Active 位从 0b 变为 1b 时，该位可被 SFI Control 寄存器中的 SFI DLL State Mask 位屏蔽。SFI DLL State Changed 条件发生在 SFI Status 寄存器中 SFI DLL State 位无论由 0 变 1 还是由 1 变 0 时，且此条件始终基于实际的数据链路层 (Data Link Layer) 状态。
+DPC 为 DL_Active 实现 ERR_COR 信令,而 SFI 为 SFI DLL State Changed 实现 ERR_COR 信令,二者是相关但不完全相同的条件。DL_Active 条件发生在 Link Status 寄存器中 Data Link Layer Link Active 位从 0b 变为 1b 时,该位可被 SFI Control 寄存器中的 SFI DLL State Mask 位屏蔽。SFI DLL State Changed 条件发生在 SFI Status 寄存器中 SFI DLL State 位无论由 0 变 1 还是由 1 变 0 时,且此条件始终基于实际的数据链路层 (Data Link Layer) 状态。
 
 §
 
@@ -9039,21 +9033,21 @@ The following rules apply:
 </td>
 <td style="background-color:#e8e8e8">
 
-DPF 的另一个关键用例是支持 firmware first 功能——当系统固件被通知有异步热添加 (async hot add) 时，可在新设备对操作系统可见之前对其配置。对于该用例,SFI CAM 机制使下游端口自身能够生成目标为下游组件的 Configuration Request TLP,且这些 TLP 不会被 DPF 机制过滤或阻塞。参见 § Section 6.7.4.3 、§ Section 7.9.20.5 和 § Section 7.9.20.6 。
+DPF 的另一个关键用例是支持 firmware first 功能——当系统固件被通知有异步热添加 (async hot add) 时,可在新设备对操作系统可见之前对其进行配置。对于该用例,SFI CAM 机制使下游端口自身能够生成目标为下游组件的 Configuration Request TLP,且这些 TLP 不会被 DPF 机制过滤或阻塞。参见 § Section 6.7.4.3 、§ Section 7.9.20.5 和 § Section 7.9.20.6 。
 
-SFI 配置访问方法 (Configuration Access Method, CAM) 提供了一种手段，使得支持 SFI 的系统固件能够在 DPF 启用时，让下游端口代理 (透传) 目标为其下方组件的 Configuration Request。SFI CAM 始终处于启用状态。
+SFI 配置访问方法 (Configuration Access Method, CAM) 提供了一种手段,使得支持 SFI 的系统固件能够在 DPF 启用时,让下游端口代理 (透传) 目标为其下方组件的 Configuration Request。SFI CAM 始终处于启用状态。
 
-要使用 SFI CAM,软件首先写入 SFI CAM Address 寄存器，指定目标配置地址。然后软件读或写 SFI CAM Data 寄存器，即可产生代理 Configuration Request 并将其发送到下游组件。
+要使用 SFI CAM,软件首先写入 SFI CAM Address 寄存器,指定目标配置地址。然后软件读或写 SFI CAM Data 寄存器,即可产生代理 Configuration Request 并将其发送到下游组件。
 
 适用以下规则:
-- 代理 Configuration Request 所用的所有 TLP 字段与原本目标为 SFI CAM Data 寄存器的 Configuration Request 相同，以下情况例外:
+- 代理 Configuration Request 所用的所有 TLP 字段与原本目标为 SFI CAM Data 寄存器的 Configuration Request 相同,以下情况例外:
   - 目标 Bus Number、Device Number 和 Function Number 来自 SFI CAM Address 寄存器。
   - Extended Register Number 和 Register Number 来自 SFI CAM Address 寄存器。
   - LCRC 重新生成。
   - 如果存在,ECRC 重新生成。
 - SFI CAM 不得对该 Request 应用 Completion Timeout 机制。
-- 系统固件必须保证从其写入 SFI CAM Address 寄存器到其后续读/写 SFI CAM Data 寄存器完成期间，没有其他线程修改 SFI CAM Address 寄存器;否则结果未定义。
-- 若代理 Configuration Request 关联到检测到的错误，则该错误是实现 SFI CAM 的下游端口关联的已报告错误(参见 § Section 6.2 )。
+- 系统固件必须保证从其写入 SFI CAM Address 寄存器到其后续读/写 SFI CAM Data 寄存器完成期间,没有其他线程修改 SFI CAM Address 寄存器;否则结果未定义。
+- 若代理 Configuration Request 关联到检测到的错误,则该错误是实现 SFI CAM 的下游端口关联的已报告错误(参见 § Section 6.2 )。
 - 上行的 Completion 必须未经修改地通过下游端口转发。
 
 </td>
@@ -9095,16 +9089,16 @@ HPS suppression is useful when a Downstream Port / slot combination supports bot
 </td>
 <td style="background-color:#e8e8e8">
 
-SFI Capability 能够屏蔽已接收的设备就绪状态 (Device Readiness Status, DRS) Message 的报告，并可模拟其已被接收。当使用 SFI 的下游端口过滤 (DPF) 机制阻止操作系统看到下游端口下方某个设备或子层级时，此功能非常有用。
+SFI Capability 能够屏蔽已接收的设备就绪状态 (Device Readiness Status, DRS) Message 的报告,并可模拟其已被接收。当使用 SFI 的下游端口过滤 (DPF) 机制阻止操作系统看到下游端口下方某个设备或子层级时,此功能非常有用。
 
 规则:
 - 当 SFI DRS Mask 位置 1 时,Link Status 2 寄存器中 DRS Message Received 位的值必须为 0b。
 - SFI DRS Received 位必须始终反映 DRS Message Received 条件的实际状态。
-- 当 SFI DRS Mask 位清零且向 SFI DRS Trigger 位写入 1b 时，下游端口必须表现得像已收到一条 DRS Message。
+- 当 SFI DRS Mask 位清零且向 SFI DRS Trigger 位写入 1b 时,下游端口必须表现得像已收到一条 DRS Message。
 
-如果某个插槽支持热插拔意外 (Hot-Plug Surprise, HPS) 功能(由 Slot Capabilities 寄存器中 Hot-Plug Surprise 位置 1 表示)，则 SFI Control 寄存器中的 SFI HPS Suppress 位可用于强制将 Hot-Plug Surprise 位清零，并禁用关联的 Hot-Plug Surprise 功能。
+如果某个插槽支持热插拔意外 (Hot-Plug Surprise, HPS) 功能(由 Slot Capabilities 寄存器中 Hot-Plug Surprise 位置 1 表示),则 SFI Control 寄存器中的 SFI HPS Suppress 位可用于强制将 Hot-Plug Surprise 位清零,并禁用关联的 Hot-Plug Surprise 功能。
 
-当下游端口/插槽组合同时支持 HPS 和下游端口遏制 (Downstream Port Containment, DPC) 时,HPS 抑制很有用。不推荐 DPC 与 HPS 并发使用，因此如果插槽的 HPS 能力已启用，则不应启用 DPC。如果软件希望使用 DPC,应先置位 SFI HPS Suppress 位以禁用 HPS 功能，从而使 DPC 正常工作。
+当下游端口/插槽组合同时支持 HPS 和下游端口遏制 (Downstream Port Containment, DPC) 时,HPS 抑制很有用。不推荐 DPC 与 HPS 并发使用,因此如果插槽的 HPS 能力已启用,则不应启用 DPC。如果软件希望使用 DPC,应先置位 SFI HPS Suppress 位以禁用 HPS 功能,从而使 DPC 正常工作。
 
 </td>
 </tr>
@@ -9150,11 +9144,11 @@ When Configuration RRS Software Visibility is enabled, the SFI CAM still works c
 **实现说明 (IMPLEMENTATION NOTE):**
 **SFI CAM 地址与数据寄存器的串行使用**
 
-如上所述，系统固件必须保证从其写入 SFI CAM Address 寄存器到其后续读/写 SFI CAM Data 寄存器完成期间，没有其他线程修改 SFI CAM Address 寄存器。例如，可以使用信号量或其他同步机制来保证此串行性。
+如上所述,系统固件必须保证从其写入 SFI CAM Address 寄存器到其后续读/写 SFI CAM Data 寄存器完成期间,没有其他线程修改 SFI CAM Address 寄存器。例如,可以使用信号量或其他同步机制来保证此串行性。
 
-在处理器对配置空间 (Configuration Space) 的 store 指令实际上是 posted 写的平台上，软件仍必须保证所生成的 Configuration Write 在其他软件线程修改 SFI CAM Data 寄存器之前完成。在此类平台上，如何确定 Configuration Write 已完成的机制因平台而异。
+在处理器对配置空间 (Configuration Space) 的 store 指令实际上是 posted 写的平台上,软件仍必须保证所生成的 Configuration Write 在其他软件线程修改 SFI CAM Data 寄存器之前完成。在此类平台上,如何确定 Configuration Write 已完成的机制因平台而异。
 
-在保证正确串行的情况下,SFI CAM 可与导致 RRS Completion 的 Configuration Request 正确配合，即使根复合体 (Root Complex) 自动将 Configuration Request 作为新 Request 重新发出也是如此。重新发出的 Configuration Request 将再次发送到 SFI CAM Data 寄存器，关联的下游端口将再次生成目标为下游组件的 Configuration Request。只要 SFI CAM Address 寄存器在该 Configuration Request 完成之前不被其他软件修改，该序列就可以无限重复，直到返回非 RRS Completion 或发生 Completion Timeout 为止。
+在保证正确串行的情况下,SFI CAM 可与导致 RRS Completion 的 Configuration Request 正确配合,即使根复合体 (Root Complex) 自动将 Configuration Request 作为新 Request 重新发出也是如此。重新发出的 Configuration Request 将再次发送到 SFI CAM Data 寄存器,关联的下游端口将再次生成目标为下游组件的 Configuration Request。只要 SFI CAM Address 寄存器在该 Configuration Request 完成之前不被其他软件修改,该序列就可以无限重复,直到返回非 RRS Completion 或发生 Completion Timeout 为止。
 
 当 Configuration RRS Software Visibility 启用时,SFI CAM 仍可与导致 RRS Completion 的 Configuration Request 正确配合。任何具有 RRS Completion 状态的 Completion 都会流回原始 Requester,由其按照 Configuration RRS Software Visibility 语义要求的方式处理。参见 § Section 2.3.2 。
 
@@ -9215,7 +9209,7 @@ Although SFI is not intended to be used by operating system software, it is reco
 **实现说明 (IMPLEMENTATION NOTE):**
 **SFI CAM 中已分配 Bus Number 的使用**
 
-当下游端口的 DPF 已启用时,SFI-aware 系统固件可使用 SFI CAM 配置和访问该端口下方的子层级，而其他软件无法访问。虽然端口下方的 Bus Number 配置通常对其他软件不可见，但应当将端口下方可用的 Bus Number 限制为已分配给该端口的 Bus Number,因为经该端口上行的 TLP 可能包含带有这些已配置 Bus Number 的 ID。如果这些 TLP 关联的错误被检测并记录,Bus Number 就会对其他软件可见，若与系统中其他位置使用的 Bus Number 重叠，会引起混淆。
+当下游端口的 DPF 已启用时,SFI-aware 系统固件可使用 SFI CAM 配置和访问该端口下方的子层级,而其他软件无法访问。虽然端口下方的 Bus Number 配置通常对其他软件不可见,但应当将端口下方可用的 Bus Number 限制为已分配给该端口的 Bus Number,因为经该端口上行的 TLP 可能包含带有这些已配置 Bus Number 的 ID。如果这些 TLP 关联的错误被检测并记录,Bus Number 就会对其他软件可见,若与系统中其他位置使用的 Bus Number 重叠,会引起混淆。
 
 §
 
@@ -9224,15 +9218,15 @@ Although SFI is not intended to be used by operating system software, it is reco
 
 某些设备在热添加 (hot-add) 操作后变为 Configuration-Ready 所需的时间可能超过允许值。参见 § Section 6.6.1 。
 
-如果系统固件已知此类设备，可以使用 SFI DPF 机制阻止操作系统看到新添加的设备，等待必要的时间使设备变为 Configuration-Ready,然后再将该设备呈现给操作系统。
+如果系统固件已知此类设备,可以使用 SFI DPF 机制阻止操作系统看到新添加的设备,等待必要的时间使设备变为 Configuration-Ready,然后再将该设备呈现给操作系统。
 
-为避免操作系统不必要地等待新呈现设备变为 Configuration-Ready 的额外时间，系统固件可以使用 SFI DRS Trigger 位让下游端口模拟 DRS Message 的接收。支持 DRS 的操作系统随后可以立即发现并配置该新呈现的设备。
+为避免操作系统不必要地等待新呈现设备变为 Configuration-Ready 的额外时间,系统固件可以使用 SFI DRS Trigger 位让下游端口模拟 DRS Message 的接收。支持 DRS 的操作系统随后可以立即发现并配置该新呈现的设备。
 
-新呈现的设备本身不一定需要具备 DRS 能力。由于上游端口 (Upstream Port) 即使在其 DRS Supported 位清零时也被明确允许发送 DRS Message,因此其上方的下游端口即使在设备无法发送 DRS Message 的情况下，也可以合法地模拟收到了来自该设备的 DRS Message。
+新呈现的设备本身不一定需要具备 DRS 能力。由于上游端口 (Upstream Port) 即使在其 DRS Supported 位清零时也被明确允许发送 DRS Message,因此其上方的下游端口即使在设备无法发送 DRS Message 的情况下,也可以合法地模拟收到了来自该设备的 DRS Message。
 
-还应注意，如果系统固件已知某设备提前变为 Configuration-Ready,系统固件可使用 SFI DRS Trigger 机制向操作系统呈现这一状态。
+还应注意,如果系统固件已知某设备提前变为 Configuration-Ready,系统固件可使用 SFI DRS Trigger 机制向操作系统呈现这一状态。
 
-虽然 SFI 并不供操作系统软件使用，但建议支持 SFI 的平台所使用的操作系统实现对 DRS 的支持，以使整个系统能够受益于该优化的设备就绪时序。
+虽然 SFI 并不供操作系统软件使用,但建议支持 SFI 的平台所使用的操作系统实现对 DRS 的支持,以使整个系统能够受益于该优化的设备就绪时序。
 
 §
 
@@ -9266,7 +9260,7 @@ Some systems that include hot-plug capable Root Ports and Switches that are rele
 </td>
 <td style="background-color:#e8e8e8">
 
-某些系统包含具备热插拔能力的根端口 (Root Port) 和交换机 (Switch)，且这些系统在支持原生热插拔的 ACPI 兼容操作系统可用之前就已发布，这些系统可使用 ACPI 固件来传播热插拔事件。如果使用具有原生热插拔支持的操作系统，则必须禁用固件对热插拔寄存器的控制。提供 ACPI 固件以传播热插拔事件的平台还必须提供一种将控制权移交给操作系统的机制。该方法的详细描述见 PCI Firmware Specification。
+某些系统包含具备热插拔能力的根端口 (Root Port) 和交换机 (Switch),且这些系统在支持原生热插拔的 ACPI 兼容操作系统可用之前就已发布,这些系统可使用 ACPI 固件来传播热插拔事件。如果使用具有原生热插拔支持的操作系统,则必须禁用固件对热插拔寄存器的控制。提供 ACPI 固件以传播热插拔事件的平台还必须提供一种将控制权移交给操作系统的机制。该方法的详细描述见 PCI Firmware Specification。
 
 </td>
 </tr>
@@ -9315,22 +9309,22 @@ Assuming that system firmware owns the SFI Capability structure, it is recommend
 </td>
 <td style="background-color:#e8e8e8">
 
-异步移除 (Async removal) 指的是由于错误遏制 (error containment) 而移除适配器或禁用下游端口链路，且事先未通知操作系统。这与有序移除 (orderly removal) 相对——有序移除中，移除操作通过明确的用户操作和系统管理设施序列与操作系统锁步执行。例如，用户按下 Attention Button 向操作系统请求移除适配器的许可，但在操作系统已静默该适配器的活动并授予移除许可之前，用户并不会实际从插槽中拔出适配器。
+异步移除 (Async removal) 指的是由于错误遏制 (error containment) 而移除适配器或禁用下游端口链路,且事先未通知操作系统。这与有序移除 (orderly removal) 相对——有序移除中,移除操作通过明确的用户操作和系统管理设施序列与操作系统锁步执行。例如,用户按下 Attention Button 向操作系统请求移除适配器的许可,但在操作系统已静默该适配器的活动并授予移除许可之前,用户并不会实际从插槽中拔出适配器。
 
-由于异步移除发生在 PCI Express 层级中其余部分或操作系统意识到该事件之前，因此除标准 PCI 热插拔所需考虑的事项之外，还需要额外的特别考虑。本节概述可能作为异步移除的副作用而发生的 PCI Express 事件，以及处理异步移除的机制。
+由于异步移除发生在 PCI Express 层级中其余部分或操作系统意识到该事件之前,因此除标准 PCI 热插拔所需考虑的事项之外,还需要额外的特别考虑。本节概述可能作为异步移除的副作用而发生的 PCI Express 事件,以及处理异步移除的机制。
 
-由于异步移除对与插槽关联的下游端口的物理层 (Physical Layer) 和数据链路层 (Data Link Layer) 而言都可能是意外的，故可纠正错误 (Correctable Error) 可能作为事件的副作用被报告(即 Receiver Error、Bad TLP 和 Bad DLLP)。如果这些错误被报告，软件应将其作为该事件预期的一部分加以处理。
+由于异步移除对与插槽关联的下游端口的物理层 (Physical Layer) 和数据链路层 (Data Link Layer) 而言都可能是意外的,故可纠正错误 (Correctable Error) 可能作为事件的副作用被报告(即 Receiver Error、Bad TLP 和 Bad DLLP)。如果这些错误被报告,软件应将其作为该事件预期的一部分加以处理。
 
 Requester 可能会因已被接受但永远不会由被移除的 Completer 完成的 Request 而经历 Completion Timeout。此类情形下产生的任何 Completion Timeout 错误也应作为该事件预期的一部分加以处理。
 
-异步移除可能导致下游端口由 DL_Active 转换到 DL_Down。此转换可能产生 Surprise Down 错误。此外,PCI Express 层级域中的 Requester 可能不会立即意识到此转换，会继续向已被移除的 Completer 发出 Request,这些 Request 必须由与插槽关联的下游端口处理。
+异步移除可能导致下游端口由 DL_Active 转换到 DL_Down。此转换可能产生 Surprise Down 错误。此外,PCI Express 层级域中的 Requester 可能不会立即意识到此转换,会继续向已被移除的 Completer 发出 Request,这些 Request 必须由与插槽关联的下游端口处理。
 
 下游端口遏制 (DPC) 或热插拔意外 (HPS) 机制都可用于在整体异步热插拔架构中支持异步移除。参见 § Appendix I. 中的相关参考模型。
 
 **实现说明 (IMPLEMENTATION NOTE):**
 **热插拔意外功能的软件协商**
 
-假设系统固件拥有 SFI Capability 结构，建议为向后兼容较老的操作系统，在支持异步移除的插槽上默认启用热插拔意外 (Hot-Plug Surprise) 功能。然后，如果该插槽同时支持 DPC 且操作系统希望改用 DPC,操作系统将请求系统固件抑制 HPS,由系统固件决定置 1 或清零 SFI HPS Suppress 位。
+假设系统固件拥有 SFI Capability 结构,建议为向后兼容较老的操作系统,在支持异步移除的插槽上默认启用热插拔意外 (Hot-Plug Surprise) 功能。然后,如果该插槽同时支持 DPC 且操作系统希望改用 DPC,操作系统将请求系统固件抑制 HPS,由系统固件决定置 1 或清零 SFI HPS Suppress 位。
 
 §
 
@@ -9370,11 +9364,11 @@ When enabled, Extended Power Budgeting provides power consumption information on
 </td>
 <td style="background-color:#e8e8e8">
 
-随着适配器增加热插拔能力，系统需要能够为系统中新增的任意设备正确分配功率。该能力是与电源管理相分离且不同的功能，需要基础级别的支持以确保系统正常运行。功率预算 (power budgeting) 概念为设备与系统交互以达成这些目标奠定了基础。系统可通过多种方式实现实际的功率预算能力，因此这些内容不在本规范范围内。
+随着适配器增加热插拔能力,系统需要能够为系统中新增的任意设备正确分配功率。该能力是与电源管理相分离且不同的功能,需要基础级别的支持以确保系统正常运行。功率预算 (power budgeting) 概念为设备与系统交互以达成这些目标奠定了基础。系统可通过多种方式实现实际的功率预算能力,因此这些内容不在本规范范围内。
 
-对外形规格 (form factor) 不要求热插拔支持或集成在系统板上的设备而言，实现 Power Budgeting Extended Capability 是可选的。外形规格规范可能要求支持功率预算。设备和/或适配器在系统完成配置和使能之前，必须将其功率消耗保持在相应电气机械规范所规定的配置功率限值 (configuration power limit) 之内。系统应保证在使能适配器之前已正确完成功率预算。
+对外形规格 (form factor) 不要求热插拔支持或集成在系统板上的设备而言,实现 Power Budgeting Extended Capability 是可选的。外形规格规范可能要求支持功率预算。设备和/或适配器在系统完成配置和使能之前,必须将其功率消耗保持在相应电气机械规范所规定的配置功率限值 (configuration power limit) 之内。系统应保证在使能适配器之前已正确完成功率预算。
 
-启用后，扩展功率预算 (Extended Power Budgeting) 提供按连接器 (connector) 的功耗信息。这使系统能够更精确地管理功耗。
+启用后,扩展功率预算 (Extended Power Budgeting) 提供按连接器 (connector) 的功耗信息。这使系统能够更精确地管理功耗。
 
 § Table 6-10 展示了功率预算的部署机制。
 
@@ -9446,11 +9440,11 @@ The power budget manager is responsible for allocating all PCI Express devices i
 <td style="background-color:#e8e8e8">
 
 **实现说明 (IMPLEMENTATION NOTE):**
-**针对异步热插拔，热插拔意外机制已弃用**
+**针对异步热插拔,热插拔意外机制已弃用**
 
-由 Slot Capabilities 寄存器中 Hot-Plug Surprise 位置 1 所表示的热插拔意外 (HPS) 机制，已弃用于异步热插拔。DPC 是支持异步热插拔的推荐机制。有关同时支持这两种机制的插槽的指导，参见 § Section 6.7.4.4 。
+由 Slot Capabilities 寄存器中 Hot-Plug Surprise 位置 1 所表示的热插拔意外 (HPS) 机制,已弃用于异步热插拔。DPC 是支持异步热插拔的推荐机制。有关同时支持这两种机制的插槽的指导,参见 § Section 6.7.4.4 。
 
-在异步移除场景下使用 HPS 具有严重的缺点。除那些本身就会导致链路 (Link) 断开之外的不可纠正错误 (Uncorrectable Error)，需被配置为使系统崩溃、由软件异步处理或被忽略。这些错误包括与 Posted Memory Write、带 poisoned 数据的 TLP 以及 Completion Timeout 相关的不可纠正错误。被忽略或由软件异步处理的不可纠正错误可能使驱动程序无法确定哪些高层操作成功完成，哪些没有成功完成。
+在异步移除场景下使用 HPS 具有严重的缺点。除那些本身就会导致链路 (Link) 断开之外的不可纠正错误 (Uncorrectable Error),需被配置为使系统崩溃、由软件异步处理或被忽略。这些错误包括与 Posted Memory Write、带 poisoned 数据的 TLP 以及 Completion Timeout 相关的不可纠正错误。被忽略或由软件异步处理的不可纠正错误可能使驱动程序无法确定哪些高层操作成功完成,哪些没有成功完成。
 
 DPC 提供了一种支持异步移除的健壮机制。TLP 流在触发 DPC 的不可纠正错误发生时干净地停止。支持 Containment Error Recovery (CER) 的操作系统/驱动栈可以从许多瞬态 PCIe 不可纠正错误中完全且透明地恢复。DPC 可同时支持异步移除和 CER。
 
@@ -9463,9 +9457,9 @@ DPC 提供了一种支持异步移除的健壮机制。TLP 流在触发 DPC 的�
 
 系统固件负责为系统板上所有不具备功率预算能力的设备分配功率。固件可包含也可不包含连接到标准电源轨的设备。
 
-当固件为实现了 Power Budgeting Extended Capability 的设备分配功率时，必须在 Power Budget Capability 寄存器中将 System Allocated 位置 1b,以指示该设备已被正确分配。
+当固件为实现了 Power Budgeting Extended Capability 的设备分配功率时,必须在 Power Budget Capability 寄存器中将 System Allocated 位置 1b,以指示该设备已被正确分配。
 
-功率预算管理器 (power budget manager) 负责为所有 PCI Express 设备分配功率，包括系统板上那些具有 Power Budgeting Extended Capability 但 System Allocated 位清零的设备。功率预算管理器负责确定热插拔设备是否可在系统中进行预算分配并被使能。
+功率预算管理器 (power budget manager) 负责为所有 PCI Express 设备分配功率,包括系统板上那些具有 Power Budgeting Extended Capability 但 System Allocated 位清零的设备。功率预算管理器负责确定热插拔设备是否可在系统中进行预算分配并被使能。
 
 </td>
 </tr>
@@ -9518,26 +9512,26 @@ An add-in card must not consume more power than it is granted by the system. The
 </td>
 <td style="background-color:#e8e8e8">
 
-可能存在可提供相同功能的替代方法，功率预算流程不必按此方式实现。
+可能存在可提供相同功能的替代方法,功率预算流程不必按此方式实现。
 
-当 Power Budgeting Extended Capability 出现在一个设备的多个 Function 中(或单功能设备的唯一 Function 中)时，按 Function 报告功率(参见 § Section 7.8.1 )。当 Power Budgeting 出现在多功能设备的恰好一个 Function 中时，按设备报告功率。当 Power Budgeting 出现在多个但不是全部 Function 中时，按 Function 报告功率，缺失的 Function 被视为消耗可忽略的功率。
+当 Power Budgeting Extended Capability 出现在一个设备的多个 Function 中(或单功能设备的唯一 Function 中)时,按 Function 报告功率(参见 § Section 7.8.1 )。当 Power Budgeting 出现在多功能设备的恰好一个 Function 中时,按设备报告功率。当 Power Budgeting 出现在多个但不是全部 Function 中时,按 Function 报告功率,缺失的 Function 被视为消耗可忽略的功率。
 
-当 Power Budgeting 出现在恰好一个 Function 中时，这表示按设备报告功率。当 Power Budgeting 出现在多设备 add-in card 的恰好一个设备中时，按 add-in card 报告功率。适用以下规则:
-- 当设备中的所有 Function 处于相同的 PM 状态时，适用于该 PM 状态的功率预算。
-  - 如果未对给定 PM 状态报告功率预算，则适用于所报告的下一个更高 PM 状态。
-- 当 Function 处于不同的 PM 状态时，功率预算为最高和最低功率 PM 状态所报告功率预算之间的实现特定值(例如，如果没有任何 Function 处于 D0,一个 Function 处于 D1,另一个 Function 处于 D3,则功率预算介于为 D1 和 D3 所报告的值之间，含端点)。
-  - 如果未对最高 PM 状态报告功率预算，则适用于所报告的下一个更高 PM 状态。
-  - 如果未对最低 PM 状态报告功率预算，则适用于所报告的下一个更低 PM 状态。
+当 Power Budgeting 出现在恰好一个 Function 中时,这表示按设备报告功率。当 Power Budgeting 出现在多设备 add-in card 的恰好一个设备中时,按 add-in card 报告功率。适用以下规则:
+- 当设备中的所有 Function 处于相同的 PM 状态时,适用于该 PM 状态的功率预算。
+  - 如果未对给定 PM 状态报告功率预算,则适用于所报告的下一个更高 PM 状态。
+- 当 Function 处于不同的 PM 状态时,功率预算为最高和最低功率 PM 状态所报告功率预算之间的实现特定值(例如,如果没有任何 Function 处于 D0,一个 Function 处于 D1,另一个 Function 处于 D3,则功率预算介于为 D1 和 D3 所报告的值之间,含端点)。
+  - 如果未对最高 PM 状态报告功率预算,则适用于所报告的下一个更高 PM 状态。
+  - 如果未对最低 PM 状态报告功率预算,则适用于所报告的下一个更低 PM 状态。
 
 add-in card 不得消耗超过系统所授予的功率。定义了六种向 add-in card 授予功率的机制:
 
-1. **Initial Power(初始功率)** —— 由外形规格授予所有处于类似位置的 add-in card 的功率。此值因外形规格而异，通常基于 add-in card 尺寸和外部电源配置等因素。
+1. **Initial Power(初始功率)** —— 由外形规格授予所有处于类似位置的 add-in card 的功率。此值因外形规格而异,通常基于 add-in card 尺寸和外部电源配置等因素。
 
 2. **Set_Slot_Power_Limit power** —— 当 add-in card 收到带有大于该 add-in card Initial Power 授予值的功率值的 `Set_Slot_Power_Limit` message 时授予的功率。
 
-3. **Power Limit PM Sub State power** —— 通过 Power Limit 机制授予 add-in card 的功率(见下文)。该机制覆盖来自 Initial Power 或 `Set_Slot_Power_Limit` 机制的功率授予。与 `Set_Slot_Power_Limit` 不同，该机制允许授予低于 Initial Power 授予值的功率级别。
+3. **Power Limit PM Sub State power** —— 通过 Power Limit 机制授予 add-in card 的功率(见下文)。该机制覆盖来自 Initial Power 或 `Set_Slot_Power_Limit` 机制的功率授予。与 `Set_Slot_Power_Limit` 不同,该机制允许授予低于 Initial Power 授予值的功率级别。
 
-4. **Out of Band Power Limit PM Sub State power** —— 通过带外 (Out of Band) Power Limit 机制授予 add-in card 的功率(见下文)。该机制覆盖来自 Initial Power 或 `Set_Slot_Power_Limit` 机制的功率授予。与 `Set_Slot_Power_Limit` 不同，该机制允许授予低于 Initial Power 授予值的功率级别。
+4. **Out of Band Power Limit PM Sub State power** —— 通过带外 (Out of Band) Power Limit 机制授予 add-in card 的功率(见下文)。该机制覆盖来自 Initial Power 或 `Set_Slot_Power_Limit` 机制的功率授予。与 `Set_Slot_Power_Limit` 不同,该机制允许授予低于 Initial Power 授予值的功率级别。
 
 5. **Firmware based additional Aux Power(基于固件的额外 Aux 功率)** —— 当驱动程序使用 [Firmware] 中定义的 Request D3Cold Aux Power Limit `_DSM` 调用时授予的 Aux 功率。该机制覆盖使用上述任何机制的 Aux 功率授予。
 
@@ -9632,7 +9626,7 @@ Power Budgeting Data 寄存器（参见 § Section 7.8.1.3）包含一个 PM Sub
 
 Power Limit Enable 和 Power Limit PM Sub State 字段在设备的所有 Function 都处于 D0<sub>uninitialized</sub> 状态时通过配置写 (Configuration Write) 事务配置。如果这些字段在任何 Function 退出 D0<sub>uninitialized</sub> 后发生更改，则行为是未定义的。
 
-Out of Band Power Limit Enable 和 Out of Band Power Limit PM Sub State 值使用实现特定的机制配置。用于带外 (Out-of-Band) 配置的机制超出了本规范的范围。
+Out of Band Power Limit Enable 和 Out of Band Power Limit PM Sub State 值使用实现特定的机制进行配置。用于带外 (Out-of-Band) 配置的机制超出了本规范的范围。
 
 </td>
 </tr>
@@ -9930,7 +9924,6 @@ A Root Complex may present one of the following topologies to configuration soft
 ---
 
 > **Figure 6-11.** Root Complex Represented as a Single Component | 根复合体表示为单一组件
-> **图 6-11.** 根复合体表示为单一组件
 > <img src="figures/chapter_06/fig_0794_1_tight.png" width="700">
 
 <table>
@@ -9981,7 +9974,6 @@ In order for software to correctly program arbitration and other control paramet
 ---
 
 > **Figure 6-12.** Root Complex Represented as Multiple Components | 根复合体表示为多个组件
-> **图 6-12.** 根复合体表示为多个组件
 > <img src="figures/chapter_06/fig_0794_2_tight.png" width="700">
 
 ---
@@ -10076,7 +10068,7 @@ Implementation of ACS in RCiEPs is permitted but not required. It is explicitly 
 
 ACS 在 PCI Express 拓扑内定义了一组控制点，以确定 TLP (事务层包) 是正常路由、被阻止还是被重定向。ACS 适用于 RC、交换机和多功能设备 (Multi-Function Device)。<sup>127</sup> 对于 ACS 要求，支持 SR-IOV 的单功能设备必须按照多功能设备的方式处理，因为它们在虚拟功能 (VF) 启用之后实际上表现为多功能设备。
 
-RCiEP 中 ACS 的实现是允许的，但不是必需的。明确允许在单个根复合体内，一些 RCiEP 实现 ACS 而另一些不实现。强烈建议根复合体实现确保来自不具有 ACS 能力的 RCiEP（PF 和 VF）的所有访问在进一步解码和处理之前首先由根复合体中的转换代理 (Translation Agent, TA) 处理。此类根复合体处理的详细信息超出了本规范的范围。
+RCiEP 中 ACS 的实现是允许的，但不是必需的。明确允许在单个根复合体内，一些 RCiEP 实现 ACS 而另一些不实现。强烈建议根复合体实现确保来自不具有 ACS 能力的 RCiEP（PF 和 VF）的所有访问在进一步解码和处理之前首先由根复合体中的转换代理 (Translation Agent, TA) 进行处理。此类根复合体处理的详细信息超出了本规范的范围。
 
 <sup>127</sup> 多功能设备中的适用 Function 具体包括 PCI Express 端点、交换机上游端口、传统 PCI Express 端点和根复合体集成端点 (Root Complex Integrated Endpoint)。
 
@@ -10594,23 +10586,23 @@ Completions are never affected by ACS P2P Egress Control.
 
 - **ACS Source Validation (源校验)**:不得实现。
 - **ACS Translation Blocking (转换阻塞)**:不得实现。
-- **ACS P2P Request Redirect (P2P 请求重定向)**:必须由支持与其他 Function 进行对等 (peer-to-peer) 通信的 Function 实现，包括 SR-IOV 虚拟功能 (Virtual Function, VF)。
+- **ACS P2P Request Redirect (P2P 请求重定向)**:必须由支持与其他 Function 进行对等 (peer-to-peer) 通信的 Function 实现,包括 SR-IOV 虚拟功能 (Virtual Function, VF)。
 
 ACS P2P Request Redirect 与 ACS P2P Egress Control 和 ACS Direct Translated P2P 机制(若已实现)存在交互。更多信息参见 § Section 6.12.3 。
 
 当 ACS P2P Request Redirect 在非 RCiEP 的多功能设备 (Multi-Function Device) 中使能时,(设备内各 Function 之间的) 对等请求 (peer-to-peer Request) 必须被重定向至上游 (Upstream) 方向的 RC。
 
-在 RCiEP 中允许(但非必须)实现 ACS P2P Request Redirect。当 ACS P2P Request Redirect 在 RCiEP 中使能时，对等请求(定义为所有目标不是系统内存的请求)必须被送往根复合体 (Root Complex) 内的特定实现逻辑，由该逻辑判定该请求是发往其原始目标，还是作为 ACS 违规 (ACS Violation) 错误予以阻塞。规范并不规定用于做出此判定的算法和具体控制。
+在 RCiEP 中允许(但非必须)实现 ACS P2P Request Redirect。当 ACS P2P Request Redirect 在 RCiEP 中使能时,对等请求(定义为所有目标不是系统内存的请求)必须被送往根复合体 (Root Complex) 内的特定实现逻辑,由该逻辑判定该请求是发往其原始目标,还是作为 ACS 违规 (ACS Violation) 错误予以阻塞。规范并不规定用于做出此判定的算法和具体控制。
 
 完成报文 (Completion) 从不受 ACS P2P Request Redirect 的影响。
 
 - **ACS P2P Completion Redirect (P2P 完成重定向)**:必须由实现 ACS P2P Request Redirect 的 Function 实现。
 
-ACS P2P Completion Redirect 的目的是在请求被重定向时，避免完成报文与请求之间的排序规则违例。更多信息参见 § Section 6.12.6 。
+ACS P2P Completion Redirect 的目的是在请求被重定向时,避免完成报文与请求之间的排序规则违例。更多信息参见 § Section 6.12.6 。
 
 ACS P2P Completion Redirect 不与管理请求的 ACS 控制交互。
 
-当 ACS P2P Completion Redirect 在非 RCiEP 的多功能设备中使能时,Relaxed Ordering 位未置位的对等完成报文必须被重定向至上游方向的 RC。否则，对等完成报文必须按常规路由。
+当 ACS P2P Completion Redirect 在非 RCiEP 的多功能设备中使能时,Relaxed Ordering 位未置位的对等完成报文必须被重定向至上游方向的 RC。否则,对等完成报文必须按常规路由。
 
 请求从不受 ACS P2P Completion Redirect 的影响。
 
@@ -10619,15 +10611,15 @@ ACS P2P Completion Redirect 不与管理请求的 ACS 控制交互。
 
 ACS P2P Egress Control 与 ACS P2P Request Redirect 和 ACS Direct Translated P2P 机制(若已实现)存在交互。更多信息参见 § Section 6.12.3 。
 
-支持 ACS P2P Egress Control 的多功能设备中的每个 Function 可被选择性地使能，以阻塞与设备内其他 Function 或 Function Group<sup>134</sup> 的对等通信。这是按 Function 粒度配置的。
+支持 ACS P2P Egress Control 的多功能设备中的每个 Function 可被选择性地使能,以阻塞与设备内其他 Function 或 Function Group<sup>134</sup> 的对等通信。这是按 Function 粒度配置的。
 
-在多功能或 SR-IOV 设备中，通过 ACS P2P Egress Control,由"发送端" Function 中的控制位决定请求是否被阻塞，若被阻塞，则由该"发送端" Function 按 § Section 6.12.5 处理 ACS Violation 错误。
+在多功能或 SR-IOV 设备中,通过 ACS P2P Egress Control,由"发送端" Function 中的控制位决定请求是否被阻塞,若被阻塞,则由该"发送端" Function 按 § Section 6.12.5 处理 ACS Violation 错误。
 
 当 ARI 设备 (ARI Device) 中使能了 ACS Function Groups(置位 ACS Function Groups Enable)时,ACS P2P Egress Control 按 Function Group 粒度而非 Function 粒度执行。参见 § Section 6.13 。
 
 完成报文从不受 ACS P2P Egress Control 的影响。
 
-- **ACS Direct Translated P2P (直接转换 P2P)**:当多功能设备的 Function 既支持地址转换服务 (Address Translation Services, ATS) 又支持与其他 Function 的对等通信时，必须实现。
+- **ACS Direct Translated P2P (直接转换 P2P)**:当多功能设备的 Function 既支持地址转换服务 (Address Translation Services, ATS) 又支持与其他 Function 的对等通信时,必须实现。
 
 134. 对于实现 ACS P2P Egress Control 的 ARI 设备,ACS Function Groups 能力为可选项。
 
@@ -10667,13 +10659,13 @@ No ACS capabilities are applicable, and the Function must not implement an ACS E
 </td>
 <td style="background-color:#e8e8e8">
 
-当 ACS Direct Translated P2P 在多功能设备中使能时，地址类型 (Address Type, AT) 字段指示为已转换地址 (Translated address) 的对等内存请求 (Memory Request)，无论 ACS P2P Request Redirect 与 ACS P2P Egress Control 设置如何，都必须被正常("直接")路由至对端 Function。所有其他对等请求仍须受 ACS P2P Request Redirect 和 ACS P2P Egress Control 设置约束。
+当 ACS Direct Translated P2P 在多功能设备中使能时,地址类型 (Address Type, AT) 字段指示为已转换地址 (Translated address) 的对等内存请求 (Memory Request),无论 ACS P2P Request Redirect 与 ACS P2P Egress Control 设置如何,都必须被正常("直接")路由至对端 Function。所有其他对等请求仍须受 ACS P2P Request Redirect 和 ACS P2P Egress Control 设置约束。
 
 完成报文从不受 ACS Direct Translated P2P 的影响。
 
-本节适用于单功能 (single-Function) 设备的 Function,但下游端口 (Downstream Port) Function 与支持 SR-IOV 的 Function 例外，它们在前面一节中已讨论。就 ACS 要求而言，支持 SR-IOV 的单功能设备必须按照多功能设备处理。
+本节适用于单功能 (single-Function) 设备的 Function,但下游端口 (Downstream Port) Function 与支持 SR-IOV 的 Function 例外,它们在前面一节中已讨论。就 ACS 要求而言,支持 SR-IOV 的单功能设备必须按照多功能设备处理。
 
-没有适用的 ACS 能力，该 Function 不得实现 ACS Extended Capability 结构。
+没有适用的 ACS 能力,该 Function 不得实现 ACS Extended Capability 结构。
 
 </td>
 </tr>
@@ -10721,15 +10713,15 @@ If ACS Direct Translated P2P is enabled in a Port/Function, peer-to-peer Memory 
 
 以下规则规定 ACS 组件与非 ACS 组件之间的互操作性:
 
-- 当未使用 ACS P2P Request Redirect 与 ACS P2P Completion Redirect 时,ACS 组件与非 ACS 组件可在同一拓扑内混合使用，并能完全互操作。在 ACS 组件的子集中使能 ACS 不会影响互操作性。
+- 当未使用 ACS P2P Request Redirect 与 ACS P2P Completion Redirect 时,ACS 组件与非 ACS 组件可在同一拓扑内混合使用,并能完全互操作。在 ACS 组件的子集中使能 ACS 不会影响互操作性。
 - 当使用 ACS P2P Request Redirect、ACS P2P Completion Redirect 或两者同时使用时,PCI Express 层级中的特定组件必须支持 ACS Upstream Forwarding(用于转发被重定向的上游请求)。具体而言:
 
-  - 关联的根端口 (Root Port)<sup>135</sup> 必须支持 ACS Upstream Forwarding。否则，根端口如何处理被重定向至上游的 Request 或 Completion TLP 是未定义的。RC 还必须实现 Redirected Request Validation。
-  - 在启用了 P2P TLP 重定向的每个 ACS 组件与其关联的根端口之间，所有中间交换机 (Switch) 必须支持 ACS Upstream Forwarding。否则，这些交换机如何处理被重定向至上游的 TLP 是未定义的。
+  - 关联的根端口 (Root Port)<sup>135</sup> 必须支持 ACS Upstream Forwarding。否则,根端口如何处理被重定向至上游的 Request 或 Completion TLP 是未定义的。RC 还必须实现 Redirected Request Validation。
+  - 在启用了 P2P TLP 重定向的每个 ACS 组件与其关联的根端口之间,所有中间交换机 (Switch) 必须支持 ACS Upstream Forwarding。否则,这些交换机如何处理被重定向至上游的 TLP 是未定义的。
 
-对于每个对等请求，多个 ACS 控制机制可能交互，以决定该请求是被直接路由到其对等目标、被立即作为 ACS 违规而阻塞，还是被重定向至上游的 RC 进行访问校验。对等完成报文的重定向仅由 ACS P2P Completion Redirect 机制决定。
+对于每个对等请求,多个 ACS 控制机制可能交互,以决定该请求是被直接路由到其对等目标、被立即作为 ACS 违规而阻塞,还是被重定向至上游的 RC 进行访问校验。对等完成报文的重定向仅由 ACS P2P Completion Redirect 机制决定。
 
-若在端口/Function 中使能了 ACS Direct Translated P2P,则地址类型 (AT) 字段指示为已转换地址的对等内存请求，无论 ACS P2P Request Redirect 与 ACS P2P Egress Control 设置如何，都必须被正常("直接")路由至对端端口/Function。否则，此类请求，以及无条件下所有其他对等请求，都必须受 ACS P2P Request Redirect 和 ACS P2P Egress Control 设置约束。具体而言，适用的 Egress Control Vector 位，连同 ACS P2P Egress Control Enable 位 (E) 和 ACS P2P Request Redirect Enable 位 (R)，决定请求如何处理。须注意，若 ACS 对等请求重定向的目标是可能成为锁定访问目标的旧式设备位置，则无法保证访问的原子性。这些控制位的描述参见 § Section 7.7.11 。§ Table 6-11 具体规定了交互关系。
+若在端口/Function 中使能了 ACS Direct Translated P2P,则地址类型 (AT) 字段指示为已转换地址的对等内存请求,无论 ACS P2P Request Redirect 与 ACS P2P Egress Control 设置如何,都必须被正常("直接")路由至对端端口/Function。否则,此类请求,以及无条件下所有其他对等请求,都必须受 ACS P2P Request Redirect 和 ACS P2P Egress Control 设置约束。具体而言,适用的 Egress Control Vector 位,连同 ACS P2P Egress Control Enable 位 (E) 和 ACS P2P Request Redirect Enable 位 (R),决定请求如何处理。须注意,若 ACS 对等请求重定向的目标是可能成为锁定访问目标的旧式设备位置,则无法保证访问的原子性。这些控制位的描述参见 § Section 7.7.11 。§ Table 6-11 具体规定了交互关系。
 
 </td>
 </tr>
@@ -10823,7 +10815,7 @@ Additionally, platform vendors should test for the presence of ACS and enable it
 </td>
 <td style="background-color:#e8e8e8">
 
-ACS Enhanced Capability 是一组额外的 ACS 控制机制，旨在提升 ACS 所提供的隔离与保护级别。ACS Enhanced Capability 定义了以下附加的访问控制机制:
+ACS Enhanced Capability 是一组额外的 ACS 控制机制,旨在提升 ACS 所提供的隔离与保护级别。ACS Enhanced Capability 定义了以下附加的访问控制机制:
 
 - ACS I/O Request Blocking (I/O 请求阻塞)
 - ACS DSP Memory Target Access (下游端口内存目标访问)
@@ -10835,18 +10827,18 @@ ACS Enhanced Capability 是一组额外的 ACS 控制机制，旨在提升 ACS �
 **实现提示:**
 **支持 Function 直连分配的系统中的访问控制服务**
 
-通用 VI 通常为每个 SI 以及 VI 自身使用独立的地址空间。若此类 VI 还支持将某个 Function 直接分配给一个 SI,则由该直接分配的 Function 发出的未转换内存请求 (Untranslated Memory Request) 事务完全由该 SI 内的软件控制，通常引用与该 SI 关联的地址空间。相反，由 Host 发出的(MMIO 请求)以及由非直接分配的 Function 发出的内存请求事务，受 VI 控制，通常引用一个或多个系统地址空间(例如 PCIe 物理地址空间、与 VI 关联的地址空间，或与某个指定 SI 关联的地址空间)。通用 VI 不应在这些不同地址空间之间建立依赖关系。因此，这些地址空间可能自由重叠，从而可能导致 Switch 对 TLP 的非预期路由。例如，若请求中的地址落在与某个下游端口相关联的 MMIO 地址范围内，则原本由直接分配的 Function 发起、目标为主存的上游内存请求 TLP 可能被错误地路由到该下游端口。这种非预期路由对 SI 和/或 VI 的稳定性与完整性构成威胁。
+通用 VI 通常为每个 SI 以及 VI 自身使用独立的地址空间。若此类 VI 还支持将某个 Function 直接分配给一个 SI,则由该直接分配的 Function 发出的未转换内存请求 (Untranslated Memory Request) 事务完全由该 SI 内的软件控制,通常引用与该 SI 关联的地址空间。相反,由 Host 发出的(MMIO 请求)以及由非直接分配的 Function 发出的内存请求事务,受 VI 控制,通常引用一个或多个系统地址空间(例如 PCIe 物理地址空间、与 VI 关联的地址空间,或与某个指定 SI 关联的地址空间)。通用 VI 不应在这些不同地址空间之间建立依赖关系。因此,这些地址空间可能自由重叠,从而可能导致 Switch 对 TLP 的非预期路由。例如,若请求中的地址落在与某个下游端口相关联的 MMIO 地址范围内,则原本由直接分配的 Function 发起、目标为主存的上游内存请求 TLP 可能被错误地路由到该下游端口。这种非预期路由对 SI 和/或 VI 的稳定性与完整性构成威胁。
 
-为防范此问题，强烈建议厂商在支持通用 VI 直连分配 Function 的平台中实现 ACS。此类支持应包括:
+为防范此问题,强烈建议厂商在支持通用 VI 直连分配 Function 的平台中实现 ACS。此类支持应包括:
 
 - 在位于 TA 下方的 Switch 或根复合体中,ACS 支持级别应遵循本规范为实现了 ACS Extended Capability 结构的下游交换机端口 (Downstream Switch Port) 所确立的指南。
 
-  注:位于 TA 上方的组件仅看到已转换的内存请求 (Translated Memory Request)，因此该问题不适用于这些组件。
+  注:位于 TA 上方的组件仅看到已转换的内存请求 (Translated Memory Request),因此该问题不适用于这些组件。
 
 - 在支持对等事务的 SR-IOV 设备中,ACS 支持是必需的。
-- 在支持对等事务的多功能设备中，强烈建议厂商实现带有 ACS P2P Egress Control 的 ACS。
+- 在支持对等事务的多功能设备中,强烈建议厂商实现带有 ACS P2P Egress Control 的 ACS。
 
-此外，平台厂商应在将某个 Function 直接分配出去之前，测试 ACS 是否存在，并在从 TA 到该 Function 的路径上的根复合体与交换机中将其使能。若该 Function 支持对等通信，则 ACS 也应在该 Function 内被使能。
+此外,平台厂商应在将某个 Function 直接分配出去之前,测试 ACS 是否存在,并在从 TA 到该 Function 的路径上的根复合体与交换机中将其使能。若该 Function 支持对等通信,则 ACS 也应在该 Function 内被使能。
 
 </td>
 </tr>
@@ -10902,27 +10894,27 @@ Together these ACS redirect mechanisms can ensure that Upstream Memory Requests 
 </td>
 <td style="background-color:#e8e8e8">
 
-ACS 违规可能由硬件或软件缺陷/故障引起。为协助故障隔离与根因分析，建议在 ACS 组件中实现 AER。可使用 AER 的前缀/包头日志以及 Prefix Log/Header Log 寄存器来确定违规请求的前缀/包头。ACS Violation 的 Status、Mask 与 Severity 位可提供对错误的明确识别并加强对错误记录与信令的控制。
+ACS 违规可能由硬件或软件缺陷/故障引起。为协助故障隔离与根因分析,建议在 ACS 组件中实现 AER。可使用 AER 的前缀/包头日志以及 Prefix Log/Header Log 寄存器来确定违规请求的前缀/包头。ACS Violation 的 Status、Mask 与 Severity 位可提供对错误的明确识别并加强对错误记录与信令的控制。
 
-当检测到 ACS 违规时，作为 Completer<sup>136</sup> 的 ACS 组件必须执行以下操作:
+当检测到 ACS 违规时,作为 Completer<sup>136</sup> 的 ACS 组件必须执行以下操作:
 
 - 对于 Non-Posted 请求,Completer 必须生成一个具有 Completer Abort (CA) Completion 状态的 Completion。
 - Completer 必须按照 § Figure 6-2 所示记录并报告 ACS 违规。注意以下事项:
   - 即便 Completer 在发送 Completion 时使用 CA Completion Status,Completer 必须将错误记录为 ACS Violation 错误而非 Completer Abort 错误。
-  - 若 ACS 违规的严重性为非致命，且 Completer 发送带 CA Completion Status 的 Completion,则此情况必须按 § Section 6.2.3.2.4.1 所述，作为 Advisory Non-Fatal Error 处理。
+  - 若 ACS 违规的严重性为非致命,且 Completer 发送带 CA Completion Status 的 Completion,则此情况必须按 § Section 6.2.3.2.4.1 所述,作为 Advisory Non-Fatal Error 处理。
 
 **实现提示:**
 **ACS 重定向与客户物理地址 (Guest Physical Address, GPA)**
 
-ACS 重定向机制最初是为 P2P 内存请求提供细粒度访问控制而设计的——通过将选定的请求重定向至上游的 RC,由其中的校验逻辑决定放行还是拒绝。然而,ACS 重定向机制还能确保由 VM 直接控制的 Function 的 DMA 请求被正确路由到主机的转换代理 (Translation Agent, TA)，由 TA 将其客户物理地址 (Guest Physical Address, GPA) 转换为主机物理地址 (Host Physical Address, HPA)。
+ACS 重定向机制最初是为 P2P 内存请求提供细粒度访问控制而设计的——通过将选定的请求重定向至上游的 RC,由其中的校验逻辑决定放行还是拒绝。然而,ACS 重定向机制还能确保由 VM 直接控制的 Function 的 DMA 请求被正确路由到主机的转换代理 (Translation Agent, TA),由 TA 将其客户物理地址 (Guest Physical Address, GPA) 转换为主机物理地址 (Host Physical Address, HPA)。
 
-用于 Memory Space 与 DMA 的 GPA 范围并不保证与 PCIe Fabric 用于内存请求路由和访问控制的 HPA 范围一致。若任何用于 DMA 的 GPA 落在用于 Memory Space 的 HPA 范围内，则可能产生合法或恶意的报文误路由。
+用于 Memory Space 与 DMA 的 GPA 范围并不保证与 PCIe Fabric 用于内存请求路由和访问控制的 HPA 范围一致。若任何用于 DMA 的 GPA 落在用于 Memory Space 的 HPA 范围内,则可能产生合法或恶意的报文误路由。
 
 ACS 重定向机制可确保目标为 DMA 的上游内存请求(其使用 GPA)永远不会被路由到 HPA 内存范围。ACS P2P Request Redirect 处理以下两种情况:(1) 多功能设备内各 Function 之间的对等访问,(2) Switch 或 RC 内各下游端口之间的对等访问。带重定向的 ACS P2P Egress Control 以更细粒度的方式处理上述同样两种情况。
 
 ACS Enhanced Capability 引入的重定向机制可处理更多情况。带重定向的 ACS DSP Memory Target Access 处理下游端口内存资源范围的情况。带重定向的 ACS USP Memory Target Access 处理交换机上游端口内存资源范围的情况。在交换机中,ACS Unclaimed Request Redirect 处理上游端口内存孔径中未由其他 ACS 重定向机制覆盖的所有区域。
 
-综合这些 ACS 重定向机制，可确保目标为 DMA 的上游内存请求(其使用 GPA)始终被路由或重定向至主机的转换代理，而目标为 P2P 的请求则仍按最初的设计进行路由。
+综合这些 ACS 重定向机制,可确保目标为 DMA 的上游内存请求(其使用 GPA)始终被路由或重定向至主机的转换代理,而目标为 P2P 的请求则仍按最初的设计进行路由。
 
 </td>
 </tr>
@@ -10960,7 +10952,7 @@ ACS Enhanced Capability 引入的重定向机制可处理更多情况。带重�
 </td>
 <td style="background-color:#e8e8e8">
 
-- Completer<sup>137</sup> 必须根据情况，将其 Status 寄存器或 Secondary Status 寄存器中的 Signaled Target Abort 位置 1。
+- Completer<sup>137</sup> 必须根据情况,将其 Status 寄存器或 Secondary Status 寄存器中的 Signaled Target Abort 位置 1。
 
 </td>
 </tr>
@@ -11002,15 +10994,15 @@ If ACS P2P Request Redirect and RC P2P Request Retargeting are not being used, t
 </td>
 <td style="background-color:#e8e8e8">
 
-当使能 ACS P2P Request Redirect 时，部分或全部对等请求被重定向，在某些情况下可能引发排序规则违例。本节探讨这些情况，以及 RC 实现"Request Retargeting"(请求重定向)——作为强制对等访问控制的另一种机制——时所出现的类似情况。
+当使能 ACS P2P Request Redirect 时,部分或全部对等请求被重定向,在某些情况下可能引发排序规则违例。本节探讨这些情况,以及 RC 实现"Request Retargeting"(请求重定向)——作为强制对等访问控制的另一种机制——时所出现的类似情况。
 
-当一个对等 Posted 请求被重定向后，一个被直接路由的后续对等 non-RO<sup>138</sup> 完成报文实际上可能"超过"被重定向的 Posted 请求，违例于"non-RO 完成报文不得超过 Posted 请求"的排序规则。更多信息参见 § Section 2.4.1 。
+当一个对等 Posted 请求被重定向后,一个被直接路由的后续对等 non-RO<sup>138</sup> 完成报文实际上可能"超过"被重定向的 Posted 请求,违例于"non-RO 完成报文不得超过 Posted 请求"的排序规则。更多信息参见 § Section 2.4.1 。
 
-可使用 ACS P2P Completion Redirect 来避免违反此排序规则。当使能 ACS P2P Completion Redirect 时，所有对等 non-RO 完成报文都将被重定向，从而与被重定向的对等 Posted 请求走相同的路径。当部分或全部对等请求被直接路由时，使能 ACS P2P Completion Redirect 不会导致任何排序规则违例，因为允许除具有相同 Transaction ID 的另一个完成报文之外的任何 TLP 超过给定的完成报文。
+可使用 ACS P2P Completion Redirect 来避免违反此排序规则。当使能 ACS P2P Completion Redirect 时,所有对等 non-RO 完成报文都将被重定向,从而与被重定向的对等 Posted 请求走相同的路径。当部分或全部对等请求被直接路由时,使能 ACS P2P Completion Redirect 不会导致任何排序规则违例,因为允许除具有相同 Transaction ID 的另一个完成报文之外的任何 TLP 超过给定的完成报文。
 
-作为强制对等访问控制、区别于 ACS P2P Request Redirect 的另一种机制，部分 RC 实现了"Request Retargeting"(请求重定向):RC 为"对等"流量支持特殊的地址范围,RC 会将经验证的上游请求重新定向到对端设备。当收到目标为该特殊地址范围的上游请求时,RC 验证该请求，将地址转换为指向相应的对端设备，并将该请求再次向下游发送。对于被重定向的 Non-Posted 请求，若 RC 不修改 Requester ID,则所产生的完成报文将"直接"对等地返回到原始 Requester,产生 non-RO 完成报文实际"超过"被重定向 Posted 请求的可能性，从而违例与使用 ACS P2P Request Redirect 时相同的排序规则。此处同样可使用 ACS P2P Completion Redirect 来避免违反该排序规则。
+作为强制对等访问控制、区别于 ACS P2P Request Redirect 的另一种机制,部分 RC 实现了"Request Retargeting"(请求重定向):RC 为"对等"流量支持特殊的地址范围,RC 会将经验证的上游请求重新定向到对端设备。当收到目标为该特殊地址范围的上游请求时,RC 验证该请求,将地址转换为指向相应的对端设备,并将该请求再次向下游发送。对于被重定向的 Non-Posted 请求,若 RC 不修改 Requester ID,则所产生的完成报文将"直接"对等地返回到原始 Requester,产生 non-RO 完成报文实际"超过"被重定向 Posted 请求的可能性,从而违例与使用 ACS P2P Request Redirect 时相同的排序规则。此处同样可使用 ACS P2P Completion Redirect 来避免违反该排序规则。
 
-若未使用 ACS P2P Request Redirect 与 RC P2P Request Retargeting,则使能 ACS P2P Completion Redirect 没有可预见的收益，鉴于潜在的性能影响，建议不要使能。
+若未使用 ACS P2P Request Redirect 与 RC P2P Request Retargeting,则使能 ACS P2P Completion Redirect 没有可预见的收益,鉴于潜在的性能影响,建议不要使能。
 
 </td>
 </tr>
@@ -11055,18 +11047,18 @@ If software enables ACS P2P Request Redirect, RC P2P Request Retargeting, or bot
 </td>
 <td style="background-color:#e8e8e8">
 
-当部分对等请求被重定向，而其他对等请求被直接路由时，存在违反"Non-Posted 请求或 non-RO Posted 请求不得超过 Posted 请求"这一排序规则的可能性。更多信息参见 § Section 2.4.1 。
+当部分对等请求被重定向,而其他对等请求被直接路由时,存在违反"Non-Posted 请求或 non-RO Posted 请求不得超过 Posted 请求"这一排序规则的可能性。更多信息参见 § Section 2.4.1 。
 
-上述排序规则违例的可能性仅在 ACS P2P Request Redirect 与 ACS Direct Translated P2P 同时使能时才存在。除非软件能确定此类排序规则违例不会发生，或即使发生也不会影响正常运行，否则不应同时使能这两个机制。
+上述排序规则违例的可能性仅在 ACS P2P Request Redirect 与 ACS Direct Translated P2P 同时使能时才存在。除非软件能确定此类排序规则违例不会发生,或即使发生也不会影响正常运行,否则不应同时使能这两个机制。
 
 **实现提示:**
 **ACS P2P 完成重定向的性能影响**
 
-虽然使用 ACS P2P Completion Redirect 可避免完成报文超过 Posted 请求所引起的排序违例，但其也可能影响性能。具体而言，所有被重定向的完成报文都必须从重定向点出发，经由 RC 来回往返，引入额外延迟并可能增加链路与 RC 的拥塞。
+虽然使用 ACS P2P Completion Redirect 可避免完成报文超过 Posted 请求所引起的排序违例,但其也可能影响性能。具体而言,所有被重定向的完成报文都必须从重定向点出发,经由 RC 来回往返,引入额外延迟并可能增加链路与 RC 的拥塞。
 
-由于 Relaxed Ordering 位置位的对等完成报文永远不会被重定向(从而避免性能影响)，强烈建议 Requester 的实现应最大化地正确使用 Relaxed Ordering,并建议软件通过置位 Device Control 寄存器中的 Enable Relaxed Ordering 位，使 Requester 能够利用 Relaxed Ordering。
+由于 Relaxed Ordering 位置位的对等完成报文永远不会被重定向(从而避免性能影响),强烈建议 Requester 的实现应最大化地正确使用 Relaxed Ordering,并建议软件通过置位 Device Control 寄存器中的 Enable Relaxed Ordering 位,使 Requester 能够利用 Relaxed Ordering。
 
-若软件使能了 ACS P2P Request Redirect、RC P2P Request Retargeting 或两者，且软件确信对等 non-RO 完成报文"超过"对等<sup>139</sup> Posted 请求不会损害正常运行，则建议软件保持 ACS P2P Completion Redirect 处于禁用状态，以避免其性能影响。
+若软件使能了 ACS P2P Request Redirect、RC P2P Request Retargeting 或两者,且软件确信对等 non-RO 完成报文"超过"对等<sup>139</sup> Posted 请求不会损害正常运行,则建议软件保持 ACS P2P Completion Redirect 处于禁用状态,以避免其性能影响。
 
 </td>
 </tr>
@@ -11164,7 +11156,6 @@ ARI 由一组新的可选能力和控制寄存器位控制。这些位提供：
 ---
 
 > **Figure 6-13.** Example System Topology with ARI Devices
-> **图 6-13.** 使用 ARI 设备的示例系统拓扑
 
 > <img src="figures/chapter_06/fig_0809_1_tight.png" width="700">
 
@@ -11431,7 +11422,6 @@ Multicast Capability 结构定义了一个多播地址范围，将该范围划�
 
 
 > **Figure 6-14.** Segmentation of the Multicast Address Range | 多播地址范围的划分
-> **图 6-14.** 多播地址范围的划分
 
 > <img src="figures/chapter_06/fig_0810_1_tight.png" width="700">
 
@@ -11885,7 +11875,7 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 ```
 **公式 6-1 MC_Overlay 变换规则**
 
-若地址已被修改的 TLP 包含可选的 ECRC,则未修改的 ECRC 几乎必然指示错误。当含有 ECRC 的 TLP 被多播 (Multicast) 复制到启用了 MC_Overlay 的出端口 (Egress Port) 时，所采取的动作取决于是否实现了可选的 ECRC 重新生成 (ECRC Regeneration) 支持。表 6-12 中列出了所有相关动作。若未启用 MC_Overlay,则 TLP 按原样转发。若启用了 MC_Overlay 且 TLP 没有 ECRC,则按上一段所述将地址替换后的已修改 TLP 转发。若 TLP 含有 ECRC 但不支持 ECRC 重新生成，则转发已修改的 TLP 时丢弃其 ECRC,并清除包头 (Header) 中的 TD 位以表示未附带 ECRC。若 TLP 含有 ECRC 且支持 ECRC 重新生成，则在转发 TLP 之前执行 ECRC 校验。若 ECRC 校验通过，则 TLP 附带重新生成的 ECRC 进行转发;若 ECRC 校验失败，则 TLP 附带反相的重新生成 ECRC 进行转发。
+若地址已被修改的 TLP 包含可选的 ECRC,则未修改的 ECRC 几乎必然指示错误。当含有 ECRC 的 TLP 被多播 (Multicast) 复制到启用了 MC_Overlay 的出端口 (Egress Port) 时,所采取的动作取决于是否实现了可选的 ECRC 重新生成 (ECRC Regeneration) 支持。表 6-12 中列出了所有相关动作。若未启用 MC_Overlay,则 TLP 按原样转发。若启用了 MC_Overlay 且 TLP 没有 ECRC,则按上一段所述将地址替换后的已修改 TLP 转发。若 TLP 含有 ECRC 但不支持 ECRC 重新生成,则转发已修改的 TLP 时丢弃其 ECRC,并清除包头 (Header) 中的 TD 位以表示未附带 ECRC。若 TLP 含有 ECRC 且支持 ECRC 重新生成,则在转发 TLP 之前执行 ECRC 校验。若 ECRC 校验通过,则 TLP 附带重新生成的 ECRC 进行转发;若 ECRC 校验失败,则 TLP 附带反相的重新生成 ECRC 进行转发。
 
 **表 6-12 MC_Overlay 的 ECRC 规则**
 
@@ -11899,11 +11889,11 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 > **实现注意事项 (IMPLEMENTATION NOTE):**
 > **MC_OVERLAY 与 ECRC 重新生成**
 >
-> 交换机 (Switch) 端口和根复合体 (Root Complex) 端口可选择支持 ECRC 重新生成。若支持 ECRC 重新生成，则强烈建议以一种稳健的方式实现，即最小化"检查原始 TLP 的 ECRC"与"用基于已修改 TLP 计算的 ECRC 进行替换"之间的时间间隔。在此期间 TLP 处于无保护状态，如果预检和重新生成未在同一个流水线阶段内完成，将留下数据完整性漏洞。
+> 交换机 (Switch) 端口和根复合体 (Root Complex) 端口可选择支持 ECRC 重新生成。若支持 ECRC 重新生成,则强烈建议以一种稳健的方式实现,即最小化"检查原始 TLP 的 ECRC"与"用基于已修改 TLP 计算的 ECRC 进行替换"之间的时间间隔。在此期间 TLP 处于无保护状态,如果预检和重新生成未在同一个流水线阶段内完成,将留下数据完整性漏洞。
 >
-> 从通过启用了 MC_Overlay 但不支持 ECRC 重新生成的端口的多播 TLP 中剥离 ECRC,允许接收端点 (Endpoint) 启用 ECRC 校验。在这种情况下，端点将在非多播 TLP 上享受 ECRC 带来的好处，而又不会在由 MC_Overlay 机制修改的多播 TLP 上检测到 ECRC 错误。
+> 从通过启用了 MC_Overlay 但不支持 ECRC 重新生成的端口的多播 TLP 中剥离 ECRC,允许接收端点 (Endpoint) 启用 ECRC 校验。在这种情况下,端点将在非多播 TLP 上享受 ECRC 带来的好处,而又不会在由 MC_Overlay 机制修改的多播 TLP 上检测到 ECRC 错误。
 >
-> 当支持多播 ECRC 重新生成且在 TLP 修改之前检测到 ECRC 错误时，对重新生成的 ECRC 取反可确保 ECRC 错误不会被重新生成过程所掩盖。
+> 当支持多播 ECRC 重新生成且在 TLP 修改之前检测到 ECRC 错误时,对重新生成的 ECRC 取反可确保 ECRC 错误不会被重新生成过程所掩盖。
 
 </td>
 </tr>
@@ -11944,9 +11934,9 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 > **实现注意事项 (IMPLEMENTATION NOTE):**
 > **多播到不具备多播能力的端点**
 >
-> 不包含多播能力 (Multicast Capability) 结构的端点 (Endpoint) Function 无法区分多播 TLP 与单播 TLP。系统设计者可以利用这一事实，将此类端点作为多播目标使用。这样做的主要前提是:设备上方交换机 (Switch) 端口中虚拟 PCI-to-PCI 桥 (Bridge) 的基址 (Base) 与界限 (Limit) 寄存器必须被配置为至少与多播地址范围的一部分重叠，或者采用 MC_Overlay 机制。推而广之，甚至可以将单个多播目标 Function 放置在 PCI Express 到 PCI/PCI-X 桥的 PCI/PCI-X 一侧。
+> 不包含多播能力 (Multicast Capability) 结构的端点 (Endpoint) Function 无法区分多播 TLP 与单播 TLP。系统设计者可以利用这一事实,将此类端点作为多播目标使用。这样做的主要前提是:设备上方交换机 (Switch) 端口中虚拟 PCI-to-PCI 桥 (Bridge) 的基址 (Base) 与界限 (Limit) 寄存器必须被配置为至少与多播地址范围的一部分重叠,或者采用 MC_Overlay 机制。推而广之,甚至可以将单个多播目标 Function 放置在 PCI Express 到 PCI/PCI-X 桥的 PCI/PCI-X 一侧。
 >
-> 若将一个不具备多播能力结构的端点用作多播目标，而又未采用 MC_Overlay 机制，则可能需要使用与多播 TLP 相同的地址从该端点的内存空间 (Memory Space) 进行读取。因此，命中多播窗口 (Multicast Window) 的内存读 (Memory Read) 不一定是错误。命中多播窗口、但又未同时命中 RCiEP 或交换机下游端口 (Downstream Port) 开口 (aperture) 的内存读，将按照标准地址路由规则被路由至上游 (Upstream)，并在该处作为不支持请求 (UR) 处理。
+> 若将一个不具备多播能力结构的端点用作多播目标,而又未采用 MC_Overlay 机制,则可能需要使用与多播 TLP 相同的地址从该端点的内存空间 (Memory Space) 进行读取。因此,命中多播窗口 (Multicast Window) 的内存读 (Memory Read) 不一定是错误。命中多播窗口、但又未同时命中 RCiEP 或交换机下游端口 (Downstream Port) 开口 (aperture) 的内存读,将按照标准地址路由规则被路由至上游 (Upstream),并在该处作为不支持请求 (UR) 处理。
 
 </td>
 </tr>
@@ -11982,7 +11972,7 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 > **实现注意事项 (IMPLEMENTATION NOTE):**
 > **根复合体中的多播**
 >
-> 具有多个根端口 (Root Port) 且支持多播的根复合体 (Root Complex) 可按其实现需要实现任意数量的多播能力 (Multicast Capability) 结构。若实现多个，则软件应确保 § 6.14.3 节中所规定的某些字段被配置为相同值。为了支持对 RCiEP 的多播，实现需要将通过 MC_Base_Address 寄存器识别为多播的所有 TLP 暴露给其内部集成的所有潜在多播目标端点 (Endpoint)。每个这样的集成端点随后使用其多播能力结构中的 MC_Receive 寄存器来确定是否应接收该 TLP。
+> 具有多个根端口 (Root Port) 且支持多播的根复合体 (Root Complex) 可按其实现需要实现任意数量的多播能力 (Multicast Capability) 结构。若实现多个,则软件应确保 § 6.14.3 节中所规定的某些字段被配置为相同值。为了支持对 RCiEP 的多播,实现需要将通过 MC_Base_Address 寄存器识别为多播的所有 TLP 暴露给其内部集成的所有潜在多播目标端点 (Endpoint)。每个这样的集成端点随后使用其多播能力结构中的 MC_Receive 寄存器来确定是否应接收该 TLP。
 
 </td>
 </tr>
@@ -12018,7 +12008,7 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 > **实现注意事项 (IMPLEMENTATION NOTE):**
 > **多播与多功能设备**
 >
-> 作为潜在多播目标的所有端口 Function 和端点 (Endpoint) Function 都需要实现一个多播能力 (Multicast Capability) 结构，以使每个 Function 都拥有自己的 MC_Receive 向量。在单个组件内部，软件应将这些能力结构的 MC_Enable、MC_Base_Address、MC_Index_Position 和 MC_Num_Group 字段配置为相同的值。在这种情况下，在组件内仅对一个多播 BAR (基址寄存器) 实例实现地址译码逻辑便已足够。
+> 作为潜在多播目标的所有端口 Function 和端点 (Endpoint) Function 都需要实现一个多播能力 (Multicast Capability) 结构,以使每个 Function 都拥有自己的 MC_Receive 向量。在单个组件内部,软件应将这些能力结构的 MC_Enable、MC_Base_Address、MC_Index_Position 和 MC_Num_Group 字段配置为相同的值。在这种情况下,在组件内仅对一个多播 BAR (基址寄存器) 实例实现地址译码逻辑便已足够。
 
 </td>
 </tr>
@@ -12061,11 +12051,11 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 > **实现注意事项 (IMPLEMENTATION NOTE):**
 > **拥塞避免**
 >
-> 多播 (Multicast) 的使用会按照所用多播组的大小以及多播流量在总流量中所占比例的程度，提升交换机 (Switch) 的输出链路利用率。这导致在使用多播时，拥塞及拥塞扩散的风险增加。
+> 多播 (Multicast) 的使用会按照所用多播组的大小以及多播流量在总流量中所占比例的程度,提升交换机 (Switch) 的输出链路利用率。这导致在使用多播时,拥塞及拥塞扩散的风险增加。
 >
-> 为降低此风险，作为多播目标的组件应被设计为以线速 (wire speed) 消费多播 TLP。作为多播源的组件则应考虑增加限速 (rate limiting) 机制。
+> 为降低此风险,作为多播目标的组件应被设计为以线速 (wire speed) 消费多播 TLP。作为多播源的组件则应考虑增加限速 (rate limiting) 机制。
 >
-> 在许多应用中，应用的多播数据流具有固有的速率限制，因而可在不引发拥塞的情况下被容纳。其他应用则需要显式的注入速率限制机制、选择具备足够缓冲以在不触发流控 (Flow Control) 的前提下吸收所需多播流量突发的交换机 (Switch)，或选择能够以所需速率吸收多播流量的多播目标组件。选择适当的机制和组件以服务应用是系统设计者的责任。
+> 在许多应用中,应用的多播数据流具有固有的速率限制,因而可在不引发拥塞的情况下被容纳。其他应用则需要显式的注入速率限制机制、选择具备足够缓冲以在不触发流控 (Flow Control) 的前提下吸收所需多播流量突发的交换机 (Switch),或选择能够以所需速率吸收多播流量的多播目标组件。选择适当的机制和组件以服务应用是系统设计者的责任。
 
 </td>
 </tr>
@@ -12103,9 +12093,9 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 > **实现注意事项 (IMPLEMENTATION NOTE):**
 > **主机作为多播接收方**
 >
-> 对于通用系统，通常预计多播地址范围不会被配置为与直接映射到主机内存的内存空间 (Memory Space) 重叠。若需将主机内存纳入多播接收方，则根复合体 (Root Complex) 可能需要某种 I/O 内存管理单元 (IOMMU)，能够将多播窗口 (Multicast Window) 的若干部分以页级粒度重映射到主机内存。或者，也可使用交换机 (Switch) 上游端口 (Upstream Port) 中的 MC_Overlay 机制，将多播地址范围的一部分叠加到主机内存上。
+> 对于通用系统,通常预计多播地址范围不会被配置为与直接映射到主机内存的内存空间 (Memory Space) 重叠。若需将主机内存纳入多播接收方,则根复合体 (Root Complex) 可能需要某种 I/O 内存管理单元 (IOMMU),能够将多播窗口 (Multicast Window) 的若干部分以页级粒度重映射到主机内存。或者,也可使用交换机 (Switch) 上游端口 (Upstream Port) 中的 MC_Overlay 机制,将多播地址范围的一部分叠加到主机内存上。
 >
-> 对于缺乏 IOMMU 的嵌入式系统，可以配置多播窗口与直接映射到主机内存的内存空间重叠，从而避免对 IOMMU 的需求。此方法的具体细节超出了本规范的范围。
+> 对于缺乏 IOMMU 的嵌入式系统,可以配置多播窗口与直接映射到主机内存的内存空间重叠,从而避免对 IOMMU 的需求。此方法的具体细节超出了本规范的范围。
 
 </td>
 </tr>
@@ -12170,42 +12160,42 @@ Direct support for the three chosen AtomicOps over PCI Express enables easier mi
 </td>
 <td style="background-color:#e8e8e8">
 
-原子操作 (Atomic Operation, AtomicOp) 是一种单一的 PCI Express 事务 (Transaction)，它以内存空间 (Memory Space) 中的某个位置为目标，读取该位置的值，可能向该位置写回新值，并返回原始值。对该位置进行的这一"读-修改-写"序列是以原子方式完成的。AtomicOp 包括以下几种:
+原子操作 (Atomic Operation, AtomicOp) 是一种单一的 PCI Express 事务 (Transaction),它以内存空间 (Memory Space) 中的某个位置为目标,读取该位置的值,可能向该位置写回新值,并返回原始值。对该位置进行的这一"读-修改-写"序列是以原子方式完成的。AtomicOp 包括以下几种:
 
-- **FetchAdd (取并加, Fetch and Add):** 请求 (Request) 包含一个操作数，即"加"值
+- **FetchAdd (取并加, Fetch and Add):** 请求 (Request) 包含一个操作数,即"加"值
   - 读取目标位置的值。
-  - 使用二进制补码算术将该"加"值与之相加，忽略任何进位或溢出。
+  - 使用二进制补码算术将该"加"值与之相加,忽略任何进位或溢出。
   - 将结果写回目标位置。
   - 返回目标位置的原始值。
-- **Swap (无条件交换, Unconditional Swap):** 请求包含一个操作数，即"交换"值
+- **Swap (无条件交换, Unconditional Swap):** 请求包含一个操作数,即"交换"值
   - 读取目标位置的值。
   - 将"交换"值写回目标位置。
   - 返回目标位置的原始值。
-- **CAS (比较并交换, Compare and Swap):** 请求包含两个操作数，即"比较"值和"交换"值
+- **CAS (比较并交换, Compare and Swap):** 请求包含两个操作数,即"比较"值和"交换"值
   - 读取目标位置的值。
   - 将该值与"比较"值进行比较。
-  - 若相等，则将"交换"值写回目标位置。
+  - 若相等,则将"交换"值写回目标位置。
   - 返回目标位置的原始值。
 
-给定的 AtomicOp 事务具有相关联的操作数大小，且对目标位置的访问以及返回的值均使用相同的大小。FetchAdd 和 Swap 支持 32 位和 64 位的操作数大小。CAS 支持 32 位、64 位和 128 位的操作数大小。
+给定的 AtomicOp 事务具有相关联的操作数大小,且对目标位置的访问以及返回的值均使用相同的大小。FetchAdd 和 Swap 支持 32 位和 64 位的操作数大小。CAS 支持 32 位、64 位和 128 位的操作数大小。
 
-AtomicOp 能力是可选规范性 (optional normative) 的。允许端点 (Endpoint) 和根端口 (Root Port) 实现 AtomicOp 请求者 (Requester) 能力。允许具有内存空间 BAR (基址寄存器) 的 PCI Express Function 以及所有根端口实现 AtomicOp 完成者 (Completer) 能力。路由元素 (即交换机 (Switch)，以及支持根端口之间对等访问的根复合体 (Root Complex)) 需要具备 AtomicOp 路由能力才能路由 AtomicOp 请求。
+AtomicOp 能力是可选规范性 (optional normative) 的。允许端点 (Endpoint) 和根端口 (Root Port) 实现 AtomicOp 请求者 (Requester) 能力。允许具有内存空间 BAR (基址寄存器) 的 PCI Express Function 以及所有根端口实现 AtomicOp 完成者 (Completer) 能力。路由元素 (即交换机 (Switch),以及支持根端口之间对等访问的根复合体 (Root Complex)) 需要具备 AtomicOp 路由能力才能路由 AtomicOp 请求。
 
-AtomicOp 架构上支持设备到主机、设备到设备、以及主机到设备的事务。在每种情况下，请求者 (Requester)、完成者 (Completer) 以及所有中间路由元素都必须支持相应的 AtomicOp 能力。
+AtomicOp 架构上支持设备到主机、设备到设备、以及主机到设备的事务。在每种情况下,请求者 (Requester)、完成者 (Completer) 以及所有中间路由元素都必须支持相应的 AtomicOp 能力。
 
-PCI Express 到 PCI/PCI-X 桥 (Bridge) 不支持 AtomicOp 能力。如有需要，可在这些桥下方的设备上使用锁事务 (Locked Transactions)。AtomicOp 与锁事务可在同一层级 (Hierarchy) 中并发执行。
+PCI Express 到 PCI/PCI-X 桥 (Bridge) 不支持 AtomicOp 能力。如有需要,可在这些桥下方的设备上使用锁事务 (Locked Transactions)。AtomicOp 与锁事务可在同一层级 (Hierarchy) 中并发执行。
 
-软件通过 Device Capabilities 2 寄存器 (参见 § 7.5.3.15 节) 中的三个新比特位来发现具体的 AtomicOp 完成者能力。为提高互操作性，根端口若实现 AtomicOp 完成者能力，则必须以集合形式实现某些能力 (参见 § 6.15.3.1 节)。软件通过 Device Capabilities 2 寄存器中的 AtomicOp Routing Supported 比特位发现 AtomicOp 路由能力。AtomicOp 请求者能力的软件发现不在本规范范围内，但软件必须在 Function 的 Device Control 2 寄存器中设置 AtomicOp Requester Enable 比特位，该 Function 才能发起 AtomicOp 请求 (参见 § 7.5.3.16 节)。
+软件通过 Device Capabilities 2 寄存器 (参见 § 7.5.3.15 节) 中的三个新比特位来发现具体的 AtomicOp 完成者能力。为提高互操作性,根端口若实现 AtomicOp 完成者能力,则必须以集合形式实现某些能力 (参见 § 6.15.3.1 节)。软件通过 Device Capabilities 2 寄存器中的 AtomicOp Routing Supported 比特位发现 AtomicOp 路由能力。AtomicOp 请求者能力的软件发现不在本规范范围内,但软件必须在 Function 的 Device Control 2 寄存器中设置 AtomicOp Requester Enable 比特位,该 Function 才能发起 AtomicOp 请求 (参见 § 7.5.3.16 节)。
 
-在路由元素上，软件可以在逐端口 (Port) 基础上设置 AtomicOp Egress Blocking 比特位 (参见 § 7.5.3.16 节)，以避免将 AtomicOp 请求转发到不应接收它们的组件，若处于非 Flit 模式 (NFM)，则可能将每个被阻塞的请求作为格式错误 TLP (Malformed TLP) 处理，默认情况下这是致命错误 (Fatal Error)。每个被阻塞的请求作为 AtomicOp Egress Blocked 错误处理，默认情况下这是一条警告性非致命错误 (Advisory Non-Fatal Error)。
+在路由元素上,软件可以在逐端口 (Port) 基础上设置 AtomicOp Egress Blocking 比特位 (参见 § 7.5.3.16 节),以避免将 AtomicOp 请求转发到不应接收它们的组件,若处于非 Flit 模式 (NFM),则可能将每个被阻塞的请求作为格式错误 TLP (Malformed TLP) 处理,默认情况下这是致命错误 (Fatal Error)。每个被阻塞的请求作为 AtomicOp Egress Blocked 错误处理,默认情况下这是一条警告性非致命错误 (Advisory Non-Fatal Error)。
 
-AtomicOp 属于内存事务 (Memory Transaction)，因此适用于管理内存空间访问的现有标准机制 (如 Bus Master Enable、Memory Space Enable 以及基址寄存器 (Base Address Register))。
+AtomicOp 属于内存事务 (Memory Transaction),因此适用于管理内存空间访问的现有标准机制 (如 Bus Master Enable、Memory Space Enable 以及基址寄存器 (Base Address Register))。
 
-AtomicOp 支持高级的同步机制，在需要以非阻塞方式同步多个生产者和/或多个消费者的场景中尤为有用。例如，多个生产者可在没有任何显式锁的情况下安全地向同一队列入队。
+AtomicOp 支持高级的同步机制,在需要以非阻塞方式同步多个生产者和/或多个消费者的场景中尤为有用。例如,多个生产者可在没有任何显式锁的情况下安全地向同一队列入队。
 
-AtomicOp 还支持无锁的统计计数器，例如设备可以原子地递增计数器，主机软件可以原子地读取并清零该计数器。
+AtomicOp 还支持无锁的统计计数器,例如设备可以原子地递增计数器,主机软件可以原子地读取并清零该计数器。
 
-在 PCI Express 上直接支持所选的这三种 AtomicOp,便于将现有高性能 SMP 应用程序迁移到使用 PCI Express 作为与紧耦合加速器、协处理器或 GP-GPU 互连的系统。例如，使用 PCI Express 连接加速器的移植应用程序也许能够使用与早期 SMP 应用程序相同的同步算法和数据结构。
+在 PCI Express 上直接支持所选的这三种 AtomicOp,便于将现有高性能 SMP 应用程序迁移到使用 PCI Express 作为与紧耦合加速器、协处理器或 GP-GPU 互连的系统。例如,使用 PCI Express 连接加速器的移植应用程序也许能够使用与早期 SMP 应用程序相同的同步算法和数据结构。
 
 </td>
 </tr>
@@ -12257,29 +12247,29 @@ Detailed protocol rules and requirements for AtomicOps are distributed throughou
 </td>
 <td style="background-color:#e8e8e8">
 
-对给定目标执行的 AtomicOp 所产生的延迟通常与对同一目标的内存读 (Memory Read) 相当。在单个层级 (Hierarchy) 内，多个 AtomicOp 可以并发"在途"(in flight)。AtomicOp 通常对其他 PCI Express 流量造成的干扰可忽略。
+对给定目标执行的 AtomicOp 所产生的延迟通常与对同一目标的内存读 (Memory Read) 相当。在单个层级 (Hierarchy) 内,多个 AtomicOp 可以并发"在途"(in flight)。AtomicOp 通常对其他 PCI Express 流量造成的干扰可忽略。
 
-与锁事务 (Locked Transactions) 相比,AtomicOp 提供了更低的延迟、更高的可扩展性、更先进的同步算法，并对其他 PCI Express 流量的影响显著降低。
+与锁事务 (Locked Transactions) 相比,AtomicOp 提供了更低的延迟、更高的可扩展性、更先进的同步算法,并对其他 PCI Express 流量的影响显著降低。
 
-有关 AtomicOp 的详细协议规则和要求分布在本规范其余部分，以下是简要总结及一些独特的要求。
+有关 AtomicOp 的详细协议规则和要求分布在本规范其余部分,以下是简要总结及一些独特的要求。
 
-- AtomicOp 是 Non-Posted 内存事务，支持 32 位和 64 位地址格式。
+- AtomicOp 是 Non-Posted 内存事务,支持 32 位和 64 位地址格式。
 - FetchAdd、Swap 和 CAS 各自使用不同的类型代码。
 - 完成者 (Completer) 根据 AtomicOp 请求中的 Length 字段值和类型代码推断操作数大小。
-- AtomicOp 完成者在目标位置读写数据所使用的字节序 (endian) 格式是实现特定的，允许由完成者自行确定最适合目标内存的格式 (例如小端、大端等)。参见 § 2.2.2 节。
-- 若 AtomicOp 请求者 (Requester) 支持地址转换服务 (Address Translation Services, ATS)，则仅当已转换地址 (Translated Address) 具有适当的访问权限时，才允许在 AtomicOp 请求中使用已转换地址。具体而言,Read (R) 和 Write (W) 字段必须同时被置位 (Set)，而 Untranslated access only (U) 字段必须被清零 (Clear)。参见 § 2.2.4.1 节。
-- 若支持访问控制服务 (Access Control Services, ACS) 的组件同时支持 AtomicOp 路由或 AtomicOp 请求者能力，则该组件在 ACS 功能方面对 AtomicOp 请求和完成报文的处理方式与对其他内存请求和完成报文的处理方式相同。
-- No Snoop 属性适用于 AtomicOp 请求且允许被置位，但无论 No Snoop 属性的值如何，都必须保证原子性。
-- Relaxed Ordering 属性适用于 AtomicOp 请求且允许被置位，它会影响请求及其相关完成报文的排序。
-- AtomicOp 请求的排序要求与 Non-Posted 写请求的排序要求类似。因此，若请求者希望确保 AtomicOp 请求在后续 Posted 或 Non-Posted 请求之前被完成者观察到，则该请求者必须等待 AtomicOp 完成报文，然后再发出后续请求。
+- AtomicOp 完成者在目标位置读写数据所使用的字节序 (endian) 格式是实现特定的,允许由完成者自行确定最适合目标内存的格式 (例如小端、大端等)。参见 § 2.2.2 节。
+- 若 AtomicOp 请求者 (Requester) 支持地址转换服务 (Address Translation Services, ATS),则仅当已转换地址 (Translated Address) 具有适当的访问权限时,才允许在 AtomicOp 请求中使用已转换地址。具体而言,Read (R) 和 Write (W) 字段必须同时被置位 (Set),而 Untranslated access only (U) 字段必须被清零 (Clear)。参见 § 2.2.4.1 节。
+- 若支持访问控制服务 (Access Control Services, ACS) 的组件同时支持 AtomicOp 路由或 AtomicOp 请求者能力,则该组件在 ACS 功能方面对 AtomicOp 请求和完成报文的处理方式与对其他内存请求和完成报文的处理方式相同。
+- No Snoop 属性适用于 AtomicOp 请求且允许被置位,但无论 No Snoop 属性的值如何,都必须保证原子性。
+- Relaxed Ordering 属性适用于 AtomicOp 请求且允许被置位,它会影响请求及其相关完成报文的排序。
+- AtomicOp 请求的排序要求与 Non-Posted 写请求的排序要求类似。因此,若请求者希望确保 AtomicOp 请求在后续 Posted 或 Non-Posted 请求之前被完成者观察到,则该请求者必须等待 AtomicOp 完成报文,然后再发出后续请求。
 - AtomicOp 完成报文的排序要求与读完成报文的排序要求类似。
-- 除非存在更高优先级的错误，否则识别 AtomicOp 的完成者必须将中毒 (Poisoned) 的 AtomicOp 请求作为 Poisoned TLP Received 错误处理，并且还必须返回一条完成状态 (Completion Status) 为 Unsupported Request (UR) 的完成报文。参见 § 2.7.2.1 节。目标位置的值必须保持不变。
-- 若 AtomicOp 请求的完成者在访问目标位置或执行原子操作时遇到不可纠正错误 (Uncorrectable Error)，则该完成者必须将其作为完成者中止 (Completer Abort, CA) 处理。目标位置的后续状态是实现特定的。
-- 识别 AtomicOp 的完成者必须将任何格式正确但其不支持的类型或操作数大小的 AtomicOp 请求作为不支持请求 (UR) 处理。若 AtomicOp 请求中的 Length 字段包含未架构定义 (unarchitected) 的值，则该请求必须被识别 AtomicOp 的完成者作为格式错误 TLP (Malformed TLP) 处理。参见 § 2.2.7 节。
-- 若多功能设备 (Multi-Function Device) 中的任何 Function 支持 AtomicOp 完成者或 AtomicOp 路由能力，则该设备中所有具有内存空间 BAR (基址寄存器) 的 Function 必须对格式正确的 AtomicOp 请求进行译码，并将其不支持的请求作为不支持请求 (UR) 处理。请注意，在这样的设备中，缺少 AtomicOp 完成者能力的 Function 不得将格式正确的 AtomicOp 请求作为格式错误 TLP 处理。
-- 若根复合体 (RC) 具有任何支持 AtomicOp 路由能力的根端口 (Root Port)，则该 RC 中可被转发的 AtomicOp 请求到达的所有 RCiEP 都必须对格式正确的 AtomicOp 请求进行译码，并将其不支持的请求作为不支持请求 (UR) 处理。
-- 对于具有支持类型和操作数大小的 AtomicOp 请求，识别 AtomicOp 的完成者必须在其目标内存空间内的任何位置上执行该请求，或将其作为完成者中止 (CA) 处理。完成者可根据其编程模型 (参见 § 2.3.1 节) 的需要，选择仅在其目标内存空间的子集上支持 AtomicOp 请求。由 PCI Express 定义或继承的内存空间结构 (例如 MSI-X Table 结构) 不要求作为 AtomicOp 目标予以支持，除非在其结构描述中明确说明。
-- 对于交换机 (Switch) 或 RC,当出端口 (Egress Port) 启用了 AtomicOp Egress Blocking 且 AtomicOp 请求的目标是要从该出端口发出时，该出端口必须将该请求作为 AtomicOp Egress Blocked 错误 (参见 § 图 6-2) 处理，并且还必须返回完成状态为 UR 的完成报文。若该 AtomicOp Egress Blocked 错误的严重性为非致命，则此情况必须作为警告性非致命错误 (Advisory Non-Fatal Error) 处理，如 § 6.2.3.2.4.1 节所述。
+- 除非存在更高优先级的错误,否则识别 AtomicOp 的完成者必须将中毒 (Poisoned) 的 AtomicOp 请求作为 Poisoned TLP Received 错误处理,并且还必须返回一条完成状态 (Completion Status) 为 Unsupported Request (UR) 的完成报文。参见 § 2.7.2.1 节。目标位置的值必须保持不变。
+- 若 AtomicOp 请求的完成者在访问目标位置或执行原子操作时遇到不可纠正错误 (Uncorrectable Error),则该完成者必须将其作为完成者中止 (Completer Abort, CA) 处理。目标位置的后续状态是实现特定的。
+- 识别 AtomicOp 的完成者必须将任何格式正确但其不支持的类型或操作数大小的 AtomicOp 请求作为不支持请求 (UR) 处理。若 AtomicOp 请求中的 Length 字段包含未架构定义 (unarchitected) 的值,则该请求必须被识别 AtomicOp 的完成者作为格式错误 TLP (Malformed TLP) 处理。参见 § 2.2.7 节。
+- 若多功能设备 (Multi-Function Device) 中的任何 Function 支持 AtomicOp 完成者或 AtomicOp 路由能力,则该设备中所有具有内存空间 BAR (基址寄存器) 的 Function 必须对格式正确的 AtomicOp 请求进行译码,并将其不支持的请求作为不支持请求 (UR) 处理。请注意,在这样的设备中,缺少 AtomicOp 完成者能力的 Function 不得将格式正确的 AtomicOp 请求作为格式错误 TLP 处理。
+- 若根复合体 (RC) 具有任何支持 AtomicOp 路由能力的根端口 (Root Port),则该 RC 中可被转发的 AtomicOp 请求到达的所有 RCiEP 都必须对格式正确的 AtomicOp 请求进行译码,并将其不支持的请求作为不支持请求 (UR) 处理。
+- 对于具有支持类型和操作数大小的 AtomicOp 请求,识别 AtomicOp 的完成者必须在其目标内存空间内的任何位置上执行该请求,或将其作为完成者中止 (CA) 处理。完成者可根据其编程模型 (参见 § 2.3.1 节) 的需要,选择仅在其目标内存空间的子集上支持 AtomicOp 请求。由 PCI Express 定义或继承的内存空间结构 (例如 MSI-X Table 结构) 不要求作为 AtomicOp 目标予以支持,除非在其结构描述中明确说明。
+- 对于交换机 (Switch) 或 RC,当出端口 (Egress Port) 启用了 AtomicOp Egress Blocking 且 AtomicOp 请求的目标是要从该出端口发出时,该出端口必须将该请求作为 AtomicOp Egress Blocked 错误 (参见 § 图 6-2) 处理,并且还必须返回完成状态为 UR 的完成报文。若该 AtomicOp Egress Blocked 错误的严重性为非致命,则此情况必须作为警告性非致命错误 (Advisory Non-Fatal Error) 处理,如 § 6.2.3.2.4.1 节所述。
 
 </td>
 </tr>
@@ -12323,13 +12313,13 @@ As with other PCI Express Transactions, the support for peer-to-peer routing of 
 
 根端口的 AtomicOp 完成者能力表示该根端口在其入端口 (Ingress Port) 支持接收以主机内存或由根端口 BAR 分配的内存空间为目标的 AtomicOp 请求。这与是否具有 AtomicOp 完成者能力的 RCiEP 无关。
 
-若根端口实现了对主机内存访问的任何 AtomicOp 完成者能力，则它必须实现所有的 32 位和 64 位 AtomicOp 完成者能力。实现 128 位 CAS 完成者能力是可选的。
+若根端口实现了对主机内存访问的任何 AtomicOp 完成者能力,则它必须实现所有的 32 位和 64 位 AtomicOp 完成者能力。实现 128 位 CAS 完成者能力是可选的。
 
-若根复合体具有一个或多个实现了 AtomicOp 完成者能力的根端口，则该 RC 必须确保:针对特定 AtomicOp 请求而执行的对目标位置的主机内存访问，相对于每个主机处理器或设备对该目标位置范围的访问是原子执行的。
+若根复合体具有一个或多个实现了 AtomicOp 完成者能力的根端口,则该 RC 必须确保:针对特定 AtomicOp 请求而执行的对目标位置的主机内存访问,相对于每个主机处理器或设备对该目标位置范围的访问是原子执行的。
 
-若主机处理器通过其指令集架构支持原子操作，则该 RC 还必须确保:代表给定 AtomicOp 请求而执行的主机内存访问保留任何主机处理器原子操作的原子性。
+若主机处理器通过其指令集架构支持原子操作,则该 RC 还必须确保:代表给定 AtomicOp 请求而执行的主机内存访问保留任何主机处理器原子操作的原子性。
 
-与其他 PCI Express 事务一样，根端口之间 AtomicOp 请求和完成报文的点对点 (peer-to-peer) 路由支持是可选的，具体取决于实现。若根复合体在两个或更多根端口之间支持 AtomicOp 路由能力，则它必须通过 Device Capabilities 2 寄存器中的 AtomicOp Routing Supported 比特位在每个相关根端口中指示该能力。
+与其他 PCI Express 事务一样,根端口之间 AtomicOp 请求和完成报文的点对点 (peer-to-peer) 路由支持是可选的,具体取决于实现。若根复合体在两个或更多根端口之间支持 AtomicOp 路由能力,则它必须通过 Device Capabilities 2 寄存器中的 AtomicOp Routing Supported 比特位在每个相关根端口中指示该能力。
 
 </td>
 </tr>
@@ -12380,21 +12370,21 @@ If a Switch supports AtomicOp routing capability for any of its Ports, it must d
 
 ### 6.15.3.1 具有 AtomicOp 完成者能力的根端口
 
-不要求根复合体在所有已置位 (Set) AtomicOp Routing Supported 比特位的根端口对之间都支持 AtomicOp 路由。若某 AtomicOp 请求需要在不支持路由的根端口对之间进行路由，则必须将其作为不支持请求 (UR) 处理，并由"发送"端口上报。
+不要求根复合体在所有已置位 (Set) AtomicOp Routing Supported 比特位的根端口对之间都支持 AtomicOp 路由。若某 AtomicOp 请求需要在不支持路由的根端口对之间进行路由,则必须将其作为不支持请求 (UR) 处理,并由"发送"端口上报。
 
 对于支持转发由主机软件或 RCiEP 发起的 AtomicOp 请求的任何根端口,AtomicOp Routing Supported 比特位必须被置位。对于支持将其入端口 (Ingress Port) 上接收到的 AtomicOp 请求转发到 RCiEP 的任何根端口,AtomicOp Routing Supported 比特位也必须被置位。
 
 允许根复合体实现"由主机软件或 RCiEP 发起 AtomicOp 请求"的能力。AtomicOp 请求者能力的软件发现不在本规范范围内。
 
-若根复合体支持由软件发起的 AtomicOp 请求者能力，则主机处理器上运行的软件如何促使根复合体生成 AtomicOp 请求的具体机制不在本规范范围内。
+若根复合体支持由软件发起的 AtomicOp 请求者能力,则主机处理器上运行的软件如何促使根复合体生成 AtomicOp 请求的具体机制不在本规范范围内。
 
 ### 6.15.3.2 具有 AtomicOp 路由能力的根端口
 
-若交换机 (Switch) 的任何端口支持 AtomicOp 路由能力，则其所有端口都必须支持 AtomicOp 路由能力。
+若交换机 (Switch) 的任何端口支持 AtomicOp 路由能力,则其所有端口都必须支持 AtomicOp 路由能力。
 
 ---
 
-> **[141]** 尽管 AtomicOp Egress Blocked 错误通过返回一条完成状态为 UR 的完成报文来处理，但该错误在其他方面并不作为不支持请求 (Unsupported Request) 处理。例如，它不会置位 Device Status 寄存器中的 Unsupported Request Detected 比特位。
+> **[141]** 尽管 AtomicOp Egress Blocked 错误通过返回一条完成状态为 UR 的完成报文来处理,但该错误在其他方面并不作为不支持请求 (Unsupported Request) 处理。例如,它不会置位 Device Status 寄存器中的 Unsupported Request Detected 比特位。
 
 </td>
 </tr>
@@ -12966,7 +12956,6 @@ LTR 支持通过 § 第 7 章 所述的报告寄存器和控制寄存器进行�
 ---
 
 > **Figure 6-15.** Latency Fields Format for LTR Messages | LTR 消息的延迟字段格式
-> **图 6-15.** LTR 消息的延迟字段格式
 > <img src="figures/chapter_06/fig_0825_1_tight.png" width="700">
 
 <table>
@@ -13206,7 +13195,6 @@ Typically, the Link will be in ASPM L1, and, if Clock Power Management (Clock PM
 ---
 
 > **Figure 6-16.** CLKREQ# and Clock Power Management | CLKREQ# 与时钟电源管理
-> **图 6-16.** CLKREQ# 与时钟电源管理
 > <img src="figures/chapter_06/fig_0827_1.png" width="700">
 
 <table>
@@ -13262,7 +13250,6 @@ LTR 延迟语义反映了设备所看到的可容忍延迟，按以下一种或�
 ---
 
 > **Figure 6-17.** Use of LTR and Clock Power Management | LTR 与时钟电源管理的使用
-> **图 6-17.** LTR 与时钟电源管理的使用
 
 > <img src="figures/chapter_06/fig_0829_1_tight.png" width="700">
 
@@ -13373,18 +13360,18 @@ These codes correspond to various assertion patterns of WAKE# when using WAKE# s
 
 根复合体 (RC, Root Complex) 处于活动状态以处理其他活动，例如操作系统定时器滴答。此类时间窗口的性质和判定由平台/实现自行决定。
 
-OBFF 指示只是一种提示 (hint) —— 只要 Function 被允许，任何时候仍可发起总线主控和/或中断流量，尽管这对平台功耗而言并非最优，应尽量避免。
+OBFF 指示只是一种提示 (hint) —— 只要 Function 被允许,任何时候仍可发起总线主控和/或中断流量,尽管这对平台功耗而言并非最优,应尽量避免。
 
-OBFF 指示可通过 WAKE# 信号或消息发出(参见 § Section 2.2.8.9)。消息方式仅在没有 WAKE# 信号的互连上使用。OBFF 或 CPU Active 的 WAKE# 信令仅可在系统处于工作状态时由根端口 (Root Port) 发起，在符合 ACPI 的系统中对应 S0 状态。处于非 D0 状态的 Function 不得响应 OBFF 或 CPU Active 信令。
+OBFF 指示可通过 WAKE# 信号或消息发出(参见 § Section 2.2.8.9)。消息方式仅在没有 WAKE# 信号的互连上使用。OBFF 或 CPU Active 的 WAKE# 信令仅可在系统处于工作状态时由根端口 (Root Port) 发起,在符合 ACPI 的系统中对应 S0 状态。处于非 D0 状态的 Function 不得响应 OBFF 或 CPU Active 信令。
 
-OBFF 消息使用消息路由 (Message Routing) 100b,即"Local - Terminate at Receiver"(参见 § Table 2-20)，且只允许沿下游 (Downstream) 方向发送。OBFF 区分多种事件。使用 OBFF 消息时,OBFF Code 字段(参见 § Figure 2-65 和 § Figure 2-66)用于区分不同 OBFF 情形:
+OBFF 消息使用消息路由 (Message Routing) 100b,即"Local - Terminate at Receiver"(参见 § Table 2-20),且只允许沿下游 (Downstream) 方向发送。OBFF 区分多种事件。使用 OBFF 消息时,OBFF Code 字段(参见 § Figure 2-65 和 § Figure 2-66)用于区分不同 OBFF 情形:
 
-- **1111b "CPU Active"** —— 系统完全活动，所有设备动作(包括总线主控和中断)均被允许
+- **1111b "CPU Active"** —— 系统完全活动,所有设备动作(包括总线主控和中断)均被允许
 - **0001b "OBFF"** —— 系统内存路径对设备的内存读/写总线主控活动可用
 - **0000b "Idle"** —— 系统处于空闲低功耗状态
 - **其他** —— 所有其他代码为保留 (Reserved)
 
-使用 WAKE# 信令时，这些代码对应 WAKE# 的不同断言模式，如 § Figure 6-18 所示。指示 OBFF 时有一个负向跳变，而每次指示 CPU Active 时则有两个负向跳变。使用 WAKE# 时所需的电气参数在 [CEM-2.0](或更高版本)的 WAKE# Signaling 一节中定义。
+使用 WAKE# 信令时,这些代码对应 WAKE# 的不同断言模式,如 § Figure 6-18 所示。指示 OBFF 时有一个负向跳变,而每次指示 CPU Active 时则有两个负向跳变。使用 WAKE# 时所需的电气参数在 [CEM-2.0](或更高版本)的 WAKE# Signaling 一节中定义。
 
 </td>
 </tr>
@@ -13392,7 +13379,6 @@ OBFF 消息使用消息路由 (Message Routing) 100b,即"Local - Terminate at Re
 </table>
 
 > **Figure 6-18.** Codes and Equivalent WAKE# Patterns | 代码与等效 WAKE# 模式
-> **图 6-18.** 代码与等效 WAKE# 模式
 > <img src="figures/chapter_06/fig_0830_1_tight.png" width="700">
 
 
@@ -13417,11 +13403,11 @@ OBFF indications reflect central resource power management (PM) state transition
 </td>
 <td style="background-color:#e8e8e8">
 
-当收到的 OBFF 消息指示保留代码时，如果接收端已使能 OBFF,则必须将该指示视为 "CPU Active" 指示。
+当收到的 OBFF 消息指示保留代码时,如果接收端已使能 OBFF,则必须将该指示视为 "CPU Active" 指示。
 
-在不实现 OBFF 或未使能 OBFF 的端口上收到的 OBFF 消息，必须按不支持请求 (UR, Unsupported Request) 处理。这是与接收端口相关联的上报错误(参见 § Section 6.2)。如果某端口已通过 WAKE# 信令使能 OBFF,却又收到 OBFF 消息，则其行为未定义。
+在不实现 OBFF 或未使能 OBFF 的端口上收到的 OBFF 消息,必须按不支持请求 (UR, Unsupported Request) 处理。这是与接收端口相关联的上报错误(参见 § Section 6.2)。如果某端口已通过 WAKE# 信令使能 OBFF,却又收到 OBFF 消息,则其行为未定义。
 
-OBFF 指示反映中央资源电源管理 (Power Management) 状态的转换:当平台拓扑支持 WAKE# 时使用 WAKE# 指示;当平台拓扑不支持 WAKE# 时使用消息指示。OBFF 支持的发现与使能通过 § Chapter 7 描述的上报寄存器和控制寄存器完成。除非平台支持将 OBFF 指示传递到该端点 (Endpoint)，否则软件不得在该端点中使能 OBFF。
+OBFF 指示反映中央资源电源管理 (Power Management) 状态的转换:当平台拓扑支持 WAKE# 时使用 WAKE# 指示;当平台拓扑不支持 WAKE# 时使用消息指示。OBFF 支持的发现与使能通过 § Chapter 7 描述的上报寄存器和控制寄存器完成。除非平台支持将 OBFF 指示传递到该端点 (Endpoint),否则软件不得在该端点中使能 OBFF。
 
 </td>
 </tr>
@@ -13455,7 +13441,7 @@ It is recommended that Endpoints not assume CPU Active or OBFF windows will rema
 </td>
 <td style="background-color:#e8e8e8">
 
-当平台指示 CPU Active 或 OBFF 窗口开始时，建议平台不要在少于 10 μs 的时间内回到 Idle 状态。允许在实际进入平台空闲 (platform idle) 之前就指示返回到 Idle,但强烈建议只有在为了避免端点 (Endpoint) 较晚的活动导致立即退出空闲状态时才这样做，且提前时间应尽可能短。
+当平台指示 CPU Active 或 OBFF 窗口开始时,建议平台不要在少于 10 μs 的时间内回到 Idle 状态。允许在实际进入平台空闲 (platform idle) 之前就指示返回到 Idle,但强烈建议只有在为了避免端点 (Endpoint) 较晚的活动导致立即退出空闲状态时才这样做,且提前时间应尽可能短。
 
 建议端点不要假设 CPU Active 或 OBFF 窗口会保持打开任何特定时长。
 
@@ -13465,7 +13451,6 @@ It is recommended that Endpoints not assume CPU Active or OBFF windows will rema
 </table>
 
 > **Figure 6-19.** Example Platform Topology Showing a Link Where OBFF is Carried by Messages | 展示 OBFF 由消息承载的链路的示例平台拓扑
-> **图 6-19.** 展示 OBFF 由消息承载的链路的示例平台拓扑
 > <img src="figures/chapter_06/fig_0831_1_tight.png" width="700">
 
 
@@ -13498,19 +13483,19 @@ When a Switch is propagating OBFF indications Downstream, it is strongly encoura
 </td>
 <td style="background-color:#e8e8e8">
 
-§ Figure 6-19 给出了一个示例系统，其中交换机 (Switch) A 需要将通过 WAKE# 接收的 OBFF 指示转换为 OBFF 消息，在本例中该消息被另一个交换机 (Switch) B 接收并转换回 WAKE# 信令。HwInit 配置机制(由硬件或固件设置)用于识别本示例所示的情形(即 Switch A 和 Switch B 之间的链路需要使用 OBFF 消息)，系统固件/软件必须相应地配置 OBFF。
+§ Figure 6-19 给出了一个示例系统,其中交换机 (Switch) A 需要将通过 WAKE# 接收的 OBFF 指示转换为 OBFF 消息,在本例中该消息被另一个交换机 (Switch) B 接收并转换回 WAKE# 信令。HwInit 配置机制(由硬件或固件设置)用于识别本示例所示的情形(即 Switch A 和 Switch B 之间的链路需要使用 OBFF 消息),系统固件/软件必须相应地配置 OBFF。
 
-当某交换机在其上游端口 (Upstream Port) 配置使用 OBFF 消息信令，在一个或多个下游端口 (Downstream Port) 使用 WAKE# 信令(反之亦然)，且已使能 OBFF 时，该交换机必须把在上游端口收到的所有 OBFF 指示转换为下游端口上对应的形式。
+当某交换机在其上游端口 (Upstream Port) 配置使用 OBFF 消息信令,在一个或多个下游端口 (Downstream Port) 使用 WAKE# 信令(反之亦然),且已使能 OBFF 时,该交换机必须把在上游端口收到的所有 OBFF 指示转换为下游端口上对应的形式。
 
-使用 WAKE# 时，任意特定根端口的使能在没有多个 WAKE# 信号的情况下会启用 WAKE# 的全局使用;若有多个 WAKE# 信号，则只影响关联的 WAKE# 信号。使用 OBFF 消息信令时，特定根端口的使能仅启用从该根端口发送 OBFF 消息。为确保平台完全使能 OBFF,所有指示支持 OBFF 的根端口都必须使能 OBFF。系统固件/软件可选择性地使能 OBFF,但此种选择性使能不在本规范的范围内。
+使用 WAKE# 时,任意特定根端口的使能在没有多个 WAKE# 信号的情况下会启用 WAKE# 的全局使用;若有多个 WAKE# 信号,则只影响关联的 WAKE# 信号。使用 OBFF 消息信令时,特定根端口的使能仅启用从该根端口发送 OBFF 消息。为确保平台完全使能 OBFF,所有指示支持 OBFF 的根端口都必须使能 OBFF。系统固件/软件可选择性地使能 OBFF,但此种选择性使能不在本规范的范围内。
 
-为最小化功耗，强烈建议系统固件/软件仅在给定链路没有 WAKE# 信令可用时，才使能 OBFF 消息信令。
+为最小化功耗,强烈建议系统固件/软件仅在给定链路没有 WAKE# 信令可用时,才使能 OBFF 消息信令。
 
-只有当 Switch 上共享 WAKE# 信号时，使用 WAKE# 的 OBFF 信令才能被上报为该 Switch 上连接的所有组件都支持。在这些拓扑中，允许软件为连接在 Switch 上的组件使能 OBFF,即使该 Switch 本身不支持 OBFF。
+只有当 Switch 上共享 WAKE# 信号时,使用 WAKE# 的 OBFF 信令才能被上报为该 Switch 上连接的所有组件都支持。在这些拓扑中,允许软件为连接在 Switch 上的组件使能 OBFF,即使该 Switch 本身不支持 OBFF。
 
 允许(但不鼓励)连续多次重复指示同一 OBFF 事件。
 
-当 Switch 沿下游传播 OBFF 指示时，强烈鼓励传播所有 OBFF 指示。然而，尤其在使用消息时,Switch 可能需要丢弃或合并 OBFF 指示。当收到相同或不同类型的指示时，允许丢弃并替换先前某类型的指示。
+当 Switch 沿下游传播 OBFF 指示时,强烈鼓励传播所有 OBFF 指示。然而,尤其在使用消息时,Switch 可能需要丢弃或合并 OBFF 指示。当收到相同或不同类型的指示时,允许丢弃并替换先前某类型的指示。
 
 </td>
 </tr>
@@ -13544,7 +13529,7 @@ Downstream Ports can be configured to transmit OBFF Messages in two ways, which 
 </td>
 <td style="background-color:#e8e8e8">
 
-下游端口 (Downstream Port) 可配置为以两种方式发送 OBFF 消息，即变体 A (Variation A) 和变体 B (Variation B)。对于变体 A,当链路 (Link) 处于 L0 状态时端口必须发送 OBFF 消息，而当链路处于 Tx_L0s 或 L1 状态时必须丢弃该消息。当下游端口所连设备预期有非时间关键的通信需求，且设备预期通过将链路状态返回到 L0 来表达非紧急的关注请求时，首选此变体。对于变体 B,端口必须
+下游端口 (Downstream Port) 可配置为以两种方式发送 OBFF 消息,即变体 A (Variation A) 和变体 B (Variation B)。对于变体 A,当链路 (Link) 处于 L0 状态时端口必须发送 OBFF 消息,而当链路处于 Tx_L0s 或 L1 状态时必须丢弃该消息。当下游端口所连设备预期有非时间关键的通信需求,且设备预期通过将链路状态返回到 L0 来表达非紧急的关注请求时,首选此变体。对于变体 B,端口必须
 
 §
 
@@ -13582,11 +13567,11 @@ When enabling Ports for OBFF, it is recommended that all Upstream Ports be enabl
 </td>
 <td style="background-color:#e8e8e8">
 
-当链路 (Link) 处于 L0 状态时发送 OBFF 消息;或者当链路处于 Tx_L0s 或 L1 状态时，必须将链路引导至 L0 状态，然后再发送 OBFF 消息。当下游端口所连设备可从及时的平台状态通知中获益时，首选此变体。
+当链路 (Link) 处于 L0 状态时发送 OBFF 消息;或者当链路处于 Tx_L0s 或 L1 状态时,必须将链路引导至 L0 状态,然后再发送 OBFF 消息。当下游端口所连设备可从及时的平台状态通知中获益时,首选此变体。
 
-在初始配置为 OBFF 操作时，无论 WAKE# 信号的逻辑值如何，初始假设的指示状态必须为 CPU Active,直到观察到第一次跳变为止。
+在初始配置为 OBFF 操作时,无论 WAKE# 信号的逻辑值如何,初始假设的指示状态必须为 CPU Active,直到观察到第一次跳变为止。
 
-在为端口使能 OBFF 时，建议先使能所有上游端口，再使能下游端口，根端口 (Root Port) 必须在其他所有端口都使能之后再使能。对于热插拔 (Hot-Plug) 端口，这一顺序通常无法保证;允许对未连接的热插拔下游端口通过 WAKE# 使能 OBFF。建议不要对未连接的热插拔下游端口使能 OBFF 消息发送。
+在为端口使能 OBFF 时,建议先使能所有上游端口,再使能下游端口,根端口 (Root Port) 必须在其他所有端口都使能之后再使能。对于热插拔 (Hot-Plug) 端口,这一顺序通常无法保证;允许对未连接的热插拔下游端口通过 WAKE# 使能 OBFF。建议不要对未连接的热插拔下游端口使能 OBFF 消息发送。
 
 </td>
 </tr>
@@ -13623,9 +13608,9 @@ When enabling Ports for OBFF, it is recommended that all Upstream Ports be enabl
 > **实现说明 (IMPLEMENTATION NOTE):**
 > **端点 OBFF 注意事项 (OBFF CONSIDERATIONS FOR ENDPOINTS)**
 >
-> 在正常情况下，某些合法事件可能导致端点 (Endpoint) 错误地将 Idle 窗口到 CPU Active 窗口或 OBFF 窗口的跳变进行解释。例如，非 OBFF 端点可能将 WAKE# 作为唤醒机制置起，掩盖系统对信号的真实跳变。这可能导致端点行为在功耗或性能方面非最优，但对端点或主机系统而言应当不会不可恢复。
+> 在正常情况下,某些合法事件可能导致端点 (Endpoint) 错误地将 Idle 窗口到 CPU Active 窗口或 OBFF 窗口的跳变进行解释。例如,非 OBFF 端点可能将 WAKE# 作为唤醒机制置起,掩盖系统对信号的真实跳变。这可能导致端点行为在功耗或性能方面非最优,但对端点或主机系统而言应当不会不可恢复。
 >
-> 为了使端点能够保持对主机状态尽可能准确的视图，建议在端点接收到由其判定为主机发起的请求时，以及在端点存在由主机软件服务的挂起中断的任意时刻，将其内部状态跟踪逻辑置于 CPU Active 状态。
+> 为了使端点能够保持对主机状态尽可能准确的视图,建议在端点接收到由其判定为主机发起的请求时,以及在端点存在由主机软件服务的挂起中断的任意时刻,将其内部状态跟踪逻辑置于 CPU Active 状态。
 
 </td>
 </tr>
@@ -13672,14 +13657,14 @@ Usage of PASID is permitted only when specifically enabled.
 
 在非 Flit 模式 (Non-Flit Mode) 下,PASID TLP Prefix 是 § Section 2.2.1 中定义的端到端 TLP Prefix。PASID TLP Prefix 的布局见 § Figure 6-20 和 § Table 6-15。
 
-在 Flit 模式 (Flit Mode) 下，出现 PASID 时，它包含在 OHC-A1 或 OHC-A4 中。
+在 Flit 模式 (Flit Mode) 下,出现 PASID 时,它包含在 OHC-A1 或 OHC-A4 中。
 
-当 PASID 存在时,PASID 值与请求者 ID (Requester ID) 一起，标识与该请求 (Request) 关联的进程地址空间 ID (Process Address Space ID)。每个 Function 拥有独立的 PASID 值集合。一个 Function 使用的 PASID 值与任何其他 Function 使用的 PASID 值互不相关。
+当 PASID 存在时,PASID 值与请求者 ID (Requester ID) 一起,标识与该请求 (Request) 关联的进程地址空间 ID (Process Address Space ID)。每个 Function 拥有独立的 PASID 值集合。一个 Function 使用的 PASID 值与任何其他 Function 使用的 PASID 值互不相关。
 
 PASID 仅允许用于特定类型的 TLP:
 
 - 包含地址类型 (AT, Address Type) 为 Untranslated 或 Translated 的地址的请求 (参见 § Section 2.2.4.1)
-- 地址转换请求 (Address Translation Request)(即 AT=01b 的 MRd)、ATS 无效化请求消息 (ATS Invalidation Request Message)、页请求消息 (Page Request Message)、Flit 模式下的地址路由消息，以及 PRG 响应消息 (参见 § Section 10.1.3)
+- 地址转换请求 (Address Translation Request)(即 AT=01b 的 MRd)、ATS 无效化请求消息 (ATS Invalidation Request Message)、页请求消息 (Page Request Message)、Flit 模式下的地址路由消息,以及 PRG 响应消息 (参见 § Section 10.1.3)
 
 其他任何类型的 TLP 都不允许携带 PASID。
 
@@ -13740,28 +13725,28 @@ A TLP may contain at most one PASID TLP Prefix.
 </td>
 <td style="background-color:#e8e8e8">
 
-对于端点 (Endpoint) Function(包括根复合体集成设备,Root Complex Integrated Devices)，适用以下规则:
+对于端点 (Endpoint) Function(包括根复合体集成设备,Root Complex Integrated Devices),适用以下规则:
 
-- 除非 PASID Enable 被置位(参见 § Section 7.8.9.3)，否则 Function 不得发送或接收携带 PASID 的 TLP:
-- 除非 PASID Enable 和 Translated Requests with PASID Enable 均被置位，否则 Function 不得使用已转换地址 (Translated Address) 和 PASID 生成请求 (Request)。
+- 除非 PASID Enable 被置位(参见 § Section 7.8.9.3),否则 Function 不得发送或接收携带 PASID 的 TLP:
+- 除非 PASID Enable 和 Translated Requests with PASID Enable 均被置位,否则 Function 不得使用已转换地址 (Translated Address) 和 PASID 生成请求 (Request)。
 - Function 必须具有将 PASID 的使用与特定 Function 上下文相关联的机制。该机制不在本规范范围内。
-- Function 必须具有请求其优雅停止使用特定 PASID 的机制。该机制是设备特定的，但必须满足以下规则:
-  - Function 可支持有限数量的并发 PASID 停止请求。软件应当推迟发起新的停止请求，直到旧的停止请求完成。
+- Function 必须具有请求其优雅停止使用特定 PASID 的机制。该机制是设备特定的,但必须满足以下规则:
+  - Function 可支持有限数量的并发 PASID 停止请求。软件应当推迟发起新的停止请求,直到旧的停止请求完成。
   - 一个 Function 的停止请求不得影响任何其他 Function 的操作。
   - 停止请求不得影响 Function 内任何其他 PASID 的操作。
   - 停止请求不得影响与 PASID 无关的交易的运行。
   - 当停止请求机制指示完成时,Function 已经:
     - 停止为该 PASID 排队新请求 (Request)。
-    - 完成了与该 PASID 关联的所有 Non-Posted 请求(无数据，需完成)。
-    - 将该 PASID 使用的所有 TC 中寻址主机内存的 Posted 请求(有数据，无完成)刷新到主机。用于此目的机制是设备特定的(例如:对主机内存的非宽松 Posted 写入或处理器对 Function 的读取可刷新 TC0;对主机内存的零长度读可刷新非零 TC)。
+    - 完成了与该 PASID 关联的所有 Non-Posted 请求(无数据,需完成)。
+    - 将该 PASID 使用的所有 TC 中寻址主机内存的 Posted 请求(有数据,无完成)刷新到主机。用于此目的的机制是设备特定的(例如:对主机内存的非宽松 Posted 写入或处理器对 Function 的读取可刷新 TC0;对主机内存的零长度读可刷新非零 TC)。
     - 可选地将所有对等 (Peer-to-Peer) Posted 请求刷新到其目标。该机制是设备特定的。
-    - 如果该 PASID 已发起地址转换或页请求 (Page Request)，还须遵守地址转换服务 (ATS)(§ Chapter 10)中描述的附加规则。
+    - 如果该 PASID 已发起地址转换或页请求 (Page Request),还须遵守地址转换服务 (ATS)(§ Chapter 10)中描述的附加规则。
 
-对于根复合体 (Root Complex)，适用以下规则:
+对于根复合体 (Root Complex),适用以下规则:
 
 - 根复合体必须具有实现特定的机制来指示对 PASID 的支持。
 - 支持 PASID 的根复合体必须具有实现特定的机制来使能 PASID。默认情况下 PASID 的使用是禁用的。
-- 支持 PASID 的根复合体可选择性地具有实现特定的机制，以比整个根复合体更细的粒度来使能 PASID(例如:针对特定根端口、请求者 ID、总线号、请求者 ID,或请求者 ID/PASID 组合的独立使能)。
+- 支持 PASID 的根复合体可选择性地具有实现特定的机制,以比整个根复合体更细的粒度来使能 PASID(例如:针对特定根端口、请求者 ID、总线号、请求者 ID,或请求者 ID/PASID 组合的独立使能)。
 
 在 Flit 模式 (Flit Mode) 下,PASID 信息包含在 OHC-A1 或 OHC-A4 中。在非 Flit 模式 (Non-Flit Mode) 下,PASID 信息包含在 PASID TLP Prefix 中。
 
@@ -13810,7 +13795,6 @@ A TLP may contain at most one PASID TLP Prefix.
 ---
 
 > **Figure 6-20.** PASID TLP Prefix | PASID TLP Prefix
-> **图 6-20.** PASID TLP Prefix
 > <img src="figures/chapter_06/fig_0834_1_tight.png" width="700">
 
 **Table 6-15. PASID TLP Prefix | 表 6-15. PASID TLP Prefix**
@@ -13854,9 +13838,9 @@ Root Complexes may optionally support TLPs with a PASID. The mechanism used to d
 
 PASID 字段标识与请求 (Request) 关联的用户进程。
 
-PASID 字段宽度为 20 位。端点 (Endpoint) 和根复合体 (Root Complex) 无需支持该字段的整个范围。对于端点,Max PASID Width 字段指示所支持的 PASID 值范围(参见 § Section 7.8.9.2)。对于根复合体，使用实现特定的机制来提供此信息。
+PASID 字段宽度为 20 位。端点 (Endpoint) 和根复合体 (Root Complex) 无需支持该字段的整个范围。对于端点,Max PASID Width 字段指示所支持的 PASID 值范围(参见 § Section 7.8.9.2)。对于根复合体,使用实现特定的机制来提供此信息。
 
-除非 PASID Enable 位(参见 § Section 7.8.9.3)被置位，否则端点不得发送携带 PASID 的 TLP。支持 PASID 的端点在收到携带 PASID 且 PASID Enable 位为 0 的 TLP 时，必须发出不支持请求 (UR, Unsupported Request) 信号。
+除非 PASID Enable 位(参见 § Section 7.8.9.3)被置位,否则端点不得发送携带 PASID 的 TLP。支持 PASID 的端点在收到携带 PASID 且 PASID Enable 位为 0 的 TLP 时,必须发出不支持请求 (UR, Unsupported Request) 信号。
 
 根复合体可选择性地支持携带 PASID 的 TLP。检测根复合体是否支持 PASID 所使用的机制是实现特定的。
 
@@ -13908,17 +13892,17 @@ For address translation related TLPs, usage of this field is defined in Address 
 </td>
 <td style="background-color:#e8e8e8">
 
-对于端点 (Endpoint)，适用以下规则:
+对于端点 (Endpoint),适用以下规则:
 
 - 端点不得发送 PASID 值大于或等于 2^Max PASID Width 的 TLP。
-- 端点在收到 PASID 值大于或等于 2^Max PASID Width 的请求 (Request) 时，可选地允许发出错误信号。这是与接收端口相关联的不支持请求错误(参见 § Section 6.2)。
+- 端点在收到 PASID 值大于或等于 2^Max PASID Width 的请求 (Request) 时,可选地允许发出错误信号。这是与接收端口相关联的不支持请求错误(参见 § Section 6.2)。
 
-对于根复合体 (Root Complex)，适用以下规则:
+对于根复合体 (Root Complex),适用以下规则:
 
 - 根复合体不得发送 PASID 值超出其支持范围的 TLP。
-- 根复合体在收到 PASID 值超出其支持范围的请求 (Request) 时，可选地允许发出错误信号。这是与接收端口相关联的不支持请求错误(参见 § Section 6.2)。
+- 根复合体在收到 PASID 值超出其支持范围的请求 (Request) 时,可选地允许发出错误信号。这是与接收端口相关联的不支持请求错误(参见 § Section 6.2)。
 
-对于完成者 (Completer)，适用以下规则:
+对于完成者 (Completer),适用以下规则:
 
 - 对于未转换的内存请求 (Untranslated Memory Request),PASID 值和未转换地址 (Untranslated Address) 都用于确定满足该请求时所使用的已转换地址 (Translated Address)。
 
@@ -13958,11 +13942,11 @@ For Root Complexes, the following rules apply:
 </td>
 <td style="background-color:#e8e8e8">
 
-如果 Execute Requested 位被置位，则端点 (Endpoint) 正在请求允许端点在与该请求关联的内存范围内执行 (Execute) 指令。Execute 权限的具体含义不在本规范范围内。
+如果 Execute Requested 位被置位,则端点 (Endpoint) 正在请求允许端点在与该请求关联的内存范围内执行 (Execute) 指令。Execute 权限的具体含义不在本规范范围内。
 
-除非 Execute Permission Supported 位(参见 § Section 7.8.9.2)和 Execute Permission Enable 位(参见 § Section 7.8.9.3)均被置位，否则端点不得发送 Execute Requested 位被置位的 TLP。
+除非 Execute Permission Supported 位(参见 § Section 7.8.9.2)和 Execute Permission Enable 位(参见 § Section 7.8.9.3)均被置位,否则端点不得发送 Execute Requested 位被置位的 TLP。
 
-对于根复合体 (Root Complex)，适用以下规则:
+对于根复合体 (Root Complex),适用以下规则:
 
 </td>
 </tr>
@@ -14048,13 +14032,13 @@ For address translation related TLPs, usage of this bit is defined in Address Tr
 - 根复合体 (Root Complex) 对 Execute Requested 的支持是可选的。用于确定根复合体是否支持 Execute Requested 的机制是实现特定的。
   - 强烈建议根复合体不支持 Execute Requested。
 - 支持 Execute Requested 位的根复合体必须具有实现特定的机制以使能该位的使用。此机制的默认值必须为禁用 (disabled)。
-- 支持 Execute Requested 位的根复合体允许具有实现特定的机制，以更细的粒度(例如针对特定根端口、特定总线号、特定请求者 ID,或特定请求者 ID/PASID 组合)使能该位的使用，其默认值是实现特定的。
+- 支持 Execute Requested 位的根复合体允许具有实现特定的机制,以更细的粒度(例如针对特定根端口、特定总线号、特定请求者 ID,或特定请求者 ID/PASID 组合)使能该位的使用,其默认值是实现特定的。
 
-对于完成者 (Completer)，适用以下规则:
+对于完成者 (Completer),适用以下规则:
 
-- 完成者具有该位有效值的概念。对于给定请求 (Request)，如果支持 Execute Requested 位且该请求已使能该位的使用，则该位的有效值为请求中的值;否则该位的有效值为 0b。
-- 对于未转换的内存读请求 (Untranslated Memory Read Request)，完成者将该位的有效值用作保护检查的一部分。如果该保护检查失败，完成者将请求视为内存未映射。
-- 对于除未转换内存读请求以外的内存请求 (Memory Request)，该位为保留 (Reserved)。
+- 完成者具有该位有效值的概念。对于给定请求 (Request),如果支持 Execute Requested 位且该请求已使能该位的使用,则该位的有效值为请求中的值;否则该位的有效值为 0b。
+- 对于未转换的内存读请求 (Untranslated Memory Read Request),完成者将该位的有效值用作保护检查的一部分。如果该保护检查失败,完成者将请求视为内存未映射。
+- 对于除未转换内存读请求以外的内存请求 (Memory Request),该位为保留 (Reserved)。
 
 对于与地址转换相关的 TLP,该位的使用在地址转换服务 (ATS, § Chapter 10)中定义。
 
@@ -14103,22 +14087,22 @@ For Completers, the following rules apply:
 </td>
 <td style="background-color:#e8e8e8">
 
-如果 Privileged Mode Requested 位被置位，则端点 (Endpoint) 正在发出针对与特权模式 (Privileged Mode) 关联的内存的请求 (Request)。如果 Privileged Mode Requested 位为 0,则端点正在发出针对与非特权模式 (Non-Privileged Mode) 关联的内存的请求。
+如果 Privileged Mode Requested 位被置位,则端点 (Endpoint) 正在发出针对与特权模式 (Privileged Mode) 关联的内存的请求 (Request)。如果 Privileged Mode Requested 位为 0,则端点正在发出针对与非特权模式 (Non-Privileged Mode) 关联的内存的请求。
 
-特权模式与非特权模式的含义，以及端点运行于特权或非特权模式的具体含义，取决于系统的保护模型，不在本规范范围内。
+特权模式与非特权模式的含义,以及端点运行于特权或非特权模式的具体含义,取决于系统的保护模型,不在本规范范围内。
 
-除非 Privileged Mode Supported 位(参见 § Section 7.8.9.2)和 Privileged Mode Enable 位(参见 § Section 7.8.9.3)均被置位，否则端点不得发送 Privileged Mode Requested 位被置位的 TLP。
+除非 Privileged Mode Supported 位(参见 § Section 7.8.9.2)和 Privileged Mode Enable 位(参见 § Section 7.8.9.3)均被置位,否则端点不得发送 Privileged Mode Requested 位被置位的 TLP。
 
-对于根复合体 (Root Complex)，适用以下规则:
+对于根复合体 (Root Complex),适用以下规则:
 
 - 根复合体对 Privileged Mode Requested 位的支持是可选的。用于确定根复合体是否支持 Privileged Mode Requested 位的机制是实现特定的。
 - 支持 Privileged Mode Requested 位的根复合体应具有实现特定的机制以使能该位的使用。
-- 支持 Privileged Mode Requested 位的根复合体可具有实现特定的机制，以更细的粒度(例如针对特定根端口、特定总线号、特定请求者 ID,或特定请求者 ID/PASID 组合)使能该位的使用。
+- 支持 Privileged Mode Requested 位的根复合体可具有实现特定的机制,以更细的粒度(例如针对特定根端口、特定总线号、特定请求者 ID,或特定请求者 ID/PASID 组合)使能该位的使用。
 
-对于完成者 (Completer)，适用以下规则:
+对于完成者 (Completer),适用以下规则:
 
-- 完成者具有该位有效值的概念。对于给定请求 (Request)，如果支持 Privileged Mode Requested 位且该请求已使能该位的使用，则该位的有效值为请求中的值;否则该位的有效值为 0b。
-- 对于未转换的内存请求 (Untranslated Memory Request)，完成者将该位的有效值用作其保护检查的一部分。如果该保护检查失败，完成者将请求视为内存未映射。
+- 完成者具有该位有效值的概念。对于给定请求 (Request),如果支持 Privileged Mode Requested 位且该请求已使能该位的使用,则该位的有效值为请求中的值;否则该位的有效值为 0b。
+- 对于未转换的内存请求 (Untranslated Memory Request),完成者将该位的有效值用作其保护检查的一部分。如果该保护检查失败,完成者将请求视为内存未映射。
 
 </td>
 </tr>
@@ -14242,7 +14226,6 @@ PTM 定义了以下角色：
 
 
 >>> **Figure 6-21.** Example System Topologies using PTM
-> **图 6-21.** 使用 PTM 的示例系统拓扑
 >>> <img src="figures/chapter_06/fig_0838_1_tight.png" width="700">
 
 <!-- 📄 Page 838 -->
@@ -14295,7 +14278,6 @@ sends PTM Requests to the Downstream Port on the same Link, which acts on behalf
 </table>
 
 >>> **Figure 6-22.** Precision Time Measurement Link Protocol
-> **图 6-22.** 精确时间测量链路协议
 >>> <img src="figures/chapter_06/fig_0839_1_tight.png" width="700">
 
 
@@ -14479,7 +14461,6 @@ to software.
 
 
 >>> **Figure 6-23.** Precision Time Measurement Example
-> **图 6-23.** 精确时间测量示例
 >>> <img src="figures/chapter_06/fig_0841_1_tight.png" width="700">
 
 <!-- 📄 Page 842 -->
@@ -14765,7 +14746,6 @@ successive PTM dialogs have been completed successfully and without replays.
 </table>
 
 >>> **Figure 6-24.** PTM Requester Operation
-> **图 6-24.** PTM 请求者操作
 >>> <img src="figures/chapter_06/fig_0844_1_tight.png" width="700">
 
 
@@ -15096,7 +15076,6 @@ a particular physical event if timestamps are captured in the higher layers.
 </table>
 
 >>> **Figure 6-25.** PTM Timestamp Capture Example
-> **图 6-25.** PTM 时间戳捕获示例
 >>> <img src="figures/chapter_06/fig_0847_1_tight.png" width="700">
 
 ---
@@ -15430,8 +15409,8 @@ Additional requirements for Root Ports and Switch Downstream Ports include:
 
 对根端口 (Root Port) 和交换机下游端口 (Switch Downstream Port) 的额外要求包括:
 
-- 实现 DRS Message Received 位，用于指示已收到 DRS 报文
-- 若实现 FRS,必须使用 FRS 在以下任一 Function 级事件发生后指示特定 Function 处于"配置就绪"状态，这些事件统称为 "FRS Events":
+- 实现 DRS Message Received 位,用于指示已收到 DRS 报文
+- 若实现 FRS,必须使用 FRS 在以下任一 Function 级事件发生后指示特定 Function 处于"配置就绪"状态,这些事件统称为 "FRS Events":
   - Function 级复位 (Function Level Reset, FLR)
   - 完成 D3Hot 到 D0 的转换
   - 在 PF 中设置或清除 VF Enable (SR-IOV)
@@ -15472,7 +15451,7 @@ FRS 报文协议要求包括:
 
 - FRS 报文的 Requester ID 必须指示已更改就绪状态的 Function(参见 § 2.2.8.6.3)
 - FRS 报文中的 FRS Reason 字段必须指示该 Function 更改就绪状态的原因
-- 在 Function 发送 FRS 报文后，除非发生后续的 DRS Event 或 FRS Event,所指示的 Function 不得在响应配置请求 (Configuration Request) 时返回带 RRS 的完成报文 (Completion)
+- 在 Function 发送 FRS 报文后,除非发生后续的 DRS Event 或 FRS Event,所指示的 Function 不得在响应配置请求 (Configuration Request) 时返回带 RRS 的完成报文 (Completion)
 
 </td>
 </tr>
@@ -15544,13 +15523,13 @@ The FRS Message Queue must satisfy the following requirements:
 FRS 报文队列必须满足以下要求:
 
 - 复位后 FRS 报文队列必须为空。
-- 对于根端口，当链路 (Link) 转为 DL_Down 时,FRS 报文队列必须被清空。
+- 对于根端口,当链路 (Link) 转为 DL_Down 时,FRS 报文队列必须被清空。
 - FRS 报文必须按接收顺序排队。
-- 若在收到 FRS 报文或内部产生 FRS 报文时 FRS 报文队列未满，则必须将该 FRS 报文送入队列，并将 FRS Message Received 位置为 1b。
-- 若在收到 FRS 报文或内部产生 FRS 报文时 FRS 报文队列已满，则必须丢弃该 FRS 报文，并将 FRS Message Overflow 位置为 1b。先前已存在的 FRS 报文队列必须保留。
+- 若在收到 FRS 报文或内部产生 FRS 报文时 FRS 报文队列未满,则必须将该 FRS 报文送入队列,并将 FRS Message Received 位置为 1b。
+- 若在收到 FRS 报文或内部产生 FRS 报文时 FRS 报文队列已满,则必须丢弃该 FRS 报文,并将 FRS Message Overflow 位置为 1b。先前已存在的 FRS 报文队列必须保留。
 - 最旧的 FRS 报文必须在 FRS Message Queue 寄存器中可见(参见 § 7.8.10.4)。
 - 写入 FRS Message Queue 寄存器必须从队列中移除最旧的元素。
-- 当 FRS Message Received 或 FRS Message Overflow 由 0b 跳变为 1b 时，如果中断已使能，则必须产生中断。
+- 当 FRS Message Received 或 FRS Message Overflow 由 0b 跳变为 1b 时,如果中断已使能,则必须产生中断。
 
 </td>
 </tr>
@@ -15582,7 +15561,6 @@ It is only permitted to apply EA to certain functions, based on the hierarchical
 <td>
 
 > **Figure 6-26.** Example Illustrating Application of Enhanced Allocation
-> **图 6-26.** TPH 与设备特定扩展
 > <img src="figures/chapter_06/fig_0853_1_tight.png" width="700">
 
 Figure 6-26 illustrates an example topology that shows where Enhanced Allocation is permitted to be used:
@@ -15611,7 +15589,7 @@ Key (with colors):
 <td style="background-color:#e8e8e8">
 
 
-图 6-26 给出了一个示例拓扑，说明在哪些位置允许使用增强分配 (Enhanced Allocation):
+图 6-26 给出了一个示例拓扑,说明在哪些位置允许使用增强分配 (Enhanced Allocation):
 
 - Si component A:Type 0 Function、Type 0 Function,桥在配置空间中未暴露
 - Si component B:Type 0 Function、Type 0 Function、Type 1 Function(桥)
@@ -15631,7 +15609,7 @@ Key (with colors):
 - 此颜色 Function 允许使用增强分配 (EA)
 - 此颜色 Function 不允许使用增强分配
 - 此方框内的 Function 必须永久连接到主桥 (Host Bridge)
-- 桥 Function 在其 Secondary 侧具有非 EA Function 的情况下，允许在其 Primary Bus 上使用 EA,但不允许在 Secondary Bus 上使用 EA
+- 桥 Function 在其 Secondary 侧具有非 EA Function 的情况下,允许在其 Primary Bus 上使用 EA,但不允许在 Secondary Bus 上使用 EA
 
 <img src="figures/chapter_06/fig_0853_1_tight.png" width="700">
 </td>
@@ -15684,11 +15662,11 @@ Functions enter and exit this state either autonomously or based on external req
 </td>
 <td style="background-color:#e8e8e8">
 
-紧急降功耗状态 (Emergency Power Reduction State) 是一种可选机制，用于请求 Function 快速降低其功耗。紧急降功耗是一种故障安全机制，旨在用于防止系统损坏，并不用于提供常规的动态电源管理 (Power Management)。
+紧急降功耗状态 (Emergency Power Reduction State) 是一种可选机制,用于请求 Function 快速降低其功耗。紧急降功耗是一种故障安全机制,旨在用于防止系统损坏,并不用于提供常规的动态电源管理 (Power Management)。
 
-如果 Function 实现紧急降功耗状态，则它还必须实现 Power Budgeting 扩展能力结构，并必须报告该状态对应的 Power Budgeting 值(参见 § 7.8.1)。集成在系统板上的设备不需要实现 Power Budgeting 扩展能力结构，但若实现，则必须满足上述要求。
+如果 Function 实现紧急降功耗状态,则它还必须实现 Power Budgeting 扩展能力结构,并必须报告该状态对应的 Power Budgeting 值(参见 § 7.8.1)。集成在系统板上的设备不需要实现 Power Budgeting 扩展能力结构,但若实现,则必须满足上述要求。
 
-Function 进入或退出此状态既可以是自主 (autonomously) 的，也可以是基于外部请求的。外部请求既可以遵循适用的外形规格 (Form Factor) 规范中定义的信号协议，也可以使用厂商特定方法。表 6-16 定义了如何根据 Emergency Power Reduction Supported 和 Emergency Power Reduction Initialization Required 字段来确定允许触发进入和退出此状态的机制(参见 § 7.5.3.15)。
+Function 进入或退出此状态既可以是自主 (autonomously) 的,也可以是基于外部请求的。外部请求既可以遵循适用的外形规格 (Form Factor) 规范中定义的信号协议,也可以使用厂商特定方法。表 6-16 定义了如何根据 Emergency Power Reduction Supported 和 Emergency Power Reduction Initialization Required 字段来确定允许触发进入和退出此状态的机制(参见 § 7.5.3.15)。
 
 </td>
 </tr>
@@ -15754,7 +15732,6 @@ When software initializes a PCI Hierarchy, it assigns unique Bus and Device numb
 **EMERGENCY POWER REDUCTION STATE: EXAMPLE ADD-IN CARD**
 
 > **Figure 6-27.** Emergency Power Reduction State: Example Add-in Card
-> **图 6-27.** TPH 与 Steer 和 ST 字段的格式
 > <img src="figures/chapter_06/fig_0857_1_tight.png" width="700">
 
 § Figure 6-27 shows an example multi-Device add-in card supporting Emergency Power Reduction. Note that Device C does not support the Emergency Power Reduction State. Device C might be a Switch that fans out to Devices A and B.
@@ -15794,15 +15771,15 @@ Hierarchy ID contains the Segment Group Number associated with this Hierarchy (a
 
 层级 ID 报文由下游端口 (Downstream Port) 应软件请求生成。在上游端口 (Upstream Port) 接收到的报文通过 Hierarchy ID 扩展能力结构 (Extended Capability) 报告(参见 § 7.9.17)。
 
-层级 ID 报文是 PCI-SIG 定义的 Type 1 VDM。层级 ID 报文可在任意时刻安全发送，不支持该报文的组件将静默忽略。
+层级 ID 报文是 PCI-SIG 定义的 Type 1 VDM。层级 ID 报文可在任意时刻安全发送,不支持该报文的组件将静默忽略。
 
-层级 ID 报文通常从层级顶部的下游端口(例如根端口)发送。在根端口不支持层级 ID 报文的系统中，层级 ID 报文可从交换机下游端口发送。
+层级 ID 报文通常从层级顶部的下游端口(例如根端口)发送。在根端口不支持层级 ID 报文的系统中,层级 ID 报文可从交换机下游端口发送。
 
-层级 ID 报文供软件、固件和/或硬件使用。在使用层级 ID 报文时，必须比较 Hierarchy ID、System GUID、System GUID Authority ID 字段的所有位，而不考虑其内部结构。该信息的使用方式不在本规范范围内。
+层级 ID 报文供软件、固件和/或硬件使用。在使用层级 ID 报文时,必须比较 Hierarchy ID、System GUID、System GUID Authority ID 字段的所有位,而不考虑其内部结构。该信息的使用方式不在本规范范围内。
 
 层级 ID 报文的布局如图 2-61 所示。层级 ID 报文中的字段如下:
 
-Hierarchy ID 包含与此层级关联的段组号(Segment Group Number,由 PCI 固件规范定义)。该字段可与 Routing ID 配合使用，以在系统内唯一标识一个 Function。值 0000h 表示根复合体 (Root Complex) 的默认(或唯一)层级。非零值表示其他层级。
+Hierarchy ID 包含与此层级关联的段组号(Segment Group Number,由 PCI 固件规范定义)。该字段可与 Routing ID 配合使用,以在系统内唯一标识一个 Function。值 0000h 表示根复合体 (Root Complex) 的默认(或唯一)层级。非零值表示其他层级。
 
 </td>
 </tr>
@@ -15911,11 +15888,11 @@ For ARI Functions associated with an Upstream Port, the Routing ID consists of a
 </td>
 <td style="background-color:#e8e8e8">
 
-扁平化门户桥 (Flattening Portal Bridge, FPB) 是一种可选机制，可用于提高 Routing ID 和 Memory Space 资源的可扩展性及运行时再分配能力。
+扁平化门户桥 (Flattening Portal Bridge, FPB) 是一种可选机制,可用于提高 Routing ID 和 Memory Space 资源的可扩展性及运行时再分配能力。
 
 对于与非 ARI(替代路由 ID 解释, Alternative Routing ID Interpretation) 关联的、连接到上游端口 (Upstream Port) 的 Function,其 Routing ID 包含一个 3 位 Function Number 字段(由上游端口硬件结构决定)和一个 13 位 Bus Number + Device Number 字段(由上游端口上方的下游端口决定)。
 
-对于与 ARI 关联的、连接到上游端口的 Function,其 Routing ID 包含一个 8 位 Function Number 字段，且仅有 8 位 Bus Number 字段由上游端口上方的下游端口决定。
+对于与 ARI 关联的、连接到上游端口的 Function,其 Routing ID 包含一个 8 位 Function Number 字段,且仅有 8 位 Bus Number 字段由上游端口上方的下游端口决定。
 
 </td>
 </tr>
@@ -15945,31 +15922,28 @@ For ARI Functions associated with an Upstream Port, the Routing ID consists of a
 A bridge that implements the FPB Capability can itself also be referred to as an FPB. The FPB Capability can be applied to any logical bridge, as illustrated in § Figure 6-28.
 
 > **Figure 6-28.** FPB High Level Diagram and Example Topology
-> **图 6-28.** TPH 完成器要求
 > <img src="figures/chapter_06/fig_0862_1_tight.png" width="700">
 
 FPB changes the way Bus Numbers are consumed by Switches to reduce waste, by "flattening" the way Bus Numbers are used inside of Switches and by Downstream Ports (see § Figure 6-29).
 
 > **Figure 6-29.** Example Illustrating "Flattening" of a Switch
-> **图 6-29.** TPH 请求者要求
 > <img src="figures/chapter_06/fig_0863_1_tight.png" width="700">
 
 FPB defines mechanisms for system software to allocate Routing IDs and Memory Space resources in non-contiguous ranges, enabling system software to assign pools of these resources from which it can allocate "bins" to Functions below the FPB. This is done using a bit vector where each bit when Set assigns a corresponding range of resources to the Secondary Side of the bridge (see § Figure 6-30).
 
 > **Figure 6-30.** Vector Mechanism for Address Range Decoding
-> **图 6-30.** 扩展语法空间 — TLP 格式
 > <img src="figures/chapter_06/fig_0864_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-实现 FPB Capability 的桥本身也可称为 FPB。FPB Capability 可应用于任何逻辑桥，如图 6-28 所示。
+实现 FPB Capability 的桥本身也可称为 FPB。FPB Capability 可应用于任何逻辑桥,如图 6-28 所示。
 
 
 FPB 通过"扁平化"交换机 (Switch) 内部以及下游端口 (Downstream Port) 使用 Bus Number 的方式来减少 Switch 对 Bus Number 的浪费(参见图 6-29)。
 
 
-FPB 定义了系统软件在不连续范围内分配 Routing ID 和 Memory Space 资源的机制，使系统软件可以分配这些资源的资源池，并从中将"桶 (bins)"分配给 FPB 下方的 Function。这是通过使用一个位向量 (bit vector) 实现的，其中每一位被置位时，会将相应的资源范围分配给桥的 Secondary 侧(参见图 6-30)。
+FPB 定义了系统软件在不连续范围内分配 Routing ID 和 Memory Space 资源的机制,使系统软件可以分配这些资源的资源池,并从中将"桶 (bins)"分配给 FPB 下方的 Function。这是通过使用一个位向量 (bit vector) 实现的,其中每一位被置位时,会将相应的资源范围分配给桥的 Secondary 侧(参见图 6-30)。
 
 <img src="figures/chapter_06/fig_0862_1_tight.png" width="700">
 </td>
@@ -15986,7 +15960,6 @@ This allows system software to assign Routing IDs and/or Memory Space resources 
 FPB is defined to allow both the non-FPB and FPB mechanisms to operate simultaneously, such that, for example, it is possible for system firmware/software to implement a policy where the non-FPB mechanisms continue to be used in parts of the system where the FPB mechanisms are not required (see § Figure 6-31). In this figure, the decode logic is assumed to provide a '1' output when a given TLP is decoded as being associated with the bridge's Secondary Side. The non-FPB decode mechanisms apply as without FPB, so for example only the Bus Number portion (bits 15:8) of a Routing ID is tested by the non-FPB decode logic when evaluating an ID routed TLP.
 
 > **Figure 6-31.** Relationship between FPB and non-FPB Decode Mechanisms
-> **图 6-31.** 64 位寻址扩展语法空间 — TLP 格式
 > <img src="figures/chapter_06/fig_0865_1_tight.png" width="700">
 
 It is important to recognize that, although FPB adds additional ways for a specific bridge to decode a given TLP, FPB does not change anything about the fundamental ways that bridges operate within the Switch and Root Complex architectural structures. FPB uses the same architectural concepts to provide management mechanisms for three different resource types:
@@ -16079,13 +16052,13 @@ The following rules apply when any of the FPB mechanisms are used:
   - 4 GB 以下内存 ("MEM Low")
   - 4 GB 以上内存 ("MEM High")
 - 系统软件允许启用特定 FPB 所支持的基本机制的任意组合(包括全部启用或全部禁用)。
-- 错误处理与报告机制，除非本节有明确修改，否则不受 FPB 影响。
+- 错误处理与报告机制,除非本节有明确修改,否则不受 FPB 影响。
 - 在 FPB Function 的任何复位之后,FPB 硬件必须清除 (Clear) 所有已实现向量中的所有位。
-- 一旦启用(通过 FPB RID Decode Mechanism Enable、FPB MEM Low Decode Mechanism Enable 和/或 FPB MEM High Decode Mechanism Enable 位)，如果系统软件随后禁用某个 FPB 机制，则相关向量中各条目的值未定义;若系统软件随后重新启用该 FPB 机制，则 FPB 硬件必须清除 (Clear) 相关向量中的所有位。
-- 若 FPB 在 No_Soft_Reset 位 Clear 的情况下实现，则当该 FPB 经过 D0→D3Hot→D0 循环时，所有 FPB 机制必须被禁用，且 FPB 必须清除 (Clear) 所有已实现向量中的所有位。
-- 若 FPB 在 No_Soft_Reset 位 Set 的情况下实现，则当该 FPB 经过 D0→D3Hot→D0 循环时，所有 FPB 配置状态必须保持不变，且 FPB 向量中的条目必须由硬件保留。
-- 硬件无需对 FPB 计算执行任何类型的边界检查，系统软件必须确保 FPB 参数的正确编程
-  - 明确允许系统软件对 Vector Start 字段进行编程，使得相应向量的高位超出与给定 FPB 关联的资源范围;但在这种情况下，系统软件必须确保向量的这些高位被 Clear。
+- 一旦启用(通过 FPB RID Decode Mechanism Enable、FPB MEM Low Decode Mechanism Enable 和/或 FPB MEM High Decode Mechanism Enable 位),如果系统软件随后禁用某个 FPB 机制,则相关向量中各条目的值未定义;若系统软件随后重新启用该 FPB 机制,则 FPB 硬件必须清除 (Clear) 相关向量中的所有位。
+- 若 FPB 在 No_Soft_Reset 位 Clear 的情况下实现,则当该 FPB 经过 D0→D3Hot→D0 循环时,所有 FPB 机制必须被禁用,且 FPB 必须清除 (Clear) 所有已实现向量中的所有位。
+- 若 FPB 在 No_Soft_Reset 位 Set 的情况下实现,则当该 FPB 经过 D0→D3Hot→D0 循环时,所有 FPB 配置状态必须保持不变,且 FPB 向量中的条目必须由硬件保留。
+- 硬件无需对 FPB 计算执行任何类型的边界检查,系统软件必须确保 FPB 参数的正确编程
+  - 明确允许系统软件对 Vector Start 字段进行编程,使得相应向量的高位超出与给定 FPB 关联的资源范围;但在这种情况下,系统软件必须确保向量的这些高位被 Clear。
   - 系统软件必须避免的错误示例包括:资源分配重复、起始偏移与已设置的向量位的组合可能导致"回绕"(wrap-around)或边界错误
 
 </td>
@@ -16138,18 +16111,18 @@ When ARI is not enabled, the FPB RID mechanism can be applied with different gra
 以下规则适用于 FPB 路由 ID (Routing ID, RID) 机制:
 
 - 当 Bus Number 部分落在由 Secondary 和 Subordinate Bus Number 寄存器中所编程的值(逻辑上与 FPB RID Vector 中相应条目所编程的值进行 OR 运算)所指示的 Bus Number 范围内时,FPB 硬件必须将该特定范围的 RID 视为与 FPB 的 Secondary 端相关联。
-- 系统软件必须在尝试通过 Bridge Function 传递 Configuration Request 之前，先配置该 Bridge Function 中 Configuration Request Type 1 到 Type 0 的转换机制。
-- 系统软件必须将 Bridge Function 中 Configuration Request Type 1 到 Type 0 转换的传统机制和 FPB 机制编程为给出相同结果，或将其中一种机制禁用。
-  - 若打算仅使用 FPB RID 机制进行 BDF 解码，则系统软件必须确保 Secondary 和 Subordinate Bus Number 寄存器均为 0。
-  - 若打算启用 FPB RID Decode Mechanism,但仅使用传统机制进行 Configuration Request Type 1 到 Type 0 的转换，则系统软件必须将 RID Secondary Start 字段的 bits 7:3 写入 0 0000b。
+- 系统软件必须在尝试通过 Bridge Function 传递 Configuration Request 之前,先配置该 Bridge Function 中 Configuration Request Type 1 到 Type 0 的转换机制。
+- 系统软件必须将 Bridge Function 中 Configuration Request Type 1 到 Type 0 转换的传统机制和 FPB 机制编程为给出相同结果,或将其中一种机制禁用。
+  - 若打算仅使用 FPB RID 机制进行 BDF 解码,则系统软件必须确保 Secondary 和 Subordinate Bus Number 寄存器均为 0。
+  - 若打算启用 FPB RID Decode Mechanism,但仅使用传统机制进行 Configuration Request Type 1 到 Type 0 的转换,则系统软件必须将 RID Secondary Start 字段的 bits 7:3 写入 0 0000b。
 - 系统软件必须确保 FPB 路由机制的配置使得以 FPB Secondary 端 Function 为目标的 Configuration Request 将由 FPB 从 Primary 端路由至 Secondary 端。
 
-当 ARI 未启用时,FPB RID 机制可以以不同的粒度应用，粒度可由系统软件通过 FPB RID Vector Control 1 Register 中的 FPB RID Vector Granularity 字段进行编程。Figure 6-32 展示了 RID 的布局与所支持粒度之间的关系。读者在考虑下文以及 Flattening Portal Bridge (FPB) Capability 定义(参见 § Section 7.8.6)中所定义的需求时，参考此图可能会有所帮助。
+当 ARI 未启用时,FPB RID 机制可以以不同的粒度应用,粒度可由系统软件通过 FPB RID Vector Control 1 Register 中的 FPB RID Vector Granularity 字段进行编程。Figure 6-32 展示了 RID 的布局与所支持粒度之间的关系。读者在考虑下文以及 Flattening Portal Bridge (FPB) Capability 定义(参见 § Section 7.8.6)中所定义的需求时,参考此图可能会有所帮助。
 
-- 系统软件必须根据字段描述中的约束，编程 FPB RID Vector Control 1 Register 中的 FPB RID Vector Granularity 和 FPB RID Vector Start 字段。
+- 系统软件必须根据字段描述中的约束,编程 FPB RID Vector Control 1 Register 中的 FPB RID Vector Granularity 和 FPB RID Vector Start 字段。
 - 对于与 Switch 上游端口 (Upstream Port) 无关的所有 FPB:
-  - 当不支持 ARI Forwarding,或 Device Control 2 Register 中的 ARI Forwarding Enable 位为 Clear 时，当 Type 1 Configuration Request 的 Routing ID 的 bits 15:3 与 FPB RID Vector Control 2 Register 中 RID Secondary Start 字段的值相匹配时,FPB 硬件必须将在 FPB Primary 端接收到的 Type 1 Configuration Request 转换为 FPB Secondary 端的 Type 0 Configuration Request,且系统软件必须相应地配置 FPB。
-  - 当 Device Control 2 Register 中的 ARI Forwarding Enable 位为 Set 时，当 Type 1 Configuration Request 的 Routing ID 中的 Bus Number 部分与 FPB RID Vector Control 2 Register 中 RID Secondary Start 字段的 Bus Number 地址(仅 bits 15:8)的值相匹配时,FPB 硬件必须将在 FPB Primary 端接收到的 Type 1 Configuration Request 转换为 FPB Secondary 端的 Type 0 Configuration Request,且系统软件必须相应地配置 FPB。
+  - 当不支持 ARI Forwarding,或 Device Control 2 Register 中的 ARI Forwarding Enable 位为 Clear 时,当 Type 1 Configuration Request 的 Routing ID 的 bits 15:3 与 FPB RID Vector Control 2 Register 中 RID Secondary Start 字段的值相匹配时,FPB 硬件必须将在 FPB Primary 端接收到的 Type 1 Configuration Request 转换为 FPB Secondary 端的 Type 0 Configuration Request,且系统软件必须相应地配置 FPB。
+  - 当 Device Control 2 Register 中的 ARI Forwarding Enable 位为 Set 时,当 Type 1 Configuration Request 的 Routing ID 中的 Bus Number 部分与 FPB RID Vector Control 2 Register 中 RID Secondary Start 字段的 Bus Number 地址(仅 bits 15:8)的值相匹配时,FPB 硬件必须将在 FPB Primary 端接收到的 Type 1 Configuration Request 转换为 FPB Secondary 端的 Type 0 Configuration Request,且系统软件必须相应地配置 FPB。
 
 </td>
 </tr>
@@ -16157,7 +16130,6 @@ When ARI is not enabled, the FPB RID mechanism can be applied with different gra
 </table>
 
 > **Figure 6-32.** Routing IDs (RIDs) and Supported Granularities
-> **图 6-32.** Process Address Space ID (PASID) TLP 前缀
 > <img src="figures/chapter_06/fig_0867_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
@@ -16204,19 +16176,19 @@ This is a special case, but the concept is not unique to FPB, and is a reflectio
 
 - 仅对于与 Switch 上游端口 (Upstream Port) 关联的 FPB,当 FPB RID Decode Mechanism Enable 位为 Set 时,FPB 硬件必须使用 FPB Capabilities Register 中的 FPB Num Sec Dev 字段来指示与 Upstream Port 桥的 Secondary 端相关联的 Device Number 数量;该数量必须与 FPB RID Vector Control 2 Register 中的 RID Secondary Start 字段一起被 FPB 用于判断:何时在 FPB Primary 端接收到的 Configuration Request 目标是 Switch 的某个 Downstream Port,即实际上何时必须将该 Request 从 Type 1 Configuration Request 转换为 Type 0 Configuration Request;且系统软件必须适当配置 FPB。
   - 配置 FPB 的系统软件必须理解:Switch 的逻辑内部结构会随 Switch 上游端口中 FPB RID Decode Mechanism Enable 位的值而变化。
-  - Downstream Port 必须使用其对应的 RID 值，以及其 Requester ID 和 Completer ID,这些值由 Upstream Port 的 FPB Num Sec Dev 和 RID Secondary Start 值确定
+  - Downstream Port 必须使用其对应的 RID 值,以及其 Requester ID 和 Completer ID,这些值由 Upstream Port 的 FPB Num Sec Dev 和 RID Secondary Start 值确定
   - 在由 Switch 上游端口 Function 的 RID Secondary Start 和 FPB Num Sec Dev 所确定的范围内的所有已实现 Function,必须是与该 Switch 上游端口相关联的 Switch Downstream Port;系统软件需要扫描此范围内的所有 Function 以确定哪些已实现。
-  - 强烈建议系统软件分配 RID Secondary Start 时，使 Bus 和 Device Number 与 Switch 上游端口的不同;否则，产生的硬件行为未定义。
+  - 强烈建议系统软件分配 RID Secondary Start 时,使 Bus 和 Device Number 与 Switch 上游端口的不同;否则,产生的硬件行为未定义。
 - 仅对于与 Switch 上游端口关联的 FPB,硬件必须理解:针对 Upstream Port 自身以及被扁平化 (flatten) 到与 Upstream Port 自身具有相同 Bus 和 Device Number 的 Function Number 范围内的 Switch 的任何 Downstream Port 的 Configuration Request,将由 Switch 上方的 Downstream Port 从 Type 1 转换为 Type 0;但被扁平化到连续 Device Number 内的 Switch 的任何其他 Downstream Port 将不会被 Switch 上方的 Downstream Port 从 Type 1 转换为 Type 0,因此必须实际上由 Switch 上游端口自身将其从 Type 1 转换为 Type 0。
 
-这是一种特殊情况，但该概念并非 FPB 所独有，而是 Bus/Device Number 与 Function Number 之间关系定义的反映 —— Function Number 始终由 Upstream Port 的硬件确定，而 Upstream Port 的 Bus 和 Device Number 始终由 Upstream Port 正上方的 Downstream Port 确定。
+这是一种特殊情况,但该概念并非 FPB 所独有,而是 Bus/Device Number 与 Function Number 之间关系定义的反映 —— Function Number 始终由 Upstream Port 的硬件确定,而 Upstream Port 的 Bus 和 Device Number 始终由 Upstream Port 正上方的 Downstream Port 确定。
 
 - FPB 必须为 INTx 虚拟线实现桥映射(参见 § Section 2.2.8.1)
 - 硬件和软件必须应用以下算法(或其逻辑等价物)来确定 FPB RID Vector 中哪个条目适用于给定的路由 ID (Routing ID, RID) 地址:
-  - 如果 RID 低于 FPB RID Vector Start 的值，则该 RID 超出范围(低于起始)，因此不能与桥的 Secondary 端相关联，否则
-  - 通过首先减去 FPB RID Vector Start 的值，然后根据 FPB RID Vector Granularity 的值进行除法，以计算向量中的偏移量，从而确定向量内的位索引。
-  - 如果位索引值大于 FPB RID Vector Size Supported 所指示的长度，则该 RID 超出范围(超过向量所覆盖范围的顶部)，因此不能与桥的 Secondary 端相关联，否则
-  - 如果向量中计算出的位索引位置的位值为 1b,则该 RID 地址与桥的 Secondary 端相关联，否则该 RID 地址与桥的 Primary 端相关联。
+  - 如果 RID 低于 FPB RID Vector Start 的值,则该 RID 超出范围(低于起始),因此不能与桥的 Secondary 端相关联,否则
+  - 通过首先减去 FPB RID Vector Start 的值,然后根据 FPB RID Vector Granularity 的值进行除法,以计算向量中的偏移量,从而确定向量内的位索引。
+  - 如果位索引值大于 FPB RID Vector Size Supported 所指示的长度,则该 RID 超出范围(超过向量所覆盖范围的顶部),因此不能与桥的 Secondary 端相关联,否则
+  - 如果向量中计算出的位索引位置的位值为 1b,则该 RID 地址与桥的 Secondary 端相关联,否则该 RID 地址与桥的 Primary 端相关联。
 
 </td>
 </tr>
@@ -16268,20 +16240,20 @@ The FPB MEM Low mechanism can be applied with different granularities, programma
 
 以下规则适用于 FPB MEM Low 机制:
 
-FPB MEM Low 机制可以以不同的粒度应用，粒度可由系统软件通过 FPB MEM Low Vector Control Register 中的 FPB MEM Low Vector Granularity 字段进行编程。Figure 6-33 展示了 FPB MEM Low 机制所应用的 4 GB 以下内存地址空间中地址布局之间的关系。读者在考虑下文以及 Flattening Portal Bridge (FPB) Capability 定义(参见 § Section 7.8.11)中所定义的需求时，参考此图可能会有所帮助。
+FPB MEM Low 机制可以以不同的粒度应用,粒度可由系统软件通过 FPB MEM Low Vector Control Register 中的 FPB MEM Low Vector Granularity 字段进行编程。Figure 6-33 展示了 FPB MEM Low 机制所应用的 4 GB 以下内存地址空间中地址布局之间的关系。读者在考虑下文以及 Flattening Portal Bridge (FPB) Capability 定义(参见 § Section 7.8.11)中所定义的需求时,参考此图可能会有所帮助。
 
-- 系统软件必须根据字段描述中的约束，编程 FPB MEM Low Vector Control Register 中的 FPB MEM Low Vector Granularity 和 FPB MEM Low Vector Start 字段。
-- 如果某个内存地址落在由其他桥 Memory 解码寄存器(下文枚举)中所编程的值(逻辑上与 FPB MEM Low Vector 中相应条目所编程的值进行 OR 运算)所指示的任意范围内，则 FPB 硬件必须将该特定内存地址视为与 FPB 的 Secondary 端相关联。其他桥 Memory 解码寄存器包括:
+- 系统软件必须根据字段描述中的约束,编程 FPB MEM Low Vector Control Register 中的 FPB MEM Low Vector Granularity 和 FPB MEM Low Vector Start 字段。
+- 如果某个内存地址落在由其他桥 Memory 解码寄存器(下文枚举)中所编程的值(逻辑上与 FPB MEM Low Vector 中相应条目所编程的值进行 OR 运算)所指示的任意范围内,则 FPB 硬件必须将该特定内存地址视为与 FPB 的 Secondary 端相关联。其他桥 Memory 解码寄存器包括:
   - Memory Base/Limit 寄存器
   - Prefetchable Base/Limit 寄存器
   - Bridge Control Register 中的 VGA Enable 位
   - Enhanced Allocation (EA) 能力(若支持)
   - FPB MEM High 机制(若支持且已启用)
 - 硬件和软件必须应用以下算法(或其逻辑等价物)来确定 FPB MEM Low Vector 中哪个条目适用于给定的内存地址:
-  - 如果内存地址低于 FPB MEM Low Vector Start 的值，则该内存地址超出范围(低于)，因此不通过此机制与桥的 Secondary 端相关联，否则
-  - 通过首先减去 FPB MEM Low Vector Start 的值，然后根据 FPB MEM Low Vector Granularity 的值进行除法，以计算向量中的偏移量，从而确定向量内的位索引。
-  - 如果位索引值大于 FPB MEM Low Vector Size Supported 所指示的长度，则该内存地址超出范围(高于)，因此不通过此机制与桥的 Secondary 端相关联，否则
-  - 如果向量中计算出的位索引位置的位值为 1b,则该内存地址与桥的 Secondary 端相关联，否则该内存地址与桥的 Primary 端相关联。
+  - 如果内存地址低于 FPB MEM Low Vector Start 的值,则该内存地址超出范围(低于),因此不通过此机制与桥的 Secondary 端相关联,否则
+  - 通过首先减去 FPB MEM Low Vector Start 的值,然后根据 FPB MEM Low Vector Granularity 的值进行除法,以计算向量中的偏移量,从而确定向量内的位索引。
+  - 如果位索引值大于 FPB MEM Low Vector Size Supported 所指示的长度,则该内存地址超出范围(高于),因此不通过此机制与桥的 Secondary 端相关联,否则
+  - 如果向量中计算出的位索引位置的位值为 1b,则该内存地址与桥的 Secondary 端相关联,否则该内存地址与桥的 Primary 端相关联。
 
 </td>
 </tr>
@@ -16289,7 +16261,6 @@ FPB MEM Low 机制可以以不同的粒度应用，粒度可由系统软件通�
 </table>
 
 > **Figure 6-33.** Addresses in Memory Below 4 GB and Effect of Granularity
-> **图 6-33.** PASID TLP 前缀格式
 > <img src="figures/chapter_06/fig_0869_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
@@ -16335,18 +16306,18 @@ The following rules apply to the FPB MEM High mechanism:
 
 以下规则适用于 FPB MEM High 机制:
 
-- 系统软件必须根据字段描述中的约束，编程 FPB MEM High Vector Control 1 Register 中的 FPB MEM High Vector Granularity 和 FPB MEM High Vector Start Lower 字段。
-- 如果某个内存地址落在由其他桥 Memory 解码寄存器(下文枚举)中所编程的值(逻辑上与 FPB MEM High Vector 中相应条目所编程的值进行 OR 运算)所指示的任意范围内，则 FPB 硬件必须将该特定内存地址视为与 FPB 的 Secondary 端相关联。其他桥 Memory 解码寄存器包括:
+- 系统软件必须根据字段描述中的约束,编程 FPB MEM High Vector Control 1 Register 中的 FPB MEM High Vector Granularity 和 FPB MEM High Vector Start Lower 字段。
+- 如果某个内存地址落在由其他桥 Memory 解码寄存器(下文枚举)中所编程的值(逻辑上与 FPB MEM High Vector 中相应条目所编程的值进行 OR 运算)所指示的任意范围内,则 FPB 硬件必须将该特定内存地址视为与 FPB 的 Secondary 端相关联。其他桥 Memory 解码寄存器包括:
   - Memory Base/Limit 寄存器
   - Prefetchable Base/Limit 寄存器
   - Bridge Control Register 中的 VGA Enable 位
   - Enhanced Allocation (EA) 能力(若支持)
   - FPB MEM Low 机制(若支持且已启用)
 - 硬件和软件必须应用以下算法来确定 FPB MEM High Vector 中哪个条目适用于给定的内存地址:
-  - 如果内存地址低于 FPB MEM High Vector Start Upper/FPB MEM High Vector Start Lower 的值，则该内存地址超出范围(低于)，因此不通过此机制与桥的 Secondary 端相关联，否则
-  - 通过首先减去 FPB MEM High Vector Start Upper/FPB MEM High Vector Start Lower 的值，然后根据 FPB MEM High Vector Granularity 的值进行除法，以计算向量中的偏移量，从而确定向量内的位索引。
-  - 如果位索引值大于 FPB MEM High Vector Size Supported 所指示的长度，则该内存地址超出范围(高于)，因此不通过此机制与桥的 Secondary 端相关联，否则
-  - 如果向量中计算出的位索引位置的位值为 1b,则该内存地址与桥的 Secondary 端相关联，否则该内存地址与桥的 Primary 端相关联。
+  - 如果内存地址低于 FPB MEM High Vector Start Upper/FPB MEM High Vector Start Lower 的值,则该内存地址超出范围(低于),因此不通过此机制与桥的 Secondary 端相关联,否则
+  - 通过首先减去 FPB MEM High Vector Start Upper/FPB MEM High Vector Start Lower 的值,然后根据 FPB MEM High Vector Granularity 的值进行除法,以计算向量中的偏移量,从而确定向量内的位索引。
+  - 如果位索引值大于 FPB MEM High Vector Size Supported 所指示的长度,则该内存地址超出范围(高于),因此不通过此机制与桥的 Secondary 端相关联,否则
+  - 如果向量中计算出的位索引位置的位值为 1b,则该内存地址与桥的 Secondary 端相关联,否则该内存地址与桥的 Primary 端相关联。
 
 </td>
 </tr>
@@ -16412,20 +16383,20 @@ FPB 使用位向量机制来解码路由 ID (Routing ID) 范围以及 4 GB 以�
 - 一个起始地址 (Start Address)
 - 一个粒度 (Granularity)
 
-桥使用这些来确定给定地址是否属于由 FPB 解码为与桥的 secondary 端相关联的范围。通过非 FPB 解码机制和 FPB 解码机制(任一或两者)被确定为不与桥的 secondary 端相关联的地址，默认情况下与桥的 primary 端相关联。此处当我们使用"关联"(associated)一词时，我们的意思是，例如，桥将对 TLP 应用以下处理:
+桥使用这些来确定给定地址是否属于由 FPB 解码为与桥的 secondary 端相关联的范围。通过非 FPB 解码机制和 FPB 解码机制(任一或两者)被确定为不与桥的 secondary 端相关联的地址,默认情况下与桥的 primary 端相关联。此处当我们使用"关联"(associated)一词时,我们的意思是,例如,桥将对 TLP 应用以下处理:
 
-- 与 Primary 关联，在 Primary 接收 → Unsupported Request (UR)
-- 与 Primary 关联，在 Secondary 接收 → 向上游转发 (Forward upstream)
-- 与 Secondary 关联，在 Primary 接收 → 向下游转发 (Forward downstream)
-- 与 Secondary 关联，在 Secondary 接收 → Unsupported Request (UR)
+- 与 Primary 关联,在 Primary 接收 → Unsupported Request (UR)
+- 与 Primary 关联,在 Secondary 接收 → 向上游转发 (Forward upstream)
+- 与 Secondary 关联,在 Primary 接收 → 向下游转发 (Forward downstream)
+- 与 Secondary 关联,在 Secondary 接收 → Unsupported Request (UR)
 
-在 FPB 中，向量中的每一位代表一个资源范围，该范围的大小由所选粒度决定。如果向量中的某位被 Set,则表示寻址到相应范围内地址的 TLP 将与桥的 secondary 端相关联。每一位所代表的特定资源范围取决于该位的索引，以及 Start Address 和 Granularity 中的值。Start Address 指示位向量所描述的最低地址。Granularity 指示每个位所表示区域的大小。向量中的每个后续位适用于随后的范围，根据 Granularity 随每个位递增。
+在 FPB 中,向量中的每一位代表一个资源范围,该范围的大小由所选粒度决定。如果向量中的某位被 Set,则表示寻址到相应范围内地址的 TLP 将与桥的 secondary 端相关联。每一位所代表的特定资源范围取决于该位的索引,以及 Start Address 和 Granularity 中的值。Start Address 指示位向量所描述的最低地址。Granularity 指示每个位所表示区域的大小。向量中的每个后续位适用于随后的范围,根据 Granularity 随每个位递增。
 
-例如，考虑使用 FPB 描述 MEM Low 范围的桥。FPB MEM Low Vector Start 已被设置为 FC0h,表示位向量所描述的范围从地址 FC00 0000 开始。FPB MEM Low Vector Granularity 已被设置为 0000b,表示每个位代表 1 MB 范围。
+例如,考虑使用 FPB 描述 MEM Low 范围的桥。FPB MEM Low Vector Start 已被设置为 FC0h,表示位向量所描述的范围从地址 FC00 0000 开始。FPB MEM Low Vector Granularity 已被设置为 0000b,表示每个位代表 1 MB 范围。
 
 根据这些值我们可以确定:向量的 bit 0 代表从 FC000 0000 (FC00 0000-FC0F FFFF) 开始的 1 MB 范围,bit 1 代表 FC10 0000-FC1F FFFF,依此类推。
 
-向量中被设置为 0 的位表示该范围未包含在 FPB 所描述的范围内。在上述示例中，如果 bit 0 被 Clear,则寻址到 FC00 0000 至 FC0F FFFF 之间任何地址的报文不应由于 FPB 而被路由到桥的 secondary 总线。
+向量中被设置为 0 的位表示该范围未包含在 FPB 所描述的范围内。在上述示例中,如果 bit 0 被 Clear,则寻址到 FC00 0000 至 FC0F FFFF 之间任何地址的报文不应由于 FPB 而被路由到桥的 secondary 总线。
 
 </td>
 </tr>
@@ -16478,19 +16449,19 @@ It is not explicitly required that system firmware/software perform the enabling
 **实现说明:**
 **FPB 的硬件与软件考量**
 
-FPB 旨在解决与 PCI/PCIe 体系结构相关的、与资源分配效率低下相关的一类问题。这些问题可分为"静态"或"动态"用例场景，其中静态用例指在系统启动时分配资源后通常不再更改的场景，动态用例指由于热插拔 (hot add/remove) 或其他需求，需要进行运行时资源再平衡(例如，分配新资源，释放不再需要的资源)的场景。
+FPB 旨在解决与 PCI/PCIe 体系结构相关的、与资源分配效率低下相关的一类问题。这些问题可分为"静态"或"动态"用例场景,其中静态用例指在系统启动时分配资源后通常不再更改的场景,动态用例指由于热插拔 (hot add/remove) 或其他需求,需要进行运行时资源再平衡(例如,分配新资源,释放不再需要的资源)的场景。
 
-在静态情况下，由于 PCI/PCIe 体系结构对 Switch 和 Downstream Port 的定义所导致的额外 Bus Number 的使用和 Device Number 的缺乏使用，层级的大小和 Endpoint 的数量存在限制。FPB 通过"扁平化"(flattening)路由 ID (Routing ID, RID) 的使用来解决此类问题，从而使 Switch 和 Downstream Port 能够更高效地利用可用的 RID。
+在静态情况下,由于 PCI/PCIe 体系结构对 Switch 和 Downstream Port 的定义所导致的额外 Bus Number 的使用和 Device Number 的缺乏使用,层级的大小和 Endpoint 的数量存在限制。FPB 通过"扁平化"(flattening)路由 ID (Routing ID, RID) 的使用来解决此类问题,从而使 Switch 和 Downstream Port 能够更高效地利用可用的 RID。
 
-对于动态情况，在没有 FPB 的情况下，避免再平衡的"最佳已知方法"是在相关 Port 或 Endpoint 上方的桥中预留大范围的 Bus Number 和内存空间 (Memory Space)，以期任何未来的需求都能在预分配范围内得到满足。这会导致潜在的未使用分配，使路由 ID 问题更糟;在资源受限的平台上，这种方法难以实现，即使是相对简单的情况，例如，一张实现单个 Endpoint 的插卡被另一张具有 Switch 和两个 Endpoint 的插卡替换，因此尽管最初分配一个 Bus 即可满足需求，但初始分配会在新插卡出现时立即失效。
+对于动态情况,在没有 FPB 的情况下,避免再平衡的"最佳已知方法"是在相关 Port 或 Endpoint 上方的桥中预留大范围的 Bus Number 和内存空间 (Memory Space),以期任何未来的需求都能在预分配范围内得到满足。这会导致潜在的未使用分配,使路由 ID 问题更糟;在资源受限的平台上,这种方法难以实现,即使是相对简单的情况,例如,一张实现单个 Endpoint 的插卡被另一张具有 Switch 和两个 Endpoint 的插卡替换,因此尽管最初分配一个 Bus 即可满足需求,但初始分配会在新插卡出现时立即失效。
 
-对于内存空间，当热插拔 Endpoint 可能需要分配 4 GB 以下的内存空间时，预分配方法存在问题，因为这种资源本质上是有限的，即使是相对较小的预分配量也会迅速耗尽;此外，由于多个系统元素对 4 GB 以下的系统地址空间分配有需求，因此预分配并不理想。
+对于内存空间,当热插拔 Endpoint 可能需要分配 4 GB 以下的内存空间时,预分配方法存在问题,因为这种资源本质上是有限的,即使是相对较小的预分配量也会迅速耗尽;此外,由于多个系统元素对 4 GB 以下的系统地址空间分配有需求,因此预分配并不理想。
 
-FPB 包含为 Requester ID 和内存空间启用不连续资源范围分配/再分配的机制。其目的是允许系统软件具备维护资源"池"的能力，这些资源池可以在运行时进行分配(并释放回去)，而不会像再平衡那样干扰进行中的其他操作。
+FPB 包含为 Requester ID 和内存空间启用不连续资源范围分配/再分配的机制。其目的是允许系统软件具备维护资源"池"的能力,这些资源池可以在运行时进行分配(并释放回去),而不会像再平衡那样干扰进行中的其他操作。
 
-为了支持系统软件对 FPB 的运行时使用,FPB 硬件实现应避免对正在进行的 Transaction 引入停顿 (stall) 或其他类型的中断，包括在系统软件正在修改 FPB 硬件状态期间。然而，并不期望硬件尝试识别系统软件错误地修改 FPB 配置从而影响正在进行的 Transaction 的情况。与非 FPB 机制一样，系统软件有责任确保系统操作不会因重新配置操作而损坏。
+为了支持系统软件对 FPB 的运行时使用,FPB 硬件实现应避免对正在进行的 Transaction 引入停顿 (stall) 或其他类型的中断,包括在系统软件正在修改 FPB 硬件状态期间。然而,并不期望硬件尝试识别系统软件错误地修改 FPB 配置从而影响正在进行的 Transaction 的情况。与非 FPB 机制一样,系统软件有责任确保系统操作不会因重新配置操作而损坏。
 
-并不明确要求系统固件/软件按特定顺序执行 FPB 机制的启用和/或禁用，但在层级中实现资源分配操作时应小心，以免系统的硬件和软件元素被损坏或导致故障。
+并不明确要求系统固件/软件按特定顺序执行 FPB 机制的启用和/或禁用,但在层级中实现资源分配操作时应小心,以免系统的硬件和软件元素被损坏或导致故障。
 
 </td>
 </tr>
@@ -16533,9 +16504,9 @@ Vital Product Data is made up of Small and Large Resource Data Types.
 </td>
 <td style="background-color:#e8e8e8">
 
-重要产品数据 (Vital Product Data, VPD) 是唯一定义系统硬件、软件和微代码元素等信息的数据。VPD 向系统提供有关各种 FRU (现场可更换单元, Field Replaceable Unit) 的信息，包括部件号 (Part Number)、序列号 (Serial Number) 和其他详细信息。VPD 还提供一种机制，用于在被监控设备上存储性能和故障数据等信息。从系统的角度来看，目标是通过从硬件、软件和微代码组件中读取这些信息来收集它们。
+重要产品数据 (Vital Product Data, VPD) 是唯一定义系统硬件、软件和微代码元素等信息的数据。VPD 向系统提供有关各种 FRU (现场可更换单元, Field Replaceable Unit) 的信息,包括部件号 (Part Number)、序列号 (Serial Number) 和其他详细信息。VPD 还提供一种机制,用于在被监控设备上存储性能和故障数据等信息。从系统的角度来看,目标是通过从硬件、软件和微代码组件中读取这些信息来收集它们。
 
-插卡 (add-in card) 中对 VPD 的支持是可选的，具体取决于制造商。尽管 VPD 支持是可选的，但鉴于 VPD 对插卡、系统制造商以及即插即用 (Plug and Play) 的固有优势，鼓励插卡制造商提供 VPD。
+插卡 (add-in card) 中对 VPD 的支持是可选的,具体取决于制造商。尽管 VPD 支持是可选的,但鉴于 VPD 对插卡、系统制造商以及即插即用 (Plug and Play) 的固有优势,鼓励插卡制造商提供 VPD。
 
 访问 VPD 的机制在 § Section 7.9.18 中记录。
 
@@ -16602,11 +16573,11 @@ A small example of the resource data type tags used in a typical VPD is shown in
 </td>
 <td style="background-color:#e8e8e8">
 
-第一个 VPD 标签是 Identifier String (标识字符串, 02h)，它提供设备的产品名称。
+第一个 VPD 标签是 Identifier String (标识字符串, 02h),它提供设备的产品名称。
 
 使用一个 VPD-R (10h) 标签作为只读关键字的头部。VPD-R 列表(包括 tag 和 length)必须校验和为零。尝试写入只读数据将作为 no-op(空操作)执行。
 
-使用一个 VPD-W (11h) 标签作为读写关键字的头部。包含读/写数据的存储组件是非易失性设备，断电后将保留数据。
+使用一个 VPD-W (11h) 标签作为读写关键字的头部。包含读/写数据的存储组件是非易失性设备,断电后将保留数据。
 
 最后一个标签必须是 End Tag (结束标签, 0Fh)。
 
@@ -16670,13 +16641,13 @@ An example of the "add-in card serial number" VPD item is as follows:
 </td>
 <td style="background-color:#e8e8e8">
 
-VPD 资源类型内的信息字段由一个三字节头部和随后的若干数据组成(参见 § Figure 6-34)。三字节头部包含一个两字节的 keyword (关键字) 和一个一字节的 length (长度)。关键字是一个两字符(ASCII)的助记符，用于唯一标识字段中的信息。头部的最后一个字节是二进制，表示后续数据的长度值(以字节为单位)。
+VPD 资源类型内的信息字段由一个三字节头部和随后的若干数据组成(参见 § Figure 6-34)。三字节头部包含一个两字节的 keyword (关键字) 和一个一字节的 length (长度)。关键字是一个两字符(ASCII)的助记符,用于唯一标识字段中的信息。头部的最后一个字节是二进制,表示后续数据的长度值(以字节为单位)。
 
 ```
 7  6  5  4  3  2  1  0  +0   Keyword (关键字)
 7  6  5  4  3  2  1  0  +1   Keyword (关键字)
 7  6  5  4  3  2  1  0  +2   Length (长度, N)
-7  6  5  4  3  2  1  0  +3   Data (数据， 字节 3 至 N+2,图中 N = 6)
+7  6  5  4  3  2  1  0  +3   Data (数据, 字节 3 至 N+2,图中 N = 6)
                           Byte 0 →
                           Byte 4 →
                           Byte 8 →
@@ -16684,7 +16655,7 @@ VPD 资源类型内的信息字段由一个三字节头部和随后的若干数�
 
 Figure 6-34 VPD 格式
 
-VPD 关键字分为两类:只读字段和读/写字段。除非另有说明，关键字数据字段以 ASCII 字符提供。ASCII 的使用允许关键字数据可在不同企业计算机系统之间传输而无需翻译。
+VPD 关键字分为两类:只读字段和读/写字段。除非另有说明,关键字数据字段以 ASCII 字符提供。ASCII 的使用允许关键字数据可在不同企业计算机系统之间传输而无需翻译。
 
 "插卡序列号" (add-in card serial number) VPD 条目示例如下:
 
@@ -16694,7 +16665,6 @@ VPD 关键字分为两类:只读字段和读/写字段。除非另有说明，�
 </table>
 
 > **Figure 6-34.** VPD Format
-> **图 6-34.** 错误转发— poisoned TLP
 > <img src="figures/chapter_06/fig_0874_1_tight.png" width="700">
 
 **Table 6-22. Example of Add-in Card Serial Number | 表 6-22. 插卡序列号示例**
@@ -17052,7 +17022,6 @@ An enclosure is any platform, box, rack, or set of boxes that contain one or mor
 </table>
 
 > **Figure 6-35.** Example NPEM Configuration using a Downstream Port
-> **图 6-35.** 错误转发— Completion 超时
 > <img src="figures/chapter_06/fig_0879_1_tight.png" width="700">
 
 <table>
@@ -17079,7 +17048,6 @@ Figure 6-36 shows an example configuration with the NPEM capability located in t
 </table>
 
 > **Figure 6-36.** Example NPEM Configuration using an Upstream Port
-> **图 6-36.** 使用上行端口的 NPEM 配置示例
 > <img src="figures/chapter_06/fig_0880_1_tight.png" width="700">
 
 
@@ -17114,7 +17082,6 @@ This specification defines the software interface provided by the NPEM capabilit
 
 
 > **Figure 6-37.** NPEM Command Flow
-> **图 6-37.** 错误消息 TLP 格式
 > <img src="figures/chapter_06/fig_0881_1.png" width="700">
 
 <table>
@@ -17314,7 +17281,7 @@ Function 寄存器和 Function 特定状态机必须设置为本规范规定的�
 
 注意，使 Function 能够发起总线事务的控制位会被清除，包括 Command Register 中的 Bus Master Enable 位、MSI 能力结构 (MSI Capability Structure) 中的 MSI Enable 位等，从而有效地使 Function 进入静默 (quiescent) 状态。
 
-FLR 启动后，Function 必须在 100 ms 内完成 FLR。如果软件在 Transactions Pending 位为 1b 时启动 FLR，则软件必须在等待足够时间以合理确信任何未完成事务均将完成之后，才能对 Function 初始化。FLR 完成时，Transactions Pending 位必须清零。
+FLR 启动后，Function 必须在 100 ms 内完成 FLR。如果软件在 Transactions Pending 位为 1b 时启动 FLR，则软件必须在等待足够时间以合理确信任何未完成事务均将完成之后，才能对 Function 进行初始化。FLR 完成时，Transactions Pending 位必须清零。
 
 </td>
 </tr>
@@ -17572,7 +17539,6 @@ Alternatively, for CMA/SPDM and related use cases, the optional Connection ID me
 
 
 > **Figure 6-38.** Stack Diagram Illustration of Multiple Sessions and Connections
-> **图 6-38.** 错误日志记录块图
 > <img src="figures/chapter_06/fig_0887_1_tight.png" width="700">
 
 <table>
@@ -17599,7 +17565,6 @@ In each case, two distinct SPDM uses are shown, A and B, and within each group, 
 </table>
 
 > **Figure 6-39.** Example Showing Relationships of Software and Hardware Elements
-> **图 6-39.** 设备错误信令与日志记录状态图
 > <img src="figures/chapter_06/fig_0888_1_tight.png" width="700">
 
 ---
@@ -17634,7 +17599,6 @@ Data objects must consist of 2 DW to 256K DW, as shown in Figure 6-40.
 </table>
 
 > **Figure 6-40.** DOE Data Object Format
-> **图 6-40.** 可校正错误消息日志记录流程
 > <img src="figures/chapter_06/fig_0889_1_tight.png" width="700">
 
 <table>
@@ -17661,7 +17625,6 @@ The first DW of a data object must be formatted as defined in Table 6-28 and ill
 </table>
 
 > **Figure 6-41.** DOE Data Object Header 1
-> **图 6-41.** 不可校正错误消息日志记录流程
 > <img src="figures/chapter_06/fig_0889_2_tight.png" width="700">
 
 **Table 6-28 DOE Data Object Header 1**
@@ -17702,7 +17665,6 @@ The Second DW of a data object must be formatted as defined in Table 6-29 and il
 </table>
 
 > **Figure 6-42.** DOE Data Object Header 2
-> **图 6-42.** 设备中断忽略逻辑
 > <img src="figures/chapter_06/fig_0889_1.png" width="700">
 
 ---
@@ -17778,7 +17740,6 @@ The DOE Discovery feature must be implemented, and provides a means for software
 
 
 > **Figure 6-43.** DOE Discovery Request Data Object Contents (3rd DW)
-> **图 6-43.** INTx 中断消息—传统 INTx 仿真
 > <img src="figures/chapter_06/fig_0890_1_tight.png" width="700">
 
 **Table 6-30 DOE Discovery Request Data Object Contents (3rd DW)**
@@ -17818,7 +17779,6 @@ The DOE Discovery feature must be implemented, and provides a means for software
 <td>
 
 > **Figure 6-44.** DOE Discovery Response Data Object Contents (3rd DW)
-> **图 6-44.** INTx 中断消息—消息断言
 > <img src="figures/chapter_06/fig_0891_1_tight.png" width="700">
 
 **Table 6-31. DOE Discovery Response Data Object Contents (3rd DW) | 表 6-31. DOE 发现响应数据对象内容（第 3 个 DW）**
@@ -17922,7 +17882,6 @@ PCI-SIG 定义的数据对象类型在 § Table 6-33 中定义。
 </table>
 
 > **Figure 6-45.** DOE Discovery Response Data Object Contents (4th DW)
-> **图 6-45.** INTx 中断消息—消息取消断言
 
 > <img src="figures/chapter_06/fig_0891_2_tight.png" width="700">
 
@@ -18239,7 +18198,6 @@ DOE 实例被允许支持 DOE 中断的生成，这由 DOE Capabilities 寄存�
 <td>
 
 > **Figure 6-46.** CMA-SPDM as Part of a Layered Architecture
-> **图 6-46.** INTx 仿真时序
 
 > <img src="figures/chapter_06/fig_0898_1_tight.png" width="700">
 
@@ -18388,11 +18346,9 @@ CMA/SPDM 的应用众多且多样化。对于复杂环境，安全身份供应�
 </table>
 
 > **Figure 6-47.** Example System Showing Multiple Access Mechanisms
-> **图 6-47.** MSI 具有多个消息能力的消息地址映射
 > <img src="figures/chapter_06/fig_0900_1.png" width="700">
 
 > **Figure 6-48.** Example Add-In-Card Supporting CMA-SPDM
-> **图 6-48.** MSI 消息数据寄存器格式—32 位
 > <img src="figures/chapter_06/fig_0901_1_tight.png" width="700">
 
 </div>
@@ -18618,27 +18574,27 @@ Some components provide a debug mode where a debugger is granted access to hardw
 </td>
 <td style="background-color:#e8e8e8">
 
-- 响应者（Responder）必须在该传输机制处于活动状态时支持运行，包括设备处于常规复位（Conventional Reset）的情况，除非通过本规范范围之外的方式允许例外。
-- 响应者必须维护 CMA-SPDM 上下文，以使每个传输机制(包括实现时的 DOE)独立于所有其他传输机制运行。
+- 响应者（Responder）必须在该传输机制处于活动状态时支持运行,包括设备处于常规复位（Conventional Reset）的情况,除非通过本规范范围之外的方式允许例外。
+- 响应者必须维护 CMA-SPDM 上下文,以使每个传输机制(包括实现时的 DOE)独立于所有其他传输机制运行。
   - 所有传输机制都必须被视为独立的 SPDM 连接。
-- 当 Function 0 还支持经由 DOE 的 CMA-SPDM 时，通过 DOE 检索到的 slot 0 证书链必须与通过任何/所有其他传输机制检索到的 slot 0 证书链匹配。
+- 当 Function 0 还支持经由 DOE 的 CMA-SPDM 时,通过 DOE 检索到的 slot 0 证书链必须与通过任何/所有其他传输机制检索到的 slot 0 证书链匹配。
 
-对于 CMA-SPDM 数据对象类型或带连接 ID 的 SPDM 数据对象类型,SPDM 消息有效负载必须从"Data Object DW 0"开始。SPDM 消息有效负载必须遵循 [SPDM] 规范的通用 SPDM 消息字段定义，从 SPDM 版本、Request Response Code、Param 1 和 Param 2 开始。SPDM 消息的字节映射如 § Figure 6-49 所示。如有需要，在使用 DOE 时,SPDM 消息有效负载必须用 0 填充以保持 DW 对齐。
+对于 CMA-SPDM 数据对象类型或带连接 ID 的 SPDM 数据对象类型,SPDM 消息有效负载必须从"Data Object DW 0"开始。SPDM 消息有效负载必须遵循 [SPDM] 规范的通用 SPDM 消息字段定义,从 SPDM 版本、Request Response Code、Param 1 和 Param 2 开始。SPDM 消息的字节映射如 § Figure 6-49 所示。如有需要,在使用 DOE 时,SPDM 消息有效负载必须用 0 填充以保持 DW 对齐。
 
-没有连接 ID 时，一个 DOE 实例只能有一个 SPDM 连接。具有连接 ID 时，一个 DOE 实例可以有多个 SPDM 连接。可通过 DOE Discovery Data Object Protocol 发现最大有效连接 ID。
+没有连接 ID 时,一个 DOE 实例只能有一个 SPDM 连接。具有连接 ID 时,一个 DOE 实例可以有多个 SPDM 连接。可通过 DOE Discovery Data Object Protocol 发现最大有效连接 ID。
 
-某些组件提供调试模式，在该模式下调试器被授予对硬件安全属性的访问权限，从而允许调试器影响测量过程本身。强烈建议组件在调试模式处于活动状态时进行报告。报告机制不在本规范范围内，可以是测量记录中的 SPDM 调试和设备模式，或 DiceTcbInfo 中的 DICE 操作标志。
+某些组件提供调试模式,在该模式下调试器被授予对硬件安全属性的访问权限,从而允许调试器影响测量过程本身。强烈建议组件在调试模式处于活动状态时进行报告。报告机制不在本规范范围内,可以是测量记录中的 SPDM 调试和设备模式,或 DiceTcbInfo 中的 DICE 操作标志。
 
-- 对于 BaseAsymAlgo,请求者（Requester）必须支持以下全部算法，响应者必须支持以下一种或多种算法:
+- 对于 BaseAsymAlgo,请求者（Requester）必须支持以下全部算法,响应者必须支持以下一种或多种算法:
   - TPM_ALG_RSASSA_3072
   - TPM_ALG_ECDSA_ECC_NIST_P256
   - TPM_ALG_ECDSA_ECC_NIST_P384
-- 对于 BaseHashAlgo,请求者必须支持以下全部算法，响应者必须支持以下一种或两种算法:
+- 对于 BaseHashAlgo,请求者必须支持以下全部算法,响应者必须支持以下一种或两种算法:
   - TPM_ALG_SHA_256
   - TPM_ALG_SHA_384
 - 对于 MeasurementSpecification,请求者和响应者必须支持以下格式:
   - DMTF 测量规范格式
-- 对于 MeasurementHashAlgo,请求者必须支持以下全部算法，响应者必须支持以下一种或两种算法:
+- 对于 MeasurementHashAlgo,请求者必须支持以下全部算法,响应者必须支持以下一种或两种算法:
 
 </td>
 </tr>
@@ -18646,7 +18602,6 @@ Some components provide a debug mode where a debugger is granted access to hardw
 </table>
 
 > **Figure 6-49.** Byte Mapping of SPDM Messages Including Example Payload
-> **图 6-49.** MSI 消息数据寄存器格式—64 位
 > <img src="figures/chapter_06/fig_0904_1_tight.png" width="700">
 
 </div>
@@ -18692,7 +18647,6 @@ An FLR to a Function for which there is an established secure session must not c
 For the Secured CMA-SPDM data object type or Secured CMA-SPDM with connection ID data object type, the Secured CMA-SPDM message payloads must start from "Data Object DW 0". The Secured CMA-SPDM message payloads must follow the Secured CMA-SPDM specification Secure Message fields definition, starting with Session ID. "Sequence Number" field must be absent (S=0). "Random Data" field must be absent (R=0). The "Application Data" field must be the in-session SPDM message. The Byte mapping of Secured CMA-SPDM Messages is shown in § Figure 6-50. If required, Secured CMA-SPDM Message payloads must be padded with 0's to maintain DW alignment, when using DOE.
 
 > **Figure 6-50.** Byte Mapping of Secured CMA-SPDM Messages Including Example Payload
-> **图 6-50.** MSI 多个消息—消息分配示例
 
 > <img src="figures/chapter_06/fig_0905_1_tight.png" width="700">
 
@@ -18700,18 +18654,17 @@ For the Secured CMA-SPDM data object type or Secured CMA-SPDM with connection ID
 </td>
 <td style="background-color:#e8e8e8">
 
-安全 CMA-SPDM（Secured CMA-SPDM）基于 [SPDM] 机制(包括 IDE 密钥管理（IDE_KM）协议)为数据对象协议提供安全性。一旦按照 [SPDM](修订版 1.1 或更高版本)建立了安全会话，允许(在某些使用场景中要求)使用安全 CMA-SPDM 以完整性/加密方式传输其他数据对象，使用 SPDM 会话建立期间协商的算法，详见 [Secured SPDM]。
+安全 CMA-SPDM（Secured CMA-SPDM）基于 [SPDM] 机制(包括 IDE 密钥管理（IDE_KM）协议)为数据对象协议提供安全性。一旦按照 [SPDM](修订版 1.1 或更高版本)建立了安全会话,允许(在某些使用场景中要求)使用安全 CMA-SPDM 以完整性/加密方式传输其他数据对象,使用 SPDM 会话建立期间协商的算法,详见 [Secured SPDM]。
 
-在建立会话后，允许继续执行非安全的 CMA-SPDM 操作，前提是该特定使用场景允许非安全传输。
+在建立会话后,允许继续执行非安全的 CMA-SPDM 操作,前提是该特定使用场景允许非安全传输。
 
-安全 CMA-SPDM 数据对象必须按照 [Secure-SPDM] 格式化。允许特定数据对象协议约束可选字段的使用和内容，但如果未应用此类约束，则这些字段的使用属于实现特定的。
+安全 CMA-SPDM 数据对象必须按照 [Secure-SPDM] 格式化。允许特定数据对象协议约束可选字段的使用和内容,但如果未应用此类约束,则这些字段的使用属于实现特定的。
 
-对已建立安全会话的 Function 执行 FLR 不得更改该安全会话的状态。但是，与非安全 CMA-SPDM 一样，在处理 CMA-SPDM 请求期间对 Function 执行 FLR 必须导致该 Function 终止其对该请求的处理，且该 Function 不返回对该请求的响应，这可能会影响安全会话的可用性，并可能导致安全会话不可用。
+对已建立安全会话的 Function 执行 FLR 不得更改该安全会话的状态。但是,与非安全 CMA-SPDM 一样,在处理 CMA-SPDM 请求期间对 Function 执行 FLR 必须导致该 Function 终止其对该请求的处理,且该 Function 不返回对该请求的响应,这可能会影响安全会话的可用性,并可能导致安全会话不可用。
 
-对于安全 CMA-SPDM 数据对象类型或带连接 ID 的安全 CMA-SPDM 数据对象类型，安全 CMA-SPDM 消息有效负载必须从"Data Object DW 0"开始。安全 CMA-SPDM 消息有效负载必须遵循安全 CMA-SPDM 规范的安全消息字段定义，从 Session ID 开始。"Sequence Number"字段必须不存在(S=0)。"Random Data"字段必须不存在(R=0)。"Application Data"字段必须是会话内 SPDM 消息。安全 CMA-SPDM 消息的字节映射如 § Figure 6-50 所示。如有需要，在使用 DOE 时，安全 CMA-SPDM 消息有效负载必须用 0 填充以保持 DW 对齐。
+对于安全 CMA-SPDM 数据对象类型或带连接 ID 的安全 CMA-SPDM 数据对象类型,安全 CMA-SPDM 消息有效负载必须从"Data Object DW 0"开始。安全 CMA-SPDM 消息有效负载必须遵循安全 CMA-SPDM 规范的安全消息字段定义,从 Session ID 开始。"Sequence Number"字段必须不存在(S=0)。"Random Data"字段必须不存在(R=0)。"Application Data"字段必须是会话内 SPDM 消息。安全 CMA-SPDM 消息的字节映射如 § Figure 6-50 所示。如有需要,在使用 DOE 时,安全 CMA-SPDM 消息有效负载必须用 0 填充以保持 DW 对齐。
 
 > **Figure 6-50.** 安全 CMA-SPDM 消息的字节映射(含示例有效负载)
-> **图 6-50.** MSI 多个消息—消息分配示例
 
 <img src="figures/chapter_06/fig_0905_1_tight.png" width="700">
 </td>
@@ -18765,18 +18718,18 @@ For the Secured CMA-SPDM data object type or Secured CMA-SPDM with connection ID
 **附加规则:**
 
 - 请求者和响应者必须支持 ENCRYPT_CAP 和 MAC_CAP。
-- 对于 DHE 组，请求者必须支持以下全部，响应者必须支持以下一种或两种:
+- 对于 DHE 组,请求者必须支持以下全部,响应者必须支持以下一种或两种:
   - secp256r1
   - secp384r1
-- 对于 AEAD 结构，请求者和响应者必须支持以下格式:
+- 对于 AEAD 结构,请求者和响应者必须支持以下格式:
   - AES-256-GCM,带 16 字节 MAC
-- 对于 KeySchedule 结构，请求者和响应者必须支持以下格式:
+- 对于 KeySchedule 结构,请求者和响应者必须支持以下格式:
   - SPDM Key Schedule
-- 对于安全消息格式，请求者和响应者必须支持以下格式:
-  - 如果使用 SPDM 1.1 或更低版本，则使用 DSP0277 第 8 节定义的 DSP0277 Secured Messages 不透明数据格式。
-  - 如果使用 SPDM 1.2 或更高版本，则使用 SPDM 1.2 第 14 节定义的 DSP0274 通用不透明数据格式。NEGOTIATE_ALGORITHMS 请求和 ALGORITHMS 响应的 OtherParamsSupport 字段必须为 OpaqueDataFmt1 设置相应位。
-- 在使用 DOE 时，请求者和响应者必须使用 DSP0277 规范版本作为 DSP0274 中定义的 KEY_EXCHANGE 请求 / KEY_EXCHANGE_RSP 响应 / PSK_EXCHANGE 请求 / PSK_EXCHANGE_RSP 响应消息的 OpaqueData 字段中要求的安全消息传输绑定版本(格式在 DSP0277 第 6 节中定义)。
-- 请求者和响应者可以支持相互认证。如果支持相互认证，则对于 ReqBaseAsymAlgo,请求者和响应者必须支持以下一种或多种:
+- 对于安全消息格式,请求者和响应者必须支持以下格式:
+  - 如果使用 SPDM 1.1 或更低版本,则使用 DSP0277 第 8 节定义的 DSP0277 Secured Messages 不透明数据格式。
+  - 如果使用 SPDM 1.2 或更高版本,则使用 SPDM 1.2 第 14 节定义的 DSP0274 通用不透明数据格式。NEGOTIATE_ALGORITHMS 请求和 ALGORITHMS 响应的 OtherParamsSupport 字段必须为 OpaqueDataFmt1 设置相应位。
+- 在使用 DOE 时,请求者和响应者必须使用 DSP0277 规范版本作为 DSP0274 中定义的 KEY_EXCHANGE 请求 / KEY_EXCHANGE_RSP 响应 / PSK_EXCHANGE 请求 / PSK_EXCHANGE_RSP 响应消息的 OpaqueData 字段中要求的安全消息传输绑定版本(格式在 DSP0277 第 6 节中定义)。
+- 请求者和响应者可以支持相互认证。如果支持相互认证,则对于 ReqBaseAsymAlgo,请求者和响应者必须支持以下一种或多种:
   - TPM_ALG_RSASSA_3072
   - TPM_ALG_ECDSA_ECC_NIST_P256
   - TPM_ALG_ECDSA_ECC_NIST_P384
@@ -18816,11 +18769,11 @@ As with AtomicOps (See § Section 6.15), the use model for DMWr requires that, f
 </td>
 <td style="background-color:#e8e8e8">
 
-可延迟内存写(Deferrable Memory Write, DMWr)是一种可选的 Non-Posted 请求，它支持可扩展的高性能机制，以实现共享工作队列及类似能力。借助 DMWr,设备可以拥有单一共享工作队列，并以非阻塞方式从多个非协作软件代理接受工作项。DMWr Completer,即 DMWr Completer Supported 位被置位的 Function,是支持作为 DMWr 请求目标的 Function。
+可延迟内存写(Deferrable Memory Write, DMWr)是一种可选的 Non-Posted 请求,它支持可扩展的高性能机制,以实现共享工作队列及类似能力。借助 DMWr,设备可以拥有单一共享工作队列,并以非阻塞方式从多个非协作软件代理接受工作项。DMWr Completer,即 DMWr Completer Supported 位被置位的 Function,是支持作为 DMWr 请求目标的 Function。
 
-生成 DMWr 请求的机制不在本文档范围内。对于 DMWr 请求者支持通过软件机制直接生成 DMWr 请求的情况，建议以特定于实现的方式将相应的完成状态（Completion Status）通知发起该请求的软件线程。
+生成 DMWr 请求的机制不在本文档范围内。对于 DMWr 请求者支持通过软件机制直接生成 DMWr 请求的情况,建议以特定于实现的方式将相应的完成状态（Completion Status）通知发起该请求的软件线程。
 
-与原子操作(AtomicOps,见 § Section 6.15)一样,DMWr 的使用模型要求从生成 DMWr 请求的初始触发开始，到向 Completer 的后续路由、Completer 的响应动作，以及相应完成（Completion）的返回，每个步骤都必须是"原子的",即单次触发必须产生单个请求，该请求不可再分割，由 Completer 处理时不得使任何观察者看到部分结果，并且向请求者返回单个完成，且完成也不可分割。因此，以下规则适用:
+与原子操作(AtomicOps,见 § Section 6.15)一样,DMWr 的使用模型要求从生成 DMWr 请求的初始触发开始,到向 Completer 的后续路由、Completer 的响应动作,以及相应完成（Completion）的返回,每个步骤都必须是"原子的",即单次触发必须产生单个请求,该请求不可再分割,由 Completer 处理时不得使任何观察者看到部分结果,并且向请求者返回单个完成,且完成也不可分割。因此,以下规则适用:
 
 </td>
 </tr>
@@ -18874,26 +18827,26 @@ The following requirements apply to DMWr Completers:
 <td style="background-color:#e8e8e8">
 
 - 支持 DMWr 路由的交换机（Switch）和根复合体（Root Complex）必须以不修改的方式路由 DMWr 请求和完成（Completion）。
-- DMWr Completer 必须确保针对给定 DMWr 请求所执行的操作，相对于每个主机处理器或设备对该目标位置范围的访问是原子执行的。
+- DMWr Completer 必须确保针对给定 DMWr 请求所执行的操作,相对于每个主机处理器或设备对该目标位置范围的访问是原子执行的。
 - DMWr 请求者和 Completer 为强制实现所需"原子"行为而采用的内部实现方式不在本文档范围内。
 
-DMWr 请求的目标如果不是 DMWr Completer(即 DMWr Completer Supported 位为 Clear 的 Function)，则按不支持的请求类型的请求处理规则进行响应(见 § Section 2.3.1)。在非 Flit 模式（Non-Flit Mode）下，那些按本规范早期修订版本设计且将 DMWr 请求对应的请求类型（Request Type）值视为保留(Reserved)的组件，允许将收到的 DMWr 请求视为格式错误的 TLP（Malformed TLP）处理。
+DMWr 请求的目标如果不是 DMWr Completer(即 DMWr Completer Supported 位为 Clear 的 Function),则按不支持的请求类型的请求处理规则进行响应(见 § Section 2.3.1)。在非 Flit 模式（Non-Flit Mode）下,那些按本规范早期修订版本设计且将 DMWr 请求对应的请求类型（Request Type）值视为保留(Reserved)的组件,允许将收到的 DMWr 请求视为格式错误的 TLP（Malformed TLP）处理。
 
 以下要求适用于 DMWr Completer:
 
-- Function 通过置位 DMWr Completer Supported 来指示其作为 DMWr Completer 的能力，并指示该 Function 可接收的最大 DMWr TLP(见 DMWr Lengths Supported)。
+- Function 通过置位 DMWr Completer Supported 来指示其作为 DMWr Completer 的能力,并指示该 Function 可接收的最大 DMWr TLP(见 DMWr Lengths Supported)。
 - 格式正确的 DMWr 请求必须作为成功完成(Successful Completion, SC)、请求重试状态(Request Retry Status, RRS)、不支持请求(Unsupported Request, UR)或完成方中止(Completer Abort, CA)处理。
-  - 格式正确但类型或操作数大小 Completer 不支持，或寻址到设备编程模型未指定为 DMWr 请求目标的地址，或跨越两个不同资源之间的地址边界的 DMWr 请求，必须作为完成方中止(CA)处理，并且目标位置的值必须保持不变。
-  - 支持 DMWr 路由但不支持作为 DMWr Completer 的交换机，必须将以交换机内部资源为目标的格式正确的 DMWr 请求作为完成方中止(CA)处理，并且目标位置的值必须保持不变。
+  - 格式正确但类型或操作数大小 Completer 不支持,或寻址到设备编程模型未指定为 DMWr 请求目标的地址,或跨越两个不同资源之间的地址边界的 DMWr 请求,必须作为完成方中止(CA)处理,并且目标位置的值必须保持不变。
+  - 支持 DMWr 路由但不支持作为 DMWr Completer 的交换机,必须将以交换机内部资源为目标的格式正确的 DMWr 请求作为完成方中止(CA)处理,并且目标位置的值必须保持不变。
 - 当 DMWr 请求由于临时状况无法成功完成时,Completer 允许返回具有请求重试状态(RRS)的完成（Completion）。
-  - 在这种情况下，目标位置的值必须保持不变，且 Completer 不得假设请求者会重复该请求。
+  - 在这种情况下,目标位置的值必须保持不变,且 Completer 不得假设请求者会重复该请求。
   - 这不是错误。
-- Completer 允许使用特定于实现的机制来决定何时使用 RRS 完成状态（Completion Status）,以便建立公平性或其他原因的策略，这些机制可以基于请求者 ID（Requester ID）、流量类（Traffic Class, TC）、PASID、有效负载内容或其他适当标准。
+- Completer 允许使用特定于实现的机制来决定何时使用 RRS 完成状态（Completion Status）,以便建立公平性或其他原因的策略,这些机制可以基于请求者 ID（Requester ID）、流量类（Traffic Class, TC）、PASID、有效负载内容或其他适当标准。
 - 支持 DMWr 的 Completer 允许实现受限的编程模型。
-  - 如果非 DMWr 请求寻址到设备编程模型指定为 DMWr 请求目标的地址，强烈建议目标位置的值保持不变;并且，如果该请求是 Non-Posted 请求，则返回的完成（Completion）不应包含任何敏感信息。
-  - 有关更多通用指导，见 § Section 2.3.1 中"实现注:基于受限编程模型的优化"（Implementation Note: Optimizations Based on a Restricted Programming Model）。
-- 支持 DMWr 并返回成功完成(SC)的 Completer 必须保证观察到的更新粒度不小于 64 字节，或不小于请求大小，以较小者为准。
-  - 此要求适用于针对"普通"内存、共享工作队列或特定于实现的其他结构的 DMWr 操作，前提是 Completer 的编程模型支持此类操作。
+  - 如果非 DMWr 请求寻址到设备编程模型指定为 DMWr 请求目标的地址,强烈建议目标位置的值保持不变;并且,如果该请求是 Non-Posted 请求,则返回的完成（Completion）不应包含任何敏感信息。
+  - 有关更多通用指导,见 § Section 2.3.1 中"实现注:基于受限编程模型的优化"（Implementation Note: Optimizations Based on a Restricted Programming Model）。
+- 支持 DMWr 并返回成功完成(SC)的 Completer 必须保证观察到的更新粒度不小于 64 字节,或不小于请求大小,以较小者为准。
+  - 此要求适用于针对"普通"内存、共享工作队列或特定于实现的其他结构的 DMWr 操作,前提是 Completer 的编程模型支持此类操作。
   - 另见 § Section 2.4.3 和 § Section 2.4.4。
 
 </td>
@@ -18949,28 +18902,28 @@ The following requirements apply to Root Complexes and Switches that support DMW
 </td>
 <td style="background-color:#e8e8e8">
 
-- 如果与上游端口（Upstream Port）关联的多功能设备（Multi-Function Device）中的任何 Function 支持 DMWr Completer 或 DMWr 路由能力，则该设备中所有具有内存空间 BAR（Memory Space BAR）的 Function 必须能正确解码格式正确的 DMWr 请求，并将任何不支持的 DMWr 请求作为不支持请求(UR)处理。
-  - 在此类设备中，缺少 DMWr Completer 能力的 Function 禁止将格式正确的 DMWr 请求作为格式错误的 TLP（Malformed TLP）处理。
-- 除非存在更高优先级的错误，否则具备 DMWr 感知能力的 Completer 必须将中毒的 DMWr 请求(Poisoned DMWr Request)作为中毒 TLP 接收错误(Poisoned TLP Received error)处理(见 § Section 2.7.2.1)。
+- 如果与上游端口（Upstream Port）关联的多功能设备（Multi-Function Device）中的任何 Function 支持 DMWr Completer 或 DMWr 路由能力,则该设备中所有具有内存空间 BAR（Memory Space BAR）的 Function 必须能正确解码格式正确的 DMWr 请求,并将任何不支持的 DMWr 请求作为不支持请求(UR)处理。
+  - 在此类设备中,缺少 DMWr Completer 能力的 Function 禁止将格式正确的 DMWr 请求作为格式错误的 TLP（Malformed TLP）处理。
+- 除非存在更高优先级的错误,否则具备 DMWr 感知能力的 Completer 必须将中毒的 DMWr 请求(Poisoned DMWr Request)作为中毒 TLP 接收错误(Poisoned TLP Received error)处理(见 § Section 2.7.2.1)。
   - Completer 必须返回完成状态（Completion Status）为不支持请求(UR)或请求重试状态(RRS)的完成（Completion）。
   - 目标位置的值必须保持不变。
-- 如果 DMWr 请求的 Completer 在访问目标位置时遇到不可纠正的错误，则 Completer 必须将其作为完成方中止(CA)处理。
+- 如果 DMWr 请求的 Completer 在访问目标位置时遇到不可纠正的错误,则 Completer 必须将其作为完成方中止(CA)处理。
   - 目标位置的后续状态属于实现特定的。
-- Completer 允许根据其编程模型的需要，仅对其目标内存空间（Memory Space）的子集支持 DMWr 请求(见 § Section 2.3.1)。
-  - 由 PCI Express 定义或继承的内存空间结构(例如 MSI-X 表结构)不需要被支持作为 DMWr 目标，除非在该结构的描述中明确说明。
-- 如果根复合体（RC）有任何支持 DMWr 路由能力的根端口（Root Port）,则该 RC 中经由转发 DMWr 请求可达的所有 RCiEP 必须能正确解码格式正确的 DMWr 请求，并将任何不支持的 DMWr 请求作为不支持请求(UR)处理。
+- Completer 允许根据其编程模型的需要,仅对其目标内存空间（Memory Space）的子集支持 DMWr 请求(见 § Section 2.3.1)。
+  - 由 PCI Express 定义或继承的内存空间结构(例如 MSI-X 表结构)不需要被支持作为 DMWr 目标,除非在该结构的描述中明确说明。
+- 如果根复合体（RC）有任何支持 DMWr 路由能力的根端口（Root Port）,则该 RC 中经由转发 DMWr 请求可达的所有 RCiEP 必须能正确解码格式正确的 DMWr 请求,并将任何不支持的 DMWr 请求作为不支持请求(UR)处理。
 
 以下要求适用于支持 DMWr 路由的根复合体和交换机:
 
 - 根端口（Root Port）和交换机端口（Switch Port）通过置位 DMWr Request Routing Supported 并指示关联 Function 所支持的最大 DMWr TLP(见 DMWr Lengths Supported)来表明其对 DMWr 路由的支持。
-- 支持 DMWr 路由能力或 DMWr Completer 能力(或两者)的交换机和根端口，在收到格式正确的 DMWr 请求时，必须将其转发到另一端口，或将其作为成功完成(SC)、请求重试状态(RRS)、不支持请求(UR)、完成方中止(CA)或 DMWr Egress Blocked 错误处理。
-- 如果交换机为其任何端口支持 DMWr 路由，则其所有端口都必须支持 DMWr 路由。
-- 对于支持 DMWr 路由能力的交换机和根端口，如果收到的 DMWr 请求跨越两个不同目的地之间的解码边界，则入口端口（Ingress Port）不得传播该请求，且必须返回完成状态（Completion Status）为 UR 的完成（Completion）。
-- 对于交换机或 RC,当出口端口（Egress Port）启用了 DMWr Egress Blocking 且 DMWr 请求的目标是离开该出口端口时，出口端口必须将该请求作为 DMWr Egress Blocked 错误处理，并必须返回完成状态（Completion Status）为 UR 的完成（Completion）。
-  - 如果 DMWr Egress Blocked 错误的严重性为非致命，则这种情况必须按 § Section 6.2.3.2.4.1 中所述的咨询性非致命错误(Advisory Non-Fatal Error)处理。
+- 支持 DMWr 路由能力或 DMWr Completer 能力(或两者)的交换机和根端口,在收到格式正确的 DMWr 请求时,必须将其转发到另一端口,或将其作为成功完成(SC)、请求重试状态(RRS)、不支持请求(UR)、完成方中止(CA)或 DMWr Egress Blocked 错误处理。
+- 如果交换机为其任何端口支持 DMWr 路由,则其所有端口都必须支持 DMWr 路由。
+- 对于支持 DMWr 路由能力的交换机和根端口,如果收到的 DMWr 请求跨越两个不同目的地之间的解码边界,则入口端口（Ingress Port）不得传播该请求,且必须返回完成状态（Completion Status）为 UR 的完成（Completion）。
+- 对于交换机或 RC,当出口端口（Egress Port）启用了 DMWr Egress Blocking 且 DMWr 请求的目标是离开该出口端口时,出口端口必须将该请求作为 DMWr Egress Blocked 错误处理,并必须返回完成状态（Completion Status）为 UR 的完成（Completion）。
+  - 如果 DMWr Egress Blocked 错误的严重性为非致命,则这种情况必须按 § Section 6.2.3.2.4.1 中所述的咨询性非致命错误(Advisory Non-Fatal Error)处理。
   - 这是一个与出口端口（Egress Port）关联的已报告错误(见 § Section 6.2)。
-- 对于 RC,对根端口之间 DMWr 请求和完成的点到点路由支持是可选的，且属于实现特定的。
-  - 在支持时，关联端口必须在 Device Capabilities 3 寄存器中置位 DMWr Request Routing Supported。
+- 对于 RC,对根端口之间 DMWr 请求和完成的点到点路由支持是可选的,且属于实现特定的。
+  - 在支持时,关联端口必须在 Device Capabilities 3 寄存器中置位 DMWr Request Routing Supported。
   - 在支持时,DMWr TLP 必须在不修改数据有效负载大小的情况下进行路由。
   - 即使两个根端口中都置位了 DMWr Request Routing Supported,这两个端口之间是否支持转发仍属于实现特定的。
 
@@ -19012,13 +18965,13 @@ The following requirements apply to DMWr Requesters:
 </td>
 <td style="background-color:#e8e8e8">
 
-- 如果根复合体（Root Complex）中的某个根端口支持 DMWr Completer 或 DMWr 路由，则该端口收到但被路由到另一个不支持 DMWr 的根端口的 DMWr 请求必须作为不支持请求(UR)处理。
+- 如果根复合体（Root Complex）中的某个根端口支持 DMWr Completer 或 DMWr 路由,则该端口收到但被路由到另一个不支持 DMWr 的根端口的 DMWr 请求必须作为不支持请求(UR)处理。
   - 这是一个与入口端口（Ingress Port）关联的已报告错误(见 § Section 6.2)。
 
 以下要求适用于 DMWr 请求者（Requester）:
 
 - 只有当 Device Control 3 寄存器中的 DMWr Requester Enable 位被置位时,Function 才允许生成 DMWr 请求。
-- 当 DMWr 请求以请求重试状态(RRS)完成时，请求者允许但不要求重新发出该请求。
+- 当 DMWr 请求以请求重试状态(RRS)完成时,请求者允许但不要求重新发出该请求。
   - 请求者允许使用任何特定于实现的标准来决定是否/何时重新发出请求。
   - 后续请求允许与原请求相同或经过修改。
 
@@ -19056,7 +19009,6 @@ Users of DMWr must understand the functional implications of transaction orderin
 As with all types of "control" mechanisms, it is necessary for all participants to comprehend the specific requirements placed by the particular mechanism, and these will vary between different systems and different device types. In many cases it will be necessary to distinguish Requests issued from different software environments (e.g., from multiple Virtual Machine guests where the guests use different drivers) all sharing the same work queue. PASID is one mechanism that can be used for this purpose, although there are many alternatives (e.g., different ranges of addresses could be assigned to each environment that would be mapped to the same resources in the Completer). In some systems, system and application level software is capable of generating DMWr Requests according to a specific template (§ Figure 6-51), where bits 31:0 are defined by the system architecture, the P bit at bit 31 indicates if user (0b) or supervisor (1b) code triggered the Request, and bits 19:0 of the payload include the PASID to indicate the context in which the Request was generated.
 
 > **Figure 6-51.** Example DMWr Data Payload Template
-> **图 6-51.** MSI-X 消息表格式
 > <img src="figures/chapter_06/fig_0910_1_tight.png" width="700">
 
 For performance reasons it is not recommended that DMWr be used for sending bulk data.
@@ -19074,21 +19026,21 @@ include a feedback mechanism or an indication from the Function to software on t
 
 **实现注:可延迟内存写(DMWR)的使用注意事项**
 
-可延迟内存写(DMWr)的预期使用模型是实现高效的硬件/软件接口控制机制，在 Completer 中使用专用硬件处理 DMWr 请求并生成适当的完成状态（Completion Status）。例如，设备可以实现"入队寄存器"(enqueue registers)，通过单个 DMWr 请求即可向设备发出命令，并根据完成状态向请求者指示该命令是否被接受。
+可延迟内存写(DMWr)的预期使用模型是实现高效的硬件/软件接口控制机制,在 Completer 中使用专用硬件处理 DMWr 请求并生成适当的完成状态（Completion Status）。例如,设备可以实现"入队寄存器"(enqueue registers),通过单个 DMWr 请求即可向设备发出命令,并根据完成状态向请求者指示该命令是否被接受。
 
-DMWr 的使用者必须理解事务排序的功能影响。DMWr 请求是带数据的 Non-Posted 请求，这意味着 Posted 请求允许越过 DMWr 请求。此外，在所有类型的 Non-Posted 请求之间没有保证的排序(见表 2-4 中 B3、B4、C3 和 C4 项)。
+DMWr 的使用者必须理解事务排序的功能影响。DMWr 请求是带数据的 Non-Posted 请求,这意味着 Posted 请求允许越过 DMWr 请求。此外,在所有类型的 Non-Posted 请求之间没有保证的排序(见表 2-4 中 B3、B4、C3 和 C4 项)。
 
-与所有类型的"控制"机制一样，所有参与者都需要理解特定机制所施加的特定要求，这些要求在不同的系统和不同的设备类型之间会有所不同。在许多情况下，有必要区分从不同软件环境发出的请求(例如，从使用不同驱动的多个虚拟机客户端共享同一工作队列时)。PASID 是可用于此目的一种机制，但也存在许多替代方案(例如，可以将不同的地址范围分配给每个环境，这些地址范围映射到 Completer 中的相同资源)。在某些系统中，系统和应用级软件能够按照特定模板(§ Figure 6-51)生成 DMWr 请求，其中位 31:0 由系统架构定义，位 31 处的 P 位指示该请求是由用户态(0b)还是管理态(1b)代码触发，有效负载的位 19:0 包含 PASID,以指示生成该请求的上下文。
+与所有类型的"控制"机制一样,所有参与者都需要理解特定机制所施加的特定要求,这些要求在不同的系统和不同的设备类型之间会有所不同。在许多情况下,有必要区分从不同软件环境发出的请求(例如,从使用不同驱动的多个虚拟机客户端共享同一工作队列时)。PASID 是可用于此目的的一种机制,但也存在许多替代方案(例如,可以将不同的地址范围分配给每个环境,这些地址范围映射到 Completer 中的相同资源)。在某些系统中,系统和应用级软件能够按照特定模板(§ Figure 6-51)生成 DMWr 请求,其中位 31:0 由系统架构定义,位 31 处的 P 位指示该请求是由用户态(0b)还是管理态(1b)代码触发,有效负载的位 19:0 包含 PASID,以指示生成该请求的上下文。
 
-出于性能原因，建议不要将 DMWr 用于发送批量数据。
+出于性能原因,建议不要将 DMWr 用于发送批量数据。
 
 作为 Non-Posted 请求,DMWr TLP 需要完成（Completion）。此外,PCIe 排序规则规定 Non-Posted TLP 不能越过 Posted TLP,使得 Posted 事务更适合提升性能。
 
-由于 DMWr TLP 和内存读请求 TLP 可以相互越过，且 DMWr TLP 可能会被 Completer 延迟，因此在尝试读取同时也是未完成 DMWr 事务目标的内存位置时(如果 Completer 的编程模型甚至支持这样做)，设备和设备驱动程序制造商必须谨慎处理。由于这些特性，在传输大量数据时不推荐使用 DMWr TLP。
+由于 DMWr TLP 和内存读请求 TLP 可以相互越过,且 DMWr TLP 可能会被 Completer 延迟,因此在尝试读取同时也是未完成 DMWr 事务目标的内存位置时(如果 Completer 的编程模型甚至支持这样做),设备和设备驱动程序制造商必须谨慎处理。由于这些特性,在传输大量数据时不推荐使用 DMWr TLP。
 
-当使用 DMWr 事务实现共享工作队列时，必须注意确保不会因与其他请求者的竞争而无限期地拒绝任何请求者访问该队列。向此类队列提交工作项的软件实体可选择实现流控（Flow Control）机制，或依赖特定的编程模型以确保所有实体都能够取得进展，例如
+当使用 DMWr 事务实现共享工作队列时,必须注意确保不会因与其他请求者的竞争而无限期地拒绝任何请求者访问该队列。向此类队列提交工作项的软件实体可选择实现流控（Flow Control）机制,或依赖特定的编程模型以确保所有实体都能够取得进展,例如
 
-包括反馈机制或 Function 向软件指示队列状态的信号，或一个在完成状态为 RRS 后延迟 DMWr 请求的定时器。DMWr 机制本身不提供针对软件实体以足够高频率发出请求(无论是恶意还是无意)而导致访问单一共享工作队列的其他软件实体出现问题的保护。此类机制和编程模型的细节不在本规范范围内。
+包括反馈机制或 Function 向软件指示队列状态的信号,或一个在完成状态为 RRS 后延迟 DMWr 请求的定时器。DMWr 机制本身不提供针对软件实体以足够高频率发出请求(无论是恶意还是无意)而导致访问单一共享工作队列的其他软件实体出现问题的保护。此类机制和编程模型的细节不在本规范范围内。
 
 <img src="figures/chapter_06/fig_0910_1_tight.png" width="700">
 </td>
@@ -19128,11 +19080,11 @@ IDE establishes an IDE Stream between two Ports (see § Figure 6-52). There are 
 </td>
 <td style="background-color:#e8e8e8">
 
-完整性与数据加密(Integrity & Data Encryption, IDE)为两个端口之间发送和接收的 TLP 提供机密性、完整性和重放保护。它能够灵活支持多种使用模型，同时提供广泛的互操作性。加密机制与行业最佳实践保持一致，并可随着安全需求的发展而扩展。
+完整性与数据加密(Integrity & Data Encryption, IDE)为两个端口之间发送和接收的 TLP 提供机密性、完整性和重放保护。它能够灵活支持多种使用模型,同时提供广泛的互操作性。加密机制与行业最佳实践保持一致,并可随着安全需求的发展而扩展。
 
-安全模型考虑了来自物理攻击对链路的威胁，包括攻击者使用实验室设备、定制的中间板（interposer）、恶意的扩展设备等来检查本应保密的数据、修改 TLP 内容、对 TLP 重排序和/或删除 TLP 的情况。TLP 在通过交换机传输时可以被保护，从而扩展安全模型，以应对通过重新编程交换机路由机制或使用"恶意"交换机发起的攻击。IDE 可用于保护受信执行环境(也称为信任域)内的流量，这些环境由多个组件组成——此类组合的框架不在 IDE 范围内。
+安全模型考虑了来自物理攻击对链路的威胁,包括攻击者使用实验室设备、定制的中间板（interposer）、恶意的扩展设备等来检查本应保密的数据、修改 TLP 内容、对 TLP 重排序和/或删除 TLP 的情况。TLP 在通过交换机传输时可以被保护,从而扩展安全模型,以应对通过重新编程交换机路由机制或使用"恶意"交换机发起的攻击。IDE 可用于保护受信执行环境(也称为信任域)内的流量,这些环境由多个组件组成——此类组合的框架不在 IDE 范围内。
 
-IDE 在两个端口之间建立 IDE 流（IDE Stream）(见 § Figure 6-52)。IDE 流有两种类型:选择性 IDE 流（Selective IDE Stream）适用于按本节定义的关联规则选定的 TLP;链路 IDE 流（Link IDE Stream）适用于使用特定 TC 发送的所有 TLP,但与选择性 IDE 流关联的 TLP 除外。当两个端口之间没有交换机时，可以分别使用链路 IDE 或选择性 IDE 保护链路上的所有 TLP 流量或仅选定的 TLP 流量。链路 IDE 与选择性 IDE 之间没有必需的关联或限制。可以在两个直连端口之间同时使用链路 IDE 和选择性 IDE,如 § Figure 6-52 中端口 A 和 B 之间所示，在这种情况下，与选择性 IDE 流关联的 TLP 使用该流的密钥集进行保护，所有其他 TLP 使用链路 IDE 流的密钥集进行保护。例如，如果对选择性 IDE TLP 实施与其他链路流量不同的安全策略，则可能需要此类配置。当 IDE 端点（IDE Terminus）是交换机端口时(如端口 C 和 D 之间所示)，可以使用选择性 IDE。IDE 不会在两个终端端口的边界之外建立安全性，在组件内保护和/或隔离安全流量的机制不在本文档范围内。再次参考 § Figure 6-52 中所示示例，端口 C 与 G 之间以及端口 G 与 H 之间的选择性 IDE 流在通过交换机时受到保护。如图所示的所有其他链路 IDE 和选择性 IDE 流由 IDE 在端口到端口之间进行保护，但必须在组件内通过特定于实现的方式在终端端口之后进行保护。由此推论，当链路 IDE 用于 TLP 通过一个或多个交换机"逐跳"流动的场景时，必须确保在交换机内保持可接受的安全性，但具体如何实现不在本文档范围内。
+IDE 在两个端口之间建立 IDE 流（IDE Stream）(见 § Figure 6-52)。IDE 流有两种类型:选择性 IDE 流（Selective IDE Stream）适用于按本节定义的关联规则选定的 TLP;链路 IDE 流（Link IDE Stream）适用于使用特定 TC 发送的所有 TLP,但与选择性 IDE 流关联的 TLP 除外。当两个端口之间没有交换机时,可以分别使用链路 IDE 或选择性 IDE 保护链路上的所有 TLP 流量或仅选定的 TLP 流量。链路 IDE 与选择性 IDE 之间没有必需的关联或限制。可以在两个直连端口之间同时使用链路 IDE 和选择性 IDE,如 § Figure 6-52 中端口 A 和 B 之间所示,在这种情况下,与选择性 IDE 流关联的 TLP 使用该流的密钥集进行保护,所有其他 TLP 使用链路 IDE 流的密钥集进行保护。例如,如果对选择性 IDE TLP 实施与其他链路流量不同的安全策略,则可能需要此类配置。当 IDE 端点（IDE Terminus）是交换机端口时(如端口 C 和 D 之间所示),可以使用选择性 IDE。IDE 不会在两个终端端口的边界之外建立安全性,在组件内保护和/或隔离安全流量的机制不在本文档范围内。再次参考 § Figure 6-52 中所示示例,端口 C 与 G 之间以及端口 G 与 H 之间的选择性 IDE 流在通过交换机时受到保护。如图所示的所有其他链路 IDE 和选择性 IDE 流由 IDE 在端口到端口之间进行保护,但必须在组件内通过特定于实现的方式在终端端口之后进行保护。由此推论,当链路 IDE 用于 TLP 通过一个或多个交换机"逐跳"流动的场景时,必须确保在交换机内保持可接受的安全性,但具体如何实现不在本文档范围内。
 
 </td>
 </tr>
@@ -19160,7 +19112,6 @@ IDE 在两个端口之间建立 IDE 流（IDE Stream）(见 § Figure 6-52)。ID
 <td>
 
 > **Figure 6-52.** IDE Secures TLPs Between Ports
-> **图 6-52.** MSI-X PBA 格式
 > <img src="figures/chapter_06/fig_0912_1_tight.png" width="700">
 
 In addition to the in-line securing of TLPs, as a "data plane" capability, IDE defines interoperable mechanisms for establishing Streams and programming keys, as a "control plane" capability, based on industry specifications. For example, for an Endpoint connected directly to the Root Complex (A to B above), one way to establish IDE is to use IDE Key Management (IDE_KM – see § Section 6.33.3) via DOE to allow host Firmware/Software to configure the Ports, including securely programming the IDE keys into both Ports. In another example, for two Endpoints communicating peer to peer (G to H above), the two Endpoints can implement communication directly via [MCTP-VDM] and [Secured-MCTP], where one will take the Requester role and the other the Responder role, and then applying the IDE_KM flow for secure key establishment. In an alternate example, it is also possible for some kind of management controller to apply IDE_KM over a sideband management connection, to program IDE keys in Ports throughout a system. The mechanisms for a management controller to program keys into a Root Complex are outside the scope of this document.
@@ -19170,9 +19121,9 @@ Policies for establishing trust between elements in a platform are outside the s
 </td>
 <td style="background-color:#e8e8e8">
 
-除了 TLP 的内联保护(作为"数据平面"能力)之外,IDE 还基于行业规范定义了用于建立流和编程密钥的可互操作机制(作为"控制平面"能力)。例如，对于直接连接到根复合体的端点(上图中 A 到 B)，建立 IDE 的一种方法是通过 DOE 使用 IDE 密钥管理(IDE_KM – 见 § Section 6.33.3)，以便主机固件/软件配置端口，包括将 IDE 密钥安全地编程到两个端口中。在另一个示例中，对于进行点到点通信的两个端点(上图中 G 到 H)，两个端点可以通过 [MCTP-VDM] 和 [Secured-MCTP] 直接实现通信，其中一方承担请求者（Requester）角色，另一方承担响应者（Responder）角色，然后应用 IDE_KM 流程以建立安全密钥。在另一种示例中，某些管理控制器也可以通过边带（sideband）管理连接应用 IDE_KM,以在整个系统中的端口中编程 IDE 密钥。管理控制器将密钥编程到根复合体中的机制不在本文档范围内。
+除了 TLP 的内联保护(作为"数据平面"能力)之外,IDE 还基于行业规范定义了用于建立流和编程密钥的可互操作机制(作为"控制平面"能力)。例如,对于直接连接到根复合体的端点(上图中 A 到 B),建立 IDE 的一种方法是通过 DOE 使用 IDE 密钥管理(IDE_KM – 见 § Section 6.33.3),以便主机固件/软件配置端口,包括将 IDE 密钥安全地编程到两个端口中。在另一个示例中,对于进行点到点通信的两个端点(上图中 G 到 H),两个端点可以通过 [MCTP-VDM] 和 [Secured-MCTP] 直接实现通信,其中一方承担请求者（Requester）角色,另一方承担响应者（Responder）角色,然后应用 IDE_KM 流程以建立安全密钥。在另一种示例中,某些管理控制器也可以通过边带（sideband）管理连接应用 IDE_KM,以在整个系统中的端口中编程 IDE 密钥。管理控制器将密钥编程到根复合体中的机制不在本文档范围内。
 
-平台中各元素间信任建立策略不在 IDE 范围内。强烈建议通过平台特定的方式实施适合平台的安全策略。无需在建立 IDE 流之前应用此策略，在某些情况下，可能首选先建立 IDE,随后
+平台中各元素间信任建立策略不在 IDE 范围内。强烈建议通过平台特定的方式实施适合平台的安全策略。无需在建立 IDE 流之前应用此策略,在某些情况下,可能首选先建立 IDE,随后
 
 <img src="figures/chapter_06/fig_0912_1_tight.png" width="700">
 </td>
@@ -19203,7 +19154,7 @@ apply security policy mechanisms, or to apply some policy mechanisms prior to es
 </td>
 <td style="background-color:#e8e8e8">
 
-应用安全策略机制，或在建立 IDE 之前应用部分策略机制，在建立 IDE 之后应用其他机制。
+应用安全策略机制,或在建立 IDE 之前应用部分策略机制,在建立 IDE 之后应用其他机制。
 
 </td>
 </tr>
@@ -19267,27 +19218,27 @@ IDE secures TLP traffic from one Port to another Port. TLP content is not secure
 
 **本威胁模型涵盖:**
 
-使用逻辑分析仪或中间板类型设备进行的攻击，包括例如"流氓"重定时器（Retimer）,其中攻击设备尝试添加或删除 TLP、观察 TLP 有效负载数据和/或对 TLP 重排序。攻击示例包括:延迟标志写入以绕过数据写入，导致陈旧数据被接受;或延迟读操作以绕过对同一位置的写入，导致读取到陈旧值。重排序在实现注"不当重排序的检测"(Detection of Improper Reordering)中有更详细的讨论。
+使用逻辑分析仪或中间板类型设备进行的攻击,包括例如"流氓"重定时器（Retimer）,其中攻击设备尝试添加或删除 TLP、观察 TLP 有效负载数据和/或对 TLP 重排序。攻击示例包括:延迟标志写入以绕过数据写入,导致陈旧数据被接受;或延迟读操作以绕过对同一位置的写入,导致读取到陈旧值。重排序在实现注"不当重排序的检测"(Detection of Improper Reordering)中有更详细的讨论。
 
-IDE 保护主机系统免受设备替换攻击，因为一旦完成认证密钥交换，后续由试图伪装为已认证单元的不同单元发起的攻击将失败，因为伪装单元无法使用正确的密钥生成 IDE TLP。
+IDE 保护主机系统免受设备替换攻击,因为一旦完成认证密钥交换,后续由试图伪装为已认证单元的不同单元发起的攻击将失败,因为伪装单元无法使用正确的密钥生成 IDE TLP。
 
-在实现包含适当的自我保护措施的前提下,IDE 还支持检测涉及设备移除的攻击，例如将设备移动到不同系统并尝试以已认证主机的身份运行该设备。
+在实现包含适当的自我保护措施的前提下,IDE 还支持检测涉及设备移除的攻击,例如将设备移动到不同系统并尝试以已认证主机的身份运行该设备。
 
-假设在攻击中，攻击者会阻止错误报告尝试，例如通过屏蔽检测到错误的端口发出的消息（Message）,此类报告消息仅用于调试配置不正确的系统。如果特定使用模型要求及时检测安全失败，则应使用某种"心跳"(heartbeat)机制，而不是假设失败会直接被报告。
+假设在攻击中,攻击者会阻止错误报告尝试,例如通过屏蔽检测到错误的端口发出的消息（Message）,此类报告消息仅用于调试配置不正确的系统。如果特定使用模型要求及时检测安全失败,则应使用某种"心跳"(heartbeat)机制,而不是假设失败会直接被报告。
 
 **本威胁模型不涵盖:**
 
-由设备实现不充分引起的安全暴露。例如，实现必然需要保护本地密钥、互连和内存，包括使用分立存储组件在插卡上实现的本地内存。IDE 不保护免受片上流量重定向的攻击，例如多功能设备（Multi-Function Device）中各 Function 之间的流量重定向。
+由设备实现不充分引起的安全暴露。例如,实现必然需要保护本地密钥、互连和内存,包括使用分立存储组件在插卡上实现的本地内存。IDE 不保护免受片上流量重定向的攻击,例如多功能设备（Multi-Function Device）中各 Function 之间的流量重定向。
 
-调试机制应仔细审查，因为实现不当时很容易导致信息泄露。强烈建议使用测量机制报告调试状态，并且任何可能暴露本应受保护数据的调试配置变更都应导致转换为 Insecure 状态(见 § Section 6.33.1)。
+调试机制应仔细审查,因为实现不当时很容易导致信息泄露。强烈建议使用测量机制报告调试状态,并且任何可能暴露本应受保护数据的调试配置变更都应导致转换为 Insecure 状态(见 § Section 6.33.1)。
 
-关于安全密钥的生成、编程和存储有许多注意事项，强烈建议非专家咨询专家，以评估各个层面的实现，确保遵循最佳实践。在所有情况下，必须避免以任何方式(包括跟踪器、配置寄存器等调试功能)暴露明文密钥。
+关于安全密钥的生成、编程和存储有许多注意事项,强烈建议非专家咨询专家,以评估各个层面的实现,确保遵循最佳实践。在所有情况下,必须避免以任何方式(包括跟踪器、配置寄存器等调试功能)暴露明文密钥。
 
-如果不使用部分包头加密(partial header encryption,见 § Section 6.33.4)，则攻击者可能通过分析包头中包含的信息在某些情况下发起"侧信道"(side channel)攻击。示例见 htts://www.ieee-security.org/TC/SP2015/papers-archived/6949a640.pdf。
+如果不使用部分包头加密(partial header encryption,见 § Section 6.33.4),则攻击者可能通过分析包头中包含的信息在某些情况下发起"侧信道"(side channel)攻击。示例见 htts://www.ieee-security.org/TC/SP2015/papers-archived/6949a640.pdf。
 
 **注意事项:**
 
-IDE 在两个端口之间保护 TLP 流量。TLP 内容在通过终端 Partner 端口之后，不会由 IDE 在片上提供保护。因此，有必要根据使用模型要求提供适当的、特定于实现的保护措施，以确保 TLP 流量在传输之前和接收之后均受到保护。
+IDE 在两个端口之间保护 TLP 流量。TLP 内容在通过终端 Partner 端口之后,不会由 IDE 在片上提供保护。因此,有必要根据使用模型要求提供适当的、特定于实现的保护措施,以确保 TLP 流量在传输之前和接收之后均受到保护。
 
 </td>
 </tr>
@@ -19336,21 +19287,21 @@ Although Link IDE applies to all kinds of TLPs, Selective IDE can only be applie
 </td>
 <td style="background-color:#e8e8e8">
 
-从概念上讲，链路 IDE 流或选择性 IDE 流的初始化涉及多个步骤，尽管其中一些步骤可以合并或以不同的顺序执行。第一步是建立包含两个 Partner 端口的组件的真实性和身份，使其成为 IDE 流的 IDE 端点（IDE Terminus）。这可以使用 CMA-SPDM、通过特定于实现的方式，或在某些情况下隐式地完成。第二步是建立 IDE 流密钥——IDE 密钥管理（IDE_KM – § Section 6.33.3）提供了一种实现方法。第三步是配置安全连接，最后，触发 IDE 流的建立。
+从概念上讲,链路 IDE 流或选择性 IDE 流的初始化涉及多个步骤,尽管其中一些步骤可以合并或以不同的顺序执行。第一步是建立包含两个 Partner 端口的组件的真实性和身份,使其成为 IDE 流的 IDE 端点（IDE Terminus）。这可以使用 CMA-SPDM、通过特定于实现的方式,或在某些情况下隐式地完成。第二步是建立 IDE 流密钥——IDE 密钥管理（IDE_KM – § Section 6.33.3）提供了一种实现方法。第三步是配置安全连接,最后,触发 IDE 流的建立。
 
-从概念上讲，每个 IDE 流在每个 Partner 端口处都关联一个状态机，如 § Figure 6-53 所示。IDE 假定实现了适当的隔离机制，以确保信息在通过 IDE 保护的端口到端口连接之外仍保持安全。在某些情况下，整个组件可被视为"安全"的，无需在片上区分流量;在其他情况下，可能需要建立一个或多个可信执行环境（TEE）以将安全流量与非安全流量以及不同安全环境彼此隔离。尽管允许在相同的两个端口之间建立多个 IDE 流，但这通常并非必要或有用，因为假定一旦进入片上，所有安全流量都"同等"安全，使用单独的 IDE 流不会提供额外的保护。此类 TEE 的实现和管理细节不在 IDE 范围内。T 位用于 TEE 管理机制(见 § Chapter 11.)。IDE 机制确保 T 位(与其他 TLP 内容一样)在传输过程中受到保护。
+从概念上讲,每个 IDE 流在每个 Partner 端口处都关联一个状态机,如 § Figure 6-53 所示。IDE 假定实现了适当的隔离机制,以确保信息在通过 IDE 保护的端口到端口连接之外仍保持安全。在某些情况下,整个组件可被视为"安全"的,无需在片上区分流量;在其他情况下,可能需要建立一个或多个可信执行环境（TEE）以将安全流量与非安全流量以及不同安全环境彼此隔离。尽管允许在相同的两个端口之间建立多个 IDE 流,但这通常并非必要或有用,因为假定一旦进入片上,所有安全流量都"同等"安全,使用单独的 IDE 流不会提供额外的保护。此类 TEE 的实现和管理细节不在 IDE 范围内。T 位用于 TEE 管理机制(见 § Chapter 11.)。IDE 机制确保 T 位(与其他 TLP 内容一样)在传输过程中受到保护。
 
 实现 TEE 的良好实践包括但不限于:
 
 - 通过使用本地加密、访问控制和/或其他机制保护机密
 - 确保安全数据不会因错误、电源管理或其他操作而"泄漏"
-- 检测不当的 IDE 重配置尝试，例如对任何 IDE 控制寄存器的写入和/或可能危及安全数据的其他内部情况，并采取适当措施，包括可能强制将端口置于 Insecure 状态
+- 检测不当的 IDE 重配置尝试,例如对任何 IDE 控制寄存器的写入和/或可能危及安全数据的其他内部情况,并采取适当措施,包括可能强制将端口置于 Insecure 状态
 - 确保密钥永远不被暴露或存储在非安全缓冲区中
 - 确保 TEE 的建立和管理本身是安全的
 
-TEE 的实现可能非常复杂，强烈建议具有适当安全专业知识的开发人员深入参与组件和系统的开发与验证。
+TEE 的实现可能非常复杂,强烈建议具有适当安全专业知识的开发人员深入参与组件和系统的开发与验证。
 
-虽然链路 IDE 适用于所有类型的 TLP,但选择性 IDE 只能应用于特定类型的 TLP(见 § Table 6-35)。内存操作几乎在所有使用模型中都需要支持，并且由选择性 IDE 支持。I/O 操作并不常用，且选择性 IDE 不支持 I/O 操作以简化设计和验证。选择性 IDE 可应用于消息（Message）,并可选择性地应用于配置请求和完成（Configuration Request & Completion）。选择性 IDE 可应用于带前缀（Prefix）的 TLP,但当 TLP 与选择性 IDE 流关联时，本地 TLP 前缀（Local TLP Prefix）不受保护。在 NFM 中，端到端 TLP 前缀（End-End TLP Prefix）与关联 TLP 一起受到保护;在 FM 中,OHC 内容与其他包头（Header）内容一起受到保护。
+虽然链路 IDE 适用于所有类型的 TLP,但选择性 IDE 只能应用于特定类型的 TLP(见 § Table 6-35)。内存操作几乎在所有使用模型中都需要支持,并且由选择性 IDE 支持。I/O 操作并不常用,且选择性 IDE 不支持 I/O 操作以简化设计和验证。选择性 IDE 可应用于消息（Message）,并可选择性地应用于配置请求和完成（Configuration Request & Completion）。选择性 IDE 可应用于带前缀（Prefix）的 TLP,但当 TLP 与选择性 IDE 流关联时,本地 TLP 前缀（Local TLP Prefix）不受保护。在 NFM 中,端到端 TLP 前缀（End-End TLP Prefix）与关联 TLP 一起受到保护;在 FM 中,OHC 内容与其他包头（Header）内容一起受到保护。
 
 </td>
 </tr>
@@ -19391,16 +19342,16 @@ A trusted execution environment (TEE) using IDE must prevent the transmission of
 </td>
 <td style="background-color:#e8e8e8">
 
-- Insecure 状态表示操作 IDE 流所需的必要步骤尚未完成，或某些事件已结束先前运行的 IDE 流的操作。
-  - 通常,Insecure 状态会包含多个概念性子状态，这些子状态对硬件不可直接观察，只有配置 IDE 流的系统固件/软件才能理解何时所有必要步骤都已完成。
-  - 当所有必要的配置均已完成时，进入 Insecure 状态的 Ready 概念性子状态;此条件必须由系统固件/软件跟踪。
-    - 在许多情况下，硬件无法区分何时已完成所有必要配置，并且不要求硬件跟踪到 Ready 子状态的转换。
+- Insecure 状态表示操作 IDE 流所需的必要步骤尚未完成,或某些事件已结束先前运行的 IDE 流的操作。
+  - 通常,Insecure 状态会包含多个概念性子状态,这些子状态对硬件不可直接观察,只有配置 IDE 流的系统固件/软件才能理解何时所有必要步骤都已完成。
+  - 当所有必要的配置均已完成时,进入 Insecure 状态的 Ready 概念性子状态;此条件必须由系统固件/软件跟踪。
+    - 在许多情况下,硬件无法区分何时已完成所有必要配置,并且不要求硬件跟踪到 Ready 子状态的转换。
 - 端口特定流的 IDE 流状态机在相应链路/选择性 IDE 流使能位（Enable bit）被清零时必须从 Secure 转换为 Insecure。
-  - 如下所述，如果相应 IDE 流状态机不处于 Secure 状态，则端口必须在内部阻止所有打算以安全方式传输的 TLP。
-- 如果在端口处检测到任何危及 IDE 流安全性的情况，则端口必须转换为 Insecure。
+  - 如下所述,如果相应 IDE 流状态机不处于 Secure 状态,则端口必须在内部阻止所有打算以安全方式传输的 TLP。
+- 如果在端口处检测到任何危及 IDE 流安全性的情况,则端口必须转换为 Insecure。
   - 允许因特定于实现的原因转换为 Insecure。
 
-使用 IDE 的可信执行环境（TEE）必须阻止使用非 IDE TLP 传输本应以安全方式传输的 TLP,并且在 TEE 要求这些 TLP 为安全时，必须拒绝接收到的非 IDE TLP。支持 TEE 的设备的特定架构由 TDISP 定义(见 § Chapter 11.)。为了精确定义 IDE 与 TEE 相关的规范性要求，我们假设 TEE 具有与 § Figure 6-54 所示相对应的内部状态。
+使用 IDE 的可信执行环境（TEE）必须阻止使用非 IDE TLP 传输本应以安全方式传输的 TLP,并且在 TEE 要求这些 TLP 为安全时,必须拒绝接收到的非 IDE TLP。支持 TEE 的设备的特定架构由 TDISP 定义(见 § Chapter 11.)。为了精确定义 IDE 与 TEE 相关的规范性要求,我们假设 TEE 具有与 § Figure 6-54 所示相对应的内部状态。
 
 </td>
 </tr>
@@ -19408,7 +19359,6 @@ A trusted execution environment (TEE) using IDE must prevent the transmission of
 </table>
 
 > **Figure 6-53.** IDE Stream State Machine
-> **图 6-53.** MSI 请求服务流程示例
 > <img src="figures/chapter_06/fig_0916_1_tight.png" width="700">
 
 </div>
@@ -19433,7 +19383,6 @@ A trusted execution environment (TEE) using IDE must prevent the transmission of
 <td>
 
 > **Figure 6-54.** IDE Stream State Machine
-> **图 6-54.** 来自同一功能的多个未完成 MSI 中断
 > <img src="figures/chapter_06/fig_0917_1_tight.png" width="700">
 
 TDISP (see § Chapter 11.) defines specific requirements that extend the following rules, that apply broadly to all TEEs using IDE:
@@ -19450,16 +19399,16 @@ To establish IDE Streams interoperably based on this specification, system firmw
 </td>
 <td style="background-color:#e8e8e8">
 
-TDISP(见 § Chapter 11.)定义了扩展以下规则的具体要求，这些规则广泛适用于使用 IDE 的所有 TEE:
+TDISP(见 § Chapter 11.)定义了扩展以下规则的具体要求,这些规则广泛适用于使用 IDE 的所有 TEE:
 
-- TEE 必须至少区分两种运行条件，这些条件可任意命名，但此处称为 Not Locked 和 Locked。
+- TEE 必须至少区分两种运行条件,这些条件可任意命名,但此处称为 Not Locked 和 Locked。
   - 当且仅当 TEE 安全运行所需的所有 IDE 流都处于 Secure 状态时,TEE 必须转换到 Locked 状态。
-  - 如果 TEE 安全运行所需的任何 IDE 流处于 Insecure 状态，则 TEE 必须转换到 Not Locked 状态。
-- 使用 IDE 流的 TEE 必须精确定义可能影响 IDE 流安全性的关键配置信息，并且一旦该 IDE 流被建立，关键配置信息必须通过安全方式进行确认和维护，以检测在 IDE 流建立期间或建立之后尝试的"中间人"(adversary-in-the-middle, AITM)攻击，并阻止和/或检测对该信息的更改，以便在运行期间检测/防止攻击。
-  - 此要求适用的具体配置信息是特定于实现的，取决于所涉及的硬件元素、所需的安全属性，以及潜在的使用假设，所有这些都不在本规范范围内。
-  - 如何确认该信息是特定于实现的，但通常包括将包含该信息本地快照的数据结构安全地传输到安全伙伴，以便与预期值进行比较。
+  - 如果 TEE 安全运行所需的任何 IDE 流处于 Insecure 状态,则 TEE 必须转换到 Not Locked 状态。
+- 使用 IDE 流的 TEE 必须精确定义可能影响 IDE 流安全性的关键配置信息,并且一旦该 IDE 流被建立,关键配置信息必须通过安全方式进行确认和维护,以检测在 IDE 流建立期间或建立之后尝试的"中间人"(adversary-in-the-middle, AITM)攻击,并阻止和/或检测对该信息的更改,以便在运行期间检测/防止攻击。
+  - 此要求适用的具体配置信息是特定于实现的,取决于所涉及的硬件元素、所需的安全属性,以及潜在的使用假设,所有这些都不在本规范范围内。
+  - 如何确认该信息是特定于实现的,但通常包括将包含该信息本地快照的数据结构安全地传输到安全伙伴,以便与预期值进行比较。
 
-为了基于本规范可互操作地建立 IDE 流，系统固件/软件充当中央机构，创建密钥并将其编程到两个 Partner 端口中。以下规则适用:
+为了基于本规范可互操作地建立 IDE 流,系统固件/软件充当中央机构,创建密钥并将其编程到两个 Partner 端口中。以下规则适用:
 
 <img src="figures/chapter_06/fig_0917_1_tight.png" width="700">
 </td>
@@ -19517,16 +19466,16 @@ IDE Key Management (IDE_KM) builds upon [SPDM] and [Secured-SPDM], and can be us
 
 **6.33.2 IDE 流建立 (IDE Stream Establishment)**
 
-- 对于与上游端口 (Upstream Port) 相关联的端点 (Endpoint)，包括多功能设备 (Multi-Function Device) 的功能，只有功能 0 必须实现 IDE 扩展能力 (IDE Extended Capability)。
-- 对于交换机 (Switch)，包括多功能设备的一个或多个功能代表交换机的上游端口的情况,IDE 扩展能力只能在功能 0 中实现，并且实现方式应使功能 0 代表整个多功能设备。
-- 对于下游端口 (Downstream Port)，与该端口相关联的桥 (Bridge) 功能必须实现 IDE 扩展能力。
+- 对于与上游端口 (Upstream Port) 相关联的端点 (Endpoint),包括多功能设备 (Multi-Function Device) 的功能,只有功能 0 必须实现 IDE 扩展能力 (IDE Extended Capability)。
+- 对于交换机 (Switch),包括多功能设备的一个或多个功能代表交换机的上游端口的情况,IDE 扩展能力只能在功能 0 中实现,并且实现方式应使功能 0 代表整个多功能设备。
+- 对于下游端口 (Downstream Port),与该端口相关联的桥 (Bridge) 功能必须实现 IDE 扩展能力。
 - 除根端口 (Root Port) 之外的所有端口必须实现通过 § 6.33.3 节中定义的 IDE 密钥管理 (IDE_KM) 协议对密钥管理的支持。
-  - 对于交换机端口和根端口，允许一个端口代替其他端口提供 DOE 和 CMA-SPDM 应答器功能，具体定义见 § 6.33.3 节。
+  - 对于交换机端口和根端口,允许一个端口代替其他端口提供 DOE 和 CMA-SPDM 应答器功能,具体定义见 § 6.33.3 节。
   - 根端口允许实现对 IDE_KM 协议的支持。
 
 系统也允许通过 MCTP 实现 IDE_KM 协议(参见 § 6.33.3 节)。
 
-系统固件/软件也允许在两个伙伴端口 (Partner Port) 之间启用直通通信，其中一方承担请求者角色 (Requester Role)，另一方承担应答者角色 (Responder Role)，直接在这两个伙伴端口之间实现下文定义的 IDE_KM 协议(例如，参见 § 图 6-52 中端口 G 和 H 之间的选择性 IDE 流)。该过程如何被发现和启用不在本规范的范围内。
+系统固件/软件也允许在两个伙伴端口 (Partner Port) 之间启用直通通信,其中一方承担请求者角色 (Requester Role),另一方承担应答者角色 (Responder Role),直接在这两个伙伴端口之间实现下文定义的 IDE_KM 协议(例如,参见 § 图 6-52 中端口 G 和 H 之间的选择性 IDE 流)。该过程如何被发现和启用不在本规范的范围内。
 
 IDE 密钥管理 (IDE Key Management, IDE_KM) 基于 [SPDM] 和 [Secured-SPDM],可通过多种传输层使用(参见 § 图 6-55)。
 
@@ -19558,7 +19507,6 @@ IDE 密钥管理 (IDE Key Management, IDE_KM) 基于 [SPDM] 和 [Secured-SPDM],�
 **6.33.3 IDE Key Management (IDE_KM)**
 
 > **Figure 6-55.** IDE Key Management (IDE_KM) and Related Specifications & Capabilities
-> **图 6-55.** MSI-X 请求服务流程示例
 > <img src="figures/chapter_06/fig_0919_1_tight.png" width="700">
 
 | Legend | Source |
@@ -19609,18 +19557,18 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
 | MCTP Base (DSP0236) | DMTF |
 | SPDM Messages over DOE(数据对象协议 01h) | PCI-SIG |
 
-以下规则定义了 IDE 密钥管理 (IDE_KM) 协议，支持 IDE_KM 使用的端口必须遵循:
+以下规则定义了 IDE 密钥管理 (IDE_KM) 协议,支持 IDE_KM 使用的端口必须遵循:
 
-- IDE_KM 协议使用下文定义的数据对象，其中:
-  - 请求者 (Requester) 必须使用 [SPDM] VENDOR_DEFINED_REQUEST 格式，应答者 (Responder) 必须使用 [SPDM] VENDOR_DEFINED_RESPONSE 格式。
+- IDE_KM 协议使用下文定义的数据对象,其中:
+  - 请求者 (Requester) 必须使用 [SPDM] VENDOR_DEFINED_REQUEST 格式,应答者 (Responder) 必须使用 [SPDM] VENDOR_DEFINED_RESPONSE 格式。
   - VENDOR_DEFINED_REQUEST/VENDOR_DEFINED_RESPONSE 的 StandardID 字段必须包含在 [SPDM] 中分配的用于标识 PCI-SIG 的值。
   - VENDOR_DEFINED_REQUEST/VENDOR_DEFINED_RESPONSE 的 VendorID 字段必须包含值 0001h,这是分配给 PCI-SIG 的值。
   - VENDOR_DEFINED_REQUEST/VENDOR_DEFINED_RESPONSE 的 VendorDefinedReqPayload/VendorDefinedRespPayload 字段必须是下文定义的数据对象内容。
   - VENDOR_DEFINED_REQUEST/VENDOR_DEFINED_RESPONSE 必须进而根据 [Secured-SPDM] 形成 Secured Message 的 Application Data 字段。
     - 强烈建议在安全会话中使用的密码强度至少与为 IDE 本身选择的强度相当。
-  - 如果收到的任何 IDE_KM 数据对象未按 [Secured-SPDM] 安全传输，则该收到的数据对象不得用于密钥管理;若该对象是请求，则不得产生响应。
+  - 如果收到的任何 IDE_KM 数据对象未按 [Secured-SPDM] 安全传输,则该收到的数据对象不得用于密钥管理;若该对象是请求,则不得产生响应。
   - VendorDefinedReqPayload/VendorDefinedRespPayload 的大小必须与下文定义的数据对象的大小匹配。
-    - 如果大小不匹配，则该收到的数据对象不得用于密钥管理;若该对象是请求，则不得产生响应。
+    - 如果大小不匹配,则该收到的数据对象不得用于密钥管理;若该对象是请求,则不得产生响应。
 
 <img src="figures/chapter_06/fig_0919_1_tight.png" width="700">
 </td>
@@ -19674,17 +19622,17 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
 </td>
 <td style="background-color:#e8e8e8">
 
-- 对于与上游端口相关联的端点 (Endpoint) 功能，包括多功能设备的功能，功能 0 必须实现用于认证和密钥交换的 DOE 和 CMA-SPDM,包括安全会话建立机制(参见 [SPDM])以及作为应答者的 IDE 密钥管理 (IDE_KM) 协议，具体定义如下。
-  - IDE 在每个端口级别运行，上游端口的功能 0 必须用于建立相关组件的真实性与身份、执行密钥交换以及为该端口配置和管理 IDE 流 (IDE Stream) 的目的。
-- 代表交换机的每个上游端口功能(无论功能号如何)，若其链接 IDE 流支持 (Link IDE Stream Supported) 和/或选择性 IDE 流支持 (Selective IDE Streams Supported) 被置位，包括在多功能设备中，必须实现支持 IDE 密钥管理 (IDE_KM) 协议作为应答者的 DOE 和 CMA-SPDM,具体定义如下。
+- 对于与上游端口相关联的端点 (Endpoint) 功能,包括多功能设备的功能,功能 0 必须实现用于认证和密钥交换的 DOE 和 CMA-SPDM,包括安全会话建立机制(参见 [SPDM])以及作为应答者的 IDE 密钥管理 (IDE_KM) 协议,具体定义如下。
+  - IDE 在每个端口级别运行,上游端口的功能 0 必须用于建立相关组件的真实性与身份、执行密钥交换以及为该端口配置和管理 IDE 流 (IDE Stream) 的目的。
+- 代表交换机的每个上游端口功能(无论功能号如何),若其链接 IDE 流支持 (Link IDE Stream Supported) 和/或选择性 IDE 流支持 (Selective IDE Streams Supported) 被置位,包括在多功能设备中,必须实现支持 IDE 密钥管理 (IDE_KM) 协议作为应答者的 DOE 和 CMA-SPDM,具体定义如下。
 - 允许根复合体 (Root Complex):
-  - 使用每个端口的 DOE 实例支持部分或全部根端口的 IDE_KM 协议，或使用某些根端口代表其他根端口
+  - 使用每个端口的 DOE 实例支持部分或全部根端口的 IDE_KM 协议,或使用某些根端口代表其他根端口
   - 在支持根端口 IDE_KM 的 RCRB 中实现 DOE 实例,
   - 使用实现特定的密钥管理。
-- 对于交换机和根复合体，允许一个端口为自己以及交换机/根复合体的其他端口实现 IDE_KM 接口作为应答者。
+- 对于交换机和根复合体,允许一个端口为自己以及交换机/根复合体的其他端口实现 IDE_KM 接口作为应答者。
 - 端口允许支持通过 MCTP 传输的 IDE_KM 协议。
-- 在每个数据对象内，第一个 DW 的 [7:0] 位中的 Protocol ID 字段必须为 00h,以表示 IDE。
-- 第一个 DW 的 [15:8] 位中的 Object ID 字段指示 IDE_KM 数据对象类型，编码如下:
+- 在每个数据对象内,第一个 DW 的 [7:0] 位中的 Protocol ID 字段必须为 00h,以表示 IDE。
+- 第一个 DW 的 [15:8] 位中的 Object ID 字段指示 IDE_KM 数据对象类型,编码如下:
   - 00h:Query (QUERY)
   - 01h:Query Response (QUERY_RESP)
   - 02h:Key Programming (KEY_PROG)
@@ -19750,26 +19698,26 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
 
 - IDE_KM 为实现 IDE_KM 的端点、交换机或根复合体的每个端口分配唯一的端口号 (PortIndex)。
 - 对于支持 IDE_KM 应答者角色的交换机:
-  - 交换机的上游端口必须为自己实现应答者角色，且上游端口必须对 PortIndex 00h 作出响应。
-  - 由上游端口代表的交换机的下游端口必须对 01h 至 FFh 范围内的 PortIndex 作出响应，顺序由交换机结构按从低到高分配给下游端口的设备/功能号确定。
-  - 允许交换机在下游端口中实现应答器能力，例如通过在该下游端口中实现 DOE 实例，在这种情况下，该下游端口必须对 PortIndex 00h 作出响应。
-    - 允许该端口代表其他下游端口，在这种情况下，被代表的下游端口必须对 01h 至 FFh 范围内的 PortIndex 作出响应，顺序由交换机结构按从低到高分配给下游端口的设备/功能号确定。
+  - 交换机的上游端口必须为自己实现应答者角色,且上游端口必须对 PortIndex 00h 作出响应。
+  - 由上游端口代表的交换机的下游端口必须对 01h 至 FFh 范围内的 PortIndex 作出响应,顺序由交换机结构按从低到高分配给下游端口的设备/功能号确定。
+  - 允许交换机在下游端口中实现应答器能力,例如通过在该下游端口中实现 DOE 实例,在这种情况下,该下游端口必须对 PortIndex 00h 作出响应。
+    - 允许该端口代表其他下游端口,在这种情况下,被代表的下游端口必须对 01h 至 FFh 范围内的 PortIndex 作出响应,顺序由交换机结构按从低到高分配给下游端口的设备/功能号确定。
 - 对于支持 IDE_KM 应答者角色的根端口:
-  - 根端口必须为自己实现应答者角色，并必须对 PortIndex 00h 作出响应。
-    - 允许该端口代表其他根端口，在这种情况下，被代表的根端口必须对 01h 至 FFh 范围内的 PortIndex 作出响应，顺序由根复合体结构按从低到高分配给根端口的设备/功能号确定。
-- 对于支持 IDE_KM 应答者角色的端点上游端口，该端口必须对 PortIndex 00h 作出响应。
+  - 根端口必须为自己实现应答者角色,并必须对 PortIndex 00h 作出响应。
+    - 允许该端口代表其他根端口,在这种情况下,被代表的根端口必须对 01h 至 FFh 范围内的 PortIndex 作出响应,顺序由根复合体结构按从低到高分配给根端口的设备/功能号确定。
+- 对于支持 IDE_KM 应答者角色的端点上游端口,该端口必须对 PortIndex 00h 作出响应。
 - 实现 [SPDM] 应答者角色的端口/RCRB 必须以 QUERY_RESP 响应 QUERY(参见 § 图 6-57)。
   - PortIndex 字段必须包含来自相应 QUERY 的 PortIndex 字段值。
   - MaxPortIndex 字段值必须指示此端口/RCRB 所代表端口的最大 PortIndex 值。
-    - 如果仅代表一个端口(包括所有端点上游端口)，则 MaxPortIndex 字段必须为 00h。
+    - 如果仅代表一个端口(包括所有端点上游端口),则 MaxPortIndex 字段必须为 00h。
   - Bus Number 字段必须包含与 PortIndex 字段值相对应功能的总线号。
   - Segment 字段必须:
-    - 对于非根端口的端口，值为零
-    - 对于根端口，包含该根端口的段号 (Segment Number) 值，或如果根复合体仅实现一个段，则为零。
+    - 对于非根端口的端口,值为零
+    - 对于根端口,包含该根端口的段号 (Segment Number) 值,或如果根复合体仅实现一个段,则为零。
   - 对于非 ARI 功能 (Non-ARI Function),Device/Function Number 字段必须包含与 PortIndex 字段值相对应功能的设备号和功能号。
   - 对于 ARI 功能 (ARI Function),Function Number 字段必须包含与 PortIndex 字段值相对应功能的功能号。
   - QUERY_RESPONSE 的其余部分必须由寻址端口的 IDE 扩展能力结构 (IDE Extended Capability Structure) 的内容(IDE 扩展能力头本身除外)组成。
-    - 在 QUERY_RESP 中返回的 Supported Algorithms 和 Selected Algorithm 字段值必须与从应答者端口的 IDE 扩展能力结构中相应字段读取的值进行比较，如果检测到不匹配的值，则必须中止此安全会话的 IDE_KM 协议，或采取其他适当的纠正措施以避免潜在的"降级"攻击。
+    - 在 QUERY_RESP 中返回的 Supported Algorithms 和 Selected Algorithm 字段值必须与从应答者端口的 IDE 扩展能力结构中相应字段读取的值进行比较,如果检测到不匹配的值,则必须中止此安全会话的 IDE_KM 协议,或采取其他适当的纠正措施以避免潜在的"降级"攻击。
 
 </td>
 </tr>
@@ -19827,30 +19775,30 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
 </td>
 <td style="background-color:#e8e8e8">
 
-- 请求者在发出 QUERY 命令后，在收到相应的 QUERY_RESP 之前，不得发出其他请求。
+- 请求者在发出 QUERY 命令后,在收到相应的 QUERY_RESP 之前,不得发出其他请求。
 - KEY_PROG、KP_ACK、K_SET_GO、K_SET_STOP 和 K_GOSTOP_ACK 均适用于单个子流 (Sub-Stream)、方向(Tx 或 Rx)和密钥集 (Key Set)。
-  - Key Sub-Stream 字段指示密钥子流，使用与子流标识符定义相同的编码(参见 § 6.33.5 节)
-  - 方向由 RxTxB 位指示，编码为:
+  - Key Sub-Stream 字段指示密钥子流,使用与子流标识符定义相同的编码(参见 § 6.33.5 节)
+  - 方向由 RxTxB 位指示,编码为:
     - 0b – 接收 (Receive)
     - 1b – 发送 (Transmit)
-  - Key Set 字段指示密钥集，对应于 IDE TLP 前缀 (NFM)/OHC-C (FM) 中的 K 位值。
-- 对于实现应答者角色的端口，必须支持使用 KEY_PROG 命令进行密钥编程和选择 IV 初始值的能力(参见 § 图 6-58)。
+  - Key Set 字段指示密钥集,对应于 IDE TLP 前缀 (NFM)/OHC-C (FM) 中的 K 位值。
+- 对于实现应答者角色的端口,必须支持使用 KEY_PROG 命令进行密钥编程和选择 IV 初始值的能力(参见 § 图 6-58)。
   - 密钥的长度必须与流的 Selected Algorithm 字段中指示的长度相对应。
-  - 请求者在从同一端口收到 KP_ACK 之前，不得向该端口发送另一条 KEY_PROG 命令。
+  - 请求者在从同一端口收到 KP_ACK 之前,不得向该端口发送另一条 KEY_PROG 命令。
     - 如果请求者在 1 秒钟加上足够的传输延迟时间内未收到来自应答者的 KP_ACK,则允许请求者认为应答者未正常运行。
   - KEY_PROG 命令特有的字段包括:
-    - PortIndex,指示密钥将要编程到的端口，对应于 QUERY_RESP 中建立的顺序
+    - PortIndex,指示密钥将要编程到的端口,对应于 QUERY_RESP 中建立的顺序
     - 流 ID (Stream ID)
-    - 密钥 (Key)，其大小必须为该流的 Selected Algorithm 所要求的大小
-    - IFV,指示 IV 的 invocation 字段的初始值，大小必须为 64 位，且在流建立时以及执行密钥刷新时必须初始设置为值 0000_0001h。
+    - 密钥 (Key),其大小必须为该流的 Selected Algorithm 所要求的大小
+    - IFV,指示 IV 的 invocation 字段的初始值,大小必须为 64 位,且在流建立时以及执行密钥刷新时必须初始设置为值 0000_0001h。
 - 实现应答者角色的端口必须通过返回 KP_ACK 来确认收到 KEY_PROG 命令,KP_ACK 在 § 图 6-59 中定义。
-  - Status 字段必须指示 KEY_PROG 命令的结果，编码为:
+  - Status 字段必须指示 KEY_PROG 命令的结果,编码为:
     - 00h:成功 (Successful)
     - 01h:解析命令失败 – 长度不正确 (Failed to parse command – Incorrect Length)
     - 02h:解析命令失败 – PortIndex 中存在不受支持的值 (Failed to parse command – Unsupported value in PortIndex)
     - 03h:解析命令失败 – 其他字段中存在不受支持的值 (Failed to parse command – Unsupported value in other field(s))
     - 04h:未指定故障 (Unspecified Failure)
-    - 05-FFh:保留 – 在生成 KP_ACK 时不得使用，但如果收到则必须视为未指定故障
+    - 05-FFh:保留 – 在生成 KP_ACK 时不得使用,但如果收到则必须视为未指定故障
   - 应答者必须在收到 KEY_PROG 命令后 1 秒钟内返回 KP_ACK。
     - 强烈建议尽快返回 KP_ACK。
   - 返回 KP_ACK(无论 Status 如何)表示该端口能够接收和处理另一条 KEY_PROG 命令。
@@ -19916,7 +19864,6 @@ An IDE error condition will occur if system software fails to ensure the correct
   - If the secure [SPDM] session that was used for initial key programming is closed, any subsequent QUERY and/or KEY_PROG requests received through a different secure [SPDM] session must first cause the responder to invalidate and render unreadable all keys must for the IDE Stream, then transition that IDE Stream to the Insecure state, and only then respond to the QUERY/KEY_PROG request, unless it can be ensured through implementation specific means that the new session has been established with the same requester as performed the initial key programming.
 
 > **Figure 6-56.** Query (QUERY) Data Object
-> **图 6-56.** 来自同一功能的多个未完成 MSI-X 中断
 > <img src="figures/chapter_06/fig_0924_1.png" width="700">
 
 <!-- 📄 Page 924 -->
@@ -19931,40 +19878,40 @@ An IDE error condition will occur if system software fails to ensure the correct
 - 生成密钥的机制不在本文档的范围内。
 - 强烈建议在为流设置 IDE 扩展能力条目中的 Enable 位之前完成流的密钥编程。
   - 允许但强烈不推荐在完成流的密钥编程之前为该流设置 IDE 扩展能力条目中的 Enable 位。
-- 如果 IDE 扩展能力条目中流的 Enable 位已置位，但该 IDE 流尚未处于安全 (Secure) 状态，则收到 K_SET_GO 必须触发该端口对所指示的流、子流、方向和密钥集发送/接收 IDE TLP。
-  - 实现 IDE_KM 请求者角色的代理必须发送 K_SET_GO 命令以启用两个 IDE 伙伴端口的接收器，然后发送 K_SET_GO 命令以启用两个 IDE 伙伴端口的发送器。
-    - 端口必须使用所指示的密钥集对与 IDE 流、子流和方向相关联的 IDE TLP 进行发送，且必须在收到启用发送器的 K_SET_GO 命令后不超过 10 毫秒内开始。
+- 如果 IDE 扩展能力条目中流的 Enable 位已置位,但该 IDE 流尚未处于安全 (Secure) 状态,则收到 K_SET_GO 必须触发该端口对所指示的流、子流、方向和密钥集发送/接收 IDE TLP。
+  - 实现 IDE_KM 请求者角色的代理必须发送 K_SET_GO 命令以启用两个 IDE 伙伴端口的接收器,然后发送 K_SET_GO 命令以启用两个 IDE 伙伴端口的发送器。
+    - 端口必须使用所指示的密钥集对与 IDE 流、子流和方向相关联的 IDE TLP 进行发送,且必须在收到启用发送器的 K_SET_GO 命令后不超过 10 毫秒内开始。
   - 端口必须能够在收到启用接收器的 K_SET_GO 命令后 10 毫秒内使用所指示的密钥集处理收到的 IDE TLP。
-  - 一旦端口能够接收另一条 IDE_KM 请求，必须通过返回 K_GOSTOP_ACK 来响应。
-- 如果 IDE 扩展能力条目中流的 Enable 位已置位，且该 IDE 流已处于安全状态(密钥刷新操作)，则收到 K_SET_GO 必须触发该端口对所指示的流、子流、方向和密钥集发送/接收 IDE TLP。
-  - 实现 IDE_KM 请求者角色的代理必须发送 K_SET_GO 命令以启用两个 IDE 伙伴端口的接收器，然后发送 K_SET_GO 命令以启用两个 IDE 伙伴端口的发送器。
-    - 端口必须使用所指示的密钥集对与 IDE 流、子流和方向相关联的 IDE TLP 进行发送，且必须在收到启用发送器的 K_SET_GO 命令后不超过 10 毫秒内开始。
+  - 一旦端口能够接收另一条 IDE_KM 请求,必须通过返回 K_GOSTOP_ACK 来响应。
+- 如果 IDE 扩展能力条目中流的 Enable 位已置位,且该 IDE 流已处于安全状态(密钥刷新操作),则收到 K_SET_GO 必须触发该端口对所指示的流、子流、方向和密钥集发送/接收 IDE TLP。
+  - 实现 IDE_KM 请求者角色的代理必须发送 K_SET_GO 命令以启用两个 IDE 伙伴端口的接收器,然后发送 K_SET_GO 命令以启用两个 IDE 伙伴端口的发送器。
+    - 端口必须使用所指示的密钥集对与 IDE 流、子流和方向相关联的 IDE TLP 进行发送,且必须在收到启用发送器的 K_SET_GO 命令后不超过 10 毫秒内开始。
   - 端口必须能够在收到启用接收器的 K_SET_GO 命令后 10 毫秒内使用所指示的密钥集处理收到的 IDE TLP。
-  - 对于流的每个子流，在端口收到使用新密钥集的 IDE TLP(由 K 位值切换指示)之前，端口必须继续接受使用已建立密钥集的 IDE TLP。
-    - 一旦端口在某个子流上收到使用新密钥集的 IDE TLP,它必须使旧密钥集无效且不可读，并丢弃该子流上随后收到的使用旧密钥集的 IDE TLP。
-  - 一旦端口能够接收另一条 IDE_KM 请求，必须通过返回 K_GOSTOP_ACK 来响应。
-- 如果 IDE 扩展能力条目中流的 Enable 位被清零，则收到用于接收和发送两者的 K_SET_GO 必须使端口在收到最后一条 K_SET_GO 后 10 毫秒内准备就绪以对所指示的流和子流发送/接收 IDE TLP,此后系统软件可置位该流的 Enable 位。当 Enable 位置位时:
+  - 对于流的每个子流,在端口收到使用新密钥集的 IDE TLP(由 K 位值切换指示)之前,端口必须继续接受使用已建立密钥集的 IDE TLP。
+    - 一旦端口在某个子流上收到使用新密钥集的 IDE TLP,它必须使旧密钥集无效且不可读,并丢弃该子流上随后收到的使用旧密钥集的 IDE TLP。
+  - 一旦端口能够接收另一条 IDE_KM 请求,必须通过返回 K_GOSTOP_ACK 来响应。
+- 如果 IDE 扩展能力条目中流的 Enable 位被清零,则收到用于接收和发送两者的 K_SET_GO 必须使端口在收到最后一条 K_SET_GO 后 10 毫秒内准备就绪以对所指示的流和子流发送/接收 IDE TLP,此后系统软件可置位该流的 Enable 位。当 Enable 位置位时:
   - 端口必须能够使用由收到的 K_SET_GO 请求加载的密钥集来处理收到的 IDE TLP。
   - 系统软件必须确保伙伴端口以适当的顺序发起 IDE TLP,以使端口在 Enable 位置位之前不会收到 IDE TLP。
-  - 一旦端口能够接收另一条 IDE_KM 请求，必须通过返回 K_GOSTOP_ACK 来响应。
+  - 一旦端口能够接收另一条 IDE_KM 请求,必须通过返回 K_GOSTOP_ACK 来响应。
 
-强烈建议在置位流的 Enable 位之前，对两个方向的所有子流完成编程。
+强烈建议在置位流的 Enable 位之前,对两个方向的所有子流完成编程。
 
-- 允许 IDE_KM 请求者发送 § 图 6-61 中定义的 K_SET_STOP 命令，以指示密钥集必须在端口上对所指示的流、子流和方向停止使用。
+- 允许 IDE_KM 请求者发送 § 图 6-61 中定义的 K_SET_STOP 命令,以指示密钥集必须在端口上对所指示的流、子流和方向停止使用。
   - 实现应答者角色的端口必须在收到 K_SET_STOP 命令后不超过 10 毫秒内使所指示的密钥集无效且不可读。
-  - 收到 KEY_STOP 命令后，对于所指示的密钥集和方向，所有密钥必须无效化且不可读。
-    - 应注意，此操作不会直接将流转为不安全 (Insecure)，但任何后续使用所指示密钥集的尝试都将导致流转为不安全。
-  - 一旦端口能够接收另一条 IDE_KM 请求，必须通过返回 K_GOSTOP_ACK 来响应。
-- 当在收到的 K_SET_GO 或 K_SET_STOP 中检测到错误(例如无效的流 ID)时，建议不返回 K_GOSTOP_ACK。
-- 当使用 DOE 进行 IDE_KM,或当使用 IDE 流的 Enable 位启用/禁用 IDE 时，适用以下规则:
-  - 对于触发启动 IDE 的配置请求 (Configuration Request)，端口必须首先将配置完成 (Configuration Completion) 作为非 IDE TLP 返回，然后触发 IDE 的启动。
-  - 对于停止 IDE 的配置请求，端口必须首先将配置完成作为 IDE TLP 返回，然后停止 IDE。
+  - 收到 KEY_STOP 命令后,对于所指示的密钥集和方向,所有密钥必须无效化且不可读。
+    - 应注意,此操作不会直接将流转为不安全 (Insecure),但任何后续使用所指示密钥集的尝试都将导致流转为不安全。
+  - 一旦端口能够接收另一条 IDE_KM 请求,必须通过返回 K_GOSTOP_ACK 来响应。
+- 当在收到的 K_SET_GO 或 K_SET_STOP 中检测到错误(例如无效的流 ID)时,建议不返回 K_GOSTOP_ACK。
+- 当使用 DOE 进行 IDE_KM,或当使用 IDE 流的 Enable 位启用/禁用 IDE 时,适用以下规则:
+  - 对于触发启动 IDE 的配置请求 (Configuration Request),端口必须首先将配置完成 (Configuration Completion) 作为非 IDE TLP 返回,然后触发 IDE 的启动。
+  - 对于停止 IDE 的配置请求,端口必须首先将配置完成作为 IDE TLP 返回,然后停止 IDE。
 
-如果系统软件未能确保两个伙伴端口的 IDE 启用顺序正确，则会发生 IDE 错误状态。
+如果系统软件未能确保两个伙伴端口的 IDE 启用顺序正确,则会发生 IDE 错误状态。
 
-- 对于给定的 IDE 流，一旦安全 [SPDM] 会话已用于响应一个 QUERY 或 KEY_PROG 请求:
-  - 在用于初始密钥编程的安全 [SPDM] 会话保持打开期间，通过不同安全 [SPDM] 会话收到的所有 QUERY 和/或 KEY_PROG 请求必须由应答者丢弃，且不得产生响应。
-  - 如果用于初始密钥编程的安全 [SPDM] 会话已关闭，则通过不同安全 [SPDM] 会话收到的任何后续 QUERY 和/或 KEY_PROG 请求必须首先使应答者使该 IDE 流的所有密钥无效且不可读，然后将该 IDE 流转为不安全状态，只有之后才能响应 QUERY/KEY_PROG 请求，除非通过实现特定手段可以确保新会话已与执行初始密钥编程的同一请求者建立。
+- 对于给定的 IDE 流,一旦安全 [SPDM] 会话已用于响应一个 QUERY 或 KEY_PROG 请求:
+  - 在用于初始密钥编程的安全 [SPDM] 会话保持打开期间,通过不同安全 [SPDM] 会话收到的所有 QUERY 和/或 KEY_PROG 请求必须由应答者丢弃,且不得产生响应。
+  - 如果用于初始密钥编程的安全 [SPDM] 会话已关闭,则通过不同安全 [SPDM] 会话收到的任何后续 QUERY 和/或 KEY_PROG 请求必须首先使应答者使该 IDE 流的所有密钥无效且不可读,然后将该 IDE 流转为不安全状态,只有之后才能响应 QUERY/KEY_PROG 请求,除非通过实现特定手段可以确保新会话已与执行初始密钥编程的同一请求者建立。
 
 <img src="figures/chapter_06/fig_0924_1.png" width="700">
 </td>
@@ -20004,27 +19951,21 @@ An IDE error condition will occur if system software fails to ensure the correct
 </table>
 
 > **Figure 6-57.** Query Response (QUERY_RESP) Data Object
-> **图 6-57.** MSI-X 中断复用
 > <img src="figures/chapter_06/fig_0925_1_tight.png" width="700">
 
 > **Figure 6-58.** Key Programming (KEY_PROG) Data Object with Example 256b Key
-> **图 6-58.** PCI Express 热插拔控制器模型
 > <img src="figures/chapter_06/fig_0925_2_tight.png" width="700">
 
 > **Figure 6-59.** Key Programming Acknowledgement (KP_ACK) Data Object
-> **图 6-59.** PCI Express 热插拔事件流程
 > <img src="figures/chapter_06/fig_0926_1_tight.png" width="700">
 
 > **Figure 6-60.** Key Set Go (K_SET_GO) Data Object
-> **图 6-60.** 热插拔系统事件流
 > <img src="figures/chapter_06/fig_0926_2_tight.png" width="700">
 
 > **Figure 6-61.** Key Set Stop (K_SET_STOP) Data Object
-> **图 6-61.** VPD 必选区域
 > <img src="figures/chapter_06/fig_0926_3_tight.png" width="700">
 
 > **Figure 6-62.** Key Set Go/Stop Acknowledgement (K_GOSTOP_ACK) Data Object
-> **图 6-62.** VPD 可选区域
 > <img src="figures/chapter_06/fig_0926_4_tight.png" width="700">
 
 </div>
@@ -20066,19 +20007,19 @@ Rules related to keys:
 </td>
 <td style="background-color:#e8e8e8">
 
-对于不需要可互操作认证和密钥交换的实现，允许使用其他机制进行密钥管理。
+对于不需要可互操作认证和密钥交换的实现,允许使用其他机制进行密钥管理。
 
 与密钥相关的规则:
 
 - 密钥大小必须为 256 位。
-- 密钥交换之后，必须使用实现特定的手段来确保密钥安全——维护密钥安全的具体要求是平台和用例特定的，不在本文档的范围内。
+- 密钥交换之后,必须使用实现特定的手段来确保密钥安全——维护密钥安全的具体要求是平台和用例特定的,不在本文档的范围内。
 - 必须为发送器和接收器以及每个子流使用单独生成的密钥。
   - 强烈建议为所有流的所有密钥单独生成。
-- 为支持在不要求将活动 IDE 流置于静默状态的情况下进行密钥更新，定义了两个密钥集 (key set)，并由发送器通过 K 位在 IDE TLP 前缀 (NFM)/OHC-C (FM) 中指示适当的密钥集。
+- 为支持在不要求将活动 IDE 流置于静默状态的情况下进行密钥更新,定义了两个密钥集 (key set),并由发送器通过 K 位在 IDE TLP 前缀 (NFM)/OHC-C (FM) 中指示适当的密钥集。
   - K 位的初始值允许为 0b 或 1b,尽管建议初始值为 0b。软件必须确保所选密钥集已在两个伙伴端口中提供密钥。
-  - 一旦发送器通过 K 位指示密钥集的更改，接收器必须将其他密钥集/库标记为无效，直至被重新编程。
-  - 密钥更新频率的具体要求由平台安全要求决定，这些要求不在本文档的范围内。
-    - 通常建议硬件提供足够的密钥存储和管理资源，以支持在不中断 IDE 操作的情况下为至少一个活动流更改密钥。
+  - 一旦发送器通过 K 位指示密钥集的更改,接收器必须将其他密钥集/库标记为无效,直至被重新编程。
+  - 密钥更新频率的具体要求由平台安全要求决定,这些要求不在本文档的范围内。
+    - 通常建议硬件提供足够的密钥存储和管理资源,以支持在不中断 IDE 操作的情况下为至少一个活动流更改密钥。
     - 预期多个流的密钥更新操作可能需要由固件/软件根据硬件密钥存储和管理资源的限制以串行方式执行。
 
 </td>
@@ -20134,12 +20075,12 @@ TLPs secured by IDE are called IDE TLPs. In Non-Flit Mode, all IDE TLPs must use
 </td>
 <td style="background-color:#e8e8e8">
 
-由 IDE 保护的 TLP 称为 IDE TLP。在非 Flit 模式 (Non-Flit Mode, NFM) 中，所有 IDE TLP 必须使用 IDE 前缀(参见 § 图 6-64)，且此前缀必须位于所有其他端到端 TLP 前缀之前。在 Flit 模式 (Flit Mode, FM) 中，所有 IDE TLP 必须包含 OHC-C。
+由 IDE 保护的 TLP 称为 IDE TLP。在非 Flit 模式 (Non-Flit Mode, NFM) 中,所有 IDE TLP 必须使用 IDE 前缀(参见 § 图 6-64),且此前缀必须位于所有其他端到端 TLP 前缀之前。在 Flit 模式 (Flit Mode, FM) 中,所有 IDE TLP 必须包含 OHC-C。
 
 > **实现说明:**
 > **理解 IDE 密钥管理流程**
 >
-> 下图说明了使用上文定义的 IDE_KM 协议进行密钥编程的详细示例流程，但应理解该流程有许多可能的变化。
+> 下图说明了使用上文定义的 IDE_KM 协议进行密钥编程的详细示例流程,但应理解该流程有许多可能的变化。
 >
 > | 步骤 | 主机(请求者角色) | 端点上游端口(应答者角色) |
 > |------|----------------------|------------------------------------------|
@@ -20157,7 +20098,7 @@ TLPs secured by IDE are called IDE TLPs. In Non-Flit Mode, all IDE TLPs must use
 > | (主机使用内部接口为根端口的每个子流触发 Tx 的 IDE,3 次) |
 > | 系统软件/固件置位 Enable 位,IDE 建立 |
 >
-> ** 当使用 DOE 时，上游端口以非 IDE Completion 响应完成 K_SET_GO(Tx) 数据对象传输的 Configuration Write,然后触发对 Completion 使用 IDE。
+> ** 当使用 DOE 时,上游端口以非 IDE Completion 响应完成 K_SET_GO(Tx) 数据对象传输的 Configuration Write,然后触发对 Completion 使用 IDE。
 >
 </td>
 </tr>
@@ -20165,7 +20106,6 @@ TLPs secured by IDE are called IDE TLPs. In Non-Flit Mode, all IDE TLPs must use
 </table>
 
 > **Figure 6-63.** IDE_KM Example
-> **图 6-63.** 数据完整性流程框图
 > <img src="figures/chapter_06/fig_0928_1_tight.png" width="700">
 
 </div>
@@ -20192,7 +20132,6 @@ TLPs secured by IDE are called IDE TLPs. In Non-Flit Mode, all IDE TLPs must use
 **6.33.4 IDE TLPs**
 
 > **Figure 6-64.** IDE TLP Prefix (NFM)
-> **图 6-64.** 带重放保护的 TLP 格式（非 Flit 模式）
 > <img src="figures/chapter_06/fig_0929_1.png" width="700">
 
 The IDE Prefix (NFM) includes:
@@ -20231,28 +20170,28 @@ In Flit Mode:
 
 IDE 前缀 (NFM) 包括:
 
-- M 位 – 置位时，表示此 TLP 包含 MAC
-  - 当不使用聚合 (aggregation) 时，所有 IDE TLP 的 M 位必须置位。
+- M 位 – 置位时,表示此 TLP 包含 MAC
+  - 当不使用聚合 (aggregation) 时,所有 IDE TLP 的 M 位必须置位。
   - 聚合使用的规则见下文。
 - K 位 – 指示此 TLP 使用的密钥集
-  - 在为任何子流发送 K 位已切换的 TLP 之后，同一流的不同子流的后续 TLP 发送也必须使用 K 位的新值。
-  - 在收到 K 位已切换的 TLP 之后，接收器必须切换到新的密钥和 IV 集，用于该 TLP 及与子流相关联的所有后续 TLP,并且必须将旧密钥和 IV 集标记为无效，直至被重新编程。
+  - 在为任何子流发送 K 位已切换的 TLP 之后,同一流的不同子流的后续 TLP 发送也必须使用 K 位的新值。
+  - 在收到 K 位已切换的 TLP 之后,接收器必须切换到新的密钥和 IV 集,用于该 TLP 及与子流相关联的所有后续 TLP,并且必须将旧密钥和 IV 集标记为无效,直至被重新编程。
     - 此等切换不得影响接收器处 IDE 流的其它子流。
-- T 位 – 置位时，表示 TLP 源自可信执行环境 (TEE)(参见 § 6.33.1 节)。
+- T 位 – 置位时,表示 TLP 源自可信执行环境 (TEE)(参见 § 6.33.1 节)。
   - 如果设备能力寄存器 (Device Capabilities Register) 中的 TEE-IO Supported 位被清零:
-    - 允许 IDE TLP 源自可信和不可信执行环境，且 T 位的值本身不修改 IDE 内对 TLP 的处理;可信执行环境的规则未在本文档中定义。
-    - 除非 T 位使用已由本文档范围之外的 TEE 管理机制明确定义，否则 T 位必须清零。
-  - 如果设备能力寄存器中的 TEE-IO Supported 位置位，则此位必须按照 § 第 11 章的定义用于 TEE 管理机制。
-- P 位 – 置位时，表示 TLP 包含 PCRC。
+    - 允许 IDE TLP 源自可信和不可信执行环境,且 T 位的值本身不修改 IDE 内对 TLP 的处理;可信执行环境的规则未在本文档中定义。
+    - 除非 T 位使用已由本文档范围之外的 TEE 管理机制明确定义,否则 T 位必须清零。
+  - 如果设备能力寄存器中的 TEE-IO Supported 位置位,则此位必须按照 § 第 11 章的定义用于 TEE 管理机制。
+- P 位 – 置位时,表示 TLP 包含 PCRC。
   - 仅当 M 位也置位时才可置位。
 - Sub-Stream[2:0] – 指示子流标识符值
 - Stream_ID[7:0] – 指示关联的流 ID 值
-- PR_Sent_Counter[7:0] – 对于非 UIO 的 Non-Posted 请求和完成 (Completion)，该值必须根据以下规则确定。对于 Posted 请求和 UIO 请求/完成，此字段必须保留 (Reserved)。
+- PR_Sent_Counter[7:0] – 对于非 UIO 的 Non-Posted 请求和完成 (Completion),该值必须根据以下规则确定。对于 Posted 请求和 UIO 请求/完成,此字段必须保留 (Reserved)。
 
 在 Flit 模式 (Flit Mode) 中:
 
 - MAC 和/或 PCRC 的存在通过 TS 字段指示。
-- K 位、T 位、Sub-Stream、Stream_ID 和 PR_Sent_Counter 包含在 OHC-C 中，其含义与 IDE 前缀中相同。
+- K 位、T 位、Sub-Stream、Stream_ID 和 PR_Sent_Counter 包含在 OHC-C 中,其含义与 IDE 前缀中相同。
 
 <img src="figures/chapter_06/fig_0929_1.png" width="700">
 </td>
@@ -20293,13 +20232,13 @@ For IDE TLPs, AES-GCM can be applied to each IDE TLP, or aggregation can be used
 </td>
 <td style="background-color:#e8e8e8">
 
-IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode, GCM)，称为 AES-GCM。对于 IDE TLP,TLP 数据有效负载内容构成"明文" (Plaintext)，也称为 P,如 [AES-GCM] 中所定义;TLP 包头 (Header) 和某些其他元素(下文定义)构成"附加认证数据" (Additional Authenticated Data)，也称为 A,如 [AES-GCM] 中所定义。
+IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode, GCM),称为 AES-GCM。对于 IDE TLP,TLP 数据有效负载内容构成"明文" (Plaintext),也称为 P,如 [AES-GCM] 中所定义;TLP 包头 (Header) 和某些其他元素(下文定义)构成"附加认证数据" (Additional Authenticated Data),也称为 A,如 [AES-GCM] 中所定义。
 
-消息认证码 (MAC)<sup>143</sup> 的大小，也称为 t,如 [AES-GCM] 中所定义，必须为 96 位(参见 § 图 6-65)。
+消息认证码 (MAC)<sup>143</sup> 的大小,也称为 t,如 [AES-GCM] 中所定义,必须为 96 位(参见 § 图 6-65)。
 
-对于 IDE TLP 的流控 (Flow Control) 信用计算，必须将 MAC 视为由 Header Credit 覆盖。
+对于 IDE TLP 的流控 (Flow Control) 信用计算,必须将 MAC 视为由 Header Credit 覆盖。
 
-对于 IDE TLP,AES-GCM 可以应用于每个 IDE TLP,或使用聚合将 AES-GCM 应用于多个 IDE TLP,从而降低每个 TLP 的 IDE TLP MAC 开销。对于链接 IDE 流 (Link IDE Stream)，本地前缀 (local prefix) 必须由 MAC 覆盖(参见 § 图 6-66、§ 图 6-67、§ 图 6-70 和 § 图 6-71)。对于选择性 IDE 流 (Selective IDE Stream)，本地前缀不得由 MAC 覆盖(参见 § 图 6-68、§ 图 6-69、§ 图 6-72 和 § 图 6-73)。
+对于 IDE TLP,AES-GCM 可以应用于每个 IDE TLP,或使用聚合将 AES-GCM 应用于多个 IDE TLP,从而降低每个 TLP 的 IDE TLP MAC 开销。对于链接 IDE 流 (Link IDE Stream),本地前缀 (local prefix) 必须由 MAC 覆盖(参见 § 图 6-66、§ 图 6-67、§ 图 6-70 和 § 图 6-71)。对于选择性 IDE 流 (Selective IDE Stream),本地前缀不得由 MAC 覆盖(参见 § 图 6-68、§ 图 6-69、§ 图 6-72 和 § 图 6-73)。
 
 <sub>143. 在 [AES-GCM] 中称为"认证标签" (authentication tag) 或 T,此处重命名以避免与其他"标签"用法混淆</sub>
 
@@ -20309,11 +20248,9 @@ IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode,
 </table>
 
 > **Figure 6-65.** MAC Layout
-> **图 6-65.** Sequence Number 使用示例
 > <img src="figures/chapter_06/fig_0930_1_tight.png" width="700">
 
 > **Figure 6-66.** Example of IDE TLP for a Link IDE Stream without Aggregation (Non-Flit Mode)
-> **图 6-66.** 无聚合的 IDE TLP 示例—链路 IDE 流（非 Flit 模式）
 > <img src="figures/chapter_06/fig_0930_2_tight.png" width="700">
 
 </div>
@@ -20396,9 +20333,9 @@ Partial header encryption provides the ability to reduce potential exposure to s
 </td>
 <td style="background-color:#e8e8e8">
 
-输入 A 和 P 必须通过按 § 2.1.2 节定义的字节顺序连接所包含的 TLP 内容来形成。虽然 A 和 P 内容在这些图中概念上是连接的，但 IDE TLP 中的内容放置与非 IDE TLP 中相同。一旦构建了 A 和 P 内容,[AES-GCM] 定义了 A 和 P 必须如何填充——此处的填充未在此说明，该填充用于 [AES-GCM] 计算中，但不包含在发送/接收的 TLP 中。当使用聚合时，聚合 TLP 的 A 和 P 内容在填充之前按每种内容类型概念上连接。
+输入 A 和 P 必须通过按 § 2.1.2 节定义的字节顺序连接所包含的 TLP 内容来形成。虽然 A 和 P 内容在这些图中概念上是连接的,但 IDE TLP 中的内容放置与非 IDE TLP 中相同。一旦构建了 A 和 P 内容,[AES-GCM] 定义了 A 和 P 必须如何填充——此处的填充未在此说明,该填充用于 [AES-GCM] 计算中,但不包含在发送/接收的 TLP 中。当使用聚合时,聚合 TLP 的 A 和 P 内容在填充之前按每种内容类型概念上连接。
 
-部分包头加密 (Partial Header Encryption) 提供通过加密 IDE 内存请求包头 (Header) 的某些部分来减少对侧信道攻击潜在暴露的能力，同时以明文形式维护 TLP 路由和低级 TLP 处理所需的信息。§ 图 6-74 在高层说明了部分包头加密的应用。
+部分包头加密 (Partial Header Encryption) 提供通过加密 IDE 内存请求包头 (Header) 的某些部分来减少对侧信道攻击潜在暴露的能力,同时以明文形式维护 TLP 路由和低级 TLP 处理所需的信息。§ 图 6-74 在高层说明了部分包头加密的应用。
 
 </td>
 </tr>
@@ -20406,23 +20343,18 @@ Partial header encryption provides the ability to reduce potential exposure to s
 </table>
 
 > **Figure 6-70.** Example of IDE TLP for a Link IDE Stream without Aggregation (Flit Mode)
-> **图 6-70.** 选择性 IDE 流中聚合两个 TLP 的 IDE TLP 示例（非 Flit 模式）
 > <img src="figures/chapter_06/fig_0932_1_tight.png" width="700">
 
 > **Figure 6-71.** IDE TLP – Example Showing Aggregation of Two TLPs for a Link IDE Stream (Flit Mode)
-> **图 6-71.** 选择性 IDE 流中聚合两个 TLP 的 IDE TLP 示例（非 Flit 模式，带本地前缀）
 > <img src="figures/chapter_06/fig_0932_2_tight.png" width="700">
 
 > **Figure 6-72.** Example of IDE TLP for a Selective IDE Stream without Aggregation (Flit Mode)
-> **图 6-72.** 外包加密的 IDE TLP 示例（非 Flit 模式）
 > <img src="figures/chapter_06/fig_0933_1_tight.png" width="700">
 
 > **Figure 6-73.** IDE TLP – Example Showing Aggregation of Two TLPs for a Selective IDE Stream (Flit Mode)
-> **图 6-73.** 外包加密的 IDE TLP 示例（非 Flit 模式，带本地前缀）
 > <img src="figures/chapter_06/fig_0933_2_tight.png" width="700">
 
 > **Figure 6-74.** High Level Flow For Partial Header Encryption
-> **图 6-74.** NFM 中部分包头的 AES-GCM 加密流程
 > <img src="figures/chapter_06/fig_0934_1_tight.png" width="700">
 
 </div>
@@ -20514,9 +20446,9 @@ Rules for partial header encryption:
 部分包头加密的规则:
 
 - 加密时,First DW BE 和 Last DW BE 字段必须位于 P 的第一个字节中
-  - 在 NFM 中,First DW BE 和 Last DW BE 字段必须在所有内存请求中加密，但 AtomicOp 请求、转换请求 (Translation Requests) 以及 TH 位置位的内存读/DMWr 请求除外。
-  - 在 FM 中，对于内存请求，如果存在 OHC-A1,则 First DW BE 和 Last DW BE 字段必须加密。
-- 选定加密的地址位必须遵循 First DW BE 和 Last DW BE 字段(若包含)在 P 中的排列，形成如下:
+  - 在 NFM 中,First DW BE 和 Last DW BE 字段必须在所有内存请求中加密,但 AtomicOp 请求、转换请求 (Translation Requests) 以及 TH 位置位的内存读/DMWr 请求除外。
+  - 在 FM 中,对于内存请求,如果存在 OHC-A1,则 First DW BE 和 Last DW BE 字段必须加密。
+- 选定加密的地址位必须遵循 First DW BE 和 Last DW BE 字段(若包含)在 P 中的排列,形成如下:
   - Address[17:2]:
     - Byte +0:Address[17:10]
     - Byte +1:Address[9:2]
@@ -20535,13 +20467,13 @@ Rules for partial header encryption:
     - Byte +2:Address[25:18]
     - Byte +3:Address[17:10]
     - Byte +4:Address[9:2]
-- 在发送器 (Transmitter) 处，选定加密的 Header 内容连接在 P 的前端，并从 A 中移除，相应地增加 P 的大小并减少 A 的大小。
+- 在发送器 (Transmitter) 处,选定加密的 Header 内容连接在 P 的前端,并从 A 中移除,相应地增加 P 的大小并减少 A 的大小。
 - 如果在使用部分包头加密时启用了 PCRC:
-  - PCRC 输入的相对位顺序保持不变，使用与 P 相同的 Header 内容。
-  - 仅对于 PCRC 计算，所选 Header 部分必须用 0 填充到 64 位，最高有效位填 0。
-- 在接收器 (Receiver) 处，操作反向进行，以便对 A 和 C 内容应用 AES-GCM,然后最终重建完整的 Header。
+  - PCRC 输入的相对位顺序保持不变,使用与 P 相同的 Header 内容。
+  - 仅对于 PCRC 计算,所选 Header 部分必须用 0 填充到 64 位,最高有效位填 0。
+- 在接收器 (Receiver) 处,操作反向进行,以便对 A 和 C 内容应用 AES-GCM,然后最终重建完整的 Header。
 - PCRC 在接收器处使用解密的 P 内容和用 0 填充到 64 位(最高有效位为 0)的 Header 部分计算。
-- 当错误导致使用部分包头加密的 IDE TLP 被记录在 Header Log 寄存器中时，选定部分包头加密的 Header 字段允许包含全 0 或加密值，但不得包含解密值，除非通过实现特定的手段可以确保这样做不会违反任何安全要求。
+- 当错误导致使用部分包头加密的 IDE TLP 被记录在 Header Log 寄存器中时,选定部分包头加密的 Header 字段允许包含全 0 或加密值,但不得包含解密值,除非通过实现特定的手段可以确保这样做不会违反任何安全要求。
 
 § 图 6-75 至 § 图 6-78 说明了部分包头加密的应用。
 
@@ -20606,26 +20538,26 @@ To enable the detection of faults in the encryption/decryption logic, which occu
 </td>
 <td style="background-color:#e8e8e8">
 
-允许将本地 TLP 前缀 (Local TLP Prefix) 与 IDE TLP 一起使用。如果存在，本地 TLP 前缀必须位于 IDE 前缀 (NFM) 之前。对于链接 IDE 流，本地 TLP 前缀必须包含在 A 中。对于选择性 IDE 流，本地 TLP 前缀不得包含在 A 或 P 中。
+允许将本地 TLP 前缀 (Local TLP Prefix) 与 IDE TLP 一起使用。如果存在,本地 TLP 前缀必须位于 IDE 前缀 (NFM) 之前。对于链接 IDE 流,本地 TLP 前缀必须包含在 A 中。对于选择性 IDE 流,本地 TLP 前缀不得包含在 A 或 P 中。
 
 IDE 前缀 (NFM) 必须包含在 A 中。所有 OHC 内容 (FM) 必须包含在 A 中。
 
-在 NFM 中，除 IDE 前缀外，允许将其他端到端 TLP 前缀 (End-End TLP Prefix) 与 IDE TLP 一起使用。如果存在，端到端 TLP 前缀必须跟在 IDE 前缀之后，且必须包含在 A 中。
+在 NFM 中,除 IDE 前缀外,允许将其他端到端 TLP 前缀 (End-End TLP Prefix) 与 IDE TLP 一起使用。如果存在,端到端 TLP 前缀必须跟在 IDE 前缀之后,且必须包含在 A 中。
 
-当使用聚合时，与单个 MAC 相关联的所有 TLP 被视为"聚合单元" (aggregated unit) 的一部分。如 [AES-GCM] 中定义，当不使用聚合时，对每个 TLP 执行单次调用;当使用聚合时，对每个聚合单元执行单次调用。
+当使用聚合时,与单个 MAC 相关联的所有 TLP 被视为"聚合单元" (aggregated unit) 的一部分。如 [AES-GCM] 中定义,当不使用聚合时,对每个 TLP 执行单次调用;当使用聚合时,对每个聚合单元执行单次调用。
 
-与所有 TLP 一样,IDE TLP 由数据链路层 (Data Link Layer) 机制覆盖，以便在将接收到的 TLP 呈现给接收器的加密处理机制之前检测和纠正物理链路 (Link) 错误。
+与所有 TLP 一样,IDE TLP 由数据链路层 (Data Link Layer) 机制覆盖,以便在将接收到的 TLP 呈现给接收器的加密处理机制之前检测和纠正物理链路 (Link) 错误。
 
-不允许在 IDE TLP 中使用 ECRC。如果为非 IDE TLP 启用了 ECRC,则 IDE TLP 的形成必须如同未启用 ECRC 一样，且 TLP Header 中的 TD 位必须清零。
+不允许在 IDE TLP 中使用 ECRC。如果为非 IDE TLP 启用了 ECRC,则 IDE TLP 的形成必须如同未启用 ECRC 一样,且 TLP Header 中的 TD 位必须清零。
 
-为了能够检测在 MAC 保护路径之外发生的加/解密逻辑中的故障,IDE 实现被允许可选地支持明文 CRC (Plaintext CRC, PCRC) 机制，以下规则适用:
+为了能够检测在 MAC 保护路径之外发生的加/解密逻辑中的故障,IDE 实现被允许可选地支持明文 CRC (Plaintext CRC, PCRC) 机制,以下规则适用:
 
 - 软件仅在两个伙伴端口都支持 PCRC 机制时才能启用 PCRC。
   - 允许按每个 IDE 流为基础启用 PCRC 机制。
-- 当为 IDE 流启用 PCRC 时，与该流相关联的所有已发送 TLP 包含 MAC 的，在且仅当 TLP 或 TLP 聚合单元中存在 P 内容时，也必须包含 PCRC。
+- 当为 IDE 流启用 PCRC 时,与该流相关联的所有已发送 TLP 包含 MAC 的,在且仅当 TLP 或 TLP 聚合单元中存在 P 内容时,也必须包含 PCRC。
   - 在 NFM 中,MAC 的存在由 IDE 前缀中的 M 位置位来指示,PCRC 的存在由 IDE 前缀中的 P 位置位来指示
   - 在 FM 中,TS 字段用于指示 MAC/PCRC 的存在(参见 § 2.2.1.2 节)
-  - 当使用聚合时，聚合单元中不包含 MAC 的 TLP 也必须不包含 PCRC(参见 § 图 6-79)。
+  - 当使用聚合时,聚合单元中不包含 MAC 的 TLP 也必须不包含 PCRC(参见 § 图 6-79)。
 
 </td>
 </tr>
@@ -20633,7 +20565,6 @@ IDE 前缀 (NFM) 必须包含在 A 中。所有 OHC 内容 (FM) 必须包含在 
 </table>
 
 > **Figure 6-79.** Example Illustrating PCRC Application to Two Aggregated IDE TLPs for a Link IDE Stream (NFM)
-> **图 6-79.** 原子操作示例—CAS
 > <img src="figures/chapter_06/fig_0940_1_tight.png" width="700">
 
 </div>
@@ -20675,20 +20606,20 @@ IDE 前缀 (NFM) 必须包含在 A 中。所有 OHC 内容 (FM) 必须包含在 
 </td>
 <td style="background-color:#e8e8e8">
 
-- 在 NFM 中，当为 IDE 流启用 PCRC 时，最终接收器必须检查与该流相关联的所有收到的 TLP 或聚合单元，这些 TLP 或聚合单元包含 P 内容和 MAC(由 IDE 前缀中的 M 位指示)也具有 IDE 前缀中置位的 P 位。
-  - 如果对于某个 TLP,IDE 前缀中的 P 位被清零且 M 位置位，接收器必须将此报告为 PCRC Check Failed 错误。
-- PCRC 必须跨给定 AES-GCM 调用的所有 P 内容<sup>144</sup>计算，并遵循以下规定:
+- 在 NFM 中,当为 IDE 流启用 PCRC 时,最终接收器必须检查与该流相关联的所有收到的 TLP 或聚合单元,这些 TLP 或聚合单元包含 P 内容和 MAC(由 IDE 前缀中的 M 位指示)也具有 IDE 前缀中置位的 P 位。
+  - 如果对于某个 TLP,IDE 前缀中的 P 位被清零且 M 位置位,接收器必须将此报告为 PCRC Check Failed 错误。
+- PCRC 必须跨给定 AES-GCM 调用的所有 P 内容<sup>144</sup>计算,并遵循以下规定:
   - 使用的多项式系数表示为 04C1 1DB7h
   - 种子值必须为 FFFF FFFFh
   - 所有 P 内容必须包含在 PCRC 计算中
-  - PCRC 计算从字节 0 的位 0 开始，从位 0 到位 7 对 P 的每个字节进行
-  - PCRC 计算结果必须取反，如 § 表 2-55 所示映射(遵循与 ECRC 相同的映射)，并附加到 P 内容，并与其他 P 内容一起加/解密，加密的 PCRC 值附加到其他 P 内容之后并位于 MAC 之前(参见 § 图 6-79)。
+  - PCRC 计算从字节 0 的位 0 开始,从位 0 到位 7 对 P 的每个字节进行
+  - PCRC 计算结果必须取反,如 § 表 2-55 所示映射(遵循与 ECRC 相同的映射),并附加到 P 内容,并与其他 P 内容一起加/解密,加密的 PCRC 值附加到其他 P 内容之后并位于 MAC 之前(参见 § 图 6-79)。
 - PCRC 必须仅由包括 PCRC 在内的 IDE TLP 的最终接收器检查。
-  - PCRC 检查失败表明数据有效负载的一个或多个位已损坏——接收器对数据有效负载的使用不在本规范的范围内，但强烈建议不要将损坏的数据当作未损坏的数据使用。
+  - PCRC 检查失败表明数据有效负载的一个或多个位已损坏——接收器对数据有效负载的使用不在本规范的范围内,但强烈建议不要将损坏的数据当作未损坏的数据使用。
   - PCRC Check Failed 是已报告错误。
-- 对于包含 PCRC 的 IDE TLP 的流控信用计算，必须将 PCRC 视为由 Header Credit 覆盖。
+- 对于包含 PCRC 的 IDE TLP 的流控信用计算,必须将 PCRC 视为由 Header Credit 覆盖。
 
-<sub>144. 与 ECRC 一样,PCRC 是使用按发送形式的 TLP 计算的，对于任何数据有效负载，包括所有按发送形式的字节，而不考虑字节使能 (byte enable) 值。</sub>
+<sub>144. 与 ECRC 一样,PCRC 是使用按发送形式的 TLP 计算的,对于任何数据有效负载,包括所有按发送形式的字节,而不考虑字节使能 (byte enable) 值。</sub>
 
 </td>
 </tr>
@@ -20803,7 +20734,7 @@ These rules apply to Selective IDE Stream TLPs:
 这些规则适用于选择性 IDE 流 TLP:
 
 - § 表 6-35 定义了哪些 TLP 类型允许用于选择性 IDE 流。
-  - 不允许用于选择性 IDE 流的 TLP 类型仍允许使用，如果启用的话，可以使用 Link IDE 进行保护。
+  - 不允许用于选择性 IDE 流的 TLP 类型仍允许使用,如果启用的话,可以使用 Link IDE 进行保护。
 - 收到与选择性 IDE 流相关联的且不是允许的 TLP 类型的 IDE TLP 是 IDE Check Failed 错误。
   - 接收器必须将关联的 IDE 流转为不安全 (Insecure)。
   - 这是与接收端口相关联的已报告错误(参见 § 6.2 节)。
@@ -20812,24 +20743,24 @@ These rules apply to Selective IDE Stream TLPs:
   - 软件必须分配 IDE Stream ID,以使两个伙伴端口对给定 IDE 流使用相同的值。
   - 软件必须分配 IDE Stream ID,以使与给定终端端口相关联的每个启用的 IDE 流在该端口被分配唯一的 Stream ID 值。
   - 平台可进一步限制 Stream ID 的分配。
-- 当仅针对特定 TC 启用链接 IDE 流时，使用该 TC 的所有 TLP 必须使用相应的链接 IDE 流进行保护。
-- 对于发送器将特定 TLP 与特定选择性 IDE 流相关联，必须满足以下条件:
+- 当仅针对特定 TC 启用链接 IDE 流时,使用该 TC 的所有 TLP 必须使用相应的链接 IDE 流进行保护。
+- 对于发送器将特定 TLP 与特定选择性 IDE 流相关联,必须满足以下条件:
   - 选择性 IDE 流控制寄存器 (Selective IDE Stream Control Register) 中的选择性 IDE 流使能 (Selective IDE Stream Enable) 位必须置位。
   - TLP 类型必须允许用于选择性 IDE 流(参见 § 表 6-35)。
   - TLP 的 TC 必须与选择性 IDE 流控制寄存器中的 TC 值匹配。
-  - 对于配置请求，选择性 IDE 用于配置请求使能 (Selective IDE for Configuration Requests Enable) 位必须置位(仅适用于根端口)。
-  - 对于完成 (Completion)，流 ID 必须与相应 Non-Posted 请求中的流 ID 匹配。
-  - 如果端口中的 ACS 机制将 TLP 重定向到根复合体，则 Default Stream 位必须置位，表示选择性 IDE 流以根复合体为目标。参见 § 6.12.3 节。
-  - 对于路由到根复合体的消息 (Routed-to-Root-Complex Message),Default Stream 位必须置位，表示选择性 IDE 流以根复合体为目标。
-  - 对于 ID 路由消息 (ID-Routed Message)，目标 RID 必须大于或等于选择性 IDE RID Association 寄存器块中的 RID Base,小于或等于 RID Limit,除非:
-    - ID 路由消息与 Default Stream 相关联，在这种情况下，目标 RID 必须被忽略;或
+  - 对于配置请求,选择性 IDE 用于配置请求使能 (Selective IDE for Configuration Requests Enable) 位必须置位(仅适用于根端口)。
+  - 对于完成 (Completion),流 ID 必须与相应 Non-Posted 请求中的流 ID 匹配。
+  - 如果端口中的 ACS 机制将 TLP 重定向到根复合体,则 Default Stream 位必须置位,表示选择性 IDE 流以根复合体为目标。参见 § 6.12.3 节。
+  - 对于路由到根复合体的消息 (Routed-to-Root-Complex Message),Default Stream 位必须置位,表示选择性 IDE 流以根复合体为目标。
+  - 对于 ID 路由消息 (ID-Routed Message),目标 RID 必须大于或等于选择性 IDE RID Association 寄存器块中的 RID Base,小于或等于 RID Limit,除非:
+    - ID 路由消息与 Default Stream 相关联,在这种情况下,目标 RID 必须被忽略;或
     - 基于实现特定的标准存在例外。
-  - 此外，在 Flit 模式中，目标段 (Segment) 值也必须与选择性 IDE RID Association 寄存器块中的 Segment Base 值匹配。
-  - 除非通过实现特定手段存在例外，当支持并启用 ATS 时，所有转换请求 (Translation Requests) 和未转换内存请求 (Untranslated Memory Requests) 与默认流相关联;否则，对于尚未与默认流相关联的内存请求，目标地址必须大于或等于选择性 IDE Address Association 寄存器块中的 Memory Base 值，小于或等于 Memory Limit 值(适用于以特定功能的 BAR 或分配给设备的基址/限值地址范围为目标时)<sup>147</sup>。
+  - 此外,在 Flit 模式中,目标段 (Segment) 值也必须与选择性 IDE RID Association 寄存器块中的 Segment Base 值匹配。
+  - 除非通过实现特定手段存在例外,当支持并启用 ATS 时,所有转换请求 (Translation Requests) 和未转换内存请求 (Untranslated Memory Requests) 与默认流相关联;否则,对于尚未与默认流相关联的内存请求,目标地址必须大于或等于选择性 IDE Address Association 寄存器块中的 Memory Base 值,小于或等于 Memory Limit 值(适用于以特定功能的 BAR 或分配给设备的基址/限值地址范围为目标时)<sup>147</sup>。
   - 对于尚未与任何其他流相关联的 TLP,Default Stream 位必须置位。
-  - TLP 通过实现特定手段进行选择或排除。例如，发送器可以将由一个或多个内部功能发起的所有内存请求与特定选择性 IDE 流相关联，特别是当已知伙伴端口是根端口，且该内部功能发起的所有请求都针对系统内存时。
-  - 如果选择性 IDE 流控制寄存器中的 TEE-Limited Stream 位置位，则 T 位置位的请求与此选择性 IDE 流相关联。
-    - 否则将与此选择性 IDE 流相关联且 T 位被清零的请求，如果未启用 Link IDE,则必须作为非 IDE TLP 发送;如果启用了 Link IDE,则作为 Link IDE TLP 发送。
+  - TLP 通过实现特定手段进行选择或排除。例如,发送器可以将由一个或多个内部功能发起的所有内存请求与特定选择性 IDE 流相关联,特别是当已知伙伴端口是根端口,且该内部功能发起的所有请求都针对系统内存时。
+  - 如果选择性 IDE 流控制寄存器中的 TEE-Limited Stream 位置位,则 T 位置位的请求与此选择性 IDE 流相关联。
+    - 否则将与此选择性 IDE 流相关联且 T 位被清零的请求,如果未启用 Link IDE,则必须作为非 IDE TLP 发送;如果启用了 Link IDE,则作为 Link IDE TLP 发送。
 
 </td>
 </tr>
@@ -20895,37 +20826,37 @@ These rules apply to TLPs other than IDE Fail Messages:
 <td style="background-color:#e8e8e8">
 
 - 发送器未确定与特定选择性 IDE 流相关联或通过实现特定手段被排除的 TLP,不得与任何选择性 IDE 流相关联。
-- 如果支持，必须在启用选择性 IDE 流之前在两个伙伴端口中配置 TEE-Limited Stream 位。
+- 如果支持,必须在启用选择性 IDE 流之前在两个伙伴端口中配置 TEE-Limited Stream 位。
   - 允许伙伴端口具有不同的 TEE-Limited Stream 位值。
 - 单独的 TC 必须使用单独的选择性 IDE 流。
 - 软件必须确保将选择性 IDE 流分配给不重叠的 RID 和地址范围。
-  - 如果软件通过编程重叠范围违反此规则，硬件必须将给定的 TLP 与匹配 RID/地址范围的一个选择性 IDE 流相关联，但从重叠集中选择哪个选择性 IDE 流是实现特定的。
+  - 如果软件通过编程重叠范围违反此规则,硬件必须将给定的 TLP 与匹配 RID/地址范围的一个选择性 IDE 流相关联,但从重叠集中选择哪个选择性 IDE 流是实现特定的。
 
 这些规则适用于 IDE Fail 消息:
 
 - 接收器必须接受作为 IDE TLP 和非 IDE TLP 接收的 IDE Fail 消息。
-- 当 IDE Fail 消息要作为启用的流(处于不安全状态)发送时，该消息必须作为非 IDE TLP 发送。这包括该流转为不安全状态触发了 IDE Fail 消息的情况。
-- 当 IDE Fail 消息要作为启用的流(处于安全状态)发送时，该消息必须作为 IDE TLP 发送。这包括选择性 IDE 流上的转为不安全状态触发了 IDE Fail 消息，且发送流是不同的选择性 IDE 流或链接 IDE 流的情况。
+- 当 IDE Fail 消息要作为启用的流(处于不安全状态)发送时,该消息必须作为非 IDE TLP 发送。这包括该流转为不安全状态触发了 IDE Fail 消息的情况。
+- 当 IDE Fail 消息要作为启用的流(处于安全状态)发送时,该消息必须作为 IDE TLP 发送。这包括选择性 IDE 流上的转为不安全状态触发了 IDE Fail 消息,且发送流是不同的选择性 IDE 流或链接 IDE 流的情况。
 
 这些规则适用于 IDE Fail 消息以外的 TLP:
 
-- 当准备调度要发送的与处于不安全状态的启用流相关联的 TLP 时，发送器必须改为丢弃该 TLP。
-- 当给定 TC 启用了 Link IDE,并且在该 TC 上作为非 IDE TLP 收到 TLP 时，接收器必须丢弃该 TLP。
-- 当同一端口同时启用链接 IDE 流和一个或多个选择性 IDE 流时，对于已发送的 TLP,选择性 IDE 流优先:选定的 TLP 必须与选择性 IDE 流相关联;未与任何选择性 IDE 流相关联的 TLP 必须使用 Link IDE。
-  - 如果同时启用了 Link IDE 和 Selective IDE,并且要发送的 TLP 与处于不安全状态的启用的选择性 IDE 流相关联，则发送器不得为该 TLP 使用 Link IDE,而必须改为丢弃该 TLP。
+- 当准备调度要发送的与处于不安全状态的启用流相关联的 TLP 时,发送器必须改为丢弃该 TLP。
+- 当给定 TC 启用了 Link IDE,并且在该 TC 上作为非 IDE TLP 收到 TLP 时,接收器必须丢弃该 TLP。
+- 当同一端口同时启用链接 IDE 流和一个或多个选择性 IDE 流时,对于已发送的 TLP,选择性 IDE 流优先:选定的 TLP 必须与选择性 IDE 流相关联;未与任何选择性 IDE 流相关联的 TLP 必须使用 Link IDE。
+  - 如果同时启用了 Link IDE 和 Selective IDE,并且要发送的 TLP 与处于不安全状态的启用的选择性 IDE 流相关联,则发送器不得为该 TLP 使用 Link IDE,而必须改为丢弃该 TLP。
 - 在最终接收器处,IDE TLP 必须与 IDE 前缀 (NFM)/OHC-C (FM) 中指示的流 ID 相关联。
-- 一旦启用了 Link IDE(参见 § 6.33.3 节)，对于流的每个子流，在端口在该子流上收到 IDE TLP 之前，端口必须继续接受与该子流对应的 FC   - 一旦端口类型的非 IDE TLP。
-在子流上收到 IDE TLP,只要关联的流已启用，端口必须丢弃该子流上的非 IDE TLP。
-- 对于根端口，当特定选择性 IDE 流的选择性 IDE 用于配置请求使能 (Selective IDE for Configuration Requests Enable) 位置位时，与该选择性 IDE 流匹配的所有配置请求必须作为与该选择性 IDE 流相关联的 IDE TLP 发送。
-  - 在启用选择性 IDE 用于配置请求后，建议系统软件使用该选择性 IDE 流执行配置请求，以便伙伴端口被触发拒绝后续未与该选择性 IDE 流相关联的配置请求。
+- 一旦启用了 Link IDE(参见 § 6.33.3 节),对于流的每个子流,在端口在该子流上收到 IDE TLP 之前,端口必须继续接受与该子流对应的 FC   - 一旦端口类型的非 IDE TLP。
+在子流上收到 IDE TLP,只要关联的流已启用,端口必须丢弃该子流上的非 IDE TLP。
+- 对于根端口,当特定选择性 IDE 流的选择性 IDE 用于配置请求使能 (Selective IDE for Configuration Requests Enable) 位置位时,与该选择性 IDE 流匹配的所有配置请求必须作为与该选择性 IDE 流相关联的 IDE TLP 发送。
+  - 在启用选择性 IDE 用于配置请求后,建议系统软件使用该选择性 IDE 流执行配置请求,以便伙伴端口被触发拒绝后续未与该选择性 IDE 流相关联的配置请求。
   - 根复合体如何确保仅授权的系统软件生成配置请求不在本文档的范围内。
-- 一旦系统软件为特定选择性 IDE 流置位了选择性 IDE 用于配置请求使能位，强烈建议系统软件在该选择性 IDE 流本身启用的期间不清零该位。
-- 根端口上选择性 IDE 用于配置请求使能位置位的特定选择性 IDE 流，必须将这些选择性 IDE 流相关联的配置请求作为 Type 1 配置请求发送。
+- 一旦系统软件为特定选择性 IDE 流置位了选择性 IDE 用于配置请求使能位,强烈建议系统软件在该选择性 IDE 流本身启用的期间不清零该位。
+- 根端口上选择性 IDE 用于配置请求使能位置位的特定选择性 IDE 流,必须将这些选择性 IDE 流相关联的配置请求作为 Type 1 配置请求发送。
 - 与选择性 IDE 流相关联的配置请求在上游端口将作为 Type 1 配置请求被接收。
-- 作为 IDE TLP 接收的、旨在通过交换机传递的配置请求，当上游端口和出口下游端口中的 Flow-Through IDE Stream Enabled 均置位时，必须不经修改地通过交换机传递。
-- 不通过交换机传递的配置请求，只要目标 RID 是与该上游端口相关联或该上游端口中交换机的下游端口相关联的已实现功能，接收器必须接受该请求。如果目标 RID 不是已实现的功能，则必须将配置请求作为不支持的请求 (Unsupported Request) 处理。
-- 对于作为具有选择性 IDE 用于配置请求支持 (Selective IDE for Configuration Requests Supported) 置位的选择性 IDE 流的 IDE 端点 (IDE Terminus) 的上游端口，在端口在该选择性 IDE 流上以 IDE TLP 接收到配置请求之前，端口必须继续以非 IDE TLP 形式接受配置请求。一旦在该选择性 IDE 流上以 IDE TLP 接收到配置请求，则只要该选择性 IDE 流已启用，端口必须仅接受与该选择性 IDE 流相关联的配置请求，并必须丢弃通过其他 IDE 流或作为非 IDE TLP 接收的所有配置请求。
-- 对于 Selective IDE,对于配置请求以外的 TLP 类型，拒绝 TLP 的要求由与选择性 IDE 流相关联的 TEE 决定(参见 § 6.33.1 节)。
+- 作为 IDE TLP 接收的、旨在通过交换机传递的配置请求,当上游端口和出口下游端口中的 Flow-Through IDE Stream Enabled 均置位时,必须不经修改地通过交换机传递。
+- 不通过交换机传递的配置请求,只要目标 RID 是与该上游端口相关联或该上游端口中交换机的下游端口相关联的已实现功能,接收器必须接受该请求。如果目标 RID 不是已实现的功能,则必须将配置请求作为不支持的请求 (Unsupported Request) 处理。
+- 对于作为具有选择性 IDE 用于配置请求支持 (Selective IDE for Configuration Requests Supported) 置位的选择性 IDE 流的 IDE 端点 (IDE Terminus) 的上游端口,在端口在该选择性 IDE 流上以 IDE TLP 接收到配置请求之前,端口必须继续以非 IDE TLP 形式接受配置请求。一旦在该选择性 IDE 流上以 IDE TLP 接收到配置请求,则只要该选择性 IDE 流已启用,端口必须仅接受与该选择性 IDE 流相关联的配置请求,并必须丢弃通过其他 IDE 流或作为非 IDE TLP 接收的所有配置请求。
+- 对于 Selective IDE,对于配置请求以外的 TLP 类型,拒绝 TLP 的要求由与选择性 IDE 流相关联的 TEE 决定(参见 § 6.33.1 节)。
 
 </td>
 </tr>
@@ -20976,26 +20907,26 @@ With [AES-GCM] it is desirable to maintain TLPs in-order so that the Transmitter
 </td>
 <td style="background-color:#e8e8e8">
 
-- TLP 中毒 (TLP poisoning)，如 TLP 头中 EP 位置位所示，在由发起发送器应用时允许用于 IDE TLP。
-- 对于 IDE TLP,不允许在两个伙伴端口之间的任何中间点修改 TLP 的任何部分，包括 EP 位。
+- TLP 中毒 (TLP poisoning),如 TLP 头中 EP 位置位所示,在由发起发送器应用时允许用于 IDE TLP。
+- 对于 IDE TLP,不允许在两个伙伴端口之间的任何中间点修改 TLP 的任何部分,包括 EP 位。
 - 软件必须配置选择性 IDE,以使伙伴端口之间整个路径上的所有链路 (Link) 都以 FM 或 NFM 运行。
-- 如果 TEE-IO Supported 置位，对于端点上游端口:
-  - 在 Flit 模式中，如果 Segment Captured 置位<sup>148</sup>,在选择性 IDE 流上:
+- 如果 TEE-IO Supported 置位,对于端点上游端口:
+  - 在 Flit 模式中,如果 Segment Captured 置位<sup>148</sup>,在选择性 IDE 流上:
     - 请求者必须包含 OHC-C 且 Requester Segment Valid (RSV) 位置位。
     - 完成者 (Completer) 必须包含 OHC-A5。
-  - 在非默认流的选择性 IDE 流上接收请求的完成者，如果请求的 Requester ID 字段小于该流的选择性 IDE RID Association 寄存器块中的 RID Base 或大于 RID Limit,则必须将其作为不支持的请求 (Unsupported Request) 处理。
+  - 在非默认流的选择性 IDE 流上接收请求的完成者,如果请求的 Requester ID 字段小于该流的选择性 IDE RID Association 寄存器块中的 RID Base 或大于 RID Limit,则必须将其作为不支持的请求 (Unsupported Request) 处理。
     - 在 Flit 模式中,Requester Segment 值(如果包含在请求中)也必须与选择性 IDE RID Association 寄存器块中的 Segment Base 值匹配。
-  - 在非默认流的选择性 IDE 流上接收完成的请求者，如果完成的 Completer ID 字段小于该流的选择性 IDE RID Association 寄存器块中的 RID Base 或大于 RID Limit,则必须将其作为意外完成 (Unexpected Completion) 处理。
+  - 在非默认流的选择性 IDE 流上接收完成的请求者,如果完成的 Completer ID 字段小于该流的选择性 IDE RID Association 寄存器块中的 RID Base 或大于 RID Limit,则必须将其作为意外完成 (Unexpected Completion) 处理。
     - 在 Flit 模式中,Completer Segment 值(如果包含在完成中)也必须与选择性 IDE RID Association 寄存器块中的 Segment Base 值匹配。
-- 如果 TEE-IO Supported 置位，对于根端口:
-  - 在根端口为 IDE 端点的选择性 IDE 流上接收请求的完成者，如果请求的 Requester ID 字段小于该流的选择性 IDE RID Association 寄存器块中的 RID Base 或大于 RID Limit,则必须将其作为不支持的请求处理。
-    - 在 Flit 模式中，如果 Requester Segment Valid (RSV) 位置位，则 Requester Segment 值也必须与选择性 IDE RID Association 寄存器块中的 Segment Base 值匹配。
-  - 在根端口为 IDE 端点的选择性 IDE 流上接收完成的请求者，如果完成的 Completer ID 字段小于该流的选择性 IDE RID Association 寄存器块中的 RID Base 或大于 RID Limit,则必须将其作为意外完成处理。
-    - 在 Flit 模式中，如果完成包含 OHC-A5,则 Completer Segment 值也必须与选择性 IDE RID Association 寄存器块中的 Segment Base 值匹配。
+- 如果 TEE-IO Supported 置位,对于根端口:
+  - 在根端口为 IDE 端点的选择性 IDE 流上接收请求的完成者,如果请求的 Requester ID 字段小于该流的选择性 IDE RID Association 寄存器块中的 RID Base 或大于 RID Limit,则必须将其作为不支持的请求处理。
+    - 在 Flit 模式中,如果 Requester Segment Valid (RSV) 位置位,则 Requester Segment 值也必须与选择性 IDE RID Association 寄存器块中的 Segment Base 值匹配。
+  - 在根端口为 IDE 端点的选择性 IDE 流上接收完成的请求者,如果完成的 Completer ID 字段小于该流的选择性 IDE RID Association 寄存器块中的 RID Base 或大于 RID Limit,则必须将其作为意外完成处理。
+    - 在 Flit 模式中,如果完成包含 OHC-A5,则 Completer Segment 值也必须与选择性 IDE RID Association 寄存器块中的 Segment Base 值匹配。
 
 在选择性 IDE 流中使用多播 (Multicast)(参见 § 6.14 节)不在本规范的范围内。
 
-使用 [AES-GCM] 时，希望保持 TLP 有序，以便发送器和接收器可以独立地彼此同步维护 IV,而不需要为每个 TLP 或聚合单元发送 IV 所需的开销。但是，某些 TLP 旁路是死锁避免所必需的，这反映在不同类型的流控信用类型中——Posted 请求 header/data payload、Non-Posted 请求 header/data payload 和完成 header/data payload(参见 § 2.6.1 节)。为了在可能的情况下提供有序 TLP 处理，并简化根据这些流控信用类型构建其内部缓冲的实现,IDE 引入了子流 (Sub-Stream) 概念，在该概念下,TLP 流量在 IDE 伙伴端口之间完全保持有序。这确保了
+使用 [AES-GCM] 时,希望保持 TLP 有序,以便发送器和接收器可以独立地彼此同步维护 IV,而不需要为每个 TLP 或聚合单元发送 IV 所需的开销。但是,某些 TLP 旁路是死锁避免所必需的,这反映在不同类型的流控信用类型中——Posted 请求 header/data payload、Non-Posted 请求 header/data payload 和完成 header/data payload(参见 § 2.6.1 节)。为了在可能的情况下提供有序 TLP 处理,并简化根据这些流控信用类型构建其内部缓冲的实现,IDE 引入了子流 (Sub-Stream) 概念,在该概念下,TLP 流量在 IDE 伙伴端口之间完全保持有序。这确保了
 
 </td>
 </tr>
@@ -21131,9 +21062,9 @@ The following rules relate to aggregation (see § Figure 6-67 and § Figure 6-69
 <!-- 📄 Page 946 -->
 ---
 
-在 IDE 子流中,TLP 在 IDE Partner Port (对等端口) 之间按序传输，这既是为了如前所述降低每个 TLP 的开销，也是为了确保某些攻击场景(例如中间人(Adversary-in-the-Middle)对 Posted Request (有数据请求) 进行重排序或重放)能够被接收端检测到，而无需额外的 TLP 跟踪逻辑。根据 [AES-GCM],必须在 Partner Port 之间保持同步，以使与某个 IDE Stream 关联的所有 TLP 始终从一个 Partner Port 路由到另一个 Partner Port。如果任何 IDE TLP 被错误路由，其结果通常是对应 IDE Stream 的不可恢复错误(详见后文要求)。
+在 IDE 子流中,TLP 在 IDE Partner Port (对等端口) 之间按序传输,这既是为了如前所述降低每个 TLP 的开销,也是为了确保某些攻击场景(例如中间人(Adversary-in-the-Middle)对 Posted Request (有数据请求) 进行重排序或重放)能够被接收端检测到,而无需额外的 TLP 跟踪逻辑。根据 [AES-GCM],必须在 Partner Port 之间保持同步,以使与某个 IDE Stream 关联的所有 TLP 始终从一个 Partner Port 路由到另一个 Partner Port。如果任何 IDE TLP 被错误路由,其结果通常是对应 IDE Stream 的不可恢复错误(详见后文要求)。
 
-每个 IDE Stream 包含通过 TLP 类型和方向区分的子流(Sub-Stream)，其适用以下规则:
+每个 IDE Stream 包含通过 TLP 类型和方向区分的子流(Sub-Stream),其适用以下规则:
 
 - 每个子流都有一个子流标识符 (Sub-Stream identifier):
   - 000b——Posted Request
@@ -21141,87 +21072,87 @@ The following rules relate to aggregation (see § Figure 6-67 and § Figure 6-69
   - 010b——Completion (完成报文)
   - 值 011b–110b 为 Reserved (保留)
   - 111b——在 NFM 中为 Reserved;在 FM 中表示该 TLP 包含 OHC-C 但不是 IDE TLP。
-  - 在本规范的早期版本中,Sub-Stream 字段是 Symbol 3 中的 4 位(bit 7:4)。Bit 7 当前为 Reserved。如果 Device Capabilities Register 中的 TEE-IO Supported 位置 1,组件必须将 bit 7 实现为 Reserved。如果 TEE-IO Supported 清零，则允许组件将 bit 7 视为 Sub-Stream 的一部分。
-- 对于每个子流，根据 [AES-GCM],必须存在一个 96 bit 确定性构造的初始化向量 IV,由以下部分组成:
+  - 在本规范的早期版本中,Sub-Stream 字段是 Symbol 3 中的 4 位(bit 7:4)。Bit 7 当前为 Reserved。如果 Device Capabilities Register 中的 TEE-IO Supported 位置 1,组件必须将 bit 7 实现为 Reserved。如果 TEE-IO Supported 清零,则允许组件将 bit 7 视为 Sub-Stream 的一部分。
+- 对于每个子流,根据 [AES-GCM],必须存在一个 96 bit 确定性构造的初始化向量 IV,由以下部分组成:
   - IV bit 95:64 中的固定字段,bit 95:64 全为 0
-  - IV bit 63:0 中的 invocation 字段，包含一个计数器的值，该计数器在 Stream 建立时以及每次刷新子流密钥时，针对每个子流初始化为 0000_0001h,并且在每次消耗一个 IV 时递增。
+  - IV bit 63:0 中的 invocation 字段,包含一个计数器的值,该计数器在 Stream 建立时以及每次刷新子流密钥时,针对每个子流初始化为 0000_0001h,并且在每次消耗一个 IV 时递增。
 - 每个子流必须支持使用其独立的唯一密钥值和 invocation 字段初始计数值。
 
 § Section 6.99.4 定义了支持 Selective IDE Stream 对等路由的 Switch (交换机) 和 Root Complex (根复合体) 的附加要求。
 
-§ Section 2.4 中定义的排序规则对 TLP/TLP 排序施加了约束，但并未提供检测错误重排序的机制。在 IDE 中，使用计数器使最终接收端能够在允许合法重排序的同时，检测到非 UIO TLP 的错误重排序。这些计数器及相关机制(包括错误检查)不适用于 UIO TLP。每个 IDE Stream 必须独立维护各自的计数器集合，并按以下规则运行:
+§ Section 2.4 中定义的排序规则对 TLP/TLP 排序施加了约束,但并未提供检测错误重排序的机制。在 IDE 中,使用计数器使最终接收端能够在允许合法重排序的同时,检测到非 UIO TLP 的错误重排序。这些计数器及相关机制(包括错误检查)不适用于 UIO TLP。每个 IDE Stream 必须独立维护各自的计数器集合,并按以下规则运行:
 
-- 在发送端，必须维护两个 8 bit 计数器:自上次发送 Non-Posted Request 或 IDE Sync Message 以来已发送的 Posted Request 计数，记为 PR_Sent_Counter-NPR;以及自上次发送 Completion 或 IDE Sync Message 以来已发送的 Posted Request 计数，记为 PR_Sent_Counter-CPL。
-  - 进入 Secure 状态时，两个计数器都必须初始化为 0。
+- 在发送端,必须维护两个 8 bit 计数器:自上次发送 Non-Posted Request 或 IDE Sync Message 以来已发送的 Posted Request 计数,记为 PR_Sent_Counter-NPR;以及自上次发送 Completion 或 IDE Sync Message 以来已发送的 Posted Request 计数,记为 PR_Sent_Counter-CPL。
+  - 进入 Secure 状态时,两个计数器都必须初始化为 0。
   - 对于与该 IDE Stream 关联的每个已发送的 Posted Request IDE TLP,两个计数器都必须递增。
-  - 当发送与该 IDE Stream 关联的 Non-Posted Request 时，必须将该 PR_Sent_Counter-NPR 值用于该 Non-Posted Request 的 IDE Prefix (NFM)/OHC-C (FM) 中的 PR_Sent_Counter 字段，然后将 PR_Sent_Counter-NPR 复位为零。
+  - 当发送与该 IDE Stream 关联的 Non-Posted Request 时,必须将该 PR_Sent_Counter-NPR 值用于该 Non-Posted Request 的 IDE Prefix (NFM)/OHC-C (FM) 中的 PR_Sent_Counter 字段,然后将 PR_Sent_Counter-NPR 复位为零。
 
 <!-- 📄 Page 947 -->
 ---
 
-  - 当发送与该 IDE Stream 关联的 Completion 时，必须将该 PR_Sent_Counter-CPL 值用于该 Completion 的 IDE Prefix (NFM)/OHC-C (FM) 中的 PR_Sent_Counter 字段，然后将 PR_Sent_Counter-CPL 复位为零。
-  - 当 PR_Sent_Counter-NPR 或 PR_Sent_Counter-CPL 达到 245 时，必须作为 IDE TLP 向 Partner Port 发送 IDE Sync Message(见 § Section 2.2.8.11)。
+  - 当发送与该 IDE Stream 关联的 Completion 时,必须将该 PR_Sent_Counter-CPL 值用于该 Completion 的 IDE Prefix (NFM)/OHC-C (FM) 中的 PR_Sent_Counter 字段,然后将 PR_Sent_Counter-CPL 复位为零。
+  - 当 PR_Sent_Counter-NPR 或 PR_Sent_Counter-CPL 达到 245 时,必须作为 IDE TLP 向 Partner Port 发送 IDE Sync Message(见 § Section 2.2.8.11)。
     - 允许在其他时刻发送 IDE Sync Message。
-  - 每次向 Partner Port 发送 IDE Sync Message 时，在构造 IDE Sync Message 之前，必须将 PR_Sent_Counter-NPR 和 PR_Sent_Counter-CPL 同时递增，然后将 PR_Sent_Counter-NPR 和 PR_Sent_Counter-CPL 都复位为零。
-- 在接收端，必须维护两个 64 bit 计数器:自上次接收到 Non-Posted Request 以来已接收的 Posted Request 计数，记为 PR_Received_Counter-NPR;以及自上次接收到 Completion 以来已接收的 Posted Request 计数，记为 PR_Received_Counter-CPL。
-  - 进入 Secure 状态时，两个计数器都必须初始化为零。
+  - 每次向 Partner Port 发送 IDE Sync Message 时,在构造 IDE Sync Message 之前,必须将 PR_Sent_Counter-NPR 和 PR_Sent_Counter-CPL 同时递增,然后将 PR_Sent_Counter-NPR 和 PR_Sent_Counter-CPL 都复位为零。
+- 在接收端,必须维护两个 64 bit 计数器:自上次接收到 Non-Posted Request 以来已接收的 Posted Request 计数,记为 PR_Received_Counter-NPR;以及自上次接收到 Completion 以来已接收的 Posted Request 计数,记为 PR_Received_Counter-CPL。
+  - 进入 Secure 状态时,两个计数器都必须初始化为零。
   - 对于与该 IDE Stream 关联的每个已接收的 Posted Request IDE TLP,两个计数器都必须递增。
-  - 当接收到与该 IDE Stream 关联的 Non-Posted Request 时，必须用 IDE Prefix (NFM)/OHC-C (FM) 中携带的 PR_Sent_Counter 值减去 PR_Received_Counter-NPR,并用所得结果更新 PR_Received_Counter-NPR。如果该减法下溢，则为错误——参见下文错误处理相关规则。
-  - 当接收到与该 IDE Stream 关联的 Completion 时，必须用 IDE Prefix (NFM)/OHC-C (FM) 中携带的 PR_Sent_Counter 值减去 PR_Received_Counter-CPL,并用所得结果更新 PR_Received_Counter-CPL。如果该减法下溢，则为错误——参见下文错误处理相关规则。
+  - 当接收到与该 IDE Stream 关联的 Non-Posted Request 时,必须用 IDE Prefix (NFM)/OHC-C (FM) 中携带的 PR_Sent_Counter 值减去 PR_Received_Counter-NPR,并用所得结果更新 PR_Received_Counter-NPR。如果该减法下溢,则为错误——参见下文错误处理相关规则。
+  - 当接收到与该 IDE Stream 关联的 Completion 时,必须用 IDE Prefix (NFM)/OHC-C (FM) 中携带的 PR_Sent_Counter 值减去 PR_Received_Counter-CPL,并用所得结果更新 PR_Received_Counter-CPL。如果该减法下溢,则为错误——参见下文错误处理相关规则。
   - 当接收到与该 IDE Stream 关联的 IDE Sync Message 时:
     - 必须用 IDE Stream Sync Message 中携带的 PR_Sent_Counter-NPR 值减去 PR_Received_Counter-NPR,并用所得结果更新 PR_Received_Counter-NPR;
     - 必须用 IDE Stream Sync Message 中携带的 PR_Sent_Counter-CPL 值减去 PR_Received_Counter-CPL,并用所得结果更新 PR_Received_Counter-CPL。
 
-如果任一减法下溢，则为错误——参见 § Section 6.33.7 中的错误处理相关规则。
+如果任一减法下溢,则为错误——参见 § Section 6.33.7 中的错误处理相关规则。
 
 <!-- 📄 Page 948 -->
 ---
 
 > **实现注记:**
 > **检测错误重排序**
-> 与其他 TLP 一样,IDE TLP 也需要被重排序以满足死锁避免的要求，但当 IDE TLP 在 PCIe 上跨端口传递时，某些其他形式的重排序是被禁止的。这些排序要求在 § Table 6-36 中定义，并以 Posted Request (PR)、Non-Posted Request (NPR) 和 Completion (Cpl) 的形式表述。下面的示例说明了选定的重排序情形。
-> 基于 TLP 重排序(或具有重排序效果的延迟)的攻击可以由多种机制实现，所有这些机制都呈现相同的可观察行为，并将由 IDE 定义的机制检测出来。
+> 与其他 TLP 一样,IDE TLP 也需要被重排序以满足死锁避免的要求,但当 IDE TLP 在 PCIe 上跨端口传递时,某些其他形式的重排序是被禁止的。这些排序要求在 § Table 6-36 中定义,并以 Posted Request (PR)、Non-Posted Request (NPR) 和 Completion (Cpl) 的形式表述。下面的示例说明了选定的重排序情形。
+> 基于 TLP 重排序(或具有重排序效果的延迟)的攻击可以由多种机制实现,所有这些机制都呈现相同的可观察行为,并将由 IDE 定义的机制检测出来。
 
-§ Figure 6-80 说明了允许 Posted Request 越过 Non-Posted Request 的情形，这是死锁避免所要求的。IDE 通过在给定 Stream 内使用 Sub-Stream 来支持 Posted Request 越过 Non-Posted Request。类似地,Posted Request 也需要能够越过 Completion(图中未示出)。
+§ Figure 6-80 说明了允许 Posted Request 越过 Non-Posted Request 的情形,这是死锁避免所要求的。IDE 通过在给定 Stream 内使用 Sub-Stream 来支持 Posted Request 越过 Non-Posted Request。类似地,Posted Request 也需要能够越过 Completion(图中未示出)。
 
-§ Figure 6-81 说明了攻击者试图用 Non-Posted Request 越过 Posted Request 的情形，这种情况可能导致(例如)消费到过期的数据。此情形将通过 PR Sent Counter 机制检测出来:与 Stream 关联的源端口发送端通过该机制向目的端口接收端指示在两个连续 Non-Posted Request 之间已发送了多少个 Posted Request。该指示携带于 IDE TLP Prefix (NFM)/OHC-C (FM) 中，受完整性保护，因此无法在接收端不被发现地进行修改。在本示例中,NP1 将携带一个已发送 Posted Request (P1) 的指示，该指示将与接收端已接收 Posted Request 的计数不匹配，从而使这种非法重排序被检测出来。
+§ Figure 6-81 说明了攻击者试图用 Non-Posted Request 越过 Posted Request 的情形,这种情况可能导致(例如)消费到过期的数据。此情形将通过 PR Sent Counter 机制检测出来:与 Stream 关联的源端口发送端通过该机制向目的端口接收端指示在两个连续 Non-Posted Request 之间已发送了多少个 Posted Request。该指示携带于 IDE TLP Prefix (NFM)/OHC-C (FM) 中,受完整性保护,因此无法在接收端不被发现地进行修改。在本示例中,NP1 将携带一个已发送 Posted Request (P1) 的指示,该指示将与接收端已接收 Posted Request 的计数不匹配,从而使这种非法重排序被检测出来。
 
 <!-- 📄 Page 949 -->
 ---
 
-在没有 IDE 时,Non-Posted Request 允许相互越过;但是在一个 IDE Stream 内部，为了简化完整性/加密机制的操作，禁止对相同类型的 TLP 进行重排序。§ Figure 6-82 表明，这种 Non-Posted Request 的重排序将被检测为完整性检查失败，即便其本身并不存在安全暴露。
+在没有 IDE 时,Non-Posted Request 允许相互越过;但是在一个 IDE Stream 内部,为了简化完整性/加密机制的操作,禁止对相同类型的 TLP 进行重排序。§ Figure 6-82 表明,这种 Non-Posted Request 的重排序将被检测为完整性检查失败,即便其本身并不存在安全暴露。
 
-需要注意的是，重排序攻击可以通过 Retimer (重定时器)、Switch (交换机) 以及任何其他能够在源端口与目的端口之间改变 TLP 流的设备或装置进行。
+需要注意的是,重排序攻击可以通过 Retimer (重定时器)、Switch (交换机) 以及任何其他能够在源端口与目的端口之间改变 TLP 流的设备或装置进行。
 
-用于实现重排序检查的计数器在发送端和接收端的大小不同。发送端计数器只需要 8 bit 宽，即可容纳任意选择的 245 这一限制(该限制触发必需的 IDE Sync Message 发送)。由于路由元素可以改变不同子流中 TLP 的相对顺序，接收端不能假定重排序的量存在任何特定的上限，因此接收端计数器被选为 64 bit 宽，以确保在正常工作条件下它们不可能溢出。
+用于实现重排序检查的计数器在发送端和接收端的大小不同。发送端计数器只需要 8 bit 宽,即可容纳任意选择的 245 这一限制(该限制触发必需的 IDE Sync Message 发送)。由于路由元素可以改变不同子流中 TLP 的相对顺序,接收端不能假定重排序的量存在任何特定的上限,因此接收端计数器被选为 64 bit 宽,以确保在正常工作条件下它们不可能溢出。
 
 <!-- 📄 Page 950 -->
 ---
 
 以下规则与聚合(见 § Figure 6-67 和 § Figure 6-69)相关:
 
-- 当支持聚合(由 IDE Capability Register 中 Port 级的 Aggregation Supported 位指示)时，接收端必须能够支持:
-  - 在任何子流内，聚合最多 8 个 TLP,或基于该子流可用的剩余流控信用可接收的 TLP 数，取两者中的较小者;
+- 当支持聚合(由 IDE Capability Register 中 Port 级的 Aggregation Supported 位指示)时,接收端必须能够支持:
+  - 在任何子流内,聚合最多 8 个 TLP,或基于该子流可用的剩余流控信用可接收的 TLP 数,取两者中的较小者;
   - 在聚合单元的 TLP 之间接收不属于该子流的其他 TLP。
-- 当支持聚合时(由 IDE Capability Register 中 Port 级的 Aggregation Supported 位指示)，对于每个允许聚合的子流，软件必须在发送端口上使能聚合。
-- 若要使用聚合，软件必须在使能 IDE Stream 之前使能聚合。
-- 当聚合被使能时，发送端:
+- 当支持聚合时(由 IDE Capability Register 中 Port 级的 Aggregation Supported 位指示),对于每个允许聚合的子流,软件必须在发送端口上使能聚合。
+- 若要使用聚合,软件必须在使能 IDE Stream 之前使能聚合。
+- 当聚合被使能时,发送端:
   - 只能对同一 Stream 和子流内的 TLP 应用聚合;
   - 在对应的 Aggregation Mode 字段中聚合的 TLP 数不得超过所选的数量;
-  - 必须限制所聚合的 TLP 数量，以使聚合单元中所有 TLP 的数据 payload 之和不超过 256 DW;
+  - 必须限制所聚合的 TLP 数量,以使聚合单元中所有 TLP 的数据 payload 之和不超过 256 DW;
   - 允许在聚合单元的 TLP 之间发送不属于该子流的其他 TLP;
-  - 在发送 IDE Sync Message 时，必须将该 IDE Sync Message 视为聚合单元的最后一个 TLP;
+  - 在发送 IDE Sync Message 时,必须将该 IDE Sync Message 视为聚合单元的最后一个 TLP;
   - 允许聚合少于所允许数量的 TLP。
-- 在聚合 TLP 时，发送端必须仅为聚合单元的最后一个 TLP 包含一个 MAC,且该 MAC 必须覆盖该单元内所有 TLP 的 A 和 P 内容。
+- 在聚合 TLP 时,发送端必须仅为聚合单元的最后一个 TLP 包含一个 MAC,且该 MAC 必须覆盖该单元内所有 TLP 的 A 和 P 内容。
   - 发送端必须将 TLP 视为聚合单元的最后一个 TLP,除非发送端能够保证在 1 μs 内在该聚合单元中发送另一个 TLP。
 - 同一密钥和 IV 集合必须用于聚合单元中的所有 TLP。
-- 如果要切换 K 位，则只能在聚合单元的第一个 TLP 上切换。
+- 如果要切换 K 位,则只能在聚合单元的第一个 TLP 上切换。
   - 接收端必须检查违反此规则的情况——违反行为属于 IDE Check Failed 错误。
     - 接收端必须将关联的 IDE Stream 转入 Insecure 状态。
   - 这是一个与接收端口相关的上报错误(见 § Section 6.2)。
 - 允许聚合单元的 TLP 与其他 TLP(包括与其他 Stream 关联的 IDE TLP,或非 IDE TLP)交错。
 - 接收端必须先处理完单元中所有聚合的 TLP,才能完成对该单元的认证解密。
-- 如果不支持聚合的接收端收到了没有 MAC 的 IDE TLP,或者接收端检测到违反本节任何规则的情况，则属于 IDE Check Failed 错误。
+- 如果不支持聚合的接收端收到了没有 MAC 的 IDE TLP,或者接收端检测到违反本节任何规则的情况,则属于 IDE Check Failed 错误。
   - 接收端必须将关联的 IDE Stream 转入 Insecure 状态。
 
 </td>
@@ -21230,15 +21161,12 @@ The following rules relate to aggregation (see § Figure 6-67 and § Figure 6-69
 </table>
 
 > **Figure 6-80.** Example – Posted Requests Allowed to Bypass Non-Posted Requests | 示例——允许 Posted Request 越过 Non-Posted Request
-> **图 6-80.** 示例——允许 Posted Request 越过 Non-Posted Request
 > <img src="figures/chapter_06/fig_0948_1_tight.png" width="700">
 
 > **Figure 6-81.** Example – Non-Posted Requests Never Allowed to Bypass Posted Requests | 示例——Non-Posted Request 绝不允许越过 Posted Request
-> **图 6-81.** 示例——Non-Posted Request 绝不允许越过 Posted Request
 > <img src="figures/chapter_06/fig_0949_1_tight.png" width="700">
 
 > **Figure 6-82.** Example – Secure Non-Posted Request Reordering Not Allowed Over PCIe Fabric | 示例——PCIe Fabric 上不允许 Secure Non-Posted Request 重排序
-> **图 6-82.** 示例——PCIe Fabric 上不允许 Secure Non-Posted Request 重排序
 > <img src="figures/chapter_06/fig_0949_2_tight.png" width="700">
 
 </div>
@@ -21285,25 +21213,25 @@ Although Switches/RCs must not reorder IDE TLPs within a Flow-Through IDE Stream
 </td>
 <td style="background-color:#e8e8e8">
 
-允许 Switch (交换机) 或 Root Complex (根复合体) 支持 Flow-Through Selective IDE Stream,即便其不支持 Link IDE Stream 或用于 Switch/RC 自身某个 Port 作为 IDE Terminus (端点) 场景的 Selective IDE Stream。也允许启用了 Flow-Through IDE 的 Switch/Root Port 作为 IDE Terminus;在这种情况下,Flow-Through IDE TLP 必须以未修改方式路由，并且只有当 Switch/Root Port 是源或最终目的地时，这些 TLP 才必须由该 Port 作为 IDE Terminus 处理。
+允许 Switch (交换机) 或 Root Complex (根复合体) 支持 Flow-Through Selective IDE Stream,即便其不支持 Link IDE Stream 或用于 Switch/RC 自身某个 Port 作为 IDE Terminus (端点) 场景的 Selective IDE Stream。也允许启用了 Flow-Through IDE 的 Switch/Root Port 作为 IDE Terminus;在这种情况下,Flow-Through IDE TLP 必须以未修改方式路由,并且只有当 Switch/Root Port 是源或最终目的地时,这些 TLP 才必须由该 Port 作为 IDE Terminus 处理。
 
 支持 Flow-Through Selective IDE Stream 的 Switch 必须在该 Switch 的每个 Port 上实现 IDE Extended Capability (扩展能力)。
 
-支持 Flow-Through IDE Stream 的 Switch 和 RC 在启用时，必须对从某个 Ingress Port 流入 Switch/RC 并从某个 Egress Port 流出的 IDE TLP,实现按 Stream 应用的 § Table 6-36 与 § Table 6-37 中所定义的修订排序规则。其中条目 A2、B3、B4、C3、C4 和 D5 都为 No,以确保任何子流内不发生重排序。在其他所有情况下，必须遵循 § Section 2.4 定义的规则;例如:在不同 Stream ID 之间、不同 Ingress Port 之间、不同 Egress Port 之间，或 IDE TLP 与非 IDE TLP 之间。
+支持 Flow-Through IDE Stream 的 Switch 和 RC 在启用时,必须对从某个 Ingress Port 流入 Switch/RC 并从某个 Egress Port 流出的 IDE TLP,实现按 Stream 应用的 § Table 6-36 与 § Table 6-37 中所定义的修订排序规则。其中条目 A2、B3、B4、C3、C4 和 D5 都为 No,以确保任何子流内不发生重排序。在其他所有情况下,必须遵循 § Section 2.4 定义的规则;例如:在不同 Stream ID 之间、不同 Ingress Port 之间、不同 Egress Port 之间,或 IDE TLP 与非 IDE TLP 之间。
 
-硬件不必在 IDE Stream 的两个 Partner Port 之间的 TLP 流之外遵循此修订排序模型(例如 Endpoint 或 RC 内部)，因此在系统层面不能假设观察到的排序行为会与修订后的 IDE 排序模型一致。
+硬件不必在 IDE Stream 的两个 Partner Port 之间的 TLP 流之外遵循此修订排序模型(例如 Endpoint 或 RC 内部),因此在系统层面不能假设观察到的排序行为会与修订后的 IDE 排序模型一致。
 
-尽管 Switch/RC 在 Flow-Through IDE Stream 内不得基于 Relaxed Ordering (RO, 宽松排序) 或 IDO (基于 ID 的排序) 对 IDE TLP 进行重排序(包括在使用 ACS 机制时)，允许这些 TLP 的 RO 位和/或 IDO 位置 1。
+尽管 Switch/RC 在 Flow-Through IDE Stream 内不得基于 Relaxed Ordering (RO, 宽松排序) 或 IDO (基于 ID 的排序) 对 IDE TLP 进行重排序(包括在使用 ACS 机制时),允许这些 TLP 的 RO 位和/或 IDO 位置 1。
 
 > **实现注记:**
 > **聚合的使用**
-> 为了降低与 MAC 相关的带宽开销，鼓励使用聚合。虽然聚合可能会增加接收端对所收到 TLP 进行处理可用的延迟，但通常该延迟增加并不显著，在许多情况下使用聚合会提高整体性能。
-> 尽管具体的优化取决于流量类型和使用模型的要求，但通常聚合约 4 个 TLP 将在可能的带宽改善和增加的延迟之间提供良好平衡。发送端策略通常应假定接收端会在接收端检查完成之前缓存聚合单元的所有 TLP,然后再释放这些 TLP 以进行后续处理。
-> 当发送端了解底层流量情况时，可以降低聚合对实际延迟的影响，例如通过确保 doorbell 或其他 "trigger" TLP 不被聚合，或者通过使聚合单元以这种 TLP 的发送作为结束。
+> 为了降低与 MAC 相关的带宽开销,鼓励使用聚合。虽然聚合可能会增加接收端对所收到 TLP 进行处理可用的延迟,但通常该延迟增加并不显著,在许多情况下使用聚合会提高整体性能。
+> 尽管具体的优化取决于流量类型和使用模型的要求,但通常聚合约 4 个 TLP 将在可能的带宽改善和增加的延迟之间提供良好平衡。发送端策略通常应假定接收端会在接收端检查完成之前缓存聚合单元的所有 TLP,然后再释放这些 TLP 以进行后续处理。
+> 当发送端了解底层流量情况时,可以降低聚合对实际延迟的影响,例如通过确保 doorbell 或其他 "trigger" TLP 不被聚合,或者通过使聚合单元以这种 TLP 的发送作为结束。
 > 接收端应设计为能够以最小的停顿缓存 TLP 的聚合单元。
 > 通常这意味着接收端支持的聚合量应显著小于所通告的接收端流控器缓冲量。
-> 聚合单元的 IDE TLP 可与其他 TLP 交错，在某些情况下这可能是必需的。
-> 例如，考虑一种情况:Switch 接收到若干聚合的 Memory Read,随后是一个 Memory Write,它们都定向到同一 egress Port。如果在 egress Port 没有足够的流控信用来发送所有 Memory Read,则 Switch 可能需要允许该 Memory Write 越过被阻塞的 Memory Read。接收端必须能够容忍聚合单元的这种"中断"。
+> 聚合单元的 IDE TLP 可与其他 TLP 交错,在某些情况下这可能是必需的。
+> 例如,考虑一种情况:Switch 接收到若干聚合的 Memory Read,随后是一个 Memory Write,它们都定向到同一 egress Port。如果在 egress Port 没有足够的流控信用来发送所有 Memory Read,则 Switch 可能需要允许该 Memory Write 越过被阻塞的 Memory Read。接收端必须能够容忍聚合单元的这种"中断"。
 
 </td>
 </tr>
@@ -21364,7 +21292,7 @@ Because hardware used with IDE will typically be required to satisfy platform-le
 </td>
 <td style="background-color:#e8e8e8">
 
-IDE Sync Message 与所有其他 Message 一样，是一种 Posted Request。IDE 协议依赖于 IDE Sync Message 与给定 IDE Stream 的所有其他 Posted Request 进行排序。
+IDE Sync Message 与所有其他 Message 一样,是一种 Posted Request。IDE 协议依赖于 IDE Sync Message 与给定 IDE Stream 的所有其他 Posted Request 进行排序。
 
 **Table 6-36. Flow-Through 非 UIO IDE Stream 的 IDE 修订排序规则——按 Stream**
 
@@ -21385,15 +21313,15 @@ IDE Sync Message 与所有其他 Message 一样，是一种 Posted Request。IDE
 
 Switch/RC 不得在 ingress 与 egress Port 之间修改 Flow-Through IDE TLP。
 
-Switch/RC 只能将 IDE TLP 通过 Flow-Through IDE Stream Enabled 位置 1 的 Port 进行路由。如果 IDE TLP 被 Ingress Port 接收或被路由到 Egress Port,而该 Port 的 Flow-Through IDE Stream Enabled 位为 Clear,则该 Port 必须将该 TLP 作为 Misrouted IDE TLP 错误处理，除非存在更高优先级的错误。此外:
+Switch/RC 只能将 IDE TLP 通过 Flow-Through IDE Stream Enabled 位置 1 的 Port 进行路由。如果 IDE TLP 被 Ingress Port 接收或被路由到 Egress Port,而该 Port 的 Flow-Through IDE Stream Enabled 位为 Clear,则该 Port 必须将该 TLP 作为 Misrouted IDE TLP 错误处理,除非存在更高优先级的错误。此外:
 
 - 对于 Ingress Port,该 Port 不得转发该 IDE TLP。
 - 对于 Egress Port,该 Port 不得发送该 IDE TLP。
 - 如果该 IDE TLP 是 Non-Posted Request,则该 Port 不得返回 Completion。
 
-允许将 ACS 与 Flow-Through IDE Stream 结合使用，但需要注意确保满足上文定义的修订排序。还应理解，由于 Relaxed Ordering 不适用于上文定义的修订排序规则，涉及 ACS P2P Completion Redirect 等用例的性能可能会有所下降。
+允许将 ACS 与 Flow-Through IDE Stream 结合使用,但需要注意确保满足上文定义的修订排序。还应理解,由于 Relaxed Ordering 不适用于上文定义的修订排序规则,涉及 ACS P2P Completion Redirect 等用例的性能可能会有所下降。
 
-由于与 IDE 一起使用的硬件通常需要满足平台级信任要求，因此在使用 IDE 时，在许多情况下不需要 ACS 即可实现并维护安全的平台行为。
+由于与 IDE 一起使用的硬件通常需要满足平台级信任要求,因此在使用 IDE 时,在许多情况下不需要 ACS 即可实现并维护安全的平台行为。
 
 </td>
 </tr>
@@ -21517,79 +21445,79 @@ UIO provides the ability for hardware to maintain full backwards compatibility w
 
 以下规则与复位 (Reset) 相关:
 
-- 对 Upstream Port 或 Downstream Port 的 Bridge Function 的任何常规复位 (Conventional Reset)，或对包含 IDE Extended Capability 的 Function 的任何 FLR,都必须导致该 Function 关联的所有 IDE Stream 转入 Insecure 状态，并且所有密钥必须被无效化并使其不可读取。
-  - 在许多情况下，需要额外的实现特定机制以确保维护所有关联数据的安全性。
+- 对 Upstream Port 或 Downstream Port 的 Bridge Function 的任何常规复位 (Conventional Reset),或对包含 IDE Extended Capability 的 Function 的任何 FLR,都必须导致该 Function 关联的所有 IDE Stream 转入 Insecure 状态,并且所有密钥必须被无效化并使其不可读取。
+  - 在许多情况下,需要额外的实现特定机制以确保维护所有关联数据的安全性。
 - 对不包含 IDE Extended Capability 的 Function 的 FLR 不得影响 IDE 操作。
   - 在某些情况下,IDE_KM 可能受对不包含 IDE Extended Capability 但通过 DOE 实现 IDE_KM 响应者角色的 Function 的 FLR 的影响——见 § Section 6.33.3。
 
-对导致 TLP 阻塞或终止的机制(例如 AtomicOps、DMWr 以及 End-End TLP Prefix Blocking 机制)的使用，必须与 Selective IDE Stream 的使用进行仔细协调，以避免以导致 IDE Check Failed 错误的方式丢弃 Selective IDE TLP。
+对导致 TLP 阻塞或终止的机制(例如 AtomicOps、DMWr 以及 End-End TLP Prefix Blocking 机制)的使用,必须与 Selective IDE Stream 的使用进行仔细协调,以避免以导致 IDE Check Failed 错误的方式丢弃 Selective IDE TLP。
 
 以下规则涉及 Access Control Services (ACS, 见 § Section 6.12) 与 IDE 的使用。
 
-- 使用 Link IDE 时，允许按其架构方式不受限制地使用 ACS 机制。
+- 使用 Link IDE 时,允许按其架构方式不受限制地使用 ACS 机制。
 - 如果 Selective IDE 与 ACS 一起使用以实现 "实现注记:ACS Redirect and Guest Physical Addresses (GPAs)"(见 § Section 6.12.4)中所述的 Direct I/O,则允许按其架构方式不受限制地使用 ACS 机制。
-- 如果 Selective IDE 用于 P2P 通信且未启用任何 ACS redirect 机制，则允许按其架构方式不受限制地使用其余 ACS 服务。
-- 在启用 ACS redirect 机制的情况下将 Selective IDE 用于 P2P 通信，存在大量与排序和子流各部分走不同路径相关的主要问题。这种用法超出了本规范的范围。
+- 如果 Selective IDE 用于 P2P 通信且未启用任何 ACS redirect 机制,则允许按其架构方式不受限制地使用其余 ACS 服务。
+- 在启用 ACS redirect 机制的情况下将 Selective IDE 用于 P2P 通信,存在大量与排序和子流各部分走不同路径相关的主要问题。这种用法超出了本规范的范围。
 - 在任何 ACS 服务(或任何其他机制)阻塞或终止 IDE TLP 的用例下使用 Selective IDE,将由于预期的最终目的端口无法接收到被阻塞/终止的 IDE TLP,而导致关联的 Selective IDE Stream 转入 Insecure 状态。
 
 以下规则与错误处理相关:
 
 - 接收到没有关联 IDE Stream 的 Link IDE TLP 或 Selective IDE TLP,属于 Misrouted IDE TLP 错误;这是与接收端口关联的上报错误。
 - Switch 接收到 Link IDE TLP,该 TLP 定向到的 Egress Port 没有处于 Secure 状态且具有相同 TC 关联的 Link IDE Stream,属于 Misrouted IDE TLP 错误;这是与 Ingress Port 关联的上报错误。
-- 事务层 (Transaction Layer) 必须归还流控信用，并将其作为 Misrouted IDE TLP 处理，但不得对接收到的 Misrouted IDE TLP 采取任何其他动作。
+- 事务层 (Transaction Layer) 必须归还流控信用,并将其作为 Misrouted IDE TLP 处理,但不得对接收到的 Misrouted IDE TLP 采取任何其他动作。
 
 <!-- 📄 Page 954 -->
 ---
 
-- 检测到以下任一条件都属于 IDE Check Failed 错误，这是与接收端口关联的上报错误(见 § Section 6.2)。
-  - 当接收端对所接收 TLP(或 TLP 聚合单元) MAC 的检查失败时，发生 MAC 检查失败;
+- 检测到以下任一条件都属于 IDE Check Failed 错误,这是与接收端口关联的上报错误(见 § Section 6.2)。
+  - 当接收端对所接收 TLP(或 TLP 聚合单元) MAC 的检查失败时,发生 MAC 检查失败;
   - PR-Received-Counter-NPR 或 PR_Received_Counter-CPL 下溢(表明已检测到错误的重排序);
   - PR-Received-Counter-NPR / PR_Received_Counter-CPL 两个 64 bit 计数器中的任一者或两者都溢出(表明未能接收到已发送的 NPR/CPL TLP)。
   - Sub-Stream identifier 字段包含 Reserved/不支持的值。
 
-在检测到上述一个或多个条件后，该 IDE Stream 的 IDE Stream State Machine 必须进入 Insecure 状态。这是与接收端口关联的上报错误(见 Section 6.2)。触发该错误的 TLP 以及之后接收到的与同一 IDE Stream 关联的所有 IDE TLP,在流控信用更新后必须被丢弃，只要该 Stream 处于启用状态。对于后续接收到的与已处于 Insecure 状态的 IDE Stream 关联的 TLP,不得记录额外的错误。当处于 Insecure 状态且达到该状态的原因并非上述所列时，这些规则同样适用于在该状态下接收到的 TLP。
+在检测到上述一个或多个条件后,该 IDE Stream 的 IDE Stream State Machine 必须进入 Insecure 状态。这是与接收端口关联的上报错误(见 Section 6.2)。触发该错误的 TLP 以及之后接收到的与同一 IDE Stream 关联的所有 IDE TLP,在流控信用更新后必须被丢弃,只要该 Stream 处于启用状态。对于后续接收到的与已处于 Insecure 状态的 IDE Stream 关联的 TLP,不得记录额外的错误。当处于 Insecure 状态且达到该状态的原因并非上述所列时,这些规则同样适用于在该状态下接收到的 TLP。
 
-- 接收到 UR 或 UC 状态 Completion 的 IDE TLP 不是安全错误，其本身不得触发转入 Insecure 状态。
-- 当支持 Advanced Error Reporting 时，在检测到与 TLP 聚合单元关联的错误时，只有该单元的最后一个 TLP 必须记录在 Header Log Register 和 TLP Prefix Log Register 中。
-- 当 DL_Active 从该链路的置位转为去置位时，与该 Link 关联的所有 IDE Stream 必须转入 Insecure 状态。
-- 除了因相应 Link/Selective IDE Stream Enable 位被清零以外的任何原因，对于给定 Stream 从 Secure 转入 Insecure 时，该 Port 必须向 Partner Port 发送一条指示 Stream ID 的 IDE Fail Message。
-- 收到 IDE Fail Message 时，对于所指示的 Stream,该 Port 必须转入 Insecure 状态。
-  - 当 IDE Stream 因收到 IDE Fail Message 而进入 Insecure 时，此次进入 Insecure 的转换不得导致发送 IDE fail message。
-- 进入 Insecure 时，关联 IDE Stream 的所有活动密钥集和 IV 必须被标记为无效。
+- 接收到 UR 或 UC 状态 Completion 的 IDE TLP 不是安全错误,其本身不得触发转入 Insecure 状态。
+- 当支持 Advanced Error Reporting 时,在检测到与 TLP 聚合单元关联的错误时,只有该单元的最后一个 TLP 必须记录在 Header Log Register 和 TLP Prefix Log Register 中。
+- 当 DL_Active 从该链路的置位转为去置位时,与该 Link 关联的所有 IDE Stream 必须转入 Insecure 状态。
+- 除了因相应 Link/Selective IDE Stream Enable 位被清零以外的任何原因,对于给定 Stream 从 Secure 转入 Insecure 时,该 Port 必须向 Partner Port 发送一条指示 Stream ID 的 IDE Fail Message。
+- 收到 IDE Fail Message 时,对于所指示的 Stream,该 Port 必须转入 Insecure 状态。
+  - 当 IDE Stream 因收到 IDE Fail Message 而进入 Insecure 时,此次进入 Insecure 的转换不得导致发送 IDE fail message。
+- 进入 Insecure 时,关联 IDE Stream 的所有活动密钥集和 IV 必须被标记为无效。
 - 要使 IDE Stream 退出 Insecure 并返回 Secure,必须使用新的密钥和 IV 集合重新建立该 IDE Stream。
-- 在 Insecure 状态下，必须保护与受影响 IDE Stream 关联的私有数据。
+- 在 Insecure 状态下,必须保护与受影响 IDE Stream 关联的私有数据。
   - 具体如何实现与具体实现相关。
-- 要准备将 Stream 从 Insecure 状态退出并返回 Secure 状态，软件必须向相应的 Selective IDE Stream Enable 或 Link IDE Stream Enable 位写入 0b,即使该位已经是 0b。
+- 要准备将 Stream 从 Insecure 状态退出并返回 Secure 状态,软件必须向相应的 Selective IDE Stream Enable 或 Link IDE Stream Enable 位写入 0b,即使该位已经是 0b。
   - 硬件不得在该 Enable 位被写入 0b 并随后被置 1 之前将 Stream 返回到 Secure 状态。
-  - 根据具体使用模型的要求，通常还需要本规范未定义的附加动作。
+  - 根据具体使用模型的要求,通常还需要本规范未定义的附加动作。
 
-要将 TC0/VC0 的 Link IDE Stream 返回到 Secure 状态，需要复位该 Device(例如使用 Hot Reset)，以便使 Configuration Request/Completion 能够跨该 Link 传递，除非该 Device 提供替代的实现特定机制。
+要将 TC0/VC0 的 Link IDE Stream 返回到 Secure 状态,需要复位该 Device(例如使用 Hot Reset),以便使 Configuration Request/Completion 能够跨该 Link 传递,除非该 Device 提供替代的实现特定机制。
 
 <!-- 📄 Page 955 -->
 ---
 
-- 在处理接收到的 IDE TLP 时，所有错误检查必须完成，或者在发出错误信号前插入等效延迟，以使外部观察者无法确定错误是在错误检查的哪个阶段被检测到的。
+- 在处理接收到的 IDE TLP 时,所有错误检查必须完成,或者在发出错误信号前插入等效延迟,以使外部观察者无法确定错误是在错误检查的哪个阶段被检测到的。
 
 以下规则与电源管理 (Power Management) 相关:
 
 - No_Soft_Reset 位必须置 1。
 - 与密钥和计数器相关的所有状态必须在 D0、D1、D2 和 D3hot 中予以保持。
-  - IDE Extended Capability 遵循本规范中定义的其他寄存器结构的相同规则，并且由于其本身对 IDE 操作至关重要，任何导致 IDE Extended Capability 编程丢失的情况都必然导致维持 IDE 操作的能力的丧失;这种情况必须导致所有 IDE Stream 转入 Insecure 状态，并且所有密钥必须被无效化并使其不可读取。
-- 允许支持在 D3cold 中保持与密钥和计数器相关的状态，但此类机制不在本文档的讨论范围内。
+  - IDE Extended Capability 遵循本规范中定义的其他寄存器结构的相同规则,并且由于其本身对 IDE 操作至关重要,任何导致 IDE Extended Capability 编程丢失的情况都必然导致维持 IDE 操作的能力的丧失;这种情况必须导致所有 IDE Stream 转入 Insecure 状态,并且所有密钥必须被无效化并使其不可读取。
+- 允许支持在 D3cold 中保持与密钥和计数器相关的状态,但此类机制不在本文档的讨论范围内。
 
 以下规则与维护安全的本地环境相关:
 
 - 必须检测对 IDE 寄存器、BAR (基址寄存器) 以及其他可能影响 Device 或 IDE Stream 安全性的结构的修改尝试。
   - 由此产生的动作与具体实现相关。
-- 当检测到可能影响 Device 或 IDE Stream 安全性的情况时，允许进入 Insecure 状态。
-  - 在某些情况下，由实现特定的标准决定，可能希望实现某些其他实现特定的动作。
-- IDE 必须在两个 Partner Port 之间以协调方式使能，以使两者在任一方将 IDE TLP 发送给另一方之前都已为 IDE 完成使能。
-- 对于 Link IDE,软件必须先使能 Upstream Port,然后使能 Downstream Port,并确保在这两个事件之间，该 Link 上不发送任何 TLP。
-- 对于 Selective IDE,在该 Stream 已在两个 Partner Port 上完成使能之前，不得使用该 Stream。对于 Partner Port 之一是 Root Port 且启用了 Configuration Request 的 Selective IDE 的情况，另一个 Partner Port 必须在 Root Port 之前完成使能。对于其他场景，满足此要求的机制是实现特定的。
+- 当检测到可能影响 Device 或 IDE Stream 安全性的情况时,允许进入 Insecure 状态。
+  - 在某些情况下,由实现特定的标准决定,可能希望实现某些其他实现特定的动作。
+- IDE 必须在两个 Partner Port 之间以协调方式使能,以使两者在任一方将 IDE TLP 发送给另一方之前都已为 IDE 完成使能。
+- 对于 Link IDE,软件必须先使能 Upstream Port,然后使能 Downstream Port,并确保在这两个事件之间,该 Link 上不发送任何 TLP。
+- 对于 Selective IDE,在该 Stream 已在两个 Partner Port 上完成使能之前,不得使用该 Stream。对于 Partner Port 之一是 Root Port 且启用了 Configuration Request 的 Selective IDE 的情况,另一个 Partner Port 必须在 Root Port 之前完成使能。对于其他场景,满足此要求的机制是实现特定的。
 
-Unordered IO (UIO) 是一种可选能力，旨在解决 PCI/PCIe Fabric 强制排序规则的局限性。UIO 使支持源与目的地之间具有多条路径的 Fabric 成为可能，并更接近地匹配常见 IO Fabric(包括片上 Fabric)的语义。UIO 适用于 Requester 与 Completer 的所有组合，包括 Host-to-Device、Device-to-Host 和 Device-to-Device (P2P)。
+Unordered IO (UIO) 是一种可选能力,旨在解决 PCI/PCIe Fabric 强制排序规则的局限性。UIO 使支持源与目的地之间具有多条路径的 Fabric 成为可能,并更接近地匹配常见 IO Fabric(包括片上 Fabric)的语义。UIO 适用于 Requester 与 Completer 的所有组合,包括 Host-to-Device、Device-to-Host 和 Device-to-Device (P2P)。
 
-UIO 使硬件能够保持与 PCI/PCIe producer-consumer 模型的完全向后兼容性，将强制观察到的排序的责任从 Fabric 转移到 Requester。所有 UIO Request 都有对应的 UIO Completion,UIO Completion 为 Requester 提供强制排序要求的能力(和责任)。只有当从 Requester 到 Completer 的整个路径使用 Flit 模式、支持 UIO 并且已启用 UIO 时，才能使用 UIO。
+UIO 使硬件能够保持与 PCI/PCIe producer-consumer 模型的完全向后兼容性,将强制观察到的排序的责任从 Fabric 转移到 Requester。所有 UIO Request 都有对应的 UIO Completion,UIO Completion 为 Requester 提供强制排序要求的能力(和责任)。只有当从 Requester 到 Completer 的整个路径使用 Flit 模式、支持 UIO 并且已启用 UIO 时,才能使用 UIO。
 
 </td>
 </tr>
@@ -21637,20 +21565,20 @@ UIO, as with other PCIe traffic, does not provide protection against address haz
 </td>
 <td style="background-color:#e8e8e8">
 
-在 UIO 请求者 (Requester) 与完成者 (Completer) 之间的通路上,UIO 必须端到端地在所有中间路由元素上启用。对于给定的操作，请求者可以通过实现特定的方式，在 UIO 请求与非 UIO 请求之间进行选择。
+在 UIO 请求者 (Requester) 与完成者 (Completer) 之间的通路上,UIO 必须端到端地在所有中间路由元素上启用。对于给定的操作,请求者可以通过实现特定的方式,在 UIO 请求与非 UIO 请求之间进行选择。
 
 UIO 允许非树形拓扑与多路径支持。
 
 - 用于启用和管理此类拓扑的机制不在本规范范围内。
 - 用于避免此类拓扑发生死锁和环路的机制不在本规范范围内。
-- 必须存在一个树形拓扑作为任何非树形拓扑的子集，以用于枚举 (Enumeration) 和配置操作以及其他非 UIO 流量。
-  - 在被实现特定软件启用之前，该树形拓扑之外的任何链路 (Link) 不得承载除本地路由 (r[2:0] = 100b) 消息 (Message) 之外的任何 TLP (Transaction Layer Packet, 事务层包)。
+- 必须存在一个树形拓扑作为任何非树形拓扑的子集,以用于枚举 (Enumeration) 和配置操作以及其他非 UIO 流量。
+  - 在被实现特定软件启用之前,该树形拓扑之外的任何链路 (Link) 不得承载除本地路由 (r[2:0] = 100b) 消息 (Message) 之外的任何 TLP (Transaction Layer Packet, 事务层包)。
 
-当某个 VC (虚通道) 被配置为 UIO 时,UIO 内存写请求使用 Posted (有数据，无完成) 信用 (Credit)，而所有其他 UIO 内存请求则使用 Non-Posted (无数据，需完成) 信用。
+当某个 VC (虚通道) 被配置为 UIO 时,UIO 内存写请求使用 Posted (有数据,无完成) 信用 (Credit),而所有其他 UIO 内存请求则使用 Non-Posted (无数据,需完成) 信用。
 
-请求者、完成者或中间路由元素通过 SVC 资源能力寄存器中的 SVC VC 协议支持字段来通告 (Advertise) UIO 支持。对于具有特定能力与控制配置的 UIO 功能(参见 § Section 7.7.9.2 和 § Section 7.7.9.3)，由端口 (Port) 实现的所有支持 UIO 的 VC 必须具有相同的能力。并不要求软件以完全相同的方式启用所有已实现的支持 UIO 的 VC。
+请求者、完成者或中间路由元素通过 SVC 资源能力寄存器中的 SVC VC 协议支持字段来通告 (Advertise) UIO 支持。对于具有特定能力与控制配置的 UIO 功能(参见 § Section 7.7.9.2 和 § Section 7.7.9.3),由端口 (Port) 实现的所有支持 UIO 的 VC 必须具有相同的能力。并不要求软件以完全相同的方式启用所有已实现的支持 UIO 的 VC。
 
-与其他 PCIe 流量一样,UIO 不提供针对地址冒险 (address hazarding) 的保护，即 Fabric 排序不考虑请求地址。如果需要此类保护，必须在本规范范围之外实现。
+与其他 PCIe 流量一样,UIO 不提供针对地址冒险 (address hazarding) 的保护,即 Fabric 排序不考虑请求地址。如果需要此类保护,必须在本规范范围之外实现。
 
 </td>
 </tr>
@@ -21720,11 +21648,11 @@ All accesses to offsets within the MMB Memory Space should be aligned to a bound
 </td>
 <td style="background-color:#e8e8e8">
 
-MMIO 寄存器块是用于在系统软件与功能 (Function) 之间交换各种数据结构的一种可选机制。由于所有运行时操作都通过内存空间 (Memory Space) 完成，其性能通常远优于使用配置空间 (Configuration Space) 的 DOE 等机制，并且使用内存空间更适合将硬件资源直接分配给相应的软件元素。
+MMIO 寄存器块是用于在系统软件与功能 (Function) 之间交换各种数据结构的一种可选机制。由于所有运行时操作都通过内存空间 (Memory Space) 完成,其性能通常远优于使用配置空间 (Configuration Space) 的 DOE 等机制,并且使用内存空间更适合将硬件资源直接分配给相应的软件元素。
 
 MMIO 寄存器块通过 MMIO 寄存器块定位器 (MRBL) 扩展能力 (Extended Capability) 进行发现(参见 § Section 7.9.30)。这些寄存器映射在通过 BAR (基址寄存器) 分配的内存空间中。MRBL 扩展能力结构中的每个 MRBL 定位寄存器 (参见 § Section 7.9.30.3) 条目定义了 MMIO 寄存器块的类型、BAR 编号以及该寄存器在 BAR 内的偏移。允许 BAR 中除本节所述的 MMIO 寄存器块之外还包含其他内容。
 
-对 MMB 内存空间内偏移量的所有访问应当按照访问大小对齐到相应边界(例如,1 字节访问必须对齐到 1 字节边界,2 字节访问必须对齐到 2 字节边界，等等)。如果访问未按访问大小对齐到相应边界，则该请求可被视为 § Section 2.3.1 中定义的受限编程模型违例。
+对 MMB 内存空间内偏移量的所有访问应当按照访问大小对齐到相应边界(例如,1 字节访问必须对齐到 1 字节边界,2 字节访问必须对齐到 2 字节边界,等等)。如果访问未按访问大小对齐到相应边界,则该请求可被视为 § Section 2.3.1 中定义的受限编程模型违例。
 
 § Figure 6-83 描述了 MRBL 扩展能力与本节所述 MMIO 寄存器块之间的关系。
 
@@ -21770,7 +21698,7 @@ The MCAP Register Block is discovered using the MMIO Register Block Locator Exte
 </td>
 <td style="background-color:#e8e8e8">
 
-MMIO 能力寄存器块是一组能力结构的数组。MCAP 数组中的每个能力由一个 MCAP Header Register(头寄存器)描述，该寄存器标识特定的能力，并指向内存空间中的能力寄存器结构。在 MCAP 寄存器块的开头是 MCAP Array Register(参见 § Section 6.35.1.1)，用于定义数组的大小，其后跟随 MCAP Header Register 列表(参见 § Section 6.35.1.2)。
+MMIO 能力寄存器块是一组能力结构的数组。MCAP 数组中的每个能力由一个 MCAP Header Register(头寄存器)描述,该寄存器标识特定的能力,并指向内存空间中的能力寄存器结构。在 MCAP 寄存器块的开头是 MCAP Array Register(参见 § Section 6.35.1.1),用于定义数组的大小,其后跟随 MCAP Header Register 列表(参见 § Section 6.35.1.2)。
 
 MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § Section 7.9.30) 进行发现。MCAP BAR 应被标记为可预取 (prefetchable)。
 
@@ -21838,15 +21766,15 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 
 | 位位置 | 描述 | 属性 |
 |---|---|---|
-| 15:0 | MCAP ID – MCAP 数组标识符。对于 MCAP 数组寄存器，该字段应设置为 0000h。 | RO |
+| 15:0 | MCAP ID – MCAP 数组标识符。对于 MCAP 数组寄存器,该字段应设置为 0000h。 | RO |
 | 23:16 | MCAP Array Version – 定义 MCAP 寄存器块中 MCAP Header Register(参见 § Section 6.35.1.2 及 § Table 6-40 至 § Table 6-43)的格式。<br>编码如下:<br>0h = MCAP Header 格式由 § Figure 6-88 定义。<br>1h-7h = 保留。<br>所有其他编码均保留。 | RO |
-| 27:24 | MCAP Type – 定义与 MCAP 寄存器块中类型特定能力(MCAP ID 范围 4000h-7FFFh)相关联的类型。<br>编码如下:<br>0h = 类型由功能 (Function) 的 Class Code 对应的 24 位值推断。如果 Class Code 未与任何类型特定能力关联，则不应存在类型特定能力。<br>01h = 保留。<br>1h-7h = 保留 – 分配给 [CXL]。<br>其他 = 所有其他编码均保留。 | RO |
+| 27:24 | MCAP Type – 定义与 MCAP 寄存器块中类型特定能力(MCAP ID 范围 4000h-7FFFh)相关联的类型。<br>编码如下:<br>0h = 类型由功能 (Function) 的 Class Code 对应的 24 位值推断。如果 Class Code 未与任何类型特定能力关联,则不应存在类型特定能力。<br>01h = 保留。<br>1h-7h = 保留 – 分配给 [CXL]。<br>其他 = 所有其他编码均保留。 | RO |
 
 **Table 6-39. MCAP Array Register 2 | 表 6-39. MCAP 数组寄存器 2**
 
 | 位位置 | 描述 | 属性 |
 |---|---|---|
-| 15:0 | MCAP Count – MCAP 寄存器块中能力的数量，不包括 MCAP 数组寄存器。每个 MCAP Header Register(参见 § Section 6.35.1.2)与前一个 MCAP Header Register 相邻。 | RO |
+| 15:0 | MCAP Count – MCAP 寄存器块中能力的数量,不包括 MCAP 数组寄存器。每个 MCAP Header Register(参见 § Section 6.35.1.2)与前一个 MCAP Header Register 相邻。 | RO |
 
 <img src="figures/chapter_06/fig_0959_1_tight.png" width="700">
 </td>
@@ -21930,7 +21858,7 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 | 位位置 | 寄存器描述 | 属性 |
 |---|---|---|
 | 15:0 | MCAP ID – 能力标识符。 | RO |
-| 23:16 | MCAP Version – 定义能力寄存器结构的版本。<br>当能力寄存器结构被扩展以增加更多功能时,MCAP Version 随之递增。在此过程中必须保持向后兼容性。对于任意值 n,版本 n+1 可以在不重新定义现有字段语义的前提下，通过替换版本 n 中标记为保留的字段来扩展版本 n。针对较低版本编写的软件可继续在更高版本的能力结构上运行，但无法使用新功能。如果无法保持向后兼容性，则应创建新的 MCAP ID。能力寄存器结构中的每个字段均假定在该结构的版本 1 中引入，除非字段定义中另有说明。 | RO |
+| 23:16 | MCAP Version – 定义能力寄存器结构的版本。<br>当能力寄存器结构被扩展以增加更多功能时,MCAP Version 随之递增。在此过程中必须保持向后兼容性。对于任意值 n,版本 n+1 可以在不重新定义现有字段语义的前提下,通过替换版本 n 中标记为保留的字段来扩展版本 n。针对较低版本编写的软件可继续在更高版本的能力结构上运行,但无法使用新功能。如果无法保持向后兼容性,则应创建新的 MCAP ID。能力寄存器结构中的每个字段均假定在该结构的版本 1 中引入,除非字段定义中另有说明。 | RO |
 
 **Table 6-41. MCAP Header Register 2 | 表 6-41. MCAP 头寄存器 2**
 
@@ -22008,17 +21936,17 @@ Unless specified otherwise in the field definitions for the MMB Registers, each 
 
 MMIO 邮箱能力 (MMB) 提供了向功能 (Function) 发出命令的能力。
 
-MMB 接口应仅以单线程方式使用。避免对 MMB 寄存器的并发、未协调访问是软件的责任，可通过锁等机制实现。
+MMB 接口应仅以单线程方式使用。避免对 MMB 寄存器的并发、未协调访问是软件的责任,可通过锁等机制实现。
 
-MMB 命令超时时间为 2 秒。该时间是指在 MMB Control Register(参见 § Section 6.35.1.3.2.2)中 Doorbell 被置起 (Set) 之后，功能完成命令、清除 (Clear) Doorbell 并可选地发出 Command Ready Interrupt(若已配置)所允许的最长时间。
+MMB 命令超时时间为 2 秒。该时间是指在 MMB Control Register(参见 § Section 6.35.1.3.2.2)中 Doorbell 被置起 (Set) 之后,功能完成命令、清除 (Clear) Doorbell 并可选地发出 Command Ready Interrupt(若已配置)所允许的最长时间。
 
-MMB 命令不会跨越常规复位 (Conventional Reset) 继续执行。FLR 不要求对 MMB 操作的内部处理引擎产生任何类型的复位，尽管允许此类行为，具体命令也可能要求或禁止此行为。
+MMB 命令不会跨越常规复位 (Conventional Reset) 继续执行。FLR 不要求对 MMB 操作的内部处理引擎产生任何类型的复位,尽管允许此类行为,具体命令也可能要求或禁止此行为。
 
-可选的 MMB Attention Mechanism(注意机制)支持改进 MMB 实现的电源管理 (Power Management)，它允许 MMB 实例临时进入非响应状态，并为软件提供一种将实例引导回响应状态的机制。若 MMB Attention Mechanism Support 被置起，为保持向后兼容，默认情况下 MMB 实例必须保持响应状态。当 MMB 实例可以进入并保持不可立即使用的状态时，建议系统软件置起 MMB Attention Not Needed。当该位被清除 (Clear) 时,MMB 实例必须保持能够及时响应系统软件的状态。MMB At Attention 置起时，表示 MMB 接口当前处于就绪状态。该位仅可在 MMB Attention Not Needed 被置起时被清除。在 MMB Attention Not Needed 被清除后，该位允许保持清除状态最多 50 ms。
+可选的 MMB Attention Mechanism(注意机制)支持改进 MMB 实现的电源管理 (Power Management),它允许 MMB 实例临时进入非响应状态,并为软件提供一种将实例引导回响应状态的机制。若 MMB Attention Mechanism Support 被置起,为保持向后兼容,默认情况下 MMB 实例必须保持响应状态。当 MMB 实例可以进入并保持不可立即使用的状态时,建议系统软件置起 MMB Attention Not Needed。当该位被清除 (Clear) 时,MMB 实例必须保持能够及时响应系统软件的状态。MMB At Attention 置起时,表示 MMB 接口当前处于就绪状态。该位仅可在 MMB Attention Not Needed 被置起时被清除。在 MMB Attention Not Needed 被清除后,该位允许保持清除状态最多 50 ms。
 
-功能可支持通过 MSI/MSI-X 中断指示 MMB 命令状态。MMB 中断支持在 MMB Capabilities Register(参见 § Section 6.35.1.3.2.1)中枚举，并在 MMB Control Register(参见 § Section 6.35.1.3.2.2)中启用。
+功能可支持通过 MSI/MSI-X 中断指示 MMB 命令状态。MMB 中断支持在 MMB Capabilities Register(参见 § Section 6.35.1.3.2.1)中枚举,并在 MMB Control Register(参见 § Section 6.35.1.3.2.2)中启用。
 
-除非在 MMB 寄存器的字段定义中另有说明，这些结构中的每个字段均从版本 1 开始出现。功能必须通过 MCAP Header Register(参见 § Section 6.35.1.2)的 MCAP Version 字段报告这些结构的版本。
+除非在 MMB 寄存器的字段定义中另有说明,这些结构中的每个字段均从版本 1 开始出现。功能必须通过 MCAP Header Register(参见 § Section 6.35.1.2)的 MCAP Version 字段报告这些结构的版本。
 
 </td>
 </tr>
@@ -22073,24 +22001,24 @@ The flow for executing a command is described below. The term "caller" represent
 下面描述执行命令的流程。术语"调用方 (caller)"代表提交命令的实体。
 
 - 调用方确保功能已准备好在 MMB 上接受新命令。
-  - 在常规复位 (Conventional Reset) 之后，调用方确保 MMB 已完成初始化。
+  - 在常规复位 (Conventional Reset) 之后,调用方确保 MMB 已完成初始化。
     - 调用方在 MMB Status Register(参见 § Section 6.35.1.3.2.4)中轮询 MMB Ready 是否被置起。
   - 调用方确保 MMB 处于就绪状态。
-    - 若 MMB Capabilities Register(参见 § Section 6.35.1.3.2.1)中的 MMB Attention Mechanism Support 被置起，调用方读取 MMB Status Register(参见 § Section 6.35.1.3.2.4)中的 MMB At Attention。若该位为清除状态:
+    - 若 MMB Capabilities Register(参见 § Section 6.35.1.3.2.1)中的 MMB Attention Mechanism Support 被置起,调用方读取 MMB Status Register(参见 § Section 6.35.1.3.2.4)中的 MMB At Attention。若该位为清除状态:
       - 调用方在 MMB Control Register(参见 § Section 6.35.1.3.2.2)中清除 (Clear) MMB Attention Not Needed。
-      - 调用方要么轮询 MMB Status Register(参见 § Section 6.35.1.3.2.4)中的 MMB At Attention 直至置起，要么等待已配置时的 Command Ready Interrupt。
+      - 调用方要么轮询 MMB Status Register(参见 § Section 6.35.1.3.2.4)中的 MMB At Attention 直至置起,要么等待已配置时的 Command Ready Interrupt。
   - 调用方确保功能已准备好接受新命令。
     - 调用方轮询 MMB Control Register(参见 § Section 6.35.1.3.2.2)中的 Doorbell 是否被清除。
 - 调用方发出新命令。
   - 调用方写入 MMB Command Register(参见 § Section 6.35.1.3.2.3)。
-  - 若输入有效负载非空，调用方写入 MMB Payload Registers(参见 § Section 6.35.1.3.2.5)。
+  - 若输入有效负载非空,调用方写入 MMB Payload Registers(参见 § Section 6.35.1.3.2.5)。
   - 调用方在 MMB Control Register(参见 § Section 6.35.1.3.2.2)中置起 (Set) Doorbell。
 - 调用方等待命令完成。
-  - 调用方要么轮询 MMB Control Register(参见 § Section 6.35.1.3.2.2)中的 Doorbell 是否被清除，要么等待已配置时的 Command Ready Interrupt。
-  - 在发生命令超时时，调用方可通过对该功能发起常规复位 (Conventional Reset) 来尝试恢复该功能。
+  - 调用方要么轮询 MMB Control Register(参见 § Section 6.35.1.3.2.2)中的 Doorbell 是否被清除,要么等待已配置时的 Command Ready Interrupt。
+  - 在发生命令超时时,调用方可通过对该功能发起常规复位 (Conventional Reset) 来尝试恢复该功能。
 - 调用方获取命令结果。
   - 调用方读取 MMB Status Register(参见 § Section 6.35.1.3.2.4)中的 Return Code。
-  - 调用方读取 MMB Command Register(参见 § Section 6.35.1.3.2.3)中的 MMB Payload Length。若该值非零，则调用方读取 MMB Payload Registers(参见 § Section 6.35.1.3.2.5)以获取输出有效负载。
+  - 调用方读取 MMB Command Register(参见 § Section 6.35.1.3.2.3)中的 MMB Payload Length。若该值非零,则调用方读取 MMB Payload Registers(参见 § Section 6.35.1.3.2.5)以获取输出有效负载。
 
 </td>
 </tr>
@@ -22177,12 +22105,12 @@ The flow for executing a command is described below. The term "caller" represent
 
 | 位位置 | 寄存器描述 | 属性 |
 |---|---|---|
-| 4:0 | MMB Payload Registers Size – MMB Payload Registers(参见 § Section 6.35.1.3.2.5)的字节大小，以 2<sup>n</sup> 表示。最小为 256 字节(n=8)，最大为 1 MB(n=20)。 | HWInit |
-| 5 | Command Ready Interrupt Capable – 该字段指示 MMB 是否支持在 MMB Control Register(参见 § Section 6.35.1.3.2.2)中的 Doorbell 由置起变为清除，或 MMB Status Register(参见 § Section 6.35.1.3.2.4)中的 MMB At Attention 由清除变为置起时发出 MSI/MSI-X 中断。<br>0b = 不支持<br>1b = 支持 | HWInit |
-| 6 | Reserved for CXL – 该字段分配给 [CXL] 使用。在非 CXL 上下文中，该字段为保留。 | RsvdP |
-| 10:7 | Interrupt Message Number – 该字段指示与该 MMB 实例相关产生的中断消息所使用的 MSI/MSI-X 向量。对于 MSI,该字段值表示基础 Message Data 与所产生的中断消息之间的偏移。当软件写入 MSI 的 Message Control 寄存器的 Multiple Message Enable 字段而使分配给该功能的 MSI 消息数发生变化时，硬件需要更新此字段以保持正确。对于 MSI-X,该字段值表示用于产生中断消息的 MSI-X 表项。即使该功能实现超过 16 项，该表项也应为前 16 项之一。该字段值应在系统软件为该功能配置的范围内。对于给定的 MSI-X 实现，该表项应保持不变。若同时实现了 MSI 与 MSI-X,允许使用不同向量，但软件一次只允许启用其中一种机制。若启用了 MSI-X,该字段值应指示 MSI-X 的向量;若启用 MSI 或两者均未启用，该字段值指示 MSI 的向量。若软件同时启用 MSI 与 MSI-X,该字段值未定义。 | RO/RsvdP |
+| 4:0 | MMB Payload Registers Size – MMB Payload Registers(参见 § Section 6.35.1.3.2.5)的字节大小,以 2<sup>n</sup> 表示。最小为 256 字节(n=8),最大为 1 MB(n=20)。 | HWInit |
+| 5 | Command Ready Interrupt Capable – 该字段指示 MMB 是否支持在 MMB Control Register(参见 § Section 6.35.1.3.2.2)中的 Doorbell 由置起变为清除,或 MMB Status Register(参见 § Section 6.35.1.3.2.4)中的 MMB At Attention 由清除变为置起时发出 MSI/MSI-X 中断。<br>0b = 不支持<br>1b = 支持 | HWInit |
+| 6 | Reserved for CXL – 该字段分配给 [CXL] 使用。在非 CXL 上下文中,该字段为保留。 | RsvdP |
+| 10:7 | Interrupt Message Number – 该字段指示与该 MMB 实例相关产生的中断消息所使用的 MSI/MSI-X 向量。对于 MSI,该字段值表示基础 Message Data 与所产生的中断消息之间的偏移。当软件写入 MSI 的 Message Control 寄存器的 Multiple Message Enable 字段而使分配给该功能的 MSI 消息数发生变化时,硬件需要更新此字段以保持正确。对于 MSI-X,该字段值表示用于产生中断消息的 MSI-X 表项。即使该功能实现超过 16 项,该表项也应为前 16 项之一。该字段值应在系统软件为该功能配置的范围内。对于给定的 MSI-X 实现,该表项应保持不变。若同时实现了 MSI 与 MSI-X,允许使用不同向量,但软件一次只允许启用其中一种机制。若启用了 MSI-X,该字段值应指示 MSI-X 的向量;若启用 MSI 或两者均未启用,该字段值指示 MSI 的向量。若软件同时启用 MSI 与 MSI-X,该字段值未定义。 | RO/RsvdP |
 | 18:11 | MMB Ready Time – 该字段指示在常规复位 (Conventional Reset) 之后,MMB Status Register(参见 § Section 6.35.1.3.2.4)中的 MMB Ready 变为置起的最大秒数。值为 0 表示 2 秒。 | HWInit |
-| 22:19 | Type – 该字段标识 MMB 所支持的类型特定命令。<br>类型由功能 (Function) 的 Class Code 对应的 24 位值推断。如果 Class Code 未与任何类型特定命令关联，则不存在类型特定命令。<br>0h = 类型由 Class Code 推断。<br>1h-7h = 保留 – 分配给 [CXL]。<br>其他 = 所有其他编码均保留。 | HWInit |
+| 22:19 | Type – 该字段标识 MMB 所支持的类型特定命令。<br>类型由功能 (Function) 的 Class Code 对应的 24 位值推断。如果 Class Code 未与任何类型特定命令关联,则不存在类型特定命令。<br>0h = 类型由 Class Code 推断。<br>1h-7h = 保留 – 分配给 [CXL]。<br>其他 = 所有其他编码均保留。 | HWInit |
 | 23 | MMB Attention Mechanism Capable – 该字段指示 MMB 是否支持可选的 MMB Attention Mechanism(注意机制)。<br>0b = 不支持<br>1b = 支持 | HWInit |
 
 <img src="figures/chapter_06/fig_0965_1_tight.png" width="700">
@@ -22234,10 +22162,10 @@ The flow for executing a command is described below. The term "caller" represent
 
 | 位位置 | 寄存器描述 | 属性 |
 |---|---|---|
-| 0 | Doorbell – 当 MMB Ready 被置起时，该位为清除状态时表示功能已准备好接受新命令。由调用方置起以通知功能命令输入已就绪。置起时为只读。在命令完成时由功能清除。<br>0b = 准备好接受命令<br>1b = 正在执行命令或初始化中<br>该字段默认值为 1b。当 MMB Status Register 中的 MMB Ready 被置起时，由功能清除。 | RW |
-| 1 | Command Ready Interrupt Enable – 当 Command Ready Interrupt Capable 被置起时，该位置起后将使能 MMB 在 Doorbell 由置起变为清除、或 MMB Status Register(参见 § Section 6.35.1.3.2.4)中的 MMB At Attention 由清除变为置起时发出 MSI/MSI-X 中断。当 Doorbell 置起时为只读。<br>当 Command Ready Interrupt Capable 被清除时，该位可作为 RsvdP。<br>0b = 禁用<br>1b = 启用<br>该字段默认值为 0b。 | RW/RsvdP |
-| 2 | Reserved for CXL – 该字段分配给 [CXL] 使用。在非 CXL 上下文中，该字段为保留。 | RsvdP |
-| 3 | MMB Attention Not Needed – 若 MMB Attention Mechanism Capable 被置起，该位置起后将允许 MMB 进入并保持不可立即使用的状态。当该位被清除时,MMB 必须保持响应状态。 | RW/RsvdP |
+| 0 | Doorbell – 当 MMB Ready 被置起时,该位为清除状态时表示功能已准备好接受新命令。由调用方置起以通知功能命令输入已就绪。置起时为只读。在命令完成时由功能清除。<br>0b = 准备好接受命令<br>1b = 正在执行命令或初始化中<br>该字段默认值为 1b。当 MMB Status Register 中的 MMB Ready 被置起时,由功能清除。 | RW |
+| 1 | Command Ready Interrupt Enable – 当 Command Ready Interrupt Capable 被置起时,该位置起后将使能 MMB 在 Doorbell 由置起变为清除、或 MMB Status Register(参见 § Section 6.35.1.3.2.4)中的 MMB At Attention 由清除变为置起时发出 MSI/MSI-X 中断。当 Doorbell 置起时为只读。<br>当 Command Ready Interrupt Capable 被清除时,该位可作为 RsvdP。<br>0b = 禁用<br>1b = 启用<br>该字段默认值为 0b。 | RW/RsvdP |
+| 2 | Reserved for CXL – 该字段分配给 [CXL] 使用。在非 CXL 上下文中,该字段为保留。 | RsvdP |
+| 3 | MMB Attention Not Needed – 若 MMB Attention Mechanism Capable 被置起,该位置起后将允许 MMB 进入并保持不可立即使用的状态。当该位被清除时,MMB 必须保持响应状态。 | RW/RsvdP |
 
 <img src="figures/chapter_06/fig_0966_1_tight.png" width="700">
 </td>
@@ -22281,7 +22209,7 @@ The MMB Command Register shall only be used by the caller when the Doorbell in t
 位 位置
 寄存器描述
 属性
-当 MMB Attention Mechanism Support 清零时，该位允许为 RsvdP。
+当 MMB Attention Mechanism Support 清零时,该位允许为 RsvdP。
 需要注意
 不需要注意
 此位的默认值为 0b。
@@ -22368,7 +22296,7 @@ RW
 此字段默认值为 0000h。
 RW
 
-**36:16 — MMB Payload Length（MMB 有效负载长度）** – MMB Payload Registers（见 § 6.35.1.3.2.5 ）中数据的大小，以字节为单位。此字段的有效值必须小于或等于 MMB Capabilities Register（见 § 6.35.1.3.2.1 ）中指定的 MMB Payload Registers Size。由调用方在设置 MMB Control Register（见 § 6.35.1.3.2.2 ）中的 Doorbell 之前写入，以向 Function 提供命令输入有效负载大小。调用方指定的大于 MMB Payload Registers Size 的值会导致在 MMB Return Code 字段中返回 Invalid Payload Length 错误。当 MMB Control Register（见 § 6.35.1.3.2.2 ）中的 Doorbell 被清零时，由 Function 写入，以向调用方提供命令输出有效负载大小。
+**36:16 — MMB Payload Length（MMB 有效负载长度）** – MMB Payload Registers（见 § 6.35.1.3.2.5 ）中数据的大小,以字节为单位。此字段的有效值必须小于或等于 MMB Capabilities Register（见 § 6.35.1.3.2.1 ）中指定的 MMB Payload Registers Size。由调用方在设置 MMB Control Register（见 § 6.35.1.3.2.2 ）中的 Doorbell 之前写入,以向 Function 提供命令输入有效负载大小。调用方指定的大于 MMB Payload Registers Size 的值会导致在 MMB Return Code 字段中返回 Invalid Payload Length 错误。当 MMB Control Register（见 § 6.35.1.3.2.2 ）中的 Doorbell 被清零时,由 Function 写入,以向调用方提供命令输出有效负载大小。
 此字段默认值为 00000h。
 RW
 
@@ -22464,15 +22392,15 @@ RO
 寄存器描述
 属性
 
-**0 — Reserved for CXL（CXL 保留）** – 此字段分配给 [CXL] 使用。在非 CXL 上下文中，此字段为保留。
+**0 — Reserved for CXL（CXL 保留）** – 此字段分配给 [CXL] 使用。在非 CXL 上下文中,此字段为保留。
 RsvdP
 
-**1 — MMB Ready（MMB 就绪）** – 当此位置 1 时，表示 Function 已准备好通过 MMB 接口接受命令。报告非零 MMB Ready Time 的 Function 应在常规复位（Conventional Reset）后，在 MMB Ready Time 字段所报告的时间内置位该位，并保持置位状态，直到下一次常规复位，或 Function 遇到阻止任何 MMB 通信的错误。
+**1 — MMB Ready（MMB 就绪）** – 当此位置 1 时,表示 Function 已准备好通过 MMB 接口接受命令。报告非零 MMB Ready Time 的 Function 应在常规复位（Conventional Reset）后,在 MMB Ready Time 字段所报告的时间内置位该位,并保持置位状态,直到下一次常规复位,或 Function 遇到阻止任何 MMB 通信的错误。
 未就绪
 就绪
 RO
 
-**2 — MMB At Attention（MMB 处于 Attention 状态）** – 当 MMB Attention Mechanism Capable 置 1 时，该位置 1 表示 MMB 接口当前处于就绪状态。如果 Command Ready Interrupt Enable 已置位，则该位从清零到置 1 的跳变会触发 Command Ready 中断。当 MMB Attention Mechanism Support 清零时，该位为 RsvdP。当 MMB Ready 置 1 时，该位由 Function 置 1。
+**2 — MMB At Attention（MMB 处于 Attention 状态）** – 当 MMB Attention Mechanism Capable 置 1 时,该位置 1 表示 MMB 接口当前处于就绪状态。如果 Command Ready Interrupt Enable 已置位,则该位从清零到置 1 的跳变会触发 Command Ready 中断。当 MMB Attention Mechanism Support 清零时,该位为 RsvdP。当 MMB Ready 置 1 时,该位由 Function 置 1。
 未处于 Attention 状态
 处于 Attention 状态
 RO/RsvdP
@@ -22510,7 +22438,7 @@ For legacy compatibility with OS software, platform firmware should clear the MM
 
 **实现注意事项（IMPLEMENTATION NOTE）:**
 **MMB 命令操作码供应商 ID 旧版兼容性**
-为了与操作系统软件的旧版兼容，平台固件应在操作系统移交之前将 MMB Command Opcode Vendor ID 清零为 0000h。
+为了与操作系统软件的旧版兼容,平台固件应在操作系统移交之前将 MMB Command Opcode Vendor ID 清零为 0000h。
 
 </td>
 </tr>
@@ -22549,11 +22477,11 @@ PCI-SIG defined command return codes are only valid for PCI-SIG defined commands
 </td>
 <td style="background-color:#e8e8e8">
 
-命令返回代码与定义该命令的实体相关联，如 MMB 命令寄存器中的 MMB Command Opcode Vendor ID 所指示的那样。
+命令返回代码与定义该命令的实体相关联,如 MMB 命令寄存器中的 MMB Command Opcode Vendor ID 所指示的那样。
 
-MMB Command Return Code 由 Function 置位，以向调用方（Caller）指示命令的结果。如果适用多个 MMB 命令返回代码，则由 Function 选择返回哪一个。
+MMB Command Return Code 由 Function 置位,以向调用方（Caller）指示命令的结果。如果适用多个 MMB 命令返回代码,则由 Function 选择返回哪一个。
 
-通常，不建议对返回错误的命令进行重试，除非在返回代码定义中明确指出。
+通常,不建议对返回错误的命令进行重试,除非在返回代码定义中明确指出。
 
 PCI-SIG 定义的命令返回代码仅对 PCI-SIG 定义的命令有效。
 
@@ -22609,7 +22537,7 @@ These registers must only be used by the caller when the Doorbell in the MMB Con
 
 MMB Payload Registers 的大小必须为 256 字节至 1 MB,如 § 图 6-98 所示。MMB Payload Registers 的大小在 MMB Capabilities Register（见 § 6.35.1.3.2.1 ）中报告。超出 MMB Capabilities Register 所指定大小的任何数据都将被调用方和 Function 忽略。
 
-MMB Payload Registers 由调用方在置位 MMB Control Register（见 § 6.35.1.3.2.2 ）中的 Doorbell 之前写入，以向 Function 提供命令输入有效负载。它们由 Function 在清零 Doorbell 之前写入，以向调用方提供命令输出有效负载。
+MMB Payload Registers 由调用方在置位 MMB Control Register（见 § 6.35.1.3.2.2 ）中的 Doorbell 之前写入,以向 Function 提供命令输入有效负载。它们由 Function 在清零 Doorbell 之前写入,以向调用方提供命令输出有效负载。
 
 这些寄存器只能在 MMB Control Register（见 § 6.35.1.3.2.2 ）中的 Doorbell 清零时由调用方使用。
 
@@ -22651,9 +22579,9 @@ Unless specified otherwise in the field definitions, each field is present in ve
 </td>
 <td style="background-color:#e8e8e8">
 
-Management Message Passthrough（MMPT）能力结构对于支持 MMPT 命令集的 Function 是必需的。有关此能力结构的使用，请参阅 MMPT 命令接口（§ 6.36.1 ）。
+Management Message Passthrough（MMPT）能力结构对于支持 MMPT 命令集的 Function 是必需的。有关此能力结构的使用,请参阅 MMPT 命令接口（§ 6.36.1 ）。
 
-除非字段定义中另有规定，否则每个字段都出现在此结构的版本 1 及更高版本中。Function 应在 MCAP Header Register 的 MCAP Version 字段中报告此结构的版本。
+除非字段定义中另有规定,否则每个字段都出现在此结构的版本 1 及更高版本中。Function 应在 MCAP Header Register 的 MCAP Version 字段中报告此结构的版本。
 
 § 图 6-99 说明了 MMPT 寄存器结构。
 
@@ -22746,13 +22674,13 @@ RO/RsvdP
 支持
 RO
 
-**4:1 — MMPT Receive Message Interrupt Message Number（MMPT 接收消息中断消息号）** – 此字段指示在 MMPT Receive Message Ready 从清零跳变为置 1 时，使用哪个 MSI/MSI-X 向量生成中断消息。
+**4:1 — MMPT Receive Message Interrupt Message Number（MMPT 接收消息中断消息号）** – 此字段指示在 MMPT Receive Message Ready 从清零跳变为置 1 时,使用哪个 MSI/MSI-X 向量生成中断消息。
 
-对于 MSI,此字段中的值表示基准 Message Data 与生成的中断消息之间的偏移量。当软件写入 MSI 的 Message Control 寄存器中的 Multiple Message Enable 字段，从而导致分配给 Function 的 MSI 消息数发生变化时，需要硬件更新此字段以保持其正确性。
+对于 MSI,此字段中的值表示基准 Message Data 与生成的中断消息之间的偏移量。当软件写入 MSI 的 Message Control 寄存器中的 Multiple Message Enable 字段,从而导致分配给 Function 的 MSI 消息数发生变化时,需要硬件更新此字段以保持其正确性。
 
-对于 MSI-X,此字段中的值指示使用哪个 MSI-X 表条目来生成中断消息。该条目必须是前 16 个条目之一，即使 Function 实现了超过 16 个条目。此字段中的值应处于系统软件为设备配置的范围内。对于给定的 MSI-X 实现，该条目应保持不变。
+对于 MSI-X,此字段中的值指示使用哪个 MSI-X 表条目来生成中断消息。该条目必须是前 16 个条目之一,即使 Function 实现了超过 16 个条目。此字段中的值应处于系统软件为设备配置的范围内。对于给定的 MSI-X 实现,该条目应保持不变。
 
-如果同时实现了 MSI 和 MSI-X,则允许它们使用不同的向量，但软件一次只允许启用其中一种机制。如果启用了 MSI-X,则此字段中的值应指示 MSI-X 的向量。如果启用了 MSI 或两者都未启用，则此字段中的值指示 MSI 的向量。如果软件同时启用 MSI 和 MSI-X,则此字段中的值是未定义的。
+如果同时实现了 MSI 和 MSI-X,则允许它们使用不同的向量,但软件一次只允许启用其中一种机制。如果启用了 MSI-X,则此字段中的值应指示 MSI-X 的向量。如果启用了 MSI 或两者都未启用,则此字段中的值指示 MSI 的向量。如果软件同时启用 MSI 和 MSI-X,则此字段中的值是未定义的。
 RO/RsvdP
 
 </td>
@@ -22831,7 +22759,7 @@ RW/RsvdP
 寄存器描述
 属性
 
-**0 — MMPT Receive Message Interrupt Enable（MMPT 接收消息中断使能）** – 当 MMPT Receive Message Interrupt Capable 置 1 时，该位置 1 将使能 Function 在 MMPT Receive Message Ready 从清零跳变为置 1 时发出 MSI/MSI-X 中断。当 MMPT Receive Message Interrupt Capable 清零时，该位允许为 RsvdP。
+**0 — MMPT Receive Message Interrupt Enable（MMPT 接收消息中断使能）** – 当 MMPT Receive Message Interrupt Capable 置 1 时,该位置 1 将使能 Function 在 MMPT Receive Message Ready 从清零跳变为置 1 时发出 MSI/MSI-X 中断。当 MMPT Receive Message Interrupt Capable 清零时,该位允许为 RsvdP。
 禁用
 使能
 此字段默认值为 0b。
@@ -22908,7 +22836,7 @@ RO
 寄存器描述
 属性
 
-**0 — MMPT Receive Message Ready（MMPT 接收消息就绪）** – 当置 1 时，表示有新的管理消息已准备好使用 MMPT Receive Message 命令（见 § 6.36.1.2 ）从 Function 传输到主机。
+**0 — MMPT Receive Message Ready（MMPT 接收消息就绪）** – 当置 1 时,表示有新的管理消息已准备好使用 MMPT Receive Message 命令（见 § 6.36.1.2 ）从 Function 传输到主机。
 RO
 
 **23:16 — MMPT Receive Message Type（MMPT 接收消息类型）** – 此字段指示已准备好使用 MMPT Receive Message 命令（见 § 6.36.1.2 ）从 Function 传输到主机的管理消息的性质和格式。此字段的编码在 [PCI-Code-and-ID] 中提供。所有未指定的编码均为保留。
@@ -22948,7 +22876,7 @@ The MMIO Designated Vendor-Specific Register Block (MDVS) allows a Vendor-Specif
 </td>
 <td style="background-color:#e8e8e8">
 
-MMIO Designated Vendor-Specific Register Block（MDVS）允许通过使用 MRBL 扩展能力结构（§ 7.9.30 ）来发现供应商特定的内存空间寄存器块。MDVS 寄存器块的格式以 MDVS Register Block Header Register（见 § 6.35.2.1 和 § 6.35.3 ）开始，如 § 图 6-103 所示。MDVS Register BlockMDVS Register Block 的其余部分由供应商定义。允许单个 Function 在 MDVS Register Block 中实现一个以上。
+MMIO Designated Vendor-Specific Register Block（MDVS）允许通过使用 MRBL 扩展能力结构（§ 7.9.30 ）来发现供应商特定的内存空间寄存器块。MDVS 寄存器块的格式以 MDVS Register Block Header Register（见 § 6.35.2.1 和 § 6.35.3 ）开始,如 § 图 6-103 所示。MDVS Register BlockMDVS Register Block 的其余部分由供应商定义。允许单个 Function 在 MDVS Register Block 中实现一个以上。
 
 </td>
 </tr>
@@ -23045,7 +22973,7 @@ RO
 </td>
 <td style="background-color:#e8e8e8">
 
-**31:16 — MDVS Register Block ID（MDVS 寄存器块 ID）** – 由位 15:0 中的供应商 ID 定义的值，用于指示供应商特定寄存器的性质和格式。
+**31:16 — MDVS Register Block ID（MDVS 寄存器块 ID）** – 由位 15:0 中的供应商 ID 定义的值,用于指示供应商特定寄存器的性质和格式。
 RO
 
 </td>
@@ -23108,7 +23036,7 @@ RO
 寄存器描述
 属性
 
-**3:0 — MDVS Register Block Revision（MDVS 寄存器块修订版本）** – 由位 15:0 中的供应商 ID 定义的版本号，用于指示该寄存器块的版本。
+**3:0 — MDVS Register Block Revision（MDVS 寄存器块修订版本）** – 由位 15:0 中的供应商 ID 定义的版本号,用于指示该寄存器块的版本。
 RO
 
 </td>
@@ -23171,7 +23099,7 @@ RO
 寄存器描述
 属性
 
-**31:0 — MDVS Register Block Length（MDVS 寄存器块长度）** – 该寄存器块中的字节数，包括 MDVS Register Block Header 和供应商特定寄存器。
+**31:0 — MDVS Register Block Length（MDVS 寄存器块长度）** – 该寄存器块中的字节数,包括 MDVS Register Block Header 和供应商特定寄存器。
 RO
 
 </td>

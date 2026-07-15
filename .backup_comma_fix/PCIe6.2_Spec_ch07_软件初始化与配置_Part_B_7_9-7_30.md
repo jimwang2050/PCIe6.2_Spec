@@ -1,4 +1,3 @@
-<a id="sec-7-9-0"></a>
 ## 7.9 Additional PCI and PCIe Capabilities | 7.9 其他 PCI 和 PCIe 能力
 
 <table>
@@ -17,14 +16,14 @@ This section, contains a description of additional PCI and PCIe capabilities tha
 </td>
 <td style="background-color:#e8e8e8">
 
-本节描述本规范中各自独立的可选 PCI 和 PCIe 能力，虽然这些能力在本规范中是可选的，但其他 PCI-SIG 规范可能要求实现。
+本节描述本规范中各自独立的可选 PCI 和 PCIe 能力,虽然这些能力在本规范中是可选的,但其他 PCI-SIG 规范可能要求实现。
 
 </td>
 </tr>
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -49,7 +48,7 @@ The Virtual Channel Extended Capability (VC Extended Capability) is an optional 
 </td>
 <td style="background-color:#e8e8e8">
 
-虚通道扩展能力(VC Extended Capability)是一项可选的扩展能力，适用于在默认虚通道(VC0)上支持超出默认流量类(TC0)功能的设备 Port(或单个 Function)。这可以适用于仅支持一个 VC 但具有 TC 过滤功能的设备，或支持多个 VC 的设备。请注意，仅在 VC0 上支持 TC0 的 PCI Express 设备不需要 VC 扩展能力及其相关寄存器。§ 图 7-221 提供了虚通道扩展能力结构的高层视图。该结构控制 PCI Express 链路的虚通道分配，可出现在包含(控制)一个 Port 的任何设备(或 RCRB)中，或任何具有多函数虚通道(MFVC)能力结构的设备中。虚通道扩展能力结构中的某些寄存器/字段可能对 Endpoint、Switch 端口、Root Port 和 RCRB 具有不同的解释。
+虚通道扩展能力(VC Extended Capability)是一项可选的扩展能力,适用于在默认虚通道(VC0)上支持超出默认流量类(TC0)功能的设备 Port(或单个 Function)。这可以适用于仅支持一个 VC 但具有 TC 过滤功能的设备,或支持多个 VC 的设备。请注意,仅在 VC0 上支持 TC0 的 PCI Express 设备不需要 VC 扩展能力及其相关寄存器。§ 图 7-221 提供了虚通道扩展能力结构的高层视图。该结构控制 PCI Express 链路的虚通道分配,可出现在包含(控制)一个 Port 的任何设备(或 RCRB)中,或任何具有多函数虚通道(MFVC)能力结构的设备中。虚通道扩展能力结构中的某些寄存器/字段可能对 Endpoint、Switch 端口、Root Port 和 RCRB 具有不同的解释。
 
 </td>
 </tr>
@@ -58,7 +57,7 @@ The Virtual Channel Extended Capability (VC Extended Capability) is an optional 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -91,15 +90,15 @@ To preserve software backward compatibility, two Extended Capability IDs are per
 </td>
 <td style="background-color:#e8e8e8">
 
-软件必须解读 PCI Express 能力寄存器中的 Device/Port Type 字段，以确定这些寄存器/字段的可用性与含义。
+软件必须解读 PCI Express 能力寄存器中的 Device/Port Type 字段,以确定这些寄存器/字段的可用性与含义。
 
 (扩展)虚通道的数量由 Port VC Capability Register 1 中的 Extended VC Count 字段表示。软件必须解读该字段以确定扩展 VC 资源寄存器的可用性。
 
-VC 扩展能力结构允许出现在所有单 Function 设备的扩展配置空间(Extended Configuration Space)中，或出现在 RCRB 中。
+VC 扩展能力结构允许出现在所有单 Function 设备的扩展配置空间(Extended Configuration Space)中,或出现在 RCRB 中。
 
 每个 VF 使用其关联 PF 的虚通道。VF 自身不得包含任何虚通道能力。
 
-位于 Upstream Port 的多函数设备允许包含多函数虚通道(MFVC)能力结构(参见 § 7.9.2)。如果多函数设备包含 MFVC 能力结构，则其任何或所有 Function(VF 除外)允许包含 VC 扩展能力结构。仅包含 Switch 下游端口 Function 的 Switch 内部设备或 RCiEP 也允许包含按 Function 的 VC 扩展能力结构。除此之外，仅 Function 0 允许包含 VC 扩展能力结构。
+位于 Upstream Port 的多函数设备允许包含多函数虚通道(MFVC)能力结构(参见 § 7.9.2)。如果多函数设备包含 MFVC 能力结构,则其任何或所有 Function(VF 除外)允许包含 VC 扩展能力结构。仅包含 Switch 下游端口 Function 的 Switch 内部设备或 RCiEP 也允许包含按 Function 的 VC 扩展能力结构。除此之外,仅 Function 0 允许包含 VC 扩展能力结构。
 
 为保持软件向后兼容性,VC 扩展能力结构允许使用两个扩展能力 ID:0002h 和 0009h。同时包含 MFVC 能力结构的设备中的任何 VC 扩展能力结构必须使用扩展能力 ID 0009h。不包含 MFVC 能力结构的设备中的 VC 扩展能力结构必须使用扩展能力 ID 0002h。
 
@@ -108,7 +107,7 @@ VC 扩展能力结构允许出现在所有单 Function 设备的扩展配置空�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -216,9 +215,9 @@ PAT_Offset(0)(端口仲裁表偏移(0))
 PAT_Offset(n)(端口仲裁表偏移(n))
 *10h
 VC Resource Status Register (n)(VC 资源状态寄存器 (n))
-RsvdP(保留，保留置位)
+RsvdP(保留,保留置位)
 VC Resource Status Register (0)(VC 资源状态寄存器 (0))
-RsvdP(保留，保留置位)
+RsvdP(保留,保留置位)
 VC Arbitration Table(VC 仲裁表)
 VC Resource Capability Register (0)(VC 资源能力寄存器 (0))
 VC Resource Control Register (0)(VC 资源控制寄存器 (0))
@@ -237,7 +236,7 @@ Port Arbitration Table (n)(端口仲裁表 (n))
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -261,14 +260,14 @@ Refer to § Section 7.6.3 for a description of the PCI Express Extended Capabili
 
 以下各节描述虚通道扩展能力结构的寄存器/字段。
 
-有关 PCI Express 扩展能力头的描述，请参见 § 7.6.3。虚通道扩展能力必须使用两个扩展能力 ID 之一:0002h 或 0009h。有关何时应使用何种 ID 的规则，请参见 § 7.9.1。§ 图 7-222 详述了虚通道扩展能力头中寄存器字段的分配;§ 表 7-201 给出了相应的位定义。
+有关 PCI Express 扩展能力头的描述,请参见 § 7.6.3。虚通道扩展能力必须使用两个扩展能力 ID 之一:0002h 或 0009h。有关何时应使用何种 ID 的规则,请参见 § 7.9.1。§ 图 7-222 详述了虚通道扩展能力头中寄存器字段的分配;§ 表 7-201 给出了相应的位定义。
 
 </td>
 </tr>
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -317,7 +316,7 @@ Next Capability Offset(下一能力偏移量)
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -366,16 +365,16 @@ RO
 寄存器描述
 属性
 15:0
-PCI Express Extended Capability ID(PCI Express 扩展能力 ID) – 该字段是 PCI-SIG 定义的 ID 编号，用于指示扩展能力的性质和格式。
+PCI Express Extended Capability ID(PCI Express 扩展能力 ID) – 该字段是 PCI-SIG 定义的 ID 编号,用于指示扩展能力的性质和格式。
 虚通道扩展能力的扩展能力 ID 为 0002h 或 0009h。
 RO
 19:16
-Capability Version(能力版本) – 该字段是 PCI-SIG 定义的版本号，用于指示所呈现能力结构的版本。
-对于本版本的规范，必须为 1h。
+Capability Version(能力版本) – 该字段是 PCI-SIG 定义的版本号,用于指示所呈现能力结构的版本。
+对于本版本的规范,必须为 1h。
 RO
 31:20
-Next Capability Offset(下一能力偏移量) – 该字段包含指向下一 PCI Express 能力结构的偏移量;若链接的能力列表中不存在其他项，则为 000h。
-对于在配置空间中实现的扩展能力，该偏移量相对于 PCI 兼容配置空间的起始位置，因此必须始终为 000h(表示能力列表的终止)或大于 0FFh。
+Next Capability Offset(下一能力偏移量) – 该字段包含指向下一 PCI Express 能力结构的偏移量;若链接的能力列表中不存在其他项,则为 000h。
+对于在配置空间中实现的扩展能力,该偏移量相对于 PCI 兼容配置空间的起始位置,因此必须始终为 000h(表示能力列表的终止)或大于 0FFh。
 RO
 
 </td>
@@ -385,7 +384,7 @@ RO
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -417,7 +416,7 @@ Port VC Capability Register 1 描述与 PCI Express Port 关联的虚通道的�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -465,12 +464,12 @@ Figure 7-223 Port VC Capability Register 1
 2
 Extended VC Count(扩展 VC 数量)
 3
-RsvdP(保留，保留置位)
+RsvdP(保留,保留置位)
 4
 6
 Low Priority Extended VC Count(低优先级扩展 VC 数量)
 7
-RsvdP(保留，保留置位)
+RsvdP(保留,保留置位)
 8
 9
 Reference Clock(参考时钟)
@@ -479,7 +478,7 @@ Reference Clock(参考时钟)
 Port Arbitration Table Entry Size(端口仲裁表条目大小)
 12
 31
-RsvdP(保留，保留置位)
+RsvdP(保留,保留置位)
 图 7-223 Port VC 能力寄存器 1
 
 </td>
@@ -487,7 +486,7 @@ RsvdP(保留，保留置位)
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -527,11 +526,11 @@ RO
 属性
 2:0
 Extended VC Count(扩展 VC 数量) – 指示除设备支持的默认 VC 之外的(扩展)虚通道数量。该字段对所有 Function 有效。
-该值指示在配置空间中，除默认 VC 所需的 VC 资源寄存器外，还存在多少(扩展)VC 资源能力、控制和状态寄存器。
+该值指示在配置空间中,除默认 VC 所需的 VC 资源寄存器外,还存在多少(扩展)VC 资源能力、控制和状态寄存器。
 该字段的最小值为 0(适用于仅支持默认 VC 且只有该 VC 一套 VC 资源寄存器的设备)。最大值为 7。
 RO
 6:4
-Low Priority Extended VC Count(低优先级扩展 VC 数量) – 指示除默认 VC 外，属于低优先级 VC(LPVC)组的(扩展)虚通道数量，该组在严格优先级 VC 仲裁中相对于其他 VC 资源具有最低优先级。该字段对所有 Function 有效。
+Low Priority Extended VC Count(低优先级扩展 VC 数量) – 指示除默认 VC 外,属于低优先级 VC(LPVC)组的(扩展)虚通道数量,该组在严格优先级 VC 仲裁中相对于其他 VC 资源具有最低优先级。该字段对所有 Function 有效。
 该字段的最小值为 000b,最大值为 Extended VC Count。
 RO
 
@@ -542,7 +541,7 @@ RO
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -596,7 +595,7 @@ Bit 0
 寄存器描述
 属性
 9:8
-Reference Clock(参考时钟) – 指示支持基于时间的 WRR 端口仲裁的虚通道所使用的参考时钟。该字段对支持点对点(peer-to-peer)流量的 RCRB、Switch 端口和 Root Port 有效。对于不支持点对点流量的 Root Port、Endpoint,以及未实现 WRR 的 Switch 或根复合体(RC)，该字段无效，且必须硬连线为 00b。
+Reference Clock(参考时钟) – 指示支持基于时间的 WRR 端口仲裁的虚通道所使用的参考时钟。该字段对支持点对点(peer-to-peer)流量的 RCRB、Switch 端口和 Root Port 有效。对于不支持点对点流量的 Root Port、Endpoint,以及未实现 WRR 的 Switch 或根复合体(RC),该字段无效,且必须硬连线为 00b。
 已定义的编码为:
 100 ns 参考时钟
 保留
@@ -615,7 +614,7 @@ RO
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -642,7 +641,7 @@ Port VC Capability Register 2 提供有关与 PCI Express Port 关联的虚通�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -678,7 +677,7 @@ Figure 7-224 Port VC Capability Register 2
 VC Arbitration Capability(VC 仲裁能力)
 8
 23
-RsvdP(保留，保留置位)
+RsvdP(保留,保留置位)
 24
 31
 VC Arbitration Table Offset(VC 仲裁表偏移量)
@@ -689,7 +688,7 @@ VC Arbitration Table Offset(VC 仲裁表偏移量)
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -726,9 +725,9 @@ RO
 属性
 7:0
 VC Arbitration Capability(VC 仲裁能力) – 指示 Function 为 LPVC 组所支持的 VC 仲裁类型。该字段对所有上报 Low Priority Extended VC Count 字段大于 0 的 Function 有效。对于所有其他 Function,该字段必须硬连线为 00h。
-该字段中的每个位位置对应于下述一种 VC 仲裁能力。当该字段中有多于 1 个位被置位时，表示该 Port 可被配置为提供不同的 VC 仲裁服务。
+该字段中的每个位位置对应于下述一种 VC 仲裁能力。当该字段中有多于 1 个位被置位时,表示该 Port 可被配置为提供不同的 VC 仲裁服务。
 已定义的位位置为:
-硬件固定仲裁方案，例如轮询(Round Robin)
+硬件固定仲裁方案,例如轮询(Round Robin)
 RO
 
 </td>
@@ -738,7 +737,7 @@ RO
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -849,7 +848,7 @@ RsvdP
 | 3:1 | VC Arbitration Select (VC 仲裁选择) — 软件通过选择 Port VC Capability Register 2 中 VC Arbitration Capability 字段所指示的支持的 VC 仲裁方案之一来配置 VC 仲裁。该字段对所有 Function 有效。<br>该字段的允许值是与 VC Arbitration Capability 字段中置位位之一相对应的数字。<br>当 LPVC 组中启用的 VC 多于一个时,该字段不可修改。 | RW |
 | 4 | All VCs Enabled (使能所有 VC) — 置位该位表示将被端口使用的所有 VC 均已启用。置位该位允许硬件在已启用的 VC 之间分配已分配的缓冲区资源。 | RW |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -891,8 +890,8 @@ Figure 7-226 Port VC Status Register
 位位置
 寄存器描述
 属性
-置位该位是可选的。如果该位保持清除状态且某些 VC 资源永远不被启用，则性能可能受到影响，但链路 (Link) 和所有已启用的 VC 必须正确运行。
-如果该位置位且此能力中的任何 VC Enable 位改变了值，则行为未定义。
+置位该位是可选的。如果该位保持清除状态且某些 VC 资源永远不被启用,则性能可能受到影响,但链路 (Link) 和所有已启用的 VC 必须正确运行。
+如果该位置位且此能力中的任何 VC Enable 位改变了值,则行为未定义。
 该位的默认值为 0b。
 Port VC Status Register (端口 VC 状态寄存器) 提供与端口关联的虚通道 (Virtual Channels) 配置的状态。§ 图 7-226 详细说明了 Port VC Status Register 中各寄存器字段的分配;§ 表 7-205 给出了相应的位定义。
 
@@ -927,7 +926,7 @@ The VC Resource Capability Register describes the capabilities and configuration
 
 VC Resource Capability Register (VC 资源能力寄存器) 描述特定虚通道资源的能力和配置。§ 图 7-227 详细说明了 VC Resource Capability Register 中各寄存器字段的分配;§ 表 7-206 给出了相应的位定义。
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -1037,7 +1036,7 @@ Port Arbitration Table Offset (端口仲裁表偏移量)
 | 15 | Reject Snoop Transactions (拒绝探测事务) — 当清除时,在 TLP (事务层包) Header 中设置了或未设置 No Snoop 位的事务都允许在该 VC 上传输。当置位时,对于任何 No Snoop 属性适用但 TLP Header 中未设置该属性的事务,允许作为 Unsupported Request (不支持的请求) 拒绝。<br>有关 No Snoop 属性适用位置的信息,请参阅 § Section 2.2.6.5。该位对 Root Port 和 RCRB 有效;对 Endpoint 或 Switch Port 无效。 | HwInit |
 | 22:16 | Maximum Time Slots (最大时间槽数) — 指示当 VC 资源被配置用于基于时间的 WRR 端口仲裁时,所支持的最大时间槽数 (减一)。例如,该字段中值为 000 0000b 表示支持的最大时间槽数为 1,值为 111 1111b 表示支持的最大时间槽数为 128。该字段对所有 Switch Port、支持点对点流量的 Root Port 和 RCRB 有效,但对不支持点对点流量的 Endpoint 或 Root Port 无效。此外,仅当 Port Arbitration Capability 字段指示 VC 资源支持基于时间的 WRR 端口仲裁时,该字段才有效。 | HwInit |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -1101,7 +1100,7 @@ Figure 7-228 VC Resource Control Register
 寄存器描述
 属性
 31:24
-Port Arbitration Table Offset (端口仲裁表偏移量) — 指示与 VC 资源关联的 Port Arbitration Table (端口仲裁表) 的位置。该字段对所有 Switch Port、支持点对点流量的 Root Port 和 RCRB 有效，但对不支持点对点流量的 Endpoint 或 Root Port 无效。
+Port Arbitration Table Offset (端口仲裁表偏移量) — 指示与 VC 资源关联的 Port Arbitration Table (端口仲裁表) 的位置。该字段对所有 Switch Port、支持点对点流量的 Root Port 和 RCRB 有效,但对不支持点对点流量的 Endpoint 或 Root Port 无效。
 该字段包含以 DQWORD (16 字节) 为单位的表相对于 Virtual Channel Extended Capability structure 基址的零基偏移量。值为 00h 表示该表不存在。
 RO
 
@@ -1158,7 +1157,7 @@ VC Enable (VC 使能)
 | 7:0 | TC/VC Map (TC/VC 映射) — 该字段指示映射到该 VC 资源的 TC (流量类, Traffic Class)。该字段对所有 Function 有效。<br>该字段内的位位置对应 TC 值。例如,当该字段中位 7 置位时,TC7 被映射到该 VC 资源。当该字段中有多个位置位时,表示有多个 TC 被映射到该 VC 资源。<br>为了从已启用 VC 的 TC/VC 映射中移除一个或多个 TC,软件必须确保没有新的或未完成的使用这些 TC 标签的事务被定向到给定的 Link。<br>该字段的默认值为第一个 VC 资源的 FFh,以及其他 VC 资源的 00h。<br>注意:<br>该字段的位 0 是只读的。对于默认 VC0 必须置位,对于所有其他已启用 VC 必须清除。 | RW (参见注释中的例外) |
 | 16 | Load Port Arbitration Table (加载端口仲裁表) — 当置位时,该位从 VC 资源的 Port Arbitration Table 更新端口仲裁逻辑。该位对所有 Switch Port、支持点对点流量的 Root Port 和 RCRB 有效,但对不支持点对点流量的 Endpoint 或 Root Port 无效。此外,该位仅当所选端口仲裁方案使用端口仲裁表时 (即 Port Arbitration Select 所选 Port Arbitration Capability 字段中的位置位) 才有效。<br>软件置位该位以通知硬件使用 Port Arbitration Table 中存储的新值更新端口仲裁逻辑;清除该位无效。软件通过 Port Arbitration Table Status 位来确认 Port Arbitration Table 的新值是否已被仲裁逻辑完全锁存。<br>读该位时始终返回 0b。<br>该位的默认值为 0b。 | RW |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -1238,21 +1237,21 @@ RW / RO / RsvdP
 寄存器描述
 属性
 19:17
-Port Arbitration Select (端口仲裁选择) — 该字段配置 VC 资源以提供特定的端口仲裁服务。该字段对 RCRB、支持点对点流量的 Root Port 和 Switch Port 有效，但对不支持点对点流量的 Endpoint 或 Root Port 无效。
+Port Arbitration Select (端口仲裁选择) — 该字段配置 VC 资源以提供特定的端口仲裁服务。该字段对 RCRB、支持点对点流量的 Root Port 和 Switch Port 有效,但对不支持点对点流量的 Endpoint 或 Root Port 无效。
 该字段的允许值是与 VC 资源的 Port Arbitration Capability 字段中置位位之一相对应的数字。
 RW
 26:24
 VC ID (VC 标识) — 该字段为 VC 资源分配一个 VC ID (参见例外情况的注释)。该字段对所有 Function 有效。
-当 VC 已启用时，不能修改该字段。
+当 VC 已启用时,不能修改该字段。
 注意:
-对于第一个 VC 资源 (默认 VC)，该字段是只读的，且必须硬连线为 000b。
+对于第一个 VC 资源 (默认 VC),该字段是只读的,且必须硬连线为 000b。
 RW
 29:27
 Shared Flow Control Usage Limit (共享流控使用限制) — 该字段控制给定的 FC/VC 可使用可用共享流控 (Shared Flow Control) 的百分比。
-该限制针对每种流控信用 (Flow Control credit) 类型独立应用。例如，如果该字段值为 101b 且 Shared Flow Control Usage Limit Enable 置位，则当 Posted TLP 通过 Tx Gate 将导致该 VC 消耗超过 62.5% 的可用 Shared Posted Header 信用，或导致该 VC 消耗超过 62.5% 的可用 Shared Data 信用时，该 Posted TLP 可能无法通过 Tx Gate。
-如果 Shared Flow Control Usage Limit Enable 被清除，则忽略该字段，且允许该 VC 消耗所有共享信用。
-当 Shared Flow Control Usage Limit Enable 置位且该字段值为 000b 时，不允许该 VC 消耗任何共享信用。
-当所有 VC 的 Shared Flow Control Usage Limit Enable 都已置位，且所有 VC 的 Shared Flow Control Limit 值之和小于 100% 时，行为未定义。
+该限制针对每种流控信用 (Flow Control credit) 类型独立应用。例如,如果该字段值为 101b 且 Shared Flow Control Usage Limit Enable 置位,则当 Posted TLP 通过 Tx Gate 将导致该 VC 消耗超过 62.5% 的可用 Shared Posted Header 信用,或导致该 VC 消耗超过 62.5% 的可用 Shared Data 信用时,该 Posted TLP 可能无法通过 Tx Gate。
+如果 Shared Flow Control Usage Limit Enable 被清除,则忽略该字段,且允许该 VC 消耗所有共享信用。
+当 Shared Flow Control Usage Limit Enable 置位且该字段值为 000b 时,不允许该 VC 消耗任何共享信用。
+当所有 VC 的 Shared Flow Control Usage Limit Enable 都已置位,且所有 VC 的 Shared Flow Control Limit 值之和小于 100% 时,行为未定义。
 编码如下:
 0%
 12.5%
@@ -1262,15 +1261,15 @@ Shared Flow Control Usage Limit (共享流控使用限制) — 该字段控制�
 62.5%
 75%
 87.5%
-当 VC Enable 和 Shared Flow Control Usage Limit Enable 都已置位时，如果该字段改变值，则行为未定义。
-当 Flit Mode Supported 清除时，该字段为 RsvdP。
-当 Extended VC Count 为 0 时，该字段允许被硬连线为任意值。
-当该字段为 RW 时，默认值由实现决定。
+当 VC Enable 和 Shared Flow Control Usage Limit Enable 都已置位时,如果该字段改变值,则行为未定义。
+当 Flit Mode Supported 清除时,该字段为 RsvdP。
+当 Extended VC Count 为 0 时,该字段允许被硬连线为任意值。
+当该字段为 RW 时,默认值由实现决定。
 RW / RO / RsvdP
 30
-Shared Flow Control Usage Limit Enable (共享流控使用限制使能) — 当置位时，该位使能在该虚通道的发送端使用上述 Shared Flow Control Usage Limit 值。
-当 VC Enable 已置位时，如果该位的值发生变化，则行为未定义。
-当 Flit Mode Supported 清除时，该位为 RsvdP。
+Shared Flow Control Usage Limit Enable (共享流控使用限制使能) — 当置位时,该位使能在该虚通道的发送端使用上述 Shared Flow Control Usage Limit 值。
+当 VC Enable 已置位时,如果该位的值发生变化,则行为未定义。
+当 Flit Mode Supported 清除时,该位为 RsvdP。
 RW / RO / RsvdP
 
 </td>
@@ -1278,7 +1277,7 @@ RW / RO / RsvdP
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -1330,15 +1329,15 @@ Figure 7-229 VC Resource Status Register
 位位置
 寄存器描述
 属性
-当 Extended VC Count 为 0 时，该位允许被硬连线为 0b。
-当该位为 RW 时，默认值由实现决定。
+当 Extended VC Count 为 0 时,该位允许被硬连线为 0b。
+当该位为 RW 时,默认值由实现决定。
 31
-VC Enable (VC 使能) — 当置位时，该位启用一个虚通道。当该位清除时，该虚通道被禁用。该位对所有 Function 有效。
+VC Enable (VC 使能) — 当置位时,该位启用一个虚通道。当该位清除时,该虚通道被禁用。该位对所有 Function 有效。
 软件必须使用 VC Negotiation Pending 位检查 VC 协商是否完成。
-对于 VC0,属性为 RO。如果该端口未实现 SVC 能力，则该位的值必须为 1b;否则，该位的值必须始终与 SVC Port Status Register 中 Use VC/MFVC 位的值相同。参见 § Section 6.3.5。
-对于其他 VC,如果该端口未实现 SVC 能力，或者 Use VC/MFVC 位置位，则该位的默认值为 0b,属性为 RW;否则，该位必须为 RO,且值为 0b。
-要使用 VC 机制在端口中启用虚通道，必须置位该虚通道的 VC Enable 位。链路对端端口中的对应虚通道也必须被启用，且该虚通道可以位于 SVC、VC 或 MFVC 能力中。要禁用虚通道，必须在链路上两个组件中同时禁用该虚通道。软件必须确保在禁用虚通道时，没有流量正在使用该虚通道。软件必须在链路上两个组件中完全禁用虚通道后，才能重新启用该虚通道。
-当该位因 Use VC/MFVC 位清除而被强制为 RO 且值为 0b 时，其关联的 VC 被禁用，导致其大部分控制寄存器失效。
+对于 VC0,属性为 RO。如果该端口未实现 SVC 能力,则该位的值必须为 1b;否则,该位的值必须始终与 SVC Port Status Register 中 Use VC/MFVC 位的值相同。参见 § Section 6.3.5。
+对于其他 VC,如果该端口未实现 SVC 能力,或者 Use VC/MFVC 位置位,则该位的默认值为 0b,属性为 RW;否则,该位必须为 RO,且值为 0b。
+要使用 VC 机制在端口中启用虚通道,必须置位该虚通道的 VC Enable 位。链路对端端口中的对应虚通道也必须被启用,且该虚通道可以位于 SVC、VC 或 MFVC 能力中。要禁用虚通道,必须在链路上两个组件中同时禁用该虚通道。软件必须确保在禁用虚通道时,没有流量正在使用该虚通道。软件必须在链路上两个组件中完全禁用虚通道后,才能重新启用该虚通道。
+当该位因 Use VC/MFVC 位清除而被强制为 RO 且值为 0b 时,其关联的 VC 被禁用,导致其大部分控制寄存器失效。
 RW/HwInit
 
 § 图 7-229 详细说明了 VC Resource Status Register 中各寄存器字段的分配;§ 表 7-208 给出了相应的位定义。
@@ -1377,7 +1376,7 @@ RsvdZ
 | 0 | Port Arbitration Table Status (端口仲裁表状态) — 该位指示与 VC 资源关联的端口仲裁表的一致性状态。该位对 RCRB、支持点对点流量的 Root Port 和 Switch Port 有效,但对不支持点对点流量的 Endpoint 或 Root Port 无效。此外,该位仅当所选端口仲裁为该 VC 资源使用端口仲裁表时才有效。<br>当端口仲裁表的任何条目被软件写入时,该位由硬件置位。在软件置位 Load Port Arbitration Table 位之后,当硬件完成加载端口仲裁表中存储的值时,该位由硬件清除。<br>该位的默认值为 0b。 | RO |
 | 1 | VC Negotiation Pending (VC 协商挂起) — 该位指示虚通道协商 (初始化或禁用) 是否处于挂起状态。该位对所有 Function 有效。<br>该位的值仅在 Link 处于 DL_Active 状态且虚通道已启用 (其 VC Enable 位置位) 时才有定义。<br>当该位由硬件置位时,表示 VC 资源尚未完成协商过程。该位在 VC 协商完成后 (从 FC_INIT2 状态退出时) 由硬件清除。对于 VC0,允许将该位硬连线为 0b。<br>在使用虚通道之前,软件必须检查链路上两个组件中该虚通道的 VC Negotiation Pending 位是否都已清除。 | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -1401,7 +1400,6 @@ VC Arbitration Table 是一个固定大小为 4 位条目的寄存器数组。§
 当默认 VC 仲裁方法使用 VC Arbitration Table 时,表条目的默认值必须全为 0,以确保默认 VC (VC ID 为 0) 的前向推进。
 
 > **Figure 7-230.** Example VC Arbitration Table with 32 Phases
-> **图 7-230.** 具有 32 个阶段的 VC 仲裁表示例
 > <img src="figures/chapter_07/fig_1273_1_tight.png" width="700">
 
 <a id="sec-7-9-1-9-table"></a>
@@ -1421,7 +1419,7 @@ VC Arbitration Table 是一个固定大小为 4 位条目的寄存器数组。§
 <a id="sec-7-9-1-9"></a>
 ## 7.9.1.9 VC Arbitration Table | VC 仲裁表
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -1473,7 +1471,7 @@ Port Arbitration Table 表示一个端口仲裁周期。§ 图 7-231 展示了�
 <a id="sec-7-9-1-10"></a>
 ## 7.9.1.10 Port Arbitration Table | 端口仲裁表
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -1481,7 +1479,6 @@ Port Arbitration Table 表示一个端口仲裁周期。§ 图 7-231 展示了�
 ---
 
 > **Figure 7-231.** Example Port Arbitration Table with 128 Phases and 2-bit Table Entries
-> **图 7-231.** 具有 128 个阶段和 2 位表项的端口仲裁表示例
 > <img src="figures/chapter_07/fig_1275_1_tight.png" width="700">
 
 <a id="sec-7-9-1-10-table"></a>
@@ -1519,7 +1516,7 @@ Multi-Function Virtual Channel Extended Capability (多功能虚通道扩展能�
 <a id="sec-7-9-2"></a>
 ## 7.9.2 Multi-Function Virtual Channel Extended Capability | 多功能虚通道扩展能力
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -1527,7 +1524,6 @@ Multi-Function Virtual Channel Extended Capability (多功能虚通道扩展能�
 ---
 
 > **Figure 7-232.** MFVC Capability Structure
-> **图 7-232.** MFVC 能力结构
 > <img src="figures/chapter_07/fig_1276_1_tight.png" width="700">
 
 The following sections describe the registers/fields of the MFVC Extended Capability structure.
@@ -1539,7 +1535,6 @@ Refer to § Section 7.6.3 for a description of the PCI Express Extended Capabili
 有关 PCI Express Extended Capability Header 的说明,请参阅 § Section 7.6.3。MFVC Extended Capability 的 Extended Capability ID 为 0008h。§ 图 7-233 详细说明了 MFVC Extended Capability Header 中各寄存器字段的分配;§ 表 7-212 给出了相应的位定义。
 
 > **Figure 7-233.** MFVC Extended Capability Header
-> **图 7-233.** MFVC Extended Capability 头部
 > <img src="figures/chapter_07/fig_1276_2_tight.png" width="700">
 
 <a id="sec-7-9-2-table"></a>
@@ -1558,7 +1553,7 @@ Refer to § Section 7.6.3 for a description of the PCI Express Extended Capabili
 | 19:16 | Capability Version (能力版本) — 该字段是 PCI-SIG 定义的版本号,用于指示所表示能力结构的版本。<br>对于本版本的规范,必须为 1h。 | RO |
 | 31:20 | Next Capability Offset (下一能力偏移量) — 该字段包含到下一个 PCI Express Capability structure 的偏移量;如果链表中不存在其他项,则为 000h。<br>对于在配置空间中实现的扩展能力,该偏移量相对于 PCI 兼容配置空间 (PCI-compatible Configuration Space) 的起始处,因此必须始终为 000h (用于终止能力列表) 或大于 0FFh。 | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -1656,7 +1651,7 @@ MFVC Port VC Capability Register 1 (MFVC 端口 VC 能力寄存器 1) 描述与�
 | 9:8 | Reference Clock (参考时钟) — 指示支持基于时间的 WRR Function 仲裁的虚通道的参考时钟。<br>已定义的编码为:<br>00b = 100 ns 参考时钟<br>01b - 11b = 保留 | RO |
 | 11:10 | Function Arbitration Table Entry Size (Function 仲裁表条目大小) — 指示设备中 Function 仲裁表条目的大小(以位为单位)。<br>已定义的编码为:<br>00b = Function 仲裁表条目大小为 1 位<br>01b = Function 仲裁表条目大小为 2 位<br>10b = Function 仲裁表条目大小为 4 位<br>11b = Function 仲裁表条目大小为 8 位 | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -1735,7 +1730,7 @@ MFVC Port VC Capability Register 2 (MFVC 端口 VC 能力寄存器 2) 提供关�
 | 7:0 | VC Arbitration Capability (VC 仲裁能力) — 指示设备针对 LPVC 组所支持的 VC 仲裁类型。该字段对所有报告 Low Priority Extended VC Count 大于 0 的设备有效。<br>该字段中的每个位位置对应于下文定义的一种 VC 仲裁能力。当该字段中有多于 1 位置位时,指示该设备可被配置为提供不同的 VC 仲裁服务。<br>已定义的位位置为:<br>位 0 = 硬件固定仲裁方案,例如轮询 (Round Robin)<br>位 1 = 加权轮询 (WRR) 仲裁,32 个相位<br>位 2 = WRR 仲裁,64 个相位<br>位 3 = WRR 仲裁,128 个相位<br>位 4-7 = 保留 | RO |
 | 31:24 | VC Arbitration Table Offset (VC 仲裁表偏移量) — 指示 MFVC VC Arbitration Table (MFVC VC 仲裁表) 的位置。<br>该字段包含以 DQWORD (16 字节) 为单位的表相对于 MFVC 扩展能力结构 (MFVC Extended Capability structure) 基址的零基偏移量。值为 00h 表示该表不存在。 | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -1798,7 +1793,7 @@ Figure 7-236 MFVC Port VC Control Register
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -1844,7 +1839,7 @@ MFVC Port VC Status Register (MFVC 端口 VC 状态寄存器) 提供与多功能
 | 3:1 | VC Arbitration Select (VC 仲裁选择) — 软件通过选择 MFVC Port VC Capability Register 2 中 VC Arbitration Capability 字段所指示的支持的 VC 仲裁方案之一来配置 VC 仲裁。<br>该字段的允许值是与 VC Arbitration Capability 字段中置位位之一相对应的数字。<br>当 LPVC 组中启用的 VC 多于一个时,该字段不可修改。 | RW |
 | 4 | All VCs Enabled (使能所有 VC) — 置位该位表示将被端口使用的所有 VC 均已启用。置位该位允许硬件在已启用的 VC 之间分配已分配的缓冲区资源。<br>置位该位是可选的。如果该位保持清除状态且某些 VC 资源永远不被启用,则性能可能受到影响,但链路 (Link) 和所有已启用的 VC 必须正确运行。<br>如果该位置位且此能力中的任何 VC Enable 位改变了值,则行为未定义。<br>该位的默认值为 0b。 | RW |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -1905,7 +1900,7 @@ Figure 7-237 MFVC Port VC Status Register
 |--------|------------|------|
 | 0 | VC Arbitration Table Status (VC 仲裁表状态) — 指示 MFVC VC Arbitration Table 的一致性状态。当所选 VC 使用 MFVC VC Arbitration Table 时,该位有效。<br>当 MFVC VC 仲裁表的任何条目被软件写入时,该位由硬件置位。在软件置位 MFVC Port VC Control Register 中的 Load VC Arbitration Table 位之后,当硬件完成加载 MFVC VC 仲裁表中存储的值时,该位由硬件清除。<br>该位的默认值为 0b。 | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -1996,7 +1991,7 @@ MFVC VC Resource Capability Register (MFVC VC 资源能力寄存器) 描述特�
 | 22:16 | Maximum Time Slots (最大时隙数) — 指示 VC 资源配置为基于时间的 WRR Function 仲裁时能够支持的最大时隙数(减 1)。例如,该字段值为 000 0000b 表示所支持的最大时隙数为 1,值为 111 1111b 表示所支持的最大时隙数为 128。<br>仅当 Function Arbitration Capability 指示 VC 资源支持基于时间的 WRR Function 仲裁时,该字段才有效。 | HwInit |
 | 31:24 | Function Arbitration Table Offset (Function 仲裁表偏移量) — 指示与 VC 资源相关联的 Function Arbitration Table (Function 仲裁表) 的位置。<br>该字段包含以 DQWORD (16 字节) 为单位的表相对于 MFVC 扩展能力结构 (MFVC Extended Capability structure) 基址的零基偏移量。值为 00h 表示该表不存在。 | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -2107,7 +2102,7 @@ Figure 7-239 MFVC VC Resource Control Register
 | 26:24 | VC ID — 该字段为 VC 资源分配一个 VC ID(例外情况参见注释)。<br>当 VC 已启用时,该字段不可修改。<br>注:对于第一个 VC 资源(默认 VC),该字段为只读字段,必须硬连线为 000b。 | RW |
 | 29:27 | Shared Flow Control Usage Limit (共享流控使用限制) — 该字段控制允许给定 FC/VC 消耗的可用共享流控 (Shared Flow Control) 百分比。<br>该限制针对每种流控 (Flow Control) 信用 (Credit) 类型独立应用。例如,如果该字段包含 101b 且 Shared Flow Control Usage Limit Enable 置位,则 Posted TLP (有数据,无完成) 在通过 Tx Gate 时可能不被允许,如果这样做将导致该 VC 消耗超过 62.5% 的可用共享 Posted Header 信用,或导致该 VC 消耗超过 62.5% 的可用共享 Data 信用。<br>如果 Shared Flow Control Usage Limit Enable 清除,则该字段被忽略,且该 VC 被允许消耗所有共享信用。<br>当 Shared Flow Control Usage Limit Enable 置位且该字段包含 000b 时,该 VC 不被允许消耗任何共享信用。<br>当所有 VC 都将 Shared Flow Control Usage Limit Enable 置位且所有 VC 的 Shared Flow Control Limit 值之和小于 100% 时,行为未定义。<br>编码为:<br>000b = 0%<br>001b = 12.5%<br>010b = 25%<br>011b = 37.5%<br>100b = 50%<br>101b = 62.5%<br>110b = 75%<br>111b = 87.5% | RW / RO / RsvdP |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -2172,39 +2167,39 @@ When this bit is forced to be RO with a value of 0b due to the Use VC/MFVC bit b
 </td>
 <td style="background-color:#e8e8e8">
 
-如果该字段在 VC Enable 和 Shared Flow Control Usage Limit Enable 均置位时改变值，则行为未定义。
+如果该字段在 VC Enable 和 Shared Flow Control Usage Limit Enable 均置位时改变值,则行为未定义。
 
-当 Flit Mode Supported 清除时，该字段为 RsvdP。
+当 Flit Mode Supported 清除时,该字段为 RsvdP。
 
-当 Extended VC Count 为 0 时，该字段允许硬连线为 000b。
+当 Extended VC Count 为 0 时,该字段允许硬连线为 000b。
 
-当该字段为 RW 时，默认值为实现特定的。
+当该字段为 RW 时,默认值为实现特定的。
 
 **位 30 - Shared Flow Control Usage Limit Enable (共享流控使用限制使能)**
 
-置位时，该位使能上述共享流控使用限制值在该虚通道发送器上的使用。
+置位时,该位使能上述共享流控使用限制值在该虚通道发送器上的使用。
 
-如果该位的值在 VC Enable 置位时改变，则行为未定义。
+如果该位的值在 VC Enable 置位时改变,则行为未定义。
 
-当 Flit Mode Supported 清除时，该位为 RsvdP。
+当 Flit Mode Supported 清除时,该位为 RsvdP。
 
-当 Extended VC Count 为 0 时，该位允许硬连线为 0b。
+当 Extended VC Count 为 0 时,该位允许硬连线为 0b。
 
-当该位为 RW 时，默认值为实现特定的。
+当该位为 RW 时,默认值为实现特定的。
 
 **位 31 - VC Enable (VC 使能)**
 
-置位时，该位使能一个虚通道。当该位清除时，虚通道被禁用。
+置位时,该位使能一个虚通道。当该位清除时,虚通道被禁用。
 
 软件必须使用 VC Negotiation Pending 位检查 VC 协商是否完成。
 
-对于 VC0,属性为 RO。如果该端口中未实现 SVC 能力，则该位的值必须为 1b;否则，该位的值必须始终与 SVC Port Status Register 中 Use VC/MFVC 位的值相同。参见第 6.3.5 节。
+对于 VC0,属性为 RO。如果该端口中未实现 SVC 能力,则该位的值必须为 1b;否则,该位的值必须始终与 SVC Port Status Register 中 Use VC/MFVC 位的值相同。参见第 6.3.5 节。
 
-对于其他 VC,如果该端口中未实现 SVC 能力，或者 Use VC/MFVC 位置位，则该位的默认值为 0b,属性为 RW;否则，该位必须为 RO,值为 0b。
+对于其他 VC,如果该端口中未实现 SVC 能力,或者 Use VC/MFVC 位置位,则该位的默认值为 0b,属性为 RW;否则,该位必须为 RO,值为 0b。
 
-要在使用 MFVC 机制的端口中使能一个虚通道，必须置位该虚通道的 VC Enable 位。链路 (Link) 伙伴端口中的相应虚通道也必须被使能，且该虚通道可以位于 SVC、VC 或 MFVC 能力中。要禁用一个虚通道，该虚通道必须在链路两端组件中均被禁用。软件必须确保在禁用虚通道时没有任何流量正在使用该虚通道。软件必须在重新使能虚通道之前，在链路两端组件中完全禁用该虚通道。
+要在使用 MFVC 机制的端口中使能一个虚通道,必须置位该虚通道的 VC Enable 位。链路 (Link) 伙伴端口中的相应虚通道也必须被使能,且该虚通道可以位于 SVC、VC 或 MFVC 能力中。要禁用一个虚通道,该虚通道必须在链路两端组件中均被禁用。软件必须确保在禁用虚通道时没有任何流量正在使用该虚通道。软件必须在重新使能虚通道之前,在链路两端组件中完全禁用该虚通道。
 
-当由于 Use VC/MFVC 位被清除而迫使该位为值 0b 的 RO 时，其关联的 VC 被禁用，导致其大部分控制寄存器失效。
+当由于 Use VC/MFVC 位被清除而迫使该位为值 0b 的 RO 时,其关联的 VC 被禁用,导致其大部分控制寄存器失效。
 
 | 属性 | 值 |
 |------|----|
@@ -2232,7 +2227,7 @@ Figure 7-240 details allocation of register fields in the MFVC VC Resource Statu
 
 Figure 7-240 MFVC VC Resource Status Register
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -2273,7 +2268,7 @@ Figure 7-240 MFVC VC Resource Status Register
 | 0 | Function Arbitration Table Status (Function 仲裁表状态) — 该位指示与 VC 资源相关联的 Function Arbitration Table 的一致性状态。仅当所选 Function 仲裁使用该 VC 资源的 Function Arbitration Table 时,该位才有效。<br>当 Function Arbitration Table 的任何条目被软件写入时,该位由硬件置位。在软件置位 Load Function Arbitration Table 位之后,当硬件完成加载 Function Arbitration Table 中存储的值时,该位由硬件清除。<br>该位的默认值为 0b。 | RO |
 | 1 | VC Negotiation Pending (VC 协商挂起) — 该位指示虚通道协商(初始化或禁用)是否处于挂起状态。<br>当该位由硬件置位时,指示该 VC 资源仍处于协商过程中。该位在 VC 协商完成后由硬件清除。对于非默认虚通道,软件可在启用或禁用 VC 时使用该位。对于默认 VC,该位指示流控 (Flow Control) 初始化过程的状态。<br>在使用虚通道之前,软件必须检查该虚通道在链路两端组件中的 VC Negotiation Pending 位是否均已清除。 | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -2306,7 +2301,7 @@ MFVC 扩展能力结构中 MFVC VC Arbitration Table (MFVC VC 仲裁表) 的定�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -2343,15 +2338,15 @@ The Function Arbitration Table represents one Function arbitration period. Each 
 
 MFVC 扩展能力结构中 Function Arbitration Table (Function 仲裁表) 寄存器的形式与 VC 扩展能力结构中 Port Arbitration Table (端口仲裁表) 寄存器的形式相同(参见第 7.9.1.10 节)。
 
-Function Arbitration Table 寄存器是一个读-写寄存器数组，用于存储 VC 资源 Function 仲裁的 WRR 或基于时间的 WRR 仲裁表。仅当 Function Arbitration Capability 字段中有一个或多个置位位指示多功能设备 (Multi-Function Device) 支持使用可编程仲裁表的 Function 仲裁方案时，它才会出现。此外，仅当 Function Arbitration Capability 字段中上述位之一被 Function Arbitration Select 字段选中时，它才有效。
+Function Arbitration Table 寄存器是一个读-写寄存器数组,用于存储 VC 资源 Function 仲裁的 WRR 或基于时间的 WRR 仲裁表。仅当 Function Arbitration Capability 字段中有一个或多个置位位指示多功能设备 (Multi-Function Device) 支持使用可编程仲裁表的 Function 仲裁方案时,它才会出现。此外,仅当 Function Arbitration Capability 字段中上述位之一被 Function Arbitration Select 字段选中时,它才有效。
 
 Function Arbitration Table 表示一个 Function 仲裁周期。包含 Function Number (Function 编号) 或 Function Group Number (Function 组编号) 的每个表条目对应于 Function 仲裁周期内的一个相位。表条目大小要求如下:
 
-- 对于非 ARI 设备，表条目大小必须支持足够的值以指定所有已实现的 Function 加上至少一个不对应于已实现 Function 的值。例如，具有 2 位条目的表可用于最多具有三个 Function 的多功能设备。
-- 对于 ARI 设备 (ARI Devices)，表条目大小必须为 4 位或 8 位。
-  - 如果启用了 MFVC Function Groups,则每个条目映射到单个 Function 组。Function 组内多个 Function 之间的仲裁是实现特定的，但必须保证前向进度。¹⁸²
+- 对于非 ARI 设备,表条目大小必须支持足够的值以指定所有已实现的 Function 加上至少一个不对应于已实现 Function 的值。例如,具有 2 位条目的表可用于最多具有三个 Function 的多功能设备。
+- 对于 ARI 设备 (ARI Devices),表条目大小必须为 4 位或 8 位。
+  - 如果启用了 MFVC Function Groups,则每个条目映射到单个 Function 组。Function 组内多个 Function 之间的仲裁是实现特定的,但必须保证前向进度。¹⁸²
 
-¹⁸² 如果 ARI 设备支持 MFVC Function Groups 能力且 ARI 感知的软件启用了该能力，则仲裁将基于 Function 组而不是 Function 进行。参见第 7.8.8 节。
+¹⁸² 如果 ARI 设备支持 MFVC Function Groups 能力且 ARI 感知的软件启用了该能力,则仲裁将基于 Function 组而不是 Function 进行。参见第 7.8.8 节。
 
 </td>
 </tr>
@@ -2360,7 +2355,7 @@ Function Arbitration Table 表示一个 Function 仲裁周期。包含 Function 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -2415,25 +2410,25 @@ When the Function Arbitration Table is used by the default Function Arbitration 
 </td>
 <td style="background-color:#e8e8e8">
 
-- 如果未启用 MFVC Function Groups 且实现了 4 位条目，则给定条目映射到其 Function Number 模 8 与该值匹配的所有 Function。类似地，如果实现了 8 位条目，则给定条目映射到其 Function Number 模 128 与该值匹配的所有 Function。如果给定条目映射到多个 Function,则这些 Function 之间的仲裁是实现特定的，但必须保证前向进度。
+- 如果未启用 MFVC Function Groups 且实现了 4 位条目,则给定条目映射到其 Function Number 模 8 与该值匹配的所有 Function。类似地,如果实现了 8 位条目,则给定条目映射到其 Function Number 模 128 与该值匹配的所有 Function。如果给定条目映射到多个 Function,则这些 Function 之间的仲裁是实现特定的,但必须保证前向进度。
 
 写入表条目的 Function Number 或 Function Group Number 指示 Function 仲裁周期内的该相位被分配给所选 Function 或 Function 组(Function Number 或 Function Group Number 必须为有效值)。
 
-- 当多功能设备出口端口 (Egress Port) 的 VC 使用 WRR Function 仲裁时，在每个仲裁相位,Function Arbiter (Function 仲裁器) 从当前相位的 Function Number 或 Function Group Number 所指示的 Function 或 Function 组中服务一个事务。完成后，它立即前进到下一个相位。如果该相位指示的 Function 或 Function 组没有该 VC 的任何事务，则跳过该相位，即 Function Arbiter 立即移至下一个相位。
-- 当多功能设备出口端口的 VC 使用基于时间的 WRR Function 仲裁时，在每个与虚拟时隙对齐的仲裁相位,Function Arbiter 从当前相位的 Function Number 或 Function Group Number 所指示的 Function 或 Function 组中服务一个事务。它在下一个虚拟时隙前进到下一个相位。如果出现以下情况，则相位表示"空闲"时隙，即 Function Arbiter 在该相位期间不服务任何事务:
-  - 该相位包含不存在的 Function 或 Function 组的编号，或
+- 当多功能设备出口端口 (Egress Port) 的 VC 使用 WRR Function 仲裁时,在每个仲裁相位,Function Arbiter (Function 仲裁器) 从当前相位的 Function Number 或 Function Group Number 所指示的 Function 或 Function 组中服务一个事务。完成后,它立即前进到下一个相位。如果该相位指示的 Function 或 Function 组没有该 VC 的任何事务,则跳过该相位,即 Function Arbiter 立即移至下一个相位。
+- 当多功能设备出口端口的 VC 使用基于时间的 WRR Function 仲裁时,在每个与虚拟时隙对齐的仲裁相位,Function Arbiter 从当前相位的 Function Number 或 Function Group Number 所指示的 Function 或 Function 组中服务一个事务。它在下一个虚拟时隙前进到下一个相位。如果出现以下情况,则相位表示"空闲"时隙,即 Function Arbiter 在该相位期间不服务任何事务:
+  - 该相位包含不存在的 Function 或 Function 组的编号,或
   - 该相位所指示的 Function 或 Function 组没有该 VC 的任何事务。
 
-MFVC Port VC Capability Register 1 中的 Function Arbitration Table Entry Size 字段决定表条目大小。表的长度由 Function Arbitration Select 字段决定，如表 7-220 所示。
+MFVC Port VC Capability Register 1 中的 Function Arbitration Table Entry Size 字段决定表条目大小。表的长度由 Function Arbitration Select 字段决定,如表 7-220 所示。
 
-当默认 Function 仲裁将 Function Arbitration Table 用于默认 VC 时，表条目的默认值必须至少包含多功能设备中每个活动的 Function 或 Function 组的一个条目，以确保多功能设备上游端口 (Upstream Port) 的默认 VC 的前向进度。该表可以包含用于默认 VC 的 RR 或类似 RR 的公平 Function 仲裁。
+当默认 Function 仲裁将 Function Arbitration Table 用于默认 VC 时,表条目的默认值必须至少包含多功能设备中每个活动的 Function 或 Function 组的一个条目,以确保多功能设备上游端口 (Upstream Port) 的默认 VC 的前向进度。该表可以包含用于默认 VC 的 RR 或类似 RR 的公平 Function 仲裁。
 
 </td>
 </tr>
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -2461,7 +2456,7 @@ It is permitted but not recommended for RCiEPs to implement this Capability.
 </td>
 <td style="background-color:#e8e8e8">
 
-Device Serial Number Extended Capability (设备序列号扩展能力) 是一种可选的扩展能力，可由任何 PCI Express 设备 Function 实现。Device Serial Number (设备序列号) 是一个只读 64 位值，对于给定的 PCI Express 设备是唯一的。图 7-241 详细说明了 Device Serial Number Extended Capability 结构中各寄存器字段的分配。
+Device Serial Number Extended Capability (设备序列号扩展能力) 是一种可选的扩展能力,可由任何 PCI Express 设备 Function 实现。Device Serial Number (设备序列号) 是一个只读 64 位值,对于给定的 PCI Express 设备是唯一的。图 7-241 详细说明了 Device Serial Number Extended Capability 结构中各寄存器字段的分配。
 
 允许但不推荐 RCiEP 实现此能力。
 
@@ -2470,7 +2465,7 @@ Device Serial Number Extended Capability (设备序列号扩展能力) 是一种
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -2516,13 +2511,13 @@ The Device Serial Number Extended Capability is permitted to be present in PFs (
 
 实现此能力的 RCiEP 允许(但非必须)返回与同一根复合体 (Root Complex) 中其他 RCiEP 所报告的设备序列号相同的值。
 
-除 RCiEP 之外，实现此能力的所有多功能设备必须为 Function 0 实现该能力;实现此能力的其他 Function 必须返回与 Function 0 所报告的设备序列号相同的值。
+除 RCiEP 之外,实现此能力的所有多功能设备必须为 Function 0 实现该能力;实现此能力的其他 Function 必须返回与 Function 0 所报告的设备序列号相同的值。
 
-RCiEP 可以根据自身情况决定是否实现此能力，而无需考虑其是否属于多功能设备的一部分。
+RCiEP 可以根据自身情况决定是否实现此能力,而无需考虑其是否属于多功能设备的一部分。
 
-除根复合体外，包含多个设备的 PCI Express 组件(例如实现此能力的 PCI Express 交换机 (Switch))必须为每个设备返回相同的设备序列号。
+除根复合体外,包含多个设备的 PCI Express 组件(例如实现此能力的 PCI Express 交换机 (Switch))必须为每个设备返回相同的设备序列号。
 
-设备序列号扩展能力允许出现在 PF 中。若 PF 包含该能力，则其值适用于所有关联的 VF。VF 允许(但不推荐)实现此能力。实现此能力的 VF 必须返回与其关联 PF 所报告的设备序列号相同的值。
+设备序列号扩展能力允许出现在 PF 中。若 PF 包含该能力,则其值适用于所有关联的 VF。VF 允许(但不推荐)实现此能力。实现此能力的 VF 必须返回与其关联 PF 所报告的设备序列号相同的值。
 
 </td>
 </tr>
@@ -2563,7 +2558,7 @@ Figure 7-241 Device Serial Number Extended Capability Structure
 
 图 7-241 设备序列号扩展能力结构
 
-§ 图 7-242 详细说明了设备序列号扩展能力包头 (Header) 中各寄存器字段的分配;§ 表 7-221 给出了相应的位定义。有关 PCI Express 扩展能力包头的描述，请参见 § 第 7.6.3 节。设备序列号扩展能力的扩展能力 ID 为 0003h。
+§ 图 7-242 详细说明了设备序列号扩展能力包头 (Header) 中各寄存器字段的分配;§ 表 7-221 给出了相应的位定义。有关 PCI Express 扩展能力包头的描述,请参见 § 第 7.6.3 节。设备序列号扩展能力的扩展能力 ID 为 0003h。
 
 </td>
 </tr>
@@ -2648,7 +2643,7 @@ The Serial Number register is a 64-bit field that contains the IEEE defined 64-b
 </td>
 <td style="background-color:#e8e8e8">
 
-序列号寄存器是一个 64 位字段，包含 IEEE 定义的 64 位扩展唯一标识符 [EUI-64]。
+序列号寄存器是一个 64 位字段,包含 IEEE 定义的 64 位扩展唯一标识符 [EUI-64]。
 
 § 图 7-243 详细说明了序列号寄存器中各寄存器字段的分配;§ 表 7-222 给出了相应的位定义。
 
@@ -2672,6 +2667,7 @@ The Serial Number register is a 64-bit field that contains the IEEE defined 64-b
 
 ---
 
+<a id="sec-7-9-3-2"></a>
 ## 7.9.3.2 Serial Number Register (Offset 04h) | 序列号寄存器(偏移 04h)
 
 <table>
@@ -2724,11 +2720,11 @@ A single PCI Express Function is permitted to contain multiple VSEC structures.
 </td>
 <td style="background-color:#e8e8e8">
 
-厂商特定能力是 PCI 兼容配置空间 (前 256 字节) 中的一种能力结构，如 § 图 7-244 所示。
+厂商特定能力是 PCI 兼容配置空间 (前 256 字节) 中的一种能力结构,如 § 图 7-244 所示。
 
 厂商特定能力允许设备厂商使用能力机制来携带厂商特定信息。
 
-除前三个字节外，信息的布局由厂商自行定义，具体如下所述。
+除前三个字节外,信息的布局由厂商自行定义,具体如下所述。
 
 单个 PCI Express Function 允许包含多个 VSEC 结构。
 
@@ -2787,15 +2783,15 @@ With a PCI Express Function, the structure and definition of the vendor-specific
 </td>
 <td style="background-color:#e8e8e8">
 
-厂商特定扩展能力 (VSEC Capability) 是一种可选的扩展能力，允许由任何 PCI Express Function 或 RCRB 实现。这允许 PCI Express 组件厂商使用扩展能力机制来公开厂商特定的寄存器。
+厂商特定扩展能力 (VSEC Capability) 是一种可选的扩展能力,允许由任何 PCI Express Function 或 RCRB 实现。这允许 PCI Express 组件厂商使用扩展能力机制来公开厂商特定的寄存器。
 
 单个 PCI Express Function 或 RCRB 允许包含多个 VSEC 结构。
 
-一个示例用法是:厂商预期在未来一系列组件中持续加入的厂商特定功能集。VSEC 结构可告知厂商特定软件某个特定组件支持哪些功能，包括在软件发布之后开发的组件。
+一个示例用法是:厂商预期在未来一系列组件中持续加入的厂商特定功能集。VSEC 结构可告知厂商特定软件某个特定组件支持哪些功能,包括在软件发布之后开发的组件。
 
 § 图 7-245 详细说明了 VSEC 结构中各寄存器字段的分配。厂商特定扩展能力包头和厂商特定包头的结构由本规范定义。
 
-对于 PCI Express Function,厂商特定寄存器区域的结构和定义由 PCI 兼容配置空间中字节偏移 00h 处的 Vendor ID 字段所指示的厂商确定。对于 RCRB,仅当 RCRB 同时包含 RCRB Header 扩展能力结构(其中包含指示厂商的 Vendor ID 字段)时，才允许使用 VSEC。
+对于 PCI Express Function,厂商特定寄存器区域的结构和定义由 PCI 兼容配置空间中字节偏移 00h 处的 Vendor ID 字段所指示的厂商确定。对于 RCRB,仅当 RCRB 同时包含 RCRB Header 扩展能力结构(其中包含指示厂商的 Vendor ID 字段)时,才允许使用 VSEC。
 
 </td>
 </tr>
@@ -2830,7 +2826,7 @@ With a PCI Express Function, the structure and definition of the vendor-specific
 </td>
 <td style="background-color:#e8e8e8">
 
-§ 图 7-246 详细说明了厂商特定扩展能力包头中各寄存器字段的分配;§ 表 7-224 给出了相应的位定义。有关 PCI Express 扩展能力包头的描述，请参见 § 第 7.6.3 节。厂商特定扩展能力的扩展能力 ID 为 000Bh。
+§ 图 7-246 详细说明了厂商特定扩展能力包头中各寄存器字段的分配;§ 表 7-224 给出了相应的位定义。有关 PCI Express 扩展能力包头的描述,请参见 § 第 7.6.3 节。厂商特定扩展能力的扩展能力 ID 为 000Bh。
 
 </td>
 </tr>
@@ -2917,7 +2913,7 @@ Vendor-specific software must qualify the associated Vendor ID of the PCI Expres
 
 § 图 7-247 详细说明了厂商特定包头中各寄存器字段的分配;§ 表 7-225 给出了相应的位定义。
 
-厂商特定软件在尝试解读 VSEC ID 或 VSEC Rev 字段中的值之前，必须先确认 PCI Express Function 或 RCRB 的相关 Vendor ID。
+厂商特定软件在尝试解读 VSEC ID 或 VSEC Rev 字段中的值之前,必须先确认 PCI Express Function 或 RCRB 的相关 Vendor ID。
 
 </td>
 </tr>
@@ -2998,11 +2994,11 @@ The DVSEC Vendor-Specific Register area begins at offset 0Ah.
 </td>
 <td style="background-color:#e8e8e8">
 
-指定厂商特定扩展能力 (DVSEC Capability) 是一种可选的扩展能力，允许由任何 PCI Express Function 或 RCRB 实现。这允许 PCI Express 组件厂商使用扩展能力机制来公开可能由多家厂商提供的组件中的厂商特定寄存器。
+指定厂商特定扩展能力 (DVSEC Capability) 是一种可选的扩展能力,允许由任何 PCI Express Function 或 RCRB 实现。这允许 PCI Express 组件厂商使用扩展能力机制来公开可能由多家厂商提供的组件中的厂商特定寄存器。
 
 单个 PCI Express Function 或 RCRB 允许包含多个 DVSEC 能力结构。
 
-一个示例用法是:多个厂商预期在未来一系列组件中持续加入的厂商特定功能集。DVSEC 能力结构可告知厂商特定软件某个特定组件支持哪些功能，包括在软件发布之后开发的组件。
+一个示例用法是:多个厂商预期在未来一系列组件中持续加入的厂商特定功能集。DVSEC 能力结构可告知厂商特定软件某个特定组件支持哪些功能,包括在软件发布之后开发的组件。
 
 § 图 7-248 详细说明了 DVSEC 能力结构中各寄存器字段的分配。PCI Express 扩展能力包头和指定厂商特定包头的结构由本规范定义。
 
@@ -3041,7 +3037,7 @@ DVSEC 厂商特定寄存器区域从偏移 0Ah 处开始。
 </td>
 <td style="background-color:#e8e8e8">
 
-§ 图 7-249 详细说明了指定厂商特定扩展能力包头中各寄存器字段的分配;§ 表 7-226 给出了相应的位定义。有关 PCI Express 扩展能力包头的描述，请参见 § 第 7.9.3 节。指定厂商特定扩展能力的扩展能力 ID 为 0023h。
+§ 图 7-249 详细说明了指定厂商特定扩展能力包头中各寄存器字段的分配;§ 表 7-226 给出了相应的位定义。有关 PCI Express 扩展能力包头的描述,请参见 § 第 7.9.3 节。指定厂商特定扩展能力的扩展能力 ID 为 0023h。
 
 </td>
 </tr>
@@ -3128,7 +3124,7 @@ Vendor-specific software must qualify the DVSEC Vendor ID before attempting to i
 
 § 图 7-250 详细说明了指定厂商特定包头 1 中各寄存器字段的分配;§ 表 7-227 给出了相应的位定义。
 
-厂商特定软件在尝试解读 DVSEC Revision 字段之前，必须先确认 DVSEC Vendor ID。
+厂商特定软件在尝试解读 DVSEC Revision 字段之前,必须先确认 DVSEC Vendor ID。
 
 </td>
 </tr>
@@ -3203,7 +3199,7 @@ Vendor-specific software must qualify the DVSEC Vendor ID before attempting to i
 
 § 图 7-251 详细说明了指定厂商特定包头 2 中各寄存器字段的分配;§ 表 7-228 给出了相应的位定义。
 
-厂商特定软件在尝试解读 DVSEC ID 字段之前，必须先确认 DVSEC Vendor ID。
+厂商特定软件在尝试解读 DVSEC ID 字段之前,必须先确认 DVSEC Vendor ID。
 
 </td>
 </tr>
@@ -3244,7 +3240,7 @@ The PCI Express RCRB Header Extended Capability is an optional Extended Capabili
 </td>
 <td style="background-color:#e8e8e8">
 
-PCI Express RCRB Header 扩展能力是一种可选的扩展能力，可以在 RCRB 中实现，以便为该 RCRB 提供 Vendor ID 和 Device ID,并允许管理与该 RCRB 关联的根复合体 (Root Complex) 功能行为的参数。
+PCI Express RCRB Header 扩展能力是一种可选的扩展能力,可以在 RCRB 中实现,以便为该 RCRB 提供 Vendor ID 和 Device ID,并允许管理与该 RCRB 关联的根复合体 (Root Complex) 功能行为的参数。
 
 </td>
 </tr>
@@ -3274,7 +3270,7 @@ PCI Express RCRB Header 扩展能力是一种可选的扩展能力，可以在 R
 </td>
 <td style="background-color:#e8e8e8">
 
-§ 图 7-253 详细说明了 RCRB Header 扩展能力包头中各寄存器字段的分配;§ 表 7-229 给出了相应的位定义。有关 PCI Express 增强能力包头的描述，请参见 § 第 7.6.3 节。RCRB Header 扩展能力的扩展能力 ID 为 000Ah。
+§ 图 7-253 详细说明了 RCRB Header 扩展能力包头中各寄存器字段的分配;§ 表 7-229 给出了相应的位定义。有关 PCI Express 增强能力包头的描述,请参见 § 第 7.6.3 节。RCRB Header 扩展能力的扩展能力 ID 为 000Ah。
 
 </td>
 </tr>
@@ -3359,7 +3355,6 @@ Figure 7-254 details allocation of register fields in the RCRB Vendor ID and Dev
 </table>
 
 > **Figure 7-254.** RCRB Vendor ID and Device ID register
-> **图 7-254.** RCRB Vendor ID 和 Device ID 寄存器
 > <img src="figures/chapter_07/fig_1294_1_tight.png" width="700">
 
 
@@ -3408,7 +3403,6 @@ Figure 7-255 details allocation of register fields in the RCRB Capabilities regi
 </table>
 
 > **Figure 7-255.** RCRB Capabilities register
-> **图 7-255.** RCRB 能力寄存器
 > <img src="figures/chapter_07/fig_1295_1_tight.png" width="700">
 
 
@@ -3444,7 +3438,6 @@ Figure 7-256 details allocation of register fields in the RCRB Control register;
 </table>
 
 > **Figure 7-256.** RCRB Control register
-> **图 7-256.** RCRB 控制寄存器
 
 
 **Table 7-232. RCRB Control register | 表 7-232. RCRB Control 寄存器**
@@ -3572,7 +3565,6 @@ Root Complex Link Declaration Extended Capability 的扩展能力 ID 为 0005h�
 </table>
 
 > **Figure 7-257.** Root Complex Link Declaration Extended Capability
-> **图 7-257.** Root Complex Link Declaration Extended Capability
 > <img src="figures/chapter_07/fig_1297_1_tight.png" width="700">
 
 
@@ -3594,7 +3586,6 @@ Root Complex Link Declaration Extended Capability 的扩展能力 ID 为 0005h�
 </table>
 
 > **Figure 7-258.** Root Complex Link Declaration Extended Capability Header
-> **图 7-258.** Root Complex Link Declaration Extended Capability 头部
 > <img src="figures/chapter_07/fig_1297_2_tight.png" width="700">
 
 
@@ -3643,7 +3634,6 @@ Element Self Description 寄存器提供关于包含 Root Complex Link Declarati
 </table>
 
 > **Figure 7-259.** Element Self Description Register
-> **图 7-259.** Element Self Description 寄存器
 > <img src="figures/chapter_07/fig_1298_1_tight.png" width="700">
 
 
@@ -3664,6 +3654,7 @@ Element Self Description 寄存器提供关于包含 Root Complex Link Declarati
 <a id="sec-7-9-8-2-2"></a>
 ### 7.9.8.2 Element Self Description Register (Offset 04h)
 
+<a id="sec-7-9-8-2"></a>
 ### 7.9.8.2 Element Self Description 寄存器（偏移 04h）
 
 <!-- 📄 Page 1299 -->
@@ -3707,7 +3698,6 @@ Link Description 寄存器位于 Link Entry 起始处的偏移 00h 处，定义�
 </table>
 
 > **Figure 7-260.** Link Entry
-> **图 7-260.** Link Entry 0 寄存器
 > <img src="figures/chapter_07/fig_1299_1_tight.png" width="700">
 
 
@@ -3729,7 +3719,6 @@ Link Description 寄存器位于 Link Entry 起始处的偏移 00h 处，定义�
 </table>
 
 > **Figure 7-261.** Link Description Register
-> **图 7-261.** Link Entry 1 寄存器
 > <img src="figures/chapter_07/fig_1299_2_tight.png" width="700">
 
 
@@ -3802,7 +3791,6 @@ For a Link pointing to a memory-mapped RCRB (Link Type bit = 0), the first DWORD
 </table>
 
 > **Figure 7-262.** Link Address for Link Type 0
-> **图 7-262.** Link Entry 2 寄存器
 > <img src="figures/chapter_07/fig_1300_1_tight.png" width="700">
 
 
@@ -3817,9 +3805,11 @@ For a Link pointing to the Configuration Space of a Root Complex element (Link T
 
 对于指向根复合体元素配置空间的链路（Link Type 位 = 1），第一个 DWORD 中的位指定目标元素的 Bus、Device 和 Function Number。如图 7-263 所示，位 2:0（N）编码与 Bus Number 关联的位数 n，其中 N = 000b 指定 n = 8，所有其他编码指定
 
+<a id="sec-7-9-8-3-2"></a>
 #### 7.9.8.3.2 Link Address（链路地址）
 <a id="sec-7-9-8-3-2-1"></a>
 ##### 7.9.8.3.2.1 Link Type 0 的 Link Address
+<a id="sec-7-9-8-3-2-2"></a>
 ##### 7.9.8.3.2.2 Link Type 1 的 Link Address
 
 > 183. The memory-mapped space for accessing an RCRB is not the same as Memory Space, and must not overlap with Memory Space.
@@ -3879,7 +3869,6 @@ n = <N 的值>。位 11:3 为保留位，硬连线为 0。位 14:12 指定 Funct
 <td>
 
 > **Figure 7-263.** Link Address for Link Type 1
-> **图 7-263.** Link Address 寄存器
 > <img src="figures/chapter_07/fig_1301_1_tight.png" width="700">
 
 </td>
@@ -3950,7 +3939,6 @@ Root Complex Internal Link Control Extended Capability 的扩展能力 ID 为 00
 </table>
 
 > **Figure 7-264.** Root Complex Internal Link Control Extended Capability
-> **图 7-264.** Root Complex Internal Link Control Extended Capability
 > <img src="figures/chapter_07/fig_1302_1_tight.png" width="700">
 
 
@@ -3972,7 +3960,6 @@ Root Complex Internal Link Control Extended Capability 的扩展能力 ID 为 00
 </table>
 
 > **Figure 7-265.** Root Complex Internal Link Control Extended Capability Header
-> **图 7-265.** Root Complex Internal Link Control Extended Capability 头部
 > <img src="figures/chapter_07/fig_1302_2_tight.png" width="700">
 
 
@@ -4024,6 +4011,7 @@ Root Complex Internal Link Control Extended Capability Header
 
 ---
 
+<a id="sec-7-9-9-2"></a>
 ## 7.9.9.2 Root Complex Link Capabilities Register (Offset 04h) | 根复合体链路能力寄存器(偏移量 04h)
 
 
@@ -4166,7 +4154,7 @@ RsvdP
 属性
 3:0
 Max Link Speed(最大链路速度) — 该字段指示关联链路 (Link) 的最大链路速度。
-编码值指定 Supported Link Speeds Vector(支持的链路速度向量，位于 Root Complex Link Capabilities Register 中)中与最大链路速度对应的位位置。
+编码值指定 Supported Link Speeds Vector(支持的链路速度向量,位于 Root Complex Link Capabilities Register 中)中与最大链路速度对应的位位置。
 已定义的编码为:
 Supported Link Speeds Vector 字段位 0
 Supported Link Speeds Vector 字段位 1
@@ -4342,7 +4330,7 @@ L1 Exit Latency(L1 退出延迟) — 该字段指示给定链路的 L1 退出延
 大于 64 μs
 RO
 24:18
-Supported Link Speeds Vector(支持的链路速度向量) — 该字段指示关联链路所支持的链路速度。对于每一位，值为 1b 表示支持相应的链路速度;否则表示不支持该链路速度。更多要求请参见 § 第 8.2.1 节。
+Supported Link Speeds Vector(支持的链路速度向量) — 该字段指示关联链路所支持的链路速度。对于每一位,值为 1b 表示支持相应的链路速度;否则表示不支持该链路速度。更多要求请参见 § 第 8.2.1 节。
 该字段内的位定义如下:
 2.5 GT/s
 5.0 GT/s
@@ -4421,13 +4409,13 @@ RsvdP
 图 7-267 Root Complex Link Control Register(根复合体链路控制寄存器)
 实现注意事项:
 早期硬件支持的链路速度
-符合 [PCIe-3.0] 之前版本的硬件组件未实现 Supported Link Speeds Vector(支持的链路速度向量)字段，而是在位 24:18 返回 0000 000b。
-对于该字段包含 0000 000b 的组件，软件可读取 Root Complex Link Capabilities Register(根复合体链路能力寄存器，现定义为 Max Link Speed 字段)的位 3:0,并按下表解释其值:
+符合 [PCIe-3.0] 之前版本的硬件组件未实现 Supported Link Speeds Vector(支持的链路速度向量)字段,而是在位 24:18 返回 0000 000b。
+对于该字段包含 0000 000b 的组件,软件可读取 Root Complex Link Capabilities Register(根复合体链路能力寄存器,现定义为 Max Link Speed 字段)的位 3:0,并按下表解释其值:
 0001b
 支持 2.5 GT/s 链路速度
 0010b
 支持 5.0 GT/s 和 2.5 GT/s 链路速度
-对于此类组件，相同的编码也用于 Root Complex Link Status Register(根复合体链路状态寄存器)中 Current Link Speed 字段的值。
+对于此类组件,相同的编码也用于 Root Complex Link Status Register(根复合体链路状态寄存器)中 Current Link Speed 字段的值。
 
 </td>
 </tr>
@@ -4462,7 +4450,7 @@ slower speeds.
 
 实现注意事项:
 未来硬件的链路速度软件管理
-强烈建议软件主要使用 Supported Link Speeds Vector(支持的链路速度向量)而非 Max Link Speed(最大链路速度)字段，以便软件能够在当前和未来硬件上确定所支持速度的精确集合。这可以避免在未来规范定义了不需要支持所有较慢速度的链路时，软件产生混淆。
+强烈建议软件主要使用 Supported Link Speeds Vector(支持的链路速度向量)而非 Max Link Speed(最大链路速度)字段,以便软件能够在当前和未来硬件上确定所支持速度的精确集合。这可以避免在未来规范定义了不需要支持所有较慢速度的链路时,软件产生混淆。
 
 </td>
 </tr>
@@ -4548,17 +4536,17 @@ Disabled(禁用)
 L0s Entry Enabled(允许进入 L0s)
 L1 Entry Enabled(允许进入 L1)
 L0s and L1 Entry Enabled(允许进入 L0s 和 L1)
-注:"L0s Entry Enabled"(允许进入 L0s)使发送器 (Transmitter) 能够进入 L0s。如果支持 L0s,则即使发送器被禁止进入 L0s(00b 或 10b)，接收器 (Receiver) 也必须能够进入 L0s。
-在 Flit 模式下，不支持 L0s,该字段的位 0 被忽略且无效(即编码 01b 与 00b 等效，编码 11b 与 10b 等效)。
+注:"L0s Entry Enabled"(允许进入 L0s)使发送器 (Transmitter) 能够进入 L0s。如果支持 L0s,则即使发送器被禁止进入 L0s(00b 或 10b),接收器 (Receiver) 也必须能够进入 L0s。
+在 Flit 模式下,不支持 L0s,该字段的位 0 被忽略且无效(即编码 01b 与 00b 等效,编码 11b 与 10b 等效)。
 该字段的默认值是实现特定的。
-除非链路上两侧的组件均支持 L0s(如其 ASPM Support 字段值所示)，否则软件不得在任何方向上的给定链路上启用 L0s。否则结果未定义。
-软件必须先在链路的上游组件 (Upstream component) 启用 ASPM L1,然后才能在该链路的下游组件 (Downstream component) 启用 ASPM L1。禁用 ASPM L1 时，软件必须先在该链路的下游组件禁用 ASPM L1,然后才能在该链路的上游组件禁用 ASPM L1。仅当链路上的两个组件均支持 ASPM L1 时，才允许在下游组件上启用 ASPM L1。
-对于给定内部链路不支持此特性的根复合体，必须将该字段硬连线 (hardwire) 为 00b。
+除非链路上两侧的组件均支持 L0s(如其 ASPM Support 字段值所示),否则软件不得在任何方向上的给定链路上启用 L0s。否则结果未定义。
+软件必须先在链路的上游组件 (Upstream component) 启用 ASPM L1,然后才能在该链路的下游组件 (Downstream component) 启用 ASPM L1。禁用 ASPM L1 时,软件必须先在该链路的下游组件禁用 ASPM L1,然后才能在该链路的上游组件禁用 ASPM L1。仅当链路上的两个组件均支持 ASPM L1 时,才允许在下游组件上启用 ASPM L1。
+对于给定内部链路不支持此特性的根复合体,必须将该字段硬连线 (hardwire) 为 00b。
 RW
 7
-Extended Synch(扩展同步) — 该位置位 (Set) 时，强制在退出 L0s 状态(见 § 第 4.2.5.6 节)和处于 Recovery(恢复)状态(见 § 第 4.2.7.4.1 节)时传输额外的有序集 (Ordered Sets)。此模式为监控链路的外部设备(例如逻辑分析仪)提供在链路进入 L0 状态并恢复通信之前实现位和符号锁定的时间。
-对于给定内部链路不支持此特性的根复合体，必须将该位硬连线为 0b。
-在 Flit 模式下，该位被忽略且无效，因为不支持 L0s。
+Extended Synch(扩展同步) — 该位置位 (Set) 时,强制在退出 L0s 状态(见 § 第 4.2.5.6 节)和处于 Recovery(恢复)状态(见 § 第 4.2.7.4.1 节)时传输额外的有序集 (Ordered Sets)。此模式为监控链路的外部设备(例如逻辑分析仪)提供在链路进入 L0 状态并恢复通信之前实现位和符号锁定的时间。
+对于给定内部链路不支持此特性的根复合体,必须将该位硬连线为 0b。
+在 Flit 模式下,该位被忽略且无效,因为不支持 L0s。
 该位的默认值为 0b。
 RW
 
@@ -4702,7 +4690,7 @@ RsvdZ
 属性
 3:0
 Current Link Speed(当前链路速度) — 该字段指示给定链路的协商后链路速度。
-编码值指定 Supported Link Speeds Vector(支持的链路速度向量，位于 Root Complex Link Capabilities Register 中)中与当前链路速度对应的位位置。
+编码值指定 Supported Link Speeds Vector(支持的链路速度向量,位于 Root Complex Link Capabilities Register 中)中与当前链路速度对应的位位置。
 已定义的编码为:
 Supported Link Speeds Vector 字段位 0
 Supported Link Speeds Vector 字段位 1
@@ -4712,7 +4700,7 @@ Supported Link Speeds Vector 字段位 4
 Supported Link Speeds Vector 字段位 5
 Supported Link Speeds Vector 字段位 6
 所有其他编码为保留。
-当链路未建立时，该字段中的值未定义。不支持此特性的根复合体必须在该字段中报告 0000b。
+当链路未建立时,该字段中的值未定义。不支持此特性的根复合体必须在该字段中报告 0000b。
 RO
 9:4
 Negotiated Link Width(协商链路宽度) — 该字段指示给定链路的协商后宽度。这包括初始链路训练期间确定的链路宽度以及初始链路训练之后发生的更改(例如 L0p)。
@@ -4722,7 +4710,7 @@ x2
 x4
 x8
 x16
-所有其他编码为保留。当链路未建立时，该字段中的值未定义。不支持此特性的根复合体必须将该字段硬连线为 00 0000b。
+所有其他编码为保留。当链路未建立时,该字段中的值未定义。不支持此特性的根复合体必须将该字段硬连线为 00 0000b。
 RO
 
 </td>
@@ -4762,7 +4750,7 @@ associated with this Root Complex Event Collector.
 <td style="background-color:#e8e8e8">
 
 Root Complex Event Collector Endpoint Association Extended Capability(根复合体事件收集器端点关联扩展能力)由 Root Complex Event Collector(根复合体事件收集器)实现。它声明该根复合体事件收集器所支持的 RCiEP(RCiEP, Root Complex integrated Endpoint)。根复合体事件收集器必须实现 Root Complex Event Collector Endpoint Association Extended Capability;不允许任何其他 PCI Express Device Function(PCI Express 设备功能)实现此 Capability(能力)。
-如 § 图 7-269 所示,Root Complex Event Collector Endpoint Association Extended Capability 由 PCI Express Extended Capability header(PCI Express 扩展能力头)组成，后跟一个 DWORD 位图，用于枚举同一 Bus(总线)上的 RCiEP,并可选地附加一段 Bus Number(总线号)范围，该范围内可能包含与该根复合体事件收集器关联的 RCiEP。此 Capability 所描述范围内的非 RCiEP 功能(例如 Root Port(根端口))与该根复合体事件收集器无关。
+如 § 图 7-269 所示,Root Complex Event Collector Endpoint Association Extended Capability 由 PCI Express Extended Capability header(PCI Express 扩展能力头)组成,后跟一个 DWORD 位图,用于枚举同一 Bus(总线)上的 RCiEP,并可选地附加一段 Bus Number(总线号)范围,该范围内可能包含与该根复合体事件收集器关联的 RCiEP。此 Capability 所描述范围内的非 RCiEP 功能(例如 Root Port(根端口))与该根复合体事件收集器无关。
 
 </td>
 </tr>
@@ -4919,12 +4907,12 @@ Next Capability Offset(下一能力偏移量)
 寄存器描述
 属性
 15:0
-PCI Express Extended Capability ID(PCI Express 扩展能力 ID) — 该字段是 PCI-SIG 定义的 ID 号，用于指示 Extended Capability(扩展能力)的性质和格式。
+PCI Express Extended Capability ID(PCI Express 扩展能力 ID) — 该字段是 PCI-SIG 定义的 ID 号,用于指示 Extended Capability(扩展能力)的性质和格式。
 Root Complex Event Collector Endpoint Association Extended Capability 的 Extended Capability ID 为 0007h。
 RO
 19:16
-Capability Version(能力版本) — 该字段是 PCI-SIG 定义的版本号，用于指示当前 Capability(能力)结构的版本。
-如果 Extended Capability 包含 RCEC Associated Bus Numbers Register(见 § 第 7.9.10.3 节)，则必须为 2h;否则必须为 1h。
+Capability Version(能力版本) — 该字段是 PCI-SIG 定义的版本号,用于指示当前 Capability(能力)结构的版本。
+如果 Extended Capability 包含 RCEC Associated Bus Numbers Register(见 § 第 7.9.10.3 节),则必须为 2h;否则必须为 1h。
 RO
 
 </td>
@@ -4970,9 +4958,9 @@ RO
 寄存器描述
 属性
 31:20
-Next Capability Offset(下一能力偏移量) — 该字段包含下一个 PCI Express Capability(能力)结构的偏移量，如果链接的 Capability 列表中不存在其他项，则为 000h。
-对于在 Configuration Space(配置空间)中实现的 Extended Capability(扩展能力)，此偏移量相对于 PCI-compatible Configuration Space(PCI 兼容配置空间)的开头，因此必须始终为 000h(用于终止 Capability 列表)或大于 0FFh。
-此偏移量的低 2 位为保留位，必须实现为 00b,但软件必须屏蔽它们以便将来使用这些位。
+Next Capability Offset(下一能力偏移量) — 该字段包含下一个 PCI Express Capability(能力)结构的偏移量,如果链接的 Capability 列表中不存在其他项,则为 000h。
+对于在 Configuration Space(配置空间)中实现的 Extended Capability(扩展能力),此偏移量相对于 PCI-compatible Configuration Space(PCI 兼容配置空间)的开头,因此必须始终为 000h(用于终止 Capability 列表)或大于 0FFh。
+此偏移量的低 2 位为保留位,必须实现为 00b,但软件必须屏蔽它们以便将来使用这些位。
 RO
 
 </td>
@@ -5006,7 +4994,7 @@ corresponding to the Device Number of the Root Complex Event Collector must alwa
 </td>
 <td style="background-color:#e8e8e8">
 
-Association Bitmap for RCiEPs(RCiEP 关联位图)是一个只读寄存器，用于设置与事件收集器所在同一 Bus Number 上的根复合体事件收集器关联的 RCiEP 的 Device Number(设备号)所对应的位。与根复合体事件收集器 Device Number 对应的位必须始终置位。
+Association Bitmap for RCiEPs(RCiEP 关联位图)是一个只读寄存器,用于设置与事件收集器所在同一 Bus Number 上的根复合体事件收集器关联的 RCiEP 的 Device Number(设备号)所对应的位。与根复合体事件收集器 Device Number 对应的位必须始终置位。
 
 </td>
 </tr>
@@ -5071,8 +5059,8 @@ HwInit
 </td>
 <td style="background-color:#e8e8e8">
 
-RCEC Associated Bus Numbers Register(RCEC 关联总线号寄存器)是一个只读寄存器，用于指示包含与此根复合体事件收集器关联的 RCiEP 的附加总线号范围。允许 Association Bus Range(关联总线范围)内出现除 RCiEP 之外的 Function(包括 Root Port)。只有该范围内的 RCiEP 才与此根复合体事件收集器关联。如果 Capability Version 为 2h 或更高，则存在此寄存器。
-此寄存器不指示事件收集器与 Association Bus Range 内的任何 Virtual Function(虚拟功能，见 § 第 9.2.1.2 节)之间的关联。此寄存器不指示事件收集器与事件收集器所在同一 Bus Number 上的任何 Function 之间的关联，但允许 Association Bus Range 包含该根复合体事件收集器的 Bus Number。
+RCEC Associated Bus Numbers Register(RCEC 关联总线号寄存器)是一个只读寄存器,用于指示包含与此根复合体事件收集器关联的 RCiEP 的附加总线号范围。允许 Association Bus Range(关联总线范围)内出现除 RCiEP 之外的 Function(包括 Root Port)。只有该范围内的 RCiEP 才与此根复合体事件收集器关联。如果 Capability Version 为 2h 或更高,则存在此寄存器。
+此寄存器不指示事件收集器与 Association Bus Range 内的任何 Virtual Function(虚拟功能,见 § 第 9.2.1.2 节)之间的关联。此寄存器不指示事件收集器与事件收集器所在同一 Bus Number 上的任何 Function 之间的关联,但允许 Association Bus Range 包含该根复合体事件收集器的 Bus Number。
 0
 7
 RsvdP
@@ -5091,11 +5079,11 @@ RsvdP
 寄存器描述
 属性
 15:8
-RCEC Next Bus(RCEC 下一总线) — 该字段包含与此根复合体事件收集器关联的 RCiEP 所在的最低附加总线号。如果与此根复合体事件收集器关联的所有 Device 都位于与事件收集器相同的总线上，则该字段必须设置为 FFh。
+RCEC Next Bus(RCEC 下一总线) — 该字段包含与此根复合体事件收集器关联的 RCiEP 所在的最低附加总线号。如果与此根复合体事件收集器关联的所有 Device 都位于与事件收集器相同的总线上,则该字段必须设置为 FFh。
 HwInit
 23:16
 RCEC Last Bus(RCEC 上一总线) — 该字段包含与此根复合体事件收集器关联的 RCiEP 所在的最高附加总线号。
-如果与此根复合体事件收集器关联的所有 Device 都位于与事件收集器相同的总线上，则该字段必须设置为 00h。
+如果与此根复合体事件收集器关联的所有 Device 都位于与事件收集器相同的总线上,则该字段必须设置为 00h。
 HwInit
 
 </td>
@@ -5135,7 +5123,7 @@ determine association.
 
 实现注意事项:
 与传统软件的 RCEC 关联总线号兼容性
-传统软件可能不支持使用 RCEC Associated Bus Numbers Register 作为将 Device 与 RCEC 关联的机制。此类软件可能会在 RCEC 中看到来自不同总线号上 Device 的事件，但这些 Device 不被视为与此根复合体事件收集器相关联。强烈建议 System Software(系统软件)报告在根复合体事件收集器上观察到的所有事件，无论它是否能够确定关联性。
+传统软件可能不支持使用 RCEC Associated Bus Numbers Register 作为将 Device 与 RCEC 关联的机制。此类软件可能会在 RCEC 中看到来自不同总线号上 Device 的事件,但这些 Device 不被视为与此根复合体事件收集器相关联。强烈建议 System Software(系统软件)报告在根复合体事件收集器上观察到的所有事件,无论它是否能够确定关联性。
 
 </td>
 </tr>
@@ -5177,9 +5165,9 @@ the RCiEP is integrated.
 </td>
 <td style="background-color:#e8e8e8">
 
-Multicast(组播)是一种可选的规范性功能，由 Multicast Extended Capability(组播扩展能力)结构控制。Multicast Extended Capability 适用于 Root Port、RCRB、Switch Port、Endpoint Function 和 RCiEP。它不适用于 PCI Express 到 PCI/PCI-X 的桥接设备 (Bridge)。
-SR-IOV(单根 I/O 虚拟化)设备中的 Multicast 支持是可选的。如果 VF(虚拟功能)实现 Multicast capability(组播能力)，则其关联的 PF(物理功能)必须实现 Multicast capability。
-对于 Switch(交换机)或 Root Complex(根复合体)或包含多个 Function 的组件，需要此 Capability 结构的多个副本——每个支持 Multicast 的 Endpoint Function、Switch Port 或 Root Port 各一个。为了提供实现效率，组件内每个 Multicast Extended Capability 结构中的某些字段必须以相同方式编程，否则结果不确定。必须配置为相同值的字段和寄存器包括 MC_Enable、MC_Num_Group、MC_Base_Address 和 MC_Index_Position。Endpoint 的 Multicast Extended Capability 结构中的这些相同字段必须与 Endpoint 上方的 Switch 或 Root Complex 的 Multicast Extended Capability 结构中配置的字段匹配，或者与 RCiEP 集成所在的 Switch 或 Root Complex 中的字段匹配。
+Multicast(组播)是一种可选的规范性功能,由 Multicast Extended Capability(组播扩展能力)结构控制。Multicast Extended Capability 适用于 Root Port、RCRB、Switch Port、Endpoint Function 和 RCiEP。它不适用于 PCI Express 到 PCI/PCI-X 的桥接设备 (Bridge)。
+SR-IOV(单根 I/O 虚拟化)设备中的 Multicast 支持是可选的。如果 VF(虚拟功能)实现 Multicast capability(组播能力),则其关联的 PF(物理功能)必须实现 Multicast capability。
+对于 Switch(交换机)或 Root Complex(根复合体)或包含多个 Function 的组件,需要此 Capability 结构的多个副本——每个支持 Multicast 的 Endpoint Function、Switch Port 或 Root Port 各一个。为了提供实现效率,组件内每个 Multicast Extended Capability 结构中的某些字段必须以相同方式编程,否则结果不确定。必须配置为相同值的字段和寄存器包括 MC_Enable、MC_Num_Group、MC_Base_Address 和 MC_Index_Position。Endpoint 的 Multicast Extended Capability 结构中的这些相同字段必须与 Endpoint 上方的 Switch 或 Root Complex 的 Multicast Extended Capability 结构中配置的字段匹配,或者与 RCiEP 集成所在的 Switch 或 Root Complex 中的字段匹配。
 
 </td>
 </tr>
@@ -5354,7 +5342,7 @@ Next Capability Offset(下一能力偏移量)
 寄存器描述
 属性
 15:0
-PCI Express Extended Capability ID(PCI Express 扩展能力 ID) — 该字段是 PCI-SIG 定义的 ID 号，用于指示 Extended Capability(扩展能力)的性质和格式。
+PCI Express Extended Capability ID(PCI Express 扩展能力 ID) — 该字段是 PCI-SIG 定义的 ID 号,用于指示 Extended Capability(扩展能力)的性质和格式。
 RO
 
 </td>
@@ -5402,11 +5390,11 @@ RO
 属性
 Multicast Extended Capability 的 PCI Express Extended Capability ID 为 0012h。
 19:16
-Capability Version(能力版本) — 该字段是 PCI-SIG 定义的版本号，用于指示当前 Capability(能力)结构的版本。
+Capability Version(能力版本) — 该字段是 PCI-SIG 定义的版本号,用于指示当前 Capability(能力)结构的版本。
 在本版本的规范中必须为 1h。
 RO
 31:20
-Next Capability Offset(下一能力偏移量) — 该字段包含下一个 PCI Express Extended Capability(扩展能力)结构的偏移量，如果链接的 Capability 列表中不存在其他项，则为 000h。
+Next Capability Offset(下一能力偏移量) — 该字段包含下一个 PCI Express Extended Capability(扩展能力)结构的偏移量,如果链接的 Capability 列表中不存在其他项,则为 000h。
 RO
 
 </td>
@@ -5496,18 +5484,18 @@ MC_ECRC_Regeneration_Supported(MC 支持 ECRC 重新生成)
 寄存器描述
 属性
 5:0
-MC_Max_Group(MC 最大组数) — 该值指示组件所支持的 Multicast Group(组播组)最大数量，以 M-1 进行编码。值为 00h 指示支持一个 Multicast Group。
+MC_Max_Group(MC 最大组数) — 该值指示组件所支持的 Multicast Group(组播组)最大数量,以 M-1 进行编码。值为 00h 指示支持一个 Multicast Group。
 对于 VF,该字段为 RsvdP。适用关联 PF 的值。
 RO
 VF RsvdP
 13:8
-MC_Window_Size_Requested(MC 请求的窗口大小) — 在 Endpoint 中，表示请求的 Multicast Window(组播窗口)大小的 log2 值。在 Switch 和 Root Port 中为 RsvdP。
+MC_Window_Size_Requested(MC 请求的窗口大小) — 在 Endpoint 中,表示请求的 Multicast Window(组播窗口)大小的 log2 值。在 Switch 和 Root Port 中为 RsvdP。
 对于 VF,该字段为 RsvdP。适用关联 PF 的值。
 RO
 VF RsvdP
 15
-MC_ECRC_Regeneration_Supported(MC 支持 ECRC 重新生成) — 如果置位，指示支持 ECRC(端到端 CRC)重新生成。
-除非 Function 支持 Advanced Error Reporting(高级错误报告)且 Advanced Error Capabilities and Control Register(高级错误能力与控制寄存器)中的 ECRC Check Capable 位也被置位，否则不得置位该位。但是，如果支持 ECRC 重新生成，则其操作不依赖于 Advanced Error Capabilities and Control Register 中 ECRC Check Enable 位的设置。该位适用于 Switch 和 Root Port,在所有其他 Function 中为 RsvdP。
+MC_ECRC_Regeneration_Supported(MC 支持 ECRC 重新生成) — 如果置位,指示支持 ECRC(端到端 CRC)重新生成。
+除非 Function 支持 Advanced Error Reporting(高级错误报告)且 Advanced Error Capabilities and Control Register(高级错误能力与控制寄存器)中的 ECRC Check Capable 位也被置位,否则不得置位该位。但是,如果支持 ECRC 重新生成,则其操作不依赖于 Advanced Error Capabilities and Control Register 中 ECRC Check Enable 位的设置。该位适用于 Switch 和 Root Port,在所有其他 Function 中为 RsvdP。
 RO/RsvdP
 
 </td>
@@ -5601,12 +5589,12 @@ MC_Enable(MC 使能)
 寄存器描述
 属性
 5:0
-MC_Num_Group(MC 组数) — 该值指示已配置使用的 Multicast Group 数量，以 N-1 进行编码。默认值 00 0000b 指示已配置一个 Multicast Group。如果该值超过 MC_Max_Group,则行为未定义。该参数间接定义 Multicast 地址范围的上限。如果 MC_Enable 清零，则忽略该字段。默认值为 00 0000b。
+MC_Num_Group(MC 组数) — 该值指示已配置使用的 Multicast Group 数量,以 N-1 进行编码。默认值 00 0000b 指示已配置一个 Multicast Group。如果该值超过 MC_Max_Group,则行为未定义。该参数间接定义 Multicast 地址范围的上限。如果 MC_Enable 清零,则忽略该字段。默认值为 00 0000b。
 对于 VF,该字段为 RsvdP。适用关联 PF 的值。
 RW
 VF RsvdP
 15
-MC_Enable(MC 使能) — 置位时，为该组件启用 Multicast 机制。默认值为 0b。
+MC_Enable(MC 使能) — 置位时,为该组件启用 Multicast 机制。默认值为 0b。
 RW
 MC_Base_Address Register(MC 基址寄存器)包含 MC_Base_Address 和 MC_Index_Position。§ 图 7-276 详细说明了 MC_Base_Address Register 中各字段的分配;§ 表 7-246 给出了相应的位定义。
 A-0751
@@ -5626,7 +5614,7 @@ MC_Base_Address [63:32]
 属性
 5:0
 MC_Index_Position(MC 索引位置) — 地址中 Multicast Group 编号的 LSB(最低有效位)的位置。
-如果该值小于 12 且 MC_Enable 已置位，则行为未定义。默认值为 0。
+如果该值小于 12 且 MC_Enable 已置位,则行为未定义。默认值为 0。
 对于 VF,该字段为 RsvdP。适用关联 PF 的值。
 RW
 VF RsvdP
@@ -5783,7 +5771,6 @@ MC_Receive 寄存器提供一个位向量，用于指示该 Function 应接受�
 </table>
 
 > **Figure 7-277.** MC_Receive Register
-> **图 7-277.** Root Complex Event Collector 能力寄存器
 > <img src="figures/chapter_07/fig_1314_1_tight.png" width="700">
 
 </div>
@@ -5816,7 +5803,6 @@ The MC_Block_All Register provides a bit vector denoting which Multicast groups 
 § Figure 7-278 details allocation of the fields in the MC_Block_All Register and § Table 7-248 provides the respective bit definitions.
 
 > **Figure 7-278.** MC_Block_All Register
-> **图 7-278.** Root Complex Event Collector 控制寄存器
 > <img src="figures/chapter_07/fig_1314_2_tight.png" width="700">
 
 </td>
@@ -5930,7 +5916,6 @@ MC_Block_Untranslated 寄存器用于确定是否应阻止包含未转换地址�
 </table>
 
 > **Figure 7-279.** MC_Block_Untranslated Register
-> **图 7-279.** Root Complex Event Collector 状态寄存器
 > <img src="figures/chapter_07/fig_1315_1_tight.png" width="700">
 
 </div>
@@ -6055,7 +6040,6 @@ MC_Overlay_BAR 用于指定单播（unicast）地址空间中一个窗口的基�
 </table>
 
 > **Figure 7-280.** MC_Overlay_BAR Register
-> **图 7-280.** Root Complex Event Collector Event Source 寄存器
 > <img src="figures/chapter_07/fig_1316_1_tight.png" width="700">
 
 
@@ -6101,7 +6085,6 @@ DPA Capability 结构如 § 图 7-281 所示。
 </table>
 
 > **Figure 7-281.** Dynamic Power Allocation Extended Capability Structure
-> **图 7-281.** Root Complex Event Collector Event Source 寄存器（续）
 > <img src="figures/chapter_07/fig_1316_2_tight.png" width="700">
 
 
@@ -6135,7 +6118,6 @@ DPA Capability 结构如 § 图 7-281 所示。
 </table>
 
 > **Figure 7-282.** DPA Extended Capability Header
-> **图 7-282.** Root Complex Event Collector Event Source 寄存器（续）
 > <img src="figures/chapter_07/fig_1317_1_tight.png" width="700">
 
 
@@ -6178,7 +6160,6 @@ DPA Capability 结构如 § 图 7-281 所示。
 </table>
 
 > **Figure 7-283.** DPA Capability Register
-> **图 7-283.** Root Complex Event Collector Event Source 寄存器（续）
 > <img src="figures/chapter_07/fig_1317_2_tight.png" width="700">
 
 
@@ -6249,7 +6230,6 @@ DPA Capability 结构如 § 图 7-281 所示。
 7.9.12.3 DPA Latency Indicator Register (Offset 08h)
 
 > **Figure 7-284.** DPA Latency Indicator Register
-> **图 7-284.** 集成设备—寄存器映射
 > <img src="figures/chapter_07/fig_1318_1.png" width="700">
 
 </td>
@@ -6301,7 +6281,6 @@ DPA Capability 结构如 § 图 7-281 所示。
 </table>
 
 > **Figure 7-285.** DPA Status Register
-> **图 7-285.** 集成设备配置头部
 > <img src="figures/chapter_07/fig_1319_1_tight.png" width="700">
 
 
@@ -6343,7 +6322,6 @@ DPA Capability 结构如 § 图 7-281 所示。
 </table>
 
 > **Figure 7-286.** DPA Control Register
-> **图 7-286.** 集成设备 A 系列寄存器映射
 > <img src="figures/chapter_07/fig_1319_2_tight.png" width="700">
 
 
@@ -6382,7 +6360,6 @@ Default value is 0 0000b.
 </table>
 
 > **Figure 7-287.** DPA Power Allocation Array
-> **图 7-287.** 集成设备 B 系列寄存器映射
 > <img src="figures/chapter_07/fig_1320_1_tight.png" width="700">
 
 
@@ -6419,7 +6396,6 @@ Each Substate Power Allocation register indicates the power allocation value for
 </table>
 
 > **Figure 7-288.** Substate Power Allocation Register (0 to Substate_Max)
-> **图 7-288.** 集成设备 C 系列寄存器映射
 > <img src="figures/chapter_07/fig_1320_2_tight.png" width="700">
 
 
@@ -6490,11 +6466,9 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 <td>
 
 > **Figure 7-289.** TPH Extended Capability Structure
-> **图 7-289.** TPH 扩展能力结构
 > <img src="figures/chapter_07/fig_1321_1_tight.png" width="700">
 
 > **Figure 7-290.** TPH Requester Extended Capability Header
-> **图 7-290.** TPH Requester 扩展能力头部
 > <img src="figures/chapter_07/fig_1321_2_tight.png" width="700">
 
 </td>
@@ -6546,13 +6520,12 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 </table>
 
 > **Figure 7-291.** TPH Requester Capability Register
-> **图 7-291.** TPH Requester 能力寄存器
 > <img src="figures/chapter_07/fig_1321_3_tight.png" width="700">
 
 
 ---
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -6618,7 +6591,6 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 </table>
 
 > **Figure 7-292.** TPH Requester Control Register
-> **图 7-292.** TPH Requester 控制寄存器
 > <img src="figures/chapter_07/fig_1322_1_tight.png" width="700">
 
 
@@ -6688,7 +6660,6 @@ The TPH ST Table must be implemented in the TPH Requester Extended Capability st
 </table>
 
 > **Figure 7-293.** TPH ST Table
-> **图 7-293.** TPH ST 表
 > <img src="figures/chapter_07/fig_1323_1.png" width="700">
 
 </div>
@@ -6745,7 +6716,6 @@ The TPH ST Table must be implemented in the TPH Requester Extended Capability st
 </table>
 
 > **Figure 7-294.** TPH ST Table Entry
-> **图 7-294.** TPH ST 表项
 > <img src="figures/chapter_07/fig_1324_1.png" width="700">
 
 
@@ -6817,7 +6787,6 @@ The various RP PIO registers must be implemented only by Root Ports that support
 <td>
 
 > **Figure 7-295.** DPC Extended Capability – Non-Flit Mode
-> **图 7-295.** DPC 扩展能力 – 非 Flit 模式
 > <img src="figures/chapter_07/fig_1325_1_tight.png" width="700">
 
 </td>
@@ -6852,7 +6821,6 @@ The various RP PIO registers must be implemented only by Root Ports that support
 </table>
 
 > **Figure 7-296.** DPC Extended Capability – Flit Mode
-> **图 7-296.** DPC 扩展能力 – Flit 模式
 > <img src="figures/chapter_07/fig_1326_1_tight.png" width="700">
 
 
@@ -6879,7 +6847,6 @@ The various RP PIO registers must be implemented only by Root Ports that support
 </table>
 
 > **Figure 7-297.** DPC Extended Capability Header
-> **图 7-297.** DPC 扩展能力头部
 > <img src="figures/chapter_07/fig_1327_1_tight.png" width="700">
 
 
@@ -6909,7 +6876,6 @@ The various RP PIO registers must be implemented only by Root Ports that support
 </table>
 
 > **Figure 7-298.** DPC Capability Register
-> **图 7-298.** DPC 能力寄存器
 > <img src="figures/chapter_07/fig_1327_2_tight.png" width="700">
 
 
@@ -7009,7 +6975,6 @@ The various RP PIO registers must be implemented only by Root Ports that support
 </table>
 
 > **Figure 7-299.** DPC Control Register
-> **图 7-299.** DPC 控制寄存器
 > <img src="figures/chapter_07/fig_1329_1_tight.png" width="700">
 
 
@@ -7087,7 +7052,6 @@ The various RP PIO registers must be implemented only by Root Ports that support
 </table>
 
 > **Figure 7-300.** DPC Status Register
-> **图 7-300.** DPC 状态寄存器
 > <img src="figures/chapter_07/fig_1331_1_tight.png" width="700">
 
 
@@ -7172,7 +7136,6 @@ The various RP PIO registers must be implemented only by Root Ports that support
 </table>
 
 > **Figure 7-301.** DPC Error Source ID Register
-> **图 7-301.** DPC 错误源 ID 寄存器
 > <img src="figures/chapter_07/fig_1332_1_tight.png" width="700">
 
 
@@ -7211,7 +7174,6 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 </table>
 
 > **Figure 7-302.** RP PIO Status Register
-> **图 7-302.** RP PIO 状态寄存器
 > <img src="figures/chapter_07/fig_1333_1_tight.png" width="700">
 
 
@@ -7289,7 +7251,6 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 </table>
 
 > **Figure 7-303.** RP PIO Mask Register
-> **图 7-303.** RP PIO 掩码寄存器
 > <img src="figures/chapter_07/fig_1334_1_tight.png" width="700">
 
 
@@ -7334,7 +7295,7 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 
 ---
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -7369,7 +7330,7 @@ Reserved for future definition.
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -7439,7 +7400,7 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -7508,7 +7469,7 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -7571,7 +7532,7 @@ This register is implemented only in Root Ports that support RP Extensions for D
 | 17 | Mem CA Cpl —— 内存请求接收到 CA 完成报文 | RWS | 0b |
 | 18 | Mem CTO —— 内存请求完成超时 | RWS | 0b |
 
-此寄存器仅在支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中实现。RP PIO Header Log 寄存器包含与所记录的 RP PIO 错误相关联的请求 TLP (Request TLP) 的包头 (Header)。详见 § 第 6.2.11.3 节。在非 Flit 模式 (Non-Flit Mode) 下，此寄存器为 16 字节。在 Flit 模式 (Flit Mode) 下，此寄存器大小介于 52 与 76 字节之间，并被拆分为偏移 20h 和偏移 34h 两部分。在 Flit 模式和非 Flit 模式下，此寄存器的格式与 AER 中的 Header Log 寄存器完全相同。参见 § 第 7.8.4.8 节。
+此寄存器仅在支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中实现。RP PIO Header Log 寄存器包含与所记录的 RP PIO 错误相关联的请求 TLP (Request TLP) 的包头 (Header)。详见 § 第 6.2.11.3 节。在非 Flit 模式 (Non-Flit Mode) 下,此寄存器为 16 字节。在 Flit 模式 (Flit Mode) 下,此寄存器大小介于 52 与 76 字节之间,并被拆分为偏移 20h 和偏移 34h 两部分。在 Flit 模式和非 Flit 模式下,此寄存器的格式与 AER 中的 Header Log 寄存器完全相同。参见 § 第 7.8.4.8 节。
 
 <img src="figures/chapter_07/fig_1337_1_tight.png" width="700">
 </td>
@@ -7581,7 +7542,7 @@ This register is implemented only in Root Ports that support RP Extensions for D
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -7641,7 +7602,7 @@ In Flit Mode, the RP PIO TLP Prefix Log Register does not exist and this configr
 |---|---|---|---|
 | 127:0 | TLP Header —— 与该错误相关联的 TLP 的包头 | ROS | 0 |
 
-此寄存器仅允许在支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中实现。如果实现 RP PIO ImpSpec Log 寄存器，则其包含与所记录错误相关的实现特定信息，例如指明请求 TLP (Request TLP) 的来源。当 RP PIO Log Size 字段的值大于等于 5 时，会为此寄存器分配空间。如果已为此寄存器分配空间但未实现，则这些位必须硬连线 (hardwired) 为 0b。
+此寄存器仅允许在支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中实现。如果实现 RP PIO ImpSpec Log 寄存器,则其包含与所记录错误相关的实现特定信息,例如指明请求 TLP (Request TLP) 的来源。当 RP PIO Log Size 字段的值大于等于 5 时,会为此寄存器分配空间。如果已为此寄存器分配空间但未实现,则这些位必须硬连线 (hardwired) 为 0b。
 
 **图 7-308 RP PIO ImpSpec Log 寄存器**
 
@@ -7656,7 +7617,7 @@ In Flit Mode, the RP PIO TLP Prefix Log Register does not exist and this configr
 
 在非 Flit 模式 (Non-Flit Mode) 下,RP PIO TLP Prefix Log 寄存器包含与所记录 RP PIO 错误对应的 TLP 中的所有端到端 TLP 前缀 (End-End TLP Prefixes)。详见 § 第 6.2.11.3 节。
 
-在 Flit 模式 (Flit Mode) 下，不存在 RP PIO TLP Prefix Log 寄存器，该配置空间是 RP PIO TLP Header Log 寄存器的延续。
+在 Flit 模式 (Flit Mode) 下,不存在 RP PIO TLP Prefix Log 寄存器,该配置空间是 RP PIO TLP Header Log 寄存器的延续。
 
 <img src="figures/chapter_07/fig_1338_1_tight.png" width="700">
 </td>
@@ -7664,7 +7625,7 @@ In Flit Mode, the RP PIO TLP Prefix Log Register does not exist and this configr
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -7694,7 +7655,7 @@ See § Section 7.9.14.11 above for the register description.
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -7735,9 +7696,9 @@ This register is formatted identically to the TLP Prefix Log register in AER, al
 </td>
 <td style="background-color:#e8e8e8">
 
-如果根端口 (Root Port) 支持跟踪包含端到端 TLP 前缀 (End-End TLP Prefixes) 的 Non-Posted 请求，则必须实现此寄存器，且其大小必须足以记录任何被跟踪请求的最大端到端 TLP 前缀数。参见 § 第 2.9.3 节。RP PIO TLP Prefix Log 寄存器以 DWORD 为单位分配的大小为:当 RP PIO Log Size 小于等于 9 时，为 RP PIO Log Size 减 5;当 RP PIO Log Size 大于 9 时，为 RP PIO Log Size 减 4。TLP Prefix Log 的实现大小必须小于或等于根端口 (Root Port) 的 Max End-End TLP Prefixes 字段值。对于根端口 (Root Port) 从不发送包含端到端 TLP 前缀 (End-End TLP Prefixes) 的 Non-Posted 请求的情况,TLP Prefix Log 的分配大小和实现大小均允许为 0。任何已分配但未实现的 DWORD 必须硬连线 (hardwired) 为零。
+如果根端口 (Root Port) 支持跟踪包含端到端 TLP 前缀 (End-End TLP Prefixes) 的 Non-Posted 请求,则必须实现此寄存器,且其大小必须足以记录任何被跟踪请求的最大端到端 TLP 前缀数。参见 § 第 2.9.3 节。RP PIO TLP Prefix Log 寄存器以 DWORD 为单位分配的大小为:当 RP PIO Log Size 小于等于 9 时,为 RP PIO Log Size 减 5;当 RP PIO Log Size 大于 9 时,为 RP PIO Log Size 减 4。TLP Prefix Log 的实现大小必须小于或等于根端口 (Root Port) 的 Max End-End TLP Prefixes 字段值。对于根端口 (Root Port) 从不发送包含端到端 TLP 前缀 (End-End TLP Prefixes) 的 Non-Posted 请求的情况,TLP Prefix Log 的分配大小和实现大小均允许为 0。任何已分配但未实现的 DWORD 必须硬连线 (hardwired) 为零。
 
-此寄存器的格式与 AER 中的 TLP Prefix Log 寄存器完全相同，但此寄存器的分配大小是可变的，而 AER 中的寄存器始终为 4 个 DWORD。参见 § 第 7.8.4.12 节。First TLP Prefix Log 寄存器包含 TLP 中的第一个端到端 TLP 前缀 (End-End TLP Prefix),Second TLP Prefix Log 寄存器包含第二个端到端 TLP 前缀，依此类推。如果 TLP 包含的 TLP 前缀数量少于本寄存器所能容纳的数量，则任何剩余的 TLP Prefix Log 寄存器必须为零。
+此寄存器的格式与 AER 中的 TLP Prefix Log 寄存器完全相同,但此寄存器的分配大小是可变的,而 AER 中的寄存器始终为 4 个 DWORD。参见 § 第 7.8.4.12 节。First TLP Prefix Log 寄存器包含 TLP 中的第一个端到端 TLP 前缀 (End-End TLP Prefix),Second TLP Prefix Log 寄存器包含第二个端到端 TLP 前缀,依此类推。如果 TLP 包含的 TLP 前缀数量少于本寄存器所能容纳的数量,则任何剩余的 TLP Prefix Log 寄存器必须为零。
 
 **图 7-309 RP PIO TLP Prefix Log 寄存器**
 
@@ -7756,7 +7717,7 @@ This register is formatted identically to the TLP Prefix Log register in AER, al
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -7801,9 +7762,9 @@ For Switches, a single instance of this Capability controls behavior for the ent
 </td>
 <td style="background-color:#e8e8e8">
 
-精确时间测量 (Precision Time Measurement, PTM) 扩展能力是一种可选的扩展能力，用于发现和控制 PTM 层级 (PTM Hierarchy) 的分布。对于根复合体 (Root Complex)，任何支持 PTM 的根端口 (Root Port)、RCiEP 或 RCRB 都必须具备此能力。对于与支持 PTM 的上游端口 (Upstream Port) 相关联的 Function,此上游端口中必须恰好有一个 Function 具备此能力，且该能力控制与该上游端口相关联的所有具备 PTM 能力的 Function 的 PTM 行为。对于交换机 (Switch) 的下游端口 (Downstream Port)，其 PTM 行为由控制该关联交换机上游端口 (Switch Upstream Port) 的同一 PTM 能力来控制。桥 (Bridge)、交换机下游端口 (Switch Downstream Port) 以及根复合体事件收集器 (Root Complex Event Collector) 不允许使用 PTM 能力。
+精确时间测量 (Precision Time Measurement, PTM) 扩展能力是一种可选的扩展能力,用于发现和控制 PTM 层级 (PTM Hierarchy) 的分布。对于根复合体 (Root Complex),任何支持 PTM 的根端口 (Root Port)、RCiEP 或 RCRB 都必须具备此能力。对于与支持 PTM 的上游端口 (Upstream Port) 相关联的 Function,此上游端口中必须恰好有一个 Function 具备此能力,且该能力控制与该上游端口相关联的所有具备 PTM 能力的 Function 的 PTM 行为。对于交换机 (Switch) 的下游端口 (Downstream Port),其 PTM 行为由控制该关联交换机上游端口 (Switch Upstream Port) 的同一 PTM 能力来控制。桥 (Bridge)、交换机下游端口 (Switch Downstream Port) 以及根复合体事件收集器 (Root Complex Event Collector) 不允许使用 PTM 能力。
 
-对于交换机 (Switch)，此能力的一个单一实例控制整个交换机的行为。如果交换机的上游端口 (Upstream Port) 与 MFD 相关联，则不要求控制 Function 为对应于交换机上游端口 (Switch Upstream Port) 的 Function。对于给定的交换机，如果存在此能力，则该交换机的所有下游端口 (Downstream Port) 必须实现 § 第 6.21.3.2 节中定义的要求。
+对于交换机 (Switch),此能力的一个单一实例控制整个交换机的行为。如果交换机的上游端口 (Upstream Port) 与 MFD 相关联,则不要求控制 Function 为对应于交换机上游端口 (Switch Upstream Port) 的 Function。对于给定的交换机,如果存在此能力,则该交换机的所有下游端口 (Downstream Port) 必须实现 § 第 6.21.3.2 节中定义的要求。
 
 **图 7-310 PTM 扩展能力结构**
 
@@ -7815,9 +7776,9 @@ For Switches, a single instance of this Capability controls behavior for the ent
 
 | 位位置 | 寄存器描述 | 属性 |
 |---|---|---|
-| 15:0 | PCI Express Extended Capability ID —— 该字段是由 PCI-SIG 定义的 ID 号，用于指示扩展能力的性质和格式。精确时间测量 (PTM) 能力的 PCI Express 扩展能力 ID 为 001Fh。 | RO |
-| 19:16 | Capability Version —— 该字段是由 PCI-SIG 定义的版本号，用于指示所存在能力结构的版本。对于本版本的规范，必须为 1h。 | RO |
-| 31:20 | Next Capability Offset —— 该字段包含指向下一个 PCI Express 扩展能力结构的偏移地址;如果链表中的能力已无其他项，则为 000h。 | RO |
+| 15:0 | PCI Express Extended Capability ID —— 该字段是由 PCI-SIG 定义的 ID 号,用于指示扩展能力的性质和格式。精确时间测量 (PTM) 能力的 PCI Express 扩展能力 ID 为 001Fh。 | RO |
+| 19:16 | Capability Version —— 该字段是由 PCI-SIG 定义的版本号,用于指示所存在能力结构的版本。对于本版本的规范,必须为 1h。 | RO |
+| 31:20 | Next Capability Offset —— 该字段包含指向下一个 PCI Express 扩展能力结构的偏移地址;如果链表中的能力已无其他项,则为 000h。 | RO |
 
 <img src="figures/chapter_07/fig_1340_1_tight.png" width="700">
 </td>
@@ -7825,7 +7786,7 @@ For Switches, a single instance of this Capability controls behavior for the ent
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -7855,7 +7816,7 @@ See § Section 7.9.15 above and § Figure 7-311 / § Table 7-274 for the registe
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -7908,12 +7869,12 @@ This register describes a Function's support for Precision Time Measurement. Not
 
 | 位位置 | 寄存器描述 | 属性 |
 |---|---|---|
-| 0 | PTM Requester Capable —— 指示该 Function 实现了 PTM Requester 角色 (参见 § 第 6.21.3.1 节)。允许端点 (Endpoint) 和 RCiEP 置位 (Set) 此位以指示其实现了 PTM Requester 角色。如果交换机 (Switch) 包含以下一项或多项，则其上游端口 (Switch Upstream Port) 必须置位 (Set) 此位: <br/> • 实现了 PTM Responder 角色的下游端口 (Downstream Port)。 <br/> • 另一个实现了 PTM Requester 角色的 Function。 | HwInit |
-| 1 | PTM Responder Capable —— 允许根端口 (Root Port) 和 RCRB 置位 (Set) 此位，支持 PTM 的交换机 (Switch) 必须置位 (Set) 此位，以指示其实现了 PTM Responder 角色 (参见 § 第 6.21.3.2 节)。如果 PTM Root Capable 被置位 (Set)，则此位必须被置位 (Set)。 | HwInit |
-| 2 | PTM Root Capable —— 根端口 (Root Port)、RCRB 和交换机 (Switch) 如果能够作为 PTM 主时间 (PTM Master Time) 的源，则允许置位 (Set) 此位 (参见 § 第 6.21.1 节)。所有其他 Function 必须将此位硬连线 (hardwired) 为 0b。 | HwInit |
-| 3 | ePTM Capable —— 置位 (Set) 时，指示该设备支持增强型精确时间测量 (Enhanced Precision Time Measurement, ePTM)。在所有 PTM 设备中，此位 MUST@FLIT 被置位 (Set)。 | HwInit |
-| 4 | PTM Propagation Delay Adaptation Capable —— 置位 (Set) 时，该字段指示端口 (Port) 支持 PTM 传播延迟适配能力 (PTM Propagation Delay Adaptation Capability)，该能力通过 Link Control 寄存器中的 PTM Propagation Delay Adaptation Interpretation B 位进行控制。对于交换机 (Switch)，在其上游端口 (Switch Upstream Port) 中置位 (Set) 时，指示该上游端口 (Upstream Port) 和交换机的所有下游端口 (Downstream Port) 均支持 PTM 传播延迟适配能力，该能力通过每个端口 (Port) 的 Link Control 寄存器中的 PTM Propagation Delay Adaptation Interpretation B 位按端口 (Port) 进行控制。 | HwInit |
-| 15:8 | Local Clock Granularity —— 编码方式如下: <br/> 0000 0000b:时间源 (Time Source) 未实现本地时钟，仅在响应 PTM 请求消息时转发从 PTM 层级 (PTM Hierarchy) 中更上游获取的定时信息。 <br/> 0000 0001b 至 1111 1110b:指示该时间源 (Time Source) 的本地时钟周期(单位:ns)。 <br/> 1111 1111b:指示该时间源 (Time Source) 的本地时钟周期大于 254 ns。 | HwInit/RsvdP |
+| 0 | PTM Requester Capable —— 指示该 Function 实现了 PTM Requester 角色 (参见 § 第 6.21.3.1 节)。允许端点 (Endpoint) 和 RCiEP 置位 (Set) 此位以指示其实现了 PTM Requester 角色。如果交换机 (Switch) 包含以下一项或多项,则其上游端口 (Switch Upstream Port) 必须置位 (Set) 此位: <br/> • 实现了 PTM Responder 角色的下游端口 (Downstream Port)。 <br/> • 另一个实现了 PTM Requester 角色的 Function。 | HwInit |
+| 1 | PTM Responder Capable —— 允许根端口 (Root Port) 和 RCRB 置位 (Set) 此位,支持 PTM 的交换机 (Switch) 必须置位 (Set) 此位,以指示其实现了 PTM Responder 角色 (参见 § 第 6.21.3.2 节)。如果 PTM Root Capable 被置位 (Set),则此位必须被置位 (Set)。 | HwInit |
+| 2 | PTM Root Capable —— 根端口 (Root Port)、RCRB 和交换机 (Switch) 如果能够作为 PTM 主时间 (PTM Master Time) 的源,则允许置位 (Set) 此位 (参见 § 第 6.21.1 节)。所有其他 Function 必须将此位硬连线 (hardwired) 为 0b。 | HwInit |
+| 3 | ePTM Capable —— 置位 (Set) 时,指示该设备支持增强型精确时间测量 (Enhanced Precision Time Measurement, ePTM)。在所有 PTM 设备中,此位 MUST@FLIT 被置位 (Set)。 | HwInit |
+| 4 | PTM Propagation Delay Adaptation Capable —— 置位 (Set) 时,该字段指示端口 (Port) 支持 PTM 传播延迟适配能力 (PTM Propagation Delay Adaptation Capability),该能力通过 Link Control 寄存器中的 PTM Propagation Delay Adaptation Interpretation B 位进行控制。对于交换机 (Switch),在其上游端口 (Switch Upstream Port) 中置位 (Set) 时,指示该上游端口 (Upstream Port) 和交换机的所有下游端口 (Downstream Port) 均支持 PTM 传播延迟适配能力,该能力通过每个端口 (Port) 的 Link Control 寄存器中的 PTM Propagation Delay Adaptation Interpretation B 位按端口 (Port) 进行控制。 | HwInit |
+| 15:8 | Local Clock Granularity —— 编码方式如下: <br/> 0000 0000b:时间源 (Time Source) 未实现本地时钟,仅在响应 PTM 请求消息时转发从 PTM 层级 (PTM Hierarchy) 中更上游获取的定时信息。 <br/> 0000 0001b 至 1111 1110b:指示该时间源 (Time Source) 的本地时钟周期(单位:ns)。 <br/> 1111 1111b:指示该时间源 (Time Source) 的本地时钟周期大于 254 ns。 | HwInit/RsvdP |
 
 <img src="figures/chapter_07/fig_1341_1_tight.png" width="700">
 </td>
@@ -7923,7 +7884,7 @@ This register describes a Function's support for Precision Time Measurement. Not
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -7966,7 +7927,7 @@ This register controls a Function's participation in the Precision Time Measurem
 </td>
 <td style="background-color:#e8e8e8">
 
-如果 PTM Root Select 位置位 (Set)，则使用该本地时钟提供 PTM 主时间 (PTM Master Time)。否则，时间源 (Time Source) 使用该本地时钟在本地跟踪从 PTM 层级 (PTM Hierarchy) 中更上游接收到的 PTM 主时间 (PTM Master Time)。
+如果 PTM Root Select 位置位 (Set),则使用该本地时钟提供 PTM 主时间 (PTM Master Time)。否则,时间源 (Time Source) 使用该本地时钟在本地跟踪从 PTM 层级 (PTM Hierarchy) 中更上游接收到的 PTM 主时间 (PTM Master Time)。
 
 如果 PTM Root Capable 位为 0b,则该字段为 RsvdP。
 
@@ -7979,9 +7940,9 @@ This register controls a Function's participation in the Precision Time Measurem
 
 | 位位置 | 寄存器描述 | 属性 |
 |---|---|---|
-| 0 | PTM Enable —— 置位 (Set) 时，该 Function 允许根据其所选定的角色参与 PTM 机制 (参见 § 第 6.21.2 节)。默认值为 0b。 | RW |
-| 1 | Root Select —— 置位 (Set) 时，如果 PTM Enable 位也被置位 (Set)，则该时间源 (Time Source) 为 PTM Root。在每个 PTM 层级 (PTM Hierarchy) 中，建议系统软件仅选择最上游的时间源 (Time Source) 作为 PTM Root。默认值为 0b。如果 PTM Root Capable 位的值为 0b,则允许将此位硬连线 (hardwired) 为 0b。 | RW/RO |
-| 15:8 | Effective Granularity —— 对于实现 PTM Requester 角色的 Function,该字段提供与 PTM 时钟预期精度相关的信息，但不会以其他方式影响 PTM 机制。 <br/> 对于端点 (Endpoint)，系统软件必须将该字段编程为由 PTM Root 及所有中间 PTM 时间源 (Time Source) 所报告的最大本地时钟粒度 (Local Clock Granularity) 所对应的值。 <br/> 对于 RCiEP,系统软件必须将该字段设置为关联的 PTM 时间源 (Time Source) 在 Local Clock Granularity 字段中报告的值。 <br/> 允许值: <br/> 0000 0000b:未知 PTM 粒度 —— 该 Function 与 PTM Root 之间的一个或多个交换机 (Switch) 报告了 Local Clock Granularity 值为 0000 0000b。 <br/> 0000 0001b 至 1111 1110b:指示有效 PTM 粒度(单位:ns)。 <br/> 1111 1111b:指示有效 PTM 粒度大于 254 ns。 <br/> 默认值为 0000 0000b。如果 PTM Requester Capable 为清零 (Clear)，则允许将该字段硬连线 (hardwired) 为 0000 0000b。 | RW/RO |
+| 0 | PTM Enable —— 置位 (Set) 时,该 Function 允许根据其所选定的角色参与 PTM 机制 (参见 § 第 6.21.2 节)。默认值为 0b。 | RW |
+| 1 | Root Select —— 置位 (Set) 时,如果 PTM Enable 位也被置位 (Set),则该时间源 (Time Source) 为 PTM Root。在每个 PTM 层级 (PTM Hierarchy) 中,建议系统软件仅选择最上游的时间源 (Time Source) 作为 PTM Root。默认值为 0b。如果 PTM Root Capable 位的值为 0b,则允许将此位硬连线 (hardwired) 为 0b。 | RW/RO |
+| 15:8 | Effective Granularity —— 对于实现 PTM Requester 角色的 Function,该字段提供与 PTM 时钟预期精度相关的信息,但不会以其他方式影响 PTM 机制。 <br/> 对于端点 (Endpoint),系统软件必须将该字段编程为由 PTM Root 及所有中间 PTM 时间源 (Time Source) 所报告的最大本地时钟粒度 (Local Clock Granularity) 所对应的值。 <br/> 对于 RCiEP,系统软件必须将该字段设置为关联的 PTM 时间源 (Time Source) 在 Local Clock Granularity 字段中报告的值。 <br/> 允许值: <br/> 0000 0000b:未知 PTM 粒度 —— 该 Function 与 PTM Root 之间的一个或多个交换机 (Switch) 报告了 Local Clock Granularity 值为 0000 0000b。 <br/> 0000 0001b 至 1111 1110b:指示有效 PTM 粒度(单位:ns)。 <br/> 1111 1111b:指示有效 PTM 粒度大于 254 ns。 <br/> 默认值为 0000 0000b。如果 PTM Requester Capable 为清零 (Clear),则允许将该字段硬连线 (hardwired) 为 0000 0000b。 | RW/RO |
 
 <img src="figures/chapter_07/fig_1342_1_tight.png" width="700">
 </td>
@@ -7989,7 +7950,7 @@ This register controls a Function's participation in the Precision Time Measurem
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8042,7 +8003,7 @@ When Immediate_Readiness_on_Return_to_D0 is Clear, a Function must be Configurat
 </td>
 <td style="background-color:#e8e8e8">
 
-就绪时间报告 (Readiness Time Reporting) 扩展能力提供了一种可选机制，用于描述设备 (Device) 或 Function 变为配置就绪 (Configuration-Ready) 所需的时间。在所述情况下，软件在等待该能力中所通告的时间后，即允许向设备 (Device) 或 Function 发出请求 (Requests)，而无需等待其他位置规定的(更长的)时间。
+就绪时间报告 (Readiness Time Reporting) 扩展能力提供了一种可选机制,用于描述设备 (Device) 或 Function 变为配置就绪 (Configuration-Ready) 所需的时间。在所述情况下,软件在等待该能力中所通告的时间后,即允许向设备 (Device) 或 Function 发出请求 (Requests),而无需等待其他位置规定的(更长的)时间。
 
 允许软件在满足以下最早一项条件时发出请求:
 - 收到 Readiness Notifications 消息 (参见 § 第 6.22 节)。
@@ -8050,23 +8011,23 @@ When Immediate_Readiness_on_Return_to_D0 is Clear, a Function must be Configurat
 - 等待本能力相关字段中指示的时间。
 - 等待由系统软件或固件定义的时间[^184]。
 
-允许软件缓存来自该能力的值，并在相同设备以相同方式运行且未发生变化期间一直使用这些缓存值。
+允许软件缓存来自该能力的值,并在相同设备以相同方式运行且未发生变化期间一直使用这些缓存值。
 
 允许在所有 Function 中实现该能力。
 
-该能力对于 PF 和 VF 是可选的。然而，如果与给定 PF 关联的某个 VF 包含该能力，则与该 PF 关联的所有 VF 都必须包含该能力，并报告相同的时间值。
+该能力对于 PF 和 VF 是可选的。然而,如果与给定 PF 关联的某个 VF 包含该能力,则与该 PF 关联的所有 VF 都必须包含该能力,并报告相同的时间值。
 
 对于 VF,参见 § 第 5.10.1 节。其他 Function 在满足下列条件时必须处于配置就绪 (Configuration-Ready) 状态:
-- Immediate Readiness 位为清零 (Clear)，且常规复位 (Conventional Reset) 完成之后至少已过去 Reset Time(复位时间)
-  - 如果 Immediate Readiness 位置位 (Set)，则 Reset Time 不适用，且为保留
-- Function 与上游端口 (Upstream Port) 相关联，且在该 Function 上游的下游端口 (Downstream Port) 报告数据链路层链路活跃 (Data Link Layer Link Active) 之后至少已过去 DL_Up Time (参见 § 第 7.5.3.8 节)。
-- Function 支持功能级复位 (Function Level Reset)，且在该 Function 发出功能级复位 (Function Level Reset) 之后至少已过去 FLR Time。
-- Immediate_Readiness_on_Return_to_D0 为清零 (Clear)，且在该 Function 从 D3Hot 转入 D0 状态后至少已过去 D3Hot to D0 Time。
-  - 如果 Immediate_Readiness_on_Return_to_D0 位置位 (Set)，则 D3Hot to D0 Time 不适用，且为保留
+- Immediate Readiness 位为清零 (Clear),且常规复位 (Conventional Reset) 完成之后至少已过去 Reset Time(复位时间)
+  - 如果 Immediate Readiness 位置位 (Set),则 Reset Time 不适用,且为保留
+- Function 与上游端口 (Upstream Port) 相关联,且在该 Function 上游的下游端口 (Downstream Port) 报告数据链路层链路活跃 (Data Link Layer Link Active) 之后至少已过去 DL_Up Time (参见 § 第 7.5.3.8 节)。
+- Function 支持功能级复位 (Function Level Reset),且在该 Function 发出功能级复位 (Function Level Reset) 之后至少已过去 FLR Time。
+- Immediate_Readiness_on_Return_to_D0 为清零 (Clear),且在该 Function 从 D3Hot 转入 D0 状态后至少已过去 D3Hot to D0 Time。
+  - 如果 Immediate_Readiness_on_Return_to_D0 位置位 (Set),则 D3Hot to D0 Time 不适用,且为保留
 
-当 Immediate_Readiness_on_Return_to_D0 为清零 (Clear) 时，在 Function 从 D3Hot 转入 D0 状态后，必须至少经过 D3Hot to D0 Time 后该 Function 才进入配置就绪 (Configuration-Ready) 状态。此外，根据 No_Soft_Reset 位的值，该 Function 必须处于 D0uninitialized 或 D0active 状态。
+当 Immediate_Readiness_on_Return_to_D0 为清零 (Clear) 时,在 Function 从 D3Hot 转入 D0 状态后,必须至少经过 D3Hot to D0 Time 后该 Function 才进入配置就绪 (Configuration-Ready) 状态。此外,根据 No_Soft_Reset 位的值,该 Function 必须处于 D0uninitialized 或 D0active 状态。
 
-[^184]: 例如，使用 ACPI 表提供与该能力等效的信息。
+[^184]: 例如,使用 ACPI 表提供与该能力等效的信息。
 
 </td>
 </tr>
@@ -8075,7 +8036,7 @@ When Immediate_Readiness_on_Return_to_D0 is Clear, a Function must be Configurat
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8131,11 +8092,11 @@ Registers and fields in the Readiness Time Reporting Extended Capability are sho
 </td>
 <td style="background-color:#e8e8e8">
 
-如果上述条件不适用，则 Function 的行为不由就绪时间报告 (Readiness Time Reporting) 扩展能力确定，该 Function 必须按照其他位置定义的方式响应 (包括例如，无响应或返回 Configuration Retry Status 的响应)。
+如果上述条件不适用,则 Function 的行为不由就绪时间报告 (Readiness Time Reporting) 扩展能力确定,该 Function 必须按照其他位置定义的方式响应 (包括例如,无响应或返回 Configuration Retry Status 的响应)。
 
-所报告的时间值由实现特定机制决定。该能力中定义了一个 Valid 位，以允许设备延迟报告时间值，例如允许通过基于驱动程序的机制进行硬件初始化。如果 Valid 位保持清零 (Clear)，且自设备驱动程序启动后已过去 1 分钟，则软件可假设不会再报告任何值。
+所报告的时间值由实现特定机制决定。该能力中定义了一个 Valid 位,以允许设备延迟报告时间值,例如允许通过基于驱动程序的机制进行硬件初始化。如果 Valid 位保持清零 (Clear),且自设备驱动程序启动后已过去 1 分钟,则软件可假设不会再报告任何值。
 
-就绪时间报告 (Readiness Time Reporting) 扩展能力中的寄存器和字段如 § 图 7-314 所示。时间值按 § 图 7-315 所示的浮点格式编码。实际时间值为 Value × Multiplier[Scale]。例如，值 A1Eh 表示约 1 秒 (实际为 1.006 秒)，值 80Ah 表示约 10 ms (实际为 10.240 ms)。
+就绪时间报告 (Readiness Time Reporting) 扩展能力中的寄存器和字段如 § 图 7-314 所示。时间值按 § 图 7-315 所示的浮点格式编码。实际时间值为 Value × Multiplier[Scale]。例如,值 A1Eh 表示约 1 秒 (实际为 1.006 秒),值 80Ah 表示约 10 ms (实际为 10.240 ms)。
 
 **图 7-314 就绪时间报告扩展能力**
 
@@ -8152,9 +8113,9 @@ Registers and fields in the Readiness Time Reporting Extended Capability are sho
 
 | 位位置 | 寄存器描述 | 属性 |
 |---|---|---|
-| 15:0 | PCI Express Extended Capability ID —— 该字段是由 PCI-SIG 定义的 ID 号，用于指示扩展能力的性质和格式。就绪时间报告 (Readiness Time Reporting) 扩展能力的扩展能力 ID 为 0022h。 | RO |
-| 19:16 | Capability Version —— 该字段是由 PCI-SIG 定义的版本号，用于指示所存在能力结构的版本。对于本版本的规范，必须为 1h。 | RO |
-| 31:20 | Next Capability Offset —— 该字段包含指向下一个 PCI Express 能力结构的偏移地址;如果链表中的能力已无其他项，则为 000h。对于在配置空间 (Configuration Space) 中实现的扩展能力，该偏移地址相对于 PCI 兼容配置空间 (PCI-compatible Configuration Space) 的起始位置，因此必须始终为 000h (用于终止能力链表) 或大于 0FFh。 | RO |
+| 15:0 | PCI Express Extended Capability ID —— 该字段是由 PCI-SIG 定义的 ID 号,用于指示扩展能力的性质和格式。就绪时间报告 (Readiness Time Reporting) 扩展能力的扩展能力 ID 为 0022h。 | RO |
+| 19:16 | Capability Version —— 该字段是由 PCI-SIG 定义的版本号,用于指示所存在能力结构的版本。对于本版本的规范,必须为 1h。 | RO |
+| 31:20 | Next Capability Offset —— 该字段包含指向下一个 PCI Express 能力结构的偏移地址;如果链表中的能力已无其他项,则为 000h。对于在配置空间 (Configuration Space) 中实现的扩展能力,该偏移地址相对于 PCI 兼容配置空间 (PCI-compatible Configuration Space) 的起始位置,因此必须始终为 000h (用于终止能力链表) 或大于 0FFh。 | RO |
 
 <img src="figures/chapter_07/fig_1344_1_tight.png" width="700">
 </td>
@@ -8162,7 +8123,7 @@ Registers and fields in the Readiness Time Reporting Extended Capability are sho
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8226,7 +8187,7 @@ Figure 7-318 and Table 7-280 detail allocation of fields in the Readiness Time R
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8272,7 +8233,7 @@ Figure 7-318 and Table 7-280 detail allocation of fields in the Readiness Time R
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8316,7 +8277,7 @@ Figure 7-318 and Table 7-280 detail allocation of fields in the Readiness Time R
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8408,7 +8369,7 @@ Figure 7-319 details the layout of the Hierarchy ID Extended Capability.
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8491,7 +8452,7 @@ Figure 7-320 and Table 7-281 detail allocation of fields in the Hierarchy ID Ext
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8563,7 +8524,7 @@ Figure 7-320 and Table 7-281 detail allocation of fields in the Hierarchy ID Ext
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8593,7 +8554,7 @@ Refer to Figure 7-320 and Table 7-281 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8676,7 +8637,7 @@ Refer to Figure 7-320 and Table 7-281 for field allocation details of the Hierar
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8706,7 +8667,7 @@ Refer to Figure 7-321 and Table 7-282 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8793,7 +8754,7 @@ Figure 7-322 and Table 7-283 detail allocation of fields in the Hierarchy ID Dat
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8823,7 +8784,7 @@ Refer to Figure 7-322 and Table 7-283 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8891,7 +8852,7 @@ Refer to Figure 7-322 and Table 7-283 for field allocation details of the Hierar
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8947,7 +8908,7 @@ Refer to Figure 7-322 and Table 7-283 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -8977,7 +8938,7 @@ Refer to Figure 7-323 and Table 7-284 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9007,7 +8968,7 @@ Refer to Figure 7-324 and Table 7-285 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9073,7 +9034,7 @@ Refer to Figure 7-324 and Table 7-285 for field allocation details of the Hierar
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9129,7 +9090,7 @@ Refer to Figure 7-324 and Table 7-285 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9159,7 +9120,7 @@ Refer to Figure 7-325 and Table 7-286 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9189,7 +9150,7 @@ Refer to Figure 7-326 and Table 7-287 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9255,7 +9216,7 @@ Refer to Figure 7-326 and Table 7-287 for field allocation details of the Hierar
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9301,7 +9262,7 @@ VPD 数据的详细信息在 § 第 6.27 节中定义。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9334,7 +9295,7 @@ VPD 数据的详细信息在 § 第 6.27 节中定义。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9368,7 +9329,7 @@ VPD 数据的详细信息在 § 第 6.27 节中定义。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9476,7 +9437,7 @@ VPD Data 寄存器
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9518,19 +9479,19 @@ The VPD Address Register is used to request a read or write of the VPD storage c
 以下协议用于在 VPD Data 字段与 VPD 存储组件之间传输数据。
 
 • 读取 VPD 信息:
-1. 向 VPD Address 寄存器发起单次写入，将标志位 (F) 写为 0b,并将 VPD Address 写为要读取的地址。
-2. 当来自存储组件的 4 字节数据已传输到 VPD Data 时，硬件设备会将 F 置为 1b。
-3. 软件可以监控 F,在 F 变为 1b 之后，从 VPD Data 读取 VPD 信息。
-如果在标志位变为 1b 之前对 VPD Address 或 VPD Data 进行写入，则行为未定义。
+1. 向 VPD Address 寄存器发起单次写入,将标志位 (F) 写为 0b,并将 VPD Address 写为要读取的地址。
+2. 当来自存储组件的 4 字节数据已传输到 VPD Data 时,硬件设备会将 F 置为 1b。
+3. 软件可以监控 F,在 F 变为 1b 之后,从 VPD Data 读取 VPD 信息。
+如果在标志位变为 1b 之前对 VPD Address 或 VPD Data 进行写入,则行为未定义。
 
 • 将 VPD 信息写入 VPD 空间的读/写部分:
 1. 将数据写入 VPD Data。
 2. 然后向 VPD Address 寄存器发起单次写入,F 置为 1b,VPD Address 置为 VPD Data 要存储的目标地址。
-3. 随后软件监控 F,当 F 被设备硬件清为 0b 时，表示 VPD Data(全部 4 字节)已从 VPD Data 传输到存储组件。
-如果在 F 变为 0b 之前对 VPD Address 或 VPD Data 进行写入，则对存储组件的写入操作结果不可预测。
-如果请求对存储组件进行读或写时,VPD Address 超出存储组件的地址范围，则行为未定义。
+3. 随后软件监控 F,当 F 被设备硬件清为 0b 时,表示 VPD Data(全部 4 字节)已从 VPD Data 传输到存储组件。
+如果在 F 变为 0b 之前对 VPD Address 或 VPD Data 进行写入,则对存储组件的写入操作结果不可预测。
+如果请求对存储组件进行读或写时,VPD Address 超出存储组件的地址范围,则行为未定义。
 
-VPD(包括只读项和读/写字段)是被存储的信息，不会对任何设备操作进行直接控制。
+VPD(包括只读项和读/写字段)是被存储的信息,不会对任何设备操作进行直接控制。
 
 VPD Address 寄存器用于请求对 VPD 存储组件进行读或写。
 
@@ -9541,7 +9502,7 @@ VPD Address 寄存器用于请求对 VPD 存储组件进行读或写。
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9573,7 +9534,7 @@ VPD Address 寄存器用于请求对 VPD 存储组件进行读或写。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9612,11 +9573,10 @@ F
 </table>
 
 > **Figure 7-329.** VPD Address Register
-> **图 7-329.** VPD 地址寄存器
 > <img src="figures/chapter_07/fig_1355_1_tight.png" width="700">
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9627,7 +9587,7 @@ F
 | 14:0 | VPD Address - DWORD-aligned byte address of the VPD to be accessed. Behavior is undefined if the lowest 2 bits of this field are non-zero. The lowest two bits of the field must be either RW, or RO with a value of 00b. The remaining bits of the field must be RW.<br>Default is implementation specific. | RW/RO (see description) |
 | 15 | F - The F bit is always written along with VPD Address. The value of F indicates the direction of transfer being requested (0b = read, 1b = write). When the transfer is complete, the F bit value changes to indicate completion (1b = read complete, 0b = write complete).<br>Default is implementation specific. | RW |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9659,10 +9619,9 @@ VPD Data
 </table>
 
 > **Figure 7-330.** VPD Data Register
-> **图 7-330.** VPD 数据寄存器
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9672,7 +9631,7 @@ VPD Data
 |--------------|-------------|------------|
 | 31:0 | VPD Data - VPD Data can be read through this register. The least significant byte of this register (at offset 04h in this capability structure) corresponds to the byte of VPD at the address specified by VPD Address. Behavior is undefined for any read or write of this register with Byte Enables other than 1111b.<br>Default is implementation specific. | RW |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9692,14 +9651,14 @@ The Native PCIe Enclosure Management Extended (NPEM) Capability is an optional e
 </td>
 <td style="background-color:#e8e8e8">
 
-原生 PCIe 机框管理扩展 (Native PCIe Enclosure Management Extended, NPEM) 能力是一个可选的扩展能力，允许由根端口 (Root Port)、交换机下游端口 (Switch Downstream Port) 以及端点 (Endpoint) 实现。
+原生 PCIe 机框管理扩展 (Native PCIe Enclosure Management Extended, NPEM) 能力是一个可选的扩展能力,允许由根端口 (Root Port)、交换机下游端口 (Switch Downstream Port) 以及端点 (Endpoint) 实现。
 
 </td>
 </tr>
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9729,7 +9688,7 @@ The Native PCIe Enclosure Management Extended (NPEM) Capability is an optional e
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9767,7 +9726,7 @@ The Native PCIe Enclosure Management Extended (NPEM) Capability is an optional e
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9878,11 +9837,10 @@ NPEM Status 寄存器
 </table>
 
 > **Figure 7-331.** NPEM Extended Capability
-> **图 7-331.** NPEM 扩展能力
 > <img src="figures/chapter_07/fig_1356_1_tight.png" width="700">
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9928,11 +9886,10 @@ PCI Express 扩展能力 ID (Extended Capability ID)
 </table>
 
 > **Figure 7-332.** NPEM Extended Capability Header
-> **图 7-332.** NPEM 扩展能力头部
 > <img src="figures/chapter_07/fig_1356_2_tight.png" width="700">
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9944,7 +9901,7 @@ PCI Express 扩展能力 ID (Extended Capability ID)
 | 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the capability structure present. Must be 1h for this version of the specification. | RO |
 | 31:20 | Next Capability Offset - This field contains the offset to the next PCI Express Extended Capability structure or 000h if no other items exist in the linked list of capabilities. | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -9964,14 +9921,14 @@ The NPEM Capability Register contains an overall NPEM Capable bit and a bit map 
 </td>
 <td style="background-color:#e8e8e8">
 
-NPEM Capability 寄存器包含一个总的 NPEM Capable 位，以及实现所支持状态的位图。如果 NPEM Capable 位被置位，则实现必须支持 OK、Locate、Fail 和 Rebuild 状态。其他所有状态都是可选的。
+NPEM Capability 寄存器包含一个总的 NPEM Capable 位,以及实现所支持状态的位图。如果 NPEM Capable 位被置位,则实现必须支持 OK、Locate、Fail 和 Rebuild 状态。其他所有状态都是可选的。
 
 </td>
 </tr>
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10001,7 +9958,7 @@ NPEM Capability 寄存器包含一个总的 NPEM Capable 位，以及实现所�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10037,7 +9994,7 @@ NPEM Capability 寄存器包含一个总的 NPEM Capable 位，以及实现所�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10128,13 +10085,12 @@ Enclosure-specific Capabilities(机框专用能力)
 </table>
 
 > **Figure 7-333.** NPEM Capability Register
-> **图 7-333.** NPEM 能力寄存器
 > <img src="figures/chapter_07/fig_1357_1_tight.png" width="700">
 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10156,7 +10112,7 @@ Enclosure-specific Capabilities(机框专用能力)
 | § | | |
 | § | | |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10170,7 +10126,7 @@ Enclosure-specific Capabilities(机框专用能力)
 | 11 | NPEM Disabled Capable - When Set, this bit indicates that enclosure has the ability to indicate the NPEM_Disabled state. This capability is independently optional. | HwInit |
 | 31:24 | Enclosure-specific Capabilities - The definition of enclosure-specific bits is outside the scope of this specification. | HwInit |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10194,18 +10150,18 @@ All writes to this register, including writes that do not change the register va
 </td>
 <td style="background-color:#e8e8e8">
 
-NPEM Control 寄存器包含一个总的 NPEM Enable 位，以及软件所控制状态的位图。
+NPEM Control 寄存器包含一个总的 NPEM Enable 位,以及软件所控制状态的位图。
 
 机框专用位的使用超出本规范的范围。
 
-对该寄存器的所有写入(包括不改变寄存器值的写入)都是 NPEM 命令，并最终应在 NPEM Status 寄存器中产生命令完成指示。
+对该寄存器的所有写入(包括不改变寄存器值的写入)都是 NPEM 命令,并最终应在 NPEM Status 寄存器中产生命令完成指示。
 
 </td>
 </tr>
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10296,13 +10252,12 @@ Enclosure-specific Controls(机框专用控制)
 </table>
 
 > **Figure 7-334.** NPEM Control Register
-> **图 7-334.** NPEM 控制寄存器
 > <img src="figures/chapter_07/fig_1358_1_tight.png" width="700">
 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10314,7 +10269,7 @@ Enclosure-specific Controls(机框专用控制)
 | 1 | NPEM Initiate Reset - If NPEM Reset Capable bit is 1b, then a write of 1b to this bit initiates NPEM Reset. If NPEM Reset Capable bit is 0b, then this bit is permitted to be read-only with a value of 0b.<br>The value read by software from this bit must always be 0b. | RW/RO |
 | 2 | NPEM OK Control - When Set, this bit specifies that the NPEM OK indication be turned ON. When Clear, this bit specifies that the NPEM OK indication be turned OFF. | RW/RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10348,7 +10303,7 @@ Enclosure-specific Controls(机框专用控制)
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10369,7 +10324,7 @@ Enclosure-specific Controls(机框专用控制)
 | 9 | NPEM In A Failed Array Control - When Set, this bit specifies that the NPEM In A Failed Array indication be turned ON. When Clear, this bit specifies that the NPEM In A Failed Array indication be turned OFF.<br>If NPEM In A Failed Array Capable bit in NPEM Capability Register is 0b, this bit is permitted to be read-only with a value of 0b. Default value of this bit is 0b. | RW/RO |
 | 10 | NPEM Invalid Device Type Control - When Set, this bit specifies that the NPEM Invaild Device Type indication be turned ON. When Clear, this bit specifies that the NPEM Invalid Device Type indication be turned OFF. | RW/RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10384,7 +10339,7 @@ Enclosure-specific Controls(机框专用控制)
 | 11 | NPEM Disabled Control - When Set, this bit specifies that the NPEM Disabled indication be turned ON. When Clear, this bit specifies that the NPEM Disabled indication be turned OFF.<br>If NPEM Disabled Capable bit in NPEM Capability Register is 0b, this bit is permitted to be read-only with a value of 0b. Default value of this bit is 0b. | RW/RO |
 | 31:24 | Enclosure-specific Controls - The definition of enclosure-specific bits is outside the scope of this specification. Enclosure-specific software is permitted to change the value of this field. Other software must preserve the existing value when writing this register. Default value of this field is 00h. | RW/RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10426,11 +10381,10 @@ Enclosure-specific Status(机框专用状态)
 </table>
 
 > **Figure 7-335.** NPEM Status Register
-> **图 7-335.** NPEM 状态寄存器
 > <img src="figures/chapter_07/fig_1360_1.png" width="700">
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10441,7 +10395,7 @@ Enclosure-specific Status(机框专用状态)
 | 0 | NPEM Command Completed - This bit is Set when an NPEM command has completed, and the NPEM controller is ready to accept a subsequent command.<br>This bit is permitted to be hardwired to 1b if the enclosure is able to accept writes that update any portion of the NPEM Control register without any delay between successive writes.<br>Default value of this bit is 0b.<br>Software must wait for an NPEM command to complete before issuing the next NPEM command. However, if this bit is not set within 1 second limit on command execution, software is permitted to repeat the NPEM command or issue the next NPEM command. If software issues a write before the Port has completed processing of the previous command and before the 1 second time limit has expired, the Port is permitted to either accept or discard the write. Such a write is considered a programming error, and could result in a discrepancy between the NPEM Control Register and the enclosure element state. To recover from such a programming error and return the enclosure to a consistent state, software must issue a write to the NPEM Control Register which conforms to the NPEM command completion rules. | RW1C / RO |
 | 31:24 | Enclosure-specific Status - The definition of enclosure specific bits is outside the scope of this specification. Enclosure specific software is permitted to write non-zero values to this field. Other software must write 00h to this field. | RsvdZ/RO/RW1C |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10475,7 +10429,7 @@ Enclosure-specific Status(机框专用状态)
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10517,7 +10471,7 @@ Alternate Protocol 扩展能力结构在实现了 Alternate Protocol Negotiation
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10547,7 +10501,7 @@ Alternate Protocol 扩展能力结构在实现了 Alternate Protocol Negotiation
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10583,7 +10537,7 @@ Alternate Protocol 扩展能力结构在实现了 Alternate Protocol Negotiation
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10697,13 +10651,12 @@ Alternate Protocol Data 2 寄存器
 </table>
 
 > **Figure 7-336.** Alternate Protocol Extended Capability
-> **图 7-336.** Alternate Protocol 扩展能力
 > <img src="figures/chapter_07/fig_1361_1_tight.png" width="700">
 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10719,7 +10672,6 @@ Alternate Protocol Data 2 寄存器
 <td>
 
 > **Figure 7-337.** Alternate Protocol Extended Capability Header
-> **图 7-337.** Alternate Protocol 扩展能力头部
 > <img src="figures/chapter_07/fig_1361_2_tight.png" width="700">
 
 0
@@ -10754,7 +10706,7 @@ PCI Express 扩展能力 ID (Extended Capability ID)
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10764,7 +10716,7 @@ PCI Express 扩展能力 ID (Extended Capability ID)
 |--------------|----------------------|------------|
 | 15:0 | PCI Express Extended Capability ID - This field is a PCI-SIG defined ID number that indicates the nature and format of the Extended Capability. | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10779,7 +10731,7 @@ PCI Express 扩展能力 ID (Extended Capability ID)
 | 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. Must be 1h for this version of the specification. | RO |
 | 31:20 | Next Capability Offset - This field contains the offset to the next PCI Express Capability structure or 000h if no other items exist in the linked list of Capabilities. For Extended Capabilities implemented in Configuration Space, this offset is relative to the beginning of PCI-compatible Configuration Space and thus must always be either 000h (for terminating list of Capabilities) or greater than 0FFh. | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10821,11 +10773,10 @@ RsvdP
 </table>
 
 > **Figure 7-338.** Alternate Protocol Capabilities Register
-> **图 7-338.** Alternate Protocol 能力寄存器
 > <img src="figures/chapter_07/fig_1362_1_tight.png" width="700">
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10836,7 +10787,7 @@ RsvdP
 | 7:0 | Alternate Protocol Count - Indicates the number of Alternate Protocols or protocols that support Training Set Messages on one or more Lanes of this Link.<br>The value of this field must be greater than or equal to 0. | HwInit |
 | 8 | Alternate Protocol Selective Enable Supported - If Set, the Alternate Protocol Selective Enable Mask Register is present. If Clear, the Alternate Protocol Selective Enable Mask Register is not present and Alternate Protocol Negotiation is controlled soley by the Alternate Protocol Negotiation Global Enable bit.<br>In Upstream Ports, this bit is hardwired to 0b.<br>In Downstream Ports, this bit is HwInit with an implementation specific default value. | RO/HwInit |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10878,11 +10829,10 @@ RsvdP
 </table>
 
 > **Figure 7-339.** Alternate Protocol Control Register
-> **图 7-339.** Alternate Protocol 控制寄存器
 > <img src="figures/chapter_07/fig_1362_2_tight.png" width="700">
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -10912,7 +10862,7 @@ RsvdP
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -11548,7 +11498,7 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -11578,7 +11528,7 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -11611,7 +11561,7 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -11641,7 +11591,7 @@ This capability is only permitted in Functions with Type 1 Configuration Space H
 </td>
 <td style="background-color:#e8e8e8">
 
-Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 ID 能力)是一种可选能力，用于唯一标识 PCI 设备所在的扩展卡或子系统。它为扩展卡厂商提供了一种机制，使其能够区分各自的扩展卡，即使这些扩展卡可能搭载相同的 PCI 桥(因此具有相同的 Vendor ID 和 Device ID)。该能力的格式如 § Figure 7-355 所示，字段说明见 § Table 7-311 和 § Table 7-312。
+Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 ID 能力)是一种可选能力,用于唯一标识 PCI 设备所在的扩展卡或子系统。它为扩展卡厂商提供了一种机制,使其能够区分各自的扩展卡,即使这些扩展卡可能搭载相同的 PCI 桥(因此具有相同的 Vendor ID 和 Device ID)。该能力的格式如 § Figure 7-355 所示,字段说明见 § Table 7-311 和 § Table 7-312。
 
 该能力仅允许在具有 Type 1 配置空间头部的 Function(功能)中使用。
 
@@ -11652,7 +11602,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -11682,7 +11632,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -11712,7 +11662,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -11750,7 +11700,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -11780,7 +11730,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -11807,7 +11757,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -11842,7 +11792,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -11879,7 +11829,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -11919,7 +11869,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -11944,7 +11894,7 @@ The Data Object Exchange (DOE) Extended Capability is an optional Extended Capab
 </td>
 <td style="background-color:#e8e8e8">
 
-Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩展能力，用于发现和控制数据对象交换机制(参见 § Section 6.30)。允许某个 Function 实现该扩展能力的多份实例。
+Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩展能力,用于发现和控制数据对象交换机制(参见 § Section 6.30)。允许某个 Function 实现该扩展能力的多份实例。
 
 § Figure 7-358 描述了 Data Object Exchange 扩展能力的结构。
 
@@ -11953,7 +11903,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -11980,7 +11930,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12007,7 +11957,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12045,7 +11995,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12081,7 +12031,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12111,7 +12061,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12155,7 +12105,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12185,7 +12135,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12230,7 +12180,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12260,7 +12210,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12306,7 +12256,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12336,8 +12286,8 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
-| 4 | DOE At Attention(续) – 当 DOE Attention Mechanism Support 位为 Clear 时，该位为 Reserved。 | RO |
-| 31 | Data Object Ready(续) – 如果没有其他数据对象准备传输，则在软件读取完数据对象最后一个 DW 后写入 DOE Read Data Mailbox Register 时,DOE 实例必须清除该位。当对 DOE Control Register 中的 DOE Abort 位写入 1b 时，如果该位尚未清除,DOE 实例也必须清除它。该位由 Clear 到 Set 的跳变是中断触发事件。该位的默认值为 0b。 | RO |
+| 4 | DOE At Attention(续) – 当 DOE Attention Mechanism Support 位为 Clear 时,该位为 Reserved。 | RO |
+| 31 | Data Object Ready(续) – 如果没有其他数据对象准备传输,则在软件读取完数据对象最后一个 DW 后写入 DOE Read Data Mailbox Register 时,DOE 实例必须清除该位。当对 DOE Control Register 中的 DOE Abort 位写入 1b 时,如果该位尚未清除,DOE 实例也必须清除它。该位由 Clear 到 Set 的跳变是中断触发事件。该位的默认值为 0b。 | RO |
 
 </td>
 </tr>
@@ -12346,7 +12296,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12373,7 +12323,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12409,7 +12359,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12445,7 +12395,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12475,7 +12425,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12507,11 +12457,11 @@ The Shadow Function Number field in the Shadow Function Instance register entry 
 </td>
 <td style="background-color:#e8e8e8">
 
-未实现的 Function 凭借其 Bus/Device/Function Number(总线/设备/功能号)空间，以及由此关联的 Requester ID(请求者 ID)空间和 Tag(标签)，拥有 Transaction ID(事务 ID)资源，即使这些 Function 实际上并未实现，不会使用这些资源。Shadow Functions Extended Capability(影子功能扩展能力)是一种可选能力，它允许 Requester(请求者)使用另一个未实现 Function 的 Transaction ID 资源，从而生成比仅使用其关联 Function 自身 Transaction ID 资源更多的未完成请求。Requester 通过其关联 Function 发起部分请求，通过 Shadow Function(影子功能)发起其他请求。如果 Requester 超出单个 Function 的 Transaction ID 资源，可实现此能力并将其 Transaction ID 空间拆分到该 Function 和由本能力定义的附加 Shadow Function 之间。
+未实现的 Function 凭借其 Bus/Device/Function Number(总线/设备/功能号)空间,以及由此关联的 Requester ID(请求者 ID)空间和 Tag(标签),拥有 Transaction ID(事务 ID)资源,即使这些 Function 实际上并未实现,不会使用这些资源。Shadow Functions Extended Capability(影子功能扩展能力)是一种可选能力,它允许 Requester(请求者)使用另一个未实现 Function 的 Transaction ID 资源,从而生成比仅使用其关联 Function 自身 Transaction ID 资源更多的未完成请求。Requester 通过其关联 Function 发起部分请求,通过 Shadow Function(影子功能)发起其他请求。如果 Requester 超出单个 Function 的 Transaction ID 资源,可实现此能力并将其 Transaction ID 空间拆分到该 Function 和由本能力定义的附加 Shadow Function 之间。
 
 实现 Shadow Function 的 Requester 使用包含此能力的 Function 的特性和属性。通过关联 Function 发出的请求将使用关联 Function 的 BDF 来填充 Requester ID。通过 Shadow Function 发出的请求将使用从对应 Shadow Function Instance 寄存器的 Shadow Function Number 字段计算所得的 BDF 来填充 Requester ID。Shadow Function 的其他特性和属性取自关联 Function 的配置空间。
 
-每个 Shadow Function 的 Shadow Function Instance 寄存器条目中的 Shadow Function Number 字段用于计算该 Shadow Function 的 Bus/Device/Function 号(ARI 设备为 Bus/Function 号)(BDF)。分配给该 Shadow Function 的 BDF 空间必须可用，即对应于一个未实现的 Function。
+每个 Shadow Function 的 Shadow Function Instance 寄存器条目中的 Shadow Function Number 字段用于计算该 Shadow Function 的 Bus/Device/Function 号(ARI 设备为 Bus/Function 号)(BDF)。分配给该 Shadow Function 的 BDF 空间必须可用,即对应于一个未实现的 Function。
 
 </td>
 </tr>
@@ -12520,7 +12470,7 @@ The Shadow Function Number field in the Shadow Function Instance register entry 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12550,20 +12500,20 @@ Additional requirements for implementing Shadow Functions are:
 
 实现 Shadow Function 的其他要求如下:
 
-- 对 Shadow Function 关联的 BDF 配置空间区域进行的任何访问，在没有会导致不同行为的错误时，必须以 UR(Unsupported Request,不支持的请求)状态的 Completion(完成报文)响应。
+- 对 Shadow Function 关联的 BDF 配置空间区域进行的任何访问,在没有会导致不同行为的错误时,必须以 UR(Unsupported Request,不支持的请求)状态的 Completion(完成报文)响应。
 - 对于非 ARI 设备,Shadow Function 必须驻留于其影子所对应的 Function 所在的同一 Device 中。如果 Shadow Function Number 大于 7,则必须支持 ARI。
 - 允许一个 Function 具有多个 Shadow Function。
 - 允许一个 Function 最多具有本能力的一个实例。
 - 允许在任何能够作为 Requester 工作的 Function 中实现本能力。
 - 对于 VF,Shadow Function 的分配方式必须与 VF 发现算法相适应(参见 § Section 9.2.1.2)。
-- 允许 Requester 使用 Shadow Function 的 Transaction ID 空间生成不是消息信号中断(MSI/MSI-X)请求的 Posted Requests(有数据，无完成请求)。
+- 允许 Requester 使用 Shadow Function 的 Transaction ID 空间生成不是消息信号中断(MSI/MSI-X)请求的 Posted Requests(有数据,无完成请求)。
 
 </td>
 </tr>
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12595,7 +12545,7 @@ Additional requirements for implementing Shadow Functions are:
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12627,12 +12577,12 @@ Additional requirements for implementing Shadow Functions are:
 <td style="background-color:#e8e8e8">
 
 - 不允许 Requester 使用 Shadow Function 的 Transaction ID 空间生成消息信号中断(MSI/MSI-X)请求。
-- 使用 Shadow Function 的 Function 必须意识到，使用 Shadow Function 的 Transaction ID 资源进行的访问对系统其余部分呈现的语义与来自任何独立 Function 的访问相同，必须处理这些影响。
-- Translation Agent(转换代理)的软件负责维护地址转换资源的完整性。如果 Shadow Function 的 Requester 发起请求之前地址转换资源未更新，则行为是未定义的。
-- 由 Shadow Function 发出的 Translation Request(转换请求)缓存在与主 Function 关联的 ATC(Address Translation Cache,地址转换缓存)中。启用后，允许 Function 在"主"Function 与 Shadow Function 之间共用转换结果，无论该 Translation Request 由哪个 Function 发出。参见 § Section 10.2。
+- 使用 Shadow Function 的 Function 必须意识到,使用 Shadow Function 的 Transaction ID 资源进行的访问对系统其余部分呈现的语义与来自任何独立 Function 的访问相同,必须处理这些影响。
+- Translation Agent(转换代理)的软件负责维护地址转换资源的完整性。如果 Shadow Function 的 Requester 发起请求之前地址转换资源未更新,则行为是未定义的。
+- 由 Shadow Function 发出的 Translation Request(转换请求)缓存在与主 Function 关联的 ATC(Address Translation Cache,地址转换缓存)中。启用后,允许 Function 在"主"Function 与 Shadow Function 之间共用转换结果,无论该 Translation Request 由哪个 Function 发出。参见 § Section 10.2。
 - 处理 Page Request Message(页请求消息)的软件负责协调跨 Shadow Function 的使用。参见 § Section 10.4.1 和 § Section 10.5.2.5。
 - 如果启用 FPB 的软件将 Shadow Function 配置为使用与其他 Function 相同的 Requester ID,则行为是未定义的。
-- 对于支持 ACS P2P Egress Control(ACS 对等出口控制)的多功能设备，在配置 Egress Control Vector(出口控制向量)以允许 Requester 与其 Shadow Function 以及设备中其他 Function 之间的 P2P 流量时，必须考虑所有已使能的 Shadow Function。
+- 对于支持 ACS P2P Egress Control(ACS 对等出口控制)的多功能设备,在配置 Egress Control Vector(出口控制向量)以允许 Requester 与其 Shadow Function 以及设备中其他 Function 之间的 P2P 流量时,必须考虑所有已使能的 Shadow Function。
 
 </td>
 </tr>
@@ -12641,7 +12591,7 @@ Additional requirements for implementing Shadow Functions are:
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12663,7 +12613,7 @@ Multiple Shadow Functions for a Function are permitted to be assigned by this Ca
 </td>
 <td style="background-color:#e8e8e8">
 
-本能力允许为一个 Function 分配多个 Shadow Function。Shadow Functions Capability 寄存器中的 Number of Shadow Functions 字段定义所分配的 Shadow Function 数量，以及本能力中 Shadow Function Instance 寄存器条目的数量，从而决定能力结构的长度。
+本能力允许为一个 Function 分配多个 Shadow Function。Shadow Functions Capability 寄存器中的 Number of Shadow Functions 字段定义所分配的 Shadow Function 数量,以及本能力中 Shadow Function Instance 寄存器条目的数量,从而决定能力结构的长度。
 
 § Figure 7-365 展示了 Shadow Functions 扩展能力的结构。
 
@@ -12672,7 +12622,7 @@ Multiple Shadow Functions for a Function are permitted to be assigned by this Ca
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12698,14 +12648,14 @@ Multiple Shadow Functions for a Function are permitted to be assigned by this Ca
 > **实现说明:**
 > **SHADOW FUNCTION NUMBER 编程**
 >
-> 编程到 Shadow Function Number 字段中的值应将 Shadow Function 置于与声明它的 Function 相同的 Bus Number 上。否则,ACS Source Validation 可能无法正常工作，发往 Shadow Function 的 Completion 可能无法被正确路由，或可能出现其他异常行为。
+> 编程到 Shadow Function Number 字段中的值应将 Shadow Function 置于与声明它的 Function 相同的 Bus Number 上。否则,ACS Source Validation 可能无法正常工作,发往 Shadow Function 的 Completion 可能无法被正确路由,或可能出现其他异常行为。
 
 </td>
 </tr>
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12735,7 +12685,7 @@ N = Number of Shadow Functions 字段的值。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12762,7 +12712,7 @@ N = Number of Shadow Functions 字段的值。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12789,7 +12739,7 @@ N = Number of Shadow Functions 字段的值。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12816,7 +12766,7 @@ N = Number of Shadow Functions 字段的值。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12828,7 +12778,7 @@ N = Number of Shadow Functions 字段的值。
 | 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. Must be 1h for this version of the specification. | RO |
 | 31:20 | Next Capability Offset - The offset to the next PCI Extended Capability structure or 000h if no other items exist in the linked list of capabilities. | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12861,7 +12811,7 @@ Shadow Functions 扩展能力头（偏移 00h）
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12906,7 +12856,7 @@ Figure 7-367 details the allocation of register bits of the Shadow Functions Cap
 
 [figures/chapter_07/fig_1382_1.png](figures/chapter_07/fig_1382_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -12944,10 +12894,11 @@ Figure 7-368 details the allocation of register bits of the Shadow Functions Con
 
 [figures/chapter_07/fig_1382_1.png](figures/chapter_07/fig_1382_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
+<a id="sec-7-9-25-2"></a>
 ## 7.9.25.2 Shadow Functions Capability Register (Offset 04h) | Shadow Functions 能力寄存器（偏移 04h）
 
 <table>
@@ -12973,7 +12924,7 @@ Shadow Functions 能力寄存器（偏移 04h）
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13003,7 +12954,7 @@ Shadow Functions 控制寄存器（偏移 08h）
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13044,7 +12995,7 @@ Figure 7-369 details the allocation of register bits of the Shadow Functions Con
 
 [figures/chapter_07/fig_1382_1.png](figures/chapter_07/fig_1382_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13086,7 +13037,7 @@ It is permitted to implement this extended capability in Functions associated wi
 
 [figures/chapter_07/fig_1383_1.png](figures/chapter_07/fig_1383_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13128,7 +13079,7 @@ The Extended Capability ID for the Integrity and Data Encryption (IDE) Exchange 
 
 [figures/chapter_07/fig_1383_1.png](figures/chapter_07/fig_1383_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13180,7 +13131,7 @@ Figure 7-372 details the allocation of register bits of the IDE Capability Regis
 
 [figures/chapter_07/fig_1385_1.png](figures/chapter_07/fig_1385_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13221,7 +13172,7 @@ Figure 7-373 details the allocation of register bits of the IDE Control Register
 
 [figures/chapter_07/fig_1387_1.png](figures/chapter_07/fig_1387_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13251,7 +13202,7 @@ Link IDE 寄存器块必须由一个 Link IDE Stream Control 寄存器和一个 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13299,7 +13250,7 @@ Figure 7-374 details the allocation of register bits of the Link IDE Stream Cont
 
 [figures/chapter_07/fig_1387_1.png](figures/chapter_07/fig_1387_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13341,7 +13292,7 @@ Figure 7-375 details the allocation of register bits of the Link IDE Stream Stat
 
 [figures/chapter_07/fig_1389_1.png](figures/chapter_07/fig_1389_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13386,7 +13337,7 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 
 [figures/chapter_07/fig_1390_1.png](figures/chapter_07/fig_1390_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13394,7 +13345,7 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 
 [figures/chapter_07/fig_1390_1.png](figures/chapter_07/fig_1390_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13427,7 +13378,7 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13466,10 +13417,10 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
-| 0 | Selective IDE Stream Enable(选择性 IDE 流使能)— 置 1 时，使能此 IDE 流，使得 IDE 操作在通过 IDE_KM 协议触发时启动(见 § Section 6.33.3 )。清零时，必须立即将流迁移到 Insecure(不安全)状态。软件必须在置位此位之前配置以下内容，且在此位置 1 期间不得修改，否则结果是未定义的:<br>• Selected Algorithm(见下文)<br>• PCRC Enable<br>• IDE RID Association Register 1 中的 Requester ID Limit<br>• IDE RID Association Register 2 中的 Requester ID Base,以及 Segment Base(若适用)<br>• IDE RID Association Register 2 中的 V 位<br>如果 V 位为 0 时此位被置 1,则 IDE 流必须迁移到 Insecure 状态。<br>当清零时，必须立即将流迁移到 Insecure 状态。<br>强烈建议在置位此位之前也编程 IDE Address Association Registers 以及 Default Stream 位(若适用)。<br>默认值为 0b。 | RW |
-| 3:2 | Tx Aggregation Mode NPR(发送聚合模式 — Non-Posted 请求)— 如果 Aggregation Supported 置 1,则此字段为此流的发送 Non-Posted 请求选择聚合级别，编码如下:<br>00b — 无聚合<br>01b — 最多 2 个 Non-Posted 请求<br>10b — 最多 4 个 Non-Posted 请求<br>11b — 最多 8 个 Non-Posted 请求<br>00b — 若 Aggregation Supported 为 0 则保留。<br>01b — 若 Aggregation Supported 为 0 则保留。<br>10b — 若 Aggregation Supported 为 0 则保留。<br>11b — 若 Aggregation Supported 为 0 则保留。<br>默认值为 00b | RW / RsvdP |
-| 5:4 | Tx Aggregation Mode PR(发送聚合模式 — Posted 请求)— 如果 Aggregation Supported 置 1,则此字段为此流的发送 Posted 请求选择聚合级别，编码如下:<br>00b — 无聚合<br>01b — 最多 2 个 Posted 请求<br>10b — 最多 4 个 Posted 请求<br>11b — 最多 8 个 Posted 请求<br>00b — 若 Aggregation Supported 为 0 则保留。<br>01b — 若 Aggregation Supported 为 0 则保留。<br>10b — 若 Aggregation Supported 为 0 则保留。<br>11b — 若 Aggregation Supported 为 0 则保留。<br>默认值为 00b | RW / RsvdP |
-| 7:6 | Tx Aggregation Mode CPL(发送聚合模式 — 完成报文)— 如果 Aggregation Supported 置 1,则此字段为此流的发送 Completion 选择聚合级别，编码如下:<br>00b — 无聚合<br>01b — 最多 2 个 Completion<br>10b — 最多 4 个 Completion<br>11b — 最多 8 个 Completion<br>00b — 若 Aggregation Supported 为 0 则保留。<br>01b — 若 Aggregation Supported 为 0 则保留。<br>10b — 若 Aggregation Supported 为 0 则保留。<br>11b — 若 Aggregation Supported 为 0 则保留。<br>默认值为 00b | RW / RsvdP |
+| 0 | Selective IDE Stream Enable(选择性 IDE 流使能)— 置 1 时,使能此 IDE 流,使得 IDE 操作在通过 IDE_KM 协议触发时启动(见 § Section 6.33.3 )。清零时,必须立即将流迁移到 Insecure(不安全)状态。软件必须在置位此位之前配置以下内容,且在此位置 1 期间不得修改,否则结果是未定义的:<br>• Selected Algorithm(见下文)<br>• PCRC Enable<br>• IDE RID Association Register 1 中的 Requester ID Limit<br>• IDE RID Association Register 2 中的 Requester ID Base,以及 Segment Base(若适用)<br>• IDE RID Association Register 2 中的 V 位<br>如果 V 位为 0 时此位被置 1,则 IDE 流必须迁移到 Insecure 状态。<br>当清零时,必须立即将流迁移到 Insecure 状态。<br>强烈建议在置位此位之前也编程 IDE Address Association Registers 以及 Default Stream 位(若适用)。<br>默认值为 0b。 | RW |
+| 3:2 | Tx Aggregation Mode NPR(发送聚合模式 — Non-Posted 请求)— 如果 Aggregation Supported 置 1,则此字段为此流的发送 Non-Posted 请求选择聚合级别,编码如下:<br>00b — 无聚合<br>01b — 最多 2 个 Non-Posted 请求<br>10b — 最多 4 个 Non-Posted 请求<br>11b — 最多 8 个 Non-Posted 请求<br>00b — 若 Aggregation Supported 为 0 则保留。<br>01b — 若 Aggregation Supported 为 0 则保留。<br>10b — 若 Aggregation Supported 为 0 则保留。<br>11b — 若 Aggregation Supported 为 0 则保留。<br>默认值为 00b | RW / RsvdP |
+| 5:4 | Tx Aggregation Mode PR(发送聚合模式 — Posted 请求)— 如果 Aggregation Supported 置 1,则此字段为此流的发送 Posted 请求选择聚合级别,编码如下:<br>00b — 无聚合<br>01b — 最多 2 个 Posted 请求<br>10b — 最多 4 个 Posted 请求<br>11b — 最多 8 个 Posted 请求<br>00b — 若 Aggregation Supported 为 0 则保留。<br>01b — 若 Aggregation Supported 为 0 则保留。<br>10b — 若 Aggregation Supported 为 0 则保留。<br>11b — 若 Aggregation Supported 为 0 则保留。<br>默认值为 00b | RW / RsvdP |
+| 7:6 | Tx Aggregation Mode CPL(发送聚合模式 — 完成报文)— 如果 Aggregation Supported 置 1,则此字段为此流的发送 Completion 选择聚合级别,编码如下:<br>00b — 无聚合<br>01b — 最多 2 个 Completion<br>10b — 最多 4 个 Completion<br>11b — 最多 8 个 Completion<br>00b — 若 Aggregation Supported 为 0 则保留。<br>01b — 若 Aggregation Supported 为 0 则保留。<br>10b — 若 Aggregation Supported 为 0 则保留。<br>11b — 若 Aggregation Supported 为 0 则保留。<br>默认值为 00b | RW / RsvdP |
 
 </td>
 </tr>
@@ -13478,7 +13429,7 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13518,20 +13469,20 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
-| 8 | PCRC Enable(PCRC 使能)— 置 1 时，与此流关联且包含 P 内容的发送 IDE TLP 必须包含 PCRC,且对接收的 TLP 必须检查 PCRC 错误。<br>若 PCRC Supported 为 0 则保留。<br>默认值为 0b。 | RW / RsvdP |
-| 9 | Selective IDE for Configuration Requests Enable(选择性 IDE 配置请求使能)—<br>对于 Root Port(根端口)，若 Selective IDE for Configuration Requests Supported 置 1,则当此位置 1 时，必须使端口将所有目标 RID 大于等于 RID Base 且小于等于 Selective IDE RID Association Register Block 中 RID Limit 的 Configuration Request(配置请求)，作为与此 Selective IDE 流关联的 IDE TLP 发送。<br>对于非 Root Port,此位保留。<br>若 Selective IDE for Configuration Requests Supported 为 0,则此位保留。<br>默认值为 0b。 | RW / RsvdP |
-| 13:10 | Partial Header Encryption Mode(部分包头加密模式)— 选择用于此 IDE 流的 IDE TLP 的部分包头加密模式。必须在两个 Partner Port 中编程为相同的值。必须在 Selective IDE Stream Enable 为 0 时配置。当 Selective IDE Stream Enable 置 1 时，该设置被采样，该字段变为 RO,读取返回采样值。<br>0000b — 无部分包头加密<br>0001b — Address[17:2] 加密，且若存在则 First DW BE 和 Last DW BE 字段也加密<br>0010b — Address[25:2] 加密，且若存在则 First DW BE 和 Last DW BE 字段也加密<br>0011b — Address[33:2] 加密，且若存在则 First DW BE 和 Last DW BE 字段也加密<br>0100b — Address[41:2] 加密，且若存在则 First DW BE 和 Last DW BE 字段也加密<br>Others — 保留<br>若 Partial Header Encryption Supported 为 0,则此字段保留。 | RW / RO / RsvdP |
-| 18:14 | Selected Algorithm(所选算法)— 选择用于保护此 IDE 流的 IDE TLP 的算法。必须在两个 Partner Port 中编程为相同的值。必须在 Selective IDE Stream Enable 为 0 时配置。当 Selective IDE Stream Enable 置 1 时，该设置被采样，该字段变为 RO,读取返回采样值。<br>0 0000b — AES-GCM 256 密钥长度,96b MAC<br>Others — 保留 | RW / RO |
+| 8 | PCRC Enable(PCRC 使能)— 置 1 时,与此流关联且包含 P 内容的发送 IDE TLP 必须包含 PCRC,且对接收的 TLP 必须检查 PCRC 错误。<br>若 PCRC Supported 为 0 则保留。<br>默认值为 0b。 | RW / RsvdP |
+| 9 | Selective IDE for Configuration Requests Enable(选择性 IDE 配置请求使能)—<br>对于 Root Port(根端口),若 Selective IDE for Configuration Requests Supported 置 1,则当此位置 1 时,必须使端口将所有目标 RID 大于等于 RID Base 且小于等于 Selective IDE RID Association Register Block 中 RID Limit 的 Configuration Request(配置请求),作为与此 Selective IDE 流关联的 IDE TLP 进行发送。<br>对于非 Root Port,此位保留。<br>若 Selective IDE for Configuration Requests Supported 为 0,则此位保留。<br>默认值为 0b。 | RW / RsvdP |
+| 13:10 | Partial Header Encryption Mode(部分包头加密模式)— 选择用于此 IDE 流的 IDE TLP 的部分包头加密模式。必须在两个 Partner Port 中编程为相同的值。必须在 Selective IDE Stream Enable 为 0 时配置。当 Selective IDE Stream Enable 置 1 时,该设置被采样,该字段变为 RO,读取返回采样值。<br>0000b — 无部分包头加密<br>0001b — Address[17:2] 加密,且若存在则 First DW BE 和 Last DW BE 字段也加密<br>0010b — Address[25:2] 加密,且若存在则 First DW BE 和 Last DW BE 字段也加密<br>0011b — Address[33:2] 加密,且若存在则 First DW BE 和 Last DW BE 字段也加密<br>0100b — Address[41:2] 加密,且若存在则 First DW BE 和 Last DW BE 字段也加密<br>Others — 保留<br>若 Partial Header Encryption Supported 为 0,则此字段保留。 | RW / RO / RsvdP |
+| 18:14 | Selected Algorithm(所选算法)— 选择用于保护此 IDE 流的 IDE TLP 的算法。必须在两个 Partner Port 中编程为相同的值。必须在 Selective IDE Stream Enable 为 0 时配置。当 Selective IDE Stream Enable 置 1 时,该设置被采样,该字段变为 RO,读取返回采样值。<br>0 0000b — AES-GCM 256 密钥长度,96b MAC<br>Others — 保留 | RW / RO |
 | 21:19 | TC(流量类)— 系统固件/软件必须编程此字段以指示与此 Selective IDE 寄存器块关联的 TC。<br>默认值为 000b | RW |
-| 22 | Default Stream(默认流)— 置 1 时，使用 TC 字段指示的流量类的 TLP 将与此流关联，除非该 TLP 与指定 TC 的其他 Selective IDE 流匹配。Default Stream 必须将层级域的 Root Port 作为其 Partner Port;否则结果是未定义的。<br>不允许将多于一个 Default Stream 配置为与同一 TC 关联。如果这样做，硬件必须选择其中一个流与该 TC 关联——选择是实现特定的。<br>仅适用于 Endpoint(端点)Upstream Port。其他端口类型保留。<br>默认值为 0b。 | RW / RsvdP |
-| 23 | TEE-Limited Stream(TEE 限制流)— 置 1 时，要求仅允许 T 位置 1 的请求与此流关联。 | RW / RO / RsvdP |
+| 22 | Default Stream(默认流)— 置 1 时,使用 TC 字段指示的流量类的 TLP 将与此流关联,除非该 TLP 与指定 TC 的其他 Selective IDE 流匹配。Default Stream 必须将层级域的 Root Port 作为其 Partner Port;否则结果是未定义的。<br>不允许将多于一个 Default Stream 配置为与同一 TC 关联。如果这样做,硬件必须选择其中一个流与该 TC 关联——选择是实现特定的。<br>仅适用于 Endpoint(端点)Upstream Port。其他端口类型保留。<br>默认值为 0b。 | RW / RsvdP |
+| 23 | TEE-Limited Stream(TEE 限制流)— 置 1 时,要求仅允许 T 位置 1 的请求与此流关联。 | RW / RO / RsvdP |
 
 </td>
 </tr>
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13568,7 +13519,7 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
-| 23(续) | TEE-Limited Stream(TEE 限制流)— 必须在 Selective IDE Stream Enable 为 0 时配置，此时该位为 RW。当 Selective IDE Stream Enable 置 1 后，该设置被采样，该字段位变为 RO,在 Selective IDE Stream Enable 保持置 1 期间读取返回采样值。<br>若 TEE-Limited Stream Supported 为 0 则保留。<br>默认值为 0b。 | RW / RO / RsvdP |
+| 23(续) | TEE-Limited Stream(TEE 限制流)— 必须在 Selective IDE Stream Enable 为 0 时配置,此时该位为 RW。当 Selective IDE Stream Enable 置 1 后,该设置被采样,该字段位变为 RO,在 Selective IDE Stream Enable 保持置 1 期间读取返回采样值。<br>若 TEE-Limited Stream Supported 为 0 则保留。<br>默认值为 0b。 | RW / RO / RsvdP |
 | 31:24 | Stream ID(流 ID)— 指示与此 Selective IDE 流关联的 Stream ID。软件必须将与同一 Selective IDE 流关联的两个端口编程为相同的 Stream ID。默认值为 00h。 | RW |
 
 </td>
@@ -13578,7 +13529,7 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13597,7 +13548,6 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 <td>
 
 > **Figure 7-378.** Selective IDE Stream Status Register
-> **图 7-378.** 选择性 IDE Stream 状态寄存器
 > <img src="figures/chapter_07/fig_1393_1_tight.png" width="700">
 
 > **Figure 7-378 (Register Layout).** Selective IDE Stream Status Register
@@ -13627,8 +13577,8 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
-| 3:0 | Selective IDE Stream State(选择性 IDE 流状态)— 当 Selective IDE Stream Enable 置 1 时，此字段指示端口的状态。编码:<br>0000b — Insecure(不安全)<br>0001b — Secure(安全)<br>0010b — 保留 — 软件必须将保留值视为指示未知状态<br>Others — 保留 — 软件必须将保留值视为指示未知状态<br>当 Selective IDE Stream Enable 为 0 时，此字段的值必须为 0000b。 | RO |
-| 31 | Received IDE Fail Message(已接收 IDE 失败消息)— 置 1 时，指示已为此流接收到一条或多条 IDE Fail Message。 | RW1C |
+| 3:0 | Selective IDE Stream State(选择性 IDE 流状态)— 当 Selective IDE Stream Enable 置 1 时,此字段指示端口的状态。编码:<br>0000b — Insecure(不安全)<br>0001b — Secure(安全)<br>0010b — 保留 — 软件必须将保留值视为指示未知状态<br>Others — 保留 — 软件必须将保留值视为指示未知状态<br>当 Selective IDE Stream Enable 为 0 时,此字段的值必须为 0000b。 | RO |
+| 31 | Received IDE Fail Message(已接收 IDE 失败消息)— 置 1 时,指示已为此流接收到一条或多条 IDE Fail Message。 | RW1C |
 
 <img src="figures/chapter_07/fig_1393_1_tight.png" width="700">
 </td>
@@ -13636,7 +13586,7 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13669,7 +13619,7 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13722,13 +13672,12 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 </table>
 
 > **Figure 7-379.** IDE RID Association Register 1 (Offset +00h)
-> **图 7-379.** IDE RID 关联寄存器 1（偏移 +00h）
 > <img src="figures/chapter_07/fig_1394_1_tight.png" width="700">
 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13777,16 +13726,16 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
-| 0 | Valid (V)(有效位)— 置 1 时，指示 Segment Base、RID Base 和 RID Limit 字段已被编程。<br>默认为 0b | RW |
+| 0 | Valid (V)(有效位)— 置 1 时,指示 Segment Base、RID Base 和 RID Limit 字段已被编程。<br>默认为 0b | RW |
 | 23:8 | RID Base(RID 基址)— 指示在 IDE Partner Port 与此 Stream ID 关联的范围内最低的 RID 值。<br>与此字段关联的 Segment Number 包含在 Segment Base 中。 | RW |
-| 31:24 | Segment Base(Segment 基址)— 在 Flit Mode(Flit 模式)下，指示在 IDE Partner Port 与此 Stream ID 关联的 Segment 值。<br>如果不支持 Flit Mode 则保留。<br>如果此 Selective IDE Stream 位于 Segment Captured 位为 0 的 FM 子树内，软件必须将此字段设置为 00h,与子树 RP 关联的 Segment Number 值无关。<br>默认值为 00h。 | RW / RsvdP |
+| 31:24 | Segment Base(Segment 基址)— 在 Flit Mode(Flit 模式)下,指示在 IDE Partner Port 与此 Stream ID 关联的 Segment 值。<br>如果不支持 Flit Mode 则保留。<br>如果此 Selective IDE Stream 位于 Segment Captured 位为 0 的 FM 子树内,软件必须将此字段设置为 00h,与子树 RP 关联的 Segment Number 值无关。<br>默认值为 00h。 | RW / RsvdP |
 
 </td>
 </tr>
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13819,7 +13768,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13868,7 +13817,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 |--------|------------|------|
 | 31:20 | Memory Limit Lower(内存下限低位)— 对应地址位 [31:20]。地址位 [19:0] 隐含为 F_FFFFh。 | RW |
 | 19:8 | Memory Base Lower(内存基址低位)— 对应地址位 [31:20]。地址位 [19:0] 隐含为 0_0000h。 | RW |
-| 0 | V (Valid)(有效位)— 置 1 时，指示此 IDE Stream Association Block 有效，由 Memory Base 和 Memory Limit 定义的地址范围对应分配给 IDE Partner Port 的一段内存地址范围，且该地址范围内的所有发送地址路由 TLP 必须与此 IDE 流关联，前提是遵循 § Section 6.33.4 中所述的规则。<br>如果为不同的 IDE Stream 分配了重叠的地址范围，硬件行为未定义。<br>默认为 0b | RW |
+| 0 | V (Valid)(有效位)— 置 1 时,指示此 IDE Stream Association Block 有效,由 Memory Base 和 Memory Limit 定义的地址范围对应分配给 IDE Partner Port 的一段内存地址范围,且该地址范围内的所有发送地址路由 TLP 必须与此 IDE 流关联,前提是遵循 § Section 6.33.4 中所述的规则。<br>如果为不同的 IDE Stream 分配了重叠的地址范围,硬件行为未定义。<br>默认为 0b | RW |
 
 </td>
 </tr>
@@ -13876,13 +13825,12 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 </table>
 
 > **Figure 7-381.** IDE Address Association Register 1 (Offset +00h)
-> **图 7-381.** IDE 地址关联寄存器 1（偏移 +00h）
 > <img src="figures/chapter_07/fig_1395_1.png" width="700">
 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13933,7 +13881,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -13986,13 +13934,12 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 </table>
 
 > **Figure 7-383.** IDE Address Association Register 3 (Offset +04h)
-> **图 7-383.** IDE 地址关联寄存器 3（偏移 +04h）
 > <img src="figures/chapter_07/fig_1396_1_tight.png" width="700">
 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -14035,9 +13982,9 @@ A single PCI Express Function is permitted to contain multiple Null Capability s
 </td>
 <td style="background-color:#e8e8e8">
 
-Null Capability(空能力)是位于 PCI 兼容配置空间(前 256 字节)中的一种能力结构，如 § Figure 7-384 所示。
+Null Capability(空能力)是位于 PCI 兼容配置空间(前 256 字节)中的一种能力结构,如 § Figure 7-384 所示。
 
-Null Capability 不包含任何寄存器。该能力出现在链表(Next Capability Pointer)中，但软件应忽略其内容。信息的布局如 § Figure 7-384 所示。
+Null Capability 不包含任何寄存器。该能力出现在链表(Next Capability Pointer)中,但软件应忽略其内容。信息的布局如 § Figure 7-384 所示。
 
 允许单个 PCI Express Function(功能)包含多个 Null Capability 结构。
 
@@ -14055,14 +14002,14 @@ Null Capability 不包含任何寄存器。该能力出现在链表(Next Capabil
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
 | 7:0 | Capability ID(能力 ID)— 指示 PCI Express Capability 结构。此字段必须返回 00h 的 Capability ID,以指示这是一个 Null Capability 结构。 | RO |
-| 15:8 | Next Capability Pointer(下一能力指针)— 此字段包含指向下一个 PCI Capability 结构的偏移，若链表中不存在其他项则为 00h。 | RO |
+| 15:8 | Next Capability Pointer(下一能力指针)— 此字段包含指向下一个 PCI Capability 结构的偏移,若链表中不存在其他项则为 00h。 | RO |
 
 </td>
 </tr>
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -14114,7 +14061,7 @@ For an Upstream Port, the SVC Extended Capability structure is permitted to be i
 </td>
 <td style="background-color:#e8e8e8">
 
-Null Extended Capability(空扩展能力)是一种可选的扩展能力，允许由任何 PCI Express Function 或 RCRB 实现。该能力不包含任何寄存器。该能力出现在链表(Next Capability Offset)中，但软件应忽略其内容。
+Null Extended Capability(空扩展能力)是一种可选的扩展能力,允许由任何 PCI Express Function 或 RCRB 实现。该能力不包含任何寄存器。该能力出现在链表(Next Capability Offset)中,但软件应忽略其内容。
 
 允许单个 PCI Express Function 或 RCRB 包含多个 Null Extended Capability 结构。
 
@@ -14130,15 +14077,15 @@ Null Extended Capability(空扩展能力)是一种可选的扩展能力，允许
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
-| 15:0 | PCI Express Extended Capability ID(PCI Express 扩展能力 ID)— 此字段是由 PCI-SIG 定义的 ID 编号，用于指示扩展能力的性质和格式。<br>Null Extended Capability 的 Extended Capability ID 为 0000h。 | RO |
-| 19:16 | Capability Version(能力版本)— 此字段是由 PCI-SIG 定义的版本号，用于指示所呈现的能力结构的版本。<br>此字段允许包含任意值。 | RO |
-| 31:20 | Next Capability Offset(下一能力偏移)— 此字段包含指向下一个 PCI Express Capability 结构的偏移，若链表中不存在其他项则为 000h。<br>对于在配置空间中实现的扩展能力，此偏移相对于 PCI 兼容配置空间的起始处，因此必须始终为 000h(用于终止能力列表)或大于 0FFh。 | RO |
+| 15:0 | PCI Express Extended Capability ID(PCI Express 扩展能力 ID)— 此字段是由 PCI-SIG 定义的 ID 编号,用于指示扩展能力的性质和格式。<br>Null Extended Capability 的 Extended Capability ID 为 0000h。 | RO |
+| 19:16 | Capability Version(能力版本)— 此字段是由 PCI-SIG 定义的版本号,用于指示所呈现的能力结构的版本。<br>此字段允许包含任意值。 | RO |
+| 31:20 | Next Capability Offset(下一能力偏移)— 此字段包含指向下一个 PCI Express Capability 结构的偏移,若链表中不存在其他项则为 000h。<br>对于在配置空间中实现的扩展能力,此偏移相对于 PCI 兼容配置空间的起始处,因此必须始终为 000h(用于终止能力列表)或大于 0FFh。 | RO |
 
-Streamlined Virtual Channel(SVC,精简虚通道)Extended Capability 是一种可选的扩展能力，对于支持与此结构相关的能力(包括 UIO)的端口是必需的。允许(但不要求)端口中的功能同时实现 SVC Extended Capability 与 MFVC Extended Capability 和/或 VC Capabilities。参见 § Section 6.3.5 。
+Streamlined Virtual Channel(SVC,精简虚通道)Extended Capability 是一种可选的扩展能力,对于支持与此结构相关的能力(包括 UIO)的端口是必需的。允许(但不要求)端口中的功能同时实现 SVC Extended Capability 与 MFVC Extended Capability 和/或 VC Capabilities。参见 § Section 6.3.5 。
 
-UIO 要求使用 SVC 能力，且 VC 或 MFVC 能力不支持 UIO。UIO 仅在 Flit Mode(Flit 模式)下受支持，但在 Non-Flit Mode(非 Flit 模式)下,SVC 能力可被非 UIO 流量使用。
+UIO 要求使用 SVC 能力,且 VC 或 MFVC 能力不支持 UIO。UIO 仅在 Flit Mode(Flit 模式)下受支持,但在 Non-Flit Mode(非 Flit 模式)下,SVC 能力可被非 UIO 流量使用。
 
-对于 Upstream Port(上游端口),SVC Extended Capability 结构允许仅在 Function 0 中实现，且该实例适用于与该端口关联的所有功能。SVC Extended Capability 结构允许在任何 Downstream Port(下游端口)或 RCRB 中实现。如果 SVC Extended Capability 结构在 USP 中实现
+对于 Upstream Port(上游端口),SVC Extended Capability 结构允许仅在 Function 0 中实现,且该实例适用于与该端口关联的所有功能。SVC Extended Capability 结构允许在任何 Downstream Port(下游端口)或 RCRB 中实现。如果 SVC Extended Capability 结构在 USP 中实现
 
 </td>
 </tr>
@@ -14146,13 +14093,12 @@ UIO 要求使用 SVC 能力，且 VC 或 MFVC 能力不支持 UIO。UIO 仅在 F
 </table>
 
 > **Figure 7-385.** Null Extended Capability
-> **图 7-385.** 空扩展能力 (Null Extended Capability)
 > <img src="figures/chapter_07/fig_1397_1_tight.png" width="700">
 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-0)
 
 ---
 
@@ -14186,7 +14132,7 @@ The number of (extended) Virtual Channels is indicated by the SVC Extended VC Co
 </td>
 <td style="background-color:#e8e8e8">
 
-如果某个 交换机 (Switch) 包含一个或多个 USP (上游端口) Function,则其所有关联的 DSP (下游端口) Function 中都必须实现该扩展能力结构。根复合体 (Root Complex) 允许在某些 Root Port 上实现该扩展能力结构，而在其他 Root Port 上不实现。
+如果某个 交换机 (Switch) 包含一个或多个 USP (上游端口) Function,则其所有关联的 DSP (下游端口) Function 中都必须实现该扩展能力结构。根复合体 (Root Complex) 允许在某些 Root Port 上实现该扩展能力结构,而在其他 Root Port 上不实现。
 
 (扩展的)虚通道 (Virtual Channel) 数量由 SVC Port VC Capability Register 1 中的 SVC Extended VC Count 字段指示。软件必须解释该字段以确定扩展 SVC Resource 寄存器的可用性。
 
@@ -14271,7 +14217,7 @@ Figure 7-388 details allocation of register fields in the SVC Port Capability Re
 </td>
 <td style="background-color:#e8e8e8">
 
-对于在配置空间 (Configuration Space) 中实现的扩展能力，该偏移量相对于 PCI 兼容 (PCI-Compatible) 配置空间的起始地址，因此必须始终为 000h(用于终止能力链表)或大于 0FFh。
+对于在配置空间 (Configuration Space) 中实现的扩展能力,该偏移量相对于 PCI 兼容 (PCI-Compatible) 配置空间的起始地址,因此必须始终为 000h(用于终止能力链表)或大于 0FFh。
 
 SVC Port Capability Register 1 描述与一个 PCI Express 端口 (Port) 关联的虚通道 (Virtual Channel) 的配置。
 
@@ -14434,9 +14380,9 @@ Figure 7-391 details allocation of register fields in the SVC Resource Capabilit
 SVC VC Protocols Supported 字段的编码值:
 
 - **0000b**: 支持与 VC0 相同的 TLP 类型和协议
-- **0001b**: 支持与 VC0 相同的 TLP 类型和协议，例外是本规范限制只能使用 VC0 的那些类型
+- **0001b**: 支持与 VC0 相同的 TLP 类型和协议,例外是本规范限制只能使用 VC0 的那些类型
 - **0010b**: 允许在该 VC 资源上启用 UIO;不允许在该 VC 资源上使用非 UIO TLP 类型。
-- **0011b**: 允许在该 VC 资源上启用 UIO,或作为 0001b VC 资源使用，但不能同时使用两者。
+- **0011b**: 允许在该 VC 资源上启用 UIO,或作为 0001b VC 资源使用,但不能同时使用两者。
 - **0100b 至 1110b**: 保留
 - **1111b**: 厂商自定义使用(超出本规范范围)
 
@@ -14605,13 +14551,13 @@ Each register block is described by a MRBL Locator Register (Section 7.9.30.3) t
 </td>
 <td style="background-color:#e8e8e8">
 
-MMIO 寄存器块定位器扩展能力 (MMIO Register Block Locator Extended Capability, MRBL) 是一项可选的扩展能力，用于发现内存空间 (Memory Space) 中的寄存器块，这些寄存器块可用于在系统软件和 Function 之间交换各种类型的数据结构(参见第 6.35 节 第 6.35 节)。
+MMIO 寄存器块定位器扩展能力 (MMIO Register Block Locator Extended Capability, MRBL) 是一项可选的扩展能力,用于发现内存空间 (Memory Space) 中的寄存器块,这些寄存器块可用于在系统软件和 Function 之间交换各种类型的数据结构(参见第 6.35 节 第 6.35 节)。
 
 允许在任何类型的 Function 中实现 MRBL 扩展能力。单个 PCI Express Function 允许包含至多一个该能力的实例。
 
 MRBL 结构中包含的寄存器块数量在 MRBL Capabilities Register 中描述(第 7.9.30.2 节 第 7.9.30.2 节)。实现 MRBL 扩展能力的 Function 应至少支持一个 MRBL Locator Register(第 7.9.30.3 节)。
 
-每个寄存器块由一个 MRBL Locator Register(第 7.9.30.3 节)描述，以指定内存空间中寄存器的位置和类型。每个寄存器块必须包含在关联的 BAR (基址寄存器, Base Address Register) 所覆盖的地址范围内。图 7-394 说明了 MRBL 扩展能力结构。
+每个寄存器块由一个 MRBL Locator Register(第 7.9.30.3 节)描述,以指定内存空间中寄存器的位置和类型。每个寄存器块必须包含在关联的 BAR (基址寄存器, Base Address Register) 所覆盖的地址范围内。图 7-394 说明了 MRBL 扩展能力结构。
 
 </td>
 </tr>
@@ -14653,7 +14599,7 @@ Figure 7-395 details allocation of register fields in the MRBL Extended Capabili
 </td>
 <td style="background-color:#e8e8e8">
 
-图 7-395 详细说明了 MRBL Extended Capability Header 中寄存器字段的分配;表 7-345 给出了相应的位定义。有关 PCI Express 扩展能力头的描述，请参见第 7.6.3 节。MRBL 扩展能力的扩展能力 ID 为 0036h。
+图 7-395 详细说明了 MRBL Extended Capability Header 中寄存器字段的分配;表 7-345 给出了相应的位定义。有关 PCI Express 扩展能力头的描述,请参见第 7.6.3 节。MRBL 扩展能力的扩展能力 ID 为 0036h。
 
 </td>
 </tr>

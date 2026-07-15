@@ -186,7 +186,7 @@ Unlike earlier mechanisms, the PCI Express-PM PME mechanism separates the follow
 电源管理状态如下:
 
 - D 状态 (Device State) 与特定 Function (功能) 关联
-  - D0 是工作状态，功耗最高
+  - D0 是工作状态,功耗最高
   - D1 与 D2 是中间级省电状态
   - D3Hot 是极低功耗状态
   - D3Cold 是断电状态
@@ -206,11 +206,11 @@ PM 提供以下服务:
 
 PM 与 PCI 总线电源管理接口规范及高级配置与电源接口规范 (ACPI) 兼容。本章还定义了 PCI Express 原生电源管理 (Native PM) 扩展。
 
-PM 定义了 PCI Express 物理链路 (Link) 允许进入的链路电源管理状态，可响应软件驱动的 D 状态转换或主动状态链路电源管理活动。PCI Express 链路状态对传统总线驱动软件不可见，它们由驻留在这些链路上的组件的电源管理状态推导而来。已定义的链路状态为 L0、L0s、L1、L2 与 L3。链路状态从 L0 向 L3 转换时，节能效果递增。
+PM 定义了 PCI Express 物理链路 (Link) 允许进入的链路电源管理状态,可响应软件驱动的 D 状态转换或主动状态链路电源管理活动。PCI Express 链路状态对传统总线驱动软件不可见,它们由驻留在这些链路上的组件的电源管理状态推导而来。已定义的链路状态为 L0、L0s、L1、L2 与 L3。链路状态从 L0 向 L3 转换时,节能效果递增。
 
-组件可使用唤醒机制后跟一个电源管理事件 (Power Management Event, PME) 报文 (Message) 来唤醒系统。PCI Express 系统可提供可选的辅助电源 (Vaux)，用于在主电源关闭状态下进行唤醒操作。
+组件可使用唤醒机制后跟一个电源管理事件 (Power Management Event, PME) 报文 (Message) 来唤醒系统。PCI Express 系统可提供可选的辅助电源 (Vaux),用于在主电源关闭状态下进行唤醒操作。
 
-与 Vaux 相关的具体定义和要求因外形规格 (form factor) 而异，在本文档中,"辅助电源 (auxiliary power)"和 "Vaux" 这两个术语应结合具体使用的外形规格来理解。
+与 Vaux 相关的具体定义和要求因外形规格 (form factor) 而异,在本文档中,"辅助电源 (auxiliary power)"和 "Vaux" 这两个术语应结合具体使用的外形规格来理解。
 
 与早期机制不同,PCI Express-PM 的 PME 机制将以下两个 PME 任务分开:
 
@@ -252,13 +252,13 @@ Note that the PCI Express Physical Layer may define additional intermediate stat
 <td style="background-color:#e8e8e8">
 
 - 重新激活 (Reactivation,即唤醒) 关联资源 (即重建 PCI Express 组件的参考时钟与主电源)
-- 向根复合体 (Root Complex) 发送 PME 报文 (Message)，告知唤醒事件的来源
+- 向根复合体 (Root Complex) 发送 PME 报文 (Message),告知唤醒事件的来源
 
-主动状态电源管理 (Active State Power Management, ASPM) 是一种基于硬件自主的主动状态机制，即使所连组件处于 D0 状态也能实现节能。在一段链路空闲时间后,ASPM 物理层协议会将空闲链路置入较低功耗状态。一旦进入低功耗状态，链路任一侧出现流量都会触发向完全工作状态 L0 的转换。软件可以禁用 ASPM。更多 ASPM 信息请参见 § 第 5.4.1 节。
+主动状态电源管理 (Active State Power Management, ASPM) 是一种基于硬件自主的主动状态机制,即使所连组件处于 D0 状态也能实现节能。在一段链路空闲时间后,ASPM 物理层协议会将空闲链路置入较低功耗状态。一旦进入低功耗状态,链路任一侧出现流量都会触发向完全工作状态 L0 的转换。软件可以禁用 ASPM。更多 ASPM 信息请参见 § 第 5.4.1 节。
 
-PCI Express 定义了链路电源管理状态，用以取代 PCI 总线电源管理接口规范中定义的总线电源管理状态。链路状态对 PCI-PM 传统兼容软件不可见，它们要么由连接到该链路的相应组件的 D 状态推导而来，要么由 ASPM 协议产生 (见 § 第 5.4.1 节)。
+PCI Express 定义了链路电源管理状态,用以取代 PCI 总线电源管理接口规范中定义的总线电源管理状态。链路状态对 PCI-PM 传统兼容软件不可见,它们要么由连接到该链路的相应组件的 D 状态推导而来,要么由 ASPM 协议产生 (见 § 第 5.4.1 节)。
 
-注意,PCI Express 物理层可能定义额外的中间状态。各状态的细节及物理层如何处理状态间转换，请参考 § 第 4 章。
+注意,PCI Express 物理层可能定义额外的中间状态。各状态的细节及物理层如何处理状态间转换,请参考 § 第 4 章。
 
 </td>
 </tr>
@@ -339,42 +339,42 @@ PCI Express-PM 定义以下链路电源管理状态:
   - ASPM 与 PCI-PM 兼容电源管理均要求支持 L0。
   - 所有 PCI Express 事务及其他操作均使能。
 - **L0s — 低恢复延迟、节能的"待机" (standby) 状态。**
-  - 除非链路适用的外形规格规范明确要求 L0s 支持，否则 L0s 对 ASPM 而言是可选的。
-  - L0s 期间，所有主电源、组件参考时钟及组件内部 PLL 必须始终保持工作。链路处于 Tx_L0s 的端口 (Port) 禁止 TLP 与 DLLP 发送。
+  - 除非链路适用的外形规格规范明确要求 L0s 支持,否则 L0s 对 ASPM 而言是可选的。
+  - L0s 期间,所有主电源、组件参考时钟及组件内部 PLL 必须始终保持工作。链路处于 Tx_L0s 的端口 (Port) 禁止 TLP 与 DLLP 发送。
   - 物理层提供从此状态到 L0 状态的快速转换机制。当链路两侧使用公共 (分布式) 参考时钟时,L0s 到 L0 的转换时间理想情况下应小于 100 个 Symbol Time。
   - 链路上一侧的发送端可处于 L0s,同时链路另一侧的发送端处于 L0。
 - **L1 — 较高延迟、较低功耗的"待机" (standby) 状态。**
-  - PCI-PM 兼容电源管理要求支持 L1。除非特定外形规格明确要求，否则对 ASPM 而言 L1 是可选的。
-  - 当通过置位 L1 PM Substates Control 1 寄存器中的一个或多个使能位来启用 L1 PM Substates 时，该状态被称为 L1.0 子状态。
-  - L1 期间所有主电源必须保持工作。只要实现遵守所通告的 L1 退出延迟，实现可显式地通过一些技术降低功耗，例如 (但不限于): 周期性而非连续地检测电气空闲 (Electrical Idle) 退出、仅在一条 Lane 上检测电气空闲退出、关断不需要的电路。除非时钟电源管理 (使用 CLKREQ#) 及/或 L1 PM Substates 启用时允许，否则平台提供的所有组件参考时钟在 L1 期间必须保持活动。L1 期间可关断组件内部 PLL,以获得更大的节能效果，但代价是退出延迟增加。
-  - 当链路上某下游组件的所有 Function 均被编程到非 D0 的 D 状态时，进入 L1 状态。若下游组件请求进入 L1 (ASPM) 并收到对该请求的肯定确认时，也进入 L1 状态。
-  - L1 退出由以下两种情况触发: 上游发起的、目标为下游组件的事务，或下游组件发起的、向上游方向流动的事务。L1 到 L0 的转换时间理想为几微秒。
+  - PCI-PM 兼容电源管理要求支持 L1。除非特定外形规格明确要求,否则对 ASPM 而言 L1 是可选的。
+  - 当通过置位 L1 PM Substates Control 1 寄存器中的一个或多个使能位来启用 L1 PM Substates 时,该状态被称为 L1.0 子状态。
+  - L1 期间所有主电源必须保持工作。只要实现遵守所通告的 L1 退出延迟,实现可显式地通过一些技术降低功耗,例如 (但不限于): 周期性而非连续地检测电气空闲 (Electrical Idle) 退出、仅在一条 Lane 上检测电气空闲退出、关断不需要的电路。除非时钟电源管理 (使用 CLKREQ#) 及/或 L1 PM Substates 启用时允许,否则平台提供的所有组件参考时钟在 L1 期间必须保持活动。L1 期间可关断组件内部 PLL,以获得更大的节能效果,但代价是退出延迟增加。
+  - 当链路上某下游组件的所有 Function 均被编程到非 D0 的 D 状态时,进入 L1 状态。若下游组件请求进入 L1 (ASPM) 并收到对该请求的肯定确认时,也进入 L1 状态。
+  - L1 退出由以下两种情况触发: 上游发起的、目标为下游组件的事务,或下游组件发起的、向上游方向流动的事务。L1 到 L0 的转换时间理想为几微秒。
   - L1 链路禁止 TLP 与 DLLP 发送。
 
-- **L1 PM Substates — L1 低功耗链路状态下可选的 L1.1 与 L1.2 子状态，用于 PCI-PM 与 ASPM。**
-  - 在 L1.1 子状态，链路共模电压保持。当链路处于 L1.0 子状态且满足进入 L1.1 子状态的条件时，进入 L1.1 子状态。详见 § 第 5.5.1 节。
-  - 在 L1.2 子状态，链路共模电压不必保持。当链路处于 L1.0 子状态且满足进入 L1.2 子状态的条件时，进入 L1.2 子状态。详见 § 第 5.5.1 节。
-  - 当 CLKREQ# 信号被断言 (asserted) 时，触发所有 L1 PM Substates 的退出 (见 § 第 5.5.2.1 节与 § 第 5.5.3.3 节)。
+- **L1 PM Substates — L1 低功耗链路状态下可选的 L1.1 与 L1.2 子状态,用于 PCI-PM 与 ASPM。**
+  - 在 L1.1 子状态,链路共模电压保持。当链路处于 L1.0 子状态且满足进入 L1.1 子状态的条件时,进入 L1.1 子状态。详见 § 第 5.5.1 节。
+  - 在 L1.2 子状态,链路共模电压不必保持。当链路处于 L1.0 子状态且满足进入 L1.2 子状态的条件时,进入 L1.2 子状态。详见 § 第 5.5.1 节。
+  - 当 CLKREQ# 信号被断言 (asserted) 时,触发所有 L1 PM Substates 的退出 (见 § 第 5.5.2.1 节与 § 第 5.5.3.3 节)。
 - **L2/L3 Ready — L2 或 L3 的过渡准备点。**
   - 要求支持 L2/L3 Ready 转换协议。
-  - L2/L3 Ready 是一个伪状态 (对应 LTSSM L2 状态)，当给定链路准备移除下游组件或两端的组件的电源与时钟时进入此状态。该过程在 PM 软件将设备转入 D3 状态、并随后调用电源管理软件启动电源与时钟移除之后启动。链路进入 L2/L3 Ready 状态后，组件已准备好移除电源。主电源移除后，如果提供并使用了 Vaux,链路将转换到 L2;如果未提供或未使用 Vaux,则转换到 L3。注意这些是链路的 PM 伪状态;在这些条件下,LTSSM 一般仅由主电源供电，因此会随主电源移除而断电。
+  - L2/L3 Ready 是一个伪状态 (对应 LTSSM L2 状态),当给定链路准备移除下游组件或两端的组件的电源与时钟时进入此状态。该过程在 PM 软件将设备转入 D3 状态、并随后调用电源管理软件启动电源与时钟移除之后启动。链路进入 L2/L3 Ready 状态后,组件已准备好移除电源。主电源移除后,如果提供并使用了 Vaux,链路将转换到 L2;如果未提供或未使用 Vaux,则转换到 L3。注意这些是链路的 PM 伪状态;在这些条件下,LTSSM 一般仅由主电源供电,因此会随主电源移除而断电。
   - L2/L3 Ready 状态进入转换过程必须在 PME_Turn_Off 报文被确认后 (即注入 PME_TO_Ack TLP 后) 尽快开始。下游组件通过发送 PM_Enter_L23 DLLP 启动 L2/L3 Ready 进入。电源管理系统报文的更多细节请参见 § 第 5.7 节。
   - L2/L3 Ready 链路禁止 TLP 与 DLLP 发送。
   - 注意:L2/L3 Ready 退回到 L0 需要经过中间 LTSSM 状态。详细信息请参考 § 第 4 章。
 - **L2 — 由辅助电源供电的链路深度节能状态。**
-  - L2 支持是可选的，取决于是否存在辅助电源。
+  - L2 支持是可选的,取决于是否存在辅助电源。
   - 组件只有在 § 第 5.6 节所述使能之后才能消耗辅助电源。
-  - L2 状态下，组件的主电源输入与参考时钟输入被关断。
-  - 在 L2 状态，任何链路重激活唤醒逻辑 (Beacon 或 WAKE#)、PME 上下文以及任何其他"保活" (keep alive) 逻辑均由辅助电源供电。
+  - L2 状态下,组件的主电源输入与参考时钟输入被关断。
+  - 在 L2 状态,任何链路重激活唤醒逻辑 (Beacon 或 WAKE#)、PME 上下文以及任何其他"保活" (keep alive) 逻辑均由辅助电源供电。
   - L2 链路禁止 TLP 与 DLLP 发送。
 - **L3 — 链路关闭状态。**
-  - 当没有任何电源存在时，组件处于 L3 状态。
+  - 当没有任何电源存在时,组件处于 L3 状态。
 - **LDn — L0 之前的过渡性链路关闭伪状态。**
   - 此伪状态与 LTSSM 状态 Detect、Polling、Configuration 以及 (在适用时) Disabled、Loopback、Hot Reset 相关联。
 
-有关 L0 与 L2/L3 Ready 之间各 L 状态进入与退出的更多细节，请参考 § 第 4.2 节 (从第 4 章的角度对应 L2.Idle)。L2 状态是出于电源管理目的而抽象出来的状态，以辅助电源的存在为特征，不应被解释为要求 LTSSM 保持活动。
+有关 L0 与 L2/L3 Ready 之间各 L 状态进入与退出的更多细节,请参考 § 第 4.2 节 (从第 4 章的角度对应 L2.Idle)。L2 状态是出于电源管理目的而抽象出来的状态,以辅助电源的存在为特征,不应被解释为要求 LTSSM 保持活动。
 
-电气部分规定了无电源时驱动器与接收器的电气特性。这就是 L3 状态，但电气部分并未引用 L3。
+电气部分规定了无电源时驱动器与接收器的电气特性。这就是 L3 状态,但电气部分并未引用 L3。
 
 § 图 5-1 展示了可能发生的 L 状态转换概览。
 
@@ -393,7 +393,6 @@ PCI Express-PM 定义以下链路电源管理状态:
 ---
 
 > **Figure 5-1.** Link Power Management State Flow Diagram
-> **图 5-1.** 链路电源管理状态流程图
 > <img src="figures/chapter_05/fig_0654_1_tight.png" width="700">
 
 The L1 and L2/L3 Ready entry negotiations happen while in the L0 state. L1 and L2/L3 Ready are entered only after the negotiation completes. Link Power Management remains in L0 until the negotiation process is completed, unless LDn occurs. Note that these states and state transitions do not correspond directly to the actions of the Physical Layer LTSSM. For example in § Figure 5-1, L0 encompasses the LTSSM L0, Recovery, and, during LinkUp, Configuration states. Also, the LTSSM is typically powered by main power (not Vaux), so LTSSM will not be powered in either the L2 or the L3 state.
@@ -499,27 +498,27 @@ Unless the Immediate_Readiness_on_Return_to_D0 bit in the PCI-PM Power Managemen
 </td>
 <td style="background-color:#e8e8e8">
 
-所有 Function 必须支持 D0 状态。D0 分为两个不同的子状态: "未初始化 (un-initialized)" 子状态和 "活动 (active)" 子状态。当组件退出常规复位 (Conventional Reset) 时，组件的所有 Function 进入 D0uninitialized 状态。当 Function 完成 FLR 时，它进入 D0uninitialized 状态。配置完成后,Function 进入 D0active 状态，这是 PCI Express Function 的完全工作状态。当 Function 的内存空间使能 (Memory Space Enable)、I/O 空间使能 (I/O Space Enable) 或总线主控使能 (Bus Master Enable) 位中的任一位或任意组合被置位时,Function 即进入 D0active 状态。
+所有 Function 必须支持 D0 状态。D0 分为两个不同的子状态: "未初始化 (un-initialized)" 子状态和 "活动 (active)" 子状态。当组件退出常规复位 (Conventional Reset) 时,组件的所有 Function 进入 D0uninitialized 状态。当 Function 完成 FLR 时,它进入 D0uninitialized 状态。配置完成后,Function 进入 D0active 状态,这是 PCI Express Function 的完全工作状态。当 Function 的内存空间使能 (Memory Space Enable)、I/O 空间使能 (I/O Space Enable) 或总线主控使能 (Bus Master Enable) 位中的任一位或任意组合被置位时,Function 即进入 D0active 状态。
 
-D1 支持是可选的。在 D1 状态下,Function 不得发起任何 Request TLP,§ 第 2.2.8 节定义的 Message 报文除外。Function 在 D1 状态下仅接受配置 (Configuration) 和 Message 报文请求。所有其他接收到的 Request 必须作为不支持的请求 (Unsupported Request) 处理，所有接收到的 Completion 可选地作为意外完成 (Unexpected Completion) 处理。如果在 D1 状态下检测到由接收 TLP 引起的错误 (例如 Unsupported Request)，并且错误上报已使能，则必须将链路恢复到 L0 状态 (如果尚未处于 L0)，并发送错误报文。如果在 D1 状态下检测到由非接收 TLP 的事件 (例如 Completion Timeout) 引起的错误，则在 Function 被编程回 D0 状态时必须发送错误报文。
+D1 支持是可选的。在 D1 状态下,Function 不得发起任何 Request TLP,§ 第 2.2.8 节定义的 Message 报文除外。Function 在 D1 状态下仅接受配置 (Configuration) 和 Message 报文请求。所有其他接收到的 Request 必须作为不支持的请求 (Unsupported Request) 处理,所有接收到的 Completion 可选地作为意外完成 (Unexpected Completion) 处理。如果在 D1 状态下检测到由接收 TLP 引起的错误 (例如 Unsupported Request),并且错误上报已使能,则必须将链路恢复到 L0 状态 (如果尚未处于 L0),并发送错误报文。如果在 D1 状态下检测到由非接收 TLP 的事件 (例如 Completion Timeout) 引起的错误,则在 Function 被编程回 D0 状态时必须发送错误报文。
 
 注意,Function 的软件驱动程序参与将 Function 从 D0 转换到 D1 的过程。它通过保存任何功能状态 (如需要) 并以其他方式为 Function 转换到 D1 做好准备来参与该过程。作为该静默 (quiescence) 过程的一部分,Function 的软件驱动程序必须确保任何进行中的事务 TLP (即具有未完成 Completion 的 Request) 在将控制权交给随后将完成到 D1 转换的系统配置软件之前被终止。
 
-D2 支持是可选的。当 Function 当前未使用且可能在较长时间内不会被使用时，可将其置入 D2。该状态要求 Function 提供显著的省电效果，同时仍能完全恢复到其先前的状态。在 D2 状态下,Function 不得发起任何 Request TLP,§ 第 2.2.8 节定义的 Message 报文除外。Function 在 D2 状态下仅接受配置和 Message 报文请求。所有其他接收到的 Request 必须作为 Unsupported Request 处理，所有接收到的 Completion 可选地作为 Unexpected Completion 处理。如果在 D2 状态下检测到由接收 TLP 引起的错误 (例如 Unsupported Request)，并且错误上报已使能，则必须将链路恢复到 L0 状态 (如果尚未处于 L0)，并发送错误报文。如果在 D2 状态下检测到由非接收 TLP 的事件引起的错误，则在 Function 被编程回 D0 状态时必须发送错误报文。
+D2 支持是可选的。当 Function 当前未使用且可能在较长时间内不会被使用时,可将其置入 D2。该状态要求 Function 提供显著的省电效果,同时仍能完全恢复到其先前的状态。在 D2 状态下,Function 不得发起任何 Request TLP,§ 第 2.2.8 节定义的 Message 报文除外。Function 在 D2 状态下仅接受配置和 Message 报文请求。所有其他接收到的 Request 必须作为 Unsupported Request 处理,所有接收到的 Completion 可选地作为 Unexpected Completion 处理。如果在 D2 状态下检测到由接收 TLP 引起的错误 (例如 Unsupported Request),并且错误上报已使能,则必须将链路恢复到 L0 状态 (如果尚未处于 L0),并发送错误报文。如果在 D2 状态下检测到由非接收 TLP 的事件引起的错误,则在 Function 被编程回 D0 状态时必须发送错误报文。
 
 注意,Function 的软件驱动程序参与将 Function 从 D0 转换到 D2 的过程。它通过保存任何功能状态 (如需要) 并以其他方式为 Function 转换到 D2 做好准备来参与该过程。作为该静默过程的一部分,Function 的软件驱动程序必须确保任何进行中的事务 TLP 在将控制权交给随后将完成到 D2 转换的系统配置软件之前被终止。
 
-系统软件必须先将 Function 恢复到 D0active 状态，然后才能访问内存或 I/O 空间。总线主控和中断请求生成等发起的动作只能在 Function 已恢复到 D0active 之后才能开始。
+系统软件必须先将 Function 恢复到 D0active 状态,然后才能访问内存或 I/O 空间。总线主控和中断请求生成等发起的动作只能在 Function 已恢复到 D0active 之后才能开始。
 
-在 Function 从 D2 编程到 D0 与下一个发往该 Function 的 Request 之间，有 200 μs 的最小恢复时间要求。在此恢复时间窗口内收到的 Request 行为未定义 (见 § 第 7.9.16 节)。
+在 Function 从 D2 编程到 D0 与下一个发往该 Function 的 Request 之间,有 200 μs 的最小恢复时间要求。在此恢复时间窗口内收到的 Request 行为未定义 (见 § 第 7.9.16 节)。
 
 D3 支持是必需的 (包括 D3Cold 与 D3Hot 状态)。
 
-如果 PMCSR 中的 No_Soft_Reset 字段被置位，则 D3Hot 状态的 Function 必须保持功能上下文。在这种情况下，从 D3Hot 转换到 D0 之后，系统软件无需重新初始化 Function (Function 将处于 D0active 状态)。如果 No_Soft_Reset 位被清零，则不要求 Function 在 D3Hot 状态下保持功能上下文，但不保证功能上下文会被清除，因此软件不得依赖此行为。因此，在这种情况下，从 D3Hot 转换到 D0 之后，系统软件必须完全重新初始化 Function,因为 Function 将处于 D0uninitialized 状态。
+如果 PMCSR 中的 No_Soft_Reset 字段被置位,则 D3Hot 状态的 Function 必须保持功能上下文。在这种情况下,从 D3Hot 转换到 D0 之后,系统软件无需重新初始化 Function (Function 将处于 D0active 状态)。如果 No_Soft_Reset 位被清零,则不要求 Function 在 D3Hot 状态下保持功能上下文,但不保证功能上下文会被清除,因此软件不得依赖此行为。因此,在这种情况下,从 D3Hot 转换到 D0 之后,系统软件必须完全重新初始化 Function,因为 Function 将处于 D0uninitialized 状态。
 
-无论 No_Soft_Reset 位的值如何，如果链路状态已转换到 L2/L3 Ready 状态,Function 将被复位。
+无论 No_Soft_Reset 位的值如何,如果链路状态已转换到 L2/L3 Ready 状态,Function 将被复位。
 
-除非 PCI-PM 电源管理能力寄存器中的 Immediate_Readiness_on_Return_to_D0 位被置位，否则系统软件必须在 D3Hot →D0 转换后、访问 Function 之前允许至少 10 ms 的最小恢复时间 (见 § 第 7.9.16 节)。
+除非 PCI-PM 电源管理能力寄存器中的 Immediate_Readiness_on_Return_to_D0 位被置位,否则系统软件必须在 D3Hot →D0 转换后、访问 Function 之前允许至少 10 ms 的最小恢复时间 (见 § 第 7.9.16 节)。
 
 </td>
 </tr>
@@ -586,8 +585,8 @@ D1 is an optional intermediate power saving state. Behavior while in D1 is descr
 
 D1 是可选的中间级省电状态。在 D1 中的行为如上所述。
 
-> **实现说明 (IMPLEMENTATION NOTE): 非 D0 状态下交换机与根端口虚拟桥的行为**
-> 当与 Switch/Root Port 相关联的 Type 1 Function ("虚拟桥") 处于非 D0 电源状态时，它将模拟传统 PCI 桥在处理 Memory、I/O 和 Configuration 请求与完成时的行为。所有向下游流动的 Memory 与 I/O 请求都被作为 Unsupported Request 终止。所有 Type 1 Configuration 请求被作为 Unsupported Request 终止，但 Type 0 Configuration 请求的处理不受虚拟桥 D 状态的影响。跨虚拟桥任意方向流动的 Completion 不受虚拟桥 D 状态的影响。注意,Message 的处理不受虚拟桥 PM 状态的影响。
+> **实现注: 非 D0 状态下交换机与根端口虚拟桥的行为**
+> 当与 Switch/Root Port 相关联的 Type 1 Function ("虚拟桥") 处于非 D0 电源状态时,它将模拟传统 PCI 桥在处理 Memory、I/O 和 Configuration 请求与完成时的行为。所有向下游流动的 Memory 与 I/O 请求都被作为 Unsupported Request 终止。所有 Type 1 Configuration 请求被作为 Unsupported Request 终止,但 Type 0 Configuration 请求的处理不受虚拟桥 D 状态的影响。跨虚拟桥任意方向流动的 Completion 不受虚拟桥 D 状态的影响。注意,Message 的处理不受虚拟桥 PM 状态的影响。
 
 </td>
 </tr>
@@ -659,8 +658,8 @@ D3 support is required, (both the D3Cold and the D3Hot states).
 
 D3 支持是必需的 (包括 D3Cold 与 D3Hot 状态)。
 
-> **实现说明 (IMPLEMENTATION NOTE): 转换到 L2/L3 Ready**
-> 如 § 第 5.2 节所述，转换到 L2/L3 Ready 状态由平台电源管理软件启动，以开始移除设备主电源与时钟的过程。因此，预计设备在其链路转换到 L2/L3 Ready 后不久将转换到 D3Cold,这使得仅适用于 D3Hot 的 No_Soft_Reset 位变得无关紧要。虽然 L2/L3 Ready 与 D3Cold 之间的关联没有保证，但系统软件应确保仅在打算移除设备主电源时才进入 L2/L3 Ready 状态。设备 Function (包括那些能够在 D3Hot 时保持功能上下文的 Function,即置位 No_Soft_Reset 位的) 在退出 L2/L3 Ready 时，由于必需的 DL_Down 状态指示，需要按照 § 第 2.9.1 节所述重新初始化内部状态。
+> **实现注: 转换到 L2/L3 Ready**
+> 如 § 第 5.2 节所述,转换到 L2/L3 Ready 状态由平台电源管理软件启动,以开始移除设备主电源与时钟的过程。因此,预计设备在其链路转换到 L2/L3 Ready 后不久将转换到 D3Cold,这使得仅适用于 D3Hot 的 No_Soft_Reset 位变得无关紧要。虽然 L2/L3 Ready 与 D3Cold 之间的关联没有保证,但系统软件应确保仅在打算移除设备主电源时才进入 L2/L3 Ready 状态。设备 Function (包括那些能够在 D3Hot 时保持功能上下文的 Function,即置位 No_Soft_Reset 位的) 在退出 L2/L3 Ready 时,由于必需的 DL_Down 状态指示,需要按照 § 第 2.9.1 节所述重新初始化内部状态。
 
 </td>
 </tr>
@@ -709,20 +708,20 @@ If the device supports PME events, and PME_En is Set, PME context must be preser
 
 组件可在访问之前引导其任何组件接口 (例如从串行 ROM)。在恢复时间内访问该 Function (包括配置请求报文) 将导致未定义行为。
 
-Function 在 D3Hot 状态下仅接受配置和 Message 报文请求。所有其他接收到的 Request 必须作为 Unsupported Request 处理，所有接收到的 Completion 可选地作为 Unexpected Completion 处理。如果在 D3Hot 状态下检测到由接收 TLP 引起的错误 (例如 Unsupported Request)，并且错误上报已使能，则必须将链路恢复到 L0 状态 (如果尚未处于 L0)，并发送错误报文。如果在 D3Hot 状态下检测到由非接收 TLP 的事件 (例如 Completion Timeout) 引起的错误，则在 Function 被编程回 D0 状态时可选择地发送错误报文。一旦进入 D3Hot,Function 此后可通过移除其宿主组件的电源转换到 D3Cold。
+Function 在 D3Hot 状态下仅接受配置和 Message 报文请求。所有其他接收到的 Request 必须作为 Unsupported Request 处理,所有接收到的 Completion 可选地作为 Unexpected Completion 处理。如果在 D3Hot 状态下检测到由接收 TLP 引起的错误 (例如 Unsupported Request),并且错误上报已使能,则必须将链路恢复到 L0 状态 (如果尚未处于 L0),并发送错误报文。如果在 D3Hot 状态下检测到由非接收 TLP 的事件 (例如 Completion Timeout) 引起的错误,则在 Function 被编程回 D0 状态时可选择地发送错误报文。一旦进入 D3Hot,Function 此后可通过移除其宿主组件的电源转换到 D3Cold。
 
 注意,Function 的软件驱动程序参与将 Function 从 D0 转换到 D3Hot 的过程。它通过保存任何功能状态 (否则会因主电源移除而丢失) 并以其他方式为 Function 转换到 D3Hot 做好准备来参与该过程。作为该静默过程的一部分,Function 的软件驱动程序必须确保任何未完成的事务 (即具有未完成 Completion 的 Request) 在将控制权交给随后将完成到 D3Hot 转换的系统配置软件之前被终止。
 
 注意,D3Hot 状态对于在运行中的系统中降低空闲组件的功耗也很有用。
 
-D3Hot 状态下的 Function 允许被软件 (写入其 PMCSR PowerState 字段) 转换到 D0active 状态或 D0uninitialized 状态。只要提供电源与时钟,D3Hot 状态下的 Function 必须响应配置空间访问，以便可被软件恢复到 D0。注意,Function 在其从 D3Hot 转换到 D0 期间或紧接其后不要求生成内部硬件复位 (见 PMCSR 中 No_Soft_Reset 位的使用)。
+D3Hot 状态下的 Function 允许被软件 (写入其 PMCSR PowerState 字段) 转换到 D0active 状态或 D0uninitialized 状态。只要提供电源与时钟,D3Hot 状态下的 Function 必须响应配置空间访问,以便可被软件恢复到 D0。注意,Function 在其从 D3Hot 转换到 D0 期间或紧接其后不要求生成内部硬件复位 (见 PMCSR 中 No_Soft_Reset 位的使用)。
 
-如果不需要内部复位，在完成 D3Hot 到 D0active 状态的转换后，除写入 PowerState 字段外，不需要额外的操作系统干预。如果需要内部复位，设备将返回 D0uninitialized 并且需要对设备进行完全重新初始化。完全重新初始化序列使设备返回 D0active。
+如果不需要内部复位,在完成 D3Hot 到 D0active 状态的转换后,除写入 PowerState 字段外,不需要额外的操作系统干预。如果需要内部复位,设备将返回 D0uninitialized 并且需要对设备进行完全重新初始化。完全重新初始化序列使设备返回 D0active。
 
-如果设备支持 PME 事件，且 PME_En 被置位，则必须在 D3Hot 中保留 PME 上下文。PME 上下文也必须在回到 D0 的 PowerState 命令转换过程中保留。
+如果设备支持 PME 事件,且 PME_En 被置位,则必须在 D3Hot 中保留 PME 上下文。PME 上下文也必须在回到 D0 的 PowerState 命令转换过程中保留。
 
-> **实现说明 (IMPLEMENTATION NOTE): 不执行内部复位的设备**
-> 非 PCIe 总线的总线控制器以及作为非 PCIe 总线 (例如 CardBus、USB 与 IEEE 1394) 接口的 PCIe 总线上的 D3Hot 恢复总线控制器，是不需要在从 D3Hot 恢复时执行内部复位的总线控制器的示例。如果不需要此内部复位，则总线控制器在从 D3Hot 恢复时不需要在其辅助 (非 PCIe) 总线上执行下游总线复位。
+> **实现注: 不执行内部复位的设备**
+> 非 PCIe 总线的总线控制器以及作为非 PCIe 总线 (例如 CardBus、USB 与 IEEE 1394) 接口的 PCIe 总线上的 D3Hot 恢复总线控制器,是不需要在从 D3Hot 恢复时执行内部复位的总线控制器的示例。如果不需要此内部复位,则总线控制器在从 D3Hot 恢复时不需要在其辅助 (非 PCIe) 总线上执行下游总线复位。
 
 </td>
 </tr>
@@ -771,20 +770,20 @@ When PME_En is Set, Functions that support wakeup functionality from D3Cold must
 </td>
 <td style="background-color:#e8e8e8">
 
-当 Function 的主电源被移除时,Function 转换到 D3Cold 状态。具有相关冷复位 (Cold Reset) 的上电序列将 Function 从 D3Cold 状态转换到 D0uninitialized 状态，且上电默认值会像初始上电时一样由硬件恢复到 Function。此时，软件必须对 Function 执行完全初始化，以重建所有功能上下文，完成 Function 到 D0active 状态的恢复。
+当 Function 的主电源被移除时,Function 转换到 D3Cold 状态。具有相关冷复位 (Cold Reset) 的上电序列将 Function 从 D3Cold 状态转换到 D0uninitialized 状态,且上电默认值会像初始上电时一样由硬件恢复到 Function。此时,软件必须对 Function 执行完全初始化,以重建所有功能上下文,完成 Function 到 D0active 状态的恢复。
 
-当 PME_En 被置位时，支持从 D3Cold 唤醒功能的 Function 必须在 PMCSR 中保持其 PME 上下文，以供 PME 服务例程软件在恢复过程中检查。其他上下文的保留是实现特定的。
+当 PME_En 被置位时,支持从 D3Cold 唤醒功能的 Function 必须在 PMCSR 中保持其 PME 上下文,以供 PME 服务例程软件在恢复过程中检查。其他上下文的保留是实现特定的。
 
-> **实现说明 (IMPLEMENTATION NOTE): 多功能设备与软复位的问题**
-> 在多功能设备 (MFD) 中，影响整体设备行为的某些控制设置由所有 Function 的设置共同决定，或严格按 Function 0 的设置决定。以下是一些关键示例:
+> **实现注: 多功能设备与软复位的问题**
+> 在多功能设备 (MFD) 中,影响整体设备行为的某些控制设置由所有 Function 的设置共同决定,或严格按 Function 0 的设置决定。以下是一些关键示例:
 > - 对于非 ARI MFD,设备控制寄存器和链路控制寄存器中的某些控制基于所有 Function 的设置 (见 § 第 7.5.3.4 节与 § 第 7.5.3.7 节)。
-> - 对于 ARI 设备，设备控制寄存器和链路控制寄存器中的某些控制严格基于 Function 0 的设置 (见 § 第 7.5.3.4 节与 § 第 7.5.3.7 节)。
+> - 对于 ARI 设备,设备控制寄存器和链路控制寄存器中的某些控制严格基于 Function 0 的设置 (见 § 第 7.5.3.4 节与 § 第 7.5.3.7 节)。
 > - 对于所有 MFD,设备控制 2 寄存器和链路控制 2 寄存器中的某些控制严格基于 Function 0 的设置 (见 § 第 7.5.3.16 节与 § 第 7.5.3.19 节)。
-> 对任何 Function (尤其是 Function 0) 执行软复位可能会破坏 MFD 中其他活动 Function 的正常运行。由于某些操作系统在 D3Hot 与 D0 之间转换给定 Function 时，期望其他 Function 不受影响，因此强烈建议 MFD 中的每个 Function 在电源管理控制/状态寄存器中将 No_Soft_Reset 位置位。这样，将给定 Function 从 D3Hot 转换到 D0 不会破坏其他活动 Function 的正常运行。
+> 对任何 Function (尤其是 Function 0) 执行软复位可能会破坏 MFD 中其他活动 Function 的正常运行。由于某些操作系统在 D3Hot 与 D0 之间转换给定 Function 时,期望其他 Function 不受影响,因此强烈建议 MFD 中的每个 Function 在电源管理控制/状态寄存器中将 No_Soft_Reset 位置位。这样,将给定 Function 从 D3Hot 转换到 D0 不会破坏其他活动 Function 的正常运行。
 > 对于支持 Flit 模式的 Function,要求将 No_Soft_Reset 位置位 (见 § 表 7-15)。
-> 同样强烈建议 MFD 中的每个端点 (Endpoint) Function 实现 Function 级复位 (FLR) (即 Function 级复位能力位置位)。FLR 可用于复位单个端点 Function,而不影响可能影响其他 Function 的设置，特别是当那些 Function 处于活动状态时。由于 FLR 的静默、错误恢复与清理重用特性,FLR 也推荐用于单 Function 端点设备。
+> 同样强烈建议 MFD 中的每个端点 (Endpoint) Function 实现 Function 级复位 (FLR) (即 Function 级复位能力位置位)。FLR 可用于复位单个端点 Function,而不影响可能影响其他 Function 的设置,特别是当那些 Function 处于活动状态时。由于 FLR 的静默、错误恢复与清理重用特性,FLR 也推荐用于单 Function 端点设备。
 
-> **实现说明 (IMPLEMENTATION NOTE): PME 上下文**
+> **实现注: PME 上下文**
 > PME 上下文的示例包括但不限于: Function 的 PME_Status 位、请求代理的 Requester ID、调制解调器支持的 Caller ID、触发恢复事件的 IP 定向网络数据包的 IP 信息等。
 
 </td>
@@ -846,9 +845,9 @@ The following rules relate to PCI-PM compatible power management:
 </td>
 <td style="background-color:#e8e8e8">
 
-当系统软件对发出断言的 Function 的 PCI-PM 兼容 PMCSR 的 PME_Status 位执行"写 1 清零"配置事务时，该 Function 的 PME 断言被确认。
+当系统软件对发出断言的 Function 的 PCI-PM 兼容 PMCSR 的 PME_Status 位执行"写 1 清零"配置事务时,该 Function 的 PME 断言被确认。
 
-必须使用辅助电源来支持 Function 内的 PME 事件检测、链路重新激活以及在 D3Cold 内保留 PME 上下文。注意，一旦由于链路重新激活使 I/O 层级 (Hierarchy) 回到完全通信状态，唤醒代理随后将 PME 报文传播到层级的根，指示 PME 事件的来源。更多 PME 特定的细节请参见 § 第 5.3.3 节。
+必须使用辅助电源来支持 Function 内的 PME 事件检测、链路重新激活以及在 D3Cold 内保留 PME 上下文。注意,一旦由于链路重新激活使 I/O 层级 (Hierarchy) 回到完全通信状态,唤醒代理随后将 PME 报文传播到层级的根,指示 PME 事件的来源。更多 PME 特定的细节请参见 § 第 5.3.3 节。
 
 链路的电源管理状态由其下游组件的 D 状态决定。
 
@@ -871,11 +870,11 @@ The following rules relate to PCI-PM compatible power management:
 以下规则涉及 PCI-PM 兼容电源管理:
 
 - D0、D1、D2 与 D3Hot 中的设备必须通过发送 PME_TO_Ack 报文来响应接收到的 PME_Turn_Off 报文。
-- 在任何设备 D 状态下，执行 PME_Turn_Off/PME_TO_Ack 握手序列后，下游组件必须使用 PM_Enter_L23 DLLP 请求链路转换到 L2/L3 Ready。完成 L2/L3 Ready 进入转换协议后，下游组件必须准备好应对主电源与参考时钟的丢失。
+- 在任何设备 D 状态下,执行 PME_Turn_Off/PME_TO_Ack 握手序列后,下游组件必须使用 PM_Enter_L23 DLLP 请求链路转换到 L2/L3 Ready。完成 L2/L3 Ready 进入转换协议后,下游组件必须准备好应对主电源与参考时钟的丢失。
 - 单 Function 设备的上游端口必须仅基于其 Function 被编程到 D1、D2 或 D3Hot 启动到 L1 的链路状态转换。对于 Switch,系统软件负责确保 Switch 上游端口的任何 D 状态编程都以符合层级范围 PM 策略的方式进行 (即上游端口不能被编程到比最活动的下游端口及下游所连组件/Function 更不活动的 D 状态)。
-- 非 ARI 多功能设备的上游端口在其所有 Function 都被编程到非 D0 D 状态之前，不得启动到 L1 的链路状态转换 (代表 PCI-PM)。
-- ARI 设备的上游端口在至少一个 Function 被编程到非 D0 状态、且其所有 Function 都处于非 D0 状态或 D0uninitialized 状态之前，不得启动到 L1 的链路状态转换 (代表 PCI-PM)。
-- 对于 SR-IOV 设备，链路电源状态仅由 PF 的设置控制，与 VF 的 D 状态无关。VF 电源状态不影响链路电源状态。
+- 非 ARI 多功能设备的上游端口在其所有 Function 都被编程到非 D0 D 状态之前,不得启动到 L1 的链路状态转换 (代表 PCI-PM)。
+- ARI 设备的上游端口在至少一个 Function 被编程到非 D0 状态、且其所有 Function 都处于非 D0 状态或 D0uninitialized 状态之前,不得启动到 L1 的链路状态转换 (代表 PCI-PM)。
+- 对于 SR-IOV 设备,链路电源状态仅由 PF 的设置控制,与 VF 的 D 状态无关。VF 电源状态不影响链路电源状态。
 
 </td>
 </tr>
@@ -936,13 +935,13 @@ The following text provides additional detail for the Link state transition proc
 
 **下游组件链路状态转换启动过程:**
 
-2. 下游组件调度与配置写请求对应的 Completion 到其 PMCSR PowerState 字段，并考虑所需的完成信用 (completion credits)。
+2. 下游组件调度与配置写请求对应的 Completion 到其 PMCSR PowerState 字段,并考虑所需的完成信用 (completion credits)。
 
-3. 下游组件随后必须等待，直到它累积至少发送任何 FC 类型最大可能分组所需的最少信用数 (适用于所有使能的 VC) (如果它尚未拥有此类信用)。然后暂停所有事务层 TLP 调度。
+3. 下游组件随后必须等待,直到它累积至少发送任何 FC 类型最大可能分组所需的最少信用数 (适用于所有使能的 VC) (如果它尚未拥有此类信用)。然后暂停所有事务层 TLP 调度。
 
-4. 下游组件随后等待，直到它收到 PMCSR 写完成以及之前发送的任何其他 TLP 的确认。如果数据链路层规则 (在非 Flit 模式下运行) 或 Flit Ack/Nak 规则 (在 Flit 模式下运行) 要求，组件必须从其适当的重传缓冲区 (Retry Buffer) 重传一个 TLP。
+4. 下游组件随后等待,直到它收到 PMCSR 写完成以及之前发送的任何其他 TLP 的确认。如果数据链路层规则 (在非 Flit 模式下运行) 或 Flit Ack/Nak 规则 (在 Flit 模式下运行) 要求,组件必须从其适当的重传缓冲区 (Retry Buffer) 重传一个 TLP。
 
-5. 一旦下游组件的所有 TLP 都已被确认，下游组件开始发送 PM_Enter_L1 DLLP。组件在非 Flit 模式下，以不超过 8 个 (使用 8b/10b 编码) 或 32 个 (使用 128b/130b 编码) Symbol Time 的空闲间隔重复发送该 DLLP。在 PM_Enter_L1 发送之间的任何时刻允许发送其他 DLLP 和 SKP 有序集 (SKP Ordered Sets)，它们不计入该空闲时间限制。
+5. 一旦下游组件的所有 TLP 都已被确认,下游组件开始发送 PM_Enter_L1 DLLP。组件在非 Flit 模式下,以不超过 8 个 (使用 8b/10b 编码) 或 32 个 (使用 128b/130b 编码) Symbol Time 的空闲间隔重复发送该 DLLP。在 PM_Enter_L1 发送之间的任何时刻允许发送其他 DLLP 和 SKP 有序集 (SKP Ordered Sets),它们不计入该空闲时间限制。
 
 </td>
 </tr>
@@ -950,7 +949,6 @@ The following text provides additional detail for the Link state transition proc
 </table>
 
 > **Figure 5-2.** Entry into the L1 Link State
-> **图 5-2.** 进入 L1 链路状态
 
 > <img src="figures/chapter_05/fig_0662_1_tight.png" width="700">
 
@@ -1010,31 +1008,31 @@ Refer to § Section 5.5 for entry into the L1 PM Substates.
 
 下游组件如上所述继续发送 PM_Enter_L1 DLLP,直到它收到来自上游组件的响应 (PM_Request_Ack)。
 
-下游组件必须继续接受来自上游组件的 TLP 与 DLLP,并根据需要继续以 DLLP 响应，包括流控 (FC) 更新 DLLP 与 Ack/Nak DLLP。被阻止传输的任何 TLP (包括对所接收 TLP 的响应) 必须存储以供以后传输，并且必须使下游组件在进入 L1 后尽快启动 L1 退出。
+下游组件必须继续接受来自上游组件的 TLP 与 DLLP,并根据需要继续以 DLLP 响应,包括流控 (FC) 更新 DLLP 与 Ack/Nak DLLP。被阻止传输的任何 TLP (包括对所接收 TLP 的响应) 必须存储以供以后传输,并且必须使下游组件在进入 L1 后尽快启动 L1 退出。
 
 **上游组件链路状态转换过程:**
 
-6. 在收到 PM_Enter_L1 DLLP 时，上游组件阻止所有 TLP 传输的调度。
+6. 在收到 PM_Enter_L1 DLLP 时,上游组件阻止所有 TLP 传输的调度。
 
-7. 上游组件随后必须等待，直到它收到之前发送的最后一个 TLP 的确认。如果数据链路层规则 (在非 Flit 模式下) 或 Flit Ack/Nak 规则 (在 Flit 模式下) 要求，上游组件必须从其适当的重传缓冲区重传一个 TLP。
+7. 上游组件随后必须等待,直到它收到之前发送的最后一个 TLP 的确认。如果数据链路层规则 (在非 Flit 模式下) 或 Flit Ack/Nak 规则 (在 Flit 模式下) 要求,上游组件必须从其适当的重传缓冲区重传一个 TLP。
 
-8. 一旦上游组件的所有 TLP 已被确认，上游组件必须向下游发送 PM_Request_Ack DLLP,无论是否有未完成的请求。上游组件在非 Flit 模式下，以不超过 8 个 (使用 8b/10b 编码) 或 32 个 (使用 128b/130b 编码) Symbol Time 的空闲间隔重复发送该 DLLP。在 PM_Request_Ack 发送之间的任何时刻允许发送 SKP 有序集，且不计入该空闲时间限制。
+8. 一旦上游组件的所有 TLP 已被确认,上游组件必须向下游发送 PM_Request_Ack DLLP,无论是否有未完成的请求。上游组件在非 Flit 模式下,以不超过 8 个 (使用 8b/10b 编码) 或 32 个 (使用 128b/130b 编码) Symbol Time 的空闲间隔重复发送该 DLLP。在 PM_Request_Ack 发送之间的任何时刻允许发送 SKP 有序集,且不计入该空闲时间限制。
 
-上游组件如上所述继续发送 PM_Request_Ack DLLP,直到它观察到其接收 Lane 进入电气空闲 (Electrical Idle) 状态。有关物理层行为的更多细节，请参见 § 第 4 章。
+上游组件如上所述继续发送 PM_Request_Ack DLLP,直到它观察到其接收 Lane 进入电气空闲 (Electrical Idle) 状态。有关物理层行为的更多细节,请参见 § 第 4 章。
 
 **完成 L1 链路状态转换:**
 
-9. 一旦下游组件在其接收 Lane 上捕获到 PM_Request_Ack DLLP (表示上游组件已确认到 L1 的转换请求)，它随后禁用 DLLP 传输，并将上行方向的物理链路置入电气空闲状态。
+9. 一旦下游组件在其接收 Lane 上捕获到 PM_Request_Ack DLLP (表示上游组件已确认到 L1 的转换请求),它随后禁用 DLLP 传输,并将上行方向的物理链路置入电气空闲状态。
 
-10. 当上游组件的接收 Lane 进入电气空闲状态时，上游组件停止发送 PM_Request_Ack DLLP,禁用 DLLP 传输，并将其发送 Lane 置为电气空闲，完成链路到 L1 的转换。
+10. 当上游组件的接收 Lane 进入电气空闲状态时,上游组件停止发送 PM_Request_Ack DLLP,禁用 DLLP 传输,并将其发送 Lane 置为电气空闲,完成链路到 L1 的转换。
 
-当两个组件的互连链路由于下游组件被编程到非 D0 状态而处于 L1 时，两个组件均暂停其流控更新 (Flow Control Update) 以及 (如实现) 更新 FCP 定时器 (Update FCP Timer) (见 § 第 2.6.1.2 节) 计数机制。有关物理层行为的更多细节，请参考 § 第 4 章。
+当两个组件的互连链路由于下游组件被编程到非 D0 状态而处于 L1 时,两个组件均暂停其流控更新 (Flow Control Update) 以及 (如实现) 更新 FCP 定时器 (Update FCP Timer) (见 § 第 2.6.1.2 节) 计数机制。有关物理层行为的更多细节,请参考 § 第 4 章。
 
-如果到 L1 的协商被中断，请参考 § 第 5.2 节。
+如果到 L1 的协商被中断,请参考 § 第 5.2 节。
 
-L1 链路两端的组件可选择地禁用其内部 PLL,以节省更多能量。但是请注意，在 L1 的 L1.0 子状态中，平台提供的主电源与参考时钟必须继续提供给 L1 链路两端的组件。
+L1 链路两端的组件可选择地禁用其内部 PLL,以节省更多能量。但是请注意,在 L1 的 L1.0 子状态中,平台提供的主电源与参考时钟必须继续提供给 L1 链路两端的组件。
 
-有关进入 L1 PM Substates 的内容，请参见 § 第 5.5 节。
+有关进入 L1 PM Substates 的内容,请参见 § 第 5.5 节。
 
 </td>
 </tr>
@@ -1089,23 +1087,23 @@ Sequence of events:
 
 链路任一端的组件均可启动 L1 退出。
 
-退出 L1 时，建议下游组件在 L1 退出后 1 μs 之内开始为所有使能的 VC 和 FC 类型发送流控更新 DLLP。
+退出 L1 时,建议下游组件在 L1 退出后 1 μs 之内开始为所有使能的 VC 和 FC 类型发送流控更新 DLLP。
 
 将链路从 L1 转换到 L0 的物理机制详见 § 第 4 章。
 
-如果组件需要在该链路上发送 TLP,则必须启动 L1 退出。即使上游组件没有发送所需 TLP 所需的流控信用，也必须在下游端口上启动 L1 退出。L1 退出后，上游组件必须等待从下游组件接收所需的信用。§ 图 5-3 概述了触发上游组件启动链路到 L0 状态转换的示例序列。
+如果组件需要在该链路上发送 TLP,则必须启动 L1 退出。即使上游组件没有发送所需 TLP 所需的流控信用,也必须在下游端口上启动 L1 退出。L1 退出后,上游组件必须等待从下游组件接收所需的信用。§ 图 5-3 概述了触发上游组件启动链路到 L0 状态转换的示例序列。
 
 事件序列:
 
-1. 电源管理软件启动针对下游组件中某个 Function 内的 PM 配置寄存器 (本例中为 PMCSR 的 PowerState 字段) 的配置周期 (例如，将 Function 带回 D0 状态)。
+1. 电源管理软件启动针对下游组件中某个 Function 内的 PM 配置寄存器 (本例中为 PMCSR 的 PowerState 字段) 的配置周期 (例如,将 Function 带回 D0 状态)。
 
-2. 上游组件检测到该配置周期是针对当前处于低功耗状态的链路的，因此启动该链路到 L0 状态的转换。
+2. 上游组件检测到该配置周期是针对当前处于低功耗状态的链路的,因此启动该链路到 L0 状态的转换。
 
-3. 如果链路处于 L1 的 L1.1 或 L1.2 子状态，则上游组件启动链路到 L1.0 子状态的转换。
+3. 如果链路处于 L1 的 L1.1 或 L1.2 子状态,则上游组件启动链路到 L1.0 子状态的转换。
 
-4. 根据 § 第 4 章的定义，链路两个方向均进入链路训练，从而使链路转换到 L0 状态。L1 →L0 转换详见 § 第 4 章。
+4. 根据 § 第 4 章的定义,链路两个方向均进入链路训练,从而使链路转换到 L0 状态。L1 →L0 转换详见 § 第 4 章。
 
-5. 一旦链路的两个方向都恢复到活动的 L0 状态，上游端口将配置报文向下游发送。
+5. 一旦链路的两个方向都恢复到活动的 L0 状态,上游端口将配置报文向下游发送。
 
 </td>
 </tr>
@@ -1113,7 +1111,6 @@ Sequence of events:
 </table>
 
 > **Figure 5-3.** Exit from L1 Link State Initiated by Upstream Component
-> **图 5-3.** 由上游组件发起的 L1 链路状态退出
 > <img src="figures/chapter_05/fig_0664_1_tight.png" width="700">
 
 </div>
@@ -1148,13 +1145,13 @@ Transition to the L2/L3 Ready state follows a process that is similar to the L1 
 </td>
 <td style="background-color:#e8e8e8">
 
-转换到 L2/L3 Ready 状态遵循与 L1 进入过程类似的过程。两者之间存在一些小差异，如下所述。
+转换到 L2/L3 Ready 状态遵循与 L1 进入过程类似的过程。两者之间存在一些小差异,如下所述。
 
-- L2/L3 Ready 进入转换协议不会立即产生 L2 或 L3 链路状态。转换到 L2/L3 Ready 实际上是一种握手，以建立下游组件的电源移除准备就绪状态。当平台移除组件的电源与参考时钟时，最终达到 L2 或 L3。
-- L2/L3 Ready 进入转换的时间由 PME_Turn_Off/PME_TO_Ack 握手序列的完成来表示。下游组件为应对电源丢失所必需的任何动作必须在启动 L2/L3 Ready 转换之前完成。一旦完成所有电源与时钟丢失的准备工作，下游组件通过向上游发送 PM_Enter_L23 DLLP 来启动 L2/L3 Ready 进入。
+- L2/L3 Ready 进入转换协议不会立即产生 L2 或 L3 链路状态。转换到 L2/L3 Ready 实际上是一种握手,以建立下游组件的电源移除准备就绪状态。当平台移除组件的电源与参考时钟时,最终达到 L2 或 L3。
+- L2/L3 Ready 进入转换的时间由 PME_Turn_Off/PME_TO_Ack 握手序列的完成来表示。下游组件为应对电源丢失所必需的任何动作必须在启动 L2/L3 Ready 转换之前完成。一旦完成所有电源与时钟丢失的准备工作,下游组件通过向上游发送 PM_Enter_L23 DLLP 来启动 L2/L3 Ready 进入。
 - L2/L3 Ready 进入转换协议使用 PM_Enter_L23 DLLP。
-- 注意,PM_Enter_L23 DLLP 持续发送，直到收到确认或电源被移除。
-- 如果到 L2/L3 Ready 的协商被中断，请参考 § 第 5.2 节。
+- 注意,PM_Enter_L23 DLLP 持续发送,直到收到确认或电源被移除。
+- 如果到 L2/L3 Ready 的协商被中断,请参考 § 第 5.2 节。
 
 </td>
 </tr>
@@ -1199,18 +1196,18 @@ PME indications that originate from a Root Port itself are reported through the 
 </td>
 <td style="background-color:#e8e8e8">
 
-PCI Express PME 机制与 [PCI] PME 机制软件兼容。电源管理事件 (Power Management Event) 由 Function 生成，作为请求 PM 状态变更的一种方式。电源管理事件通常用于将系统或单个 Function 从低功耗状态恢复。
+PCI Express PME 机制与 [PCI] PME 机制软件兼容。电源管理事件 (Power Management Event) 由 Function 生成,作为请求 PM 状态变更的一种方式。电源管理事件通常用于将系统或单个 Function 从低功耗状态恢复。
 
-电源管理软件可以将一个层级 (Hierarchy) 转换到低功耗状态，并将这些设备的上游链路转换到不通信的 L2 状态。
+电源管理软件可以将一个层级 (Hierarchy) 转换到低功耗状态,并将这些设备的上游链路转换到不通信的 L2 状态。
 
 因此,PCI Express PME 生成机制被分解为以下两个组件:
 
-- 唤醒不通信的层级 (wakeup)。仅当发起 PME 的设备的上游链路处于不通信的 L2 状态时才需要此步骤，因为在该状态下设备无法向上游发送 PM_PME 报文。
+- 唤醒不通信的层级 (wakeup)。仅当发起 PME 的设备的上游链路处于不通信的 L2 状态时才需要此步骤,因为在该状态下设备无法向上游发送 PM_PME 报文。
 - 向层级的根发送 PM_PME 报文
 
-源自 PCI Express 端点 (Endpoint) 或 PCI Express 传统端点 (Legacy Endpoint) 的 PME 指示以 TLP 报文的形式传播到根复合体 (Root Complex)。PM_PME 报文通过 PM_PME 报文头的 Requester ID 标识层级内的请求代理。PM_PME 报文中的显式标识旨在加快 PME 服务例程响应，从而缩短恢复时间。
+源自 PCI Express 端点 (Endpoint) 或 PCI Express 传统端点 (Legacy Endpoint) 的 PME 指示以 TLP 报文的形式传播到根复合体 (Root Complex)。PM_PME 报文通过 PM_PME 报文头的 Requester ID 标识层级内的请求代理。PM_PME 报文中的显式标识旨在加快 PME 服务例程响应,从而缩短恢复时间。
 
-如果 RCiEP 与根复合体事件收集器 (Root Complex Event Collector) 相关联，则源自该 RCiEP 的任何 PME 指示必须由该根复合体事件收集器上报。
+如果 RCiEP 与根复合体事件收集器 (Root Complex Event Collector) 相关联,则源自该 RCiEP 的任何 PME 指示必须由该根复合体事件收集器上报。
 
 源自根端口 (Root Port) 本身的 PME 指示通过同一根端口上报。
 
@@ -1260,19 +1257,19 @@ Regardless of the wakeup mechanism used, once the Link has been re-activated and
 
 L2 状态被定义为"不通信",因为在该状态下组件参考时钟和主电源被移除。
 
-链路唤醒机制提供了一种向平台发出信号以重建其域内组件的电源和参考时钟的方法。已定义两种唤醒机制: Beacon 和 WAKE#。Beacon 机制使用带内 (in-band) 信令实现唤醒功能。对于支持唤醒功能的组件，实现所针对的外形规格规范决定了唤醒机制的支持要求。针对在 Switch 的某些端口上使用 Beacon 而在其他端口上使用 WAKE# 的应用的 Switch 组件，必须适当地转换唤醒机制 (见 § 第 5.3.3.2 节标题为"WAKE# 到 Beacon 转换示例"的实现注)。在仅使用 WAKE# 作为唤醒机制的应用中，根复合体不需要支持 Beacon 的接收。
+链路唤醒机制提供了一种向平台发出信号以重建其域内组件的电源和参考时钟的方法。已定义两种唤醒机制: Beacon 和 WAKE#。Beacon 机制使用带内 (in-band) 信令实现唤醒功能。对于支持唤醒功能的组件,实现所针对的外形规格规范决定了唤醒机制的支持要求。针对在 Switch 的某些端口上使用 Beacon 而在其他端口上使用 WAKE# 的应用的 Switch 组件,必须适当地转换唤醒机制 (见 § 第 5.3.3.2 节标题为"WAKE# 到 Beacon 转换示例"的实现注)。在仅使用 WAKE# 作为唤醒机制的应用中,根复合体不需要支持 Beacon 的接收。
 
-WAKE# 机制使用边带 (sideband) 信令实现唤醒功能。WAKE# 是由请求唤醒的组件断言 (assert) 的"漏极开路 (open drain)"信号，由关联的电源控制器观察。WAKE# 仅在某些外形规格中定义,WAKE# 的详细规范包含在相关外形规格规范中。特定的外形规格规范可能要求使用 Beacon 或 WAKE# 作为唤醒机制。
+WAKE# 机制使用边带 (sideband) 信令实现唤醒功能。WAKE# 是由请求唤醒的组件断言 (assert) 的"漏极开路 (open drain)"信号,由关联的电源控制器观察。WAKE# 仅在某些外形规格中定义,WAKE# 的详细规范包含在相关外形规格规范中。特定的外形规格规范可能要求使用 Beacon 或 WAKE# 作为唤醒机制。
 
-当使用 WAKE# 作为唤醒机制时，一旦 WAKE# 被断言，断言该信号的 Function 必须继续驱动该信号为低电平，直到主电源已恢复到该组件，如基本复位 (Fundamental Reset) 转为非活动所指示。
+当使用 WAKE# 作为唤醒机制时,一旦 WAKE# 被断言,断言该信号的 Function 必须继续驱动该信号为低电平,直到主电源已恢复到该组件,如基本复位 (Fundamental Reset) 转为非活动所指示。
 
 系统不需要以端点可以保证检测到其他 Function 已断言该信号的方式来路由或缓冲 WAKE#。
 
-在使用任何唤醒机制之前,Function 必须通过软件将 PMCSR 中的 PME_En 位置位来启用。PME_Status 位是粘性位 (sticky)，且如果辅助电源可用且已使能唤醒事件,Function 必须通过复位保持 PME_Status 位的值 (此要求也适用于 PMCSR 中的 PME_En 位和设备控制寄存器中的 Aux Power PM Enable 位)。
+在使用任何唤醒机制之前,Function 必须通过软件将 PMCSR 中的 PME_En 位置位来启用。PME_Status 位是粘性位 (sticky),且如果辅助电源可用且已使能唤醒事件,Function 必须通过复位保持 PME_Status 位的值 (此要求也适用于 PMCSR 中的 PME_En 位和设备控制寄存器中的 Aux Power PM Enable 位)。
 
-允许从 D3Cold 状态生成 PME 的系统必须提供辅助电源，以便在主系统电源关闭时支持链路唤醒。组件只有在软件按 § 第 5.6 节所述启用后才能消耗辅助电源。软件需要在参与链路唤醒的所有组件中使能辅助电源消耗，包括必须传播 Beacon 信号的所有组件。在传统系统软件存在的情况下，这是系统固件的责任。
+允许从 D3Cold 状态生成 PME 的系统必须提供辅助电源,以便在主系统电源关闭时支持链路唤醒。组件只有在软件按 § 第 5.6 节所述启用后才能消耗辅助电源。软件需要在参与链路唤醒的所有组件中使能辅助电源消耗,包括必须传播 Beacon 信号的所有组件。在传统系统软件存在的情况下,这是系统固件的责任。
 
-无论使用哪种唤醒机制，一旦链路已重新激活并完成训练，请求代理随后将 PM_PME 报文向上游传播到根复合体。从电源管理的角度来看，两种唤醒机制提供相同的功能，本章其余部分不区分它们。
+无论使用哪种唤醒机制,一旦链路已重新激活并完成训练,请求代理随后将 PM_PME 报文向上游传播到根复合体。从电源管理的角度来看,两种唤醒机制提供相同的功能,本章其余部分不区分它们。
 
 </td>
 </tr>
@@ -1320,20 +1317,20 @@ All components with an Upstream Port must accept and acknowledge the PME_Turn_Of
 </td>
 <td style="background-color:#e8e8e8">
 
-PCI Express-PM 引入了一种围栏 (fence) 机制，用于启动电源移除序列，同时协调平台电源管理控制器与 PCI Express 代理的 PME 处理行为。
+PCI Express-PM 引入了一种围栏 (fence) 机制,用于启动电源移除序列,同时协调平台电源管理控制器与 PCI Express 代理的 PME 处理行为。
 
 **PME_Turn_Off 广播报文**
 
-在主组件电源和参考时钟关闭之前，根复合体或 Switch 下游端口必须发出广播报文，指示层级内该点下游的所有代理在收到 PME_Turn_Off 报文时立即停止启动任何后续 PM_PME 报文。
+在主组件电源和参考时钟关闭之前,根复合体或 Switch 下游端口必须发出广播报文,指示层级内该点下游的所有代理在收到 PME_Turn_Off 报文时立即停止启动任何后续 PM_PME 报文。
 
-每个 PCI Express 代理都需要以一个 TLP "确认"报文 PME_TO_Ack 响应，该报文始终路由到上游。在所有情况下,PME_TO_Ack 报文必须在 PME_Turn_Off 报文的源点终止。
+每个 PCI Express 代理都需要以一个 TLP "确认"报文 PME_TO_Ack 响应,该报文始终路由到上游。在所有情况下,PME_TO_Ack 报文必须在 PME_Turn_Off 报文的源点终止。
 
 Switch 必须在收到每个下游端口的 PME_TO_Ack 报文后才能报告"聚合"确认。一旦每个下游端口都收到 PME_TO_Ack 报文,Switch 必须随后在其上游端口上发送 PME_TO_Ack 报文。以下任一事件的发生都必须重置聚合机制: 从上游端口发送 PME_TO_Ack 报文、上游端口接收到任何 TLP、Switch 主电源的移除或基本复位。
 
-具有上游端口的所有组件必须接受并确认 PME_Turn_Off 报文，与关联设备或其多功能设备的任何 Function 的 D 状态无关。一旦组件发送了 PME_TO_Ack 报文，它必须通过启动到 L2/L3 Ready 状态的转换来准备移除其电源和参考时钟。
+具有上游端口的所有组件必须接受并确认 PME_Turn_Off 报文,与关联设备或其多功能设备的任何 Function 的 D 状态无关。一旦组件发送了 PME_TO_Ack 报文,它必须通过启动到 L2/L3 Ready 状态的转换来准备移除其电源和参考时钟。
 
-> **实现说明 (IMPLEMENTATION NOTE): WAKE# 到 Beacon 转换示例**
-> 针对连接"Beacon 域"和"WAKE# 域"的应用的 Switch 组件必须适当地转换唤醒机制。§ 图 5-4 显示了两个示例系统，每个系统都包括使用 WAKE# 唤醒机制的插槽。在情况 1 中,WAKE# 直接输入到电源管理控制器，不需要转换。在情况 2 中,WAKE# 是 Switch 的输入，作为对 WAKE# 被断言的响应,Switch 必须生成传播到根复合体/电源管理控制器的 Beacon。
+> **实现注: WAKE# 到 Beacon 转换示例**
+> 针对连接"Beacon 域"和"WAKE# 域"的应用的 Switch 组件必须适当地转换唤醒机制。§ 图 5-4 显示了两个示例系统,每个系统都包括使用 WAKE# 唤醒机制的插槽。在情况 1 中,WAKE# 直接输入到电源管理控制器,不需要转换。在情况 2 中,WAKE# 是 Switch 的输入,作为对 WAKE# 被断言的响应,Switch 必须生成传播到根复合体/电源管理控制器的 Beacon。
 
 </td>
 </tr>
@@ -1341,7 +1338,6 @@ Switch 必须在收到每个下游端口的 PME_TO_Ack 报文后才能报告"聚
 </table>
 
 > **Figure 5-4.** Conceptual Diagrams Showing Two Example Cases of WAKE# Routing
-> **图 5-4.** 展示 WAKE# 路由两种示例情况的概念图
 
 > <img src="figures/chapter_05/fig_0667_1_tight.png" width="700">
 
@@ -1386,17 +1382,17 @@ The power delivery manager must wait a minimum of 100 ns after observing all Lin
 </td>
 <td style="background-color:#e8e8e8">
 
-Switch 必须在所有下游端口进入 L2/L3 Ready 状态之后，才将其上游链路转换到 L2/L3 Ready 状态。
+Switch 必须在所有下游端口进入 L2/L3 Ready 状态之后,才将其上游链路转换到 L2/L3 Ready 状态。
 
-连接到 PME_Turn_Off 报文发起者的链路是最后进入 L2/L3 Ready 状态的链路。此状态转换作为对电源交付管理器的指示，表明层级该部分内的所有链路已成功将所有在途 PME 报文撤回到 PME_Turn_Off 报文源点，并已执行任何必要的本地调整以准备电源移除。
+连接到 PME_Turn_Off 报文发起者的链路是最后进入 L2/L3 Ready 状态的链路。此状态转换作为对电源交付管理器的指示,表明层级该部分内的所有链路已成功将所有在途 PME 报文撤回到 PME_Turn_Off 报文源点,并已执行任何必要的本地调整以准备电源移除。
 
-为避免在一个或多个设备不响应 PME_TO_Ack 报文然后将其链路置入 L2/L3 Ready 状态的情况下发生死锁，电源管理器必须实现在等待一定时间后的超时，此时将按已收到报文且所有链路已置入 L2/L3 Ready 状态继续进行。该定时器的推荐限制范围为 1 ms 至 10 ms。
+为避免在一个或多个设备不响应 PME_TO_Ack 报文然后将其链路置入 L2/L3 Ready 状态的情况下发生死锁,电源管理器必须实现在等待一定时间后的超时,此时将按已收到报文且所有链路已置入 L2/L3 Ready 状态继续进行。该定时器的推荐限制范围为 1 ms 至 10 ms。
 
-电源交付管理器必须在观察到与 PME_Turn_Off 报文源点对应的所有链路进入 L2/L3 Ready 状态后，等待至少 100 ns 才能移除组件的参考时钟和主电源。上述定时器触发的情况下不适用此要求。
+电源交付管理器必须在观察到与 PME_Turn_Off 报文源点对应的所有链路进入 L2/L3 Ready 状态后,等待至少 100 ns 才能移除组件的参考时钟和主电源。上述定时器触发的情况下不适用此要求。
 
-> **实现说明 (IMPLEMENTATION NOTE): Switch 对 PME_TO_ACK 报文的代理**
-> PME_Turn_Off/PME_TO_Ack 握手的关键作用之一是确保在睡眠状态电源移除之前，所有在途 PME 报文都已从 PCI Express 互连中清除。这一点得到保证，是因为 PME 报文和 PME_TO_Ack 报文都使用 VC0 内的 Posted 请求队列，因此所有先前注入的 PME 报文将在 PME_TO_Ack 被根复合体接收之前对系统可见。一旦根复合体的所有下游端口接收到 PME_TO_Ack 报文，根复合体即可向电源管理器发出信号，表明在不会丢失任何 PME 报文的情况下安全移除电源。
-> Switch 创建层级扩展点，因此必须等待其连接的所有下游端口接收到 PME_TO_Ack 报文，然后才能代表其下游创建的子层级向上游发送 PME_TO_Ack 报文。这可以使用常见的记分板 (scoreboarding) 技术非常简单地实现。例如，一旦 PME_Turn_Off 广播报文已从 Switch 向下游广播,Switch 简单地检查每个下游端口是否已收到 PME_TO_Ack。一旦其活动下游端口中最后一个接收到 PME_TO_Ack,Switch 随后将作为其下游整个子层级的代理向上游发送单个 PME_TO_Ack 报文。注意，一旦下游端口接收到 PME_TO_Ack 报文且 Switch 已记下其到达，该端口可自由地从其内部队列中丢弃该报文并释放相应的 Posted 请求队列 FC 信用。
+> **实现注: Switch 对 PME_TO_ACK 报文的代理**
+> PME_Turn_Off/PME_TO_Ack 握手的关键作用之一是确保在睡眠状态电源移除之前,所有在途 PME 报文都已从 PCI Express 互连中清除。这一点得到保证,是因为 PME 报文和 PME_TO_Ack 报文都使用 VC0 内的 Posted 请求队列,因此所有先前注入的 PME 报文将在 PME_TO_Ack 被根复合体接收之前对系统可见。一旦根复合体的所有下游端口接收到 PME_TO_Ack 报文,根复合体即可向电源管理器发出信号,表明在不会丢失任何 PME 报文的情况下安全移除电源。
+> Switch 创建层级扩展点,因此必须等待其连接的所有下游端口接收到 PME_TO_Ack 报文,然后才能代表其下游创建的子层级向上游发送 PME_TO_Ack 报文。这可以使用常见的记分板 (scoreboarding) 技术非常简单地实现。例如,一旦 PME_Turn_Off 广播报文已从 Switch 向下游广播,Switch 简单地检查每个下游端口是否已收到 PME_TO_Ack。一旦其活动下游端口中最后一个接收到 PME_TO_Ack,Switch 随后将作为其下游整个子层级的代理向上游发送单个 PME_TO_Ack 报文。注意,一旦下游端口接收到 PME_TO_Ack 报文且 Switch 已记下其到达,该端口可自由地从其内部队列中丢弃该报文并释放相应的 Posted 请求队列 FC 信用。
 
 </td>
 </tr>
@@ -1433,9 +1429,9 @@ PM_PME Messages are always routed in the direction of the Root Complex. To send 
 </td>
 <td style="background-color:#e8e8e8">
 
-PM_PME 报文是 Posted 事务层包 (TLP)，通知电源管理软件层级内哪个代理请求 PM 状态变更。与所有其他电源管理系统报文一样,PM_PME 报文必须使用通用流量类 TC0。
+PM_PME 报文是 Posted 事务层包 (TLP),通知电源管理软件层级内哪个代理请求 PM 状态变更。与所有其他电源管理系统报文一样,PM_PME 报文必须使用通用流量类 TC0。
 
-PM_PME 报文始终沿根复合体方向路由。要在其上游链路上发送 PM_PME 报文，设备必须将链路转换到 L0 状态 (如果链路尚未处于该状态)。除非另有说明，设备在发送 PM_PME 报文后将保持链路处于 L0 状态。
+PM_PME 报文始终沿根复合体方向路由。要在其上游链路上发送 PM_PME 报文,设备必须将链路转换到 L0 状态 (如果链路尚未处于该状态)。除非另有说明,设备在发送 PM_PME 报文后将保持链路处于 L0 状态。
 
 </td>
 </tr>
@@ -1481,21 +1477,21 @@ If after 100 ms (+50%/-5%), the PME_Status bit of a requesting agent has not yet
 </td>
 <td style="background-color:#e8e8e8">
 
-根复合体通常实现有本地缓冲，以临时存储可能同时通过层级传播的有限数量的 PM_PME 报文。鉴于根复合体内可存储的 PM_PME 报文数量有限，在该临时 PM_PME 报文缓冲区的容量被超出时，可能对向上游方向的 Posted 队列施加背压。
+根复合体通常实现有本地缓冲,以临时存储可能同时通过层级传播的有限数量的 PM_PME 报文。鉴于根复合体内可存储的 PM_PME 报文数量有限,在该临时 PM_PME 报文缓冲区的容量被超出时,可能对向上游方向的 Posted 队列施加背压。
 
 按以下示例场景可发生死锁:
 
-1. 输入的 PM_PME 报文填满根复合体的临时存储达到其容量，而层级中还有额外的 PM_PME 报文正在向上游方向传播。
+1. 输入的 PM_PME 报文填满根复合体的临时存储达到其容量,而层级中还有额外的 PM_PME 报文正在向上游方向传播。
 2. 根复合体代表系统软件发出针对某个 PME 请求者的 PMCSR 的配置读请求 (Configuration Read Request) (例如读取其 PME_Status 位)。
-3. 根据生产者/消费者排序规则，相应的拆分完成报文 (split completion) 必须将其之前 Posted 的所有 PM_PME 报文推送到其之前，在这种情况下这些 PM_PME 报文无处可去。
+3. 根据生产者/消费者排序规则,相应的拆分完成报文 (split completion) 必须将其之前 Posted 的所有 PM_PME 报文推送到其之前,在这种情况下这些 PM_PME 报文无处可去。
 4. PME 服务例程无法取得进展;PM_PME 报文存储情况无法改善。
 5. 发生死锁。
 
-避免潜在死锁要求根复合体在这些情况下始终启用前向进度。这必须通过接受 Posted 队列流控信用所允许的任何 PM_PME 报文，并丢弃造成溢出情况的任何 PM_PME 报文来实现。这种必需的行为确保在这些情况下不会发生死锁;然而,PM_PME 报文将在此过程中被丢弃，因此会丢失。
+避免潜在死锁要求根复合体在这些情况下始终启用前向进度。这必须通过接受 Posted 队列流控信用所允许的任何 PM_PME 报文,并丢弃造成溢出情况的任何 PM_PME 报文来实现。这种必需的行为确保在这些情况下不会发生死锁;然而,PM_PME 报文将在此过程中被丢弃,因此会丢失。
 
-为确保没有 PM_PME 报文被永久丢失，所有能够生成 PM_PME 的代理必须实现 PME 服务超时机制，以确保其 PME 请求在合理的时间内得到服务。
+为确保没有 PM_PME 报文被永久丢失,所有能够生成 PM_PME 的代理必须实现 PME 服务超时机制,以确保其 PME 请求在合理的时间内得到服务。
 
-如果在 100 ms (+50%/-5%) 之后，请求代理的 PME_Status 位尚未被清零，则 PME 服务超时机制到期，触发 PME 请求代理重新发送暂时丢失的 PM_PME 报文。如果此时链路处于不通信状态，则在重新发送 PM_PME 报文之前，代理必须按 § 第 5.3.3.2 节所述重新激活链路。
+如果在 100 ms (+50%/-5%) 之后,请求代理的 PME_Status 位尚未被清零,则 PME 服务超时机制到期,触发 PME 请求代理重新发送暂时丢失的 PM_PME 报文。如果此时链路处于不通信状态,则在重新发送 PM_PME 报文之前,代理必须按 § 第 5.3.3.2 节所述重新激活链路。
 
 </td>
 </tr>
@@ -1537,10 +1533,10 @@ If after 100 ms (+50%/-5%), the PME_Status bit of a requesting agent has not yet
 
 - 所有设备 Function 必须按照 PCI-PM 规范实现 PCI-PM 电源管理能力 (Power Management Capabilities, PMC) 寄存器和 PMCSR。这些寄存器驻留在符合 PCI-PM 的 PCI 能力列表格式中。
   - 支持 PME 的 Function 必须在它们的 PMCSR 中实现 PME_Status 位以及底层功能行为。
-  - 当 Function 启动链路唤醒或发出 PM_PME 报文时，它必须置位其 PME_Status 位。
+  - 当 Function 启动链路唤醒或发出 PM_PME 报文时,它必须置位其 PME_Status 位。
 - Switch 必须将从任何下游端口接收到的 PM_PME 路由到其上游端口。
-- 收到 PME_Turn_Off 报文时，设备必须阻止 PM_PME 报文的发送，并向上游发送 PME_TO_Ack 报文。在链路通过 LDn 返回到 L0 状态之后，允许组件发送 PM_PME 报文。
-- 在链路或层级的某一部分被转换到不通信状态 (即无法发出 PM_PME 报文的状态) 之前，必须向下游广播 PME_Turn_Off 报文。
+- 收到 PME_Turn_Off 报文时,设备必须阻止 PM_PME 报文的发送,并向上游发送 PME_TO_Ack 报文。在链路通过 LDn 返回到 L0 状态之后,允许组件发送 PM_PME 报文。
+- 在链路或层级的某一部分被转换到不通信状态 (即无法发出 PM_PME 报文的状态) 之前,必须向下游广播 PME_Turn_Off 报文。
 
 </td>
 </tr>
@@ -1570,7 +1566,6 @@ If after 100 ms (+50%/-5%), the PME_Status bit of a requesting agent has not yet
 The following diagram conceptually outlines the PM_PME delivery control state machine. This state machine determines the ability of a Link to service PME events by issuing PM_PME immediately vs. requiring Link wakeup.
 
 > **Figure 5-5.** A Conceptual PME Control State Machine
-> **图 5-5.** 概念性 PME 控制状态机
 
 > <img src="figures/chapter_05/fig_0670_1_tight.png" width="700">
 
@@ -1606,25 +1601,25 @@ At initial power-up and associated reset, the Upstream Link enters the Communica
 
 **通信 (Communicating) 状态:**
 
-在初始上电和相关复位时，上游链路进入 Communicating 状态。
+在初始上电和相关复位时,上游链路进入 Communicating 状态。
 
-- 如果 PME_Status 被断言 (假设 PME 传递已使能)，将向上游发出 PM_PME 报文，在层级的根处终止。下一个状态是 PME Sent 状态。
-- 如果收到 PME_Turn_Off 报文，链路在确认报文并随后进入 L2/L3 Ready 状态后，进入 Non-communicating 状态。
+- 如果 PME_Status 被断言 (假设 PME 传递已使能),将向上游发出 PM_PME 报文,在层级的根处终止。下一个状态是 PME Sent 状态。
+- 如果收到 PME_Turn_Off 报文,链路在确认报文并随后进入 L2/L3 Ready 状态后,进入 Non-communicating 状态。
 
 **不通信 (Non-communicating) 状态:**
 
-- 在电源和时钟恢复以及相关复位之后，下一个状态是 Communicating 状态。
-- 如果 PME_Status 被断言，链路将转换到 Link Reactivation 状态，并激活唤醒机制。
+- 在电源和时钟恢复以及相关复位之后,下一个状态是 Communicating 状态。
+- 如果 PME_Status 被断言,链路将转换到 Link Reactivation 状态,并激活唤醒机制。
 
 **PME Sent 状态**
 
 - 如果 PME_Status 被清零,Function 再次成为 PME 能力。下一个状态是 Communicating 状态。
-- 如果在 PME 服务超时到期时 PME_Status 位尚未被清零，则重新向上游发送 PM_PME 报文。有关超时机制的说明，请参见 § 第 5.3.3.3.1 节。
+- 如果在 PME 服务超时到期时 PME_Status 位尚未被清零,则重新向上游发送 PM_PME 报文。有关超时机制的说明,请参见 § 第 5.3.3.3.1 节。
 - 如果已发出 PME 报文但软件在链路即将转换到不能进行报文通信的状态 (收到 PME_Turn_Off 报文) 时尚未清零 PME_Status,则链路在发送 PME_TO_Ack 报文后转换到 Link Reactivation 状态。设备还激活唤醒机制。
 
 **链路重激活 (Link Reactivation) 状态**
 
-- 在电源和时钟恢复以及相关复位之后，链路恢复为可处理事务的状态。设备在必要时清零唤醒信令，并向上游发出 PM_PME,然后转换到 PME Sent 状态。
+- 在电源和时钟恢复以及相关复位之后,链路恢复为可处理事务的状态。设备在必要时清零唤醒信令,并向上游发出 PM_PME,然后转换到 PME Sent 状态。
 
 <img src="figures/chapter_05/fig_0670_1_tight.png" width="700">
 </td>
@@ -1702,48 +1697,48 @@ Note that the components must be capable of changing their behavior during runti
 </td>
 <td style="background-color:#e8e8e8">
 
-以下各节定义了需要新软件的电源管理功能。虽然这些功能在新 PCI Express 设计中的存在不会破坏传统软件兼容性，但要充分利用它们需要新代码来管理它们。
+以下各节定义了需要新软件的电源管理功能。虽然这些功能在新 PCI Express 设计中的存在不会破坏传统软件兼容性,但要充分利用它们需要新代码来管理它们。
 
-这些功能使用本规范 § 第 7 章所述的 PCI Express 原生配置机制进行枚举和配置。有关与这些 PCI Express-PM 功能相关的特定寄存器位置、位分配和访问机制，请参考 § 第 7 章。
+这些功能使用本规范 § 第 7 章所述的 PCI Express 原生配置机制进行枚举和配置。有关与这些 PCI Express-PM 功能相关的特定寄存器位置、位分配和访问机制,请参考 § 第 7 章。
 
-未与内部根复合体链路 (Internal Root Complex Link) 或系统出口端口 (system Egress Port) 关联的所有端口都需要支持此处定义的主动状态链路电源管理 (Active State Link PM) 的最低要求。从最低要求的角度看，此功能必须被视为与 PCI-PM 软件兼容功能正交。例如，根复合体免于 PCI-PM 软件兼容功能要求;但它必须实现 ASPM 的最低要求。
+未与内部根复合体链路 (Internal Root Complex Link) 或系统出口端口 (system Egress Port) 关联的所有端口都需要支持此处定义的主动状态链路电源管理 (Active State Link PM) 的最低要求。从最低要求的角度看,此功能必须被视为与 PCI-PM 软件兼容功能正交。例如,根复合体免于 PCI-PM 软件兼容功能要求;但它必须实现 ASPM 的最低要求。
 
-如 § 第 5.3.2 节所定义，处于 D0 状态 (即完全活动状态) 的组件通常将其上游链路保持在活动的 L0 状态。ASPM 为处于 D0 状态的组件定义了一个协议，通过将其链路置入低功耗状态并指示链路的另一端同样操作来降低链路功耗。此功能允许硬件自主、动态地降低链路功耗，超出仅由软件控制 (即 PCI-PM 软件驱动) 的电源管理所能达到的范围。
+如 § 第 5.3.2 节所定义,处于 D0 状态 (即完全活动状态) 的组件通常将其上游链路保持在活动的 L0 状态。ASPM 为处于 D0 状态的组件定义了一个协议,通过将其链路置入低功耗状态并指示链路的另一端同样操作来降低链路功耗。此功能允许硬件自主、动态地降低链路功耗,超出仅由软件控制 (即 PCI-PM 软件驱动) 的电源管理所能达到的范围。
 
 在非 Flit 模式下,ASPM 定义了两种低功耗"待机"链路状态 L0s 和 L1。在 Flit 模式下,L0p 实际上取代了 L0s,而 L1 仍作为 ASPM 的"待机"链路状态。
 
-L0s 低功耗链路状态针对短进入与退出延迟进行了优化，同时提供显著的节能效果。如果在设备中启用了 L0s 状态，则建议设备在该链路不使用时将其发送链路置入 L0s 状态 (有关 L0s 调用策略的详细信息，请参见 § 第 5.4.1.1.1 节)。除非链路适用的外形规格规范明确要求，否则从 D0 设备状态对 L0s 链路状态的支持是可选的。
+L0s 低功耗链路状态针对短进入与退出延迟进行了优化,同时提供显著的节能效果。如果在设备中启用了 L0s 状态,则建议设备在该链路不使用时将其发送链路置入 L0s 状态 (有关 L0s 调用策略的详细信息,请参见 § 第 5.4.1.1.1 节)。除非链路适用的外形规格规范明确要求,否则从 D0 设备状态对 L0s 链路状态的支持是可选的。
 
-L0p 低功耗链路状态针对短进入与较长退出延迟进行了优化，同时提供显著的节能效果，并支持在链路宽度变化正在进行时进行链路操作。
+L0p 低功耗链路状态针对短进入与较长退出延迟进行了优化,同时提供显著的节能效果,并支持在链路宽度变化正在进行时进行链路操作。
 
-L1 链路状态针对最大节能进行了优化，代价是较长的进入与退出延迟。对于需要极低功耗且可接受较长转换时间的场景,L1 可将链路功耗降低到 L0s 状态以下。除非特定外形规格明确要求，否则对 ASPM 而言 L1 链路状态的支持是可选的。
+L1 链路状态针对最大节能进行了优化,代价是较长的进入与退出延迟。对于需要极低功耗且可接受较长转换时间的场景,L1 可将链路功耗降低到 L0s 状态以下。除非特定外形规格明确要求,否则对 ASPM 而言 L1 链路状态的支持是可选的。
 
-定义了可选的 L1 PM Substates L1.1 和 L1.2。这些子状态可以进一步降低链路功耗，适用于需要极低空闲功耗且可接受较长转换时间的场景。
+定义了可选的 L1 PM Substates L1.1 和 L1.2。这些子状态可以进一步降低链路功耗,适用于需要极低空闲功耗且可接受较长转换时间的场景。
 
-每个组件必须在 ASPM Support 字段中报告其对 ASPM 的支持级别。在适用的情况下，每个组件还应报告其 L0s 和 L1 退出延迟 (从 L0s 或 L1 状态转换到 L0 状态所需的时间)。端点 Function 还必须报告它们可承受的最差延迟，例如在 L0s 或 L1 转换到 L0 状态的转换延迟导致内部 FIFO 溢出之前可以承受的最差延迟。电源管理软件可使用所提供的信息来启用相应级别的 ASPM。
+每个组件必须在 ASPM Support 字段中报告其对 ASPM 的支持级别。在适用的情况下,每个组件还应报告其 L0s 和 L1 退出延迟 (从 L0s 或 L1 状态转换到 L0 状态所需的时间)。端点 Function 还必须报告它们可承受的最差延迟,例如在 L0s 或 L1 转换到 L0 状态的转换延迟导致内部 FIFO 溢出之前可以承受的最差延迟。电源管理软件可使用所提供的信息来启用相应级别的 ASPM。
 
-L1 退出延迟也适用于 L0p,但用于 L0p 时，表示扩展链路宽度所需的时间。在此时间段内，链路保持运行，但带宽较低。
+L1 退出延迟也适用于 L0p,但用于 L0p 时,表示扩展链路宽度所需的时间。在此时间段内,链路保持运行,但带宽较低。
 
 > **注: L0p 与 ASPM**
-> 本规范的未来草案可能定义一种机制来报告端点在 L0p 降低带宽时可承受的最差延迟。这可能涉及多个延迟要求值，具体取决于起始和结束链路宽度。电源管理软件可使用此信息为 ASPM 启用适当的 L0p 链路宽度。
+> 本规范的未来草案可能定义一种机制来报告端点在 L0p 降低带宽时可承受的最差延迟。这可能涉及多个延迟要求值,具体取决于起始和结束链路宽度。电源管理软件可使用此信息为 ASPM 启用适当的 L0p 链路宽度。
 
-如果给定链路两端的参考时钟由同一源提供，或者由不同源提供给每个组件，则 L0s 退出延迟可能会有显著差异。PCI Express-PM 软件通过其 Capability 结构的 Link Control 寄存器中的 Common Clock Configuration 位通知每个设备其时钟配置。此位用作设备所报告 L0s 退出延迟值的决定因素。ASPM 可根据实现特定的标准及/或相关外形规格规范的要求默认启用或禁用。软件可使用 § 第 5.4.1.4.1 节所述过程启用或禁用 ASPM。
+如果给定链路两端的参考时钟由同一源提供,或者由不同源提供给每个组件,则 L0s 退出延迟可能会有显著差异。PCI Express-PM 软件通过其 Capability 结构的 Link Control 寄存器中的 Common Clock Configuration 位通知每个设备其时钟配置。此位用作设备所报告 L0s 退出延迟值的决定因素。ASPM 可根据实现特定的标准及/或相关外形规格规范的要求默认启用或禁用。软件可使用 § 第 5.4.1.4.1 节所述过程启用或禁用 ASPM。
 
-电源管理软件通过对每个组件的每个端口的 ASPM Control 字段编程来启用或禁用 ASPM。注意，新的 BIOS 代码在与传统操作系统一起运行时可有效地启用或禁用 ASPM 功能，但支持 PCI Express 的操作系统可能选择覆盖 BIOS 配置的 ASPM 设置。
+电源管理软件通过对每个组件的每个端口的 ASPM Control 字段编程来启用或禁用 ASPM。注意,新的 BIOS 代码在与传统操作系统一起运行时可有效地启用或禁用 ASPM 功能,但支持 PCI Express 的操作系统可能选择覆盖 BIOS 配置的 ASPM 设置。
 
-对于 ARI 设备,ASPM Control 仅由 Function 0 的设置决定，而不考虑 Function 0 的 D 状态。其他 Function 中的 ASPM Control 设置将被组件忽略。
+对于 ARI 设备,ASPM Control 仅由 Function 0 的设置决定,而不考虑 Function 0 的 D 状态。其他 Function 中的 ASPM Control 设置将被组件忽略。
 
 非 ARI 多功能设备的上游端口可在每个 Function 的相应 ASPM Control 字段中编程不同的值。此类组件的策略将由所有 D0 Function 中"最活动的最大公约数"按以下规则决定:
 
-- 在确定 ASPM 策略时，处于非 D0 状态 (D1 及更深) 的 Function 被忽略。
-- 如果 D0 状态中的任何 Function 禁用 ASPM (ASPM Control 字段 = 00b)，或者如果 D0 状态中至少一个 Function 仅启用 L0s (ASPM Control 字段 = 01b)，而 D0 状态中至少另一个 Function 仅启用 L1 (ASPM Control 字段 = 10b)，则整个组件禁用 ASPM。
-- 否则，如果 D0 状态中至少一个 Function 仅启用 L0s (ASPM Control 字段 = 01b)，则仅对 L0s 启用 ASPM。
-- 否则，如果 D0 状态中至少一个 Function 仅启用 L1 (ASPM Control 字段 = 10b)，则仅对 L1 启用 ASPM。
-- 否则，对 L0s 和 L1 状态都启用 ASPM。
+- 在确定 ASPM 策略时,处于非 D0 状态 (D1 及更深) 的 Function 被忽略。
+- 如果 D0 状态中的任何 Function 禁用 ASPM (ASPM Control 字段 = 00b),或者如果 D0 状态中至少一个 Function 仅启用 L0s (ASPM Control 字段 = 01b),而 D0 状态中至少另一个 Function 仅启用 L1 (ASPM Control 字段 = 10b),则整个组件禁用 ASPM。
+- 否则,如果 D0 状态中至少一个 Function 仅启用 L0s (ASPM Control 字段 = 01b),则仅对 L0s 启用 ASPM。
+- 否则,如果 D0 状态中至少一个 Function 仅启用 L1 (ASPM Control 字段 = 10b),则仅对 L1 启用 ASPM。
+- 否则,对 L0s 和 L1 状态都启用 ASPM。
 
-注意，组件必须能够在运行时改变其行为，以响应设备 Function 进入和退出低功耗设备状态。例如，如果多功能设备内的某个 Function 被编程为禁用 ASPM,则在该 Function 处于 D0 状态时，该设备必须禁用 ASPM。一旦该 Function 转换到非 D0 状态，如果所有其他 Function 都已启用 ASPM,则可以启用 ASPM。
+注意,组件必须能够在运行时改变其行为,以响应设备 Function 进入和退出低功耗设备状态。例如,如果多功能设备内的某个 Function 被编程为禁用 ASPM,则在该 Function 处于 D0 状态时,该设备必须禁用 ASPM。一旦该 Function 转换到非 D0 状态,如果所有其他 Function 都已启用 ASPM,则可以启用 ASPM。
 
-> **实现说明 (IMPLEMENTATION NOTE): 等时流量与 ASPM**
+> **实现注: 等时流量与 ASPM**
 > 等时流量需要有限的服务延迟。ASPM 可能将等时事务的延迟增加到超出预期限制。一个可能的解决方案是为配置了等时虚通道 (Isochronous Virtual Channel) 的设备禁用 ASPM。
 
 </td>
@@ -1785,13 +1780,13 @@ The L1 exit latency also applies to L0p, but when used for L0p, indicates the ti
 </td>
 <td style="background-color:#e8e8e8">
 
-L1 链路状态针对最大节能进行了优化，代价是较长的进入与退出延迟。对于需要极低功耗且可接受较长转换时间的场景,L1 可将链路功耗降低到 L0s 状态以下。除非特定外形规格明确要求，否则对 ASPM 而言 L1 链路状态的支持是可选的。
+L1 链路状态针对最大节能进行了优化,代价是较长的进入与退出延迟。对于需要极低功耗且可接受较长转换时间的场景,L1 可将链路功耗降低到 L0s 状态以下。除非特定外形规格明确要求,否则对 ASPM 而言 L1 链路状态的支持是可选的。
 
-定义了可选的 L1 PM Substates L1.1 和 L1.2。这些子状态可以进一步降低链路功耗，适用于需要极低空闲功耗且可接受较长转换时间的场景。
+定义了可选的 L1 PM Substates L1.1 和 L1.2。这些子状态可以进一步降低链路功耗,适用于需要极低空闲功耗且可接受较长转换时间的场景。
 
-每个组件必须在 ASPM Support 字段中报告其对 ASPM 的支持级别。在适用的情况下，每个组件还应报告其 L0s 和 L1 退出延迟 (从 L0s 或 L1 状态转换到 L0 状态所需的时间)。端点 Function 还必须报告它们可承受的最差延迟，例如在 L0s 或 L1 转换到 L0 状态的转换延迟导致内部 FIFO 溢出之前可以承受的最差延迟。电源管理软件可使用所提供的信息来启用相应级别的 ASPM。
+每个组件必须在 ASPM Support 字段中报告其对 ASPM 的支持级别。在适用的情况下,每个组件还应报告其 L0s 和 L1 退出延迟 (从 L0s 或 L1 状态转换到 L0 状态所需的时间)。端点 Function 还必须报告它们可承受的最差延迟,例如在 L0s 或 L1 转换到 L0 状态的转换延迟导致内部 FIFO 溢出之前可以承受的最差延迟。电源管理软件可使用所提供的信息来启用相应级别的 ASPM。
 
-L1 退出延迟也适用于 L0p,但用于 L0p 时，表示扩展链路宽度所需的时间。在此时间段内，链路保持运行，但带宽较低。
+L1 退出延迟也适用于 L0p,但用于 L0p 时,表示扩展链路宽度所需的时间。在此时间段内,链路保持运行,但带宽较低。
 
 </td>
 </tr>
@@ -1841,22 +1836,22 @@ Transaction Layer and Link Layer timers are not affected by a transition to the 
 </td>
 <td style="background-color:#e8e8e8">
 
-除非链路适用的外形规格规范明确要求，否则设备对 L0s 低功耗链路状态的支持是可选的。
+除非链路适用的外形规格规范明确要求,否则设备对 L0s 低功耗链路状态的支持是可选的。
 
-> **实现说明 (IMPLEMENTATION NOTE): L0S 仅在无 Retimer 的非 Flit 模式下工作**
+> **实现注: L0S 仅在无 Retimer 的非 Flit 模式下工作**
 > Flit 模式不支持 L0s。
 > Retimer 不支持 L0s。
 
 事务层与链路层定时器不受到 L0s 状态转换的影响 (即它们必须遵循其各自章节中定义的规则)。
 
-> **实现说明 (IMPLEMENTATION NOTE): 不支持 L0S 时传统软件的潜在问题**
-> 在本规范的早期版本中，设备对 L0s 的支持是强制性的，软件可以合理地假设所有设备都支持 L0s。不支持 L0s 的较新硬件组件可能与此类"传统软件"存在兼容问题。此类软件甚至可能不会检查 Link Capabilities 寄存器中的 ASPM Support 字段，可能不识别随后为 ASPM Support 字段定义的值 (00b 和 10b)，或者可能不遵循仅当链路两端组件各自支持 L0s 时才启用 L0s 的策略。
-> 遇到先前保留值 00b (无 ASPM 支持) 的传统软件 (操作系统或固件) 最有可能避免启用 L1,这是预期行为。传统软件也最有可能避免为该组件的发送器启用 L0s (也是预期行为)，但尚不清楚此类软件是否也会避免为链路另一端的组件启用 L0s。如果软件在一端启用 L0s,而另一端的组件未指示其支持 L0s,则结果是未定义的。对于由此导致的行为不可接受的情况，可能需要通过更新传统软件、建立传统软件被指示不启用 L0s 的配置列表，或者简单地不支持有问题的系统配置来处理。
-> 在某些平台上，固件控制 ASPM,操作系统可以保留或覆盖固件建立的 ASPM 设置。这将受操作系统是否支持控制 ASPM 的影响，在某些情况下还受固件是否允许操作系统接管 ASPM 控制的影响。此外，热插拔操作的 ASPM 控制可能受原生 PCI Express 热插拔与 ACPI 热插拔使用情况的影响。处理 L0s 的任何传统软件问题可能需要更新固件、操作系统或两者。
-> 当组件未通告其支持 L0s (由其 ASPM Support 字段值为 00b 或 10b 指示) 时，建议该组件的 L0s Exit Latency 字段返回 111b 的值，表示最大延迟范围。通告此最大延迟范围可能有助于阻止传统软件启用 L0s (如果它本来会这样做)，从而有助于避免传统软件错误地在此组件或链路另一端的组件上启用 L0s 所引起的问题。
+> **实现注: 不支持 L0S 时传统软件的潜在问题**
+> 在本规范的早期版本中,设备对 L0s 的支持是强制性的,软件可以合理地假设所有设备都支持 L0s。不支持 L0s 的较新硬件组件可能与此类"传统软件"存在兼容问题。此类软件甚至可能不会检查 Link Capabilities 寄存器中的 ASPM Support 字段,可能不识别随后为 ASPM Support 字段定义的值 (00b 和 10b),或者可能不遵循仅当链路两端组件各自支持 L0s 时才启用 L0s 的策略。
+> 遇到先前保留值 00b (无 ASPM 支持) 的传统软件 (操作系统或固件) 最有可能避免启用 L1,这是预期行为。传统软件也最有可能避免为该组件的发送器启用 L0s (也是预期行为),但尚不清楚此类软件是否也会避免为链路另一端的组件启用 L0s。如果软件在一端启用 L0s,而另一端的组件未指示其支持 L0s,则结果是未定义的。对于由此导致的行为不可接受的情况,可能需要通过更新传统软件、建立传统软件被指示不启用 L0s 的配置列表,或者简单地不支持有问题的系统配置来处理。
+> 在某些平台上,固件控制 ASPM,操作系统可以保留或覆盖固件建立的 ASPM 设置。这将受操作系统是否支持控制 ASPM 的影响,在某些情况下还受固件是否允许操作系统接管 ASPM 控制的影响。此外,热插拔操作的 ASPM 控制可能受原生 PCI Express 热插拔与 ACPI 热插拔使用情况的影响。处理 L0s 的任何传统软件问题可能需要更新固件、操作系统或两者。
+> 当组件未通告其支持 L0s (由其 ASPM Support 字段值为 00b 或 10b 指示) 时,建议该组件的 L0s Exit Latency 字段返回 111b 的值,表示最大延迟范围。通告此最大延迟范围可能有助于阻止传统软件启用 L0s (如果它本来会这样做),从而有助于避免传统软件错误地在此组件或链路另一端的组件上启用 L0s 所引起的问题。
 
-> **实现说明 (IMPLEMENTATION NOTE): 最小化 L0S 退出延迟**
-> L0s 退出延迟主要取决于接收器快速获取位与符号同步的能力。对于高频时钟解决方案存在不同方法，它们的 L0s 退出延迟可能差异很大，因此 ASPM 的效率也差异很大。为了通过 ASPM 实现最大的节能效率，应通过适当选择时钟解决方案来保持较低的 L0s 退出延迟。
+> **实现注: 最小化 L0S 退出延迟**
+> L0s 退出延迟主要取决于接收器快速获取位与符号同步的能力。对于高频时钟解决方案存在不同方法,它们的 L0s 退出延迟可能差异很大,因此 ASPM 的效率也差异很大。为了通过 ASPM 实现最大的节能效率,应通过适当选择时钟解决方案来保持较低的 L0s 退出延迟。
 
 </td>
 </tr>
@@ -1917,13 +1912,13 @@ Refer to § Section 4.2 for details on L0s entry by the Physical Layer.
 </td>
 <td style="background-color:#e8e8e8">
 
-L0s 状态的进入是针对链路的每个方向分别管理的。链路的任一端设备有责任启动其发送 Lane 到 L0s 状态的进入。除非链路两端的组件各自支持 L0s,否则软件不得在给定链路的任一方向上启用 L0s;否则，结果是未定义的。
+L0s 状态的进入是针对链路的每个方向分别管理的。链路的任一端设备有责任启动其发送 Lane 到 L0s 状态的进入。除非链路两端的组件各自支持 L0s,否则软件不得在给定链路的任一方向上启用 L0s;否则,结果是未定义的。
 
-已禁用 L0s 状态的端口不得将其发送 Lane 转换到 L0s 状态。但是，如果端口通告其支持 L0s,则端口必须能够容忍其接收端口 Lane 进入 L0s (由于另一端的设备将其发送 Lane 置入 L0s 状态)，然后再返回 L0 状态。
+已禁用 L0s 状态的端口不得将其发送 Lane 转换到 L0s 状态。但是,如果端口通告其支持 L0s,则端口必须能够容忍其接收端口 Lane 进入 L0s (由于另一端的设备将其发送 Lane 置入 L0s 状态),然后再返回 L0 状态。
 
 **L0s 调用策略**
 
-对于启用了 L0s 进入的端口，如果满足下文定义的空闲条件达到一定时间 (建议不超过 7 μs)，通常应将其发送 Lane 转换到 L0s 状态。在此时间范围内，端口用于确定何时进入 L0s 的策略是实现特定的。发送器进入 L0s 从来都不是强制的。
+对于启用了 L0s 进入的端口,如果满足下文定义的空闲条件达到一定时间 (建议不超过 7 μs),通常应将其发送 Lane 转换到 L0s 状态。在此时间范围内,端口用于确定何时进入 L0s 的策略是实现特定的。发送器进入 L0s 从来都不是强制的。
 
 **空闲的定义**
 
@@ -1946,7 +1941,7 @@ Switch 的下游端口在满足以下条件时被确定为空闲:
 - 没有待在此链路上发送的 TLP,或没有可用的 FC 信用
 - 没有待发送的 DLLP
 
-有关物理层 L0s 进入的详细信息，请参考 § 第 4.2 节。
+有关物理层 L0s 进入的详细信息,请参考 § 第 4.2 节。
 
 </td>
 </tr>
@@ -1992,21 +1987,21 @@ For example, consider a Switch with an Upstream Port in L0s and a Downstream dev
 </td>
 <td style="background-color:#e8e8e8">
 
-当发送器处于 L0s 状态的组件需要通过链路发送 TLP 或 DLLP 时，必须启动 L0s 退出。注意，从 L0s 链路状态的转换不依赖于 FC 信用的状态 (或可用性)。链路必须能够达到 L0 状态，并在链路上交换 FC 信用。例如，如果在链路进入 L0s 时某些类型的所有信用都被消耗，则链路任一侧的任何组件在需要跨链路发送新信用时，仍必须能够将链路转换到 L0 状态。注意，组件可适当地预期空闲条件的结束并启动 L0s 发送退出;例如，当收到 NP 请求时。
+当发送器处于 L0s 状态的组件需要通过链路发送 TLP 或 DLLP 时,必须启动 L0s 退出。注意,从 L0s 链路状态的转换不依赖于 FC 信用的状态 (或可用性)。链路必须能够达到 L0 状态,并在链路上交换 FC 信用。例如,如果在链路进入 L0s 时某些类型的所有信用都被消耗,则链路任一侧的任何组件在需要跨链路发送新信用时,仍必须能够将链路转换到 L0 状态。注意,组件可适当地预期空闲条件的结束并启动 L0s 发送退出;例如,当收到 NP 请求时。
 
 **下游发起的退出**
 
-组件的上游端口 (对于下游 Switch,为其上游端口发送 Lane) 在需要通过链路进行通信时，允许在其发送链路上启动从 L0s 低功耗状态的退出。组件如 § 第 4.2 节所述在上游方向的 Lane 上启动到 L0 状态的转换。
+组件的上游端口 (对于下游 Switch,为其上游端口发送 Lane) 在需要通过链路进行通信时,允许在其发送链路上启动从 L0s 低功耗状态的退出。组件如 § 第 4.2 节所述在上游方向的 Lane 上启动到 L0 状态的转换。
 
-如果上游组件是 Switch (即不是根复合体)，则它必须在检测到其任何下游端口退出 L0s 时，立即在其上游端口发送 Lane (如果上游端口的发送 Lane 处于低功耗状态) 上启动转换。
+如果上游组件是 Switch (即不是根复合体),则它必须在检测到其任何下游端口退出 L0s 时,立即在其上游端口发送 Lane (如果上游端口的发送 Lane 处于低功耗状态) 上启动转换。
 
 **上游发起的退出**
 
-下游端口在需要通过链路进行通信时，允许在其任何发送链路上启动从 L0s 低功耗状态的退出。组件如 § 第 4 章所述在下游方向的 Lane 上启动到 L0 状态的转换。
+下游端口在需要通过链路进行通信时,允许在其任何发送链路上启动从 L0s 低功耗状态的退出。组件如 § 第 4 章所述在下游方向的 Lane 上启动到 L0 状态的转换。
 
-如果下游组件包含 Switch,则它必须在检测到其上游端口退出 L0s 时，立即启动其所有当时处于 L0s 的下游端口发送 Lane 的转换。已经处于 L0 状态的链路不受此转换的影响。下游组件处于低功耗状态 (即 D1–D3Hot 状态) 的链路也不受退出转换的影响。
+如果下游组件包含 Switch,则它必须在检测到其上游端口退出 L0s 时,立即启动其所有当时处于 L0s 的下游端口发送 Lane 的转换。已经处于 L0 状态的链路不受此转换的影响。下游组件处于低功耗状态 (即 D1–D3Hot 状态) 的链路也不受退出转换的影响。
 
-例如，考虑一个 Switch,其上游端口处于 L0s,下游设备处于 D1 状态。配置请求报文向下游传播到 Switch,最终目的是将下游设备从 D1 重新编程为 D0。Switch 的上游端口链路必须转换到 L0 状态，以允许报文到达 Switch。连接到 D1 状态设备的下游链路不会转换到 L0 状态;它将保持在 L1 状态。捕获的报文被检查并路由到与处于 D1 状态的下游设备共享链路的上游端口。如 § 第 4.2 节所述,Switch 现在将下游链路转换到 L0 状态。注意，到 L0 状态的转换是由报文被路由到该特定下游 L1 链路触发的，而不是由上游端口的链路到 L0 状态的转换触发的。如果报文的目的地是针对不同的下游链路，则该特定的下游链路将保持在 L1 状态。
+例如,考虑一个 Switch,其上游端口处于 L0s,下游设备处于 D1 状态。配置请求报文向下游传播到 Switch,最终目的是将下游设备从 D1 重新编程为 D0。Switch 的上游端口链路必须转换到 L0 状态,以允许报文到达 Switch。连接到 D1 状态设备的下游链路不会转换到 L0 状态;它将保持在 L1 状态。捕获的报文被检查并路由到与处于 D1 状态的下游设备共享链路的上游端口。如 § 第 4.2 节所述,Switch 现在将下游链路转换到 L0 状态。注意,到 L0 状态的转换是由报文被路由到该特定下游 L1 链路触发的,而不是由上游端口的链路到 L0 状态的转换触发的。如果报文的目的地是针对不同的下游链路,则该特定的下游链路将保持在 L1 状态。
 
 </td>
 </tr>
@@ -2043,9 +2038,9 @@ L0p is supported in Flit Mode only and can be used only when supported by both L
 </td>
 <td style="background-color:#e8e8e8">
 
-L0p 是 L0 的子状态，可在较短的进入延迟下提供节能，同时退出延迟较长。本地 L0p 退出延迟与远程 L0p 退出延迟对软件可见，并在数据链路功能扩展能力 (Data Link Feature Extended Capability) 的 Local L0p Exit Latency 和 Remote L0p Exit Latency 字段中报告。
+L0p 是 L0 的子状态,可在较短的进入延迟下提供节能,同时退出延迟较长。本地 L0p 退出延迟与远程 L0p 退出延迟对软件可见,并在数据链路功能扩展能力 (Data Link Feature Extended Capability) 的 Local L0p Exit Latency 和 Remote L0p Exit Latency 字段中报告。
 
-L0p 仅在 Flit 模式下支持，仅在两个链路伙伴都支持时才能使用。在支持时,ASPM L0p 由 Link Control 寄存器中的 Hardware Autonomous Width Disable 位和多个 Device Control 3 寄存器字段控制。有关 L0p 的更多细节，请参见 § 第 4.2.6.7 节。
+L0p 仅在 Flit 模式下支持,仅在两个链路伙伴都支持时才能使用。在支持时,ASPM L0p 由 Link Control 寄存器中的 Hardware Autonomous Width Disable 位和多个 Device Control 3 寄存器字段控制。有关 L0p 的更多细节,请参见 § 第 4.2.6.7 节。
 
 </td>
 </tr>
@@ -2093,13 +2088,13 @@ Three power management Messages provide support for the ASPM L1 state:
 </td>
 <td style="background-color:#e8e8e8">
 
-组件可选择地支持 ASPM L1 状态;该状态以更长的退出延迟为代价提供更大的节能。L1 退出延迟对软件可见，并通过 L1 Exit Latency 字段报告。
+组件可选择地支持 ASPM L1 状态;该状态以更长的退出延迟为代价提供更大的节能。L1 退出延迟对软件可见,并通过 L1 Exit Latency 字段报告。
 
-在支持时,L1 进入由 ASPM Control 字段控制。软件仅在链路上两个组件都支持 ASPM L1 时才必须在下游组件上启用 ASPM L1。软件必须按以下顺序对 ASPM L1 进行启用和禁用: 在下游组件之前启用上游组件，在下游组件之后禁用上游组件。
+在支持时,L1 进入由 ASPM Control 字段控制。软件仅在链路上两个组件都支持 ASPM L1 时才必须在下游组件上启用 ASPM L1。软件必须按以下顺序对 ASPM L1 进行启用和禁用: 在下游组件之前启用上游组件,在下游组件之后禁用上游组件。
 
 启用了 L1 ASPM 进入的组件上的上游端口可启动到 L1 链路状态的进入。
 
-有关转换到 L1.1 或 L1.2 子状态的详细信息，请参见 § 第 5.5.1 节。
+有关转换到 L1.1 或 L1.2 子状态的详细信息,请参见 § 第 5.5.1 节。
 
 三种电源管理报文为 ASPM L1 状态提供支持:
 
@@ -2107,9 +2102,9 @@ Three power management Messages provide support for the ASPM L1 state:
 - PM_Request_Ack (DLLP)
 - PM_Active_State_Nak (TLP)
 
-> **实现说明 (IMPLEMENTATION NOTE): 仅支持 L1 时传统软件的潜在问题**
-> 在本规范的早期版本中，设备对 L0s 的支持是强制性的，并且没有架构化 (architected) 的 ASPM Support 字段值可指示在不支持 L0s 的情况下支持 L1。仅支持 L1 的较新硬件组件可能与"传统软件" (即不识别随后为 ASPM Support 字段定义值的软件) 存在兼容问题。
-> 遇到先前保留值 10b (L1 Support) 的传统软件可能避免同时启用 L0s 和 L1,这不幸地避免了在仅支持 L1 的新组件上使用 L1。虽然这可能导致额外的功耗，但不应引起任何功能误操作。但是，关于传统软件启用 L0s 的相同问题在此 10b 情况下也存在，正如 § 第 5.4.1.1 节中实现注"不支持 L0S 时传统软件的潜在问题"中所述。
+> **实现注: 仅支持 L1 时传统软件的潜在问题**
+> 在本规范的早期版本中,设备对 L0s 的支持是强制性的,并且没有架构化 (architected) 的 ASPM Support 字段值可指示在不支持 L0s 的情况下支持 L1。仅支持 L1 的较新硬件组件可能与"传统软件" (即不识别随后为 ASPM Support 字段定义值的软件) 存在兼容问题。
+> 遇到先前保留值 10b (L1 Support) 的传统软件可能避免同时启用 L0s 和 L1,这不幸地避免了在仅支持 L1 的新组件上使用 L1。虽然这可能导致额外的功耗,但不应引起任何功能误操作。但是,关于传统软件启用 L0s 的相同问题在此 10b 情况下也存在,正如 § 第 5.4.1.1 节中实现注"不支持 L0S 时传统软件的潜在问题"中所述。
 
 </td>
 </tr>
@@ -2146,9 +2141,9 @@ Three power management Messages provide support for the ASPM L1 state:
 </td>
 <td style="background-color:#e8e8e8">
 
-> **实现说明 (IMPLEMENTATION NOTE): 启动 L1**
-> 本规范不规定具有上游端口的组件何时必须启动到 L1 状态的转换。在本规范中定义了用于转换进出 L1 的可互操作机制;然而，有关何时转换到 L1 的具体 ASPM 策略留给实现者决定。
-> 一种可能的方法是，当下游设备的接收器和发送器都处于 L0s 状态 (RxL0s 和 TxL0s) 达到设定时间后，启动到 L1 状态的转换。另一种方法是，当链路在 L0 状态空闲达到设定时间后，下游设备启动到 L1 状态的转换。如果未启用 L0s 进入，这种方法尤其有用。再一种方法是，如果下游设备已完成其分配的任务，则可启动到 L1 状态的转换。注意，组件的 L1 调用策略绝不限于这几个示例。
+> **实现注: 启动 L1**
+> 本规范不规定具有上游端口的组件何时必须启动到 L1 状态的转换。在本规范中定义了用于转换进出 L1 的可互操作机制;然而,有关何时转换到 L1 的具体 ASPM 策略留给实现者决定。
+> 一种可能的方法是,当下游设备的接收器和发送器都处于 L0s 状态 (RxL0s 和 TxL0s) 达到设定时间后,启动到 L1 状态的转换。另一种方法是,当链路在 L0 状态空闲达到设定时间后,下游设备启动到 L1 状态的转换。如果未启用 L0s 进入,这种方法尤其有用。再一种方法是,如果下游设备已完成其分配的任务,则可启动到 L1 状态的转换。注意,组件的 L1 调用策略绝不限于这几个示例。
 
 </td>
 </tr>
@@ -2231,7 +2226,7 @@ If the Upstream component is not able to accept the request, it must immediately
 
 下游端口在以下所有条件都为真时必须接受进入 L1 的请求:
 
-- 端口支持 ASPM L1 进入，并且 ASPM L1 进入已使能。
+- 端口支持 ASPM L1 进入,并且 ASPM L1 进入已使能。
 - 没有 TLP 调度发送
 - 没有 Ack 或 Nak DLLP 调度发送 (非 Flit 模式)
 - 没有 Flit Ack 或 Nak 调度发送 (Flit 模式)
@@ -2244,37 +2239,37 @@ Switch 上游端口在以下所有条件都为真时可请求其链路的 L1 进
 - 没有待发送的 DLLP
 - 上游端口的接收器空闲达到实现特定的设定时间
 
-注意,Switch 在其任何下游端口上启用 ASPM L1 链路状态，而在其上游端口上禁用或甚至不支持 ASPM L1,这是合法的。在这种情况下，下游端口可进入 L1 链路状态，但 Switch 永远不会在其上游端口上启动 ASPM L1 进入转换。
+注意,Switch 在其任何下游端口上启用 ASPM L1 链路状态,而在其上游端口上禁用或甚至不支持 ASPM L1,这是合法的。在这种情况下,下游端口可进入 L1 链路状态,但 Switch 永远不会在其上游端口上启动 ASPM L1 进入转换。
 
 **ASPM L1 协商规则 (见 § 图 5-6 与 § 图 5-7):**
 
-- 在非 Flit 模式下，在累积至少发送任何 FC 类型最大可能分组所需的最少信用数之前，下游组件不得启动 ASPM L1 进入。
-- 在 Flit 模式下，对于使用非零且非无限专用信用初始化的任何 FC/VC,在该 VC 上累积至少发送该 FC 类型最大可能分组所需的最少专用信用之前，下游组件不得启动 ASPM L1 进入。
-- 在 Flit 模式下，对于使用零专用信用初始化的任何 FC/VC,在累积至少发送该 FC 类型最大可能分组所需的最少共享信用之前，下游组件不得启动 ASPM L1 进入。
-- 在决定进入低功耗链路状态时，下游组件必须阻止所有 TLP 从事务层向数据链路层的移动以进行发送 (包括完成报文)。
-- 如果在 L1 协商过程中任何 TLP 变得可从事务层发送，则必须先完成到 L1 的转换，然后下游组件必须启动返回 L0。
-- 如果到 L1 的协商被中断，请参见 § 第 5.2 节。
-- 在非 Flit 模式下，下游组件必须等待，直到它收到之前发送的最后一个 TLP 的链路层确认 (即重传缓冲区为空)。如果数据链路层规则要求，组件必须从其数据链路层重传缓冲区重传 TLP。
-- 在 Flit 模式下，下游组件必须等待，直到它收到之前发送的最后一个 TLP 的最后一个 Flit 的 Flit 确认 (即重传缓冲区为空)。如果 Flit Ack/Nak 规则要求，组件必须从其重传缓冲区重传 Flit。
-- 下游组件随后通过向其发送 Lane 发送 PM_Active_State_Request_L1 DLLP 启动 ASPM 协商。组件在非 Flit 模式下，以不超过 8 个 (使用 8b/10b 编码) 或 32 个 (使用 128b/130b 编码) Symbol Time 的空闲间隔重复发送该 DLLP。在 PM_Active_State_Request_L1 发送之间的任何时刻必须根据需要发送其他 DLLP 和 SKP 有序集，且不计入该空闲时间限制。L1 进入期间的 SKP 有序集发送遵循 § 第 4.2.8 节中的时钟容差补偿规则。
+- 在非 Flit 模式下,在累积至少发送任何 FC 类型最大可能分组所需的最少信用数之前,下游组件不得启动 ASPM L1 进入。
+- 在 Flit 模式下,对于使用非零且非无限专用信用初始化的任何 FC/VC,在该 VC 上累积至少发送该 FC 类型最大可能分组所需的最少专用信用之前,下游组件不得启动 ASPM L1 进入。
+- 在 Flit 模式下,对于使用零专用信用初始化的任何 FC/VC,在累积至少发送该 FC 类型最大可能分组所需的最少共享信用之前,下游组件不得启动 ASPM L1 进入。
+- 在决定进入低功耗链路状态时,下游组件必须阻止所有 TLP 从事务层向数据链路层的移动以进行发送 (包括完成报文)。
+- 如果在 L1 协商过程中任何 TLP 变得可从事务层发送,则必须先完成到 L1 的转换,然后下游组件必须启动返回 L0。
+- 如果到 L1 的协商被中断,请参见 § 第 5.2 节。
+- 在非 Flit 模式下,下游组件必须等待,直到它收到之前发送的最后一个 TLP 的链路层确认 (即重传缓冲区为空)。如果数据链路层规则要求,组件必须从其数据链路层重传缓冲区重传 TLP。
+- 在 Flit 模式下,下游组件必须等待,直到它收到之前发送的最后一个 TLP 的最后一个 Flit 的 Flit 确认 (即重传缓冲区为空)。如果 Flit Ack/Nak 规则要求,组件必须从其重传缓冲区重传 Flit。
+- 下游组件随后通过向其发送 Lane 发送 PM_Active_State_Request_L1 DLLP 启动 ASPM 协商。组件在非 Flit 模式下,以不超过 8 个 (使用 8b/10b 编码) 或 32 个 (使用 128b/130b 编码) Symbol Time 的空闲间隔重复发送该 DLLP。在 PM_Active_State_Request_L1 发送之间的任何时刻必须根据需要发送其他 DLLP 和 SKP 有序集,且不计入该空闲时间限制。L1 进入期间的 SKP 有序集发送遵循 § 第 4.2.8 节中的时钟容差补偿规则。
 
-- 下游组件如上所述继续发送 PM_Active_State_Request_L1 DLLP,直到它收到来自上游设备的响应 (见下文)。下游组件保持在此循环中，等待来自上游组件的响应。
+- 下游组件如上所述继续发送 PM_Active_State_Request_L1 DLLP,直到它收到来自上游设备的响应 (见下文)。下游组件保持在此循环中,等待来自上游组件的响应。
 
-在此等待期间，下游组件不得启动任何事务层传输。它仍必须接受来自上游组件的 TLP 和 DLLP,并存储所需的任何 TLP 响应以供以后发送。它继续以 DLLP 响应，包括 FC 更新 DLLP,具体取决于链路层协议的需要。
+在此等待期间,下游组件不得启动任何事务层传输。它仍必须接受来自上游组件的 TLP 和 DLLP,并存储所需的任何 TLP 响应以供以后发送。它继续以 DLLP 响应,包括 FC 更新 DLLP,具体取决于链路层协议的需要。
 
-如果下游组件因任何原因需要在链路上发送 TLP,则它必须先完成到低功耗链路状态的转换。一旦进入较低功耗链路状态，下游组件必须随后启动退出低功耗链路状态以处理该传输。如果到 L1 的协商被中断，请参见 § 第 5.2 节。
+如果下游组件因任何原因需要在链路上发送 TLP,则它必须先完成到低功耗链路状态的转换。一旦进入较低功耗链路状态,下游组件必须随后启动退出低功耗链路状态以处理该传输。如果到 L1 的协商被中断,请参见 § 第 5.2 节。
 
 - 上游组件必须立即 (在遵守本规范中的所有其他规则的同时) 以接受或拒绝该请求来响应请求。
 
-如果上游组件无法接受该请求，则必须立即 (在遵守本规范中的所有其他规则的同时) 拒绝该请求。
+如果上游组件无法接受该请求,则必须立即 (在遵守本规范中的所有其他规则的同时) 拒绝该请求。
 
-- 如果到 L1 的协商被中断，请参见 § 第 5.2 节。
+- 如果到 L1 的协商被中断,请参见 § 第 5.2 节。
 
 **拒绝情况下的规则:**
 
-- 在拒绝的情况下，上游组件必须尽快通过向 Downstream 组件发送 PM_Active_State_Nak 报文来调度拒绝。PM_Active_State_Nak 报文发送后，允许上游组件启动任何 TLP 或 DLLP 传输。
-- 如果请求被拒绝，通常建议下游组件立即将其发送 Lane 转换到 L0s 状态，前提是 L0s 已启用且满足 L0s 进入条件。
-- 在发送与后续 ASPM L1 协商序列关联的 PM_Active_State_Request_L1 DLLP 之前，下游组件必须在其发送器上进入并退出 L0s,或者必须自与先前 ASPM L1 协商关联的 PM_Active_State_Request_L1 DLLP 最后一次发送起等待至少 10 μs。该 10 μs 定时器必须仅计算在 LTSSM L0 和 L0s 状态中花费的时间。定时器必须在 LTSSM Recovery 状态中保持。如果链路断开并重新连接，则忽略该定时器，并允许组件在链路重新连接后发出新的 ASPM L1 请求。
+- 在拒绝的情况下,上游组件必须尽快通过向 Downstream 组件发送 PM_Active_State_Nak 报文来调度拒绝。PM_Active_State_Nak 报文发送后,允许上游组件启动任何 TLP 或 DLLP 传输。
+- 如果请求被拒绝,通常建议下游组件立即将其发送 Lane 转换到 L0s 状态,前提是 L0s 已启用且满足 L0s 进入条件。
+- 在发送与后续 ASPM L1 协商序列关联的 PM_Active_State_Request_L1 DLLP 之前,下游组件必须在其发送器上进入并退出 L0s,或者必须自与先前 ASPM L1 协商关联的 PM_Active_State_Request_L1 DLLP 最后一次发送起等待至少 10 μs。该 10 μs 定时器必须仅计算在 LTSSM L0 和 L0s 状态中花费的时间。定时器必须在 LTSSM Recovery 状态中保持。如果链路断开并重新连接,则忽略该定时器,并允许组件在链路重新连接后发出新的 ASPM L1 请求。
 
 </td>
 </tr>
@@ -2340,41 +2335,41 @@ If the Upstream component is not able to accept the request, it must immediately
 </td>
 <td style="background-color:#e8e8e8">
 
-传输，且不计入该空闲时间限制。L1 进入期间的 SKP 有序集传输遵循 § 第 4.2.8 节中的时钟容差补偿规则。
+传输,且不计入该空闲时间限制。L1 进入期间的 SKP 有序集传输遵循 § 第 4.2.8 节中的时钟容差补偿规则。
 
-- 下游组件如上所述继续发送 PM_Active_State_Request_L1 DLLP,直到它收到来自上游设备的响应 (见下文)。下游组件保持在此循环中，等待来自上游组件的响应。
+- 下游组件如上所述继续发送 PM_Active_State_Request_L1 DLLP,直到它收到来自上游设备的响应 (见下文)。下游组件保持在此循环中,等待来自上游组件的响应。
 
-在此等待期间，下游组件不得启动任何事务层传输。它仍必须接受来自上游组件的 TLP 和 DLLP,并存储所需的任何 TLP 响应以供以后发送。它继续以 DLLP 响应，包括 FC 更新 DLLP,具体取决于链路层协议的需要。
+在此等待期间,下游组件不得启动任何事务层传输。它仍必须接受来自上游组件的 TLP 和 DLLP,并存储所需的任何 TLP 响应以供以后发送。它继续以 DLLP 响应,包括 FC 更新 DLLP,具体取决于链路层协议的需要。
 
-如果下游组件因任何原因需要在链路上发送 TLP,则它必须先完成到低功耗链路状态的转换。一旦进入较低功耗链路状态，下游组件必须随后启动退出低功耗链路状态以处理该传输。如果到 L1 的协商被中断，请参见 § 第 5.2 节。
+如果下游组件因任何原因需要在链路上发送 TLP,则它必须先完成到低功耗链路状态的转换。一旦进入较低功耗链路状态,下游组件必须随后启动退出低功耗链路状态以处理该传输。如果到 L1 的协商被中断,请参见 § 第 5.2 节。
 
 - 上游组件必须立即 (在遵守本规范中的所有其他规则的同时) 以接受或拒绝该请求来响应请求。
 
-如果上游组件无法接受该请求，则必须立即 (在遵守本规范中的所有其他规则的同时) 拒绝该请求。
+如果上游组件无法接受该请求,则必须立即 (在遵守本规范中的所有其他规则的同时) 拒绝该请求。
 
-- 如果到 L1 的协商被中断，请参见 § 第 5.2 节。
+- 如果到 L1 的协商被中断,请参见 § 第 5.2 节。
 
 **拒绝情况下的规则:**
 
-- 在拒绝的情况下，上游组件必须尽快通过向 Downstream 组件发送 PM_Active_State_Nak 报文来调度拒绝。PM_Active_State_Nak 报文发送后，允许上游组件启动任何 TLP 或 DLLP 传输。
-- 如果请求被拒绝，通常建议下游组件立即将其发送 Lane 转换到 L0s 状态，前提是 L0s 已启用且满足 L0s 进入条件。
-- 在发送与后续 ASPM L1 协商序列关联的 PM_Active_State_Request_L1 DLLP 之前，下游组件必须在其发送器上进入并退出 L0s,或者必须自与先前 ASPM L1 协商关联的 PM_Active_State_Request_L1 DLLP 最后一次发送起等待至少 10 μs。该 10 μs 定时器必须仅计算在 LTSSM L0 和 L0s 状态中花费的时间。定时器必须在 LTSSM Recovery 状态中保持。如果链路断开并重新连接，则忽略该定时器，并允许组件在链路重新连接后发出新的 ASPM L1 请求。
+- 在拒绝的情况下,上游组件必须尽快通过向 Downstream 组件发送 PM_Active_State_Nak 报文来调度拒绝。PM_Active_State_Nak 报文发送后,允许上游组件启动任何 TLP 或 DLLP 传输。
+- 如果请求被拒绝,通常建议下游组件立即将其发送 Lane 转换到 L0s 状态,前提是 L0s 已启用且满足 L0s 进入条件。
+- 在发送与后续 ASPM L1 协商序列关联的 PM_Active_State_Request_L1 DLLP 之前,下游组件必须在其发送器上进入并退出 L0s,或者必须自与先前 ASPM L1 协商关联的 PM_Active_State_Request_L1 DLLP 最后一次发送起等待至少 10 μs。该 10 μs 定时器必须仅计算在 LTSSM L0 和 L0s 状态中花费的时间。定时器必须在 LTSSM Recovery 状态中保持。如果链路断开并重新连接,则忽略该定时器,并允许组件在链路重新连接后发出新的 ASPM L1 请求。
 
 **接受情况下的规则:**
 
-- 如果上游组件准备好接受该请求，则它必须阻止从事务层调度任何 TLP。
-- 在非 Flit 模式下，上游组件随后必须等待，直到它收到之前发送的最后一个 TLP 的数据链路层确认。如果数据链路层规则要求，上游组件必须重传 TLP。
+- 如果上游组件准备好接受该请求,则它必须阻止从事务层调度任何 TLP。
+- 在非 Flit 模式下,上游组件随后必须等待,直到它收到之前发送的最后一个 TLP 的数据链路层确认。如果数据链路层规则要求,上游组件必须重传 TLP。
 
-> **实现说明 (IMPLEMENTATION NOTE): 上游组件的 ASPM L1 接受/拒绝注意事项**
-> 当上游组件以 PM_Request_Ack DLLP 响应下游组件的 ASPM L1 请求以接受 L1 进入请求时,ASPM L1 协商协议以链路进入 L1 明确无误地结束。但是，如果上游组件以 PM_Active_State_Nak 报文响应以拒绝 L1 进入请求，则 ASPM L1 协商协议的终止不太明确。因此，两个组件需要设计为明确无误地终止协议交换。如果不这样做，则存在两个组件彼此失去同步的风险，结果可能是未定义的。例如，考虑以下情况:
+> **实现注: 上游组件的 ASPM L1 接受/拒绝注意事项**
+> 当上游组件以 PM_Request_Ack DLLP 响应下游组件的 ASPM L1 请求以接受 L1 进入请求时,ASPM L1 协商协议以链路进入 L1 明确无误地结束。但是,如果上游组件以 PM_Active_State_Nak 报文响应以拒绝 L1 进入请求,则 ASPM L1 协商协议的终止不太明确。因此,两个组件需要设计为明确无误地终止协议交换。如果不这样做,则存在两个组件彼此失去同步的风险,结果可能是未定义的。例如,考虑以下情况:
 > - 下游组件通过发送一系列 PM_Active_State_Request_L1 DLLP 来请求 ASPM L1 进入。
-> - 由于临时情况，上游组件以 PM_Active_State_Nak 报文响应以拒绝 L1 请求。
-> - 在其能够对 PM_Active_State_Nak 报文做出响应之前，下游组件继续发送 PM_Active_State_Request_L1 DLLP 一段时间。
-> - 同时，先前导致上游组件拒绝 L1 请求的临时情况得到解决，上游组件错误地将持续的 PM_Active_State_Request_L1 DLLP 视为新的 L1 进入请求，并通过向下游发送 PM_Request_Ack DLLP 来响应。
-> 此时，结果是未定义的，因为下游组件将 L1 请求视为已拒绝并结束，但上游组件将这种情况视为第二个 L1 请求被接受。
-> 为避免这种情况，下游组件需要提供一种机制来区分一个 ASPM L1 请求与另一个。下游组件通过进入 L0s (在支持并启用时) 或在开始发送与第二个请求关联的 PM_Active_State_Request_L1 DLLP 之前，从与第一个 ASPM L1 请求关联的最后一个 PM_Active_State_Request_L1 DLLP 发送起等待至少 10 μs (如上所述) 来实现此目的。
-> 如果上游组件能够表现出上述行为，则上游组件必须通过检测其接收器到 L0s 的转换 (在支持并启用时) 或在 L0/L0s 中测量 9.5 μs 或以上的 PM_Active_State_Request_L1 DLLP 接收中断来识别 L1 请求序列的结束，作为下游组件的 ASPM L1 请求之间的间隔。
-> 如果存在歧义的可能性，上游组件应拒绝 L1 请求，以避免可能产生上述模糊情况。
+> - 由于临时情况,上游组件以 PM_Active_State_Nak 报文响应以拒绝 L1 请求。
+> - 在其能够对 PM_Active_State_Nak 报文做出响应之前,下游组件继续发送 PM_Active_State_Request_L1 DLLP 一段时间。
+> - 同时,先前导致上游组件拒绝 L1 请求的临时情况得到解决,上游组件错误地将持续的 PM_Active_State_Request_L1 DLLP 视为新的 L1 进入请求,并通过向下游发送 PM_Request_Ack DLLP 来响应。
+> 此时,结果是未定义的,因为下游组件将 L1 请求视为已拒绝并结束,但上游组件将这种情况视为第二个 L1 请求被接受。
+> 为避免这种情况,下游组件需要提供一种机制来区分一个 ASPM L1 请求与另一个。下游组件通过进入 L0s (在支持并启用时) 或在开始发送与第二个请求关联的 PM_Active_State_Request_L1 DLLP 之前,从与第一个 ASPM L1 请求关联的最后一个 PM_Active_State_Request_L1 DLLP 发送起等待至少 10 μs (如上所述) 来实现此目的。
+> 如果上游组件能够表现出上述行为,则上游组件必须通过检测其接收器到 L0s 的转换 (在支持并启用时) 或在 L0/L0s 中测量 9.5 μs 或以上的 PM_Active_State_Request_L1 DLLP 接收中断来识别 L1 请求序列的结束,作为下游组件的 ASPM L1 请求之间的间隔。
+> 如果存在歧义的可能性,上游组件应拒绝 L1 请求,以避免可能产生上述模糊情况。
 
 </td>
 </tr>
@@ -2417,18 +2412,18 @@ Notes:
 </td>
 <td style="background-color:#e8e8e8">
 
-- 在 Flit 模式下，上游组件随后必须等待，直到它收到之前发送的最后一个 TLP 的最后一个 Flit 的数据链路层确认。如果数据链路层规则要求，上游组件必须重传 Flit。
-- 一旦所有 TLP/Flit 都已被确认，上游组件向下游发送 PM_Request_Ack DLLP。上游组件在非 Flit 模式下，以不超过 8 个 (使用 8b/10b 编码) 或 32 个 (使用 128b/130b 编码) Symbol Time 的空闲间隔重复发送该 DLLP。在 PM_Request_Ack 发送之间的任何时刻必须根据需要发送 SKP 有序集，且不计入该空闲时间限制。L1 进入期间的 SKP 有序集发送遵循 § 第 4.2.8 节中的时钟容差补偿规则。
-- 上游组件如上所述继续发送 PM_Request_Ack DLLP,直到它观察到其接收 Lane 进入电气空闲状态。有关物理层行为的更多细节，请参见 § 第 4 章。
-- 如果上游组件在发送 PM_Request_Ack DLLP 后因任何原因需要在链路上发送 TLP,则它必须先完成到低功耗状态的转换，然后启动退出低功耗状态，以在链路回到 L0 后处理该传输。如果到 L1 的协商被中断，请参见 § 第 5.2 节。
-  - 在这种情况下，即使上游组件没有发送 TLP 所需的流控信用，也必须启动从 L1 的退出。
-- 当下游组件在其接收 Lane 上检测到 PM_Request_Ack DLLP (表示上游设备已确认到 L1 状态的转换请求) 时，下游组件随后停止发送 PM_Active_State_Request_L1 DLLP,禁用 DLLP、TLP 发送，并将其发送 Lane 置入电气空闲状态。
-- 当上游组件在其接收 Lane 上检测到电气空闲 (表示下游组件已进入 L1 状态) 时，它随后停止发送 PM_Request_Ack DLLP,禁用 DLLP、TLP 发送，并将链路的下游方向置入电气空闲状态。
+- 在 Flit 模式下,上游组件随后必须等待,直到它收到之前发送的最后一个 TLP 的最后一个 Flit 的数据链路层确认。如果数据链路层规则要求,上游组件必须重传 Flit。
+- 一旦所有 TLP/Flit 都已被确认,上游组件向下游发送 PM_Request_Ack DLLP。上游组件在非 Flit 模式下,以不超过 8 个 (使用 8b/10b 编码) 或 32 个 (使用 128b/130b 编码) Symbol Time 的空闲间隔重复发送该 DLLP。在 PM_Request_Ack 发送之间的任何时刻必须根据需要发送 SKP 有序集,且不计入该空闲时间限制。L1 进入期间的 SKP 有序集发送遵循 § 第 4.2.8 节中的时钟容差补偿规则。
+- 上游组件如上所述继续发送 PM_Request_Ack DLLP,直到它观察到其接收 Lane 进入电气空闲状态。有关物理层行为的更多细节,请参见 § 第 4 章。
+- 如果上游组件在发送 PM_Request_Ack DLLP 后因任何原因需要在链路上发送 TLP,则它必须先完成到低功耗状态的转换,然后启动退出低功耗状态,以在链路回到 L0 后处理该传输。如果到 L1 的协商被中断,请参见 § 第 5.2 节。
+  - 在这种情况下,即使上游组件没有发送 TLP 所需的流控信用,也必须启动从 L1 的退出。
+- 当下游组件在其接收 Lane 上检测到 PM_Request_Ack DLLP (表示上游设备已确认到 L1 状态的转换请求) 时,下游组件随后停止发送 PM_Active_State_Request_L1 DLLP,禁用 DLLP、TLP 发送,并将其发送 Lane 置入电气空闲状态。
+- 当上游组件在其接收 Lane 上检测到电气空闲 (表示下游组件已进入 L1 状态) 时,它随后停止发送 PM_Request_Ack DLLP,禁用 DLLP、TLP 发送,并将链路的下游方向置入电气空闲状态。
 
 注:
 
 1. 事务层完成超时 (Completion Timeout) 机制不受 L1 状态转换的影响 (即它必须继续计数)。
-2. 在链路处于 L1 状态时，流控更新定时器被冻结，以防止定时器到期导致链路不必要地转换回 L0 状态。
+2. 在链路处于 L1 状态时,流控更新定时器被冻结,以防止定时器到期导致链路不必要地转换回 L0 状态。
 
 </td>
 </tr>
@@ -2436,11 +2431,9 @@ Notes:
 </table>
 
 > **Figure 5-6.** L1 Transition Sequence Ending with a Rejection (L0s Enabled) §
-> **图 5-6.** 以拒绝结束的 L1 转换序列（L0s 已启用）
 > <img src="figures/chapter_05/fig_0681_1_tight.png" width="700">
 
 > **Figure 5-7.** L1 Successful Transition Sequence
-> **图 5-7.** L1 成功转换序列
 
 </div>
 
@@ -2491,7 +2484,6 @@ Following along as above, Link 2 will complete its transition to the L0 state at
 Therefore, among Links 1, 2, and 3, the Link to complete the transition to the L0 state last is Link 1 with a 34 μs delay. This is the delay experienced by the packet that initiated the transition in Endpoint C.
 
 > **Figure 5-8.** Example of L1 Exit Latency Computation
-> **图 5-8.** L1 退出延迟计算示例
 
 > <img src="figures/chapter_05/fig_0683_1_tight.png" width="700">
 
@@ -2512,38 +2504,38 @@ A Switch is required to initiate a transition from L1 state on all of its Downst
 
 链路任一端的组件均可启动从 L1 链路状态的退出。
 
-有关转换到 L1.1 或 L1.2 子状态的详细信息，请参见 § 第 5.5.1 节。
+有关转换到 L1.1 或 L1.2 子状态的详细信息,请参见 § 第 5.5.1 节。
 
-退出 L1 时，建议下游组件在 L1 退出后 1 μs 之内开始为所有使能的 VC 和 FC 类型发送流控更新 DLLP。
+退出 L1 时,建议下游组件在 L1 退出后 1 μs 之内开始为所有使能的 VC 和 FC 类型发送流控更新 DLLP。
 
 **下游组件发起的退出**
 
-上游端口在需要通过链路进行通信时，必须在其发送 Lane 上启动从 L1 的退出。组件如 § 第 4 章所述启动到 L0 状态的转换。上游组件必须通过启动其发送 Lane 的类似转换来响应。
+上游端口在需要通过链路进行通信时,必须在其发送 Lane 上启动从 L1 的退出。组件如 § 第 4 章所述启动到 L0 状态的转换。上游组件必须通过启动其发送 Lane 的类似转换来响应。
 
-如果上游组件是 Switch 下游端口 (即不是根复合体根端口)，则 Switch 必须在检测到其任何下游端口链路上的 L1 退出活动后，立即在其上游端口的发送 Lane 上 (如果上游端口的链路处于 L1 状态) 启动 L1 退出转换。由于 L1 退出延迟相对较长,Switch 在其上游端口链路上启动 L1 退出转换之前，不得等待其下游端口链路完全退出到 L0。等待到下游链路完成 L0 转换将导致通过若干 Switch 传输的报文在每个 Switch 中经历累积的延迟。
+如果上游组件是 Switch 下游端口 (即不是根复合体根端口),则 Switch 必须在检测到其任何下游端口链路上的 L1 退出活动后,立即在其上游端口的发送 Lane 上 (如果上游端口的链路处于 L1 状态) 启动 L1 退出转换。由于 L1 退出延迟相对较长,Switch 在其上游端口链路上启动 L1 退出转换之前,不得等待其下游端口链路完全退出到 L0。等待到下游链路完成 L0 转换将导致通过若干 Switch 传输的报文在每个 Switch 中经历累积的延迟。
 
-Switch 需要在其任何下游端口链路上开始 L1 退出转换后，不超过 1 μs 的时间在其上游端口链路上启动 L1 退出转换。有关 L1 退出期间物理层信令的详细信息，请参见 § 第 4.2 节。
+Switch 需要在其任何下游端口链路上开始 L1 退出转换后,不超过 1 μs 的时间在其上游端口链路上启动 L1 退出转换。有关 L1 退出期间物理层信令的详细信息,请参见 § 第 4.2 节。
 
 考虑 § 图 5-8 中的示例。每个端口附带的数字表示相应端口所报告的发送 Lane L1 退出延迟 (以微秒为单位)。
 
-链路 1、2 和 3 均处于 L1 状态，端点 C 在时间 T 启动到 L0 状态的转换。由于 Switch B 需要 32 μs 才能在其端口上退出 L1,因此链路 3 将在 T+32 时转换到 L0 状态 (考虑端点 C 的 T+8 和 Switch B 的 T+32 中的最长时间)。
+链路 1、2 和 3 均处于 L1 状态,端点 C 在时间 T 启动到 L0 状态的转换。由于 Switch B 需要 32 μs 才能在其端口上退出 L1,因此链路 3 将在 T+32 时转换到 L0 状态 (考虑端点 C 的 T+8 和 Switch B 的 T+32 中的最长时间)。
 
-Switch B 需要在链路 3 上开始 L1 状态转换后，不超过 1 μs 的时间在其上游端口链路 (链路 2) 上启动 L1 状态转换。因此，链路 2 将在 T+1 时开始到 L0 状态的转换。类似地，链路 1 将在时间 T+2 时开始到 L0 状态的转换。
+Switch B 需要在链路 3 上开始 L1 状态转换后,不超过 1 μs 的时间在其上游端口链路 (链路 2) 上启动 L1 状态转换。因此,链路 2 将在 T+1 时开始到 L0 状态的转换。类似地,链路 1 将在时间 T+2 时开始到 L0 状态的转换。
 
-如上所述，链路 2 将在时间 T+33 时完成到 L0 状态的转换 (由于 Switch B 转换所需时间较长且它在时间 T+1 开始)。链路 1 将在时间 T+34 时完成到 L0 状态的转换 (由于根复合体转换需要 32 μs 且它在时间 T+2 开始)。
+如上所述,链路 2 将在时间 T+33 时完成到 L0 状态的转换 (由于 Switch B 转换所需时间较长且它在时间 T+1 开始)。链路 1 将在时间 T+34 时完成到 L0 状态的转换 (由于根复合体转换需要 32 μs 且它在时间 T+2 开始)。
 
-因此，在链路 1、2 和 3 中，最后完成到 L0 状态转换的链路是链路 1,延迟为 34 μs。这是端点 C 中启动转换的报文所经历的延迟。
+因此,在链路 1、2 和 3 中,最后完成到 L0 状态转换的链路是链路 1,延迟为 34 μs。这是端点 C 中启动转换的报文所经历的延迟。
 
 
 Switch 不需要在其任何其他下游端口链路上启动 L1 退出转换。
 
 **上游组件发起的退出**
 
-根复合体或 Switch 在需要通过任何根端口或下游端口链路进行通信时，必须启动从 L1 的退出。Switch 或根复合体必须能够启动 L1 退出，即使它没有发送给定 TLP 所需的流控信用。组件如 § 第 4 章所述启动到 L0 状态的转换。下游组件必须通过启动其发送 Lane 上的类似转换来响应。
+根复合体或 Switch 在需要通过任何根端口或下游端口链路进行通信时,必须启动从 L1 的退出。Switch 或根复合体必须能够启动 L1 退出,即使它没有发送给定 TLP 所需的流控信用。组件如 § 第 4 章所述启动到 L0 状态的转换。下游组件必须通过启动其发送 Lane 上的类似转换来响应。
 
-如果下游组件包含 Switch,则它必须在检测到其上游端口链路上退出 L1 状态后，立即对其所有下游链路 (假设下游链路处于 ASPM L1 状态) 启动转换。由于 L1 退出延迟相对较长,Switch 在其下游端口链路上启动 L1 退出转换之前，不得等待其上游端口链路完全退出到 L0。如果那样，通过多个 Switch 传输的报文将在每个 Switch 中经历累积的延迟。
+如果下游组件包含 Switch,则它必须在检测到其上游端口链路上退出 L1 状态后,立即对其所有下游链路 (假设下游链路处于 ASPM L1 状态) 启动转换。由于 L1 退出延迟相对较长,Switch 在其下游端口链路上启动 L1 退出转换之前,不得等待其上游端口链路完全退出到 L0。如果那样,通过多个 Switch 传输的报文将在每个 Switch 中经历累积的延迟。
 
-Switch 需要在其上游端口上开始 L1 状态转换后，不超过 1 μs 的时间在其当前处于 L1 的所有下游端口链路上启动 L1 状态转换。有关 L1 退出期间物理层信令的详细信息，请参见 § 第 4.2 节。已经处于 L0 状态的下游端口链路不参与退出转换。下游组件处于低功耗 D 状态 (D1-D3Hot) 的下游端口链路也不受 L1 退出转换的影响 (即不得将这些链路转换到 L0 状态)。
+Switch 需要在其上游端口上开始 L1 状态转换后,不超过 1 μs 的时间在其当前处于 L1 的所有下游端口链路上启动 L1 状态转换。有关 L1 退出期间物理层信令的详细信息,请参见 § 第 4.2 节。已经处于 L0 状态的下游端口链路不参与退出转换。下游组件处于低功耗 D 状态 (D1-D3Hot) 的下游端口链路也不受 L1 退出转换的影响 (即不得将这些链路转换到 L0 状态)。
 
 <img src="figures/chapter_05/fig_0683_1_tight.png" width="700">
 </td>
@@ -2648,7 +2640,7 @@ Power management software, using the latency information reported by all compone
 </td>
 <td style="background-color:#e8e8e8">
 
-所有 Function 必须实现以下配置位以支持 ASPM。有关配置寄存器分配和访问机制，请参见 § 第 7 章。
+所有 Function 必须实现以下配置位以支持 ASPM。有关配置寄存器分配和访问机制,请参见 § 第 7 章。
 
 每个组件在下面的 ASPM Support 字段中报告其 ASPM 支持级别。
 
@@ -2661,7 +2653,7 @@ Power management software, using the latency information reported by all compone
 | 10b | | 支持 L1 |
 | 11b | | 支持 L0s 和 L1 |
 
-除非链路两端的组件各自支持 L0s,否则软件不得在给定链路的任一方向上启用 L0s;否则，结果是未定义的。
+除非链路两端的组件各自支持 L0s,否则软件不得在给定链路的任一方向上启用 L0s;否则,结果是未定义的。
 
 每个组件在其 Capability 结构的 Link Status 寄存器中的 Slot Clock Configuration 位中报告其参考时钟的来源。
 
@@ -2669,10 +2661,10 @@ Power management software, using the latency information reported by all compone
 
 | 位 | 描述 |
 |----|------|
-| Slot Clock Configuration | 该位置位时，表示组件使用平台在连接器上提供的同一物理参考时钟。 |
-| | 该位清零时，表示组件使用独立时钟，而无论连接器上是否存在参考。 |
-| | 对于根端口和 Switch 下游端口，该位置位时，表示下游端口使用与下游组件或插槽相同的参考时钟。 |
-| | 对于 Switch 和桥的上游端口，该位置位时，表示上游端口使用平台提供的同一参考时钟。 |
+| Slot Clock Configuration | 该位置位时,表示组件使用平台在连接器上提供的同一物理参考时钟。 |
+| | 该位清零时,表示组件使用独立时钟,而无论连接器上是否存在参考。 |
+| | 对于根端口和 Switch 下游端口,该位置位时,表示下游端口使用与下游组件或插槽相同的参考时钟。 |
+| | 对于 Switch 和桥的上游端口,该位置位时,表示上游端口使用平台提供的同一参考时钟。 |
 | | 否则清零。 |
 
 每个组件必须在其 Capability 结构的 Link Control 寄存器中支持 Common Clock Configuration 位。软件写入此寄存器位以向设备指示它是否与链路另一端的设备共享同一时钟源。
@@ -2681,8 +2673,8 @@ Power management software, using the latency information reported by all compone
 
 | 位 | 描述 |
 |----|------|
-| Common Clock Configuration | 该位置位时，表示此组件与链路另一端的组件使用公共时钟源。 |
-| | 该位清零时，表示此组件与链路另一端的组件使用单独的参考时钟源。 |
+| Common Clock Configuration | 该位置位时,表示此组件与链路另一端的组件使用公共时钟源。 |
+| | 该位清零时,表示此组件与链路另一端的组件使用单独的参考时钟源。 |
 | | 该位的默认值为 0b。 |
 
 组件利用此公共时钟配置信息来报告正确的 L0s 和 L1 退出延迟。
@@ -2717,7 +2709,7 @@ Power management software, using the latency information reported by all compone
 
 端点还报告由于从 L0s 或 L1 状态转换到 L0 状态所能吸收的额外延迟。这分别在 Endpoint L0s Acceptable Latency 和 Endpoint L1 Acceptable Latency 字段中报告。
 
-电源管理软件使用层级中所有组件报告的延迟信息，可通过将从根到端点的每条给定路径的退出延迟与每个相应端点可承受的可接受延迟进行比较，启用适当级别的 ASPM。
+电源管理软件使用层级中所有组件报告的延迟信息,可通过将从根到端点的每条给定路径的退出延迟与每个相应端点可承受的可接受延迟进行比较,启用适当级别的 ASPM。
 
 </td>
 </tr>
@@ -2819,10 +2811,10 @@ Following is an example software algorithm that highlights how to enable or disa
 
 以下示例软件算法重点说明如何在组件中启用或禁用 ASPM。
 
-- PCI Express 组件上电时，其 Slot Clock Configuration 位具有适当的值。它们初始化此位的方法是设备特定的。
-- PCI Express 系统软件扫描每个链路两端组件的 Slot Clock Configuration 位，以确定两者是否使用同一参考时钟源或来自不同源的参考时钟。如果两个设备的 Slot Clock Configuration 位都已置位，则它们都使用同一参考时钟源，否则不是。
-- PCI Express 软件更新每个链路两端组件的 Common Clock Configuration 位，以指示这些设备是否共享同一参考时钟，并通过在上游组件的 Link Control 寄存器中写入 1b 到 Retrain Link 位来触发链路重训练。
-- 设备必须根据 Common Clock Configuration 位的设置，在其 L0s/L1 Exit Latency 字段中反映适当的 L0s/L1 退出延迟。
+- PCI Express 组件上电时,其 Slot Clock Configuration 位具有适当的值。它们初始化此位的方法是设备特定的。
+- PCI Express 系统软件扫描每个链路两端组件的 Slot Clock Configuration 位,以确定两者是否使用同一参考时钟源或来自不同源的参考时钟。如果两个设备的 Slot Clock Configuration 位都已置位,则它们都使用同一参考时钟源,否则不是。
+- PCI Express 软件更新每个链路两端组件的 Common Clock Configuration 位,以指示这些设备是否共享同一参考时钟,并通过在上游组件的 Link Control 寄存器中写入 1b 到 Retrain Link 位来触发链路重训练。
+- 设备必须根据 Common Clock Configuration 位的设置,在其 L0s/L1 Exit Latency 字段中反映适当的 L0s/L1 退出延迟。
 - PCI Express 系统软件随后根据每个端口报告的延迟读取并计算每个端点的 L0s/L1 退出延迟。示例请参见 § 第 5.4.1.3.2 节。
 - 对于具有一个或多个端点 Function 的每个组件,PCI Express 系统软件检查每个端点 Function 在其 Link Capabilities 寄存器中报告的 Endpoint L0s Acceptable Latency / Endpoint L1 Acceptable Latency,并相应地启用或禁用该层级上某些或所有中间设备端口的 L0s / L1 进入 (通过 Link Control 寄存器中的 ASPM Control 字段)。
 
@@ -2885,11 +2877,11 @@ If these requirements cannot be satisfied in a particular system, then L1 PM Sub
 </td>
 <td style="background-color:#e8e8e8">
 
-L1 PM Substates 建立了一种链路电源管理机制，它创建了 L1 链路状态的较低功耗子状态 (见 § 图 5-9)，以及使用这些子状态的相关机制。L1 PM Substates 为:
+L1 PM Substates 建立了一种链路电源管理机制,它创建了 L1 链路状态的较低功耗子状态 (见 § 图 5-9),以及使用这些子状态的相关机制。L1 PM Substates 为:
 
 - **L1.0 子状态**
-  - L1.0 子状态对应于传统的 L1 链路状态。每当链路进入 L1 时，即进入此子状态。L1 PM Substates 机制定义了从此子状态转换到 L1.1 和 L1.2 子状态以及从其转换出来的转换过程。
-  - 上游和下游端口必须使能以检测电气空闲退出，如 § 第 4.2.7.7.2 节所要求。
+  - L1.0 子状态对应于传统的 L1 链路状态。每当链路进入 L1 时,即进入此子状态。L1 PM Substates 机制定义了从此子状态转换到 L1.1 和 L1.2 子状态以及从其转换出来的转换过程。
+  - 上游和下游端口必须使能以检测电气空闲退出,如 § 第 4.2.7.7.2 节所要求。
 - **L1.1 子状态**
   - 链路共模电压保持。
   - 使用双向漏极开路时钟请求 (CLKREQ#) 信号进行此状态的进入与退出。
@@ -2901,17 +2893,17 @@ L1 PM Substates 建立了一种链路电源管理机制，它创建了 L1 链路
 
 支持 L1 PM Substates 的端口在处于 L1.0 以外的 L1 PM Substates 时不得要求参考时钟。
 
-支持 L1 PM Substates 且也支持 SRIS 模式的端口需要在 SRIS 模式下运行时支持 L1 PM Substates。在这种情况下,CLKREQ# 信号由本节定义的 L1 PM Substates 协议使用，但与链路上任一端口使用的任何本地时钟没有已定义的关系，且此类本地时钟的管理是实现特定的。
+支持 L1 PM Substates 且也支持 SRIS 模式的端口需要在 SRIS 模式下运行时支持 L1 PM Substates。在这种情况下,CLKREQ# 信号由本节定义的 L1 PM Substates 协议使用,但与链路上任一端口使用的任何本地时钟没有已定义的关系,且此类本地时钟的管理是实现特定的。
 
 支持 ASPM L1 的 L1.2 子状态的端口必须支持延迟容忍度报告 (Latency Tolerance Reporting, LTR)。
 
 启用后,L1 PM Substates 机制对 CLKREQ# 信号应用以下额外要求:
 
-- CLKREQ# 信号必须由链路的上下游端口作为双向漏极开路信号支持。每个端口必须具有该信号的独立实例，且上游和下游端口的 CLKREQ# 信号必须连接。
-- 当链路处于 PCI-PM L1 或 ASPM L1 状态，或当链路处于 L2/L3 Ready 伪状态时，允许上游端口取消断言 CLKREQ#;当链路处于任何其他状态时，上游端口必须断言 CLKREQ#。
+- CLKREQ# 信号必须由链路的上下游端口作为双向漏极开路信号支持。每个端口必须具有该信号的独立实例,且上游和下游端口的 CLKREQ# 信号必须连接。
+- 当链路处于 PCI-PM L1 或 ASPM L1 状态,或当链路处于 L2/L3 Ready 伪状态时,允许上游端口取消断言 CLKREQ#;当链路处于任何其他状态时,上游端口必须断言 CLKREQ#。
 - 与 CLKREQ# 信号相关的其他规范 (未被 L1 PM Substates 专门定义或修改) 继续适用。
 
-如果特定系统不能满足这些要求，则不得启用 L1 PM Substates。
+如果特定系统不能满足这些要求,则不得启用 L1 PM Substates。
 
 </td>
 </tr>
@@ -2919,7 +2911,6 @@ L1 PM Substates 建立了一种链路电源管理机制，它创建了 L1 链路
 </table>
 
 > **Figure 5-9.** State Diagram for L1 PM Substates
-> **图 5-9.** L1 PM 子状态状态图
 
 > <img src="figures/chapter_05/fig_0689_1_tight.png" width="700">
 
@@ -2940,13 +2931,11 @@ L1 PM Substates 建立了一种链路电源管理机制，它创建了 L1 链路
 > Example 1: Single Downstream Port with a single PLL connected to a single Upstream Port (see § Figure 5-10). In this platform configuration the Upstream component (A) has only a single CLKREQ# signal. The Upstream and Downstream Ports' CLKREQ# (A and B) signals are connected to each other. In this case, Upstream component (A), must assert CLKREQ# signal whenever it requires a reference clock.
 
 > **Figure 5-10.** Downstream Port with a Single PLL
-> **图 5-10.** 带单个 PLL 的下行端口
 > <img src="figures/chapter_05/fig_0690_1_tight.png" width="700">
 
 > Example 2: Upstream component with multiple Downstream Ports, with a common shared PLL, connected to separate Downstream components (see § Figure 5-11).
 
 > **Figure 5-11.** Multiple Downstream Ports with a shared PLL
-> **图 5-11.** 带共享 PLL 的多个下行端口
 
 > <img src="figures/chapter_05/fig_0691_1_tight.png" width="700">
 
@@ -2998,28 +2987,28 @@ When the entry conditions for L1.2 are satisfied, the following rules apply:
 </td>
 <td style="background-color:#e8e8e8">
 
-当 L1 PM Substate 为 L1.0 且 LTSSM 通过 PCI-PM 兼容电源管理进入 L1 时，链路被视为处于 PCI-PM L1.0。当 L1 PM Substate 为 L1.0 且 LTSSM 通过 ASPM 进入 L1 时，链路被视为处于 ASPM L1.0。
+当 L1 PM Substate 为 L1.0 且 LTSSM 通过 PCI-PM 兼容电源管理进入 L1 时,链路被视为处于 PCI-PM L1.0。当 L1 PM Substate 为 L1.0 且 LTSSM 通过 ASPM 进入 L1 时,链路被视为处于 ASPM L1.0。
 
 以下规则定义如何进入 L1.1 和 L1.2 子状态:
 
 - 上下游端口都必须监视 CLKREQ# 信号的逻辑状态。
-- 当处于 PCI-PM L1.0 且 PCI-PM L1.2 Enable 位置位时，必须在 CLKREQ# 取消断言时进入 L1.2 子状态。
-- 当处于 PCI-PM L1.0 且 PCI-PM L1.1 Enable 位置位时，必须在 CLKREQ# 取消断言且 PCI-PM L1.2 Enable 位清零时进入 L1.1 子状态。
-- 当处于 ASPM L1.0 且 ASPM L1.2 Enable 位置位时，必须在 CLKREQ# 取消断言且满足以下所有条件时进入 L1.2 子状态:
-  - 此端口最后发送或接收的已报告侦听 LTR 值大于或等于 LTR_L1.2_THRESHOLD Value 和 Scale 字段设置的值，或没有侦听服务延迟要求。
-  - 此端口最后发送或接收的已报告非侦听 LTR 值大于或等于 LTR_L1.2_THRESHOLD Value 和 Scale 字段设置的值，或无非侦听服务延迟要求。
-- 当处于 ASPM L1.0 且 ASPM L1.1 Enable 位置位时，必须在 CLKREQ# 取消断言且不满足进入 L1.2 子状态的条件时进入 L1.1 子状态。
+- 当处于 PCI-PM L1.0 且 PCI-PM L1.2 Enable 位置位时,必须在 CLKREQ# 取消断言时进入 L1.2 子状态。
+- 当处于 PCI-PM L1.0 且 PCI-PM L1.1 Enable 位置位时,必须在 CLKREQ# 取消断言且 PCI-PM L1.2 Enable 位清零时进入 L1.1 子状态。
+- 当处于 ASPM L1.0 且 ASPM L1.2 Enable 位置位时,必须在 CLKREQ# 取消断言且满足以下所有条件时进入 L1.2 子状态:
+  - 此端口最后发送或接收的已报告侦听 LTR 值大于或等于 LTR_L1.2_THRESHOLD Value 和 Scale 字段设置的值,或没有侦听服务延迟要求。
+  - 此端口最后发送或接收的已报告非侦听 LTR 值大于或等于 LTR_L1.2_THRESHOLD Value 和 Scale 字段设置的值,或无非侦听服务延迟要求。
+- 当处于 ASPM L1.0 且 ASPM L1.1 Enable 位置位时,必须在 CLKREQ# 取消断言且不满足进入 L1.2 子状态的条件时进入 L1.1 子状态。
 
-当满足 L1.2 的进入条件时，适用以下规则:
+当满足 L1.2 的进入条件时,适用以下规则:
 
 - 上下游端口都必须监视 CLKREQ# 输入信号的逻辑状态。
-- 在链路进入 L1.0 之前，上游端口不得取消断言 CLKREQ#。
+- 在链路进入 L1.0 之前,上游端口不得取消断言 CLKREQ#。
 - 允许任一端口断言 CLKREQ# 以阻止链路进入 L1.2。
 - 打算阻止进入 L1.2 的下游端口必须在链路进入 L1 之前断言 CLKREQ#。
-- 当 CLKREQ# 取消断言时，端口进入 L1.2 的 L1.2.Entry 子状态。
+- 当 CLKREQ# 取消断言时,端口进入 L1.2 的 L1.2.Entry 子状态。
 
-> **实现说明 (IMPLEMENTATION NOTE): 避免 L1 PM SUBSTATES 与 LTSSM 之间的意外交互**
-> 通常，实现节能的技术也会增加恢复正常操作的延迟。在实现 L1 PM Substates 时，实现者必须确保任何增加的延迟不会与平台的其他元素产生负面交互。特别重要的是确保不会意外触发 LTSSM 超时条件。虽然典型的实现不会接近可能引起此类交互的延迟，但实现者有责任确保实现正确的整体操作。
+> **实现注: 避免 L1 PM SUBSTATES 与 LTSSM 之间的意外交互**
+> 通常,实现节能的技术也会增加恢复正常操作的延迟。在实现 L1 PM Substates 时,实现者必须确保任何增加的延迟不会与平台的其他元素产生负面交互。特别重要的是确保不会意外触发 LTSSM 超时条件。虽然典型的实现不会接近可能引起此类交互的延迟,但实现者有责任确保实现正确的整体操作。
 
 </td>
 </tr>
@@ -3065,14 +3054,14 @@ If either the Upstream or Downstream Port needs to initiate exit from L1.1, it m
 </td>
 <td style="background-color:#e8e8e8">
 
-如果下游端口处于 PCI-PM L1.0 且 PCI-PM L1.1 Enable 和/或 PCI-PM L1.2 Enable 已置位，或下游端口处于 ASPM L1.0 且 ASPM L1.1 Enable 和/或 ASPM L1.2 Enable 已置位，且下游端口在未进入 L1.1 或 L1.2 的情况下启动到 Recovery 的退出，则下游端口必须断言 CLKREQ#,直到链路退出 Recovery。
+如果下游端口处于 PCI-PM L1.0 且 PCI-PM L1.1 Enable 和/或 PCI-PM L1.2 Enable 已置位,或下游端口处于 ASPM L1.0 且 ASPM L1.1 Enable 和/或 ASPM L1.2 Enable 已置位,且下游端口在未进入 L1.1 或 L1.2 的情况下启动到 Recovery 的退出,则下游端口必须断言 CLKREQ#,直到链路退出 Recovery。
 
-如果实现，允许上下游端口停用电气空闲 (EI) 退出检测和 Refclk 活动检测机制，但是两个端口都必须保持共模。
+如果实现,允许上下游端口停用电气空闲 (EI) 退出检测和 Refclk 活动检测机制,但是两个端口都必须保持共模。
 
-如果上游或下游端口需要启动从 L1.1 的退出，则它必须断言 CLKREQ#,直到链路退出 Recovery。上游端口必须在进入 Recovery 时断言 CLKREQ#,并必须继续断言 CLKREQ#,直到下一次进入 L1 或允许取消断言 CLKREQ# 的其他状态。
+如果上游或下游端口需要启动从 L1.1 的退出,则它必须断言 CLKREQ#,直到链路退出 Recovery。上游端口必须在进入 Recovery 时断言 CLKREQ#,并必须继续断言 CLKREQ#,直到下一次进入 L1 或允许取消断言 CLKREQ# 的其他状态。
 
-- 如果 CLKREQ# 被断言，则下一个状态是 L1.0。
-  - Refclk 最终将按 PCI Express Mini CEM 规范的规定打开，该打开可能根据上游端口通告的 LTR 延迟。
+- 如果 CLKREQ# 被断言,则下一个状态是 L1.0。
+  - Refclk 最终将按 PCI Express Mini CEM 规范的规定打开,该打开可能根据上游端口通告的 LTR 延迟。
 
 § 图 5-12 演示了由上游端口驱动的退出进入 L1.1。
 
@@ -3084,11 +3073,9 @@ If either the Upstream or Downstream Port needs to initiate exit from L1.1, it m
 </table>
 
 > **Figure 5-12.** Example: L1.1 Waveforms Illustrating Upstream Port Initiated Exit
-> **图 5-12.** 示例：说明由上游端口发起退出的 L1.1 波形
 > <img src="figures/chapter_05/fig_0693_1.png" width="700">
 
 > **Figure 5-13.** Example: L1.1 Waveforms Illustrating Downstream Port Initiated Exit
-> **图 5-13.** 示例：说明由下行端口发起退出的 L1.1 波形
 
 </div>
 
@@ -3118,7 +3105,7 @@ L1.2 has additional requirements that do not apply to L1.1 These requirements ar
 </td>
 <td style="background-color:#e8e8e8">
 
-所有链路与 PHY 状态必须在 L1.2 期间保持，或者必须在退出时使用实现特定的方式恢复，并且从 L1.2 退出时的 LTSSM 和相应端口状态必须与 L1.0 LTSSM 和端口状态无法区分。
+所有链路与 PHY 状态必须在 L1.2 期间保持,或者必须在退出时使用实现特定的方式恢复,并且从 L1.2 退出时的 LTSSM 和相应端口状态必须与 L1.0 LTSSM 和端口状态无法区分。
 
 L1.2 具有不适用于 L1.1 的额外要求。这些要求记录在本节中。
 
@@ -3165,17 +3152,17 @@ Note that there is a boundary condition which can occur when one Port asserts CL
 </td>
 <td style="background-color:#e8e8e8">
 
-L1.2 有三个子状态，定义如下 (见 § 图 5-14)。
+L1.2 有三个子状态,定义如下 (见 § 图 5-14)。
 
-L1.2.Entry 是进入 L1.2 时的过渡状态，以允许 Refclk 关闭的时间并确保两个端口都已观察到 CLKREQ# 取消断言。以下规则适用于 L1.2.Entry:
+L1.2.Entry 是进入 L1.2 时的过渡状态,以允许 Refclk 关闭的时间并确保两个端口都已观察到 CLKREQ# 取消断言。以下规则适用于 L1.2.Entry:
 
 - 上下游端口都继续保持共模。
 - 上下游端口都可以关闭其电气空闲 (EI) 退出检测电路。
 - 上下游端口在此状态下不得断言 CLKREQ#。
 - Refclk 必须在 TL1O_REFCLK_OFF 内关闭。
-- 如果 CLKREQ# 被断言，则下一个状态为 L1.0,否则在等待 TPOWER_OFF 后下一个状态为 L1.2.Idle。
+- 如果 CLKREQ# 被断言,则下一个状态为 L1.0,否则在等待 TPOWER_OFF 后下一个状态为 L1.2.Idle。
 
-注意，存在一个边界条件，当一个端口在另一个端口取消断言 CLKREQ# 后不久 (但在第一个端口观察到 CLKREQ# 取消断言之前) 断言 CLKREQ# 时，可能会发生此边界条件。这是一个不可避免的边界条件，实现必须正确处理。§ 图 5-15 演示了此条件的示例。
+注意,存在一个边界条件,当一个端口在另一个端口取消断言 CLKREQ# 后不久 (但在第一个端口观察到 CLKREQ# 取消断言之前) 断言 CLKREQ# 时,可能会发生此边界条件。这是一个不可避免的边界条件,实现必须正确处理。§ 图 5-15 演示了此条件的示例。
 
 </td>
 </tr>
@@ -3183,7 +3170,6 @@ L1.2.Entry 是进入 L1.2 时的过渡状态，以允许 Refclk 关闭的时间�
 </table>
 
 > **Figure 5-14.** L1.2 Substates
-> **图 5-14.** L1.2 子状态
 > <img src="figures/chapter_05/fig_0694_1_tight.png" width="700">
 
 </div>
@@ -3208,7 +3194,6 @@ L1.2.Entry 是进入 L1.2 时的过渡状态，以允许 Refclk 关闭的时间�
 <td>
 
 > **Figure 5-15.** Example: Illustration of Boundary Condition due to Different Sampling of CLKREQ#
-> **图 5-15.** 示例：CLKREQ# 不同采样导致的边界条件图示
 > <img src="figures/chapter_05/fig_0695_1_tight.png" width="700">
 
 When requirements for the entry into L1.2.Idle state (see § Section 5.5.1) have been satisfied then the Ports enter the L1.2.Idle substate. The following rules apply in L1.2.Idle:
@@ -3233,20 +3218,20 @@ This is a transitional state on exit from L1.2 to allow time for both devices to
 <td style="background-color:#e8e8e8">
 
 
-当满足进入 L1.2.Idle 状态的要求 (见 § 第 5.5.1 节) 时，端口进入 L1.2.Idle 子状态。以下规则适用于 L1.2.Idle:
+当满足进入 L1.2.Idle 状态的要求 (见 § 第 5.5.1 节) 时,端口进入 L1.2.Idle 子状态。以下规则适用于 L1.2.Idle:
 
-- 上下游端口都可以断电任何活动逻辑，包括需要保持共模的电路。
+- 上下游端口都可以断电任何活动逻辑,包括需要保持共模的电路。
 - 上下游端口的 PHY 都可以移除其电源。
 
-使用基于 CLKREQ# 的机制时，以下规则适用于 L1.2.Idle 状态:
+使用基于 CLKREQ# 的机制时,以下规则适用于 L1.2.Idle 状态:
 
 - 如果上游或下游端口需要退出 L1.2,则必须在确保满足 TL1.2 后断言 CLKREQ#。
-- 如果下游端口正在启动从 L1 的退出，则必须断言 CLKREQ#,直到链路退出 Recovery。上游端口必须在进入 Recovery 时断言 CLKREQ#,并必须继续断言 CLKREQ#,直到下一次进入 L1 或允许取消断言 CLKREQ# 的其他状态。
-- 如果上游端口正在启动从 L1 的退出，则必须继续断言 CLKREQ#,直到下一次进入 L1 或允许取消断言 CLKREQ# 的其他状态。
+- 如果下游端口正在启动从 L1 的退出,则必须断言 CLKREQ#,直到链路退出 Recovery。上游端口必须在进入 Recovery 时断言 CLKREQ#,并必须继续断言 CLKREQ#,直到下一次进入 L1 或允许取消断言 CLKREQ# 的其他状态。
+- 如果上游端口正在启动从 L1 的退出,则必须继续断言 CLKREQ#,直到下一次进入 L1 或允许取消断言 CLKREQ# 的其他状态。
 - 上下游端口都必须监视 CLKREQ# 输入信号的逻辑状态。
-- 如果 CLKREQ# 被断言，则下一个状态为 L1.2.Exit。
+- 如果 CLKREQ# 被断言,则下一个状态为 L1.2.Exit。
 
-这是退出 L1.2 时的过渡状态，以允许两个设备上电的时间。在 L1.2.Exit 中，适用以下规则:
+这是退出 L1.2 时的过渡状态,以允许两个设备上电的时间。在 L1.2.Exit 中,适用以下规则:
 
 - 上下游端口的 PHY 必须上电。
 - 不得假设已保持共模。
@@ -3292,13 +3277,13 @@ The following rules apply for L1.2.Exit using the CLKREQ#-based mechanism:
 </td>
 <td style="background-color:#e8e8e8">
 
-使用基于 CLKREQ# 的机制时，以下规则适用于 L1.2.Exit:
+使用基于 CLKREQ# 的机制时,以下规则适用于 L1.2.Exit:
 
-- 上下游端口必须上电 L1.0 所需的任何电路，包括需要保持共模的电路。
+- 上下游端口必须上电 L1.0 所需的任何电路,包括需要保持共模的电路。
 - 上下游端口在此状态下不得改变其 CLKREQ# 的驱动状态。
-- Refclk 必须在不早于 TL10_REFCLK_ON 最小时间时打开，并且在变为有效之前可能需要根据端点通告的 LTR 允许的时间。
-- 在等待 TPOWER_ON 后，下一个状态为 L1.0。
-  - 允许在 L1.0 期间被动建立共模，并在 Recovery 期间主动建立共模。为确保已建立共模，下游端口必须维持一个定时器，并且下游端口必须继续发送 TS1 训练序列，直到自下游端口开始发送 TS1 训练序列并在已配置链路的任何 Lane 上检测到电气空闲退出以来已过去至少 TCOMMONMODE。
+- Refclk 必须在不早于 TL10_REFCLK_ON 最小时间时打开,并且在变为有效之前可能需要根据端点通告的 LTR 允许的时间。
+- 在等待 TPOWER_ON 后,下一个状态为 L1.0。
+  - 允许在 L1.0 期间被动建立共模,并在 Recovery 期间主动建立共模。为确保已建立共模,下游端口必须维持一个定时器,并且下游端口必须继续发送 TS1 训练序列,直到自下游端口开始发送 TS1 训练序列并在已配置链路的任何 Lane 上检测到电气空闲退出以来已过去至少 TCOMMONMODE。
 
 § 图 5-16 演示了与 L1.2 进入和上游端口发起的退出相关的信号关系和时序约束。
 
@@ -3310,14 +3295,12 @@ The following rules apply for L1.2.Exit using the CLKREQ#-based mechanism:
 </table>
 
 > **Figure 5-16.** Example: L1.2 Waveforms Illustrating Upstream Port Initiated Exit
-> **图 5-16.** 示例：说明由上游端口发起退出的 L1.2 波形
 
 > <img src="figures/chapter_05/fig_0697_1_tight.png" width="700">
 
 > <img src="figures/chapter_05/fig_0696_1_tight.png" width="700">
 
 > **Figure 5-17.** Example: L1.2 Waveforms Illustrating Downstream Port Initiated Exit
-> **图 5-17.** 示例：说明由下行端口发起退出的 L1.2 波形
 
 > <img src="figures/chapter_05/fig_0698_1_tight.png" width="700">
 
@@ -3392,23 +3375,23 @@ When programming LTR_L1.2_THRESHOLD Value and Scale fields, identical values mus
 </td>
 <td style="background-color:#e8e8e8">
 
-当与该端口关联的 ASPM L1.1 Enable、ASPM L1.2 Enable、PCI-PM L1.1 Enable 和 PCI-PM L1.2 Enable 位的任意组合被置位时，认为该端口启用了 L1 PM Substates。
+当与该端口关联的 ASPM L1.1 Enable、ASPM L1.2 Enable、PCI-PM L1.1 Enable 和 PCI-PM L1.2 Enable 位的任意组合被置位时,认为该端口启用了 L1 PM Substates。
 
-L1 PM Substates 使能位仅在链路的上下游端口上对应的支持能力位都被置位时才允许在链路的上下游端口上置位，否则行为未定义。
+L1 PM Substates 使能位仅在链路的上下游端口上对应的支持能力位都被置位时才允许在链路的上下游端口上置位,否则行为未定义。
 
-任何使能位的置位必须在允许在上游端口置位对应位之前先在下游端口进行。如果稍后要清除任何 L1 PM Substates 使能位，则必须先在上游端口清除使能位，然后才允许在下游端口清除对应的使能位。
+任何使能位的置位必须在允许在上游端口置位对应位之前先在下游端口进行。如果稍后要清除任何 L1 PM Substates 使能位,则必须先在上游端口清除使能位,然后才允许在下游端口清除对应的使能位。
 
-如果为 ASPM L1 PM Substates 置位一个或两个使能位，则在 ASPM L1 禁用的同时，两个端口必须按本节所述配置。
+如果为 ASPM L1 PM Substates 置位一个或两个使能位,则在 ASPM L1 禁用的同时,两个端口必须按本节所述进行配置。
 
-如果为 PCI-PM L1 PM Substates 置位一个或两个使能位，则在处于 D0 时，两个端口必须按本节所述配置。
+如果为 PCI-PM L1 PM Substates 置位一个或两个使能位,则在处于 D0 时,两个端口必须按本节所述进行配置。
 
-在为 L1.2 置位一个或两个使能位之前，必须对 TPOWER_ON、Common_Mode_Restore_Time,以及 (如果要置位 ASPM L1.2 Enable 位) LTR_L1.2_THRESHOLD (Value 和 Scale 字段) 的值进行编程。
+在为 L1.2 置位一个或两个使能位之前,必须对 TPOWER_ON、Common_Mode_Restore_Time,以及 (如果要置位 ASPM L1.2 Enable 位) LTR_L1.2_THRESHOLD (Value 和 Scale 字段) 的值进行编程。
 
 TPOWER_ON 和 Common_Mode_Restore_Time 字段必须基于连接两个组件的连接中使用的组件和 AC 耦合电容器编程为适当的值。这些值的确定是设计实现特定的。
 
-当 ASPM L1.2 Enable 和 PCI-PM L1.2 Enable 位均清零时，不要求对 TPOWER_ON、Common_Mode_Restore_Time 和 LTR_L1.2_THRESHOLD Value 和 Scale 字段进行编程，并且硬件不得依赖这些字段具有任何特定值。
+当 ASPM L1.2 Enable 和 PCI-PM L1.2 Enable 位均清零时,不要求对 TPOWER_ON、Common_Mode_Restore_Time 和 LTR_L1.2_THRESHOLD Value 和 Scale 字段进行编程,并且硬件不得依赖这些字段具有任何特定值。
 
-对 LTR_L1.2_THRESHOLD Value 和 Scale 字段进行编程时，必须在两个端口中编程相同的值。
+对 LTR_L1.2_THRESHOLD Value 和 Scale 字段进行编程时,必须在两个端口中编程相同的值。
 
 § 表 5-11 定义了与 L1.2 子状态机制相关的时序参数。
 
@@ -3459,10 +3442,10 @@ TPOWER_ON 和 Common_Mode_Restore_Time 字段必须基于连接两个组件的�
 | 参数 | 描述 | 最小值 | 最大值 | 单位 |
 |------|------|--------|--------|------|
 | TPOWER_OFF | CLKREQ# 取消断言到进入 L1.2.Idle 子状态 | 2 | | μs |
-| TCOMMONMODE | Refclk 恢复到通过主动发送 TS1 训练序列建立的共模的恢复 (见 § 第 5.5.3.3.1 节) | 可编程，范围从 0 到 255 | | μs |
+| TCOMMONMODE | Refclk 恢复到通过主动发送 TS1 训练序列建立的共模的恢复 (见 § 第 5.5.3.3.1 节) | 可编程,范围从 0 到 255 | | μs |
 | TL1O_REFCLK_OFF | 进入 L1.2 时,CLKREQ# 取消断言到 Refclk 达到空闲电气状态 | 0 | 100 | ns |
 | TL10_REFCLK_ON | 退出 L1.2 时,CLKREQ# 断言到 Refclk 有效 | TPOWER_ON | 端点通告的 LTR 值 | μs |
-| TPOWER_ON | 在采样到 CLKREQ# 断言后，每个组件在 L1.2.Exit 中必须等待的最小时间，然后才能主动驱动接口，以确保没有设备主动驱动到未上电的组件中。 | 在 L1 PM Substates Control 2 寄存器中设置 (范围从 0 到 3100) | | μs |
+| TPOWER_ON | 在采样到 CLKREQ# 断言后,每个组件在 L1.2.Exit 中必须等待的最小时间,然后才能主动驱动接口,以确保没有设备主动驱动到未上电的组件中。 | 在 L1 PM Substates Control 2 寄存器中设置 (范围从 0 到 3100) | | μs |
 | TL1.2 | 端口在 L1.2 中必须停留且 CLKREQ# 必须保持不活动的时间 | 4 | | μs |
 
 </td>
@@ -3509,21 +3492,21 @@ The following rules apply to Link Activation:
 </td>
 <td style="background-color:#e8e8e8">
 
-链路激活 (Link Activation) 是一种可选机制，用于临时禁用 L1 Substates。链路激活用于使链路退出 L1.1/L1.2,以避免潜在的停顿。此类停顿的一个示例是执行 D3Hot 到 D0 转换的配置写相关停顿。链路激活还可用于间接向设备指示，在延迟敏感或时间关键操作期间，应避免使用长延迟的内部电源管理。
+链路激活 (Link Activation) 是一种可选机制,用于临时禁用 L1 Substates。链路激活用于使链路退出 L1.1/L1.2,以避免潜在的停顿。此类停顿的一个示例是执行 D3Hot 到 D0 转换的配置写相关停顿。链路激活还可用于间接向设备指示,在延迟敏感或时间关键操作期间,应避免使用长延迟的内部电源管理。
 
 以下规则适用于链路激活:
 
-- 允许下游端口支持链路激活，如 L1 PM Substates Capabilities 寄存器中 Link Activation Supported 位置位所示。
-- Link Activation Control 位必须对端口行为没有影响，除非以下位中的一个或多个被置位:
+- 允许下游端口支持链路激活,如 L1 PM Substates Capabilities 寄存器中 Link Activation Supported 位置位所示。
+- Link Activation Control 位必须对端口行为没有影响,除非以下位中的一个或多个被置位:
   - PCI-PM L1.2 Enable
   - PCI-PM L1.1 Enable
-- 当 Link Activation Control 位置位时，即将进入 L1 的端口必须断言 CLKREQ# 信号，并在 L1 中保持其被断言。
-- 如果 Link Activation Control 位清零，则链路激活机制不会对 CLKREQ# 信号的状态施加任何额外要求。
-- 如果端口已使用 MSI 或 MSI-X 启用边沿触发中断信令，则每次以下条件的逻辑 AND 从 FALSE 转换到 TRUE 时，必须发送中断报文:
+- 当 Link Activation Control 位置位时,即将进入 L1 的端口必须断言 CLKREQ# 信号,并在 L1 中保持其被断言。
+- 如果 Link Activation Control 位清零,则链路激活机制不会对 CLKREQ# 信号的状态施加任何额外要求。
+- 如果端口已使用 MSI 或 MSI-X 启用边沿触发中断信令,则每次以下条件的逻辑 AND 从 FALSE 转换到 TRUE 时,必须发送中断报文:
   - 关联的向量未屏蔽 (如果 MSI 不支持 PVM 则不适用)
   - Link Activation Interrupt Enable 位置位
   - Link Activation Control 位置位
-  - Link Activation Status 位置位。注意，链路激活中断始终使用 PCI Express Capabilities 寄存器中 Interrupt Message Number 字段指示的 MSI 或 MSI-X 向量。
+  - Link Activation Status 位置位。注意,链路激活中断始终使用 PCI Express Capabilities 寄存器中 Interrupt Message Number 字段指示的 MSI 或 MSI-X 向量。
 
 </td>
 </tr>
@@ -3617,7 +3600,7 @@ The Aux Power PM Enable bit is sticky (see § Section 7.4 ) so its state is pres
 </td>
 <td style="background-color:#e8e8e8">
 
-- 如果端口已使用 INTx 报文启用电平触发中断信令，则只要满足以下条件，虚拟 INTx 线必须被断言:
+- 如果端口已使用 INTx 报文启用电平触发中断信令,则只要满足以下条件,虚拟 INTx 线必须被断言:
   - Command 寄存器中的 Interrupt Disable 位清零。
   - Link Activation Interrupt Enable 位置位
   - Link Activation Control 位置位
@@ -3629,13 +3612,13 @@ The Aux Power PM Enable bit is sticky (see § Section 7.4 ) so its state is pres
 
 与辅助电源相关的具体定义和要求因外形规格而异,"辅助电源"和 "Vaux" 这两个术语应结合具体使用的外形规格来理解。提供辅助电源的具体机制在本规范中未定义。以下文本定义了适用于所有外形规格的要求。
 
-注意，对辅助电源的支持是可选的。某些外形规格不支持它。此外，某些外形规格具有专用辅助电源引脚，而其他外形规格则以某种方式使用主电源引脚。
+注意,对辅助电源的支持是可选的。某些外形规格不支持它。此外,某些外形规格具有专用辅助电源引脚,而其他外形规格则以某种方式使用主电源引脚。
 
-PCI Express PM 在 Device Control 寄存器中提供 Aux Power PM Enable 位，该位提供了使 Function 能够抽取最大允许辅助电力的方法，与 Function 对 PME 生成的支持级别无关。
+PCI Express PM 在 Device Control 寄存器中提供 Aux Power PM Enable 位,该位提供了使 Function 能够抽取最大允许辅助电力的方法,与 Function 对 PME 生成的支持级别无关。
 
 Function 通过在 PMC 寄存器的 Aux_Current 字段中指定非零值来请求辅助电源分配。
 
-有关 Aux Power PM Enable 寄存器位分配和访问机制，请参见 § 第 7 章。
+有关 Aux Power PM Enable 寄存器位分配和访问机制,请参见 § 第 7 章。
 
 使用 Aux Power PM Enable 和 PME_En 的辅助电源分配确定如下:
 
@@ -3650,7 +3633,7 @@ Function 通过在 PMC 寄存器的 Aux_Current 字段中指定非零值来请�
 
 **Aux Power PM Enable = 1b:**
 
-按 PMC 寄存器的 Aux_Current 字段所请求的方式分配辅助电源，与 PMSCR 中的 PME_En 位无关。PME_En 位仍控制 master PME 的能力。
+按 PMC 寄存器的 Aux_Current 字段所请求的方式分配辅助电源,与 PMSCR 中的 PME_En 位无关。PME_En 位仍控制 master PME 的能力。
 
 允许使用基于固件的机制分配额外辅助电源 (参见 [Firmware] 中定义的 Request D3Cold Aux Power Limit _DSM 调用)。
 
@@ -3658,13 +3641,13 @@ Function 通过在 PMC 寄存器的 Aux_Current 字段中指定非零值来请�
 
 **Aux Power PM Enable = 0b:**
 
-辅助电源分配由 PME_En 位控制，定义见 § 第 7.5.2.2 节。
+辅助电源分配由 PME_En 位控制,定义见 § 第 7.5.2.2 节。
 
 允许使用基于固件的机制分配额外辅助电源 (参见 [Firmware] 中定义的 Request D3Cold Aux Power Limit _DSM 调用)。
 
 还允许通过在 Power Limit 机制中选择 PM Sub State 来分配额外辅助电源 (见 § 第 7.8.1.3 节)。
 
-Aux Power PM Enable 位是粘性位 (见 § 第 7.4 节)，因此其状态在 D3Cold 状态中保留，并且不受从 D3Cold 状态到 D0uninitialized 状态的转换的影响。
+Aux Power PM Enable 位是粘性位 (见 § 第 7.4 节),因此其状态在 D3Cold 状态中保留,并且不受从 D3Cold 状态到 D0uninitialized 状态的转换的影响。
 
 § 表 5-13 定义了每个 PM 报文在 PCI Express 协议栈中的位置。
 
@@ -3720,7 +3703,7 @@ Power Management Messages follow the general rules for all Messages. Power Manag
 </td>
 <td style="background-color:#e8e8e8">
 
-有关电源管理 DLLP 的结构信息，请参见 § 第 3.5 节。
+有关电源管理 DLLP 的结构信息,请参见 § 第 3.5 节。
 
 电源管理报文遵循所有报文的一般规则。电源管理报文字段遵循以下规则:
 
@@ -3773,9 +3756,9 @@ All PCI-PM power management state changes are explicitly controlled by software 
 </td>
 <td style="background-color:#e8e8e8">
 
-除基本复位 (Fundamental Reset) 将所有 Function 带到 D0uninitialized 状态外，所有 PCI-PM 电源管理状态更改都由软件显式控制。§ 图 5-18 显示了所有支持的状态转换。未标记的弧线表示软件发起的状态转换 (Set Power State 操作)。
+除基本复位 (Fundamental Reset) 将所有 Function 带到 D0uninitialized 状态外,所有 PCI-PM 电源管理状态更改都由软件显式控制。§ 图 5-18 显示了所有支持的状态转换。未标记的弧线表示软件发起的状态转换 (Set Power State 操作)。
 
-§ 表 5-14 显示了系统软件在 Function 被编程为更改状态与下次访问该 Function (包括配置空间) 之间必须允许的最短恢复时间，除非使用就绪通知 (Readiness Notifications) (见 § 第 6.22 节) 来向系统软件指示修改后的值。对于桥 Function,此延迟还构成桥的状态被更改与可访问其发起的逻辑总线上任何 Function 之间的最小延迟。
+§ 表 5-14 显示了系统软件在 Function 被编程为更改状态与下次访问该 Function (包括配置空间) 之间必须允许的最短恢复时间,除非使用就绪通知 (Readiness Notifications) (见 § 第 6.22 节) 来向系统软件指示修改后的值。对于桥 Function,此延迟还构成桥的状态被更改与可访问其发起的逻辑总线上任何 Function 之间的最小延迟。
 
 **表 5-14. PCI Function 状态转换延迟**
 
@@ -3794,7 +3777,6 @@ All PCI-PM power management state changes are explicitly controlled by software 
 </table>
 
 > **Figure 5-18.** Function Power Management State Transitions
-> **图 5-18.** 功能电源管理状态转换
 
 > <img src="figures/chapter_05/fig_0702_1_tight.png" width="700">
 
@@ -3900,38 +3882,38 @@ When the PF is placed into the D3Cold state VFs no longer exist, any VF specific
 </td>
 <td style="background-color:#e8e8e8">
 
-如果 VF 未实现 PCI 电源管理能力，则 VF 表现得好像已被编程为与其关联 PF 等效的电源状态。
+如果 VF 未实现 PCI 电源管理能力,则 VF 表现得好像已被编程为与其关联 PF 等效的电源状态。
 
-如果 VF 实现了 PCI 电源管理能力，则该功能必须按 § 第 7.5.2 节中的定义。
+如果 VF 实现了 PCI 电源管理能力,则该功能必须按 § 第 7.5.2 节中的定义。
 
-如果 VF 实现了 PCI 电源管理能力，则当 PF 被置于比 VF 更低的电源状态时，设备行为未定义。软件应通过在降低其关联 PF 的电源状态之前将所有 VF 置于低电源状态来避免这种情况。
+如果 VF 实现了 PCI 电源管理能力,则当 PF 被置于比 VF 更低的电源状态时,设备行为未定义。软件应通过在降低其关联 PF 的电源状态之前将所有 VF 置于低电源状态来避免这种情况。
 
-D0 状态下的 VF 在 VF 完成其内部初始化并且 SR-IOV Control 寄存器 (见 § 第 9.3.3.3 节) 扩展能力中的 VF Bus Master Enable 位或 VF MSE 位被置位时，处于 D0active 状态。当发生以下任何条件时，必须已完成 VF 的内部初始化:
+D0 状态下的 VF 在 VF 完成其内部初始化并且 SR-IOV Control 寄存器 (见 § 第 9.3.3.3 节) 扩展能力中的 VF Bus Master Enable 位或 VF MSE 位被置位时,处于 D0active 状态。当发生以下任何条件时,必须已完成 VF 的内部初始化:
 
 - VF 已成功响应 (未返回 RRS) 配置请求。
-- 在向 VF 发出 FLR 之后，以下之一为真:
+- 在向 VF 发出 FLR 之后,以下之一为真:
   - 自 FLR 发出以来已过去至少 1.0 秒。
-  - VF 支持 Function Readiness Status,并且在 FLR 发出后，已收到来自 VF 的、原因代码为 FLR Completed 的 FRS 报文。
-  - 自 FLR 发出以来已过去至少 FLR time。FLR Time 是 (1) 与 VF 关联的 Readiness Time Reporting 能力中的 FLR Time 值，或 (2) 由系统软件/固件确定的值。
-- 在 PF 中置位 VF Enable 之后，以下之一为真:
+  - VF 支持 Function Readiness Status,并且在 FLR 发出后,已收到来自 VF 的、原因代码为 FLR Completed 的 FRS 报文。
+  - 自 FLR 发出以来已过去至少 FLR time。FLR Time 是 (1) 与 VF 关联的 Readiness Time Reporting 能力中的 FLR Time 值,或 (2) 由系统软件/固件确定的值。
+- 在 PF 中置位 VF Enable 之后,以下之一为真:
   - 自 VF Enable 置位以来已过去至少 1.0 秒。
-  - PF 支持 Function Readiness Status,并且在 VF Enable 置位后，已收到来自 PF 的、原因代码为 VF Enabled 的 FRS 报文。
-- 在将 VF 从 D3Hot 转换到 D0 之后，以下之一为真:
+  - PF 支持 Function Readiness Status,并且在 VF Enable 置位后,已收到来自 PF 的、原因代码为 VF Enabled 的 FRS 报文。
+- 在将 VF 从 D3Hot 转换到 D0 之后,以下之一为真:
   - 自发出进入 D0 请求以来已过去至少 10 ms。
-  - VF 支持 Function Readiness Status,并且在发出进入 D0 请求后，已收到来自 VF 的、原因代码为 D3Hot to D0 Transition Completed 的 FRS 报文。
+  - VF 支持 Function Readiness Status,并且在发出进入 D0 请求后,已收到来自 VF 的、原因代码为 D3Hot to D0 Transition Completed 的 FRS 报文。
   - 自发出进入 D0 请求以来已过去至少 D3Hot to D0 Time。D3Hot to D0 Time 是 (1) 与 VF 关联的 Readiness Time Reporting 能力中的 D3Hot to D0 Time,或 (2) 由系统软件/固件确定的值。
 
-PF 的电源管理状态 (D 状态) 对其关联的 VF 具有全局影响。如果 VF 未实现 PCI 电源管理能力，则它表现得好像处于其关联 PF 的等效电源状态。
+PF 的电源管理状态 (D 状态) 对其关联的 VF 具有全局影响。如果 VF 未实现 PCI 电源管理能力,则它表现得好像处于其关联 PF 的等效电源状态。
 
-如果 VF 实现了 PCI 电源管理能力，则当 PF 被置于比 VF 更低的电源状态时，设备行为未定义。软件应通过在降低其关联 PF 的电源状态之前将所有 VF 置于低电源状态来避免这种情况。
+如果 VF 实现了 PCI 电源管理能力,则当 PF 被置于比 VF 更低的电源状态时,设备行为未定义。软件应通过在降低其关联 PF 的电源状态之前将所有 VF 置于低电源状态来避免这种情况。
 
 当 PF 被置于 D3Hot 状态时:
 
-- 如果 No_Soft_Reset 位清零，则 PF 在 D3Hot 到 D0 转换时执行内部复位，其所有配置状态返回默认值。
-  - 注意: 复位 PF 会复位 VF Enable,这意味着 VF 不再存在，并且在 D3Hot 到 D0 转换完成后，任何 VF 特定的上下文都将丢失。
-- 如果 No_Soft_Reset 位置位，则不会发生内部复位。SR-IOV 扩展能力保持状态，且关联的 VF 保持使能。
+- 如果 No_Soft_Reset 位清零,则 PF 在 D3Hot 到 D0 转换时执行内部复位,其所有配置状态返回默认值。
+  - 注意: 复位 PF 会复位 VF Enable,这意味着 VF 不再存在,并且在 D3Hot 到 D0 转换完成后,任何 VF 特定的上下文都将丢失。
+- 如果 No_Soft_Reset 位置位,则不会发生内部复位。SR-IOV 扩展能力保持状态,且关联的 VF 保持使能。
 
-当 PF 被置于 D3Cold 状态时,VF 不再存在，任何 VF 特定的上下文都将丢失，且 PME 事件只能由 PF 启动。
+当 PF 被置于 D3Cold 状态时,VF 不再存在,任何 VF 特定的上下文都将丢失,且 PME 事件只能由 PF 启动。
 
 </td>
 </tr>
@@ -4030,7 +4012,7 @@ The shaded regions in § Figure 5-19 illustrate what is discussed in this sectio
 </td>
 <td style="background-color:#e8e8e8">
 
-在操作系统的指导下进行电源管理时，每个 Function 类必须具有明确定义的标准，用于功能可用性以及在每个电源管理状态中运行时必须保留哪些功能上下文。ACPI 规范已为从音频到网络扩展卡等各种 Function 提出了一些设备类规范示例。虽然为大多数 Function 定义设备类特定的行为策略超出本规范的范围，但定义 PCI 桥 Function 的必需行为在本规范范围内。此处的定义适用于所有三种类型的 PCIe 桥:
+在操作系统的指导下进行电源管理时,每个 Function 类必须具有明确定义的标准,用于功能可用性以及在每个电源管理状态中运行时必须保留哪些功能上下文。ACPI 规范已为从音频到网络扩展卡等各种 Function 提出了一些设备类规范示例。虽然为大多数 Function 定义设备类特定的行为策略超出本规范的范围,但定义 PCI 桥 Function 的必需行为在本规范范围内。此处的定义适用于所有三种类型的 PCIe 桥:
 
 - Host 桥、PCI Express 到扩展总线桥或其他 ACPI 枚举的桥
 - Switch
@@ -4043,8 +4025,8 @@ The shaded regions in § Figure 5-19 illustrate what is discussed in this sectio
 
 § 图 5-19 中的阴影区域说明了本节讨论的内容。
 
-> **实现说明 (IMPLEMENTATION NOTE): 强烈建议置位 NO_SOFT_RESET**
-> 强烈建议在多功能设备的所有 Function 中置位 No_Soft_Reset 位。如位定义所示，所有支持 Flit 模式的实现都需要置位 No_Soft_Reset 位。此建议也适用于 PF。
+> **实现注: 强烈建议置位 NO_SOFT_RESET**
+> 强烈建议在多功能设备的所有 Function 中置位 No_Soft_Reset 位。如位定义所示,所有支持 Flit 模式的实现都需要置位 No_Soft_Reset 位。此建议也适用于 PF。
 
 </td>
 </tr>
@@ -4075,7 +4057,6 @@ The shaded regions in § Figure 5-19 illustrate what is discussed in this sectio
 <td>
 
 > **Figure 5-19.** PCI Express Bridge Power Management Diagram
-> **图 5-19.** PCI Express 桥接电源管理图
 
 > <img src="figures/chapter_05/fig_0705_1_tight.png" width="700">
 
@@ -4108,7 +4089,7 @@ In PCI Express, after main power has been restored and the Link is trained, the 
 <td style="background-color:#e8e8e8">
 
 
-从 § 图 5-19 可以看出，从操作系统的角度来看，本章描述的 PCI Express 桥行为对于 Host 桥、Switch 和 PCI Express 到 PCI 桥是通用的。
+从 § 图 5-19 可以看出,从操作系统的角度来看,本章描述的 PCI Express 桥行为对于 Host 桥、Switch 和 PCI Express 到 PCI 桥是通用的。
 
 系统软件有责任确保对给定总线及驻留在该总线上的所有 Function,仅使用有效、可工作的总线和下游 Function 电源管理状态组合。
 
@@ -4125,11 +4106,11 @@ Switch 或 PCI Express 到 PCI 桥的辅助总线的电源管理策略与为任�
 
 PME 生成事件用于向系统标识请求打开电源的 Function。
 
-在传统 PCI 中，两种事件都与 PME# 信号关联。PME# 信号由 Function 断言以请求其电源管理状态的更改。当 PME_En 位置位且事件发生时,Function 置位 PME_Status 位并断言 PME# 信号。它保持 PME# 信号被断言，直到 PME_En 位或 PME_Status 被清零 (通常由软件清零)。
+在传统 PCI 中,两种事件都与 PME# 信号关联。PME# 信号由 Function 断言以请求其电源管理状态的更改。当 PME_En 位置位且事件发生时,Function 置位 PME_Status 位并断言 PME# 信号。它保持 PME# 信号被断言,直到 PME_En 位或 PME_Status 被清零 (通常由软件清零)。
 
-在 PCI Express 中，唤醒事件与 WAKE# 信号关联。如果支持,WAKE# 信号在关联的外形规格规范中定义，用于在 Function 处于 D3Cold 且 PME_En 置位时请求其 PCI-PM 电源管理状态的更改。
+在 PCI Express 中,唤醒事件与 WAKE# 信号关联。如果支持,WAKE# 信号在关联的外形规格规范中定义,用于在 Function 处于 D3Cold 且 PME_En 置位时请求其 PCI-PM 电源管理状态的更改。
 
-在 PCI Express 中，在主电源已恢复且链路已训练之后，启动唤醒的 Function (即断言 WAKE# 的 Function) 向根复合体发送 PM_PME 报文。PM_PME 报文向根复合体提供请求 Function 的标识，而不需要软件轮询 PME_Status 位是否被置位。
+在 PCI Express 中,在主电源已恢复且链路已训练之后,启动唤醒的 Function (即断言 WAKE# 的 Function) 向根复合体发送 PM_PME 报文。PM_PME 报文向根复合体提供请求 Function 的标识,而不需要软件轮询 PME_Status 位是否被置位。
 
 <img src="figures/chapter_05/fig_0705_1_tight.png" width="700">
 </td>
