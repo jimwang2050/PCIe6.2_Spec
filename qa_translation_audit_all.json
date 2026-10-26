@@ -1,0 +1,5514 @@
+{
+  "chapters": {
+    "ch01": {
+      "file": "PCIe6.2_Spec_ch01_Introduction_引言.md",
+      "stats": {
+        "pairs": 24,
+        "missing_zh": 0,
+        "missing_en": 0,
+        "flag_counts": {}
+      },
+      "findings": []
+    },
+    "ch02": {
+      "file": "PCIe6.2_Spec_ch02_Transaction_Layer_Specification_事务层规范.md",
+      "stats": {
+        "pairs": 240,
+        "missing_zh": 0,
+        "missing_en": 0,
+        "flag_counts": {
+          "empty_zh_cell": 2,
+          "en_cell_swallowed": 5,
+          "heading_in_cell": 5,
+          "ascii_comma": 6,
+          "english_leak": 4,
+          "short_ratio": 2,
+          "untranslated": 2,
+          "numbers_missing": 1
+        }
+      },
+      "findings": [
+        {
+          "line": 5218,
+          "type": "empty_zh_cell",
+          "detail": "TPH Rules"
+        },
+        {
+          "line": 5562,
+          "type": "empty_zh_cell",
+          "detail": "Flit Mode"
+        },
+        {
+          "line": 7345,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 774 chars, structure inside"
+        },
+        {
+          "line": 7345,
+          "type": "heading_in_cell",
+          "detail": "### 2.2.8.8 Latency Tolerance Reporting (LTR) Message | 延迟容忍度上报 (LTR) 消息"
+        },
+        {
+          "line": 7406,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 831 chars, structure inside"
+        },
+        {
+          "line": 7406,
+          "type": "heading_in_cell",
+          "detail": "### 2.2.8.9 Optimized Buffer Flush/Fill (OBFF) Message | 优化的缓冲区冲刷/填充 (OBFF) 消息"
+        },
+        {
+          "line": 7473,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 1304 chars, structure inside"
+        },
+        {
+          "line": 7473,
+          "type": "heading_in_cell",
+          "detail": "### 2.2.8.10 Precision Time Measurement (PTM) Messages | 精确时间测量 (PTM) 消息"
+        },
+        {
+          "line": 7547,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 1190 chars, structure inside"
+        },
+        {
+          "line": 7547,
+          "type": "heading_in_cell",
+          "detail": "### 2.2.8.11 Integrity and Data Encryption (IDE) Messages | 完整性与数据加密 (IDE) 消息"
+        },
+        {
+          "line": 7923,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 685 chars, structure inside"
+        },
+        {
+          "line": 7923,
+          "type": "heading_in_cell",
+          "detail": "### 2.2.9.2 Completion Rules for Flit Mode | Flit 模式下的完成规则"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=15 ，=8",
+          "line": 1744,
+          "en": "**For OHC-C:** - The Requester Segment field is Reserved when RSV is Clear. - IDE TLPs must include OHC-C. - If Sub-Stream is 000b, 001b, or 010b, the PR_Sent_C",
+          "zh": "**关于 OHC-C:** - 当 RSV 清零时,Requester Segment 字段保留。 - IDE TLP 必须包含 OHC-C。 - 如果 Sub-Stream 为 000b、001b 或 010b,PR_Sent_Counter、Stream_ID、K 和 T 字段有意义 (见 § 第 6.33.5 节"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "No NFM Subtree Below This Root Port",
+            "No NFM Subtree Below This Root Port",
+            "No NFM Subtree Below This Root Port"
+          ],
+          "line": 1962,
+          "en": "- It is not permitted to configure a Selective IDE Stream passing peer-to-peer between different Hierarchies unless it is known that the RC supports flow-throug",
+          "zh": "- 除非已知 RC 支持两个根端口之间的 flow-through IDE,且两个 Partner Port 之间路径上的所有链路 (包括两个根端口) 都处于 FM 模式，否则不允许配置在不同层级之间点对点传递的 Selective IDE Stream。 - 根复合体不需要支持通过 RC 点对点传递的 Selecti"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Header Field Locations for non-ARI ID Routing",
+            "Header Field Locations for ARI ID Routing"
+          ],
+          "line": 2948,
+          "en": "- In FM, Completions and ID Routed Messages with a different destination Hierarchy than the Hierarchy in which they originate must be routed to the destination ",
+          "zh": "- 在 FM 下，目标层级 (Hierarchy) 与发起层级不同的完成报文和 ID 路由消息，必须先使用目标段 (Destination Segment) 字段路由至目标层级，然后再通过目标 Bus、Device 和 Function 号在目标层级内进行路由。 - 在 NFM 下，规定了两种 ID 路由格式:一种使用"
+        },
+        {
+          "type": "short_ratio",
+          "detail": "ZH/EN=0.13",
+          "line": 6486,
+          "en": "| ECS | 编码 | 描述 | |-----|------|------| | 00 | ECS Legacy (传统) | 如果 Requester 不支持 ECS 能力时默认使用的值。支持 ECS 的 Requester 不得使用此值。参见 § 7.5.3.3 节。 | | 01 | ECS SIG_SFW |",
+          "zh": "Unlock 消息用于支持 Lock 事务序列。有关 Lock 事务序列的详细信息，请参见 § 6.5 节。Unlock 消息的构成需遵循以下规则："
+        },
+        {
+          "type": "short_ratio",
+          "detail": "ZH/EN=0.10",
+          "line": 7231,
+          "en": "The format of the Hierarchy ID Message is shown in § Figure 2-61 and § Figure 2-62 below: > **Figure 2-61.** Hierarchy ID Message - Non-Flit Mode > > **Figure 2",
+          "zh": "层级 ID 消息的格式见下方 § 图 2-61 和 § 图 2-62："
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=5 ，=2",
+          "line": 8102,
+          "en": "- UR if any of the UIO Completions have UR Completion Status, or a Reserved Completion Status - CA if none of the UIO Completions have UR Completions Status, an",
+          "zh": "- 若任一 UIO 完成报文的 Completion Status 为 UR 或为保留的 Completion Status,则合并后为 UR - 若无 UIO 完成报文的 Completion Status 为 UR,但任一为 CA,则合并后为 CA - 若无 UIO 完成报文的 Completion Status "
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=6 ，=2",
+          "line": 8150,
+          "en": "In NFM, the following rules apply to any TLP that contains a TLP Prefix: - For any TLP, a value of 100b in the Fmt[2:0] field in byte 0 of the TLP indicates the",
+          "zh": "在 NFM 中，以下规则适用于任何包含 TLP Prefix 的 TLP: - 对于任何 TLP,TLP 第 0 字节中 Fmt[2:0] 字段为 100b 表示该 TLP 包含一个 TLP Prefix,Type[4] 位指示该 TLP Prefix 的类型。 - Type[4] 位为 0b 表示存在 Local T"
+        },
+        {
+          "type": "untranslated",
+          "detail": "EN 257 chars, ZH CJK 4",
+          "line": 8641,
+          "en": "| Byte | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 | |------|---|---|---|---|---|---|---|---| | +0 | R | R | R | R | R | R | R | R | | +1 | R | R | R | R | R | R | R | R | ",
+          "zh": "| 字节 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 | |------|---|---|---|---|---|---|---|---| | +0 | R | R | R | R | R | R | R | R | | +1 | R | R | R | R | R | R | R | R | | "
+        },
+        {
+          "type": "untranslated",
+          "detail": "EN 277 chars, ZH CJK 6",
+          "line": 8684,
+          "en": "| Byte | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 | |------|---|---|---|---|---|---|---|---| | +0 | R | R | R | R | R | R | R | R | | +1 | R | R | R | R | R | R | R | R | ",
+          "zh": "| 字节 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 | |------|---|---|---|---|---|---|---|---| | +0 | R | R | R | R | R | R | R | R | | +1 | R | R | R | R | R | R | R | R | | "
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "WHEN REQUESTS ARE TERMINATED USING UNSUPPORTED REQUEST"
+          ],
+          "line": 9218,
+          "en": "- In Flit Mode, if the Receiver is the ultimate destination of the TLP, and the Type value is defined in § Table 2-3 as a Reserved value, the Request must be di",
+          "zh": "- 在 Flit 模式下，如果接收器是 TLP 的最终目的地，并且 Type 值在 § Table 2-3 中被定义为 Reserved 值，则必须在更新流控信用 (flow control credits) 之后丢弃该请求。 - 如果请求是消息 (Message)，且 Message Code、路由字段或 Msg /"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "RESTRICTED PROGRAMMING MODEL FOR MEETING THE POSTED REQUEST ACCEPTANCE LIMIT"
+          ],
+          "line": 9426,
+          "en": "Request is never initiated to the Endpoint either by software or by other devices while the Endpoint is unable to accept a new Posted Request within the necessa",
+          "zh": "Request 既不会被软件也不会被其他设备发起到端点。 - 以下不被视为适用 Posted Request Acceptance Limit 的正常操作条件: - 基本复位 (Fundamental Reset) 之后的紧接时段(参见 § Section 6.6) - TLP 重传或链路重训练 (Link retra"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=43 ，=10",
+          "line": 9918,
+          "en": "- UIO Read Completions must follow the same rules as non-UIO Read Completions, with the following exceptions: - Multiple UIO Read Completions for a single UIO R",
+          "zh": "- UIO 读完成报文必须遵循与非 UIO 读完成报文相同的规则，但有以下例外: - 允许以任意地址顺序返回单个 UIO 读请求的多个 UIO 读完成报文。 > **实现说明:受限编程模型** > 当设备的编程模型对指向该设备的读请求的大小和/或对齐有所限制(相对于 PCI Express 中通常所允许的)时，允许该设"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=9 ，=5",
+          "line": 10341,
+          "en": "**Explanation of the row and column headers in § Table 2-42:** A Posted Request is a Memory Write Request or a Message Request. A Read Request is a Configuratio",
+          "zh": "**§ Table 2-42 中行和列表头的解释:** Posted Request 是内存写请求或消息请求。 Read Request 是配置读请求、I/O 读请求或内存读请求。 带数据的 NPR(Non-Posted Request with Data)是配置写请求、I/O 写请求、AtomicOp 请求或 DMW"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=6 ，=3",
+          "line": 10473,
+          "en": "- The No Snoop bit does not affect the required ordering behavior. - For Root Ports and Switch Downstream Ports, acceptance of a Posted Request or Completion mu",
+          "zh": "- No Snoop 位不影响所要求的排序行为。 - 对于根端口和交换机下游端口,Posted Request 或 Completion 的接收不得依赖于同一流量类内 Non-Posted Request 的发送。 41 - 对于交换机上游端口,Posted Request 或 Completion 的接收不得依赖于在"
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "2.5": 1,
+            "5.0": 1,
+            "8.0": 1
+          },
+          "line": 12882,
+          "en": "**Table 2-52 Maximum UpdateFC Transmission Latency Guidelines for 2.5 GT/s (Symbol Times) | 表 2-52 2.5 GT/s 下最大 UpdateFC 发送延迟指南 (Symbol Times)** | Rx_MPS_Limit ",
+          "zh": "**Table 2-52 2.5 GT/s 下最大 UpdateFC 发送延迟指南 (Symbol Times)** | Rx_MPS_Limit (字节) | x1 | x2 | x4 | x8 | x12 | x16 | x32 | |----------------------|----|----|----|--"
+        }
+      ]
+    },
+    "ch03": {
+      "file": "PCIe6.2_Spec_ch03_Data_Link_Layer_Specification_数据链路层规范.md",
+      "stats": {
+        "pairs": 27,
+        "missing_zh": 0,
+        "missing_en": 0,
+        "flag_counts": {
+          "english_leak": 1,
+          "ascii_comma": 1
+        }
+      },
+      "findings": [
+        {
+          "type": "english_leak",
+          "detail": [
+            "Data Link Control and Management State Machine, DLCMSM"
+          ],
+          "line": 200,
+          "en": "- Data integrity checking for TLPs and Data Link Layer Packets (DLLPs) - Positive and negative acknowledgement DLLPs - Error indications for error reporting and",
+          "zh": "- 对 TLP 和数据链路层包 (Data Link Layer Packets, DLLP) 进行数据完整性检查 - 肯定与否定确认 DLLP - 用于错误报告和记录机制的错误指示 - 链路确认超时 (Link Acknowledgement Timeout) 重放机制 **初始化与电源管理 (Initializat"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=5 ，=3",
+          "line": 2191,
+          "en": "Since Ack/Nak and Flow Control DLLPs affect TLPs flowing in the opposite direction across the Link, the TLP transmission mechanisms in the Data Link Layer are a",
+          "zh": "由于 Ack/Nak 和流控 DLLP 影响跨链路上反方向流动的 TLP,因此数据链路层中的 TLP 发送机制也负责处理从链路上对端组件接收到的 Ack/Nak 和流控 DLLP。这些 DLLP 按以下规则处理(见 § Figure 3-20): - 如果物理层指示接收器错误 (Receiver Error)，则丢弃当"
+        }
+      ]
+    },
+    "ch04": {
+      "file": "PCIe6.2_Spec_ch04_Physical_Layer_Logical_Block_物理层逻辑块.md",
+      "stats": {
+        "pairs": 399,
+        "missing_zh": 0,
+        "missing_en": 0,
+        "flag_counts": {
+          "empty_zh_cell": 3,
+          "en_cell_swallowed": 4,
+          "heading_in_cell": 3,
+          "numbers_missing": 3,
+          "ascii_comma": 26,
+          "english_leak": 11,
+          "untranslated": 1
+        }
+      },
+      "findings": [
+        {
+          "line": 440,
+          "type": "empty_zh_cell",
+          "detail": "(no content)"
+        },
+        {
+          "line": 8873,
+          "type": "empty_zh_cell",
+          "detail": ""
+        },
+        {
+          "line": 13993,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 3121 chars, structure inside"
+        },
+        {
+          "line": 13993,
+          "type": "heading_in_cell",
+          "detail": "## 4.2.7.4 Recovery | Recovery 状态"
+        },
+        {
+          "line": 14399,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 3887 chars, structure inside"
+        },
+        {
+          "line": 14399,
+          "type": "heading_in_cell",
+          "detail": "## 4.2.7.4.2 Recovery.Equalization | Recovery.Equalization 子状态"
+        },
+        {
+          "line": 14459,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 2468 chars, structure inside"
+        },
+        {
+          "line": 14459,
+          "type": "heading_in_cell",
+          "detail": "## 4.2.7.4.2.1 Downstream Lanes | Downstream 通道"
+        },
+        {
+          "line": 15734,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 8095 chars, structure inside"
+        },
+        {
+          "line": 17426,
+          "type": "empty_zh_cell",
+          "detail": "L1"
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "2.5": 1
+          },
+          "line": 664,
+          "en": "The 8b/10b encoding scheme provides Special Symbols that are distinct from the Data Symbols used to represent Characters. These Special Symbols are used for var",
+          "zh": "8b/10b 编码方案提供了一组与表示字符的数据符号 (Data Symbols) 不同的特殊符号 (Special Symbols)。这些特殊符号用于本章后述的各种链路管理 (Link Management) 机制。在非 Flit 模式中，特殊符号还用于对 DLLP 和 TLP 进行成帧 (Framing)，使用不同"
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "130": 2
+          },
+          "line": 1144,
+          "en": "> **IMPLEMENTATION NOTE:** > **DISABLING SCRAMBLING** > > Disabling scrambling is intended to help simplify test and debug equipment. Control of the exact data ",
+          "zh": "> **实现提示 (IMPLEMENTATION NOTE):** > **禁用加扰 (DISABLING SCRAMBLING)** > > 禁用加扰的目的是简化测试和调试设备。对精确数据模式的控制在测试与调试环境中非常有用。由于加扰在物理层被复位，无法通过软件以合理方式可靠地控制数据转换的状态。因此,TS1 与 T"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=4 ，=2",
+          "line": 1423,
+          "en": "**Table 4-4 Framing Token Encoding | 表 4-4 帧定界符编码** | Framing Token | Type | Description | |---|---|---| | **IDL** | Logical Idle | Logical Idle. The Framing To",
+          "zh": "**Table 4-4 Framing Token Encoding | 表 4-4 帧定界符编码** | 帧定界符 | 类型 | 描述 | |---|---|---| | **IDL** | 逻辑空闲 (Logical Idle) | 逻辑空闲。该帧定界符为 1 个 Symbol。当没有 TLP、DLLP 或其他帧定"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=4 ，=1",
+          "line": 5514,
+          "en": "- Processing of received Ack or Nak Flits must not interrupt a replay in progress. - Handling an invalid Flit Sequence Number in a received Ack Flit or Nak Flit",
+          "zh": "- 对已接收 Ack 或 Nak Flit 的处理不得打断正在进行的重放。 - 处理已接收 Ack Flit 或 Nak Flit 中无效的 Flit Sequence Number: - 如果: - 收到一个有效的 Ack Flit 或 Nak Flit,其 Flit Sequence Number N 满足以下条件"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=27 ，=3",
+          "line": 6677,
+          "en": "Consider two devices A and B connected through a Retimer, as shown in § Figure 4-34. 1. Both Device A and Device B are in the Normal Flit Exchange Phase 2. B re",
+          "zh": "考虑通过 Retimer 连接的两个设备 A 和 B,如图 § Figure 4-34 所示。 1. 设备 A 和设备 B 均处于 Normal Flit Exchange Phase。 2. B 收到来自 A 的有效 Payload Flit 1 至 10。B 向 A 发送这些 Flit 的 Ack。(Ack Sch"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=36 ，=25",
+          "line": 6840,
+          "en": "The CRC generator polynomial, defined over GF(28), is g(x) = (x+α)(x+α2)… (x+α8), where α is the root of the primitive polynomial of degree 8: x8+x5+x3+x+1. Thu",
+          "zh": "CRC 生成多项式在 GF(28) 上定义，为 g(x) = (x+α)(x+α2)…(x+α8)，其中 α 是 8 次本原多项式 x8+x5+x3+x+1 的根。因此,g(x) = x8+ α172 x7 + α116 x6 + α186 x5+ α172 x4+ α195 x3+ α134 x2+ α199 x+ "
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=11 ，=7",
+          "line": 7226,
+          "en": "For 0 ≤ i ≤ 249, - Byte i in Flit is mapped to ECC Group i mod 3 - with Byte Offset floor(i/3) - ECC Group 1 Byte Offset 83 is 0 - ECC Group 2 Byte Offset 83 is",
+          "zh": "对于 0 ≤ i ≤ 249: - Flit 中的字节 i 映射到 ECC Group i mod 3 - 字节偏移为 floor(i/3) - ECC Group 1 的 Byte Offset 83 为 0 - ECC Group 2 的 Byte Offset 83 为 0 对于 250 ≤ i ≤ 255(即 "
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=4 ，=0",
+          "line": 7430,
+          "en": "**Table 4-21 Ordered Set insertion interval once Data Stream starts in terms of number of Flits** | Link Width and Clocking Modes | x16 | x8 | x4 | x2 | x1 | |-",
+          "zh": "**表 4-21 数据流开始后按 Flit 数计的有序集插入间隔** | 链路宽度与时钟模式 | x16 | x8 | x4 | x2 | x1 | |---|---|---|---|---|---| | 共同时钟/SRNS 模式,1b/1b 编码 | 748 | 374 | 187 | 93 | 46 | | 共同时"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Equalization Bypass to Highest NRZ Rate Support",
+            "Equalization Bypass to Highest NRZ Rate Disable",
+            "Equalization Bypass to Highest NRZ Rate Disable"
+          ],
+          "line": 7532,
+          "en": "Normally, equalization is performed at a higher data rate only if equalization has successfully completed at all lower data rates above 5.0 GT/s. For example, a",
+          "zh": "通常，只有在 5.0 GT/s 以上的所有较低数据速率上均衡已成功完成时，才在更高的数据速率上执行均衡。例如，链路将依次在 8.0 GT/s、16.0 GT/s、32.0 GT/s、64.0 GT/s 成功完成均衡。然而，如果所有组件都支持 32.0 GT/s 或更高的数据速率，并且该机制得到链路中所有组件的支持(如 "
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Equalization Bypass to Highest NRZ Rate Supported",
+            "Equalization Bypass to Highest NRZ Rate Disable"
+          ],
+          "line": 7626,
+          "en": "When using the software based mechanism, software must guarantee that there will be no side-effects for transactions in flight (e.g., no timeout), if any, due t",
+          "zh": "使用基于软件的机制时，软件必须保证正在进行的交易(若有)不会因链路正在进行均衡过程而产生副作用(例如，不会超时)。软件可向 Link Control 3 寄存器中的 Perform Equalization 位写 1b,然后向 Link Control 2 寄存器中的 Target Link Speed 字段写入以使链"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Equalization Bypass to Highest NRZ Rate Supported",
+            "Equalization Bypass to Highest NRZ Rate Disable"
+          ],
+          "line": 7795,
+          "en": "> **IMPLEMENTATION NOTE:** > **USING QUIESCE GUARANTEE MECHANISM** > > Side-effects due to executing equalization after the Data Link Layer is in DL_Active can ",
+          "zh": "> **实现注意 (IMPLEMENTATION NOTE):** > **使用 QUIESCE GUARANTEE 机制** > > 在数据链路层 (Data Link Layer) 处于 DL_Active 之后执行均衡所引起的副作用可能发生在端口、设备或系统级别。例如，执行均衡过程所需的时间可能导致完成超时 (C"
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "64.0": 2
+          },
+          "line": 8088,
+          "en": "> **Figure 4-44.** 64.0 GT/s Equalization Flow > > **图 4-44.** 64.0 GT/s 均衡 流 > **Description of Figure 4-44 (64.0 GT/s Equalization Flow):** *Phase 0: 128b/130",
+          "zh": "**图 4-44 说明(64.0 GT/s 均衡流程):** *阶段 0 (Phase 0):从 Downstream Port 向 Upstream Port 发送 128b/130b EQ TS2 有序集。* *阶段 1 (Phase 1):双方交换 TS0 有序集以建立可运行的链路。每 32 个 TS0 有序集发"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=11 ，=3",
+          "line": 8088,
+          "en": "> **Figure 4-44.** 64.0 GT/s Equalization Flow > > **图 4-44.** 64.0 GT/s 均衡 流 > **Description of Figure 4-44 (64.0 GT/s Equalization Flow):** *Phase 0: 128b/130",
+          "zh": "**图 4-44 说明(64.0 GT/s 均衡流程):** *阶段 0 (Phase 0):从 Downstream Port 向 Upstream Port 发送 128b/130b EQ TS2 有序集。* *阶段 1 (Phase 1):双方交换 TS0 有序集以建立可运行的链路。每 32 个 TS0 有序集发"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=10 ，=7",
+          "line": 8181,
+          "en": "The explanation of the coefficients and the FIR filter it represents are provided in Section 8.3.3.1. The following rules apply to both the advertised as well a",
+          "zh": "关于系数及其所代表的 FIR 滤波器的说明，请参见 § Section 8.3.3.1。以下规则适用于通告的以及请求的系数设置。 1. C-2、C-1 和 C+1 是 FIR 等式中使用的系数，分别表示第二前游标 (2nd pre-cursor)、前游标 (pre-cursor) 和后游标 (post-cursor)。"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "LTSSM, Link Training and Status State Machine"
+          ],
+          "line": 10164,
+          "en": "The LTSSM states are illustrated in § Figure 4-49. These states are described in following sections. All timeout values specified for the Link Training and Stat",
+          "zh": "LTSSM 状态如 § 图 4-49 所示。这些状态将在后续章节中描述。 除非另有明确说明，链路训练与状态机 (LTSSM, Link Training and Status State Machine) 所规定的所有超时值均允许负 0 秒、正 50% 的偏差。所有超时值必须在基本复位 (Fundamental Res"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=4 ，=2",
+          "line": 10637,
+          "en": "--- The following rules must be followed for L0p: - If the Hardware Autonomous Width Disable bit in the Link Control register is set to 1b or if the L0p Enable ",
+          "zh": "--- L0p 必须遵循以下规则: - 如果 Link Control 寄存器中的 Hardware Autonomous Width Disable 位置 1b,或 L0p Enable 位置 0b,则端口: - 不得请求任何 down-size。 - 如果链路未处于完全配置的宽度，则必须发起 up-size 请求以"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=5 ，=0",
+          "line": 10909,
+          "en": "--- **Table 4-44 Link Management DLLP** | Field | Description | |-------|-------------| | Byte 0 | Link Management DLLP - must be 0010 1000b | | Byte 1 | Link M",
+          "zh": "--- **Table 4-44 Link Management DLLP | 表 4-44 Link Management DLLP** | 字段 | 描述 | |-------|-------------| | Byte 0 | Link Management DLLP - 必须为 0010 1000b | | B"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=4 ，=1",
+          "line": 10995,
+          "en": "--- | Field | Description | |-------|-------------| | Byte 3, Bits [3:0] | Meaning of this field varies by L0p.Cmd value | | | If L0p.Cmd is: L0p Request - L0p ",
+          "zh": "--- | 字段 | 描述 | |-------|-------------| | Byte 3, Bits [3:0] | 此字段的含义因 L0p.Cmd 值而异 | | | 若 L0p.Cmd 为:L0p Request - L0p Link Width - 期望的链路宽度 | | | 0001b - x1 | |"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=5 ，=3",
+          "line": 12090,
+          "en": "Subsequent entries to Polling.Compliance repeat the above sequence. For example, the state sequence which causes a Port to transmit the Compliance Pattern at a ",
+          "zh": "后续进入 Polling.Compliance 时重复上述序列。例如，使端口以 5.0 GT/s 数据速率和 -6 dB 去加重电平发送一致性测试码型的状态序列为:Polling.Active, Polling.Compliance(2.5 GT/s 且 -3.5 dB),Polling.Active, Polling"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "NEGOTIATING FLIT MODE AND THE MODIFIED TS"
+          ],
+          "line": 13092,
+          "en": "- LinkUp = 0b - The component has transmitted Modified TS1/TS2 Ordered Sets supported value (11b) in the Enhanced Link Behavior Control field in Symbol 5 of all",
+          "zh": "- LinkUp = 0b - 组件自进入 Polling 状态以来，在 Polling 和 Configuration 状态期间，在所有 TS1 和 TS2 有序集的 Symbol 5 中的 Enhanced Link Behavior Control 字段中已发送 Modified TS1/TS2 有序集支持值(1"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Equalization Bypass to Highest NRZ Rate bit"
+          ],
+          "line": 13777,
+          "en": "- When using 8b/10b encoding, the Transmitter sends Idle data Symbols on all configured Lanes in Non-Flit Mode and IDLE Flits across all configured Lanes in Fli",
+          "zh": "- 使用 8b/10b 编码时，发送器在非 Flit 模式 (Non-Flit Mode) 下在所有已配置通道上发送 Idle 数据 Symbol；在 Flit 模式下在所有已配置通道上发送 IDLE Flit。 - 若 LinkUp = 0b 且链路上所有组件均支持 64.0 GT/s 数据速率（依据进入 Confi"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "RECOMMENDED MECHANISM FOR LINK WIDTH REDUCTION IN FLIT MODE"
+          ],
+          "line": 14349,
+          "en": "matches what is being transmitted on the same Lane. See § Section 4.2.7 for more on Matching Link and Lane Numbers for 1b/1b Encoding. - Either of the following",
+          "zh": "与在同一通道上正在发送的 Lane 号相匹配。1b/1b 编码下 Link 号与 Lane 号匹配的更多信息见 § 4.2.7。 - 以下条件之一成立： - 当前运行的数据速率大于 2.5 GT/s。 - 所发送 TS1 Ordered Set 与所接收（8 个连续）TS1 或 TS2 Ordered Set 的 Da"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=13 ，=11",
+          "line": 14617,
+          "en": "4. Else, if the Transmitter preset setting specified by the Downstream Port 8.0 GT/s Transmitter Preset field of the Lane Equalization Control Register Entry (f",
+          "zh": "4. 否则，如果由 Lane Equalization Control Register Entry 中的 Downstream Port 8.0 GT/s Transmitter Preset 字段(用于 8.0 GT/s 数据速率)、或 16.0 GT/s Lane Equalization Control Reg"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=13 ，=7",
+          "line": 14686,
+          "en": "- Note: A transition to Recovery.RcvrLock might be used in the case where the Downstream Port determines that Phase 2 and Phase 3 are not needed based on the pl",
+          "zh": "- 注意:在 Downstream Port 根据平台和通道特性确定不需要 Phase 2 和 Phase 3 的情况下，可能会使用到 Recovery.RcvrLock 的转换。 - 如果 perform_equalization_for_loopback 为 1b,则在 24 ms 超时后下一状态为 Loopbac"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=8 ，=7",
+          "line": 14974,
+          "en": "- The equalization_done_16GT_data_rate variable is set to 1b. - If the data rate of operation is 32.0 GT/s: - The Equalization 32.0 GT/s Phase 1 Successful, Equ",
+          "zh": "- equalization_done_16GT_data_rate 变量被设置为 1b。 - 如果运行数据速率为 32.0 GT/s: - 32.0 GT/s Status Register 中的 Equalization 32.0 GT/s Phase 1 Successful、Equalization 32.0 "
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=15 ，=11",
+          "line": 15041,
+          "en": "Ordered Sets (depending on the Data Rate) for the remainder of the Recovery.Equalization state is in reference to the presets determined above. In the TS1 Order",
+          "zh": "在 Recovery.Equalization 状态剩余时间内(根据数据速率)是参考上述确定的预设值。在 TS1 Ordered Sets 中,EC 字段被设置为 00b,每个 Lane 的 Transmitter Preset 位被设置为在 EQ TS2 Ordered Sets 或 128b/130b EQ TS2"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=22 ，=3",
+          "line": 15114,
+          "en": "- If the data rate is 16.0 GT/s, the Equalization 16.0 GT/s Complete bit of the 16.0 GT/s Status Register is set to 1b. - If the data rate is 32.0 GT/s, the Equ",
+          "zh": "- 如果数据速率为 16.0 GT/s,则 16.0 GT/s Status Register 中的 Equalization 16.0 GT/s Complete 位被设置为 1b。 - 如果数据速率为 32.0 GT/s,则 32.0 GT/s Status Register 中的 Equalization 32."
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=10 ，=5",
+          "line": 17228,
+          "en": "When using 128b/130b encoding: The N_FTS timeout shall be no shorter than 130*[N_FTS+5+12+Floor(N_FTS/32)]*UI and no longer than twice this amount for 8.0 GT/s ",
+          "zh": "使用 128b/130b 编码时:对于 8.0 GT/s 和 16.0 GT/s 数据速率,N_FTS 超时不得短于 130*[N_FTS+5+12+Floor(N_FTS/32)]*UI,且不得超过该值的两倍。对于 32.0 GT/s 及以上数据速率,N_FTS 超时不得短于 130*[N_FTS+10+12+2*F"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Separate Reference Clocks With No SSC, SRNS",
+            "Separate Reference Clocks with Independent SSC, SRIS"
+          ],
+          "line": 18182,
+          "en": "SKP Ordered Sets (defined in § Section 4.2.8.1 , § Section 4.2.8.2 , and § Section 4.2.8.3 ) are used to compensate for differences in frequencies between bit r",
+          "zh": "SKP Ordered Sets (定义见 § Section 4.2.8.1、§ Section 4.2.8.2 和 § Section 4.2.8.3) 用于补偿链路 (Link) 两端比特率之间的频率差异。接收器物理层逻辑子块必须包含弹性缓冲器以执行此补偿。SKP Ordered Set 发送间隔由 § Tabl"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=11 ，=8",
+          "line": 18182,
+          "en": "SKP Ordered Sets (defined in § Section 4.2.8.1 , § Section 4.2.8.2 , and § Section 4.2.8.3 ) are used to compensate for differences in frequencies between bit r",
+          "zh": "SKP Ordered Sets (定义见 § Section 4.2.8.1、§ Section 4.2.8.2 和 § Section 4.2.8.3) 用于补偿链路 (Link) 两端比特率之间的频率差异。接收器物理层逻辑子块必须包含弹性缓冲器以执行此补偿。SKP Ordered Set 发送间隔由 § Tabl"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=8 ，=0",
+          "line": 18442,
+          "en": "The 'Margin CRC[4:0]' is computed from Bits [6:0] in Symbols 4N+2 (referred to as d[6:0] in the equations below, where d[0] is Bit 0 of Symbol 4N+2, d[1] is Bit",
+          "zh": "\"Margin CRC[4:0]\" 由符号 4N+2 的位 [6:0](在以下公式中称为 d[6:0],其中 d[0] 是符号 4N+2 的位 0,d[1] 是符号 4N+2 的位 1,...,d[6] 是符号 4N+2 的位 6)和符号 4N+3 的位 [7:0](称为 d[14:7],其中 d[7] 是符号 4N+"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=51 ，=12",
+          "line": 19740,
+          "en": "The payload in each scrambled Block is the output of the scrambler in that Lane (i.e., input data is 0b), which are then gray-coded, and precoded, if performed,",
+          "zh": "每个经加扰的数据块的有效负载是该通道上加扰器的输出（即输入数据为 0b），随后按 § 图 4-22 所示执行格雷编码与预编码（如有）。用于确定加扰 LFSR 种子值的通道号取决于进入 Polling.Compliance 的方式。（关于通道号分配及其他加扰器要求，参见 § 4.2.2.4 节。）一致性测试码型的经加扰数"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=16 ，=11",
+          "line": 19859,
+          "en": "Lane Margining at Receiver, as defined in this section, is mandatory for all Ports supporting a data rate of 16.0 GT/s or higher, including Pseudo Ports (Retime",
+          "zh": "本节定义的 Lane Margining at Receiver(接收端通道裕量测试)对所有支持 16.0 GT/s 或更高数据速率的端口(包括 Pseudo Port,即 Retimer 上的伪端口)均为强制要求。Lane Margining at Receiver 使系统软件能够在链路处于 L0 状态时获取给定接收"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "POTENTIAL FUTURE USAGE OF CONTROL SKP ORDERED SET"
+          ],
+          "line": 19961,
+          "en": "**Usage Model:** An encoding of 0b indicates that the usage model is Lane Margining at Receiver. An encoding of 1b in this field is reserved for future usages. ",
+          "zh": "**Usage Model(使用模式):** 编码 0b 表示使用模式为 Lane Margining at Receiver。该字段的 1b 编码为未来用途保留(Reserved)。 若 Usage Model 字段为 1b,则 Symbol 4N+2 的 Bits [5:0] 与 Symbol 4N+3 的 Bit"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Step Margin to timing offset to right",
+            "Step Margin to voltage offset to up"
+          ],
+          "line": 20251,
+          "en": "For the Step Margin to timing offset to right/left of default command, the Margin Payload field is defined as follows: - **Margin Payload [7]:** Reserved. - **I",
+          "zh": "对于 \"Step Margin to timing offset to right/left of default\"(在默认位置基础上向左右进行时序偏移步进裕量)命令,Margin Payload 字段定义如下: - **Margin Payload [7]:** 保留(Reserved)。 - **若目标接收器的 M"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=4 ，=0",
+          "line": 20251,
+          "en": "For the Step Margin to timing offset to right/left of default command, the Margin Payload field is defined as follows: - **Margin Payload [7]:** Reserved. - **I",
+          "zh": "对于 \"Step Margin to timing offset to right/left of default\"(在默认位置基础上向左右进行时序偏移步进裕量)命令,Margin Payload 字段定义如下: - **Margin Payload [7]:** 保留(Reserved)。 - **若目标接收器的 M"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=6 ，=4",
+          "line": 20353,
+          "en": "- Every Retimer Upstream Pseudo Port Receiver and the Downstream Port Receiver must compute the Margin CRC and Margin Parity bits and compare against the receiv",
+          "zh": "- 每个 Retimer 的 Upstream Pseudo Port 接收器与 Downstream Port 接收器必须计算 Margin CRC 与 Margin Parity 位，并与接收到的 Margin CRC 与 Margin Parity 位进行比较。任何不匹配都必须导致忽略 Symbols 4N+2 "
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=14 ，=10",
+          "line": 20836,
+          "en": "a. If Margin Type = 010b, Receiver Number = target Receiver, and Margin Payload = Margin Payload control field (Bits [14:7]), go to Step B4 b. Else: If 10 ms ha",
+          "zh": "a. 若 Margin Type = 010b,Receiver Number = 目标接收器，且 Margin Payload = Margin Payload 控制字段(Bit [14:7])，则转到步骤 B4。 b. 否则:若自命令发出以来已过去 10 ms,则转到步骤 B3;否则等待 >10 μs 并转到步骤 "
+        },
+        {
+          "type": "untranslated",
+          "detail": "EN 350 chars, ZH CJK 9",
+          "line": 21215,
+          "en": "> **Figure 4-62.** Supported Retimer Topologies > > **图 4-62.** Supported Retimer (重定时器) Topologies > Diagram contents: - Upstream Component (RC or Switch) - Do",
+          "zh": "图示内容: - Upstream Component (RC 或 Switch) - Downstream Port - Upstream Port - Downstream Component (Endpoint 或 Switch) - Link Segment (链路段) - Upstream Pseudo Por"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=11 ，=6",
+          "line": 21318,
+          "en": "- RT_LinkUp = 0b - RT_number = undefined - RT_next_data_rate = 2.5 GT/s - RT_error_data_rate = 2.5 GT/s - RT_flit_mode_enabled = 0b The Retimer Transmitters and",
+          "zh": "- RT_LinkUp = 0b - RT_number = undefined (未定义) - RT_next_data_rate = 2.5 GT/s - RT_error_data_rate = 2.5 GT/s - RT_flit_mode_enabled = 0b 在 Fundamental Reset 处于"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "The next state of the Loopback Lead and Loopback Follower is Detect",
+            "s and then both Pseudo Ports are placed in Forwarding mode"
+          ],
+          "line": 23911,
+          "en": "The Pseudo Port that is not operating as the Loopback Follower must do the following: - Maintain the Transmitter in Electrical Idle. - Set the data rate to 2.5 ",
+          "zh": "不充当 Loopback Follower 的 Pseudo Port 必须执行以下操作： - 保持发送器处于电气空闲状态。 - 将数据速率设置为 2.5 GT/s。 - 接收器继续忽略输入的符号。 充当 Loopback Follower 的 Pseudo Port 的行为必须符合 § 4.2.7.10.3 节所述，"
+        }
+      ]
+    },
+    "ch05": {
+      "file": "PCIe6.2_Spec_ch05_Power_Management_电源管理.md",
+      "stats": {
+        "pairs": 54,
+        "missing_zh": 0,
+        "missing_en": 5,
+        "flag_counts": {
+          "table_structure": 5
+        }
+      },
+      "findings": [
+        {
+          "line": 3335,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[3346]"
+        },
+        {
+          "line": 3950,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[3961]"
+        },
+        {
+          "line": 3974,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[3985]"
+        },
+        {
+          "line": 4147,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[4158]"
+        },
+        {
+          "line": 4171,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[4182]"
+        },
+        {
+          "line": 3346,
+          "type": "missing_en"
+        },
+        {
+          "line": 3961,
+          "type": "missing_en"
+        },
+        {
+          "line": 3985,
+          "type": "missing_en"
+        },
+        {
+          "line": 4158,
+          "type": "missing_en"
+        },
+        {
+          "line": 4182,
+          "type": "missing_en"
+        }
+      ]
+    },
+    "ch06": {
+      "file": "PCIe6.2_Spec_ch06_System_Architecture_系统架构.md",
+      "stats": {
+        "pairs": 429,
+        "missing_zh": 0,
+        "missing_en": 3,
+        "flag_counts": {
+          "heading_in_cell": 2,
+          "table_structure": 3,
+          "empty_zh_cell": 4,
+          "en_cell_swallowed": 2,
+          "english_leak": 7,
+          "ascii_comma": 5
+        }
+      },
+      "findings": [
+        {
+          "line": 546,
+          "type": "heading_in_cell",
+          "detail": "### 6.1.1 Rationale for PCI Express Interrupt Model | PCI Express 中断模型的设计理由"
+        },
+        {
+          "line": 955,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[966]"
+        },
+        {
+          "line": 1025,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[1036]"
+        },
+        {
+          "line": 5757,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[5768]"
+        },
+        {
+          "line": 12349,
+          "type": "heading_in_cell",
+          "detail": "### 6.15.3.1 Root Ports with AtomicOp Completer Capabilities"
+        },
+        {
+          "line": 18523,
+          "type": "empty_zh_cell",
+          "detail": "This section has been removed."
+        },
+        {
+          "line": 18556,
+          "type": "empty_zh_cell",
+          "detail": "Removed"
+        },
+        {
+          "line": 19984,
+          "type": "empty_zh_cell",
+          "detail": "--- ---"
+        },
+        {
+          "line": 21020,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 12071 chars, structure inside"
+        },
+        {
+          "line": 21415,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 10391 chars, structure inside"
+        },
+        {
+          "line": 23363,
+          "type": "empty_zh_cell",
+          "detail": "Bits[2:0]"
+        },
+        {
+          "line": 966,
+          "type": "missing_en"
+        },
+        {
+          "line": 1036,
+          "type": "missing_en"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "AtomicOp, DMWr, or TLP Translation Egress Blocked",
+            "Poisoned TLP Received or Poisoned TLP Egress Blocked"
+          ],
+          "line": 2207,
+          "en": "- ECRC Check Failed - Misrouted IDE TLP - AtomicOp, DMWr, or TLP Translation Egress Blocked - TLP Prefix Blocked - ACS Violation - MC Blocked TLP - Unsupported ",
+          "zh": "- ECRC 检查失败 (ECRC Check Failed) - IDE TLP 路由错误 (Misrouted IDE TLP) - AtomicOp、DMWr 或 TLP 转换出口被阻止 (AtomicOp, DMWr, or TLP Translation Egress Blocked) - TLP 前缀被阻止"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Use of RP PIO Advisory Error Handling"
+          ],
+          "line": 4247,
+          "en": "Downstream Port Containment (DPC) is an optional normative feature of a Downstream Port. DPC halts PCI Express traffic below a Downstream Port after an unmasked",
+          "zh": "Downstream Port Containment (DPC, 下游端口遏制) 是 Downstream Port (下游端口) 的一项可选规范性特性。当在该 Port 处或之下检测到未屏蔽的不可纠正错误时,DPC 停止该 Downstream Port 下方的 PCI Express 流量，以避免任何数据损坏的潜"
+        },
+        {
+          "line": 5768,
+          "type": "missing_en"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "MULTI-FUNCTION DEVICES WITHOUT THE MFVC EXTENDED CAPABILITY STRUCTURE"
+          ],
+          "line": 5980,
+          "en": "Servicing isochronous data transfer requires a system to provide not only guaranteed data bandwidth but also deterministic service latency. The isochronous supp",
+          "zh": "为等时 (isochronous) 数据传输提供服务要求系统不仅提供保证的数据带宽，还要求提供确定性的服务延迟。等时支持机制的定义为:确保等时流量 (isochronous traffic) 在相关时间段内获得其分配的带宽，同时防止系统中其他流量出现饥饿 (starvation) 现象。等时支持机制适用于端点 (End"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Lane Margining at the Receiver Extended Capability"
+          ],
+          "line": 6974,
+          "en": "The FLR mechanism enables software to quiesce and reset Endpoint hardware with Function-level granularity. Three example usage models illustrate the benefits of",
+          "zh": "FLR 机制使软件能够以功能 (Function) 级别的粒度静默并复位端点硬件。三个示例使用模型说明了此功能带来的好处: - 在某些系统中，控制某个功能的软件实体可能停止正常运行。为防止数据损坏，有必要停止该功能正在执行的所有 PCI Express 操作和外部 I/O (非 PCI Express) 操作。其他已定"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Out of Band Power Limit PM Sub State power"
+          ],
+          "line": 9494,
+          "en": "There are alternate methods which may provide the same functionality, and it is not required that the power budgeting process be implemented in this manner. Whe",
+          "zh": "可能存在可提供相同功能的替代方法，功率预算流程不必按此方式实现。 当 Power Budgeting Extended Capability 出现在一个设备的多个 Function 中(或单功能设备的唯一 Function 中)时，按 Function 报告功率(参见 § Section 7.8.1 )。当 Power"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Out of Band Power Limit PM Sub State",
+            "Out of Band Power Limit PM Sub State"
+          ],
+          "line": 9605,
+          "en": "The Power Budgeting Data Register (see § Section 7.8.1.3) contains a PM Sub State field. This permits a Device to report power consumption for up to 8 PM Sub St",
+          "zh": "Power Budgeting Data 寄存器（参见 § Section 7.8.1.3）包含一个 PM Sub State 字段。这允许设备报告多达 8 个 PM Sub State 的功耗。此 PM Sub State 是实现特定的，并且与 PCIe 中其他类似命名的概念（例如 PM State、L1 PM Su"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=11 ，=8",
+          "line": 10879,
+          "en": "ACS Violations may occur due to either hardware or software defects/failures. To assist in fault isolation and root cause analysis, it is recommended that AER b",
+          "zh": "ACS 违规可能由硬件或软件缺陷/故障引起。为协助故障隔离与根因分析，建议在 ACS 组件中实现 AER。可使用 AER 的前缀/包头日志以及 Prefix Log/Header Log 寄存器来确定违规请求的前缀/包头。ACS Violation 的 Status、Mask 与 Severity 位可提供对错误的明确"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=8 ，=0",
+          "line": 13984,
+          "en": "> **IMPLEMENTATION NOTE:** > **PASID WIDTH HOMOGENEITY (PASID 宽度一致性)** > > The PASID value is unique per Function and thus the original intent was that the widt",
+          "zh": "> **实现说明 (IMPLEMENTATION NOTE):** > **PASID 宽度一致性 (PASID WIDTH HOMOGENEITY)** > > PASID 值在每个 Function 内唯一,因此最初的设想是该 Function 所支持的 PASID 宽度可基于该 Function 的需求来确定。然"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=4 ，=2",
+          "line": 15907,
+          "en": "The Flattening Portal Bridge (FPB) is an optional mechanism which can be used to improve the scalability and runtime reallocation of Routing IDs and Memory Spac",
+          "zh": "扁平化门户桥 (Flattening Portal Bridge, FPB) 是一种可选机制，可用于提高 Routing ID 和 Memory Space 资源的可扩展性及运行时再分配能力。 对于与非 ARI(替代路由 ID 解释, Alternative Routing ID Interpretation) 关联的"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Optimizations Based on a Restricted Programming Model"
+          ],
+          "line": 18852,
+          "en": "- Switches and Root Complexes that support DMWr routing must route DMWr Requests and Completions without modification. - DMWr Completers must ensure that operat",
+          "zh": "- 支持 DMWr 路由的交换机（Switch）和根复合体（Root Complex）必须以不修改的方式路由 DMWr 请求和完成（Completion）。 - DMWr Completer 必须确保针对给定 DMWr 请求所执行的操作，相对于每个主机处理器或设备对该目标位置范围的访问是原子执行的。 - DMWr 请求"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=7 ，=5",
+          "line": 20108,
+          "en": "TLPs secured by IDE are called IDE TLPs. In Non-Flit Mode, all IDE TLPs must use the IDE prefix (see § Figure 6-64), and this prefix must precede all other End-",
+          "zh": "由 IDE 保护的 TLP 称为 IDE TLP。在非 Flit 模式 (Non-Flit Mode, NFM) 中，所有 IDE TLP 必须使用 IDE 前缀(参见 § 图 6-64)，且此前缀必须位于所有其他端到端 TLP 前缀之前。在 Flit 模式 (Flit Mode, FM) 中，所有 IDE TLP 必"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=9 ，=8",
+          "line": 20282,
+          "en": "IDE uses Galois/Counter Mode (GCM) as defined in [AES-GCM], referred to as AES-GCM. For IDE TLPs, TLP data payload content forms the \"Plaintext\", also known as ",
+          "zh": "IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode, GCM)，称为 AES-GCM。对于 IDE TLP,TLP 数据有效负载内容构成\"明文\" (Plaintext)，也称为 P,如 [AES-GCM] 中所定义;TLP 包头 (Header) 和某些其他元素(下文"
+        }
+      ]
+    },
+    "ch07": {
+      "file": "PCIe6.2_Spec_ch07_Software_Initialization_and_Configuration_软件初始化与配置.md",
+      "stats": {
+        "pairs": 650,
+        "missing_zh": 0,
+        "missing_en": 17,
+        "flag_counts": {
+          "en_cell_swallowed": 2,
+          "empty_zh_cell": 13,
+          "table_structure": 17,
+          "heading_in_cell": 1,
+          "english_leak": 17,
+          "ascii_comma": 8,
+          "numbers_missing": 3,
+          "untranslated": 2
+        }
+      },
+      "findings": [
+        {
+          "line": 18510,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 11974 chars, structure inside"
+        },
+        {
+          "line": 23809,
+          "type": "empty_zh_cell",
+          "detail": "(参见上一节内容)"
+        },
+        {
+          "line": 29978,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[29989]"
+        },
+        {
+          "line": 31032,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 63 chars, structure inside"
+        },
+        {
+          "line": 31032,
+          "type": "heading_in_cell",
+          "detail": "### 7.9.7.1 RCRB Header Extended Capability Header (Offset 00h)"
+        },
+        {
+          "line": 31078,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[31089]"
+        },
+        {
+          "line": 31127,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[31138]"
+        },
+        {
+          "line": 31163,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[31174]"
+        },
+        {
+          "line": 31313,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[31324]"
+        },
+        {
+          "line": 31362,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[31373]"
+        },
+        {
+          "line": 31449,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[31460]"
+        },
+        {
+          "line": 31522,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[31533]"
+        },
+        {
+          "line": 31695,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[31706]"
+        },
+        {
+          "line": 33779,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[33790]"
+        },
+        {
+          "line": 34345,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[34356]"
+        },
+        {
+          "line": 34472,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[34483]"
+        },
+        {
+          "line": 34580,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[34591]"
+        },
+        {
+          "line": 34607,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[34618]"
+        },
+        {
+          "line": 34637,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[34648]"
+        },
+        {
+          "line": 34737,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[34748]"
+        },
+        {
+          "line": 34815,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[34826]"
+        },
+        {
+          "line": 38667,
+          "type": "empty_zh_cell",
+          "detail": "§ § §"
+        },
+        {
+          "line": 38711,
+          "type": "empty_zh_cell",
+          "detail": "§ § §"
+        },
+        {
+          "line": 38759,
+          "type": "empty_zh_cell",
+          "detail": "§"
+        },
+        {
+          "line": 38793,
+          "type": "empty_zh_cell",
+          "detail": "§ § § §"
+        },
+        {
+          "line": 38889,
+          "type": "empty_zh_cell",
+          "detail": "§ § §"
+        },
+        {
+          "line": 38937,
+          "type": "empty_zh_cell",
+          "detail": "§"
+        },
+        {
+          "line": 38973,
+          "type": "empty_zh_cell",
+          "detail": "§ § § §"
+        },
+        {
+          "line": 39024,
+          "type": "empty_zh_cell",
+          "detail": "§"
+        },
+        {
+          "line": 39059,
+          "type": "empty_zh_cell",
+          "detail": "§ §"
+        },
+        {
+          "line": 39099,
+          "type": "empty_zh_cell",
+          "detail": "§ § §"
+        },
+        {
+          "line": 39149,
+          "type": "empty_zh_cell",
+          "detail": "§"
+        },
+        {
+          "line": 39184,
+          "type": "empty_zh_cell",
+          "detail": "§ § § §"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Data Link Control and Management State Machine"
+          ],
+          "line": 6371,
+          "en": "| 18 | Clock Power Management - For Upstream Ports, a value of 1b in this bit indicates that the component tolerates the removal of any reference clock(s) via t",
+          "zh": "| 18 | Clock Power Management (时钟电源管理) — 对于上游端口 (Upstream Port)，该位值为 1b 表示组件允许在链路 (Link) 处于 L1 和 L2/L3 Ready Link 状态时，通过\"时钟请求\" (CLKREQ#) 机制移除任何参考时钟。值为 0b 表示组件不具"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Delays in Data Link Layer Link Active Reflecting Link Control Operations"
+          ],
+          "line": 6685,
+          "en": "**4 Link Disable** - This bit disables the Link by directing the LTSSM to the Disabled state when Set; this bit is Reserved on Endpoints, PCI Express to PCI/PCI",
+          "zh": "**4 Link Disable (禁用链路)** —— 置 1 时，该位通过将 LTSSM 引导至 Disabled 状态来禁用链路;在端点 (Endpoint)、PCI Express 转 PCI/PCI-X 桥以及交换机 (Switch) 的上游端口上该位为保留。 相关信息请参见实现说明:\"Delays in D"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Delays in Data Link Layer Link Active Reflecting Link Control Operations"
+          ],
+          "line": 7349,
+          "en": "**10 Undefined** - The value read from this bit is undefined. In previous versions of this specification, this bit was used to indicate a Link Training Error. S",
+          "zh": "**10 Undefined (未定义)** —— 从该位读取的值未定义。在本规范以前的版本中，该位用于指示链路训练错误 (Link Training Error)。系统软件必须忽略从该位读取的值。系统软件可向该位写入任何值。**RO, VF RsvdZ** **11 Link Training (链路训练)** ——"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "No NFM Subtree Below This Root Port"
+          ],
+          "line": 8088,
+          "en": "Bit | Description ---|--- 0 | System Error on Correctable Error Enable 1 | System Error on Non-Fatal Error Enable 2 | System Error on Fatal Error Enable 3 | PME",
+          "zh": "位 | 描述 ---|--- 0 | 可纠正错误上系统错误使能 (System Error on Correctable Error Enable) 1 | 非致命错误上系统错误使能 (System Error on Non-Fatal Error Enable) 2 | 致命错误上系统错误使能 (System Err"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "No NFM Subtree Below This Root Port"
+          ],
+          "line": 8161,
+          "en": "| Bit Location | Register Description | Attributes | |---|---|---| | 5 | No NFM Subtree Below This Root Port - When Clear, indicates that the RC must take owner",
+          "zh": "| 位位置 | 寄存器描述 | 属性 | |---|---|---| | 5 | 此根端口下无 NFM 子树 (No NFM Subtree Below This Root Port) — 清零时，指示 RC 必须接管通过 RC 对等穿越、以此 RP 作为出口端口 (Egress Port) 的非 UIO Non-Po"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "USE OF THE NO RO-ENABLED PR-PR PASSING BIT"
+          ],
+          "line": 8574,
+          "en": "Bit | Description ---|--- 3:0 | Completion Timeout Value 4 | Completion Timeout Disable 5 | ARI Forwarding Enable 6 | AtomicOp Requester Enable 7 | AtomicOp Egr",
+          "zh": "位 | 描述 ---|--- 3:0 | 完成超时值 (Completion Timeout Value) 4 | 完成超时禁用 (Completion Timeout Disable) 5 | ARI 转发使能 (ARI Forwarding Enable) 6 | AtomicOp 请求者使能 (AtomicOp "
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=5 ，=2",
+          "line": 8663,
+          "en": "**Bit 4 — Completion Timeout Range & Encoding (continued)** Defined encodings: - 0000b — Default range: 50 μs to 50 ms; the Function MUST@FLIT implement a timeo",
+          "zh": "**位 4 — Completion Timeout 范围与编码(续)** 已定义编码: - 0000b — 默认范围:50 μs 到 50 ms;该 Function MUST@FLIT 实现 40 ms 到 50 ms 范围内的超时值。 - 对于不支持 Flit 模式的 Function,强烈建议 Completi"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=4 ，=2",
+          "line": 11134,
+          "en": "[figures/chapter_07/fig_1095_1.png] **Table 7-45 Extended Message Data Register for MSI** | Bit Location | Register Description | Attributes | |---|---|---| | 3",
+          "zh": "[figures/chapter_07/fig_1095_1.png] **表 7-45 MSI 扩展消息数据寄存器** | 位位置 | 寄存器说明 | 属性 | |---|---|---| | 31:0 | 扩展消息数据(Extended Message Data) — 对于使用 32 位数据的 MSI 消息,MSI"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Separate Reference clock with Independent Spread Spectrum"
+          ],
+          "line": 12332,
+          "en": "[Table 7-58 continued - Link Control 3 Register bits 1-31] | Bit Location | Register Description | Attributes | |--------------|----------------------|---------",
+          "zh": "[表 7-58 续 - 链路控制 3 寄存器 位 1-31] - **位 1**：Link Equalization Request Interrupt Enable（链路均衡请求中断使能）— 当置位时，此位使能生成中断，以指示 Link Equalization Request 8.0 GT/s 位、Link Equ"
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "16.0": 1
+          },
+          "line": 13111,
+          "en": "The Physical Layer 16.0 GT/s Extended Capability structure must be implemented in: - A Function associated with a Downstream Port where the Supported Link Speed",
+          "zh": "物理层 16.0 GT/s 扩展能力结构 (Physical Layer 16.0 GT/s Extended Capability) 必须在以下情况中实现: - 与某个下游端口 (Downstream Port) 相关联的 Function 中，且其 Supported Link Speeds Vector 字段指示"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Equalization Bypass to Highest NRZ Rate Supported"
+          ],
+          "line": 14055,
+          "en": "--- Bit layout of the register: - Bit 0 — Equalization Bypass to Highest NRZ Rate Supported - Bit 1 — No Equalization Needed Supported - Bits 7:2 — RsvdP - Bit ",
+          "zh": "--- 该寄存器的位布局如下： - 位 0 — Equalization Bypass to Highest NRZ Rate Supported（支持旁路均衡直接跳至最高 NRZ 速率） - 位 1 — No Equalization Needed Supported（支持不需要均衡） - 位 7:2 — RsvdP"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Equalization Bypass to Highest NRZ Rate Disable"
+          ],
+          "line": 14135,
+          "en": "--- Bit layout of the register: - Bit 0 — Equalization Bypass to Highest NRZ Rate Disable - Bit 1 — No Equalization Needed Disable - Bits 7:2 — RsvdP - Bits 10:",
+          "zh": "--- 该寄存器的位布局如下： - 位 0 — Equalization Bypass to Highest NRZ Rate Disable（禁用旁路均衡直接跳至最高 NRZ 速率） - 位 1 — No Equalization Needed Disable（禁用不需要均衡） - 位 7:2 — RsvdP（保留）"
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "64.0": 1
+          },
+          "line": 14776,
+          "en": "> **Figure 7-97** Physical Layer 64.0 GT/s Extended Capability > | Bits 0-15 | Bits 16-19 | Bits 20-31 | |---|---|---| | PCI Express Extended Capability ID = 00",
+          "zh": "| 位 0-15 | 位 16-19 | 位 20-31 | |---|---|---| | PCI Express Extended Capability ID = 0031h | Capability Version | Next Capability Offset | **图 7-98 物理层 64.0 GT/s"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Flit Offset from the Last Logged Flit in Error",
+            "Consecutive Flit Error after the Last Flit Error",
+            "More Entries for Flit Error Log Register are Valid"
+          ],
+          "line": 15371,
+          "en": "The Flit Error Log 1 Register and Flit Error Log 2 Register are Link level registers and contain information about the Flit errors corrected and/or detected by ",
+          "zh": "Flit 错误日志 1 寄存器和 Flit 错误日志 2 寄存器是链路级 (Link level) 寄存器，包含接收 Flit 中由 FEC 和/或 CRC 纠正和/或检测到的 Flit 错误的相关信息。Flit 错误日志是一个 FIFO,其大小为实现特定且未指定(允许大小为 1)。这些寄存器包含最旧的日志条目。清除 "
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "More Entries for Flit Error Log Register are Valid",
+            "Flit Offset from the Last Logged Flit in Error",
+            "Consecutive Flit Error after the Last Flit Error"
+          ],
+          "line": 15435,
+          "en": "| Encoding | Link Width | |---|---| | 000b | x1 | | 001b | x2 | | 010b | x4 | | 011b | x8 | | 100b | x16 | | Others | Reserved | **Table 7-92 Flit Error Log 1 R",
+          "zh": "| 编码 | 链路宽度 | |---|---| | 000b | x1 | | 001b | x2 | | 010b | x4 | | 011b | x8 | | 100b | x16 | | 其他 | 保留 | **表 7-92 Flit 错误日志 1 寄存器** | 位位置 | 寄存器描述 | 属性 | |---|"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Flit Offset from the Last Logged Flit in Error",
+            "More Entries for Flit Error Log Register are Valid"
+          ],
+          "line": 15500,
+          "en": "- If in turn, Flit Offset from the Last Logged Flit in Error in C is ≤5, some of the bits in B are not meaningful and must be computed from C (and possibly the ",
+          "zh": "- 反过来，若 C 中 Flit Offset from the Last Logged Flit in Error ≤5,则 B 中的某些位没有意义，必须由 C(以及可能的下一个条目 D,若适用且可用)计算得到。 默认为零。 | 位位置 | 寄存器描述 | 属性 | |---|---|---| | 13 | **Mo"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Interrupt Generated based on Trigger Event Count",
+            "Interrupt Generated based on Trigger Event Count"
+          ],
+          "line": 15708,
+          "en": "**Table 7-94 Flit Error Counter Control Register (continued)** **Bit Location** | **Register Description** | **Attributes** - **3:2** (cont.) — Events to count ",
+          "zh": "**表 7-94 Flit 错误计数控制寄存器（续）** **位位置** | **寄存器说明** | **属性** - **3:2**（续）— 统计事件（Events to count）— 续 - 000b：FEC 可纠正 Flit - 001b：无效 Flit - 010b：00b 中所有事件，外加上页所述事件 - "
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Out of Band Power Limit PM Sub State",
+            "Out of Band Power Limit PM Sub State",
+            "Out of Band Power Limit PM Sub State"
+          ],
+          "line": 18453,
+          "en": "§ Figure 7-138 details allocation of register fields in the Aux Power Control register; § Table 7-121 provides the respective bit definitions. > **Figure 7-138.",
+          "zh": "§ 图 7-138 详细说明了 Aux Power Control 寄存器(辅助电源控制寄存器)中各寄存器字段的分配;§ 表 7-121 给出了相应的位定义。 > **图 7-138. 功耗预算控制寄存器 (Power Budgeting Control Register)** > | 位 0 | 位 1 | 位 2-"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Out of Band Power Limit PM Sub State"
+          ],
+          "line": 18659,
+          "en": "This register indicates the power budgeting capabilities of a device. § Figure 7-140 details allocation of register fields in the Power Budgeting Capability Reg",
+          "zh": "该寄存器指示设备的功耗预算能力。§ 图 7-140 详细说明了 Power Budgeting Capability Register 中各寄存器字段的分配;§ 表 7-123 给出了相应的位定义。 > **图 7-140. 功耗预算能力寄存器 (Power Budgeting Capability Register)"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=24 ，=15",
+          "line": 18725,
+          "en": "Whenever the adapter is receiving any power, this register reports, for each implemented power connector, which sense wires are currently detected. Any adapter ",
+          "zh": "只要适配器正在接收任何电源，该寄存器就会针对每个已实现的电源连接器报告当前检测到哪些感应线。 实现 Power Budgeting Extended Capability 且 Power Budgeting Sense Detect Supported 置位的任何适配器，必须为其支持的每个连接器提供 Connector"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "First DW of Each Entry for Enhanced Allocation Capability",
+            "First DW of Each Entry for Enhanced Allocation Capability"
+          ],
+          "line": 21548,
+          "en": "An Enhanced Allocation Entry consists of a First DW followed by between 2 and 4 DW of Base / MaxOffset information. - For Type 0 Functions, Enhanced Allocation ",
+          "zh": "增强分配条目（Enhanced Allocation Entry）由一个首 DW 后接 2 至 4 个 DW 的 Base / MaxOffset 信息组成。 - 对于 Type 0 功能，增强分配条目从该能力的偏移 04h 处开始。 - 对于 Type 1 功能，增强分配条目从该能力的偏移 08h 处开始。 - 后续"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=10 ，=3",
+          "line": 25693,
+          "en": "| Bit | Description | |-----|-------------| | 0 | Flit Latency Measurement Enable | | 3:1 | Flit Response Type (001b = Flit to Ack Latency, 010b = Flit to Nak L",
+          "zh": "| 位 | 描述 | |-----|------| | 0 | Flit 延迟测量使能 | | 3:1 | Flit 响应类型（001b = Flit 到 Ack 延迟,010b = Flit 到 Nak 延迟,100b = Nak 到 Replay 延迟，其他 = 保留） | | 5:4 | 保留 | | 10:6 "
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=7 ，=5",
+          "line": 26238,
+          "en": "**Table 7-192 Flit Error Injection Extended Capability Header (continued)** | Bit Location | Register Description | Attributes | |--------------|---------------",
+          "zh": "**表 7-192 Flit 错误注入扩展能力头（续）** | 位位置 | 寄存器描述 | 属性 | |--------|------------|------| | 31:20 | 下一能力偏移 - 该字段包含到下一个 PCI Express 能力结构的偏移，如果链表中不存在其他项，则为 000h。对于在配置空间中实"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=9 ，=8",
+          "line": 26357,
+          "en": "**Table 7-194 Flit Error Injection Control 1 Register (continued)** | Bit Location | Register Description | Attributes | |--------------|----------------------|",
+          "zh": "**表 7-194 Flit 错误注入控制 1 寄存器（续）** | 位位置 | 寄存器描述 | 属性 | |--------|------------|------| | 1 | 在发送的 Flit 上注入错误 – 将该位置 1b 可在发送的 Flit 上启用错误注入。未实现此功能的端口必须将该位硬连线为 0b。默认"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=8 ，=7",
+          "line": 26410,
+          "en": "**Table 7-194 Flit Error Injection Control 1 Register (continued)** | Bit Location | Register Description | Attributes | |--------------|----------------------|",
+          "zh": "**表 7-194 Flit 错误注入控制 1 寄存器（续）** | 位位置 | 寄存器描述 | 属性 | |--------|------------|------| | 31:29（续） | 在所有注入了 FEC 不可纠正错误的未完成 Payload Flit 中。整个重复将计为一次错误注入实例，用于计入注入错误数"
+        },
+        {
+          "line": 29989,
+          "type": "missing_en"
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "128": 6,
+            "220": 1,
+            "256": 3
+          },
+          "line": 30116,
+          "en": "- If MFVC Function Groups are not enabled and 4-bit entries are implemented, a given entry maps to all Functions whose Function Number modulo 8 matches its valu",
+          "zh": "- 如果未启用 MFVC Function Groups 且实现了 4 位条目，则给定条目映射到其 Function Number 模 8 与该值匹配的所有 Function。类似地，如果实现了 8 位条目，则给定条目映射到其 Function Number 模 128 与该值匹配的所有 Function。如果给定条目"
+        },
+        {
+          "line": 31089,
+          "type": "missing_en"
+        },
+        {
+          "line": 31138,
+          "type": "missing_en"
+        },
+        {
+          "line": 31174,
+          "type": "missing_en"
+        },
+        {
+          "line": 31324,
+          "type": "missing_en"
+        },
+        {
+          "line": 31373,
+          "type": "missing_en"
+        },
+        {
+          "line": 31460,
+          "type": "missing_en"
+        },
+        {
+          "line": 31533,
+          "type": "missing_en"
+        },
+        {
+          "line": 31706,
+          "type": "missing_en"
+        },
+        {
+          "line": 33790,
+          "type": "missing_en"
+        },
+        {
+          "line": 34356,
+          "type": "missing_en"
+        },
+        {
+          "line": 34483,
+          "type": "missing_en"
+        },
+        {
+          "line": 34591,
+          "type": "missing_en"
+        },
+        {
+          "line": 34618,
+          "type": "missing_en"
+        },
+        {
+          "line": 34648,
+          "type": "missing_en"
+        },
+        {
+          "line": 34748,
+          "type": "missing_en"
+        },
+        {
+          "line": 34826,
+          "type": "missing_en"
+        },
+        {
+          "type": "untranslated",
+          "detail": "EN 341 chars, ZH CJK 6",
+          "line": 37802,
+          "en": "0 NPEM Capable 1 NPEM Reset Capable 2 NPEM OK Capable 3 NPEM Locate Capable 4 NPEM Fail Capable 5 NPEM Rebuild Capable 6 NPEM PFA Capable 7 NPEM Hot Spare Capab",
+          "zh": "0 NPEM Capable 1 NPEM Reset Capable 2 NPEM OK Capable 3 NPEM Locate Capable 4 NPEM Fail Capable 5 NPEM Rebuild Capable 6 NPEM PFA Capable 7 NPEM Hot Spare Capab"
+        },
+        {
+          "type": "untranslated",
+          "detail": "EN 337 chars, ZH CJK 6",
+          "line": 37970,
+          "en": "0 NPEM Enable 1 NPEM Initiate Reset 2 NPEM OK Control 3 NPEM Locate Control 4 NPEM Fail Control 5 NPEM Rebuild Control 6 NPEM PFA Control 7 NPEM Hot Spare Contr",
+          "zh": "0 NPEM Enable 1 NPEM Initiate Reset 2 NPEM OK Control 3 NPEM Locate Control 4 NPEM Fail Control 5 NPEM Rebuild Control 6 NPEM PFA Control 7 NPEM Hot Spare Contr"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=4 ，=3",
+          "line": 40295,
+          "en": "Additional requirements for implementing Shadow Functions are: - Any access to the Configuration Space region of the BDF associated with the Shadow Function, wi",
+          "zh": "实现 Shadow Function 的其他要求如下: - 对 Shadow Function 关联的 BDF 配置空间区域进行的任何访问，在没有会导致不同行为的错误时，必须以 UR(Unsupported Request,不支持的请求)状态的 Completion(完成报文)响应。 - 对于非 ARI 设备,Shad"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Number of TCs Supported for Link IDE"
+          ],
+          "line": 41002,
+          "en": "A Link IDE register block must consist of one Link IDE Stream Control Register followed by one Link IDE Stream Status Register. If the Link IDE Stream Supported",
+          "zh": "Link IDE 寄存器块必须由一个 Link IDE Stream Control 寄存器和一个 Link IDE Stream Status 寄存器组成。如果 IDE 能力寄存器中的 Link IDE Stream Supported 位被置位，则该寄存器块必须为 Number of TCs Supported f"
+        }
+      ]
+    },
+    "ch08": {
+      "file": "PCIe6.2_Spec_ch08_Electrical_Sub_Block_电气子块.md",
+      "stats": {
+        "pairs": 191,
+        "missing_zh": 0,
+        "missing_en": 5,
+        "flag_counts": {
+          "table_structure": 5,
+          "heading_in_cell": 4,
+          "zh_equals_en": 2,
+          "empty_zh_cell": 1,
+          "ascii_comma": 11,
+          "numbers_missing": 7,
+          "english_leak": 7,
+          "untranslated": 2
+        }
+      },
+      "findings": [
+        {
+          "line": 1109,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[1120]"
+        },
+        {
+          "line": 1576,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[1587]"
+        },
+        {
+          "line": 2131,
+          "type": "heading_in_cell",
+          "detail": "### 8.3.5.1 Post Processing Steps to Extract Jitter §"
+        },
+        {
+          "line": 2218,
+          "type": "heading_in_cell",
+          "detail": "### 8.3.5.4 Embedded and Non-Embedded Refclk Measurement and Post Processing §"
+        },
+        {
+          "line": 2485,
+          "type": "zh_equals_en",
+          "detail": "**H(s) =** $$H(s) = \\frac{s^2}{(s + \\omega_0)(s + \\omega_1)} \\times \\frac{s^2 + 2\\zeta_2 \\omega_0 s "
+        },
+        {
+          "line": 2554,
+          "type": "heading_in_cell",
+          "detail": "### 8.3.5.6 Data Dependent and Uncorrelated Jitter §"
+        },
+        {
+          "line": 2607,
+          "type": "heading_in_cell",
+          "detail": "### 8.3.5.8 Uncorrelated Total Jitter and Deterministic Jitter (Dual Dirac Model) (TTX-UTJ and TTX-U"
+        },
+        {
+          "line": 2816,
+          "type": "zh_equals_en",
+          "detail": "**Table 8-6 (continued). Data Rate Dependent Transmitter Parameters | 表 8-6 (续). 速率相关发送器参数** | Symbo"
+        },
+        {
+          "line": 4237,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[4248]"
+        },
+        {
+          "line": 4261,
+          "type": "empty_zh_cell",
+          "detail": "§ §"
+        },
+        {
+          "line": 4540,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[4551]"
+        },
+        {
+          "line": 4656,
+          "type": "table_structure",
+          "detail": "cells=['ZH'] lines=[4667]"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=8 ，=7",
+          "line": 325,
+          "en": "Please note that throughout this specification, the term GT/s is used to refer to the number of encoded bits transferred in a second on a direction of a lane. I",
+          "zh": "请注意，在本规范全文中，术语 GT/s 用于表示一秒钟内在一个通道 (Lane) 方向上传输的已编码比特数。在 PAM4 信号中，两个比特通过四个电平编码在一个 UI (Unit Interval, 单位间隔) 中(参见 § 4.2.3.1.1)。因此,32.0 GT/s NRZ 和 64.0 GT/s PAM4 的奈"
+        },
+        {
+          "line": 1120,
+          "type": "missing_en"
+        },
+        {
+          "line": 1587,
+          "type": "missing_en"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=9 ，=8",
+          "line": 1666,
+          "en": "Signal-to-noise and distortion ratio (SNDR) is measured at the transmitter output using the Compliance Pattern (see § Section 4.2.14) with preset Q0 (no Tx equa",
+          "zh": "信噪失真比 (Signal-to-Noise and Distortion Ratio, SNDR) 在发送器输出端使用一致性码型 (Compliance Pattern,参见 § Section 4.2.14) 进行测量，采用预设 Q0(无 Tx 均衡)，未测量的通道也以预设 Q0 发射一致性码型。所记录的波形必须至"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=8 ，=0",
+          "line": 1741,
+          "en": "$$\\mu_{L,i} = \\frac{1}{N_k} \\sum_{k=1}^{N_k} V_{L,i,k}$$ **Equation 8-4 μL,i** In the above equations, Nk is the number of repetitions of the compliance pattern",
+          "zh": "$$\\mu_{L,i} = \\frac{1}{N_k} \\sum_{k=1}^{N_k} V_{L,i,k}$$ **公式 8-4 μL,i** 在上述公式中,Nk 为所记录波形中一致性码型的重复次数;VL,i,k 为一致性码型第 k 次重复中第 61 个符号 UI 内第 i 个数据采样点处、对应电压电平的波形电压;μ"
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "2.5": 1,
+            "5.0": 1,
+            "32.0": 1
+          },
+          "line": 2049,
+          "en": "> **Figure 8-13.** 2.5 and 5.0 GT/s Transmitter Margining Voltage Levels and Codes > **图 8-13.** 合规性/接收端校准—32.0 GT/s > > > *Margining codes (4 codes: 001, 010, ",
+          "zh": "> > *余量编码(共 4 个编码:001、010、011、i(i ≥ 3))及对应电压电平:* > - *满摆幅 (Full Swing, A-0574A):2.5 GT/s -3.5 dB、5.0 GT/s -3.5 dB、5.0 GT/s -6 dB — 电压电平为 1200 mV(眼图外)、800 mV(眼图内"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Tx Measurement and Post Processing For Different Refclks",
+            "Refclk available at DUT pin and not testing SRIS mode",
+            "Refclk not available at DUT pin or testing SRIS mode"
+          ],
+          "line": 2228,
+          "en": "When the transmitting PCIe device is driven from an external source to its Refclk pin it permits the Tx under test to be driven with a clean Refclk as shown in ",
+          "zh": "当发送端 PCIe 器件的 Refclk 引脚由外部源驱动时，可使被测 Tx 由一个干净的 Refclk 驱动，如 § Figure 8-1 所示。 本规范现在显式支持 Refclk 选项的完整矩阵，包括 Refclk 内嵌、参考时钟外置、参考时钟在 DUT 引脚上可用以及参考时钟在 DUT 引脚上不可用四种情况。§ "
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=16 ，=11",
+          "line": 2228,
+          "en": "When the transmitting PCIe device is driven from an external source to its Refclk pin it permits the Tx under test to be driven with a clean Refclk as shown in ",
+          "zh": "当发送端 PCIe 器件的 Refclk 引脚由外部源驱动时，可使被测 Tx 由一个干净的 Refclk 驱动，如 § Figure 8-1 所示。 本规范现在显式支持 Refclk 选项的完整矩阵，包括 Refclk 内嵌、参考时钟外置、参考时钟在 DUT 引脚上可用以及参考时钟在 DUT 引脚上不可用四种情况。§ "
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "2.5": 1,
+            "5.0": 1
+          },
+          "line": 2346,
+          "en": "> **Figure 8-15. 2nd Order Behavioral SRIS CDR Transfer Functions for 2.5 GT/s and 5.0 GT/s | 2.5 GT/s 与 5.0 GT/s 的二阶行为 SRIS CDR 传递函数** >",
+          "zh": "> **图 8-15.** 2.5 GT/s 与 5.0 GT/s 的二阶行为 SRIS CDR 传递函数 >"
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "8.0": 2,
+            "16.0": 2,
+            "32.0": 2
+          },
+          "line": 2383,
+          "en": "> **Figure 8-16. Behavioral SRIS CDR Function for 8.0 GT/s, and SRIS and CC CDR for 16.0 and 32.0 GT/s | 8.0 GT/s 行为 SRIS CDR,以及 16.0/32.0 GT/s 的 SRIS 和 CC CDR*",
+          "zh": "**H(s) =** $$H(s) = \\frac{s^2}{s^2 + sA + B} \\times \\frac{s^2 + 2\\zeta_2 \\omega_0 s + \\omega_0^2}{s^2 + 2\\zeta_1 \\omega_0 s + \\omega_0^2} \\times \\frac{s}{s + \\o"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "s and SRIS and CC Behavioral CDR at"
+          ],
+          "line": 2383,
+          "en": "> **Figure 8-16. Behavioral SRIS CDR Function for 8.0 GT/s, and SRIS and CC CDR for 16.0 and 32.0 GT/s | 8.0 GT/s 行为 SRIS CDR,以及 16.0/32.0 GT/s 的 SRIS 和 CC CDR*",
+          "zh": "**H(s) =** $$H(s) = \\frac{s^2}{s^2 + sA + B} \\times \\frac{s^2 + 2\\zeta_2 \\omega_0 s + \\omega_0^2}{s^2 + 2\\zeta_1 \\omega_0 s + \\omega_0^2} \\times \\frac{s}{s + \\o"
+        },
+        {
+          "type": "untranslated",
+          "detail": "EN 242 chars, ZH CJK 6",
+          "line": 2450,
+          "en": "- A = 9.5 × 10⁶ × 2π - B = 4.36 × 10¹² × (2π)² **Equation 8-12. SRIS and CC Behavioral CDR Parameters at 16.0 GT/s | 16.0 GT/s 的 SRIS 和 CC 行为 CDR 参数** > **Figur",
+          "zh": "- A = 9.5 × 10⁶ × 2π - B = 4.36 × 10¹² × (2π)² **Equation 8-12. SRIS and CC Behavioral CDR Parameters at 16.0 GT/s | 16.0 GT/s 的 SRIS 和 CC 行为 CDR 参数**"
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "64.0": 2
+          },
+          "line": 2450,
+          "en": "- A = 9.5 × 10⁶ × 2π - B = 4.36 × 10¹² × (2π)² **Equation 8-12. SRIS and CC Behavioral CDR Parameters at 16.0 GT/s | 16.0 GT/s 的 SRIS 和 CC 行为 CDR 参数** > **Figur",
+          "zh": "- A = 9.5 × 10⁶ × 2π - B = 4.36 × 10¹² × (2π)² **Equation 8-12. SRIS and CC Behavioral CDR Parameters at 16.0 GT/s | 16.0 GT/s 的 SRIS 和 CC 行为 CDR 参数**"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "SRIS and CC Behavioral CDR Parameters at"
+          ],
+          "line": 2450,
+          "en": "- A = 9.5 × 10⁶ × 2π - B = 4.36 × 10¹² × (2π)² **Equation 8-12. SRIS and CC Behavioral CDR Parameters at 16.0 GT/s | 16.0 GT/s 的 SRIS 和 CC 行为 CDR 参数** > **Figur",
+          "zh": "- A = 9.5 × 10⁶ × 2π - B = 4.36 × 10¹² × (2π)² **Equation 8-12. SRIS and CC Behavioral CDR Parameters at 16.0 GT/s | 16.0 GT/s 的 SRIS 和 CC 行为 CDR 参数**"
+        },
+        {
+          "type": "untranslated",
+          "detail": "EN 494 chars, ZH CJK 7",
+          "line": 2495,
+          "en": "**H(s) =** $$H(s) = \\frac{s^2}{(s + \\omega_0)(s + \\omega_1)} \\times \\frac{s^2 + 2\\zeta_2 \\omega_0 s + \\omega_0^2}{s^2 + 2\\zeta_1 \\omega_0 s + \\omega_0^2} \\times",
+          "zh": "**H(s) =** $$H(s) = \\frac{s^2}{(s + \\omega_0)(s + \\omega_1)} \\times \\frac{s^2 + 2\\zeta_2 \\omega_0 s + \\omega_0^2}{s^2 + 2\\zeta_1 \\omega_0 s + \\omega_0^2} \\times"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "SRIS and CC Behavioral CDR Parameters at"
+          ],
+          "line": 2495,
+          "en": "**H(s) =** $$H(s) = \\frac{s^2}{(s + \\omega_0)(s + \\omega_1)} \\times \\frac{s^2 + 2\\zeta_2 \\omega_0 s + \\omega_0^2}{s^2 + 2\\zeta_1 \\omega_0 s + \\omega_0^2} \\times",
+          "zh": "**H(s) =** $$H(s) = \\frac{s^2}{(s + \\omega_0)(s + \\omega_1)} \\times \\frac{s^2 + 2\\zeta_2 \\omega_0 s + \\omega_0^2}{s^2 + 2\\zeta_1 \\omega_0 s + \\omega_0^2} \\times"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Minimum voltage swing during EIEOS for full swing signaling",
+            "Minimum voltage swing during EIEOS for reduced swing signaling",
+            "Pseudo package loss of a device containing root port"
+          ],
+          "line": 2826,
+          "en": "**Table 8-6 (continued). Data Rate Dependent Transmitter Parameters | 表 8-6 (续). 速率相关发送器参数** | Symbol | Parameter description | 2.5 GT/s | 5.0 GT/s | 8.0 GT/s |",
+          "zh": "**Table 8-6 (continued). Data Rate Dependent Transmitter Parameters | 表 8-6 (续). 速率相关发送器参数** | Symbol | Parameter description | 2.5 GT/s | 5.0 GT/s | 8.0 GT/s |"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Tx uncorrelated total jitter when testing for the IR clock mode with SSC",
+            "Range of Rj possible with zero to maximum allowed TTX-UDJDD",
+            "Tx ACCM noise measurement analysis is done without any de-embedding"
+          ],
+          "line": 2885,
+          "en": "**Table 8-6 (continued). Data Rate Dependent Transmitter Parameters | 表 8-6 (续). 速率相关发送器参数** | Symbol | Parameter description | 2.5 GT/s | 5.0 GT/s | 8.0 GT/s |",
+          "zh": "**Table 8-6 (续). 速率相关发送器参数 | 表 8-6 (续). 速率相关发送器参数** | Symbol | Parameter description | 2.5 GT/s | 5.0 GT/s | 8.0 GT/s | 16.0 GT/s | 32.0 GT/s | 64.0 GT/s | Unit"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Tx AC peak-peak common mode voltage filtered with a simple low-pass filter",
+            "Tx ACCM noise measurement analysis is done without any de-embedding",
+            "A single combination of PLL BW and peaking is specified for"
+          ],
+          "line": 2948,
+          "en": "**Table 8-6 (continued). Data Rate Dependent Transmitter Parameters | 表 8-6 (续). 速率相关发送器参数** | Symbol | Parameter description | 2.5 GT/s | 5.0 GT/s | 8.0 GT/s |",
+          "zh": "**Table 8-6 (续). 速率相关发送器参数 | 表 8-6 (续). 速率相关发送器参数** | Symbol | Parameter description | 2.5 GT/s | 5.0 GT/s | 8.0 GT/s | 16.0 GT/s | 32.0 GT/s | 64.0 GT/s | Unit"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=12 ，=5",
+          "line": 2948,
+          "en": "**Table 8-6 (continued). Data Rate Dependent Transmitter Parameters | 表 8-6 (续). 速率相关发送器参数** | Symbol | Parameter description | 2.5 GT/s | 5.0 GT/s | 8.0 GT/s |",
+          "zh": "**Table 8-6 (续). 速率相关发送器参数 | 表 8-6 (续). 速率相关发送器参数** | Symbol | Parameter description | 2.5 GT/s | 5.0 GT/s | 8.0 GT/s | 16.0 GT/s | 32.0 GT/s | 64.0 GT/s | Unit"
+        },
+        {
+          "line": 4248,
+          "type": "missing_en"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=4 ，=2",
+          "line": 4305,
+          "en": "A Receiver operating at 16.0 GT/s utilizes a similar set of CTLE curves with different pole locations. The difference is that ωp1 =pole 1= 2π* 2 GHz and ωp2 = p",
+          "zh": "运行在 16.0 GT/s 的接收器使用一组类似但极点位置不同的 CTLE 曲线。其差异在于 ωp1 = 极点 1 = 2π* 2 GHz,而 ωp2 = 极点 2 = 2π * 16.0 GHz。ADC 的可调范围与 8.0 GT/s 相同。 32.0 GT/s 的行为级 Rx 均衡定义了一个二阶 CTLE,其极点固"
+        },
+        {
+          "line": 4551,
+          "type": "missing_en"
+        },
+        {
+          "line": 4667,
+          "type": "missing_en"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=4 ，=1",
+          "line": 4692,
+          "en": "For 64.0 GT/s, the feedback signal yk* can take values of -1, -1/3, +1/3 and +1. In this case, the limit on d1 is defined as a ratio of the tap magnitude (|d1|)",
+          "zh": "对于 64.0 GT/s,反馈信号 yk* 可取值为 -1、-1/3、+1/3 和 +1。在这种情况下,d1 的限值定义为抽头幅度 (|d1|) 与 DFE 输入端光标幅度 (h0) 之比。为限制 DFE 突发错误,|d1/h0| 比值必须小于 0.55,且由 (|d1| + |d2| + 0.85*|d3| + 0."
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "8.0": 1
+          },
+          "line": 5027,
+          "en": "> **Figure 8-41.** Layout for Calibrating the Stressed Jitter Eye at 8.0 GT/s > **图 8-41.** 发送端封装模型参数 > Layout (TP1 → TP5/TP4 flow): - TP1: 8.0 GT/s PRBS Genera",
+          "zh": "布局 (TP1 → TP5/TP4 流程): - TP1: 8.0 GT/s PRBS (伪随机二进制序列) 发生器 → 固定 TX EQ - RJ 源、SJ 源、合路器 (Combiner) - 差分干扰、共模干扰 - 校准通道 → TP3 - 复制通道 → 测试设备 → TP2 - 后处理脚本:Rx 封装模型、行为"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=4 ，=2",
+          "line": 5896,
+          "en": "**Notes:** 1. Two combinations of PLL BW and peaking are specified at 5.0 GT/s to permit designers to make tradeoffs between the two parameters. If the PLL's mi",
+          "zh": "**注释:** 1. 在 5.0 GT/s 下规定了两组 PLL 带宽和峰化值的组合，以便设计者在两个参数之间进行权衡。如果 PLL 的最小带宽 ≥ 8 MHz,则允许最多 3.0 dB 的峰化。如果 PLL 的最小带宽放宽到 ≥ 5.0 MHz,则必须满足更严格的 1.0 dB 峰化值。注:PLL 带宽从零延伸到上表"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=14 ，=0",
+          "line": 6099,
+          "en": "--- For NRZ: 0.5 UI (max), 0.2 UI (min), -0.2 UI (min), -0.5 UI (max), 50 mV (min), 500 mV (max), -50 mV (min), -500 mV (max). For PAM4 (3 eyes): 0.35 UI (max),",
+          "zh": "--- 对于 NRZ:0.5 UI (最大),0.2 UI (最小),-0.2 UI (最小),-0.5 UI (最大),50 mV (最小),500 mV (最大),-50 mV (最小),-500 mV (最大)。 对于 PAM4 (3 个眼图):0.35 UI (最大),0.1 UI (最小),-0.1 UI ("
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "32.0": 1
+          },
+          "line": 6758,
+          "en": "- a 2nd order CTLE and a 3-tap DFE for 32.0 GT/s, and - a CTLE transfer function with six poles and three zeros and a 16-tap DFE for 64.0 GT/s. Behavioral packa",
+          "zh": "- 32.0 GT/s:2 阶 CTLE 与 3 tap DFE; - 64.0 GT/s:具有 6 极 3 零的 CTLE 传递函数，以及 16 tap DFE。 行为级封装模型在本规范中加以定义，以表示预期可与目标通道范围互通的综合 die 与封装损耗。注意，在 16.0 GT/s 时，行为级封装对许多设备表示的是"
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "64.8": 1
+          },
+          "line": 6911,
+          "en": "return loss characteristics of on-die pad for a typical design. The reference impedance for the 32.0 and 64.0 GT/s reference package model s-parameters is 50 Ω.",
+          "zh": "对于典型设计，片上 pad 的回损 (return loss) 特性。32.0 GT/s 与 64.0 GT/s 参考封装模型 S 参数的参考阻抗为 50 Ω。下列各图展示了基于 50 Ω 阻抗的 32.0 GT/s 与 64.0 GT/s 参考封装的插入损耗、回损、FEXT 与 NEXT S 参数曲线。为考虑片上电感"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=16 ，=12",
+          "line": 8465,
+          "en": "Based on the above clock architecture, it is possible to define a difference function that corresponds to the worst case mismatch between Tx and Rx PLLs. Second",
+          "zh": "基于上述时钟架构，可以定义一个与 Tx 和 Rx PLL 之间最坏失配情况相对应的差分函数。这里假设使用二阶 PLL 传递函数 (尽管大多数 PLL 传递函数是三阶或更高阶)，这是因为二阶函数相对于大多数实际 PLL 实现倾向于给出略偏保守的差分函数。 在共参考时钟接收器架构中，还需要考虑发送器到接收器之间的最大传输延"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=15 ，=5",
+          "line": 8779,
+          "en": "| Data Rate | CC jitter Limit | Notes | |-----------|-----------------|-------| | 8.0 GT/s | 1.0 ps RMS | 1, 2 | | 16.0 GT/s | 0.5 ps RMS | 1, 2, 3, 4 | | 32.0 ",
+          "zh": "| 数据速率 (Data Rate) | CC 抖动限值 (CC jitter Limit) | 备注 (Notes) | |---|---|---| | 8.0 GT/s | 1.0 ps RMS | 1, 2 | | 16.0 GT/s | 0.5 ps RMS | 1, 2, 3, 4 | | 32.0 GT/s"
+        }
+      ]
+    },
+    "ch09": {
+      "file": "PCIe6.2_Spec_ch09_Single_Root_I_O_Virtualization_and_Sharing_单根IO虚拟化与共享SRIOV.md",
+      "stats": {
+        "pairs": 39,
+        "missing_zh": 0,
+        "missing_en": 1,
+        "flag_counts": {
+          "table_structure": 1,
+          "en_cell_swallowed": 15,
+          "heading_in_cell": 5,
+          "ascii_comma": 5,
+          "english_leak": 5,
+          "numbers_missing": 1
+        }
+      },
+      "findings": [
+        {
+          "line": 778,
+          "type": "table_structure",
+          "detail": "cells=['EN', 'ZH', 'ZH'] lines=[788, 798, 828]"
+        },
+        {
+          "line": 872,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 209 chars, structure inside"
+        },
+        {
+          "line": 872,
+          "type": "heading_in_cell",
+          "detail": "### 9.2.1 SR-IOV Resource Discovery § | 9.2.1 SR-IOV 资源发现 §"
+        },
+        {
+          "line": 921,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 1452 chars, structure inside"
+        },
+        {
+          "line": 1088,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 3161 chars, structure inside"
+        },
+        {
+          "line": 1167,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 2566 chars, structure inside"
+        },
+        {
+          "line": 1167,
+          "type": "heading_in_cell",
+          "detail": "### 9.2.2 SR-IOV Reset Mechanisms § | 9.2.2 SR-IOV 复位机制 §"
+        },
+        {
+          "line": 1282,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 1799 chars, structure inside"
+        },
+        {
+          "line": 1282,
+          "type": "heading_in_cell",
+          "detail": "## 9.3 Configuration § | 9.3 配置 §"
+        },
+        {
+          "line": 1365,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 310 chars, structure inside"
+        },
+        {
+          "line": 1413,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 1179 chars, structure inside"
+        },
+        {
+          "line": 1524,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 2851 chars, structure inside"
+        },
+        {
+          "line": 1615,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 1992 chars, structure inside"
+        },
+        {
+          "line": 1856,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 2606 chars, structure inside"
+        },
+        {
+          "line": 1943,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 2575 chars, structure inside"
+        },
+        {
+          "line": 2030,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 1582 chars, structure inside"
+        },
+        {
+          "line": 2294,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 2708 chars, structure inside"
+        },
+        {
+          "line": 2407,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 3203 chars, structure inside"
+        },
+        {
+          "line": 2498,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 2458 chars, structure inside"
+        },
+        {
+          "line": 2498,
+          "type": "heading_in_cell",
+          "detail": "### 9.3.4 PF/VF Configuration Space Header § | 9.3.4 PF/VF 配置空间头部 §"
+        },
+        {
+          "line": 2912,
+          "type": "heading_in_cell",
+          "detail": "## End of Chapter 9 | 第 9 章结束"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=4 ，=2",
+          "line": 307,
+          "en": "SR-IOV provides tools to reduce these platform resources overheads. The benefits of SR-IOV are: - The ability to eliminate VI involvement in main data movement ",
+          "zh": "SR-IOV 提供了减少这些平台资源开销的工具。SR-IOV 的好处包括: - 能够消除 VI 在主要数据移动操作中的参与——DMA、内存空间访问、中断处理等。消除 VI 对每个 I/O 操作的拦截和处理可以提供显著的应用程序和平台性能改进。 - 通过单根 PCI 管理器 (Single Root PCI Manage"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=9 ，=8",
+          "line": 409,
+          "en": "- **Optional Address Translation Cache (ATC)** - An ATC can exist in two locations within a platform - within the TA which can be integrated within or sit above",
+          "zh": "- **可选的地址转换缓存 (Address Translation Cache, ATC)**——ATC 可以存在于平台中的两个位置:TA 内(可以集成在 RC 内或位于 RC 之上)，或 PCIe 设备内。在 RC 内,ATC 启用加速的转换查找。在设备内,ATC 通过 ATS 技术填充。指示其包含已转换地址的 P"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "The following sections describe how software determines that a Device is SR-IOV capable and subsequently identifies VF resources through Virtual Function Configuration Space",
+            "This section describes the fields that must be configured before enabling a PF's IOV Capabilities",
+            "The VFs are enabled by Setting the PF's VF Enable bit"
+          ],
+          "line": 788,
+          "en": "Key observations to note: - Each Device must contain a Function 0. Function 0 may be a PF (i.e., it may include the SR-IOV extended capability). - Any mix of Fu",
+          "zh": "需要注意的关键观察点: - 每个设备必须包含一个 Function 0。Function 0 可以是 PF(即，它可以包括 SR-IOV 扩展能力结构)。 - 任何功能组合都可以与捕获的总线号相关联。 - 非 VF 只能与捕获的总线号相关联。 - 如果支持 ARI 扩展能力结构，则可以将功能分配到功能组。分配策略不在本"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=6 ，=3",
+          "line": 788,
+          "en": "Key observations to note: - Each Device must contain a Function 0. Function 0 may be a PF (i.e., it may include the SR-IOV extended capability). - Any mix of Fu",
+          "zh": "需要注意的关键观察点: - 每个设备必须包含一个 Function 0。Function 0 可以是 PF(即，它可以包括 SR-IOV 扩展能力结构)。 - 任何功能组合都可以与捕获的总线号相关联。 - 非 VF 只能与捕获的总线号相关联。 - 如果支持 ARI 扩展能力结构，则可以将功能分配到功能组。分配策略不在本"
+        },
+        {
+          "line": 828,
+          "type": "missing_en"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "MULTI-FUNCTION DEVICES WITH PFS AND SWITCH FUNCTIONS"
+          ],
+          "line": 1098,
+          "en": "Software should configure Switch Secondary and Subordinate Bus Number fields to route enough Bus Numbers to the Device. If sufficient Bus Numbers are not availa",
+          "zh": "软件应配置交换机的 Secondary 和 Subordinate Bus Number 字段，以将足够的总线号路由到设备。如果没有足够的总线号，软件应通过不启用 SR-IOV 和/或在启用 SR-IOV 之前减少设备某些或所有 PF 的 NumVFs 来降低设备的总线号需求。 在某些 PF n 中置位 VF Enab"
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "9.3": 1
+          },
+          "line": 1292,
+          "en": "Unarchitected VF state configured through the PF or SR-PCIM interface is permitted to persist across VF instances. Architected VF state configured through the P",
+          "zh": "通过 PF 或 SR-PCIM 接口配置的未定义 VF 状态允许跨 VF 实例持续存在。通过 PF 或 SR-PCIM 接口配置的已定义 VF 状态允许恢复到较早的值或设置为新值。也就是说，当再次置位 VF Enabled 时，允许 VF 实例具有与先前实例不同的已定义能力集和/或其属性(例如 MSI-X 表大小)。 "
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=4 ，=1",
+          "line": 2154,
+          "en": "The programming model for a Device may have vendor-specific dependencies between sets of Functions. The Function Dependency Link field is used to describe these",
+          "zh": "设备的编程模型可能在功能集之间具有特定于供应商的依赖关系。功能依赖链接 (Function Dependency Link) 字段用于描述这些依赖关系。 此字段描述 PF 之间的依赖关系。VF 依赖关系与其关联 PF 的依赖关系相同。 如果 PF 独立于设备的其他 PF,则此字段应包含其自己的功能号。 如果 PF 依赖"
+        },
+        {
+          "type": "ascii_comma",
+          "detail": ",=14 ，=0",
+          "line": 2205,
+          "en": "> **IMPLEMENTATION NOTE:** > **FUNCTION DEPENDENCY LINK EXAMPLE** > Consider the following scenario: > > | SR-IOV Field | PF 0 | PF 1 | PF 2 | > |---|---|---|--",
+          "zh": "> **实现注意 (IMPLEMENTATION NOTE):** > **功能依赖链接示例 (FUNCTION DEPENDENCY LINK EXAMPLE)** > 考虑以下场景: > > | SR-IOV 字段 | PF 0 | PF 1 | PF 2 | > |---|---|---|---| > | 功能依"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "SR-IOV Usage of PCI Express Extended Capabilities"
+          ],
+          "line": 2742,
+          "en": "**Table 9-10. SR-IOV Usage of PCI Express Extended Capabilities | 表 9-10. SR-IOV 对 PCI Express 扩展能力结构的使用** | Extended Capability ID | Description | PF Attribute",
+          "zh": "**Table 9-10. SR-IOV 对 PCI Express 扩展能力结构的使用 (SR-IOV Usage of PCI Express Extended Capabilities)** | 扩展能力 ID | 描述 | PF 属性 | VF 属性 | |----------------------|----"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "SR-IOV Usage of PCI Express Extended Capabilities"
+          ],
+          "line": 2827,
+          "en": "**Table 9-10 (cont.). SR-IOV Usage of PCI Express Extended Capabilities | 表 9-10(续). SR-IOV 对 PCI Express 扩展能力结构的使用** | Extended Capability ID | Description | P",
+          "zh": "**Table 9-10(续). SR-IOV 对 PCI Express 扩展能力结构的使用 (SR-IOV Usage of PCI Express Extended Capabilities)** | 扩展能力 ID | 描述 | PF 属性 | VF 属性 | |----------------------|-"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "SR-IOV Usage of PCI Express Extended Capabilities"
+          ],
+          "line": 2922,
+          "en": "**Table 9-10 (final). SR-IOV Usage of PCI Express Extended Capabilities | 表 9-10(终). SR-IOV 对 PCI Express 扩展能力结构的使用** | Extended Capability ID | Description | P",
+          "zh": "**Table 9-10(终). SR-IOV 对 PCI Express 扩展能力结构的使用 (SR-IOV Usage of PCI Express Extended Capabilities)** | 扩展能力 ID | 描述 | PF 属性 | VF 属性 | |----------------------|-"
+        }
+      ]
+    },
+    "ch10": {
+      "file": "PCIe6.2_Spec_ch10_Address_Translation_Services_地址转换服务ATS.md",
+      "stats": {
+        "pairs": 55,
+        "missing_zh": 0,
+        "missing_en": 0,
+        "flag_counts": {
+          "numbers_missing": 2,
+          "english_leak": 3
+        }
+      },
+      "findings": [
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "193": 1,
+            "194": 1
+          },
+          "line": 886,
+          "en": "A Translation Request has a format that is similar to that of a Memory Read 192 (MRd TLP Type) in either FM or NFM. The AT field must be set to the value define",
+          "zh": "转换请求的格式在 FM 或 NFM 中均类似于内存读 192 (MRd TLP 类型)。AT 字段必须设置为\"Translation Request\"所定义的值，以将转换请求与普通内存读区分开(参见 § 图 10-10、§ 图 10-11、§ 图 10-12 和 § 图 10-13)。在 Flit 模式下，必须包含 O"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Translation Completion with No Data Status Codes",
+            "BYTE COUNT FIELD FOR UNSUCCESSFUL TRANSLATION COMPLETIONS WITH NO DATA"
+          ],
+          "line": 1291,
+          "en": "**Table 10-2. Translation Completion with No Data Status Codes | 表 10-2 无数据转换完成状态码** | Value | Status | Meaning | |-------|--------|---------| | 000b | Success ",
+          "zh": "**Table 10-2. Translation Completion with No Data Status Codes | 表 10-2 无数据转换完成状态码** | 值 | 状态 | 含义 | |-------|--------|---------| | 000b | Success(成功) | 表示 TA 正"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "Examples of Translation Size Using S Field"
+          ],
+          "line": 1497,
+          "en": "If S is Set, then the translation applies to a range that is larger than 4096 bytes. If S = 1b, then bit 12 of the Translated Address is used to indicate whethe",
+          "zh": "如果 S 置位，则转换适用于大于 4096 字节的范围。如果 S = 1b,则使用 Translated Address 的第 12 位指示范围是否大于 8192 字节。如果第 12 位为 0b,则范围大小为 8192 字节，但如果置位则大于 8192 字节。如果 S = 1b 且第 12 位 = 1b,则使用第 13"
+        },
+        {
+          "type": "english_leak",
+          "detail": [
+            "TLP LENGTH, ADDRESS, AND BYTE OFFSET VALUES FOR TRANSLATION REQUEST COMPLETIONS"
+          ],
+          "line": 1915,
+          "en": "AMA values are associated with the Completer and are implementation specific. AMA values are opaque to the Requester, the Requester's ATC and the TA. The method",
+          "zh": "AMA 值与完成者关联，且是实现特定的。AMA 值对请求者、请求者的 ATC 和 TA 是不透明的。 检测 TA 中 AMA 机制支持与否以及启用该机制的方法是实现特定的。当请求者和 TA 均未启用 AMA 机制时，默认 AMA 值为 000b。此情况下完成者的行为是实现特定的。 > **实现说明 (IMPLEMENT"
+        },
+        {
+          "type": "numbers_missing",
+          "detail": {
+            "8096": 1
+          },
+          "line": 2887,
+          "en": "| L | Last Request in PRG - This field, when Set, indicates that the associated page request is the last request of the associated PRG. A PRG can have a single ",
+          "zh": "| L | PRG 中最后一个请求 - 此字段置位时，表示关联页请求是关联 PRG 的最后一个请求。PRG 可以具有单个条目，在这种情况下,PRG 由单个请求组成，且此字段已置位。清零时，此字段表示将使用此记录的 PRG 索引发布其他页请求。如果 R 和 W 均清零且 L 置位，则为停止标记(参见 § 第 10.4.1"
+        }
+      ]
+    },
+    "ch11": {
+      "file": "PCIe6.2_Spec_ch11_TEE_Device_Interface_Security_Protocol_TEE设备接口安全协议TDISP.md",
+      "stats": {
+        "pairs": 20,
+        "missing_zh": 1,
+        "missing_en": 0,
+        "flag_counts": {
+          "en_cell_swallowed": 1,
+          "heading_in_cell": 1,
+          "table_structure": 1
+        }
+      },
+      "findings": [
+        {
+          "line": 1068,
+          "type": "en_cell_swallowed",
+          "detail": "EN cell 2996 chars, structure inside"
+        },
+        {
+          "line": 1068,
+          "type": "heading_in_cell",
+          "detail": "### 11.3.1 TDISP Request Codes | 11.3.1 TDISP 请求代码"
+        },
+        {
+          "line": 1569,
+          "type": "table_structure",
+          "detail": "cells=['EN'] lines=[1579]"
+        },
+        {
+          "line": 1579,
+          "type": "missing_zh",
+          "en": "- Additional private resources that need to be assigned to the TDI by the DSM at the time of locking the TDI have been successfully allocated and assigned. - DS"
+        }
+      ]
+    },
+    "ch12": {
+      "file": "PCIe6.2_Spec_ch12_Architectural_Out_of_Band_Management_架构带外管理.md",
+      "stats": {
+        "pairs": 53,
+        "missing_zh": 0,
+        "missing_en": 0,
+        "flag_counts": {
+          "ascii_comma": 1
+        }
+      },
+      "findings": [
+        {
+          "type": "ascii_comma",
+          "detail": ",=6 ，=4",
+          "line": 1090,
+          "en": "Presence of a PESTI target is characterized by a rising edge of PESTI. The default input state of PESTI at an initiator is HIGH=1 indicating that there is no ad",
+          "zh": "PESTI 目标的存在性以 PESTI 的上升沿为特征。发起者处 PESTI 的默认输入状态为 HIGH=1,表示没有适配器或组件存在。如果观察到 PESTI 信号保持为静态低电平超过 tDBREAK (参见 § 表 12-5)，则该目标适配器或组件正在指示简单的存在性。PESTI 信号的上升沿向发起者表明目标已准备好"
+        }
+      ]
+    }
+  },
+  "variant_counts": {
+    "根复合体": {
+      "ch01": 18,
+      "ch02": 86,
+      "ch03": 0,
+      "ch04": 1,
+      "ch05": 26,
+      "ch06": 221,
+      "ch07": 118,
+      "ch08": 2,
+      "ch09": 12,
+      "ch10": 7,
+      "ch11": 9,
+      "ch12": 0
+    },
+    "根联合体": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "根复杂体": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "根复合器": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "端点": {
+      "ch01": 30,
+      "ch02": 32,
+      "ch03": 0,
+      "ch04": 5,
+      "ch05": 20,
+      "ch06": 155,
+      "ch07": 52,
+      "ch08": 0,
+      "ch09": 6,
+      "ch10": 12,
+      "ch11": 1,
+      "ch12": 2
+    },
+    "终端": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 2,
+      "ch05": 0,
+      "ch06": 4,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 4
+    },
+    "交换机": {
+      "ch01": 12,
+      "ch02": 136,
+      "ch03": 4,
+      "ch04": 5,
+      "ch05": 1,
+      "ch06": 208,
+      "ch07": 123,
+      "ch08": 0,
+      "ch09": 5,
+      "ch10": 2,
+      "ch11": 1,
+      "ch12": 1
+    },
+    "交换器": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "交换设备": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "流控": {
+      "ch01": 7,
+      "ch02": 117,
+      "ch03": 26,
+      "ch04": 8,
+      "ch05": 9,
+      "ch06": 34,
+      "ch07": 24,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 8,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "流量控制": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "热插拔": {
+      "ch01": 5,
+      "ch02": 1,
+      "ch03": 2,
+      "ch04": 1,
+      "ch05": 3,
+      "ch06": 99,
+      "ch07": 32,
+      "ch08": 1,
+      "ch09": 3,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 3
+    },
+    "热插入": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "有序集": {
+      "ch01": 1,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 1080,
+      "ch05": 7,
+      "ch06": 0,
+      "ch07": 15,
+      "ch08": 2,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "有序集合": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "通道": {
+      "ch01": 4,
+      "ch02": 47,
+      "ch03": 5,
+      "ch04": 932,
+      "ch05": 1,
+      "ch06": 28,
+      "ch07": 282,
+      "ch08": 217,
+      "ch09": 5,
+      "ch10": 1,
+      "ch11": 1,
+      "ch12": 20
+    },
+    "通路": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 1,
+      "ch04": 6,
+      "ch05": 0,
+      "ch06": 1,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "链路": {
+      "ch01": 47,
+      "ch02": 107,
+      "ch03": 141,
+      "ch04": 800,
+      "ch05": 292,
+      "ch06": 212,
+      "ch07": 489,
+      "ch08": 7,
+      "ch09": 8,
+      "ch10": 8,
+      "ch11": 3,
+      "ch12": 17
+    },
+    "链接": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 4,
+      "ch10": 2,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "功能": {
+      "ch01": 17,
+      "ch02": 73,
+      "ch03": 4,
+      "ch04": 17,
+      "ch05": 38,
+      "ch06": 457,
+      "ch07": 407,
+      "ch08": 5,
+      "ch09": 108,
+      "ch10": 305,
+      "ch11": 18,
+      "ch12": 59
+    },
+    "函数": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 2,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 44,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "请求者": {
+      "ch01": 4,
+      "ch02": 49,
+      "ch03": 0,
+      "ch04": 7,
+      "ch05": 1,
+      "ch06": 137,
+      "ch07": 32,
+      "ch08": 0,
+      "ch09": 27,
+      "ch10": 12,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "请求方": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 17,
+      "ch12": 0
+    },
+    "完成者": {
+      "ch01": 8,
+      "ch02": 81,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 92,
+      "ch07": 30,
+      "ch08": 0,
+      "ch09": 8,
+      "ch10": 5,
+      "ch11": 1,
+      "ch12": 0
+    },
+    "完成方": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "接收方": {
+      "ch01": 0,
+      "ch02": 28,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 47,
+      "ch07": 4,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "接收者": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "发送方": {
+      "ch01": 0,
+      "ch02": 1,
+      "ch03": 1,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 3,
+      "ch07": 3,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "发送者": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "事务层": {
+      "ch01": 26,
+      "ch02": 34,
+      "ch03": 42,
+      "ch04": 11,
+      "ch05": 13,
+      "ch06": 25,
+      "ch07": 1,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "传输层": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 1,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 1,
+      "ch12": 0
+    },
+    "数据链路层": {
+      "ch01": 20,
+      "ch02": 23,
+      "ch03": 60,
+      "ch04": 31,
+      "ch05": 9,
+      "ch06": 28,
+      "ch07": 24,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "数据链接层": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "物理层": {
+      "ch01": 11,
+      "ch02": 12,
+      "ch03": 41,
+      "ch04": 23,
+      "ch05": 10,
+      "ch06": 16,
+      "ch07": 21,
+      "ch08": 2,
+      "ch09": 3,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 1
+    },
+    "实体层": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "设备": {
+      "ch01": 20,
+      "ch02": 134,
+      "ch03": 2,
+      "ch04": 82,
+      "ch05": 85,
+      "ch06": 511,
+      "ch07": 344,
+      "ch08": 36,
+      "ch09": 102,
+      "ch10": 56,
+      "ch11": 131,
+      "ch12": 40
+    },
+    "器件": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 1,
+      "ch07": 0,
+      "ch08": 18,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "寄存器": {
+      "ch01": 0,
+      "ch02": 48,
+      "ch03": 6,
+      "ch04": 190,
+      "ch05": 35,
+      "ch06": 666,
+      "ch07": 1489,
+      "ch08": 1,
+      "ch09": 22,
+      "ch10": 33,
+      "ch11": 15,
+      "ch12": 8
+    },
+    "暂存器": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "描述符": {
+      "ch01": 0,
+      "ch02": 7,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 2,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 19
+    },
+    "描述子": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "带宽": {
+      "ch01": 2,
+      "ch02": 3,
+      "ch03": 0,
+      "ch04": 9,
+      "ch05": 3,
+      "ch06": 19,
+      "ch07": 16,
+      "ch08": 43,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 2
+    },
+    "频宽": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "吞吐量": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 2,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 1,
+      "ch11": 0,
+      "ch12": 1
+    },
+    "吞吐率": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "时钟": {
+      "ch01": 1,
+      "ch02": 1,
+      "ch03": 0,
+      "ch04": 44,
+      "ch05": 47,
+      "ch06": 16,
+      "ch07": 59,
+      "ch08": 93,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 12
+    },
+    "时脉": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "复位": {
+      "ch01": 2,
+      "ch02": 23,
+      "ch03": 21,
+      "ch04": 96,
+      "ch05": 27,
+      "ch06": 109,
+      "ch07": 28,
+      "ch08": 3,
+      "ch09": 16,
+      "ch10": 10,
+      "ch11": 4,
+      "ch12": 25
+    },
+    "重置": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    },
+    "中断": {
+      "ch01": 3,
+      "ch02": 17,
+      "ch03": 0,
+      "ch04": 17,
+      "ch05": 14,
+      "ch06": 219,
+      "ch07": 82,
+      "ch08": 0,
+      "ch09": 16,
+      "ch10": 2,
+      "ch11": 6,
+      "ch12": 5
+    },
+    "插断": {
+      "ch01": 0,
+      "ch02": 0,
+      "ch03": 0,
+      "ch04": 0,
+      "ch05": 0,
+      "ch06": 0,
+      "ch07": 0,
+      "ch08": 0,
+      "ch09": 0,
+      "ch10": 0,
+      "ch11": 0,
+      "ch12": 0
+    }
+  },
+  "glossary_coverage": [
+    {
+      "chapter": "ch01",
+      "source": "Transaction Layer",
+      "target": "事务层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 8,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch01",
+      "source": "Data Link Layer",
+      "target": "数据链路层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch01",
+      "source": "Physical Layer",
+      "target": "物理层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch01",
+      "source": "Root Complex",
+      "target": "根复合体",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch01",
+      "source": "Endpoint",
+      "target": "端点",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch01",
+      "source": "Request",
+      "target": "请求",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch01",
+      "source": "Configuration",
+      "target": "配置",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 9,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Transaction Layer",
+      "target": "事务层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 16,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Data Link Layer",
+      "target": "数据链路层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 11,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Root Complex",
+      "target": "根复合体",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 34,
+      "coverage": 0.971,
+      "neither": 1
+    },
+    {
+      "chapter": "ch02",
+      "source": "Endpoint",
+      "target": "端点",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 15,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Root Port",
+      "target": "根端口",
+      "category": "port",
+      "confidence": "high",
+      "en_cells": 11,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Downstream Port",
+      "target": "下游端口",
+      "category": "port",
+      "confidence": "high",
+      "en_cells": 16,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Upstream Port",
+      "target": "上游端口",
+      "category": "port",
+      "confidence": "high",
+      "en_cells": 18,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Flit Mode",
+      "target": "Flit 模式",
+      "category": "mode",
+      "confidence": "high",
+      "en_cells": 84,
+      "coverage": 0.964,
+      "neither": 3
+    },
+    {
+      "chapter": "ch02",
+      "source": "Non-Flit Mode",
+      "target": "非 Flit 模式",
+      "category": "mode",
+      "confidence": "high",
+      "en_cells": 55,
+      "coverage": 0.945,
+      "neither": 3
+    },
+    {
+      "chapter": "ch02",
+      "source": "Completion",
+      "target": "完成报文",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 77,
+      "coverage": 0.831,
+      "neither": 13
+    },
+    {
+      "chapter": "ch02",
+      "source": "Request",
+      "target": "请求",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 103,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Non-Posted",
+      "target": "无数据,需完成",
+      "category": "transaction",
+      "confidence": "high",
+      "en_cells": 24,
+      "coverage": 0.958,
+      "neither": 1
+    },
+    {
+      "chapter": "ch02",
+      "source": "Memory Space",
+      "target": "内存空间",
+      "category": "address",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Flow Control",
+      "target": "流控",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 33,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Flow Control Credit",
+      "target": "流控信用",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Traffic Class",
+      "target": "流量类",
+      "category": "field",
+      "confidence": "high",
+      "en_cells": 23,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Requester ID",
+      "target": "请求者 ID",
+      "category": "field",
+      "confidence": "high",
+      "en_cells": 38,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Byte Enable",
+      "target": "字节使能",
+      "category": "field",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 0.857,
+      "neither": 1
+    },
+    {
+      "chapter": "ch02",
+      "source": "Virtual Channel",
+      "target": "虚通道",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 15,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Configuration Request",
+      "target": "配置请求",
+      "category": "transaction",
+      "confidence": "high",
+      "en_cells": 9,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Interrupt",
+      "target": "中断",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Receiver",
+      "target": "接收器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 55,
+      "coverage": 0.818,
+      "neither": 10
+    },
+    {
+      "chapter": "ch02",
+      "source": "Transmitter",
+      "target": "发送器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 15,
+      "coverage": 0.867,
+      "neither": 2
+    },
+    {
+      "chapter": "ch02",
+      "source": "Configuration",
+      "target": "配置",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 43,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Encoding",
+      "target": "编码",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Hierarchy",
+      "target": "层级",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 14,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "PCI-SIG",
+      "target": "PCI 特殊兴趣小组",
+      "category": "organization",
+      "confidence": "high",
+      "en_cells": 8,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch02",
+      "source": "Specification",
+      "target": "规范",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 30,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch03",
+      "source": "Transaction Layer",
+      "target": "事务层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 17,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch03",
+      "source": "Data Link Layer",
+      "target": "数据链路层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 21,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch03",
+      "source": "Physical Layer",
+      "target": "物理层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 16,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch03",
+      "source": "Flit Mode",
+      "target": "Flit 模式",
+      "category": "mode",
+      "confidence": "high",
+      "en_cells": 13,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch03",
+      "source": "Non-Flit Mode",
+      "target": "非 Flit 模式",
+      "category": "mode",
+      "confidence": "high",
+      "en_cells": 10,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch03",
+      "source": "Flow Control",
+      "target": "流控",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 13,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch03",
+      "source": "Power Management",
+      "target": "电源管理",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch03",
+      "source": "Receiver",
+      "target": "接收器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch03",
+      "source": "Transmitter",
+      "target": "发送器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch03",
+      "source": "Recovery",
+      "target": "恢复",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch03",
+      "source": "ACK DLLP",
+      "target": "确认 DLLP",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch03",
+      "source": "NAK DLLP",
+      "target": "否认 DLLP",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch03",
+      "source": "Sequence Number",
+      "target": "序列号",
+      "category": "field",
+      "confidence": "high",
+      "en_cells": 11,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Transaction Layer",
+      "target": "事务层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Data Link Layer",
+      "target": "数据链路层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 24,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Physical Layer",
+      "target": "物理层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 14,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Downstream Port",
+      "target": "下游端口",
+      "category": "port",
+      "confidence": "high",
+      "en_cells": 70,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Upstream Port",
+      "target": "上游端口",
+      "category": "port",
+      "confidence": "high",
+      "en_cells": 53,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Flit Mode",
+      "target": "Flit 模式",
+      "category": "mode",
+      "confidence": "high",
+      "en_cells": 62,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Non-Flit Mode",
+      "target": "非 Flit 模式",
+      "category": "mode",
+      "confidence": "high",
+      "en_cells": 28,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Completion",
+      "target": "完成报文",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 11,
+      "coverage": 0.091,
+      "neither": 10
+    },
+    {
+      "chapter": "ch04",
+      "source": "Request",
+      "target": "请求",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 39,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Flow Control",
+      "target": "流控",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Capabilities Register",
+      "target": "能力寄存器",
+      "category": "register",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 0.833,
+      "neither": 1
+    },
+    {
+      "chapter": "ch04",
+      "source": "Retimer",
+      "target": "重定时器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 71,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "128b/130b",
+      "target": "128b/130b 编码",
+      "category": "encoding",
+      "confidence": "high",
+      "en_cells": 96,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Equalization",
+      "target": "均衡",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 76,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Training Sequence",
+      "target": "训练序列",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Compliance Pattern",
+      "target": "一致性测试码型",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 35,
+      "coverage": 0.971,
+      "neither": 1
+    },
+    {
+      "chapter": "ch04",
+      "source": "Electrical Idle",
+      "target": "电气空闲",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 96,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Receiver",
+      "target": "接收器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 147,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Transmitter",
+      "target": "发送器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 142,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "De-emphasis",
+      "target": "去加重",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 23,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Polling",
+      "target": "轮询",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 44,
+      "coverage": 0.977,
+      "neither": 1
+    },
+    {
+      "chapter": "ch04",
+      "source": "Configuration",
+      "target": "配置",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 84,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Recovery",
+      "target": "恢复",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 103,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "L0 State",
+      "target": "L0 状态",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 14,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Hot Reset",
+      "target": "热复位",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 14,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Loopback",
+      "target": "回环",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 66,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Disable",
+      "target": "禁用",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 26,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Sequence Number",
+      "target": "序列号",
+      "category": "field",
+      "confidence": "high",
+      "en_cells": 21,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Generation",
+      "target": "代",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 0.5,
+      "neither": 3
+    },
+    {
+      "chapter": "ch04",
+      "source": "Bandwidth",
+      "target": "带宽",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 9,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Latency",
+      "target": "延迟",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 15,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Negotiation",
+      "target": "协商",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 29,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Advertise",
+      "target": "通告",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 24,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Encoding",
+      "target": "编码",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 122,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Decoding",
+      "target": "解码",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Scrambling",
+      "target": "加扰",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 43,
+      "coverage": 0.977,
+      "neither": 1
+    },
+    {
+      "chapter": "ch04",
+      "source": "De-scrambling",
+      "target": "解扰",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Package",
+      "target": "封装",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Fundamental Reset",
+      "target": "基本复位",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 8,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Specification",
+      "target": "规范",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 35,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch04",
+      "source": "Compliance",
+      "target": "一致性",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 53,
+      "coverage": 0.981,
+      "neither": 1
+    },
+    {
+      "chapter": "ch05",
+      "source": "Transaction Layer",
+      "target": "事务层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Data Link Layer",
+      "target": "数据链路层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Physical Layer",
+      "target": "物理层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Root Complex",
+      "target": "根复合体",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 11,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Endpoint",
+      "target": "端点",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 9,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Downstream Port",
+      "target": "下游端口",
+      "category": "port",
+      "confidence": "high",
+      "en_cells": 17,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Upstream Port",
+      "target": "上游端口",
+      "category": "port",
+      "confidence": "high",
+      "en_cells": 18,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Flit Mode",
+      "target": "Flit 模式",
+      "category": "mode",
+      "confidence": "high",
+      "en_cells": 10,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Non-Flit Mode",
+      "target": "非 Flit 模式",
+      "category": "mode",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Completion",
+      "target": "完成报文",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 0.857,
+      "neither": 1
+    },
+    {
+      "chapter": "ch05",
+      "source": "Request",
+      "target": "请求",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 18,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Flow Control",
+      "target": "流控",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Power Management",
+      "target": "电源管理",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 28,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Power State",
+      "target": "电源状态",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 12,
+      "coverage": 0.5,
+      "neither": 6
+    },
+    {
+      "chapter": "ch05",
+      "source": "Electrical Idle",
+      "target": "电气空闲",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Receiver",
+      "target": "接收器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 0.8,
+      "neither": 1
+    },
+    {
+      "chapter": "ch05",
+      "source": "Transmitter",
+      "target": "发送器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Configuration",
+      "target": "配置",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 17,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Recovery",
+      "target": "恢复",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 10,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "L0 State",
+      "target": "L0 状态",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 12,
+      "coverage": 0.917,
+      "neither": 1
+    },
+    {
+      "chapter": "ch05",
+      "source": "L1 State",
+      "target": "L1 状态",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 11,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Disable",
+      "target": "禁用",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Generation",
+      "target": "代",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 0.6,
+      "neither": 2
+    },
+    {
+      "chapter": "ch05",
+      "source": "Latency",
+      "target": "延迟",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 12,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Negotiation",
+      "target": "协商",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Encoding",
+      "target": "编码",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Hierarchy",
+      "target": "层级",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 10,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Form Factor",
+      "target": "外形规格",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 9,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch05",
+      "source": "Specification",
+      "target": "规范",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 14,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Transaction Layer",
+      "target": "事务层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 12,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Data Link Layer",
+      "target": "数据链路层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 16,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Physical Layer",
+      "target": "物理层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Root Complex",
+      "target": "根复合体",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 78,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Endpoint",
+      "target": "端点",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 46,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Root Port",
+      "target": "根端口",
+      "category": "port",
+      "confidence": "high",
+      "en_cells": 37,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Downstream Port",
+      "target": "下游端口",
+      "category": "port",
+      "confidence": "high",
+      "en_cells": 71,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Upstream Port",
+      "target": "上游端口",
+      "category": "port",
+      "confidence": "high",
+      "en_cells": 40,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Flit Mode",
+      "target": "Flit 模式",
+      "category": "mode",
+      "confidence": "high",
+      "en_cells": 20,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Non-Flit Mode",
+      "target": "非 Flit 模式",
+      "category": "mode",
+      "confidence": "high",
+      "en_cells": 10,
+      "coverage": 0.9,
+      "neither": 1
+    },
+    {
+      "chapter": "ch06",
+      "source": "Completion",
+      "target": "完成报文",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 72,
+      "coverage": 0.833,
+      "neither": 12
+    },
+    {
+      "chapter": "ch06",
+      "source": "Request",
+      "target": "请求",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 134,
+      "coverage": 0.993,
+      "neither": 1
+    },
+    {
+      "chapter": "ch06",
+      "source": "Non-Posted",
+      "target": "无数据,需完成",
+      "category": "transaction",
+      "confidence": "high",
+      "en_cells": 36,
+      "coverage": 0.972,
+      "neither": 1
+    },
+    {
+      "chapter": "ch06",
+      "source": "Memory Space",
+      "target": "内存空间",
+      "category": "address",
+      "confidence": "high",
+      "en_cells": 27,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Configuration Space",
+      "target": "配置空间",
+      "category": "address",
+      "confidence": "high",
+      "en_cells": 13,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Flow Control",
+      "target": "流控",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 20,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Traffic Class",
+      "target": "流量类",
+      "category": "field",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Address Type",
+      "target": "地址类型",
+      "category": "field",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Requester ID",
+      "target": "请求者 ID",
+      "category": "field",
+      "confidence": "high",
+      "en_cells": 19,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Poisoned TLP",
+      "target": "中毒 TLP",
+      "category": "error",
+      "confidence": "high",
+      "en_cells": 10,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Correctable Error",
+      "target": "可纠正错误",
+      "category": "error",
+      "confidence": "high",
+      "en_cells": 16,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Uncorrectable Error",
+      "target": "不可纠正错误",
+      "category": "error",
+      "confidence": "high",
+      "en_cells": 24,
+      "coverage": 0.917,
+      "neither": 2
+    },
+    {
+      "chapter": "ch06",
+      "source": "Fatal Error",
+      "target": "致命错误",
+      "category": "error",
+      "confidence": "high",
+      "en_cells": 25,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Power Management",
+      "target": "电源管理",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 16,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Hot-Plug",
+      "target": "热插拔",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 39,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Virtual Channel",
+      "target": "虚通道",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 13,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "TC/VC Mapping",
+      "target": "TC/VC 映射",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Arbitration",
+      "target": "仲裁",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 18,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Port Arbitration",
+      "target": "端口仲裁",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Configuration Request",
+      "target": "配置请求",
+      "category": "transaction",
+      "confidence": "high",
+      "en_cells": 16,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Type 1 Configuration",
+      "target": "Type 1 配置",
+      "category": "transaction",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Capabilities Register",
+      "target": "能力寄存器",
+      "category": "register",
+      "confidence": "high",
+      "en_cells": 34,
+      "coverage": 0.412,
+      "neither": 20
+    },
+    {
+      "chapter": "ch06",
+      "source": "Interrupt",
+      "target": "中断",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 48,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Out-of-Band",
+      "target": "带外",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "In-Band",
+      "target": "带内",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 13,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Receiver",
+      "target": "接收器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 35,
+      "coverage": 0.743,
+      "neither": 9
+    },
+    {
+      "chapter": "ch06",
+      "source": "Transmitter",
+      "target": "发送器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 10,
+      "coverage": 0.8,
+      "neither": 2
+    },
+    {
+      "chapter": "ch06",
+      "source": "Polling",
+      "target": "轮询",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 10,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Configuration",
+      "target": "配置",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 80,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Recovery",
+      "target": "恢复",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 9,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Hot Reset",
+      "target": "热复位",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Disable",
+      "target": "禁用",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 19,
+      "coverage": 0.947,
+      "neither": 1
+    },
+    {
+      "chapter": "ch06",
+      "source": "Generation",
+      "target": "代",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 12,
+      "coverage": 0.25,
+      "neither": 9
+    },
+    {
+      "chapter": "ch06",
+      "source": "Bandwidth",
+      "target": "带宽",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 9,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Latency",
+      "target": "延迟",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 19,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Negotiation",
+      "target": "协商",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Decoding",
+      "target": "解码",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 0.667,
+      "neither": 2
+    },
+    {
+      "chapter": "ch06",
+      "source": "Hierarchy",
+      "target": "层级",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 22,
+      "coverage": 0.955,
+      "neither": 1
+    },
+    {
+      "chapter": "ch06",
+      "source": "Topology",
+      "target": "拓扑",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 9,
+      "coverage": 0.889,
+      "neither": 1
+    },
+    {
+      "chapter": "ch06",
+      "source": "Form Factor",
+      "target": "外形规格",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 17,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Adapter",
+      "target": "适配器",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 23,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Fundamental Reset",
+      "target": "基本复位",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Conventional Reset",
+      "target": "常规复位",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 13,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "PCI-SIG",
+      "target": "PCI 特殊兴趣小组",
+      "category": "organization",
+      "confidence": "high",
+      "en_cells": 9,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch06",
+      "source": "Specification",
+      "target": "规范",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 74,
+      "coverage": 0.986,
+      "neither": 1
+    },
+    {
+      "chapter": "ch07",
+      "source": "Data Link Layer",
+      "target": "数据链路层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 16,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Physical Layer",
+      "target": "物理层",
+      "category": "layer",
+      "confidence": "high",
+      "en_cells": 11,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Root Complex",
+      "target": "根复合体",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 47,
+      "coverage": 0.979,
+      "neither": 1
+    },
+    {
+      "chapter": "ch07",
+      "source": "Endpoint",
+      "target": "端点",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 17,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Root Port",
+      "target": "根端口",
+      "category": "port",
+      "confidence": "high",
+      "en_cells": 25,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Downstream Port",
+      "target": "下游端口",
+      "category": "port",
+      "confidence": "high",
+      "en_cells": 41,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Upstream Port",
+      "target": "上游端口",
+      "category": "port",
+      "confidence": "high",
+      "en_cells": 77,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "PCI Express Port",
+      "target": "PCI Express 端口",
+      "category": "port",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Flit Mode",
+      "target": "Flit 模式",
+      "category": "mode",
+      "confidence": "high",
+      "en_cells": 34,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Non-Flit Mode",
+      "target": "非 Flit 模式",
+      "category": "mode",
+      "confidence": "high",
+      "en_cells": 13,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Completion",
+      "target": "完成报文",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 28,
+      "coverage": 0.571,
+      "neither": 12
+    },
+    {
+      "chapter": "ch07",
+      "source": "Request",
+      "target": "请求",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 61,
+      "coverage": 0.984,
+      "neither": 1
+    },
+    {
+      "chapter": "ch07",
+      "source": "Non-Posted",
+      "target": "无数据,需完成",
+      "category": "transaction",
+      "confidence": "high",
+      "en_cells": 14,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Memory Space",
+      "target": "内存空间",
+      "category": "address",
+      "confidence": "high",
+      "en_cells": 12,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Configuration Space",
+      "target": "配置空间",
+      "category": "address",
+      "confidence": "high",
+      "en_cells": 36,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Base Address Register",
+      "target": "基址寄存器",
+      "category": "register",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Flow Control",
+      "target": "流控",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 8,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Requester ID",
+      "target": "请求者 ID",
+      "category": "field",
+      "confidence": "high",
+      "en_cells": 13,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Poisoned TLP",
+      "target": "中毒 TLP",
+      "category": "error",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Correctable Error",
+      "target": "可纠正错误",
+      "category": "error",
+      "confidence": "high",
+      "en_cells": 12,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Uncorrectable Error",
+      "target": "不可纠正错误",
+      "category": "error",
+      "confidence": "high",
+      "en_cells": 17,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Fatal Error",
+      "target": "致命错误",
+      "category": "error",
+      "confidence": "high",
+      "en_cells": 12,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Power Management",
+      "target": "电源管理",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 14,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Active State Power Management",
+      "target": "主动状态电源管理",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Hot-Plug",
+      "target": "热插拔",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 11,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Virtual Channel",
+      "target": "虚通道",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 15,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Arbitration",
+      "target": "仲裁",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 22,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Port Arbitration",
+      "target": "端口仲裁",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 8,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Configuration Request",
+      "target": "配置请求",
+      "category": "transaction",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Type 1 Configuration",
+      "target": "Type 1 配置",
+      "category": "transaction",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 0.8,
+      "neither": 1
+    },
+    {
+      "chapter": "ch07",
+      "source": "PCI-Compatible",
+      "target": "PCI 兼容",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 18,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "PCI Express Capability",
+      "target": "PCI Express 能力结构",
+      "category": "register",
+      "confidence": "high",
+      "en_cells": 14,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Capabilities Register",
+      "target": "能力寄存器",
+      "category": "register",
+      "confidence": "high",
+      "en_cells": 46,
+      "coverage": 0.826,
+      "neither": 8
+    },
+    {
+      "chapter": "ch07",
+      "source": "Interrupt",
+      "target": "中断",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 25,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "In-Band",
+      "target": "带内",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Retimer",
+      "target": "重定时器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 12,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Equalization",
+      "target": "均衡",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 27,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Receiver",
+      "target": "接收器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 22,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Transmitter",
+      "target": "发送器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 24,
+      "coverage": 0.958,
+      "neither": 1
+    },
+    {
+      "chapter": "ch07",
+      "source": "De-emphasis",
+      "target": "去加重",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Polling",
+      "target": "轮询",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 10,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Configuration",
+      "target": "配置",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 81,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Recovery",
+      "target": "恢复",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 17,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "L0 State",
+      "target": "L0 状态",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Disable",
+      "target": "禁用",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 29,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Generation",
+      "target": "代",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 15,
+      "coverage": 0.267,
+      "neither": 11
+    },
+    {
+      "chapter": "ch07",
+      "source": "Bandwidth",
+      "target": "带宽",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 8,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Latency",
+      "target": "延迟",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 23,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Negotiation",
+      "target": "协商",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 20,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Encoding",
+      "target": "编码",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 26,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Hierarchy",
+      "target": "层级",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 29,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Form Factor",
+      "target": "外形规格",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 10,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Adapter",
+      "target": "适配器",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 9,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Connector",
+      "target": "连接器",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "PCI-SIG",
+      "target": "PCI 特殊兴趣小组",
+      "category": "organization",
+      "confidence": "high",
+      "en_cells": 24,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Specification",
+      "target": "规范",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 51,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Compliance",
+      "target": "一致性",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 9,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch07",
+      "source": "Compliance Testing",
+      "target": "一致性测试",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch08",
+      "source": "Equalization",
+      "target": "均衡",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 33,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch08",
+      "source": "Compliance Pattern",
+      "target": "一致性测试码型",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 13,
+      "coverage": 0.769,
+      "neither": 3
+    },
+    {
+      "chapter": "ch08",
+      "source": "Receiver",
+      "target": "接收器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 52,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch08",
+      "source": "Transmitter",
+      "target": "发送器",
+      "category": "block",
+      "confidence": "high",
+      "en_cells": 45,
+      "coverage": 0.956,
+      "neither": 2
+    },
+    {
+      "chapter": "ch08",
+      "source": "De-emphasis",
+      "target": "去加重",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 10,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch08",
+      "source": "Bandwidth",
+      "target": "带宽",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 11,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch08",
+      "source": "Form Factor",
+      "target": "外形规格",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch08",
+      "source": "Connector",
+      "target": "连接器",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch08",
+      "source": "Package",
+      "target": "封装",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 36,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch08",
+      "source": "Specification",
+      "target": "规范",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 28,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch08",
+      "source": "Compliance",
+      "target": "一致性",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 27,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch09",
+      "source": "Root Complex",
+      "target": "根复合体",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch09",
+      "source": "Endpoint",
+      "target": "端点",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch09",
+      "source": "Request",
+      "target": "请求",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch09",
+      "source": "Memory Space",
+      "target": "内存空间",
+      "category": "address",
+      "confidence": "high",
+      "en_cells": 8,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch09",
+      "source": "Configuration Space",
+      "target": "配置空间",
+      "category": "address",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch09",
+      "source": "Interrupt",
+      "target": "中断",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch09",
+      "source": "Configuration",
+      "target": "配置",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 18,
+      "coverage": 0.944,
+      "neither": 1
+    },
+    {
+      "chapter": "ch09",
+      "source": "VF Enable",
+      "target": "VF 使能",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 11,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch09",
+      "source": "ARI Capable Hierarchy",
+      "target": "支持 ARI 的层级",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch09",
+      "source": "Hierarchy",
+      "target": "层级",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 9,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch09",
+      "source": "Specification",
+      "target": "规范",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 10,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch10",
+      "source": "Root Complex",
+      "target": "根复合体",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch10",
+      "source": "Endpoint",
+      "target": "端点",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch10",
+      "source": "Flit Mode",
+      "target": "Flit 模式",
+      "category": "mode",
+      "confidence": "high",
+      "en_cells": 8,
+      "coverage": 0.875,
+      "neither": 1
+    },
+    {
+      "chapter": "ch10",
+      "source": "Completion",
+      "target": "完成报文",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 33,
+      "coverage": 0.273,
+      "neither": 24
+    },
+    {
+      "chapter": "ch10",
+      "source": "Request",
+      "target": "请求",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 51,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch10",
+      "source": "Requester ID",
+      "target": "请求者 ID",
+      "category": "field",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch10",
+      "source": "Page Request Interface",
+      "target": "页请求接口",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 13,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch10",
+      "source": "Page Request",
+      "target": "页请求",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 14,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch10",
+      "source": "Stop Marker",
+      "target": "停止标记",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 7,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch10",
+      "source": "Specification",
+      "target": "规范",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 24,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch11",
+      "source": "Completion",
+      "target": "完成报文",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 0.2,
+      "neither": 4
+    },
+    {
+      "chapter": "ch11",
+      "source": "Request",
+      "target": "请求",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 13,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch11",
+      "source": "Configuration",
+      "target": "配置",
+      "category": "state",
+      "confidence": "high",
+      "en_cells": 9,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch12",
+      "source": "Request",
+      "target": "请求",
+      "category": "packet",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch12",
+      "source": "Out-of-Band",
+      "target": "带外",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch12",
+      "source": "Sideband",
+      "target": "边带",
+      "category": "feature",
+      "confidence": "high",
+      "en_cells": 11,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch12",
+      "source": "Interposer",
+      "target": "中间板",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 5,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch12",
+      "source": "Form Factor",
+      "target": "外形规格",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 17,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch12",
+      "source": "Adapter",
+      "target": "适配器",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 18,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch12",
+      "source": "Connector",
+      "target": "连接器",
+      "category": "device",
+      "confidence": "high",
+      "en_cells": 6,
+      "coverage": 1.0,
+      "neither": 0
+    },
+    {
+      "chapter": "ch12",
+      "source": "Specification",
+      "target": "规范",
+      "category": "concept",
+      "confidence": "high",
+      "en_cells": 14,
+      "coverage": 1.0,
+      "neither": 0
+    }
+  ]
+}
