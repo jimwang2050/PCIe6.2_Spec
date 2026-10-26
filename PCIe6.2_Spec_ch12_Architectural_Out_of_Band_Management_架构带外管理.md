@@ -163,7 +163,7 @@ does traverse Links. Some applications choose to isolate such traffic for reason
 
 本章提供了一份"工具包",包含多种潜在适用的技术要素,例如 [SMBus] 寻址、离散信号整合、灵活 I/O (Flexible I/O) 信号功能协商,以及如何利用 [I3C-Basic] 和托管 USB 2.0 等增强型接口。在本规范中集中这些内容的目的是在系统以及现有或新的未来外形规格 (Form Factor) 规范或修订版的物理、电气和逻辑域方面实现能力和一致性方面的重大改进。
 
-下表提供了典型架构带外接口的相对比较和基本使用指导。带宽显示为理论接口速度,并不代表实际吞吐率。术语"隔离控制面 (Isolated Control Plane)"是指该接口不涉及链路 (Link)。例如,PCIe 厂商定义消息 (Vendor-Defined Messages, VDM) 通常用于不涉及运行在主机 CPU 上的固件/软件、但会穿越链路的带外管理。某些应用出于主机带宽或安全等原因选择隔离此类流量。
+下表提供了典型架构带外接口的相对比较和基本使用指导。带宽显示为理论接口速度,并不代表实际吞吐量。术语"隔离控制面 (Isolated Control Plane)"是指该接口不涉及链路 (Link)。例如,PCIe 厂商定义消息 (Vendor-Defined Messages, VDM) 通常用于不涉及运行在主机 CPU 上的固件/软件、但会穿越链路的带外管理。某些应用出于主机带宽或安全等原因选择隔离此类流量。
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -172,7 +172,7 @@ does traverse Links. Some applications choose to isolate such traffic for reason
 
 本章提供了一份"工具包",包含多种潜在适用的技术要素，例如 [SMBus] 寻址、离散信号整合、灵活 I/O (Flexible I/O) 信号功能协商，以及如何利用 [I3C-Basic] 和托管 USB 2.0 等增强型接口。在本规范中集中这些内容的目的是在系统以及现有或新的未来外形规格 (Form Factor) 规范或修订版的物理、电气和逻辑域方面实现能力和一致性方面的重大改进。
 
-下表提供了典型架构带外接口的相对比较和基本使用指导。带宽显示为理论接口速度，并不代表实际吞吐率。术语"隔离控制面 (Isolated Control Plane)"是指该接口不涉及链路 (Link)。例如,PCIe 厂商定义消息 (Vendor-Defined Messages, VDM) 通常用于不涉及运行在主机 CPU 上的固件/软件、但会穿越链路的带外管理。某些应用出于主机带宽或安全等原因选择隔离此类流量。
+下表提供了典型架构带外接口的相对比较和基本使用指导。带宽显示为理论接口速度，并不代表实际吞吐量。术语"隔离控制面 (Isolated Control Plane)"是指该接口不涉及链路 (Link)。例如,PCIe 厂商定义消息 (Vendor-Defined Messages, VDM) 通常用于不涉及运行在主机 CPU 上的固件/软件、但会穿越链路的带外管理。某些应用出于主机带宽或安全等原因选择隔离此类流量。
 
 </td>
 </tr>
@@ -1701,7 +1701,7 @@ re-entry to the discovery phase.
 
 一旦 PESTI 过渡到活动阶段，发起者将自主地与每个目标组件交换硬件控制的虚拟线路。硬件控制的虚拟线路输入和输出特定于目标 DEVICE CLASS[15:0]。输入和输出的字节数及其各自的用途按设备类别固定。
 
-如果虚拟线路输出字节数为零，则发起者将跳过传输虚拟线路输出 (Virtual Wire Output, VWOUT_0) 并等待接收任何虚拟线路输入 (Virtual Wire Input, VWIN_N) 字节。如果虚拟线路字节数为零，则每当在发起者处预期时，需要目标的确认响应 00h。SMFW 可以清除 APEN=0,以便不传输 VWE 命令，并且总线将保持空闲，直到下次开机重置或重新进入发现阶段。
+如果虚拟线路输出字节数为零，则发起者将跳过传输虚拟线路输出 (Virtual Wire Output, VWOUT_0) 并等待接收任何虚拟线路输入 (Virtual Wire Input, VWIN_N) 字节。如果虚拟线路字节数为零，则每当在发起者处预期时，需要目标的确认响应 00h。SMFW 可以清除 APEN=0,以便不传输 VWE 命令，并且总线将保持空闲，直到下次开机复位或重新进入发现阶段。
 
 </td>
 </tr>

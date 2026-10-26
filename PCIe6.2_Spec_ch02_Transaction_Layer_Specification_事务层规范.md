@@ -3382,7 +3382,8 @@ As a best practice, it is strongly recommended that devices receiving non-enable
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 2-32.** 非 Flit 模式下 TLP 包头中字节使能的位置
+> <img src="figures/chapter_02/fig_0183_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -3760,7 +3761,8 @@ A Memory Read Request of 1 DW with no bytes enabled, or "zero-length Read," may 
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 2-33.** 事务描述符
+> <img src="figures/chapter_02/fig_0186_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -4734,7 +4736,7 @@ Memory, I/O, and Configuration Request Rules
 - 对于内存请求，适用以下规则：
   - 内存请求按地址路由，使用 64 位或 32 位寻址（见 § 图 2-36 和 § 图 2-37）。
   - 对于内存读请求，Length 不得超过 Max_Read_Request_Size 指定的值（见 § 7.5.3.4 节）。
-  - 对于 AtomicOp 请求，规整化的操作数大小及其对应的 Length 字段值见 § 表 2-15。如果完成方 (Completer) 支持 AtomicOp，则适用以下规则：完成方必须检查 Length 字段值。如果该值不匹配任何规整化值，则完成方必须将该 TLP 视为畸形 TLP (Malformed TLP)。否则，如果该值与完成方支持的操作数大小不匹配，则完成方必须将该 TLP 视为不支持请求 (Unsupported Request, UR)。此为与接收端口 (Receiving Port) 相关的上报错误（见 § 6.2 节）。
+  - 对于 AtomicOp 请求，规整化的操作数大小及其对应的 Length 字段值见 § 表 2-15。如果完成者 (Completer) 支持 AtomicOp，则适用以下规则：完成者必须检查 Length 字段值。如果该值不匹配任何规整化值，则完成者必须将该 TLP 视为畸形 TLP (Malformed TLP)。否则，如果该值与完成者支持的操作数大小不匹配，则完成者必须将该 TLP 视为不支持请求 (Unsupported Request, UR)。此为与接收端口 (Receiving Port) 相关的上报错误（见 § 6.2 节）。
 
 </td>
 </tr>
@@ -4777,11 +4779,11 @@ Memory, I/O, and Configuration Request Rules
 - FetchAdd 请求包含一个操作数，即"add"值。
 - Swap 请求包含一个操作数，即"swap"值。
 - CAS 请求包含两个操作数。数据区中的第一个是"compare"值，第二个是"swap"值。
-- 对于 AtomicOp 请求，地址必须与操作数大小自然对齐。完成方必须检查对此规则的违反。如果 TLP 违反此规则，则该 TLP 为畸形 TLP。此为与接收端口相关的上报错误（见 § 6.2 节）。
+- 对于 AtomicOp 请求，地址必须与操作数大小自然对齐。完成者必须检查对此规则的违反。如果 TLP 违反此规则，则该 TLP 为畸形 TLP。此为与接收端口相关的上报错误（见 § 6.2 节）。
 - 请求不能指定会导致内存空间访问跨越 4-KB 边界的 Address/Length 组合。
   - 接收方可选择性地检查对此规则的违反。实现该检查的接收方如果判定 TLP 违反此规则，则该 TLP 为畸形 TLP。
     - 如果实施检查，此为与接收端口相关的上报错误（见 § 6.2 节）。
-    - 建议此可选检查仅在完成方中执行，永远不在中间接收方中执行。
+    - 建议此可选检查仅在完成者中执行，永远不在中间接收方中执行。
 
 </td>
 </tr>
@@ -4814,7 +4816,7 @@ Memory, I/O, and Configuration Request Rules
 <td style="background-color:#e8e8e8">
 
   - 中间接收方不允许对具有保留 Type 值的 TLP 实施此检查（见 § 表 2-5）。TLP Length 字段与所影响内存范围长度之间的关系取决于请求类型（关于两者不同的示例，请参见 AtomicOp CAS 请求）。
-  - 对于 AtomicOp 请求，强制性的完成方对地址自然对齐的检查（见上文）已保证访问不会跨越 4-KB 边界，因此不再需要单独的 4-KB 边界检查。
+  - 对于 AtomicOp 请求，强制性的完成者对地址自然对齐的检查（见上文）已保证访问不会跨越 4-KB 边界，因此不再需要单独的 4-KB 边界检查。
   - 如果对 AtomicOp CAS 请求执行 4-KB 边界检查，该检查必须理解：TLP Length 值基于两个操作数的大小，而对内存空间的访问基于一个操作数的大小。
 
 </td>
@@ -5525,7 +5527,7 @@ Except as stated, rules that apply in Non-Flit Mode also apply in Flit Mode.
 - ST[7:0] 字段承载 Steering Tag 值
   - 零值表示无 Steering Tag 偏好
   - 共提供 255 个唯一的 Steering Tag 值
-- 不支持 TPH 完成方 (Completer) 或路由 (Routing) 能力的 Function，在收到 TH 位置位的请求时，必须忽略 TH 位，并以与同类型未置位 TH 的请求相同的方式处理该请求。
+- 不支持 TPH 完成者 (Completer) 或路由 (Routing) 能力的 Function，在收到 TH 位置位的请求时，必须忽略 TH 位，并以与同类型未置位 TH 的请求相同的方式处理该请求。
 
 除非另有说明，适用于非 Flit 模式的规则同样适用于 Flit 模式。
 
@@ -6708,6 +6710,8 @@ The Vendor-Defined Messages allow expansion of PCI Express messaging capabilitie
 
 1. Note 1: Transmission by Endpoint/Root Complex/Bridge is implementation specific. Switches must forward received Messages using Routing r[2:0] field values of 000b, 010b, and 011b.
 
+<sup>1. 注 1：由 Endpoint / Root Complex / Bridge 发送是实现特定的。Switch 必须使用 Routing r[2:0] 字段值 000b、010b 和 011b 转发接收到的消息。</sup>
+
 <table>
 <thead>
 <tr>
@@ -6719,21 +6723,17 @@ The Vendor-Defined Messages allow expansion of PCI Express messaging capabilitie
 <tr>
 <td>
 
-1. 注 1：由 Endpoint / Root Complex / Bridge 发送是实现特定的。Switch 必须使用 Routing r[2:0] 字段值 000b、010b 和 011b 转发接收到的消息。
+27. ACS Source Validation (see § Section 6.12.1.1) checks the Requester ID on all Requests, including Vendor-Defined Messages. This validation depends on the Requester ID properly identifying the Requester.
 
 </td>
 <td style="background-color:#e8e8e8">
 
----
-
-27. ACS Source Validation (see § Section 6.12.1.1) checks the Requester ID on all Requests, including Vendor-Defined Messages. This validation depends on the Requester ID properly identifying the Requester.
+27. ACS Source Validation (参见 § 6.12.1.1 节) 会检查所有请求上的 Requester ID，包括厂商自定义消息。此验证依赖于 Requester ID 正确标识 Requester。
 
 </td>
 </tr>
 </tbody>
 </table>
-
-<sup>27. ACS Source Validation (参见 § 6.12.1.1 节) 会检查所有请求上的 Requester ID，包括厂商自定义消息。此验证依赖于 Requester ID 正确标识 Requester。</sup>
 
 ---
 
@@ -7770,10 +7770,10 @@ check for violations of this rule. See § Section 2.3.2 , second bullet, for det
 - 完成报文按 ID 路由 (route by ID)，并使用 3 DW 报头。
   - 请注意，路由 ID 字段与相应请求中提供的 Requester ID 一一对应。因此，对于完成报文，这些字段将统称为 Requester ID,而不是通常在 ID 路由中使用的各个独立字段。
 - 除所有 TLP 都包含的报头字段和 ID 路由字段外，完成报文还包含以下附加字段 (参见 § 图 2-79):
-  - Completer ID[15:0] - 标识完成方 (Completer) - 详见下文
+  - Completer ID[15:0] - 标识完成者 (Completer) - 详见下文
   - Completion Status[2:0] - 指示完成报文的状态 (参见 § 表 2-37)
     - 关于如何确定 Completion Status[2:0] 字段值的规则，见 § 2.3.1 节。
-  - BCM - Byte Count Modified - 该位不得由 PCI Express 完成方设置，仅可由 PCI-X 完成方设置
+  - BCM - Byte Count Modified - 该位不得由 PCI Express 完成者设置，仅可由 PCI-X 完成者设置
   - Byte Count[11:0] - 请求的剩余字节数 (Byte Count)
     - Byte Count 值以二进制数表示,0000 0000 0001b 表示 1 字节,1111 1111 1111b 表示 4095 字节,0000 0000 0000b 表示 4096 字节。
     - 对于内存读完成 (Memory Read Completion),Byte Count[11:0] 根据 § 2.3.1.1 节中的规则设置。
@@ -7899,7 +7899,7 @@ Length field.
   - 在转换完成 (Translation Completion) 中使用 RO 时 (参见 § 10.2.3 节)
 - TH 位对完成报文为保留 (Reserved)。
 - AT[1:0] 必须为 00b。接收器不要求也不鼓励对此进行检查。
-- 在完成设备经过软件初始化和配置 (使用至少一个配置写请求) 之前,Completer ID 字段没有意义;在这种情况下，请求方必须忽略 Completer ID 字段返回的值。
+- 在完成设备经过软件初始化和配置 (使用至少一个配置写请求) 之前,Completer ID 字段没有意义;在这种情况下，请求者必须忽略 Completer ID 字段返回的值。
 - 包含数据有效载荷的完成报文必须指定该完成报文实际返回的数据量，并必须包含所指定的数据量。
   - 在 TLP 中包含多于或少于 Length 字段所指定的数据属于 TLP 构造错误，所得到的 TLP 为格式错误 TLP (Malformed TLP)。
 注:这只是一般规则 (要求 TLP 数据有效载荷长度与 Length 字段值匹配) 的一个具体应用。
@@ -8047,7 +8047,7 @@ Completion Status is determined according to the following rules:
 以下情况均要求 OHC-A5 (参见 § 图 2-11):
 - 不成功的完成报文 (Unsuccessful Completions)
 - Lower Address[1:0] 不等于 00b 的非 UIO 完成报文
-- 由于关联的 Non-Posted 请求所包含的 Requester Segment 与完成方 (Completer) 所捕获的 Segment 不匹配，而需要 Destination Segment 的完成报文。
+- 由于关联的 Non-Posted 请求所包含的 Requester Segment 与完成者 (Completer) 所捕获的 Segment 不匹配，而需要 Destination Segment 的完成报文。
 
 当 OHC-A5 不存在时，意味着:Completion Status 为 Successful;Completer Segment 和 Destination Segment 不需要显式给出 (参见 § 2.2.1.2 节的 Segment 规则);并且对于非 UIO 完成报文,Lower Address[1:0] = 00b。
 
@@ -8062,7 +8062,7 @@ BCM 字段存在于非 Flit 模式完成报文中，在 Flit 模式中不予支�
 对于所有 UIO 完成报文:
 - 必须遵循 § 2.3.1.2 节和 § 2.3.1.3 节中分别定义的 Read Completion Boundary 和 Write Completion Boundary 规则。
 - Length[9:0] 表示该完成报文所代表的 DW 总数。值的定义参见 § 表 2-4。
-  - 无论 Completion Status 如何，完成方必须为 UIO 请求中的所有 DW 返回完成报文。
+  - 无论 Completion Status 如何，完成者必须为 UIO 请求中的所有 DW 返回完成报文。
   - 在确定 UIO 完成报文的 Length 值时，不得考虑 Byte Enables。
     - 对于零长度 UIO 写 (Zero Length UIO Write,请求中 Length = 00_0000_0001b 且 First Byte Enable = 0000b)，视为已写入一个 DW。
 - Tag 字段值必须与对应 UIO 请求的 Tag 字段值相匹配
@@ -8074,10 +8074,10 @@ BCM 字段存在于非 Flit 模式完成报文中，在 Flit 模式中不予支�
 - 对于带数据的 UIO 完成报文 (参见 § 图 2-84)
   - Lower Address[11:2] 必须存在
 - CDL[1:0] 字段分配给 [CXL] 使用;对于 [CXL] 未涵盖的使用场景，该字段必须视为保留 (Reserved)。
-- UIO 请求方必须接受以任何顺序到达的 UIO 完成报文。
+- UIO 请求者必须接受以任何顺序到达的 UIO 完成报文。
 - 与某个 Transaction ID 相关联的 UIO 内存请求 (UIO Memory Request)，仅当完成报文中 Length[9:0] 字段值所指示的已完成 DW 总和等于该请求所期望的 DW 总和时，才被视为完成。
-  - 仅 UIO 内存写 (UIO Memory Writes) 允许就同一 Transaction ID 同时存在多个未完成的请求 (outstanding Requests)。如果请求方需要确保以某个 Transaction ID 发出的 UIO 内存写请求已完成，则必须推迟以该 Transaction ID 发出进一步的请求，直到收到能账目所有使用该 Transaction ID 的、尚未完成的 UIO 内存写请求的完成报文为止。
-- 当完全完成时，与同一 Transaction ID 相关联的所有请求以同一 Completion Status 表示。但是，一个 UIO 请求的各个完成报文可以指示不同的 Completion Status 值。在合并 (coalesce) UIO 完成报文的任何位置 (包括请求方在内)，合并后的 Completion Status 按以下规则确定:
+  - 仅 UIO 内存写 (UIO Memory Writes) 允许就同一 Transaction ID 同时存在多个未完成的请求 (outstanding Requests)。如果请求者需要确保以某个 Transaction ID 发出的 UIO 内存写请求已完成，则必须推迟以该 Transaction ID 发出进一步的请求，直到收到能账目所有使用该 Transaction ID 的、尚未完成的 UIO 内存写请求的完成报文为止。
+- 当完全完成时，与同一 Transaction ID 相关联的所有请求以同一 Completion Status 表示。但是，一个 UIO 请求的各个完成报文可以指示不同的 Completion Status 值。在合并 (coalesce) UIO 完成报文的任何位置 (包括请求者在内)，合并后的 Completion Status 按以下规则确定:
 
 </td>
 </tr>
@@ -9253,7 +9253,7 @@ This section describes how Received Requests are handled, following the initial 
 >
 > 传统 PCI 中不存在 PCI Express 消息，因此无法应用上述指南。本规范针对每种类型的消息具体描述了设备何时必须将请求作为 Unsupported Request 处理。消息通过根端口和交换机端口时不受传统 PCI 控制机制的影响，包括 Bus Master Enable 和电源状态设置。
 >
-> 请注意,CA(Completer Abort)是 PCI Express 等效于 Target Abort 的错误，仅用于指示严重错误，该错误使完成方 (Completer) 永久无法响应其原本能够正常响应的请求。由于 Target Abort 仅在目标已断言 DEVSEL# 时在传统 PCI 中使用，因此对于传统 PCI 目标本应通过不断言 DEVSEL# 来忽略请求的任何情况，使用 CA 都是不正确的。
+> 请注意,CA(Completer Abort)是 PCI Express 等效于 Target Abort 的错误，仅用于指示严重错误，该错误使完成者 (Completer) 永久无法响应其原本能够正常响应的请求。由于 Target Abort 仅在目标已断言 DEVSEL# 时在传统 PCI 中使用，因此对于传统 PCI 目标本应通过不断言 DEVSEL# 来忽略请求的任何情况，使用 CA 都是不正确的。
 
 </td>
 </tr>
@@ -9321,7 +9321,7 @@ If the Request arrives between the time an FLR has been initiated and the comple
   - 如果请求需要完成报文，则返回 CA 的 Completion Status(参见 § Section 2.2.9)
 - 对于 DMWr 请求，请参考 § Section 6.32 中的规则。
 - 否则(受支持的请求类型，非 DMWr,非消息)，处理该请求
-  - 如果完成方由于设备特定的错误条件而永久无法处理该请求，则完成方必须在可能的情况下将请求作为 Completer Abort 处理
+  - 如果完成者由于设备特定的错误条件而永久无法处理该请求，则完成者必须在可能的情况下将请求作为 Completer Abort 处理
     - 如果错误可以隔离到组件中的特定 Function,这是与接收 Function 相关联的上报错误;如果无法隔离错误，则是与接收端口相关联的上报错误(参见 § Section 6.2)
 
 > **实现说明 (IMPLEMENTATION NOTE):**
@@ -9385,12 +9385,12 @@ If the Request arrives between the time an FLR has been initiated and the comple
   - 在任何 DRS 事件之后(参见 § Section 6.22)，一旦链路 (Link) 处于 L0 状态，与上游端口相关联的 Function MUST@FLIT 返回 RRS 的 Completion Status,直到上游端口已发送 Device Readiness Status Message。
   - 一旦上游端口发送了 Device Readiness Status Message,上游端口的所有非 VF Function 必须以 Successful Completion 的 Completion Status 响应所有格式正确的配置请求。
 - 仅对于配置请求，如果不支持 Device Readiness Status,则在复位后，允许 Function 终止该请求并表示其暂时无法处理该请求，但能够在将来处理该请求 - 在这种情况下，必须使用 Request Retry Status (RRS) 的 Completion Status(参见 § Section 6.6)。设备/Function 在以下有效复位条件之后允许以 RRS 响应配置请求:
-  - 冷复位 (Cold Reset)、热复位 (Warm Reset) 和热重置 (Hot Reset)
+  - 冷复位 (Cold Reset)、热复位 (Warm Reset) 和热复位 (Hot Reset)
   - FLR
   - 响应 D3Hot 到 D0uninitialized 设备状态转换而发起的复位
 - 明确不允许设备 Function 在设备的软件发起复位(FLR 除外)之后以 RRS 响应配置请求，例如，由设备的软件驱动程序写入设备特定的复位位。在 Function 表示其已 Configuration-Ready 之后(参见 § Section 6.22)，不允许设备 Function 在没有有效的复位(即 FLR 或 Conventional Reset)条件介入的情况下以 RRS 响应配置请求，或者如果 Function 的 Status 寄存器中的 Immediate Readiness 位置位。同样，在先前已返回 Successful Completion 之后，不允许设备 Function 在没有有效的复位(即 FLR 或 Conventional Reset)条件介入的情况下以 RRS 响应配置请求。
 - 实现 Readiness Time Reporting Extended Capability 的 Function 不得针对在该 Extended Capability 中报告的相关时间之后收到的配置请求返回 RRS。
-- 在处理请求的过程中，完成方可以确定(原本可接受的)请求必须作为错误处理，在这种情况下，根据错误的类型处理该请求
+- 在处理请求的过程中，完成者可以确定(原本可接受的)请求必须作为错误处理，在这种情况下，根据错误的类型处理该请求
   - 示例:PCI Express/PCI 桥最初可能因为请求指定映射到桥次级侧的内存空间 (Memory Space) 范围而接受该请求，但该请求可能在桥的 PCI 端产生 Master Abort 或 Target Abort。从 PCI Express 的角度来看，这种情况下请求的状态是 UR(对于 Master Abort)或 CA(对于 Target Abort)。如果 PCI Express 上的请求需要完成报文，则返回相应的 Completion Status。
 - 如果请求是需要返回完成报文的类型，则根据完成报文 (Completion) 构成规则生成完成报文(参见 § Section 2.2.9)
   - Completion Status 由处理请求的结果决定
@@ -9605,7 +9605,7 @@ Flowchart steps (OM13773):
 >
 > 某些设备需要冗长的自初始化序列才能完成，然后才能为配置请求提供服务。在指定的情况下，允许设备/Function 通过 Request Retry Status (RRS) Completion Status 机制"推迟"初始配置。在有效复位条件之后收到配置请求的设备可以以 RRS 的 Completion Status 响应以终止该请求，从而有效地暂停配置请求，直到子系统完成本地初始化并准备好与主机通信为止。请注意，在指定的情况下，以 RRS 的 Completion Status 响应配置请求才是合法的。Readiness Notifications(参见 § Section 6.22)和 Immediate Readiness(参见 § Section 7.5.1.1.4 和 § Section 7.5.2.1)在某些情况下也禁止在响应配置请求时使用 RRS 的 Completion Status。
 >
-> 请求方收到带有 RRS 的 Completion Status 的完成报文将终止配置请求。有关根复合体 (Root Complex) 针对原始配置请求的进一步操作，请参见 § Section 2.3.2 中的规定。
+> 请求者收到带有 RRS 的 Completion Status 的完成报文将终止配置请求。有关根复合体 (Root Complex) 针对原始配置请求的进一步操作，请参见 § Section 2.3.2 中的规定。
 >
 > 实现 Configuration RRS Software Visibility 的根复合体能够将配置请求的 RRS 的 Completion Status 的接收情况报告给软件，从而使软件能够处理其他任务，而不是在设备完成自初始化时停滞。打算利用此机制的软件必须确保在有效复位条件之后对设备进行的第一次访问是访问设备配置空间 (Configuration Space) 头中 Vendor ID 字段两个字节的配置读请求。仅对于这种情况，根复合体(如果启用)将为 Vendor ID 字段合成特殊的读数据值，以向软件表明设备已以 RRS 的 Completion Status 响应配置请求。对于其他地址的配置请求，或未启用 Configuration RRS Software Visibility 时，根复合体通常会重新发出配置请求，直到以 RRS 以外的状态完成，详见 § Section 2.3.2。
 >
@@ -9702,7 +9702,7 @@ Flowchart steps (OM13773):
 - 有关发送器与接收器的相关重要细节，请参阅 § Section 2.2.2。
 - 注:这只是适用于所有带数据负载 TLP 规则的一个具体情形
 - 内存读请求可以使用一个完成报文(Completion)完成，在某些情况下也可以使用多个完成报文
-- 读完成边界(Read Completion Boundary, RCB)确定了自然对齐的地址边界，完成方(Completer)可以在这些边界上将单个读请求的响应拆分为多个完成报文。
+- 读完成边界(Read Completion Boundary, RCB)确定了自然对齐的地址边界，完成者(Completer)可以在这些边界上将单个读请求的响应拆分为多个完成报文。
   - 对于根复合体(RC)而言,RCB 为 64 字节或 128 字节。
     - 该值在链路控制寄存器(Link Control Register)的 Read Completion Boundary 字段中报告(参见 § Section 7.5.3.7)。
       - 注:桥(Bridge)与端点(Endpoint)可实现相应的命令位，由系统软件设置以指示 RC 的 RCB 值，从而在 RC 的 RCB 为 128 字节时允许桥或端点优化其行为。
@@ -9774,10 +9774,10 @@ Flowchart steps (OM13773):
 - § Figure 2-92 给出了上述规则的一个示例。示例假定返回一个完成报文 TLP。
 
 > **实现说明:BCM 位使用**
-> 为了满足某些 PCI-X 协议约束，针对 PCI-X 突发读,PCI-X 桥或 PCI-X 完成方在某些情况下会在 Split Completion 序列的第一个 PCI-X 事务中设置 Byte Count 字段，使其仅指示该第一个事务的大小，而不是整个突发读的大小。出现这种情况时,PCI-X 桥/PCI-X 完成方还会在该第一个 PCI-X 事务中置位 BCM 位，以指示 Byte Count 字段已偏离其正常使用方式。更多详细信息请参阅 [PCI-X]。
-> PCI Express 内存读请求方需要正确处理 PCI-X 桥/PCI-X 完成方置位 BCM 位的情况。出现这种情况时，返回给请求方的第一个读完成报文将置位 BCM 位，表明 Byte Count 字段报告的只是该第一个报文的大小，而不是整个剩余字节数。请求方此时不应断定读完成报文的其他报文丢失。
-> 读完成报文的后续报文中永远不会置位 BCM 位，因此这些后续报文中的 Byte Count 字段始终指示当时的剩余字节数。因此，请求方可以使用这些报文中的 Byte Count 字段来判断读完成报文的其他报文是否丢失。
-> PCI Express 完成方永远不会置位 BCM 位。
+> 为了满足某些 PCI-X 协议约束，针对 PCI-X 突发读,PCI-X 桥或 PCI-X 完成者在某些情况下会在 Split Completion 序列的第一个 PCI-X 事务中设置 Byte Count 字段，使其仅指示该第一个事务的大小，而不是整个突发读的大小。出现这种情况时,PCI-X 桥/PCI-X 完成者还会在该第一个 PCI-X 事务中置位 BCM 位，以指示 Byte Count 字段已偏离其正常使用方式。更多详细信息请参阅 [PCI-X]。
+> PCI Express 内存读请求者需要正确处理 PCI-X 桥/PCI-X 完成者置位 BCM 位的情况。出现这种情况时，返回给请求者的第一个读完成报文将置位 BCM 位，表明 Byte Count 字段报告的只是该第一个报文的大小，而不是整个剩余字节数。请求者此时不应断定读完成报文的其他报文丢失。
+> 读完成报文的后续报文中永远不会置位 BCM 位，因此这些后续报文中的 Byte Count 字段始终指示当时的剩余字节数。因此，请求者可以使用这些报文中的 Byte Count 字段来判断读完成报文的其他报文是否丢失。
+> PCI Express 完成者永远不会置位 BCM 位。
 > 在 Flit 模式下不存在 BCM 位。
 
 <img src="figures/chapter_02/fig_0253_1_tight.png" width="700">
@@ -9871,7 +9871,7 @@ Flowchart steps (OM13773):
 <td style="background-color:#e8e8e8">
 
 - 对于所有内存读完成报文,Lower Address 字段必须指示该完成报文所返回数据的第一个使能字节的字节地址低位。
-  - 对于第一个(或唯一的)完成报文，完成方可以根据请求地址的最低 5 位与按 § Table 2-41 形成的 2 位字节级地址相拼接来生成此字段。
+  - 对于第一个(或唯一的)完成报文，完成者可以根据请求地址的最低 5 位与按 § Table 2-41 形成的 2 位字节级地址相拼接来生成此字段。
   - 对于任何后续完成报文,Lower Address 字段将始终为零，但由 RCB 为 64 字节的根复合体生成的完成报文除外。在这种情况下,Lower Address 字段的最低 6 位始终为零，最高位根据 64 字节数据负载的对齐情况进行切换。
 
 **Table 2-41 根据 First DW BE 计算 Lower Address**
@@ -9888,8 +9888,8 @@ Flowchart steps (OM13773):
   - 该完成报文不携带数据
     - 使用 Cpl(或 CplLk)编码，而不是 CplD(或 CplDLk)
   - 该完成报文是此请求的最后一个完成报文
-    - 完成方不得再为该请求发送额外的完成报文
-    - 示例:完成方将请求拆分为四部分进行服务;第二个完成报文的完成状态为 Completer Abort;完成方终止对该请求的服务，且未发送剩余的两个完成报文。
+    - 完成者不得再为该请求发送额外的完成报文
+    - 示例:完成者将请求拆分为四部分进行服务;第二个完成报文的完成状态为 Completer Abort;完成者终止对该请求的服务，且未发送剩余的两个完成报文。
   - Byte Count 字段必须指示完成该请求还需要的剩余字节数(如同完成状态为 Successful Completion 一样)
   - Lower Address 字段必须指示:如果完成状态为 Successful Completion,本应随该完成报文一起返回数据的第一个使能字节的字节地址低位
 
@@ -10036,15 +10036,15 @@ Flowchart steps (OM13773):
 <td style="background-color:#e8e8e8">
 
 - UIO 写完成报文必须遵循以下规则:
-  - 写完成边界(Write Completion Boundary, WCB)为 64 字节，指出了自然对齐的地址边界，完成方可以在这些边界上将单个 UIO 写请求的响应拆分为多个完成报文。
+  - 写完成边界(Write Completion Boundary, WCB)为 64 字节，指出了自然对齐的地址边界，完成者可以在这些边界上将单个 UIO 写请求的响应拆分为多个完成报文。
   - 允许以任意地址顺序返回单个 UIO 写请求的多个 UIO 写完成报文。
-- 允许 UIO 完成方合并具有相同 Transaction ID 的 UIO 写完成报文。
+- 允许 UIO 完成者合并具有相同 Transaction ID 的 UIO 写完成报文。
   - 完成的合并不得超过 Length[9:0] 字段所能表示的 DWORD 数。
-  - 建议 UIO 完成方进行机会式合并，并且在大多数情况下，建议不要为了与后续的 UIO 完成报文合并而延迟返回 UIO 完成报文。UIO 完成合并的具体策略因实现而异。
+  - 建议 UIO 完成者进行机会式合并，并且在大多数情况下，建议不要为了与后续的 UIO 完成报文合并而延迟返回 UIO 完成报文。UIO 完成合并的具体策略因实现而异。
 - 交换机(Switch)不得合并 UIO 完成报文。
 - 当设备收到的完成报文与该设备发出的任何未完成请求的 Transaction ID 都不匹配时，该完成报文称为"意外完成报文"(Unexpected Completion)。
 - 如果收到的完成报文与某个未完成请求的 Transaction ID 匹配，但其他 TLP 字段与对应请求不匹配，则接收方 MUST@FLIT 将该完成报文作为意外完成报文处理。
-  - 请求方不得检查完成报文中的 IDO 属性(Attribute Bit 2)，因为如 § Section 2.2.6.4 和 § Section 2.2.9 所述，完成方无需将该请求中 IDO 的值复制到对应的完成报文中。
+  - 请求者不得检查完成报文中的 IDO 属性(Attribute Bit 2)，因为如 § Section 2.2.6.4 和 § Section 2.2.9 所述，完成者无需将该请求中 IDO 的值复制到对应的完成报文中。
   - 但是，如果该完成报文在其他方面格式正确，则允许接收方将其作为格式错误的 TLP(Malformed TLP)处理。
 - 当交换机的入口端口(Ingress Port)收到无法转发的完成报文时，该入口端口必须将其作为意外完成报文处理。这包括目标为以下对象的完成报文:
   - 与上游端口相关联的设备中不存在的功能(Function),
@@ -10055,7 +10055,7 @@ Flowchart steps (OM13773):
   - 收到意外完成报文的代理必须丢弃该完成报文。
   - 意外完成报文是与接收端口相关联的上报错误(参见 § Section 6.2)。
 
-> 注:意外完成报文被认为主要是由交换机对完成报文的错误路由引起的。在这种情况下，该请求的请求方可能收不到其请求的完成报文，请求方的完成超时机制(参见 § Section 2.8)将终止该请求。
+> 注:意外完成报文被认为主要是由交换机对完成报文的错误路由引起的。在这种情况下，该请求的请求者可能收不到其请求的完成报文，请求者的完成超时机制(参见 § Section 2.8)将终止该请求。
 
 </td>
 </tr>
@@ -10165,9 +10165,9 @@ Flowchart steps (OM13773):
 </td>
 <td style="background-color:#e8e8e8">
 
-- 对于完成状态不是成功完成(Successful Completion)或请求重试状态(Request Retry Status,作为对配置请求的响应)的完成报文，必须使请求方:
+- 对于完成状态不是成功完成(Successful Completion)或请求重试状态(Request Retry Status,作为对配置请求的响应)的完成报文，必须使请求者:
   - 释放与该请求相关联的完成报文缓冲空间及其他资源。
-  - 通过请求方特定的机制处理该错误(参见 § Section 6.2.3.2.5)。
+  - 通过请求者特定的机制处理该错误(参见 § Section 6.2.3.2.5)。
 
   > 如果完成报文在已发起 FLR 与目标功能完成 FLR 之间的这段时间内到达，则允许将该完成报文作为意外完成报文处理，或在更新流控信用后将其静默丢弃，而不将其作为错误记录或上报。FLR 一旦完成，对于 FLR 之前发出的请求所对应的、已收到的完成报文，必须作为意外完成报文处理，除非该功能已被重新使能以发起请求。
 
@@ -10182,7 +10182,7 @@ Flowchart steps (OM13773):
 
 - 具有保留完成状态(Reserved Completion Status)值的完成报文，按完成状态为 Unsupported Request (UR) 处理。
 - 完成状态为 Unsupported Request 或 Completer Abort 的完成报文使用传统 PCI 上报机制进行上报(参见 § Section 7.5.1.1.4)。
-  - 请注意，触发生成此类完成报文的错误条件由完成方按 § Section 6.2 所述进行上报。
+  - 请注意，触发生成此类完成报文的错误条件由完成者按 § Section 6.2 所述进行上报。
 - 当读、AtomicOp 或 DMWr 请求的完成报文收到的完成状态不是 Successful Completion 时:
 
 </td>
@@ -10232,10 +10232,10 @@ Flowchart steps (OM13773):
   - 该完成报文不携带数据
     - 使用 Cpl(或 CplLk)编码，而不是 CplD(CplDLk)
   - 该完成报文是此请求的最后一个完成报文
-    - 请求方必须认为该请求已终止，且不再期待额外的完成报文
+    - 请求者必须认为该请求已终止，且不再期待额外的完成报文
     - 对此前已收到的部分完成报文的处理因实现而异
 
-  > 示例:请求方对所发起的 128 字节读请求已收到 32 字节的读数据，之后又收到一个完成状态为 Completer Abort 的完成报文。此时，请求方必须释放为该特定读请求所分配的内部资源。
+  > 示例:请求者对所发起的 128 字节读请求已收到 32 字节的读数据，之后又收到一个完成状态为 Completer Abort 的完成报文。此时，请求者必须释放为该特定读请求所分配的内部资源。
 
   本节定义的规则统一适用于 PCI Express 上的所有类型事务，包括内存、I/O、配置和消息，例外是 UIO 请求/完成报文(参见 § Section 2.4.2)以及具有修改后排序要求的 Flow-Through IDE Streams(参见 § Section 6.33.4)。本表所定义的排序规则在单个流量类(TC)内适用。不同 TC 标签的事务之间没有排序要求。注意，这也意味着，流经不同虚通道(VC)的流量之间不需要排序，因为任何 PCI Express 链路上具有相同 TC 标签的事务都不允许映射到多个 VC。
 
@@ -11459,7 +11459,7 @@ Flow Control mechanisms used internally within an MFD are outside the scope of t
 </td>
 <td style="background-color:#e8e8e8">
 
-流控 (Flow Control, FC) 用于防止接收器 (Receiver) 缓冲区溢出，并保证符合 § Section 2.4 中定义的排序规则。请注意，流控机制由请求者 (Requester) 使用，以追踪链路 (Link) 对端代理中可用的队列/缓冲空间，如 § Figure 2-97 所示。也就是说，流控是点对点的（跨越一条链路），而非端到端的。流控并不意味着请求 (Request) 已到达其最终完成方 (Ultimate Completer)。
+流控 (Flow Control, FC) 用于防止接收器 (Receiver) 缓冲区溢出，并保证符合 § Section 2.4 中定义的排序规则。请注意，流控机制由请求者 (Requester) 使用，以追踪链路 (Link) 对端代理中可用的队列/缓冲空间，如 § Figure 2-97 所示。也就是说，流控是点对点的（跨越一条链路），而非端到端的。流控并不意味着请求 (Request) 已到达其最终完成者 (Ultimate Completer)。
 
 流控与用于在发送器 (Transmitter) 与接收器之间实现可靠信息交换的数据完整性机制相互独立。流控可以将 TLP 信息从发送器到接收器的流动视为理想的，因为数据完整性机制确保被损坏或丢失的 TLP 通过重传得到纠正（参见 § Section 3.6）。
 
@@ -12784,7 +12784,7 @@ The purpose of having some amount of Dedicated Credit per VC is to ensure that o
   - 当如 § Table 3-3 所示需要 [Zero] 专用 FC 信用时，本规则可选。
   - 必须实现 MUST@FLIT 一种超时机制。若实现，该机制必须：
     - 仅在链路处于 L0 或 L0s 链路状态时激活
-    - 使用一个 200 μs (-0%/+50%) 限制的定时器，可由任何 Init 或 Update FCP 的接收重置。也可由任何 DLLP 的接收重置（参见 § Section 3.5）
+    - 使用一个 200 μs (-0%/+50%) 限制的定时器，可由任何 Init 或 Update FCP 的接收复位。也可由任何 DLLP 的接收复位（参见 § Section 3.5）
     - 在定时器到期时，指示物理层重新训练链路（通过 LTSSM Recovery 状态，§ Section 4.2.7.4）
     - 在非 Flit 模式下，若初始化期间对全部三种 FC 类型进行了 Infinite Credit 通告，则必须对该 VC 禁用此超时机制
     - 在 Flit 模式下，若初始化期间对全部六种 FC 类型进行了 Infinite Credit 通告，则必须对该 VC 禁用此超时机制

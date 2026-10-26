@@ -1328,7 +1328,7 @@ PCI Express-PM 引入了一种围栏 (fence) 机制，用于启动电源移除�
 
 每个 PCI Express 代理都需要以一个 TLP "确认"报文 PME_TO_Ack 响应，该报文始终路由到上游。在所有情况下,PME_TO_Ack 报文必须在 PME_Turn_Off 报文的源点终止。
 
-Switch 必须在收到每个下游端口的 PME_TO_Ack 报文后才能报告"聚合"确认。一旦每个下游端口都收到 PME_TO_Ack 报文,Switch 必须随后在其上游端口上发送 PME_TO_Ack 报文。以下任一事件的发生都必须重置聚合机制: 从上游端口发送 PME_TO_Ack 报文、上游端口接收到任何 TLP、Switch 主电源的移除或基本复位。
+Switch 必须在收到每个下游端口的 PME_TO_Ack 报文后才能报告"聚合"确认。一旦每个下游端口都收到 PME_TO_Ack 报文,Switch 必须随后在其上游端口上发送 PME_TO_Ack 报文。以下任一事件的发生都必须复位聚合机制: 从上游端口发送 PME_TO_Ack 报文、上游端口接收到任何 TLP、Switch 主电源的移除或基本复位。
 
 具有上游端口的所有组件必须接受并确认 PME_Turn_Off 报文，与关联设备或其多功能设备的任何 Function 的 D 状态无关。一旦组件发送了 PME_TO_Ack 报文，它必须通过启动到 L2/L3 Ready 状态的转换来准备移除其电源和参考时钟。
 

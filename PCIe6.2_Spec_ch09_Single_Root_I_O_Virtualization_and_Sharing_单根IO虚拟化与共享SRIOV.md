@@ -426,7 +426,7 @@ To compare and contrast a PCIe Device with a PCIe SR-IOV capable device, examine
 - **物理功能 (Physical Function, PF)**——PF 是支持 SR-IOV 扩展能力结构 (SR-IOV Extended Capability) 的 PCIe 功能，可由 SR-PCIM、VI 或 SI 访问。
 - **虚拟功能 (Virtual Function, VF)**——VF 是 SI 直接访问的"轻量级"PCIe 功能。
   - 最起码，功能主要数据移动相关的资源对 SI 可用。配置资源应限制于受信任的软件组件(例如 VI 或 SR-PCIM)。
-  - VF 可以由不同的 SI 串行共享(即，可以将 VF 分配给一个 SI,然后重置并分配给另一个 SI)。
+  - VF 可以由不同的 SI 串行共享(即，可以将 VF 分配给一个 SI,然后复位并分配给另一个 SI)。
   - VF 可以选择性地从一个 PF 迁移到另一个 PF。迁移过程本身不在本规范的范围内，但通过本规范中定义的配置控制来促成。
 - 与 PF 关联的所有 VF 必须与 PF 是相同的设备类型(例如相同的网络设备类型或相同的存储设备类型)。
 
@@ -793,16 +793,6 @@ Key observations to note:
   - Non-VFs can only be associated with the captured Bus Number.
 - If the ARI Extended Capability is supported, Functions can be assigned to Function Groups. The assignment policy is outside the scope of this specification. If the ARI Extended Capability is not supported, Functions can still use the Function arbitration capabilities as defined in § Section 6.3.3.4 .
 
-</td>
-<td style="background-color:#e8e8e8">
-
-需要注意的关键观察点:
-
-- 每个设备必须包含一个 Function 0。Function 0 可以是 PF(即，它可以包括 SR-IOV 扩展能力结构)。
-- 任何功能组合都可以与捕获的总线号相关联。
-  - 非 VF 只能与捕获的总线号相关联。
-- 如果支持 ARI 扩展能力结构，则可以将功能分配到功能组。分配策略不在本规范的范围内。如果不支持 ARI 扩展能力结构，则功能仍可以使用 § 第 6.3.3.4 节中定义的功能仲裁能力。
-
 The following sections describe how software determines that a Device is SR-IOV capable and subsequently identifies VF resources through Virtual Function Configuration Space.
 
 This section describes the fields that must be configured before enabling a PF's IOV Capabilities. The VFs are enabled by Setting the PF's VF Enable bit (see § Section 9.3.3.3.1 ) in the SR-IOV extended capability.
@@ -826,6 +816,11 @@ The behavior of VF BARs is the same as the normal PCI Memory Space BARs (see § 
 </td>
 <td style="background-color:#e8e8e8">
 
+需要注意的关键观察点:
+
+- 每个设备必须包含一个 Function 0。Function 0 可以是 PF(即，它可以包括 SR-IOV 扩展能力结构)。
+- 任何功能组合都可以与捕获的总线号相关联。
+  - 非 VF 只能与捕获的总线号相关联。
 - 如果支持 ARI 扩展能力结构，则可以将功能分配到功能组。分配策略不在本规范的范围内。如果不支持 ARI 扩展能力结构，则功能仍可以使用 § 第 6.3.3.4 节中定义的功能仲裁能力。
 
 以下各节描述了软件如何确定设备支持 SR-IOV,然后通过虚拟功能配置空间识别 VF 资源。

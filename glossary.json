@@ -2140,14 +2140,14 @@
     {
       "id": "receiver",
       "source": "Receiver",
-      "target": "接收器 (Receiver)",
+      "target": "接收方 (Receiver)",
       "category": "block",
       "aliases": [],
       "gender": "unknown",
       "confidence": "high",
       "frequency": 0,
       "evidence_refs": [],
-      "notes": "Curated from CXL 3.2 (CXL_zh/) translation; shared PCIe terminology"
+      "notes": "电气语境作“接收器”；事务层语境作“接收方”。Curated from CXL 3.2 (CXL_zh/) translation; shared PCIe terminology"
     },
     {
       "id": "transmitter",
@@ -2560,7 +2560,7 @@
     {
       "id": "throughput",
       "source": "Throughput",
-      "target": "吞吐率 (Throughput)",
+      "target": "吞吐量 (Throughput)",
       "category": "concept",
       "aliases": [],
       "gender": "unknown",

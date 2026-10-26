@@ -793,7 +793,7 @@ TDISP messages are transported as follows:
 
 TEE-I/O 兼容设备必须将 ST 表 (如果支持) 放在 MSI-X 表中 (如果支持 ST 操作模式)。
 
-以下规则适用于作为完成方的 TDI:
+以下规则适用于作为完成者的 TDI:
 - 针对 IS_NON_TEE_MEM (见 § Section 11.3.22) 属性清零的设备内存的接收内存请求，当且仅当满足以下所有条件时，才能被正常处理:
   - 请求的 T 位置位
   - TDI 处于 RUN 状态
@@ -2191,7 +2191,7 @@ Page Request Messages must only be issued while in RUN, and must Set the T bit. 
 
 设备可能作为常规复位的一部分失去电力，并且可能没有从复位中出来的状态以确定设备是否正在被 TVM 使用。TEE-I/O 兼容设备应假定在常规复位之前可能存在与 TVM 关联的 TDI,因此应实现适当的机制以确保在常规复位后不会以明文形式泄露残留数据和机密。
 
-设备度量寄存器必须在需要重新加载固件的复位中重置为其默认值。一些设备可能在热复位时重新加载固件，而其他设备可能需要冷复位或 D3 状态转换。
+设备度量寄存器必须在需要重新加载固件的复位中复位为其默认值。一些设备可能在热复位时重新加载固件，而其他设备可能需要冷复位或 D3 状态转换。
 
 对 VF 或非 IOV 功能的功能级复位必须影响该功能承载的 TDI。对 PF 的功能级复位必须影响所有下属 VF TDI。功能级复位必须将所有受影响的 TDI 从 CONFIG_LOCKED、RUN 状态转换为 ERROR 状态，以便需要 STOP_INTERFACE_REQUEST 请求来清理 TDI 状态并在受影响的 TDI 转换为 CONFIG_UNLOCKED 状态之前擦除 TVM 数据/机密。
 

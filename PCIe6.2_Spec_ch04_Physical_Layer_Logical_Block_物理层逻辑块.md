@@ -1620,30 +1620,12 @@ TLP Length 字段值在 1152 到 1535(含)之间的报文保留供未来标准�
 
 § 图 4-17 显示了在 x8 链路上发送的 TLP、DLLP、IDL 以及一个 EDS Token 之后跟随一个 SKP 有序集的示例。SKP 有序集的定义见 § 4.2.8.2。
 
+> **图 4-15.** x8 链路中的数据包传输
 > <img src="figures/chapter_04/fig_0368_2_tight.png" width="700">
-> **图 4-16.** Nullified TLP Layout in x8 Link 含 Other Packets
 
+> **图 4-16.** 含其他数据包的 x8 链路中被作废 TLP 的布局
 > <img src="figures/chapter_04/fig_0368_3_tight.png" width="700">
 
-</td>
-<td style="background-color:#e8e8e8">
-
-§ 图 4-17 显示了在 x8 链路上发送的 TLP、DLLP、IDL 以及一个 EDS Token 之后跟随一个 SKP 有序集的示例。SKP 有序集的定义见 § 4.2.8.2。
-
-> <img src="figures/chapter_04/fig_0368_2_tight.png" width="700">
-> **图 4-15.** Packet Transmission in x8 Link
-
-> <img src="figures/chapter_04/fig_0368_2_tight.png" width="700">
-
-> **Figure 4-16.** Nullified TLP Layout in a x8 Link with Other Packets
-> <img src="figures/chapter_04/fig_0368_3_tight.png" width="700">
-
-</td>
-<td style="background-color:#e8e8e8">
-
-§ 图 4-17 显示了在 x8 链路上发送的 TLP、DLLP、IDL 以及一个 EDS Token 之后跟随一个 SKP 有序集的示例。SKP 有序集的定义见 § 4.2.8.2。
-
-> <img src="figures/chapter_04/fig_0368_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -8627,7 +8609,7 @@ Receivers are permitted, but not required, to check Symbols 14 and 15 for the fo
 
 当使用 128b/130b 或 1b/1b 编码时，发送器需要跟踪链路上传输的、构成 TS0、TS1 和 TS2 有序集的比特 (在 1b/1b 中 Gray 编码、加扰之后，以及在开启预编码时的预编码之后) 的运行 DC 平衡 (running DC Balance)。运行 DC 平衡是指在 8.0 GT/s、16.0 GT/s 或 32.0 GT/s 数据率下，发送的 1 的数量与 0 的数量之差。对于 64.0 GT/s 数据率，运行 DC 平衡是每个 UI 中分配给每个电压电平的 DC 平衡值的累计和，如 § 图 4-24 所示。每条通道必须独立跟踪其运行 DC 平衡，并能跟踪至少 +/-511 比特的差值。所使用的任何计数器必须在其极限处饱和 (不回绕)，并在达到极限后继续跟踪减少量。例如，一个能跟踪 511 比特差值的计数器，在检测到 513 比特差值时会饱和在 511;之后如果差值减少 2,则该计数器变为 509。
 
-运行 DC 平衡在以下两种事件时重置为 0:
+运行 DC 平衡在以下两种事件时复位为 0:
 
 1. 发送器退出电气空闲 (Electrical Idle);
 2. 在数据块 (Data Block) 之后传输 EIEOS。
@@ -9240,7 +9222,7 @@ When using 128b/130b encoding, an EIEOSQ, as defined in § Table 4-35 through §
 
 - 在进入 LTSSM Configuration.Linkwidth.Start 状态后，发送第一个 TS1 有序集之前。
 - 在进入 LTSSM Recovery.RcvrLock 状态后，发送第一个 TS1 有序集之前。
-- 在 LTSSM Configuration.Linkwidth.Start、Recovery.RcvrLock 和 Recovery.RcvrCfg 状态中，每发送 32 个 TS1 或 TS2 有序集后。TS1/TS2 计数在以下情况下重置为 0:
+- 在 LTSSM Configuration.Linkwidth.Start、Recovery.RcvrLock 和 Recovery.RcvrCfg 状态中，每发送 32 个 TS1 或 TS2 有序集后。TS1/TS2 计数在以下情况下复位为 0:
   - 发送 EIEOS。
   - 在 LTSSM Recovery.RcvrCfg 状态中接收到第一个 TS2 有序集。
 
@@ -9250,7 +9232,7 @@ When using 128b/130b encoding, an EIEOSQ, as defined in § Table 4-35 through §
 - 在进入 LTSSM Recovery.RcvrLock 子状态后，发送第一个 TS1 有序集之前。
 - 在非 Flit 模式 (Non-Flit Mode) 中结束数据流 (Data Stream) 时，紧跟 EDS 帧标记 (Framing Token) 之后，既不发送 EIOS 也不进入 LTSSM Recovery.RcvrLock 子状态。
 - 在 Flit 模式 (Flit Mode) 中，在调度的有序集间隔处以结束数据流 (Data Stream)。
-- 在所有需要发送 TS1 或 TS2 有序集的 LTSSM 状态中，每发送 32 个 TS1 或 TS2 有序集后。TS1/TS2 计数在以下情况下重置为 0:
+- 在所有需要发送 TS1 或 TS2 有序集的 LTSSM 状态中，每发送 32 个 TS1 或 TS2 有序集后。TS1/TS2 计数在以下情况下复位为 0:
   - 发送 EIEOS。
   - 在 LTSSM Recovery.RcvrCfg 状态中接收到第一个 TS2 有序集。
   - 在 LTSSM Configuration.Complete 状态中接收到第一个 TS2 有序集。
@@ -9317,7 +9299,7 @@ While operating in speeds other than 2.5 GT/s, an implementation is permitted to
 - 在进入 LTSSM Recovery.RcvrLock 子状态后，发送第一个 TS1 有序集之前。
 - 在进入 Recovery.Equalization 子状态后，发送第一个 TS0 有序集之前。
 - 在调度的有序集间隔处，用于指示数据流 (Data Stream) 的结束。
-- 在所有需要发送 TS1、TS2 或 TS0 有序集的 LTSSM 状态中，每发送 32 个 TS1、TS2 或 TS0 有序集后。TS1/TS2/TS0 计数在以下情况下重置为 0:
+- 在所有需要发送 TS1、TS2 或 TS0 有序集的 LTSSM 状态中，每发送 32 个 TS1、TS2 或 TS0 有序集后。TS1/TS2/TS0 计数在以下情况下复位为 0:
   - 发送 EIEOS。
   - 在 LTSSM Recovery.RcvrCfg 状态中接收到第一个 TS2 有序集。
   - 在 LTSSM Configuration.Complete 状态中接收到第一个 TS2 有序集。
@@ -9327,7 +9309,7 @@ While operating in speeds other than 2.5 GT/s, an implementation is permitted to
 - 如果 Reset EIEOS Interval Count 位阻止了 EIEOSQ 在该间隔内发送，则在 LTSSM Recovery.Equalization 状态中，每发送 65,536 个 TS1 有序集后发送 EIEOSQ。允许实现通过在当前加扰 (Scrambling) LFSR 匹配其种子值时的两个 TS1 有序集内发送 EIEOSQ 来满足此要求。
 - 作为一致性测试码型 (Compliance Pattern) 或修改后的一致性测试码型 (Modified Compliance Pattern) 的一部分，详见相关章节。
 
-**示例:** LTSSM 在 5.0 GT/s 数据速率下从 L0 进入 Recovery.RcvrLock。它发送一个 EIEOS,后跟 TS1 有序集。发送 32 个 TS1 有序集后，再发送第二个 EIEOS。随后再发送两个 TS1 有序集，并进入 Recovery.RcvrCfg,在其中发送 30 个 TS2 有序集后发送第三个 EIEOS。在 Recovery.RcvrCfg 中接收到 TS2 有序集时，再发送 31 个 TS2 有序集(在最初的 30 个 TS2 有序集之后)。由于接收到第一个 TS2 有序集，它将 EIEOS 间隔计数重置为 0,并在转换到 Recovery.Idle 之前再发送 16 个 TS2 有序集。因此，在最后 47 个 TS2 有序集中没有发送 EIEOS,因为 EIEOS 间隔计数被重置为 0。从 Recovery.Idle 开始,LTSSM 转换到 Configuration.Linkwidth.Start,并发送一个 EIEOS,之后开始发送 TS1 有序集。
+**示例:** LTSSM 在 5.0 GT/s 数据速率下从 L0 进入 Recovery.RcvrLock。它发送一个 EIEOS,后跟 TS1 有序集。发送 32 个 TS1 有序集后，再发送第二个 EIEOS。随后再发送两个 TS1 有序集，并进入 Recovery.RcvrCfg,在其中发送 30 个 TS2 有序集后发送第三个 EIEOS。在 Recovery.RcvrCfg 中接收到 TS2 有序集时，再发送 31 个 TS2 有序集(在最初的 30 个 TS2 有序集之后)。由于接收到第一个 TS2 有序集，它将 EIEOS 间隔计数复位为 0,并在转换到 Recovery.Idle 之前再发送 16 个 TS2 有序集。因此，在最后 47 个 TS2 有序集中没有发送 EIEOS,因为 EIEOS 间隔计数被复位为 0。从 Recovery.Idle 开始,LTSSM 转换到 Configuration.Linkwidth.Start,并发送一个 EIEOS,之后开始发送 TS1 有序集。
 
 在以 2.5 GT/s 以外的速度运行时，允许实现不依赖电气空闲检测电路的输出，除非在某些 LTSSM 状态期间接收 EIEOS 时，或在 Rx L0s 期间接收器 (Receiver) 接收由四个连续 EIE 符号前置的 FTS 时(见 § 4.2.5.6 节)，或在 Polling.Compliance 中当电路需要发信号通知电气空闲退出时接收修改后的一致性测试码型 (Modified Compliance Pattern) 时。
 
@@ -9470,7 +9452,7 @@ Fast Training Sequence (FTS) is the mechanism that is used for bit and Symbol lo
   单个 FTS 由一个 K28.5 (COM) 符号 (Symbol) 后跟三个 K28.1 符号 (Symbol) 组成。组件可以请求的最大 FTS 数 (N_FTS) 为 255,提供 4 * 255 * 10 * UI 的比特时间锁定。如果数据速率为 5.0 GT/s,则在发送第一个 FTS 之前，会以有效信号电平发送四个连续的 EIE 符号 (Symbol)。这些符号 (Symbol) 将帮助接收器 (Receiver) 检测电气空闲退出。对于无法保证自退出电气空闲条件起在发送器 (Transmitter) 引脚上达到允许时间的适当信号电平(见 § 4.2.5.6 节)的实现，需要在第一个 FTS 之前加上额外的 EIE 符号 (Symbol)，以便接收器 (Receiver) 可以在有效信号电平下接收至少四个 EIE 符号 (Symbol)。实现不得在发送第一个 FTS 之前发送超过八个 EIE 符号 (Symbol)。允许组件在不同速度下通告不同的 N_FTS 速率。在 5.0 GT/s 时，组件可考虑将接收四个 EIE 符号 (Symbol) 的因素考虑在内，选择通告适当的 N_FTS 数。当设置 Extended Synch 位时，必须发送 4096 个 FTS,以便为外部链路 (Link) 监控工具提供足够的时间来实现比特和帧同步。必须根据需要调度和发送 FTS 之间的 SKP 有序集，以满足 § 4.2.8 节中的定义，但在第一个 N_FTS 个 FTS 期间不能发送 SKP 有序集。在发送最后一个 FTS 后，始终发送单个 SKP 有序集。允许此 SKP 有序集影响或不影响 § 4.2.8 节所述发送器 (Transmitter) 用于时钟容差补偿的后续 SKP 有序集的调度。请注意，可能存在背靠背发送两个 SKP 有序集的情况(一个 SKP 有序集表示 4096 个 FTS 的完成，另一个按 § 4.2.8 节所述的定义进行调度和发送)。
 
 - 在 8.0 GT/s、16.0 GT/s 或 32.0 GT/s 数据速率下:
-  单个 FTS 是 130 位未加扰的有序集块 (Ordered Set Block)，如 § 表 4-40 所示。组件可以请求的最大 FTS 数 (N_FTS) 为 255,提供 130 * 255 UI 的比特时间锁定(如果包括周期性 EIEOS,则为 130 * 263 或 273 UI)。允许组件在不同速度下通告不同的 N_FTS 值。在退出 L0s 时，发送器 (Transmitter) 首先发送 EIEOSQ,这将由于其低频内容帮助接收器 (Receiver) 检测电气空闲退出。在第一个 EIEOSQ 之后，发送器 (Transmitter) 必须发送所需数量的 FTS(当设置 Extended Synch 位时为 4096;否则为 N_FTS)，每 32 个 FTS 后发送一个 EIEOSQ。FTS 序列将使接收器 (Receiver) 获得比特锁定(并可选地执行块对齐 (Block Alignment))。当设置 Extended Synch 位时，必须根据需要在 FTS 和 EIEOSQ 之间调度和发送 SKP 有序集，以满足 § 4.2.8 节中的定义。FTS 序列的最后一个 FTS 有序集(如果有，如果 N_FTS 等于零则不发送 FTS 有序集)之后跟一个最终的 EIEOSQ,这将帮助接收器 (Receiver) 获取块对齐 (Block Alignment)。即使在低于 32.0 GT/s 的数据速率下，只要 N_FTS 是 32 的倍数，允许实现在最后一个 FTS 有序集之后背靠背发送两个 EIEOS。EIEOS 重置
+  单个 FTS 是 130 位未加扰的有序集块 (Ordered Set Block)，如 § 表 4-40 所示。组件可以请求的最大 FTS 数 (N_FTS) 为 255,提供 130 * 255 UI 的比特时间锁定(如果包括周期性 EIEOS,则为 130 * 263 或 273 UI)。允许组件在不同速度下通告不同的 N_FTS 值。在退出 L0s 时，发送器 (Transmitter) 首先发送 EIEOSQ,这将由于其低频内容帮助接收器 (Receiver) 检测电气空闲退出。在第一个 EIEOSQ 之后，发送器 (Transmitter) 必须发送所需数量的 FTS(当设置 Extended Synch 位时为 4096;否则为 N_FTS)，每 32 个 FTS 后发送一个 EIEOSQ。FTS 序列将使接收器 (Receiver) 获得比特锁定(并可选地执行块对齐 (Block Alignment))。当设置 Extended Synch 位时，必须根据需要在 FTS 和 EIEOSQ 之间调度和发送 SKP 有序集，以满足 § 4.2.8 节中的定义。FTS 序列的最后一个 FTS 有序集(如果有，如果 N_FTS 等于零则不发送 FTS 有序集)之后跟一个最终的 EIEOSQ,这将帮助接收器 (Receiver) 获取块对齐 (Block Alignment)。即使在低于 32.0 GT/s 的数据速率下，只要 N_FTS 是 32 的倍数，允许实现在最后一个 FTS 有序集之后背靠背发送两个 EIEOS。EIEOS 复位
 
 </td>
 </tr>
@@ -19724,7 +19706,7 @@ The Compliance Pattern consists of the following repeating sequence of 137 Block
 - Block 5：D9_C3_33_CC_A0_D3_DC_FF_FF_FF_FF_FF_FF_FF_FF_FF
 - Block 6：5D_2D_CD_0E_C3_23_E1_F0_8F_1D_32_8E_B3_31_39_C2
 
-5. 一个 EIEOSQ（未加扰）—— 用于重置加扰器。
+5. 一个 EIEOSQ（未加扰）—— 用于复位加扰器。
 6. 64 个数据块，每个数据块由 16 个经加扰的 00h 符号组成。
 7. 一个数据块，未加扰：64 个 UI 均为 10b（电压电平始终为 2）。加扰器不推进。
 8. 一个数据块，未加扰：64 个 UI 均为 01b（电压电平始终为 1）。加扰器不推进。
@@ -19789,7 +19771,7 @@ The jitter measurement pattern consists of repeating the following 52 UI, consis
 
 当未运行在 SRIS 模式时，修改后的一致性测试码型由以下 65792 个数据块的重复序列组成：
 
-1. 一个 EIEOSQ（用于重置加扰器）。
+1. 一个 EIEOSQ（用于复位加扰器）。
 2. 256 个数据块，每个数据块由 16 个经加扰的 00h 符号组成。
 3. 255 组以下序列：
    a. 一个 SKP 有序集。
@@ -19797,7 +19779,7 @@ The jitter measurement pattern consists of repeating the following 52 UI, consis
 
 当运行在 SRIS 模式时，修改后的一致性测试码型由以下 67585 个数据块的重复序列组成：
 
-1. 一个 EIEOSQ（用于重置加扰器）。
+1. 一个 EIEOSQ（用于复位加扰器）。
 2. 2048 组以下序列：
    a. 一个 SKP 有序集。
    b. 32 个数据块，每个数据块由 16 个经加扰的 00h 符号组成。

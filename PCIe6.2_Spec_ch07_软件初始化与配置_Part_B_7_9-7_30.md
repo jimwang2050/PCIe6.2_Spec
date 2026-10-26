@@ -49,7 +49,7 @@ The Virtual Channel Extended Capability (VC Extended Capability) is an optional 
 </td>
 <td style="background-color:#e8e8e8">
 
-虚通道扩展能力(VC Extended Capability)是一项可选的扩展能力，适用于在默认虚通道(VC0)上支持超出默认流量类(TC0)功能的设备 Port(或单个 Function)。这可以适用于仅支持一个 VC 但具有 TC 过滤功能的设备，或支持多个 VC 的设备。请注意，仅在 VC0 上支持 TC0 的 PCI Express 设备不需要 VC 扩展能力及其相关寄存器。§ 图 7-221 提供了虚通道扩展能力结构的高层视图。该结构控制 PCI Express 链路的虚通道分配，可出现在包含(控制)一个 Port 的任何设备(或 RCRB)中，或任何具有多函数虚通道(MFVC)能力结构的设备中。虚通道扩展能力结构中的某些寄存器/字段可能对 Endpoint、Switch 端口、Root Port 和 RCRB 具有不同的解释。
+虚通道扩展能力(VC Extended Capability)是一项可选的扩展能力，适用于在默认虚通道(VC0)上支持超出默认流量类(TC0)功能的设备 Port(或单个 Function)。这可以适用于仅支持一个 VC 但具有 TC 过滤功能的设备，或支持多个 VC 的设备。请注意，仅在 VC0 上支持 TC0 的 PCI Express 设备不需要 VC 扩展能力及其相关寄存器。§ 图 7-221 提供了虚通道扩展能力结构的高层视图。该结构控制 PCI Express 链路的虚通道分配，可出现在包含(控制)一个 Port 的任何设备(或 RCRB)中，或任何具有多功能虚通道(MFVC)能力结构的设备中。虚通道扩展能力结构中的某些寄存器/字段可能对 Endpoint、Switch 端口、Root Port 和 RCRB 具有不同的解释。
 
 </td>
 </tr>
@@ -99,7 +99,7 @@ VC 扩展能力结构允许出现在所有单 Function 设备的扩展配置空�
 
 每个 VF 使用其关联 PF 的虚通道。VF 自身不得包含任何虚通道能力。
 
-位于 Upstream Port 的多函数设备允许包含多函数虚通道(MFVC)能力结构(参见 § 7.9.2)。如果多函数设备包含 MFVC 能力结构，则其任何或所有 Function(VF 除外)允许包含 VC 扩展能力结构。仅包含 Switch 下游端口 Function 的 Switch 内部设备或 RCiEP 也允许包含按 Function 的 VC 扩展能力结构。除此之外，仅 Function 0 允许包含 VC 扩展能力结构。
+位于 Upstream Port 的多功能设备允许包含多功能虚通道(MFVC)能力结构(参见 § 7.9.2)。如果多功能设备包含 MFVC 能力结构，则其任何或所有 Function(VF 除外)允许包含 VC 扩展能力结构。仅包含 Switch 下游端口 Function 的 Switch 内部设备或 RCiEP 也允许包含按 Function 的 VC 扩展能力结构。除此之外，仅 Function 0 允许包含 VC 扩展能力结构。
 
 为保持软件向后兼容性,VC 扩展能力结构允许使用两个扩展能力 ID:0002h 和 0009h。同时包含 MFVC 能力结构的设备中的任何 VC 扩展能力结构必须使用扩展能力 ID 0009h。不包含 MFVC 能力结构的设备中的 VC 扩展能力结构必须使用扩展能力 ID 0002h。
 
@@ -374,7 +374,7 @@ Capability Version(能力版本) – 该字段是 PCI-SIG 定义的版本号，�
 对于本版本的规范，必须为 1h。
 RO
 31:20
-Next Capability Offset(下一能力偏移量) – 该字段包含指向下一 PCI Express 能力结构的偏移量;若链接的能力列表中不存在其他项，则为 000h。
+Next Capability Offset(下一能力偏移量) – 该字段包含指向下一 PCI Express 能力结构的偏移量;若能力列表中不存在其他项，则为 000h。
 对于在配置空间中实现的扩展能力，该偏移量相对于 PCI 兼容配置空间的起始位置，因此必须始终为 000h(表示能力列表的终止)或大于 0FFh。
 RO
 
@@ -3335,7 +3335,7 @@ PCI Express RCRB Header 扩展能力是一种可选的扩展能力，可以在 R
 |---|---|---|
 | 15:0 | PCI Express Extended Capability ID（PCI Express 扩展能力 ID）— 该字段是 PCI-SIG 定义的 ID 编号，用于指示扩展能力的性质和格式。RCRB Header Extended Capability 的扩展能力 ID 为 000Ah。 | RO |
 | 19:16 | Capability Version（能力版本）— 该字段是 PCI-SIG 定义的版本号，用于指示当前 Capability 结构的版本。本规范版本必须为 1h。 | RO |
-| 31:20 | Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express Capability 结构的偏移，若链接列表中不存在其他项，则为 000h。对于在配置空间中实现的扩展能力，该偏移相对于 PCI 兼容配置空间的起始位置，因此必须为 000h（表示能力列表终止）或大于 0FFh。 | RO |
+| 31:20 | Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express Capability 结构的偏移，若能力列表中不存在其他项，则为 000h。对于在配置空间中实现的扩展能力，该偏移相对于 PCI 兼容配置空间的起始位置，因此必须为 000h（表示能力列表终止）或大于 0FFh。 | RO |
 
 Figure 7-254 details allocation of register fields in the RCRB Vendor ID and Device ID register; Table 7-230 provides the respective bit definitions.
 
@@ -3619,7 +3619,7 @@ Root Complex Link Declaration Extended Capability 的扩展能力 ID 为 0005h�
 |---|---|---|
 | 15:0 | PCI Express Extended Capability ID（PCI Express 扩展能力 ID）— 该字段是 PCI-SIG 定义的 ID 编号，用于指示扩展能力的性质和格式。Root Complex Link Declaration Extended Capability 的扩展能力 ID 为 0005h。 | RO |
 | 19:16 | Capability Version（能力版本）— 该字段是 PCI-SIG 定义的版本号，用于指示当前 Capability 结构的版本。本规范版本必须为 1h。 | RO |
-| 31:20 | Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express Capability 结构的偏移，若链接列表中不存在其他项，则为 000h。对于在配置空间中实现的扩展能力，该偏移相对于 PCI 兼容配置空间的起始位置，因此必须为 000h（表示能力列表终止）或大于 0FFh。该偏移的低 2 位为保留位，必须实现为 00b，但软件必须将其屏蔽以允许将来使用这些位。 | RO |
+| 31:20 | Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express Capability 结构的偏移，若能力列表中不存在其他项，则为 000h。对于在配置空间中实现的扩展能力，该偏移相对于 PCI 兼容配置空间的起始位置，因此必须为 000h（表示能力列表终止）或大于 0FFh。该偏移的低 2 位为保留位，必须实现为 00b，但软件必须将其屏蔽以允许将来使用这些位。 | RO |
 
 The Element Self Description Register provides information about the Root Complex element containing the Root Complex Link Declaration Extended Capability.
 
@@ -3885,6 +3885,8 @@ n = <N 的值>。位 11:3 为保留位，硬连线为 0。位 14:12 指定 Funct
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-263.** Link Address 寄存器
+> <img src="figures/chapter_07/fig_1301_1_tight.png" width="700">
 
 </td>
 </tr>
@@ -3988,7 +3990,7 @@ Root Complex Internal Link Control Extended Capability 的扩展能力 ID 为 00
 |---|---|---|
 | 15:0 | PCI Express Extended Capability ID（PCI Express 扩展能力 ID）— 该字段是 PCI-SIG 定义的 ID 编号，用于指示扩展能力的性质和格式。Root Complex Internal Link Control Extended Capability 的扩展能力 ID 为 0006h。 | RO |
 | 19:16 | Capability Version（能力版本）— 该字段是 PCI-SIG 定义的版本号，用于指示当前 Capability 结构的版本。本规范版本必须为 1h。 | RO |
-| 31:20 | Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express Capability 结构的偏移，若链接列表中不存在其他项，则为 000h。对于在配置空间中实现的扩展能力，该偏移相对于 PCI 兼容配置空间的起始位置，因此必须为 000h（表示能力列表终止）或大于 0FFh。该偏移的低 2 位为保留位，必须实现为 00b，但软件必须将其屏蔽以允许将来使用这些位。 | RO |
+| 31:20 | Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express Capability 结构的偏移，若能力列表中不存在其他项，则为 000h。对于在配置空间中实现的扩展能力，该偏移相对于 PCI 兼容配置空间的起始位置，因此必须为 000h（表示能力列表终止）或大于 0FFh。该偏移的低 2 位为保留位，必须实现为 00b，但软件必须将其屏蔽以允许将来使用这些位。 | RO |
 
 The Root Complex Link Capabilities Register identifies capabilities for this Link.
 
@@ -4970,7 +4972,7 @@ RO
 寄存器描述
 属性
 31:20
-Next Capability Offset(下一能力偏移量) — 该字段包含下一个 PCI Express Capability(能力)结构的偏移量，如果链接的 Capability 列表中不存在其他项，则为 000h。
+Next Capability Offset(下一能力偏移量) — 该字段包含下一个 PCI Express Capability(能力)结构的偏移量，如果Capability 能力列表中不存在其他项，则为 000h。
 对于在 Configuration Space(配置空间)中实现的 Extended Capability(扩展能力)，此偏移量相对于 PCI-compatible Configuration Space(PCI 兼容配置空间)的开头，因此必须始终为 000h(用于终止 Capability 列表)或大于 0FFh。
 此偏移量的低 2 位为保留位，必须实现为 00b,但软件必须屏蔽它们以便将来使用这些位。
 RO
@@ -5406,7 +5408,7 @@ Capability Version(能力版本) — 该字段是 PCI-SIG 定义的版本号，�
 在本版本的规范中必须为 1h。
 RO
 31:20
-Next Capability Offset(下一能力偏移量) — 该字段包含下一个 PCI Express Extended Capability(扩展能力)结构的偏移量，如果链接的 Capability 列表中不存在其他项，则为 000h。
+Next Capability Offset(下一能力偏移量) — 该字段包含下一个 PCI Express Extended Capability(扩展能力)结构的偏移量，如果Capability 能力列表中不存在其他项，则为 000h。
 RO
 
 </td>
@@ -6500,7 +6502,11 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-289.** TPH 扩展能力结构
+> <img src="figures/chapter_07/fig_1321_1_tight.png" width="700">
 
+> **图 7-290.** TPH Requester 扩展能力头部
+> <img src="figures/chapter_07/fig_1321_2_tight.png" width="700">
 
 </td>
 </tr>
@@ -6823,6 +6829,8 @@ The various RP PIO registers must be implemented only by Root Ports that support
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-295.** DPC 扩展能力 – 非 Flit 模式
+> <img src="figures/chapter_07/fig_1325_1_tight.png" width="700">
 
 </td>
 </tr>
@@ -8556,7 +8564,7 @@ Figure 7-320 and Table 7-281 detail allocation of fields in the Hierarchy ID Ext
 |----------|------|------|
 | 15:0 | **Extended Capability ID（扩展能力 ID）** — 此字段是 PCI-SIG 定义的 ID 编号，用于指示扩展能力的性质和格式。 <br>层级 ID 扩展能力的 PCI Express 扩展能力 ID 为 0028h。 | RO |
 | 19:16 | **Capability Version（能力版本）** — 此字段是 PCI-SIG 定义的版本号，用于指示当前能力结构的版本。 <br>对于本版本的规范必须为 1h。 | RO |
-| 31:20 | **Next Capability Offset（下一能力偏移）** — 此字段包含到下一个 PCI Express 扩展能力结构的偏移量，如果链接的能力列表中没有其他项则为 000h。对于配置空间中的扩展能力，此偏移相对于 PCI 兼容配置空间的起始位置，因此必须始终为 000h（用于终止能力列表）或大于 0FFh。 | RO |
+| 31:20 | **Next Capability Offset（下一能力偏移）** — 此字段包含到下一个 PCI Express 扩展能力结构的偏移量，如果能力列表中没有其他项则为 000h。对于配置空间中的扩展能力，此偏移相对于 PCI 兼容配置空间的起始位置，因此必须始终为 000h（用于终止能力列表）或大于 0FFh。 | RO |
 
 </td>
 </tr>
@@ -11572,6 +11580,8 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-353.** SFI CAM 地址寄存器
+> <img src="figures/chapter_07/fig_1372_1_tight.png" width="700">
 
 </td>
 </tr>
@@ -11602,9 +11612,13 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 
 > **Figure 7-354. SFI CAM Data Register**
 
+> （原图未单独抽取，可参考整页图 `figures/chapter_07/fig_1372_1.png`）
+
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-354.** SFI CAM 数据寄存器
+> （原图未单独抽取，可参考整页图 `figures/chapter_07/fig_1372_1.png`）
 
 </td>
 </tr>
@@ -11774,6 +11788,8 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-355.** 子系统 ID 与子系统供应商 ID 能力
+> <img src="figures/chapter_07/fig_1373_1_tight.png" width="700">
 
 </td>
 </tr>
@@ -11801,6 +11817,8 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-356.** 子系统 ID 与子系统供应商 ID 能力头部
+> <img src="figures/chapter_07/fig_1373_2_tight.png" width="700">
 
 </td>
 </tr>
@@ -11836,6 +11854,8 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-357.** 子系统 ID 与子系统供应商 ID 能力数据
+> <img src="figures/chapter_07/fig_1373_3_tight.png" width="700">
 
 </td>
 </tr>
@@ -11974,6 +11994,8 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-358.** 数据对象交换 (DOE) 扩展能力
+> <img src="figures/chapter_07/fig_1374_1_tight.png" width="700">
 
 </td>
 </tr>
@@ -12001,6 +12023,8 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-359.** DOE 扩展能力头部
+> <img src="figures/chapter_07/fig_1374_2_tight.png" width="700">
 
 </td>
 </tr>
@@ -12105,6 +12129,8 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-360.** DOE 能力寄存器
+> <img src="figures/chapter_07/fig_1375_1_tight.png" width="700">
 
 </td>
 </tr>
@@ -12179,6 +12205,8 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-361.** DOE 控制寄存器
+> <img src="figures/chapter_07/fig_1376_1_tight.png" width="700">
 
 </td>
 </tr>
@@ -12254,6 +12282,8 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-362.** DOE 状态寄存器
+> <img src="figures/chapter_07/fig_1377_1_tight.png" width="700">
 
 </td>
 </tr>
@@ -12367,6 +12397,8 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-363.** DOE 写数据邮箱寄存器
+> <img src="figures/chapter_07/fig_1378_1_tight.png" width="700">
 
 </td>
 </tr>
@@ -12469,6 +12501,8 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-364.** DOE 读数据邮箱寄存器
+> <img src="figures/chapter_07/fig_1379_1.png" width="700">
 
 </td>
 </tr>
@@ -12756,6 +12790,8 @@ N = Number of Shadow Functions 字段的值。
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-365.** 影子功能扩展能力结构
+> <img src="figures/chapter_07/fig_1381_1_tight.png" width="700">
 
 </td>
 </tr>
@@ -12810,6 +12846,8 @@ N = Number of Shadow Functions 字段的值。
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-366.** 影子功能扩展能力头部
+> <img src="figures/chapter_07/fig_1381_2_tight.png" width="700">
 
 </td>
 </tr>

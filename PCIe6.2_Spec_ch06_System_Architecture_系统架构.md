@@ -88,7 +88,7 @@
 |  | 6.2.11.3 | [RP PIO Error Controls (SysError 与 E…](#sec-6-2-11-3) | [RP PIO 错误控制(SysError 与 Excepti…](#sec-6-2-11-3) | p.747 |
 |  | 6.2.11.4 | [Software Triggering of DPC](#sec-6-2-11-4) | [DPC 的软件触发](#sec-6-2-11-4) | p.748 |
 |  | 6.2.11.5 | [DL_ACTIVE ERR_COR Signaling](#sec-6-2-11-5) | [DL_ACTIVE ERR_COR 信令](#sec-6-2-11-5) | p.749 |
-|  | 6.2.11.5 | [DL_Active ERR_COR Signaling](#sec-6-2-11-5) | [DL_Active 正确错误（ERR_COR）信号](#sec-6-2-11-5) | p.749 |
+|  | 6.2.11.5 | [DL_Active ERR_COR Signaling](#sec-6-2-11-5) | [DL_Active 可纠正错误（ERR_COR）信号](#sec-6-2-11-5) | p.749 |
 |  | 6.3 | [Virtual Channel Support](#sec-6-3) | [虚通道（VC）支持](#sec-6-3) | p.750 |
 |  | 6.3.1 | [Introduction and Scope](#sec-6-3-1) | [引言与范围](#sec-6-3-1) | p.750 |
 |  | 6.3.2 | [TC/VC Mapping and Example Usage](#sec-6-3-2) | [TC/VC 映射与使用示例](#sec-6-3-2) | p.750 |
@@ -113,10 +113,10 @@
 |  | 6.6.1 | [Conventional Reset (continued)](#sec-6-6-1) | [常规复位(续)](#sec-6-6-1) | p.766 |
 |  | 6.6.1 | [Conventional Reset (continued)](#sec-6-6-1) | [常规复位(续)](#sec-6-6-1) | p.767 |
 |  | 6.6.1 | [Conventional Reset (continued)](#sec-6-6-1) | [常规复位(续)](#sec-6-6-1) | p.768 |
-|  | 6.6.2 | [Function Level Reset (FLR)](#sec-6-6-2) | [函数级复位 (FLR)](#sec-6-6-2) | p.768 |
-|  | 6.6.2 | [Function Level Reset (FLR) (continu…](#sec-6-6-2) | [函数级复位 (FLR) (续)](#sec-6-6-2) | p.769 |
-|  | 6.6.2 | [Function Level Reset (FLR) (continu…](#sec-6-6-2) | [函数级复位 (FLR) (续)](#sec-6-6-2) | p.769 |
-|  | 6.6.2 | [Function Level Reset (FLR) (continu…](#sec-6-6-2) | [函数级复位 (FLR) (续)](#sec-6-6-2) | p.769 |
+|  | 6.6.2 | [Function Level Reset (FLR)](#sec-6-6-2) | [功能级复位 (FLR)](#sec-6-6-2) | p.768 |
+|  | 6.6.2 | [Function Level Reset (FLR) (continu…](#sec-6-6-2) | [功能级复位 (FLR) (续)](#sec-6-6-2) | p.769 |
+|  | 6.6.2 | [Function Level Reset (FLR) (continu…](#sec-6-6-2) | [功能级复位 (FLR) (续)](#sec-6-6-2) | p.769 |
+|  | 6.6.2 | [Function Level Reset (FLR) (continu…](#sec-6-6-2) | [功能级复位 (FLR) (续)](#sec-6-6-2) | p.769 |
 |  | 6.7 | [PCI Express Native Hot-Plug](#sec-6-7) | [PCI Express 原生热插拔 (Hot-Plug)](#sec-6-7) | p.771 |
 |  | 6.7.1 | [Elements of Hot-Plug](#sec-6-7-1) | [热插拔 (Hot-Plug) 元素](#sec-6-7-1) | p.772 |
 |  | 6.7.1.1 | [Indicators](#sec-6-7-1-1) | [指示灯](#sec-6-7-1-1) | p.773 |
@@ -1265,7 +1265,7 @@ Although interrupt messages remain strictly ordered throughout the PCI Express H
 
 MSI 或 MSI-X 消息本质上是一条 Posted Request（有数据、无完成报文），根据事务排序规则，它不得越过该 Function 先前发送的 Posted Request。系统必须保证：由某条消息触发的 ISR 一定能够观察到在该消息到达之前由 Posted Request 所做的所有更新。因此，设备驱动程序的 ISR 无需通过读取设备寄存器来确保与先前 Posted Request 的数据一致性。但是，如果多个 MSI-X Table 条目共享同一向量，ISR 可能需要读取某些设备专用寄存器，以确定哪些中断源需要服务。
 
-与所有 Memory Write 事务一样，包含中断消息目标（中断接收方）的设备作为 Completer（完成方），必须完成所有中断消息事务，而无需先以 Requester（请求方）身份完成其他事务。一般而言，这意味着消息接收方必须独立于 CPU 何时服务该中断，而完成该中断消息事务。例如，每次中断接收方收到一条中断消息时，可以在内部寄存器中置位一个比特以表示该消息已被接收，然后在总线上完成该事务。相应的 ISR 之后会因为该比特被置位而被调度执行。消息接收方不得在总线上延迟完成该中断消息事务，以等待处理器确认该中断正在被服务。当多个设备同时发送中断消息时，这种依赖关系可能导致死锁。
+与所有 Memory Write 事务一样，包含中断消息目标（中断接收方）的设备作为 Completer（完成者），必须完成所有中断消息事务，而无需先以 Requester（请求者）身份完成其他事务。一般而言，这意味着消息接收方必须独立于 CPU 何时服务该中断，而完成该中断消息事务。例如，每次中断接收方收到一条中断消息时，可以在内部寄存器中置位一个比特以表示该消息已被接收，然后在总线上完成该事务。相应的 ISR 之后会因为该比特被置位而被调度执行。消息接收方不得在总线上延迟完成该中断消息事务，以等待处理器确认该中断正在被服务。当多个设备同时发送中断消息时，这种依赖关系可能导致死锁。
 
 尽管中断消息在整个 PCI Express 层级（H）中保持严格有序，但收到中断消息的顺序并不能保证中断被服务的顺序。由于消息接收方必须在不考虑中断实际何时被服务的情况下完成所有中断消息事务，因此消息接收方通常不会维护关于中断接收顺序的信息。这既适用于从不同设备收到的中断消息，也适用于从同一设备收到的多条消息。如果某设备要求一条中断消息先于另一条被服务，则该设备必须等到第一条被服务后，才能发送第二条中断消息。
 
@@ -1755,7 +1755,7 @@ Note that it is the responsibility of the agent detecting the error to signal th
 
 致命错误是不可纠正的错误条件，会导致特定链路 (Link) 及相关硬件变得不可靠。对于致命错误，可能需要复位链路上的组件才能恢复正常运行。平台对致命错误的处理以及限制其影响的措施，因平台实现而异。
 
-非致命错误是不可纠正的错误，会导致特定事务变得不可靠，但链路在其他方面功能正常。将非致命错误与致命错误分离，可使设备中的请求者/接收者 (Requester/Receiver) 逻辑或系统管理软件有机会在不复位链路上组件、不打扰其他正在执行事务的情况下，从错误中恢复。与出错事务无关的设备不受该错误影响。
+非致命错误是不可纠正的错误，会导致特定事务变得不可靠，但链路在其他方面功能正常。将非致命错误与致命错误分离，可使设备中的请求者/接收方 (Requester/Receiver) 逻辑或系统管理软件有机会在不复位链路上组件、不打扰其他正在执行事务的情况下，从错误中恢复。与出错事务无关的设备不受该错误影响。
 
 检测到错误的代理可以通过三种互补机制向系统或其他设备发出错误通知。第一种机制是通过完成状态 (Completion Status)，第二种机制是使用带内错误报文 (in-band error Messages)，第三种机制是使用错误转发 (Error Forwarding, 也称为数据中毒, data poisoning)。
 
@@ -1862,7 +1862,7 @@ Non-fatal errors are uncorrectable errors which cause a particular transaction t
 </td>
 <td style="background-color:#e8e8e8">
 
-非致命错误是不可纠正的错误，会导致特定事务变得不可靠，但链路在其他方面功能正常。将非致命错误与致命错误分离，可使设备中的请求者/接收者 (Requester/Receiver) 逻辑或系统管理软件有机会在不复位链路上组件、不打扰其他正在执行事务的情况下，从错误中恢复。与出错事务无关的设备不受该错误影响。
+非致命错误是不可纠正的错误，会导致特定事务变得不可靠，但链路在其他方面功能正常。将非致命错误与致命错误分离，可使设备中的请求者/接收方 (Requester/Receiver) 逻辑或系统管理软件有机会在不复位链路上组件、不打扰其他正在执行事务的情况下，从错误中恢复。与出错事务无关的设备不受该错误影响。
 
 </td>
 </tr>
@@ -2048,7 +2048,7 @@ Software should recognize that a single transaction can be signaled by multiple 
 
 对于通常为非致命的某个不可纠正错误，如果软件希望在检测到该错误时避免层级 (hierarchy) 继续运行，软件可以配置实现了 AER 的检测代理将该错误的严重性升级为致命。检测代理(若启用)将始终使用 ERR_FATAL 发送致命错误信号，无论该代理的角色如何。
 
-软件应当认识到，单个事务可以被多个代理使用不同类型的错误报文发出信号。例如，中毒的 TLP (poisoned TLP) 可能被中间的接收者 (intermediate Receivers) 用 ERR_COR 发出信号，而最终目的地的接收者 (ultimate destination Receiver) 可能用 ERR_NONFATAL 发出信号。
+软件应当认识到，单个事务可以被多个代理使用不同类型的错误报文发出信号。例如，中毒的 TLP (poisoned TLP) 可能被中间的接收方 (intermediate Receivers) 用 ERR_COR 发出信号，而最终目的地的接收方 (ultimate destination Receiver) 可能用 ERR_NONFATAL 发出信号。
 
 </td>
 </tr>
@@ -2173,7 +2173,7 @@ For errors detected in the Transaction layer and Uncorrectable Internal Errors, 
 对于事务层检测到的错误以及不可纠正的内部错误 (Uncorrectable Internal Errors)，允许并建议对单个已接收 TLP 最多只报告一个错误，并应采用以下优先级(从高到低):
 
 - 不可纠正的内部错误 (Uncorrectable Internal Error)
-- 接收者溢出 (Receiver Overflow)
+- 接收方溢出 (Receiver Overflow)
 - 格式错误 TLP (Malformed TLP)
 - IDE 检查失败 (IDE Check Failed)
 
@@ -2255,7 +2255,7 @@ handle this case as an Advisory Non-Fatal Error.
 
 在某些情况下，非致命错误的检测者并不是确定该错误是否可恢复、或者是否需要任何恢复操作的合适代理。例如，如果软件尝试从不存在的设备或功能执行配置读，则完成中的 UR 状态会将该错误告知软件，软件不需要完成者再额外发送 ERR_NONFATAL 报文来上报该错误。事实上，在某些平台上，使用 ERR_NONFATAL 发出错误信号会导致系统错误 (System Error)，从而破坏正常的软件探测。
 
-"建议性非致命错误" (Advisory Non-Fatal Error) 情形主要由检测代理(请求者、完成者或接收者)的角色以及具体的错误决定。在这些情况下，具有 AER 的代理(若启用)通过发送 ERR_COR 报文作为对软件的通知性建议，而不是发送 ERR_NONFATAL,来发出非致命错误信号。没有 AER 的代理在这些情况下不发送错误报文，因为收到 ERR_COR 的软件将无法将建议性非致命错误情形与用于评估链路完整性的可纠正错误情形区分开来。
+"建议性非致命错误" (Advisory Non-Fatal Error) 情形主要由检测代理(请求者、完成者或接收方)的角色以及具体的错误决定。在这些情况下，具有 AER 的代理(若启用)通过发送 ERR_COR 报文作为对软件的通知性建议，而不是发送 ERR_NONFATAL,来发出非致命错误信号。没有 AER 的代理在这些情况下不发送错误报文，因为收到 ERR_COR 的软件将无法将建议性非致命错误情形与用于评估链路完整性的可纠正错误情形区分开来。
 
 以下是建议性非致命错误的具体情形。请注意，单个 TLP 中可能同时存在来自相同或不同错误类别(可纠正、非致命、致命)的多个错误。例如，意外的完成报文 (unexpected Completion) 可能同时是中毒的。有关上报多个错误的要求和建议，请参见 § 6.2.3.2.3 节。对于上述示例，建议上报意外完成，而不上报收到中毒 TLP。
 
@@ -2306,7 +2306,7 @@ This section covers Advisory Non-Fatal Error handling for errors managed by the 
 </td>
 <td style="background-color:#e8e8e8">
 
-"建议性非致命错误" (Advisory Non-Fatal Error) 情形主要由检测代理(请求者、完成者或接收者)的角色以及具体的错误决定。在这些情况下，具有 AER 的代理(若启用)通过发送 ERR_COR 报文作为对软件的通知性建议，而不是发送 ERR_NONFATAL,来发出非致命错误信号。没有 AER 的代理在这些情况下不发送错误报文，因为收到 ERR_COR 的软件将无法将建议性非致命错误情形与用于评估链路完整性的可纠正错误情形区分开来。
+"建议性非致命错误" (Advisory Non-Fatal Error) 情形主要由检测代理(请求者、完成者或接收方)的角色以及具体的错误决定。在这些情况下，具有 AER 的代理(若启用)通过发送 ERR_COR 报文作为对软件的通知性建议，而不是发送 ERR_NONFATAL,来发出非致命错误信号。没有 AER 的代理在这些情况下不发送错误报文，因为收到 ERR_COR 的软件将无法将建议性非致命错误情形与用于评估链路完整性的可纠正错误情形区分开来。
 
 以下是建议性非致命错误的具体情形。请注意，单个 TLP 中可能同时存在来自相同或不同错误类别(可纠正、非致命、致命)的多个错误。例如，意外的完成报文 (unexpected Completion) 可能同时是中毒的。有关上报多个错误的要求和建议，请参见 § 6.2.3.2.3 节。对于上述示例，建议上报意外完成，而不上报收到中毒 TLP。
 
@@ -2411,22 +2411,22 @@ A Receiver must not handle this case as an Advisory Non-Fatal Error if either of
 
 即使该特定事务存在不可纠正错误，完成者也必须将此情形作为建议性非致命错误来处理，因为请求者 (Requester) 在收到带有 UR/CA 状态的完成报文时，负责使用请求者特定的机制在必要时上报该错误(参见 § 6.2.3.2.5 节)。
 
-当一个接收者 (Receiver) 不作为某个 TLP 的最终 PCI Express 目的地时,
-108 如果该接收者检测到该 TLP 的非致命错误，
-则这个"中间"接收者必须将此情形作为建议性非致命错误来处理。
-109 具有 AER 的接收者(若启用)通过发送 ERR_COR 报文来发出错误信号。没有 AER 的接收者针对此情形不发送任何错误报文。针对根复合体 (Root Complexes, RCs) 的中间接收者情形的例外情况见下文。
+当一个接收方 (Receiver) 不作为某个 TLP 的最终 PCI Express 目的地时,
+108 如果该接收方检测到该 TLP 的非致命错误，
+则这个"中间"接收方必须将此情形作为建议性非致命错误来处理。
+109 具有 AER 的接收方(若启用)通过发送 ERR_COR 报文来发出错误信号。没有 AER 的接收方针对此情形不发送任何错误报文。针对根复合体 (Root Complexes, RCs) 的中间接收方情形的例外情况见下文。
 
-中间接收者情形的一个示例是:交换机 (Switch) 在转发某个 TLP 时检测到中毒 (poison) 或错误的 ECRC。即使在该 TLP 路由的此处，这是一个不可纠正的(但非致命的)错误，中间接收者也将其作为建议性非致命错误处理，以使 TLP 的最终接收者(即对 Request TLP 而言的完成者，或对 Completion TLP 而言的请求者)能够根据其错误设置，更恰当地处理该错误。例如，某个完成者在检测到内存写请求 (Memory Write Request) 中的中毒时,
+中间接收方情形的一个示例是:交换机 (Switch) 在转发某个 TLP 时检测到中毒 (poison) 或错误的 ECRC。即使在该 TLP 路由的此处，这是一个不可纠正的(但非致命的)错误，中间接收方也将其作为建议性非致命错误处理，以使 TLP 的最终接收方(即对 Request TLP 而言的完成者，或对 Completion TLP 而言的请求者)能够根据其错误设置，更恰当地处理该错误。例如，某个完成者在检测到内存写请求 (Memory Write Request) 中的中毒时,
 110 可能将该错误掩码(因此不上报)，而同一层级中的另一个完成者可能会使用 ERR_NONFATAL 上报该错误。
 
-中毒 TLP 出口被阻止 (Poisoned TLP Egress Blocked) 错误从不作为中间接收者情形处理，因为它不是在处理已接收 TLP 的过程中被检测到的。
+中毒 TLP 出口被阻止 (Poisoned TLP Egress Blocked) 错误从不作为中间接收方情形处理，因为它不是在处理已接收 TLP 的过程中被检测到的。
 
 如果 RC 检测到某个 TLP 的非致命错误，该 TLP 通常会在根端口之间以对等方式转发，但 RC 不支持随转发的报文一起传递错误相关信息(例如 TLP Digest、EP 位或等效信息)，则 RC 必须(若启用)使用 ERR_NONFATAL 发出错误信号，并且还必须不转发该事务。一个示例是:RC 需要在根端口之间以对等方式转发一个中毒的 TLP,但 RC 的内部互连 (fabric) 不支持中毒指示 (poison indication)。
 
-当中毒 TLP 被其最终 PCI Express 目的地接收时，如果严重性为非致命，并且接收者合法地选择不将此情形作为不可纠正错误处理(见下文)，则接收者必须将此情形作为建议性非致命错误来处理。
-111 当某个 IDE TLP 在其最终目的端口 (ultimate destination Port) 被判定为具有 PCRC 检查失败错误时，如果严重性为非致命，并且接收者以允许继续运行的方式处理该中毒数据，则接收者必须将此情形作为建议性非致命错误来处理。具有 AER 的接收者(若启用)通过发送 ERR_COR 报文来发出错误信号。没有 AER 的接收者针对此情形不发送任何错误报文。
+当中毒 TLP 被其最终 PCI Express 目的地接收时，如果严重性为非致命，并且接收方合法地选择不将此情形作为不可纠正错误处理(见下文)，则接收方必须将此情形作为建议性非致命错误来处理。
+111 当某个 IDE TLP 在其最终目的端口 (ultimate destination Port) 被判定为具有 PCRC 检查失败错误时，如果严重性为非致命，并且接收方以允许继续运行的方式处理该中毒数据，则接收方必须将此情形作为建议性非致命错误来处理。具有 AER 的接收方(若启用)通过发送 ERR_COR 报文来发出错误信号。没有 AER 的接收方针对此情形不发送任何错误报文。
 
-在以下任一情况下，接收者不得将此情形作为建议性非致命错误处理:
+在以下任一情况下，接收方不得将此情形作为建议性非致命错误处理:
 
 - 在正确配置的情况下，将该错误作为可纠正错误处理并继续运行可能导致静默数据损坏 (silent data corruption)。
 - § 2.7.2.1 节的规则要求将此情形作为不可纠正错误处理。
@@ -2470,9 +2470,9 @@ A Receiver must not handle this case as an Advisory Non-Fatal Error if either of
 </td>
 <td style="background-color:#e8e8e8">
 
-105. 如果完成方 (Completer) 在完成报文 (Completion) 中返回数据，且该数据已损坏或可疑，完成方被允许使用错误转发 (Error Forwarding, 数据中毒, Data Poisoning) 机制来指示该错误，而不是将其作为不支持的请求 (UR) 或完成中止 (CA) 处理。
+105. 如果完成者 (Completer) 在完成报文 (Completion) 中返回数据，且该数据已损坏或可疑，完成者被允许使用错误转发 (Error Forwarding, 数据中毒, Data Poisoning) 机制来指示该错误，而不是将其作为不支持的请求 (UR) 或完成中止 (CA) 处理。
 
-106. 某些其他错误 (例如 ACS 违例) 与 Non-Posted 请求 (Non-Posted Request) 同时发生时，也会导致完成方发送带有 UR 或 CA 状态的完成报文。如果该错误 (例如 ACS 违例) 的严重程度为非致命 (non-fatal)，则完成方还必须将此情形作为建议性非致命错误 (Advisory Non-Fatal Error) 处理。但是，关于某些必须作为不可纠正错误 (uncorrectable error) 处理的带中毒数据 (Poisoned data) 的请求，请参阅 § 2.7.2.1 节。
+106. 某些其他错误 (例如 ACS 违例) 与 Non-Posted 请求 (Non-Posted Request) 同时发生时，也会导致完成者发送带有 UR 或 CA 状态的完成报文。如果该错误 (例如 ACS 违例) 的严重程度为非致命 (non-fatal)，则完成者还必须将此情形作为建议性非致命错误 (Advisory Non-Fatal Error) 处理。但是，关于某些必须作为不可纠正错误 (uncorrectable error) 处理的带中毒数据 (Poisoned data) 的请求，请参阅 § 2.7.2.1 节。
 
 107. 如果严重程度为致命 (fatal)，则该错误不是建议性非致命错误，且必须 (若已使能) 使用 ERR_FATAL 来指示。
 
@@ -2643,7 +2643,7 @@ If the Requester needs to report the error, the Requester must do so solely thro
 </td>
 <td style="background-color:#e8e8e8">
 
-当请求者 (Requester) 接收到一条带有 UR/CA 状态的完成报文 (Completion) 时，通常完成方 (Completer) 已将该错误作为建议性非致命错误 (Advisory Non-Fatal Error) 处理——前提是完成方处的错误严重程度为非致命 (non-fatal) (见 § 6.2.3.2.4.1 节)。请求者必须确定是否需要采取任何错误恢复动作、采取何种类型的恢复动作，以及是否需要上报该错误。
+当请求者 (Requester) 接收到一条带有 UR/CA 状态的完成报文 (Completion) 时，通常完成者 (Completer) 已将该错误作为建议性非致命错误 (Advisory Non-Fatal Error) 处理——前提是完成者处的错误严重程度为非致命 (non-fatal) (见 § 6.2.3.2.4.1 节)。请求者必须确定是否需要采取任何错误恢复动作、采取何种类型的恢复动作，以及是否需要上报该错误。
 
 如果请求者需要上报该错误，则请求者必须仅通过请求者特定的机制 (Requester-specific mechanism) 来完成。例如，许多设备具有关联的设备驱动程序 (device driver)，可向软件上报错误。作为另一个重要示例，在某些平台上，根复合体 (Root Complex) 在配置读完成 (Configuration Read Completion) 带有 UR/CA 状态时，会向软件返回全 1。
 
@@ -3561,7 +3561,7 @@ The diagram covers:
   - SERR# Enable(用于转发)— Bridge Control (桥控制) 寄存器
   - DPC Trigger Status 与 DPC Trigger Reason(若 ERR_FATAL 或 ERR_NONFATAL 触发 DPC 则置位)— DPC Status (DPC 状态) 寄存器
   - 仅 ERR_NONFATAL 和 ERR_FATAL(仅当 ERR_FATAL 或 ERR_NONFATAL 时置位)
-  - 未被 DPC 包含 (Not contained by DPC)
+  - 不受 DPC 遏制 (Not contained by DPC)
   - 平台特定 (System Specific)
 
 <img src="figures/chapter_06/fig_0733_1_tight.png" width="700">
@@ -3662,7 +3662,7 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 | Replay Timer Timeout(重放定时器超时) | Correctable(可纠正) | Transmitter:向根复合体 (Root Complex) 发送 ERR_COR。 | § Section 3.6.2.1、§ Section 4.2.3.4.2.1 |
 | REPLAY_NUM Rollover(重放号翻转) | Correctable(可纠正) | Transmitter:向根复合体 (Root Complex) 发送 ERR_COR。 | § Section 3.6.2.1、§ Section 4.2.3.4.2.1 |
 | Data Link Protocol Error(数据链路协议错误) | Uncorrectable(致命) | 若启用检查，则向根复合体 (Root Complex) 发送 ERR_FATAL。 | § Section 3.6.2.2、§ Section 3.6.2.3、§ Section 4.2.3.4.2.1 |
-| Surprise Down(意外下线) | Uncorrectable(致命) | 若启用检查，则向根复合体 (Root Complex) 发送 ERR_FATAL。 | § Section 3.2.1 |
+| Surprise Down（意外断开） | Uncorrectable(致命) | 若启用检查，则向根复合体 (Root Complex) 发送 ERR_FATAL。 | § Section 3.2.1 |
 
 ---
 
@@ -3774,7 +3774,7 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 |---|---|---|---|
 | Unsupported Request (UR)(不支持的请求) | Uncorrectable(非致命) | Request Receiver:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形，则发送 ERR_COR。记录引起该错误的 TLP 的前缀/包头。 | § Table F-1、§ Section 2.3.1、§ Section 2.3.2、§ Section 2.7.2.1、§ Section 2.9.1、§ Section 5.3.1、§ Section 6.2.3.1、§ Section 6.2.6、§ Section 6.2.8.1、§ Section 6.5.7、§ Section 7.3.1、§ Section 7.3.3、§ Section 7.5.1.1.3、§ Section 7.5.1.1.4 |
 | Completion Timeout(完成超时) | Uncorrectable(非致命) | Requester:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.4 中描述的咨询性非致命错误情形，则发送 ERR_COR。若 Advanced Error Capabilities and Control 寄存器中的 Completion Timeout Prefix/Header Log Capable 位已置位，则记录发生该错误的 Request TLP 的前缀/包头。 | § Section 2.8 |
-| Completer Abort(完成方中止) | Uncorrectable(非致命) | Completer:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形，则发送 ERR_COR。记录发生该错误的 Request 的前缀/包头。 | § Section 2.3.1 |
+| Completer Abort(完成者中止) | Uncorrectable(非致命) | Completer:向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形，则发送 ERR_COR。记录发生该错误的 Request 的前缀/包头。 | § Section 2.3.1 |
 | Unexpected Completion(意外完成) | Uncorrectable(非致命) | Receiver:向根复合体 (Root Complex) 发送 ERR_COR。这是 § Section 6.2.3.2.4.5 中描述的咨询性非致命错误情形。记录发生该错误的 Completion 的前缀/包头。 | § Section 2.3.2 |
 | ACS Violation(ACS 违规) | Uncorrectable(非致命) | Receiver(若启用检查):向根复合体 (Root Complex) 发送 ERR_NONFATAL;对于 § Section 6.2.3.2.4.1 中描述的咨询性非致命错误情形，则发送 ERR_COR。 | (续下表) |
 
@@ -4152,7 +4152,7 @@ Each VF must use its own Routing ID when signaling errors.
 - Fatal Reporting Enable(致命错误上报使能)
 - Unsupported Request (UR) Reporting Enable(不支持请求 (UR) 上报使能)
 
-每个 VF (虚拟功能) 必须独立于任何其他 Function 报告其错误状态。这对于为 Function 特定的错误提供 SI (系统集成商) 隔离是必需的。每个 VF 必须实现以下基线错误处理状态位:
+每个 VF (虚拟功能) 必须独立于任何其他 Function 报告其错误状态。这对于为 Function 特定的错误提供 系统镜像 (System Image) 隔离是必需的。每个 VF 必须实现以下基线错误处理状态位:
 
 - Status 寄存器(参见 § Section 7.5.1.1.4 )
   - Master Data Parity Error(主设备数据奇偶校验错误)
@@ -4286,7 +4286,7 @@ DPC 默认禁用，除非由软件通过 DPC Trigger Enable 字段使能，否�
 > **实现说明:**
 > **数据值为全 1**
 >
-> 许多平台(包括那些支持 RP Extensions for DPC 的平台)在与 PCI Express Configuration、I/O 或 Memory Read Request 相关的错误发生时，可以向软件返回全 1 的数据值。在 DPC 期间,Downstream Port 丢弃发往该 Link 的请求并以错误完成它们(即，以 Unsupported Request (UR, 不支持请求) 或 Completer Abort (CA, 完成方中止) 完成状态)。通过以读取某个已知数据值(非全 1)地址的读操作结束一系列 MMIO 或配置空间操作，软件可以判断 Completer 是否已被移除或 DPC 是否已被触发。
+> 许多平台(包括那些支持 RP Extensions for DPC 的平台)在与 PCI Express Configuration、I/O 或 Memory Read Request 相关的错误发生时，可以向软件返回全 1 的数据值。在 DPC 期间,Downstream Port 丢弃发往该 Link 的请求并以错误完成它们(即，以 Unsupported Request (UR, 不支持请求) 或 Completer Abort (CA, 完成者中止) 完成状态)。通过以读取某个已知数据值(非全 1)地址的读操作结束一系列 MMIO 或配置空间操作，软件可以判断 Completer 是否已被移除或 DPC 是否已被触发。
 >
 > 另请参见实现说明 "Use of RP PIO Advisory Error Handling"
 
@@ -4869,7 +4869,7 @@ For a given DL_ACTIVE event, if a Port is going to send both an ERR_COR Message 
 ---
 
 <a id="sec-6-2-11-5"></a>
-## 6.2.11.5 DL_Active ERR_COR Signaling | DL_Active 正确错误（ERR_COR）信号
+## 6.2.11.5 DL_Active ERR_COR Signaling | DL_Active 可纠正错误（ERR_COR）信号
 
 <table>
 <thead>
@@ -6633,7 +6633,7 @@ Conventional Reset includes all reset mechanisms other than Function Level Reset
 
 本节规定 PCI Express 复位 (Reset) 机制。本节涵盖本文档中定义的架构机制与本文档中定义的复位机制之间的关系。PCI Express 常规复位 (Conventional Reset) 与组件或平台复位之间的任何关系都由组件或平台特定 (除非明确说明)。
 
-常规复位包括函数级复位 (Function Level Reset) 之外的所有复位机制。常规复位分为两类:基本复位 (Fundamental Reset) 和非基本复位。本节适用于所有类型的常规复位。
+常规复位包括功能级复位 (Function Level Reset) 之外的所有复位机制。常规复位分为两类:基本复位 (Fundamental Reset) 和非基本复位。本节适用于所有类型的常规复位。
 
 </td>
 </tr>
@@ -6806,8 +6806,8 @@ Note: This delay is analogous to the Trhfa parameter specified for PCI/PCI-X, an
 第二组规则针对施加于系统的要求:
 
 - 为了让组件能够执行内部初始化，系统软件必须在一个或多个设备退出常规复位后等待规定的最小时长，才被允许向这些设备发出配置请求，除非使用了就绪通知机制 (见 § 6.22 节)。如果系统软件通过本文档范围之外的方式知晓特定设备的要求，则也可免于这些最短等待时长的要求
-- 如果设备/函数通过"立即就绪" (Immediate Readiness) 指示，系统软件可以立即向该设备/函数发出配置请求 (见 § 3.3 节和 § 7.9.16 节，介绍了允许指示立即就绪支持的两种方式)
-- 如果下游端口的 DRS 消息接收 (DRS Message Received) 位已置 1,系统软件可以立即向该下游端口下方的设备/函数发出配置请求
+- 如果设备/功能通过"立即就绪" (Immediate Readiness) 指示，系统软件可以立即向该设备/功能发出配置请求 (见 § 3.3 节和 § 7.9.16 节，介绍了允许指示立即就绪支持的两种方式)
+- 如果下游端口的 DRS 消息接收 (DRS Message Received) 位已置 1,系统软件可以立即向该下游端口下方的设备/功能发出配置请求
 
 <!-- 📄 Page 767 -->
 ---
@@ -6957,7 +6957,7 @@ Additional parameters may be specified.
 ---
 
 <a id="sec-6-6-2"></a>
-## 6.6.2 Function Level Reset (FLR) | 函数级复位 (FLR)
+## 6.6.2 Function Level Reset (FLR) | 功能级复位 (FLR)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -7027,22 +7027,22 @@ FLR modifies the Function state described by this specification as follows:
 </td>
 <td style="background-color:#e8e8e8">
 
-FLR 机制使软件能够以函数 (Function) 级别的粒度静默并复位端点硬件。三个示例使用模型说明了此功能带来的好处:
+FLR 机制使软件能够以功能 (Function) 级别的粒度静默并复位端点硬件。三个示例使用模型说明了此功能带来的好处:
 
-- 在某些系统中，控制某个函数的软件实体可能停止正常运行。为防止数据损坏，有必要停止该函数正在执行的所有 PCI Express 操作和外部 I/O (非 PCI Express) 操作。其他已定义的复位操作不能保证停止外部 I/O 操作
-- 在将硬件从一个分区迁移到另一个分区的分区化环境中，必须确保硬件不保留任何先前分区的残留"信息",例如用户委托给第一个分区但不委托给第二个分区的秘密信息。此外，鉴于函数种类繁多，有必要以与函数无关的方式完成此操作
-- 当系统软件正在拆除某个函数的软件栈并随后重建该软件栈时，有时需要将状态恢复到未初始化状态，再重建该函数的软件栈
+- 在某些系统中，控制某个功能的软件实体可能停止正常运行。为防止数据损坏，有必要停止该功能正在执行的所有 PCI Express 操作和外部 I/O (非 PCI Express) 操作。其他已定义的复位操作不能保证停止外部 I/O 操作
+- 在将硬件从一个分区迁移到另一个分区的分区化环境中，必须确保硬件不保留任何先前分区的残留"信息",例如用户委托给第一个分区但不委托给第二个分区的秘密信息。此外，鉴于功能种类繁多，有必要以与功能无关的方式完成此操作
+- 当系统软件正在拆除某个功能的软件栈并随后重建该软件栈时，有时需要将状态恢复到未初始化状态，再重建该功能的软件栈
 
 FLR 的实现是可选的 (非必需)，但强烈建议实现。
 
-FLR 适用于每个函数。FLR 操作仅影响目标函数。FLR 不得影响链路 (Link) 状态。
+FLR 适用于每个功能。FLR 操作仅影响目标功能。FLR 不得影响链路 (Link) 状态。
 
-FLR 按如下方式修改本规范所描述的函数状态:
+FLR 按如下方式修改本规范所描述的功能状态:
 
 <!-- 📄 Page 769 -->
 ---
 
-- 函数寄存器和函数特定的状态机必须被设置为其初始化值，如本文档所规定，但以下情况除外，这些情况下值不受 FLR 影响:
+- 功能寄存器和功能特定的状态机必须被设置为其初始化值，如本文档所规定，但以下情况除外，这些情况下值不受 FLR 影响:
   - sticky 类型的寄存器 (ROS、RWS、RW1CS)
   - 定义为 HwInit 类型的寄存器
   - 以下其他字段或寄存器:
@@ -7091,7 +7091,7 @@ FLR 按如下方式修改本规范所描述的函数状态:
 ---
 
 <a id="sec-6-6-2-cont"></a>
-## 6.6.2 Function Level Reset (FLR) (continued) | 函数级复位 (FLR) (续)
+## 6.6.2 Function Level Reset (FLR) (continued) | 功能级复位 (FLR) (续)
 
 <table>
 <thead>
@@ -7119,17 +7119,17 @@ Note that upon receipt of an FLR, a device Function may either clear all transac
 </td>
 <td style="background-color:#e8e8e8">
 
-请注意，用于使函数能够在 PCI Express 上发起请求的控制位将被清零，包括 Bus Master Enable、MSI Enable 等，这实际上会使该函数在链路上变为静默 (quiescent)。
+请注意，用于使功能能够在 PCI Express 上发起请求的控制位将被清零，包括 Bus Master Enable、MSI Enable 等，这实际上会使该功能在链路上变为静默 (quiescent)。
 
 请注意，与链路功能相关的端口状态机(包括物理层和数据链路层中的状态机) 不会被 FLR 复位,VC0 在 FLR 之后仍保持已初始化状态。
 
-- 函数所置位的任何未完成 (outstanding) 的 INTx 中断必须在启动 FLR 之前通过发送相应的 Deassert_INTx 消息 (Deassert_INTx Message) 来撤销
+- 功能所置位的任何未完成 (outstanding) 的 INTx 中断必须在启动 FLR 之前通过发送相应的 Deassert_INTx 消息 (Deassert_INTx Message) 来撤销
 
-请注意，当 FLR 被发起以复位多功能设备 (Multi-Function Device) 的某个函数时，如果另一个函数继续置位匹配的 INTx,则不会发送 Deassert_INTx 消息。
+请注意，当 FLR 被发起以复位多功能设备 (Multi-Function Device) 的某个功能时，如果另一个功能继续置位匹配的 INTx,则不会发送 Deassert_INTx 消息。
 
-通过向"启动函数级复位" (Initiate Function Level Reset) 位写入 1b 来启动 FLR 后，函数必须在 100 ms 内完成 FLR。如果软件在"事务待处理" (Transactions Pending) 位为 1b 时发起 FLR,则软件必须为任何关联完成报文的到达留出充足时间，或者在合理确定任何剩余的完成报文将永远不会到达之前，不得初始化该函数。为此，建议软件至少允许与设备上 FLR 之前"完成超时" (Completion Timeout) 值所提供的时间一样长。如果在发出 FLR 时该函数上的"完成超时"被禁用，则该延迟取决于系统，但必须不小于 100 ms。如果实现了"函数就绪状态" (Function Readiness Status, FRS — 见 § 6.22.2 节)，则系统软件在收到指示"配置就绪" (Configuration-Ready) 的 FRS 消息后，即可立即向该函数发出配置请求，但这并不一定表示该函数发起的未完成请求已经完成。
+通过向"启动功能级复位" (Initiate Function Level Reset) 位写入 1b 来启动 FLR 后，功能必须在 100 ms 内完成 FLR。如果软件在"事务待处理" (Transactions Pending) 位为 1b 时发起 FLR,则软件必须为任何关联完成报文的到达留出充足时间，或者在合理确定任何剩余的完成报文将永远不会到达之前，不得初始化该功能。为此，建议软件至少允许与设备上 FLR 之前"完成超时" (Completion Timeout) 值所提供的时间一样长。如果在发出 FLR 时该功能上的"完成超时"被禁用，则该延迟取决于系统，但必须不小于 100 ms。如果实现了"功能就绪状态" (Function Readiness Status, FRS — 见 § 6.22.2 节)，则系统软件在收到指示"配置就绪" (Configuration-Ready) 的 FRS 消息后，即可立即向该功能发出配置请求，但这并不一定表示该功能发起的未完成请求已经完成。
 
-请注意，在收到 FLR 时，设备函数可以选择清除所有事务状态(包括"事务待处理")，或将"完成超时"设置为其默认值，以便所有未完成事务在 FLR 执行期间超时。无论如何，在 FLR 完成时,"事务待处理"位必须被清零。
+请注意，在收到 FLR 时，设备功能可以选择清除所有事务状态(包括"事务待处理")，或将"完成超时"设置为其默认值，以便所有未完成事务在 FLR 执行期间超时。无论如何，在 FLR 完成时,"事务待处理"位必须被清零。
 
 </td>
 </tr>
@@ -7141,7 +7141,7 @@ Note that upon receipt of an FLR, a device Function may either clear all transac
 ---
 
 <a id="sec-6-6-2-cont2"></a>
-## 6.6.2 Function Level Reset (FLR) (continued) | 函数级复位 (FLR) (续)
+## 6.6.2 Function Level Reset (FLR) (continued) | 功能级复位 (FLR) (续)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -7167,13 +7167,13 @@ Since FLR modifies Function state not described by this specification (in additi
 </td>
 <td style="background-color:#e8e8e8">
 
-由于 FLR 会修改本规范未描述的函数状态(以及本规范所描述的状态)，有必要使用一组标准来规定 FLR 的行为，当这些标准应用于函数时，表明该函数已满足 FLR 的要求。必须使用函数相关的知识应用以下标准来评估该函数对 FLR 的响应行为:
+由于 FLR 会修改本规范未描述的功能状态(以及本规范所描述的状态)，有必要使用一组标准来规定 FLR 的行为，当这些标准应用于功能时，表明该功能已满足 FLR 的要求。必须使用功能相关的知识应用以下标准来评估该功能对 FLR 的响应行为:
 
-- 函数不得在其控制的任何外部接口上呈现为已初始化且主机处于活动状态的适配器。终止外部接口上活动所需的具体步骤不在本文档范围之内
-  - 例如，网络适配器不得响应那些需要主机系统对适配器进行初始化或与活动主机系统进行交互的查询，但允许执行其在设计上不需主机初始化或交互即可执行的动作。如果该网络适配器包含多个在同一外部网络接口上工作的函数，则本规则仅影响与被 FLR 复位的特定函数相关的方面
-- 函数不得在其自身内保留可能包含与该函数先前使用相关的秘密信息的、软件可读的状态。分配给该函数的主机主存不得被该函数修改
-  - 例如，具有可被主机软件直接或间接读取的内部存储器的函数必须清除或随机化该存储器
-- 函数必须返回到一种状态，使得对函数 PCI Express 接口的正常配置将使通常与该函数关联的驱动程序能够使用该函数
+- 功能不得在其控制的任何外部接口上呈现为已初始化且主机处于活动状态的适配器。终止外部接口上活动所需的具体步骤不在本文档范围之内
+  - 例如，网络适配器不得响应那些需要主机系统对适配器进行初始化或与活动主机系统进行交互的查询，但允许执行其在设计上不需主机初始化或交互即可执行的动作。如果该网络适配器包含多个在同一外部网络接口上工作的功能，则本规则仅影响与被 FLR 复位的特定功能相关的方面
+- 功能不得在其自身内保留可能包含与该功能先前使用相关的秘密信息的、软件可读的状态。分配给该功能的主机主存不得被该功能修改
+  - 例如，具有可被主机软件直接或间接读取的内部存储器的功能必须清除或随机化该存储器
+- 功能必须返回到一种状态，使得对功能 PCI Express 接口的正常配置将使通常与该功能关联的驱动程序能够使用该功能
 
 </td>
 </tr>
@@ -7187,7 +7187,7 @@ Since FLR modifies Function state not described by this specification (in additi
 ---
 
 <a id="sec-6-6-2-cont3"></a>
-## 6.6.2 Function Level Reset (FLR) (continued) | 函数级复位 (FLR) (续)
+## 6.6.2 Function Level Reset (FLR) (continued) | 功能级复位 (FLR) (续)
 
 <table>
 <thead>
@@ -7217,9 +7217,9 @@ The PCI Express architecture is designed to natively support both hot-add and ho
 </td>
 <td style="background-color:#e8e8e8">
 
-当 FLR 被发起时，目标函数必须按以下方式行为:
+当 FLR 被发起时，目标功能必须按以下方式行为:
 
-- 函数必须返回启动 FLR 操作的配置写操作的完成报文，然后再启动 FLR
+- 功能必须返回启动 FLR 操作的配置写操作的完成报文，然后再启动 FLR
 - 当 FLR 正在进行中时:
 
 <!-- 📄 Page 771 -->
@@ -7227,7 +7227,7 @@ The PCI Express architecture is designed to natively support both hot-add and ho
 
   - 如果收到请求 (Request)，允许将该请求静默丢弃 (在更新流控信用之后)，而不将其记录或报告为错误
   - 如果收到完成报文 (Completion)，允许将该完成报文作为"意外完成" (Unexpected Completion) 处理，或将其静默丢弃 (在更新流控信用之后)，而不将其记录或报告为错误
-  - 虽然函数被要求在上述时间限制内完成 FLR 操作，但随后的函数特定初始化序列可能需要额外的时间。如果需要额外时间，则当在上述时间限制之后收到配置请求时，函数必须返回"请求重试状态" (Request Retry Status, RRS) 完成状态。在函数以非 RRS 的完成状态响应一次配置请求之后，在该函数被再次复位之前，不允许以 RRS 响应配置请求
+  - 虽然功能被要求在上述时间限制内完成 FLR 操作，但随后的功能特定初始化序列可能需要额外的时间。如果需要额外时间，则当在上述时间限制之后收到配置请求时，功能必须返回"请求重试状态" (Request Retry Status, RRS) 完成状态。在功能以非 RRS 的完成状态响应一次配置请求之后，在该功能被再次复位之前，不允许以 RRS 响应配置请求
 
 PCI Express 架构旨在原生支持电缆、插卡 (add-in cards) 和模块的热添加与热移除 ("热插拔" / Hot-Plug)。PCI Express 原生热插拔提供了一套"工具箱"机制，允许通过自洽的基础设施支持不同的用户/操作员模型。这些机制既可用于实现依赖于与操作系统协调的有序添加/移除 (例如传统 PCI 热插拔)，也可用于异步移除 — 即不与操作系统严格同步的移除。本节定义热插拔机制集，并规定热插拔的组成元素 (如指示灯和按钮) 在系统中实现时必须具备的行为。
 
@@ -7270,16 +7270,16 @@ Software can avoid data corruption from stale Completions in a variety of ways. 
 </td>
 <td style="background-color:#e8e8e8">
 
-FLR 会导致函数丢失对所有未完成 (outstanding) 非 Posted 请求的跟踪。此后到达的相应完成报文被称为"陈旧" (stale) 完成报文。如果软件在存在未完成请求时发出 FLR,然后未等待潜在的陈旧完成报文就重新使能该函数运行，之后到达的任何陈旧完成报文都可能被该函数误认为是 FLR 之后所发出请求的完成报文，从而导致数据损坏。
+FLR 会导致功能丢失对所有未完成 (outstanding) 非 Posted 请求的跟踪。此后到达的相应完成报文被称为"陈旧" (stale) 完成报文。如果软件在存在未完成请求时发出 FLR,然后未等待潜在的陈旧完成报文就重新使能该功能运行，之后到达的任何陈旧完成报文都可能被该功能误认为是 FLR 之后所发出请求的完成报文，从而导致数据损坏。
 
 软件可以通过多种方式避免陈旧完成报文造成的数据损坏。以下是一种可能的算法:
 
-1. 执行 FLR 的软件与其他可能直接访问该函数的软件进行同步，并确保在此算法执行期间不发生此类访问
-2. 软件清空整个命令寄存器 (Command register)，禁止该函数发出任何新请求
+1. 执行 FLR 的软件与其他可能直接访问该功能的软件进行同步，并确保在此算法执行期间不发生此类访问
+2. 软件清空整个命令寄存器 (Command register)，禁止该功能发出任何新请求
 3. 软件轮询设备状态寄存器 (Device Status register) 中的"事务待处理" (Transactions Pending) 位，直到其清零，或直到软件合理确信与任何剩余未完成事务关联的完成报文将永远不会到达。在许多平台上,"事务待处理"位通常会在几毫秒内清零，因此软件可以选择在此初始期间使用紧凑的软件循环进行轮询。在少数情况下，如果"事务待处理"位在此期间未清零，则软件需要轮询一个长得多的、平台特定的周期 (可能为秒级)，因此软件可以选择使用基于定时器的中断轮询机制进行此轮询
 4. 软件启动 FLR
 5. 软件等待 100 ms
-6. 软件重新配置该函数并使能其正常运行
+6. 软件重新配置该功能并使能其正常运行
 
 </td>
 </tr>
@@ -8596,7 +8596,7 @@ If enabled through the associated enable field, slot events must generate a soft
 
 上述每个事件都有一个状态 (status) 字段，用于指示事件已发生但尚未被软件处理;以及一个使能 (enable) 字段，用于指示该事件是否已使能软件通知。某些事件还具有能力 (capability) 字段，用于指示该端口 (Port) 上是否支持该事件类型。这些字段按事件类型的分组列于 § 第 6.7.2 节 ，每个单独字段的描述见 § 第 7.5.3 节 。
 
-具有热插拔能力的下游端口会监视其控制的插槽，以上述插槽事件。当检测到这些插槽事件之一时，端口通过置位与该事件关联的状态字段来指示事件已发生。此时，事件处于挂起 (pending) 状态，直到软件清除该状态字段为止。
+具有热插拔能力的下游端口会监视其控制的插槽是否发生上述插槽事件。当检测到这些插槽事件之一时，端口通过置位与该事件关联的状态字段来指示事件已发生。此时，事件处于挂起 (pending) 状态，直到软件清除该状态字段为止。
 
 一旦某个插槽事件在特定插槽上挂起，则在该事件被清除之前，该插槽上同类型的所有后续事件将被忽略。端口必须继续监视该插槽上的所有其他插槽事件类型，并在它们发生时予以报告。
 
@@ -11607,7 +11607,7 @@ Unless available address space is limited, resource allocation software may be a
 </td>
 <td style="background-color:#e8e8e8">
 
-多播 TLP 的每个最终接收者可能有不同的多播窗口 (Multicast Window) 大小需求。在一种极端情况下，多播窗口可能需要覆盖设备内部实现的一段内存范围；在另一种情况下，可能仅需覆盖 FIFO 寄存器所在的特定偏移。Multicast Capability 寄存器中的 MC_Window_Size_Requested 字段供端点 (Endpoint) 通告其所需要的多播窗口大小。
+多播 TLP 的每个最终接收方可能有不同的多播窗口 (Multicast Window) 大小需求。在一种极端情况下，多播窗口可能需要覆盖设备内部实现的一段内存范围；在另一种情况下，可能仅需覆盖 FIFO 寄存器所在的特定偏移。Multicast Capability 寄存器中的 MC_Window_Size_Requested 字段供端点 (Endpoint) 通告其所需要的多播窗口大小。
 
 除非可用地址空间受限，否则资源分配软件可以将每个请求视为最小值，并通过 MC_Index_Position 设置多播窗口大小以满足最大的请求。在某些情况下，对较大窗口的请求可以通过配置较小的窗口大小并将相同成员关系分配给多个连续的 MCG 来满足。
 
@@ -11693,7 +11693,7 @@ For hardware enforcement that only Translated Addresses can be used to target th
 
 ACS P2P Request Redirect 和 ACS Direct Translated P2P 机制提供了一种方式：带未转换地址 (Untranslated Addresses) 的 P2P 请求可被重定向到根复合体 (Root Complex, RC) 进行访问控制检查，而带已转换地址 (Translated Addresses) 的 P2P 请求可被"直接"路由到其 P2P 目标以提高性能。详见 § Section 6.12。对于多播 TLP (Multicast TLPs)，目前不存在相应的重定向机制。
 
-为实现类似功能，可以将 RC 配置为提供一个或多个不在多播地址范围内、但映射到"受保护"多播窗口 (Multicast Windows) 的目标内存空间 (Memory Space) 范围。无论是否具备 ATS 能力，多播 TLP 发送者均可寻址这些 RC 内存空间范围以间接访问受保护的多播窗口。当任一类型的发送者以内存写 (Memory Writes) 寻址这些范围时，通过访问控制检查的每个 TLP 将被 RC 反射 (reflect) 回，使用已转换地址 (Translated Address) 寻址受保护的多播窗口。<sup>140</sup> 具备 ATS 能力的发送者可使用 RC 内存空间范围请求并缓存已转换地址 (Translated Addresses)，之后使用这些已转换地址以内存写直接寻址受保护的多播窗口，从而无需通过 RC 即可完成多播。
+为实现类似功能，可以将 RC 配置为提供一个或多个不在多播地址范围内、但映射到"受保护"多播窗口 (Multicast Windows) 的目标内存空间 (Memory Space) 范围。无论是否具备 ATS 能力，多播 TLP 发送方均可寻址这些 RC 内存空间范围以间接访问受保护的多播窗口。当任一类型的发送方以内存写 (Memory Writes) 寻址这些范围时，通过访问控制检查的每个 TLP 将被 RC 反射 (reflect) 回，使用已转换地址 (Translated Address) 寻址受保护的多播窗口。<sup>140</sup> 具备 ATS 能力的发送方可使用 RC 内存空间范围请求并缓存已转换地址 (Translated Addresses)，之后使用这些已转换地址以内存写直接寻址受保护的多播窗口，从而无需通过 RC 即可完成多播。
 
 对于"仅允许使用已转换地址直接寻址受保护多播窗口"的硬件强制执行，软件在平台中所有适用功能的 MC_Block_Untranslated 寄存器中设置相应的 MCG 位。每个被设置的 MCG 位将使其关联的多播窗口免受使用未转换地址 (Untranslated Addresses) 的直接访问。
 
@@ -11708,7 +11708,7 @@ ACS P2P Request Redirect 和 ACS Direct Translated P2P 机制提供了一种方�
 
 ---
 
-<sup>140</sup> If the original sender belongs to the MCG associated with this Window, the original sender will also receive a copy of the reflected TLP. | 如果原始发送者属于与此窗口关联的 MCG，则原始发送者也将收到反射 TLP 的副本。
+<sup>140</sup> If the original sender belongs to the MCG associated with this Window, the original sender will also receive a copy of the reflected TLP. | 如果原始发送方属于与此窗口关联的 MCG，则原始发送方也将收到反射 TLP 的副本。
 
 ---
 
@@ -13971,6 +13971,17 @@ For Root Complexes, the following rules apply:
 </div>
 
 
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
 > **IMPLEMENTATION NOTE:**
 > **PASID WIDTH HOMOGENEITY (PASID 宽度一致性)**
 >
@@ -13982,16 +13993,8 @@ For Root Complexes, the following rules apply:
 >
 > §
 
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+</td>
+<td style="background-color:#e8e8e8">
 
 > **实现说明 (IMPLEMENTATION NOTE):**
 > **PASID 宽度一致性 (PASID WIDTH HOMOGENEITY)**
@@ -14592,7 +14595,7 @@ Data Byte 3 contains Propagation Delay [7:0] (least significant byte)
 
 在非 Flit 模式 (NFM) 下，时间戳必须以对该 TLP 进行成帧的 STP Symbol 或 Token 为基准，相当于在端口引脚 (Port's pins) 处观察该 Symbol 或 Token 的第一位。
 
-在 Flit 模式 (FM) 下，单个 Flit 允许包含零个或一个 PTM 消息；时间戳必须以 Flit_Marker（参见 § 4.2.3.4.2）中 PTM Message contained in this Flit 位置 1 的那个 Flit_Marker 为基准，相当于在端口引脚处观察 Flit_Marker 的指示位 (Indicator bit)。通常这需要通过实现特定的调整来补偿无法直接在真实引脚处测量的限制，因为实际时间通常在 Rx 或 Tx 路径的某个内部点测量。该测量的精度和一致性不在本规范的约束范围内，但强烈建议实现能达到的最高实用精度和一致性。
+在 Flit 模式 (FM) 下，单个 Flit 允许包含零个或一个 PTM 消息；时间戳必须以 Flit_Marker（参见 § 4.2.3.4.2）中 携带 PTM 消息（PTM Message contained in this Flit 位置 1）的那个 Flit_Marker 为基准，相当于在端口引脚处观察 Flit_Marker 的指示位 (Indicator bit)。通常这需要通过实现特定的调整来补偿无法直接在真实引脚处测量的限制，因为实际时间通常在 Rx 或 Tx 路径的某个内部点测量。该测量的精度和一致性不在本规范的约束范围内，但强烈建议实现能达到的最高实用精度和一致性。
 
 如 § 图 2-68 所示，Propagation Delay[31:0] 字段内的字节排列如下：
 
@@ -18882,9 +18885,9 @@ DMWr 请求的目标如果不是 DMWr Completer(即 DMWr Completer Supported 位
 以下要求适用于 DMWr Completer:
 
 - Function 通过置位 DMWr Completer Supported 来指示其作为 DMWr Completer 的能力，并指示该 Function 可接收的最大 DMWr TLP(见 DMWr Lengths Supported)。
-- 格式正确的 DMWr 请求必须作为成功完成(Successful Completion, SC)、请求重试状态(Request Retry Status, RRS)、不支持请求(Unsupported Request, UR)或完成方中止(Completer Abort, CA)处理。
-  - 格式正确但类型或操作数大小 Completer 不支持，或寻址到设备编程模型未指定为 DMWr 请求目标的地址，或跨越两个不同资源之间的地址边界的 DMWr 请求，必须作为完成方中止(CA)处理，并且目标位置的值必须保持不变。
-  - 支持 DMWr 路由但不支持作为 DMWr Completer 的交换机，必须将以交换机内部资源为目标的格式正确的 DMWr 请求作为完成方中止(CA)处理，并且目标位置的值必须保持不变。
+- 格式正确的 DMWr 请求必须作为成功完成(Successful Completion, SC)、请求重试状态(Request Retry Status, RRS)、不支持请求(Unsupported Request, UR)或完成者中止(Completer Abort, CA)处理。
+  - 格式正确但类型或操作数大小 Completer 不支持，或寻址到设备编程模型未指定为 DMWr 请求目标的地址，或跨越两个不同资源之间的地址边界的 DMWr 请求，必须作为完成者中止(CA)处理，并且目标位置的值必须保持不变。
+  - 支持 DMWr 路由但不支持作为 DMWr Completer 的交换机，必须将以交换机内部资源为目标的格式正确的 DMWr 请求作为完成者中止(CA)处理，并且目标位置的值必须保持不变。
 - 当 DMWr 请求由于临时状况无法成功完成时,Completer 允许返回具有请求重试状态(RRS)的完成（Completion）。
   - 在这种情况下，目标位置的值必须保持不变，且 Completer 不得假设请求者会重复该请求。
   - 这不是错误。
@@ -18954,7 +18957,7 @@ The following requirements apply to Root Complexes and Switches that support DMW
 - 除非存在更高优先级的错误，否则具备 DMWr 感知能力的 Completer 必须将中毒的 DMWr 请求(Poisoned DMWr Request)作为中毒 TLP 接收错误(Poisoned TLP Received error)处理(见 § Section 2.7.2.1)。
   - Completer 必须返回完成状态（Completion Status）为不支持请求(UR)或请求重试状态(RRS)的完成（Completion）。
   - 目标位置的值必须保持不变。
-- 如果 DMWr 请求的 Completer 在访问目标位置时遇到不可纠正的错误，则 Completer 必须将其作为完成方中止(CA)处理。
+- 如果 DMWr 请求的 Completer 在访问目标位置时遇到不可纠正的错误，则 Completer 必须将其作为完成者中止(CA)处理。
   - 目标位置的后续状态属于实现特定的。
 - Completer 允许根据其编程模型的需要，仅对其目标内存空间（Memory Space）的子集支持 DMWr 请求(见 § Section 2.3.1)。
   - 由 PCI Express 定义或继承的内存空间结构(例如 MSI-X 表结构)不需要被支持作为 DMWr 目标，除非在该结构的描述中明确说明。
@@ -18963,7 +18966,7 @@ The following requirements apply to Root Complexes and Switches that support DMW
 以下要求适用于支持 DMWr 路由的根复合体和交换机:
 
 - 根端口（Root Port）和交换机端口（Switch Port）通过置位 DMWr Request Routing Supported 并指示关联 Function 所支持的最大 DMWr TLP(见 DMWr Lengths Supported)来表明其对 DMWr 路由的支持。
-- 支持 DMWr 路由能力或 DMWr Completer 能力(或两者)的交换机和根端口，在收到格式正确的 DMWr 请求时，必须将其转发到另一端口，或将其作为成功完成(SC)、请求重试状态(RRS)、不支持请求(UR)、完成方中止(CA)或 DMWr Egress Blocked 错误处理。
+- 支持 DMWr 路由能力或 DMWr Completer 能力(或两者)的交换机和根端口，在收到格式正确的 DMWr 请求时，必须将其转发到另一端口，或将其作为成功完成(SC)、请求重试状态(RRS)、不支持请求(UR)、完成者中止(CA)或 DMWr Egress Blocked 错误处理。
 - 如果交换机为其任何端口支持 DMWr 路由，则其所有端口都必须支持 DMWr 路由。
 - 对于支持 DMWr 路由能力的交换机和根端口，如果收到的 DMWr 请求跨越两个不同目的地之间的解码边界，则入口端口（Ingress Port）不得传播该请求，且必须返回完成状态（Completion Status）为 UR 的完成（Completion）。
 - 对于交换机或 RC,当出口端口（Egress Port）启用了 DMWr Egress Blocking 且 DMWr 请求的目标是离开该出口端口时，出口端口必须将该请求作为 DMWr Egress Blocked 错误处理，并必须返回完成状态（Completion Status）为 UR 的完成（Completion）。
@@ -19676,7 +19679,7 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
 
 - 对于与上游端口相关联的端点 (Endpoint) 功能，包括多功能设备的功能，功能 0 必须实现用于认证和密钥交换的 DOE 和 CMA-SPDM,包括安全会话建立机制(参见 [SPDM])以及作为应答者的 IDE 密钥管理 (IDE_KM) 协议，具体定义如下。
   - IDE 在每个端口级别运行，上游端口的功能 0 必须用于建立相关组件的真实性与身份、执行密钥交换以及为该端口配置和管理 IDE 流 (IDE Stream) 的目的。
-- 代表交换机的每个上游端口功能(无论功能号如何)，若其链接 IDE 流支持 (Link IDE Stream Supported) 和/或选择性 IDE 流支持 (Selective IDE Streams Supported) 被置位，包括在多功能设备中，必须实现支持 IDE 密钥管理 (IDE_KM) 协议作为应答者的 DOE 和 CMA-SPDM,具体定义如下。
+- 代表交换机的每个上游端口功能(无论功能号如何)，若其链路 IDE 流支持 (Link IDE Stream Supported) 和/或选择性 IDE 流支持 (Selective IDE Streams Supported) 被置位，包括在多功能设备中，必须实现支持 IDE 密钥管理 (IDE_KM) 协议作为应答者的 DOE 和 CMA-SPDM,具体定义如下。
 - 允许根复合体 (Root Complex):
   - 使用每个端口的 DOE 实例支持部分或全部根端口的 IDE_KM 协议，或使用某些根端口代表其他根端口
   - 在支持根端口 IDE_KM 的 RCRB 中实现 DOE 实例,
@@ -20299,7 +20302,7 @@ IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode,
 
 对于 IDE TLP 的流控 (Flow Control) 信用计算，必须将 MAC 视为由 Header Credit 覆盖。
 
-对于 IDE TLP,AES-GCM 可以应用于每个 IDE TLP,或使用聚合将 AES-GCM 应用于多个 IDE TLP,从而降低每个 TLP 的 IDE TLP MAC 开销。对于链接 IDE 流 (Link IDE Stream)，本地前缀 (local prefix) 必须由 MAC 覆盖(参见 § 图 6-66、§ 图 6-67、§ 图 6-70 和 § 图 6-71)。对于选择性 IDE 流 (Selective IDE Stream)，本地前缀不得由 MAC 覆盖(参见 § 图 6-68、§ 图 6-69、§ 图 6-72 和 § 图 6-73)。
+对于 IDE TLP,AES-GCM 可以应用于每个 IDE TLP,或使用聚合将 AES-GCM 应用于多个 IDE TLP,从而降低每个 TLP 的 IDE TLP MAC 开销。对于链路 IDE 流 (Link IDE Stream)，本地前缀 (local prefix) 必须由 MAC 覆盖(参见 § 图 6-66、§ 图 6-67、§ 图 6-70 和 § 图 6-71)。对于选择性 IDE 流 (Selective IDE Stream)，本地前缀不得由 MAC 覆盖(参见 § 图 6-68、§ 图 6-69、§ 图 6-72 和 § 图 6-73)。
 
 <sub>143. 在 [AES-GCM] 中称为"认证标签" (authentication tag) 或 T,此处重命名以避免与其他"标签"用法混淆</sub>
 
@@ -20509,7 +20512,7 @@ Rules for partial header encryption:
 </td>
 <td style="background-color:#e8e8e8">
 
-在部分包头加密中,Header 的加密部分由选择性 IDE 流控制寄存器 (Selective IDE Stream Control Register) 或链接 IDE 控制寄存器 (Link IDE Control Register) 中的 Partial Header Encryption Mode 字段设置决定。
+在部分包头加密中,Header 的加密部分由选择性 IDE 流控制寄存器 (Selective IDE Stream Control Register) 或链路 IDE 控制寄存器 (Link IDE Control Register) 中的 Partial Header Encryption Mode 字段设置决定。
 
 部分包头加密的规则:
 
@@ -20606,7 +20609,7 @@ To enable the detection of faults in the encryption/decryption logic, which occu
 </td>
 <td style="background-color:#e8e8e8">
 
-允许将本地 TLP 前缀 (Local TLP Prefix) 与 IDE TLP 一起使用。如果存在，本地 TLP 前缀必须位于 IDE 前缀 (NFM) 之前。对于链接 IDE 流，本地 TLP 前缀必须包含在 A 中。对于选择性 IDE 流，本地 TLP 前缀不得包含在 A 或 P 中。
+允许将本地 TLP 前缀 (Local TLP Prefix) 与 IDE TLP 一起使用。如果存在，本地 TLP 前缀必须位于 IDE 前缀 (NFM) 之前。对于链路 IDE 流，本地 TLP 前缀必须包含在 A 中。对于选择性 IDE 流，本地 TLP 前缀不得包含在 A 或 P 中。
 
 IDE 前缀 (NFM) 必须包含在 A 中。所有 OHC 内容 (FM) 必须包含在 A 中。
 
@@ -20812,7 +20815,7 @@ These rules apply to Selective IDE Stream TLPs:
   - 软件必须分配 IDE Stream ID,以使两个伙伴端口对给定 IDE 流使用相同的值。
   - 软件必须分配 IDE Stream ID,以使与给定终端端口相关联的每个启用的 IDE 流在该端口被分配唯一的 Stream ID 值。
   - 平台可进一步限制 Stream ID 的分配。
-- 当仅针对特定 TC 启用链接 IDE 流时，使用该 TC 的所有 TLP 必须使用相应的链接 IDE 流进行保护。
+- 当仅针对特定 TC 启用链路 IDE 流时，使用该 TC 的所有 TLP 必须使用相应的链路 IDE 流进行保护。
 - 对于发送器将特定 TLP 与特定选择性 IDE 流相关联，必须满足以下条件:
   - 选择性 IDE 流控制寄存器 (Selective IDE Stream Control Register) 中的选择性 IDE 流使能 (Selective IDE Stream Enable) 位必须置位。
   - TLP 类型必须允许用于选择性 IDE 流(参见 § 表 6-35)。
@@ -20905,13 +20908,13 @@ These rules apply to TLPs other than IDE Fail Messages:
 
 - 接收器必须接受作为 IDE TLP 和非 IDE TLP 接收的 IDE Fail 消息。
 - 当 IDE Fail 消息要作为启用的流(处于不安全状态)发送时，该消息必须作为非 IDE TLP 发送。这包括该流转为不安全状态触发了 IDE Fail 消息的情况。
-- 当 IDE Fail 消息要作为启用的流(处于安全状态)发送时，该消息必须作为 IDE TLP 发送。这包括选择性 IDE 流上的转为不安全状态触发了 IDE Fail 消息，且发送流是不同的选择性 IDE 流或链接 IDE 流的情况。
+- 当 IDE Fail 消息要作为启用的流(处于安全状态)发送时，该消息必须作为 IDE TLP 发送。这包括选择性 IDE 流上的转为不安全状态触发了 IDE Fail 消息，且发送流是不同的选择性 IDE 流或链路 IDE 流的情况。
 
 这些规则适用于 IDE Fail 消息以外的 TLP:
 
 - 当准备调度要发送的与处于不安全状态的启用流相关联的 TLP 时，发送器必须改为丢弃该 TLP。
 - 当给定 TC 启用了 Link IDE,并且在该 TC 上作为非 IDE TLP 收到 TLP 时，接收器必须丢弃该 TLP。
-- 当同一端口同时启用链接 IDE 流和一个或多个选择性 IDE 流时，对于已发送的 TLP,选择性 IDE 流优先:选定的 TLP 必须与选择性 IDE 流相关联;未与任何选择性 IDE 流相关联的 TLP 必须使用 Link IDE。
+- 当同一端口同时启用链路 IDE 流和一个或多个选择性 IDE 流时，对于已发送的 TLP,选择性 IDE 流优先:选定的 TLP 必须与选择性 IDE 流相关联;未与任何选择性 IDE 流相关联的 TLP 必须使用 Link IDE。
   - 如果同时启用了 Link IDE 和 Selective IDE,并且要发送的 TLP 与处于不安全状态的启用的选择性 IDE 流相关联，则发送器不得为该 TLP 使用 Link IDE,而必须改为丢弃该 TLP。
 - 在最终接收器处,IDE TLP 必须与 IDE 前缀 (NFM)/OHC-C (FM) 中指示的流 ID 相关联。
 - 一旦启用了 Link IDE(参见 § 6.33.3 节)，对于流的每个子流，在端口在该子流上收到 IDE TLP 之前，端口必须继续接受与该子流对应的 FC   - 一旦端口类型的非 IDE TLP。
@@ -24003,7 +24006,7 @@ The flow for transferring a management message asynchronously from the Function 
 - [6.2.11.3 Root Port Programmed I/O (RP PIO) Error Controls | 根端口可编程 I/O (RP PIO) 错误控制](#sec-6-2-11-3)
 - [6.2.11.4 Software Triggering of DPC | DPC 的软件触发](#sec-6-2-11-4)
 - [6.2.11.5 DL_ACTIVE ERR_COR Signaling | DL_ACTIVE ERR_COR 信令](#sec-6-2-11-5)
-- [6.2.11.5 DL_Active ERR_COR Signaling | DL_Active 正确错误（ERR_COR）信号](#sec-6-2-11-5)
+- [6.2.11.5 DL_Active ERR_COR Signaling | DL_Active 可纠正错误（ERR_COR）信号](#sec-6-2-11-5)
 - [6.3 Virtual Channel Support | 虚通道（VC）支持](#sec-6-3)
 - [6.3.1 Introduction and Scope | 引言与范围](#sec-6-3-1)
 - [6.3.2 TC/VC Mapping and Example Usage | TC/VC 映射与使用示例](#sec-6-3-2)
@@ -24025,7 +24028,7 @@ The flow for transferring a management message asynchronously from the Function 
 - [6.5.7 PCI Express Endpoints | PCI Express 端点](#sec-6-5-7)
 - [6.6 PCI Express Reset - Rules | PCI Express 复位 — 规则](#sec-6-6)
 - [6.6.1 Conventional Reset | 常规复位](#sec-6-6-1)
-- [6.6.2 Function Level Reset (FLR) | 函数级复位 (FLR)](#sec-6-6-2)
+- [6.6.2 Function Level Reset (FLR) | 功能级复位 (FLR)](#sec-6-6-2)
 - [6.7 PCI Express Native Hot-Plug | PCI Express 原生热插拔 (Hot-Plug)](#sec-6-7)
 - [6.7.1 Elements of Hot-Plug | 热插拔 (Hot-Plug) 元素](#sec-6-7-1)
 - [6.7.1.1 Indicators | 指示灯](#sec-6-7-1-1)

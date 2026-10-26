@@ -187,7 +187,7 @@ The high-level requirements for this evolving I/O interconnect are as follows:
 
 - 能够对设备上电进行排序，以在功率预算中实现平稳的平台策略
 - 支持差异化服务，即不同的服务质量 (QoS)
-  - 每个 QoS 数据流拥有专用的链路 (Link) 资源，以在出现头阻阻塞时提升 Fabric 效率与有效的应用级性能
+  - 每个 QoS 数据流拥有专用的链路 (Link) 资源，以在出现队头阻塞时提升 Fabric 效率与有效的应用级性能
   - 能够在每个组件内配置 Fabric 的 QoS 仲裁策略
   - 能够为每个报文打上端到端 QoS 标签
   - 能够创建端到端等时 (基于时间、注入速率控制) 解决方案
@@ -285,17 +285,9 @@ A fabric is defined as a set of point-to-point Links that interconnect a set of 
 
 Fabric (互连网络) 定义为一组点对点链路，它们互连一组组件——一个 Fabric 拓扑示例如图 1-2 所示。该图展示了一个由根复合体 (Root Complex, RC)、多个端点 (Endpoint) 与多个交换机 (Switch) 组成、包含两个层级 (Hierarchy) 并通过 PCI Express 链路互连的 Fabric 实例。
 
-> <img src="figures/chapter_01/fig_0130_1_tight.png" width="700">
-> **图 1-2.** Example PCI Express 拓扑
-
+> **图 1-2.** 示例 PCI Express 拓扑
 > <img src="figures/chapter_01/fig_0130_1_tight.png" width="700">
 
-</td>
-<td style="background-color:#e8e8e8">
-
-Fabric (互连网络) 定义为一组点对点链路，它们互连一组组件——一个 Fabric 拓扑示例如图 1-2 所示。该图展示了一个由根复合体 (Root Complex, RC)、多个端点 (Endpoint) 与多个交换机 (Switch) 组成、包含两个层级 (Hierarchy) 并通过 PCI Express 链路互连的 Fabric 实例。
-
-> <img src="figures/chapter_01/fig_0130_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -454,7 +446,7 @@ Endpoint refers to a type of Function that can be the Requester or Completer of 
 - PCI Express 端点不得作为完成者支持锁定请求，也不得作为请求者生成锁定请求。兼容 PCI Express 的设备驱动程序和应用程序在访问 PCI Express 端点时必须编写为禁止使用锁语义。
 - PCI Express 端点作为内存事务的请求者时，必须具备生成大于 4 GB 地址的能力。
 - 如果请求中断资源，PCI Express 端点必须支持 MSI 或 MSI-X 或两者皆支持。如果实现了 MSI，PCI Express 端点必须支持 MSI 能力结构的 64 位消息地址版本。
-- PCI Express 端点通过 BAR 请求内存资源时，必须设置该 BAR 的可预取 (Prefetchable) 位，除非该范围包含具有读副作用 (read side-effects) 的位置或功能 (Function) 不容忍写合并 (write merging) 的位置。有关 Prefetchable 位置 1 的更多指导，参见 § 7.5.1.2.1 节。
+- PCI Express 端点通过 BAR 请求内存资源时，必须设置该 BAR 的可预取 (Prefetchable) 位，除非该范围包含具有读副作用 (read side-effects) 的位置或功能 (Function) 不容忍写合并 (write merging) 的位置。有关 Prefetchable 位被置位 的更多指导，参见 § 7.5.1.2.1 节。
 - 对于 PCI Express 端点，所有 Prefetchable 位为 1 的 BAR 必须支持 64 位寻址。所有 Prefetchable 位为 0 的 BAR 允许使用 32 位寻址。
 - BAR 请求的最小内存地址范围为 128 字节。
 - PCI Express 端点必须出现在由根复合体发起的某个层级域中。

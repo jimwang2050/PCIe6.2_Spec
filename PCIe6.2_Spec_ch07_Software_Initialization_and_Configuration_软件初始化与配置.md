@@ -2392,7 +2392,7 @@ Returning FFFFh for Device ID and Vendor ID values allows some legacy software t
 
 | 位位置 | 寄存器描述 | 属性 |
 |---|---|---|
-| 4 | Memory Write and Invalidate（内存写入无效）— 该位最初在 [PCI] 和 [PCI-to-PCI-Bridge] 中描述。其功能不适用于 PCI Express，该位必须硬连线为 0b。对于 PCI Express 到 PCI/PCI-X 桥，请参阅 [PCIe-to-PCI-PCI-X-Bridge] 以了解此寄存器的要求。 | RO |
+| 4 | 内存写并无效化（Memory Write and Invalidate）— 该位最初在 [PCI] 和 [PCI-to-PCI-Bridge] 中描述。其功能不适用于 PCI Express，该位必须硬连线为 0b。对于 PCI Express 到 PCI/PCI-X 桥，请参阅 [PCIe-to-PCI-PCI-X-Bridge] 以了解此寄存器的要求。 | RO |
 | 5 | VGA Palette Snoop（VGA 调色板监听）— 该位最初在 [PCI] 和 [PCI-to-PCI-Bridge] 中描述。其功能不适用于 PCI Express，该位必须硬连线为 0b。 | RO |
 | 6 | Parity Error Response（奇偶校验错误响应）— 参见 § 7.5.1.1.14。<br>该位控制将中毒 TLP（poisoned TLPs）记录到 Status 寄存器中的 Master Data Parity Error 位。<br>未与根复合体事件收集器（Root Complex Event Collector）关联的 RCiEP 允许将该位硬连线为 0b。<br>此位的默认值为 0b。 | RW<br>VF RsvdP |
 | 7 | IDSEL Stepping/Wait Cycle Control（IDSEL 步进/等待周期控制）— 该位最初在 [PCI] 中描述。其功能不适用于 PCI Express，该位必须硬连线为 0b。 | RO |
@@ -2942,7 +2942,7 @@ For an SR-IOV device, if the VF Enable bit is Set in any PF, then software shoul
 </td>
 <td style="background-color:#e8e8e8">
 
-该寄存器用于 BIST 的控制和状态。不支持 BIST 的 Function 必须将该寄存器硬连线为 00h。VF 不应支持 BIST。被调用 BIST 的 Function 不得阻止 PCI Express 链路的正常运行。§ Table 7-8 描述了该寄存器中的各个位,§ Figure 7-9 显示了寄存器布局。
+该寄存器用于 BIST 的控制和状态。不支持 BIST 的 Function 必须将该寄存器硬连线为 00h。VF 不得支持 BIST。被调用 BIST 的 Function 不得阻止 PCI Express 链路的正常运行。§ Table 7-8 描述了该寄存器中的各个位,§ Figure 7-9 显示了寄存器布局。
 
 对于 SR-IOV 设备，如果任一 PF 中的 VF Enable 位被置 1,则软件不应在与该设备关联的任何 Function 中调用 BIST。
 
@@ -12254,7 +12254,7 @@ The Secondary PCI Express Extended Capability structure layout:
 - **位 19:16**：Capability Version（能力版本）— 该字段是由 PCI-SIG 定义的版本号，用于指示所呈现的能力结构的版本。
   - 对于本规范版本必须为 1h。
   - 属性：RO
-- **位 31:20**：Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express 扩展能力结构的偏移，若链接的能力列表中没有其他项，则为 000h。
+- **位 31:20**：Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express 扩展能力结构的偏移，若能力列表中没有其他项，则为 000h。
   - 属性：RO
 
 </td>
@@ -12300,7 +12300,7 @@ The Secondary PCI Express Extended Capability structure layout:
 （参见上方图 7-70 和表 7-58）
 
 - **位 0**：Perform Equalization（执行均衡）— 当此位为 1b 并且在 Target Link Speed (目标链路速度) 字段设置为 8.0 GT/s 或更高时向 Retrain Link (重训练链路) 位写入 1b，则 Downstream Port (下游端口) 必须执行 Link Equalization (链路均衡)。有关详细信息，请参见 § 4.2.4 和 § 4.2.7.4.2。
-  - 对于 Downstream Port 以及当 Crosslink Supported (交叉链路支持) 为 1b 时的 Upstream Port，此位为 RW（参见 § 7.5.3.18）。当 Crosslink Supported 位为 0b 时，此位不适用并为 RsvdP (保留，保留为 Post 零)。
+  - 对于 Downstream Port 以及当 Crosslink Supported (交叉链路支持) 为 1b 时的 Upstream Port，此位为 RW（参见 § 7.5.3.18）。当 Crosslink Supported 位为 0b 时，此位不适用并为 RsvdP（保留并保持）。
   - 默认值为 0b。
   - 如果 Port 不支持 8.0 GT/s，则允许将此位硬连线为 0b。
   - 属性：RW/RsvdP
@@ -12764,7 +12764,7 @@ Figure 7-75 details allocation of register fields in the Data Link Feature Exten
 - **位 19:16**：Capability Version（能力版本）— 该字段是由 PCI-SIG 定义的版本号，用于指示所呈现的能力结构的版本。
   - 对于本规范版本必须为 1h。
   - 属性：RO
-- **位 31:20**：Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express 能力结构的偏移，若链接的能力列表中没有其他项，则为 000h。
+- **位 31:20**：Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express 能力结构的偏移，若能力列表中没有其他项，则为 000h。
   - 对于在配置空间中实现的扩展能力，此偏移相对于 PCI 兼容配置空间的起始位置，因此必须始终为 000h（用于终止能力列表）或大于 0FFh。
   - 此偏移的低 2 位为保留位，必须实现为 00b，但软件必须屏蔽它们以允许将来使用这些位。
   - 属性：RO
@@ -14033,7 +14033,7 @@ Bit layout of the register:
 |--------|-----------|------|
 | 15:0 | **PCI Express Extended Capability ID（PCI Express 扩展能力 ID）** - 此字段是 PCI-SIG 定义的 ID 编号,用于指示扩展能力的性质和格式。物理层 32.0 GT/s 能力的扩展能力 ID 为 002Ah。 | RO |
 | 19:16 | **Capability Version（能力版本）** - 此字段是 PCI-SIG 定义的版本号,用于指示所提供能力结构的版本。对于此版本的规范,必须为 1h。 | RO |
-| 31:20 | **Next Capability Offset（下一能力偏移）** - 此字段包含指向下一个 PCI Express 能力结构的偏移量,如果链接的能力列表中不存在其他项,则为 000h。对于在配置空间中实现的扩展能力,此偏移相对于 PCI 兼容配置空间的开头,因此必须始终为 000h（终止能力列表）或大于 0FFh。 | RO |
+| 31:20 | **Next Capability Offset（下一能力偏移）** - 此字段包含指向下一个 PCI Express 能力结构的偏移量,如果能力列表中不存在其他项,则为 000h。对于在配置空间中实现的扩展能力,此偏移相对于 PCI 兼容配置空间的开头,因此必须始终为 000h（终止能力列表）或大于 0FFh。 | RO |
 
 ---
 
@@ -15966,7 +15966,7 @@ FBER 测量状态 1 寄存器至 FBER 测量状态 10 寄存器包含一组逐�
 - 无效 Flit 计数器（Invalid Flit Counter）— 逐链路
 - 可纠正错误计数器（Correctable Error Counters）— 逐通道（将其相加可得到逐链路的计数器）
 
-对 FBER 测量控制寄存器中的 Clear FBER Counters 位或 FBER Measurement Enable 位写 1b，会将所有这些计数器重置为其默认值。所有这些计数器均饱和（saturate，即达到最大值时不会回绕）。
+对 FBER 测量控制寄存器中的 Clear FBER Counters 位或 FBER Measurement Enable 位写 1b，会将所有这些计数器复位为其默认值。所有这些计数器均饱和（saturate，即达到最大值时不会回绕）。
 
 **图 7-110 FBER 测量状态 1 寄存器**
 
@@ -18601,7 +18601,7 @@ Base Power(基础功率)和 Data Scale(数据比例)字段描述设备的功率�
 | 9:8 | Data Scale[1:0](数据比例[1:0]) — 指定应用于 Base Power 值的比例。设备的功耗通过将 Base Power 字段的内容与该字段返回编码所对应的值相乘来确定，除上文所述的例外情况外。请注意,Data Scale[2] 和 Data Scale[1:0] 在该寄存器内不连续。已定义的编码为:00b:1.0x;01b:0.1x;10b:0.01x;11b:0.001x;100b:10x;101b:100x;其他:保留。 | RO |
 | 12:10 | PM Sub State(PM 子状态) — 指定所描述工作条件的电源管理子状态。已定义的编码为:000b:Default Sub State(默认子状态);001b - 111b:Device Specific Sub State(设备特定子状态)。 | RO |
 | 14:13 | PM State(PM 状态) — 指定所描述工作条件的电源管理状态。已定义的编码为:00b:D0;01b:D1;10b:D2;11b:D3。设备在该字段返回 11b 且 Type 字段返回 Auxiliary 或 PME Aux,以指定 D3Cold PM 状态。编码 11b 与任何其他 Type 字段值一起指定 D3Hot 状态。 | RO |
-| 17:15 | Type(类型) — 指定所描述工作条件的类型。已定义的编码为:000b:PME Aux — D3Cold 下 PME_En 置位且 Aux Power PM Enable 清零时消耗的持续功率;001b:Auxiliary — D3Cold 下 Aux Power PM Enable 置位时消耗的持续功率;010b:Idle — Function 或 Device 空闲 20 秒或更长时间时消耗的持续功率;011b:Sustained Power(持续功率);100b:紧急功耗降低状态下的持续功率(参见 § 6.24 节);101b:紧急功耗降低状态下的最大功率(参见 § 6.24 节);111b:Maximum Power(最大功率)。所有其他编码均为保留。除非外形规格规范另有明确说明，否则以下测量定义适用于该字段:(1) 持续功率是指设备以其最大吞吐率运行时所消耗的功率，以 1 秒内的平均值测量。(2) 最大功率是指设备以其最大吞吐率运行时所消耗的功率，以 100 μs 移动窗口测量。请注意，最大功率可以轻松超过持续功率多达 250%。最大功耗通常与 Function D 状态的改变相关。 | RO |
+| 17:15 | Type(类型) — 指定所描述工作条件的类型。已定义的编码为:000b:PME Aux — D3Cold 下 PME_En 置位且 Aux Power PM Enable 清零时消耗的持续功率;001b:Auxiliary — D3Cold 下 Aux Power PM Enable 置位时消耗的持续功率;010b:Idle — Function 或 Device 空闲 20 秒或更长时间时消耗的持续功率;011b:Sustained Power(持续功率);100b:紧急功耗降低状态下的持续功率(参见 § 6.24 节);101b:紧急功耗降低状态下的最大功率(参见 § 6.24 节);111b:Maximum Power(最大功率)。所有其他编码均为保留。除非外形规格规范另有明确说明，否则以下测量定义适用于该字段:(1) 持续功率是指设备以其最大吞吐量运行时所消耗的功率，以 1 秒内的平均值测量。(2) 最大功率是指设备以其最大吞吐量运行时所消耗的功率，以 100 μs 移动窗口测量。请注意，最大功率可以轻松超过持续功率多达 250%。最大功耗通常与 Function D 状态的改变相关。 | RO |
 | 20:18 | Power Rail(电源轨) — 指定所描述工作条件下的热负载或电源轨。已定义的编码为:000b:Power (12V);001b:Power (3.3V);010b:Power (1.5V 或 1.8V);100b:Power (48V);101b:Power (5V);111b:Thermal(热负载)。所有其他编码均为保留。 | RO |
 | 21 | Data Scale[2](数据比例[2]) — Data Scale 字段的高位。详情请参阅 Data Scale[1:0]。如果 Extended Power Budgeting Enable 清零，则该位必须为零。 | RO |
 | 24:22 | Connector Number(连接器编号) — 在一块附加卡(包括边缘连接器)上最多支持 8 个供电连接器。该字段指示与该条目相关联的电源连接器。如果 Power Budgeting Sense Detect Supported 置位，则必须为附加卡支持的每个电源连接器实现此字段的一个实例。Connector Number 表示单个物理连接器，在附加卡上是全局的。在多功能设备中,Connector Number 必须在所有 Function 之间保持一致。当单个连接器包含多个电源轨或单个连接器与多个连接器类型(例如，类型 00 0110b 和 00 0111b)相关联时,Connector Number 必须匹配。Connector Number 值以及 Connector Number 到物理位置的映射不在本规范的范围内。对于规定连接器放置位置的外形规格规范，建议这些规范根据放置规则定义连接器编号。如果 Extended Power Budgeting Enable 清零，则该字段必须为零。如果 Extended Power Budgeting Present 清零，则软件必须忽略该字段的值。 | RO |
@@ -19680,7 +19680,7 @@ Switch Port, or Function 0 Endpoint Functions, so for VFs their intended attribu
 </td>
 <td style="background-color:#e8e8e8">
 
-交换机 (Switch) 端口或 Function 0 端点 (Endpoint) 函数，因此对于 VF (虚拟功能, Virtual Function)，其预期属性为 VF ROZ,并且它们与本规范的早期版本存在相同的问题。
+交换机 (Switch) 端口或 Function 0 端点 (Endpoint) 功能，因此对于 VF (虚拟功能, Virtual Function)，其预期属性为 VF ROZ,并且它们与本规范的早期版本存在相同的问题。
 
 **图 7-155 不可纠正错误状态寄存器**
 
@@ -19692,12 +19692,12 @@ Switch Port, or Function 0 Endpoint Functions, so for VFs their intended attribu
 | 0 | 未定义 |
 | 1:3 | 保留 (RsvdZ) |
 | 4 | 数据链路协议错误状态 |
-| 5 | 意外下线错误状态 |
+| 5 | 意外断开错误状态 |
 | 6:11 | 保留 (RsvdZ) |
 | 12 | 接收到中毒 TLP (Poisoned TLP) |
 | 13 | 流控协议错误状态 |
 | 14 | 完成超时状态 |
-| 15 | 完成方中止状态 |
+| 15 | 完成者中止状态 |
 | 16 | 意外完成状态 |
 | 17 | 接收器溢出状态 |
 | 18 | 畸形 TLP 状态 |
@@ -19721,7 +19721,7 @@ Switch Port, or Function 0 Endpoint Functions, so for VFs their intended attribu
 |--------|------------|------|--------|
 | 0 | 未定义 - 从该位读取的值是未定义的。在本规范的早期版本中，该位用于指示链路训练错误。系统软件必须忽略从该位读取的值。允许系统软件向该位写入任何值。 | 未定义 | 未定义 |
 | 4 | 数据链路协议错误状态 | RW1CS / VF ROZ | 0b |
-| 5 | 意外下线错误状态（可选 – 注 1） | RW1CS / VF ROZ | 0b |
+| 5 | 意外断开错误状态（可选 – 注 1） | RW1CS / VF ROZ | 0b |
 | 12 | 接收到中毒 TLP 状态 | RW1CS | 0b |
 | 13 | 流控协议错误状态（可选 – 注 1） | RW1CS / VF ROZ | 0b |
 | 14 | 完成超时状态 ¹⁷⁷ | RW1CS | 0b |
@@ -19781,7 +19781,7 @@ Switch Port, or Function 0 Endpoint Functions, so for VFs their intended attribu
 
 | 位位置 | 寄存器描述 | 属性 | 默认值 |
 |--------|------------|------|--------|
-| 15 | 完成方中止状态（可选 – 注 1） | RW1CS | 0b |
+| 15 | 完成者中止状态（可选 – 注 1） | RW1CS | 0b |
 | 16 | 意外完成状态 | RW1CS | 0b |
 | 17 | 接收器溢出状态（可选 – 注 1） | RW1CS / VF ROZ | 0b |
 | 18 | 畸形 TLP 状态 | RW1CS / VF ROZ | 0b |
@@ -19838,7 +19838,7 @@ Switch Port, or Function 0 Endpoint Functions, so for VFs their intended attribu
 **注释：**
 
 1. 如果对应的不可纠正错误屏蔽位已实现，则必须实现该位。否则，硬连线为 0。
-2. 对于 VF 函数，强烈推荐使用 VF ROZ,但为了与本规范的早期版本向后兼容，如果 VF 实现了对应的不可纠正错误屏蔽寄存器位，则允许使用 RW1CS。
+2. 对于 VF 功能，强烈推荐使用 VF ROZ,但为了与本规范的早期版本向后兼容，如果 VF 实现了对应的不可纠正错误屏蔽寄存器位，则允许使用 RW1CS。
 
 </td>
 </tr>
@@ -19874,7 +19874,7 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 </td>
 <td style="background-color:#e8e8e8">
 
-不可纠正错误屏蔽寄存器控制设备函数 (Function) 通过 PCI Express 错误消息向 PCI Express 根复合体 (Root Complex) 报告各个错误。被屏蔽的错误（屏蔽寄存器中相应位置 1）不会被记录或报告到包头日志 (Header Log)、TLP 前缀日志 (TLP Prefix Log) 或首次错误指针 (First Error Pointer) 中，并且也不会由该函数向 PCI Express 根复合体报告。有关更多详细信息，请参阅 § 6.2 节。不可纠正错误状态寄存器的每个错误位都有一个对应的屏蔽位。该函数未实现的位对应的寄存器字段被硬连线为 0b。§ 图 7-156 详细说明了不可纠正错误屏蔽寄存器的寄存器字段分配;§ 表 7-136 给出了相应的位定义。
+不可纠正错误屏蔽寄存器控制设备功能 (Function) 通过 PCI Express 错误消息向 PCI Express 根复合体 (Root Complex) 报告各个错误。被屏蔽的错误（屏蔽寄存器中相应位置 1）不会被记录或报告到包头日志 (Header Log)、TLP 前缀日志 (TLP Prefix Log) 或首次错误指针 (First Error Pointer) 中，并且也不会由该功能向 PCI Express 根复合体报告。有关更多详细信息，请参阅 § 6.2 节。不可纠正错误状态寄存器的每个错误位都有一个对应的屏蔽位。该功能未实现的位对应的寄存器字段被硬连线为 0b。§ 图 7-156 详细说明了不可纠正错误屏蔽寄存器的寄存器字段分配;§ 表 7-136 给出了相应的位定义。
 
 对于标记为 VF RsvdP 的 VF 字段，关联的 PF (物理功能, Physical Function) 的设置适用于该 VF。对于标记为 VF ROZ 的 VF 字段，该错误不适用于 VF。
 
@@ -19964,12 +19964,12 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 | 0 | 未定义 |
 | 1:3 | 保留 (RsvdP) |
 | 4 | 数据链路协议错误屏蔽 |
-| 5 | 意外下线错误屏蔽 |
+| 5 | 意外断开错误屏蔽 |
 | 6:11 | 保留 (RsvdP) |
 | 12 | 接收到中毒 TLP 屏蔽 |
 | 13 | 流控协议错误屏蔽 |
 | 14 | 完成超时屏蔽 |
-| 15 | 完成方中止屏蔽 |
+| 15 | 完成者中止屏蔽 |
 | 16 | 意外完成屏蔽 |
 | 17 | 接收器溢出屏蔽 |
 | 18 | 畸形 TLP 屏蔽 |
@@ -19993,7 +19993,7 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 |--------|------------|------|--------|
 | 0 | 未定义 - 从该位读取的值是未定义的。在本规范的早期版本中，该位用于屏蔽链路训练错误。系统软件必须忽略从该位读取的值。系统软件只能向该位写入值 1b。 | 未定义 | 未定义 |
 | 4 | 数据链路协议错误屏蔽 | RWS / VF ROZ | 0b |
-| 5 | 意外下线错误屏蔽（具备意外下线错误报告能力 – 注 1） | RWS / VF ROZ | 0b |
+| 5 | 意外断开错误屏蔽（具备意外断开错误报告能力 – 注 1） | RWS / VF ROZ | 0b |
 | 12 | 接收到中毒 TLP 屏蔽 | RWS / VF RsvdP | 0b |
 | 13 | 流控协议错误屏蔽（可选） | RWS / VF ROZ | 0b |
 | 14 | 完成超时屏蔽 ¹⁷⁸ | RWS / VF RsvdP | 0b |
@@ -20062,7 +20062,7 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 
 | 位位置 | 寄存器描述 | 属性 | 默认值 |
 |--------|------------|------|--------|
-| 15 | 完成方中止屏蔽（可选） | RWS / VF RsvdP | 0b |
+| 15 | 完成者中止屏蔽（可选） | RWS / VF RsvdP | 0b |
 | 16 | 意外完成屏蔽 | RWS / VF RsvdP | 0b |
 | 17 | 接收器溢出屏蔽（可选） | RWS / VF ROZ | 0b |
 | 18 | 畸形 TLP 屏蔽 | RWS / VF ROZ | 0b |
@@ -20082,12 +20082,12 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 
 **注释：**
 
-1. 当在非 VF 函数中置 1 时，必须实现此 AER 屏蔽位。否则，对于非 VF 函数，该位是可选的。
-2. 当函数实现此扩展能力（即 ACS / 多播）时，该函数必须实现此 AER 屏蔽位。
-3. 当在非 VF 函数中置 1 时，该函数必须实现此 AER 屏蔽位。
+1. 当在非 VF 功能中置 1 时，必须实现此 AER 屏蔽位。否则，对于非 VF 功能，该位是可选的。
+2. 当功能实现此扩展能力（即 ACS / 多播）时，该功能必须实现此 AER 屏蔽位。
+3. 当在非 VF 功能中置 1 时，该功能必须实现此 AER 屏蔽位。
 4. 当 Function 0 实现 IDE 扩展能力，并且 Function 0 实现 AER 时，则 Function 0 必须实现此 AER 屏蔽位。
 5. 当 Function 0 中支持 PCRC 位置 1,并且 Function 0 实现 AER 时，则 Function 0 必须实现此 AER 屏蔽位。
-6. 对于 VF 函数，强烈推荐使用 VF ROZ,但为了与本规范的早期版本向后兼容，允许使用 RWS。
+6. 对于 VF 功能，强烈推荐使用 VF ROZ,但为了与本规范的早期版本向后兼容，允许使用 RWS。
 
 </td>
 </tr>
@@ -20126,7 +20126,7 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 </td>
 <td style="background-color:#e8e8e8">
 
-不可纠正错误严重性寄存器控制某个错误是作为非致命 (Non-fatal) 还是致命 (Fatal) 错误报告。当严重性寄存器中对应的错误位置 1 时，该错误被报告为致命错误。如果该位清零，则对应的错误被视为非致命错误。有关更多详细信息，请参阅 § 6.2 节。该函数未实现的位对应的寄存器字段被硬连线为实现特定的值。§ 图 7-157 详细说明了不可纠正错误严重性寄存器的寄存器字段分配;§ 表 7-137 给出了相应的位定义。
+不可纠正错误严重性寄存器控制某个错误是作为非致命 (Non-fatal) 还是致命 (Fatal) 错误报告。当严重性寄存器中对应的错误位置 1 时，该错误被报告为致命错误。如果该位清零，则对应的错误被视为非致命错误。有关更多详细信息，请参阅 § 6.2 节。该功能未实现的位对应的寄存器字段被硬连线为实现特定的值。§ 图 7-157 详细说明了不可纠正错误严重性寄存器的寄存器字段分配;§ 表 7-137 给出了相应的位定义。
 
 对于标记为 VF RsvdP 的 VF 字段，关联的 PF 的设置适用于该 VF。对于标记为 VF ROZ 的 VF 字段，该错误不适用于 VF。
 
@@ -20213,12 +20213,12 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 | 0 | 未定义 |
 | 1:3 | 保留 (RsvdP) |
 | 4 | 数据链路协议错误严重性 |
-| 5 | 意外下线错误严重性 |
+| 5 | 意外断开错误严重性 |
 | 6:11 | 保留 (RsvdP) |
 | 12 | 接收到中毒 TLP 严重性 |
 | 13 | 流控协议错误严重性 |
 | 14 | 完成超时错误严重性 |
-| 15 | 完成方中止错误严重性 |
+| 15 | 完成者中止错误严重性 |
 | 16 | 意外完成错误严重性 |
 | 17 | 接收器溢出严重性 |
 | 18 | 畸形 TLP 严重性 |
@@ -20242,7 +20242,7 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 |--------|------------|------|--------|
 | 0 | 未定义 - 从该位读取的值是未定义的。在本规范的早期版本中，该位用于设置链路训练错误的严重性。系统软件必须忽略从该位读取的值。允许系统软件向该位写入任何值。 | 未定义 | 未定义 |
 | 4 | 数据链路协议错误严重性 | RWS / VF ROZ | 1b |
-| 5 | 意外下线错误严重性（可选 – 注 1） | RWS / VF ROZ | 1b |
+| 5 | 意外断开错误严重性（可选 – 注 1） | RWS / VF ROZ | 1b |
 | 12 | 接收到中毒 TLP 严重性 | RWS / VF RsvdP | 0b |
 | 13 | 流控协议错误严重性（可选 – 注 1） | RWS / VF ROZ | 1b |
 | 14 | 完成超时错误严重性 ¹⁷⁹ | RWS / VF RsvdP | 0b |
@@ -20303,7 +20303,7 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 
 | 位位置 | 寄存器描述 | 属性 | 默认值 |
 |--------|------------|------|--------|
-| 15 | 完成方中止错误严重性（可选 – 注 1） | RWS / VF RsvdP | 0b |
+| 15 | 完成者中止错误严重性（可选 – 注 1） | RWS / VF RsvdP | 0b |
 | 16 | 意外完成错误严重性 | RWS / VF RsvdP | 0b |
 | 17 | 接收器溢出严重性（可选 – 注 1） | RWS / VF ROZ | 1b |
 | 18 | 畸形 TLP 严重性 | RWS / VF ROZ | 1b |
@@ -20369,7 +20369,7 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 **注释：**
 
 1. 如果对应的不可纠正错误屏蔽寄存器位已实现，则必须实现该位。否则，硬连线为 0。
-2. 对于 VF 函数，强烈推荐使用 VF ROZ,但为了与本规范的早期版本向后兼容，如果 VF 实现了对应的不可纠正错误屏蔽寄存器位，则允许使用 RWS。
+2. 对于 VF 功能，强烈推荐使用 VF ROZ,但为了与本规范的早期版本向后兼容，如果 VF 实现了对应的不可纠正错误屏蔽寄存器位，则允许使用 RWS。
 
 </td>
 </tr>
@@ -20405,9 +20405,9 @@ For SR-IOV devices, errors categorized as non-Function-specific must be logged i
 </td>
 <td style="background-color:#e8e8e8">
 
-可纠正错误状态寄存器报告 PCI Express 设备函数 (Function) 上各个可纠正错误源的状态。当某个错误状态位置 1 时，表示发生了相应的错误;软件可以通过向对应位写入 1b 来清除错误状态。有关更多详细信息，请参阅 § 6.2 节。该函数未实现的寄存器位被硬连线为 0b。§ 图 7-158 详细说明了可纠正错误状态寄存器的寄存器字段分配;§ 表 7-138 给出了相应的位定义。
+可纠正错误状态寄存器报告 PCI Express 设备功能 (Function) 上各个可纠正错误源的状态。当某个错误状态位置 1 时，表示发生了相应的错误;软件可以通过向对应位写入 1b 来清除错误状态。有关更多详细信息，请参阅 § 6.2 节。该功能未实现的寄存器位被硬连线为 0b。§ 图 7-158 详细说明了可纠正错误状态寄存器的寄存器字段分配;§ 表 7-138 给出了相应的位定义。
 
-对于 SR-IOV (单根 I/O 虚拟化) 设备，归类为非函数特定的错误必须记录在 PF (物理功能, Physical Function) 和非 IOV 函数中，但不应记录在 VF 中。VF 必须仅记录函数特定的错误。
+对于 SR-IOV (单根 I/O 虚拟化) 设备，归类为非功能特定的错误必须记录在 PF (物理功能, Physical Function) 和非 IOV 功能中，但不应记录在 VF 中。VF 必须仅记录功能特定的错误。
 
 7.8.4.5 可纠正错误状态寄存器（偏移 10h）§
 
@@ -20575,7 +20575,7 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 </td>
 <td style="background-color:#e8e8e8">
 
-可纠正错误屏蔽寄存器控制该函数通过 PCI Express 错误消息向 PCI Express 根复合体 (Root Complex) 报告各个可纠正错误。被屏蔽的错误（屏蔽寄存器中相应位置 1）不会由该函数向 PCI Express 根复合体报告。有关更多详细信息，请参阅 § 6.2 节。可纠正错误状态寄存器中每个错误位都有一个对应的屏蔽位。该函数未实现的位对应的寄存器字段被硬连线为 0b。§ 图 7-159 详细说明了可纠正错误屏蔽寄存器的寄存器字段分配;§ 表 7-139 给出了相应的位定义。
+可纠正错误屏蔽寄存器控制该功能通过 PCI Express 错误消息向 PCI Express 根复合体 (Root Complex) 报告各个可纠正错误。被屏蔽的错误（屏蔽寄存器中相应位置 1）不会由该功能向 PCI Express 根复合体报告。有关更多详细信息，请参阅 § 6.2 节。可纠正错误状态寄存器中每个错误位都有一个对应的屏蔽位。该功能未实现的位对应的寄存器字段被硬连线为 0b。§ 图 7-159 详细说明了可纠正错误屏蔽寄存器的寄存器字段分配;§ 表 7-139 给出了相应的位定义。
 
 对于标记为 VF RsvdP 的 VF 字段，关联的 PF 的设置适用于该 VF。
 
@@ -20803,12 +20803,12 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
 | 4:0 | 首次错误指针 - 首次错误指针是一个字段，用于标识在不可纠正错误状态寄存器中报告的第一个错误的位位置。有关更多详细信息，请参阅 § 6.2 节。 | ROS |
-| 5 | ECRC 生成能力 - 如果置 1,则该位表示该函数能够生成 ECRC（见 § 2.7 节）。 | RO |
-| 6 | ECRC 生成使能 - 当置 1 时，启用 ECRC 生成（见 § 2.7 节）。允许未实现相关机制的函数将该位硬连线为 0b。该位的默认值为 0b。 | RWS / VF RsvdP |
-| 7 | ECRC 检查能力 - 如果置 1,则该位表示该函数能够检查 ECRC（见 § 2.7 节）。 | RO |
-| 8 | ECRC 检查使能 - 当置 1 时，启用 ECRC 检查（见 § 2.7 节）。允许未实现相关机制的函数将该位硬连线为 0b。该位的默认值为 0b。 | RWS / VF RsvdP |
-| 9 | 多包头记录能力 - 如果置 1,则该位表示该函数能够记录多个错误包头。有关更多详细信息，请参阅 § 6.2 节。如果 VF 实现了包头日志共享（见 § 6.2.4.2.1 节）,则该位必须硬连线为零。 | RO / 0b |
-| 10 | 多包头记录使能 - 当置 1 时，该位使该函数能够记录多个错误包头。允许未实现相关机制的函数将该位硬连线为 0b。如果 VF 实现了包头日志共享（见 § 6.2.4.2.1 节）,则该位为 RsvdP。该位的默认值为 0b。 | RWS / RsvdP |
+| 5 | ECRC 生成能力 - 如果置 1,则该位表示该功能能够生成 ECRC（见 § 2.7 节）。 | RO |
+| 6 | ECRC 生成使能 - 当置 1 时，启用 ECRC 生成（见 § 2.7 节）。允许未实现相关机制的功能将该位硬连线为 0b。该位的默认值为 0b。 | RWS / VF RsvdP |
+| 7 | ECRC 检查能力 - 如果置 1,则该位表示该功能能够检查 ECRC（见 § 2.7 节）。 | RO |
+| 8 | ECRC 检查使能 - 当置 1 时，启用 ECRC 检查（见 § 2.7 节）。允许未实现相关机制的功能将该位硬连线为 0b。该位的默认值为 0b。 | RWS / VF RsvdP |
+| 9 | 多包头记录能力 - 如果置 1,则该位表示该功能能够记录多个错误包头。有关更多详细信息，请参阅 § 6.2 节。如果 VF 实现了包头日志共享（见 § 6.2.4.2.1 节）,则该位必须硬连线为零。 | RO / 0b |
+| 10 | 多包头记录使能 - 当置 1 时，该位使该功能能够记录多个错误包头。允许未实现相关机制的功能将该位硬连线为 0b。如果 VF 实现了包头日志共享（见 § 6.2.4.2.1 节）,则该位为 RsvdP。该位的默认值为 0b。 | RWS / RsvdP |
 | 11 | TLP 前缀日志存在 - 如果端到端 TLP 前缀支持 (End-End TLP Prefix Supported) 清零，则该位为 RsvdP。如果 Flit 模式支持 (Flit Mode Supported) 置 1、首次错误指针有效，以及记录的 TLP 处于 Flit 模式位置 1,则该位必须为 0。 | ROS / RsvdP |
 
 </td>
@@ -20853,7 +20853,7 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
 | 11（续） | 如果该位置 1 且首次错误指针有效，则 TLP 前缀日志寄存器（偏移 38h 至 44h,也称为包头日志寄存器 DW5-8）包含有效的非 Flit 模式 (Non-Flit Mode) 端到端 TLP 前缀信息。如果该位清零或首次错误指针无效，则 TLP 前缀日志寄存器不包含端到端 TLP 前缀信息（重叠字段包头日志寄存器 DW5-8 可能包含本节其他位置规定的 Flit 模式 (Flit Mode) TLP 包头信息）。该位的默认值为 0。如果 VF 实现了包头日志共享（见 § 6.2.4.2.1 节）,则当包头日志由于溢出条件而全为 1 时，该位必须为零。 | （续） |
-| 12 | 完成超时前缀/包头日志能力 - 如果置 1,则该位表示该函数记录经历完成超时错误的请求 TLP 的前缀/包头。 | HwInit |
+| 12 | 完成超时前缀/包头日志能力 - 如果置 1,则该位表示该功能记录经历完成超时错误的请求 TLP 的前缀/包头。 | HwInit |
 | 17:13 | 包头日志大小 - 该字段指示已实现的包头日志的 DW 数量。如果 Flit 模式支持置 1,请参阅相关文本的要求。如果 Flit 模式支持清零且端到端 TLP 前缀支持置 1,则该值必须为 0 或必须大于等于 8。如果该字段为 0 且 Flit 模式支持清零，则包头日志的大小取决于端到端 TLP 前缀支持。如果端到端 TLP 前缀支持清零，则包头日志为 4 DW,否则包头日志为 8 DW。 | HwInit / RsvdP |
 | 18 | 记录的 TLP 处于 Flit 模式 -- 如果 Flit 模式支持置 1、首次错误指针有效，且该位置 1,则记录的 TLP 是在 Flit 模式下捕获的，否则该 TLP 是在非 Flit 模式下捕获的。 | ROS |
 | 23:19 | 记录的 TLP 大小 -- 如果 Flit 模式支持置 1 且首次错误指针有效，则该字段包含已记录到包头日志寄存器，以及（如适用）TLP 前缀日志寄存器中的 DW 数量。如果 Flit 模式支持置 1、首次错误指针有效、VF 实现包头日志共享（见 § 6.2.4.2.1 节）,并且发生了包头日志溢出条件，则该字段必须为 0（除此之外包头日志全为 1）。 | ROS |
@@ -21028,7 +21028,7 @@ For Functions other than Root Ports and Root Complex Event Collectors: when End-
 
 对于根端口和根复合体事件收集器，为了使接收到的错误消息或内部生成的错误消息能够产生此寄存器启用的中断，该错误消息必须由根端口或根复合体事件收集器启用为"传输"（见 § 6.2.4.1 节和 § 6.2.8.1 节）。
 
-对于根端口和根复合体事件收集器以外的函数：当端到端 TLP 前缀支持 (End-End TLP Prefix Supported) 置 1 时，该寄存器为 RsvdP;当端到端 TLP 前缀支持清零时，该寄存器不需要实现。
+对于根端口和根复合体事件收集器以外的功能：当端到端 TLP 前缀支持 (End-End TLP Prefix Supported) 置 1 时，该寄存器为 RsvdP;当端到端 TLP 前缀支持清零时，该寄存器不需要实现。
 
 </td>
 </tr>
@@ -27782,7 +27782,7 @@ The Virtual Channel Extended Capability (VC Extended Capability) is an optional 
 </td>
 <td style="background-color:#e8e8e8">
 
-虚通道扩展能力(VC Extended Capability)是一项可选的扩展能力，适用于在默认虚通道(VC0)上支持超出默认流量类(TC0)功能的设备 Port(或单个 Function)。这可以适用于仅支持一个 VC 但具有 TC 过滤功能的设备，或支持多个 VC 的设备。请注意，仅在 VC0 上支持 TC0 的 PCI Express 设备不需要 VC 扩展能力及其相关寄存器。§ 图 7-221 提供了虚通道扩展能力结构的高层视图。该结构控制 PCI Express 链路的虚通道分配，可出现在包含(控制)一个 Port 的任何设备(或 RCRB)中，或任何具有多函数虚通道(MFVC)能力结构的设备中。虚通道扩展能力结构中的某些寄存器/字段可能对 Endpoint、Switch 端口、Root Port 和 RCRB 具有不同的解释。
+虚通道扩展能力(VC Extended Capability)是一项可选的扩展能力，适用于在默认虚通道(VC0)上支持超出默认流量类(TC0)功能的设备 Port(或单个 Function)。这可以适用于仅支持一个 VC 但具有 TC 过滤功能的设备，或支持多个 VC 的设备。请注意，仅在 VC0 上支持 TC0 的 PCI Express 设备不需要 VC 扩展能力及其相关寄存器。§ 图 7-221 提供了虚通道扩展能力结构的高层视图。该结构控制 PCI Express 链路的虚通道分配，可出现在包含(控制)一个 Port 的任何设备(或 RCRB)中，或任何具有多功能虚通道(MFVC)能力结构的设备中。虚通道扩展能力结构中的某些寄存器/字段可能对 Endpoint、Switch 端口、Root Port 和 RCRB 具有不同的解释。
 
 </td>
 </tr>
@@ -27832,7 +27832,7 @@ VC 扩展能力结构允许出现在所有单 Function 设备的扩展配置空�
 
 每个 VF 使用其关联 PF 的虚通道。VF 自身不得包含任何虚通道能力。
 
-位于 Upstream Port 的多函数设备允许包含多函数虚通道(MFVC)能力结构(参见 § 7.9.2)。如果多函数设备包含 MFVC 能力结构，则其任何或所有 Function(VF 除外)允许包含 VC 扩展能力结构。仅包含 Switch 下游端口 Function 的 Switch 内部设备或 RCiEP 也允许包含按 Function 的 VC 扩展能力结构。除此之外，仅 Function 0 允许包含 VC 扩展能力结构。
+位于 Upstream Port 的多功能设备允许包含多功能虚通道(MFVC)能力结构(参见 § 7.9.2)。如果多功能设备包含 MFVC 能力结构，则其任何或所有 Function(VF 除外)允许包含 VC 扩展能力结构。仅包含 Switch 下游端口 Function 的 Switch 内部设备或 RCiEP 也允许包含按 Function 的 VC 扩展能力结构。除此之外，仅 Function 0 允许包含 VC 扩展能力结构。
 
 为保持软件向后兼容性,VC 扩展能力结构允许使用两个扩展能力 ID:0002h 和 0009h。同时包含 MFVC 能力结构的设备中的任何 VC 扩展能力结构必须使用扩展能力 ID 0009h。不包含 MFVC 能力结构的设备中的 VC 扩展能力结构必须使用扩展能力 ID 0002h。
 
@@ -28107,7 +28107,7 @@ Capability Version(能力版本) – 该字段是 PCI-SIG 定义的版本号，�
 对于本版本的规范，必须为 1h。
 RO
 31:20
-Next Capability Offset(下一能力偏移量) – 该字段包含指向下一 PCI Express 能力结构的偏移量;若链接的能力列表中不存在其他项，则为 000h。
+Next Capability Offset(下一能力偏移量) – 该字段包含指向下一 PCI Express 能力结构的偏移量;若能力列表中不存在其他项，则为 000h。
 对于在配置空间中实现的扩展能力，该偏移量相对于 PCI 兼容配置空间的起始位置，因此必须始终为 000h(表示能力列表的终止)或大于 0FFh。
 RO
 
@@ -31069,7 +31069,7 @@ PCI Express RCRB Header 扩展能力是一种可选的扩展能力，可以在 R
 |---|---|---|
 | 15:0 | PCI Express Extended Capability ID（PCI Express 扩展能力 ID）— 该字段是 PCI-SIG 定义的 ID 编号，用于指示扩展能力的性质和格式。RCRB Header Extended Capability 的扩展能力 ID 为 000Ah。 | RO |
 | 19:16 | Capability Version（能力版本）— 该字段是 PCI-SIG 定义的版本号，用于指示当前 Capability 结构的版本。本规范版本必须为 1h。 | RO |
-| 31:20 | Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express Capability 结构的偏移，若链接列表中不存在其他项，则为 000h。对于在配置空间中实现的扩展能力，该偏移相对于 PCI 兼容配置空间的起始位置，因此必须为 000h（表示能力列表终止）或大于 0FFh。 | RO |
+| 31:20 | Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express Capability 结构的偏移，若能力列表中不存在其他项，则为 000h。对于在配置空间中实现的扩展能力，该偏移相对于 PCI 兼容配置空间的起始位置，因此必须为 000h（表示能力列表终止）或大于 0FFh。 | RO |
 
 Figure 7-254 details allocation of register fields in the RCRB Vendor ID and Device ID register; Table 7-230 provides the respective bit definitions.
 
@@ -31353,7 +31353,7 @@ Root Complex Link Declaration Extended Capability 的扩展能力 ID 为 0005h�
 |---|---|---|
 | 15:0 | PCI Express Extended Capability ID（PCI Express 扩展能力 ID）— 该字段是 PCI-SIG 定义的 ID 编号，用于指示扩展能力的性质和格式。Root Complex Link Declaration Extended Capability 的扩展能力 ID 为 0005h。 | RO |
 | 19:16 | Capability Version（能力版本）— 该字段是 PCI-SIG 定义的版本号，用于指示当前 Capability 结构的版本。本规范版本必须为 1h。 | RO |
-| 31:20 | Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express Capability 结构的偏移，若链接列表中不存在其他项，则为 000h。对于在配置空间中实现的扩展能力，该偏移相对于 PCI 兼容配置空间的起始位置，因此必须为 000h（表示能力列表终止）或大于 0FFh。该偏移的低 2 位为保留位，必须实现为 00b，但软件必须将其屏蔽以允许将来使用这些位。 | RO |
+| 31:20 | Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express Capability 结构的偏移，若能力列表中不存在其他项，则为 000h。对于在配置空间中实现的扩展能力，该偏移相对于 PCI 兼容配置空间的起始位置，因此必须为 000h（表示能力列表终止）或大于 0FFh。该偏移的低 2 位为保留位，必须实现为 00b，但软件必须将其屏蔽以允许将来使用这些位。 | RO |
 
 The Element Self Description Register provides information about the Root Complex element containing the Root Complex Link Declaration Extended Capability.
 
@@ -31622,7 +31622,8 @@ n = <N 的值>。位 11:3 为保留位，硬连线为 0。位 14:12 指定 Funct
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 7-263.** Link Address 寄存器
+> <img src="figures/chapter_07/fig_1301_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -31725,7 +31726,7 @@ Root Complex Internal Link Control Extended Capability 的扩展能力 ID 为 00
 |---|---|---|
 | 15:0 | PCI Express Extended Capability ID（PCI Express 扩展能力 ID）— 该字段是 PCI-SIG 定义的 ID 编号，用于指示扩展能力的性质和格式。Root Complex Internal Link Control Extended Capability 的扩展能力 ID 为 0006h。 | RO |
 | 19:16 | Capability Version（能力版本）— 该字段是 PCI-SIG 定义的版本号，用于指示当前 Capability 结构的版本。本规范版本必须为 1h。 | RO |
-| 31:20 | Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express Capability 结构的偏移，若链接列表中不存在其他项，则为 000h。对于在配置空间中实现的扩展能力，该偏移相对于 PCI 兼容配置空间的起始位置，因此必须为 000h（表示能力列表终止）或大于 0FFh。该偏移的低 2 位为保留位，必须实现为 00b，但软件必须将其屏蔽以允许将来使用这些位。 | RO |
+| 31:20 | Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express Capability 结构的偏移，若能力列表中不存在其他项，则为 000h。对于在配置空间中实现的扩展能力，该偏移相对于 PCI 兼容配置空间的起始位置，因此必须为 000h（表示能力列表终止）或大于 0FFh。该偏移的低 2 位为保留位，必须实现为 00b，但软件必须将其屏蔽以允许将来使用这些位。 | RO |
 
 The Root Complex Link Capabilities Register identifies capabilities for this Link.
 
@@ -32708,7 +32709,7 @@ RO
 寄存器描述
 属性
 31:20
-Next Capability Offset(下一能力偏移量) — 该字段包含下一个 PCI Express Capability(能力)结构的偏移量，如果链接的 Capability 列表中不存在其他项，则为 000h。
+Next Capability Offset(下一能力偏移量) — 该字段包含下一个 PCI Express Capability(能力)结构的偏移量，如果Capability 能力列表中不存在其他项，则为 000h。
 对于在 Configuration Space(配置空间)中实现的 Extended Capability(扩展能力)，此偏移量相对于 PCI-compatible Configuration Space(PCI 兼容配置空间)的开头，因此必须始终为 000h(用于终止 Capability 列表)或大于 0FFh。
 此偏移量的低 2 位为保留位，必须实现为 00b,但软件必须屏蔽它们以便将来使用这些位。
 RO
@@ -33144,7 +33145,7 @@ Capability Version(能力版本) — 该字段是 PCI-SIG 定义的版本号，�
 在本版本的规范中必须为 1h。
 RO
 31:20
-Next Capability Offset(下一能力偏移量) — 该字段包含下一个 PCI Express Extended Capability(扩展能力)结构的偏移量，如果链接的 Capability 列表中不存在其他项，则为 000h。
+Next Capability Offset(下一能力偏移量) — 该字段包含下一个 PCI Express Extended Capability(扩展能力)结构的偏移量，如果Capability 能力列表中不存在其他项，则为 000h。
 RO
 
 </td>
@@ -34238,8 +34239,11 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-289.** TPH 扩展能力结构
+> <img src="figures/chapter_07/fig_1321_1_tight.png" width="700">
 
-
+> **图 7-290.** TPH Requester 扩展能力头部
+> <img src="figures/chapter_07/fig_1321_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -34561,7 +34565,8 @@ The various RP PIO registers must be implemented only by Root Ports that support
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 7-295.** DPC 扩展能力 – 非 Flit 模式
+> <img src="figures/chapter_07/fig_1325_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -36294,7 +36299,7 @@ Figure 7-320 and Table 7-281 detail allocation of fields in the Hierarchy ID Ext
 |----------|------|------|
 | 15:0 | **Extended Capability ID（扩展能力 ID）** — 此字段是 PCI-SIG 定义的 ID 编号，用于指示扩展能力的性质和格式。 <br>层级 ID 扩展能力的 PCI Express 扩展能力 ID 为 0028h。 | RO |
 | 19:16 | **Capability Version（能力版本）** — 此字段是 PCI-SIG 定义的版本号，用于指示当前能力结构的版本。 <br>对于本版本的规范必须为 1h。 | RO |
-| 31:20 | **Next Capability Offset（下一能力偏移）** — 此字段包含到下一个 PCI Express 扩展能力结构的偏移量，如果链接的能力列表中没有其他项则为 000h。对于配置空间中的扩展能力，此偏移相对于 PCI 兼容配置空间的起始位置，因此必须始终为 000h（用于终止能力列表）或大于 0FFh。 | RO |
+| 31:20 | **Next Capability Offset（下一能力偏移）** — 此字段包含到下一个 PCI Express 扩展能力结构的偏移量，如果能力列表中没有其他项则为 000h。对于配置空间中的扩展能力，此偏移相对于 PCI 兼容配置空间的起始位置，因此必须始终为 000h（用于终止能力列表）或大于 0FFh。 | RO |
 
 </td>
 </tr>
@@ -39310,7 +39315,8 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 7-353.** SFI CAM 地址寄存器
+> <img src="figures/chapter_07/fig_1372_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -39340,9 +39346,13 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 
 > **Figure 7-354. SFI CAM Data Register**
 
+> （原图未单独抽取，可参考整页图 `figures/chapter_07/fig_1372_1.png`）
+
 </td>
 <td style="background-color:#e8e8e8">
 
+> **图 7-354.** SFI CAM 数据寄存器
+> （原图未单独抽取，可参考整页图 `figures/chapter_07/fig_1372_1.png`）
 
 </td>
 </tr>
@@ -39512,7 +39522,8 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 7-355.** 子系统 ID 与子系统供应商 ID 能力
+> <img src="figures/chapter_07/fig_1373_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -39539,7 +39550,8 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 7-356.** 子系统 ID 与子系统供应商 ID 能力头部
+> <img src="figures/chapter_07/fig_1373_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -39574,7 +39586,8 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 7-357.** 子系统 ID 与子系统供应商 ID 能力数据
+> <img src="figures/chapter_07/fig_1373_3_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -39712,7 +39725,8 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 7-358.** 数据对象交换 (DOE) 扩展能力
+> <img src="figures/chapter_07/fig_1374_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -39739,7 +39753,8 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 7-359.** DOE 扩展能力头部
+> <img src="figures/chapter_07/fig_1374_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -39843,7 +39858,8 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 7-360.** DOE 能力寄存器
+> <img src="figures/chapter_07/fig_1375_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -39917,7 +39933,8 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 7-361.** DOE 控制寄存器
+> <img src="figures/chapter_07/fig_1376_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -39992,7 +40009,8 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 7-362.** DOE 状态寄存器
+> <img src="figures/chapter_07/fig_1377_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -40105,7 +40123,8 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 7-363.** DOE 写数据邮箱寄存器
+> <img src="figures/chapter_07/fig_1378_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -40207,7 +40226,8 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 7-364.** DOE 读数据邮箱寄存器
+> <img src="figures/chapter_07/fig_1379_1.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -40494,7 +40514,8 @@ N = Number of Shadow Functions 字段的值。
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 7-365.** 影子功能扩展能力结构
+> <img src="figures/chapter_07/fig_1381_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
@@ -40548,7 +40569,8 @@ N = Number of Shadow Functions 字段的值。
 </td>
 <td style="background-color:#e8e8e8">
 
-
+> **图 7-366.** 影子功能扩展能力头部
+> <img src="figures/chapter_07/fig_1381_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
