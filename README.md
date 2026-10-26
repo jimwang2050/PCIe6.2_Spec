@@ -48,7 +48,8 @@ open preview/book.html     # 完整版 (8.4 MB, 含目录)
 | 4 | [Physical Layer Logical Block · 物理层逻辑块](PCIe6.2_Spec_ch04_Physical_Layer_Logical_Block_物理层逻辑块.md) ★ | 351–650 | Flit 模式、128b/130b 编码、LTSSM、链路训练 |
 | 5 | [Power Management · 电源管理](PCIe6.2_Spec_ch05_Power_Management_电源管理.md) | 651–706 | D/L 电源状态、ASPM、PME、热插拔 |
 | 6 | [System Architecture · 系统架构](PCIe6.2_Spec_ch06_System_Architecture_系统架构.md) ★ | 707–980 | RC/Switch/Endpoint 拓扑、组件模型、中断与错误上报 |
-| 7 | [Software Init & Config · 软件初始化与配置](PCIe6.2_Spec_ch07_Software_Initialization_and_Configuration_软件初始化与配置.md) ★ | 981–1408 | 配置空间、能力结构、枚举、寄存器定义 |
+| 7A | [Software Init & Config · 软件初始化与配置（Part A · 7.1–7.8）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md) ★ | 981–1408 | 配置拓扑、配置机制、寄存器类型、必需/通用能力 |
+| 7B | [Software Init & Config · 软件初始化与配置（Part B · 7.9–7.30）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_B_7_9-7_30.md) ★ | 981–1408 | 附加 PCI/PCIe 能力、扩展能力结构与寄存器定义 |
 | 8 | [Electrical Sub-Block · 电气子块](PCIe6.2_Spec_ch08_Electrical_Sub_Block_电气子块.md) | 1409–1522 | 电气参数、发送/接收均衡、抖动、互操作性 |
 | 9 | [SR-IOV · 单根 I/O 虚拟化](PCIe6.2_Spec_ch09_Single_Root_I_O_Virtualization_and_Sharing_单根IO虚拟化与共享SRIOV.md) | 1523–1558 | PF/VF、ARI、资源虚拟化与共享 |
 | 10 | [ATS · 地址转换服务](PCIe6.2_Spec_ch10_Address_Translation_Services_地址转换服务ATS.md) | 1559–1608 | 地址转换、设备 TLB、IOMMU 交互 |
@@ -57,4 +58,4 @@ open preview/book.html     # 完整版 (8.4 MB, 含目录)
 
 > **建议阅读顺序**：第 1、6 章建立全局视角 → 第 2、3、4 章精读协议栈 → 按方向深入（软件走第 7 章，硬件走第 5、8 章）→ 第 9–12 章按需查阅专题。
 
-> **第 7 章已拆分**：[Part A (7.1–7.8)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md) · [Part B (7.9–7.30)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_B_7_9-7_30.md) 便于分篇阅读。
+> **第 7 章全篇**：[单文件完整版](PCIe6.2_Spec_ch07_Software_Initialization_and_Configuration_软件初始化与配置.md)（未拆分，含完整章节索引）。
