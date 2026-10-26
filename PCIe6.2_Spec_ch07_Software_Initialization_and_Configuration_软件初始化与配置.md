@@ -3423,11 +3423,11 @@ Type 0 配置空间头 (Type 0 Configuration Space Header) 在配置空间 (Conf
 > **实现说明：**
 > **计算 32 位基址寄存器大小的示例**
 >
-> 在对基址寄存器 (Base Address Register) 进行大小测量之前，通过命令寄存器 (Command Register) 禁用相应地址空间（I/O 或内存）的解码。软件保存基址寄存器的原始值，向该寄存器写入全 1 的值，然后读取。可以从读取的 32 位值进行大小计算：首先清除编码信息位（I/O 为位 1:0，内存为位 3:0），将所有 32 位取反（逻辑非），然后加 1。
+> 在对基址寄存器 (Base Address Register) 进行大小测量之前，通过命令寄存器 (Command Register) 禁用相应地址空间（I/O 或内存）的解码。软件保存基址寄存器的原始值，向该寄存器写入全 1 的值，然后读取。可以从读取的 32 位值进行大小计算：首先清除编码信息位（I/O 为 Bits 1:0，内存为 Bits 3:0），将所有 32 位取反（逻辑非），然后加 1。
 >
-> 所得的 32 位值就是该寄存器解码的内存/I/O 范围大小。请注意，如果基址寄存器用于 I/O，并且位 31:16 在读取时返回零，则结果的高 16 位将被忽略。在重新启用功能 (Function) 命令寄存器 (Command Register) 中的解码之前，将恢复基址寄存器中的原始值。
+> 所得的 32 位值就是该寄存器解码的内存/I/O 范围大小。请注意，如果基址寄存器用于 I/O，并且 Bits 31:16 在读取时返回零，则结果的高 16 位将被忽略。在重新启用功能 (Function) 命令寄存器 (Command Register) 中的解码之前，将恢复基址寄存器中的原始值。
 >
-> 64 位（内存）基址寄存器的处理方式相同，只是第二个 32 位寄存器被视为第一个寄存器的扩展（即位 63:32）。软件向两个寄存器写入全 1 的值，读取它们，并将结果合并为 64 位值。大小计算在 64 位值上进行。
+> 64 位（内存）基址寄存器的处理方式相同，只是第二个 32 位寄存器被视为第一个寄存器的扩展（即 Bits 63:32）。软件向两个寄存器写入全 1 的值，读取它们，并将结果合并为 64 位值。大小计算在 64 位值上进行。
 
 ---
 
@@ -3698,7 +3698,7 @@ Functions that support an expansion ROM must allow that ROM to be accessed with 
 | 110b | Warning Pass Validation Passed with implementation specific warning. Valid contents, trust test was not performed / 警告通过：验证通过但带有实现特定的警告。内容有效，未执行信任测试 |
 | 111b | Warning Pass Validation Passed with implementation specific warning. Valid and trusted contents / 警告通过：验证通过但带有实现特定的警告。内容有效且受信任 |
 
-**Table 7-10 Bit 3:1 (Details). Expansion ROM Validation Status | 表 7-10 位 3:1（详细）扩展 ROM 验证状态**
+**Table 7-10 Bit 3:1 (Details). Expansion ROM Validation Status | 表 7-10 Bits 3:1（详细）扩展 ROM 验证状态**
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -9051,7 +9051,7 @@ Default value of this field is 00b.
 </td>
 <td style="background-color:#e8e8e8">
 
-**位 14:13 — OBFF Enable(属性:RW/RsvdP,参见描述)**
+**Bits 14:13 — OBFF Enable(属性:RW/RsvdP,参见描述)**
 
 此字段使能 OBFF 机制并选择信令方式。
 
@@ -9213,7 +9213,7 @@ Multi-Function Devices associated with an Upstream Port must report the same val
 </td>
 <td style="background-color:#e8e8e8">
 
-**位 7:1 — Supported Link Speeds Vector(属性:HwInit/RsvdP)**
+**Bits 7:1 — Supported Link Speeds Vector(属性:HwInit/RsvdP)**
 
 此字段指示关联端口所支持的链路 (Link) 速度。对于每个位，值为 1b 表示支持对应的链路速度，否则表示不支持该链路速度。进一步要求参见 § 第 8.2.1 节。
 
@@ -9279,7 +9279,7 @@ Bit definitions within this field are:
 </td>
 <td style="background-color:#e8e8e8">
 
-**位 15:9 — Lower SKP OS Generation Supported Speeds Vector(属性:HwInit/RsvdP)**
+**Bits 15:9 — Lower SKP OS Generation Supported Speeds Vector(属性:HwInit/RsvdP)**
 
 如果此字段非零，则表示端口在以指定速度运行时支持 SRIS,并支持对 SKP 有序集 (SKP Ordered Set) 传输调度速率的软件控制。
 
@@ -9323,7 +9323,7 @@ Behavior is undefined if a bit is Set in this field and the corresponding bit is
 </td>
 <td style="background-color:#e8e8e8">
 
-**位 15:9 — Lower SKP OS Generation Supported Speeds Vector(续)**
+**Bits 15:9 — Lower SKP OS Generation Supported Speeds Vector(续)**
 
 与上游端口相关联的多功能设备必须为其所有 Function 在此字段中报告相同的值。
 
@@ -9355,7 +9355,7 @@ Behavior is undefined if a bit is Set in this field and the corresponding bit is
 </td>
 <td style="background-color:#e8e8e8">
 
-**位 22:16 — Lower SKP OS Reception Supported Speeds Vector(属性:HwInit/RsvdP)**
+**Bits 22:16 — Lower SKP OS Reception Supported Speeds Vector(属性:HwInit/RsvdP)**
 
 如果此字段非零，则表示端口在以指定速度运行时支持 SRIS,并支持在 SRIS 模式下以 SRNS 定义的速率接收 SKP OS。
 
@@ -9512,7 +9512,7 @@ When Set, indicates support for the optional Device Readiness Status (DRS) capab
 >
 > 符合 [PCIe-3.0] 之前版本规范的硬件组件未实现 Link Capabilities 2 寄存器，或者该寄存器为 Reserved。
 >
-> 对于 Link Capabilities 2 寄存器未实现或其 Supported Link Speeds Vector 值为 0000000b 的组件，软件可读取 Link Capabilities 寄存器的位 3:0(现定义为 Max Link Speed 字段)，并按以下方式解释该值:
+> 对于 Link Capabilities 2 寄存器未实现或其 Supported Link Speeds Vector 值为 0000000b 的组件，软件可读取 Link Capabilities 寄存器的 Bits 3:0(现定义为 Max Link Speed 字段)，并按以下方式解释该值:
 >
 > - 0001b — 支持 2.5 GT/s 链路速度
 > - 0010b — 支持 5.0 GT/s 和 2.5 GT/s 链路速度
@@ -9607,7 +9607,7 @@ Components that support only the 2.5 GT/s speed are permitted to hardwire this f
 </td>
 <td style="background-color:#e8e8e8">
 
-**位 3:0 — Target Link Speed(属性:RWS/RsvdP,参见描述)**
+**Bits 3:0 — Target Link Speed(属性:RWS/RsvdP,参见描述)**
 
 对于下游端口，此字段通过对上游组件在其训练序列中通告的值进行限制，从而设置链路运行速度的上限。
 
@@ -9773,7 +9773,7 @@ For a Multi-Function Device associated with an Upstream Port, the field in Funct
 </td>
 <td style="background-color:#e8e8e8">
 
-**位 9:7 — Transmit Margin(属性:RWS/RsvdP,参见描述)**
+**Bits 9:7 — Transmit Margin(属性:RWS/RsvdP,参见描述)**
 
 此字段控制发送器引脚上非去加重电压等级的值。进入 LTSSM Polling.Configuration 子状态时，此字段复位为 000b(关于发送器电压等级在各种状态中如何确定的详细信息，参见 § 第 4 章)。
 
@@ -9816,7 +9816,7 @@ This field is intended for debug, compliance testing purposes only. System firmw
 </td>
 <td style="background-color:#e8e8e8">
 
-**位 9:7 — Transmit Margin(续)**
+**Bits 9:7 — Transmit Margin(续)**
 
 此字段的默认值为 000b。
 
@@ -9927,7 +9927,7 @@ This field is intended for debug and compliance testing purposes. System firmwar
 </td>
 <td style="background-color:#e8e8e8">
 
-**位 15:12 — Compliance Preset/De-emphasis(属性:RWS/RsvdP,参见描述)**
+**Bits 15:12 — Compliance Preset/De-emphasis(属性:RWS/RsvdP,参见描述)**
 
 对于 8.0 GT/s 及更高数据速率:如果进入 Polling.Compliance 状态是由于 Enter Compliance 位为 1b,则此字段设置发送器 Preset。编码定义参见 § 第 4.2.4.2 节。如果以此方式进入 Polling.Compliance 时使用了保留的 preset 编码，则结果未定义。
 
@@ -10298,7 +10298,7 @@ Once a value of 01b or 10b is returned in this field, that value must continue t
 </td>
 <td style="background-color:#e8e8e8">
 
-**位 9:8 — Crosslink Resolution(属性:RO)**
+**Bits 9:8 — Crosslink Resolution(属性:RO)**
 
 此字段指示 Crosslink 协商的状态。如果 Crosslink Supported 置位且端口支持 16.0 GT/s 或更高数据速率，则必须实现该字段。允许在所有其他端口中实现。如果 Crosslink Supported 清除，则该字段可硬连线为 01b 或 10b。
 
@@ -10357,7 +10357,7 @@ This field indicates the presence and DRS status for the Downstream Component, i
 </td>
 <td style="background-color:#e8e8e8">
 
-**位 14:12 — Downstream Component Presence(属性:RO/RsvdZ)**
+**Bits 14:12 — Downstream Component Presence(属性:RO/RsvdZ)**
 
 此字段指示连接到链路(如果有)的下游组件的存在性和 DRS 状态;定义值如下:
 
@@ -10409,7 +10409,7 @@ Default value of this field is 000b.
 </td>
 <td style="background-color:#e8e8e8">
 
-**位 14:12 — Downstream Component Presence(续)**
+**Bits 14:12 — Downstream Component Presence(续)**
 
 - 101b — Link Up - 组件存在且已收到 DRS(Component Present and DRS Received):表示自数据链路层激活以来,DP 已收到 DRS 消息。Flit Mode Status 位在此状态下有意义。
 - 110b — Reserved
@@ -11967,15 +11967,15 @@ If a Function implements a TPH Requester Extended Capability structure and an MS
 - **位 0**：Mask Bit（屏蔽位）— 当该位被置位时，禁止该 Function (功能) 通过此 MSI-X 表条目发送消息。但是，使用相同向量编程的其他 MSI-X 表条目仍能够发送等效消息，除非它们也被屏蔽。
   - 默认值为 1b（条目被屏蔽）
   - 属性：RW
-- **位 15:1**：Reserved（保留）
+- **Bits 15:1**：Reserved（保留）
   - 默认情况下，这些位的值必须为 0。但是，为了将来可能的用途，在修改其他 Vector Control (向量控制) 位的值时，软件必须保留这些保留位的值。如果软件修改了这些保留位的值，则结果是未定义的。
   - 这些位允许为 RsvdP 或读写。
   - 属性：RW 或 RsvdP
-- **位 23:16**：ST Lower（ST 低位）— 如果该 Function 实现了 TPH Requester Extended Capability (TPH 请求者扩展能力) 结构，且 ST Table Location 指示的值为 10b，则此字段包含 Steering Tag (转向标签) 的低 8 位，且必须为可读写。
+- **Bits 23:16**：ST Lower（ST 低位）— 如果该 Function 实现了 TPH Requester Extended Capability (TPH 请求者扩展能力) 结构，且 ST Table Location 指示的值为 10b，则此字段包含 Steering Tag (转向标签) 的低 8 位，且必须为可读写。
   - 否则，该字段允许为可读写或 RsvdP，并且为了将来可能的用途，在修改其他向量控制位的值时，软件必须保留这些保留位的值，否则结果是未定义的。
   - 默认值为 00h。
   - 属性：RW/RsvdP
-- **位 31:24**：ST Upper（ST 高位）— 如果该 Function 实现了 TPH Requester Extended Capability 结构，且 ST Table Location 指示的值为 10b，且 Extended TPH Requester Supported 位被置位，则此字段包含 Steering Tag 的高 8 位，且必须为可读写。
+- **Bits 31:24**：ST Upper（ST 高位）— 如果该 Function 实现了 TPH Requester Extended Capability 结构，且 ST Table Location 指示的值为 10b，且 Extended TPH Requester Supported 位被置位，则此字段包含 Steering Tag 的高 8 位，且必须为可读写。
   - 否则，该字段允许为可读写或 RsvdP，并且为了将来可能的用途，在修改其他向量控制位的值时，软件必须保留这些保留位的值，否则结果是未定义的。
   - 默认值为 00h。
   - 属性：RW/RsvdP
@@ -12050,7 +12050,7 @@ If a Function implements a TPH Requester Extended Capability structure and an MS
 
 （参见上方图 7-67 和表 7-56）
 
-- **位 63:0**：Pending Bits（挂起位）— 对于每个被置位的 Pending Bit，Function 对于关联的 MSI-X 表条目有一条挂起的消息。
+- **Bits 63:0**：Pending Bits（挂起位）— 对于每个被置位的 Pending Bit，Function 对于关联的 MSI-X 表条目有一条挂起的消息。
   - 没有关联 MSI-X 表条目的 Pending 位为保留位。默认情况下，保留 Pending 位的值必须为 0b。
   - 软件不应写入，而应只读 Pending 位。如果软件写入 Pending 位，则结果是未定义的。
   - 每个 Pending Bit 的默认值为 0b。
@@ -12248,13 +12248,13 @@ The Secondary PCI Express Extended Capability structure layout:
 
 （参见上方图 7-69 和表 7-57）
 
-- **位 15:0**：PCI Express Extended Capability ID（PCI Express 扩展能力 ID）— 该字段是由 PCI-SIG 定义的 ID 号，用于指示扩展能力的性质和格式。
+- **Bits 15:0**：PCI Express Extended Capability ID（PCI Express 扩展能力 ID）— 该字段是由 PCI-SIG 定义的 ID 号，用于指示扩展能力的性质和格式。
   - 次级 PCI Express 扩展能力的 PCI Express 扩展能力 ID 为 0019h。
   - 属性：RO
-- **位 19:16**：Capability Version（能力版本）— 该字段是由 PCI-SIG 定义的版本号，用于指示所呈现的能力结构的版本。
+- **Bits 19:16**：Capability Version（能力版本）— 该字段是由 PCI-SIG 定义的版本号，用于指示所呈现的能力结构的版本。
   - 对于本规范版本必须为 1h。
   - 属性：RO
-- **位 31:20**：Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express 扩展能力结构的偏移，若能力列表中没有其他项，则为 000h。
+- **Bits 31:20**：Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express 扩展能力结构的偏移，若能力列表中没有其他项，则为 000h。
   - 属性：RO
 
 </td>
@@ -12349,9 +12349,9 @@ The Secondary PCI Express Extended Capability structure layout:
   - 默认值为 0b。
   - 如果 Port 不支持 8.0 GT/s，则允许将此位硬连线为 0b。
   - 属性：RW/RsvdP
-- **位 2:8**：RsvdP（保留）
+- **Bits 2:8**：RsvdP（保留）
   - 属性：RsvdP
-- **位 9:15**：Enable Lower SKP OS Generation Vector（使能低 SKP OS 生成向量）— 当 Link 处于 L0 状态且此字段中与 Current Link Speed (当前链路速度) 对应的位被置位时，SKP 有序集 (SKP Ordered Sets) 按 SRNS (Separate Reference clock with Independent Spread Spectrum, 独立扩频的独立参考时钟) 定义的速率调度，覆盖基于时钟容差架构所要求的速率。有关其他要求，请参见 § 4.2.8 和 § 4.2.8.4。
+- **Bits 9:15**：Enable Lower SKP OS Generation Vector（使能低 SKP OS 生成向量）— 当 Link 处于 L0 状态且此字段中与 Current Link Speed (当前链路速度) 对应的位被置位时，SKP 有序集 (SKP Ordered Sets) 按 SRNS (Separate Reference clock with Independent Spread Spectrum, 独立扩频的独立参考时钟) 定义的速率调度，覆盖基于时钟容差架构所要求的速率。有关其他要求，请参见 § 4.2.8 和 § 4.2.8.4。
   - 此字段内的位定义如下：
     - 位 0：2.5 GT/s
     - 位 1：5.0 GT/s
@@ -12359,12 +12359,12 @@ The Secondary PCI Express Extended Capability structure layout:
     - 位 3：16.0 GT/s
     - 位 4：32.0 GT/s
     - 位 5：64.0 GT/s
-    - 位 7:6：RsvdP
+    - Bits 7:6：RsvdP
   - 如果 Lower SKP OS Generation Supported Speeds Vector 中对应的位被置位，则此字段中的每个未保留位必须为 RW，否则该位必须为 RW 或硬连线为 0。
   - 如果此字段中某位置位，而 Lower SKP OS Generation Supported Speeds Vector 中对应位未置位，则行为未定义。
   - 此字段的默认值为 000 0000b。
   - 属性：RW/RsvdP
-- **位 16:31**：RsvdP（保留）
+- **Bits 16:31**：RsvdP（保留）
   - 属性：RsvdP
 
 </td>
@@ -12448,7 +12448,7 @@ Lane Error Status Register (通道错误状态寄存器) 由一个 32 位的向�
 
 （参见上方图 7-71 和表 7-59）
 
-- **位 31:0**：Lane Error Status Bits（通道错误状态位）— 每个位指示相应 Lane 是否检测到 Lane-based error (基于通道的错误)。值 1b 表示在相应 Lane 号上检测到 Lane based-error（有关详细信息，请参见 § 4.2.2.3.3、§ 4.2.7 和 § 4.2.8.2）。
+- **Bits 31:0**：Lane Error Status Bits（通道错误状态位）— 每个位指示相应 Lane 是否检测到 Lane-based error (基于通道的错误)。值 1b 表示在相应 Lane 号上检测到 Lane based-error（有关详细信息，请参见 § 4.2.2.3.3、§ 4.2.7 和 § 4.2.8.2）。
   - 每个位的默认值为 0b。
   - 对于宽度小于 32 个 Lane 的 Port，未使用的高位 [31: 最大链路宽度] 为 RsvdZ (保留，保留为零)。
   - 对于不支持 8.0 GT/s 且不根据 8b/10b 错误设置这些位的 Port（可选，参见 § 4.2.7），此字段允许硬连线为 0。
@@ -12552,17 +12552,17 @@ Lane Equalization Control Register (通道均衡控制寄存器) 包含每通道
 
 通道均衡控制寄存器条目字段说明：
 
-- **位 3:0**：Downstream Port 8.0 GT/s Transmitter Preset（下游端口 8.0 GT/s 发送器预设值）— 当 Port 作为 Downstream Port 运行时，此 Port 在 8.0 GT/s Equalization 中使用的 Transmitter Preset (发送器预设值)。当 Port 作为 Upstream Port 运行时，此字段被忽略。有关详细信息，请参见第 8 章。字段编码在 § 4.2.4.2 中定义。
+- **Bits 3:0**：Downstream Port 8.0 GT/s Transmitter Preset（下游端口 8.0 GT/s 发送器预设值）— 当 Port 作为 Downstream Port 运行时，此 Port 在 8.0 GT/s Equalization 中使用的 Transmitter Preset (发送器预设值)。当 Port 作为 Upstream Port 运行时，此字段被忽略。有关详细信息，请参见第 8 章。字段编码在 § 4.2.4.2 中定义。
   - 对于 Upstream Port，如果 Crosslink Supported 为 0b，则此字段为 RsvdP。否则，此字段为 HwInit (硬件初始化)。参见 § 7.5.3.18。
   - 默认值为 1111b。
   - 属性：HwInit/RsvdP（见描述）
-- **位 6:4**：Downstream Port 8.0 GT/s Receiver Preset Hint（下游端口 8.0 GT/s 接收器预设提示）— 当 Port 作为 Downstream Port 运行时，此 Port 可能用作 8.0 GT/s 接收器均衡建议设置的 Receiver Preset Hint (接收器预设提示)。当 Port 作为 Upstream Port 运行时，此字段被忽略。有关详细信息，请参见第 8 章。字段编码在 § 4.2.4.2 中定义。
+- **Bits 6:4**：Downstream Port 8.0 GT/s Receiver Preset Hint（下游端口 8.0 GT/s 接收器预设提示）— 当 Port 作为 Downstream Port 运行时，此 Port 可能用作 8.0 GT/s 接收器均衡建议设置的 Receiver Preset Hint (接收器预设提示)。当 Port 作为 Upstream Port 运行时，此字段被忽略。有关详细信息，请参见第 8 章。字段编码在 § 4.2.4.2 中定义。
   - 对于 Upstream Port，如果 Crosslink Supported 为 0b，则此字段为 RsvdP。否则，此字段为 HwInit。参见 § 7.5.3.18。
   - 默认值为 111b。
   - 属性：HwInit/RsvdP（见描述）
 - **位 7**：RsvdP（保留）
   - 属性：RsvdP
-- **位 11:8**：Upstream Port 8.0 GT/s Transmitter Preset（上游端口 8.0 GT/s 发送器预设值）— 该字段包含 8.0 GT/s Link Equalization 期间发送或接收的 Transmitter Preset 值。字段使用因情况而异：
+- **Bits 11:8**：Upstream Port 8.0 GT/s Transmitter Preset（上游端口 8.0 GT/s 发送器预设值）— 该字段包含 8.0 GT/s Link Equalization 期间发送或接收的 Transmitter Preset 值。字段使用因情况而异：
   - **情况 A - Downstream Port，Crosslink Supported：任意**
     - 字段包含在 Recovery.RcvrCfg (恢复接收器配置) 期间通过关联 Lane 发送的值。字段为 HwInit。
   - **情况 B - Upstream Port，Crosslink Supported：0b**
@@ -12580,7 +12580,7 @@ Lane Equalization Control Register (通道均衡控制寄存器) 包含每通道
   - 属性：HwInit/RO（见描述）
 - **位 15**：RsvdP（保留）
   - 属性：RsvdP
-- **位 14:12**：Upstream Port 8.0 GT/s Receiver Preset Hint（上游端口 8.0 GT/s 接收器预设提示）— 该字段包含 8.0 GT/s Link Equalization 期间发送或接收的 Receiver Preset Hint 值。字段使用因情况而异：
+- **Bits 14:12**：Upstream Port 8.0 GT/s Receiver Preset Hint（上游端口 8.0 GT/s 接收器预设提示）— 该字段包含 8.0 GT/s Link Equalization 期间发送或接收的 Receiver Preset Hint 值。字段使用因情况而异：
   - **情况 A - Downstream Port，Crosslink Supported：任意**
     - 字段包含在 Recovery.RcvrCfg 期间通过关联 Lane 发送的值。字段为 HwInit。
   - **情况 B - Upstream Port，Crosslink Supported：0b**
@@ -12758,13 +12758,13 @@ Figure 7-75 details allocation of register fields in the Data Link Feature Exten
 
 （参见上方图 7-75 和表 7-63）
 
-- **位 15:0**：PCI Express Extended Capability ID（PCI Express 扩展能力 ID）— 该字段是由 PCI-SIG 定义的 ID 号，用于指示扩展能力的性质和格式。
+- **Bits 15:0**：PCI Express Extended Capability ID（PCI Express 扩展能力 ID）— 该字段是由 PCI-SIG 定义的 ID 号，用于指示扩展能力的性质和格式。
   - 数据链路特性的扩展能力 ID 为 0025h。
   - 属性：RO
-- **位 19:16**：Capability Version（能力版本）— 该字段是由 PCI-SIG 定义的版本号，用于指示所呈现的能力结构的版本。
+- **Bits 19:16**：Capability Version（能力版本）— 该字段是由 PCI-SIG 定义的版本号，用于指示所呈现的能力结构的版本。
   - 对于本规范版本必须为 1h。
   - 属性：RO
-- **位 31:20**：Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express 能力结构的偏移，若能力列表中没有其他项，则为 000h。
+- **Bits 31:20**：Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express 能力结构的偏移，若能力列表中没有其他项，则为 000h。
   - 对于在配置空间中实现的扩展能力，此偏移相对于 PCI 兼容配置空间的起始位置，因此必须始终为 000h（用于终止能力列表）或大于 0FFh。
   - 此偏移的低 2 位为保留位，必须实现为 00b，但软件必须屏蔽它们以允许将来使用这些位。
   - 属性：RO
@@ -12806,7 +12806,7 @@ When this Port sends a Data Link Feature DLLP, the Feature Support field in Symb
 
 § 图 7-76 详细说明了数据链路特性能力寄存器中寄存器字段的分配；§ 表 7-64 提供了相应的位定义。
 
-当此 Port 发送 Data Link Feature DLLP (数据链路特性 DLLP) 时，该 DLLP 的符号 1、2 和 3 中的 Feature Support (特性支持) 字段分别包含此寄存器的位 [22:16]、[15:8] 和 [7:0]（参见 § 图 3-14）。
+当此 Port 发送 Data Link Feature DLLP (数据链路特性 DLLP) 时，该 DLLP 的符号 1、2 和 3 中的 Feature Support (特性支持) 字段分别包含此寄存器的 Bits [22:16]、[15:8] 和 [7:0]（参见 § 图 3-14）。
 
 7.7.4.2 数据链路特性能力寄存器（偏移 04h）§
 
@@ -12860,7 +12860,7 @@ When this Port sends a Data Link Feature DLLP, the Feature Support field in Symb
 
 （参见上方图 7-76 和表 7-64）
 
-- **位 22:0**：Local Data Link Feature Supported（本地数据链路特性支持）— 该字段包含此 Port 发送 Data Link Feature DLLP 时使用的 Feature Supported 值（参见 § 图 3-14）。已定义的特性包括：
+- **Bits 22:0**：Local Data Link Feature Supported（本地数据链路特性支持）— 该字段包含此 Port 发送 Data Link Feature DLLP 时使用的 Feature Supported 值（参见 § 图 3-14）。已定义的特性包括：
   - **Local Scaled Flow Control Supported（本地支持缩放流控）— 数据链路特性**
     - 此位指示此 Port 支持 Scaled Flow Control Feature（缩放流控特性）（参见 § 3.4.2）。
   - **Local Immediate Readiness（本地立即就绪）— 数据链路参数**
@@ -12873,7 +12873,7 @@ When this Port sends a Data Link Feature DLLP, the Feature Support field in Symb
     - 此字段指示此 Port 对 L0p Exit Latency (L0p 退出延迟) 的了解程度。报告的值是 Port L0p 退出延迟和 Retimer L0p 退出延迟 中的较大值。widening the Link (扩宽链路) 实际所需的时间是 Local L0p 退出延迟和 Remote L0p 退出延迟 中的较大值。
     - Downstream Port 的 Retimer L0p 退出延迟应包括属于 "系统" 的 retimer。
     - Upstream Port 的 Retimer L0p 退出延迟应包括属于 "附加卡 (add-in card)" 的 retimer。
-    - 已定义的编码（位 22:8）如下：
+    - 已定义的编码（Bits 22:8）如下：
       - 000b：小于 1 μs
       - 001b：1 μs 至小于 2 μs
       - 010b：2 μs 至小于 4 μs
@@ -12887,7 +12887,7 @@ When this Port sends a Data Link Feature DLLP, the Feature Support field in Symb
     - 此字段在 Flit 模式下有意义。在非 Flit 模式下，此字段必须为零。
     - 该字段中的其他位为 RsvdP。
   - 属性：HwInit/RsvdP
-- **位 23:30**：RsvdP（保留）
+- **Bits 23:30**：RsvdP（保留）
   - 属性：RsvdP
 - **位 31**：Data Link Feature Exchange is Enabled（数据链路特性交换已使能）— 如果置位，则指示此 Port 将进入 DL_Feature negotiation (DL_Feature 协商) 状态（参见 § 3.2.1）。
   - 属性：HwInit
@@ -12935,7 +12935,7 @@ Figure 7-77 details allocation of register fields in the Data Link Feature Statu
 
 § 图 7-77 详细说明了数据链路特性状态寄存器中寄存器字段的分配；§ 表 7-65 提供了相应的位定义。
 
-- **位 22:0**：Remote Data Link Feature Supported（远端数据链路特性支持）— 这些位指示 Remote Port (远端端口) 支持相应的 Data Link Feature。即使此 Port 不支持相应的特性，这些位也会从 Data Link Feature DLLP 的 Feature Supported 字段中捕获所有信息。
+- **Bits 22:0**：Remote Data Link Feature Supported（远端数据链路特性支持）— 这些位指示 Remote Port (远端端口) 支持相应的 Data Link Feature。即使此 Port 不支持相应的特性，这些位也会从 Data Link Feature DLLP 的 Feature Supported 字段中捕获所有信息。
   - 在进入 DL_Inactive 状态时，此字段被清除（参见 § 3.2.1）。
   - 当前定义的特性包括：
     - **Remote Scaled Flow Control Supported（远端支持缩放流控）— 数据链路特性**
@@ -12943,7 +12943,7 @@ Figure 7-77 details allocation of register fields in the Data Link Feature Statu
     - **Remote Immediate Readiness（远端立即就绪）— 数据链路参数**
       - 此位指示 Remote Port 中的所有非 Virtual Function 都设置了 Immediate Readiness（立即就绪）（参见 § 7.5.1.1.4）。
   - 属性：RO
-- **位 23:30**：RsvdZ（保留为零）
+- **Bits 23:30**：RsvdZ（保留为零）
   - 属性：RsvdZ
 - **位 31**：Remote Data Link Feature Supported Valid（远端数据链路特性支持有效）
 
@@ -14006,9 +14006,9 @@ Bit layout of the register:
 
 该寄存器的位布局如下：
 
-- 位 15:0 — PCI Express 扩展能力 ID（002Ah）
-- 位 19:16 — 能力版本
-- 位 31:20 — 下一能力偏移
+- Bits 15:0 — PCI Express 扩展能力 ID（002Ah）
+- Bits 19:16 — 能力版本
+- Bits 31:20 — 下一能力偏移
 
 </td>
 </tr>
@@ -14077,12 +14077,12 @@ Bit layout of the register:
 
 - 位 0 — Equalization Bypass to Highest NRZ Rate Supported（支持旁路均衡直接跳至最高 NRZ 速率）
 - 位 1 — No Equalization Needed Supported（支持不需要均衡）
-- 位 7:2 — RsvdP（保留）
+- Bits 7:2 — RsvdP（保留）
 - 位 8 — Modified TS Usage Mode 0 Supported - PCI Express（支持 Modified TS 使用模式 0 - PCI Express）
 - 位 9 — Modified TS Usage Mode 1 Supported - Training Set Message（支持 Modified TS 使用模式 1 - 训练集消息）
 - 位 10 — Modified TS Usage Mode 2 Supported - Alternate Protocol（支持 Modified TS 使用模式 2 - 备用协议）
-- 位 15:11 — Modified TS Reserved Usage Modes（Modified TS 保留使用模式）
-- 位 31:16 — RsvdP（保留）
+- Bits 15:11 — Modified TS Reserved Usage Modes（Modified TS 保留使用模式）
+- Bits 31:16 — RsvdP（保留）
 
 </td>
 </tr>
@@ -14154,9 +14154,9 @@ Bit layout of the register:
 
 - 位 0 — Equalization Bypass to Highest NRZ Rate Disable（禁用旁路均衡直接跳至最高 NRZ 速率）
 - 位 1 — No Equalization Needed Disable（禁用不需要均衡）
-- 位 7:2 — RsvdP（保留）
-- 位 10:8 — Modified TS Usage Mode Selected（已选 Modified TS 使用模式）
-- 位 31:11 — RsvdP（保留）
+- Bits 7:2 — RsvdP（保留）
+- Bits 10:8 — Modified TS Usage Mode Selected（已选 Modified TS 使用模式）
+- Bits 31:11 — RsvdP（保留）
 
 </td>
 </tr>
@@ -14232,11 +14232,11 @@ Bit layout of the register:
 - 位 3 — Equalization 32.0 GT/s Phase 3 Successful（32.0 GT/s 均衡阶段 3 成功）
 - 位 4 — Link Equalization Request 32.0 GT/s（32.0 GT/s 链路均衡请求）
 - 位 5 — Modified TS Received（已接收 Modified TS）
-- 位 7:6 — Received Enhanced Link Behavior Control（已接收增强链路行为控制）
+- Bits 7:6 — Received Enhanced Link Behavior Control（已接收增强链路行为控制）
 - 位 8 — Transmitter Precoding On（发送器预编码开启）
 - 位 9 — Transmitter Precode Request（发送器预编码请求）
 - 位 10 — No Equalization Needed Received（已接收不需要均衡）
-- 位 31:11 — RsvdZ（保留）
+- Bits 31:11 — RsvdZ（保留）
 
 </td>
 </tr>
@@ -14320,9 +14320,9 @@ Bit layout of the register:
 
 该寄存器的位布局如下：
 
-- 位 2:0 — Received Modified TS Usage Mode（已接收 Modified TS 使用模式）
-- 位 15:3 — Received Modified TS Information 1（已接收 Modified TS 信息 1）
-- 位 31:16 — Received Modified TS Vendor ID（已接收 Modified TS 厂商 ID）
+- Bits 2:0 — Received Modified TS Usage Mode（已接收 Modified TS 使用模式）
+- Bits 15:3 — Received Modified TS Information 1（已接收 Modified TS 信息 1）
+- Bits 31:16 — Received Modified TS Vendor ID（已接收 Modified TS 厂商 ID）
 
 </td>
 </tr>
@@ -14346,8 +14346,8 @@ Bit layout of the register:
 | 位位置 | 描述 | 属性 |
 |--------|------|------|
 | 2:0 | **Received Modified TS Usage Mode（已接收 Modified TS 使用模式）** - 如果 Modified TS Received 置位,此字段包含 Modified TS1/TS2 Ordered Set 中的 Modified TS Usage 字段（参见第 4.2.7.3.6 节）。如果 Modified TS Received 清零,此字段为 000b。允许将此字段中未使用的位硬连线为 0b。如果仅支持 PCI Express（使用模式 0）,则允许将此字段硬连线为 000b。默认值为 000b。 | RO |
-| 15:3 | **Received Modified TS Information 1（已接收 Modified TS 信息 1）** - 如果 Modified TS Received 置位,此字段包含 Modified TS1/TS2 Ordered Set 中的 Modified TS Information 1 字段（参见第 4.2.7.3.6 节）。如果 Modified TS Received 清零,此字段为 0 0000 0000 0000b。位 15:8 包含 Symbol 9 的值。位 7:3 包含 Symbol 8 的位 7:3。如果仅支持 PCI Express（使用模式 0）,则允许将此字段硬连线为 0 0000 0000 0000b。默认值为 0 0000 0000 0000b。 | RO |
-| 31:16 | **Received Modified TS Vendor ID（已接收 Modified TS 厂商 ID）** - 如果 Modified TS Received 置位,此字段包含已接收的 Modified TS1/TS2 Ordered Set 中的 Training Set Message Vendor ID 或 Alternate Protocol Vendor ID 字段（参见第 4.2.7.3.6 节）。如果 Modified TS Received 清零,此字段为 0000h。位 15:8 包含 Symbol 11 的值。位 7:0 包含 Symbol 10 的值。如果仅支持 PCI Express（使用模式 0）,则允许将此字段硬连线为 0000h。默认值为 0000h。 | RO |
+| 15:3 | **Received Modified TS Information 1（已接收 Modified TS 信息 1）** - 如果 Modified TS Received 置位,此字段包含 Modified TS1/TS2 Ordered Set 中的 Modified TS Information 1 字段（参见第 4.2.7.3.6 节）。如果 Modified TS Received 清零,此字段为 0 0000 0000 0000b。Bits 15:8 包含 Symbol 9 的值。Bits 7:3 包含 Symbol 8 的 Bits 7:3。如果仅支持 PCI Express（使用模式 0）,则允许将此字段硬连线为 0 0000 0000 0000b。默认值为 0 0000 0000 0000b。 | RO |
+| 31:16 | **Received Modified TS Vendor ID（已接收 Modified TS 厂商 ID）** - 如果 Modified TS Received 置位,此字段包含已接收的 Modified TS1/TS2 Ordered Set 中的 Training Set Message Vendor ID 或 Alternate Protocol Vendor ID 字段（参见第 4.2.7.3.6 节）。如果 Modified TS Received 清零,此字段为 0000h。Bits 15:8 包含 Symbol 11 的值。Bits 7:0 包含 Symbol 10 的值。如果仅支持 PCI Express（使用模式 0）,则允许将此字段硬连线为 0000h。默认值为 0000h。 | RO |
 
 ---
 
@@ -14398,9 +14398,9 @@ Alternate Protocol Negotiation Status encodings:
 
 该寄存器的位布局如下：
 
-- 位 23:0 — Received Modified TS Information 2（已接收 Modified TS 信息 2）
-- 位 25:24 — Alternate Protocol Negotiation Status（备用协议协商状态）
-- 位 31:26 — RsvdP（保留）
+- Bits 23:0 — Received Modified TS Information 2（已接收 Modified TS 信息 2）
+- Bits 25:24 — Alternate Protocol Negotiation Status（备用协议协商状态）
+- Bits 31:26 — RsvdP（保留）
 
 Alternate Protocol Negotiation Status 编码：
 - 00b — 不支持备用协议协商
@@ -14430,7 +14430,7 @@ Alternate Protocol Negotiation Status 编码：
 
 | 位位置 | 描述 | 属性 |
 |--------|------|------|
-| 23:0 | **Received Modified TS Information 2（已接收 Modified TS 信息 2）** - 如果 Modified TS Received 置位,此字段包含已接收的 Modified TS1/TS2 Ordered Set 中的 Modified TS Information 2 字段（参见第 4.2.7.3.6 节）。如果 Modified TS Received 清零,此字段为 00 0000h。位 23:16 包含 Symbol 14 的值。位 16:8 包含 Symbol 13 的值。位 7:0 包含 Symbol 12 的值。如果仅支持 PCI Express（使用模式 0）,则允许将此字段硬连线为 00 0000h。默认值为 00 0000h。 | RO |
+| 23:0 | **Received Modified TS Information 2（已接收 Modified TS 信息 2）** - 如果 Modified TS Received 置位,此字段包含已接收的 Modified TS1/TS2 Ordered Set 中的 Modified TS Information 2 字段（参见第 4.2.7.3.6 节）。如果 Modified TS Received 清零,此字段为 00 0000h。Bits 23:16 包含 Symbol 14 的值。Bits 16:8 包含 Symbol 13 的值。Bits 7:0 包含 Symbol 12 的值。如果仅支持 PCI Express（使用模式 0）,则允许将此字段硬连线为 00 0000h。默认值为 00 0000h。 | RO |
 | 25:24 | **Alternate Protocol Negotiation Status（备用协议协商状态）** - 指示备用协议协商的状态。编码如下：00b = 不支持备用协议协商；01b = 备用协议协商已禁用；10b = 备用协议协商失败——尝试进行备用协议协商,但未找到链路两端都支持的协议；11b = 备用协议协商成功——备用协议协商找到一个或多个链路两端都支持的协议,且下游端口已选择其中一个协议使用。如果为 11b,则备用协议协商已成功完成。如果不是 11b,则备用协议协商未成功完成。如果 Modified TS Usage Mode 1 Supported - Training Set Message 和 Modified TS Usage Mode 2 Supported - Alternate Protocol 都清零,则允许将此字段硬连线为 00b。如果 Modified TS Usage Mode 2 Supported - Alternate Protocol 清零,则此字段硬连线为 00b。如果 Modified TS Usage Mode 2 Supported - Alternate Protocol 置位且 Modified TS Usage Mode Selected 不等于 2,则此字段必须返回非 11b 值。此字段在进入 Detect 时清零为 00b。默认值为 00b。 | RO |
 
 ---
@@ -14474,9 +14474,9 @@ Bit layout of the register:
 
 该寄存器的位布局如下：
 
-- 位 2:0 — Transmitted Modified TS Usage Mode（已发送 Modified TS 使用模式）
-- 位 15:3 — Transmitted Modified TS Information 1（已发送 Modified TS 信息 1）
-- 位 31:16 — Transmitted Modified TS Vendor ID（已发送 Modified TS 厂商 ID）
+- Bits 2:0 — Transmitted Modified TS Usage Mode（已发送 Modified TS 使用模式）
+- Bits 15:3 — Transmitted Modified TS Information 1（已发送 Modified TS 信息 1）
+- Bits 31:16 — Transmitted Modified TS Vendor ID（已发送 Modified TS 厂商 ID）
 
 </td>
 </tr>
@@ -14500,8 +14500,8 @@ Bit layout of the register:
 | 位位置 | 描述 | 属性 |
 |--------|------|------|
 | 2:0 | **Transmitted Modified TS Usage Mode（已发送 Modified TS 使用模式）** - 如果 Modified TS Received 置位,此字段包含 Configuration.Complete LTSSM 状态期间发送的 Modified TS2 Ordered Set 中的 Modified TS Usage 字段（参见第 4.2.7.3.6 节）。允许将此字段中未使用的位硬连线为 0b。如果仅支持 PCI Express（使用模式 0）,则允许将此字段硬连线为 000b。默认值为 000b。 | RO |
-| 15:3 | **Transmitted Modified TS Information 1（已发送 Modified TS 信息 1）** - 如果 Modified TS Received 置位,此字段包含 Configuration.Complete LTSSM 状态期间发送的 Modified TS2 Ordered Set 中的 Modified TS Information 1 字段（参见第 4.2.7.3.6 节）。位 15:8 包含 Symbol 9 的值。位 7:3 包含 Symbol 8 的位 7:3。如果仅支持 PCI Express（使用模式 0）,则允许将此字段硬连线为 0 0000 0000 0000b。默认值为 0 0000 0000 0000b。 | RO |
-| 31:16 | **Transmitted Modified TS Vendor ID（已发送 Modified TS 厂商 ID）** - 如果 Modified TS Received 置位,此字段包含 Configuration.Complete LTSSM 状态期间发送的 Modified TS2 Ordered Set 中的 Training Set Message Vendor ID 或 Alternate Protocol Vendor ID 字段（参见第 4.2.7.3.6 节）。位 15:8 包含 Symbol 11 的值。位 7:0 包含 Symbol 10 的值。如果仅支持 PCI Express（使用模式 0）,则允许将此字段硬连线为 0000h。默认值为 0000h。 | RO |
+| 15:3 | **Transmitted Modified TS Information 1（已发送 Modified TS 信息 1）** - 如果 Modified TS Received 置位,此字段包含 Configuration.Complete LTSSM 状态期间发送的 Modified TS2 Ordered Set 中的 Modified TS Information 1 字段（参见第 4.2.7.3.6 节）。Bits 15:8 包含 Symbol 9 的值。Bits 7:3 包含 Symbol 8 的 Bits 7:3。如果仅支持 PCI Express（使用模式 0）,则允许将此字段硬连线为 0 0000 0000 0000b。默认值为 0 0000 0000 0000b。 | RO |
+| 31:16 | **Transmitted Modified TS Vendor ID（已发送 Modified TS 厂商 ID）** - 如果 Modified TS Received 置位,此字段包含 Configuration.Complete LTSSM 状态期间发送的 Modified TS2 Ordered Set 中的 Training Set Message Vendor ID 或 Alternate Protocol Vendor ID 字段（参见第 4.2.7.3.6 节）。Bits 15:8 包含 Symbol 11 的值。Bits 7:0 包含 Symbol 10 的值。如果仅支持 PCI Express（使用模式 0）,则允许将此字段硬连线为 0000h。默认值为 0000h。 | RO |
 
 ---
 
@@ -14554,9 +14554,9 @@ The 32.0 GT/s Equalization Control register consists of control fields required 
 
 该寄存器的位布局如下：
 
-- 位 23:0 — Transmitted Modified TS Information 2（已发送 Modified TS 信息 2）
-- 位 25:24 — Alternate Protocol Negotiation Status（备用协议协商状态）
-- 位 31:26 — RsvdP（保留）
+- Bits 23:0 — Transmitted Modified TS Information 2（已发送 Modified TS 信息 2）
+- Bits 25:24 — Alternate Protocol Negotiation Status（备用协议协商状态）
+- Bits 31:26 — RsvdP（保留）
 
 Alternate Protocol Negotiation Status 编码：
 - 00b — 不支持备用协议协商
@@ -14588,7 +14588,7 @@ Alternate Protocol Negotiation Status 编码：
 
 | 位位置 | 描述 | 属性 |
 |--------|------|------|
-| 23:0 | **Transmitted Modified TS Information 2（已发送 Modified TS 信息 2）** - 如果 Modified TS Received 置位,此字段包含 Configuration.Complete LTSSM 状态期间发送的 Modified TS2 Ordered Set 中的 Modified TS Information 2 字段（参见第 4.2.7.3.6 节）。位 23:16 包含 Symbol 14 的值。位 16:8 包含 Symbol 13 的值。位 7:0 包含 Symbol 12 的值。如果仅支持 PCI Express（使用模式 0）,则允许将此字段硬连线为 00 0000h。默认值为 00 0000h。 | RO |
+| 23:0 | **Transmitted Modified TS Information 2（已发送 Modified TS 信息 2）** - 如果 Modified TS Received 置位,此字段包含 Configuration.Complete LTSSM 状态期间发送的 Modified TS2 Ordered Set 中的 Modified TS Information 2 字段（参见第 4.2.7.3.6 节）。Bits 23:16 包含 Symbol 14 的值。Bits 16:8 包含 Symbol 13 的值。Bits 7:0 包含 Symbol 12 的值。如果仅支持 PCI Express（使用模式 0）,则允许将此字段硬连线为 00 0000h。默认值为 00 0000h。 | RO |
 | 25:24 | **Alternate Protocol Negotiation Status（备用协议协商状态）** - 指示备用协议协商的状态。编码如下：00b = 不支持备用协议协商；01b = 备用协议协商已禁用；10b = 备用协议协商失败——尝试进行备用协议协商,但未找到链路两端都支持的协议；11b = 备用协议协商成功——备用协议协商找到一个或多个链路两端都支持的协议,且下游端口已选择其中一个协议使用。如果为 11b,则备用协议协商已成功完成。如果不是 11b,则备用协议协商未成功完成。如果 Modified TS Usage Mode 1 Supported - Training Set Message 和 Modified TS Usage Mode 2 Supported - Alternate Protocol 都清零,则允许将此字段硬连线为 00b。如果 Modified TS Usage Mode 2 Supported - Alternate Protocol 清零,则此字段硬连线为 00b。如果 Modified TS Usage Mode 2 Supported - Alternate Protocol 置位且 Modified TS Usage Mode Selected 不等于 2,则此字段必须返回非 11b 值。此字段在 Detect 时清零为 00b。默认值为 00b。 | RO |
 
 ---
@@ -15661,9 +15661,9 @@ Flit 错误计数寄存器是链路级（Link wide）寄存器，用于统计工
 
 - 位 0：Flit 错误计数器使能（Flit Error Counter Enable）
 - 位 1：Flit 错误计数器中断使能（Flit Error Counter Interrupt Enable）
-- 位 3:2：统计事件（Events to count）
-- 位 11:4：按错误计数触发的触发事件（Trigger Event on Error Count）
-- 位 15:12：RsvdP
+- Bits 3:2：统计事件（Events to count）
+- Bits 11:4：按错误计数触发的触发事件（Trigger Event on Error Count）
+- Bits 15:12：RsvdP
 
 **表 7-94 Flit 错误计数控制寄存器**
 
@@ -15764,10 +15764,10 @@ Flit 错误计数寄存器是链路级（Link wide）寄存器，用于统计工
 > <img src="figures/chapter_07/fig_1143_1_tight.png" width="700">
 
 
-- 位 2:0：错误计数器启动时的链路宽度（Link Width when Error Counter Started）
+- Bits 2:0：错误计数器启动时的链路宽度（Link Width when Error Counter Started）
 - 位 3：基于触发事件计数已生成中断（Interrupt Generated based on Trigger Event Count）
-- 位 7:4：RsvdZ
-- 位 15:8：Flit 错误计数器（Flit Error Counter）
+- Bits 7:4：RsvdZ
+- Bits 15:8：Flit 错误计数器（Flit Error Counter）
 
 **表 7-95 Flit 错误计数状态寄存器**
 
@@ -15878,9 +15878,9 @@ FBER 测量控制寄存器使能直接的 FBER（Flit Bit Error Rate，Flit 误�
 
 - 位 0：FBER 测量使能（FBER Measurement Enable）
 - 位 1：清除 FBER 计数器（Clear FBER Counters）
-- 位 3:2：上报的逐通道错误粒度（Granularity of per-Lane Error reported）
+- Bits 3:2：上报的逐通道错误粒度（Granularity of per-Lane Error reported）
 - 位 4：上报最长突发还是首次突发（Report Longest Burst vs First Burst）
-- 位 31:5：RsvdP
+- Bits 31:5：RsvdP
 
 **表 7-96 FBER 测量控制寄存器**
 
@@ -15973,7 +15973,7 @@ FBER 测量状态 1 寄存器至 FBER 测量状态 10 寄存器包含一组逐�
 > <img src="figures/chapter_07/fig_1145_1_tight.png" width="700">
 
 
-- 位 31:0：Flit 计数器（Flit Counter）
+- Bits 31:0：Flit 计数器（Flit Counter）
 
 **表 7-97 FBER 测量状态 1 寄存器**
 
@@ -15986,8 +15986,8 @@ FBER 测量状态 1 寄存器至 FBER 测量状态 10 寄存器包含一组逐�
 > <img src="figures/chapter_07/fig_1145_2_tight.png" width="700">
 
 
-- 位 15:0：无效 Flit 计数器（Invalid Flit Counter）
-- 位 31:16：RsvdZ
+- Bits 15:0：无效 Flit 计数器（Invalid Flit Counter）
+- Bits 31:16：RsvdZ
 
 </td>
 </tr>
@@ -16076,8 +16076,8 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 
 **图 7-112 FBER 测量状态 3 寄存器**
 
-- 位 15:0：通道 #0 可纠正计数器（Lane #0 Correctable Counter）
-- 位 31:16：通道 #1 可纠正计数器（Lane #1 Correctable Counter）
+- Bits 15:0：通道 #0 可纠正计数器（Lane #0 Correctable Counter）
+- Bits 31:16：通道 #1 可纠正计数器（Lane #1 Correctable Counter）
 
 **表 7-99 FBER 测量状态 3 寄存器**
 
@@ -16164,8 +16164,8 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 
 **图 7-113 FBER 测量状态 4 寄存器**
 
-- 位 15:0：通道 #2 可纠正计数器（Lane #2 Correctable Counter）
-- 位 31:16：通道 #3 可纠正计数器（Lane #3 Correctable Counter）
+- Bits 15:0：通道 #2 可纠正计数器（Lane #2 Correctable Counter）
+- Bits 31:16：通道 #3 可纠正计数器（Lane #3 Correctable Counter）
 
 **表 7-100 FBER 测量状态 4 寄存器**
 
@@ -16176,8 +16176,8 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 
 **图 7-114 FBER 测量状态 5 寄存器**
 
-- 位 15:0：通道 #4 可纠正计数器（Lane #4 Correctable Counter）
-- 位 31:16：通道 #5 可纠正计数器（Lane #5 Correctable Counter）
+- Bits 15:0：通道 #4 可纠正计数器（Lane #4 Correctable Counter）
+- Bits 31:16：通道 #5 可纠正计数器（Lane #5 Correctable Counter）
 
 </td>
 </tr>
@@ -16226,8 +16226,8 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 
 **图 7-115 FBER 测量状态 6 寄存器**
 
-- 位 15:0：通道 #6 可纠正计数器（Lane #6 Correctable Counter）
-- 位 31:16：通道 #7 可纠正计数器（Lane #7 Correctable Counter）
+- Bits 15:0：通道 #6 可纠正计数器（Lane #6 Correctable Counter）
+- Bits 31:16：通道 #7 可纠正计数器（Lane #7 Correctable Counter）
 
 </td>
 </tr>
@@ -16282,8 +16282,8 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 > <img src="figures/chapter_07/fig_1147_1_tight.png" width="700">
 
 
-- 位 15:0：通道 #8 可纠正计数器（Lane #8 Correctable Counter）
-- 位 31:16：通道 #9 可纠正计数器（Lane #9 Correctable Counter）
+- Bits 15:0：通道 #8 可纠正计数器（Lane #8 Correctable Counter）
+- Bits 31:16：通道 #9 可纠正计数器（Lane #9 Correctable Counter）
 
 </td>
 </tr>
@@ -16332,8 +16332,8 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 
 **图 7-117 FBER 测量状态 8 寄存器**
 
-- 位 15:0：通道 #10 可纠正计数器（Lane #10 Correctable Counter）
-- 位 31:16：通道 #11 可纠正计数器（Lane #11 Correctable Counter）
+- Bits 15:0：通道 #10 可纠正计数器（Lane #10 Correctable Counter）
+- Bits 31:16：通道 #11 可纠正计数器（Lane #11 Correctable Counter）
 
 </td>
 </tr>
@@ -16395,8 +16395,8 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 > <img src="figures/chapter_07/fig_1148_1_tight.png" width="700">
 
 
-- 位 15:0：通道 #12 可纠正计数器（Lane #12 Correctable Counter）
-- 位 31:16：通道 #13 可纠正计数器（Lane #13 Correctable Counter）
+- Bits 15:0：通道 #12 可纠正计数器（Lane #12 Correctable Counter）
+- Bits 31:16：通道 #13 可纠正计数器（Lane #13 Correctable Counter）
 
 **表 7-105 FBER 测量状态 9 寄存器**
 
@@ -16448,8 +16448,8 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 
 **图 7-119 FBER 测量状态 10 寄存器**
 
-- 位 15:0：通道 #14 可纠正计数器（Lane #14 Correctable Counter）
-- 位 31:16：通道 #15 可纠正计数器（Lane #15 Correctable Counter）
+- Bits 15:0：通道 #14 可纠正计数器（Lane #14 Correctable Counter）
+- Bits 31:16：通道 #15 可纠正计数器（Lane #15 Correctable Counter）
 
 **表 7-106 FBER 测量状态 10 寄存器**
 
@@ -17586,11 +17586,11 @@ The Margining Lane Status register consists of status fields required for per-La
 > **图 7-129.** 通道 N：Margining 控制寄存器条目
 >
 > 位字段：
-> - 位 [2:0] 接收器编号（Receiver Number）
-> - 位 [5:3] Margin 类型（Margin Type）
+> - Bits [2:0] 接收器编号（Receiver Number）
+> - Bits [5:3] Margin 类型（Margin Type）
 > - 位 [6] 使用模式（Usage Model）
 > - 位 [7] RsvdP
-> - 位 [15:8] Margin 负载（Margin Payload）
+> - Bits [15:8] Margin 负载（Margin Payload）
 
 **表 7-114. 通道 N：Margining 控制寄存器条目**
 
@@ -17660,11 +17660,11 @@ Margining Lane Status 寄存器由 per-Lane margining 所需的状态字段组�
 > **图 7-130.** 通道 N：Margining Lane 状态寄存器条目
 >
 > 位字段：
-> - 位 [2:0] 接收器编号状态（Receiver Number Status）
-> - 位 [5:3] Margin 类型状态（Margin Type Status）
+> - Bits [2:0] 接收器编号状态（Receiver Number Status）
+> - Bits [5:3] Margin 类型状态（Margin Type Status）
 > - 位 [6] 使用模式状态（Usage Model Status）
 > - 位 [7] RsvdP
-> - 位 [15:8] Margin 负载状态（Margin Payload Status）
+> - Bits [15:8] Margin 负载状态（Margin Payload Status）
 
 **表 7-115. 通道 N：Margining Lane 状态寄存器条目**
 
@@ -17788,9 +17788,9 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 > **图 7-132.** ACS 扩展能力头
 >
 > 位字段：
-> - 位 [15:0] PCI Express 扩展能力 ID = 000Dh
-> - 位 [19:16] 能力版本（Capability Version）
-> - 位 [31:20] 下一能力偏移（Next Capability Offset）
+> - Bits [15:0] PCI Express 扩展能力 ID = 000Dh
+> - Bits [19:16] 能力版本（Capability Version）
+> - Bits [31:20] 下一能力偏移（Next Capability Offset）
 
 **表 7-116. ACS 扩展能力头**
 
@@ -17869,7 +17869,7 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 > - 位 [5] ACS P2P Egress Control
 > - 位 [6] ACS 直传 P2P（ACS Direct Translated P2P）
 > - 位 [7] ACS 增强能力（ACS Enhanced Capability）
-> - 位 [15:8] Egress Control Vector 大小（Egress Control Vector Size）
+> - Bits [15:8] Egress Control Vector 大小（Egress Control Vector Size）
 
 **表 7-117. ACS 能力寄存器**
 
@@ -17993,10 +17993,10 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 > - 位 [5] ACS P2P Egress Control 使能（ACS P2P Egress Control Enable）
 > - 位 [6] ACS 直传 P2P 使能（ACS Direct Translated P2P Enable）
 > - 位 [7] ACS I/O 请求阻塞使能（ACS I/O Request Blocking Enable）
-> - 位 [9:8] ACS DSP 内存目标访问控制（ACS DSP Memory Target Access Control）
-> - 位 [11:10] ACS USP 内存目标访问控制（ACS USP Memory Target Access Control）
+> - Bits [9:8] ACS DSP 内存目标访问控制（ACS DSP Memory Target Access Control）
+> - Bits [11:10] ACS USP 内存目标访问控制（ACS USP Memory Target Access Control）
 > - 位 [12] ACS 未声明请求重定向控制（ACS Unclaimed Request Redirect Control）
-> - 位 [15:13] RsvdP
+> - Bits [15:13] RsvdP
 
 **表 7-118. ACS 控制寄存器**
 
@@ -18182,7 +18182,7 @@ The following examples illustrate how the vector might be configured:
 > **图 7-135.** Egress Control Vector 寄存器
 >
 > 位字段：
-> - 位 [31:0] Egress Control Vector
+> - Bits [31:0] Egress Control Vector
 
 **表 7-119. Egress Control Vector 寄存器**
 
@@ -18487,7 +18487,7 @@ Refer to § 7.8.1.1 for the description of this register.
 
 | 位位置 | 寄存器描述 | 属性 |
 |---|---|---|
-| 0 | Extended Power Budgeting Enable(扩展功耗预算使能) — 若置位，允许功耗预算在 Power Budgeting Data Register 的位 31:21 中返回非零值。若清零，则对于 Power Budgeting Data Select Register 的所有值，这些位必须全部返回零。若置位，则允许 Power Budgeting Sense Detect Register 返回非零值;若清零，则该寄存器必须返回全零。当 Extended Power Budgeting Supported 清零时，该位硬连线为 0b。默认值为零。 | RW |
+| 0 | Extended Power Budgeting Enable(扩展功耗预算使能) — 若置位，允许功耗预算在 Power Budgeting Data Register 的 Bits 31:21 中返回非零值。若清零，则对于 Power Budgeting Data Select Register 的所有值，这些位必须全部返回零。若置位，则允许 Power Budgeting Sense Detect Register 返回非零值;若清零，则该寄存器必须返回全零。当 Extended Power Budgeting Supported 清零时，该位硬连线为 0b。默认值为零。 | RW |
 | 1 | Power Limit Enable(功率限制使能) — 若置位,Power Limit PM Sub State 字段才有意义。该字段在启用 Power Limit Supported 的编号最小的 Function 中的值适用于设备的所有 Function。若存在，该位在其他 Function 中的值会被硬件忽略。当 Power Limit Supported 清零时，该位允许硬连线为零。建议系统软件/固件在所有 Function 中将该字段配置为相同的值。这样可以为设备驱动程序提供一种标准机制来理解其 Function 的电源配置。默认值为零。 | RWS/RsvdP |
 | 4:2 | Power Limit PM Sub State(功率限制 PM 子状态) — 若 Power Limit Enable 置位，则该字段与 Out of Band Power Limit Enable 和 Out of Band Power Limit PM Sub State 字段一起指示设备所使用的 PM Sub State(电源管理子状态)。该字段在启用 Power Limit Supported 的编号最小的 Function 中的值适用于设备的所有 Function。若存在，该字段在其他 Function 中的值会被硬件忽略。当 Power Limit Supported 清零时，该字段允许硬连线为零。建议系统软件/固件在所有 Function 中将该字段配置为相同的值。这样可以为设备驱动程序提供一种标准机制来理解其 Function 的电源配置。默认值为零。 | RWS/RsvdP |
 | 5 | Out of Band Power Limit Enable(带外功率限制使能) — 若置位,Out of Band Power Limit PM Sub State 字段才有意义。HwInit/RsvdP。当该字段存在时，设备的所有 Function 必须包含相同的值。当 Power Limit Supported 清零时，该位允许硬连线为零。允许该字段在 Function 配置就绪(Configuration Ready)之后被修改。例如，这可能发生在该字段通过 PCIe 上的 MCTP 进行配置的情况下。延迟访问该字段直到该字段有意义的机制不在本规范的范围之内(例如，使用 SFI 机制或使用 _DSM 调用授予系统软件对这些字段的访问权限)。默认值为零。 | HwInit/RsvdP |
@@ -18577,10 +18577,10 @@ If a device implements Emergency Power Reduction State, it must report Power Bud
 
 该只读寄存器返回由 Power Budgeting Data Select Register 选择的功耗预算数据 DWORD。功耗预算数据的每个 DWORD 描述设备在特定工作条件下的功率使用情况。不同工作条件下的功耗预算数据不需要按任何特定顺序返回，只要递增 Power Budgeting Data Select Register 就会返回不同工作条件下的信息即可。如果 Power Budgeting Data Select Register 包含的值大于或等于设备提供功率信息的工作条件数，则该寄存器必须返回全零。该寄存器的默认值未定义。§ 图 7-139 详细说明了 Power Budgeting Data Register 中各寄存器字段的分配;§ 表 7-122 给出了相应的位定义。
 
-在早期版本的规范中，该寄存器的位 31:21 是 RsvdP。为确保这些位的新用途不会混淆现有软件:
+在早期版本的规范中，该寄存器的 Bits 31:21 是 RsvdP。为确保这些位的新用途不会混淆现有软件:
 
 - 当 Extended Power Budgeting Enable 清零(默认值)时，扩展功耗预算条目被隐藏。当 Extended Power Budgeting Enable 清零且 Power Budgeting Data Select 选择了一个扩展功耗预算条目时,Data 寄存器必须返回 0000 0000h。
-- 扩展功耗预算数据条目必须位于非扩展功耗预算数据条目之后(即，所有位 31:21 为零的条目必须使用比任何位 31:21 非零的条目更小的 Power Budgeting Data Select 值)。
+- 扩展功耗预算数据条目必须位于非扩展功耗预算数据条目之后(即，所有 Bits 31:21 为零的条目必须使用比任何 Bits 31:21 非零的条目更小的 Power Budgeting Data Select 值)。
 
 Base Power(基础功率)和 Data Scale(数据比例)字段描述设备的功率使用情况;Power Rail(电源轨)、Type(类型)、PM State(PM 状态)和 PM Sub State(PM 子状态)字段描述设备具有此功率使用情况的条件。
 
@@ -18606,7 +18606,7 @@ Base Power(基础功率)和 Data Scale(数据比例)字段描述设备的功率�
 | 21 | Data Scale[2](数据比例[2]) — Data Scale 字段的高位。详情请参阅 Data Scale[1:0]。如果 Extended Power Budgeting Enable 清零，则该位必须为零。 | RO |
 | 24:22 | Connector Number(连接器编号) — 在一块附加卡(包括边缘连接器)上最多支持 8 个供电连接器。该字段指示与该条目相关联的电源连接器。如果 Power Budgeting Sense Detect Supported 置位，则必须为附加卡支持的每个电源连接器实现此字段的一个实例。Connector Number 表示单个物理连接器，在附加卡上是全局的。在多功能设备中,Connector Number 必须在所有 Function 之间保持一致。当单个连接器包含多个电源轨或单个连接器与多个连接器类型(例如，类型 00 0110b 和 00 0111b)相关联时,Connector Number 必须匹配。Connector Number 值以及 Connector Number 到物理位置的映射不在本规范的范围内。对于规定连接器放置位置的外形规格规范，建议这些规范根据放置规则定义连接器编号。如果 Extended Power Budgeting Enable 清零，则该字段必须为零。如果 Extended Power Budgeting Present 清零，则软件必须忽略该字段的值。 | RO |
 | 30:25 | Connector Type(连接器类型) — 指示连接器类型。如果 Power Budgeting Sense Detect Supported 置位，则必须为适配器支持的每个电源连接器实现此字段的一个实例。值为:00 0000b:外形规格定义的边缘连接器;00 0001b:由系统提供的非连接器电源(例如，焊接固定);00 0010b:由选件卡提供的非连接器电源(例如，电池);00 0011b:不由系统或选件卡提供的非连接器电源(例如，由外部机箱提供的电源);00 0100b:CEM 2x3 连接器;00 0101b:具有 2x3 电缆或 2x4 电缆的 CEM 2x4 连接器(见下文);00 0110b:具有 2x3 电缆的 CEM 2x4 连接器(见下文);00 0111b:具有 2x4 电缆的 CEM 2x4 连接器(见下文);00 1000b:CEM 12VHPWR 连接器，电缆的 Sense0 和 Sense1 均悬空;00 1001b:CEM 12VHPWR 连接器，电缆的 Sense0 接地且 Sense1 悬空;00 1010b:CEM 12VHPWR 连接器,Sense0 悬空且 Sense1 接地;00 1011b:CEM 12VHPWR 连接器,Sense0 和 Sense1 均接地;00 1100b:CEM 48VHPWR 连接器，电缆的 Sense0 和 Sense1 均悬空;00 1101b:CEM 48VHPWR 连接器，电缆的 Sense0 接地且 Sense1 悬空;00 1110b:CEM 48VHPWR 连接器，电缆的 Sense0 悬空且 Sense1 接地;00 1111b:CEM 48VHPWR 连接器，电缆的 Sense0 和 Sense1 均接地;01 0000b:CEM 12V-2x6:存在 150 W 或更高功率的电缆;01 0001b:CEM 12V-2x6:存在 300 W 或更高功率的电缆;01 0010b:CEM 12V-2x6:存在 450 W 或更高功率的电缆;01 0011b:CEM 12V-2x6:存在 600 W 电缆;01 0100b 至 10 1111b:保留供 PCI-SIG 使用;11 0000b 至 11 1111b:供应商特定电源连接器。每个 CEM 2x4 连接器必须具有一个 Connector Type 为 00 0101b 的条目，或两个 Connector Type 分别为 00 0110b 和 00 0111b 的条目。每个 12V-2x6 连接器必须为其支持的最低功率电缆提供一个条目。每个 12V-2x6 连接器必须为每个具有不同功耗值的电缆提供一个条目。如果 Extended Power Budgeting Enable 清零，则该字段必须为零。如果 Extended Power Budgeting Present 清零，则软件必须忽略该字段的值。 | RO |
-| 31 | Extended Power Budgeting Present(存在扩展功耗预算) — 指示位 30:22 包含扩展功耗预算数据。如果 Extended Power Budgeting Enable 清零，则该位必须为 0b。 | RO |
+| 31 | Extended Power Budgeting Present(存在扩展功耗预算) — 指示 Bits 30:22 包含扩展功耗预算数据。如果 Extended Power Budgeting Enable 清零，则该位必须为 0b。 | RO |
 
 除 Type = 000b 和 001b 外，具有相同工作条件和 PM Sub State 值的功耗预算数据表示同时消耗。Function 必须为每个支持的工作条件和 PM Sub State 组合报告一整套功耗预算数据。
 
@@ -18807,7 +18807,7 @@ This register is only meaningful in the lowest numbered Function that contains t
 
 | 连接器类型 | 编码 | 描述 |
 |---|---|---|
-| 00 0000b 至 00 0011b | 位 0:000b:电缆不存在，未检测到感应;001b:电缆存在，已检测到感应;其他:保留。位 1:000b:检测到主电源。如果不使用辅助电源，则此位允许硬连线为 1b。001b:检测到辅助电源。如果不使用辅助电源，则此位允许硬连线为 0b。当所实现的外形规格中未定义专用辅助电源引脚时，此位具有外形规格特定的含义。位 2:0xxb:外形规格特定含义。 | 外形规格特定含义 |
+| 00 0000b 至 00 0011b | Bits 0:000b:电缆不存在，未检测到感应;001b:电缆存在，已检测到感应;其他:保留。Bits 1:000b:检测到主电源。如果不使用辅助电源，则此位允许硬连线为 1b。001b:检测到辅助电源。如果不使用辅助电源，则此位允许硬连线为 0b。当所实现的外形规格中未定义专用辅助电源引脚时，此位具有外形规格特定的含义。Bits 2:0xxb:外形规格特定含义。 | 外形规格特定含义 |
 | 00 0100b | CEM 2x3 连接器。000b:电缆不存在，未检测到感应;001b:电缆存在，已检测到感应;其他:保留。 | CEM 2x3 连接器 |
 | 00 0101b 至 00 0111b | CEM 2x4 连接器。000b:电缆不存在,Sense0 和 Sense1 均未检测到;001b:存在 2x3 电缆，检测到 Sense0,未检测到 Sense1;010b:保留条件，未检测到 Sense0,检测到 Sense1;011b:存在 2x4 电缆,Sense0 和 Sense1 均已检测到;其他:保留。 | CEM 2x4 连接器 |
 | 00 1000b 至 00 1011b | CEM 12VHPWR 连接器。000b:电缆不存在;100b:存在 12VHPWR 电缆,Sense0 和 Sense1 均悬空;101b:存在 12VHPWR 电缆,Sense0 接地,Sense1 悬空;110b:存在 12VHPWR 电缆,Sense0 悬空,Sense1 接地;111b:存在 12VHPWR 电缆,Sense0 和 Sense1 均接地;其他:保留。 | CEM 12VHPWR 连接器 |
@@ -24423,7 +24423,7 @@ Default value for this field is 0000 0000 0000 0b. | RW/RO |
 
 所有其他编码为保留。
 若违反此要求，则硬件行为未定义。
-对于下游端口，若 Device Control 2 寄存器中的 ARI 转发使能位 (ARI Forwarding Enable) 与 FPB RID 解码机制使能位均被置位，则软件必须将该字段的位 23:19 编程为 0000 0b;若编程为任何其他值，硬件行为未定义。
+对于下游端口，若 Device Control 2 寄存器中的 ARI 转发使能位 (ARI Forwarding Enable) 与 FPB RID 解码机制使能位均被置位，则软件必须将该字段的 Bits 23:19 编程为 0000 0b;若编程为任何其他值，硬件行为未定义。
 若 FPB RID 解码机制支持位清零，则允许硬件将该字段实现为 RO,且该字段的值未定义。
 该字段默认值为 0000 0000 0000 0b。 | RW/RO |
 
@@ -24524,7 +24524,7 @@ Default value for this field is 0000 0000 0000 0b. | RW/RO |
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|-----------|------|
-| 15:3 | RID Secondary Start —— 软件写入此字段的值控制 RID 偏移量，在该偏移量处，经桥向下游传递的 Type 1 配置请求 (Configuration Request) 必须被转换为 Type 0。RID 偏移量的位 [2:0] 由硬件固定为 000b 且不可修改。对于下游端口，若 Device Control 2 寄存器中的 ARI 转发使能位 (ARI Forwarding Enable) 被置位，则软件必须将该字段的位 7:3 写入 0 0000b。若 FPB RID 解码机制支持位清零，则允许硬件将该字段实现为 RO,且该字段的值未定义。该字段默认值为 0000 0000 0000 0b。 | RW/RO |
+| 15:3 | RID Secondary Start —— 软件写入此字段的值控制 RID 偏移量，在该偏移量处，经桥向下游传递的 Type 1 配置请求 (Configuration Request) 必须被转换为 Type 0。RID 偏移量的 Bits [2:0] 由硬件固定为 000b 且不可修改。对于下游端口，若 Device Control 2 寄存器中的 ARI 转发使能位 (ARI Forwarding Enable) 被置位，则软件必须将该字段的 Bits 7:3 写入 0 0000b。若 FPB RID 解码机制支持位清零，则允许硬件将该字段实现为 RO,且该字段的值未定义。该字段默认值为 0000 0000 0000 0b。 | RW/RO |
 
 </td>
 </tr>
@@ -24698,7 +24698,7 @@ Default value for this field is 000h. | RW/RO |
 若 FPB MEM Low 解码机制支持位清零，则允许硬件将该字段实现为 RO,且该字段的值未定义。
 该字段默认值为 0000b。
 
-| 31:20 | FPB MEM Low 向量起始 (FPB MEM Low Vector Start) —— 软件写入此字段的值设置应用 FPB MEM Low 向量的基地址的位 31:20。软件必须按照 FPB MEM Low 向量粒度字段所指示的、本字段中的值进行自然对齐编程(意味着低位必须为 0):
+| 31:20 | FPB MEM Low 向量起始 (FPB MEM Low Vector Start) —— 软件写入此字段的值设置应用 FPB MEM Low 向量的基地址的 Bits 31:20。软件必须按照 FPB MEM Low 向量粒度字段所指示的、本字段中的值进行自然对齐编程(意味着低位必须为 0):
 
 | FPB MEM Low 向量粒度 | 约束 |
 |----------------------|------|
@@ -24978,7 +24978,7 @@ Default value for this field is 0h.
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|-----------|------|
-| 31:0 | FPB MEM High 向量起始高位 (FPB MEM High Vector Start Upper) —— 软件写入此字段的值设置应用 FPB MEM High 向量的基地址的位 63:32。软件必须按照 FPB MEM High 向量粒度字段所指示的、本字段中的值进行自然对齐编程(意味着低位必须为 0):(续) | RW/RO |
+| 31:0 | FPB MEM High 向量起始高位 (FPB MEM High Vector Start Upper) —— 软件写入此字段的值设置应用 FPB MEM High 向量的基地址的 Bits 63:32。软件必须按照 FPB MEM High 向量粒度字段所指示的、本字段中的值进行自然对齐编程(意味着低位必须为 0):(续) | RW/RO |
 
 </td>
 </tr>
@@ -25728,7 +25728,7 @@ Behavior is undefined if bits 31:1 of this register are changed while Flit Laten
 
 能力中的状态寄存器指示 LTSSM 状态转换跟踪器可同时跟踪的事件数。软件必须确保启用的位数不超过端口所能启用的数量。
 
-在 Flit 延迟测量正在运行时更改此寄存器的位 31:1 行为未定义（当 Flit 延迟测量使能为 1b 时，且满足以下条件之一：Flit 响应类型非零且 Flit 延迟跟踪状态为 00b 或 01b；或 LTSSM 状态转换跟踪器非零且启用的 LTSSM 状态转换跟踪状态字段中任意一个为 00b 或 01b）。
+在 Flit 延迟测量正在运行时更改此寄存器的 Bits 31:1 行为未定义（当 Flit 延迟测量使能为 1b 时，且满足以下条件之一：Flit 响应类型非零且 Flit 延迟跟踪状态为 00b 或 01b；或 LTSSM 状态转换跟踪器非零且启用的 LTSSM 状态转换跟踪状态字段中任意一个为 00b 或 01b）。
 
 7.8.12.3 Flit 性能测量控制寄存器（偏移 08h）§
 
@@ -25832,7 +25832,7 @@ Behavior is undefined if bits 31:1 of this register are changed while Flit Laten
 | 13:11 | 若任何被跟踪 Flit 的延迟超过此编码值则产生中断。000b – 不产生中断。001b = 100 ns。010b = 200 ns。011b = 300 ns。其他 = 保留。在测量进行中更改此字段的值行为未定义。默认值为零。 | RW |
 | 18:14 | LTSSM 状态转换跟踪器 – 每个位计为一个独立事件：位 14 = 由于帧错误或软件触发在 L0 时从 L0 到 Recovery。位 15 = L0p – 上行配置时，从电气空闲到通道上数据流开始。位 16 = L1.0 到 L0。位 17 = L1.1 到 L0。位 18 = L1.2 到 L0。如果此字段中设置的位数大于 LTSSM 跟踪寄存器计数，则行为未定义。默认值为零。 | RW |
 | 23:19 | LTSSM 转换的跟踪实例数。00000b = 跟踪最坏延迟。其他 = 此处所提供数量的聚合延迟。默认值为零。 | RW |
-| 26:24 | LTSSM 状态转换跟踪器中断 - 若 LTSSM 状态转换跟踪器低 3 位（本寄存器位 16:14）所覆盖的任何事件超过此编码值则产生中断：000b = 不产生中断。001b = 6.4 ms。010b = 12.8 ms。011b = 19.2 ms。其他 = 保留。默认值为零。 | RW |
+| 26:24 | LTSSM 状态转换跟踪器中断 - 若 LTSSM 状态转换跟踪器低 3 位（本寄存器 Bits 16:14）所覆盖的任何事件超过此编码值则产生中断：000b = 不产生中断。001b = 6.4 ms。010b = 12.8 ms。011b = 19.2 ms。其他 = 保留。默认值为零。 | RW |
 
 </td>
 </tr>
@@ -25895,7 +25895,7 @@ Behavior is undefined if bits 31:1 of this register are changed while Flit Laten
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
-| 29:27 | LTSSM 状态转换跟踪器 L12 PM 子状态中断 - 若 LTSSM 状态转换跟踪器高位 2 位（本寄存器位 18:17）所覆盖的任何事件超过此值则产生中断：000b = 不产生中断。001b = 1 秒。010b = 2 秒。011b = 3 秒。100b = 4 秒。101b = 5 秒。110b = 10 秒。111b = 保留。默认值为零。 | RW |
+| 29:27 | LTSSM 状态转换跟踪器 L12 PM 子状态中断 - 若 LTSSM 状态转换跟踪器高位 2 位（本寄存器 Bits 18:17）所覆盖的任何事件超过此值则产生中断：000b = 不产生中断。001b = 1 秒。010b = 2 秒。011b = 3 秒。100b = 4 秒。101b = 5 秒。110b = 10 秒。111b = 保留。默认值为零。 | RW |
 
 | 位 | 描述 |
 |-----|------|
@@ -26301,14 +26301,14 @@ Link level, optional register, both on Tx side as well as Rx side. Behavior is u
 |--------|------------|------|
 | 31:0 | 保留 | RsvdP |
 
-链路级、可选寄存器,Tx 侧和 Rx 侧均存在。当错误注入正在运行时（Flit 错误注入使能为 1b 且 Flit 错误注入状态为 00b 或 01b）更改此寄存器位 31:1 的值时，行为未定义。
+链路级、可选寄存器,Tx 侧和 Rx 侧均存在。当错误注入正在运行时（Flit 错误注入使能为 1b 且 Flit 错误注入状态为 00b 或 01b）更改此寄存器 Bits 31:1 的值时，行为未定义。
 
 | 位 | 描述 |
 |-----|------|
 | 0 | Flit 错误注入使能 |
 | 1 | 在发送的 Flit 上注入错误 |
 | 2 | 在接收的 Flit 上注入错误 |
-| 15:3 | Flit 错误注入使能数据速率（位 3 = 2.5 GT/s,位 4 = 5.0 GT/s,位 5 = 8.0 GT/s,位 6 = 16.0 GT/s,位 7 = 32.0 GT/s,位 8 = 64.0 GT/s,位 15:9 = 保留） |
+| 15:3 | Flit 错误注入使能数据速率（位 3 = 2.5 GT/s,位 4 = 5.0 GT/s,位 5 = 8.0 GT/s,位 6 = 16.0 GT/s,位 7 = 32.0 GT/s,位 8 = 64.0 GT/s,Bits 15:9 = 保留） |
 | 20:16 | 注入错误数 |
 | 28:21 | 注入错误之间的间隔 |
 | 31:29 | 在 Flit 类型上注入 |
@@ -26375,7 +26375,7 @@ Link level, optional register, both on Tx side as well as Rx side. Behavior is u
 |--------|------------|------|
 | 1 | 在发送的 Flit 上注入错误 – 将该位置 1b 可在发送的 Flit 上启用错误注入。未实现此功能的端口必须将该位硬连线为 0b。默认值为零。 | RW |
 | 2 | 在接收的 Flit 上注入错误 – 设置该位可在接收的 Flit 上启用错误注入。允许端口不注入所描述的确切错误，而是模拟错误注入效果以实现所需的效果，例如记录 FEC 可纠正错误或在 CRC 检查后导致 NAK。未实现此功能的端口必须将该位硬连线为 0b。默认值为零。 | RW |
-| 15:3 | Flit 错误注入使能数据速率 – 这些位在启用时为相应数据速率启用 Flit 错误注入：位 3 = 2.5 GT/s,位 4 = 5.0 GT/s,位 5 = 8.0 GT/s,位 6 = 16.0 GT/s,位 7 = 32.0 GT/s,位 8 = 64.0 GT/s,位 15:9 = 保留。默认值为零。 | RW / RsvdP |
+| 15:3 | Flit 错误注入使能数据速率 – 这些位在启用时为相应数据速率启用 Flit 错误注入：位 3 = 2.5 GT/s,位 4 = 5.0 GT/s,位 5 = 8.0 GT/s,位 6 = 16.0 GT/s,位 7 = 32.0 GT/s,位 8 = 64.0 GT/s,Bits 15:9 = 保留。默认值为零。 | RW / RsvdP |
 | 20:16 | 注入错误数 – 表示独立地在发送和/或接收的 Flit 上注入的错误数。值为 0 表示错误注入将持续到注入机制被禁用。默认值为零。 | RW |
 | 28:21 | 注入错误之间的间隔 – 表示在当前 Flit 错误注入序列完成之后，将在下一个 Flit 上注入错误。非 0 值表示在该确切数量的 Flit 之后注入错误;值为 0 时，将在 1 到 127 之间的伪随机数量的 Flit 后注入错误，以等概率选择。此项在发送和/或接收侧独立使用。默认值为零。 | RW |
 | 31:29 | 在 Flit 类型上注入 – 000b = 在任何 Flit 类型上注入。001b = 在任何非 IDLE Flit 上注入。010b = 仅在 Payload Flit 上注入。011b = 仅在 NOP Flit 上注入。100b = 仅在 IDLE Flit 上注入。101b = 如果正在注入的错误类型为 11b,则仅在 Payload Flit 上注入，随后在 Consecutive Error Injection 次数的相同序列号上注入。整个重复将计为一次错误注入实例，用于计入注入错误数。如果正在注入的错误类型非 11b,则此为保留编码。110b = 如果正在注入的错误类型为 11b,则仅在 Payload Flit 上注入，随后在 Consecutive Error Injection 次数的相同序列号上对一个所选 Payload Flit 注入。连续错误注入恰好选择一个序列号。 | RW |
@@ -31517,7 +31517,7 @@ Link Address 是一个 HwInit 字段，位于 Link Entry 起始处偏移 08h 处
 
 For a Link pointing to a memory-mapped RCRB (Link Type bit = 0), the first DWORD specifies the lower 32 bits of the RCRB base address of the target element as shown below; bits 11:0 are hardwired to 000h and Reserved for future use. The second DWORD specifies the high order 32 bits (63:32) of the RCRB base address of the target element.
 
-对于指向内存映射 RCRB 的链路（Link Type 位 = 0），如下图所示，第一个 DWORD 指定目标元素的 RCRB 基址的低 32 位；位 11:0 硬连线为 000h 并保留以供将来使用。第二个 DWORD 指定目标元素的 RCRB 基址的高 32 位（63:32）。
+对于指向内存映射 RCRB 的链路（Link Type 位 = 0），如下图所示，第一个 DWORD 指定目标元素的 RCRB 基址的低 32 位；Bits 11:0 硬连线为 000h 并保留以供将来使用。第二个 DWORD 指定目标元素的 RCRB 基址的高 32 位（63:32）。
 
 <table>
 <thead>
@@ -31550,7 +31550,7 @@ For a Link pointing to the Configuration Space of a Root Complex element (Link T
 <a id="sec-7-9-8-3-2-2-2"></a>
 ##### 7.9.8.3.2.2 Link Address for Link Type 1
 
-对于指向根复合体元素配置空间的链路（Link Type 位 = 1），第一个 DWORD 中的位指定目标元素的 Bus、Device 和 Function Number。如图 7-263 所示，位 2:0（N）编码与 Bus Number 关联的位数 n，其中 N = 000b 指定 n = 8，所有其他编码指定
+对于指向根复合体元素配置空间的链路（Link Type 位 = 1），第一个 DWORD 中的位指定目标元素的 Bus、Device 和 Function Number。如图 7-263 所示，Bits 2:0（N）编码与 Bus Number 关联的位数 n，其中 N = 000b 指定 n = 8，所有其他编码指定
 
 
 #### 7.9.8.3.2 Link Address（链路地址）
@@ -31589,7 +31589,7 @@ Software must not use n outside the context of evaluating the Bus Number and mem
 </td>
 <td style="background-color:#e8e8e8">
 
-n = <N 的值>。位 11:3 为保留位，硬连线为 0。位 14:12 指定 Function Number，位 19:15 指定 Device Number。位 (19 + n):20 指定 Bus Number，其中 1 ≤ n ≤ 8。
+n = <N 的值>。Bits 11:3 为保留位，硬连线为 0。Bits 14:12 指定 Function Number，Bits 19:15 指定 Device Number。位 (19 + n):20 指定 Bus Number，其中 1 ≤ n ≤ 8。
 
 第一个 DWORD 的位 31:(20 + n) 与第二个 DWORD 一起，通过指定与目标元素关联的 PCI Express 层级（hierarchy）的内存映射配置空间基址的位 63:(20 + n)，可选地标识目标元素的层级（对于实现 PCI Express Enhanced Configuration Access Mechanism 的系统）；不实现多于一个内存映射配置空间的单层级系统允许报告零值以表示默认配置空间。
 
@@ -32160,8 +32160,8 @@ RsvdP
 图 7-267 Root Complex Link Control Register(根复合体链路控制寄存器)
 实现注意事项:
 早期硬件支持的链路速度
-符合 [PCIe-3.0] 之前版本的硬件组件未实现 Supported Link Speeds Vector(支持的链路速度向量)字段，而是在位 24:18 返回 0000 000b。
-对于该字段包含 0000 000b 的组件，软件可读取 Root Complex Link Capabilities Register(根复合体链路能力寄存器，现定义为 Max Link Speed 字段)的位 3:0,并按下表解释其值:
+符合 [PCIe-3.0] 之前版本的硬件组件未实现 Supported Link Speeds Vector(支持的链路速度向量)字段，而是在 Bits 24:18 返回 0000 000b。
+对于该字段包含 0000 000b 的组件，软件可读取 Root Complex Link Capabilities Register(根复合体链路能力寄存器，现定义为 Max Link Speed 字段)的 Bits 3:0,并按下表解释其值:
 0001b
 支持 2.5 GT/s 链路速度
 0010b
@@ -41380,7 +41380,7 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 
 > **图 7-378(寄存器布局)。** 选择性 IDE 流状态寄存器
 >
-> | 位 31 | 位 30:4 | 位 3:0 |
+> | 位 31 | Bits 30:4 | Bits 3:0 |
 > |-------|---------|--------|
 > | Received IDE Fail Message(已接收 IDE 失败消息) | RsvdZ | Selective IDE Stream State(选择性 IDE 流状态) |
 
@@ -41467,7 +41467,7 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 
 > **图 7-379(寄存器布局)。** IDE RID 关联寄存器 1 (Offset +00h)
 >
-> | 位 31:24 | 位 23:8 | 位 7:0 |
+> | Bits 31:24 | Bits 23:8 | Bits 7:0 |
 > |----------|---------|--------|
 > | RsvdP | RID Limit(RID 上限) | RsvdP |
 
@@ -41530,7 +41530,7 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 > <img src="figures/chapter_07/fig_1077_1_tight.png" width="700">
 
 >
-> | 位 31:24 | 位 23:8 | 位 7:1 | 位 0 |
+> | Bits 31:24 | Bits 23:8 | Bits 7:1 | 位 0 |
 > |----------|---------|---------|------|
 > | Segment Base(Segment 基址) | RID Base(RID 基址) | RsvdP | Valid (V)(有效位) |
 
@@ -41619,7 +41619,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 > **图 7-381(寄存器布局)。** IDE 地址关联寄存器 1 (Offset +00h)
 >
-> | 位 31:20 | 位 19:8 | 位 7:1 | 位 0 |
+> | Bits 31:20 | Bits 19:8 | Bits 7:1 | 位 0 |
 > |----------|---------|---------|------|
 > | Memory Limit Lower(内存下限低位) | Memory Base Lower(内存基址低位) | RsvdP | V (Valid)(有效位) |
 
@@ -41627,8 +41627,8 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
-| 31:20 | Memory Limit Lower(内存下限低位)— 对应地址位 [31:20]。地址位 [19:0] 隐含为 F_FFFFh。 | RW |
-| 19:8 | Memory Base Lower(内存基址低位)— 对应地址位 [31:20]。地址位 [19:0] 隐含为 0_0000h。 | RW |
+| 31:20 | Memory Limit Lower(内存下限低位)— 对应地址 Bits [31:20]。地址 Bits [19:0] 隐含为 F_FFFFh。 | RW |
+| 19:8 | Memory Base Lower(内存基址低位)— 对应地址 Bits [31:20]。地址 Bits [19:0] 隐含为 0_0000h。 | RW |
 | 0 | V (Valid)(有效位)— 置 1 时，指示此 IDE Stream Association Block 有效，由 Memory Base 和 Memory Limit 定义的地址范围对应分配给 IDE Partner Port 的一段内存地址范围，且该地址范围内的所有发送地址路由 TLP 必须与此 IDE 流关联，前提是遵循 § Section 6.33.4 中所述的规则。<br>如果为不同的 IDE Stream 分配了重叠的地址范围，硬件行为未定义。<br>默认为 0b | RW |
 
 </td>
@@ -41679,7 +41679,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 > **图 7-382(寄存器布局)。** IDE 地址关联寄存器 2 (Offset +04h)
 >
-> | 位 31:0 |
+> | Bits 31:0 |
 > |---------|
 > | Memory Limit Upper(内存上限高位) |
 
@@ -41687,7 +41687,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
-| 31:0 | Memory Limit Upper(内存上限高位)— 对应地址位 [63:32] | RW |
+| 31:0 | Memory Limit Upper(内存上限高位)— 对应地址 Bits [63:32] | RW |
 
 </td>
 </tr>
@@ -41731,7 +41731,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 > **图 7-383(寄存器布局)。** IDE 地址关联寄存器 3 (Offset +04h)
 >
-> | 位 31:0 |
+> | Bits 31:0 |
 > |---------|
 > | Memory Base Upper(内存基址高位) |
 
@@ -41739,7 +41739,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
-| 31:0 | Memory Base Upper(内存基址高位)— 对应地址位 [63:32] | RW |
+| 31:0 | Memory Base Upper(内存基址高位)— 对应地址 Bits [63:32] | RW |
 
 </td>
 </tr>
@@ -41807,7 +41807,7 @@ Null Capability 不包含任何寄存器。该能力出现在链表(Next Capabil
 
 > **图 7-384(寄存器布局)。** 空能力
 >
-> | 位 15:8 | 位 7:0 |
+> | Bits 15:8 | Bits 7:0 |
 > |---------|---------|
 > | Next Capability Pointer(下一能力指针) | Capability ID = 00h |
 
@@ -41883,7 +41883,7 @@ Null Extended Capability(空扩展能力)是一种可选的扩展能力，允许
 
 > **图 7-385(寄存器布局)。** 空扩展能力
 >
-> | 位 31:20 | 位 19:16 | 位 15:0 |
+> | Bits 31:20 | Bits 19:16 | Bits 15:0 |
 > |----------|----------|---------|
 > | Next Capability Offset(下一能力偏移) | Capability Version(能力版本) | PCI Express Extended Capability ID = 0000h |
 

@@ -17914,8 +17914,8 @@ PCI-SIG 定义的数据对象类型在 § Table 6-33 中定义。
 | 0001 | 00 | **DOE Discovery** – 每个 DOE 实例必须支持此数据对象功能及相关类型，两者均由本条目指示。<br>请求者使用 DOE Discovery 来发现 DOE 实例所支持的所有其他数据对象类型。<br>不得包含 DOE Discovery 响应数据对象内容（第 4 个 DW）。 |
 | 0001 | 01 | **CMA-SPDM** – 用于 SPDM 消息的数据对象类型。参见 § Section 6.31。<br>允许包含 DOE Discovery 响应数据对象内容（第 4 个 DW）。Additional Info 字段为保留。 |
 | 0001 | 02 | **Secured CMA-SPDM（安全 CMA-SPDM）** – 用于 SPDM 安全会话的数据对象类型。参见 § Section 6.31.4。<br>如果支持此类型，则必须同时支持 CMA/SPDM (01h) 类型。<br>允许包含 DOE Discovery 响应数据对象内容（第 4 个 DW）。Additional Info 字段为保留。 |
-| 0001 | 03 | **CMA/SPDM with Connection ID（带 Connection ID 的 CMA/SPDM）** – 用于带 Connection ID 的 SPDM 消息的数据对象类型。<br>如果支持此类型，则必须同时支持 CMA/SPDM (01h) 类型。<br>必须包含 DOE Discovery 响应数据对象内容（第 4 个 DW）。Additional Info 字段的位 11:0 必须指示所支持的最大 Connection ID 值，所有 Connection ID 必须位于从 0 到所示值的范围内：<br>0000 0000 0000b = 1 个 Connection ID<br>…<br>1111 1111 1111b = 4096 个 Connection ID<br>Additional Info 字段的位 13:12 为保留。 |
-| 0001 | 04 | **Secured CMA/SPDM with Connection ID（带 Connection ID 的安全 CMA/SPDM）** – 用于带 Connection ID 的 SPDM 安全会话的数据对象类型。<br>如果支持此类型，则必须同时支持 CMA/SPDM (01h) 和 CMA/SPDM with Connection ID (03h) 类型。<br>必须包含 DOE Discovery 响应数据对象内容（第 4 个 DW）。Additional Info 字段的位 11:0 必须指示所支持的最大 Connection ID 值，所有 Connection ID 必须位于从 0 到所示值的范围内：<br>0000 0000 0000b = 1 个 Connection ID<br>…<br>1111 1111 1111b = 4096 个 Connection ID<br>Additional Info 字段的位 13:12 为保留。 |
+| 0001 | 03 | **CMA/SPDM with Connection ID（带 Connection ID 的 CMA/SPDM）** – 用于带 Connection ID 的 SPDM 消息的数据对象类型。<br>如果支持此类型，则必须同时支持 CMA/SPDM (01h) 类型。<br>必须包含 DOE Discovery 响应数据对象内容（第 4 个 DW）。Additional Info 字段的 Bits 11:0 必须指示所支持的最大 Connection ID 值，所有 Connection ID 必须位于从 0 到所示值的范围内：<br>0000 0000 0000b = 1 个 Connection ID<br>…<br>1111 1111 1111b = 4096 个 Connection ID<br>Additional Info 字段的 Bits 13:12 为保留。 |
+| 0001 | 04 | **Secured CMA/SPDM with Connection ID（带 Connection ID 的安全 CMA/SPDM）** – 用于带 Connection ID 的 SPDM 安全会话的数据对象类型。<br>如果支持此类型，则必须同时支持 CMA/SPDM (01h) 和 CMA/SPDM with Connection ID (03h) 类型。<br>必须包含 DOE Discovery 响应数据对象内容（第 4 个 DW）。Additional Info 字段的 Bits 11:0 必须指示所支持的最大 Connection ID 值，所有 Connection ID 必须位于从 0 到所示值的范围内：<br>0000 0000 0000b = 1 个 Connection ID<br>…<br>1111 1111 1111b = 4096 个 Connection ID<br>Additional Info 字段的 Bits 13:12 为保留。 |
 | 0001 | 05 | **Async Message（异步消息）** – 用于设备异步生成的消息的数据对象类型。<br>必须包含 DOE Discovery 响应数据对象内容（第 4 个 DW）。 |
 | 0001 | 06 至 FF | 保留 |
 
@@ -19081,7 +19081,7 @@ include a feedback mechanism or an indication from the Function to software on t
 
 DMWr 的使用者必须理解事务排序的功能影响。DMWr 请求是带数据的 Non-Posted 请求，这意味着 Posted 请求允许越过 DMWr 请求。此外，在所有类型的 Non-Posted 请求之间没有保证的排序(见表 2-4 中 B3、B4、C3 和 C4 项)。
 
-与所有类型的"控制"机制一样，所有参与者都需要理解特定机制所施加的特定要求，这些要求在不同的系统和不同的设备类型之间会有所不同。在许多情况下，有必要区分从不同软件环境发出的请求(例如，从使用不同驱动的多个虚拟机客户端共享同一工作队列时)。PASID 是可用于此目的一种机制，但也存在许多替代方案(例如，可以将不同的地址范围分配给每个环境，这些地址范围映射到 Completer 中的相同资源)。在某些系统中，系统和应用级软件能够按照特定模板(§ Figure 6-51)生成 DMWr 请求，其中位 31:0 由系统架构定义，位 31 处的 P 位指示该请求是由用户态(0b)还是管理态(1b)代码触发，有效负载的位 19:0 包含 PASID,以指示生成该请求的上下文。
+与所有类型的"控制"机制一样，所有参与者都需要理解特定机制所施加的特定要求，这些要求在不同的系统和不同的设备类型之间会有所不同。在许多情况下，有必要区分从不同软件环境发出的请求(例如，从使用不同驱动的多个虚拟机客户端共享同一工作队列时)。PASID 是可用于此目的一种机制，但也存在许多替代方案(例如，可以将不同的地址范围分配给每个环境，这些地址范围映射到 Completer 中的相同资源)。在某些系统中，系统和应用级软件能够按照特定模板(§ Figure 6-51)生成 DMWr 请求，其中 Bits 31:0 由系统架构定义，位 31 处的 P 位指示该请求是由用户态(0b)还是管理态(1b)代码触发，有效负载的 Bits 19:0 包含 PASID,以指示生成该请求的上下文。
 
 出于性能原因，建议不要将 DMWr 用于发送批量数据。
 
@@ -23048,7 +23048,7 @@ RO
 </td>
 <td style="background-color:#e8e8e8">
 
-**31:16 — MDVS Register Block ID（MDVS 寄存器块 ID）** – 由位 15:0 中的供应商 ID 定义的值，用于指示供应商特定寄存器的性质和格式。
+**31:16 — MDVS Register Block ID（MDVS 寄存器块 ID）** – 由 Bits 15:0 中的供应商 ID 定义的值，用于指示供应商特定寄存器的性质和格式。
 RO
 
 </td>
@@ -23111,7 +23111,7 @@ RO
 寄存器描述
 属性
 
-**3:0 — MDVS Register Block Revision（MDVS 寄存器块修订版本）** – 由位 15:0 中的供应商 ID 定义的版本号，用于指示该寄存器块的版本。
+**3:0 — MDVS Register Block Revision（MDVS 寄存器块修订版本）** – 由 Bits 15:0 中的供应商 ID 定义的版本号，用于指示该寄存器块的版本。
 RO
 
 </td>

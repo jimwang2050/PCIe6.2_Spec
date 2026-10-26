@@ -2853,14 +2853,14 @@ For correct software operation, full address decoding is required even in system
 
 | 地址位 | 32 位寻址 | 64 位寻址 |
 |--------|-----------|-----------|
-| 63:56 | 不适用 | Byte 8 的位 7:0 |
-| 55:48 | 不适用 | Byte 9 的位 7:0 |
-| 47:40 | 不适用 | Byte 10 的位 7:0 |
-| 39:32 | 不适用 | Byte 11 的位 7:0 |
-| 31:24 | Byte 8 的位 7:0 | Byte 12 的位 7:0 |
-| 23:16 | Byte 9 的位 7:0 | Byte 13 的位 7:0 |
-| 15:8 | Byte 10 的位 7:0 | Byte 14 的位 7:0 |
-| 7:2 | Byte 11 的位 7:2 | Byte 15 的位 7:2 |
+| 63:56 | 不适用 | Byte 8 的 Bits 7:0 |
+| 55:48 | 不适用 | Byte 9 的 Bits 7:0 |
+| 47:40 | 不适用 | Byte 10 的 Bits 7:0 |
+| 39:32 | 不适用 | Byte 11 的 Bits 7:0 |
+| 31:24 | Byte 8 的 Bits 7:0 | Byte 12 的 Bits 7:0 |
+| 23:16 | Byte 9 的 Bits 7:0 | Byte 13 的 Bits 7:0 |
+| 15:8 | Byte 10 的 Bits 7:0 | Byte 14 的 Bits 7:0 |
+| 7:2 | Byte 11 的 Bits 7:2 | Byte 15 的 Bits 7:2 |
 
 - 除明确要求外，非 UIO 的 Memory Read、Memory Write、DMWr 和 AtomicOp 请求可使用上述两种格式。
   - 对于低于 4 GB 的地址，请求者必须使用 32 位格式。若接收到使用 64 位格式但地址低于 4 GB (即地址的高 32 位全为 0) 的请求，则接收器的行为不在本规范规定范围内。
@@ -2988,16 +2988,16 @@ For correct software operation, full address decoding is required even in system
 
 | 字段 | 包头位置 |
 |------|----------|
-| Bus Number[7:0] | Byte 8 的位 7:0 |
-| Device Number[4:0] | Byte 9 的位 7:3 |
-| Function Number[2:0] | Byte 9 的位 2:0 |
+| Bus Number[7:0] | Byte 8 的 Bits 7:0 |
+| Device Number[4:0] | Byte 9 的 Bits 7:3 |
+| Function Number[2:0] | Byte 9 的 Bits 2:0 |
 
 **表 2-9 ARI ID 路由的包头字段位置 (Header Field Locations for ARI ID Routing)**
 
 | 字段 | 包头位置 |
 |------|----------|
-| Bus Number[7:0] | Byte 8 的位 7:0 |
-| Function Number[7:0] | Byte 9 的位 7:0 |
+| Bus Number[7:0] | Byte 8 的 Bits 7:0 |
+| Function Number[7:0] | Byte 9 的 Bits 7:0 |
 
 </td>
 </tr>
@@ -5165,7 +5165,7 @@ Figure 2-40: TPH TLP Prefix (4 bytes). Byte 0 (after the header) is decoded to d
 </td>
 <td style="background-color:#e8e8e8">
 
-图 2-40：TPH TLP 前缀 (4 字节)。包头之后的 Byte 0 用于解码以检测 TPH TLP 前缀是否存在。Byte 1-3 包含：ST[15:8]（Byte 1，位 7:0）、AMA[2:0]（Byte 2，位 7:5）、AV（Byte 2，位 4）、保留（Byte 2 位 3:0；Byte 3 位 7:0）。
+图 2-40：TPH TLP 前缀 (4 字节)。包头之后的 Byte 0 用于解码以检测 TPH TLP 前缀是否存在。Byte 1-3 包含：ST[15:8]（Byte 1，Bits 7:0）、AMA[2:0]（Byte 2，Bits 7:5）、AV（Byte 2，位 4）、保留（Byte 2 Bits 3:0；Byte 3 Bits 7:0）。
 
 </td>
 </tr>
@@ -5311,7 +5311,7 @@ Figure 2-41: 4 DW Request Header layout in Non-Flit Mode, showing the location o
 </td>
 <td style="background-color:#e8e8e8">
 
-图 2-41：非 Flit 模式下 4 DW 请求包头格式，展示了 PH[1:0] 字段的位置（32 位寻址时位于 Byte 11 的位 1:0；64 位寻址时位于 Byte 15 的位 1:0）。
+图 2-41：非 Flit 模式下 4 DW 请求包头格式，展示了 PH[1:0] 字段的位置（32 位寻址时位于 Byte 11 的 Bits 1:0；64 位寻址时位于 Byte 15 的 Bits 1:0）。
 
 </td>
 </tr>
@@ -5441,7 +5441,7 @@ Figure 2-43: Non-Flit Mode Memory Write Request header (3 DW) showing the locati
 </td>
 <td style="background-color:#e8e8e8">
 
-图 2-43：非 Flit 模式的内存写请求包头 (3 DW)，展示了 ST[7:0] 字段的位置（位于 Byte 6 的位 7:0，替代 Last DW BE）。
+图 2-43：非 Flit 模式的内存写请求包头 (3 DW)，展示了 ST[7:0] 字段的位置（位于 Byte 6 的 Bits 7:0，替代 Last DW BE）。
 
 </td>
 </tr>
@@ -5475,7 +5475,7 @@ Figure 2-44: Non-Flit Mode Memory Read / DMWr / AtomicOp Request header (3 DW) s
 </td>
 <td style="background-color:#e8e8e8">
 
-图 2-44：非 Flit 模式的内存读 / DMWr / AtomicOp 请求包头 (3 DW)，展示了 ST[7:0] 字段的位置（位于 Byte 7 的位 7:0）。
+图 2-44：非 Flit 模式的内存读 / DMWr / AtomicOp 请求包头 (3 DW)，展示了 ST[7:0] 字段的位置（位于 Byte 7 的 Bits 7:0）。
 
 </td>
 </tr>
@@ -5855,7 +5855,7 @@ Many types of Messages, including Vendor-Defined Messages, are potentially usabl
 - AT[1:0] 必须为 00b，Flit 模式中按地址路由的消息除外（见 § 表 2-20）。接收方无需也不鼓励检查此项。
 - Byte 8 至 Byte 15 为保留，除非另行明确定义。
 - 在 Flit 模式与非 Flit 模式之间进行转换 (Translation) 时，Byte 8 至 Byte 15 必须原样复制，无论 Message Code 为何。
-- 在 Flit 模式与非 Flit 模式之间进行转换时，Byte 6 的位 6:0 必须原样复制，无论 Message Code 为何。
+- 在 Flit 模式与非 Flit 模式之间进行转换时，Byte 6 的 Bits 6:0 必须原样复制，无论 Message Code 为何。
 - 消息请求是 Posted (有数据，无完成) 的，不需要完成报文 (Completion)。
 - 消息请求遵循与内存写请求相同的排序规则。
 
@@ -6611,7 +6611,7 @@ The Set_Slot_Power_Limit Message includes a one DW data payload. The data payloa
 </td>
 <td style="background-color:#e8e8e8">
 
-Set_Slot_Power_Limit 消息包含一个 DW 的数据负载。该数据负载从下游端口 (Downstream Port) 的 Slot Capabilities 寄存器复制而来，并被写入链路另一侧上游端口 (Upstream Port) 的 Device Capabilities 寄存器。数据负载的 Byte 1 的位 1:0 映射到 Slot Power Limit Scale 字段，Byte 0 的位 7:0 映射到 Slot Power Limit Value 字段。数据负载 Byte 3 的位 7:0、Byte 2 的位 7:0 以及 Byte 1 的位 7:2 必须全部由发送器 (Transmitter) 清零，并由接收器 (Receiver) 忽略。在发生以下任一事件时，该消息必须由下游端口 (根复合体或交换机的) 自动发送：
+Set_Slot_Power_Limit 消息包含一个 DW 的数据负载。该数据负载从下游端口 (Downstream Port) 的 Slot Capabilities 寄存器复制而来，并被写入链路另一侧上游端口 (Upstream Port) 的 Device Capabilities 寄存器。数据负载的 Byte 1 的 Bits 1:0 映射到 Slot Power Limit Scale 字段，Byte 0 的 Bits 7:0 映射到 Slot Power Limit Value 字段。数据负载 Byte 3 的 Bits 7:0、Byte 2 的 Bits 7:0 以及 Byte 1 的 Bits 7:2 必须全部由发送器 (Transmitter) 清零，并由接收器 (Receiver) 忽略。在发生以下任一事件时，该消息必须由下游端口 (根复合体或交换机的) 自动发送：
 
 - 当数据链路层 (Data Link Layer) 报告 DL_Up 状态时，对 Slot Capabilities 寄存器进行配置写 (参见 § 7.5.3.9 节)。
 - 当链路 (Link) 从非 DL_Up 状态转换到 DL_Up 状态时 (参见 § 2.9.2 节)，并且 Slot Control 寄存器中的 Auto Slot Power Limit Disable 位为 0 (Clear)。如果 Slot Capabilities 寄存器尚未初始化，则此传输是可选的。
@@ -8835,10 +8835,10 @@ If a Function sets the End-End TLP Prefix Supported bit but does not support OHC
 
 OHC-E 用于传递原本将使用 E-E Prefix 0011 到 1111 的内容。
 
-- 对于 OHC-E 的每个 DW,字节 0 的位 [7:4] 指示该 DW 其余部分的格式，编码如下:
+- 对于 OHC-E 的每个 DW,字节 0 的 Bits [7:4] 指示该 DW 其余部分的格式，编码如下:
   - 0000b - No Entry - 该 DW 的其余部分为 Reserved
   - 0001b - E-E Prefix DW - 该 DW 的其余部分定义如下:
-    - 字节 0 的位 [3:0] 采用相应 E-E Prefix 中 E[3:0] 的值(参见 § Table 2-39)，但编码 0000b-0010b 为 Reserved。
+    - 字节 0 的 Bits [3:0] 采用相应 E-E Prefix 中 E[3:0] 的值(参见 § Table 2-39)，但编码 0000b-0010b 为 Reserved。
     - 字节 1、2 和 3 采用相应 E-E Prefix 中字节 1、2 和 3 的值。
   - 0010b-1111b - Reserved - 接收器必须将其作为 No Entry 处理
 

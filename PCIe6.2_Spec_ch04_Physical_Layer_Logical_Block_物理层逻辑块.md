@@ -18457,7 +18457,7 @@ The rules for generating and checking the Margin CRC and Margin Parity are descr
 </td>
 <td style="background-color:#e8e8e8">
 
-"Margin CRC[4:0]" 由符号 4N+2 的位 [6:0](在以下公式中称为 d[6:0],其中 d[0] 是符号 4N+2 的位 0,d[1] 是符号 4N+2 的位 1,...,d[6] 是符号 4N+2 的位 6)和符号 4N+3 的位 [7:0](称为 d[14:7],其中 d[7] 是符号 4N+3 的位 0,d[8] 是符号 4N+3 的位 1,...,d[14] 是符号 4N+3 的位 7)按如下方式计算:
+"Margin CRC[4:0]" 由符号 4N+2 的 Bits [6:0](在以下公式中称为 d[6:0],其中 d[0] 是符号 4N+2 的位 0,d[1] 是符号 4N+2 的位 1,...,d[6] 是符号 4N+2 的位 6)和符号 4N+3 的 Bits [7:0](称为 d[14:7],其中 d[7] 是符号 4N+3 的位 0,d[8] 是符号 4N+3 的位 1,...,d[14] 是符号 4N+3 的位 7)按如下方式计算:
 
 Margin CRC[0] = d[0] ^ d[3] ^ d[5] ^ d[6] ^ d[9] ^ d[10] ^ d[11] ^ d[12] ^ d[13]
 Margin CRC[1] = d[1] ^ d[4] ^ d[6] ^ d[7] ^ d[10] ^ d[11] ^ d[12] ^ d[13] ^ d[14]
@@ -18465,7 +18465,7 @@ Margin CRC[2] = d[0] ^ d[2] ^ d[3] ^ d[6] ^ d[7] ^ d[8] ^ d[9] ^ d[10] ^ d[14]
 Margin CRC[3] = d[1] ^ d[3] ^ d[4] ^ d[7] ^ d[8] ^ d[9] ^ d[10] ^ d[11]
 Margin CRC[4] = d[2] ^ d[4] ^ d[5] ^ d[8] ^ d[9] ^ d[10] ^ d[11] ^ d[12]
 
-"Margin Parity" 是符号 4N+1 的位 [4:0]、符号 4N+2 的位 [6:0] 和符号 4N+3 的位 [7:0] 的偶校验(即 Margin Parity = Margin CRC[0] ^ Margin CRC[1] ^ Margin CRC[2] ^ Margin CRC[3] ^ Margin CRC[4] ^ d[0] ^ d[1] ^ d[2] ^ d[3] ^ d[4] ^ d[5] ^ d[6] ^ d[7] ^ d[8] ^ d[9] ^ d[10] ^ d[11] ^ d[12] ^ d[13] ^ d[14])。
+"Margin Parity" 是符号 4N+1 的 Bits [4:0]、符号 4N+2 的 Bits [6:0] 和符号 4N+3 的 Bits [7:0] 的偶校验(即 Margin Parity = Margin CRC[0] ^ Margin CRC[1] ^ Margin CRC[2] ^ Margin CRC[3] ^ Margin CRC[4] ^ d[0] ^ d[1] ^ d[2] ^ d[3] ^ d[4] ^ d[5] ^ d[6] ^ d[7] ^ d[8] ^ d[9] ^ d[10] ^ d[11] ^ d[12] ^ d[13] ^ d[14])。
 
 "Margin Parity" 仅适用于 128b/130b 编码。1b/1b Control SKP Ordered Set 不包含 "Margin Parity" 字段。
 
@@ -18541,7 +18541,7 @@ Since these 21 bits are not part of a TLP, repeated delivery of the same content
 **实现说明:**
 **CONTROL SKP ORDERED SET 中的错误保护**
 
-符号 4N+1 (位 [4:0])、符号 4N+2 (位 [7:0]) 和符号 4N+3 (位 [7:0]) 中的 21 位由 5 位 CRC 和 1 位奇偶校验位保护，剩下 15 位用于信息传递。奇偶校验位提供针对奇数次位翻转(例如 1 位、3 位)的检测，而 CRC 提供 1 位和 2 位翻转的保证检测;从而在这 21 位上提供三位翻转检测保证，以及对长度为 5 的突发错误的保证检测。5 位 CRC 派生自本原多项式: x5 + x2 + 1。
+符号 4N+1 (Bits [4:0])、符号 4N+2 (Bits [7:0]) 和符号 4N+3 (Bits [7:0]) 中的 21 位由 5 位 CRC 和 1 位奇偶校验位保护，剩下 15 位用于信息传递。奇偶校验位提供针对奇数次位翻转(例如 1 位、3 位)的检测，而 CRC 提供 1 位和 2 位翻转的保证检测;从而在这 21 位上提供三位翻转检测保证，以及对长度为 5 的突发错误的保证检测。5 位 CRC 派生自本原多项式: x5 + x2 + 1。
 
 由于这 21 位不属于 TLP,重复传递相同内容提供传递保证。这通过架构寄存器实现。下游命令从下游端口 (Downstream Port) 发送，反映架构寄存器的内容，而通过错误检查的上游状态则更新到下游端口中的状态寄存器。因此，软件具有在发出新命令前先发出命令并等待状态回传的机制。因此，这 15 位信息充当微数据包 (micro-packet)。
 

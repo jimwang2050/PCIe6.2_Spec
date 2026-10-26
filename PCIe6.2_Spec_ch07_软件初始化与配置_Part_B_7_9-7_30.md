@@ -3782,7 +3782,7 @@ Link Address 是一个 HwInit 字段，位于 Link Entry 起始处偏移 08h 处
 
 For a Link pointing to a memory-mapped RCRB (Link Type bit = 0), the first DWORD specifies the lower 32 bits of the RCRB base address of the target element as shown below; bits 11:0 are hardwired to 000h and Reserved for future use. The second DWORD specifies the high order 32 bits (63:32) of the RCRB base address of the target element.
 
-对于指向内存映射 RCRB 的链路（Link Type 位 = 0），如下图所示，第一个 DWORD 指定目标元素的 RCRB 基址的低 32 位；位 11:0 硬连线为 000h 并保留以供将来使用。第二个 DWORD 指定目标元素的 RCRB 基址的高 32 位（63:32）。
+对于指向内存映射 RCRB 的链路（Link Type 位 = 0），如下图所示，第一个 DWORD 指定目标元素的 RCRB 基址的低 32 位；Bits 11:0 硬连线为 000h 并保留以供将来使用。第二个 DWORD 指定目标元素的 RCRB 基址的高 32 位（63:32）。
 
 <table>
 <thead>
@@ -3815,7 +3815,7 @@ For a Link pointing to the Configuration Space of a Root Complex element (Link T
 <a id="sec-7-9-8-3-2-2-2"></a>
 ##### 7.9.8.3.2.2 Link Address for Link Type 1
 
-对于指向根复合体元素配置空间的链路（Link Type 位 = 1），第一个 DWORD 中的位指定目标元素的 Bus、Device 和 Function Number。如图 7-263 所示，位 2:0（N）编码与 Bus Number 关联的位数 n，其中 N = 000b 指定 n = 8，所有其他编码指定
+对于指向根复合体元素配置空间的链路（Link Type 位 = 1），第一个 DWORD 中的位指定目标元素的 Bus、Device 和 Function Number。如图 7-263 所示，Bits 2:0（N）编码与 Bus Number 关联的位数 n，其中 N = 000b 指定 n = 8，所有其他编码指定
 
 #### 7.9.8.3.2 Link Address（链路地址）
 <a id="sec-7-9-8-3-2-1"></a>
@@ -3852,7 +3852,7 @@ Software must not use n outside the context of evaluating the Bus Number and mem
 </td>
 <td style="background-color:#e8e8e8">
 
-n = <N 的值>。位 11:3 为保留位，硬连线为 0。位 14:12 指定 Function Number，位 19:15 指定 Device Number。位 (19 + n):20 指定 Bus Number，其中 1 ≤ n ≤ 8。
+n = <N 的值>。Bits 11:3 为保留位，硬连线为 0。Bits 14:12 指定 Function Number，Bits 19:15 指定 Device Number。位 (19 + n):20 指定 Bus Number，其中 1 ≤ n ≤ 8。
 
 第一个 DWORD 的位 31:(20 + n) 与第二个 DWORD 一起，通过指定与目标元素关联的 PCI Express 层级（hierarchy）的内存映射配置空间基址的位 63:(20 + n)，可选地标识目标元素的层级（对于实现 PCI Express Enhanced Configuration Access Mechanism 的系统）；不实现多于一个内存映射配置空间的单层级系统允许报告零值以表示默认配置空间。
 
@@ -4423,8 +4423,8 @@ RsvdP
 图 7-267 Root Complex Link Control Register(根复合体链路控制寄存器)
 实现注意事项:
 早期硬件支持的链路速度
-符合 [PCIe-3.0] 之前版本的硬件组件未实现 Supported Link Speeds Vector(支持的链路速度向量)字段，而是在位 24:18 返回 0000 000b。
-对于该字段包含 0000 000b 的组件，软件可读取 Root Complex Link Capabilities Register(根复合体链路能力寄存器，现定义为 Max Link Speed 字段)的位 3:0,并按下表解释其值:
+符合 [PCIe-3.0] 之前版本的硬件组件未实现 Supported Link Speeds Vector(支持的链路速度向量)字段，而是在 Bits 24:18 返回 0000 000b。
+对于该字段包含 0000 000b 的组件，软件可读取 Root Complex Link Capabilities Register(根复合体链路能力寄存器，现定义为 Max Link Speed 字段)的 Bits 3:0,并按下表解释其值:
 0001b
 支持 2.5 GT/s 链路速度
 0010b
@@ -13657,7 +13657,7 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 
 > **图 7-378(寄存器布局)。** 选择性 IDE 流状态寄存器
 >
-> | 位 31 | 位 30:4 | 位 3:0 |
+> | 位 31 | Bits 30:4 | Bits 3:0 |
 > |-------|---------|--------|
 > | Received IDE Fail Message(已接收 IDE 失败消息) | RsvdZ | Selective IDE Stream State(选择性 IDE 流状态) |
 
@@ -13744,7 +13744,7 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 
 > **图 7-379(寄存器布局)。** IDE RID 关联寄存器 1 (Offset +00h)
 >
-> | 位 31:24 | 位 23:8 | 位 7:0 |
+> | Bits 31:24 | Bits 23:8 | Bits 7:0 |
 > |----------|---------|--------|
 > | RsvdP | RID Limit(RID 上限) | RsvdP |
 
@@ -13807,7 +13807,7 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 > <img src="figures/chapter_07/fig_1077_1_tight.png" width="700">
 
 >
-> | 位 31:24 | 位 23:8 | 位 7:1 | 位 0 |
+> | Bits 31:24 | Bits 23:8 | Bits 7:1 | 位 0 |
 > |----------|---------|---------|------|
 > | Segment Base(Segment 基址) | RID Base(RID 基址) | RsvdP | Valid (V)(有效位) |
 
@@ -13896,7 +13896,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 > **图 7-381(寄存器布局)。** IDE 地址关联寄存器 1 (Offset +00h)
 >
-> | 位 31:20 | 位 19:8 | 位 7:1 | 位 0 |
+> | Bits 31:20 | Bits 19:8 | Bits 7:1 | 位 0 |
 > |----------|---------|---------|------|
 > | Memory Limit Lower(内存下限低位) | Memory Base Lower(内存基址低位) | RsvdP | V (Valid)(有效位) |
 
@@ -13904,8 +13904,8 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
-| 31:20 | Memory Limit Lower(内存下限低位)— 对应地址位 [31:20]。地址位 [19:0] 隐含为 F_FFFFh。 | RW |
-| 19:8 | Memory Base Lower(内存基址低位)— 对应地址位 [31:20]。地址位 [19:0] 隐含为 0_0000h。 | RW |
+| 31:20 | Memory Limit Lower(内存下限低位)— 对应地址 Bits [31:20]。地址 Bits [19:0] 隐含为 F_FFFFh。 | RW |
+| 19:8 | Memory Base Lower(内存基址低位)— 对应地址 Bits [31:20]。地址 Bits [19:0] 隐含为 0_0000h。 | RW |
 | 0 | V (Valid)(有效位)— 置 1 时，指示此 IDE Stream Association Block 有效，由 Memory Base 和 Memory Limit 定义的地址范围对应分配给 IDE Partner Port 的一段内存地址范围，且该地址范围内的所有发送地址路由 TLP 必须与此 IDE 流关联，前提是遵循 § Section 6.33.4 中所述的规则。<br>如果为不同的 IDE Stream 分配了重叠的地址范围，硬件行为未定义。<br>默认为 0b | RW |
 
 </td>
@@ -13956,7 +13956,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 > **图 7-382(寄存器布局)。** IDE 地址关联寄存器 2 (Offset +04h)
 >
-> | 位 31:0 |
+> | Bits 31:0 |
 > |---------|
 > | Memory Limit Upper(内存上限高位) |
 
@@ -13964,7 +13964,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
-| 31:0 | Memory Limit Upper(内存上限高位)— 对应地址位 [63:32] | RW |
+| 31:0 | Memory Limit Upper(内存上限高位)— 对应地址 Bits [63:32] | RW |
 
 </td>
 </tr>
@@ -14008,7 +14008,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 > **图 7-383(寄存器布局)。** IDE 地址关联寄存器 3 (Offset +04h)
 >
-> | 位 31:0 |
+> | Bits 31:0 |
 > |---------|
 > | Memory Base Upper(内存基址高位) |
 
@@ -14016,7 +14016,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|------------|------|
-| 31:0 | Memory Base Upper(内存基址高位)— 对应地址位 [63:32] | RW |
+| 31:0 | Memory Base Upper(内存基址高位)— 对应地址 Bits [63:32] | RW |
 
 </td>
 </tr>
@@ -14084,7 +14084,7 @@ Null Capability 不包含任何寄存器。该能力出现在链表(Next Capabil
 
 > **图 7-384(寄存器布局)。** 空能力
 >
-> | 位 15:8 | 位 7:0 |
+> | Bits 15:8 | Bits 7:0 |
 > |---------|---------|
 > | Next Capability Pointer(下一能力指针) | Capability ID = 00h |
 
@@ -14160,7 +14160,7 @@ Null Extended Capability(空扩展能力)是一种可选的扩展能力，允许
 
 > **图 7-385(寄存器布局)。** 空扩展能力
 >
-> | 位 31:20 | 位 19:16 | 位 15:0 |
+> | Bits 31:20 | Bits 19:16 | Bits 15:0 |
 > |----------|----------|---------|
 > | Next Capability Offset(下一能力偏移) | Capability Version(能力版本) | PCI Express Extended Capability ID = 0000h |
 

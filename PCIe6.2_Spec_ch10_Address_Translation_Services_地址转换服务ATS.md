@@ -990,9 +990,9 @@ Tag 字段的含义与内存读请求中的含义相同。
 
 当请求多个转换时，如果某个转换的范围与转换请求的隐含范围不重叠(这仅适用于初始值之后的转换),TA 不会返回该转换。转换请求的隐含范围为 [2^STU+12 * (Length/2)] 字节。
 
-转换请求中的未转换地址字段是第一个 STU 范围内任意地址。地址位 11:0 不出现在转换请求中，隐含为零。如果请求者的 Page Aligned Request 已设置(参见 § 第 7.8.9.2 节)，则必须确保位 11:2 为零。如果请求者的 Page Aligned Request 已清零，则允许为位 11:2 提供任意值。<sup>196</sup> TA 必须忽略位 11:2 以及确定转换不需要的任何低位。
+转换请求中的未转换地址字段是第一个 STU 范围内任意地址。地址 Bits 11:0 不出现在转换请求中，隐含为零。如果请求者的 Page Aligned Request 已设置(参见 § 第 7.8.9.2 节)，则必须确保 Bits 11:2 为零。如果请求者的 Page Aligned Request 已清零，则允许为 Bits 11:2 提供任意值。<sup>196</sup> TA 必须忽略 Bits 11:2 以及确定转换不需要的任何低位。
 
-例如，对于 Page Aligned Request 位置位且 STU 编程为 1(即 8192 字节页)的功能使用 64 位寻址时，位 63:13 有效，位 12 被 TA 忽略，位 11:0 隐含为零。
+例如，对于 Page Aligned Request 位置位且 STU 编程为 1(即 8192 字节页)的功能使用 64 位寻址时，Bits 63:13 有效，位 12 被 TA 忽略，Bits 11:0 隐含为零。
 
 > **实现说明 (IMPLEMENTATION NOTE):**
 > **转换请求排序 (TRANSLATION REQUEST ORDERING)**
@@ -1090,9 +1090,9 @@ Tag 字段的含义与内存读请求中的含义相同。
 
 当请求多个转换时，如果某个转换的范围与转换请求的隐含范围不重叠(这仅适用于初始值之后的转换),TA 不会返回该转换。转换请求的隐含范围为 [2^STU+12 * (Length/2)] 字节。
 
-转换请求中的未转换地址字段是第一个 STU 范围内任意地址。地址位 11:0 不出现在转换请求中，隐含为零。如果请求者的 Page Aligned Request 已设置(参见 § 第 7.8.9.2 节)，则必须确保位 11:2 为零。如果请求者的 Page Aligned Request 已清零，则允许为位 11:2 提供任意值。TA 必须忽略位 11:2 以及确定转换不需要的任何低位。
+转换请求中的未转换地址字段是第一个 STU 范围内任意地址。地址 Bits 11:0 不出现在转换请求中，隐含为零。如果请求者的 Page Aligned Request 已设置(参见 § 第 7.8.9.2 节)，则必须确保 Bits 11:2 为零。如果请求者的 Page Aligned Request 已清零，则允许为 Bits 11:2 提供任意值。TA 必须忽略 Bits 11:2 以及确定转换不需要的任何低位。
 
-例如，对于 Page Aligned Request 位置位且 STU 编程为 1(即 8192 字节页)的功能使用 64 位寻址时，位 63:13 有效，位 12 被 TA 忽略，位 11:0 隐含为零。
+例如，对于 Page Aligned Request 位置位且 STU 编程为 1(即 8192 字节页)的功能使用 64 位寻址时，Bits 63:13 有效，位 12 被 TA 忽略，Bits 11:0 隐含为零。
 
 > **实现说明 (IMPLEMENTATION NOTE):**
 > **转换请求排序 (TRANSLATION REQUEST ORDERING)**
@@ -1546,7 +1546,7 @@ If a Function receives a Translation Completion with a Translation Size field sm
 
 无论 STU 设置如何,size 字段均设置为以 4096 字节的倍数表示范围大小。例如，如果 STU 设置为指示最小转换为 8192 字节，则在转换完成中返回的所有转换以及所有无效化请求中,S 都应置位。如果 STU 设置为指示 16384 字节的最小值，则 S 和位 12 在所有转换和无效化范围中都应置位。
 
-如果 S 置位且位 63:12 全部为 1b,则行为未定义。如果 S 置位且位 63 为 0b,且位 62:12 全部为 1b,则该请求为使所有转换无效。
+如果 S 置位且 Bits 63:12 全部为 1b,则行为未定义。如果 S 置位且位 63 为 0b,且 Bits 62:12 全部为 1b,则该请求为使所有转换无效。
 
 如果功能收到转换完成，其中转换大小字段小于该功能编程的 STU 值，则应将该转换完成视为完成状态为 UR。
 
@@ -3407,7 +3407,7 @@ Each Function that supports ATS (capable of generating Translation Requests) mus
 | 位位置 | 寄存器描述 | 属性 |
 |--------------|----------------------|------------|
 | 4:0 (续) | 对于 VF,此字段必须硬连线为零。VF 共享关联 PF 的队列。参见 § 第 10.3.5 节。 | - |
-| 5 | Page Aligned Request - 置位时，指示 Untranslated Address 始终与 4096 字节边界对齐。此字段允许软件区分与本规范兼容的实现和与本规范早期版本(其中允许请求者提供位 [11:2] 中的任何值)兼容的实现。强烈建议置位此位。 | RO |
+| 5 | Page Aligned Request - 置位时，指示 Untranslated Address 始终与 4096 字节边界对齐。此字段允许软件区分与本规范兼容的实现和与本规范早期版本(其中允许请求者提供 Bits [11:2] 中的任何值)兼容的实现。强烈建议置位此位。 | RO |
 | 6 | Global Invalidate Supported - 置位时，该功能支持具有 Global Invalidate 位置位的 Invalidation 请求。清零时，该功能忽略所有 Invalidate 请求中的 Global Invalidate 位(参见 § 第 10.3.8 节)。强烈建议清零此位。如果该功能不支持 PASID,则此位必须硬连线为零。 | RO |
 | 7 | Relaxed Ordering Supported - 置位时，指示当 Enable Relaxed Ordering 位置位时，允许该功能在转换请求中置位 RO 位。 | RO |
 | 8 | ATS Memory Attributes Supported – 置位时，该功能支持在功能 ATC 中使用来自 ATS 转换完成的 AMA 值。清零时，该功能忽略 ATS 转换完成中的 AMA 字段。 | RO |
