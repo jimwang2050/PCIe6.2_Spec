@@ -241,10 +241,10 @@
 |  | 7.8.7.3 | [VF Resizable BAR Control Register (…](#sec-7-8-7-3) | [VF 可变大小 BAR 控制寄存器（偏移 08h）](#sec-7-8-7-3) | p.1225 |
 |  | 7.8.8 | [ARI Extended Capability](#sec-7-8-8) | [ARI 扩展能力](#sec-7-8-8) | p.1227 |
 |  | 7.8.8.1 | [ARI Extended Capability Header (Off…](#sec-7-8-8-1) | [ARI 扩展能力头（偏移 00h）](#sec-7-8-8-1) | p.1227 |
-|  | 7.8.8.1 | [Figure 7-183 ARI Capability Registe…](#sec-7-8-8-1) | [图 7-183 ARI 能力寄存器](#sec-7-8-8-1) | p.1228 |
 |  | 7.8.8.2 | [ARI Capability Register (Offset 04h…](#sec-7-8-8-2) | [ARI 能力寄存器（偏移 04h）](#sec-7-8-8-2) | p.1228 |
-|  | 7.8.8.2 | [Figure 7-184 ARI Control Register](#sec-7-8-8-2) | [图 7-184 ARI 控制寄存器](#sec-7-8-8-2) | p.1229 |
+|  | 7.8.8.2 | [Figure 7-183 ARI Capability Registe…](#sec-7-8-8-2) | [图 7-183 ARI 能力寄存器](#sec-7-8-8-2) | p.1228 |
 |  | 7.8.8.3 | [ARI Control Register (Offset 06h)](#sec-7-8-8-3) | [ARI 控制寄存器（偏移 06h）](#sec-7-8-8-3) | p.1229 |
+|  | 7.8.8.3 | [Figure 7-184 ARI Control Register](#sec-7-8-8-3) | [图 7-184 ARI 控制寄存器](#sec-7-8-8-3) | p.1229 |
 |  | 7.8.9 | [PASID Extended Capability Structure](#sec-7-8-9) | [PASID 扩展能力结构](#sec-7-8-9) | p.1229 |
 |  | 7.8.9.1 | [PASID Extended Capability Header (O…](#sec-7-8-9-1) | [PASID 扩展能力头（偏移 00h）](#sec-7-8-9-1) | p.1230 |
 |  | 7.8.9.2 | [PASID Capability Register (Offset 0…](#sec-7-8-9-2) | [PASID 能力寄存器（偏移 04h）](#sec-7-8-9-2) | p.1231 |
@@ -253,8 +253,8 @@
 |  | 7.8.10.1 | [FRS Queueing Extended Capability He…](#sec-7-8-10-1) | [FRS 排队扩展能力头（偏移 00h）](#sec-7-8-10-1) | p.1233 |
 |  | 7.8.10.2 | [FRS Queueing Capability Register (O…](#sec-7-8-10-2) | [FRS 排队能力寄存器（偏移 04h）](#sec-7-8-10-2) | p.1234 |
 |  | 7.8.10.3 | [FRS Queueing Status Register (Offse…](#sec-7-8-10-3) | [FRS 排队状态寄存器（偏移 08h）](#sec-7-8-10-3) | p.1234 |
-|  | 7.8.10.4 | [FRS Queueing Control Register (Offs…](#sec-7-8-10-4) | [FRS 排队控制寄存器 (Offset 0Ah)](#sec-7-8-10-4) | p.1235 |
-|  | 7.8.10.5 | [FRS Message Queue Register (Offset …](#sec-7-8-10-5) | [FRS 报文队列寄存器 (Offset 0Ch)](#sec-7-8-10-5) | p.1235 |
+|  | 7.8.10.4 | [FRS Queueing Control Register (Offs…](#sec-7-8-10-4) | [FRS 排队控制寄存器（偏移 0Ah）](#sec-7-8-10-4) | p.1235 |
+|  | 7.8.10.5 | [FRS Message Queue Register (Offset …](#sec-7-8-10-5) | [FRS 报文队列寄存器（偏移 0Ch）](#sec-7-8-10-5) | p.1235 |
 |  | 7.8.11 | [Flattening Portal Bridge (FPB) Capa…](#sec-7-8-11) | [7.8.11 扁平化门户桥 (FPB) 能力](#sec-7-8-11) | p.1236 |
 |  | 7.8.11.1 | [FPB Capability Header (Offset 00h)](#sec-7-8-11-1) | [7.8.11.1 FPB 能力头 (Offset 00h)](#sec-7-8-11-1) | p.1237 |
 |  | 7.8.11.2 | [FPB Capabilities Register (Offset 0…](#sec-7-8-11-2) | [7.8.11.2 FPB 能力寄存器 (Offset 04h…](#sec-7-8-11-2) | p.1237 |
@@ -22867,36 +22867,13 @@ ARI（替代路由 ID 解释，Alternative Routing ID Interpretation）是一种
 <a id="sec-7-8-8-1"></a>
 ## 7.8.8.1 ARI Extended Capability Header (Offset 00h) | ARI 扩展能力头（偏移 00h）
 
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-Reserved for ARI Extended Capability Header.
-
-</td>
-<td style="background-color:#e8e8e8">
-
-ARI 扩展能力头保留位。
-
-</td>
-</tr>
-</tbody>
-</table>
-
----
-
 <!-- 📄 Page 1228 -->
 ---
 
-<a id="sec-7-8-8-1-fig"></a>
-### 7.8.8.1 Figure 7-183 ARI Capability Register | 图 7-183 ARI 能力寄存器
+<a id="sec-7-8-8-2"></a>
+## 7.8.8.2 ARI Capability Register (Offset 04h) | ARI 能力寄存器（偏移 04h）
+
+### Figure 7-183 ARI Capability Register | 图 7-183 ARI 能力寄存器
 
 **Figure 7-183. ARI Capability Register | 图 7-183. ARI 能力寄存器**
 
@@ -22943,40 +22920,15 @@ ARI 扩展能力头保留位。
 | 1 | **ACS Function Groups Capability (A)** —— 仅适用于 Function 0；其他所有 Function 必须为 0。置 1 表示 ARI 设备通过其 ACS 能力结构支持以 Function Group 粒度进行 ACS P2P Egress Control。<br>任何在 ACS 能力中实现了可选 Egress Control Vector 并消耗多个 Bus Number 的 SR-IOV 设备必须在其 Function 0 中置 1 此位。 | RO |
 | 15:8 | **Next Function Number** —— 对于非 VF，此字段指示设备中编号次高的下一个 Function 的 Function Number；若不存在更高编号的 Function，则为 00h。Function 0 启动此 Function 链表。<br>Shadow Function 的存在不影响此字段。<br>对于 VF，此字段未定义，因为 VF 是通过 First VF Offset（参见 § 9.3.3.9 节）和 VF Stride（参见 § 9.3.3.10 节）来定位的。 | RO |
 
----
-
-<a id="sec-7-8-8-2"></a>
-## 7.8.8.2 ARI Capability Register (Offset 04h) | ARI 能力寄存器（偏移 04h）
-
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-Reserved for ARI Capability Register description.
-
-</td>
-<td style="background-color:#e8e8e8">
-
-ARI 能力寄存器说明保留位。
-
-</td>
-</tr>
-</tbody>
-</table>
-
----
-
 <!-- 📄 Page 1229 -->
 ---
 
-### 7.8.8.2 Figure 7-184 ARI Control Register | 图 7-184 ARI 控制寄存器
+---
+
+<a id="sec-7-8-8-3"></a>
+## 7.8.8.3 ARI Control Register (Offset 06h) | ARI 控制寄存器（偏移 06h）
+
+### Figure 7-184 ARI Control Register | 图 7-184 ARI 控制寄存器
 
 **Figure 7-184. ARI Control Register | 图 7-184. ARI 控制寄存器**
 
@@ -23026,36 +22978,6 @@ ARI 能力寄存器说明保留位。
 | 0 | **MFVC Function Groups Enable (M)** —— 仅适用于 Function 0；其他所有 Function 必须硬连线为 0b。置 1 时，ARI 设备必须将其 Function Arbitration Table 中的条目解释为 Function Group Number，而非 Function Number。<br>此位默认值为 0b。如果 MFVC Function Groups Capability 位为 0b，则必须硬连线为 0b。 | RW |
 | 1 | **ACS Function Groups Enable (A)** —— 仅适用于 Function 0；其他所有 Function 必须硬连线为 0b。置 1 时，ARI 设备中的每个 Function 必须将其 Egress Control Vector 中的位与 Function Group Number 关联，而非 Function Number。<br>此位默认值为 0b。如果 ACS Function Groups Capability 位为 0b，则必须硬连线为 0b。 | RW |
 | 6:4 | **Function Group** —— 为本 Function 分配一个 Function Group Number。<br>此字段默认值为 000b。如果在 Function 0 中 MFVC Function Groups Capability 位和 ACS Function Groups Capability 位都为 0b，则必须硬连线为 000b。 | RW |
-
----
-
-<a id="sec-7-8-8-3"></a>
-## 7.8.8.3 ARI Control Register (Offset 06h) | ARI 控制寄存器（偏移 06h）
-
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-Refer to the ARI Control Register description above (§ 7.8.8.2).
-
-</td>
-<td style="background-color:#e8e8e8">
-
-参见上文 ARI 控制寄存器的说明（§ 7.8.8.2）。
-
-</td>
-</tr>
-</tbody>
-</table>
-
----
 
 <a id="sec-7-8-9"></a>
 ## 7.8.9 PASID Extended Capability Structure | PASID 扩展能力结构
@@ -23707,6 +23629,11 @@ FRS Queueing 扩展能力对于支持可选规范性 FRS Queueing 能力的 Root
 
 ---
 
+---
+
+<a id="sec-7-8-10-4"></a>
+## 7.8.10.4 FRS Queueing Control Register (Offset 0Ah) | FRS 排队控制寄存器（偏移 0Ah）
+
 ### Figure 7-193 FRS Queueing Control Register | 图 7-193 FRS 排队控制寄存器
 
 **Figure 7-193. FRS Queueing Control Register | 图 7-193. FRS 排队控制寄存器**
@@ -23743,6 +23670,9 @@ FRS Queueing 扩展能力对于支持可选规范性 FRS Queueing 能力的 Root
 | 0 | **FRS Interrupt Enable** —— 当置 1 且 MSI 或 MSI-X 已启用时，Port 必须发出 MSI/MSI-X 中断，以指示 FRS Message Received 或 FRS Message Overflow 位发生 0b 到 1b 的跳变。<br>此位默认值为 0b。 | RW |
 
 ---
+
+<a id="sec-7-8-10-5"></a>
+## 7.8.10.5 FRS Message Queue Register (Offset 0Ch) | FRS 报文队列寄存器（偏移 0Ch）
 
 <table>
 <thead>
@@ -23800,69 +23730,10 @@ FRS Message Queue Register 包含队列中最旧 FRS message 的字段。它还�
 
 ---
 
-
----
-
-<a id="sec-7-8-10-4"></a>
-## 7.8.10.4 FRS Queueing Control Register (Offset 0Ah) | FRS 排队控制寄存器 (Offset 0Ah)
-
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-(参见上一节内容)
-
-</td>
-<td style="background-color:#e8e8e8">
-
-(参见上一节内容)
-
-</td>
-</tr>
-</tbody>
-</table>
-
----
-
-<a id="sec-7-8-10-5"></a>
-## 7.8.10.5 FRS Message Queue Register (Offset 0Ch) | FRS 报文队列寄存器 (Offset 0Ch)
-
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-7.8.10.5 FRS Message Queue Register (Offset 0Ch) §
-
-</td>
-<td style="background-color:#e8e8e8">
-
-7.8.10.5 FRS 报文队列寄存器 (Offset 0Ch) §
-
-</td>
-</tr>
-</tbody>
-</table>
-
----
-
 <!-- 📄 Page 1236 -->
 ---
 
-**Table 7-166 FRS Message Queue Register | 表 7-166 FRS 报文队列寄存器**
+**Table 7-166. FRS Message Queue Register | 表 7-166. FRS 报文队列寄存器**
 
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
@@ -23870,40 +23741,13 @@ FRS Message Queue Register 包含队列中最旧 FRS message 的字段。它还�
 | 19:16 | FRS Message Queue Reason - Recorded from the FRS Reason of the oldest FRS Message Received or generated by this Root Port or Root Complex Event Collector and still in the queue. Undefined if FRS Message Queue Depth is 000h. | RO |
 | 31:20 | FRS Message Queue Depth - indicates the current number of FRS Messages in the queue. The value of 000h indicates an empty queue. Default value of this field is 000h. | RO |
 
-
-<div style="overflow-x: auto; max-width: 100%;">
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-| Bit Location | Register Description | Attributes |
-|--------------|----------------------|------------|
-| 15:0 | FRS Message Queue Function ID - Recorded from the Requester ID (请求者 ID) of the oldest FRS Message Received or generated by this Root Port or Root Complex Event Collector and still in the queue. Undefined if FRS Message Queue Depth is 000h. | RO |
-| 19:16 | FRS Message Queue Reason - Recorded from the FRS Reason of the oldest FRS Message Received or generated by this Root Port or Root Complex Event Collector and still in the queue. Undefined if FRS Message Queue Depth is 000h. | RO |
-| 31:20 | FRS Message Queue Depth - indicates the current number of FRS Messages in the queue. The value of 000h indicates an empty queue. Default value of this field is 000h. | RO |
-
-</td>
-<td style="background-color:#e8e8e8">
+**Table 7-166. FRS 报文队列寄存器**
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|-----------|------|
 | 15:0 | FRS 报文队列 Function ID —— 来自此根端口 (Root Port) 或根复合体事件收集器 (Root Complex Event Collector) 接收或生成、且仍位于队列中的最旧 FRS 报文的 Requester ID。若 FRS 报文队列深度 (FRS Message Queue Depth) 为 000h,则该字段未定义。 | RO |
 | 19:16 | FRS 报文队列 Reason —— 来自此根端口 (Root Port) 或根复合体事件收集器 (Root Complex Event Collector) 接收或生成、且仍位于队列中的最旧 FRS 报文的 FRS Reason。若 FRS 报文队列深度为 000h,则该字段未定义。 | RO |
 | 31:20 | FRS 报文队列深度 (FRS Message Queue Depth) —— 指示队列中当前 FRS 报文的数量。值 000h 表示空队列。该字段默认值为 000h。 | RO |
-
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
