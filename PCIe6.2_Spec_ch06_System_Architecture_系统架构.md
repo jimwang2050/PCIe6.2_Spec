@@ -343,7 +343,6 @@
 | 48 | Example Add-In-Card Supporting… |  | p.898 |
 | 49 | Byte Mapping of SPDM Messages … |  | p.903 |
 | 50 | Byte Mapping of Secured CMA-SP… |  | p.905 |
-| 50 | 安全 CMA-SPDM 消息的字节映射(含示例有效负载) |  | p.905 |
 | 51 | Example DMWr Data Payload Temp… |  | p.910 |
 | 52 | IDE Secures TLPs Between Ports |  | p.912 |
 | 53 | IDE Stream State Machine |  | p.916 |
@@ -15585,7 +15584,7 @@ It is only permitted to apply EA to certain functions, based on the hierarchical
 <td>
 
 > **Figure 6-26.** Example Illustrating Application of Enhanced Allocation
-> **图 6-26.** TPH 与设备特定扩展
+> **图 6-26.** 增强分配应用示例
 > <img src="figures/chapter_06/fig_0853_1_tight.png" width="700">
 
 Figure 6-26 illustrates an example topology that shows where Enhanced Allocation is permitted to be used:
@@ -15757,7 +15756,7 @@ When software initializes a PCI Hierarchy, it assigns unique Bus and Device numb
 **EMERGENCY POWER REDUCTION STATE: EXAMPLE ADD-IN CARD**
 
 > **Figure 6-27.** Emergency Power Reduction State: Example Add-in Card
-> **图 6-27.** TPH 与 Steer 和 ST 字段的格式
+> **图 6-27.** 紧急降功耗状态：附加卡示例
 > <img src="figures/chapter_06/fig_0857_1_tight.png" width="700">
 
 § Figure 6-27 shows an example multi-Device add-in card supporting Emergency Power Reduction. Note that Device C does not support the Emergency Power Reduction State. Device C might be a Switch that fans out to Devices A and B.
@@ -15948,19 +15947,19 @@ For ARI Functions associated with an Upstream Port, the Routing ID consists of a
 A bridge that implements the FPB Capability can itself also be referred to as an FPB. The FPB Capability can be applied to any logical bridge, as illustrated in § Figure 6-28.
 
 > **Figure 6-28.** FPB High Level Diagram and Example Topology
-> **图 6-28.** TPH 完成器要求
+> **图 6-28.** FPB 高层框图与示例拓扑
 > <img src="figures/chapter_06/fig_0862_1_tight.png" width="700">
 
 FPB changes the way Bus Numbers are consumed by Switches to reduce waste, by "flattening" the way Bus Numbers are used inside of Switches and by Downstream Ports (see § Figure 6-29).
 
 > **Figure 6-29.** Example Illustrating "Flattening" of a Switch
-> **图 6-29.** TPH 请求者要求
+> **图 6-29.** 交换机“扁平化”示例
 > <img src="figures/chapter_06/fig_0863_1_tight.png" width="700">
 
 FPB defines mechanisms for system software to allocate Routing IDs and Memory Space resources in non-contiguous ranges, enabling system software to assign pools of these resources from which it can allocate "bins" to Functions below the FPB. This is done using a bit vector where each bit when Set assigns a corresponding range of resources to the Secondary Side of the bridge (see § Figure 6-30).
 
 > **Figure 6-30.** Vector Mechanism for Address Range Decoding
-> **图 6-30.** 扩展语法空间 — TLP 格式
+> **图 6-30.** 地址范围解码的向量机制
 > <img src="figures/chapter_06/fig_0864_1_tight.png" width="700">
 
 </td>
@@ -15989,7 +15988,7 @@ This allows system software to assign Routing IDs and/or Memory Space resources 
 FPB is defined to allow both the non-FPB and FPB mechanisms to operate simultaneously, such that, for example, it is possible for system firmware/software to implement a policy where the non-FPB mechanisms continue to be used in parts of the system where the FPB mechanisms are not required (see § Figure 6-31). In this figure, the decode logic is assumed to provide a '1' output when a given TLP is decoded as being associated with the bridge's Secondary Side. The non-FPB decode mechanisms apply as without FPB, so for example only the Bus Number portion (bits 15:8) of a Routing ID is tested by the non-FPB decode logic when evaluating an ID routed TLP.
 
 > **Figure 6-31.** Relationship between FPB and non-FPB Decode Mechanisms
-> **图 6-31.** 64 位寻址扩展语法空间 — TLP 格式
+> **图 6-31.** FPB 与非 FPB 解码机制的关系
 > <img src="figures/chapter_06/fig_0865_1_tight.png" width="700">
 
 It is important to recognize that, although FPB adds additional ways for a specific bridge to decode a given TLP, FPB does not change anything about the fundamental ways that bridges operate within the Switch and Root Complex architectural structures. FPB uses the same architectural concepts to provide management mechanisms for three different resource types:
@@ -16160,7 +16159,7 @@ When ARI is not enabled, the FPB RID mechanism can be applied with different gra
 </table>
 
 > **Figure 6-32.** Routing IDs (RIDs) and Supported Granularities
-> **图 6-32.** Process Address Space ID (PASID) TLP 前缀
+> **图 6-32.** Routing ID（RID）与支持的粒度
 > <img src="figures/chapter_06/fig_0867_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
@@ -16292,7 +16291,7 @@ FPB MEM Low 机制可以以不同的粒度应用，粒度可由系统软件通�
 </table>
 
 > **Figure 6-33.** Addresses in Memory Below 4 GB and Effect of Granularity
-> **图 6-33.** PASID TLP 前缀格式
+> **图 6-33.** 4 GB 以下内存地址及粒度的影响
 > <img src="figures/chapter_06/fig_0869_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
@@ -16697,7 +16696,7 @@ VPD 关键字分为两类:只读字段和读/写字段。除非另有说明，�
 </table>
 
 > **Figure 6-34.** VPD Format
-> **图 6-34.** 错误转发— poisoned TLP
+> **图 6-34.** VPD 格式
 > <img src="figures/chapter_06/fig_0874_1_tight.png" width="700">
 
 **Table 6-22. Example of Add-in Card Serial Number | 表 6-22. 插卡序列号示例**
@@ -17055,7 +17054,7 @@ An enclosure is any platform, box, rack, or set of boxes that contain one or mor
 </table>
 
 > **Figure 6-35.** Example NPEM Configuration using a Downstream Port
-> **图 6-35.** 错误转发— Completion 超时
+> **图 6-35.** 使用下行端口的 NPEM 配置示例
 > <img src="figures/chapter_06/fig_0879_1_tight.png" width="700">
 
 <table>
@@ -17117,7 +17116,7 @@ This specification defines the software interface provided by the NPEM capabilit
 
 
 > **Figure 6-37.** NPEM Command Flow
-> **图 6-37.** 错误消息 TLP 格式
+> **图 6-37.** NPEM 命令流程
 > <img src="figures/chapter_06/fig_0881_1.png" width="700">
 
 <table>
@@ -17575,7 +17574,7 @@ Alternatively, for CMA/SPDM and related use cases, the optional Connection ID me
 
 
 > **Figure 6-38.** Stack Diagram Illustration of Multiple Sessions and Connections
-> **图 6-38.** 错误日志记录块图
+> **图 6-38.** 多会话与连接的分层结构示意图
 > <img src="figures/chapter_06/fig_0887_1_tight.png" width="700">
 
 <table>
@@ -17602,7 +17601,7 @@ In each case, two distinct SPDM uses are shown, A and B, and within each group, 
 </table>
 
 > **Figure 6-39.** Example Showing Relationships of Software and Hardware Elements
-> **图 6-39.** 设备错误信令与日志记录状态图
+> **图 6-39.** 软件与硬件要素关系示例
 > <img src="figures/chapter_06/fig_0888_1_tight.png" width="700">
 
 ---
@@ -17637,7 +17636,7 @@ Data objects must consist of 2 DW to 256K DW, as shown in Figure 6-40.
 </table>
 
 > **Figure 6-40.** DOE Data Object Format
-> **图 6-40.** 可校正错误消息日志记录流程
+> **图 6-40.** DOE 数据对象格式
 > <img src="figures/chapter_06/fig_0889_1_tight.png" width="700">
 
 <table>
@@ -17664,7 +17663,7 @@ The first DW of a data object must be formatted as defined in Table 6-28 and ill
 </table>
 
 > **Figure 6-41.** DOE Data Object Header 1
-> **图 6-41.** 不可校正错误消息日志记录流程
+> **图 6-41.** DOE 数据对象头 1
 > <img src="figures/chapter_06/fig_0889_2_tight.png" width="700">
 
 **Table 6-28 DOE Data Object Header 1**
@@ -17705,7 +17704,7 @@ The Second DW of a data object must be formatted as defined in Table 6-29 and il
 </table>
 
 > **Figure 6-42.** DOE Data Object Header 2
-> **图 6-42.** 设备中断忽略逻辑
+> **图 6-42.** DOE 数据对象头 2
 > <img src="figures/chapter_06/fig_0889_1.png" width="700">
 
 ---
@@ -17781,7 +17780,7 @@ The DOE Discovery feature must be implemented, and provides a means for software
 
 
 > **Figure 6-43.** DOE Discovery Request Data Object Contents (3rd DW)
-> **图 6-43.** INTx 中断消息—传统 INTx 仿真
+> **图 6-43.** DOE Discovery 请求数据对象内容（第 3 个 DW）
 > <img src="figures/chapter_06/fig_0890_1_tight.png" width="700">
 
 **Table 6-30 DOE Discovery Request Data Object Contents (3rd DW)**
@@ -17821,7 +17820,7 @@ The DOE Discovery feature must be implemented, and provides a means for software
 <td>
 
 > **Figure 6-44.** DOE Discovery Response Data Object Contents (3rd DW)
-> **图 6-44.** INTx 中断消息—消息断言
+> **图 6-44.** DOE Discovery 响应数据对象内容（第 3 个 DW）
 > <img src="figures/chapter_06/fig_0891_1_tight.png" width="700">
 
 **Table 6-31. DOE Discovery Response Data Object Contents (3rd DW) | 表 6-31. DOE 发现响应数据对象内容（第 3 个 DW）**
@@ -17925,7 +17924,7 @@ PCI-SIG 定义的数据对象类型在 § Table 6-33 中定义。
 </table>
 
 > **Figure 6-45.** DOE Discovery Response Data Object Contents (4th DW)
-> **图 6-45.** INTx 中断消息—消息取消断言
+> **图 6-45.** DOE Discovery 响应数据对象内容（第 4 个 DW）
 
 > <img src="figures/chapter_06/fig_0891_2_tight.png" width="700">
 
@@ -18242,7 +18241,7 @@ DOE 实例被允许支持 DOE 中断的生成，这由 DOE Capabilities 寄存�
 <td>
 
 > **Figure 6-46.** CMA-SPDM as Part of a Layered Architecture
-> **图 6-46.** INTx 仿真时序
+> **图 6-46.** 作为分层架构组成部分的 CMA-SPDM
 
 > <img src="figures/chapter_06/fig_0898_1_tight.png" width="700">
 
@@ -18391,11 +18390,11 @@ CMA/SPDM 的应用众多且多样化。对于复杂环境，安全身份供应�
 </table>
 
 > **Figure 6-47.** Example System Showing Multiple Access Mechanisms
-> **图 6-47.** MSI 具有多个消息能力的消息地址映射
+> **图 6-47.** 展示多种访问机制的示例系统
 > <img src="figures/chapter_06/fig_0900_1.png" width="700">
 
 > **Figure 6-48.** Example Add-In-Card Supporting CMA-SPDM
-> **图 6-48.** MSI 消息数据寄存器格式—32 位
+> **图 6-48.** 支持 CMA-SPDM 的附加卡示例
 > <img src="figures/chapter_06/fig_0901_1_tight.png" width="700">
 
 </div>
@@ -18649,7 +18648,7 @@ Some components provide a debug mode where a debugger is granted access to hardw
 </table>
 
 > **Figure 6-49.** Byte Mapping of SPDM Messages Including Example Payload
-> **图 6-49.** MSI 消息数据寄存器格式—64 位
+> **图 6-49.** SPDM 消息的字节映射（含示例有效负载）
 > <img src="figures/chapter_06/fig_0904_1_tight.png" width="700">
 
 </div>
@@ -18695,7 +18694,6 @@ An FLR to a Function for which there is an established secure session must not c
 For the Secured CMA-SPDM data object type or Secured CMA-SPDM with connection ID data object type, the Secured CMA-SPDM message payloads must start from "Data Object DW 0". The Secured CMA-SPDM message payloads must follow the Secured CMA-SPDM specification Secure Message fields definition, starting with Session ID. "Sequence Number" field must be absent (S=0). "Random Data" field must be absent (R=0). The "Application Data" field must be the in-session SPDM message. The Byte mapping of Secured CMA-SPDM Messages is shown in § Figure 6-50. If required, Secured CMA-SPDM Message payloads must be padded with 0's to maintain DW alignment, when using DOE.
 
 > **Figure 6-50.** Byte Mapping of Secured CMA-SPDM Messages Including Example Payload
-> **图 6-50.** MSI 多个消息—消息分配示例
 
 > <img src="figures/chapter_06/fig_0905_1_tight.png" width="700">
 
@@ -18713,8 +18711,7 @@ For the Secured CMA-SPDM data object type or Secured CMA-SPDM with connection ID
 
 对于安全 CMA-SPDM 数据对象类型或带连接 ID 的安全 CMA-SPDM 数据对象类型，安全 CMA-SPDM 消息有效负载必须从"Data Object DW 0"开始。安全 CMA-SPDM 消息有效负载必须遵循安全 CMA-SPDM 规范的安全消息字段定义，从 Session ID 开始。"Sequence Number"字段必须不存在(S=0)。"Random Data"字段必须不存在(R=0)。"Application Data"字段必须是会话内 SPDM 消息。安全 CMA-SPDM 消息的字节映射如 § Figure 6-50 所示。如有需要，在使用 DOE 时，安全 CMA-SPDM 消息有效负载必须用 0 填充以保持 DW 对齐。
 
-> **Figure 6-50.** 安全 CMA-SPDM 消息的字节映射(含示例有效负载)
-> **图 6-50.** MSI 多个消息—消息分配示例
+> **图 6-50.** 安全 CMA-SPDM 消息的字节映射（含示例有效负载）
 
 <img src="figures/chapter_06/fig_0905_1_tight.png" width="700">
 </td>
@@ -19059,7 +19056,7 @@ Users of DMWr must understand the functional implications of transaction orderin
 As with all types of "control" mechanisms, it is necessary for all participants to comprehend the specific requirements placed by the particular mechanism, and these will vary between different systems and different device types. In many cases it will be necessary to distinguish Requests issued from different software environments (e.g., from multiple Virtual Machine guests where the guests use different drivers) all sharing the same work queue. PASID is one mechanism that can be used for this purpose, although there are many alternatives (e.g., different ranges of addresses could be assigned to each environment that would be mapped to the same resources in the Completer). In some systems, system and application level software is capable of generating DMWr Requests according to a specific template (§ Figure 6-51), where bits 31:0 are defined by the system architecture, the P bit at bit 31 indicates if user (0b) or supervisor (1b) code triggered the Request, and bits 19:0 of the payload include the PASID to indicate the context in which the Request was generated.
 
 > **Figure 6-51.** Example DMWr Data Payload Template
-> **图 6-51.** MSI-X 消息表格式
+> **图 6-51.** DMWr 数据有效负载模板示例
 > <img src="figures/chapter_06/fig_0910_1_tight.png" width="700">
 
 For performance reasons it is not recommended that DMWr be used for sending bulk data.
@@ -19163,7 +19160,7 @@ IDE 在两个端口之间建立 IDE 流（IDE Stream）(见 § Figure 6-52)。ID
 <td>
 
 > **Figure 6-52.** IDE Secures TLPs Between Ports
-> **图 6-52.** MSI-X PBA 格式
+> **图 6-52.** IDE 保护端口间的 TLP
 > <img src="figures/chapter_06/fig_0912_1_tight.png" width="700">
 
 In addition to the in-line securing of TLPs, as a "data plane" capability, IDE defines interoperable mechanisms for establishing Streams and programming keys, as a "control plane" capability, based on industry specifications. For example, for an Endpoint connected directly to the Root Complex (A to B above), one way to establish IDE is to use IDE Key Management (IDE_KM – see § Section 6.33.3) via DOE to allow host Firmware/Software to configure the Ports, including securely programming the IDE keys into both Ports. In another example, for two Endpoints communicating peer to peer (G to H above), the two Endpoints can implement communication directly via [MCTP-VDM] and [Secured-MCTP], where one will take the Requester role and the other the Responder role, and then applying the IDE_KM flow for secure key establishment. In an alternate example, it is also possible for some kind of management controller to apply IDE_KM over a sideband management connection, to program IDE keys in Ports throughout a system. The mechanisms for a management controller to program keys into a Root Complex are outside the scope of this document.
@@ -19411,7 +19408,7 @@ A trusted execution environment (TEE) using IDE must prevent the transmission of
 </table>
 
 > **Figure 6-53.** IDE Stream State Machine
-> **图 6-53.** MSI 请求服务流程示例
+> **图 6-53.** IDE 流状态机
 > <img src="figures/chapter_06/fig_0916_1_tight.png" width="700">
 
 </div>
@@ -19436,7 +19433,7 @@ A trusted execution environment (TEE) using IDE must prevent the transmission of
 <td>
 
 > **Figure 6-54.** IDE Stream State Machine
-> **图 6-54.** 来自同一功能的多个未完成 MSI 中断
+> **图 6-54.** IDE 流状态机
 > <img src="figures/chapter_06/fig_0917_1_tight.png" width="700">
 
 TDISP (see § Chapter 11.) defines specific requirements that extend the following rules, that apply broadly to all TEEs using IDE:
@@ -19561,7 +19558,7 @@ IDE 密钥管理 (IDE Key Management, IDE_KM) 基于 [SPDM] 和 [Secured-SPDM],�
 **6.33.3 IDE Key Management (IDE_KM)**
 
 > **Figure 6-55.** IDE Key Management (IDE_KM) and Related Specifications & Capabilities
-> **图 6-55.** MSI-X 请求服务流程示例
+> **图 6-55.** IDE 密钥管理（IDE_KM）及相关规范与能力
 > <img src="figures/chapter_06/fig_0919_1_tight.png" width="700">
 
 | Legend | Source |
@@ -19919,7 +19916,7 @@ An IDE error condition will occur if system software fails to ensure the correct
   - If the secure [SPDM] session that was used for initial key programming is closed, any subsequent QUERY and/or KEY_PROG requests received through a different secure [SPDM] session must first cause the responder to invalidate and render unreadable all keys must for the IDE Stream, then transition that IDE Stream to the Insecure state, and only then respond to the QUERY/KEY_PROG request, unless it can be ensured through implementation specific means that the new session has been established with the same requester as performed the initial key programming.
 
 > **Figure 6-56.** Query (QUERY) Data Object
-> **图 6-56.** 来自同一功能的多个未完成 MSI-X 中断
+> **图 6-56.** Query（QUERY）数据对象
 > <img src="figures/chapter_06/fig_0924_1.png" width="700">
 
 <!-- 📄 Page 924 -->
@@ -20007,27 +20004,27 @@ An IDE error condition will occur if system software fails to ensure the correct
 </table>
 
 > **Figure 6-57.** Query Response (QUERY_RESP) Data Object
-> **图 6-57.** MSI-X 中断复用
+> **图 6-57.** Query Response（QUERY_RESP）数据对象
 > <img src="figures/chapter_06/fig_0925_1_tight.png" width="700">
 
 > **Figure 6-58.** Key Programming (KEY_PROG) Data Object with Example 256b Key
-> **图 6-58.** PCI Express 热插拔控制器模型
+> **图 6-58.** Key Programming（KEY_PROG）数据对象（含 256 位密钥示例）
 > <img src="figures/chapter_06/fig_0925_2_tight.png" width="700">
 
 > **Figure 6-59.** Key Programming Acknowledgement (KP_ACK) Data Object
-> **图 6-59.** PCI Express 热插拔事件流程
+> **图 6-59.** Key Programming Acknowledgement（KP_ACK）数据对象
 > <img src="figures/chapter_06/fig_0926_1_tight.png" width="700">
 
 > **Figure 6-60.** Key Set Go (K_SET_GO) Data Object
-> **图 6-60.** 热插拔系统事件流
+> **图 6-60.** Key Set Go（K_SET_GO）数据对象
 > <img src="figures/chapter_06/fig_0926_2_tight.png" width="700">
 
 > **Figure 6-61.** Key Set Stop (K_SET_STOP) Data Object
-> **图 6-61.** VPD 必选区域
+> **图 6-61.** Key Set Stop（K_SET_STOP）数据对象
 > <img src="figures/chapter_06/fig_0926_3_tight.png" width="700">
 
 > **Figure 6-62.** Key Set Go/Stop Acknowledgement (K_GOSTOP_ACK) Data Object
-> **图 6-62.** VPD 可选区域
+> **图 6-62.** Key Set Go/Stop Acknowledgement（K_GOSTOP_ACK）数据对象
 > <img src="figures/chapter_06/fig_0926_4_tight.png" width="700">
 
 </div>
@@ -20168,7 +20165,7 @@ TLPs secured by IDE are called IDE TLPs. In Non-Flit Mode, all IDE TLPs must use
 </table>
 
 > **Figure 6-63.** IDE_KM Example
-> **图 6-63.** 数据完整性流程框图
+> **图 6-63.** IDE_KM 示例
 > <img src="figures/chapter_06/fig_0928_1_tight.png" width="700">
 
 </div>
@@ -20195,7 +20192,7 @@ TLPs secured by IDE are called IDE TLPs. In Non-Flit Mode, all IDE TLPs must use
 **6.33.4 IDE TLPs**
 
 > **Figure 6-64.** IDE TLP Prefix (NFM)
-> **图 6-64.** 带重放保护的 TLP 格式（非 Flit 模式）
+> **图 6-64.** IDE TLP 前缀（NFM）
 > <img src="figures/chapter_06/fig_0929_1.png" width="700">
 
 The IDE Prefix (NFM) includes:
@@ -20312,11 +20309,11 @@ IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode,
 </table>
 
 > **Figure 6-65.** MAC Layout
-> **图 6-65.** Sequence Number 使用示例
+> **图 6-65.** MAC 布局
 > <img src="figures/chapter_06/fig_0930_1_tight.png" width="700">
 
 > **Figure 6-66.** Example of IDE TLP for a Link IDE Stream without Aggregation (Non-Flit Mode)
-> **图 6-66.** 无聚合的 IDE TLP 示例—链路 IDE 流（非 Flit 模式）
+> **图 6-66.** 链路 IDE 流无聚合的 IDE TLP 示例（非 Flit 模式）
 > <img src="figures/chapter_06/fig_0930_2_tight.png" width="700">
 
 </div>
@@ -20352,13 +20349,13 @@ IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode,
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 6-67.** IDE TLP – 示例外链 IDE Stream 中两个 TLP 的聚合（非 Flit 模式）
+> **图 6-67.** IDE TLP —— 链路 IDE 流聚合两个 TLP 的示例（非 Flit 模式）
 > <img src="figures/chapter_06/fig_0931_1_tight.png" width="700">
 
-> **图 6-68.** IDE TLP – 选择性 IDE Stream 无聚合 IDE TLP 示例（非 Flit 模式）
+> **图 6-68.** IDE TLP —— 选择性 IDE 流无聚合的 IDE TLP 示例（非 Flit 模式）
 > <img src="figures/chapter_06/fig_0931_2_tight.png" width="700">
 
-> **图 6-69.** IDE TLP – 选择性 IDE Stream 中两个 TLP 的聚合示例（非 Flit 模式）
+> **图 6-69.** IDE TLP —— 选择性 IDE 流聚合两个 TLP 的示例（非 Flit 模式）
 > <img src="figures/chapter_06/fig_0931_3_tight.png" width="700">
 
 <!-- 📄 Page 932 -->
@@ -20409,23 +20406,23 @@ Partial header encryption provides the ability to reduce potential exposure to s
 </table>
 
 > **Figure 6-70.** Example of IDE TLP for a Link IDE Stream without Aggregation (Flit Mode)
-> **图 6-70.** 选择性 IDE 流中聚合两个 TLP 的 IDE TLP 示例（非 Flit 模式）
+> **图 6-70.** 链路 IDE 流无聚合的 IDE TLP 示例（Flit 模式）
 > <img src="figures/chapter_06/fig_0932_1_tight.png" width="700">
 
 > **Figure 6-71.** IDE TLP – Example Showing Aggregation of Two TLPs for a Link IDE Stream (Flit Mode)
-> **图 6-71.** 选择性 IDE 流中聚合两个 TLP 的 IDE TLP 示例（非 Flit 模式，带本地前缀）
+> **图 6-71.** IDE TLP —— 链路 IDE 流聚合两个 TLP 的示例（Flit 模式）
 > <img src="figures/chapter_06/fig_0932_2_tight.png" width="700">
 
-> **Figure 6-72.** Example of IDE TLP for a Selective IDE Stream without Aggregation (Flit Mode)
-> **图 6-72.** 外包加密的 IDE TLP 示例（非 Flit 模式）
+> **Figure 6-72.** IDE TLP – Example of IDE TLP for a Selective IDE Stream without Aggregation (Flit Mode)
+> **图 6-72.** IDE TLP —— 选择性 IDE 流无聚合的 IDE TLP 示例（Flit 模式）
 > <img src="figures/chapter_06/fig_0933_1_tight.png" width="700">
 
 > **Figure 6-73.** IDE TLP – Example Showing Aggregation of Two TLPs for a Selective IDE Stream (Flit Mode)
-> **图 6-73.** 外包加密的 IDE TLP 示例（非 Flit 模式，带本地前缀）
+> **图 6-73.** IDE TLP —— 选择性 IDE 流聚合两个 TLP 的示例（Flit 模式）
 > <img src="figures/chapter_06/fig_0933_2_tight.png" width="700">
 
 > **Figure 6-74.** High Level Flow For Partial Header Encryption
-> **图 6-74.** NFM 中部分包头的 AES-GCM 加密流程
+> **图 6-74.** 部分包头加密的高层流程
 > <img src="figures/chapter_06/fig_0934_1_tight.png" width="700">
 
 </div>
@@ -20548,16 +20545,16 @@ Rules for partial header encryption:
 
 § 图 6-75 至 § 图 6-78 说明了部分包头加密的应用。
 
-> **图 6-75.** NFM 中带字节使能的部分包头加密
+> **图 6-75.** NFM 中使用字节使能的部分包头加密
 > <img src="figures/chapter_06/fig_0936_1.png" width="700">
 
-> **图 6-76.** NFM 中不带字节使能的部分包头加密
+> **图 6-76.** NFM 中不使用字节使能的部分包头加密
 > <img src="figures/chapter_06/fig_0937_1_tight.png" width="700">
 
-> **图 6-77.** FM 中带 OHC-A1 的部分包头加密
+> **图 6-77.** FM 中使用 OHC-A1 的部分包头加密
 > <img src="figures/chapter_06/fig_0938_1_tight.png" width="700">
 
-> **图 6-78.** FM 中不带 OHC-A1 的部分包头加密
+> **图 6-78.** FM 中不使用 OHC-A1 的部分包头加密
 > <img src="figures/chapter_06/fig_0939_1_tight.png" width="700">
 
 </td>
@@ -20636,7 +20633,7 @@ IDE 前缀 (NFM) 必须包含在 A 中。所有 OHC 内容 (FM) 必须包含在 
 </table>
 
 > **Figure 6-79.** Example Illustrating PCRC Application to Two Aggregated IDE TLPs for a Link IDE Stream (NFM)
-> **图 6-79.** 原子操作示例—CAS
+> **图 6-79.** 链路 IDE 流（NFM）中对两个聚合 IDE TLP 应用 PCRC 的示例
 > <img src="figures/chapter_06/fig_0940_1_tight.png" width="700">
 
 </div>
