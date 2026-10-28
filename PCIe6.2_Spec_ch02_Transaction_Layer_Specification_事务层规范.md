@@ -219,10 +219,6 @@
 
 ---
 
----
-
----
-
 # 📘 第 2 章　Transaction Layer Specification (事务层规范)
 
 > 📄 **Source pages**: 141–171 | 📁 **File**: `chapter_02_aa.md`
@@ -505,10 +501,7 @@ I/O 事务使用单一地址格式:短地址格式，即 32 位地址。
 
 ---
 
-<!-- 📄 Page 142 -->
----
-
-<a id="sec-2-1-1-3"></a>
+<a id="sec-2-1-1-3"></a> <!-- 📄 Page 142 -->
 ## 2.1.1.3 Configuration Transactions | 配置事务
 
 <table>
@@ -625,9 +618,8 @@ TLP 前缀、TLP 包头和 TLP 摘要的详细布局 (以 § 图 2-3 中的通�
 ---
 
 > **Figure 2-2.** Serial View of a TLP
-> <img src="figures/chapter_02/fig_0142_1.png" width="700">
+> <img src="figures/chapter_02/fig_0142_1.png" width="700"> <!-- 📄 Page 143 -->
 
-<!-- 📄 Page 143 -->
 ---
 
 > **Figure 2-3.** Generic TLP Format - Non-Flit Mode
@@ -637,9 +629,8 @@ TLP 前缀、TLP 包头和 TLP 摘要的详细布局 (以 § 图 2-3 中的通�
 > <img src="figures/chapter_02/fig_0143_1.png" width="700">
 > **图 2-2.** Serial View TLP
 
-> <img src="figures/chapter_02/fig_0142_1.png" width="700">
+> <img src="figures/chapter_02/fig_0142_1.png" width="700"> <!-- 📄 Page 143 -->
 
-<!-- 📄 Page 143 -->
 ---
 
 > **Figure 2-3.** Generic TLP Format - Non-Flit Mode
@@ -704,16 +695,12 @@ TLP 内的数据负载以最低地址字节 (§ 图 2-3 中的字节 J) 显示�
 
 ---
 
-<!-- 📄 Page 144 -->
----
-
-> **Figure 2-3.** Generic TLP Format - Non-Flit Mode (continued)
+> **Figure 2-3.** Generic TLP Format - Non-Flit Mode (continued) <!-- 📄 Page 144 -->
 > <img src="figures/chapter_02/fig_0144_1_tight.png" width="700">
 > **图 2-3.** Generic TLP 格式 - 非 Flit 模式 (continued)
 
-> <img src="figures/chapter_02/fig_0144_1_tight.png" width="700">
+> <img src="figures/chapter_02/fig_0144_1_tight.png" width="700"> <!-- 📄 Page 145 -->
 
-<!-- 📄 Page 145 -->
 ---
 
 <a id="sec-2-2"></a>
@@ -873,10 +860,7 @@ TLP 包头的 Fmt、Type、TD 和 Length 字段包含确定 TLP 非前缀部分�
 
 ---
 
-<!-- 📄 Page 146 -->
----
-
-> **Figure 2-5.** Fields Present in All Non-Flit Mode TLP Headers
+> **Figure 2-5.** Fields Present in All Non-Flit Mode TLP Headers <!-- 📄 Page 146 -->
 > <img src="figures/chapter_02/fig_0146_1_tight.png" width="700">
 > **图 2-5.** Fields Present in All 非 Flit 模式 TLP Headers
 
@@ -983,10 +967,7 @@ TLP 包头的 Fmt、Type、TD 和 Length 字段包含确定 TLP 非前缀部分�
 
 ---
 
-<!-- 📄 Page 147 -->
----
-
-<table>
+<table> <!-- 📄 Page 147 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1053,10 +1034,7 @@ Flit 模式与非 Flit 模式 TLP 之间的其他显著差异包括:
 
 ---
 
-<!-- 📄 Page 148 -->
----
-
-<a id="sec-2-2-1-2"></a>
+<a id="sec-2-2-1-2"></a> <!-- 📄 Page 148 -->
 ## 2.2.1.2 Common Packet Header Fields for Flit Mode | Flit 模式的公共包头字段
 
 
@@ -1114,9 +1092,8 @@ All Flit Mode TLPs contain the same fields in the first DW of the Header Base (s
 > <img src="figures/chapter_02/fig_0148_1_tight.png" width="700">
 > **图 2-6.** First DW 包头 Base
 
-> <img src="figures/chapter_02/fig_0148_1_tight.png" width="700">
+> <img src="figures/chapter_02/fig_0148_1_tight.png" width="700"> <!-- 📄 Page 149 -->
 
-<!-- 📄 Page 149 -->
 ---
 
 <table>
@@ -1296,11 +1273,8 @@ UIO TLP 在"描述"列中标为 UIO。在描述列中标记为"保留"的项没�
 
 ---
 
-<!-- 📄 Page 158 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 158 -->
 <table>
 <thead>
 <tr>
@@ -1356,10 +1330,7 @@ Flit 模式下 TC、Attr 和 Length 字段的定义与非 Flit 模式相同。
 
 ---
 
-<!-- 📄 Page 160 -->
----
-
-<table>
+<table> <!-- 📄 Page 160 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1425,10 +1396,7 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 
 ---
 
-<!-- 📄 Page 161 -->
----
-
-> **Figure 2-7.** OHC-A1
+> **Figure 2-7.** OHC-A1 <!-- 📄 Page 161 -->
 > <img src="figures/chapter_02/fig_0161_1_tight.png" width="700">
 > **图 2-7.** OHC-A1
 
@@ -1555,10 +1523,7 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 
 ---
 
-<!-- 📄 Page 162 -->
----
-
-> **Figure 2-10.** OHC-A4
+> **Figure 2-10.** OHC-A4 <!-- 📄 Page 162 -->
 > <img src="figures/chapter_02/fig_0162_1_tight.png" width="700">
 > **图 2-10.** OHC-A4
 
@@ -1683,10 +1648,7 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 
 ---
 
-<!-- 📄 Page 163 -->
----
-
-<table>
+<table> <!-- 📄 Page 163 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1800,10 +1762,7 @@ In Flit Mode, it is possible, and in some cases required, to include Segment fie
 
 ---
 
-<!-- 📄 Page 164 -->
----
-
-<table>
+<table> <!-- 📄 Page 164 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1870,10 +1829,7 @@ Segment 字段的第二个用途是改进错误日志记录。当 FM TLP 包头�
 
 ---
 
-<!-- 📄 Page 165 -->
----
-
-<table>
+<table> <!-- 📄 Page 165 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1900,10 +1856,7 @@ Segment 字段的第二个用途是改进错误日志记录。当 FM TLP 包头�
 
 ---
 
-<!-- 📄 Page 166 -->
----
-
-> **Figure 2-14.** Example Topology Illustrating Multiple Segments and NFM Subtrees
+> **Figure 2-14.** Example Topology Illustrating Multiple Segments and NFM Subtrees <!-- 📄 Page 166 -->
 > <img src="figures/chapter_02/fig_0166_1_tight.png" width="700">
 > **图 2-14.** Example 拓扑: Multiple Segments 与 NFM Subtrees
 
@@ -1946,10 +1899,7 @@ Because Segment fields aren't communicated across Links in NFM, Root Complexes t
 
 ---
 
-<!-- 📄 Page 167 -->
----
-
-<table>
+<table> <!-- 📄 Page 167 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2010,11 +1960,8 @@ A NFM device could be hot-added into a subtree for which the No NFM Subtree Belo
 
 ---
 
-<!-- 📄 Page 168 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 168 -->
 <table>
 <thead>
 <tr>
@@ -2084,10 +2031,7 @@ A NFM device could be hot-added into a subtree for which the No NFM Subtree Belo
 
 ---
 
-<!-- 📄 Page 169 -->
----
-
-<table>
+<table> <!-- 📄 Page 169 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2158,11 +2102,8 @@ Each Switch exists entirely within a single Hierarchy by definition. However, Sw
 
 ---
 
-<!-- 📄 Page 170 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 170 -->
 <table>
 <thead>
 <tr>
@@ -2234,10 +2175,7 @@ Each Switch exists entirely within a single Hierarchy by definition. However, Sw
 
 ---
 
-<!-- 📄 Page 171 -->
----
-
-<table>
+<table> <!-- 📄 Page 171 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2303,9 +2241,6 @@ Each Switch exists entirely within a single Hierarchy by definition. However, Sw
 </table>
 
 [⬆️ 返回目录](#sec-2-0)
-
----
-
 
 ---
 
@@ -2383,10 +2318,7 @@ Each Switch exists entirely within a single Hierarchy by definition. However, Sw
 
 ---
 
-<!-- 📄 Page 173 -->
----
-
-<a id="sec-2-2-2-endian"></a>
+<a id="sec-2-2-2-endian"></a> <!-- 📄 Page 173 -->
 ## 2.2.2 TLPs with Data Payloads (continued) | 含数据负载的 TLP (续)
 
 <table>
@@ -2428,10 +2360,7 @@ Each Switch exists entirely within a single Hierarchy by definition. However, Sw
 
 ---
 
-<!-- 📄 Page 174 -->
----
-
-<a id="sec-2-2-2-impl"></a>
+<a id="sec-2-2-2-impl"></a> <!-- 📄 Page 174 -->
 ## 2.2.2 TLPs with Data Payloads (continued) | 含数据负载的 TLP (续)
 
 
@@ -2543,9 +2472,8 @@ There is no PCI Express requirement that an RC AtomicOp Completer support the ho
 
 ---
 
-[^8]: An exception is an Intermediate Receiver forwarding a Multicast TLP out an Egress Port with MC_Overlay enabled. See § Section 6.14.5.
+[^8]: An exception is an Intermediate Receiver forwarding a Multicast TLP out an Egress Port with MC_Overlay enabled. See § Section 6.14.5. <!-- 📄 Page 175 -->
 
-<!-- 📄 Page 175 -->
 ---
 
 <a id="sec-2-2-4"></a>
@@ -2657,10 +2585,7 @@ TLP 路由主要有三种机制:地址路由、ID 路由和隐式路由。本节
 
 ---
 
-<!-- 📄 Page 176 -->
----
-
-<a id="sec-2-2-4-1-figures"></a>
+<a id="sec-2-2-4-1-figures"></a> <!-- 📄 Page 176 -->
 ## 2.2.4.1 Address-Based Routing Rules (continued) | 基于地址的路由规则 (续)
 
 <table>
@@ -2737,10 +2662,7 @@ TLP 路由主要有三种机制:地址路由、ID 路由和隐式路由。本节
 
 ---
 
-<!-- 📄 Page 177 -->
----
-
-<a id="sec-2-2-4-1-figures-cont"></a>
+<a id="sec-2-2-4-1-figures-cont"></a> <!-- 📄 Page 177 -->
 ## 2.2.4.1 Address-Based Routing Rules (continued) | 基于地址的路由规则 (续)
 
 <table>
@@ -2925,9 +2847,8 @@ For correct software operation, full address decoding is required even in system
 
 ---
 
-[^9]: Earlier versions of this specification did not specify address routed message behavior when the address was below 4 GB.
+[^9]: Earlier versions of this specification did not specify address routed message behavior when the address was below 4 GB. <!-- 📄 Page 179 -->
 
-<!-- 📄 Page 179 -->
 ---
 
 <a id="sec-2-2-4-2-cont"></a>
@@ -3016,10 +2937,7 @@ For correct software operation, full address decoding is required even in system
 
 ---
 
-<!-- 📄 Page 180 -->
----
-
-<a id="sec-2-2-4-2-figures"></a>
+<a id="sec-2-2-4-2-figures"></a> <!-- 📄 Page 180 -->
 ## 2.2.4.2 ID Based Routing Rules (continued) | 基于 ID 的路由规则 (续)
 
 <table>
@@ -3120,10 +3038,7 @@ For correct software operation, full address decoding is required even in system
 
 ---
 
-<!-- 📄 Page 181 -->
----
-
-<a id="sec-2-2-4-2-figures-fm"></a>
+<a id="sec-2-2-4-2-figures-fm"></a> <!-- 📄 Page 181 -->
 ## 2.2.4.2 ID Based Routing Rules (continued) | 基于 ID 的路由规则 (续)
 
 <table>
@@ -3200,10 +3115,7 @@ For correct software operation, full address decoding is required even in system
 
 ---
 
-<!-- 📄 Page 182 -->
----
-
-<a id="sec-2-2-5-prelude"></a>
+<a id="sec-2-2-5-prelude"></a> <!-- 📄 Page 182 -->
 ## 2.2.4.2 ID Based Routing Rules (continued) | 基于 ID 的路由规则 (续)
 
 <table>
@@ -3278,9 +3190,6 @@ TLP 字节使能 (Byte Enable) 的一般功能在非 Flit 模式与 Flit 模式�
 
 
 [⬆️ 返回目录](#sec-2-0)
-
----
-
 
 ---
 
@@ -3362,10 +3271,7 @@ As a best practice, it is strongly recommended that devices receiving non-enable
 
 ---
 
-<!-- 📄 Page 183 -->
----
-
-<table>
+<table> <!-- 📄 Page 183 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3482,10 +3388,7 @@ TH 位置位且目标为非预取内存空间 (Non-Prefetchable Memory Space) �
 
 ---
 
-<!-- 📄 Page 184 -->
----
-
-<table>
+<table> <!-- 📄 Page 184 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3609,11 +3512,8 @@ A Memory Write Request of 1 DW with no bytes enabled, or "zero-length Write," ma
 
 ---
 
-<!-- 📄 Page 185 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 185 -->
 <table>
 <thead>
 <tr>
@@ -3772,10 +3672,7 @@ A Memory Read Request of 1 DW with no bytes enabled, or "zero-length Read," may 
 
 ---
 
-<!-- 📄 Page 186 -->
----
-
-<a id="sec-2-2-6-2"></a>
+<a id="sec-2-2-6-2"></a> <!-- 📄 Page 186 -->
 ## 2.2.6.2 Transaction Descriptor - Transaction ID Field | 事务描述符 - Transaction ID 字段
 
 
@@ -3838,10 +3735,7 @@ Transaction ID 用于将完成报文与请求关联起来。共有三组请求/�
 
 ---
 
-<!-- 📄 Page 187 -->
----
-
-<table>
+<table> <!-- 📄 Page 187 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3906,11 +3800,8 @@ Four Tag sizes are architected for operation: 14-bit, 10-bit, 8-Bit and 5-bit. A
 
 ---
 
-<!-- 📄 Page 188 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 188 -->
 <table>
 <thead>
 <tr>
@@ -3958,10 +3849,7 @@ Four Tag sizes are architected for operation: 14-bit, 10-bit, 8-Bit and 5-bit. A
 
 ---
 
-<!-- 📄 Page 189 -->
----
-
-<table>
+<table> <!-- 📄 Page 189 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4053,11 +3941,8 @@ Four Tag sizes are architected for operation: 14-bit, 10-bit, 8-Bit and 5-bit. A
 
 ---
 
-<!-- 📄 Page 190 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 190 -->
 <table>
 <thead>
 <tr>
@@ -4135,10 +4020,7 @@ Note that this rule and the exception are consistent with the existing PCI model
 
 ---
 
-<!-- 📄 Page 191 -->
----
-
-<table>
+<table> <!-- 📄 Page 191 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4218,10 +4100,7 @@ Phantom Function 在架构上存在诸多限制，包括 ARI Device、虚拟功�
 
 ---
 
-<!-- 📄 Page 192 -->
----
-
-<table>
+<table> <!-- 📄 Page 192 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4238,13 +4117,13 @@ Phantom Function 在架构上存在诸多限制，包括 ARI Device、虚拟功�
 
 The use of "larger" (i.e., 10-bit or 14-bit) Tags enables a Requester to increase its number of outstanding Non-Posted Requests (NPRs) substantially, which for very high rates of NPRs or very large round-trip times can avoid Tag availability from becoming a bottleneck. The following formula gives the basic relationship between payload bandwidth, number of outstanding NPRs, and other factors:
 
-```
+<pre>
 BW = S * N / RTT, where
 BW = payload bandwidth
 S = transaction payload size
 N = number of outstanding NPRs
 RTT = transaction round-trip time
-```
+</pre>
 
 Generally only high-speed Requesters on high-speed Links using relatively small transactions will benefit from increasing their number of outstanding NPRs beyond 256, although this can also help maintain performance in configurations where the transaction round-trip time is high.
 
@@ -4270,13 +4149,13 @@ Non-Flit Mode Switches that lack 10-bit Tag Completer capability are still able 
 
 使用"更大"Tag（即 10-bit 或 14-bit）可使 Requester 显著增加其未完成 Non-Posted 请求 (NPR) 数量；在 NPR 速率极高或往返时间很大的情况下，可避免 Tag 可用性成为瓶颈。以下公式给出负载带宽、未完成 NPR 数量与其他因素之间的基本关系：
 
-```
+<pre>
 BW = S * N / RTT，其中
 BW = 负载带宽
 S  = 事务负载大小
 N  = 未完成 NPR 数量
 RTT = 事务往返时间
-```
+</pre>
 
 通常只有使用相对较小事务的高速 Requester 在高速链路上，才会从将其未完成 NPR 数增加到 256 以上中获益；不过在事务往返时间较长的配置中，这也有助于维持性能。
 
@@ -4303,11 +4182,8 @@ RTT = 事务往返时间
 
 ---
 
-<!-- 📄 Page 193 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 193 -->
 <table>
 <thead>
 <tr>
@@ -4392,10 +4268,7 @@ Similar implementation approaches for 14-Bit Tags are possible, and they are str
 
 ---
 
-<!-- 📄 Page 194 -->
----
-
-<a id="sec-2-2-6-3"></a>
+<a id="sec-2-2-6-3"></a> <!-- 📄 Page 194 -->
 ## 2.2.6.3 Transaction Descriptor - Attributes Field | 事务描述符 - Attributes 字段
 
 <table>
@@ -4518,13 +4391,7 @@ A Root Complex that supports peer-to-peer forwarding TLPs between Root Ports is 
 
 ---
 
-
----
-
-<!-- 📄 Page 194 -->
----
-
-<a id="sec-2-2-6-4"></a>
+<a id="sec-2-2-6-4"></a> <!-- 📄 Page 194 -->
 ## 2.2.6.4 Relaxed Ordering and ID-Based Ordering Attributes | 宽松排序与基于 ID 的排序属性
 
 <table>
@@ -4636,10 +4503,7 @@ The following rule applies to all Memory, I/O, and Configuration Requests. Addit
 
 ---
 
-<!-- 📄 Page 195 -->
----
-
-<a id="sec-2-2-6-6"></a>
+<a id="sec-2-2-6-6"></a> <!-- 📄 Page 195 -->
 ## 2.2.6.6 Transaction Descriptor - Traffic Class Field | 事务描述符 - 流量类字段
 
 <table>
@@ -4792,11 +4656,8 @@ Memory, I/O, and Configuration Request Rules
 
 ---
 
-<!-- 📄 Page 196 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 196 -->
 <table>
 <thead>
 <tr>
@@ -4915,11 +4776,8 @@ For I/O Requests, the following rules apply:
 
 ---
 
-<!-- 📄 Page 197 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 197 -->
 <table>
 <thead>
 <tr>
@@ -5049,10 +4907,7 @@ For Configuration Requests, the following rules apply:
 
 ---
 
-<!-- 📄 Page 198 -->
----
-
-<table>
+<table> <!-- 📄 Page 198 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5209,10 +5064,7 @@ Figure 2-40: TPH TLP Prefix (4 bytes). Byte 0 (after the header) is decoded to d
 
 ---
 
-<!-- 📄 Page 199 -->
----
-
-<a id="sec-2-2-7-1-1"></a>
+<a id="sec-2-2-7-1-1"></a> <!-- 📄 Page 199 -->
 ## 2.2.7.1.1 TPH Rules | TPH 规则
 
 <table>
@@ -5320,10 +5172,7 @@ Figure 2-41: 4 DW Request Header layout in Non-Flit Mode, showing the location o
 
 ---
 
-<!-- 📄 Page 200 -->
----
-
-> **Figure 2-42.** Location of PH[1:0] in a 3 DW Request Header - Non-Flit Mode
+> **Figure 2-42.** Location of PH[1:0] in a 3 DW Request Header - Non-Flit Mode <!-- 📄 Page 200 -->
 > <img src="figures/chapter_02/fig_0200_1_tight.png" width="700">
 > **图 2-42.** Location PH[1:0] in 3 DW Request 包头 - 非 Flit 模式
 
@@ -5450,10 +5299,7 @@ Figure 2-43: Non-Flit Mode Memory Write Request header (3 DW) showing the locati
 
 ---
 
-<!-- 📄 Page 201 -->
----
-
-> **Figure 2-44.** Location of ST[7:0] in Memory Read, DMWr, and AtomicOp Request Headers - Non-Flit Mode
+> **Figure 2-44.** Location of ST[7:0] in Memory Read, DMWr, and AtomicOp Request Headers - Non-Flit Mode <!-- 📄 Page 201 -->
 > <img src="figures/chapter_02/fig_0201_1_tight.png" width="700">
 > **图 2-44.** Location ST[7:0] in Memory Read, DMWr, 与 AtomicOp Request Headers - 非 Flit 模式
 
@@ -5553,10 +5399,7 @@ Except as stated, rules that apply in Non-Flit Mode also apply in Flit Mode.
 
 ---
 
-<!-- 📄 Page 202 -->
----
-
-<a id="sec-2-2-7-2"></a>
+<a id="sec-2-2-7-2"></a> <!-- 📄 Page 202 -->
 ## 2.2.7.2 Flit Mode | Flit 模式
 
 <table>
@@ -5706,10 +5549,7 @@ Figure 2-47: Flit Mode I/O Request (3 DW). Byte 0: Type=IO. Bytes 4-7: R, Addres
 
 ---
 
-<!-- 📄 Page 203 -->
----
-
-> **Figure 2-48.** Flit Mode Configuration Request
+> **Figure 2-48.** Flit Mode Configuration Request <!-- 📄 Page 203 -->
 > <img src="figures/chapter_02/fig_0203_1_tight.png" width="700">
 > **图 2-48.** Flit 模式 配置请求 (Configuration Request)
 
@@ -5826,10 +5666,7 @@ The following rules apply to all Message Requests. Additional rules specific to 
 
 ---
 
-<!-- 📄 Page 204 -->
----
-
-<table>
+<table> <!-- 📄 Page 204 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5962,11 +5799,8 @@ In addition to address and ID routing, Messages support several other routing me
 
 ---
 
-<!-- 📄 Page 205 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 205 -->
 <table>
 <thead>
 <tr>
@@ -6076,10 +5910,7 @@ INTx 中断信令 - 规则
 
 ---
 
-<!-- 📄 Page 206 -->
----
-
-<table>
+<table> <!-- 📄 Page 206 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6140,11 +5971,8 @@ INTx 中断信令 - 规则
 
 ---
 
-<!-- 📄 Page 207 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 207 -->
 <table>
 <thead>
 <tr>
@@ -6202,10 +6030,7 @@ Assert_INTx/Deassert_INTx 消息对为传统 PCI 中断 A、B、C、D 各自构�
 
 ---
 
-<!-- 📄 Page 208 -->
----
-
-**Table 2-22 Bridge Mapping for INTx Virtual Wires | 表 2-22 INTx 虚拟线的桥映射**
+**Table 2-22 Bridge Mapping for INTx Virtual Wires | 表 2-22 INTx 虚拟线的桥映射** <!-- 📄 Page 208 -->
 
 | Requester ID[7:3] from the Assert_INTx/Deassert_INTx Message received on Secondary Side of Bridge (Interrupt Source)<br>If ARI Forwarding is enabled, the value 0 must be used instead of Requester ID[7:3]. | INTx Virtual Wire on Secondary Side of Bridge | Mapping to INTx Virtual Wire on Primary Side of Bridge |
 |---|---|---|
@@ -6240,10 +6065,7 @@ Assert_INTx/Deassert_INTx 消息对为传统 PCI 中断 A、B、C、D 各自构�
 
 ---
 
-<!-- 📄 Page 209 -->
----
-
-<table>
+<table> <!-- 📄 Page 209 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6322,10 +6144,7 @@ These Messages are used to support PCI Express power management, which is descri
 
 ---
 
-<!-- 📄 Page 211 -->
----
-
-<a id="sec-2-2-8-2"></a>
+<a id="sec-2-2-8-2"></a> <!-- 📄 Page 211 -->
 ## 2.2.8.2 Power Management Messages | 电源管理消息
 
 <table>
@@ -6737,10 +6556,7 @@ The Vendor-Defined Messages allow expansion of PCI Express messaging capabilitie
 
 ---
 
-<!-- 📄 Page 215 -->
----
-
-> **Figure 2-53.** Header for Vendor-Defined Messages - Non-Flit Mode
+> **Figure 2-53.** Header for Vendor-Defined Messages - Non-Flit Mode <!-- 📄 Page 215 -->
 > <img src="figures/chapter_02/fig_0215_1_tight.png" width="700">
 
 > **Figure 2-54.** Header for Vendor-Defined Messages - Flit Mode
@@ -6803,10 +6619,7 @@ The Vendor-Defined Messages allow expansion of PCI Express messaging capabilitie
 
 ---
 
-<!-- 📄 Page 216 -->
----
-
-<table>
+<table> <!-- 📄 Page 216 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7139,10 +6952,7 @@ FRS 消息的格式见下方 § 图 2-59 和 § 图 2-60：
 
 ---
 
-<!-- 📄 Page 220 -->
----
-
-<a id="sec-2-2-8-6-4"></a>
+<a id="sec-2-2-8-6-4"></a> <!-- 📄 Page 220 -->
 ## 2.2.8.6.4 Hierarchy ID Message | 层级 ID 消息
 
 
@@ -7282,13 +7092,7 @@ The messages listed in § Table 2-32 were previously used for a mechanism (Hot-P
 
 ---
 
-
----
-
-<!-- 📄 Page 222 -->
----
-
-<a id="sec-2-2-8-7"></a>
+<a id="sec-2-2-8-7"></a> <!-- 📄 Page 222 -->
 ## 2.2.8.7 Ignored Messages | 忽略消息
 
 
@@ -7396,9 +7200,8 @@ LTR 消息可选地用于上报设备对读/写服务延迟的容忍行为。有
 > <img src="figures/chapter_02/fig_0223_1_tight.png" width="700">
 > **图 2-63.** LTR Message - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0223_1_tight.png" width="700">
+> <img src="figures/chapter_02/fig_0223_1_tight.png" width="700"> <!-- 📄 Page 223 -->
 
-<!-- 📄 Page 223 -->
 ---
 
 
@@ -7465,9 +7268,8 @@ OBFF 消息可选地用于将平台中心资源状态上报给端点 (Endpoint)�
 > <img src="figures/chapter_02/fig_0224_1_tight.png" width="700">
 > **图 2-65.** OBFF Message - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0224_1_tight.png" width="700">
+> <img src="figures/chapter_02/fig_0224_1_tight.png" width="700"> <!-- 📄 Page 224 -->
 
-<!-- 📄 Page 224 -->
 ---
 
 <table>
@@ -7537,9 +7339,8 @@ a Malformed TLP.
 > <img src="figures/chapter_02/fig_0225_1_tight.png" width="700">
 > **图 2-67.** PTM Request/Response Message - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0225_1_tight.png" width="700">
+> <img src="figures/chapter_02/fig_0225_1_tight.png" width="700"> <!-- 📄 Page 225 -->
 
-<!-- 📄 Page 225 -->
 ---
 
 
@@ -7631,9 +7432,8 @@ IDE 消息与可选的完整性与数据加密 (Integrity and Data Encryption, I
 > - Data Byte 2 包含 Propagation Delay [23:16]
 > - Data Byte 3 包含 Propagation Delay [31:24]
 >
-> 因此,建议实现提供可适配上述任一字节解释的机制。可选的 PTM Propagation Delay Adaptation Capability 即是这样一种机制。
+> 因此,建议实现提供可适配上述任一字节解释的机制。可选的 PTM Propagation Delay Adaptation Capability 即是这样一种机制。 <!-- 📄 Page 226 -->
 
-<!-- 📄 Page 226 -->
 ---
 
 <table>
@@ -7676,9 +7476,8 @@ IDE 消息与可选的完整性与数据加密 (Integrity and Data Encryption, I
 ---
 
 > **Figure 2-71.** IDE Sync Message for Link IDE Stream - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0228_1_tight.png" width="700">
+> <img src="figures/chapter_02/fig_0228_1_tight.png" width="700"> <!-- 📄 Page 227 -->
 
-<!-- 📄 Page 227 -->
 ---
 
 
@@ -7698,9 +7497,8 @@ IDE 消息与可选的完整性与数据加密 (Integrity and Data Encryption, I
 > <img src="figures/chapter_02/fig_0230_1_tight.png" width="700">
 > **图 2-71.** IDE Sync Message Link IDE 流 - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0228_1_tight.png" width="700">
+> <img src="figures/chapter_02/fig_0228_1_tight.png" width="700"> <!-- 📄 Page 227 -->
 
-<!-- 📄 Page 227 -->
 ---
 
 
@@ -7708,12 +7506,11 @@ IDE 消息与可选的完整性与数据加密 (Integrity and Data Encryption, I
 > <img src="figures/chapter_02/fig_0229_1_tight.png" width="700">
 
 > **Figure 2-76.** IDE Fail Message for Link IDE Stream - Flit Mode
-> <img src="figures/chapter_02/fig_0230_1_tight.png" width="700">
+> <img src="figures/chapter_02/fig_0230_1_tight.png" width="700"> <!-- 📄 Page 228 -->
 
 
 
 
-<!-- 📄 Page 228 -->
 ---
 
 <a id="sec-2-2-9"></a>
@@ -7793,9 +7590,8 @@ check for violations of this rule. See § Section 2.3.2 , second bullet, for det
 ---
 
 <a id="sec-2-2-9-1"></a>
-### 2.2.9.1 Completion Rules for Non-Flit Mode | 非 Flit 模式下的完成规则
+### 2.2.9.1 Completion Rules for Non-Flit Mode | 非 Flit 模式下的完成规则 <!-- 📄 Page 229 -->
 
-<!-- 📄 Page 229 -->
 ---
 
 **Table 2-37 Completion Status Field Values | 表 2-37 Completion Status 字段值**
@@ -7915,9 +7711,8 @@ Length field.
 > 29. An ARI Completer ID does not contain a Device Number field. See § Section 2.2.4.2 .
 
 > 28. 对于 ARI 设备,功能 (Function) 仅被要求捕获 Bus Number。ARI 设备被允许以按设备 (per-Device) 或按功能 (per-Function) 的方式保留所捕获的 Bus Number。参见 § 2.2.6.2 节。
-> 29. ARI Completer ID 不包含 Device Number 字段。参见 § 2.2.4.2 节。
+> 29. ARI Completer ID 不包含 Device Number 字段。参见 § 2.2.4.2 节。 <!-- 📄 Page 230 -->
 
-<!-- 📄 Page 230 -->
 ---
 
 <table>
@@ -7966,9 +7761,8 @@ Reserved Completions (as indicated in § Table 2-5), are ID Routed TLPs as defin
 
 > <img src="figures/chapter_02/fig_0234_1_tight.png" width="700">
 
-> <img src="figures/chapter_02/fig_0233_1.png" width="700">
+> <img src="figures/chapter_02/fig_0233_1.png" width="700"> <!-- 📄 Page 231 -->
 
-<!-- 📄 Page 231 -->
 ---
 
 
@@ -8083,10 +7877,9 @@ BCM 字段存在于非 Flit 模式完成报文中，在 Flit 模式中不予支�
 </tr>
 </tbody>
 </table>
-</div>
+</div> <!-- 📄 Page 232 -->
 
 
-<!-- 📄 Page 232 -->
 ---
 
 <table>
@@ -8202,9 +7995,6 @@ The following rules apply to Local TLP Prefixes:
 
 ---
 
-
----
-
 <a id="sec-2-2-10-1"></a>
 ## 2.2.10.1 TLP Prefix General Rules - Non-Flit Mode | TLP Prefix 通用规则 - 非 Flit 模式
 
@@ -8237,10 +8027,7 @@ The following rules apply to Local TLP Prefixes:
 
 ---
 
-<!-- 📄 Page 237 -->
----
-
-**Table 2-38 Local TLP Prefix Types | 表 2-38 本地 TLP Prefix 类型**
+**Table 2-38 Local TLP Prefix Types | 表 2-38 本地 TLP Prefix 类型** <!-- 📄 Page 237 -->
 
 | Local TLP Prefix Type | L[3:0] (b) | Description |
 |-----------------------|------------|-------------|
@@ -8388,10 +8175,7 @@ Flit 模式本地 TLP Prefix: 1 0 0 0 1 1 0 1(字节 0)
 
 ---
 
-<!-- 📄 Page 238 -->
----
-
-<a id="sec-2-2-10-3"></a>
+<a id="sec-2-2-10-3"></a> <!-- 📄 Page 238 -->
 ## 2.2.10.3 Flit Mode Local TLP Prefix | Flit 模式本地 TLP Prefix
 
 
@@ -8461,10 +8245,7 @@ All other encodings are Reserved.
 
 ---
 
-<!-- 📄 Page 239 -->
----
-
-<a id="sec-2-2-10-4"></a>
+<a id="sec-2-2-10-4"></a> <!-- 📄 Page 239 -->
 ## 2.2.10.4 End-End TLP Prefix Processing - Non-Flit Mode | End-End TLP Prefix 处理 - 非 Flit 模式
 
 <table>
@@ -8573,10 +8354,7 @@ As described in § Table 2-39, Types VendPrefixE0 and VendPrefixE1 are defined f
 
 ---
 
-<!-- 📄 Page 240 -->
----
-
-<a id="sec-2-2-10-4-1"></a>
+<a id="sec-2-2-10-4-1"></a> <!-- 📄 Page 240 -->
 ## 2.2.10.4.1 Vendor Defined End-End TLP Prefix | 厂商定义 End-End TLP Prefix
 
 <table>
@@ -8750,10 +8528,7 @@ OHC-E DW 1、OHC-E DW 0(字节 0、字节 4)
 
 ---
 
-<!-- 📄 Page 241 -->
----
-
-<a id="sec-2-2-11"></a>
+<a id="sec-2-2-11"></a> <!-- 📄 Page 241 -->
 ## 2.2.11 OHC-E Rules - Flit Mode | OHC-E 规则 - Flit 模式
 
 
@@ -8899,10 +8674,7 @@ This section describes how all Received TLPs are handled when they are delivered
 
 ---
 
-<!-- 📄 Page 242 -->
----
-
-<table>
+<table> <!-- 📄 Page 242 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -8959,10 +8731,7 @@ This is a reported error associated with the Receiving Port (see § Section 6.2)
 
 ---
 
-<!-- 📄 Page 243 -->
----
-
-> **Figure 2-89.** Flowchart for Handling of Received TLPs
+> **Figure 2-89.** Flowchart for Handling of Received TLPs <!-- 📄 Page 243 -->
 > <img src="figures/chapter_02/fig_0243_1.png" width="700">
 > **图 2-89.** 流程图 Handling Received TLPs
 
@@ -9060,11 +8829,8 @@ Switches must process both TLPs that address resources within the Switch as well
 
 ---
 
-<!-- 📄 Page 244 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 244 -->
 <table>
 <thead>
 <tr>
@@ -9106,10 +8872,7 @@ Switches must process both TLPs that address resources within the Switch as well
 
 ---
 
-<!-- 📄 Page 245 -->
----
-
-> **Figure 2-90.** Flowchart for Switch Handling of TLPs
+> **Figure 2-90.** Flowchart for Switch Handling of TLPs <!-- 📄 Page 245 -->
 > <img src="figures/chapter_02/fig_0245_1_tight.png" width="700">
 > **图 2-90.** 流程图 交换机 Handling TLPs
 
@@ -9202,10 +8965,7 @@ This section describes how Received Requests are handled, following the initial 
 
 ---
 
-<!-- 📄 Page 246 -->
----
-
-<table>
+<table> <!-- 📄 Page 246 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9264,11 +9024,8 @@ This section describes how Received Requests are handled, following the initial 
 
 ---
 
-<!-- 📄 Page 247 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 247 -->
 <table>
 <thead>
 <tr>
@@ -9346,10 +9103,7 @@ If the Request arrives between the time an FLR has been initiated and the comple
 
 ---
 
-<!-- 📄 Page 248 -->
----
-
-<table>
+<table> <!-- 📄 Page 248 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9408,11 +9162,8 @@ If the Request arrives between the time an FLR has been initiated and the comple
 
 ---
 
-<!-- 📄 Page 249 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 249 -->
 <table>
 <thead>
 <tr>
@@ -9484,10 +9235,7 @@ Request 既不会被软件也不会被其他设备发起到端点。
 
 ---
 
-<!-- 📄 Page 250 -->
----
-
-> **Figure 2-91.** Flowchart for Handling of Received Request
+> **Figure 2-91.** Flowchart for Handling of Received Request <!-- 📄 Page 250 -->
 > <img src="figures/chapter_02/fig_0250_1_tight.png" width="700">
 > **图 2-91.** 流程图 Handling Received Request
 
@@ -9550,11 +9298,8 @@ Flowchart steps (OM13773):
 
 ---
 
-<!-- 📄 Page 251 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 251 -->
 <table>
 <thead>
 <tr>
@@ -9624,9 +9369,6 @@ Flowchart steps (OM13773):
 
 ---
 
-
----
-
 <a id="sec-2-3-1-1"></a>
 ## 2.3.1.1 Data Return for Non-UIO Read Requests | 非 UIO 读请求的数据返回
 
@@ -9657,11 +9399,8 @@ Flowchart steps (OM13773):
 
 ---
 
-<!-- 📄 Page 252 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 252 -->
 <table>
 <thead>
 <tr>
@@ -9733,10 +9472,7 @@ Flowchart steps (OM13773):
 
 ---
 
-<!-- 📄 Page 253 -->
----
-
-<table>
+<table> <!-- 📄 Page 253 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9788,10 +9524,7 @@ Flowchart steps (OM13773):
 
 ---
 
-<!-- 📄 Page 254 -->
----
-
-**Table 2-40 Calculating Byte Count from Length and Byte Enables | 表 2-40 根据 Length 和字节使能计算 Byte Count**
+**Table 2-40 Calculating Byte Count from Length and Byte Enables | 表 2-40 根据 Length 和字节使能计算 Byte Count** <!-- 📄 Page 254 -->
 
 | First DW BE[3:0] (b) | Last DW BE[3:0] (b) | Total Byte Count |
 |----------------------|---------------------|------------------|
@@ -9828,11 +9561,8 @@ Flowchart steps (OM13773):
 
 ---
 
-<!-- 📄 Page 255 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 255 -->
 <table>
 <thead>
 <tr>
@@ -9902,10 +9632,7 @@ Flowchart steps (OM13773):
 
 ---
 
-<!-- 📄 Page 256 -->
----
-
-<table>
+<table> <!-- 📄 Page 256 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9994,11 +9721,8 @@ Flowchart steps (OM13773):
 
 ---
 
-<!-- 📄 Page 257 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 257 -->
 <table>
 <thead>
 <tr>
@@ -10126,11 +9850,8 @@ Flowchart steps (OM13773):
 
 ---
 
-<!-- 📄 Page 258 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 258 -->
 <table>
 <thead>
 <tr>
@@ -10194,10 +9915,7 @@ Flowchart steps (OM13773):
 
 ---
 
-<!-- 📄 Page 259 -->
----
-
-<table>
+<table> <!-- 📄 Page 259 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10314,10 +10032,7 @@ Flowchart steps (OM13773):
 
 ---
 
-<!-- 📄 Page 260 -->
----
-
-**Table 2-42 Ordering Rules Summary | 表 2-42 排序规则汇总**
+**Table 2-42 Ordering Rules Summary | 表 2-42 排序规则汇总** <!-- 📄 Page 260 -->
 
 | Row Pass Column? | Posted Request (Col 2) | Read Request (Col 3) | NPR with Data (Col 4) | Completion (Col 5) |
 |------------------|------------------------|----------------------|------------------------|--------------------|
@@ -10392,10 +10107,7 @@ Non-Posted Request 是 Read Request 或 NPR with Data。
 
 ---
 
-<!-- 📄 Page 261 -->
----
-
-<table>
+<table> <!-- 📄 Page 261 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10455,11 +10167,8 @@ Non-Posted Request 是 Read Request 或 NPR with Data。
 
 ---
 
-<!-- 📄 Page 262 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 262 -->
 <table>
 <thead>
 <tr>
@@ -10517,10 +10226,7 @@ Non-Posted Request 是 Read Request 或 NPR with Data。
 
 ---
 
-<!-- 📄 Page 263 -->
----
-
-<table>
+<table> <!-- 📄 Page 263 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10555,10 +10261,7 @@ Non-Posted Request 是 Read Request 或 NPR with Data。
 
 ---
 
-<!-- 📄 Page 264 -->
----
-
-> **Figure 2-93.** Deadlock Examples with Intersystem Interconnects
+> **Figure 2-93.** Deadlock Examples with Intersystem Interconnects <!-- 📄 Page 264 -->
 > <img src="figures/chapter_02/fig_0264_1_tight.png" width="700">
 > **图 2-93.** Deadlock Examples 含 Intersystem Interconnects
 
@@ -10567,11 +10270,8 @@ Non-Posted Request 是 Read Request 或 NPR with Data。
 
 ---
 
-<!-- 📄 Page 265 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 265 -->
 <table>
 <thead>
 <tr>
@@ -10647,9 +10347,6 @@ UIO TLP 的排序规则如下(参见 § Table 2-43):
 
 ---
 
-
----
-
 <a id="sec-2-4-2"></a>
 ## 2.4.2 Ordering Rules for UIO | UIO 排序规则
 
@@ -10696,10 +10393,7 @@ UIO TLP 的死锁避免规则见 § Table 2-44 和 § Table 2-45。
 
 ---
 
-<!-- 📄 Page 266 -->
----
-
-**Table 2-44 UIO Acceptance Dependency Rules – Downstream Ports | 表 2-44 UIO 接受依赖规则 – 下游端口**
+**Table 2-44 UIO Acceptance Dependency Rules – Downstream Ports | 表 2-44 UIO 接受依赖规则 – 下游端口** <!-- 📄 Page 266 -->
 
 | Row Independent of Col?<br>Egress transmission →<br>Ingress Acceptance ↓ | UIO Memory Write Request<br>(Col 1) | Other UIO Memory Request<br>(Col 2) | UIO Completion<br>(Col 3) |
 |--------------------------------------------------------------------------|---------------------------------------|---------------------------------------|---------------------------|
@@ -10759,10 +10453,7 @@ If a Requester using a single transaction reads a block of data from a Completer
 
 ---
 
-<!-- 📄 Page 267 -->
----
-
-<a id="sec-2-4-3-1"></a>
+<a id="sec-2-4-3-1"></a> <!-- 📄 Page 267 -->
 ## 2.4.3.1 Ordering and Granularity for Non-UIO Reads | 非 UIO 读事务的排序与粒度
 
 <table>
@@ -10902,10 +10593,7 @@ As an example of update ordering and granularity, if a Requester writes a QW to 
 
 ---
 
-<!-- 📄 Page 268 -->
----
-
-<a id="sec-2-4-4-2"></a>
+<a id="sec-2-4-4-2"></a> <!-- 📄 Page 268 -->
 ## 2.4.4.2 Ordering and Granularity for UIO Writes | UIO 写事务的排序与粒度
 
 
@@ -11037,10 +10725,7 @@ SVC 通过硬件要求与软件指导相结合，为架构定义的 TC/VC 应用
 
 ---
 
-<!-- 📄 Page 269 -->
----
-
-**Table 2-46 Streamlined VC (SVC) TC/VC Default Assignments | 表 2-46 精简 VC (SVC) TC/VC 默认分配**
+**Table 2-46 Streamlined VC (SVC) TC/VC Default Assignments | 表 2-46 精简 VC (SVC) TC/VC 默认分配** <!-- 📄 Page 269 -->
 
 | TC | VC | Description |
 |----|----|-------------|
@@ -11134,10 +10819,7 @@ TC7/VC7 保留
 
 ---
 
-<!-- 📄 Page 270 -->
----
-
-> **Figure 2-94.** Virtual Channel Concept - An Illustration
+> **Figure 2-94.** Virtual Channel Concept - An Illustration <!-- 📄 Page 270 -->
 
 > <img src="figures/chapter_02/fig_0271_1_tight.png" width="700">
 
@@ -11222,10 +10904,7 @@ PCI Express 端口可支持 1 到 8 个虚通道 – 每个端口独立配置/�
 
 ---
 
-<!-- 📄 Page 271 -->
----
-
-<a id="sec-2-5-2"></a>
+<a id="sec-2-5-2"></a> <!-- 📄 Page 271 -->
 ## 2.5.2 TC to VC Mapping | TC 到 VC 映射
 
 
@@ -11325,10 +11004,7 @@ The number of VCs supported, and the associated buffering per VC per Port, are n
 
 ---
 
-<!-- 📄 Page 272 -->
----
-
-<a id="sec-2-5-2-impl"></a>
+<a id="sec-2-5-2-impl"></a> <!-- 📄 Page 272 -->
 ## 2.5.2 TC to VC Mapping (Key Rules Summary) | 2.5.2 TC 到 VC 映射(关键规则总结)
 
 <table>
@@ -11376,9 +11052,6 @@ Here is a summary of key rules associated with the TC/VC mechanism:
 
 ---
 
-
----
-
 <a id="sec-2-5-3"></a>
 ## 2.5.3 VC and TC Rules | VC 与 TC 规则
 
@@ -11423,10 +11096,7 @@ For more details on the VC and TC mechanisms, including configuration, mapping, 
 
 ---
 
-<!-- 📄 Page 275 -->
----
-
-<a id="sec-2-6"></a>
+<a id="sec-2-6"></a> <!-- 📄 Page 275 -->
 ## 2.6 Ordering and Receive Buffer Flow Control | 排序与接收缓冲流控
 
 <table>
@@ -11521,10 +11191,7 @@ In this and other sections of this specification, rules are described using conc
 
 ---
 
-<!-- 📄 Page 276 -->
----
-
-<table>
+<table> <!-- 📄 Page 276 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11659,11 +11326,8 @@ Note: size of data returned is never more than 4 (aligned) DWs.
 
 ---
 
-<!-- 📄 Page 277 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 277 -->
 <table>
 <thead>
 <tr>
@@ -11749,10 +11413,7 @@ Note: It is possible for multiple VCs to be following the Flow Control initializ
 
 ---
 
-<!-- 📄 Page 278 -->
----
-
-<table>
+<table> <!-- 📄 Page 278 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11835,11 +11496,8 @@ Note: It is possible for multiple VCs to be following the Flow Control initializ
 
 ---
 
-<!-- 📄 Page 279 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 279 -->
 <table>
 <thead>
 <tr>
@@ -11923,10 +11581,7 @@ The [Field Size] parameter used in the following sections is described in § Tab
 
 ---
 
-<!-- 📄 Page 280 -->
----
-
-<table>
+<table> <!-- 📄 Page 280 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12045,11 +11700,8 @@ If Shared credits are infinite for a given FC/VC, Shared and Dedicated credits i
 
 ---
 
-<!-- 📄 Page 281 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 281 -->
 <table>
 <thead>
 <tr>
@@ -12143,10 +11795,7 @@ SHARED_CREDITS_CONSUMED := (SHARED_CREDITS_CONSUMED + Increment) mod 2[Field Siz
 
 ---
 
-<!-- 📄 Page 282 -->
----
-
-<table>
+<table> <!-- 📄 Page 282 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12301,11 +11950,8 @@ SUM_SHARED_CREDIT_LIMIT = (从 i=0 到 7 对 SHARED_CREDIT_LIMIT[i] 求和) mod 
 
 ---
 
-<!-- 📄 Page 283 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 283 -->
 <table>
 <thead>
 <tr>
@@ -12413,10 +12059,7 @@ SCCC + 待发送 TLP 所需信用单元 ≤ (TOTAL_SHARED_CREDITS_AVAILABLE_POST
 
 ---
 
-<!-- 📄 Page 284 -->
----
-
-<table>
+<table> <!-- 📄 Page 284 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12519,10 +12162,7 @@ CREDITS_ALLOCATED := (CREDITS_ALLOCATED + Increment) mod 2[Field Size]
 
 ---
 
-<!-- 📄 Page 285 -->
----
-
-<a id="sec-2-6-1-1"></a>
+<a id="sec-2-6-1-1"></a> <!-- 📄 Page 285 -->
 ## 2.6.1.1 FC Information Tracked by Transmitter | 2.6.1.1 发送器跟踪的 FC 信息
 
 
@@ -12620,10 +12260,7 @@ CREDITS_RECEIVED := (CREDITS_RECEIVED + Increment) mod 2[Field Size]
 
 ---
 
-<!-- 📄 Page 286 -->
----
-
-<table>
+<table> <!-- 📄 Page 286 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12736,11 +12373,8 @@ temp2[i] ≡ CREDITS_RECEIVED_POSTED[i] + CREDITS_RECEIVED_COMPLETION[i]
 
 ---
 
-<!-- 📄 Page 287 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 287 -->
 <table>
 <thead>
 <tr>
@@ -12810,10 +12444,7 @@ The purpose of having some amount of Dedicated Credit per VC is to ensure that o
 
 ---
 
-<!-- 📄 Page 288 -->
----
-
-<table>
+<table> <!-- 📄 Page 288 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12864,11 +12495,8 @@ For a Multi-Function Device where different Functions have different Rx_MPS_Limi
 
 ---
 
-<!-- 📄 Page 289 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 289 -->
 <table>
 <thead>
 <tr>
@@ -12972,9 +12600,6 @@ The capability to generate and check ECRC is reported to software, and the abili
 
 ---
 
-
----
-
 <a id="sec-2-7"></a>
 ## 2.7 End-to-End Data Integrity | 端到端数据完整性
 
@@ -13005,10 +12630,7 @@ The capability to generate and check ECRC is reported to software, and the abili
 
 ---
 
-<!-- 📄 Page 298 -->
----
-
-<a id="sec-2-7-1"></a>
+<a id="sec-2-7-1"></a> <!-- 📄 Page 298 -->
 ## 2.7.1 ECRC Rules | ECRC 规则
 
 
@@ -13104,10 +12726,7 @@ A 32-bit ECRC is calculated for the TLP (End-End TLP Prefixes/OHC, header, and d
 
 ---
 
-<!-- 📄 Page 299 -->
----
-
-**Table 2-55. Mapping of Bits into ECRC Field | 表 2-55. ECRC 字段位映射**
+**Table 2-55. Mapping of Bits into ECRC Field | 表 2-55. ECRC 字段位映射** <!-- 📄 Page 299 -->
 
 | ECRC Result Bit | Corresponding Bit Position in the 32-bit TLP ECRC Field |
 |-----------------|--------------------------------------------------------|
@@ -13148,10 +12767,7 @@ A 32-bit ECRC is calculated for the TLP (End-End TLP Prefixes/OHC, header, and d
 
 ---
 
-<!-- 📄 Page 300 -->
----
-
-<a id="sec-2-7-1-cont"></a>
+<a id="sec-2-7-1-cont"></a> <!-- 📄 Page 300 -->
 ## 2.7.1 ECRC Rules (continued) | 2.7.1 ECRC 规则（续）
 
 <table>
@@ -13193,10 +12809,7 @@ Beyond the stated error reporting semantics contained elsewhere in this specific
 
 ---
 
-<!-- 📄 Page 301 -->
----
-
-> **Figure 2-99.** Calculation of 32-bit ECRC for TLP End to End Data Integrity Protection
+> **Figure 2-99.** Calculation of 32-bit ECRC for TLP End to End Data Integrity Protection <!-- 📄 Page 301 -->
 > <img src="figures/chapter_02/fig_0301_1_tight.png" width="700">
 > **图 2-99.** 计算 32-bit ECRC TLP End End Data Integrity Protection
 
@@ -13205,10 +12818,7 @@ Beyond the stated error reporting semantics contained elsewhere in this specific
 
 ---
 
-<!-- 📄 Page 302 -->
----
-
-<a id="sec-2-7-2"></a>
+<a id="sec-2-7-2"></a> <!-- 📄 Page 302 -->
 ## 2.7.2 Error Forwarding (Data Poisoning) | 错误转发（数据中毒）
 
 
@@ -13288,10 +12898,7 @@ EP 位的使用规则在 § 第 2.7.2.1 节中规定。物理层逻辑块机制�
 
 ---
 
-<!-- 📄 Page 303 -->
----
-
-<a id="sec-2-7-2-1"></a>
+<a id="sec-2-7-2-1"></a> <!-- 📄 Page 303 -->
 ## 2.7.2.1 Rules For Use of Data Poisoning | 数据中毒的使用规则
 
 <table>
@@ -13365,10 +12972,7 @@ EP 位的使用规则在 § 第 2.7.2.1 节中规定。物理层逻辑块机制�
 
 ---
 
-<!-- 📄 Page 304 -->
----
-
-<a id="sec-2-7-2-1-cont"></a>
+<a id="sec-2-7-2-1-cont"></a> <!-- 📄 Page 304 -->
 ## 2.7.2.1 Rules For Use of Data Poisoning (continued) | 2.7.2.1 数据中毒的使用规则（续）
 
 
@@ -13476,10 +13080,7 @@ For a Memory Read Request, if some, but not all, requested data is returned befo
 
 ---
 
-<!-- 📄 Page 305 -->
----
-
-<a id="sec-2-8-cont"></a>
+<a id="sec-2-8-cont"></a> <!-- 📄 Page 305 -->
 ## 2.8 Completion Timeout Mechanism (continued) | 2.8 完成超时机制（续）
 
 
@@ -13579,9 +13180,6 @@ DL_Down 状态表示与链路上另一个组件无连接，或者与另一组件
 
 ---
 
-
----
-
 <a id="sec-2-9-1"></a>
 ## 2.9.1 Transaction Layer Behavior in DL_Down Status | DL_Down 状态下的事务层行为
 
@@ -13647,11 +13245,8 @@ For an Upstream Port, DL_Down status is handled as a reset by:
 </tr>
 </tbody>
 </table>
-</div>
+</div> <!-- 📄 Page 306 -->
 
-
-<!-- 📄 Page 306 -->
----
 
 ---
 
@@ -13687,10 +13282,7 @@ DL_Up 状态表示已与相关链路上另一个组件建立连接。本节规�
 </td>
 </tr>
 </tbody>
-</table>
-
-<!-- 📄 Page 307 -->
----
+</table> <!-- 📄 Page 307 -->
 
 ---
 
@@ -13751,11 +13343,8 @@ For any outstanding Non-Posted Requests where DPC being triggered prevents their
 </tr>
 </tbody>
 </table>
-</div>
+</div> <!-- 📄 Page 308 -->
 
-
-<!-- 📄 Page 308 -->
----
 
 ---
 

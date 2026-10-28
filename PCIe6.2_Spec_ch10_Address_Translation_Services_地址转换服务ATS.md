@@ -137,8 +137,6 @@
 
 ---
 
----
-
 <a id="sec-10-0"></a>
 # 10. Address Translation Services (ATS) § | 10. 地址转换服务 (ATS) §
 
@@ -218,7 +216,7 @@ This specification will provide the interoperability that allows PCIe Devices to
 ---
 
 <a id="sec-10-1"></a>
-## 10.1 ATS Architectural Overview § | 10.1 ATS 架构概述 §
+## 10.1 ATS Architectural Overview | 10.1 ATS 架构概述
 
 <table>
 <thead>
@@ -281,7 +279,7 @@ ATS 章节引入了一组新的 TLP 及相关语义。ATS 使用设备与根复�
 ---
 
 <a id="sec-10-1-1"></a>
-### 10.1.1 Address Translation Services (ATS) Overview § | 10.1.1 地址转换服务 (ATS) 概述 §
+### 10.1.1 Address Translation Services (ATS) Overview | 10.1.1 地址转换服务 (ATS) 概述
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -364,17 +362,8 @@ b. 功能必须丢弃可能"过期"的转换完成。过期转换完成可能由
 
 ---
 
-<!-- 📄 Page 1559 -->
----
-
-<!-- 📄 Page 1560 -->
----
-
-<!-- 📄 Page 1561 -->
----
-
-<a id="sec-10-1-2"></a>
-### 10.1.2 Page Request Interface Extension § | 10.1.2 页请求接口扩展 §
+<a id="sec-10-1-2"></a> <!-- 📄 Page 1559 --> <!-- 📄 Page 1560 --> <!-- 📄 Page 1561 -->
+### 10.1.2 Page Request Interface Extension | 10.1.2 页请求接口扩展
 
 <table>
 <thead>
@@ -447,7 +436,7 @@ Independent of the number of Functions within a Device, the following are requir
 ---
 
 <a id="sec-10-1-2-cont"></a>
-### 10.1.2 Page Request Interface Extension (continued) § | 10.1.2 页请求接口扩展 (续) §
+### 10.1.2 Page Request Interface Extension (continued) | 10.1.2 页请求接口扩展 (续)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -514,7 +503,7 @@ As § Figure 10-4 illustrates, there are essentially three steps in the ATS Inva
 ---
 
 <a id="sec-10-1-2-cont2"></a>
-### 10.1.2 Page Request Interface Extension (continued 2) § | 10.1.2 页请求接口扩展 (续二) §
+### 10.1.2 Page Request Interface Extension (continued 2) | 10.1.2 页请求接口扩展 (续二)
 
 <table>
 <thead>
@@ -577,7 +566,7 @@ PRI 在功能上独立于 ATS 的其他方面。即，支持 ATS 的设备无需
 ---
 
 <a id="sec-10-1-3"></a>
-### 10.1.3 Process Address Space ID (PASID) § | 10.1.3 进程地址空间 ID (PASID) §
+### 10.1.3 Process Address Space ID (PASID) | 10.1.3 进程地址空间 ID (PASID)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -665,7 +654,7 @@ ATC 可选择性地支持带 PASID 的已转换请求。当 Translated Requests 
 ---
 
 <a id="sec-10-1-4"></a>
-### 10.1.4 ATS Memory Attributes § | 10.1.4 ATS 内存属性 §
+### 10.1.4 ATS Memory Attributes | 10.1.4 ATS 内存属性
 
 <table>
 <thead>
@@ -703,7 +692,7 @@ TA 执行转换。ATC 可以缓存这些转换。如果 ATC 与 TA 之间通过 
 ---
 
 <a id="sec-10-2"></a>
-## 10.2 ATS Translation Services § | 10.2 ATS 转换服务 §
+## 10.2 ATS Translation Services | 10.2 ATS 转换服务
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -802,26 +791,8 @@ In NFM, the AT field in the Requests is a redefinition of a reserved field in ea
 
 ---
 
-<!-- 📄 Page 1562 -->
----
-
-<!-- 📄 Page 1563 -->
----
-
-<!-- 📄 Page 1564 -->
----
-
-<!-- 📄 Page 1565 -->
----
-
-<!-- 📄 Page 1566 -->
----
-
-<!-- 📄 Page 1567 -->
----
-
-<a id="sec-10-2-1"></a>
-### 10.2.1 Memory Requests with Address Type § | 10.2.1 带地址类型的内存请求 §
+<a id="sec-10-2-1"></a> <!-- 📄 Page 1562 --> <!-- 📄 Page 1563 --> <!-- 📄 Page 1564 --> <!-- 📄 Page 1565 --> <!-- 📄 Page 1566 --> <!-- 📄 Page 1567 -->
+### 10.2.1 Memory Requests with Address Type | 10.2.1 带地址类型的内存请求
 
 <table>
 <thead>
@@ -869,7 +840,7 @@ AT 字段仅对内存请求以及 Flit 模式下的地址路由消息有定义�
 ---
 
 <a id="sec-10-2-2"></a>
-### 10.2.2 Translation Requests § | 10.2.2 转换请求 §
+### 10.2.2 Translation Requests | 10.2.2 转换请求
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -946,7 +917,7 @@ For a Translation Request, the Relaxed Ordering (RO) bit is applicable and permi
 ---
 
 <a id="sec-10-2-2-1"></a>
-#### 10.2.2.1 Attribute Field § | 10.2.2.1 属性字段 §
+#### 10.2.2.1 Attribute Field | 10.2.2.1 属性字段
 
 <table>
 <thead>
@@ -1008,7 +979,7 @@ Tag 字段的含义与内存读请求中的含义相同。
 ---
 
 <a id="sec-10-2-2-2"></a>
-#### 10.2.2.2 Length Field § | 10.2.2.2 Length 字段 §
+#### 10.2.2.2 Length Field | 10.2.2.2 Length 字段
 
 <table>
 <thead>
@@ -1039,20 +1010,8 @@ Tag 字段的含义与内存读请求中的含义相同。
 
 ---
 
-<!-- 📄 Page 1568 -->
----
-
-<!-- 📄 Page 1569 -->
----
-
-<!-- 📄 Page 1570 -->
----
-
-<!-- 📄 Page 1571 -->
----
-
-<a id="sec-10-2-2-3"></a>
-#### 10.2.2.3 Tag Field § | 10.2.2.3 Tag 字段 §
+<a id="sec-10-2-2-3"></a> <!-- 📄 Page 1568 --> <!-- 📄 Page 1569 --> <!-- 📄 Page 1570 --> <!-- 📄 Page 1571 -->
+#### 10.2.2.3 Tag Field | 10.2.2.3 Tag 字段
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1110,7 +1069,7 @@ Tag 字段的含义与内存读请求中的含义相同。
 ---
 
 <a id="sec-10-2-2-4"></a>
-#### 10.2.2.4 Untranslated Address Field § | 10.2.2.4 未转换地址字段 §
+#### 10.2.2.4 Untranslated Address Field | 10.2.2.4 未转换地址字段
 
 <table>
 <thead>
@@ -1152,7 +1111,7 @@ TA 可以忽略 No Write 标志;然而，如果 TA 以标记为只读的转换�
 ---
 
 <a id="sec-10-2-2-5"></a>
-#### 10.2.2.5 No Write (NW) Flag § | 10.2.2.5 No Write (NW) 标志 §
+#### 10.2.2.5 No Write (NW) Flag | 10.2.2.5 No Write (NW) 标志
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1202,7 +1161,7 @@ PASID Extended Capability 指示功能是否支持并已启用以发送和接收
 ---
 
 <a id="sec-10-2-2-6"></a>
-#### 10.2.2.6 PASID on Translation Request § | 10.2.2.6 转换请求中的 PASID §
+#### 10.2.2.6 PASID on Translation Request | 10.2.2.6 转换请求中的 PASID
 
 <table>
 <thead>
@@ -1240,7 +1199,7 @@ TA 为每个转换请求发送一个转换完成(Cpl 或 CplD)。本规范描述
 ---
 
 <a id="sec-10-2-2-7"></a>
-#### 10.2.2.7 CXL Src § | 10.2.2.7 CXL Src §
+#### 10.2.2.7 CXL Src | 10.2.2.7 CXL Src
 
 <table>
 <thead>
@@ -1274,7 +1233,7 @@ TA 为每个转换请求发送一个转换完成(Cpl 或 CplD)。本规范描述
 ---
 
 <a id="sec-10-2-3"></a>
-### 10.2.3 Translation Completion § | 10.2.3 转换完成 §
+### 10.2.3 Translation Completion | 10.2.3 转换完成
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1358,7 +1317,7 @@ Lower Address 字段包含一个计算值，使报文与 RCB 语义一致。如�
 ---
 
 <a id="sec-10-2-3-data"></a>
-### 10.2.3 Translation Completion Data Fields § | 10.2.3 转换完成数据字段 §
+### 10.2.3 Translation Completion Data Fields | 10.2.3 转换完成数据字段
 
 <table>
 <thead>
@@ -1436,7 +1395,7 @@ Lower Address 字段包含一个计算值，使报文与 RCB 语义一致。如�
 ---
 
 <a id="sec-10-2-3-1"></a>
-#### 10.2.3.1 Translated Address Field § | 10.2.3.1 已转换地址字段 §
+#### 10.2.3.1 Translated Address Field | 10.2.3.1 已转换地址字段
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1482,7 +1441,7 @@ A Function is not allowed to make an entry into its ATC unless the entry is in a
 ---
 
 <a id="sec-10-2-3-2"></a>
-#### 10.2.3.2 Translation Range Size (S) Field § | 10.2.3.2 转换范围大小 (S) 字段 §
+#### 10.2.3.2 Translation Range Size (S) Field | 10.2.3.2 转换范围大小 (S) 字段
 
 <table>
 <thead>
@@ -1560,7 +1519,7 @@ If a Function receives a Translation Completion with a Translation Size field sm
 ---
 
 <a id="sec-10-2-3-3"></a>
-#### 10.2.3.3 Non-snooped (N) Field § | 10.2.3.3 非监听 (N) 字段 §
+#### 10.2.3.3 Non-snooped (N) Field | 10.2.3.3 非监听 (N) 字段
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1610,7 +1569,7 @@ Future revisions of this specification are expected to deprecate the U bit.
 ---
 
 <a id="sec-10-2-3-4"></a>
-#### 10.2.3.4 Untranslated Access Only (U) Field § | 10.2.3.4 仅未转换访问 (U) 字段 §
+#### 10.2.3.4 Untranslated Access Only (U) Field | 10.2.3.4 仅未转换访问 (U) 字段
 
 <table>
 <thead>
@@ -1644,7 +1603,7 @@ Note: One of the possible uses of this field is to avoid unnecessary invalidatio
 ---
 
 <a id="sec-10-2-3-5"></a>
-#### 10.2.3.5 Read (R) and Write (W) Fields § | 10.2.3.5 读 (R) 和写 (W) 字段 §
+#### 10.2.3.5 Read (R) and Write (W) Fields | 10.2.3.5 读 (R) 和写 (W) 字段
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1713,26 +1672,8 @@ Priv 位用于限定 R 和 W。如果 Priv 置位，则 R 和 W 表示授予该�
 
 ---
 
-<!-- 📄 Page 1572 -->
----
-
-<!-- 📄 Page 1573 -->
----
-
-<!-- 📄 Page 1574 -->
----
-
-<!-- 📄 Page 1575 -->
----
-
-<!-- 📄 Page 1576 -->
----
-
-<!-- 📄 Page 1577 -->
----
-
-<a id="sec-10-2-3-6"></a>
-#### 10.2.3.6 Execute Permitted (Exe) § | 10.2.3.6 允许执行 (Exe) §
+<a id="sec-10-2-3-6"></a> <!-- 📄 Page 1572 --> <!-- 📄 Page 1573 --> <!-- 📄 Page 1574 --> <!-- 📄 Page 1575 --> <!-- 📄 Page 1576 --> <!-- 📄 Page 1577 -->
+#### 10.2.3.6 Execute Permitted (Exe) | 10.2.3.6 允许执行 (Exe)
 
 <table>
 <thead>
@@ -1774,7 +1715,7 @@ This value may be cached if R is Set.
 ---
 
 <a id="sec-10-2-3-7"></a>
-#### 10.2.3.7 Privileged Mode Access (Priv) § | 10.2.3.7 特权模式访问 (Priv) §
+#### 10.2.3.7 Privileged Mode Access (Priv) | 10.2.3.7 特权模式访问 (Priv)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1852,7 +1793,7 @@ R、W 和 Exe 的特权和非特权模式版本是独立的。ATC 可以缓存 R
 ---
 
 <a id="sec-10-2-3-8"></a>
-#### 10.2.3.8 Global Mapping (Global) § | 10.2.3.8 全局映射 (Global) §
+#### 10.2.3.8 Global Mapping (Global) | 10.2.3.8 全局映射 (Global)
 
 <table>
 <thead>
@@ -1898,7 +1839,7 @@ Functions that use this bit must also have the Global Invalidate Supported bit S
 ---
 
 <a id="sec-10-2-3-9"></a>
-#### 10.2.3.9 ATS Memory Attributes § | 10.2.3.9 ATS 内存属性 §
+#### 10.2.3.9 ATS Memory Attributes | 10.2.3.9 ATS 内存属性
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1978,7 +1919,7 @@ AMA 值与完成者关联，且是实现特定的。AMA 值对请求者、请求
 ---
 
 <a id="sec-10-2-4"></a>
-### 10.2.4 Completions with Multiple Translations § | 10.2.4 包含多个转换的完成 §
+### 10.2.4 Completions with Multiple Translations | 10.2.4 包含多个转换的完成
 
 <table>
 <thead>
@@ -2058,7 +1999,7 @@ ATC 允许请求 TA 为虚拟连续的地址范围提供转换。它通过将转
 ---
 
 <a id="sec-10-3"></a>
-## 10.3 ATS Invalidation § | 10.3 ATS 无效化 §
+## 10.3 ATS Invalidation | 10.3 ATS 无效化
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2137,7 +2078,7 @@ Invalidate 请求是带 64 位数据的 MsgD 事务。Invalidate 请求消息可
 ---
 
 <a id="sec-10-3-1"></a>
-### 10.3.1 Invalidate Request § | 10.3.1 无效化请求 §
+### 10.3.1 Invalidate Request | 10.3.1 无效化请求
 
 <table>
 <thead>
@@ -2201,35 +2142,8 @@ Global Invalidate 位指示无效化请求消息影响所有 PASID 值(参见 §
 
 ---
 
-<!-- 📄 Page 1578 -->
----
-
-<!-- 📄 Page 1579 -->
----
-
-<!-- 📄 Page 1580 -->
----
-
-<!-- 📄 Page 1581 -->
----
-
-<!-- 📄 Page 1582 -->
----
-
-<!-- 📄 Page 1583 -->
----
-
-<!-- 📄 Page 1584 -->
----
-
-<!-- 📄 Page 1585 -->
----
-
-<!-- 📄 Page 1586 -->
----
-
-<a id="sec-10-3-2"></a>
-### 10.3.2 Invalidate Completion § | 10.3.2 无效化完成 §
+<a id="sec-10-3-2"></a> <!-- 📄 Page 1578 --> <!-- 📄 Page 1579 --> <!-- 📄 Page 1580 --> <!-- 📄 Page 1581 --> <!-- 📄 Page 1582 --> <!-- 📄 Page 1583 --> <!-- 📄 Page 1584 --> <!-- 📄 Page 1585 --> <!-- 📄 Page 1586 -->
+### 10.3.2 Invalidate Completion | 10.3.2 无效化完成
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2333,7 +2247,7 @@ TA 如果收到针对某个没有未完成 Invalidation 请求的 ITag 的 Inval
 ---
 
 <a id="sec-10-3-3"></a>
-### 10.3.3 Invalidate Completion Semantics § | 10.3.3 无效化完成语义 §
+### 10.3.3 Invalidate Completion Semantics | 10.3.3 无效化完成语义
 
 <table>
 <thead>
@@ -2411,7 +2325,7 @@ Invalidation 完成行为独立于关联的 Invalidate 请求是发给该功能�
 ---
 
 <a id="sec-10-3-4"></a>
-### 10.3.4 Request Acceptance Rules § | 10.3.4 请求接受规则 §
+### 10.3.4 Request Acceptance Rules | 10.3.4 请求接受规则
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2463,7 +2377,7 @@ Due to the variety of caching architectures and queuing strategies, implementati
 ---
 
 <a id="sec-10-3-5"></a>
-### 10.3.5 Invalidate Flow Control § | 10.3.5 无效化流控 §
+### 10.3.5 Invalidate Flow Control | 10.3.5 无效化流控
 
 <table>
 <thead>
@@ -2509,7 +2423,7 @@ Each Function is required to implement sufficient queuing to ensure it can hold 
 ---
 
 <a id="sec-10-3-6"></a>
-### 10.3.6 Invalidate Ordering Semantics § | 10.3.6 无效化排序语义 §
+### 10.3.6 Invalidate Ordering Semantics | 10.3.6 无效化排序语义
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2565,7 +2479,7 @@ ATC 必须针对所有到达的 Invalidate 请求"监听"其未完成转换请�
 ---
 
 <a id="sec-10-3-7"></a>
-### 10.3.7 Implicit Invalidation Events § | 10.3.7 隐式无效化事件 §
+### 10.3.7 Implicit Invalidation Events | 10.3.7 隐式无效化事件
 
 <table>
 <thead>
@@ -2637,7 +2551,7 @@ No explicit Invalidate Completion message is sent when these implied invalidate 
 ---
 
 <a id="sec-10-3-8"></a>
-### 10.3.8 PASID and Global Invalidate § | 10.3.8 PASID 与全局无效化 §
+### 10.3.8 PASID and Global Invalidate | 10.3.8 PASID 与全局无效化
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2702,26 +2616,8 @@ For Invalidation Requests that do not have a PASID, the ATC shall:
 
 ---
 
-<!-- 📄 Page 1587 -->
----
-
-<!-- 📄 Page 1588 -->
----
-
-<!-- 📄 Page 1589 -->
----
-
-<!-- 📄 Page 1590 -->
----
-
-<!-- 📄 Page 1591 -->
----
-
-<!-- 📄 Page 1592 -->
----
-
-<a id="sec-10-4"></a>
-## 10.4 Page Request Services § | 10.4 页请求服务 §
+<a id="sec-10-4"></a> <!-- 📄 Page 1587 --> <!-- 📄 Page 1588 --> <!-- 📄 Page 1589 --> <!-- 📄 Page 1590 --> <!-- 📄 Page 1591 --> <!-- 📄 Page 1592 -->
+## 10.4 Page Request Services | 10.4 页请求服务
 
 <table>
 <thead>
@@ -2795,7 +2691,7 @@ PRG 响应消息是由 ID 路由回请求功能的 PCIe 消息请求。系统软
 ---
 
 <a id="sec-10-4-1"></a>
-### 10.4.1 Page Request Message § | 10.4.1 页请求消息 §
+### 10.4.1 Page Request Message | 10.4.1 页请求消息
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2872,7 +2768,7 @@ The first two DWs of a Page Request Message contain a standard PCIe message head
 ---
 
 <a id="sec-10-4-1-1"></a>
-#### 10.4.1.1 PASID Usage § | 10.4.1.1 PASID 使用 §
+#### 10.4.1.1 PASID Usage | 10.4.1.1 PASID 使用
 
 <table>
 <thead>
@@ -2942,7 +2838,7 @@ PASID Extended Capability 指示功能是否支持 PASID TLP Prefix(NFM)或带 P
 ---
 
 <a id="sec-10-4-1-2"></a>
-#### 10.4.1.2 Managing PASID Usage on PRG Requests § | 10.4.1.2 在 PRG 请求上管理 PASID 使用 §
+#### 10.4.1.2 Managing PASID Usage on PRG Requests | 10.4.1.2 在 PRG 请求上管理 PASID 使用
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -3002,7 +2898,7 @@ Note: Steps 4 and 5 may be performed in either order, or in parallel.
 ---
 
 <a id="sec-10-4-1-2-1"></a>
-##### 10.4.1.2.1 Stop Marker Messages § | 10.4.1.2.1 停止标记消息 §
+##### 10.4.1.2.1 Stop Marker Messages | 10.4.1.2.1 停止标记消息
 
 <table>
 <thead>
@@ -3096,26 +2992,8 @@ Behavior is undefined if a Stop Marker Message is received and any of the follow
 
 ---
 
-<!-- 📄 Page 1593 -->
----
-
-<!-- 📄 Page 1594 -->
----
-
-<!-- 📄 Page 1595 -->
----
-
-<!-- 📄 Page 1596 -->
----
-
-<!-- 📄 Page 1597 -->
----
-
-<!-- 📄 Page 1598 -->
----
-
-<a id="sec-10-4-2"></a>
-### 10.4.2 Page Request Group Response Message § | 10.4.2 页请求组响应消息 §
+<a id="sec-10-4-2"></a> <!-- 📄 Page 1593 --> <!-- 📄 Page 1594 --> <!-- 📄 Page 1595 --> <!-- 📄 Page 1596 --> <!-- 📄 Page 1597 --> <!-- 📄 Page 1598 -->
+### 10.4.2 Page Request Group Response Message | 10.4.2 页请求组响应消息
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -3209,7 +3087,7 @@ In order to prevent overflow, it is recommended to size Page Request queuing app
 ---
 
 <a id="sec-10-4-2-1"></a>
-#### 10.4.2.1 Response Code Field § | 10.4.2.1 响应代码字段 §
+#### 10.4.2.1 Response Code Field | 10.4.2.1 响应代码字段
 
 <table>
 <thead>
@@ -3269,7 +3147,7 @@ When a PASID is attached to PRG Response Messages, the Execute Requested and Pri
 ---
 
 <a id="sec-10-4-2-2"></a>
-#### 10.4.2.2 PASID Usage on PRG Responses § | 10.4.2.2 PRG 响应中的 PASID 使用 §
+#### 10.4.2.2 PASID Usage on PRG Responses | 10.4.2.2 PRG 响应中的 PASID 使用
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -3307,7 +3185,7 @@ Each Function that supports ATS (capable of generating Translation Requests) mus
 ---
 
 <a id="sec-10-5"></a>
-## 10.5 ATS Configuration § | 10.5 ATS 配置 §
+## 10.5 ATS Configuration | 10.5 ATS 配置
 
 <table>
 <thead>
@@ -3368,7 +3246,7 @@ Each Function that supports ATS (capable of generating Translation Requests) mus
 ---
 
 <a id="sec-10-5-1"></a>
-### 10.5.1 ATS Extended Capability § | 10.5.1 ATS Extended Capability §
+### 10.5.1 ATS Extended Capability | 10.5.1 ATS Extended Capability
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -3437,7 +3315,7 @@ Each Function that supports ATS (capable of generating Translation Requests) mus
 ---
 
 <a id="sec-10-5-1-1"></a>
-#### 10.5.1.1 ATS Extended Capability Header (Offset 00h) § | 10.5.1.1 ATS Extended Capability 头 (Offset 00h) §
+#### 10.5.1.1 ATS Extended Capability Header (Offset 00h) | 10.5.1.1 ATS Extended Capability 头 (Offset 00h)
 
 <table>
 <thead>
@@ -3481,7 +3359,7 @@ Each Function that supports ATS (capable of generating Translation Requests) mus
 ---
 
 <a id="sec-10-5-1-2"></a>
-#### 10.5.1.2 ATS Capability Register (Offset 04h) § | 10.5.1.2 ATS Capability 寄存器 (Offset 04h) §
+#### 10.5.1.2 ATS Capability Register (Offset 04h) | 10.5.1.2 ATS Capability 寄存器 (Offset 04h)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -3595,7 +3473,7 @@ Page Request Extended Capability Structure 用于配置页请求接口机制。�
 ---
 
 <a id="sec-10-5-1-3"></a>
-#### 10.5.1.3 ATS Control Register (Offset 06h) § | 10.5.1.3 ATS Control 寄存器 (Offset 06h) §
+#### 10.5.1.3 ATS Control Register (Offset 06h) | 10.5.1.3 ATS Control 寄存器 (Offset 06h)
 
 <table>
 <thead>
@@ -3639,7 +3517,7 @@ Page Request Extended Capability Structure 用于配置页请求接口机制。�
 ---
 
 <a id="sec-10-5-2"></a>
-### 10.5.2 Page Request Extended Capability Structure § | 10.5.2 页请求扩展能力结构 §
+### 10.5.2 Page Request Extended Capability Structure | 10.5.2 页请求扩展能力结构
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -3705,7 +3583,7 @@ Stop Marker Messages consume buffering but are not included in this allocation (
 ---
 
 <a id="sec-10-5-2-1"></a>
-#### 10.5.2.1 Page Request Extended Capability Header (Offset 00h) § | 10.5.2.1 页请求扩展能力头 (Offset 00h) §
+#### 10.5.2.1 Page Request Extended Capability Header (Offset 00h) | 10.5.2.1 页请求扩展能力头 (Offset 00h)
 
 <table>
 <thead>
@@ -3774,7 +3652,7 @@ Outstanding Page Request Allocation 寄存器(Offset 0Ch)包含关联页请求�
 ---
 
 <a id="sec-10-5-2-2"></a>
-#### 10.5.2.2 Page Request Control Register (Offset 04h) § | 10.5.2.2 页请求控制寄存器 (Offset 04h) §
+#### 10.5.2.2 Page Request Control Register (Offset 04h) | 10.5.2.2 页请求控制寄存器 (Offset 04h)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -3838,40 +3716,7 @@ PRG 响应消息是由 ID 路由回请求功能的 PCIe 消息请求。系统软
 
 ---
 
-<!-- 📄 Page 1599 -->
----
-
-<!-- 📄 Page 1600 -->
----
-
-<!-- 📄 Page 1601 -->
----
-
-<!-- 📄 Page 1602 -->
----
-
-<!-- 📄 Page 1603 -->
----
-
-<!-- 📄 Page 1604 -->
----
-
-<!-- 📄 Page 1605 -->
----
-
-<!-- 📄 Page 1606 -->
----
-
-<!-- 📄 Page 1607 -->
----
-
-<!-- 📄 Page 1608 -->
----
-
-
----
-
-## 📑 本章目录 (Table of Contents) — Auto-Generated
+## 📑 本章目录 (Table of Contents) — Auto-Generated <!-- 📄 Page 1599 --> <!-- 📄 Page 1600 --> <!-- 📄 Page 1601 --> <!-- 📄 Page 1602 --> <!-- 📄 Page 1603 --> <!-- 📄 Page 1604 --> <!-- 📄 Page 1605 --> <!-- 📄 Page 1606 --> <!-- 📄 Page 1607 --> <!-- 📄 Page 1608 -->
 
 - [10.1 ATS Architectural Overview § | 10.1 ATS 架构概述 §](#sec-10-1)
 - [10.2 ATS Translation Services § | 10.2 ATS 转换服务 §](#sec-10-2)

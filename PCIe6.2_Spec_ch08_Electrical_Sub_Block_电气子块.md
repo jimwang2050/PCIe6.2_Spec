@@ -246,8 +246,6 @@
 
 ---
 
----
-
 <a id="sec-8-intro"></a>
 # 📘 第 8 章　电气子块 (Chapter 8. Electrical Sub-Block)
 
@@ -256,10 +254,7 @@
 
 ---
 
-<!-- 📄 Page 1409 -->
----
-
-<a id="sec-8-overview"></a>
+<a id="sec-8-overview"></a> <!-- 📄 Page 1409 -->
 <a id="sec-8-0"></a>
 ## 8. 电气子块 (Electrical Sub-Block)
 
@@ -440,11 +435,8 @@ PCIe 支持两种 Refclk 数据架构:公共 Refclk (Common Refclk) 和独立 Re
 
 ---
 
-<!-- 📄 Page 1410 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1410 -->
 <table>
 <thead>
 <tr>
@@ -525,11 +517,8 @@ Tx 规范的 6.0 版本还明确支持采用嵌入式 Refclk 的发送器 (Trans
 
 ---
 
-<!-- 📄 Page 1411 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1411 -->
 <table>
 <thead>
 <tr>
@@ -624,10 +613,7 @@ VTX-AC-CM-PP = max(VD+ + VD-)/2 - min(VD+ + VD-)/2
 
 ---
 
-<!-- 📄 Page 1412 -->
----
-
-<table>
+<table> <!-- 📄 Page 1412 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -716,10 +702,7 @@ Tx 电压参数包括均衡 (Equalization) 系数、均衡预设 (Preset) 和最
 
 ---
 
-<!-- 📄 Page 1413 -->
----
-
-<table>
+<table> <!-- 📄 Page 1413 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -752,10 +735,7 @@ Tx equalization coefficients for 64.0 GT/s are based on the following FIR filter
 
 ---
 
-<!-- 📄 Page 1414 -->
----
-
-> **Figure 8-5.** Tx Equalization FIR Representation for 64.0 GT/s
+> **Figure 8-5.** Tx Equalization FIR Representation for 64.0 GT/s <!-- 📄 Page 1414 -->
 > **图 8-5.** 64.0 GT/s 的发送端均衡 FIR 表示
 > <img src="figures/chapter_08/fig_1414_1_tight.png" width="700">
 >
@@ -799,10 +779,7 @@ The presets defined in (§ Table 8-1) and (§ Table 8-2) are numbered to match t
 
 ---
 
-<!-- 📄 Page 1415 -->
----
-
-> **Figure 8-6.** Definition of Tx Voltage Levels and Equalization Ratios
+> **Figure 8-6.** Definition of Tx Voltage Levels and Equalization Ratios <!-- 📄 Page 1415 -->
 > **图 8-6.** 发送端电压电平与均衡比的定义
 > <img src="figures/chapter_08/fig_1415_1_tight.png" width="700">
 >
@@ -853,11 +830,8 @@ The presets defined in (§ Table 8-1) and (§ Table 8-2) are numbered to match t
 
 ---
 
-<!-- 📄 Page 1416 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1416 -->
 <table>
 <thead>
 <tr>
@@ -964,11 +938,8 @@ Tx equalization de-emphasis values at 2.5 and 5.0 GT/s are measured using the av
 
 ---
 
-<!-- 📄 Page 1417 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1417 -->
 <table>
 <thead>
 <tr>
@@ -1037,9 +1008,6 @@ The range for a Transmitter's output voltage swing, (specified by Vd) with no eq
 
 ---
 
-
----
-
 <a id="sec-8-3-3-6"></a>
 ## 8.3.3.6 Method for Measuring VTX-DIFF-PP at 2.5 GT/s and 5.0 GT/s | 2.5 GT/s 和 5.0 GT/s 下 VTX-DIFF-PP 的测量方法
 
@@ -1100,10 +1068,7 @@ The range for a Transmitter's output voltage swing, (specified by Vd) with no eq
 
 ---
 
-<!-- 📄 Page 1418 -->
----
-
-<a id="sec-8-3-3-7-fig"></a>
+<a id="sec-8-3-3-7-fig"></a> <!-- 📄 Page 1418 -->
 ## Figure 8-8 VTX-DIFF-PP and VTX-DIFF-PP-LOW Measurement | 图 8-8 VTX-DIFF-PP 与 VTX-DIFF-PP-LOW 测量
 
 <table>
@@ -1114,12 +1079,7 @@ The range for a Transmitter's output voltage swing, (specified by Vd) with no eq
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -1210,10 +1170,7 @@ When the above constraints are applied the resulting coefficient space for 8.0, 
 
 ---
 
-<!-- 📄 Page 1419 -->
----
-
-<a id="fig-8-9"></a>
+<a id="fig-8-9"></a> <!-- 📄 Page 1419 -->
 ## Figure 8-9 Transmit Equalization Coefficient Space Triangular Matrix Example for 8.0, 16.0, and 32.0 GT/s | 图 8-9 8.0、16.0 和 32.0 GT/s 发送均衡系数空间三角矩阵示例
 
 
@@ -1284,10 +1241,7 @@ The coefficient space for 64.0 GT/s with each pre-shoot2 coefficient may be mapp
 
 ---
 
-<!-- 📄 Page 1420 -->
----
-
-<a id="fig-8-10"></a>
+<a id="fig-8-10"></a> <!-- 📄 Page 1420 -->
 ## Figure 8-10 Transmit Equalization Coefficient Space Triangular Matrix Example for 64.0 GT/s | 图 8-10 64.0 GT/s 发送均衡系数空间三角矩阵示例
 
 <table>
@@ -1324,10 +1278,7 @@ The coefficient space for 64.0 GT/s with each pre-shoot2 coefficient may be mapp
 
 ---
 
-<!-- 📄 Page 1421 -->
----
-
-<a id="sec-8-3-3-9"></a>
+<a id="sec-8-3-3-9"></a> <!-- 📄 Page 1421 -->
 ## 8.3.3.9 EIEOS and VTX-EIEOS-FS and VTX-EIEOS-RS Limits | EIEOS 与 VTX-EIEOS-FS、VTX-EIEOS-RS 限制
 
 
@@ -1377,10 +1328,7 @@ EIEOS 信号仅在 5.0、8.0、16.0、32.0 和 64.0 GT/s 速率下定义。在 5
 
 ---
 
-<!-- 📄 Page 1422 -->
----
-
-<a id="fig-8-11"></a>
+<a id="fig-8-11"></a> <!-- 📄 Page 1422 -->
 ## Figure 8-11 Measuring VTX-EIEOS-FS and VTX-EIEOS-RS at 8.0 GT/s | 图 8-11 在 8.0 GT/s 下测量 VTX-EIEOS-FS 和 VTX-EIEOS-RS
 
 <table>
@@ -1480,10 +1428,7 @@ Package loss (including silicon driver bandwidth) is represented by the ps21TX p
 
 ---
 
-<!-- 📄 Page 1423 -->
----
-
-<a id="sec-8-3-3-11-root"></a>
+<a id="sec-8-3-3-11-root"></a> <!-- 📄 Page 1423 -->
 ## Root Package vs Non-Root Package ps21TX at 16.0 and 32.0 GT/s | 16.0 和 32.0 GT/s 下 Root Package 与 Non-Root Package 的 ps21TX
 
 
@@ -1581,12 +1526,7 @@ Package loss is measured by comparing the 64-zeros/64-ones voltage swing (V111) 
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -1599,10 +1539,7 @@ Package loss is measured by comparing the 64-zeros/64-ones voltage swing (V111) 
 
 ---
 
-<!-- 📄 Page 1424 -->
----
-
-<a id="sec-8-3-3-11-measurement"></a>
+<a id="sec-8-3-3-11-measurement"></a> <!-- 📄 Page 1424 -->
 ## V101 and V111 Measurement Procedure | V101 与 V111 的测量流程
 
 
@@ -1722,10 +1659,7 @@ $$\sigma_{L,i}^{2} = \frac{1}{N_k} \sum_{k=1}^{N_k} (V_{L,i,k} - \mu_{L,i})^2$$
 
 ---
 
-<!-- 📄 Page 1425 -->
----
-
-<a id="eq-8-4"></a>
+<a id="eq-8-4"></a> <!-- 📄 Page 1425 -->
 ## Equation 8-4 μL,i | 公式 8-4 μL,i
 
 <table>
@@ -1907,10 +1841,7 @@ Transmitter linearity is defined as a function of the mean signal levels (V0, V1
 
 ---
 
-<!-- 📄 Page 1426 -->
----
-
-<a id="eq-8-8"></a>
+<a id="eq-8-8"></a> <!-- 📄 Page 1426 -->
 ## Equation 8-8 RLM | 公式 8-8 RLM
 
 <table>
@@ -1924,12 +1855,12 @@ Transmitter linearity is defined as a function of the mean signal levels (V0, V1
 <tr>
 <td>
 
-```
+<pre>
 Vmid = (V0 + V3) / 2
 ES1 = (V1 − Vmid) / (V0 − Vmid)
 ES2 = (V2 − Vmid) / (V3 − Vmid)
 RLM = min((3 × ES1), (3 × ES2), (2 − 3 × ES1), (2 − 3 × ES2))
-```
+</pre>
 
 **Equation 8-8 RLM**
 
@@ -1938,12 +1869,12 @@ The mean signal levels (VL where L = 0, 1, 2, and 3) described above are measure
 </td>
 <td style="background-color:#e8e8e8">
 
-```
+<pre>
 Vmid = (V0 + V3) / 2
 ES1 = (V1 − Vmid) / (V0 − Vmid)
 ES2 = (V2 − Vmid) / (V3 − Vmid)
 RLM = min((3 × ES1), (3 × ES2), (2 − 3 × ES1), (2 − 3 × ES2))
-```
+</pre>
 
 **公式 8-8 RLM**
 
@@ -2030,10 +1961,7 @@ There are 8 encoded values for transmit margin from 000b to 111b. Encoding 000b 
 
 ---
 
-<!-- 📄 Page 1427 -->
----
-
-<a id="fig-8-13"></a>
+<a id="fig-8-13"></a> <!-- 📄 Page 1427 -->
 ## Figure 8-13 2.5 and 5.0 GT/s Transmitter Margining Voltage Levels and Codes | 图 8-13 2.5 和 5.0 GT/s 发送器余量电压电平与编码
 
 <table>
@@ -2115,9 +2043,6 @@ Direct probing at a Transmitter's pins is not generally feasible, so data is ins
 
 ---
 
-
----
-
 # 📘 第 8 章　Electrical Sub-Block (电气子块)
 
 > 📄 **Source pages**: 1428–1440 | 📁 **File**: `chapter_08_ac.md`
@@ -2139,8 +2064,8 @@ Direct probing at a Transmitter's pins is not generally feasible, so data is ins
 <tr>
 <td>
 
-### 8.3.5.1 Post Processing Steps to Extract Jitter §
-### 8.3.5.2 Applying CTLE or De-embedding §
+### 8.3.5.1 Post Processing Steps to Extract Jitter
+### 8.3.5.2 Applying CTLE or De-embedding
 
 **Table 8-4. Recommended De-embedding Cutoff Frequency | 表 8-4. 推荐的去嵌入截止频率**
 
@@ -2165,13 +2090,13 @@ For 64.0 GT/s, the High Swing Toggle Pattern (see § Section 4.2.17) with no Tx 
 
 A Transmitter may operate in the Independent Refclk (IR) mode, in which case the Transmitter may not provide a Refclk output. In this case a single-port jitter measurement is required. The post processing algorithm must employ the appropriate model CDR for the reference clock architecture being tested.
 
-### 8.3.5.3 Independent Refclk Measurement and Post Processing §
+### 8.3.5.3 Independent Refclk Measurement and Post Processing
 
 </td>
 <td style="background-color:#e8e8e8">
 
-### 8.3.5.1 提取抖动的后处理步骤 §
-### 8.3.5.2 应用 CTLE 或去嵌入 §
+### 8.3.5.1 提取抖动的后处理步骤
+### 8.3.5.2 应用 CTLE 或去嵌入
 
 **Table 8-4. Recommended De-embedding Cutoff Frequency | 表 8-4. 推荐的去嵌入截止频率**
 
@@ -2196,7 +2121,7 @@ A Transmitter may operate in the Independent Refclk (IR) mode, in which case the
 
 发送器 (Transmitter) 可以运行在 Independent Refclk (IR) 模式，此时发送器可能不提供 Refclk 输出。这种情况下需要单端口抖动测量。后处理算法必须针对被测参考时钟架构使用相应的模型 CDR。
 
-### 8.3.5.3 独立 Refclk 测量与后处理 §
+### 8.3.5.3 独立 Refclk 测量与后处理
 
 </td>
 </tr>
@@ -2207,10 +2132,7 @@ A Transmitter may operate in the Independent Refclk (IR) mode, in which case the
 
 ---
 
-<!-- 📄 Page 1428 -->
----
-
-<a id="sec-8-3-5-3-cont"></a>
+<a id="sec-8-3-5-3-cont"></a> <!-- 📄 Page 1428 -->
 ## 8.3.5.3 Independent Refclk Measurement and Post Processing (cont.) | 独立 Refclk 测量与后处理 (续)
 
 
@@ -2246,8 +2168,8 @@ If the DUT supports multiple Refclk modes, as described in § Table 8-5 then the
 
 A behavioral CDR filter is applied to reject low frequency jitter that would normally be tracked by the CDR in a Receiver. As such, the behavioral CDR represents a bounding function for actual CDR implementations. Roll-off characteristics of the behavioral CDR are dependent on whether the corresponding DUT supports an embedded vs. non-embedded Refclk, is operating in CC or IR mode, and whether the Refclk pin is available for probing (see § Table 8-5). In all cases the behavioral CDR represents a high pass filter function where the corner frequency depends on the Tx data rate. § Figure 8-14 shows the CC first-order CDR transfer functions for an f3dB of 1.5 MHz, 5.0 MHz, and 10 MHz that corresponds to 2.5 GT/s, 5.0 GT/s, and 8.0 GT/s, respectively. The 10 MHz behavioral CDR is also used for CC Transmitter and CC Reference Clock testing for 16.0 GT/s and, optionally, for Receiver Stressed Eye calibration when 32.0 GT/s is not supported.
 
-### 8.3.5.4 Embedded and Non-Embedded Refclk Measurement and Post Processing §
-### 8.3.5.5 Behavioral CDR Characteristics §
+### 8.3.5.4 Embedded and Non-Embedded Refclk Measurement and Post Processing
+### 8.3.5.5 Behavioral CDR Characteristics
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -2272,8 +2194,8 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 
 行为 CDR (Behavioral CDR) 滤波器用于抑制接收器 (Receiver) 中 CDR 通常会跟踪的低频抖动。因此，行为 CDR 体现了对实际 CDR 实现的一种包络函数。行为 CDR 的滚降特性取决于相应 DUT 是支持内嵌还是非内嵌 Refclk、运行于 CC 还是 IR 模式，以及 Refclk 引脚是否可供探测 (见 § Table 8-5)。在所有情形下，行为 CDR 体现为一个高通滤波器函数，其转折频率取决于 Tx 数据速率。§ Figure 8-14 显示了 CC 一阶 CDR 传递函数,f3dB 分别为 1.5 MHz、5.0 MHz 和 10 MHz,依次对应 2.5 GT/s、5.0 GT/s 和 8.0 GT/s。10 MHz 行为 CDR 还用于 16.0 GT/s 的 CC 发送器 (CC Transmitter) 和 CC 参考时钟测试;在不支持 32.0 GT/s 时，也可选择用于接收器 (Receiver) 压力眼图 (Stressed Eye) 校准。
 
-### 8.3.5.4 内嵌与非内嵌 Refclk 测量与后处理 §
-### 8.3.5.5 行为 CDR 特性 §
+### 8.3.5.4 内嵌与非内嵌 Refclk 测量与后处理
+### 8.3.5.5 行为 CDR 特性
 
 </td>
 </tr>
@@ -2286,10 +2208,7 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 
 ---
 
-<!-- 📄 Page 1429 -->
----
-
-<a id="sec-8-3-5-4-cont"></a>
+<a id="sec-8-3-5-4-cont"></a> <!-- 📄 Page 1429 -->
 ## 8.3.5.5 Behavioral CDR Characteristics (cont.) | 行为 CDR 特性 (续)
 
 <table>
@@ -2327,10 +2246,7 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 
 ---
 
-<!-- 📄 Page 1430 -->
----
-
-<a id="sec-8-3-5-5-fig-8-15"></a>
+<a id="sec-8-3-5-5-fig-8-15"></a> <!-- 📄 Page 1430 -->
 ## 8.3.5.5 Behavioral CDR Characteristics — Figure 8-15 | 行为 CDR 特性 — 图 8-15
 
 <table>
@@ -2362,10 +2278,7 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 
 ---
 
-<!-- 📄 Page 1431 -->
----
-
-<a id="sec-8-3-5-5-fig-8-16"></a>
+<a id="sec-8-3-5-5-fig-8-16"></a> <!-- 📄 Page 1431 -->
 ## 8.3.5.5 Behavioral CDR Characteristics — Figure 8-16 & Equation 8-10/8-11 | 行为 CDR 特性 — 图 8-16 与公式 8-10/8-11
 
 
@@ -2431,10 +2344,7 @@ $$H(s) = \frac{s^2}{s^2 + sA + B} \times \frac{s^2 + 2\zeta_2 \omega_0 s + \omeg
 
 ---
 
-<!-- 📄 Page 1432 -->
----
-
-<a id="sec-8-3-5-5-eq-8-12-fig-8-17"></a>
+<a id="sec-8-3-5-5-eq-8-12-fig-8-17"></a> <!-- 📄 Page 1432 -->
 ## 8.3.5.5 Behavioral CDR Characteristics — Equation 8-12 & Figure 8-17 | 行为 CDR 特性 — 公式 8-12 与图 8-17
 
 <table>
@@ -2474,10 +2384,7 @@ $$H(s) = \frac{s^2}{s^2 + sA + B} \times \frac{s^2 + 2\zeta_2 \omega_0 s + \omeg
 
 ---
 
-<!-- 📄 Page 1433 -->
----
-
-<a id="sec-8-3-5-5-eq-8-13"></a>
+<a id="sec-8-3-5-5-eq-8-13"></a> <!-- 📄 Page 1433 -->
 ## 8.3.5.5 Behavioral CDR Characteristics — Equation 8-13 | 行为 CDR 特性 — 公式 8-13
 
 
@@ -2545,10 +2452,7 @@ $$H(s) = \frac{s^2}{(s + \omega_0)(s + \omega_1)} \times \frac{s^2 + 2\zeta_2 \o
 
 ---
 
-<!-- 📄 Page 1434 -->
----
-
-<a id="sec-8-3-5-6"></a>
+<a id="sec-8-3-5-6"></a> <!-- 📄 Page 1434 -->
 ## 8.3.5.6 Data Dependent and Uncorrelated Jitter / 8.3.5.7 Data Dependent Jitter | 数据相关与非相关抖动 / 数据相关抖动
 
 <table>
@@ -2570,8 +2474,8 @@ While DDJ is not explicitly defined as a parameter in the specification, it is n
 
 § Figure 8-18 illustrates the relation between Tx data, recovered clock, and the data's PDF. Data dependent jitter is defined as the time delta between the PDF's mean for each zero-crossing point and the corresponding recovered clock edge. A sufficient number of repeated patterns must be accumulated to yield stable mean values and PDF profiles for each transition. These PDFs are then utilized to extract uncorrelated jitter parameters.
 
-### 8.3.5.6 Data Dependent and Uncorrelated Jitter §
-### 8.3.5.7 Data Dependent Jitter §
+### 8.3.5.6 Data Dependent and Uncorrelated Jitter
+### 8.3.5.7 Data Dependent Jitter
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -2584,8 +2488,8 @@ While DDJ is not explicitly defined as a parameter in the specification, it is n
 
 § Figure 8-18 展示了 Tx 数据、恢复时钟以及数据 PDF 之间的关系。数据相关抖动定义为每个过零点的 PDF 均值与对应恢复时钟边沿之间的时间差。必须累积足够多次重复码型，以得到每次跃迁的稳定均值和 PDF 形态。随后利用这些 PDF 提取非相关抖动参数。
 
-### 8.3.5.6 数据相关与非相关抖动 §
-### 8.3.5.7 数据相关抖动 §
+### 8.3.5.6 数据相关与非相关抖动
+### 8.3.5.7 数据相关抖动
 
 </td>
 </tr>
@@ -2596,10 +2500,7 @@ While DDJ is not explicitly defined as a parameter in the specification, it is n
 
 ---
 
-<!-- 📄 Page 1435 -->
----
-
-<a id="sec-8-3-5-7-fig-8-18"></a>
+<a id="sec-8-3-5-7-fig-8-18"></a> <!-- 📄 Page 1435 -->
 ## 8.3.5.7 Data Dependent Jitter — Figure 8-18 / 8.3.5.8/9/10 | 数据相关抖动 — 图 8-18
 
 
@@ -2644,9 +2545,9 @@ Random jitter is uncorrelated with respect to data dependent jitter. TTX-RJ may 
 
 Pulse width jitter is defined as an edge to edge phenomenon on consecutive edges nominally 1.0 UI apart. § Figure 8-20 illustrates how PWJ is defined, showing that it is typically present on both data edges of consecutive UI. To accurately quantify PWJ it is first necessary to remove the ISI contributions to PWJ. The shaded areas on either side of the unjittered edges represent the maximum amount of jitter about that edge. Note the jitter for one edge is assumed to be independent from the other.
 
-### 8.3.5.8 Uncorrelated Total Jitter and Deterministic Jitter (Dual Dirac Model) (TTX-UTJ and TTX-UDJDD) §
-### 8.3.5.9 Random Jitter (TTX-RJ) (informative) §
-### 8.3.5.10 Uncorrelated Total and Deterministic PWJ (TTX-UPW-TJ and TTX-UPW-DJDD) §
+### 8.3.5.8 Uncorrelated Total Jitter and Deterministic Jitter (Dual Dirac Model) (TTX-UTJ and TTX-UDJDD)
+### 8.3.5.9 Random Jitter (TTX-RJ) (informative)
+### 8.3.5.10 Uncorrelated Total and Deterministic PWJ (TTX-UPW-TJ and TTX-UPW-DJDD)
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -2674,9 +2575,9 @@ Pulse width jitter is defined as an edge to edge phenomenon on consecutive edges
 
 脉宽抖动 (Pulse Width Jitter, PWJ) 定义为相邻两个边沿之间的边对边 (edge-to-edge) 现象，标称间隔为 1.0 UI。§ Figure 8-20 说明了 PWJ 的定义方式，显示其通常同时出现在连续 UI 的两个数据边沿上。为准确量化 PWJ,首先必须去除 ISI 对 PWJ 的贡献。无抖动边沿两侧的阴影区域表示该边沿抖动的最大值。需要注意的是，一个边沿的抖动假定与另一个边沿相互独立。
 
-### 8.3.5.8 非相关总抖动和确定性抖动 (Dual Dirac 模型) (TTX-UTJ 与 TTX-UDJDD) §
-### 8.3.5.9 随机抖动 (TTX-RJ) (信息性) §
-### 8.3.5.10 非相关总 PWJ 与确定性 PWJ (TTX-UPW-TJ 与 TTX-UPW-DJDD) §
+### 8.3.5.8 非相关总抖动和确定性抖动 (Dual Dirac 模型) (TTX-UTJ 与 TTX-UDJDD)
+### 8.3.5.9 随机抖动 (TTX-RJ) (信息性)
+### 8.3.5.10 非相关总 PWJ 与确定性 PWJ (TTX-UPW-TJ 与 TTX-UPW-DJDD)
 
 <img src="figures/chapter_08/fig_1435_1_tight.png" width="700">
 </td>
@@ -2690,10 +2591,7 @@ Pulse width jitter is defined as an edge to edge phenomenon on consecutive edges
 
 ---
 
-<!-- 📄 Page 1436 -->
----
-
-<a id="sec-8-3-5-10-fig-8-20-21"></a>
+<a id="sec-8-3-5-10-fig-8-20-21"></a> <!-- 📄 Page 1436 -->
 ## 8.3.5.10 Uncorrelated Total and Deterministic PWJ — Figures 8-20 & 8-21 | 非相关总与确定性 PWJ — 图 8-20 与 8-21
 
 <table>
@@ -2750,10 +2648,7 @@ PWJ 的等价描述可通过参考固定的引导边 (leading edge) 并将两个
 
 ---
 
-<!-- 📄 Page 1437 -->
----
-
-<a id="sec-8-3-6"></a>
+<a id="sec-8-3-6"></a> <!-- 📄 Page 1437 -->
 ## 8.3.6 Data Rate Dependent Parameters | 速率相关参数
 
 
@@ -2807,10 +2702,7 @@ For 5.0 GT/s a similar removal of DDj must be performed to obtain UTj. However, 
 
 ---
 
-<!-- 📄 Page 1438 -->
----
-
-<a id="sec-8-3-6-cont"></a>
+<a id="sec-8-3-6-cont"></a> <!-- 📄 Page 1438 -->
 ## 8.3.6 Data Rate Dependent Parameters (cont.) — Table 8-6 (cont.) | 速率相关参数 (续) — 表 8-6 (续)
 
 <table>
@@ -2864,10 +2756,7 @@ For 5.0 GT/s a similar removal of DDj must be performed to obtain UTj. However, 
 
 ---
 
-<!-- 📄 Page 1439 -->
----
-
-<a id="sec-8-3-6-cont-2"></a>
+<a id="sec-8-3-6-cont-2"></a> <!-- 📄 Page 1439 -->
 ## 8.3.6 Data Rate Dependent Parameters (cont.) — Table 8-6 (cont. 2) | 速率相关参数 (续) — 表 8-6 (续 2)
 
 
@@ -2929,10 +2818,7 @@ For 5.0 GT/s a similar removal of DDj must be performed to obtain UTj. However, 
 
 ---
 
-<!-- 📄 Page 1440 -->
----
-
-<a id="sec-8-3-6-notes"></a>
+<a id="sec-8-3-6-notes"></a> <!-- 📄 Page 1440 -->
 ## 8.3.6 Data Rate Dependent Parameters — Table 8-6 (final) & Notes | 速率相关参数 — 表 8-6 (结尾) 与注释
 
 <table>
@@ -3001,9 +2887,6 @@ Return loss measurements for the Tx and Rx are essentially identical, so both ar
 </table>
 
 [⬆️ 返回目录](#sec-8-0)
-
----
-
 
 ---
 
@@ -4022,9 +3905,6 @@ CTLE 和 DFE 的 Rx 均衡算法仅用作在校准通道 ISI 及其他信号损�
 
 ---
 
-
----
-
 <a id="sec-8-4-1-4"></a>
 ## 8.4.1.4 Behavioral Rx Package Models | 行为级 Rx 封装模型
 
@@ -4128,11 +4008,8 @@ CTLE 和 DFE 的 Rx 均衡算法仅用作在校准通道 ISI 及其他信号损�
 
 ---
 
-<!-- 📄 Page 1458 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1458 -->
 <table>
 <thead>
 <tr>
@@ -4204,10 +4081,7 @@ Figure 8-34 8.0 GT/s 行为级 CTLE 的传递函数
 
 ---
 
-<!-- 📄 Page 1459 -->
----
-
-<table>
+<table> <!-- 📄 Page 1459 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4242,12 +4116,7 @@ Figure 8-34 8.0 GT/s 行为级 CTLE 的传递函数
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -4287,11 +4156,8 @@ Figure 8-34 8.0 GT/s 行为级 CTLE 的传递函数
 
 ---
 
-<!-- 📄 Page 1460 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1460 -->
 <table>
 <thead>
 <tr>
@@ -4387,10 +4253,7 @@ FZ2 = |直流增益| × FP2
 
 ---
 
-<!-- 📄 Page 1461 -->
----
-
-<table>
+<table> <!-- 📄 Page 1461 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4446,10 +4309,7 @@ FZ2 = |直流增益| × FP2
 
 ---
 
-<!-- 📄 Page 1462 -->
----
-
-<table>
+<table> <!-- 📄 Page 1462 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4534,10 +4394,7 @@ FZ3 = 7.7 GHz
 
 ---
 
-<!-- 📄 Page 1463 -->
----
-
-<table>
+<table> <!-- 📄 Page 1463 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4545,12 +4402,7 @@ FZ3 = 7.7 GHz
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -4598,10 +4450,7 @@ At 8.0 GT/s the combination of a 1st order CTLE and a one-tap DFE algorithm is r
 
 ---
 
-<!-- 📄 Page 1464 -->
----
-
-<table>
+<table> <!-- 📄 Page 1464 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4661,12 +4510,7 @@ At 8.0 GT/s the combination of a 1st order CTLE and a one-tap DFE algorithm is r
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -4714,10 +4558,7 @@ For 64.0 GT/s, the feedback signal yk* can take values of -1, -1/3, +1/3 and +1.
 
 ---
 
-<!-- 📄 Page 1465 -->
----
-
-<table>
+<table> <!-- 📄 Page 1465 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4770,11 +4611,8 @@ EH/EW 定义的参考点对应于 8.0、16.0、32.0 和 64.0 GT/s 下接收器�
 
 ---
 
-<!-- 📄 Page 1466 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1466 -->
 <table>
 <thead>
 <tr>
@@ -4882,10 +4720,7 @@ For all EH, EW and eye area measurements performed in receiver calibration the A
 
 ---
 
-<!-- 📄 Page 1467 -->
----
-
-<table>
+<table> <!-- 📄 Page 1467 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4978,11 +4813,8 @@ Note that because the first tiebreaker is highest loss - most approaches will st
 
 ---
 
-<!-- 📄 Page 1468 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1468 -->
 <table>
 <thead>
 <tr>
@@ -5091,11 +4923,8 @@ Layout (TP1 → TP5/TP4 flow):
 
 ---
 
-<!-- 📄 Page 1469 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1469 -->
 <table>
 <thead>
 <tr>
@@ -5164,10 +4993,7 @@ Layout (TP1 → TP5/TP4 flow):
 
 ---
 
-<!-- 📄 Page 1470 -->
----
-
-**Table 8-11 (continued). Notes | 表 8-11 (续) 注释**
+**Table 8-11 (continued). Notes | 表 8-11 (续) 注释** <!-- 📄 Page 1470 -->
 
 <table>
 <thead>
@@ -5291,10 +5117,7 @@ A waveform post processing tool or a channel compliance methodology tool may be 
 
 ---
 
-<!-- 📄 Page 1471 -->
----
-
-<table>
+<table> <!-- 📄 Page 1471 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5357,9 +5180,6 @@ The SJ (pp value) profiles shown in § Figure 8-43, § Figure 8-44, § Figure 8-
 
 ---
 
-
----
-
 <a id="sec-8-4-2-2-1"></a>
 ## 8.4.2.2.1 Sj Mask | Sj 模板
 
@@ -5372,17 +5192,15 @@ The SJ (pp value) profiles shown in § Figure 8-43, § Figure 8-44, § Figure 8-
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1472 -->
 
-<!-- 📄 Page 1472 -->
 ---
 
 Receivers operating at 8.0 GT/s in the IR mode use the Sj mask profile shown in § Figure 8-43. The magnitude of the 33 kHz spur is 25 ns pp, or 200 UIpp. The equation of the swept Sj curve is shown on § Figure 8-43.
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1472 -->
 
-<!-- 📄 Page 1472 -->
 ---
 
 在 IR (Independent Refclk, 独立参考时钟) 模式下以 8.0 GT/s 工作的接收器 (Receiver) 使用 § Figure 8-43 中所示的 Sj 模板。33 kHz 杂散分量的幅值为 25 ns pp,即 200 UIpp。扫描 Sj 曲线的方程如 § Figure 8-43 所示。
@@ -5436,18 +5254,16 @@ Receivers operating at 16.0 GT/s in the Independent Refclk (IR) mode use the Sj 
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1473 -->
 
-<!-- 📄 Page 1473 -->
 ---
 
 Figure 8-44 Sj Mask for Receivers Operating in SRIS mode at 16.0 GT/s
 Receivers operating at 16.0 GT/s in the Common Clock (CC) Refclk mode use the Sj mask profile shown in § Figure 8-45. The magnitude of the 33 kHz spur is 1 ns pp, or 16 UIpp. The equation of the swept Sj curve is shown on the § Figure 8-45. Devices that do not support 32.0 GT/s have the option to use the Sj mask defined in § Figure 8-50. In this case, a 500 ps-pp triangular SSC modulation has to be applied at the source for both channel calibration and RX compliance, as specified in § Table 8-11.
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1473 -->
 
-<!-- 📄 Page 1473 -->
 ---
 
 图 8-44:以 16.0 GT/s 在 SRIS 模式下工作的接收器的 Sj 模板
@@ -5475,18 +5291,16 @@ Receivers operating at 16.0 GT/s in the Common Clock (CC) Refclk mode use the Sj
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1474 -->
 
-<!-- 📄 Page 1474 -->
 ---
 
 Figure 8-45 Sj Mask for Receivers Operating in CC mode at 16.0 GT/s
 Receivers operating at 32.0 GT/s in the IR mode use the Sj mask profile shown in § Figure 8-46. The magnitude of the 33 kHz spur is 15 ns pp, or 480 UIpp. The equation of the swept Sj curve is shown on the § Figure 8-46.
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1474 -->
 
-<!-- 📄 Page 1474 -->
 ---
 
 图 8-45:以 16.0 GT/s 在 CC 模式下工作的接收器的 Sj 模板
@@ -5512,18 +5326,16 @@ Receivers operating at 32.0 GT/s in the IR mode use the Sj mask profile shown in
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1475 -->
 
-<!-- 📄 Page 1475 -->
 ---
 
 Figure 8-46 Sj Mask for Receivers Operating in SRIS mode at 32.0 GT/s
 Receivers operating at 32.0 GT/s in the CC Refclk mode use the Sj mask profile shown in § Figure 8-47. The magnitude of the 33 kHz spur is 1 ns pp, or 32 UIpp. The equation of the swept Sj curve is shown on the § Figure 8-47.
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1475 -->
 
-<!-- 📄 Page 1475 -->
 ---
 
 图 8-46:以 32.0 GT/s 在 SRIS 模式下工作的接收器的 Sj 模板
@@ -5549,18 +5361,16 @@ Receivers operating at 32.0 GT/s in the CC Refclk mode use the Sj mask profile s
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1476 -->
 
-<!-- 📄 Page 1476 -->
 ---
 
 Figure 8-47 Sj Mask for Receivers Operating in CC mode at 32.0 GT/s
 Receivers operating at 64.0 GT/s in the IR mode use the Sj mask profile shown in § Figure 8-48. The magnitude of the 33 kHz spur is 15 ns pp, or 480 UI pp. The equation of the swept Sj curve is shown on the § Figure 8-48.
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1476 -->
 
-<!-- 📄 Page 1476 -->
 ---
 
 图 8-47:以 32.0 GT/s 在 CC 模式下工作的接收器的 Sj 模板
@@ -5586,18 +5396,16 @@ Receivers operating at 64.0 GT/s in the IR mode use the Sj mask profile shown in
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1477 -->
 
-<!-- 📄 Page 1477 -->
 ---
 
 Figure 8-48 Sj Mask for Receivers Operating in SRIS mode at 64.0 GT/s
 Receivers operating at 64.0 GT/s in the CC Refclk mode use the Sj mask profile shown in § Figure 8-49. The magnitude of the 33 kHz spur is 1 ns pp, or 32 UIpp. The equation of the swept Sj curve is shown on the § Figure 8-49.
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1477 -->
 
-<!-- 📄 Page 1477 -->
 ---
 
 图 8-48:以 64.0 GT/s 在 SRIS 模式下工作的接收器的 Sj 模板
@@ -5625,18 +5433,16 @@ Receivers operating at 64.0 GT/s in the CC Refclk mode use the Sj mask profile s
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1478 -->
 
-<!-- 📄 Page 1478 -->
 ---
 
 Figure 8-49 Sj Mask for Receivers Operating in CC mode at 64.0 GT/s
 Receivers operating in the CC Refclk mode at 8.0 GT/s shall utilize the Sj profile shown in § Figure 8-50. The testing procedure is identical to that used for the IR mode, except that the clock topology differs. See § Section 8.4.2.3 for details. Receivers operating at 16.0 GT/s in the CC Refclk mode in devices that do not support 32.0 GT/s also have the option to use the Sj mask profile shown in § Figure 8-50, with additional residual SSC applied per § Table 8-11.
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1478 -->
 
-<!-- 📄 Page 1478 -->
 ---
 
 图 8-49:以 64.0 GT/s 在 CC 模式下工作的接收器的 Sj 模板
@@ -5664,17 +5470,15 @@ Receivers operating in the CC Refclk mode at 8.0 GT/s shall utilize the Sj profi
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1479 -->
 
-<!-- 📄 Page 1479 -->
 ---
 
 A Rx is permitted to support one or both of two clock modes: CC and IR although only one clock mode may be operational at a given time. Receivers can support more than one Refclk mode by selecting a mode at power-up or by means of strapping pins, etc.
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1479 -->
 
-<!-- 📄 Page 1479 -->
 ---
 
 接收器可以支持 CC 和 IR 这两种时钟模式中的一种或两种，但在任一给定时刻只能运行其中一种时钟模式。接收器可以通过在上电时选择模式或通过配置引脚 (strapping pins) 等方式来支持多种 Refclk 模式。
@@ -5730,17 +5534,15 @@ A Rx is permitted to support one or both of two clock modes: CC and IR although 
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1480 -->
 
-<!-- 📄 Page 1480 -->
 ---
 
 Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1480 -->
 
-<!-- 📄 Page 1480 -->
 ---
 
 图 8-51:16.0 GT/s 公共 Refclk 接收器抖动测试布局
@@ -5799,17 +5601,15 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1481 -->
 
-<!-- 📄 Page 1481 -->
 ---
 
 § Table 8-12 lists the common Receiver parameters that are not directly associated with stressed eye tolerancing. Values are separately defined for the four data rates.
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1481 -->
 
-<!-- 📄 Page 1481 -->
 ---
 
 § Table 8-12 列出了与压力眼图容差测试无直接关联的公共接收器参数。这些值针对四种数据速率分别定义。
@@ -5847,9 +5647,8 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1482 -->
 
-<!-- 📄 Page 1482 -->
 ---
 
 | Symbol | Parameter | 2.5 GT/s value | 5.0 GT/s value | 8.0 GT/s value | 16.0 GT/s value | 32.0 GT/s value | 64.0 GT/s value | Units | Notes |
@@ -5861,9 +5660,8 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 | LRX-SKEW | Lane to Lane skew | (max) 20 | (max) 8 | (max) 6 | (max) 5 | (max) 5 | (max) 5 | ns | Across all Lanes on a Port. LRX-SKEW comprehends Lane-Lane variations due to channel and repeater delay differences. |
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1482 -->
 
-<!-- 📄 Page 1482 -->
 ---
 
 | 符号 | 参数 | 2.5 GT/s 值 | 5.0 GT/s 值 | 8.0 GT/s 值 | 16.0 GT/s 值 | 32.0 GT/s 值 | 64.0 GT/s 值 | 单位 | 备注 |
@@ -5927,9 +5725,8 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1483 -->
 
-<!-- 📄 Page 1483 -->
 ---
 
 3. The Rx DC single ended impedance must be present when the Receiver terminations are first enabled to ensure that the Receiver Detect occurs properly. Compensation of this impedance is permitted to start immediately and the Rx Common Mode Impedance (constrained by RLRX-CM to 50 Ω ±20%) must be within the specified range by the time Detect is entered.
@@ -5939,9 +5736,8 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 5. Defines the time for the Receiver's input pads to settle to new common-mode on 2.5/5.0 GT/s transition to 8.0, 16.0, 32.0, and 64.0 GT/s.
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1483 -->
 
-<!-- 📄 Page 1483 -->
 ---
 
 3. 当接收器端接 (Termination) 首次使能时,Rx DC 单端阻抗必须存在，以确保接收器检测 (Receiver Detect) 正确发生。允许立即开始对此阻抗进行补偿，且 Rx 共模阻抗 (由 RLRX-CM 约束为 50 Ω ±20%) 必须在进入 Detect 状态时处于规定范围内。
@@ -6060,17 +5856,15 @@ PCI Express components including Retimers that support the 16.0 GT/s or higher r
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1484 -->
 
-<!-- 📄 Page 1484 -->
 ---
 
 For simplicity, the margin commands and requirements described in § Section 4.2.18 are described in terms of moving the data sample location - but the actual margining method is implementation specific. For example - the timing margin could be implemented on the actual data sampler or an independent error sampler. Further the timing margin can be achieved by injecting an appropriate amount of stress/jitter to the data sample location, or by moving the data/error sample location. The parameters in § Table 8-13 are reported for 16.0, 32.0, or 64.0 GT/s and all are allowed to be different for each of those data rates, though some are required to be different for NRZ vs. PAM4 data rates.
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1484 -->
 
-<!-- 📄 Page 1484 -->
 ---
 
 为简单起见,§ Section 4.2.18 中描述的余量命令和要求以移动数据采样位置的方式描述，但实际的余量测量方法是实现相关的。例如，时间余量可以在实际数据采样器或独立错误采样器上实现。此外，时间余量可以通过向数据采样位置注入适当量的压力/抖动，或通过移动数据/错误采样位置来实现。§ Table 8-13 中的参数针对 16.0、32.0 或 64.0 GT/s 报告，允许在每种数据速率下不同，虽然有些在 NRZ 和 PAM4 数据速率之间必须不同。
@@ -6095,18 +5889,16 @@ For simplicity, the margin commands and requirements described in § Section 4.2
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1485 -->
 
-<!-- 📄 Page 1485 -->
 ---
 
 For NRZ: 0.5 UI (max), 0.2 UI (min), -0.2 UI (min), -0.5 UI (max), 50 mV (min), 500 mV (max), -50 mV (min), -500 mV (max).
 For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 17 mV (min), 167 mV (max), -17 mV (min), -167 mV (max).
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1485 -->
 
-<!-- 📄 Page 1485 -->
 ---
 
 对于 NRZ:0.5 UI (最大),0.2 UI (最小),-0.2 UI (最小),-0.5 UI (最大),50 mV (最小),500 mV (最大),-50 mV (最小),-500 mV (最大)。
@@ -6173,9 +5965,8 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1486 -->
 
-<!-- 📄 Page 1486 -->
 ---
 
 | Parameter Name | Min | Max | Description |
@@ -6194,9 +5985,8 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 | MMaxLanes | 0 | 31 | Maximum number of Lanes minus 1 that can be margined at the same time. It is recommended that this value be greater than or equal to the number of Lanes in the Link minus 1. Encoding Behavior is undefined if software attempts to margin more than MMaxLanes+1 at the same time. |
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1486 -->
 
-<!-- 📄 Page 1486 -->
 ---
 
 | 参数名称 | 最小值 | 最大值 | 描述 |
@@ -6232,9 +6022,8 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1487 -->
 
-<!-- 📄 Page 1487 -->
 ---
 
 | Parameter Name | Min | Max | Description |
@@ -6245,9 +6034,8 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 | MSampleCount | 0 | 127 | Value = 3*log2 (number of bits margined). Where number of bits margined is a count of the actual number of bits tested during margining. The count stops when margining stops. The count saturates at 127 (after approximately 5.54 × 10^12 bits). The count resets to zero when a new margin command is received. |
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1487 -->
 
-<!-- 📄 Page 1487 -->
 ---
 
 | 参数名称 | 最小值 | 最大值 | 描述 |
@@ -6330,9 +6118,6 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 
 ---
 
-
----
-
 <a id="sec-8-4-5-2"></a>
 ## 8.4.5.2 Channel AC Coupling Capacitors | 通道 AC 耦合电容
 
@@ -6405,10 +6190,7 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 
 ---
 
-<!-- 📄 Page 1488 -->
----
-
-<a id="sec-8-4-5-4"></a>
+<a id="sec-8-4-5-4"></a> <!-- 📄 Page 1488 -->
 ## 8.4.5.4 Transmitter and Receiver Termination | 发送器与接收器端接
 
 <table>
@@ -6532,10 +6314,7 @@ Transmitter DC common mode voltage is held at the same value during all states u
 
 ---
 
-<!-- 📄 Page 1489 -->
----
-
-<a id="sec-8-4-5-7"></a>
+<a id="sec-8-4-5-7"></a> <!-- 📄 Page 1489 -->
 ## 8.4.5.7 Receiver Detection | 接收器检测
 
 
@@ -6663,10 +6442,7 @@ The key components and processes of channel tolerancing are illustrated in § Fi
 
 ---
 
-<!-- 📄 Page 1490 -->
----
-
-> **Figure 8-56.** Flow Diagram for Channel Tolerancing at 2.5 and 5.0 GT/s
+> **Figure 8-56.** Flow Diagram for Channel Tolerancing at 2.5 and 5.0 GT/s <!-- 📄 Page 1490 -->
 > **图 8-56.** 系统主板 IL 设计目标系数
 > <img src="figures/chapter_08/fig_1490_1_tight.png" width="700">
 
@@ -6742,10 +6518,7 @@ For 8.0, 16.0, 32.0, and 64.0 GT/s testing the simulation process must properly 
 
 ---
 
-<!-- 📄 Page 1491 -->
----
-
-<table>
+<table> <!-- 📄 Page 1491 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6853,10 +6626,7 @@ For ease of incorporation into the post processing flow the 8.0 and 16.0 behavio
 
 ---
 
-<!-- 📄 Page 1492 -->
----
-
-> **Figure 8-59.** Behavioral Tx and Rx S-Port Designation for 8.0 and 16.0 GT/s Packages
+> **Figure 8-59.** Behavioral Tx and Rx S-Port Designation for 8.0 and 16.0 GT/s Packages <!-- 📄 Page 1492 -->
 > **图 8-59.** 64.0 GT/s 发送端抖动模板
 > <img src="figures/chapter_08/fig_1492_1_tight.png" width="700">
 
@@ -6893,11 +6663,8 @@ For 32.0 GT/s, reference package models the die capacitive loads are included in
 
 ---
 
-<!-- 📄 Page 1493 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1493 -->
 <table>
 <thead>
 <tr>
@@ -6933,10 +6700,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 ---
 
-<!-- 📄 Page 1494 -->
----
-
-> **Figure 8-63.** NEXT for Root Reference Package (Worst-Case) for 32.0 GT/s
+> **Figure 8-63.** NEXT for Root Reference Package (Worst-Case) for 32.0 GT/s <!-- 📄 Page 1494 -->
 > **图 8-63.** 64.0 GT/s 参考 DFE 误码率浴盆曲线
 > <img src="figures/chapter_08/fig_1494_1.png" width="700">
 
@@ -6945,10 +6709,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 ---
 
-<!-- 📄 Page 1495 -->
----
-
-> **Figure 8-65.** Insertion Loss for Non-Root Reference Package for 32.0 GT/s
+> **Figure 8-65.** Insertion Loss for Non-Root Reference Package for 32.0 GT/s <!-- 📄 Page 1495 -->
 > **图 8-65.** 参考通道 IL 模板参数（64.0 GT/s）
 > <img src="figures/chapter_08/fig_1495_1.png" width="700">
 
@@ -6957,10 +6718,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 ---
 
-<!-- 📄 Page 1496 -->
----
-
-> **Figure 8-67.** NEXT for Non-Root Reference Package (Worst-Case) for 32.0 GT/s
+> **Figure 8-67.** NEXT for Non-Root Reference Package (Worst-Case) for 32.0 GT/s <!-- 📄 Page 1496 -->
 > **图 8-67.** 参考 EBR 介质（64.0 GT/s）
 > <img src="figures/chapter_08/fig_1496_1.png" width="700">
 
@@ -6969,10 +6727,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 ---
 
-<!-- 📄 Page 1497 -->
----
-
-> **Figure 8-69.** Insertion Loss for Root Reference Package for 64.0 GT/s
+> **Figure 8-69.** Insertion Loss for Root Reference Package for 64.0 GT/s <!-- 📄 Page 1497 -->
 > **图 8-69.** 参考封装交叉耦合（64.0 GT/s）
 > <img src="figures/chapter_08/fig_1497_1.png" width="700">
 
@@ -6981,10 +6736,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 ---
 
-<!-- 📄 Page 1498 -->
----
-
-> **Figure 8-71.** NEXT for Root Reference Package (Worst Case) for 64.0 GT/s
+> **Figure 8-71.** NEXT for Root Reference Package (Worst Case) for 64.0 GT/s <!-- 📄 Page 1498 -->
 > **图 8-71.** COM PB 测试负载返回损耗模板
 > <img src="figures/chapter_08/fig_1498_1.png" width="700">
 
@@ -6993,10 +6745,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 ---
 
-<!-- 📄 Page 1499 -->
----
-
-> **Figure 8-73.** Insertion Loss for Non-Root Reference Package for 64.0 GT/s
+> **Figure 8-73.** Insertion Loss for Non-Root Reference Package for 64.0 GT/s <!-- 📄 Page 1499 -->
 > **图 8-73.** 32.0 GT/s 通道 IL 模板参数
 > <img src="figures/chapter_08/fig_1499_1.png" width="700">
 
@@ -7005,10 +6754,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 ---
 
-<!-- 📄 Page 1500 -->
----
-
-> **Figure 8-75.** NEXT for Non-Root Reference Package (Worst Case) for 64.0 GT/s
+> **Figure 8-75.** NEXT for Non-Root Reference Package (Worst Case) for 64.0 GT/s <!-- 📄 Page 1500 -->
 > **图 8-75.** 64.0 GT/s 封装 RLR 参数
 > <img src="figures/chapter_08/fig_1500_1.png" width="700">
 
@@ -7017,10 +6763,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 ---
 
-<!-- 📄 Page 1501 -->
----
-
-> **Figure 8-77.** 32.0 and 64.0 GT/s Reference Package Port Connections for Pin to Pin Channel Evaluation
+> **Figure 8-77.** 32.0 and 64.0 GT/s Reference Package Port Connections for Pin to Pin Channel Evaluation <!-- 📄 Page 1501 -->
 > **图 8-77.** 32.0 GT/s 回波损耗参数
 > <img src="figures/chapter_08/fig_1501_1_tight.png" width="700">
 
@@ -7117,11 +6860,8 @@ Channel tolerancing is implemented by means of simulation, where the pass/fail c
 
 ---
 
-<!-- 📄 Page 1502 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1502 -->
 <table>
 <thead>
 <tr>
@@ -7205,14 +6945,7 @@ Output eye parameters: The simulator shall generate a statistically defined outp
 
 ---
 
-
----
-
----
-<!-- 📄 Page 1503 -->
----
-
-<a id="sec-8-5-1-3-2"></a>
+<a id="sec-8-5-1-3-2"></a> <!-- 📄 Page 1503 -->
 ## 8.5.1.3.2 Processing Steps | 处理步骤
 
 <table>
@@ -7403,7 +7136,7 @@ TTX-CH-UDJDD = TTX-UDJ-DD – (TTXUPWJ-DJDD)/2 = 7.00ps
 
 A channel must be tested at all data rates, with the corresponding Tx jitter parameters, that it is intended to support during normal operation. For example, a channel intended to support a maximum data rate of 8.0 GT/s must be tested at 2.5, 5.0, and 8.0 GT/s.
 
-**Table 8-15. Jitter/Voltage Parameters for Channel Tolerancing**
+**Table 8-15. Jitter/Voltage Parameters for Channel Tolerancing | 表 8-15. 通道容差测试的抖动/电压参数**
 
 | Symbol | Parameter | Value | Units | Notes |
 |--------|-----------|-------|-------|-------|
@@ -7414,7 +7147,6 @@ A channel must be tested at all data rates, with the corresponding Tx jitter par
 
 通道必须在正常运行期间所支持的所有数据速率下、使用对应的 Tx 抖动参数进行测试。例如，旨在支持最高 8.0 GT/s 数据速率的通道，必须在 2.5、5.0 和 8.0 GT/s 下进行测试。
 
-**Table 8-15. 通道容差测试的抖动/电压参数**
 
 | 符号 (Symbol) | 参数 (Parameter) | 数值 (Value) | 单位 (Units) | 备注 (Notes) |
 |--------|-----------|-------|-------|-------|
@@ -7427,10 +7159,7 @@ A channel must be tested at all data rates, with the corresponding Tx jitter par
 
 ---
 
-<!-- 📄 Page 1504 -->
----
-
-**Table 8-15. Jitter/Voltage Parameters for Channel Tolerancing (continued) | 表 8-15. 通道容差测试的抖动/电压参数(续)**
+**Table 8-15. Jitter/Voltage Parameters for Channel Tolerancing (continued) | 表 8-15. 通道容差测试的抖动/电压参数(续)** <!-- 📄 Page 1504 -->
 
 | Symbol | Parameter | Value | Units | Notes |
 |--------|-----------|-------|-------|-------|
@@ -7478,10 +7207,7 @@ A channel must be tested at all data rates, with the corresponding Tx jitter par
 
 ---
 
-<!-- 📄 Page 1505 -->
----
-
-**Table 8-15. Jitter/Voltage Parameters for Channel Tolerancing (continued) | 表 8-15. 通道容差测试的抖动/电压参数(续)**
+**Table 8-15. Jitter/Voltage Parameters for Channel Tolerancing (continued) | 表 8-15. 通道容差测试的抖动/电压参数(续)** <!-- 📄 Page 1505 -->
 
 **32.0 GT/s Jitter Parameters and Voltage Parameters | 32.0 GT/s 抖动参数与电压参数**
 
@@ -7583,10 +7309,7 @@ The output of the simulation tool shall be in the form of pass/fail characterist
 
 ---
 
-<!-- 📄 Page 1506 -->
----
-
-> **A-0841A**
+> **A-0841A** <!-- 📄 Page 1506 -->
 >
 > **Figure 8-79.** EH, EW Mask
 > **图 8-79.** 64.0 GT/s 系统主板 IL 设计目标系数
@@ -7616,14 +7339,13 @@ The output of the simulation tool shall be in the form of pass/fail characterist
 
 Note that the pass/fail EH and EW limits shown in § Figure 8-79 are identical to the limits defined for Rx testing in § Table 8-11 for 8.0 and 16.0 GT/s. For 32.0 and 64.0 GT/s, the pass/fail EH and EW limits are still identical but they are computed at the optimal sample location. For 2.5 and 5.0 GT/s the limits for Rx testing are referenced to the package pins and the limits for channel tolerancing in this table are referenced to the Receiver pad after applying the same reference package used for 8.0 GT/s channel tolerancing.
 
-**Table 8-16. Channel Tolerancing Eye Mask Values**
+**Table 8-16. Channel Tolerancing Eye Mask Values | 表 8-16. 通道容差测试的眼图模板数值**
 
 </td>
 <td style="background-color:#e8e8e8">
 
 注意,§ Figure 8-79 中所示的 Pass/Fail EH 与 EW 限值与 § Table 8-11 中为 8.0 与 16.0 GT/s Rx 测试所定义的限值完全相同。对于 32.0 和 64.0 GT/s,Pass/Fail EH 与 EW 限值仍然相同，但它们在最佳采样位置处计算。对于 2.5 和 5.0 GT/s,Rx 测试的限值以封装引脚为参考点;而本表中通道容差测试的限值，在施加了与 8.0 GT/s 通道容差测试所用的相同参考封装后，以接收器焊盘为参考点。
 
-**Table 8-16. 通道容差测试的眼图模板数值**
 
 </td>
 </tr>
@@ -7654,10 +7376,7 @@ Note that the pass/fail EH and EW limits shown in § Figure 8-79 are identical t
 
 ---
 
-<!-- 📄 Page 1507 -->
----
-
-**Table 8-16. Channel Tolerancing Eye Mask Values (continued) | 表 8-16. 通道容差测试的眼图模板数值(续)**
+**Table 8-16. Channel Tolerancing Eye Mask Values (continued) | 表 8-16. 通道容差测试的眼图模板数值(续)** <!-- 📄 Page 1507 -->
 
 **8.0 GT/s Eye Margins (continued) | 8.0 GT/s 眼图裕量(续)**
 
@@ -7695,10 +7414,7 @@ Note that the pass/fail EH and EW limits shown in § Figure 8-79 are identical t
 
 ---
 
-<!-- 📄 Page 1508 -->
----
-
-**Table 8-16. Channel Tolerancing Eye Mask Values (continued) | 表 8-16. 通道容差测试的眼图模板数值(续)**
+**Table 8-16. Channel Tolerancing Eye Mask Values (continued) | 表 8-16. 通道容差测试的眼图模板数值(续)** <!-- 📄 Page 1508 -->
 
 **64.0 GT/s Eye Margins (continued) | 64.0 GT/s 眼图裕量(续)**
 
@@ -7762,10 +7478,7 @@ Note that the Tx and channel CM noise parameters cannot simply be added to obtai
 
 ---
 
-<!-- 📄 Page 1509 -->
----
-
-<a id="sec-8-5-1-4-5"></a>
+<a id="sec-8-5-1-4-5"></a> <!-- 📄 Page 1509 -->
 ## 8.5.1.4.5 Verifying VCH-IDLE-DET-DIFF-pp | 验证 VCH-IDLE-DET-DIFF-pp
 
 <table>
@@ -7879,10 +7592,7 @@ Refclk 的测试设置假设仅有 Refclk 发生器本身存在。测试设置�
 
 ---
 
-<!-- 📄 Page 1510 -->
----
-
-> **Figure 8-80.** Oscilloscope Refclk Test Setup for All Cases Except Jitter at 32.0 and 64.0 GT/s
+> **Figure 8-80.** Oscilloscope Refclk Test Setup for All Cases Except Jitter at 32.0 and 64.0 GT/s <!-- 📄 Page 1510 -->
 > **图 8-80.** TP1a 的 64.0 GT/s 回波损耗模板
 > <img src="figures/chapter_08/fig_1510_1_tight.png" width="700">
 
@@ -7958,10 +7668,7 @@ All specifications in § Table 8-18 are to be measured using a test configuratio
 
 ---
 
-<!-- 📄 Page 1511 -->
----
-
-**Table 8-18. REFCLK DC Specifications and AC Timing Requirements (continued) | 表 8-18. REFCLK DC 规范与 AC 时序要求(续)**
+**Table 8-18. REFCLK DC Specifications and AC Timing Requirements (continued) | 表 8-18. REFCLK DC 规范与 AC 时序要求(续)** <!-- 📄 Page 1511 -->
 
 | Symbol | Parameter | 100 MHz Input Min | 100 MHz Input Max | Unit | Note |
 |--------|-----------|-------------------|-------------------|------|------|
@@ -8006,10 +7713,7 @@ All specifications in § Table 8-18 are to be measured using a test configuratio
 
 ---
 
-<!-- 📄 Page 1512 -->
----
-
-**Table 8-18 Notes (continued) | 表 8-18 注释(续)**
+**Table 8-18 Notes (continued) | 表 8-18 注释(续)** <!-- 📄 Page 1512 -->
 
 13. PPM refers to parts per million and is a DC absolute period accuracy specification. 1 PPM is 1/1,000,000th of 100.000000 MHz exactly or 100 Hz. For example, for 300 PPM, then we have an error budget of 100 Hz/PPM × 300 PPM = 30 kHz. The period is to be measured with a frequency counter with measurement window set to 100 ms or greater.
 14. Matching applies to rising edge rate for REFCLK+ and falling edge rate for REFCLK-. It is measured using a ±75 mV window centered on the median cross point where REFCLK+ rising meets REFCLK- falling. The median cross point is used to calculate the voltage thresholds the oscilloscope is to use for the edge rate calculations. The Rise Edge Rate of REFCLK+ should be compared to the Fall Edge Rate of REFCLK-; the maximum allowed difference should not exceed 20% of the slowest edge rate. See § Figure 8-83.
@@ -8032,10 +7736,7 @@ All specifications in § Table 8-18 are to be measured using a test configuratio
 
 ---
 
-<!-- 📄 Page 1513 -->
----
-
-> **Figure 8-83.** Single-Ended Measurement Points for Rise and Fall Time Matching
+> **Figure 8-83.** Single-Ended Measurement Points for Rise and Fall Time Matching <!-- 📄 Page 1513 -->
 > **图 8-83.** 32.0 GT/s COM 的 EBR 与 IL
 > <img src="figures/chapter_08/fig_1513_1_tight.png" width="700">
 
@@ -8053,10 +7754,7 @@ All specifications in § Table 8-18 are to be measured using a test configuratio
 
 ---
 
-<!-- 📄 Page 1514 -->
----
-
-> **Figure 8-86.** Differential Measurement Points for Ringback
+> **Figure 8-86.** Differential Measurement Points for Ringback <!-- 📄 Page 1514 -->
 > **图 8-86.** 参考 RL 目标
 > <img src="figures/chapter_08/fig_1514_1_tight.png" width="700">
 
@@ -8151,9 +7849,8 @@ A number of Refclk parameters are data rate independent and are listed in the ta
 ---
 
 <a id="sec-8-6-3-1"></a>
-## 8.6.3.1 Low Frequency Refclk Jitter Limits | 低频 Refclk 抖动限值
+## 8.6.3.1 Low Frequency Refclk Jitter Limits | 低频 Refclk 抖动限值 <!-- 📄 Page 1515 -->
 
-<!-- 📄 Page 1515 -->
 ---
 
 <table>
@@ -8225,9 +7922,8 @@ Two Refclk architectures are supported: Common Refclk (CC) and Independent Refcl
 ---
 
 <a id="sec-8-6-5"></a>
-## 8.6.5 Filtering Functions Applied to Raw Data | 应用于原始数据的滤波函数
+## 8.6.5 Filtering Functions Applied to Raw Data | 应用于原始数据的滤波函数 <!-- 📄 Page 1516 -->
 
-<!-- 📄 Page 1516 -->
 ---
 
 <table>
@@ -8343,9 +8039,8 @@ $$\frac{\omega_{3dB}}{\omega_n} = \sqrt{\sqrt{\frac{2\zeta^2 + 1}{2}} + 1} + 2\z
 ---
 
 <a id="sec-8-6-5-2"></a>
-## 8.6.5.2 CDR Transfer Function Examples | CDR 传递函数示例
+## 8.6.5.2 CDR Transfer Function Examples | CDR 传递函数示例 <!-- 📄 Page 1517 -->
 
-<!-- 📄 Page 1517 -->
 ---
 
 <table>
@@ -8445,9 +8140,8 @@ This architecture utilizes a single Refclk source that is distributed to both th
 ---
 
 <a id="sec-8-6-6-1"></a>
-## 8.6.6.1 Determining the Number of PLL BW and Peaking Combinations | 确定 PLL 带宽和峰化组合数
+## 8.6.6.1 Determining the Number of PLL BW and Peaking Combinations | 确定 PLL 带宽和峰化组合数 <!-- 📄 Page 1518 -->
 
-<!-- 📄 Page 1518 -->
 ---
 
 
@@ -8494,9 +8188,8 @@ At 5.0 GT/s and higher data rates, two possible sets of limits of PLL bandwidth 
 ---
 
 <a id="sec-8-6-6-2"></a>
-## 8.6.6.2 CDR and PLL BW and Peaking Limits for Common Refclk | 共参考时钟的 CDR 与 PLL 带宽和峰化限值
+## 8.6.6.2 CDR and PLL BW and Peaking Limits for Common Refclk | 共参考时钟的 CDR 与 PLL 带宽和峰化限值 <!-- 📄 Page 1519 -->
 
-<!-- 📄 Page 1519 -->
 ---
 
 <table>
@@ -8557,9 +8250,8 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 ---
 
 <a id="fig-8-92"></a>
-### Figure 8-92 | 图 8-92
+### Figure 8-92 | 图 8-92 <!-- 📄 Page 1520 -->
 
-<!-- 📄 Page 1520 -->
 ---
 
 <table>
@@ -8761,9 +8453,8 @@ For 5.0, 8.0, and 16.0 GT/s, jitter is specified as an RMS (Rj) value. These sig
 ---
 
 <a id="tbl-8-20-continued"></a>
-### Table 8-20 (continued) | 表 8-20 (续)
+### Table 8-20 (continued) | 表 8-20 (续) <!-- 📄 Page 1521 -->
 
-<!-- 📄 Page 1521 -->
 ---
 
 <table>
@@ -8822,9 +8513,8 @@ For 5.0, 8.0, and 16.0 GT/s, jitter is specified as an RMS (Rj) value. These sig
 ---
 
 <a id="sec-8-6-8"></a>
-## 8.6.8 Form Factor Requirements for RefClock Architectures | 外形规格对 RefClock 架构的要求
+## 8.6.8 Form Factor Requirements for RefClock Architectures | 外形规格对 RefClock 架构的要求 <!-- 📄 Page 1522 -->
 
-<!-- 📄 Page 1522 -->
 ---
 
 
@@ -8943,9 +8633,6 @@ If a form factor has clocking requirements that cannot be provided in this simpl
 
 
 [⬆️ 返回目录](#sec-8-0)
-
----
-
 
 ---
 

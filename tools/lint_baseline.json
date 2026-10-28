@@ -1,0 +1,30 @@
+{
+ "totals": {
+  "anchor_continuation_alias": 13,
+  "bilingual_en_only": 1,
+  "both_empty": 0,
+  "caption_fig_single": 96,
+  "caption_fig_two_line": 0,
+  "caption_tbl_en_only": 38,
+  "caption_tbl_single": 404,
+  "caption_tbl_two_line": 0,
+  "en_only": 1,
+  "imbalanced": 0,
+  "punct_halfwidth_colon": 477,
+  "punct_halfwidth_comma": 480,
+  "punct_halfwidth_paren": 398,
+  "rows": 3013,
+  "zh_only": 0
+ },
+ "by_code": {
+  "anchor_continuation_alias": 13,
+  "bilingual_en_only": 1,
+  "caption_tbl_en_only": 38,
+  "punct_halfwidth_colon": 477,
+  "punct_halfwidth_comma": 480,
+  "punct_halfwidth_paren": 398
+ },
+ "by_severity": {
+  "info": 49
+ }
+}

@@ -167,10 +167,6 @@
 
 ---
 
----
-
----
-
 # 📘 第 9 章　Single Root I/O Virtualization and Sharing (单根 I/O 虚拟化与共享 (SR-IOV)) (Chapter 9. Single Root I/O Virtualization and Sharing)
 
 > 📄 **Source pages**: 1523–1558 | 📁 **File**: `chapter_09.md`
@@ -180,7 +176,7 @@
 
 
 <a id="sec-9-0"></a>
-## 9. Single Root I/O Virtualization and Sharing § | 单根 I/O 虚拟化与共享 (SR-IOV) §
+## 9. Single Root I/O Virtualization and Sharing | 单根 I/O 虚拟化与共享 (SR-IOV)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -237,7 +233,7 @@ The generic platform configuration is composed of the following components:
 ---
 
 <a id="sec-9-1"></a>
-## 9.1 SR-IOV Architectural Overview § | SR-IOV 架构概述 §
+## 9.1 SR-IOV Architectural Overview | SR-IOV 架构概述
 
 <table>
 <thead>
@@ -290,7 +286,7 @@ VI 独占底层硬件的所有权。VI 使用本规范范围之外的各种方�
 ---
 
 <a id="sec-9-1-cont"></a>
-## 9.1 SR-IOV Architectural Overview (cont.) § | SR-IOV 架构概述(续) §
+## 9.1 SR-IOV Architectural Overview (cont.) | SR-IOV 架构概述(续)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -346,11 +342,8 @@ SR-IOV 提供了减少这些平台资源开销的工具。SR-IOV 的好处包括
 
 ---
 
-<!-- 📄 Page 1527 -->
----
-
-<a id="sec-9-1-1"></a>
-## 9.1 SR-IOV Components (cont.) § | SR-IOV 组件(续) §
+<a id="sec-9-1-cont1"></a> <!-- 📄 Page 1527 -->
+## 9.1 SR-IOV Components (cont.) | SR-IOV 组件(续)
 
 <table>
 <thead>
@@ -391,8 +384,8 @@ SR-IOV 通用平台配置由以下附加功能元素组成:
 
 ---
 
-<a id="sec-9-1-2"></a>
-## 9.1 SR-IOV Components (cont. 2) § | SR-IOV 组件(续 2) §
+<a id="sec-9-1-cont2"></a>
+## 9.1 SR-IOV Components (cont. 2) | SR-IOV 组件(续 2)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -443,11 +436,8 @@ To compare and contrast a PCIe Device with a PCIe SR-IOV capable device, examine
 
 ---
 
-<!-- 📄 Page 1528 -->
----
-
-<a id="sec-9-1-3"></a>
-## 9.1.1 Example Multi-Function Device § | 9.1.1 多功能设备示例 §
+<a id="sec-9-1-1"></a> <!-- 📄 Page 1528 -->
+## 9.1.1 Example Multi-Function Device | 9.1.1 多功能设备示例
 
 <table>
 <thead>
@@ -501,11 +491,8 @@ As this figure illustrates, the hardware resources scale with the number of Func
 
 ---
 
-<!-- 📄 Page 1529 -->
----
-
-<a id="sec-9-1-4"></a>
-## 9.1.2 Example SR-IOV Single PF Capable Device § | 9.1.2 单 PF SR-IOV 设备示例 §
+<a id="sec-9-1-2"></a> <!-- 📄 Page 1529 -->
+## 9.1.2 Example SR-IOV Single PF Capable Device | 9.1.2 单 PF SR-IOV 设备示例
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -567,13 +554,12 @@ The example in § Figure 9-5 illustrates a single PF with N VFs. Key observation
 
 ---
 
->>> [185. InitialVFs and TotalVFs could have had different values due to MR-IOV (now deprecated).]()
+>>> [185. InitialVFs and TotalVFs could have had different values due to MR-IOV (now deprecated).]() <!-- 📄 Page 1530 -->
 
-<!-- 📄 Page 1530 -->
 ---
 
-<a id="sec-9-1-5"></a>
-## 9.1.3 SR-IOV Single PF Capable Device (cont.) § | 9.1.3 SR-IOV 单 PF 设备(续) §
+<a id="sec-9-1-3"></a>
+## 9.1.3 SR-IOV Single PF Capable Device (cont.) | 9.1.3 SR-IOV 单 PF 设备(续)
 
 <table>
 <thead>
@@ -618,11 +604,8 @@ Another example usage model is illustrated in § Figure 9-6. In this example, th
 
 ---
 
-<!-- 📄 Page 1531 -->
----
-
-<a id="sec-9-1-6"></a>
-## 9.1.4 Example SR-IOV Multi-PF Capable Device § | 9.1.4 多 PF SR-IOV 设备示例 §
+<a id="sec-9-1-4"></a> <!-- 📄 Page 1531 -->
+## 9.1.4 Example SR-IOV Multi-PF Capable Device | 9.1.4 多 PF SR-IOV 设备示例
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -674,11 +657,8 @@ Key observations to note:
 
 ---
 
-<!-- 📄 Page 1532 -->
----
-
-<a id="sec-9-1-7"></a>
-## 9.1.5 SR-IOV Function, PF, and VF Mix § | 9.1.5 SR-IOV 功能、PF 和 VF 组合 §
+<a id="sec-9-1-5"></a> <!-- 📄 Page 1532 -->
+## 9.1.5 SR-IOV Function, PF, and VF Mix | 9.1.5 SR-IOV 功能、PF 和 VF 组合
 
 <table>
 <thead>
@@ -727,11 +707,8 @@ As seen in the prior example, the number of PF and VF can vary based on usage mo
 
 ---
 
-<!-- 📄 Page 1533 -->
----
-
-<a id="sec-9-1-8"></a>
-## 9.1.6 Example SR-IOV Device with Multiple Bus Numbers § | 9.1.6 跨多总线号的 SR-IOV 设备示例 §
+<a id="sec-9-1-6"></a> <!-- 📄 Page 1533 -->
+## 9.1.6 Example SR-IOV Device with Multiple Bus Numbers | 9.1.6 跨多总线号的 SR-IOV 设备示例
 
 <table>
 <thead>
@@ -767,11 +744,8 @@ In this last example, § Figure 9-8, a device implementation may mix any number 
 
 ---
 
-<!-- 📄 Page 1534 -->
----
-
-<a id="sec-9-1-9"></a>
-## 9.1.7 Example SR-IOV Device with a Mixture of Function Types § | 9.1.7 混合功能类型的 SR-IOV 设备示例 §
+<a id="sec-9-1-7"></a> <!-- 📄 Page 1534 -->
+## 9.1.7 Example SR-IOV Device with a Mixture of Function Types | 9.1.7 混合功能类型的 SR-IOV 设备示例
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -793,26 +767,6 @@ Key observations to note:
   - Non-VFs can only be associated with the captured Bus Number.
 - If the ARI Extended Capability is supported, Functions can be assigned to Function Groups. The assignment policy is outside the scope of this specification. If the ARI Extended Capability is not supported, Functions can still use the Function arbitration capabilities as defined in § Section 6.3.3.4 .
 
-The following sections describe how software determines that a Device is SR-IOV capable and subsequently identifies VF resources through Virtual Function Configuration Space.
-
-This section describes the fields that must be configured before enabling a PF's IOV Capabilities. The VFs are enabled by Setting the PF's VF Enable bit (see § Section 9.3.3.3.1 ) in the SR-IOV extended capability.
-
-The NumVFs field (see § Section 9.3.3.7 ) defines the number of VFs that are enabled when VF Enable is Set in the associated PF.
-
-This section describes how the VF BARs are configured to map memory space. VFs do not support I/O Space and thus VF BARs shall not indicate I/O Space.
-
-The System Page Size field (see § Section 9.3.3.13 ) defines the page size the system will use to map the VF's PCIe memory addresses when the PF's IOV Capabilities are enabled. The System Page Size field is used by the PF to align the Memory space aperture defined by each VF BAR to a system page boundary. The value chosen for the System Page Size must be one of the Supported Page Sizes (see § Section 9.3.3.12 ) in the SR-IOV extended capability.
-
-The behavior of VF BARs is the same as the normal PCI Memory Space BARs (see § Section 7.5.1.2.1 ), except that a VF BAR describes the aperture for each VF, whereas a PCI BAR describes the aperture for a single Function. The attributes for some of the bits in the VF BARs are affected by the VF Resizable BAR Extended Capability (see § Section 7.8.7 ) if it is implemented.
-
-- The behavior described in § Section 7.5.1.2.1 for determining the memory aperture of a Function's BAR applies to each VF BAR. That is, the size of the memory aperture required for each VF BAR can be determined by writing all "1"s and then reading the VF BAR. The results read back must be interpreted as described in § Section 7.5.1.2.1 .
-- The behavior for assigning the starting memory space address of each BAR associated with the first VF is also as described in § Section 7.5.1.2.1 . That is, the address written into each VF BAR is used by the Device for the starting address of the first VF.
-- The difference between VF BARs and BARs described in § Section 7.5.1.2.1 is that for each VF BAR, the memory space associated with the second and higher VFs is derived from the starting address of the first VF and the memory space aperture. For any given VF<sub>v</sub>, the starting address of its Memory space aperture for any implemented BAR<sub>b</sub>) is calculated according to the following formula:
-
-  BAR<sub>b</sub> VF<sub>v</sub> starting address = VF BAR<sub>b</sub> + (v - 1) x (VF BAR<sub>b</sub> aperture size)
-
-  where VF BAR<sub>b</sub> aperture size is the size of VF BAR<sub>b</sub> as determined by the usual BAR probing algorithm as described in § Section 9.3.3.14 .
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -822,26 +776,6 @@ The behavior of VF BARs is the same as the normal PCI Memory Space BARs (see § 
 - 任何功能组合都可以与捕获的总线号相关联。
   - 非 VF 只能与捕获的总线号相关联。
 - 如果支持 ARI 扩展能力结构，则可以将功能分配到功能组。分配策略不在本规范的范围内。如果不支持 ARI 扩展能力结构，则功能仍可以使用 § 第 6.3.3.4 节中定义的功能仲裁能力。
-
-以下各节描述了软件如何确定设备支持 SR-IOV,然后通过虚拟功能配置空间识别 VF 资源。
-
-本节描述了在启用 PF 的 IOV 功能之前必须配置的字段。通过在 SR-IOV 扩展能力结构中置位 (Set) PF 的 VF 使能 (VF Enable) 位(见 § 第 9.3.3.3.1 节)来启用 VF。
-
-NumVFs 字段(见 § 第 9.3.3.7 节)定义了在关联 PF 中 VF Enable 被置位时启用的 VF 数量。
-
-本节描述了如何配置 VF BAR 以映射内存空间。VF 不支持 I/O 空间 (I/O Space)，因此 VF BAR 不应指示 I/O 空间。
-
-系统页大小 (System Page Size) 字段(见 § 第 9.3.3.13 节)定义了在启用 PF 的 IOV 功能时系统用于映射 VF 的 PCIe 内存地址的页大小。系统页大小字段供 PF 用于将每个 VF BAR 定义的内存空间窗口对齐到系统页边界。为系统页大小选择的值必须是 SR-IOV 扩展能力结构中支持的页大小 (Supported Page Sizes)(见 § 第 9.3.3.12 节)之一。
-
-VF BAR 的行为与普通 PCI 内存空间 BAR 相同(见 § 第 7.5.1.2.1 节)，只是 VF BAR 描述每个 VF 的窗口，而 PCI BAR 描述单个功能的窗口。VF BAR 中某些位的属性受 VF 可调整 BAR 扩展能力结构 (VF Resizable BAR Extended Capability)(见 § 第 7.8.7 节)的影响(如果已实现)。
-
-- § 第 7.5.1.2.1 节中描述的确定功能 BAR 内存窗口的行为适用于每个 VF BAR。也就是说，可以通过写入全"1"然后读取 VF BAR 来确定每个 VF BAR 所需的内存窗口大小。回读的结果必须按照 § 第 7.5.1.2.1 节中的描述进行解释。
-- 为与第一个 VF 关联的每个 BAR 分配起始内存空间地址的行为也如 § 第 7.5.1.2.1 节中所述。也就是说，写入每个 VF BAR 的地址由设备用作第一个 VF 的起始地址。
-- VF BAR 与 § 第 7.5.1.2.1 节中描述的 BAR 之间的区别在于，对于每个 VF BAR,与第二个及更高编号 VF 关联的内存空间由第一个 VF 的起始地址和内存空间窗口导出。对于任何给定的 VF<sub>v</sub>,其任何已实现 BAR<sub>b</sub> 的内存空间窗口的起始地址按以下公式计算:
-
-  BAR<sub>b</sub> VF<sub>v</sub> 起始地址 = VF BAR<sub>b</sub> + (v - 1) x (VF BAR<sub>b</sub> 窗口大小)
-
-  其中 VF BAR<sub>b</sub> 窗口大小是通过 § 第 9.3.3.14 节中描述的常用 BAR 探测算法确定的 VF BAR<sub>b</sub> 的大小。
 
 </td>
 </tr>
@@ -862,7 +796,7 @@ VF BAR 的行为与普通 PCI 内存空间 BAR 相同(见 § 第 7.5.1.2.1 节)�
 ---
 
 <a id="sec-9-2"></a>
-## 9.2 SR-IOV Initialization and Resource Allocation § | 9.2 SR-IOV 初始化和资源分配 §
+## 9.2 SR-IOV Initialization and Resource Allocation | 9.2 SR-IOV 初始化和资源分配
 
 <table>
 <thead>
@@ -876,25 +810,75 @@ VF BAR 的行为与普通 PCI 内存空间 BAR 相同(见 § 第 7.5.1.2.1 节)�
 <td>
 
 <a id="sec-9-2-1"></a>
-### 9.2.1 SR-IOV Resource Discovery § | 9.2.1 SR-IOV 资源发现 §
+### 9.2.1 SR-IOV Resource Discovery | 9.2.1 SR-IOV 资源发现
+
+The following sections describe how software determines that a Device is SR-IOV capable and subsequently identifies VF resources through Virtual Function Configuration Space.
+
+
 
 <a id="sec-9-2-1-1"></a>
-#### 9.2.1.1 Configuring SR-IOV Capabilities § | 9.2.1.1 配置 SR-IOV 功能 §
+#### 9.2.1.1 Configuring SR-IOV Capabilities | 9.2.1.1 配置 SR-IOV 功能
+
+This section describes the fields that must be configured before enabling a PF's IOV Capabilities. The VFs are enabled by Setting the PF's VF Enable bit (see § Section 9.3.3.3.1 ) in the SR-IOV extended capability.
+
+The NumVFs field (see § Section 9.3.3.7 ) defines the number of VFs that are enabled when VF Enable is Set in the associated PF.
+
+
 
 <a id="sec-9-2-1-1-1"></a>
-#### 9.2.1.1.1 Configuring the VF BAR Mechanisms § | 9.2.1.1.1 配置 VF BAR 机制 §
+#### 9.2.1.1.1 Configuring the VF BAR Mechanisms | 9.2.1.1.1 配置 VF BAR 机制
+
+This section describes how the VF BARs are configured to map memory space. VFs do not support I/O Space and thus VF BARs shall not indicate I/O Space.
+
+The System Page Size field (see § Section 9.3.3.13 ) defines the page size the system will use to map the VF's PCIe memory addresses when the PF's IOV Capabilities are enabled. The System Page Size field is used by the PF to align the Memory space aperture defined by each VF BAR to a system page boundary. The value chosen for the System Page Size must be one of the Supported Page Sizes (see § Section 9.3.3.12 ) in the SR-IOV extended capability.
+
+The behavior of VF BARs is the same as the normal PCI Memory Space BARs (see § Section 7.5.1.2.1 ), except that a VF BAR describes the aperture for each VF, whereas a PCI BAR describes the aperture for a single Function. The attributes for some of the bits in the VF BARs are affected by the VF Resizable BAR Extended Capability (see § Section 7.8.7 ) if it is implemented.
+
+- The behavior described in § Section 7.5.1.2.1 for determining the memory aperture of a Function's BAR applies to each VF BAR. That is, the size of the memory aperture required for each VF BAR can be determined by writing all "1"s and then reading the VF BAR. The results read back must be interpreted as described in § Section 7.5.1.2.1 .
+- The behavior for assigning the starting memory space address of each BAR associated with the first VF is also as described in § Section 7.5.1.2.1 . That is, the address written into each VF BAR is used by the Device for the starting address of the first VF.
+- The difference between VF BARs and BARs described in § Section 7.5.1.2.1 is that for each VF BAR, the memory space associated with the second and higher VFs is derived from the starting address of the first VF and the memory space aperture. For any given VF<sub>v</sub>, the starting address of its Memory space aperture for any implemented BAR<sub>b</sub>) is calculated according to the following formula:
+
+  BAR<sub>b</sub> VF<sub>v</sub> starting address = VF BAR<sub>b</sub> + (v - 1) x (VF BAR<sub>b</sub> aperture size)
+
+  where VF BAR<sub>b</sub> aperture size is the size of VF BAR<sub>b</sub> as determined by the usual BAR probing algorithm as described in § Section 9.3.3.14 .
+
 
 </td>
 <td style="background-color:#e8e8e8">
 
 <a id="sec-9-2-1-cn"></a>
-### 9.2.1 SR-IOV 资源发现 §
+### 9.2.1 SR-IOV 资源发现
+
+以下各节描述了软件如何确定设备支持 SR-IOV,然后通过虚拟功能配置空间识别 VF 资源。
+
+
 
 <a id="sec-9-2-1-1-cn"></a>
-#### 9.2.1.1 配置 SR-IOV 功能 §
+#### 9.2.1.1 配置 SR-IOV 功能
+
+本节描述了在启用 PF 的 IOV 功能之前必须配置的字段。通过在 SR-IOV 扩展能力结构中置位 (Set) PF 的 VF 使能 (VF Enable) 位(见 § 第 9.3.3.3.1 节)来启用 VF。
+
+NumVFs 字段(见 § 第 9.3.3.7 节)定义了在关联 PF 中 VF Enable 被置位时启用的 VF 数量。
+
+
 
 <a id="sec-9-2-1-1-1-cn"></a>
-#### 9.2.1.1.1 配置 VF BAR 机制 §
+#### 9.2.1.1.1 配置 VF BAR 机制
+
+本节描述了如何配置 VF BAR 以映射内存空间。VF 不支持 I/O 空间 (I/O Space)，因此 VF BAR 不应指示 I/O 空间。
+
+系统页大小 (System Page Size) 字段(见 § 第 9.3.3.13 节)定义了在启用 PF 的 IOV 功能时系统用于映射 VF 的 PCIe 内存地址的页大小。系统页大小字段供 PF 用于将每个 VF BAR 定义的内存空间窗口对齐到系统页边界。为系统页大小选择的值必须是 SR-IOV 扩展能力结构中支持的页大小 (Supported Page Sizes)(见 § 第 9.3.3.12 节)之一。
+
+VF BAR 的行为与普通 PCI 内存空间 BAR 相同(见 § 第 7.5.1.2.1 节)，只是 VF BAR 描述每个 VF 的窗口，而 PCI BAR 描述单个功能的窗口。VF BAR 中某些位的属性受 VF 可调整 BAR 扩展能力结构 (VF Resizable BAR Extended Capability)(见 § 第 7.8.7 节)的影响(如果已实现)。
+
+- § 第 7.5.1.2.1 节中描述的确定功能 BAR 内存窗口的行为适用于每个 VF BAR。也就是说，可以通过写入全"1"然后读取 VF BAR 来确定每个 VF BAR 所需的内存窗口大小。回读的结果必须按照 § 第 7.5.1.2.1 节中的描述进行解释。
+- 为与第一个 VF 关联的每个 BAR 分配起始内存空间地址的行为也如 § 第 7.5.1.2.1 节中所述。也就是说，写入每个 VF BAR 的地址由设备用作第一个 VF 的起始地址。
+- VF BAR 与 § 第 7.5.1.2.1 节中描述的 BAR 之间的区别在于，对于每个 VF BAR,与第二个及更高编号 VF 关联的内存空间由第一个 VF 的起始地址和内存空间窗口导出。对于任何给定的 VF<sub>v</sub>,其任何已实现 BAR<sub>b</sub> 的内存空间窗口的起始地址按以下公式计算:
+
+  BAR<sub>b</sub> VF<sub>v</sub> 起始地址 = VF BAR<sub>b</sub> + (v - 1) x (VF BAR<sub>b</sub> 窗口大小)
+
+  其中 VF BAR<sub>b</sub> 窗口大小是通过 § 第 9.3.3.14 节中描述的常用 BAR 探测算法确定的 VF BAR<sub>b</sub> 的大小。
+
 
 </td>
 </tr>
@@ -905,11 +889,8 @@ VF BAR 的行为与普通 PCI 内存空间 BAR 相同(见 § 第 7.5.1.2.1 节)�
 
 ---
 
-<!-- 📄 Page 1536 -->
----
-
-<a id="sec-9-2-1-1-1-cont"></a>
-## 9.2.1.1.1 Configuring the VF BAR Mechanisms (cont.) § | 9.2.1.1.1 配置 VF BAR 机制(续) §
+<a id="sec-9-2-1-1-1-cont"></a> <!-- 📄 Page 1536 -->
+## 9.2.1.1.1 Configuring the VF BAR Mechanisms (cont.) | 9.2.1.1.1 配置 VF BAR 机制(续)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -936,7 +917,7 @@ The First VF Offset and VF Stride fields in the SR-IOV extended capability are 1
 - ARI Capable Hierarchy (§ Section 9.3.3.3.5 ) may only be changed when VF Enable is Clear in all PFs of a Device.
 
 <a id="sec-9-2-1-2"></a>
-#### 9.2.1.2 VF Discovery § | 9.2.1.2 VF 发现 §
+#### 9.2.1.2 VF Discovery | 9.2.1.2 VF 发现
 
 > **IMPLEMENTATION NOTE:**
 > **NUMVFS AND ARI CAPABLE HIERARCHY**
@@ -957,7 +938,7 @@ SR-IOV 扩展能力结构中的 First VF Offset 和 VF Stride 字段是 16 位�
 - 只能在设备所有 PF 的 VF Enable 都被清零时更改 ARI Capable Hierarchy(§ 第 9.3.3.3.5 节)。
 
 <a id="sec-9-2-1-2-cn"></a>
-#### 9.2.1.2 VF 发现 §
+#### 9.2.1.2 VF 发现
 
 > **实现注意 (IMPLEMENTATION NOTE):**
 > **NUMVFS 和 ARI CAPABLE HIERARCHY**
@@ -981,11 +962,8 @@ SR-IOV 扩展能力结构中的 First VF Offset 和 VF Stride 字段是 16 位�
 
 ---
 
-<!-- 📄 Page 1537 -->
----
-
-<a id="sec-9-2-1-2-cont"></a>
-## 9.2.1.2 VF Discovery (cont.) § | 9.2.1.2 VF 发现(续) §
+<a id="sec-9-2-1-2-cont"></a> <!-- 📄 Page 1537 -->
+## 9.2.1.2 VF Discovery (cont.) | 9.2.1.2 VF 发现(续)
 
 <table>
 <thead>
@@ -1033,7 +1011,7 @@ All PFs must be located on the Device's captured Bus Number.
 
 § Table 9-1 描述了用于确定与每个 VF 关联的路由 ID 的算法。
 
-**Table 9-1. VF 路由 ID 算法 (VF Routing ID Algorithm)**
+**Table 9-1. VF Routing ID Algorithm | 表 9-1. VF 路由 ID 算法**
 
 | VF 编号 | VF 路由 ID |
 |-----------|---------------|
@@ -1072,11 +1050,8 @@ SR-IOV RCiEP 设备的 VF 与其 PF 关联到同一根复合体事件收集器 (
 
 ---
 
-<!-- 📄 Page 1538 -->
----
-
-<a id="sec-9-2-1-2-cont-2"></a>
-## 9.2.1.2 VF Discovery (cont. 2) § | 9.2.1.2 VF 发现(续 2) §
+<a id="sec-9-2-1-2-cont-2"></a> <!-- 📄 Page 1538 -->
+## 9.2.1.2 VF Discovery (cont. 2) | 9.2.1.2 VF 发现(续 2)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1113,7 +1088,7 @@ PCI Devices may have vendor-specific dependencies between Functions. For example
 > SR-IOV devices may consume multiple bus numbers. Additional bus numbers beyond the first one are consecutive and immediately follow the first bus number assigned to the device. If an SR-IOV device also contains PCI-PCI Bridges (with Type 1 Configuration Space Headers), the SR-IOV usage must be accounted for when programming the Secondary Bus Number for those Bridges. Software should determine the last Bus Number used by VFs first and then configure any co-located Bridges to use Bus Numbers above that value.
 
 <a id="sec-9-2-1-3"></a>
-#### 9.2.1.3 Function Dependency Lists § | 9.2.1.3 功能依赖列表 §
+#### 9.2.1.3 Function Dependency Lists | 9.2.1.3 功能依赖列表
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -1140,7 +1115,7 @@ PCI 设备的功能之间可能存在特定于供应商的依赖关系。例如,
 > SR-IOV 设备可能消耗多个总线号。第一个之后的附加总线号是连续的，并紧跟在分配给设备的第一个总线号之后。如果 SR-IOV 设备还包含 PCI-PCI 桥(具有 Type 1 配置空间头部)，则在编程这些桥的 Secondary Bus Number 时必须考虑 SR-IOV 的使用情况。软件应先确定 VF 使用的最后一个总线号，然后配置任何同位的桥以使用高于该值的总线号。
 
 <a id="sec-9-2-1-3-cn"></a>
-#### 9.2.1.3 功能依赖列表 §
+#### 9.2.1.3 功能依赖列表
 
 </td>
 </tr>
@@ -1153,11 +1128,8 @@ PCI 设备的功能之间可能存在特定于供应商的依赖关系。例如,
 
 ---
 
-<!-- 📄 Page 1539 -->
----
-
-<a id="sec-9-2-1-3-cont"></a>
-## 9.2.1.3 Function Dependency Lists (cont.) § | 9.2.1.3 功能依赖列表(续) §
+<a id="sec-9-2-1-3-cont"></a> <!-- 📄 Page 1539 -->
+## 9.2.1.3 Function Dependency Lists (cont.) | 9.2.1.3 功能依赖列表(续)
 
 <table>
 <thead>
@@ -1174,43 +1146,41 @@ Function Dependency Lists are used to describe these dependencies (or to indicat
 
 See § Section 9.3.3.8 for details.
 
+<a id="sec-9-2-1-4"></a>
+#### 9.2.1.4 Interrupt Resource Allocation | 9.2.1.4 中断资源分配
+
 PFs and VFs support either MSI, MSI-X interrupts, or both if interrupt resources are allocated. VFs shall not implement INTx. MSI and MSI-X interrupts are described in § Section 6.1.4 .
 
 For MSI-X interrupts, special address range isolation requirements apply for the MSI-X structures in PF and VF MMIO regions. See in § Section 7.7.2 .
 
+<a id="sec-9-2-2"></a>
+### 9.2.2 SR-IOV Reset Mechanisms | 9.2.2 SR-IOV 复位机制
+
 This section describes how reset mechanisms defined in § Section 6.6 affect Devices that support SR-IOV. It also describes the mechanisms used to reset a single VF and a single PF with its associated VFs.
+
+<a id="sec-9-2-2-1"></a>
+#### 9.2.2.1 SR-IOV Conventional Reset | 9.2.2.1 SR-IOV 常规复位
 
 A Conventional Reset to a Device that supports SR-IOV shall cause all Functions (including both PFs and VFs) to be reset to their original, power-on state as per the rules in § Section 6.6.1 . § Section 9.3 describes the behavior for the fields defined.
 
 Note: Conventional Reset clears VF Enable in the PF. Thus, VFs no longer exist after a Conventional Reset.
 
+<a id="sec-9-2-2-2"></a>
+#### 9.2.2.2 FLR That Targets a VF | 9.2.2.2 针对 VF 的 FLR
+
 VFs must support Function Level Reset (FLR).
 
 Note: Software may use FLR to reset a VF. FLR to a VF affects a VF's state but does not affect its existence in PCI Configuration Space or PCI Bus address space. The VFs BARn values (see § Section 9.3.3.14 ) and VF MSE (see § Section 9.3.3.3.4 ) in the PF's SR-IOV extended capability, and the VF Resizable BAR capability values (see § Section 7.8.7 ) are unaffected by FLRs issued to the VF.
 
+<a id="sec-9-2-2-3"></a>
+#### 9.2.2.3 FLR That Targets a PF | 9.2.2.3 针对 PF 的 FLR
+
 PFs must support FLR.
 
-FLR to a PF resets the PF state as well as the SR-IOV extended capability including VF Enable which means that VFs no longer exist.
+<a id="sec-9-2-3"></a>
+### 9.2.3 IOV Re-initialization and Reallocation | 9.2.3 IOV 重新初始化和重新分配
 
 If VF Enable is Cleared after having been Set, all of the VFs associated with the PF no longer exist and must no longer issue PCIe transactions or respond to Configuration Space or Memory Space accesses. VFs must not retain any architected state after VF Enable has been Cleared (including sticky bits). For security, unarchitected VF state configured through the VF must be cleared or randomized, with the exception of persistent storage data.
-
-<a id="sec-9-2-1-4"></a>
-#### 9.2.1.4 Interrupt Resource Allocation § | 9.2.1.4 中断资源分配 §
-
-<a id="sec-9-2-2"></a>
-### 9.2.2 SR-IOV Reset Mechanisms § | 9.2.2 SR-IOV 复位机制 §
-
-<a id="sec-9-2-2-1"></a>
-#### 9.2.2.1 SR-IOV Conventional Reset § | 9.2.2.1 SR-IOV 常规复位 §
-
-<a id="sec-9-2-2-2"></a>
-#### 9.2.2.2 FLR That Targets a VF § | 9.2.2.2 针对 VF 的 FLR §
-
-<a id="sec-9-2-2-3"></a>
-#### 9.2.2.3 FLR That Targets a PF § | 9.2.2.3 针对 PF 的 FLR §
-
-<a id="sec-9-2-3"></a>
-### 9.2.3 IOV Re-initialization and Reallocation § | 9.2.3 IOV 重新初始化和重新分配 §
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -1219,43 +1189,41 @@ If VF Enable is Cleared after having been Set, all of the VFs associated with th
 
 详见 § 第 9.3.3.8 节。
 
+<a id="sec-9-2-1-4-cn"></a>
+#### 9.2.1.4 中断资源分配
+
 PF 和 VF 支持 MSI、MSI-X 中断，或两者都支持(如果分配了中断资源)。VF 不得实现 INTx。MSI 和 MSI-X 中断在 § 第 6.1.4 节中描述。
 
 对于 MSI-X 中断,PF 和 VF MMIO 区域中的 MSI-X 结构适用特殊的地址范围隔离要求。请参见 § 第 7.7.2 节。
 
+<a id="sec-9-2-2-cn"></a>
+### 9.2.2 SR-IOV 复位机制
+
 本节描述 § 第 6.6 节中定义的复位机制如何影响支持 SR-IOV 的设备。它还描述了用于复位单个 VF 和单个 PF 及其关联 VF 的机制。
+
+<a id="sec-9-2-2-1-cn"></a>
+#### 9.2.2.1 SR-IOV 常规复位
 
 对支持 SR-IOV 的设备进行常规复位 (Conventional Reset) 应使所有功能(包括 PF 和 VF)根据 § 第 6.6.1 节中的规则复位到其原始上电状态。§ 第 9.3 节描述了已定义字段的行为。
 
 注意:常规复位会清除 PF 中的 VF Enable。因此，常规复位后 VF 不再存在。
 
+<a id="sec-9-2-2-2-cn"></a>
+#### 9.2.2.2 针对 VF 的 FLR
+
 VF 必须支持功能级复位 (Function Level Reset, FLR)。
 
 注意:软件可以使用 FLR 复位 VF。对 VF 的 FLR 会影响 VF 的状态，但不会影响其在 PCI 配置空间或 PCI 总线地址空间中的存在性。PF 的 SR-IOV 扩展能力结构中的 VF BARn 值(见 § 第 9.3.3.14 节)和 VF MSE(见 § 第 9.3.3.3.4 节)，以及 VF 可调整 BAR 能力值(见 § 第 7.8.7 节)不受对 VF 发出的 FLR 的影响。
 
+<a id="sec-9-2-2-3-cn"></a>
+#### 9.2.2.3 针对 PF 的 FLR
+
 PF 必须支持 FLR。
 
-对 PF 的 FLR 会复位 PF 状态以及 SR-IOV 扩展能力结构，包括 VF Enable,这意味着 VF 不再存在。
+<a id="sec-9-2-3-cn"></a>
+### 9.2.3 IOV 重新初始化和重新分配
 
 如果在 VF Enable 被置位后清零 VF Enable,则与该 PF 关联的所有 VF 不再存在，并且不得再发出 PCIe 事务或响配置空间或内存空间访问。VF 在 VF Enable 被清零后不得保留任何已定义的状态(包括粘滞位 sticky bit)。出于安全考虑，通过 VF 配置的未定义 VF 状态必须被清除或随机化，但持久存储数据除外。
-
-<a id="sec-9-2-1-4-cn"></a>
-#### 9.2.1.4 中断资源分配 §
-
-<a id="sec-9-2-2-cn"></a>
-### 9.2.2 SR-IOV 复位机制 §
-
-<a id="sec-9-2-2-1-cn"></a>
-#### 9.2.2.1 SR-IOV 常规复位 §
-
-<a id="sec-9-2-2-2-cn"></a>
-#### 9.2.2.2 针对 VF 的 FLR §
-
-<a id="sec-9-2-2-3-cn"></a>
-#### 9.2.2.3 针对 PF 的 FLR §
-
-<a id="sec-9-2-3-cn"></a>
-### 9.2.3 IOV 重新初始化和重新分配 §
 
 </td>
 </tr>
@@ -1266,11 +1234,8 @@ PF 必须支持 FLR。
 
 ---
 
-<!-- 📄 Page 1540 -->
----
-
-<a id="sec-9-2-3-cont"></a>
-## 9.2.3 IOV Re-initialization and Reallocation (cont.) § | 9.2.3 IOV 重新初始化和重新分配(续) §
+<a id="sec-9-2-3-cont"></a> <!-- 📄 Page 1540 -->
+## 9.2.3 IOV Re-initialization and Reallocation (cont.) | 9.2.3 IOV 重新初始化和重新分配(续)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1300,16 +1265,16 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 § Figure 9-10 shows the SR-IOV Extended Capability structure.
 
 <a id="sec-9-3"></a>
-## 9.3 Configuration § | 9.3 配置 §
+## 9.3 Configuration | 9.3 配置
 
 <a id="sec-9-3-1"></a>
-### 9.3.1 SR-IOV Configuration Overview § | 9.3.1 SR-IOV 配置概述 §
+### 9.3.1 SR-IOV Configuration Overview | 9.3.1 SR-IOV 配置概述
 
 <a id="sec-9-3-2"></a>
-### 9.3.2 Configuration Space § | 9.3.2 配置空间 §
+### 9.3.2 Configuration Space | 9.3.2 配置空间
 
 <a id="sec-9-3-3"></a>
-### 9.3.3 SR-IOV Extended Capability § | 9.3.3 SR-IOV 扩展能力结构 §
+### 9.3.3 SR-IOV Extended Capability | 9.3.3 SR-IOV 扩展能力结构
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -1329,16 +1294,16 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 § Figure 9-10 展示了 SR-IOV 扩展能力结构。
 
 <a id="sec-9-3-cn"></a>
-## 9.3 配置 §
+## 9.3 配置
 
 <a id="sec-9-3-1-cn"></a>
-### 9.3.1 SR-IOV 配置概述 §
+### 9.3.1 SR-IOV 配置概述
 
 <a id="sec-9-3-2-cn"></a>
-### 9.3.2 配置空间 §
+### 9.3.2 配置空间
 
 <a id="sec-9-3-3-cn"></a>
-### 9.3.3 SR-IOV 扩展能力结构 §
+### 9.3.3 SR-IOV 扩展能力结构
 
 </td>
 </tr>
@@ -1351,11 +1316,8 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 
 ---
 
-<!-- 📄 Page 1541 -->
----
-
-<a id="sec-9-3-3-fig"></a>
-## 9.3.3 SR-IOV Extended Capability (Figure 9-10) § | 9.3.3 SR-IOV 扩展能力结构(Figure 9-10) §
+<a id="sec-9-3-3-fig"></a> <!-- 📄 Page 1541 -->
+## 9.3.3 SR-IOV Extended Capability (Figure 9-10) | 9.3.3 SR-IOV 扩展能力结构(Figure 9-10)
 
 <table>
 <thead>
@@ -1377,7 +1339,7 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 § Table 9-2 defines the SR-IOV Extended Capability header. The Capability ID for the SR-IOV Extended Capability is 0010h.
 
 <a id="sec-9-3-3-1"></a>
-#### 9.3.3.1 SR-IOV Extended Capability Header (Offset 00h) § | 9.3.3.1 SR-IOV 扩展能力结构头部(偏移 00h) §
+#### 9.3.3.1 SR-IOV Extended Capability Header (Offset 00h) | 9.3.3.1 SR-IOV 扩展能力结构头部(偏移 00h)
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -1385,7 +1347,7 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 § Table 9-2 定义了 SR-IOV 扩展能力结构头部。SR-IOV 扩展能力结构的能力 ID 为 0010h。
 
 <a id="sec-9-3-3-1-cn"></a>
-#### 9.3.3.1 SR-IOV 扩展能力结构头部(偏移 00h) §
+#### 9.3.3.1 SR-IOV 扩展能力结构头部(偏移 00h)
 
 <img src="figures/chapter_09/fig_1541_1_tight.png" width="700">
 </td>
@@ -1397,11 +1359,8 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 
 ---
 
-<!-- 📄 Page 1542 -->
----
-
-<a id="sec-9-3-3-1-tbl"></a>
-## 9.3.3.1 SR-IOV Extended Capability Header (Table 9-2) § | 9.3.3.1 SR-IOV 扩展能力结构头部(Table 9-2) §
+<a id="sec-9-3-3-1-tbl"></a> <!-- 📄 Page 1542 -->
+## 9.3.3.1 SR-IOV Extended Capability Header (Table 9-2) | 9.3.3.1 SR-IOV 扩展能力结构头部(Table 9-2)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1427,12 +1386,12 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 § Table 9-3 defines the layout of the SR-IOV Capabilities field.
 
 <a id="sec-9-3-3-2"></a>
-#### 9.3.3.2 SR-IOV Capabilities Register (04h) § | 9.3.3.2 SR-IOV 能力寄存器(04h) §
+#### 9.3.3.2 SR-IOV Capabilities Register (04h) | 9.3.3.2 SR-IOV 能力寄存器(04h)
 
 </td>
 <td style="background-color:#e8e8e8">
 
-**Table 9-2. SR-IOV 扩展能力结构头部 (SR-IOV Extended Capability Header)**
+**Table 9-2. SR-IOV Extended Capability Header | 表 9-2. SR-IOV 扩展能力结构头部**
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------------|----------------------|------------|
@@ -1443,7 +1402,7 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 § Table 9-3 定义了 SR-IOV 能力字段的布局。
 
 <a id="sec-9-3-3-2-cn"></a>
-#### 9.3.3.2 SR-IOV 能力寄存器(04h) §
+#### 9.3.3.2 SR-IOV 能力寄存器(04h)
 
 </td>
 </tr>
@@ -1463,11 +1422,8 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 
 ---
 
-<!-- 📄 Page 1542 -->
----
-
-<a id="sec-9-3-3-2-tbl"></a>
-## 9.3.3.2 SR-IOV Capabilities Register (Table 9-3) § | 9.3.3.2 SR-IOV 能力寄存器(Table 9-3) §
+<a id="sec-9-3-3-2-tbl"></a> <!-- 📄 Page 1542 -->
+## 9.3.3.2 SR-IOV Capabilities Register (Table 9-3) | 9.3.3.2 SR-IOV 能力寄存器(Table 9-3)
 
 <table>
 <thead>
@@ -1491,7 +1447,7 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 </td>
 <td style="background-color:#e8e8e8">
 
-**Table 9-3. SR-IOV 能力寄存器 (SR-IOV Capabilities Register)**
+**Table 9-3. SR-IOV Capabilities Register | 表 9-3. SR-IOV 能力寄存器**
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------------|----------------------|------------|
@@ -1508,11 +1464,8 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 
 ---
 
-<!-- 📄 Page 1543 -->
----
-
-<a id="sec-9-3-3-2-tbl-cont"></a>
-## 9.3.3.2 SR-IOV Capabilities Register (cont.) § | 9.3.3.2 SR-IOV 能力寄存器(续) §
+<a id="sec-9-3-3-2-tbl-cont"></a> <!-- 📄 Page 1543 -->
+## 9.3.3.2 SR-IOV Capabilities Register (cont.) | 9.3.3.2 SR-IOV 能力寄存器(续)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1549,13 +1502,13 @@ For a given PF, it is required that either all or none of its associated VFs sup
 VFs that support larger-Tag Requester capabilities have additional requirements and recommendations beyond other Function types in order to simplify error handling and reduce the possibility of larger-Tag related errors with one VF impacting other traffic.
 
 <a id="sec-9-3-3-2-1"></a>
-#### 9.3.3.2.1 VF Migration Capable § | 9.3.3.2.1 VF 迁移能力 §
+#### 9.3.3.2.1 VF Migration Capable | 9.3.3.2.1 VF 迁移能力
 
 <a id="sec-9-3-3-2-2"></a>
-#### 9.3.3.2.2 ARI Capable Hierarchy Preserved § | 9.3.3.2.2 ARI 能力层级保留 §
+#### 9.3.3.2.2 ARI Capable Hierarchy Preserved | 9.3.3.2.2 ARI 能力层级保留
 
 <a id="sec-9-3-3-2-3"></a>
-#### 9.3.3.2.3 VF Larger-Tag Requester Support § | 9.3.3.2.3 VF 大标签请求者支持 §
+#### 9.3.3.2.3 VF Larger-Tag Requester Support | 9.3.3.2.3 VF 大标签请求者支持
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -1582,13 +1535,13 @@ ARI Capable Hierarchy Preserved 不适用于 RCiEP,其值未定义(见 § 第 9.
 支持大标签请求者能力的 VF 具有超出其他功能类型的额外要求和建议，以简化错误处理并减少大标签相关错误影响其他流量的可能性。
 
 <a id="sec-9-3-3-2-1-cn"></a>
-#### 9.3.3.2.1 VF 迁移能力 §
+#### 9.3.3.2.1 VF 迁移能力
 
 <a id="sec-9-3-3-2-2-cn"></a>
-#### 9.3.3.2.2 ARI 能力层级保留 §
+#### 9.3.3.2.2 ARI 能力层级保留
 
 <a id="sec-9-3-3-2-3-cn"></a>
-#### 9.3.3.2.3 VF 大标签请求者支持 §
+#### 9.3.3.2.3 VF 大标签请求者支持
 
 </td>
 </tr>
@@ -1601,11 +1554,8 @@ ARI Capable Hierarchy Preserved 不适用于 RCiEP,其值未定义(见 § 第 9.
 
 ---
 
-<!-- 📄 Page 1544 -->
----
-
-<a id="sec-9-3-3-2-3-cont"></a>
-## 9.3.3.2.3 VF Larger-Tag Requester Support (cont.) § | 9.3.3.2.3 VF 大标签请求者支持(续) §
+<a id="sec-9-3-3-2-3-cont"></a> <!-- 📄 Page 1544 -->
+## 9.3.3.2.3 VF Larger-Tag Requester Support (cont.) | 9.3.3.2.3 VF 大标签请求者支持(续)
 
 <table>
 <thead>
@@ -1631,10 +1581,10 @@ VF Migration is associated with the now deprecated MR-IOV. New designs should ha
 > There are no VF 14-bit or VF 10-Bit Tag Completer Supported bits. If a PF supports one or both larger-Tag Completer capabilities, then all of its associated VFs are required support the associated Tag Completer capabilities as stated in 14-Bit Tag Completer Supported and 10-Bit Tag Completer Supported. This helps avoid the complexity of PCIe hierarchies where some Completers support larger-Tag capability and some do not.
 
 <a id="sec-9-3-3-2-4"></a>
-#### 9.3.3.2.4 VF Migration Interrupt Message Number § | 9.3.3.2.4 VF 迁移中断消息号 §
+#### 9.3.3.2.4 VF Migration Interrupt Message Number | 9.3.3.2.4 VF 迁移中断消息号
 
 <a id="sec-9-3-3-3"></a>
-#### 9.3.3.3 SR-IOV Control Register (Offset 08h) § | 9.3.3.3 SR-IOV 控制寄存器(偏移 08h) §
+#### 9.3.3.3 SR-IOV Control Register (Offset 08h) | 9.3.3.3 SR-IOV 控制寄存器(偏移 08h)
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -1656,10 +1606,10 @@ VF 迁移与现已弃用的 MR-IOV 关联。新设计应将此字段硬连线为
 > 没有 VF 14 位或 VF 10 位标签完成者支持位。如果 PF 支持一个或两个大标签完成者能力，则如 14 位标签完成者支持和 10 位标签完成者支持中所述，其所有关联的 VF 都需要支持关联的标签完成者能力。这有助于避免某些完成者支持大标签能力而某些不支持的 PCIe 层级的复杂性。
 
 <a id="sec-9-3-3-2-4-cn"></a>
-#### 9.3.3.2.4 VF 迁移中断消息号 §
+#### 9.3.3.2.4 VF 迁移中断消息号
 
 <a id="sec-9-3-3-3-cn"></a>
-#### 9.3.3.3 SR-IOV 控制寄存器(偏移 08h) §
+#### 9.3.3.3 SR-IOV 控制寄存器(偏移 08h)
 
 </td>
 </tr>
@@ -1670,11 +1620,8 @@ VF 迁移与现已弃用的 MR-IOV 关联。新设计应将此字段硬连线为
 
 ---
 
-<!-- 📄 Page 1545 -->
----
-
-<a id="sec-9-3-3-3-fig"></a>
-## 9.3.3.3 SR-IOV Control Register (Figure 9-13) § | 9.3.3.3 SR-IOV 控制寄存器(Figure 9-13) §
+<a id="sec-9-3-3-3-fig"></a> <!-- 📄 Page 1545 -->
+## 9.3.3.3 SR-IOV Control Register (Figure 9-13) | 9.3.3.3 SR-IOV 控制寄存器(Figure 9-13)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1702,7 +1649,7 @@ VF 迁移与现已弃用的 MR-IOV 关联。新设计应将此字段硬连线为
 </td>
 <td style="background-color:#e8e8e8">
 
-**Table 9-4. SR-IOV 控制寄存器 (SR-IOV Control Register)**
+**Table 9-4. SR-IOV Control Register | 表 9-4. SR-IOV 控制寄存器**
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------------|----------------------|------------|
@@ -1730,11 +1677,8 @@ VF 迁移与现已弃用的 MR-IOV 关联。新设计应将此字段硬连线为
 
 ---
 
-<!-- 📄 Page 1546 -->
----
-
-<a id="sec-9-3-3-3-tbl-cont"></a>
-## 9.3.3.3 SR-IOV Control Register (cont.) § | 9.3.3.3 SR-IOV 控制寄存器(续) §
+<a id="sec-9-3-3-3-tbl-cont"></a> <!-- 📄 Page 1546 -->
+## 9.3.3.3 SR-IOV Control Register (cont.) | 9.3.3.3 SR-IOV 控制寄存器(续)
 
 <table>
 <thead>
@@ -1769,11 +1713,8 @@ VF 迁移与现已弃用的 MR-IOV 关联。新设计应将此字段硬连线为
 
 ---
 
-<!-- 📄 Page 1546 -->
----
-
-<a id="sec-9-3-3-3-1"></a>
-## 9.3.3.3.1 VF Enable § | 9.3.3.3.1 VF 使能 §
+<a id="sec-9-3-3-3-1"></a> <!-- 📄 Page 1546 -->
+## 9.3.3.3.1 VF Enable | 9.3.3.3.1 VF 使能
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1842,11 +1783,8 @@ VF Enable 管理 VF 到关联 PF 的分配。如果 VF Enable 被置位，则与
 
 ---
 
-<!-- 📄 Page 1547 -->
----
-
-<a id="sec-9-3-3-3-1-cont"></a>
-## 9.3.3.3.1 VF Enable (cont.) § | 9.3.3.3.1 VF 使能(续) §
+<a id="sec-9-3-3-3-1-cont"></a> <!-- 📄 Page 1547 -->
+## 9.3.3.3.1 VF Enable (cont.) | 9.3.3.3.1 VF 使能(续)
 
 <table>
 <thead>
@@ -1881,10 +1819,10 @@ After VF Enable is Cleared no field in the SR-IOV Extended Capability may be acc
 § Section 9.3.3.7 NumVFs, § Section 9.3.3.5 InitialVFs, § Section 9.3.3.6 TotalVFs, § Section 9.3.3.9 First VF Offset, § Section 9.3.3.13 System Page Size, and § Section 9.3.3.14 VF BARx describe additional semantics associated with this field.
 
 <a id="sec-9-3-3-3-2"></a>
-#### 9.3.3.3.2 VF Migration Enable § | 9.3.3.3.2 VF 迁移使能 §
+#### 9.3.3.3.2 VF Migration Enable | 9.3.3.3.2 VF 迁移使能
 
 <a id="sec-9-3-3-3-3"></a>
-#### 9.3.3.3.3 VF Migration Interrupt Enable § | 9.3.3.3.3 VF 迁移中断使能 §
+#### 9.3.3.3.3 VF Migration Interrupt Enable | 9.3.3.3.3 VF 迁移中断使能
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -1911,10 +1849,10 @@ After VF Enable is Cleared no field in the SR-IOV Extended Capability may be acc
 § 第 9.3.3.7 节 NumVFs、§ 第 9.3.3.5 节 InitialVFs、§ 第 9.3.3.6 节 TotalVFs、§ 第 9.3.3.9 节 First VF Offset、§ 第 9.3.3.13 节 System Page Size 和 § 第 9.3.3.14 节 VF BARx 描述了与此字段相关的其他语义。
 
 <a id="sec-9-3-3-3-2-cn"></a>
-#### 9.3.3.3.2 VF 迁移使能 §
+#### 9.3.3.3.2 VF 迁移使能
 
 <a id="sec-9-3-3-3-3-cn"></a>
-#### 9.3.3.3.3 VF 迁移中断使能 §
+#### 9.3.3.3.3 VF 迁移中断使能
 
 </td>
 </tr>
@@ -1927,11 +1865,8 @@ After VF Enable is Cleared no field in the SR-IOV Extended Capability may be acc
 
 ---
 
-<!-- 📄 Page 1548 -->
----
-
-<a id="sec-9-3-3-3-4"></a>
-## 9.3.3.3.4 VF MSE (Memory Space Enable) § | 9.3.3.3.4 VF MSE(内存空间使能) §
+<a id="sec-9-3-3-3-4"></a> <!-- 📄 Page 1548 -->
+## 9.3.3.3.4 VF MSE (Memory Space Enable) | 9.3.3.3.4 VF MSE(内存空间使能)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1965,7 +1900,7 @@ ARI Capable Hierarchy does not apply to RCiEPs.
 > VF memory space will respond with Unsupported Request when VF Enable is Clear. Thus, VF MSE is "don't care" when VF Enable is Clear; however, software may choose to Set VF MSE after programming the VF BARn registers, prior to Setting VF Enable.
 
 <a id="sec-9-3-3-3-5"></a>
-#### 9.3.3.3.5 ARI Capable Hierarchy § | 9.3.3.3.5 ARI 能力层级 §
+#### 9.3.3.3.5 ARI Capable Hierarchy | 9.3.3.3.5 ARI 能力层级
 
 > **IMPLEMENTATION NOTE:**
 > **ARI CAPABLE HIERARCHY**
@@ -1998,7 +1933,7 @@ ARI Capable Hierarchy 不适用于 RCiEP。
 > 当 VF Enable 被清零时,VF 内存空间将响应不支持请求 (Unsupported Request)。因此，当 VF Enable 被清零时,VF MSE 是"无关项";但是，软件可以选择在编程 VF BARn 寄存器之后、置位 VF Enable 之前置位 VF MSE。
 
 <a id="sec-9-3-3-3-5-cn"></a>
-#### 9.3.3.3.5 ARI 能力层级 §
+#### 9.3.3.3.5 ARI 能力层级
 
 > **实现注意 (IMPLEMENTATION NOTE):**
 > **ARI 能力层级 (ARI CAPABLE HIERARCHY)**
@@ -2016,11 +1951,8 @@ ARI Capable Hierarchy 不适用于 RCiEP。
 
 ---
 
-<!-- 📄 Page 1549 -->
----
-
-<a id="sec-9-3-3-4"></a>
-## 9.3.3.4 SR-IOV Status Register (Offset 0Ah) § | 9.3.3.4 SR-IOV 状态寄存器(偏移 0Ah) §
+<a id="sec-9-3-3-4"></a> <!-- 📄 Page 1549 -->
+## 9.3.3.4 SR-IOV Status Register (Offset 0Ah) | 9.3.3.4 SR-IOV 状态寄存器(偏移 0Ah)
 
 <table>
 <thead>
@@ -2050,12 +1982,12 @@ ARI Capable Hierarchy 不适用于 RCiEP。
 VF Migration is associated with the now-deprecated [MR-IOV]. New designs should hardwire this bit to 0b.
 
 <a id="sec-9-3-3-4-1"></a>
-#### 9.3.3.4.1 VF Migration Status § | 9.3.3.4.1 VF 迁移状态 §
+#### 9.3.3.4.1 VF Migration Status | 9.3.3.4.1 VF 迁移状态
 
 VF Migration is associated with the now deprecated MR-IOV. New designs should encode this field as HwInit with a value equal to TotalVFs.
 
 <a id="sec-9-3-3-5"></a>
-#### 9.3.3.5 InitialVFs (Offset 0Ch) § | 9.3.3.5 InitialVFs(偏移 0Ch) §
+#### 9.3.3.5 InitialVFs (Offset 0Ch) | 9.3.3.5 InitialVFs(偏移 0Ch)
 
 TotalVFs indicates the maximum number of VFs that are associated with the PF.
 
@@ -2064,7 +1996,7 @@ The minimum value of TotalVFs is 0.
 This field is HwInit and must contain the same value as InitialVFs.
 
 <a id="sec-9-3-3-6"></a>
-#### 9.3.3.6 TotalVFs (Offset 0Eh) § | 9.3.3.6 TotalVFs(偏移 0Eh) §
+#### 9.3.3.6 TotalVFs (Offset 0Eh) | 9.3.3.6 TotalVFs(偏移 0Eh)
 
 NumVFs controls the number of VFs that are visible. SR-PCIM sets NumVFs as part of the process of creating VFs. This number of VFs shall be visible in the PCI Express fabric after both NumVFs is set to a valid value and VF Enable is Set.
 
@@ -2075,14 +2007,14 @@ NumVFs may only be written while VF Enable is Clear. If NumVFs is written when V
 The initial value of NumVFs is undefined.
 
 <a id="sec-9-3-3-7"></a>
-#### 9.3.3.7 NumVFs (Offset 10h) § | 9.3.3.7 NumVFs(偏移 10h) §
+#### 9.3.3.7 NumVFs (Offset 10h) | 9.3.3.7 NumVFs(偏移 10h)
 
 </td>
 <td style="background-color:#e8e8e8">
 
 § Table 9-5 定义了 SR-IOV 状态字段的布局。
 
-**Table 9-5. SR-IOV 状态 (SR-IOV Status)**
+**Table 9-5. SR-IOV Status | 表 9-5. SR-IOV 状态**
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------------|----------------------|------------|
@@ -2091,12 +2023,12 @@ The initial value of NumVFs is undefined.
 VF 迁移与现已弃用的 [MR-IOV] 关联。新设计应将此位硬连线为 0b。
 
 <a id="sec-9-3-3-4-1-cn"></a>
-#### 9.3.3.4.1 VF 迁移状态 §
+#### 9.3.3.4.1 VF 迁移状态
 
 VF 迁移与现已弃用的 MR-IOV 关联。新设计应将此字段编码为 HwInit,值等于 TotalVFs。
 
 <a id="sec-9-3-3-5-cn"></a>
-#### 9.3.3.5 InitialVFs(偏移 0Ch) §
+#### 9.3.3.5 InitialVFs(偏移 0Ch)
 
 TotalVFs 指示与 PF 关联的最大 VF 数。
 
@@ -2105,7 +2037,7 @@ TotalVFs 的最小值为 0。
 此字段为 HwInit,必须包含与 InitialVFs 相同的值。
 
 <a id="sec-9-3-3-6-cn"></a>
-#### 9.3.3.6 TotalVFs(偏移 0Eh) §
+#### 9.3.3.6 TotalVFs(偏移 0Eh)
 
 NumVFs 控制可见的 VF 数量。SR-PCIM 在创建 VF 的过程中设置 NumVFs。在将 NumVFs 设置为有效值并且 VF Enable 被置位之后，该数量的 VF 将在 PCI Express Fabric 中可见。
 
@@ -2116,7 +2048,7 @@ NumVFs 控制可见的 VF 数量。SR-PCIM 在创建 VF 的过程中设置 NumVF
 NumVFs 的初始值未定义。
 
 <a id="sec-9-3-3-7-cn"></a>
-#### 9.3.3.7 NumVFs(偏移 10h) §
+#### 9.3.3.7 NumVFs(偏移 10h)
 
 <img src="figures/chapter_09/fig_1549_1.png" width="700">
 </td>
@@ -2128,11 +2060,8 @@ NumVFs 的初始值未定义。
 
 ---
 
-<!-- 📄 Page 1550 -->
----
-
-<a id="sec-9-3-3-8"></a>
-## 9.3.3.8 Function Dependency Link (Offset 12h) § | 9.3.3.8 功能依赖链接(偏移 12h) §
+<a id="sec-9-3-3-8"></a> <!-- 📄 Page 1550 -->
+## 9.3.3.8 Function Dependency Link (Offset 12h) | 9.3.3.8 功能依赖链接(偏移 12h)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2181,11 +2110,8 @@ If PF<sub>p</sub> and PF<sub>q</sub> are in the same Function Dependency List, t
 
 ---
 
-<!-- 📄 Page 1551 -->
----
-
-<a id="sec-9-3-3-8-cont"></a>
-## 9.3.3.8 Function Dependency Link (cont.) § | 9.3.3.8 功能依赖链接(续) §
+<a id="sec-9-3-3-8-cont"></a> <!-- 📄 Page 1551 -->
+## 9.3.3.8 Function Dependency Link (cont.) | 9.3.3.8 功能依赖链接(续)
 
 <table>
 <thead>
@@ -2278,11 +2204,8 @@ If PF<sub>p</sub> and PF<sub>q</sub> are in the same Function Dependency List, t
 
 ---
 
-<!-- 📄 Page 1552 -->
----
-
-<a id="sec-9-3-3-8-cont-2"></a>
-## 9.3.3.8 Function Dependency Link (cont. 2) § | 9.3.3.8 功能依赖链接(续 2) §
+<a id="sec-9-3-3-8-cont-2"></a> <!-- 📄 Page 1552 -->
+## 9.3.3.8 Function Dependency Link (cont. 2) | 9.3.3.8 功能依赖链接(续 2)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2312,7 +2235,7 @@ VF Mapping operations occur independently for every VF. SR-PCIM shall not assign
 Similarly, SR-PCIM shall not remove a VF from an SI until it can remove all dependent VFs.
 
 <a id="sec-9-3-3-9"></a>
-#### 9.3.3.9 First VF Offset (Offset 14h) § | 9.3.3.9 First VF Offset(偏移 14h) §
+#### 9.3.3.9 First VF Offset (Offset 14h) | 9.3.3.9 First VF Offset(偏移 14h)
 
 First VF Offset is a constant and defines the Routing ID offset of the first VF that is associated with the PF that contains this Capability structure. The first VF's 16-bit Routing ID is calculated by adding the contents of this field to the Routing ID of the PF containing this field ignoring any carry, using unsigned, 16-bit arithmetic.
 
@@ -2323,7 +2246,7 @@ This field may change value when the lowest-numbered PF's ARI Capable Hierarchy 
 Note: First VF Offset is unused if NumVFs is 0. If NumVFs is greater than 0, First VF Offset must not be zero.
 
 <a id="sec-9-3-3-10"></a>
-#### 9.3.3.10 VF Stride (Offset 16h) § | 9.3.3.10 VF Stride(偏移 16h) §
+#### 9.3.3.10 VF Stride (Offset 16h) | 9.3.3.10 VF Stride(偏移 16h)
 
 VF Stride defines the Routing ID offset from one VF to the next one for all VFs associated with the PF that contains this Capability structure. The next VF's 16-bit Routing ID is calculated by adding the contents of this field to the Routing ID of the current VF, ignoring any carry, using unsigned 16-bit arithmetic.
 
@@ -2332,7 +2255,7 @@ This field may change value when the lowest-numbered PF's ARI Capable Hierarchy 
 Note: VF Stride is unused if NumVFs is 0 or 1. If NumVFs is greater than 1, VF Stride must not be zero.
 
 <a id="sec-9-3-3-11"></a>
-#### 9.3.3.11 VF Device ID (Offset 1Ah) § | 9.3.3.11 VF Device ID(偏移 1Ah) §
+#### 9.3.3.11 VF Device ID (Offset 1Ah) | 9.3.3.11 VF Device ID(偏移 1Ah)
 
 This field contains the Device ID that should be presented for every VF to the SI.
 
@@ -2356,7 +2279,7 @@ VF 映射操作独立地针对每个 VF 进行。在 SR-PCIM 可以分配所有�
 类似地，在 SR-PCIM 可以移除所有依赖 VF 之前，不得从 SI 移除 VF。
 
 <a id="sec-9-3-3-9-cn"></a>
-#### 9.3.3.9 First VF Offset(偏移 14h) §
+#### 9.3.3.9 First VF Offset(偏移 14h)
 
 First VF Offset 是一个常量，定义了与此 Capability 结构所属 PF 关联的第一个 VF 的路由 ID 偏移量。第一个 VF 的 16 位路由 ID 是通过将此字段的内容添加到包含此字段的 PF 的路由 ID 来计算的，忽略任何进位，使用 16 位无符号算术。
 
@@ -2367,7 +2290,7 @@ VF 不得位于数字上小于其关联 PF 的总线号上。
 注意:如果 NumVFs 为 0,则 First VF Offset 不使用。如果 NumVFs 大于 0,则 First VF Offset 必须不为零。
 
 <a id="sec-9-3-3-10-cn"></a>
-#### 9.3.3.10 VF Stride(偏移 16h) §
+#### 9.3.3.10 VF Stride(偏移 16h)
 
 VF Stride 定义了从当前 PF 所包含 Capability 关联的所有 VF 中一个 VF 到下一个 VF 的路由 ID 偏移量。下一个 VF 的 16 位路由 ID 是通过将此字段的内容添加到当前 VF 的路由 ID 来计算的，忽略任何进位，使用 16 位无符号算术。
 
@@ -2376,7 +2299,7 @@ VF Stride 定义了从当前 PF 所包含 Capability 关联的所有 VF 中一�
 注意:如果 NumVFs 为 0 或 1,则 VF Stride 不使用。如果 NumVFs 大于 1,则 VF Stride 必须不为零。
 
 <a id="sec-9-3-3-11-cn"></a>
-#### 9.3.3.11 VF Device ID(偏移 1Ah) §
+#### 9.3.3.11 VF Device ID(偏移 1Ah)
 
 此字段包含应向 SI 呈现的每个 VF 的 Device ID。
 
@@ -2393,11 +2316,8 @@ VF Device ID 可能不同于 PF Device ID。VF Device ID 必须由供应商管�
 
 ---
 
-<!-- 📄 Page 1553 -->
----
-
-<a id="sec-9-3-3-12"></a>
-## 9.3.3.12 Supported Page Sizes (Offset 1Ch) § | 9.3.3.12 支持的页大小(偏移 1Ch) §
+<a id="sec-9-3-3-12"></a> <!-- 📄 Page 1553 -->
+## 9.3.3.12 Supported Page Sizes (Offset 1Ch) | 9.3.3.12 支持的页大小(偏移 1Ch)
 
 <table>
 <thead>
@@ -2415,7 +2335,7 @@ This field indicates the page sizes supported by the PF. This PF supports a page
 The page size describes the minimum alignment requirements for VF BAR resources as described in § Section 9.3.3.13 .
 
 <a id="sec-9-3-3-13"></a>
-#### 9.3.3.13 System Page Size (Offset 20h) § | 9.3.3.13 系统页大小(偏移 20h) §
+#### 9.3.3.13 System Page Size (Offset 20h) | 9.3.3.13 系统页大小(偏移 20h)
 
 This field defines the page size the system will use to map the VFs' memory addresses. Software must set the value of the System Page Size to one of the page sizes set in the Supported Page Sizes field (see § Section 9.3.3.12 ). As with Supported Page Sizes, if bit n is Set in System Page Size, the VFs associated with this PF are required to support a page size of 2<sup>n+12</sup>. For example, if bit 1 is Set, the system is using an 8-KB page size. The results are undefined if System Page Size is zero. The results are undefined if more than one bit is Set in System Page Size. The results are undefined if a bit is Set in System Page Size that is not Set in Supported Page Sizes.
 
@@ -2430,7 +2350,7 @@ Default value is 0000 0001h (i.e., 4 KB).
 > Non-prefetchable address space is limited to addresses below 4 GB. Pre-fetch address space in 32-bit systems is also limited. Vendors are strongly encouraged to utilize the System Page Size feature to conserve address space while also supporting systems with larger pages.
 
 <a id="sec-9-3-3-14"></a>
-#### 9.3.3.14 VF BAR0 (Offset 24h), VF BAR1 (Offset 28h), VF BAR2 (Offset 2Ch), VF BAR3 (Offset 30h), VF BAR4 (Offset 34h), VF BAR5 (Offset 38h) § | 9.3.3.14 VF BAR0(偏移 24h)、VF BAR1(偏移 28h)、VF BAR2(偏移 2Ch)、VF BAR3(偏移 30h)、VF BAR4(偏移 34h)、VF BAR5(偏移 38h) §
+#### 9.3.3.14 VF BAR0 (Offset 24h), VF BAR1 (Offset 28h), VF BAR2 (Offset 2Ch), VF BAR3 (Offset 30h), VF BAR4 (Offset 34h), VF BAR5 (Offset 38h) | 9.3.3.14 VF BAR0(偏移 24h)、VF BAR1(偏移 28h)、VF BAR2(偏移 2Ch)、VF BAR3(偏移 30h)、VF BAR4(偏移 34h)、VF BAR5(偏移 38h)
 
 These fields must define the VF's Base Address Registers (BARs). These fields behave as normal PCI BARs, as described in § Section 7.5.1 . They can be sized by writing all 1s and reading back the contents of the BARs as described in § Section 7.5.1.2.1 , complying with the low order bits that define the BAR type fields.
 
@@ -2448,7 +2368,7 @@ Each VF BARn, when "sized" by writing 1s and reading back the contents, describe
 页大小描述了 § 第 9.3.3.13 节中描述的 VF BAR 资源的最小对齐要求。
 
 <a id="sec-9-3-3-13-cn"></a>
-#### 9.3.3.13 系统页大小(偏移 20h) §
+#### 9.3.3.13 系统页大小(偏移 20h)
 
 此字段定义系统将用于映射 VF 内存地址的页大小。软件必须将系统页大小的值设置为"支持的页大小 (Supported Page Sizes)"字段(见 § 第 9.3.3.12 节)中设置的页大小之一。与"支持的页大小"一样，如果系统页大小中位 n 被置位，则与此 PF 关联的 VF 需要支持 2<sup>n+12</sup> 的页大小。例如，如果位 1 被置位，则系统使用 8 KB 的页大小。如果系统页大小为零，则结果未定义。如果系统页大小中多个位被置位，则结果未定义。如果系统页大小中置位的位未在"支持的页大小"中置位，则结果未定义。
 
@@ -2463,7 +2383,7 @@ Each VF BARn, when "sized" by writing 1s and reading back the contents, describe
 > 不可预取地址空间限制为低于 4 GB 的地址。在 32 位系统中，预取地址空间也有限制。强烈建议供应商利用"系统页大小"功能节省地址空间，同时支持具有较大页面的系统。
 
 <a id="sec-9-3-3-14-cn"></a>
-#### 9.3.3.14 VF BAR0(偏移 24h)、VF BAR1(偏移 28h)、VF BAR2(偏移 2Ch)、VF BAR3(偏移 30h)、VF BAR4(偏移 34h)、VF BAR5(偏移 38h) §
+#### 9.3.3.14 VF BAR0(偏移 24h)、VF BAR1(偏移 28h)、VF BAR2(偏移 2Ch)、VF BAR3(偏移 30h)、VF BAR4(偏移 34h)、VF BAR5(偏移 38h)
 
 这些字段必须定义 VF 的基址寄存器 (Base Address Register, BAR)。这些字段的行为与 § 第 7.5.1 节中描述的普通 PCI BAR 相同。它们可以通过写入全 1 并读回 BAR 的内容来调整大小，如 § 第 7.5.1.2.1 节所述，符合定义 BAR 类型字段的低位。
 
@@ -2482,11 +2402,8 @@ Each VF BARn, when "sized" by writing 1s and reading back the contents, describe
 
 ---
 
-<!-- 📄 Page 1554 -->
----
-
-<a id="sec-9-3-3-14-cont"></a>
-## 9.3.3.14 VF BARx (cont.) § | 9.3.3.14 VF BARx(续) §
+<a id="sec-9-3-3-14-cont"></a> <!-- 📄 Page 1554 -->
+## 9.3.3.14 VF BARx (cont.) | 9.3.3.14 VF BARx(续)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2535,13 +2452,13 @@ This section's material in previous versions of this specification has been inte
 This section's material in previous versions of this specification has been integrated into § Section 7.5.3 .
 
 <a id="sec-9-3-3-15"></a>
-#### 9.3.3.15 VF Migration State Array Offset (Deprecated) (Offset 3Ch) § | 9.3.3.15 VF 迁移状态数组偏移(已弃用)(偏移 3Ch) §
+#### 9.3.3.15 VF Migration State Array Offset (Deprecated) (Offset 3Ch) | 9.3.3.15 VF 迁移状态数组偏移(已弃用)(偏移 3Ch)
 
 <a id="sec-9-3-4"></a>
-### 9.3.4 PF/VF Configuration Space Header § | 9.3.4 PF/VF 配置空间头部 §
+### 9.3.4 PF/VF Configuration Space Header | 9.3.4 PF/VF 配置空间头部
 
 <a id="sec-9-3-5"></a>
-### 9.3.5 PCI Express Capability Changes § | 9.3.5 PCI Express 能力结构变化 §
+### 9.3.5 PCI Express Capability Changes | 9.3.5 PCI Express 能力结构变化
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -2560,7 +2477,7 @@ VF BAR 仅支持 32 位和 64 位内存空间。VF 不支持 PCI I/O 空间。�
 
 对于每个 VF BARn 字段,n 对应于 VF 的 BAR 空间之一。§ Table 9-8 展示了 n 与功能 BAR 之间的关系。
 
-**Table 9-8. BAR 偏移 (BAR Offsets)**
+**Table 9-8. BAR Offsets | 表 9-8. BAR 偏移**
 
 | n | Type 0 头部中的 BAR 偏移 |
 |---|-------------------------------|
@@ -2580,13 +2497,13 @@ VF 迁移与现已弃用的 [MR-IOV] 关联。新设计应将此寄存器硬连�
 本节中以前版本规范的内容已整合到 § 第 7.5.3 节中。
 
 <a id="sec-9-3-3-15-cn"></a>
-#### 9.3.3.15 VF 迁移状态数组偏移(已弃用)(偏移 3Ch) §
+#### 9.3.3.15 VF 迁移状态数组偏移(已弃用)(偏移 3Ch)
 
 <a id="sec-9-3-4-cn"></a>
-### 9.3.4 PF/VF 配置空间头部 §
+### 9.3.4 PF/VF 配置空间头部
 
 <a id="sec-9-3-5-cn"></a>
-### 9.3.5 PCI Express 能力结构变化 §
+### 9.3.5 PCI Express 能力结构变化
 
 </td>
 </tr>
@@ -2599,11 +2516,8 @@ VF 迁移与现已弃用的 [MR-IOV] 关联。新设计应将此寄存器硬连�
 
 ---
 
-<!-- 📄 Page 1555 -->
----
-
-<a id="sec-9-3-6"></a>
-## 9.3.6 PCI Standard Capabilities § | 9.3.6 PCI 标准能力结构 §
+<a id="sec-9-3-6"></a> <!-- 📄 Page 1555 -->
+## 9.3.6 PCI Standard Capabilities | 9.3.6 PCI 标准能力结构
 
 <table>
 <thead>
@@ -2650,7 +2564,7 @@ SR-IOV usage of PCI Standard Capabilities is described in § Table 9-9. Items ma
 
 § Table 9-9 描述了 SR-IOV 对 PCI 标准能力结构的使用。标记为 n/a 的项不适用于 PF 或 VF。
 
-**Table 9-9. SR-IOV 对 PCI 标准能力结构的使用 (SR-IOV Usage of PCI Standard Capabilities)**
+**Table 9-9. SR-IOV Usage of PCI Standard Capabilities | 表 9-9. SR-IOV 对 PCI 标准能力结构的使用**
 
 | 能力 ID | 描述 | PF 属性 | VF 属性 |
 |---------------|-------------|---------------|---------------|
@@ -2687,7 +2601,7 @@ SR-IOV usage of PCI Standard Capabilities is described in § Table 9-9. Items ma
 ---
 
 <a id="sec-9-3-7"></a>
-## 9.3.7 PCI Express Extended Capabilities Changes § | 9.3.7 PCI Express 扩展能力结构变化 §
+## 9.3.7 PCI Express Extended Capabilities Changes | 9.3.7 PCI Express 扩展能力结构变化
 
 <table>
 <thead>
@@ -2716,11 +2630,8 @@ SR-IOV usage of PCI Express Extended Capabilities is described in § Table 9-10.
 
 ---
 
-<!-- 📄 Page 1556 -->
----
-
-<a id="sec-9-3-7-tbl"></a>
-## 9.3.7 PCI Express Extended Capabilities Changes (Table 9-10) § | 9.3.7 PCI Express 扩展能力结构变化(Table 9-10) §
+<a id="sec-9-3-7-tbl"></a> <!-- 📄 Page 1556 -->
+## 9.3.7 PCI Express Extended Capabilities Changes (Table 9-10) | 9.3.7 PCI Express 扩展能力结构变化(Table 9-10)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2765,7 +2676,7 @@ SR-IOV usage of PCI Express Extended Capabilities is described in § Table 9-10.
 </td>
 <td style="background-color:#e8e8e8">
 
-**Table 9-10. SR-IOV 对 PCI Express 扩展能力结构的使用 (SR-IOV Usage of PCI Express Extended Capabilities)**
+**Table 9-10. SR-IOV Usage of PCI Express Extended Capabilities | 表 9-10. SR-IOV 对 PCI Express 扩展能力结构的使用**
 
 | 扩展能力 ID | 描述 | PF 属性 | VF 属性 |
 |----------------------|-------------|---------------|---------------|
@@ -2803,11 +2714,8 @@ SR-IOV usage of PCI Express Extended Capabilities is described in § Table 9-10.
 
 ---
 
-<!-- 📄 Page 1557 -->
----
-
-<a id="sec-9-3-7-tbl-cont"></a>
-## 9.3.7 PCI Express Extended Capabilities (cont.) § | 9.3.7 PCI Express 扩展能力结构(续) §
+<a id="sec-9-3-7-tbl-cont"></a> <!-- 📄 Page 1557 -->
+## 9.3.7 PCI Express Extended Capabilities (cont.) | 9.3.7 PCI Express 扩展能力结构(续)
 
 <table>
 <thead>
@@ -2896,11 +2804,8 @@ SR-IOV usage of PCI Express Extended Capabilities is described in § Table 9-10.
 
 ---
 
-<!-- 📄 Page 1558 -->
----
-
-<a id="sec-9-3-7-tbl-final"></a>
-## 9.3.7 PCI Express Extended Capabilities (final) § | 9.3.7 PCI Express 扩展能力结构(终) §
+<a id="sec-9-3-7-tbl-final"></a> <!-- 📄 Page 1558 -->
+## 9.3.7 PCI Express Extended Capabilities (final) | 9.3.7 PCI Express 扩展能力结构(终)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2959,24 +2864,19 @@ SR-IOV usage of PCI Express Extended Capabilities is described in § Table 9-10.
 
 ---
 
----
-
-
----
-
 ## 📑 本章目录 (Table of Contents) — Auto-Generated
 
 - [9. Single Root I/O Virtualization and Sharing § | 单根 I/O 虚拟化与共享 (SR-IOV) §](#sec-9-0)
 - [9.1 SR-IOV Architectural Overview § | SR-IOV 架构概述 §](#sec-9-1)
-- [9.1 SR-IOV Components (cont.) § | SR-IOV 组件(续) §](#sec-9-1-1)
-- [9.1 SR-IOV Components (cont. 2) § | SR-IOV 组件(续 2) §](#sec-9-1-2)
-- [9.1.1 Example Multi-Function Device § | 9.1.1 多功能设备示例 §](#sec-9-1-3)
-- [9.1.2 Example SR-IOV Single PF Capable Device § | 9.1.2 单 PF SR-IOV 设备示例 §](#sec-9-1-4)
-- [9.1.3 SR-IOV Single PF Capable Device (cont.) § | 9.1.3 SR-IOV 单 PF 设备(续) §](#sec-9-1-5)
-- [9.1.4 Example SR-IOV Multi-PF Capable Device § | 9.1.4 多 PF SR-IOV 设备示例 §](#sec-9-1-6)
-- [9.1.5 SR-IOV Function, PF, and VF Mix § | 9.1.5 SR-IOV 功能、PF 和 VF 组合 §](#sec-9-1-7)
-- [9.1.6 Example SR-IOV Device with Multiple Bus Numbers § | 9.1.6 跨多总线号的 SR-IOV 设备示例 §](#sec-9-1-8)
-- [9.1.7 Example SR-IOV Device with a Mixture of Function Types § | 9.1.7 混合功能类型的 SR-IOV 设备示例 §](#sec-9-1-9)
+- [9.1 SR-IOV Components (cont.) § | SR-IOV 组件(续) §](#sec-9-1-cont1)
+- [9.1 SR-IOV Components (cont. 2) § | SR-IOV 组件(续 2) §](#sec-9-1-cont2)
+- [9.1.1 Example Multi-Function Device § | 9.1.1 多功能设备示例 §](#sec-9-1-1)
+- [9.1.2 Example SR-IOV Single PF Capable Device § | 9.1.2 单 PF SR-IOV 设备示例 §](#sec-9-1-2)
+- [9.1.3 SR-IOV Single PF Capable Device (cont.) § | 9.1.3 SR-IOV 单 PF 设备(续) §](#sec-9-1-3)
+- [9.1.4 Example SR-IOV Multi-PF Capable Device § | 9.1.4 多 PF SR-IOV 设备示例 §](#sec-9-1-4)
+- [9.1.5 SR-IOV Function, PF, and VF Mix § | 9.1.5 SR-IOV 功能、PF 和 VF 组合 §](#sec-9-1-5)
+- [9.1.6 Example SR-IOV Device with Multiple Bus Numbers § | 9.1.6 跨多总线号的 SR-IOV 设备示例 §](#sec-9-1-6)
+- [9.1.7 Example SR-IOV Device with a Mixture of Function Types § | 9.1.7 混合功能类型的 SR-IOV 设备示例 §](#sec-9-1-7)
 - [9.2 SR-IOV Initialization and Resource Allocation § | 9.2 SR-IOV 初始化和资源分配 §](#sec-9-2)
 - [9.3 Configuration § | 9.3 配置 §](#sec-9-3)
 - [9.3.3.3.1 VF Enable § | 9.3.3.3.1 VF 使能 §](#sec-9-3-3-3-1)

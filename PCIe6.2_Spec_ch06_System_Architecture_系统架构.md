@@ -466,8 +466,6 @@
 
 ---
 
----
-
 <a id="sec-6-0"></a>
 # 6. System Architecture | 6. 系统架构
 
@@ -569,10 +567,7 @@ PCI Express 在中断支持方面采用从 PCI 演进而来的方法。
 
 ---
 
-<!-- 📄 Page 708 -->
----
-
-<a id="sec-6-1-2"></a>
+<a id="sec-6-1-2"></a> <!-- 📄 Page 708 -->
 ## 6.1.2 PCI-compatible INTx Emulation | PCI 兼容的 INTx 仿真
 
 
@@ -690,10 +685,7 @@ MSI-X 定义了基本 MSI 功能的另一种可选扩展。与 MSI 相比，MSI-
 
 ---
 
-<!-- 📄 Page 709 -->
----
-
-<table>
+<table> <!-- 📄 Page 709 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -790,11 +782,8 @@ MSI/MSI-X 事务的请求者（Requester）必须将事务描述符的 No Snoop 
 
 ---
 
-<!-- 📄 Page 710 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 710 -->
 <table>
 <thead>
 <tr>
@@ -886,11 +875,8 @@ For each MSI-X Table entry that will be used, software fills in the Message Addr
 
 ---
 
-<!-- 📄 Page 711 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 711 -->
 <table>
 <thead>
 <tr>
@@ -959,12 +945,7 @@ To maintain backward compatibility, the MSI Enable bit in the Message Control Re
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -972,11 +953,8 @@ To maintain backward compatibility, the MSI Enable bit in the Message Control Re
 
 ---
 
-<!-- 📄 Page 712 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 712 -->
 <table>
 <thead>
 <tr>
@@ -1029,12 +1007,7 @@ How a Function uses multiple vectors (when allocated) is device dependent. A Fun
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -1096,10 +1069,7 @@ MSI-X 中的 PVM 由每个 MSI-X Table 表项中的 Mask 位控制。虽然更�
 
 ---
 
-<!-- 📄 Page 713 -->
----
-
-<table>
+<table> <!-- 📄 Page 713 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1146,9 +1116,6 @@ If a Function sends messages with the same vector multiple times before being ac
 
 ---
 
-
----
-
 <a id="sec-6-1-4-6"></a>
 ## 6.1.4.6 Hardware/Software Synchronization | 硬件/软件同步
 
@@ -1179,10 +1146,7 @@ If a Function sends messages with the same vector multiple times before being ac
 
 ---
 
-<!-- 📄 Page 714 -->
----
-
-<a id="sec-impl-note-msi-msix-servicing"></a>
+<a id="sec-impl-note-msi-msix-servicing"></a> <!-- 📄 Page 714 -->
 ### IMPLEMENTATION NOTE: SERVICING MSI AND MSI-X INTERRUPTS | 实现说明：MSI 与 MSI-X 中断服务
 
 
@@ -1236,10 +1200,7 @@ This alternative has the potential side effect of one vector's interrupt service
 
 ---
 
-<!-- 📄 Page 715 -->
----
-
-<a id="sec-6-1-4-7"></a>
+<a id="sec-6-1-4-7"></a> <!-- 📄 Page 715 -->
 ## 6.1.4.7 Message Transaction Reception and Ordering Requirements | 消息事务的接收与排序要求
 
 <table>
@@ -1355,10 +1316,7 @@ Note that all other interrupt sources within the same Function will assert the s
 
 ---
 
-<!-- 📄 Page 716 -->
----
-
-<a id="sec-6-1-6-msi-msix"></a>
+<a id="sec-6-1-6-msi-msix"></a> <!-- 📄 Page 716 -->
 ### Native PME Software Model (cont.) | 原生 PME 软件模型（续）
 
 <table>
@@ -1510,10 +1468,7 @@ If the PME# signal from a PCI or PCI-X device is routed directly to the Root Com
 
 ---
 
-<!-- 📄 Page 717 -->
----
-
-<a id="sec-6-1-9-cont"></a>
+<a id="sec-6-1-9-cont"></a> <!-- 📄 Page 717 -->
 ### 6.1.9 PME Routing Between PCI Express and PCI Hierarchies (cont.) | PCI Express 与 PCI 层级之间的 PME 路由（续）
 
 
@@ -1631,9 +1586,6 @@ In this document, errors which must be checked and errors which may optionally b
 
 ---
 
-
----
-
 <a id="sec-6-2-2"></a>
 ## 6.2.2 Error Classification | 错误分类
 
@@ -1718,10 +1670,7 @@ ERR_NONFATAL
 
 ---
 
-<!-- 📄 Page 718 -->
----
-
-<a id="sec-6-2-2-1"></a>
+<a id="sec-6-2-2-1"></a> <!-- 📄 Page 718 -->
 ## 6.2.2.1 Correctable Errors | 可纠正错误
 
 <table>
@@ -1771,10 +1720,7 @@ Note that it is the responsibility of the agent detecting the error to signal th
 
 ---
 
-<!-- 📄 Page 719 -->
----
-
-<a id="sec-6-2-2-2"></a>
+<a id="sec-6-2-2-2"></a> <!-- 📄 Page 719 -->
 ## 6.2.2.2 Uncorrectable Errors | 不可纠正错误
 
 
@@ -1974,10 +1920,7 @@ Error Messages are sent to the Root Complex for reporting the detection of error
 
 ---
 
-<!-- 📄 Page 720 -->
----
-
-<a id="sec-6-2-3-2-body"></a>
+<a id="sec-6-2-3-2-body"></a> <!-- 📄 Page 720 -->
 ## 6.2.3.2 Error Messages (continued) | 错误报文(续)
 
 
@@ -2060,10 +2003,7 @@ Software should recognize that a single transaction can be signaled by multiple 
 
 ---
 
-<!-- 📄 Page 721 -->
----
-
-<a id="sec-6-2-3-2-1"></a>
+<a id="sec-6-2-3-2-1"></a> <!-- 📄 Page 721 -->
 ## 6.2.3.2.1 Uncorrectable Error Severity Programming (Advanced Error Reporting) | 不可纠正错误严重性编程(高级错误报告)
 
 <table>
@@ -2187,10 +2127,7 @@ For errors detected in the Transaction layer and Uncorrectable Internal Errors, 
 
 ---
 
-<!-- 📄 Page 722 -->
----
-
-<a id="sec-6-2-3-2-3-cont"></a>
+<a id="sec-6-2-3-2-3-cont"></a> <!-- 📄 Page 722 -->
 ## 6.2.3.2.3 Error Pollution (continued) | 错误污染(续)
 
 <table>
@@ -2364,10 +2301,7 @@ handle this case as an Advisory Non-Fatal Error.
 
 ---
 
-<!-- 📄 Page 723 -->
----
-
-<a id="sec-6-2-3-2-4-1-cont"></a>
+<a id="sec-6-2-3-2-4-1-cont"></a> <!-- 📄 Page 723 -->
 ## 6.2.3.2.4.1 Completer Sending a Completion with UR/CA Status (continued) | 完成者发送带有 UR/CA 状态的完成报文(续)
 
 
@@ -2441,11 +2375,8 @@ A Receiver must not handle this case as an Advisory Non-Fatal Error if either of
 
 ---
 
-
----
-
 <a id="sec-6-2-3-2-4-2"></a>
-## 6.2.3.2.4.2 Intermediate Receiver § | 6.2.3.2.4.2 中间接收器 §
+## 6.2.3.2.4.2 Intermediate Receiver | 6.2.3.2.4.2 中间接收器
 
 <table>
 <thead>
@@ -2487,7 +2418,7 @@ A Receiver must not handle this case as an Advisory Non-Fatal Error if either of
 ---
 
 <a id="sec-6-2-3-2-4-3"></a>
-## 6.2.3.2.4.3 Ultimate PCI Express Receiver of a Poisoned TLP or IDE TLP with PCRC Check Failed § | 6.2.3.2.4.3 接收到中毒 TLP 或 PCRC 检查失败的 IDE TLP 的最终 PCI Express 接收方 §
+## 6.2.3.2.4.3 Ultimate PCI Express Receiver of a Poisoned TLP or IDE TLP with PCRC Check Failed | 6.2.3.2.4.3 接收到中毒 TLP 或 PCRC 检查失败的 IDE TLP 的最终 PCI Express 接收方
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2540,11 +2471,8 @@ This section applies to Requesters other than Root Ports performing programmed I
 
 ---
 
-<!-- 📄 Page 724 -->
----
-
-<a id="sec-6-2-3-2-4-4"></a>
-## 6.2.3.2.4.4 Requester with Completion Timeout § | 6.2.3.2.4.4 发生完成超时的请求者 §
+<a id="sec-6-2-3-2-4-4"></a> <!-- 📄 Page 724 -->
+## 6.2.3.2.4.4 Requester with Completion Timeout | 6.2.3.2.4.4 发生完成超时的请求者
 
 <table>
 <thead>
@@ -2582,7 +2510,7 @@ Note that automatic recovery by the Requester from a Completion Timeout is gener
 ---
 
 <a id="sec-6-2-3-2-4-5"></a>
-## 6.2.3.2.4.5 Receiver of an Unexpected Completion § | 6.2.3.2.4.5 意外完成报文的接收方 §
+## 6.2.3.2.4.5 Receiver of an Unexpected Completion | 6.2.3.2.4.5 意外完成报文的接收方
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2620,7 +2548,7 @@ If the unexpected Completion was a result of misrouting, the Completion Timeout 
 ---
 
 <a id="sec-6-2-3-2-5"></a>
-## 6.2.3.2.5 Requester Receiving a Completion with UR/CA Status § | 6.2.3.2.5 接收到带有 UR/CA 状态完成报文的请求者 §
+## 6.2.3.2.5 Requester Receiving a Completion with UR/CA Status | 6.2.3.2.5 接收到带有 UR/CA 状态完成报文的请求者
 
 <table>
 <thead>
@@ -2658,7 +2586,7 @@ If the Requester needs to report the error, the Requester must do so solely thro
 ---
 
 <a id="sec-6-2-3-3"></a>
-## 6.2.3.3 Error Forwarding (Data Poisoning) § | 6.2.3.3 错误转发 (数据中毒) §
+## 6.2.3.3 Error Forwarding (Data Poisoning) | 6.2.3.3 错误转发 (数据中毒)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2692,7 +2620,7 @@ Error Forwarding, also known as data poisoning, is indicated by setting the EP b
 ---
 
 <a id="sec-6-2-3-4"></a>
-## 6.2.3.4 Optional Error Checking § | 6.2.3.4 可选错误检查 §
+## 6.2.3.4 Optional Error Checking | 6.2.3.4 可选错误检查
 
 <table>
 <thead>
@@ -2729,11 +2657,8 @@ Unless otherwise specified, implementation specific criteria are used in determi
 
 ---
 
-<!-- 📄 Page 725 -->
----
-
-<a id="sec-6-2-4"></a>
-## 6.2.4 Error Logging § | 6.2.4 错误日志记录 §
+<a id="sec-6-2-4"></a> <!-- 📄 Page 725 -->
+## 6.2.4 Error Logging | 6.2.4 错误日志记录
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2811,7 +2736,7 @@ The following PCI Express errors are not Function-specific:
 ---
 
 <a id="sec-6-2-4-1"></a>
-## 6.2.4.1 Root Complex Considerations (Advanced Error Reporting) § | 6.2.4.1 根复合体的相关考虑 (高级错误报告) §
+## 6.2.4.1 Root Complex Considerations (Advanced Error Reporting) | 6.2.4.1 根复合体的相关考虑 (高级错误报告)
 
 <table>
 <thead>
@@ -2852,11 +2777,8 @@ For both Root Ports and Root Complex Event Collectors, in order for a received e
 
 ---
 
-<!-- 📄 Page 726 -->
----
-
-<a id="sec-6-2-4-1-1"></a>
-## 6.2.4.1.1 Error Source Identification § | 6.2.4.1.1 错误源识别 §
+<a id="sec-6-2-4-1-1"></a> <!-- 📄 Page 726 -->
+## 6.2.4.1.1 Error Source Identification | 6.2.4.1.1 错误源识别
 
 <table>
 <thead>
@@ -2886,7 +2808,7 @@ The Root Error Command register allows further control of Root Complex response 
 ---
 
 <a id="sec-6-2-4-1-2"></a>
-## 6.2.4.1.2 Interrupt Generation § | 6.2.4.1.2 中断生成 §
+## 6.2.4.1.2 Interrupt Generation | 6.2.4.1.2 中断生成
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2944,7 +2866,7 @@ Note that Advanced Error Reporting MSI/MSI-X interrupts always use the vector in
 ---
 
 <a id="sec-6-2-4-2"></a>
-## 6.2.4.2 Multiple Error Handling (Advanced Error Reporting Extended Capability) § | 6.2.4.2 多错误处理 (高级错误报告扩展能力) §
+## 6.2.4.2 Multiple Error Handling (Advanced Error Reporting Extended Capability) | 6.2.4.2 多错误处理 (高级错误报告扩展能力)
 
 <table>
 <thead>
@@ -2989,11 +2911,8 @@ If multiple header recording is supported and enabled, and the First Error Point
 
 ---
 
-<!-- 📄 Page 727 -->
----
-
-<a id="footnote-114"></a>
-## Footnote 114 § | 脚注 114 §
+<a id="footnote-114"></a> <!-- 📄 Page 727 -->
+## Footnote 114 | 脚注 114
 
 <table>
 <thead>
@@ -3023,7 +2942,7 @@ If multiple header recording is supported and enabled, and the First Error Point
 ---
 
 <a id="sec-6-2-4-2-continued"></a>
-## 6.2.4.2 Multiple Error Handling (continued) § | 6.2.4.2 多错误处理 (续) §
+## 6.2.4.2 Multiple Error Handling (continued) | 6.2.4.2 多错误处理 (续)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -3072,11 +2991,8 @@ The setting of Multiple Header Recording Capable and the checking for Header Log
 
 ---
 
-<!-- 📄 Page 728 -->
----
-
-<a id="footnote-115"></a>
-## Footnote 115 § | 脚注 115 §
+<a id="footnote-115"></a> <!-- 📄 Page 728 -->
+## Footnote 115 | 脚注 115
 
 <table>
 <thead>
@@ -3106,7 +3022,7 @@ The setting of Multiple Header Recording Capable and the checking for Header Log
 ---
 
 <a id="sec-6-2-4-3-vf-pf-header-log"></a>
-## Header Log Space for PF/VF and IMPLEMENTATION NOTE § | 物理功能/虚拟功能的包头日志空间及实现说明 §
+## Header Log Space for PF/VF and IMPLEMENTATION NOTE | 物理功能/虚拟功能的包头日志空间及实现说明
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -3187,14 +3103,7 @@ If hardware relies on this definition of the FEP being valid to determine when i
 
 ---
 
-<!-- 📄 Page 729 -->
----
-
----
-
----
-
-<a id="sec-6-2-4-2-1"></a>
+<a id="sec-6-2-4-2-1"></a> <!-- 📄 Page 729 -->
 ## 6.2.4.2.1 Multiple Error Handling in VFs | 多 VF 错误处理
 
 <table>
@@ -3477,10 +3386,7 @@ Abbreviations:
 
 ---
 
-<!-- 📄 Page 733 -->
----
-
-<a id="sec-6-2-6"></a>
+<a id="sec-6-2-6"></a> <!-- 📄 Page 733 -->
 ## 6.2.6 Error Message Controls | 错误报文 (Error Message) 控制
 
 <table>
@@ -3571,10 +3477,7 @@ The diagram covers:
 
 ---
 
-<!-- 📄 Page 734 -->
----
-
-<a id="sec-6-2-7"></a>
+<a id="sec-6-2-7"></a> <!-- 📄 Page 734 -->
 ## 6.2.7 Error Listing and Rules | 错误列表与规则
 
 
@@ -3638,7 +3541,7 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 
 对于实现 Downstream Port Containment (DPC,下游端口遏制) 并已使能该功能的下游端口 (Downstream Port)，若错误触发了 DPC,则其检测代理的动作会有所不同。后续表格未描述 DPC 行为，详见 § Section 6.2.11。
 
-**Table 6-2. PCI Express 通用错误列表 | Table 6-2. General PCI Express Error List**
+**Table 6-2. General PCI Express Error List | 表 6-2. PCI Express 通用错误列表**
 
 | 错误名称 (Error Name) | 错误类型(默认严重性) | 检测代理动作 ¹¹⁶ | 引用 (References) |
 |---|---|---|---|
@@ -3646,13 +3549,13 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 | Uncorrectable Internal Error(不可纠正内部错误) | Uncorrectable(致命，默认屏蔽) | Component:向根复合体 (Root Complex) 发送 ERR_FATAL。可选地，记录与该错误相关的第一个 TLP 的前缀/包头。 | § Section 6.2.10 |
 | Header Log Overflow(包头日志溢出) | Correctable(可纠正，默认屏蔽) | Component:向根复合体 (Root Complex) 发送 ERR_COR。 | § Section 6.2.4.2 |
 
-**Table 6-3. 物理层错误列表 | Table 6-3. Physical Layer Error List**
+**Table 6-3. Physical Layer Error List | 表 6-3. 物理层错误列表**
 
 | 错误名称 (Error Name) | 错误类型(默认严重性) | 检测代理动作 ¹¹⁷ | 引用 (References) |
 |---|---|---|---|
 | Receiver Error(接收器错误) | Correctable(可纠正) | Receiver:向根复合体 (Root Complex) 发送 ERR_COR。 | § Section 4.2.1.1.3、§ Section 4.2.1.2、§ Section 4.2.5.8、§ Section 4.2.7 |
 
-**Table 6-4. 数据链路层错误列表 | Table 6-4. Data Link Layer Error List**
+**Table 6-4. Data Link Layer Error List | 表 6-4. 数据链路层错误列表**
 
 | 错误名称 (Error Name) | 错误类型(默认严重性) | 检测代理动作 ¹¹⁸ | 引用 (References) |
 |---|---|---|---|
@@ -3680,10 +3583,7 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 
 ---
 
-<!-- 📄 Page 735 -->
----
-
-<a id="sec-6-2-7-table-6-5"></a>
+<a id="sec-6-2-7-table-6-5"></a> <!-- 📄 Page 735 -->
 ## 6.2.7 Error Listing and Rules (Table 6-5) | 错误列表与规则(表 6-5)
 
 <table>
@@ -3714,7 +3614,7 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 </td>
 <td style="background-color:#e8e8e8">
 
-**Table 6-5. 事务层错误列表 | Table 6-5. Transaction Layer Error List**
+**Table 6-5. Transaction Layer Error List | 表 6-5. 事务层错误列表**
 
 | 错误名称 (Error Name) | 错误类型(默认严重性) | 检测代理动作 ¹¹⁹ | 引用 (References) |
 |---|---|---|---|
@@ -3735,10 +3635,7 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 
 ---
 
-<!-- 📄 Page 736 -->
----
-
-<a id="sec-6-2-7-table-6-5-2"></a>
+<a id="sec-6-2-7-table-6-5-2"></a> <!-- 📄 Page 736 -->
 ## 6.2.7 Error Listing and Rules (Table 6-5, cont.) | 错误列表与规则(表 6-5,续)
 
 
@@ -3767,7 +3664,7 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 </td>
 <td style="background-color:#e8e8e8">
 
-**Table 6-5. 事务层错误列表(续) | Table 6-5. Transaction Layer Error List (continued)**
+**Table 6-5. Transaction Layer Error List (continued) | 表 6-5. 事务层错误列表(续)**
 
 | 错误名称 (Error Name) | 错误类型(默认严重性) | 检测代理动作 | 引用 (References) |
 |---|---|---|---|
@@ -3786,10 +3683,7 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 
 ---
 
-<!-- 📄 Page 737 -->
----
-
-<a id="sec-6-2-7-table-6-5-3"></a>
+<a id="sec-6-2-7-table-6-5-3"></a> <!-- 📄 Page 737 -->
 ## 6.2.7 Error Listing and Rules (Table 6-5, cont. 2) | 错误列表与规则(表 6-5,续 2)
 
 <table>
@@ -3817,7 +3711,7 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 </td>
 <td style="background-color:#e8e8e8">
 
-**Table 6-5. 事务层错误列表(续) | Table 6-5. Transaction Layer Error List (continued)**
+**Table 6-5. Transaction Layer Error List (continued) | 表 6-5. 事务层错误列表(续)**
 
 | 错误名称 (Error Name) | 错误类型(默认严重性) | 检测代理动作 | 引用 (References) |
 |---|---|---|---|
@@ -3835,10 +3729,7 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 
 ---
 
-<!-- 📄 Page 738 -->
----
-
-<a id="sec-6-2-7-table-6-5-4"></a>
+<a id="sec-6-2-7-table-6-5-4"></a> <!-- 📄 Page 738 -->
 ## 6.2.7 Error Listing and Rules (Table 6-5, cont. 3) | 错误列表与规则(表 6-5,续 3)
 
 
@@ -3870,7 +3761,7 @@ For all errors listed above, the appropriate status bit(s) must be set upon dete
 </td>
 <td style="background-color:#e8e8e8">
 
-**Table 6-5. 事务层错误列表(续) | Table 6-5. Transaction Layer Error List (continued)**
+**Table 6-5. Transaction Layer Error List (continued) | 表 6-5. 事务层错误列表(续)**
 
 | 错误名称 (Error Name) | 错误类型(默认严重性) | 检测代理动作 | 引用 (References) |
 |---|---|---|---|
@@ -3892,10 +3783,7 @@ For all errors listed above, the appropriate status bit(s) must be set upon dete
 
 ---
 
-<!-- 📄 Page 739 -->
----
-
-<a id="sec-6-2-7-1"></a>
+<a id="sec-6-2-7-1"></a> <!-- 📄 Page 739 -->
 ## 6.2.7.1 Conventional PCI Mapping | 传统 PCI 映射
 
 <table>
@@ -4055,10 +3943,7 @@ With software/firmware that sets the SERR# Enable bit but leaves the Unsupported
 
 ---
 
-<!-- 📄 Page 740 -->
----
-
-<a id="sec-6-2-8-1-continued"></a>
+<a id="sec-6-2-8-1-continued"></a> <!-- 📄 Page 740 -->
 ## 6.2.8.1 Error Message Forwarding and PCI Mapping for Bridge - Rules (cont.) | 桥的错误报文转发与 PCI 映射 — 规则(续)
 
 
@@ -4102,9 +3987,6 @@ The following error handling control bits are only implemented in the PF. They a
 </tbody>
 </table>
 </div>
-
-
----
 
 
 ---
@@ -4227,10 +4109,7 @@ Corrected Internal Errors 与 Uncorrectable Internal Errors 的上报是彼此�
 
 ---
 
-<!-- 📄 Page 741 -->
----
-
-<a id="sec-6-2-11"></a>
+<a id="sec-6-2-11"></a> <!-- 📄 Page 741 -->
 ## 6.2.11 Downstream Port Containment (DPC) | 下游端口遏制 (DPC)
 
 <table>
@@ -4298,10 +4177,7 @@ DPC 默认禁用，除非由软件通过 DPC Trigger Enable 字段使能，否�
 
 ---
 
-<!-- 📄 Page 742 -->
----
-
-<a id="sec-6-2-11-dpc-npr"></a>
+<a id="sec-6-2-11-dpc-npr"></a> <!-- 📄 Page 742 -->
 ## 6.2.11 DPC 续 | DPC(续):Non-Posted Request 响应选择与触发条件
 
 
@@ -4387,10 +4263,7 @@ DPC 默认禁用，除非由软件通过 DPC Trigger Enable 字段使能，否�
 
 ---
 
-<!-- 📄 Page 743 -->
----
-
-<a id="sec-6-2-11-1"></a>
+<a id="sec-6-2-11-1"></a> <!-- 📄 Page 743 -->
 ## 6.2.11.1 DPC Interrupts | DPC 中断
 
 <table>
@@ -4480,10 +4353,7 @@ The Port may optionally send an interrupt message if interrupt generation has be
 
 ---
 
-<!-- 📄 Page 744 -->
----
-
-<a id="sec-6-2-11-2"></a>
+<a id="sec-6-2-11-2"></a> <!-- 📄 Page 744 -->
 ## 6.2.11.2 DPC ERR_COR Signaling | DPC ERR_COR 信令
 
 
@@ -4539,10 +4409,7 @@ For a given DPC trigger event, if a Port is going to send both an ERR_COR Messag
 
 ---
 
-<!-- 📄 Page 745 -->
----
-
-<a id="sec-6-2-11-3"></a>
+<a id="sec-6-2-11-3"></a> <!-- 📄 Page 745 -->
 ## 6.2.11.3 Root Port Programmed I/O (RP PIO) Error Controls | 根端口可编程 I/O (RP PIO) 错误控制
 
 <table>
@@ -4576,10 +4443,7 @@ RP PIO 错误控制寄存器可对 Root Port 所追踪的 Non-Posted Requests �
 
 ---
 
-<!-- 📄 Page 746 -->
----
-
-<a id="sec-6-2-11-3-continued"></a>
+<a id="sec-6-2-11-3-continued"></a> <!-- 📄 Page 746 -->
 ## 6.2.11.3 RP PIO Error Controls (续) | RP PIO 错误控制(续)
 
 
@@ -4647,10 +4511,7 @@ RP PIO Status、Mask 和 Severity 寄存器的行为与 AER 中的 Uncorrectable
 
 ---
 
-<!-- 📄 Page 747 -->
----
-
-<a id="sec-6-2-11-3-syserror-exception"></a>
+<a id="sec-6-2-11-3-syserror-exception"></a> <!-- 📄 Page 747 -->
 ## 6.2.11.3 RP PIO Error Controls (SysError 与 Exception) | RP PIO 错误控制(SysError 与 Exception)
 
 <table>
@@ -4730,10 +4591,7 @@ RP PIO Exception 寄存器提供了一种在某些由处理器指令产生的、
 
 ---
 
-<!-- 📄 Page 748 -->
----
-
-<a id="sec-6-2-11-4"></a>
+<a id="sec-6-2-11-4"></a> <!-- 📄 Page 748 -->
 ## 6.2.11.4 Software Triggering of DPC | DPC 的软件触发
 
 
@@ -4809,10 +4667,7 @@ Root Port 对所追踪的、除接收 UR 和 CA Completions 之外发生错误�
 
 ---
 
-<!-- 📄 Page 749 -->
----
-
-<a id="sec-6-2-11-5-2"></a>
+<a id="sec-6-2-11-5-2"></a> <!-- 📄 Page 749 -->
 ## 6.2.11.5 DL_ACTIVE ERR_COR Signaling | DL_ACTIVE ERR_COR 信令
 
 <table>
@@ -4864,9 +4719,6 @@ For a given DL_ACTIVE event, if a Port is going to send both an ERR_COR Message 
 
 ---
 
-
----
-
 <a id="sec-6-2-11-5"></a>
 ## 6.2.11.5 DL_Active ERR_COR Signaling | DL_Active 可纠正错误（ERR_COR）信号
 
@@ -4901,10 +4753,7 @@ It is recommended that operating systems use Data Link Layer State Changed inter
 
 ---
 
-<!-- 📄 Page 750 -->
----
-
-<a id="sec-6-3"></a>
+<a id="sec-6-3"></a> <!-- 📄 Page 750 -->
 ## 6.3 Virtual Channel Support | 虚通道（VC）支持
 
 
@@ -5184,10 +5033,7 @@ TC[0:6] / TC7
 
 ---
 
-<!-- 📄 Page 751 -->
----
-
-<table>
+<table> <!-- 📄 Page 751 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5519,11 +5365,8 @@ The following two steps conceptually describe routing of traffic received by the
 
 ---
 
-<!-- 📄 Page 754 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 754 -->
 <table>
 <thead>
 <tr>
@@ -5653,10 +5496,7 @@ Flow control credits are exchanged between two Ports connected to the same Link.
 
 ---
 
-<!-- 📄 Page 755 -->
----
-
-<a id="sec-6-3-3-2"></a>
+<a id="sec-6-3-3-2"></a> <!-- 📄 Page 755 -->
 ## 6.3.3.2 VC Arbitration - Arbitration Between VCs | VC 仲裁——VC 之间的仲裁
 
 
@@ -5761,12 +5601,7 @@ WRR 方案的一个关键使用模型是支持 QoS 策略——通过使用不�
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -5774,11 +5609,8 @@ WRR 方案的一个关键使用模型是支持 QoS 策略——通过使用不�
 
 ---
 
-<!-- 📄 Page 756 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 756 -->
 <table>
 <thead>
 <tr>
@@ -5834,13 +5666,9 @@ The multi-Function arbitration model defines an optional arbitration infrastruct
 
 ---
 
-
----
-
 6.3.3.3 Port Arbitration - Arbitration Within VC §
-6.3.3.4 Multi-Function Devices and Function Arbitration §
+6.3.3.4 Multi-Function Devices and Function Arbitration § <!-- 📄 Page 757 -->
 
-<!-- 📄 Page 757 -->
 ---
 
 > **Figure 6-10.** Multi-Function Arbitration Model
@@ -5959,9 +5787,8 @@ Finally, if the MFVC Extended Capability structure supports VC Arbitration, this
 - **n/a**: Not Applicable (Function/Port sending to itself) | 不适用 (Function/Port 发送给自己)
 
 §
-§
+§ <!-- 📄 Page 758 -->
 
-<!-- 📄 Page 758 -->
 ---
 
 
@@ -6035,10 +5862,7 @@ However, as stated in this specification, if a Multi-Function Device supports TC
 
 ---
 
-<!-- 📄 Page 759 -->
----
-
-<a id="sec-6-3-4"></a>
+<a id="sec-6-3-4"></a> <!-- 📄 Page 759 -->
 ## 6.3.4 Isochronous Support | 等时支持
 
 <table>
@@ -6160,10 +5984,7 @@ A Multi-Function Device that includes an MFVC Extended Capability structure prov
 
 ---
 
-<!-- 📄 Page 760 -->
----
-
-<table>
+<table> <!-- 📄 Page 760 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6234,11 +6055,8 @@ SVC 能力与 VC/MFVC 能力不兼容，且硬件机制确保对于给定的 Por
 
 ---
 
-<!-- 📄 Page 761 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 761 -->
 <table>
 <thead>
 <tr>
@@ -6308,9 +6126,6 @@ Transactions Pending 位 (事务挂起位) 提供了一种在每个 Function 基
 
 ---
 
-
----
-
 <a id="sec-6-5-1"></a>
 ## 6.5.1 Introduction | 引言
 
@@ -6323,9 +6138,8 @@ Transactions Pending 位 (事务挂起位) 提供了一种在每个 Function 基
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 763 -->
 
-<!-- 📄 Page 763 -->
 ---
 
 Only the Root Complex is allowed to initiate Locked Requests on PCI Express. Locked Requests initiated by Endpoints and Bridges are not supported. This is consistent with limitations for locked transaction use outlined in [PCI] (§ Appendix F. - Exclusive Accesses).
@@ -6354,9 +6168,8 @@ Locked transaction sequences are generated by the Host CPU(s) as one or more rea
     - If not locked, or if the Receiver is a PCI Express Endpoint or Bridge which does not support lock, the Unlock Message is ignored and discarded
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 763 -->
 
-<!-- 📄 Page 763 -->
 ---
 
 在 PCI Express 上，只有根复合体 (Root Complex) 才允许发起锁定请求 (Locked Requests)。不支持由端点 (Endpoint) 和桥 (Bridge) 发起的锁定请求。这与 [PCI] (附录 F — 排他访问) 中所列出的关于锁定事务使用的限制一致。
@@ -6407,9 +6220,8 @@ Locked transaction sequences are generated by the Host CPU(s) as one or more rea
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 764 -->
 
-<!-- 📄 Page 764 -->
 ---
 
 Switches must distinguish transactions associated with locked sequences from other transactions to prevent other transactions from interfering with the lock and potentially causing deadlock. The following rules cover how this is done. Note that locked accesses are limited to TC0, which is always mapped to VC0.
@@ -6427,9 +6239,8 @@ Note: This sort of split-lock access is not supported by PCI Express and softwar
     - Ports which were not involved in the locked access are unaffected by the Unlock Message
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 764 -->
 
-<!-- 📄 Page 764 -->
 ---
 
 交换机必须将锁定序列相关的事务与其他事务区分开，以防止其他事务干扰锁并可能导致死锁。以下规则说明了如何实现。请注意，锁定访问仅限于 TC0,而 TC0 始终映射到 VC0。
@@ -6536,9 +6347,8 @@ A Root Complex is permitted to support locked transactions as a Requester. If lo
 Legacy Endpoints are permitted to support locked accesses, although their use is discouraged. If locked accesses are supported, Legacy Endpoints must handle them as follows:
 
 - The Legacy Endpoint becomes locked when it Transmits the first Completion for the first Read Request of the locked access with a Successful Completion status
-  - If the completion status is not Successful Completion, the Legacy Endpoint does not become locked
+  - If the completion status is not Successful Completion, the Legacy Endpoint does not become locked <!-- 📄 Page 765 -->
 
-<!-- 📄 Page 765 -->
 ---
 
   - Once locked, the Legacy Endpoint must remain locked until it receives the Unlock Message
@@ -6554,9 +6364,8 @@ Note that this requirement applies to all possible sources of Requests within th
 允许传统端点 (Legacy Endpoint) 支持锁定访问，但不鼓励使用。如果支持锁定访问，传统端点必须按以下方式处理:
 
 - 当传统端点以"成功完成"状态发送锁定访问中第一个读请求的第一个完成报文时，它进入锁定状态
-  - 如果完成状态不是"成功完成",则传统端点不会进入锁定状态
+  - 如果完成状态不是"成功完成",则传统端点不会进入锁定状态 <!-- 📄 Page 765 -->
 
-<!-- 📄 Page 765 -->
 ---
 
   - 一旦锁定，传统端点必须保持锁定状态，直到接收到 Unlock 消息
@@ -6703,9 +6512,8 @@ In all form factors and system硬件 configurations, there must, at some level, 
 <tr>
 <td>
 
-There is an in-band mechanism for software to force a Link into Electrical Idle, "disabling" the Link. The Disabled LTSSM state is described in § Section 4.2.6.10 , the Link Disable control bit is described
+There is an in-band mechanism for software to force a Link into Electrical Idle, "disabling" the Link. The Disabled LTSSM state is described in § Section 4.2.6.10 , the Link Disable control bit is described <!-- 📄 Page 766 -->
 
-<!-- 📄 Page 766 -->
 ---
 
 in § Section 7.5.3.7 , and the Downstream Port Containment mechanism is described in § Section 6.2.11 . Disabling a Link causes Downstream components to undergo a hot reset.
@@ -6729,9 +6537,8 @@ The first set of rules addresses requirements for components and devices:
 </td>
 <td style="background-color:#e8e8e8">
 
-存在一种软件可用的带内机制，用于强制将链路置于电气空闲 (Electrical Idle) 状态，即"禁用"链路。禁用的 LTSSM 状态在 § 4.2.6.10 节描述，链路禁用控制位在
+存在一种软件可用的带内机制，用于强制将链路置于电气空闲 (Electrical Idle) 状态，即"禁用"链路。禁用的 LTSSM 状态在 § 4.2.6.10 节描述，链路禁用控制位在 <!-- 📄 Page 766 -->
 
-<!-- 📄 Page 766 -->
 ---
 
 § 7.5.3.7 节描述，下游端口抑制 (Downstream Port Containment) 机制在 § 6.2.11 节描述。禁用链路会导致下游组件经历一次热复位。
@@ -6781,9 +6588,8 @@ The second set of rules addresses requirements placed on the system:
 
 - To allow components to perform internal初始化, system software must wait a specified minimum period following exit from a Conventional Reset of one or more devices before it is permitted to issue Configuration Requests to those devices, unless Readiness Notifications mechanisms are used (see § Section 6.22 ). System software is also exempted from these minimum waiting period requirements if it knows of the specific device's requirements via means outside the scope of this specification.
 - System software is permitted to immediately issue Configuration Requests to a device/Function if Immediate Readiness is indicated by the device/Function (see § Section 3.3 and § Section 7.9.16 for two ways Immediate Readiness support is permitted to be indicated)
-- System software is permitted to immediately issue Configuration Requests to a device/Function below a Downstream Port if the DRS Message Received bit is Set.
+- System software is permitted to immediately issue Configuration Requests to a device/Function below a Downstream Port if the DRS Message Received bit is Set. <!-- 📄 Page 767 -->
 
-<!-- 📄 Page 767 -->
 ---
 
 - Devices that support Flit Mode are required to implement DRS
@@ -6806,9 +6612,8 @@ Note: This delay is analogous to the Trhfa parameter specified for PCI/PCI-X, an
 
 - 为了让组件能够执行内部初始化，系统软件必须在一个或多个设备退出常规复位后等待规定的最小时长，才被允许向这些设备发出配置请求，除非使用了就绪通知机制 (见 § 6.22 节)。如果系统软件通过本文档范围之外的方式知晓特定设备的要求，则也可免于这些最短等待时长的要求
 - 如果设备/功能通过"立即就绪" (Immediate Readiness) 指示，系统软件可以立即向该设备/功能发出配置请求 (见 § 3.3 节和 § 7.9.16 节，介绍了允许指示立即就绪支持的两种方式)
-- 如果下游端口的 DRS 消息接收 (DRS Message Received) 位已置 1,系统软件可以立即向该下游端口下方的设备/功能发出配置请求
+- 如果下游端口的 DRS 消息接收 (DRS Message Received) 位已置 1,系统软件可以立即向该下游端口下方的设备/功能发出配置请求 <!-- 📄 Page 767 -->
 
-<!-- 📄 Page 767 -->
 ---
 
 - 支持 Flit 模式 (Flit Mode) 的设备必须实现 DRS
@@ -6857,9 +6662,8 @@ When a Link is in normal operation, the following rules apply:
 - For any Root or Switch Downstream Port, setting the Secondary Bus Reset bit of the Bridge Control Register associated with the Port must cause a hot reset to be sent (see § Section 4.2.5.9.2 ).
 - For a Switch, the following must cause a hot reset to be sent on all Downstream Ports:
   - Setting the Secondary Bus Reset bit of the Bridge Control Register associated with the Upstream Port
-  - The Data Link Layer of the Upstream Port reporting DL_Down status. In Switches that support Link speeds greater than 5.0 GT/s, the Upstream Port must direct the LTSSM of each Downstream Port to the Hot Reset state, but not hold the LTSSMs in that state. This permits each Downstream Port to
+  - The Data Link Layer of the Upstream Port reporting DL_Down status. In Switches that support Link speeds greater than 5.0 GT/s, the Upstream Port must direct the LTSSM of each Downstream Port to the Hot Reset state, but not hold the LTSSMs in that state. This permits each Downstream Port to <!-- 📄 Page 768 -->
 
-<!-- 📄 Page 768 -->
 ---
 
 begin Link training immediately after its hot reset completes. This behavior is recommended for all Switches.
@@ -6877,9 +6681,8 @@ begin Link training immediately after its hot reset completes. This behavior is 
 - 对于任何根端口或交换机的下游端口，设置与该端口关联的桥控制寄存器 (Bridge Control Register) 中的"次级总线复位" (Secondary Bus Reset) 位必须导致发出一次热复位 (见 § 4.2.5.9.2 节)
 - 对于交换机，以下情况必须在所有下游端口上发出热复位:
   - 设置与上游端口关联的桥控制寄存器中的"次级总线复位"位
-  - 上游端口的数据链路层上报 DL_Down 状态。在支持 5.0 GT/s 以上链路速度的交换机中，上游端口必须将每个下游端口的 LTSSM 引导至 Hot Reset 状态，但不将 LTSSM 保持在该状态。这使得每个下游端口能够在其热复位完成后立即开始链路训练。建议所有交换机都采用此行为
+  - 上游端口的数据链路层上报 DL_Down 状态。在支持 5.0 GT/s 以上链路速度的交换机中，上游端口必须将每个下游端口的 LTSSM 引导至 Hot Reset 状态，但不将 LTSSM 保持在该状态。这使得每个下游端口能够在其热复位完成后立即开始链路训练。建议所有交换机都采用此行为 <!-- 📄 Page 768 -->
 
-<!-- 📄 Page 768 -->
 ---
 
   - 在上游端口接收到一次热复位
@@ -6981,9 +6784,8 @@ Implementation of FLR is optional (not required), but is strongly recommended.
 
 FLR applies on a per Function basis. Only the targeted Function is affected by the FLR operation. The Link state must not be affected by an FLR.
 
-FLR modifies the Function state described by this specification as follows:
+FLR modifies the Function state described by this specification as follows: <!-- 📄 Page 769 -->
 
-<!-- 📄 Page 769 -->
 ---
 
 - Function registers and Function-specific state machines must be set to their initialization values as specified in this document, except that in the following cases, the values are not affected by FLR:
@@ -7036,9 +6838,8 @@ FLR 的实现是可选的 (非必需)，但强烈建议实现。
 
 FLR 适用于每个功能。FLR 操作仅影响目标功能。FLR 不得影响链路 (Link) 状态。
 
-FLR 按如下方式修改本规范所描述的功能状态:
+FLR 按如下方式修改本规范所描述的功能状态: <!-- 📄 Page 769 -->
 
-<!-- 📄 Page 769 -->
 ---
 
 - 功能寄存器和功能特定的状态机必须被设置为其初始化值，如本文档所规定，但以下情况除外，这些情况下值不受 FLR 影响:
@@ -7202,9 +7003,8 @@ Since FLR modifies Function state not described by this specification (in additi
 When an FLR is initiated, the targeted Function must behave as follows:
 
 - The Function must return the Completion for the configuration write that initiated the FLR operation and then initiate the FLR.
-- While an FLR is in progress:
+- While an FLR is in progress: <!-- 📄 Page 771 -->
 
-<!-- 📄 Page 771 -->
 ---
 
   - If a Request arrives, the Request is permitted to be silently discarded (following update of flow control credits) without logging or signaling it as an error.
@@ -7219,9 +7019,8 @@ The PCI Express architecture is designed to natively support both hot-add and ho
 当 FLR 被发起时，目标功能必须按以下方式行为:
 
 - 功能必须返回启动 FLR 操作的配置写操作的完成报文，然后再启动 FLR
-- 当 FLR 正在进行中时:
+- 当 FLR 正在进行中时: <!-- 📄 Page 771 -->
 
-<!-- 📄 Page 771 -->
 ---
 
   - 如果收到请求 (Request)，允许将该请求静默丢弃 (在更新流控信用之后)，而不将其记录或报告为错误
@@ -7291,9 +7090,6 @@ FLR 会导致功能丢失对所有未完成 (outstanding) 非 Posted 请求的�
 
 ---
 
-
----
-
 <a id="sec-6-7"></a>
 ## 6.7 PCI Express Native Hot-Plug | PCI Express 原生热插拔 (Hot-Plug)
 
@@ -7306,9 +7102,8 @@ FLR 会导致功能丢失对所有未完成 (outstanding) 非 Posted 请求的�
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 772 -->
 
-<!-- 📄 Page 772 -->
 ---
 
 Table 6-7 lists the physical elements comprehended in this specification for support of hot-plug models. A form factor specification must define how these elements are used in that form factor. For a given form factor specification, it is possible that only some of the available hot-plug elements are required, or even that none of these elements are required. In all cases, the form factor specification must define all assumptions and limitations placed on the system or the user by the choice of elements included. Silicon component implementations that are intended to be used only with selected form factors are permitted to support only those elements that are required by the associated form factor(s).
@@ -7409,9 +7204,8 @@ The Downstream Port must not change the state of an indicator unless commanded t
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 773 -->
 
-<!-- 📄 Page 773 -->
 ---
 
 The Attention Indicator, which must be yellow or amber in color, indicates that an operational problem exists or that the hot-plug slot is being identified so that a human operator can locate it easily.
@@ -7568,9 +7362,8 @@ The Power Indicator, which must be green in color, indicates the power state of 
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 774 -->
 
-<!-- 📄 Page 774 -->
 ---
 
 **Power Indicator Off**
@@ -7803,9 +7596,8 @@ If an MRL Sensor is implemented without a corresponding MRL Sensor input on the 
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 775 -->
 
-<!-- 📄 Page 775 -->
 ---
 
 An electromechanical interlock is a mechanism for physically locking the adapter or MRL in place until system software releases it. The state of the electromechanical interlock is set by software and must not change except in response to a subsequent software command. In particular, the state of the electromechanical interlock must be maintained even when power to the hot-plug slot is removed.
@@ -7902,9 +7694,8 @@ On systems with multiple hot-plug slots, the system software must allow the user
 </td>
 </tr>
 <tr>
-<td>
+<td> <!-- 📄 Page 776 -->
 
-<!-- 📄 Page 776 -->
 ---
 
 using either the software user interface or the Attention Button while a hot-plug operation on another slot is in process, regardless of which interface was used to start the first operation.
@@ -7979,9 +7770,6 @@ The Slot Numbering Capability, as defined in the PCI-to-PCI Bridge Specification
 
 ---
 
-
----
-
 <a id="sec-6-7-1-8"></a>
 ## 6.7.1.8 Power Controller | 电源控制器
 
@@ -7994,9 +7782,8 @@ The Slot Numbering Capability, as defined in the PCI-to-PCI Bridge Specification
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 777 -->
 
-<!-- 📄 Page 777 -->
 ---
 
 as described in § Section 6.7.3.3 . After turning power off, software must wait for at least 1 second before taking any action that relies on power having been removed from the hot-plug slot. For example, software is not permitted to turn off the power indicator (if present) or attempt to turn on the power controller before completing the 1 second wait period.
@@ -8026,9 +7813,8 @@ Power Fault Detected (Slot Status Register) - This bit is Set when a power fault
 §
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 777 -->
 
-<!-- 📄 Page 777 -->
 ---
 
 如 § 第 6.7.3.3 节 所述。关闭电源后，软件必须等待至少 1 秒，然后才能执行任何依赖于热插拔 (Hot-Plug) 插槽电源已移除的操作。例如，在完成 1 秒等待之前，不允许软件关闭电源指示灯 (如果存在) 或尝试打开电源控制器。
@@ -8244,9 +8030,8 @@ Refer to the following register field descriptions for Power Indicator:
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 778 -->
 
-<!-- 📄 Page 778 -->
 ---
 
 Refer to the following register field descriptions for Power Controller:
@@ -8259,9 +8044,8 @@ Refer to the following register field descriptions for Power Controller:
 §
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 778 -->
 
-<!-- 📄 Page 778 -->
 ---
 
 有关 Power Controller 的寄存器字段说明，请参阅以下内容:
@@ -8468,9 +8252,8 @@ Refer to the following register field descriptions for Command Completed:
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 779 -->
 
-<!-- 📄 Page 779 -->
 ---
 
 Refer to the following register field descriptions for Port Capabilities and Slot Information:
@@ -8483,9 +8266,8 @@ Refer to the following register field descriptions for Port Capabilities and Slo
 §
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 779 -->
 
-<!-- 📄 Page 779 -->
 ---
 
 有关 Port Capabilities (端口能力) 和 Slot Information (插槽信息) 的寄存器字段说明，请参阅以下内容:
@@ -8662,9 +8444,8 @@ Refer to § Section 6.7.2 for the list of slot events and their associated regis
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 780 -->
 
-<!-- 📄 Page 780 -->
 ---
 
 Since changing the state of some hot-plug elements may not happen instantaneously, PCI Express supports hot-plug commands and command completed events. All hot-plug capable Ports are required to support hot-plug commands and, if the capability is reported, command completed events.
@@ -8682,9 +8463,8 @@ If enabled through the associated enable field, the completion of a command must
 §
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 780 -->
 
-<!-- 📄 Page 780 -->
 ---
 
 由于某些热插拔 (Hot-Plug) 元素的状态变化可能不是瞬时发生的，因此 PCI Express 支持热插拔命令和命令完成事件。所有支持热插拔的端口都必须支持热插拔命令，以及 (如果报告了该能力) 命令完成事件。
@@ -8768,9 +8548,8 @@ The Data Link Layer State Changed event must occur within 1 second of the event 
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 781 -->
 
-<!-- 📄 Page 781 -->
 ---
 
 A hot-plug capable Downstream Port must support generation of an interrupt on a hot-plug event. As described in Sections 6.7.3.1 and 6.7.3.2, each hot-plug event has both an enable bit for interrupt generation and a status bit that indicates when an event has occurred but has not yet been processed by software. There is also a Hot-Plug Interrupt Enable bit in the Slot Control register that serves as a master enable/disable bit for all hot-plug events.
@@ -8806,9 +8585,8 @@ Note that the Hot-Plug Controller generates the wakeup on behalf of the hot-plug
 §
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 781 -->
 
-<!-- 📄 Page 781 -->
 ---
 
 支持热插拔 (Hot-Plug) 的下游端口 (Downstream Port) 必须支持在热插拔事件上产生中断。如第 6.7.3.1 节和第 6.7.3.2 节所述，每个热插拔事件都有一个用于中断生成的使能 (enable) 位，以及一个状态 (status) 位，用于指示事件已发生但尚未被软件处理。Slot Control 寄存器中还有一个 Hot-Plug Interrupt Enable 位，作为所有热插拔事件的主使能/禁止位。
@@ -8854,15 +8632,7 @@ Note that the Hot-Plug Controller generates the wakeup on behalf of the hot-plug
 
 ---
 
-
----
-
----
-<!-- 📄 Page 782 -->
----
----
-
-<a id="sec-6-7-3-4"></a>
+<a id="sec-6-7-3-4"></a> <!-- 📄 Page 782 -->
 ### 6.7.3.4 Software Notification of Hot-Plug Events | 热插拔事件的软件通知
 
 <table>
@@ -9549,9 +9319,6 @@ add-in card 不得消耗超过系统所授予的功率。定义了六种向 add-
 
 ---
 
-
----
-
 <a id="sec-6-8-2"></a>
 ## 6.8.2 Device Power Considerations | 设备电源考量
 
@@ -9640,10 +9407,7 @@ Out of Band Power Limit Enable 和 Out of Band Power Limit PM Sub State 值使�
 
 ---
 
-<!-- 📄 Page 790 -->
----
-
-<a id="sec-6-9"></a>
+<a id="sec-6-9"></a> <!-- 📄 Page 790 -->
 ## 6.9 Slot Power Limit Control | 插槽电源限制控制
 
 
@@ -9687,10 +9451,7 @@ PCI Express 提供了一种机制，用于软件控制适配器 (adapter)（与�
 
 ---
 
-<!-- 📄 Page 791 -->
----
-
-<table>
+<table> <!-- 📄 Page 791 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9749,11 +9510,8 @@ The following rules cover the Slot Power Limit control mechanism:
 
 ---
 
-<!-- 📄 Page 792 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 792 -->
 <table>
 <thead>
 <tr>
@@ -9839,10 +9597,7 @@ The following rules cover the Slot Power Limit control mechanism:
 
 ---
 
-<!-- 📄 Page 793 -->
----
-
-<table>
+<table> <!-- 📄 Page 793 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9925,10 +9680,7 @@ A Root Complex may present one of the following topologies to configuration soft
 
 ---
 
-<!-- 📄 Page 794 -->
----
-
-> **Figure 6-11.** Root Complex Represented as a Single Component | 根复合体表示为单一组件
+> **Figure 6-11.** Root Complex Represented as a Single Component | 根复合体表示为单一组件 <!-- 📄 Page 794 -->
 > **图 6-11.** 根复合体表示为单一组件
 > <img src="figures/chapter_06/fig_0794_1_tight.png" width="700">
 
@@ -9985,10 +9737,7 @@ In order for software to correctly program arbitration and other control paramet
 
 ---
 
-<!-- 📄 Page 795 -->
----
-
-<a id="sec-6-11"></a>
+<a id="sec-6-11"></a> <!-- 📄 Page 795 -->
 ## 6.11 Link Speed Management | 链路速度管理
 
 
@@ -10086,11 +9835,8 @@ RCiEP 中 ACS 的实现是允许的，但不是必需的。明确允许在单个
 
 ---
 
-<!-- 📄 Page 796 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 796 -->
 <table>
 <thead>
 <tr>
@@ -10274,10 +10020,7 @@ ACS P2P Request Redirect 与 ACS P2P Egress Control 和 ACS Direct Translated P2
 
 ---
 
-<!-- 📄 Page 797 -->
----
-
-<table>
+<table> <!-- 📄 Page 797 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10320,11 +10063,8 @@ ACS P2P Completion Redirect 不与控制请求的 ACS 控件交互。
 
 ---
 
-<!-- 📄 Page 798 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 798 -->
 <table>
 <thead>
 <tr>
@@ -10404,10 +10144,7 @@ ACS P2P Egress Control 与 ACS P2P Request Redirect 和 ACS Direct Translated P2
 
 ---
 
-<!-- 📄 Page 799 -->
----
-
-<table>
+<table> <!-- 📄 Page 799 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10513,15 +10250,7 @@ This section applies to Multi-Function Device ACS Functions, with the exception 
 
 ---
 
-
----
-
----
-<!-- 📄 Page 800 -->
----
----
-
-<a id="sec-6-12-1-2"></a>
+<a id="sec-6-12-1-2"></a> <!-- 📄 Page 800 -->
 ### 6.12.1.2 ACS Functions in SR-IOV Capable and Multi-Function Devices | SR-IOV 与多功能设备中的 ACS 功能
 
 
@@ -10683,11 +10412,7 @@ No ACS capabilities are applicable, and the Function must not implement an ACS E
 
 ---
 
-<!-- 📄 Page 801 -->
----
----
-
-<a id="sec-6-12-2"></a>
+<a id="sec-6-12-2"></a> <!-- 📄 Page 801 -->
 ### 6.12.2 Interoperability | 互操作性
 
 
@@ -10743,11 +10468,7 @@ If ACS Direct Translated P2P is enabled in a Port/Function, peer-to-peer Memory 
 
 ---
 
-<!-- 📄 Page 802 -->
----
----
-
-<a id="sec-6-12-3"></a>
+<a id="sec-6-12-3"></a> <!-- 📄 Page 802 -->
 ### 6.12.3 ACS Peer-to-Peer Control Interactions | ACS 对等控制交互
 
 **Table 6-11 ACS P2P Request Redirect and ACS P2P Egress Control Interactions | 表 6-11 ACS P2P 请求重定向与 ACS P2P 出口控制交互**
@@ -10776,11 +10497,7 @@ If ACS Direct Translated P2P is enabled in a Port/Function, peer-to-peer Memory 
 
 ---
 
-<!-- 📄 Page 803 -->
----
----
-
-<a id="sec-6-12-4"></a>
+<a id="sec-6-12-4"></a> <!-- 📄 Page 803 -->
 ### 6.12.4 ACS Enhanced Capability | ACS 增强能力
 
 <table>
@@ -10856,11 +10573,7 @@ ACS Enhanced Capability 是一组额外的 ACS 控制机制，旨在提升 ACS �
 
 ---
 
-<!-- 📄 Page 804 -->
----
----
-
-<a id="sec-6-12-5"></a>
+<a id="sec-6-12-5"></a> <!-- 📄 Page 804 -->
 ### 6.12.5 ACS Violation Error Handling | ACS 违规错误处理
 
 
@@ -10936,11 +10649,7 @@ ACS Enhanced Capability 引入的重定向机制可处理更多情况。带重�
 
 ---
 
-<!-- 📄 Page 805 -->
----
----
-
-<a id="sec-6-12-5-continued"></a>
+<a id="sec-6-12-5-continued"></a> <!-- 📄 Page 805 -->
 ### 6.12.5 ACS Violation Error Handling (continued) | ACS 违规错误处理(续)
 
 <table>
@@ -11078,9 +10787,6 @@ If software enables ACS P2P Request Redirect, RC P2P Request Retargeting, or bot
 
 ---
 
-
----
-
 <a id="sec-6-12-6-2"></a>
 ## 6.12.6.2 Requests Passing Posted Requests | 越过 Posted 请求的请求
 
@@ -11111,10 +10817,7 @@ If software enables ACS P2P Request Redirect, RC P2P Request Retargeting, or bot
 
 ---
 
-<!-- 📄 Page 807 -->
----
-
-<a id="sec-6-13"></a>
+<a id="sec-6-13"></a> <!-- 📄 Page 807 -->
 ## 6.13 Alternative Routing-ID Interpretation (ARI) | 替代路由 ID 解释 (ARI)
 
 
@@ -11210,10 +10913,7 @@ ACS Direct Translated P2P 的目的是在使用地址转换服务 (ATS, Address 
 
 ---
 
-<!-- 📄 Page 808 -->
----
-
-<a id="sec-6-13-cont"></a>
+<a id="sec-6-13-cont"></a> <!-- 📄 Page 808 -->
 ## 6.13 Alternative Routing-ID Interpretation (ARI) — continued | 替代路由 ID 解释 (ARI) — 续
 
 
@@ -11293,10 +10993,7 @@ With an ARI Device, the Phantom Functions Supported field within each Function's
 
 ---
 
-<!-- 📄 Page 809 -->
----
-
-<a id="sec-6-13-figure"></a>
+<a id="sec-6-13-figure"></a> <!-- 📄 Page 809 -->
 ## 6.13 Alternative Routing-ID Interpretation (ARI) — Figure 6-13 | 替代路由 ID 解释 (ARI) — 图 6-13
 
 <table>
@@ -11396,10 +11093,7 @@ It is strongly recommended that firmware not have the ARI Forwarding Enable bit 
 
 ---
 
-<!-- 📄 Page 810 -->
----
-
-<a id="sec-6-14"></a>
+<a id="sec-6-14"></a> <!-- 📄 Page 810 -->
 ## 6.14 Multicast Operations | 多播 (Multicast) 操作
 
 
@@ -11504,10 +11198,7 @@ The Multicast Group is extracted from the address in the TLP using any Function'
 
 ---
 
-<!-- 📄 Page 811 -->
----
-
-<a id="sec-6-14-1-cont"></a>
+<a id="sec-6-14-1-cont"></a> <!-- 📄 Page 811 -->
 ## 6.14.1 Multicast TLP Processing — continued | 多播 TLP 处理 — 续
 
 
@@ -11621,10 +11312,7 @@ Unless available address space is limited, resource allocation software may be a
 
 ---
 
-<!-- 📄 Page 812 -->
----
-
-<a id="sec-6-14-1-cont-2"></a>
+<a id="sec-6-14-1-cont-2"></a> <!-- 📄 Page 812 -->
 ## 6.14.1 Multicast TLP Processing — continued (2) | 多播 TLP 处理 — 续 (2)
 
 <table>
@@ -11711,10 +11399,7 @@ ACS P2P Request Redirect 和 ACS Direct Translated P2P 机制提供了一种方�
 
 ---
 
-<!-- 📄 Page 813 -->
----
-
-<a id="sec-6-14-3"></a>
+<a id="sec-6-14-3"></a> <!-- 📄 Page 813 -->
 ## 6.14.3 Multicast Capability Structure Field Updates | 多播能力结构字段更新
 
 <table>
@@ -11828,9 +11513,6 @@ Downstream Port 的 MC_Overlay 机制适用于离开该 Port 的 TLP。Upstream 
 
 ---
 
-
----
-
 <a id="sec-6-14-5"></a>
 ## 6.14.5 MC_Overlay Mechanism | MC_Overlay 机制
 
@@ -11845,12 +11527,12 @@ Downstream Port 的 MC_Overlay 机制适用于离开该 Port 的 TLP。Upstream 
 <tr>
 <td>
 
-```
-If (MC_Overlay_Size < 6)
+<pre>
+If (MC_Overlay_Size &lt; 6)
 Then Egress_TLP_Addr = Ingress_TLP_Addr;
 Else Egress_TLP_Addr = { MC_Overlay_BAR[63:MC_Overlay_Size],
 Ingress_TLP_Addr[MC_Overlay_Size-1:0] };
-```
+</pre>
 **Equation 6-1 MC_Overlay Transform rules**
 
 If the TLP with modified address contains the optional ECRC, the unmodified ECRC will almost certainly indicate an error. The action to be taken if a TLP containing an ECRC is Multicast copied to an Egress Port that has MC_Overlay enabled depends upon whether or not optional support for ECRC regeneration is implemented. All of the contingent actions are outlined in § Table 6-12. If MC_Overlay is not enabled, the TLP is forwarded unmodified. If MC_Overlay is enabled and the TLP has no ECRC, the modified TLP, with its address replaced as specified in the previous paragraph is forwarded. If the TLP has an ECRC but ECRC regeneration is not supported, then the modified TLP is forwarded with its ECRC dropped and the TD bit in the header cleared to indicate no ECRC attached. If the TLP has an ECRC and ECRC regeneration is supported, then an ECRC check is performed before the TLP is forwarded. If the ECRC check passes, the TLP is forwarded with regenerated ECRC. If the ECRC check fails, the TLP is forwarded with inverted regenerated ECRC.
@@ -11876,12 +11558,12 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 </td>
 <td style="background-color:#e8e8e8">
 
-```
-若 (MC_Overlay_Size < 6)
+<pre>
+若 (MC_Overlay_Size &lt; 6)
 则 Egress_TLP_Addr = Ingress_TLP_Addr;
 否则 Egress_TLP_Addr = { MC_Overlay_BAR[63:MC_Overlay_Size],
                         Ingress_TLP_Addr[MC_Overlay_Size-1:0] };
-```
+</pre>
 **公式 6-1 MC_Overlay 变换规则**
 
 若地址已被修改的 TLP 包含可选的 ECRC,则未修改的 ECRC 几乎必然指示错误。当含有 ECRC 的 TLP 被多播 (Multicast) 复制到启用了 MC_Overlay 的出端口 (Egress Port) 时，所采取的动作取决于是否实现了可选的 ECRC 重新生成 (ECRC Regeneration) 支持。表 6-12 中列出了所有相关动作。若未启用 MC_Overlay,则 TLP 按原样转发。若启用了 MC_Overlay 且 TLP 没有 ECRC,则按上一段所述将地址替换后的已修改 TLP 转发。若 TLP 含有 ECRC 但不支持 ECRC 重新生成，则转发已修改的 TLP 时丢弃其 ECRC,并清除包头 (Header) 中的 TD 位以表示未附带 ECRC。若 TLP 含有 ECRC 且支持 ECRC 重新生成，则在转发 TLP 之前执行 ECRC 校验。若 ECRC 校验通过，则 TLP 附带重新生成的 ECRC 进行转发;若 ECRC 校验失败，则 TLP 附带反相的重新生成 ECRC 进行转发。
@@ -11911,10 +11593,7 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 
 ---
 
-<!-- 📄 Page 815 -->
----
-
-<a id="sec-6-14-5-imp-1"></a>
+<a id="sec-6-14-5-imp-1"></a> <!-- 📄 Page 815 -->
 ## Implementation Note: Multicast to Endpoints Without Multicast Capability | 实现注意事项:多播到不具备多播能力的端点
 
 
@@ -12028,10 +11707,7 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 
 ---
 
-<!-- 📄 Page 816 -->
----
-
-<a id="sec-6-14-5-imp-4"></a>
+<a id="sec-6-14-5-imp-4"></a> <!-- 📄 Page 816 -->
 ## Implementation Note: Congestion Avoidance | 实现注意事项:拥塞避免
 
 <table>
@@ -12337,10 +12013,7 @@ As with other PCI Express Transactions, the support for peer-to-peer routing of 
 
 ---
 
-<!-- 📄 Page 820 -->
----
-
-<a id="sec-6-15-3"></a>
+<a id="sec-6-15-3"></a> <!-- 📄 Page 820 -->
 ## 6.15.3 Root Complex Support for AtomicOps | 6.15.3 根复合体对 AtomicOp 的支持
 
 
@@ -12400,9 +12073,6 @@ If a Switch supports AtomicOp routing capability for any of its Ports, it must d
 </tbody>
 </table>
 </div>
-
-
----
 
 
 ---
@@ -12497,10 +12167,7 @@ DPA 定义了一组功率子状态 (power substate)，每个子状态都有一�
 
 ---
 
-<!-- 📄 Page 821 -->
----
-
-<table>
+<table> <!-- 📄 Page 821 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12595,10 +12262,7 @@ Due to the variety of applications and the wide range of maximum power required 
 
 ---
 
-<!-- 📄 Page 822 -->
----
-
-<table>
+<table> <!-- 📄 Page 822 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12759,10 +12423,7 @@ TPH Requester Extended Capability 结构中的 ST Table Location 字段指示 Fu
 
 ---
 
-<!-- 📄 Page 823 -->
----
-
-**Table 6-13 Processing Hint Mapping | 表 6-13 处理提示映射**
+**Table 6-13 Processing Hint Mapping | 表 6-13 处理提示映射** <!-- 📄 Page 823 -->
 
 | PH[1:0] (b) | Processing Hint | Usage Model | PH[1:0] (b) | 处理提示 | 用例模型 |
 |---|---|---|---|---|---|
@@ -12865,10 +12526,7 @@ In the Device Specific Mode of operation, the assignment of the Steering Tags to
 
 ---
 
-<!-- 📄 Page 824 -->
----
-
-**Table 6-14 ST Modes of Operation | 表 6-14 ST 操作模式**
+**Table 6-14 ST Modes of Operation | 表 6-14 ST 操作模式** <!-- 📄 Page 824 -->
 
 | ST Mode Select [2:0] (b) | ST Mode Name | Description | ST Mode Select [2:0] (b) | ST 模式名称 | 描述 |
 |---|---|---|---|---|---|
@@ -12961,10 +12619,7 @@ LTR 支持通过 § 第 7 章 所述的报告寄存器和控制寄存器进行�
 
 ---
 
-<!-- 📄 Page 825 -->
----
-
-> **Figure 6-15.** Latency Fields Format for LTR Messages | LTR 消息的延迟字段格式
+> **Figure 6-15.** Latency Fields Format for LTR Messages | LTR 消息的延迟字段格式 <!-- 📄 Page 825 -->
 > **图 6-15.** LTR 消息的延迟字段格式
 > <img src="figures/chapter_06/fig_0825_1_tight.png" width="700">
 
@@ -13074,10 +12729,7 @@ It is strongly recommended that Endpoints send no more than two LTR Messages wit
 
 ---
 
-<!-- 📄 Page 826 -->
----
-
-<table>
+<table> <!-- 📄 Page 826 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -13160,11 +12812,8 @@ The RC is permitted to delay processing of device Request TLPs provided it satis
 
 ---
 
-<!-- 📄 Page 827 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 827 -->
 <table>
 <thead>
 <tr>
@@ -13257,10 +12906,7 @@ LTR 延迟语义反映了设备所看到的可容忍延迟，按以下一种或�
 
 ---
 
-<!-- 📄 Page 828 -->
----
-
-> **Figure 6-17.** Use of LTR and Clock Power Management | LTR 与时钟电源管理的使用
+> **Figure 6-17.** Use of LTR and Clock Power Management | LTR 与时钟电源管理的使用 <!-- 📄 Page 828 -->
 > **图 6-17.** LTR 与时钟电源管理的使用
 
 > <img src="figures/chapter_06/fig_0829_1_tight.png" width="700">
@@ -13322,13 +12968,7 @@ Note that LTR may be enabled in environments where not all Endpoints support LTR
 
 ---
 
-<!-- 📄 Page 829 -->
----
-
-
----
-
-<a id="sec-6-19"></a>
+<a id="sec-6-19"></a> <!-- 📄 Page 829 -->
 ## 6.19 Optimized Buffer Flush/Fill (OBFF) Mechanism | 优化缓冲区刷新/填充 (OBFF) 机制
 
 <table>
@@ -13342,9 +12982,8 @@ Note that LTR may be enabled in environments where not all Endpoints support LTR
 <tr>
 <td>
 
-6.19 Optimized Buffer Flush/Fill (OBFF) Mechanism §
+6.19 Optimized Buffer Flush/Fill (OBFF) Mechanism § <!-- 📄 Page 830 -->
 
-<!-- 📄 Page 830 -->
 ---
 
 associated with the Root Complex (RC, 根复合体) are active to service some other activity, for example the operating system timer tick. The nature and determination of such windows is platform/implementation specific.
@@ -13365,9 +13004,8 @@ These codes correspond to various assertion patterns of WAKE# when using WAKE# s
 </td>
 <td style="background-color:#e8e8e8">
 
-6.19 优化缓冲区刷新/填充 (OBFF, Optimized Buffer Flush/Fill) 机制 §
+6.19 优化缓冲区刷新/填充 (OBFF, Optimized Buffer Flush/Fill) 机制 § <!-- 📄 Page 830 -->
 
-<!-- 📄 Page 830 -->
 ---
 
 根复合体 (RC, Root Complex) 处于活动状态以处理其他活动，例如操作系统定时器滴答。此类时间窗口的性质和判定由平台/实现自行决定。
@@ -13433,10 +13071,7 @@ OBFF 指示反映中央资源电源管理 (Power Management) 状态的转换:当
 
 ---
 
-<!-- 📄 Page 831 -->
----
-
-<table>
+<table> <!-- 📄 Page 831 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -13556,11 +13191,8 @@ Downstream Ports can be configured to transmit OBFF Messages in two ways, which 
 
 ---
 
-<!-- 📄 Page 832 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 832 -->
 <table>
 <thead>
 <tr>
@@ -13805,10 +13437,7 @@ A TLP may contain at most one PASID TLP Prefix.
 
 ---
 
-<!-- 📄 Page 834 -->
----
-
-> **Figure 6-20.** PASID TLP Prefix | PASID TLP Prefix
+> **Figure 6-20.** PASID TLP Prefix | PASID TLP Prefix <!-- 📄 Page 834 -->
 > **图 6-20.** PASID TLP Prefix
 > <img src="figures/chapter_06/fig_0834_1_tight.png" width="700">
 
@@ -13874,10 +13503,7 @@ PASID 字段宽度为 20 位。端点 (Endpoint) 和根复合体 (Root Complex) 
 
 ---
 
-<!-- 📄 Page 835 -->
----
-
-<table>
+<table> <!-- 📄 Page 835 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -14015,11 +13641,8 @@ For Root Complexes, the following rules apply:
 
 ---
 
-<!-- 📄 Page 836 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 836 -->
 <table>
 <thead>
 <tr>
@@ -14131,9 +13754,6 @@ For Completers, the following rules apply:
 
 ---
 
-
----
-
 <a id="sec-6-20-2-4"></a>
 ### 6.20.2.4 Privileged Mode Requested | 特权模式请求
 
@@ -14160,10 +13780,7 @@ For address translation related TLPs, usage of this bit is defined in Address Tr
 </td>
 </tr>
 </tbody>
-</table>
-
-<!-- 📄 Page 837 -->
----
+</table> <!-- 📄 Page 837 -->
 
 ---
 
@@ -14245,10 +13862,7 @@ PTM 定义了以下角色：
 
 >>> **Figure 6-21.** Example System Topologies using PTM
 > **图 6-21.** 使用 PTM 的示例系统拓扑
->>> <img src="figures/chapter_06/fig_0838_1_tight.png" width="700">
-
-<!-- 📄 Page 838 -->
----
+>>> <img src="figures/chapter_06/fig_0838_1_tight.png" width="700"> <!-- 📄 Page 838 -->
 
 ---
 
@@ -14368,11 +13982,8 @@ t1、t2、t3、t4 和 t2' 表示在 PTM 对话期间采集的时间戳，如图 
 </tr>
 </tbody>
 </table>
-</div>
+</div> <!-- 📄 Page 840 -->
 
-
-<!-- 📄 Page 840 -->
----
 
 ---
 
@@ -14404,10 +14015,7 @@ specific.
 </td>
 </tr>
 </tbody>
-</table>
-
-<!-- 📄 Page 841 -->
----
+</table> <!-- 📄 Page 841 -->
 
 ---
 
@@ -14482,10 +14090,7 @@ to software.
 
 >>> **Figure 6-23.** Precision Time Measurement Example
 > **图 6-23.** 精确时间测量示例
->>> <img src="figures/chapter_06/fig_0841_1_tight.png" width="700">
-
-<!-- 📄 Page 842 -->
----
+>>> <img src="figures/chapter_06/fig_0841_1_tight.png" width="700"> <!-- 📄 Page 842 -->
 
 ---
 
@@ -14606,10 +14211,7 @@ Data Byte 3 contains Propagation Delay [7:0] (least significant byte)
 </td>
 </tr>
 </tbody>
-</table>
-
-<!-- 📄 Page 843 -->
----
+</table> <!-- 📄 Page 843 -->
 
 ---
 
@@ -14817,11 +14419,8 @@ successive PTM dialogs have been completed successfully and without replays.
 </tr>
 </tbody>
 </table>
-</div>
+</div> <!-- 📄 Page 845 -->
 
-
-<!-- 📄 Page 845 -->
----
 
 ---
 
@@ -14938,10 +14537,7 @@ expected to take more than 10 μs.
 </td>
 </tr>
 </tbody>
-</table>
-
-<!-- 📄 Page 846 -->
----
+</table> <!-- 📄 Page 846 -->
 
 ---
 
@@ -15041,11 +14637,8 @@ granularity of this clock as defined in the PTM Capabilities structure (§ Secti
 </tr>
 </tbody>
 </table>
-</div>
+</div> <!-- 📄 Page 847 -->
 
-
-<!-- 📄 Page 847 -->
----
 
 ---
 
@@ -15145,11 +14738,8 @@ however such software/firmware mechanisms are outside the scope of this specific
 </tr>
 </tbody>
 </table>
-</div>
+</div> <!-- 📄 Page 848 -->
 
-
-<!-- 📄 Page 848 -->
----
 
 ---
 
@@ -15265,10 +14855,7 @@ below it, then this hybrid approach for determining Configuration Ready is recom
 </td>
 </tr>
 </tbody>
-</table>
-
-<!-- 📄 Page 849 -->
----
+</table> <!-- 📄 Page 849 -->
 
 ---
 
@@ -15396,11 +14983,7 @@ DRS 消息协议要求包括以下内容：
 </tr>
 </tbody>
 </table>
-</div>
-
-
-<!-- 📄 Page 850 -->
----
+</div> <!-- 📄 Page 850 -->
 
 
 ---
@@ -16009,41 +15592,7 @@ The following rules apply when any of the FPB mechanisms are used:
 
 ---
 
-<!-- 📄 Page 851 -->
----
-<!-- 📄 Page 852 -->
----
-<!-- 📄 Page 853 -->
----
-<!-- 📄 Page 854 -->
----
-<!-- 📄 Page 855 -->
----
-<!-- 📄 Page 856 -->
----
-<!-- 📄 Page 857 -->
----
-<!-- 📄 Page 858 -->
----
-<!-- 📄 Page 859 -->
----
-<!-- 📄 Page 860 -->
----
-<!-- 📄 Page 861 -->
----
-<!-- 📄 Page 862 -->
----
-<!-- 📄 Page 863 -->
----
-<!-- 📄 Page 864 -->
----
-<!-- 📄 Page 865 -->
----
-
-
----
-
-<a id="sec-6-26-2"></a>
+<a id="sec-6-26-2"></a> <!-- 📄 Page 851 --> <!-- 📄 Page 852 --> <!-- 📄 Page 853 --> <!-- 📄 Page 854 --> <!-- 📄 Page 855 --> <!-- 📄 Page 856 --> <!-- 📄 Page 857 --> <!-- 📄 Page 858 --> <!-- 📄 Page 859 --> <!-- 📄 Page 860 --> <!-- 📄 Page 861 --> <!-- 📄 Page 862 --> <!-- 📄 Page 863 --> <!-- 📄 Page 864 --> <!-- 📄 Page 865 -->
 ## 6.26.2 Hardware and Software Requirements | 硬件与软件要求
 
 
@@ -16101,10 +15650,7 @@ The following rules apply when any of the FPB mechanisms are used:
 
 ---
 
-<!-- 📄 Page 867 -->
----
-
-<a id="sec-6-26-2-fpb-rid"></a>
+<a id="sec-6-26-2-fpb-rid"></a> <!-- 📄 Page 867 -->
 ## 6.26.2 (续) FPB RID 机制规则 | FPB RID Mechanism Rules
 
 <table>
@@ -16166,10 +15712,7 @@ When ARI is not enabled, the FPB RID mechanism can be applied with different gra
 
 ---
 
-<!-- 📄 Page 868 -->
----
-
-<a id="sec-6-26-2-fpb-switch"></a>
+<a id="sec-6-26-2-fpb-switch"></a> <!-- 📄 Page 868 -->
 ## 6.26.2 (续) Switch 上游端口相关 FPB 规则 | FPB Rules for Switch Upstream Ports
 
 
@@ -16231,10 +15774,7 @@ This is a special case, but the concept is not unique to FPB, and is a reflectio
 
 ---
 
-<!-- 📄 Page 869 -->
----
-
-<a id="sec-6-26-2-fpb-mem-low"></a>
+<a id="sec-6-26-2-fpb-mem-low"></a> <!-- 📄 Page 869 -->
 ## 6.26.2 (续) FPB MEM Low 机制规则 | FPB MEM Low Mechanism Rules
 
 <table>
@@ -16298,10 +15838,7 @@ FPB MEM Low 机制可以以不同的粒度应用，粒度可由系统软件通�
 
 ---
 
-<!-- 📄 Page 870 -->
----
-
-<a id="sec-6-26-2-fpb-mem-high"></a>
+<a id="sec-6-26-2-fpb-mem-high"></a> <!-- 📄 Page 870 -->
 ## 6.26.2 (续) FPB MEM High 机制规则 | FPB MEM High Mechanism Rules
 
 
@@ -16361,10 +15898,7 @@ The following rules apply to the FPB MEM High mechanism:
 
 ---
 
-<!-- 📄 Page 871 -->
----
-
-<a id="sec-6-26-2-impl-note-fpb-decoding"></a>
+<a id="sec-6-26-2-impl-note-fpb-decoding"></a> <!-- 📄 Page 871 -->
 ## 6.26.2 (续) 实现说明:FPB 地址解码 | IMPLEMENTATION NOTE: FPB ADDRESS DECODING
 
 <table>
@@ -16438,10 +15972,7 @@ FPB 使用位向量机制来解码路由 ID (Routing ID) 范围以及 4 GB 以�
 
 ---
 
-<!-- 📄 Page 872 -->
----
-
-<a id="sec-6-26-2-impl-note-hw-sw"></a>
+<a id="sec-6-26-2-impl-note-hw-sw"></a> <!-- 📄 Page 872 -->
 ## 6.26.2 (续) 实现说明:FPB 的硬件与软件考量 | IMPLEMENTATION NOTE: HARDWARE AND SOFTWARE CONSIDERATIONS FOR FPB
 
 
@@ -16505,10 +16036,7 @@ FPB 包含为 Requester ID 和内存空间启用不连续资源范围分配/再�
 
 ---
 
-<!-- 📄 Page 873 -->
----
-
-<a id="sec-6-27"></a>
+<a id="sec-6-27"></a> <!-- 📄 Page 873 -->
 ## 6.27 Vital Product Data (VPD) | 重要产品数据 (VPD)
 
 <table>
@@ -16634,10 +16162,7 @@ A small example of the resource data type tags used in a typical VPD is shown in
 
 ---
 
-<!-- 📄 Page 874 -->
----
-
-<a id="sec-6-27-1"></a>
+<a id="sec-6-27-1"></a> <!-- 📄 Page 874 -->
 ## 6.27.1 VPD Format | VPD 格式
 
 <table>
@@ -16653,7 +16178,7 @@ A small example of the resource data type tags used in a typical VPD is shown in
 
 Information fields within a VPD resource type consist of a three-byte header followed by some amount of data (see § Figure 6-34). The three-byte header contains a two-byte keyword and a one-byte length. A keyword is a two-character (ASCII) mnemonic that uniquely identifies the information in the field. The last byte of the header is binary and represents the length value (in bytes) of the data that follows.
 
-```
+<pre>
 7  6  5  4  3  2  1  0  +0   Keyword
 7  6  5  4  3  2  1  0  +1   Keyword
 7  6  5  4  3  2  1  0  +2   Length (N)
@@ -16661,7 +16186,7 @@ Information fields within a VPD resource type consist of a three-byte header fol
                           Byte 0 →
                           Byte 4 →
                           Byte 8 →
-```
+</pre>
 
 Figure 6-34 VPD Format
 
@@ -16674,7 +16199,7 @@ An example of the "add-in card serial number" VPD item is as follows:
 
 VPD 资源类型内的信息字段由一个三字节头部和随后的若干数据组成(参见 § Figure 6-34)。三字节头部包含一个两字节的 keyword (关键字) 和一个一字节的 length (长度)。关键字是一个两字符(ASCII)的助记符，用于唯一标识字段中的信息。头部的最后一个字节是二进制，表示后续数据的长度值(以字节为单位)。
 
-```
+<pre>
 7  6  5  4  3  2  1  0  +0   Keyword (关键字)
 7  6  5  4  3  2  1  0  +1   Keyword (关键字)
 7  6  5  4  3  2  1  0  +2   Length (长度, N)
@@ -16682,7 +16207,7 @@ VPD 资源类型内的信息字段由一个三字节头部和随后的若干数�
                           Byte 0 →
                           Byte 4 →
                           Byte 8 →
-```
+</pre>
 
 Figure 6-34 VPD 格式
 
@@ -16719,10 +16244,7 @@ VPD 关键字分为两类:只读字段和读/写字段。除非另有说明，�
 
 ---
 
-<!-- 📄 Page 875 -->
----
-
-<a id="sec-6-27-2"></a>
+<a id="sec-6-27-2"></a> <!-- 📄 Page 875 -->
 ## 6.27.2 VPD Definitions | VPD 定义
 
 <table>
@@ -16774,9 +16296,6 @@ VPD 包含在四种类型的大型和小型 Resource Data Tag 中。以下标签
 | SN | Serial Number | The characters are alphanumeric and represent the unique add-in card Serial Number. (字符为字母数字,表示唯一的插卡序列号。) |
 
 [⬆️ 返回目录](#sec-6-0)
-
----
-
 
 ---
 
@@ -16870,13 +16389,7 @@ VPD 包含在四种类型的大型和小型 Resource Data Tag 中。以下标签
 
 ---
 
-<!-- 📄 Page 876 -->
----
-
-<!-- 📄 Page 877 -->
----
-
-<a id="sec-6-27-2-3"></a>
+<a id="sec-6-27-2-3"></a> <!-- 📄 Page 876 --> <!-- 📄 Page 877 -->
 ### 6.27.2.3 Read/Write Fields | 读/写字段
 
 <table>
@@ -17008,10 +16521,7 @@ The following is an example of a typical VPD.
 
 ---
 
-<!-- 📄 Page 878 -->
----
-
-<a id="sec-6-28"></a>
+<a id="sec-6-28"></a> <!-- 📄 Page 878 -->
 ## 6.28 Native PCIe Enclosure Management | 原生 PCIe 机箱管理
 
 <table>
@@ -17148,19 +16658,7 @@ NPEM 提供了一种机制，使系统软件能够通过 NPEM 复位 (NPEM Reset
 
 ---
 
-<!-- 📄 Page 879 -->
----
-
-<!-- 📄 Page 880 -->
----
-
-<!-- 📄 Page 881 -->
----
-
-<!-- 📄 Page 882 -->
----
-
-> **IMPLEMENTATION NOTE:** NPEM STATES
+> **IMPLEMENTATION NOTE:** NPEM STATES <!-- 📄 Page 879 --> <!-- 📄 Page 880 --> <!-- 📄 Page 881 --> <!-- 📄 Page 882 -->
 
 <table>
 <thead>
@@ -17256,10 +16754,7 @@ For the case where an NPEM command has not completed when software polls the bit
 
 ---
 
-<!-- 📄 Page 883 -->
----
-
-<a id="sec-6-29"></a>
+<a id="sec-6-29"></a> <!-- 📄 Page 883 -->
 ## 6.29 Conventional PCI Advanced Features Operation | 传统 PCI 高级特性操作
 
 <table>
@@ -17325,10 +16820,7 @@ FLR 启动后，Function 必须在 100 ms 内完成 FLR。如果软件在 Transa
 
 ---
 
-<!-- 📄 Page 884 -->
----
-
-> **IMPLEMENTATION NOTE:** AVOIDING ISSUES WITH PENDING TRANSACTIONS
+> **IMPLEMENTATION NOTE:** AVOIDING ISSUES WITH PENDING TRANSACTIONS <!-- 📄 Page 884 -->
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -17523,16 +17015,7 @@ It is permitted to use DOE when a Function is in non-D0 states, although it is p
 
 ---
 
-<!-- 📄 Page 885 -->
----
-
-<!-- 📄 Page 886 -->
----
-
-<!-- 📄 Page 887 -->
----
-
-> **IMPLEMENTATION NOTE:** SUPPORTING MULTIPLE HARDWARE/SOFTWARE BINDINGS
+> **IMPLEMENTATION NOTE:** SUPPORTING MULTIPLE HARDWARE/SOFTWARE BINDINGS <!-- 📄 Page 885 --> <!-- 📄 Page 886 --> <!-- 📄 Page 887 -->
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -17606,10 +17089,7 @@ In each case, two distinct SPDM uses are shown, A and B, and within each group, 
 
 ---
 
-<!-- 📄 Page 888 -->
----
-
-<a id="sec-6-30-1"></a>
+<a id="sec-6-30-1"></a> <!-- 📄 Page 888 -->
 ### 6.30.1 Data Objects and Features | 数据对象与特性
 
 <table>
@@ -17709,10 +17189,7 @@ The Second DW of a data object must be formatted as defined in Table 6-29 and il
 
 ---
 
-<!-- 📄 Page 889 -->
----
-
-**Table 6-29 DOE Data Object Header 2**
+**Table 6-29 DOE Data Object Header 2** <!-- 📄 Page 889 -->
 
 | Bit Location | Description |
 |--------------|-------------|
@@ -17799,13 +17276,7 @@ The DOE Discovery feature must be implemented, and provides a means for software
 
 ---
 
-<!-- 📄 Page 890 -->
----
-
-
----
-
-<a id="sec-6-30-1-1"></a>
+<a id="sec-6-30-1-1"></a> <!-- 📄 Page 890 -->
 ## 6.30.1.1 DOE Discovery Feature | DOE 发现功能
 
 <table>
@@ -17854,10 +17325,7 @@ The DOE Discovery feature must be implemented, and provides a means for software
 
 ---
 
-<!-- 📄 Page 892 -->
----
-
-<a id="sec-6-30-1-1-4dw"></a>
+<a id="sec-6-30-1-1-4dw"></a> <!-- 📄 Page 892 -->
 ## 6.30.1.1 DOE Discovery Feature (4th DW) | DOE 发现功能（第 4 个 DW）
 
 
@@ -17937,10 +17405,7 @@ PCI-SIG 定义的数据对象类型在 § Table 6-33 中定义。
 
 ---
 
-<!-- 📄 Page 893 -->
----
-
-<a id="sec-6-30-1-2"></a>
+<a id="sec-6-30-1-2"></a> <!-- 📄 Page 893 -->
 ## 6.30.1.2 DOE Async Message | DOE 异步消息
 
 <table>
@@ -18022,10 +17487,7 @@ DOE 实例必须仅在接收到 Async Message GET 后才返回 Async Message REQ
 
 ---
 
-<!-- 📄 Page 894 -->
----
-
-<a id="sec-6-30-2"></a>
+<a id="sec-6-30-2"></a> <!-- 📄 Page 894 -->
 ## 6.30.2 Operation | 运行
 
 
@@ -18115,10 +17577,7 @@ DOE 错误涵盖 DOE 自身运行中的错误，但如下所述，不包括与�
 
 ---
 
-<!-- 📄 Page 895 -->
----
-
-<a id="sec-6-30-2-impl-note"></a>
+<a id="sec-6-30-2-impl-note"></a> <!-- 📄 Page 895 -->
 ### IMPLEMENTATION NOTE: EXCHANGE OF DATA OBJECTS | 实现说明：数据对象交换
 
 <table>
@@ -18178,10 +17637,7 @@ DOE Busy 位可用于指示 DOE 响应者暂时无法接受数据对象。DOE �
 
 ---
 
-<!-- 📄 Page 896 -->
----
-
-<a id="sec-6-30-3"></a>
+<a id="sec-6-30-3"></a> <!-- 📄 Page 896 -->
 ## 6.30.3 Interrupt Generation | 中断生成
 
 
@@ -18223,10 +17679,7 @@ DOE 实例被允许支持 DOE 中断的生成，这由 DOE Capabilities 寄存�
 
 ---
 
-<!-- 📄 Page 897 -->
----
-
-<a id="sec-6-31"></a>
+<a id="sec-6-31"></a> <!-- 📄 Page 897 -->
 ## 6.31 Component Measurement and Authentication (CMA-SPDM) | 组件度量与认证 (CMA-SPDM)
 
 <table>
@@ -18296,10 +17749,7 @@ CMA-SPDM 安全特性的高级概述及其相关 PCIe 特定要求将在以下�
 
 ---
 
-<!-- 📄 Page 898 -->
----
-
-<a id="sec-6-31-impl-note-1"></a>
+<a id="sec-6-31-impl-note-1"></a> <!-- 📄 Page 898 -->
 ### IMPLEMENTATION NOTE: UNDERSTANDING AND IMPLEMENTING CMA-SPDM | 实现说明：理解与实现 CMA-SPDM
 
 
@@ -18404,10 +17854,7 @@ CMA/SPDM 的应用众多且多样化。对于复杂环境，安全身份供应�
 
 ---
 
-<!-- 📄 Page 902 -->
----
-
-<a id="sec-6-31-impl-note-2"></a>
+<a id="sec-6-31-impl-note-2"></a> <!-- 📄 Page 902 -->
 ### IMPLEMENTATION NOTE: OVERVIEW OF THREAT MODEL | 实现说明：威胁模型概述
 
 <table>
@@ -18513,10 +17960,7 @@ CMA-SPDM 不适用于根端口 (Root Port)，根端口不得实现 CMA-SPDM。
 
 ---
 
-<!-- 📄 Page 903 -->
----
-
-<a id="sec-6-31-1"></a>
+<a id="sec-6-31-1"></a> <!-- 📄 Page 903 -->
 ## 6.31.1 Removed | 6.31.1 已删除
 
 <table>
@@ -18543,9 +17987,6 @@ This section has been removed.
 </table>
 
 [⬆️ 返回目录](#sec-6-0)
-
----
-
 
 ---
 
@@ -18658,10 +18099,7 @@ Some components provide a debug mode where a debugger is granted access to hardw
 
 ---
 
-<!-- 📄 Page 905 -->
----
-
-- For MeasurementHashAlgo (cont.):
+- For MeasurementHashAlgo (cont.): <!-- 📄 Page 905 -->
   - TPM_ALG_SHA_256
   - TPM_ALG_SHA_384
 - It is permitted for Requesters and Responders to support additional algorithms defined for [SPDM] beyond those required.
@@ -18723,11 +18161,8 @@ For the Secured CMA-SPDM data object type or Secured CMA-SPDM with connection ID
 
 ---
 
-<!-- 📄 Page 906 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 906 -->
 <table>
 <thead>
 <tr>
@@ -18831,11 +18266,8 @@ As with AtomicOps (See § Section 6.15), the use model for DMWr requires that, f
 
 ---
 
-<!-- 📄 Page 907 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 907 -->
 <table>
 <thead>
 <tr>
@@ -18907,10 +18339,7 @@ DMWr 请求的目标如果不是 DMWr Completer(即 DMWr Completer Supported 位
 
 ---
 
-<!-- 📄 Page 908 -->
----
-
-<table>
+<table> <!-- 📄 Page 908 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -18983,11 +18412,8 @@ The following requirements apply to Root Complexes and Switches that support DMW
 
 ---
 
-<!-- 📄 Page 909 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 909 -->
 <table>
 <thead>
 <tr>
@@ -19033,10 +18459,7 @@ The following requirements apply to DMWr Requesters:
 
 ---
 
-<!-- 📄 Page 910 -->
----
-
-<table>
+<table> <!-- 📄 Page 910 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -19100,10 +18523,7 @@ DMWr 的使用者必须理解事务排序的功能影响。DMWr 请求是带数�
 
 ---
 
-<!-- 📄 Page 911 -->
----
-
-<a id="sec-6-33"></a>
+<a id="sec-6-33"></a> <!-- 📄 Page 911 -->
 ## 6.33 Integrity & Data Encryption (IDE) | 完整性与数据加密 (IDE)
 
 
@@ -19145,10 +18565,7 @@ IDE 在两个端口之间建立 IDE 流（IDE Stream）(见 § Figure 6-52)。ID
 
 ---
 
-<!-- 📄 Page 912 -->
----
-
-<table>
+<table> <!-- 📄 Page 912 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -19184,10 +18601,7 @@ Policies for establishing trust between elements in a platform are outside the s
 
 ---
 
-<!-- 📄 Page 913 -->
----
-
-<table>
+<table> <!-- 📄 Page 913 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -19214,11 +18628,8 @@ apply security policy mechanisms, or to apply some policy mechanisms prior to es
 
 ---
 
-<!-- 📄 Page 914 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 914 -->
 <table>
 <thead>
 <tr>
@@ -19300,10 +18711,7 @@ IDE 在两个端口之间保护 TLP 流量。TLP 内容在通过终端 Partner �
 
 ---
 
-<!-- 📄 Page 915 -->
----
-
-<a id="sec-6-33-1"></a>
+<a id="sec-6-33-1"></a> <!-- 📄 Page 915 -->
 ## 6.33.1 IDE Stream and TEE State Machines | IDE 流与 TEE 状态机
 
 <table>
@@ -19361,11 +18769,8 @@ TEE 的实现可能非常复杂，强烈建议具有适当安全专业知识的�
 
 ---
 
-<!-- 📄 Page 916 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 916 -->
 <table>
 <thead>
 <tr>
@@ -19418,10 +18823,7 @@ A trusted execution environment (TEE) using IDE must prevent the transmission of
 
 ---
 
-<!-- 📄 Page 917 -->
----
-
-<table>
+<table> <!-- 📄 Page 917 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -19471,12 +18873,8 @@ TDISP(见 § Chapter 11.)定义了扩展以下规则的具体要求，这些规�
 
 ---
 
+<a id="sec-6-33-2"></a> <!-- 📄 Page 918 -->
 
----
-
-<a id="sec-6-33-2"></a>
-
-<!-- 📄 Page 918 -->
 ---
 
 ## 6.33.2 IDE Stream Establishment | IDE 流建立
@@ -19507,9 +18905,8 @@ It is also permitted for systems to implement the IDE_KM protocol via MCTP (see 
 
 It is also permitted for system firmware/software to enable pass-through communications between the two Partner Ports, where one of the two takes the Requester Role and the other takes the Responder Role, implementing the IDE_KM protocol defined below directly between the two Partner Ports (as an example see the Selective IDE Stream between Ports G and H in § Figure 6-52). How this is discovered and enabled is outside the scope of this specification.
 
-IDE Key Management (IDE_KM) builds upon [SPDM] and [Secured-SPDM], and can be used over multiple transports (see § Figure 6-55).
+IDE Key Management (IDE_KM) builds upon [SPDM] and [Secured-SPDM], and can be used over multiple transports (see § Figure 6-55). <!-- 📄 Page 919 -->
 
-<!-- 📄 Page 919 -->
 ---
 
 </td>
@@ -19585,9 +18982,8 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
     - It is strongly recommended that the cryptographic strength used in the secure session be at least as strong as selected for IDE itself.
   - If any IDE_KM data object is received that has not been transferred securely per [Secured-SPDM], the received data object must not be used for key management, and, if it is a request, must not result in a response.
   - The size of the VendorDefinedReqPayload/VendorDefinedRespPayload must match the size of the data object defined below.
-    - If the size does not match, the received data object must not be used for key management, and, if it is a request, must not result in a response.
+    - If the size does not match, the received data object must not be used for key management, and, if it is a request, must not result in a response. <!-- 📄 Page 920 -->
 
-<!-- 📄 Page 920 -->
 ---
 
 </td>
@@ -19666,9 +19062,8 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
   - all other encodings Reserved.
 - A Requester is permitted to use QUERY to determine the capabilities and configuration of a Port (see § Figure 6-56)
   - The PortIndex field must be used to indicate the Port addressed by the QUERY.
-- A Responder must respond to a QUERY indicating a PortIndex value of 00h.
+- A Responder must respond to a QUERY indicating a PortIndex value of 00h. <!-- 📄 Page 921 -->
 
-<!-- 📄 Page 921 -->
 ---
 
 </td>
@@ -19740,9 +19135,8 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
   - For Non-ARI Functions the Device/Function Number field must contain the Device and Function number of the Function corresponding to the PortIndex field value.
   - For ARI Functions the Function Number field must contain the Function number of the Function corresponding to the PortIndex field value.
   - The remainder of QUERY_RESPONSE must consist of the contents of the IDE Extended Capability Structure, other than the IDE Extended Capability Header itself, for the addressed Port.
-    - The Supported Algorithms and Selected Algorithm field values returned in QUERY_RESP must be compared against the values read from the corresponding fields in the Responder Port's IDE Extended Capability structure and if non-matching values are detected then the IDE_KM protocol for this secure session must be aborted, or other appropriate corrective action taken to avoid a possible "downgrade" attack.
+    - The Supported Algorithms and Selected Algorithm field values returned in QUERY_RESP must be compared against the values read from the corresponding fields in the Responder Port's IDE Extended Capability structure and if non-matching values are detected then the IDE_KM protocol for this secure session must be aborted, or other appropriate corrective action taken to avoid a possible "downgrade" attack. <!-- 📄 Page 922 -->
 
-<!-- 📄 Page 922 -->
 ---
 
 </td>
@@ -19819,9 +19213,8 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
     - 05-FFh: Reserved – Must not be used in generating KP_ACK, but if received must be treated as Unspecified Failure
   - The Responder must return KP_ACK within 1 second of the receipt of the KEY_PROG command.
     - It is strongly recommended to return KP_ACK as quickly as possible.
-  - Return of KP_ACK, regardless of Status, indicates the Port is able to receive and process another KEY_PROG command.
+  - Return of KP_ACK, regardless of Status, indicates the Port is able to receive and process another KEY_PROG command. <!-- 📄 Page 923 -->
 
-<!-- 📄 Page 923 -->
 ---
 
 </td>
@@ -19917,15 +19310,11 @@ An IDE error condition will occur if system software fails to ensure the correct
 
 > **Figure 6-56.** Query (QUERY) Data Object
 > **图 6-56.** Query（QUERY）数据对象
-> <img src="figures/chapter_06/fig_0924_1.png" width="700">
+> <img src="figures/chapter_06/fig_0924_1.png" width="700"> <!-- 📄 Page 924 -->
 
-<!-- 📄 Page 924 -->
 ---
 
-<!-- 📄 Page 925 -->
----
-
-</td>
+</td> <!-- 📄 Page 925 -->
 <td style="background-color:#e8e8e8">
 
 - 生成密钥的机制不在本文档的范围内。
@@ -19987,15 +19376,11 @@ An IDE error condition will occur if system software fails to ensure the correct
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 926 -->
 
-<!-- 📄 Page 926 -->
 ---
 
-<!-- 📄 Page 927 -->
----
-
-</td>
+</td> <!-- 📄 Page 927 -->
 <td style="background-color:#e8e8e8">
 
 </td>
@@ -20058,9 +19443,8 @@ Rules related to keys:
   - Once the Transmitter has indicated a change of key set via the K bit, the Receiver must mark the other key set/bank invalid until it is reprogrammed.
   - The specific requirements for the frequency of key updates are determined by platform security requirements that are outside the scope of this document.
     - It is generally recommended that hardware provide enough key storage and management resources to support changing the keys for at least one active Stream without disruption to IDE operation.
-    - It is expected that key update operations for multiple streams may need to be performed by firmware/software in a serialized fashion based on hardware key storage and management resource limitations.
+    - It is expected that key update operations for multiple streams may need to be performed by firmware/software in a serialized fashion based on hardware key storage and management resource limitations. <!-- 📄 Page 928 -->
 
-<!-- 📄 Page 928 -->
 ---
 
 </td>
@@ -20127,8 +19511,7 @@ TLPs secured by IDE are called IDE TLPs. In Non-Flit Mode, all IDE TLPs must use
 > | System Software / Firmware sets the Enable bit and IDE is established |
 >
 > ** When using DOE, the Upstream Port responds to the Configuration Write that completes the transfer of the K_SET_GO(Tx) data object for Completions with a non-IDE Completion, then triggers the use of IDE for Completions.
->
-<!-- 📄 Page 929 -->
+> <!-- 📄 Page 929 -->
 ---
 
 </td>
@@ -20218,9 +19601,8 @@ The IDE Prefix (NFM) includes:
 In Flit Mode:
 
 - The presence of MAC and/or PCRC are indicated using the TS field.
-- The K bit, T bit, Sub-Stream, Stream_ID, and PR_Sent_Counter are included in OHC-C, and have the same meaning as in the IDE Prefix.
+- The K bit, T bit, Sub-Stream, Stream_ID, and PR_Sent_Counter are included in OHC-C, and have the same meaning as in the IDE Prefix. <!-- 📄 Page 930 -->
 
-<!-- 📄 Page 930 -->
 ---
 
 </td>
@@ -20285,9 +19667,8 @@ Flow Control credit accounting for IDE TLPs must handle the MAC as covered by th
 
 For IDE TLPs, AES-GCM can be applied to each IDE TLP, or aggregation can be used to apply AES-GCM to multiple IDE TLPs, reducing the per-TLP overhead for the IDE TLP MAC. For a Link IDE Stream, local prefixes must be covered by the MAC (see § Figure 6-66, § Figure 6-67), § Figure 6-70, and § Figure 6-71). For Selective IDE Streams, local prefixes must not be covered by the MAC (see § Figure 6-68, § Figure 6-69, § Figure 6-72, and § Figure 6-73).
 
-<sub>143. Referred to as "authentication tag" or T in [AES-GCM] but renamed here to avoid confusion with other uses of "tag"</sub>
+<sub>143. Referred to as "authentication tag" or T in [AES-GCM] but renamed here to avoid confusion with other uses of "tag"</sub> <!-- 📄 Page 931 -->
 
-<!-- 📄 Page 931 -->
 ---
 
 </td>
@@ -20341,9 +19722,8 @@ IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode,
 > <img src="figures/chapter_06/fig_0931_2_tight.png" width="700">
 
 > **Figure 6-69.** IDE TLP – Example Showing Aggregation of Two TLPs for a Selective IDE Stream (Non-Flit Mode)
-> <img src="figures/chapter_06/fig_0931_3_tight.png" width="700">
+> <img src="figures/chapter_06/fig_0931_3_tight.png" width="700"> <!-- 📄 Page 932 -->
 
-<!-- 📄 Page 932 -->
 ---
 
 </td>
@@ -20356,9 +19736,8 @@ IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode,
 > <img src="figures/chapter_06/fig_0931_2_tight.png" width="700">
 
 > **图 6-69.** IDE TLP —— 选择性 IDE 流聚合两个 TLP 的示例（非 Flit 模式）
-> <img src="figures/chapter_06/fig_0931_3_tight.png" width="700">
+> <img src="figures/chapter_06/fig_0931_3_tight.png" width="700"> <!-- 📄 Page 932 -->
 
-<!-- 📄 Page 932 -->
 ---
 
 </td>
@@ -20381,16 +19760,14 @@ IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode,
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 933 -->
 
-<!-- 📄 Page 933 -->
 ---
 
 The inputs A and P must be formed by concatenating the included TLP content in Byte order as defined in § Section 2.1.2. Although the A and P content is conceptually concatenated as illustrated in these figures, the content placement in the IDE TLPs is the same as in non-IDE TLPs. Once the A and P content is constructed, [AES-GCM] defines how A and P must be padded – this padding is not illustrated here, and the padding is used in the [AES-GCM] calculations but is not included in the TLPs transmitted/received. When aggregation is used, the A and P content for aggregated TLPs is conceptually concatenated, for each type of content, prior to padding.
 
-Partial header encryption provides the ability to reduce potential exposure to side-channel attacks by encryption some portions of the Header of an IDE Memory Request while maintaining information that is required for TLP routing and low-level TLP processing in the clear. § Figure 6-74 illustrates, at a high level, the application of partial header encryption.
+Partial header encryption provides the ability to reduce potential exposure to side-channel attacks by encryption some portions of the Header of an IDE Memory Request while maintaining information that is required for TLP routing and low-level TLP processing in the clear. § Figure 6-74 illustrates, at a high level, the application of partial header encryption. <!-- 📄 Page 934 -->
 
-<!-- 📄 Page 934 -->
 ---
 
 </td>
@@ -20477,33 +19854,28 @@ Rules for partial header encryption:
 - The PCRC is calculated at the receiver using the decrypted P content and the Header portion padded to 64bits with 0's in the most significant bits.
 - When an error causes an IDE TLP with partial header encryption to be logged in the Header Log Register, the header fields selected for partial header encryption are permitted to contain all 0's or the encrypted values, but must not contain the decrypted values unless through implementation-specific means it is assured that doing so will not violate any security requirements.
 
-§ Figure 6-75 through § Figure 6-78 illustrate the application of partial header encryption.
+§ Figure 6-75 through § Figure 6-78 illustrate the application of partial header encryption. <!-- 📄 Page 935 -->
 
-<!-- 📄 Page 935 -->
 ---
 
 > **Figure 6-75.** Partial Header Encryption in NFM with Byte Enables
-> <img src="figures/chapter_06/fig_0936_1.png" width="700">
+> <img src="figures/chapter_06/fig_0936_1.png" width="700"> <!-- 📄 Page 936 -->
 
-<!-- 📄 Page 936 -->
 ---
 
 > **Figure 6-76.** Partial Header Encryption in NFM without Byte Enables
-> <img src="figures/chapter_06/fig_0937_1_tight.png" width="700">
+> <img src="figures/chapter_06/fig_0937_1_tight.png" width="700"> <!-- 📄 Page 937 -->
 
-<!-- 📄 Page 937 -->
 ---
 
 > **Figure 6-77.** Partial Header Encryption in FM with OHC-A1
-> <img src="figures/chapter_06/fig_0938_1_tight.png" width="700">
+> <img src="figures/chapter_06/fig_0938_1_tight.png" width="700"> <!-- 📄 Page 938 -->
 
-<!-- 📄 Page 938 -->
 ---
 
 > **Figure 6-78.** Partial Header Encryption in FM without OHC-A1
-> <img src="figures/chapter_06/fig_0939_1_tight.png" width="700">
+> <img src="figures/chapter_06/fig_0939_1_tight.png" width="700"> <!-- 📄 Page 939 -->
 
-<!-- 📄 Page 939 -->
 ---
 
 </td>
@@ -20598,9 +19970,8 @@ To enable the detection of faults in the encryption/decryption logic, which occu
 - When PCRC is enabled for an IDE Stream, all Transmitted TLPs associated with that Stream that include a MAC must also include PCRC, if and only if there is P content in the TLP or aggregated unit of TLPs.
   - In NFM, presence of a MAC is indicated by the M bit in the IDE Prefix being Set and presence of the PCRC is indicated by the P bit in the IDE Prefix being Set
   - In FM, the TS field is used to indicate presence of MAC / PCRC (see § Section 2.2.1.2.
-  - When aggregation is used, the TLPs of an aggregated unit that do not include a MAC also must not include PCRC (see § Figure 6-79).
+  - When aggregation is used, the TLPs of an aggregated unit that do not include a MAC also must not include PCRC (see § Figure 6-79). <!-- 📄 Page 940 -->
 
-<!-- 📄 Page 940 -->
 ---
 
 </td>
@@ -20667,9 +20038,8 @@ IDE 前缀 (NFM) 必须包含在 A 中。所有 OHC 内容 (FM) 必须包含在 
   - PCRC Check Failed is a reported error.
 - Flow Control credit accounting for IDE TLPs that include PCRC must handle the PCRC as covered by the Header Credit.
 
-<sub>144. As with ECRC, the PCRC is calculated using the TLP as-transmitted, including, for any data payload, all bytes as-transmitted regardless of the byte enable values.</sub>
+<sub>144. As with ECRC, the PCRC is calculated using the TLP as-transmitted, including, for any data payload, all bytes as-transmitted regardless of the byte enable values.</sub> <!-- 📄 Page 941 -->
 
-<!-- 📄 Page 941 -->
 ---
 
 </td>
@@ -20739,9 +20109,8 @@ IDE 前缀 (NFM) 必须包含在 A 中。所有 OHC 内容 (FM) 必须包含在 
 
 
 <sub>145. Routed to Root Complex is permitted only when the Partner Port is a Root Port, as indicated by the Default Stream bit being Set.</sub>
-<sub>146. Routed to Root Complex is permitted only when the Partner Port is a Root Port, as indicated by the Default Stream bit being Set.</sub>
+<sub>146. Routed to Root Complex is permitted only when the Partner Port is a Root Port, as indicated by the Default Stream bit being Set.</sub> <!-- 📄 Page 942 -->
 
-<!-- 📄 Page 942 -->
 ---
 
 > **IMPLEMENTATION NOTE:**
@@ -20792,9 +20161,8 @@ These rules apply to Selective IDE Stream TLPs:
   - For a TLP not already associated with any other Stream, the Default Stream bit must be Set.
   - The TLP is selected or precluded through implementation specific means. For example, the Transmitter could associate all Memory Requests initiated by one or more internal Functions with a specific Selective IDE Stream, particularly when it is known that the Partner Port is a Root Port, and that all Requests initiated by that internal Function target system memory.
   - If the TEE-Limited Stream bit in the Selective IDE Stream Control Register is Set, Requests with the T bit Set are associated with this Selective IDE Stream.
-    - Requests that otherwise would be associated with this Selective IDE Stream and have the T bit Clear must be Transmitted as non-IDE TLPs if Link IDE is not enabled, or as Link IDE TLPs if Link IDE is enabled.
+    - Requests that otherwise would be associated with this Selective IDE Stream and have the T bit Clear must be Transmitted as non-IDE TLPs if Link IDE is not enabled, or as Link IDE TLPs if Link IDE is enabled. <!-- 📄 Page 943 -->
 
-<!-- 📄 Page 943 -->
 ---
 
 </td>
@@ -20886,9 +20254,8 @@ These rules apply to TLPs other than IDE Fail Messages:
 - Configuration Requests received as IDE TLPs that are directed to pass through the Switch must pass without modification through a Switch when Flow-Through IDE Stream Enabled is Set in both the Upstream Port and the Egress Downstream Port.
 - Configuration Requests that are not directed to pass through a Switch must be accepted by the Receiver provided the Target RID is an implemented Function either associated with that Upstream Port or a Downstream Port of a Switch in that Upstream Port. If the Target RID is not an implemented Function, the Configuration Request must be handled as an Unsupported Request.
 - For Upstream Ports that are the IDE Terminus of a Selective IDE Stream with Selective IDE for Configuration Requests Supported Set, until the Port receives a Configuration Request as an IDE TLP on that Selective IDE Stream, the Port must continue to accept Configuration Requests as non-IDE TLPs. Once a Configuration Request has been received as an IDE TLP on that Selective IDE Stream, then the Port must accept only Configuration Requests associated with that Selective IDE Stream, and must discard all Configuration Requests received on other IDE Streams or as non-IDE TLPs, for as long as that Selective IDE Stream is enabled.
-- For Selective IDE, for TLP types other than Configuration Requests, the requirements for rejecting TLPs are determined by the TEE associated with the Selective IDE Stream (see § Section 6.33.1).
+- For Selective IDE, for TLP types other than Configuration Requests, the requirements for rejecting TLPs are determined by the TEE associated with the Selective IDE Stream (see § Section 6.33.1). <!-- 📄 Page 944 -->
 
-<!-- 📄 Page 944 -->
 ---
 
 </td>
@@ -20968,9 +20335,8 @@ These rules apply to TLPs other than IDE Fail Messages:
 
 The use of Multicast (see § Section 6.14) with Selective IDE Streams is outside the scope of this specification.
 
-With [AES-GCM] it is desirable to maintain TLPs in-order so that the Transmitter and Receiver can independently maintain IV in sync with each other without the overhead required to transmit the IV for each TLP or aggregated unit. However, certain TLP bypassing is required for deadlock avoidance, and this is reflected in the different types of Flow Control Credit Types – Posted Request header/data payload, Non-Posted Request header/data payload, and Completion header/data payload (see § Section 2.6.1). To provide in-order TLP processing where possible, and to simplify implementations that structure their internal buffering according to these Flow Control Credit types, IDE introduces the concept of a Sub-Stream within which TLP traffic is maintained fully in-order between the IDE Partner Ports. It is ensured
+With [AES-GCM] it is desirable to maintain TLPs in-order so that the Transmitter and Receiver can independently maintain IV in sync with each other without the overhead required to transmit the IV for each TLP or aggregated unit. However, certain TLP bypassing is required for deadlock avoidance, and this is reflected in the different types of Flow Control Credit Types – Posted Request header/data payload, Non-Posted Request header/data payload, and Completion header/data payload (see § Section 2.6.1). To provide in-order TLP processing where possible, and to simplify implementations that structure their internal buffering according to these Flow Control Credit types, IDE introduces the concept of a Sub-Stream within which TLP traffic is maintained fully in-order between the IDE Partner Ports. It is ensured <!-- 📄 Page 945 -->
 
-<!-- 📄 Page 945 -->
 ---
 
 </td>
@@ -21006,9 +20372,6 @@ With [AES-GCM] it is desirable to maintain TLPs in-order so that the Transmitter
 
 ---
 
-
----
-
 <a id="sec-6-33-5"></a>
 ## 6.33.5 IDE TLP Sub-Streams | IDE TLP 子流
 
@@ -21025,9 +20388,8 @@ With [AES-GCM] it is desirable to maintain TLPs in-order so that the Transmitter
 <tr>
 <td>
 
-148. The value of Segment Captured indicates that Segment values are being applied – the captured Segment value is not used for the tests defined here.
+148. The value of Segment Captured indicates that Segment values are being applied – the captured Segment value is not used for the tests defined here. <!-- 📄 Page 946 -->
 
-<!-- 📄 Page 946 -->
 ---
 
 within IDE Sub-Streams that TLPs travel in-order between the IDE Partner Ports both to reduce the per-TLP overhead as noted, and also to ensure that certain attack scenarios, such as the reordering or replaying by an Adversary-in-the-Middle, of Posted Requests, will be detected by the receiver without additional TLP tracking logic. With [AES-GCM] it is essential to maintain synchronization between the Partner Ports such that all TLPs associated with an IDE Stream are always routed from one Partner Port to the other. If any IDE TLPs are misrouted the result will typically be an unrecoverable error for the associated IDE Stream (see detailed requirements below).
@@ -21053,9 +20415,8 @@ The ordering rules defined in § Section 2.4 define constraints on TLP/TLP order
 - For the Transmitter, two 8 bit counters must be maintained: a count of Posted Requests Transmitted since the last Non-Posted Request or IDE Sync Message was Transmitted, called PR_Sent_Counter-NPR, and a count of Posted Requests Transmitted since the last Completion or IDE Sync Message was Transmitted, called PR_Sent_Counter-CPL
   - Upon entry to the Secure state, both counters must be initialized to 0.
   - Both counters must be incremented for each Posted Request IDE TLP Transmitted associated with the IDE Stream.
-  - When a Non-Posted Request associated with the IDE Stream is Transmitted, the PR_Sent_Counter-NPR value must be used in the PR_Sent_Counter field of the IDE Prefix (NFM)/OHC-C (FM) for the Non-Posted Request, and then PR_Sent_Counter-NPR must be reset to zero.
+  - When a Non-Posted Request associated with the IDE Stream is Transmitted, the PR_Sent_Counter-NPR value must be used in the PR_Sent_Counter field of the IDE Prefix (NFM)/OHC-C (FM) for the Non-Posted Request, and then PR_Sent_Counter-NPR must be reset to zero. <!-- 📄 Page 947 -->
 
-<!-- 📄 Page 947 -->
 ---
 
   - When a Completion associated with the IDE Stream is Transmitted, the PR_Sent_Counter-CPL value must be used in the PR_Sent_Counter field of the IDE Prefix (NFM)/OHC-C (FM) for the Completion, and then PR_Sent_Counter-CPL must be reset to zero.
@@ -21071,9 +20432,8 @@ The ordering rules defined in § Section 2.4 define constraints on TLP/TLP order
     - the PR_Sent_Counter-NPR value carried in the IDE Stream Sync Message must be subtracted from the PR_Received_Counter-NPR, and the PR_Received_Counter-NPR updated with the result,
     - the PR_Sent_Counter-CPL value carried in the IDE Stream Sync Message must be subtracted from the PR_Received_Counter-CPL, and the PR_Received_Counter-CPL updated with the result.
 
-If either subtraction underflows, this is an error – see rules related to error handling in § Section 6.33.7.
+If either subtraction underflows, this is an error – see rules related to error handling in § Section 6.33.7. <!-- 📄 Page 948 -->
 
-<!-- 📄 Page 948 -->
 ---
 
 > **IMPLEMENTATION NOTE:**
@@ -21083,18 +20443,16 @@ If either subtraction underflows, this is an error – see rules related to erro
 
 § Figure 6-80 illustrates the case where a Posted Request is allowed to bypass a Non-Posted Request, as is required for deadlock avoidance. IDE supports having Posted Requests bypass Non-Posted Requests through the use of Sub-Streams within a given Stream. There is a similar requirement for Posted Request to be able to bypass Completions (not illustrated).
 
-§ Figure 6-81 illustrates a case where an attacker attempts to bypass a Posted Request with a Non-Posted Request, which could, for example, cause the consumption of stale data. This case will be detected through the use of the PR Sent Counter mechanism, through which the Transmitter at source Port associated with the Stream indicates to the Receiver at the Destination Port how many Posted Requests were transmitted between successive Non-Posted Requests. This indication is carried in the IDE TLP Prefix (NFM)/OHC-C (FM), which is integrity protected and so cannot be modified without detection at the Receiver. In this example, NP1 will carry the indication that a Posted Request (P1) was transmitted, and this will not match the Receiver's count of Posted Requests received, enabling this illegal reordering to be detected.
+§ Figure 6-81 illustrates a case where an attacker attempts to bypass a Posted Request with a Non-Posted Request, which could, for example, cause the consumption of stale data. This case will be detected through the use of the PR Sent Counter mechanism, through which the Transmitter at source Port associated with the Stream indicates to the Receiver at the Destination Port how many Posted Requests were transmitted between successive Non-Posted Requests. This indication is carried in the IDE TLP Prefix (NFM)/OHC-C (FM), which is integrity protected and so cannot be modified without detection at the Receiver. In this example, NP1 will carry the indication that a Posted Request (P1) was transmitted, and this will not match the Receiver's count of Posted Requests received, enabling this illegal reordering to be detected. <!-- 📄 Page 949 -->
 
-<!-- 📄 Page 949 -->
 ---
 
 Without IDE, Non-Posted Requests are allowed to bypass each other, but within an IDE Stream, reordering of TLPs of the same type is disallowed in order to simplify the operation of the integrity/encryption mechanisms. § Figure 6-82 illustrates that this will cause the reordering of Non-Posted Requests to be detected as an integrity check failure, even though there isn't a security exposure per se.
 
 Note that reordering attacks are possible through Retimers (重定时器), Switches (交换机), and any other device or equipment that can alter the flow of TLPs at any point between the originating Port and the Destination Port.
 
-The counters used to implement the reordering checks are of different sizes in the Transmitter and Receiver. The Transmitter counters only need to be 8 bits wide in order to accommodate the arbitrarily chosen limit of 245 that triggers the required transmission of an IDE Sync Message. Because routing elements can modify the relative order of TLPs in different Sub-Streams, Receivers cannot assume any particular limit on the amount of reordering that can occur, and so the Receiver counters were chosen to be 64 bits wide so as to ensure that under normal operating conditions it is not possible for them to overflow.
+The counters used to implement the reordering checks are of different sizes in the Transmitter and Receiver. The Transmitter counters only need to be 8 bits wide in order to accommodate the arbitrarily chosen limit of 245 that triggers the required transmission of an IDE Sync Message. Because routing elements can modify the relative order of TLPs in different Sub-Streams, Receivers cannot assume any particular limit on the amount of reordering that can occur, and so the Receiver counters were chosen to be 64 bits wide so as to ensure that under normal operating conditions it is not possible for them to overflow. <!-- 📄 Page 950 -->
 
-<!-- 📄 Page 950 -->
 ---
 
 The following rules relate to aggregation (see § Figure 6-67 and § Figure 6-69):
@@ -21126,9 +20484,8 @@ The following rules relate to aggregation (see § Figure 6-67 and § Figure 6-69
 </td>
 <td style="background-color:#e8e8e8">
 
-148. Segment Captured 字段的值表示 Segment 值正在被应用——此处定义的测试并不使用捕获的 Segment 值。
+148. Segment Captured 字段的值表示 Segment 值正在被应用——此处定义的测试并不使用捕获的 Segment 值。 <!-- 📄 Page 946 -->
 
-<!-- 📄 Page 946 -->
 ---
 
 在 IDE 子流中,TLP 在 IDE Partner Port (对等端口) 之间按序传输，这既是为了如前所述降低每个 TLP 的开销，也是为了确保某些攻击场景(例如中间人(Adversary-in-the-Middle)对 Posted Request (有数据请求) 进行重排序或重放)能够被接收端检测到，而无需额外的 TLP 跟踪逻辑。根据 [AES-GCM],必须在 Partner Port 之间保持同步，以使与某个 IDE Stream 关联的所有 TLP 始终从一个 Partner Port 路由到另一个 Partner Port。如果任何 IDE TLP 被错误路由，其结果通常是对应 IDE Stream 的不可恢复错误(详见后文要求)。
@@ -21154,9 +20511,8 @@ The following rules relate to aggregation (see § Figure 6-67 and § Figure 6-69
 - 在发送端，必须维护两个 8 bit 计数器:自上次发送 Non-Posted Request 或 IDE Sync Message 以来已发送的 Posted Request 计数，记为 PR_Sent_Counter-NPR;以及自上次发送 Completion 或 IDE Sync Message 以来已发送的 Posted Request 计数，记为 PR_Sent_Counter-CPL。
   - 进入 Secure 状态时，两个计数器都必须初始化为 0。
   - 对于与该 IDE Stream 关联的每个已发送的 Posted Request IDE TLP,两个计数器都必须递增。
-  - 当发送与该 IDE Stream 关联的 Non-Posted Request 时，必须将该 PR_Sent_Counter-NPR 值用于该 Non-Posted Request 的 IDE Prefix (NFM)/OHC-C (FM) 中的 PR_Sent_Counter 字段，然后将 PR_Sent_Counter-NPR 复位为零。
+  - 当发送与该 IDE Stream 关联的 Non-Posted Request 时，必须将该 PR_Sent_Counter-NPR 值用于该 Non-Posted Request 的 IDE Prefix (NFM)/OHC-C (FM) 中的 PR_Sent_Counter 字段，然后将 PR_Sent_Counter-NPR 复位为零。 <!-- 📄 Page 947 -->
 
-<!-- 📄 Page 947 -->
 ---
 
   - 当发送与该 IDE Stream 关联的 Completion 时，必须将该 PR_Sent_Counter-CPL 值用于该 Completion 的 IDE Prefix (NFM)/OHC-C (FM) 中的 PR_Sent_Counter 字段，然后将 PR_Sent_Counter-CPL 复位为零。
@@ -21172,9 +20528,8 @@ The following rules relate to aggregation (see § Figure 6-67 and § Figure 6-69
     - 必须用 IDE Stream Sync Message 中携带的 PR_Sent_Counter-NPR 值减去 PR_Received_Counter-NPR,并用所得结果更新 PR_Received_Counter-NPR;
     - 必须用 IDE Stream Sync Message 中携带的 PR_Sent_Counter-CPL 值减去 PR_Received_Counter-CPL,并用所得结果更新 PR_Received_Counter-CPL。
 
-如果任一减法下溢，则为错误——参见 § Section 6.33.7 中的错误处理相关规则。
+如果任一减法下溢，则为错误——参见 § Section 6.33.7 中的错误处理相关规则。 <!-- 📄 Page 948 -->
 
-<!-- 📄 Page 948 -->
 ---
 
 > **实现注记:**
@@ -21184,18 +20539,16 @@ The following rules relate to aggregation (see § Figure 6-67 and § Figure 6-69
 
 § Figure 6-80 说明了允许 Posted Request 越过 Non-Posted Request 的情形，这是死锁避免所要求的。IDE 通过在给定 Stream 内使用 Sub-Stream 来支持 Posted Request 越过 Non-Posted Request。类似地,Posted Request 也需要能够越过 Completion(图中未示出)。
 
-§ Figure 6-81 说明了攻击者试图用 Non-Posted Request 越过 Posted Request 的情形，这种情况可能导致(例如)消费到过期的数据。此情形将通过 PR Sent Counter 机制检测出来:与 Stream 关联的源端口发送端通过该机制向目的端口接收端指示在两个连续 Non-Posted Request 之间已发送了多少个 Posted Request。该指示携带于 IDE TLP Prefix (NFM)/OHC-C (FM) 中，受完整性保护，因此无法在接收端不被发现地进行修改。在本示例中,NP1 将携带一个已发送 Posted Request (P1) 的指示，该指示将与接收端已接收 Posted Request 的计数不匹配，从而使这种非法重排序被检测出来。
+§ Figure 6-81 说明了攻击者试图用 Non-Posted Request 越过 Posted Request 的情形，这种情况可能导致(例如)消费到过期的数据。此情形将通过 PR Sent Counter 机制检测出来:与 Stream 关联的源端口发送端通过该机制向目的端口接收端指示在两个连续 Non-Posted Request 之间已发送了多少个 Posted Request。该指示携带于 IDE TLP Prefix (NFM)/OHC-C (FM) 中，受完整性保护，因此无法在接收端不被发现地进行修改。在本示例中,NP1 将携带一个已发送 Posted Request (P1) 的指示，该指示将与接收端已接收 Posted Request 的计数不匹配，从而使这种非法重排序被检测出来。 <!-- 📄 Page 949 -->
 
-<!-- 📄 Page 949 -->
 ---
 
 在没有 IDE 时,Non-Posted Request 允许相互越过;但是在一个 IDE Stream 内部，为了简化完整性/加密机制的操作，禁止对相同类型的 TLP 进行重排序。§ Figure 6-82 表明，这种 Non-Posted Request 的重排序将被检测为完整性检查失败，即便其本身并不存在安全暴露。
 
 需要注意的是，重排序攻击可以通过 Retimer (重定时器)、Switch (交换机) 以及任何其他能够在源端口与目的端口之间改变 TLP 流的设备或装置进行。
 
-用于实现重排序检查的计数器在发送端和接收端的大小不同。发送端计数器只需要 8 bit 宽，即可容纳任意选择的 245 这一限制(该限制触发必需的 IDE Sync Message 发送)。由于路由元素可以改变不同子流中 TLP 的相对顺序，接收端不能假定重排序的量存在任何特定的上限，因此接收端计数器被选为 64 bit 宽，以确保在正常工作条件下它们不可能溢出。
+用于实现重排序检查的计数器在发送端和接收端的大小不同。发送端计数器只需要 8 bit 宽，即可容纳任意选择的 245 这一限制(该限制触发必需的 IDE Sync Message 发送)。由于路由元素可以改变不同子流中 TLP 的相对顺序，接收端不能假定重排序的量存在任何特定的上限，因此接收端计数器被选为 64 bit 宽，以确保在正常工作条件下它们不可能溢出。 <!-- 📄 Page 950 -->
 
-<!-- 📄 Page 950 -->
 ---
 
 以下规则与聚合(见 § Figure 6-67 和 § Figure 6-69)相关:
@@ -21366,7 +20719,6 @@ Because hardware used with IDE will typically be required to satisfy platform-le
 
 IDE Sync Message 与所有其他 Message 一样，是一种 Posted Request。IDE 协议依赖于 IDE Sync Message 与给定 IDE Stream 的所有其他 Posted Request 进行排序。
 
-**Table 6-36. Flow-Through 非 UIO IDE Stream 的 IDE 修订排序规则——按 Stream**
 
 | 行通过列? | Posted Request (Col 2) | Non-Posted Read Request (Col 3) | NPR with Data (Col 4) | Completion (Col 5) |
 |---|---|---|---|---|
@@ -21375,7 +20727,6 @@ IDE Sync Message 与所有其他 Message 一样，是一种 Posted Request。IDE
 | NPR with Data (Row C) | No | No | No | Y/N |
 | Completion (Row D) | No | Yes | Yes | No |
 
-**Table 6-37. Flow-Through UIO IDE Stream 的 IDE 修订排序规则——按 Stream**
 
 | 行通过列? | UIO PR-FC TLP (Col U1) | UIO NPR-FC TLP (Col U2) | UIO Completion (Col U3) |
 |---|---|---|---|
@@ -21418,9 +20769,8 @@ Switch/RC 只能将 IDE TLP 通过 Flow-Through IDE Stream Enabled 位置 1 的 
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 953 -->
 
-<!-- 📄 Page 953 -->
 ---
 
 - If the TEE-IO Supported bit in the Device Capabilities Register is Clear, Requesters of Non-Posted Requests must check that the corresponding received Completion(s) be returned using the same Stream ID and the same T bit value as was associated with the Non-Posted Request – a violation is an IDE Check Failed error.
@@ -21449,9 +20799,8 @@ The following rules relate to error handling
 
 - Receipt of a Link IDE TLP or Selective IDE TLP for which there is not an associated IDE Stream is a Misrouted IDE TLP error; this is a reported error associated with the Receiving Port.
 - Receipt of a Link IDE TLP by a Switch that targets an Egress Port for which there is not a Link IDE Stream associated with the same TC and in the Secure state is a Misrouted IDE TLP error; this is a reported error associated with the Ingress Port.
-- The Transaction Layer must return flow control credit and handle as a Misrouted IDE TLP, but take no other action in response to a received Misrouted IDE TLP.
+- The Transaction Layer must return flow control credit and handle as a Misrouted IDE TLP, but take no other action in response to a received Misrouted IDE TLP. <!-- 📄 Page 954 -->
 
-<!-- 📄 Page 954 -->
 ---
 
 - The detection of any of the following conditions is IDE Check Failed error, a reported error associated with the Receiving Port (see § Section 6.2).
@@ -21476,9 +20825,8 @@ Upon detection of one or more of these conditions, the IDE Stream State Machine 
   - Hardware must not return a Stream to the Secure state until the Enable bit has been written to 0b and subsequently Set.
   - Additional actions not defined here are typically necessary based on specific use model requirements.
 
-To return a Link IDE Stream for TC0/VC0 to the Secure state, it is necessary to reset the Device, e.g. using a Hot Reset, to make it possible for Configuration Requests/Completions to pass across the Link, unless the Device provides an alternate, implementation-specific, mechanism.
+To return a Link IDE Stream for TC0/VC0 to the Secure state, it is necessary to reset the Device, e.g. using a Hot Reset, to make it possible for Configuration Requests/Completions to pass across the Link, unless the Device provides an alternate, implementation-specific, mechanism. <!-- 📄 Page 955 -->
 
-<!-- 📄 Page 955 -->
 ---
 
 - When processing received IDE TLPs, all error checks must be completed, or an equivalent delay must be inserted, prior to signaling an error, such that it is not possible for an external observer to determine at which stage in error checking the error(s) was(were) detected.
@@ -21505,9 +20853,8 @@ Unordered IO (UIO) is an optional capability, intended to address the limitation
 UIO provides the ability for hardware to maintain full backwards compatibility with the PCI/PCIe producer-consumer model, shifting the responsibility for enforcing the observed ordering from the fabric to the Requester. All UIO Requests have corresponding UIO Completions, and the UIO Completions provide the Requester with the ability (and responsibility) to enforce ordering requirements. UIO can be used only when the entire path from Requester to Completer uses Flit Mode (Flit 模式), supports UIO, and has UIO enabled.
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 953 -->
 
-<!-- 📄 Page 953 -->
 ---
 
 - 如果 Device Capabilities Register 中的 TEE-IO Supported 位为 Clear,则 Non-Posted Request 的请求者必须检查对应的接收到的 Completion 是否使用与该 Non-Posted Request 关联的相同 Stream ID 和相同 T bit 值进行返回——违反属于 IDE Check Failed 错误。
@@ -21536,9 +20883,8 @@ UIO provides the ability for hardware to maintain full backwards compatibility w
 
 - 接收到没有关联 IDE Stream 的 Link IDE TLP 或 Selective IDE TLP,属于 Misrouted IDE TLP 错误;这是与接收端口关联的上报错误。
 - Switch 接收到 Link IDE TLP,该 TLP 定向到的 Egress Port 没有处于 Secure 状态且具有相同 TC 关联的 Link IDE Stream,属于 Misrouted IDE TLP 错误;这是与 Ingress Port 关联的上报错误。
-- 事务层 (Transaction Layer) 必须归还流控信用，并将其作为 Misrouted IDE TLP 处理，但不得对接收到的 Misrouted IDE TLP 采取任何其他动作。
+- 事务层 (Transaction Layer) 必须归还流控信用，并将其作为 Misrouted IDE TLP 处理，但不得对接收到的 Misrouted IDE TLP 采取任何其他动作。 <!-- 📄 Page 954 -->
 
-<!-- 📄 Page 954 -->
 ---
 
 - 检测到以下任一条件都属于 IDE Check Failed 错误，这是与接收端口关联的上报错误(见 § Section 6.2)。
@@ -21563,9 +20909,8 @@ UIO provides the ability for hardware to maintain full backwards compatibility w
   - 硬件不得在该 Enable 位被写入 0b 并随后被置 1 之前将 Stream 返回到 Secure 状态。
   - 根据具体使用模型的要求，通常还需要本规范未定义的附加动作。
 
-要将 TC0/VC0 的 Link IDE Stream 返回到 Secure 状态，需要复位该 Device(例如使用 Hot Reset)，以便使 Configuration Request/Completion 能够跨该 Link 传递，除非该 Device 提供替代的实现特定机制。
+要将 TC0/VC0 的 Link IDE Stream 返回到 Secure 状态，需要复位该 Device(例如使用 Hot Reset)，以便使 Configuration Request/Completion 能够跨该 Link 传递，除非该 Device 提供替代的实现特定机制。 <!-- 📄 Page 955 -->
 
-<!-- 📄 Page 955 -->
 ---
 
 - 在处理接收到的 IDE TLP 时，所有错误检查必须完成，或者在发出错误信号前插入等效延迟，以使外部观察者无法确定错误是在错误检查的哪个阶段被检测到的。
@@ -21597,9 +20942,6 @@ UIO 使硬件能够保持与 PCI/PCIe producer-consumer 模型的完全向后兼
 </table>
 
 [⬆️ 返回目录](#sec-6-0)
-
----
-
 
 ---
 
@@ -22249,9 +21591,6 @@ The flow for executing a command is described below. The term "caller" represent
 
 ---
 
-
----
-
 <a id="sec-6-35-1-3-2-2"></a>
 ## 6.35.1.3.2.2 MMB Control Register (Offset 04h) | MMB 控制寄存器（偏移量 04h）
 
@@ -22294,10 +21633,7 @@ MMB 命令寄存器只能在 MMB 控制寄存器（见 § 6.35.1.3.2.2 ）中的
 
 ---
 
-<!-- 📄 Page 967 -->
----
-
-<a id="sec-6-35-1-3-2-3"></a>
+<a id="sec-6-35-1-3-2-3"></a> <!-- 📄 Page 967 -->
 ## 6.35.1.3.2.3 MMB Command Register (Offset 08h) | MMB 命令寄存器（偏移量 08h）
 
 <table>
@@ -22385,10 +21721,7 @@ RW
 
 ---
 
-<!-- 📄 Page 968 -->
----
-
-<a id="sec-6-35-1-3-2-4"></a>
+<a id="sec-6-35-1-3-2-4"></a> <!-- 📄 Page 968 -->
 ## 6.35.1.3.2.4 MMB Status Register (Offset 10h) | MMB 状态寄存器（偏移量 10h）
 
 <table>
@@ -22519,10 +21852,7 @@ For legacy compatibility with OS software, platform firmware should clear the MM
 
 ---
 
-<!-- 📄 Page 969 -->
----
-
-<a id="sec-6-35-1-3-2-4-1"></a>
+<a id="sec-6-35-1-3-2-4-1"></a> <!-- 📄 Page 969 -->
 ## 6.35.1.3.2.4.1 MMB Command Return Codes | MMB 命令返回代码
 
 
@@ -22620,10 +21950,7 @@ MMB Payload Registers 由调用方在置位 MMB Control Register（见 § 6.35.1
 
 ---
 
-<!-- 📄 Page 970 -->
----
-
-> **Figure 6-98. MMB Payload Registers | MMB 有效负载寄存器**
+> **Figure 6-98. MMB Payload Registers | MMB 有效负载寄存器** <!-- 📄 Page 970 -->
 > <img src="figures/chapter_06/fig_0970_1_tight.png" width="700">
 
 ---
@@ -22764,10 +22091,7 @@ RO/RsvdP
 
 ---
 
-<!-- 📄 Page 971 -->
----
-
-<a id="sec-6-35-1-4-1-2"></a>
+<a id="sec-6-35-1-4-1-2"></a> <!-- 📄 Page 971 -->
 ## 6.35.1.4.1.2 MMPT Control Register (Offset 04h) | MMPT 控制寄存器（偏移量 04h）
 
 <table>
@@ -22798,10 +22122,7 @@ RO/RsvdP
 
 ---
 
-<!-- 📄 Page 972 -->
----
-
-**Table 6-51. MMPT Control Register | 表 6-51. MMPT 控制寄存器**
+**Table 6-51. MMPT Control Register | 表 6-51. MMPT 控制寄存器** <!-- 📄 Page 972 -->
 
 <table>
 <thead>
@@ -22926,10 +22247,7 @@ RO
 
 ---
 
-<!-- 📄 Page 973 -->
----
-
-<a id="sec-6-35-2"></a>
+<a id="sec-6-35-2"></a> <!-- 📄 Page 973 -->
 ## 6.35.2 MMIO Designated Vendor-Specific Register Block (MDVS) | MMIO 指定供应商特定寄存器块（MDVS）
 
 <table>
@@ -23025,10 +22343,7 @@ RO
 
 ---
 
-<!-- 📄 Page 974 -->
----
-
-<table>
+<table> <!-- 📄 Page 974 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -23244,9 +22559,8 @@ RO
 
 §
 
-§
+§ <!-- 📄 Page 975 -->
 
-<!-- 📄 Page 975 -->
 ---
 
 <a id="sec-6-36"></a>
@@ -23352,9 +22666,8 @@ Management messages may be initiated from the host to the Function using the Sen
 
 ---
 
-§
+§ <!-- 📄 Page 976 -->
 
-<!-- 📄 Page 976 -->
 ---
 
 <table>
@@ -23502,9 +22815,8 @@ Possible MMB Command Return Code values (see § Section 6.35.1.3.2.4.1 ):
 
 ---
 
-§
+§ <!-- 📄 Page 977 -->
 
-<!-- 📄 Page 977 -->
 ---
 
 <table>
@@ -23690,9 +23002,8 @@ The flow for transferring a management message from the host to the Function is 
 
 6.36.1.1.1 MMPT Send Message Operation §
 
-§
+§ <!-- 📄 Page 978 -->
 
-<!-- 📄 Page 978 -->
 ---
 
 <a id="sec-6-36-1-2"></a>
@@ -23879,9 +23190,8 @@ Table 6-59 fields (Chinese description):
 
 §
 
-§
+§ <!-- 📄 Page 979 -->
 
-<!-- 📄 Page 979 -->
 ---
 
 <a id="sec-6-36-1-2-1"></a>
@@ -23938,11 +23248,7 @@ The flow for transferring a management message asynchronously from the Function 
 
 ---
 
-6.36.1.2.1 MMPT Receive Message Operation §
-
-<!-- 📄 Page 980 -->
----
-
+6.36.1.2.1 MMPT Receive Message Operation § <!-- 📄 Page 980 -->
 
 ---
 

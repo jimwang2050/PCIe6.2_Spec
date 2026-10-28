@@ -52,8 +52,6 @@
 
 ---
 
----
-
 <a id="sec-11-0"></a>
 # 11. TEE Device Interface Security Protocol (TDISP) § | 11. TEE 设备接口安全协议 (TDISP) §
 
@@ -98,7 +96,7 @@ TEE-I/O 构建于已有的能力之上，例如用于将设备直接分配给 VM
 ---
 
 <a id="sec-11-1"></a>
-## 11.1 Overview of the TEE-I/O Security Model as it Relates to Devices § | 11.1 TEE-I/O 安全模型与设备相关的概述 §
+## 11.1 Overview of the TEE-I/O Security Model as it Relates to Devices | 11.1 TEE-I/O 安全模型与设备相关的概述
 
 <table>
 <thead>
@@ -183,10 +181,7 @@ TEE-I/O 安全模型不要求 VMM 被 TVM 信任。因此，支持硬件辅助 I
 
 ---
 
-<!-- 📄 Page 1613 -->
----
-
-<a id="sec-11-1-1"></a>
+<a id="sec-11-1-1"></a> <!-- 📄 Page 1613 -->
 ## 11.1.1 TDISP Host/Device Reference Architecture | 11.1.1 TDISP 主机/设备参考架构
 
 
@@ -235,10 +230,7 @@ There are a variety of additional elements of the reference architecture. Softwa
 
 ---
 
-<!-- 📄 Page 1614 -->
----
-
-<a id="sec-11-1-2"></a>
+<a id="sec-11-1-2"></a> <!-- 📄 Page 1614 -->
 ## 11.1.2 Memory Address Routing and IDE Stream Requirements | 11.1.2 内存地址路由与 IDE 流 (Stream) 需求
 
 <table>
@@ -304,10 +296,7 @@ TSM 提供以下功能:
 
 ---
 
-<!-- 📄 Page 1615 -->
----
-
-<a id="sec-11-1-3"></a>
+<a id="sec-11-1-3"></a> <!-- 📄 Page 1615 -->
 ## 11.1.3 TSM Functions and Secured Messages | 11.1.3 TSM 功能与安全消息
 
 
@@ -375,11 +364,8 @@ DSM 必须跟踪用于为 IDE 流建立 IDE 密钥的 SPDM 会话。为了使 ID
 
 ---
 
-<!-- 📄 Page 1616 -->
----
-
-<a id="sec-11-2"></a>
-## 11.2 TDISP Rules § | 11.2 TDISP 规则 §
+<a id="sec-11-2"></a> <!-- 📄 Page 1616 -->
+## 11.2 TDISP Rules | 11.2 TDISP 规则
 
 <table>
 <thead>
@@ -420,10 +406,7 @@ INTERFACE_ID 由 FUNCTION_ID 字段和为未来扩展保留的 Reserved 字段�
 
 ---
 
-<!-- 📄 Page 1617 -->
----
-
-<a id="sec-11-2-1"></a>
+<a id="sec-11-2-1"></a> <!-- 📄 Page 1617 -->
 ## 11.2.1 TDISP TLP Rules and State Machine | 11.2.1 TDISP TLP 规则与状态机
 
 
@@ -489,10 +472,7 @@ Each TDI in the device is associated with a TDISP state machine (see § Figure 1
 
 ---
 
-<!-- 📄 Page 1618 -->
----
-
-<table>
+<table> <!-- 📄 Page 1618 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -565,11 +545,8 @@ TDISP 要求拒绝某些 TLP,这意味着首先根据适用于所有其他 TLP �
 
 ---
 
-<!-- 📄 Page 1619 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1619 -->
 <table>
 <thead>
 <tr>
@@ -657,10 +634,7 @@ TSM 允许在所有状态下发出 GET_DEVICE_INTERFACE_STATE 请求。
 
 ---
 
-<!-- 📄 Page 1620 -->
----
-
-<a id="sec-11-2-2"></a>
+<a id="sec-11-2-2"></a> <!-- 📄 Page 1620 -->
 ## 11.2.2 TDISP Message Transport and P2P/IDE Streams | 11.2.2 TDISP 消息传输与 P2P/IDE 流
 
 <table>
@@ -734,11 +708,8 @@ TDI 不得依赖 I/O 资源和 I/O 请求为 TVM 提供功能。I/O 资源不得
 
 ---
 
-<!-- 📄 Page 1621 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1621 -->
 <table>
 <thead>
 <tr>
@@ -828,10 +799,7 @@ TDISP 消息的传输方式如下:
 
 ---
 
-<!-- 📄 Page 1622 -->
----
-
-<table>
+<table> <!-- 📄 Page 1622 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -898,10 +866,7 @@ A Requester is permitted to send simultaneous request messages to different Resp
 
 ---
 
-<!-- 📄 Page 1623 -->
----
-
-<a id="sec-11-2-3"></a>
+<a id="sec-11-2-3"></a> <!-- 📄 Page 1623 -->
 ## 11.2.3 Requirements for Requesters (TSM) and Responders (DSM) | 11.2.3 请求方 (TSM) 和响应方 (DSM) 的要求
 
 
@@ -959,10 +924,7 @@ DSM 必须跟踪修改影响任何承载 CONFIG_LOCKED 或 RUN 状态下 TDI 的
 
 ---
 
-<!-- 📄 Page 1624 -->
----
-
-**Table 11-2 Example DSM Tracking and Handling for Architected Registers | 表 11-2 架构定义的寄存器的 DSM 跟踪和处理示例**
+**Table 11-2 Example DSM Tracking and Handling for Architected Registers | 表 11-2 架构定义的寄存器的 DSM 跟踪和处理示例** <!-- 📄 Page 1624 -->
 
 | Register / Capability / Extended Capability | Example | Response to Register Modification | Description |
 |---|---|---|---|
@@ -983,9 +945,6 @@ DSM 必须跟踪修改影响任何承载 CONFIG_LOCKED 或 RUN 状态下 TDI 的
 
 ---
 
-<!-- 📄 Page 1625 -->
----
-
 | Register / Capability / Extended Capability | Example | Response to Register Modification | Description |
 |---|---|---|---|
 | Advanced Error Reporting Extended Capability | | Allowed | As specified in § Section 6.2.3.2.2 , error mask register settings control reporting of detected errors, but do not block error detection. |
@@ -1003,17 +962,14 @@ DSM 必须跟踪修改影响任何承载 CONFIG_LOCKED 或 RUN 状态下 TDI 的
 
 ---
 
-<!-- 📄 Page 1626 -->
----
-
 | Register / Capability / Extended Capability | Example | Response to Register Modification | Description |
 |---|---|---|---|
 | ATS Extended Capability | | Allowed | |
 | Page Request Extended Capability, SR-IOV Extended Capability | | Error | Transition hosted TDIs to ERROR. |
 | VPD Capability | | Allowed | |
 
-<a id="sec-11-2-7"></a>
-## 11.2.7 TVM Acceptance of a TDI § | 11.2.7 TVM 接受 TDI §
+<a id="sec-11-2-7"></a> <!-- 📄 Page 1625 --> <!-- 📄 Page 1626 -->
+## 11.2.7 TVM Acceptance of a TDI | 11.2.7 TVM 接受 TDI
 
 <table>
 <thead>
@@ -1061,7 +1017,7 @@ TVM 通过使用 TSM 提供的接口查询 TSM,以确定问题 1、2 和 3 的�
 ---
 
 <a id="sec-11-3"></a>
-## 11.3 TDISP Message Formats and processing § | 11.3 TDISP 消息格式和处理 §
+## 11.3 TDISP Message Formats and processing | 11.3 TDISP 消息格式和处理
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1167,10 +1123,7 @@ The Request Response Code field in the response message must specify the appropr
 
 ---
 
-<!-- 📄 Page 1628 -->
----
-
-<a id="sec-11-3-3"></a>
+<a id="sec-11-3-3"></a> <!-- 📄 Page 1628 -->
 ### 11.3.3 TDISP Message Format and Protocol Versioning | 11.3.3 TDISP 消息格式和协议版本控制
 
 <table>
@@ -1272,10 +1225,7 @@ The device must fail the request and return the indicated response code if any o
 
 ---
 
-<!-- 📄 Page 1629 -->
----
-
-<a id="sec-11-3-4"></a>
+<a id="sec-11-3-4"></a> <!-- 📄 Page 1629 -->
 ### 11.3.4 GET_TDISP_VERSION / TDISP_VERSION | 11.3.4 GET_TDISP_VERSION / TDISP_VERSION
 
 
@@ -1373,10 +1323,7 @@ Used to retrieve the Responder's TDISP capabilities. TDISP protocol inherits the
 
 ---
 
-<!-- 📄 Page 1630 -->
----
-
-<a id="sec-11-3-8"></a>
+<a id="sec-11-3-8"></a> <!-- 📄 Page 1630 -->
 ### 11.3.8 LOCK_INTERFACE_REQUEST | 11.3.8 LOCK_INTERFACE_REQUEST
 
 <table>
@@ -1444,11 +1391,8 @@ LOCK_INTERFACE_REQUEST 用于将 TDI 移至 CONFIG_LOCKED,前提是 DSM 确认�
 
 ---
 
-<!-- 📄 Page 1631 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1631 -->
 <table>
 <thead>
 <tr>
@@ -1506,10 +1450,7 @@ LOCK_INTERFACE_REQUEST 将以下参数绑定并配置到 TDI:
 
 ---
 
-<!-- 📄 Page 1632 -->
----
-
-**Table 11-10 LOCK_INTERFACE_REQUEST | 表 11-10 LOCK_INTERFACE_REQUEST**
+**Table 11-10 LOCK_INTERFACE_REQUEST | 表 11-10 LOCK_INTERFACE_REQUEST** <!-- 📄 Page 1632 -->
 
 | Offset | Field | Size (Bytes) | Description |
 |--------|-------|--------------|-------------|
@@ -1561,11 +1502,8 @@ LOCK_INTERFACE_RESPONSE 在 LOCK_INTERFACE_REQUEST 成功处理且设备已将 T
 
 ---
 
-<!-- 📄 Page 1633 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1633 -->
 <table>
 <thead>
 <tr>
@@ -1614,7 +1552,6 @@ The device must fail the request if any of the following errors are detected:
 |--------|-------|--------------|-------------|
 | Payload (All fields in little endian format) | | | |
 
-<!-- 📄 Page 1634 -->
 ---
 
 | Offset | Field | Size (Bytes) | Description |
@@ -1622,7 +1559,7 @@ The device must fail the request if any of the following errors are detected:
 | 16 | OFFSET | 2 | Offset in bytes from the start of the report to where the read request message begins. The responder must send its report starting from this offset. For first GET_DEVICE_INTERFACE_REPORT request, the Requester must set this field to 0. For non-first requests, Offset is the sum of PORTION_LENGTH values in all previous DEVICE_INTERFACE_REPORT responses. |
 | 18 | LENGTH | 2 | Length of report, in bytes, to be returned in the corresponding response. Length is an unsigned 16-bit integer. This value is the smaller of the following values: Capacity of requester's internal buffer for receiving Responder's report, The REMAINDER_LENGTH of the preceding DEVICE_INTERFACE_REPORT response. For the first GET_DEVICE_INTERFACE_REPORT request, the requester must use the capacity of the requester's receiving buffer. If offset=0 and length=FFFFh, the requester is requesting the entire report. The Responder is permitted to provide less than the requested length if the Responder's buffer length is limited. |
 
-**Table 11-14 DEVICE_INTERFACE_REPORT | 表 11-14 DEVICE_INTERFACE_REPORT**
+**Table 11-14 DEVICE_INTERFACE_REPORT | 表 11-14 DEVICE_INTERFACE_REPORT** <!-- 📄 Page 1634 -->
 
 | Offset | Field | Size (Bytes) | Description |
 |--------|-------|--------------|-------------|
@@ -1639,7 +1576,6 @@ The TDI report is structured as follows:
 |--------|-------|--------------|-------------|
 | 0 | INTERFACE_INFO | 2 | Bit 0: NO_FW_UPDATE – When 1, indicates that device firmware updates are not permitted while in CONFIG_LOCKED or RUN. When 0, indicates that firmware updates are permitted while in these states. Bit 1: TDI generates DMA requests without PASID. Bit 2: TDI generates DMA requests with PASID. |
 
-<!-- 📄 Page 1635 -->
 ---
 
 | Offset | Field | Size (Bytes) | Description |
@@ -1654,9 +1590,8 @@ The TDI report is structured as follows:
 | 16 + N * 16 | DEVICE_SPECIFIC_INFO_LEN (L) | 4 | Number of bytes of device specific information |
 | 16 + N * 16 + 4 | DEVICE_SPECIFIC_INFO | L | Device specific information |
 
-A TDI may generate (a) all DMA requests without PASID, (b) all DMA requests with PASID, or (c) some DMA requests with and others without PASID.
+A TDI may generate (a) all DMA requests without PASID, (b) all DMA requests with PASID, or (c) some DMA requests with and others without PASID. <!-- 📄 Page 1636 --> <!-- 📄 Page 1635 -->
 
-<!-- 📄 Page 1636 -->
 ---
 
 The Range ID is used to logically group the ranges reported in the report into logical groups.
@@ -1682,10 +1617,7 @@ The following sequence diagram shows the high-level request-response message flo
 
 ---
 
-<!-- 📄 Page 1637 -->
----
-
-<a id="sec-11-3-12"></a>
+<a id="sec-11-3-12"></a> <!-- 📄 Page 1637 -->
 ### 11.3.12 GET_DEVICE_INTERFACE_STATE / DEVICE_INTERFACE_STATE | 11.3.12 GET_DEVICE_INTERFACE_STATE / DEVICE_INTERFACE_STATE
 
 <table>
@@ -1764,9 +1696,8 @@ No request-specific responses are defined
 <a id="sec-11-3-18"></a>
 ### 11.3.18 BIND_P2P_STREAM_REQUEST | 11.3.18 BIND_P2P_STREAM_REQUEST
 
-A TDI is permitted to support peer-to-peer transactions secured from end-to-end between two devices. Such devices must support configuring one or more selective IDE Stream(s) such that the selective IDE stream configuration registers
+A TDI is permitted to support peer-to-peer transactions secured from end-to-end between two devices. Such devices must support configuring one or more selective IDE Stream(s) such that the selective IDE stream configuration registers <!-- 📄 Page 1638 -->
 
-<!-- 📄 Page 1638 -->
 ---
 
 provide the address and Requester ID ranges for the peer device. Such peer-to-peer IDE streams must be used by a device only if the device supports Address Translation Services and the capability is enabled for the device.
@@ -1805,10 +1736,9 @@ All ATS requests and requests with addresses for which translations were not pre
 | INVALID_REQUEST | TDI does not support binding P2P streams. P2P_STREAM_ID is invalid. Keys have not been configured for all sub-streams of the P2P stream. Keys for the stream identified by P2P_STREAM_ID were not configured by the SPDM session on which the LOCK_INTERFACE_REQUEST was received. IDE registers with configurations for the P2P_STREAM_ID is marked as the default stream. Multiple IDE registers are configured with the P2P_STREAM_ID. The IDE registers configured for this P2P_STREAM_ID have overlaps with other valid IDE registers. |
 | INVALID_INTERFACE_STATE | If the TDI is not in RUN. |
 
-<!-- 📄 Page 1639 -->
 ---
 
-<a id="sec-11-3-20"></a>
+<a id="sec-11-3-20"></a> <!-- 📄 Page 1639 -->
 ### 11.3.20 UNBIND_P2P_STREAM_REQUEST | 11.3.20 UNBIND_P2P_STREAM_REQUEST
 
 The UNBIND_P2P_STREAM_REQUEST unbinds a previously bound peer-to-peer stream IDs from the TDI. The device must fail the request if any of the following apply:
@@ -1839,10 +1769,9 @@ If the device supports continuing the peer-to-peer operations following the unbi
 | INVALID_REQUEST | TDI does not support binding P2P streams. P2P_STREAM_ID is invalid. P2P_STREAM_ID was not previously bound to this TDI. |
 | INVALID_INTERFACE_STATE | If the TDI is not in RUN. |
 
-<!-- 📄 Page 1640 -->
 ---
 
-<a id="sec-11-3-22"></a>
+<a id="sec-11-3-22"></a> <!-- 📄 Page 1640 -->
 ### 11.3.22 SET_MMIO_ATTRIBUTE_REQUEST | 11.3.22 SET_MMIO_ATTRIBUTE_REQUEST
 
 The SET_MMIO_ATTRIBUTE_REQUEST enables a TVM to update attributes of one or more MMIO ranges reported in the DEVICE_INTERFACE_REPORT. The MMIO ranges in a TDI that support updateable attributes are device specific.
@@ -1944,11 +1873,10 @@ The TDISP_ERROR is permitted to be used by the device to complete any of the req
 | 2 | VENDOR_ID | VENDOR_ID_LEN | VENDOR_ID as assigned by the registry identified by REGISTRY_ID |
 | 2 + VENDOR_ID_LEN | VENDOR_DATA | Variable | Vendor defined data. |
 
-<!-- 📄 Page 1641 -->
 ---
 
-<a id="sec-11-4"></a>
-## 11.4 Device Security Requirements § | 11.4 设备安全要求 §
+<a id="sec-11-4"></a> <!-- 📄 Page 1641 -->
+## 11.4 Device Security Requirements | 11.4 设备安全要求
 
 <table>
 <thead>
@@ -2034,10 +1962,7 @@ TEE-I/O 兼容设备必须在绑定到这些接口的 IDE 流转换为 Insecure 
 
 ---
 
-<!-- 📄 Page 1642 -->
----
-
-<table>
+<table> <!-- 📄 Page 1642 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2140,11 +2065,8 @@ TEE-I/O 兼容设备的设计应避免或最小化主机驱动对 TDI 特定配�
 
 ---
 
-<!-- 📄 Page 1643 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1643 -->
 <table>
 <thead>
 <tr>
@@ -2222,10 +2144,7 @@ ATS 无效请求和无效完成消息允许使用或不使用 IDE。如果使用
 
 ---
 
-<!-- 📄 Page 1644 -->
----
-
-<table>
+<table> <!-- 📄 Page 1644 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2292,11 +2211,8 @@ TEE-I/O 兼容设备必须强制执行地址转换缓存 (ATC) 的完整性，�
 
 ---
 
-<!-- 📄 Page 1645 -->
----
-
-<a id="sec-11-5"></a>
-## 11.5 Requirements Placed on Host Security due to TDI Requirements § | 11.5 由 TDI 需求引发的主机安全要求 §
+<a id="sec-11-5"></a> <!-- 📄 Page 1645 -->
+## 11.5 Requirements Placed on Host Security due to TDI Requirements | 11.5 由 TDI 需求引发的主机安全要求
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2389,10 +2305,7 @@ TSM 必须提供可信机制来确定:
 
 ---
 
-<!-- 📄 Page 1646 -->
----
-
-**Table 11-31 Example TSM Tracking and Handling for Root Port Configurations | 表 11-31 根端口配置的 TSM 跟踪和处理示例**
+**Table 11-31 Example TSM Tracking and Handling for Root Port Configurations | 表 11-31 根端口配置的 TSM 跟踪和处理示例** <!-- 📄 Page 1646 -->
 
 | Register / Capability / Extended Capability | Example | Response to Register Modification | Description |
 |---|---|---|---|
@@ -2453,11 +2366,8 @@ TSM may provide an interface for the VMM to manage the lifecycle of IDE streams 
 
 ---
 
-<!-- 📄 Page 1647 -->
----
-
-<a id="sec-11-6"></a>
-## 11.6 Overview of Threat Model and Mitigations § | 11.6 威胁模型和缓解措施概述 §
+<a id="sec-11-6"></a> <!-- 📄 Page 1647 -->
+## 11.6 Overview of Threat Model and Mitigations | 11.6 威胁模型和缓解措施概述
 
 <table>
 <thead>
@@ -2608,11 +2518,8 @@ These threats are mitigated by the use of TDISP.
 
 ---
 
-<!-- 📄 Page 1648 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1648 -->
 <table>
 <thead>
 <tr>
@@ -2662,13 +2569,7 @@ TSM 使用主机特定机制来强制执行 DMA 访问控制。TSM 使用 STOP_I
 
 ---
 
-<!-- 📄 Page 1649 -->
----
-
-
----
-
-</td>
+</td> <!-- 📄 Page 1649 -->
 </tr>
 </tbody>
 </table>

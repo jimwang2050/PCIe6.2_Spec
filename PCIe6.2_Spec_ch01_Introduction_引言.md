@@ -48,10 +48,6 @@
 
 ---
 
----
-
----
-
 # 📘 第 1 章　Introduction (引言)
 
 > 📄 **Source pages**: 127–140 | 📁 **File**: `chapter_01.md`

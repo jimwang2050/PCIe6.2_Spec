@@ -42,21 +42,818 @@ GitHub Flavored Markdown 📚 <strong>Template</strong>: CXL 3.2 Spec
 translation (CXL_zh/)</p>
 </blockquote>
 <hr />
-<h2 id="bookmark_tabs-本章目录-table-of-contents">📑 本章目录 (Table of
-Contents)</h2>
-<blockquote>
-<p>由合并阶段自动生成。请使用浏览器/GitHub
-渲染时,各小节标题链接跳转。</p>
-</blockquote>
+<h2 id="bookmark_tabs-章节索引-sections">📑 章节索引 (Sections)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th style="text-align: left;">Section</th>
+<th style="text-align: left;">小节</th>
+<th style="text-align: center;">Page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.1</td>
+<td style="text-align: left;"><a href="#sec-10-1">ATS Architectural
+Overview §</a></td>
+<td style="text-align: center;"><a href="#sec-10-1">10.1 ATS 架构概述
+§</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.1.1</td>
+<td style="text-align: left;"><a href="#sec-10-1-1">Address Translation
+Services (ATS) …</a></td>
+<td style="text-align: center;"><a href="#sec-10-1-1">10.1.1
+地址转换服务 (ATS) 概述 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.1.2</td>
+<td style="text-align: left;"><a href="#sec-10-1-2">Page Request
+Interface Extension §</a></td>
+<td style="text-align: center;"><a href="#sec-10-1-2">10.1.2
+页请求接口扩展 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.1.2</td>
+<td style="text-align: left;"><a href="#sec-10-1-2">Page Request
+Interface Extension (c…</a></td>
+<td style="text-align: center;"><a href="#sec-10-1-2">10.1.2
+页请求接口扩展 (续) §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.1.2</td>
+<td style="text-align: left;"><a href="#sec-10-1-2">Page Request
+Interface Extension (c…</a></td>
+<td style="text-align: center;"><a href="#sec-10-1-2">10.1.2
+页请求接口扩展 (续二) §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.1.3</td>
+<td style="text-align: left;"><a href="#sec-10-1-3">Process Address
+Space ID (PASID) §</a></td>
+<td style="text-align: center;"><a href="#sec-10-1-3">10.1.3
+进程地址空间 ID (PASID) §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.1.4</td>
+<td style="text-align: left;"><a href="#sec-10-1-4">ATS Memory
+Attributes §</a></td>
+<td style="text-align: center;"><a href="#sec-10-1-4">10.1.4 ATS
+内存属性 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2</td>
+<td style="text-align: left;"><a href="#sec-10-2">ATS Translation
+Services §</a></td>
+<td style="text-align: center;"><a href="#sec-10-2">10.2 ATS 转换服务
+§</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.1</td>
+<td style="text-align: left;"><a href="#sec-10-2-1">Memory Requests with
+Address Type §</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-1">10.2.1
+带地址类型的内存请求 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.2</td>
+<td style="text-align: left;"><a href="#sec-10-2-2">Translation Requests
+§</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-2">10.2.2 转换请求
+§</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.2.1</td>
+<td style="text-align: left;"><a href="#sec-10-2-2-1">Attribute Field
+§</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-2-1">10.2.2.1
+属性字段 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.2.2</td>
+<td style="text-align: left;"><a href="#sec-10-2-2-2">Length Field
+§</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-2-2">10.2.2.2 Length
+字段 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.2.3</td>
+<td style="text-align: left;"><a href="#sec-10-2-2-3">Tag Field
+§</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-2-3">10.2.2.3 Tag
+字段 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.2.4</td>
+<td style="text-align: left;"><a href="#sec-10-2-2-4">Untranslated
+Address Field §</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-2-4">10.2.2.4
+未转换地址字段 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.2.5</td>
+<td style="text-align: left;"><a href="#sec-10-2-2-5">No Write (NW) Flag
+§</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-2-5">10.2.2.5 No
+Write (NW) 标志 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.2.6</td>
+<td style="text-align: left;"><a href="#sec-10-2-2-6">PASID on
+Translation Request §</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-2-6">10.2.2.6
+转换请求中的 PASID §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.2.7</td>
+<td style="text-align: left;"><a href="#sec-10-2-2-7">CXL Src §</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-2-7">10.2.2.7 CXL Src
+§</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.3</td>
+<td style="text-align: left;"><a href="#sec-10-2-3">Translation
+Completion §</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-3">10.2.3 转换完成
+§</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.3</td>
+<td style="text-align: left;"><a href="#sec-10-2-3">Translation
+Completion Data Fields …</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-3">10.2.3
+转换完成数据字段 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.3.1</td>
+<td style="text-align: left;"><a href="#sec-10-2-3-1">Translated Address
+Field §</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-3-1">10.2.3.1
+已转换地址字段 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.3.2</td>
+<td style="text-align: left;"><a href="#sec-10-2-3-2">Translation Range
+Size (S) Field §</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-3-2">10.2.3.2
+转换范围大小 (S) 字段 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.3.3</td>
+<td style="text-align: left;"><a href="#sec-10-2-3-3">Non-snooped (N)
+Field §</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-3-3">10.2.3.3 非监听
+(N) 字段 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.3.4</td>
+<td style="text-align: left;"><a href="#sec-10-2-3-4">Untranslated
+Access Only (U) Field …</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-3-4">10.2.3.4
+仅未转换访问 (U) 字段 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.3.5</td>
+<td style="text-align: left;"><a href="#sec-10-2-3-5">Read (R) and Write
+(W) Fields §</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-3-5">10.2.3.5 读 (R)
+和写 (W) 字段 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.3.6</td>
+<td style="text-align: left;"><a href="#sec-10-2-3-6">Execute Permitted
+(Exe) §</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-3-6">10.2.3.6
+允许执行 (Exe) §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.3.7</td>
+<td style="text-align: left;"><a href="#sec-10-2-3-7">Privileged Mode
+Access (Priv) §</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-3-7">10.2.3.7
+特权模式访问 (Priv) §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.3.8</td>
+<td style="text-align: left;"><a href="#sec-10-2-3-8">Global Mapping
+(Global) §</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-3-8">10.2.3.8
+全局映射 (Global) §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.3.9</td>
+<td style="text-align: left;"><a href="#sec-10-2-3-9">ATS Memory
+Attributes §</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-3-9">10.2.3.9 ATS
+内存属性 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.2.4</td>
+<td style="text-align: left;"><a href="#sec-10-2-4">Completions with
+Multiple Translati…</a></td>
+<td style="text-align: center;"><a href="#sec-10-2-4">10.2.4
+包含多个转换的完成 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.3</td>
+<td style="text-align: left;"><a href="#sec-10-3">ATS Invalidation
+§</a></td>
+<td style="text-align: center;"><a href="#sec-10-3">10.3 ATS 无效化
+§</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.3.1</td>
+<td style="text-align: left;"><a href="#sec-10-3-1">Invalidate Request
+§</a></td>
+<td style="text-align: center;"><a href="#sec-10-3-1">10.3.1 无效化请求
+§</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.3.2</td>
+<td style="text-align: left;"><a href="#sec-10-3-2">Invalidate
+Completion §</a></td>
+<td style="text-align: center;"><a href="#sec-10-3-2">10.3.2 无效化完成
+§</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.3.3</td>
+<td style="text-align: left;"><a href="#sec-10-3-3">Invalidate
+Completion Semantics §</a></td>
+<td style="text-align: center;"><a href="#sec-10-3-3">10.3.3
+无效化完成语义 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.3.4</td>
+<td style="text-align: left;"><a href="#sec-10-3-4">Request Acceptance
+Rules §</a></td>
+<td style="text-align: center;"><a href="#sec-10-3-4">10.3.4
+请求接受规则 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.3.5</td>
+<td style="text-align: left;"><a href="#sec-10-3-5">Invalidate Flow
+Control §</a></td>
+<td style="text-align: center;"><a href="#sec-10-3-5">10.3.5 无效化流控
+§</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.3.6</td>
+<td style="text-align: left;"><a href="#sec-10-3-6">Invalidate Ordering
+Semantics §</a></td>
+<td style="text-align: center;"><a href="#sec-10-3-6">10.3.6
+无效化排序语义 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.3.7</td>
+<td style="text-align: left;"><a href="#sec-10-3-7">Implicit
+Invalidation Events §</a></td>
+<td style="text-align: center;"><a href="#sec-10-3-7">10.3.7
+隐式无效化事件 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.3.8</td>
+<td style="text-align: left;"><a href="#sec-10-3-8">PASID and Global
+Invalidate §</a></td>
+<td style="text-align: center;"><a href="#sec-10-3-8">10.3.8 PASID
+与全局无效化 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.4</td>
+<td style="text-align: left;"><a href="#sec-10-4">Page Request Services
+§</a></td>
+<td style="text-align: center;"><a href="#sec-10-4">10.4 页请求服务
+§</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.4.1</td>
+<td style="text-align: left;"><a href="#sec-10-4-1">Page Request Message
+§</a></td>
+<td style="text-align: center;"><a href="#sec-10-4-1">10.4.1 页请求消息
+§</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.4.1.1</td>
+<td style="text-align: left;"><a href="#sec-10-4-1-1">PASID Usage
+§</a></td>
+<td style="text-align: center;"><a href="#sec-10-4-1-1">10.4.1.1 PASID
+使用 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.4.1.2</td>
+<td style="text-align: left;"><a href="#sec-10-4-1-2">Managing PASID
+Usage on PRG Request…</a></td>
+<td style="text-align: center;"><a href="#sec-10-4-1-2">10.4.1.2 在 PRG
+请求上管理 PASID 使用 …</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.4.1.2.1</td>
+<td style="text-align: left;"><a href="#sec-10-4-1-2-1">Stop Marker
+Messages §</a></td>
+<td style="text-align: center;"><a href="#sec-10-4-1-2-1">10.4.1.2.1
+停止标记消息 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.4.2</td>
+<td style="text-align: left;"><a href="#sec-10-4-2">Page Request Group
+Response Message…</a></td>
+<td style="text-align: center;"><a href="#sec-10-4-2">10.4.2
+页请求组响应消息 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.4.2.1</td>
+<td style="text-align: left;"><a href="#sec-10-4-2-1">Response Code
+Field §</a></td>
+<td style="text-align: center;"><a href="#sec-10-4-2-1">10.4.2.1
+响应代码字段 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.4.2.2</td>
+<td style="text-align: left;"><a href="#sec-10-4-2-2">PASID Usage on PRG
+Responses §</a></td>
+<td style="text-align: center;"><a href="#sec-10-4-2-2">10.4.2.2 PRG
+响应中的 PASID 使用 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.5</td>
+<td style="text-align: left;"><a href="#sec-10-5">ATS Configuration
+§</a></td>
+<td style="text-align: center;"><a href="#sec-10-5">10.5 ATS 配置
+§</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.5.1</td>
+<td style="text-align: left;"><a href="#sec-10-5-1">ATS Extended
+Capability §</a></td>
+<td style="text-align: center;"><a href="#sec-10-5-1">10.5.1 ATS
+Extended Capability…</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.5.1.1</td>
+<td style="text-align: left;"><a href="#sec-10-5-1-1">ATS Extended
+Capability Header (Off…</a></td>
+<td style="text-align: center;"><a href="#sec-10-5-1-1">10.5.1.1 ATS
+Extended Capabili…</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.5.1.2</td>
+<td style="text-align: left;"><a href="#sec-10-5-1-2">ATS Capability
+Register (Offset 04h…</a></td>
+<td style="text-align: center;"><a href="#sec-10-5-1-2">10.5.1.2 ATS
+Capability 寄存器 (O…</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.5.1.3</td>
+<td style="text-align: left;"><a href="#sec-10-5-1-3">ATS Control
+Register (Offset 06h) §</a></td>
+<td style="text-align: center;"><a href="#sec-10-5-1-3">10.5.1.3 ATS
+Control 寄存器 (Offs…</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.5.2</td>
+<td style="text-align: left;"><a href="#sec-10-5-2">Page Request
+Extended Capability St…</a></td>
+<td style="text-align: center;"><a href="#sec-10-5-2">10.5.2
+页请求扩展能力结构 §</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.5.2.1</td>
+<td style="text-align: left;"><a href="#sec-10-5-2-1">Page Request
+Extended Capability He…</a></td>
+<td style="text-align: center;"><a href="#sec-10-5-2-1">10.5.2.1
+页请求扩展能力头 (Offset 00h)…</a></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">10.5.2.2</td>
+<td style="text-align: left;"><a href="#sec-10-5-2-2">Page Request
+Control Register (Offs…</a></td>
+<td style="text-align: center;"><a href="#sec-10-5-2-2">10.5.2.2
+页请求控制寄存器 (Offset 04h)…</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="-本章图表-figures">🖼 本章图表 (Figures)</h2>
-<blockquote>
-<p>所有图已抽取为 PNG 存放在 <code>figures/chapter_10/</code>。</p>
-</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Figure</th>
+<th style="text-align: left;">Title</th>
+<th style="text-align: left;">图标题</th>
+<th style="text-align: center;">Page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Example Illustrating a Platfor…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Example ATS Translation Reques…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Example Multi-Function Device …</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1561</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: left;">Invalidation Protocol with a S…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1561</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Single Invalidate Request with…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1561</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Memory Request Header with 64-…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1561</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">Memory Request Header with 32-…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1561</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Memory Request Header with 64-…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1561</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">Memory Request Header with 32-…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1561</td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: left;">Translation Request with 64-bi…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1567</td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td style="text-align: left;">Translation Request with 32-bi…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1567</td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td style="text-align: left;">Example Translation Completion…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1577</td>
+</tr>
+<tr>
+<td style="text-align: center;">16</td>
+<td style="text-align: left;">Example Translation Completion…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1577</td>
+</tr>
+<tr>
+<td style="text-align: center;">18</td>
+<td style="text-align: left;">Invalidate Request Message - N…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1577</td>
+</tr>
+<tr>
+<td style="text-align: center;">19</td>
+<td style="text-align: left;">Invalidate Request Message - F…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1577</td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td style="text-align: left;">Invalidate Request Message Bod…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1577</td>
+</tr>
+<tr>
+<td style="text-align: center;">21</td>
+<td style="text-align: left;">Invalidate Completion Message …</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1586</td>
+</tr>
+<tr>
+<td style="text-align: center;">22</td>
+<td style="text-align: left;">Invalidate Completion Message …</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1586</td>
+</tr>
+<tr>
+<td style="text-align: center;">23</td>
+<td style="text-align: left;">Page Request Message - Non-Fli…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1592</td>
+</tr>
+<tr>
+<td style="text-align: center;">24</td>
+<td style="text-align: left;">Page Request Message - Flit Mo…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1592</td>
+</tr>
+<tr>
+<td style="text-align: center;">25</td>
+<td style="text-align: left;">Stop Marker Message - Non-Flit…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1592</td>
+</tr>
+<tr>
+<td style="text-align: center;">26</td>
+<td style="text-align: left;">Stop Marker Message - Flit Mod…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1592</td>
+</tr>
+<tr>
+<td style="text-align: center;">27</td>
+<td style="text-align: left;">PRG Response Message - Non-Fli…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">28</td>
+<td style="text-align: left;">PRG Response Message - FLIT Mo…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">30</td>
+<td style="text-align: left;">ATS Extended Capability Header</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">32</td>
+<td style="text-align: left;">ATS Capability Register (Offse…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">34</td>
+<td style="text-align: left;">Page Request Extended Capabili…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">35</td>
+<td style="text-align: left;">Page Request Extended Capabili…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">36</td>
+<td style="text-align: left;">Page Request Control Register</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">38</td>
+<td style="text-align: left;">Page Request Extended Capabili…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">39</td>
+<td style="text-align: left;">Stop Marker Message - Flit Mod…</td>
+<td style="text-align: left;"></td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+</tbody>
+</table>
 <h2 id="bar_chart-本章表格-tables">📊 本章表格 (Tables)</h2>
-<blockquote>
-<p>各章表格以标准 Markdown 表格形式嵌入正文。</p>
-</blockquote>
-<hr />
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Table</th>
+<th style="text-align: left;">Title</th>
+<th style="text-align: left;">表标题</th>
+<th style="text-align: center;">Page</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Address Type (AT) Field Encodi…</td>
+<td style="text-align: left;">表 10-1 地址类型 (AT) 字段编码</td>
+<td style="text-align: center;">p.1567</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: left;">Address Type (AT) Field Encodi…</td>
+<td style="text-align: left;">表 10-1 地址类型 (AT) 字段编码</td>
+<td style="text-align: center;">p.1567</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Translation Completion with No…</td>
+<td style="text-align: left;">表 10-2 无数据转换完成状态码</td>
+<td style="text-align: center;">p.1571</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Translation Completion with No…</td>
+<td style="text-align: left;">表 10-2 无数据转换完成状态码</td>
+<td style="text-align: center;">p.1571</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Translation Completion Data Fi…</td>
+<td style="text-align: left;">表 10-3 转换完成数据字段</td>
+<td style="text-align: center;">p.1571</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: left;">Translation Completion Data Fi…</td>
+<td style="text-align: left;">表 10-3 转换完成数据字段</td>
+<td style="text-align: center;">p.1571</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Examples of Translation Size U…</td>
+<td style="text-align: left;">表 10-5 使用 S 字段的转换大小示例</td>
+<td style="text-align: center;">p.1571</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: left;">Examples of Translation Size U…</td>
+<td style="text-align: left;">表 10-5 使用 S 字段的转换大小示例</td>
+<td style="text-align: center;">p.1571</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Page Request Message Data Fiel…</td>
+<td style="text-align: left;">表 10-6 页请求消息数据字段</td>
+<td style="text-align: center;">p.1592</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: left;">Page Request Message Data Fiel…</td>
+<td style="text-align: left;">表 10-6 页请求消息数据字段</td>
+<td style="text-align: center;">p.1592</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">PRG Response Message Data Fiel…</td>
+<td style="text-align: left;">表 10-7 PRG 响应消息数据字段</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: left;">PRG Response Message Data Fiel…</td>
+<td style="text-align: left;">表 10-7 PRG 响应消息数据字段</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Response Codes</td>
+<td style="text-align: left;">表 10-8 响应代码</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: left;">Response Codes</td>
+<td style="text-align: left;">表 10-8 响应代码</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">ATS Extended Capability Header</td>
+<td style="text-align: left;">表 10-9 ATS Extended Capability…</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">ATS Capability Register (Offse…</td>
+<td style="text-align: left;">表 10-10 ATS Capability 寄存器 (Of…</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: left;">ATS Extended Capability Header</td>
+<td style="text-align: left;">表 10-9 ATS Extended Capability…</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: left;">ATS Capability Register (Offse…</td>
+<td style="text-align: left;">表 10-10 ATS Capability 寄存器 (Of…</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: left;">ATS Control Register</td>
+<td style="text-align: left;">表 10-11 ATS Control 寄存器</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: left;">ATS Control Register</td>
+<td style="text-align: left;">表 10-11 ATS Control 寄存器</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td style="text-align: left;">Page Request Extended Capabili…</td>
+<td style="text-align: left;">表 10-13 页请求扩展能力头</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: left;">Page Request Control Register</td>
+<td style="text-align: left;">表 10-14 页请求控制寄存器</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">13</td>
+<td style="text-align: left;">Page Request Extended Capabili…</td>
+<td style="text-align: left;">表 10-13 页请求扩展能力头</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">14</td>
+<td style="text-align: left;">Page Request Control Register</td>
+<td style="text-align: left;">表 10-14 页请求控制寄存器</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td style="text-align: left;">Page Request Status Register</td>
+<td style="text-align: left;">表 10-15 页请求状态寄存器</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+<tr>
+<td style="text-align: center;">15</td>
+<td style="text-align: left;">Page Request Status Register</td>
+<td style="text-align: left;">表 10-15 页请求状态寄存器</td>
+<td style="text-align: center;">p.1598</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <p><a id="sec-10-0"></a></p>
 <h1 id="10-address-translation-services-ats---10-地址转换服务-ats-">10.
@@ -66,7 +863,7 @@ Address Translation Services (ATS) § | 10. 地址转换服务 (ATS) §</h1>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -140,60 +937,60 @@ specific and are outside the</p>
 <td style="background-color:#e8e8e8">
 
 <p>现代大多数系统架构都为来自 DMA (总线主控) I/O
-功能的地址转换提供支持。在许多实现中,通常假设 CPU 和 I/O
-功能看到的物理地址空间是等价的;而在其他情况下,这种假设并不成立。I/O
+功能的地址转换提供支持。在许多实现中，通常假设 CPU 和 I/O
+功能看到的物理地址空间是等价的;而在其他情况下，这种假设并不成立。I/O
 功能中编程的地址是一个"句柄",由根复合体 (Root Complex, RC)
-进行处理。该处理的结果通常是转换为中央复合体内的物理内存地址。处理过程一般会包括访问权限检查,以确保
+处理。该处理的结果通常是转换为中央复合体内的物理内存地址。处理过程一般会包括访问权限检查，以确保
 DMA 功能被允许访问所引用的内存位置。</p>
-<p>引入 DMA 地址转换的目的多种多样,包括:</p>
+<p>引入 DMA 地址转换的目的多种多样，包括:</p>
 <ul>
 <li>限制"损坏"或误编程的 DMA I/O 功能的破坏性</li>
 <li>支持 scatter/gather(分散/聚集)</li>
 <li>能够将消息信号中断(如 MSI 或
-MSI-X)重定向到不同的地址范围,而无需与底层 I/O 功能协调</li>
+MSI-X)重定向到不同的地址范围，而无需与底层 I/O 功能协调</li>
 <li>地址空间转换(32 位 I/O 功能扩展到更大的系统地址空间)</li>
 <li>虚拟化支持</li>
 </ul>
-<p>无论出于何种动机,主机系统中存在的 DMA 地址转换都会对 DMA
+<p>无论出于何种动机，主机系统中存在的 DMA 地址转换都会对 DMA
 访问的性能产生一定影响。</p>
-<p>具体影响取决于实现方式,实际物理地址解析所需的时间可能会显著延长 DMA
-访问时间。如果实现需要访问驻留在主存中的转换表,则访问时间可能远长于未转换访问的时间。此外,如果每个事务需要多次内存访问(例如用于表遍历),则与
+<p>具体影响取决于实现方式，实际物理地址解析所需的时间可能会显著延长 DMA
+访问时间。如果实现需要访问驻留在主存中的转换表，则访问时间可能远长于未转换访问的时间。此外，如果每个事务需要多次内存访问(例如用于表遍历)，则与
 DMA 相关的内存事务率(即开销)可能很高。</p>
-<p>为缓解这些影响,设计中通常会在执行地址转换的实体中包含地址转换缓存。在
-CPU 中,地址转换缓存通常称为快表 (Translation Look-aside Buffer,
-TLB)。对于 I/O 转换代理 (Translation Agent, TA),使用术语"地址转换缓存"或
-ATC 来与 CPU 使用的转换缓存相区分。</p>
-<p>虽然 TLB 和 ATC 之间存在一些相似之处,但二者有重要区别。TLB
+<p>为缓解这些影响，设计中通常会在执行地址转换的实体中包含地址转换缓存。在
+CPU 中，地址转换缓存通常称为快表 (Translation Look-aside Buffer,
+TLB)。对于 I/O 转换代理 (Translation Agent,
+TA)，使用术语"地址转换缓存"或 ATC 来与 CPU 使用的转换缓存相区分。</p>
+<p>虽然 TLB 和 ATC 之间存在一些相似之处，但二者有重要区别。TLB
 服务于一个名义上同时只运行一个线程的 CPU。而 ATC 通常处理来自多个 I/O
-功能的请求,每个功能可视为一个独立线程。这种差异使得根据成本模型和跨多种系统配置的预期技术复用进行
+功能的请求，每个功能可视为一个独立线程。这种差异使得根据成本模型和跨多种系统配置的预期技术复用进行
 ATC 容量规划变得困难。</p>
-<p>本规范中描述的机制允许 I/O 设备参与转换过程,并为其自身的内存访问提供
+<p>本规范中描述的机制允许 I/O 设备参与转换过程，并为其自身的内存访问提供
 ATC。设备内集成 ATC 的好处包括:</p>
 <ul>
-<li>通过分散地址转换缓存责任,减轻 TA 的资源压力(降低 TA
+<li>通过分散地址转换缓存责任，减轻 TA 的资源压力(降低 TA
 内"抖动"的概率)</li>
 <li>使支持 ATC 的设备对系统 ATC 容量大小的性能依赖性降低</li>
-<li>通过向中央复合体发送预转换请求,有望确保最佳访问延迟</li>
+<li>通过向中央复合体发送预转换请求，有望确保最佳访问延迟</li>
 </ul>
-<p>本规范将提供允许 PCIe 设备与 TA 协同使用的互操作性,但 TA
+<p>本规范将提供允许 PCIe 设备与 TA 协同使用的互操作性，但 TA
 及其地址转换与保护表 (Address Translation and Protection Table, ATPT)
-被视为实现特定的内容,不在</p>
+被视为实现特定的内容，不在</p>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-1"></a></p>
-<h2 id="101-ats-architectural-overview---101-ats-架构概述-">10.1 ATS
-Architectural Overview § | 10.1 ATS 架构概述 §</h2>
-<p>table&gt;</p>
+<h2 id="101-ats-architectural-overview--101-ats-架构概述">10.1 ATS
+Architectural Overview | 10.1 ATS 架构概述</h2>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -210,7 +1007,12 @@ distinct or integrated components within a given system design.</p>
 <blockquote>
 <p><strong>Figure 10-1.</strong> Example Illustrating a Platform with
 TA, ATPT, and ATC Elements
-<img src="figures/chapter_10/fig_1559_1.png" width="700"></p>
+<img src="figures/chapter_10/fig_1559_1.png" width="700"> <strong>图
+10-1.</strong> 示例 Platform 含 TA, ATPT, 与 ATC Elements</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1559_1.png" width="700">
+
 </blockquote>
 <p>The ATS chapter provides a new set of TLP and associated semantics.
 ATS uses a request-completion protocol between a Device and a Root
@@ -222,8 +1024,15 @@ translated or not via the ATS protocol.</p>
 Request operation.</p>
 <blockquote>
 <p><strong>Figure 10-2.</strong> Example ATS Translation
-Request/Completion Exchange
-<img src="figures/chapter_10/fig_1560_1.png" width="700"></p>
+Request/Completion Exchange</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1560_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1560_1_tight.png" width="700">
+
 </blockquote>
 <p>In this example, a Function-specific work request is received by a
 single-Function PCIe Device. The Function determines through an
@@ -239,41 +1048,46 @@ a significant update rate</li>
 <td style="background-color:#e8e8e8">
 
 <p>本规范的范围内。虽然在其它 PCIe 组件内实现 ATS
-也许是可行的,但本规范仅限于 PCIe 设备和 PCIe 根复合体集成端点 (Root
+也许是可行的，但本规范仅限于 PCIe 设备和 PCIe 根复合体集成端点 (Root
 Complex Integrated Endpoint, RCiEP)。</p>
 <p>§ 图 10-1 展示了一个包含 TA 和 ATPT 以及一组 PCIe 设备和带集成 ATC 的
 RC 集成端点的示例平台。TA 和 ATPT
-是实现特定的,在给定的系统设计中可以是独立的组件,也可以是集成的组件。</p>
+是实现特定的，在给定的系统设计中可以是独立的组件，也可以是集成的组件。</p>
 <p>ATS 章节引入了一组新的 TLP 及相关语义。ATS 使用设备与根复合体 (RC)
-之间的请求-完成协议来提供转换服务。此外,在 Memory Read 和 Memory Write
+之间的请求-完成协议来提供转换服务。此外，在 Memory Read 和 Memory Write
 TLP 中定义了一个新的 AT 字段。新的 AT 字段使 RC 能够通过 ATS
 协议确定给定请求是否已经被转换。</p>
 <p>§ 图 10-2 展示了 ATS 转换请求操作的基本流程。</p>
-<p>在此示例中,单功能 PCIe
-设备收到一个功能特定的工作请求。该功能通过某种实现特定的方法判断,在其
+<blockquote>
+<p><strong>图 10-2.</strong> ATS 转换请求/完成交换示例
+<img src="figures/chapter_10/fig_1560_2_tight.png" width="700">
+<img src="figures/chapter_10/fig_1560_1_tight.png" width="700"></p>
+</blockquote>
+<p>在此示例中，单功能 PCIe
+设备收到一个功能特定的工作请求。该功能通过某种实现特定的方法判断，在其
 ATC
 中缓存一个转换是有益的。功能或软件在进行这种判断时可以考虑多种因素;例如:</p>
 <ul>
-<li>长时间内频繁访问的内存地址范围,或相关缓冲区内容更新速率较高的地址范围</li>
+<li>长时间内频繁访问的内存地址范围，或相关缓冲区内容更新速率较高的地址范围</li>
 </ul>
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-1-1"></a></p>
 <h3
-id="1011-address-translation-services-ats-overview---1011-地址转换服务-ats-概述-">10.1.1
-Address Translation Services (ATS) Overview § | 10.1.1 地址转换服务
-(ATS) 概述 §</h3>
+id="1011-address-translation-services-ats-overview--1011-地址转换服务-ats-概述">10.1.1
+Address Translation Services (ATS) Overview | 10.1.1 地址转换服务 (ATS)
+概述</h3>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -351,42 +1165,42 @@ of reasons.</p>
 
 <p><sup>189</sup> 本章中所有对"设备"的引用同样适用于 PCIe
 设备或根复合体集成端点。在要求、语义、配置、错误处理等方面,ATS
-不区分这两种类型。从软件的角度看,支持 ATS 的根复合体集成端点必须与支持
+不区分这两种类型。从软件的角度看，支持 ATS 的根复合体集成端点必须与支持
 ATS 的非集成设备行为相同。</p>
 <ul>
-<li>内存地址范围,例如工作和完成队列结构、低延迟通信的数据缓冲区、图形帧缓冲区、用于缓存功能特定内容的主机内存等</li>
+<li>内存地址范围，例如工作和完成队列结构、低延迟通信的数据缓冲区、图形帧缓冲区、用于缓存功能特定内容的主机内存等</li>
 </ul>
-<p>鉴于设计和访问模式的多样性,无法应用单一的标准来判断。</p>
-<p>该功能生成一个 ATS 转换请求,该请求通过 PCIe 层级向上游发送至 RC,RC
+<p>鉴于设计和访问模式的多样性，无法应用单一的标准来判断。</p>
+<p>该功能生成一个 ATS 转换请求，该请求通过 PCIe 层级向上游发送至 RC,RC
 再将其转发给 TA。ATS
-转换请求使用本规范中定义的相同路由和排序规则。此外,任意时刻可以有多个
+转换请求使用本规范中定义的相同路由和排序规则。此外，任意时刻可以有多个
 ATS 转换请求处于未完成状态;即可以在一个或多个 TC
-上流水线处理多个请求。每个 TC 表示一个唯一的排序域,并定义了关联的 ATS
+上流水线处理多个请求。每个 TC 表示一个唯一的排序域，并定义了关联的 ATS
 转换完成必须使用的域。</p>
-<p>TA 在收到 ATS 转换请求后,执行以下基本步骤:</p>
+<p>TA 在收到 ATS 转换请求后，执行以下基本步骤:</p>
 <ol type="1">
 <li>验证该功能已被配置为可发出 ATS 转换请求。</li>
 <li>确定该功能是否可以访问 ATS
-转换请求所指示的内存,并具备相应的访问权限。</li>
+转换请求所指示的内存，并具备相应的访问权限。</li>
 <li>确定是否可以向该功能提供转换。如果可以,TA 向该功能发出一个转换。 a.
-ATS 需要支持多种页大小,以适应各种 ATPT 和处理器实现。 i. 页大小必须是 2
+ATS 需要支持多种页大小，以适应各种 ATPT 和处理器实现。 i. 页大小必须是 2
 的幂且自然对齐。 ii. 最小支持的页大小为 4096 字节。支持 ATS
 的组件必须支持该最小页大小。 b.
-必须通知功能其需要支持的最小转换或无效化大小,以便该功能有机会优化其资源利用率。最小的最小转换大小必须为
+必须通知功能其需要支持的最小转换或无效化大小，以便该功能有机会优化其资源利用率。最小的最小转换大小必须为
 4096 字节。</li>
 <li>TA 将请求成功或失败的结果通知 RC,RC 生成 ATS 转换完成并通过响应 TLP
 经由 RP 发送给功能。 a. RC 必须为每个 ATS 转换请求生成至少一个 ATS
-转换完成;即,无论请求成功或失败,至少存在 1:1 的对应关系。 i.
+转换完成;即，无论请求成功或失败，至少存在 1:1 的对应关系。 i.
 一次成功的转换可能产生一个或两个 ATS 转换完成
 TLP。转换完成指示所覆盖的转换范围。 ii. RC 允许流水线处理多个 ATS
-转换完成;即,RC 可以返回多个 ATS 转换完成,这些 ATS 转换完成相对于 ATS
+转换完成;即,RC 可以返回多个 ATS 转换完成，这些 ATS 转换完成相对于 ATS
 转换请求可以按任意顺序出现。 iii. RC 必须使用与对应 ATS 转换请求相同的
 TC(流量类)发送 ATS 转换完成。 b. 请求的地址可能无效。RC
-必须发出一个转换完成,表明所请求的地址不可访问。</li>
+必须发出一个转换完成，表明所请求的地址不可访问。</li>
 </ol>
-<p>当功能收到 ATS 转换完成时,它会更新其 ATC
-以反映该转换,或者记录该转换不存在。然后,功能继续处理其工作请求,并根据完成的结果使用转换后地址或未转换地址生成后续请求。
-a. 与读完成类似,功能必须为每个完成分配资源空间,且不会在 PCIe
+<p>当功能收到 ATS 转换完成时，它会更新其 ATC
+以反映该转换，或者记录该转换不存在。然后，功能继续处理其工作请求，并根据完成的结果使用转换后地址或未转换地址生成后续请求。
+a. 与读完成类似，功能必须为每个完成分配资源空间，且不会在 PCIe
 链路上产生反压。 b.
 功能必须丢弃可能"过期"的转换完成。过期转换完成可能由多种原因引起。</p>
 </td>
@@ -395,20 +1209,18 @@ a. 与读完成类似,功能必须为每个完成分配资源空间,且不会在
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1559</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1560</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1561</p>
-<p><a id="sec-10-1-2"></a></p>
+<p><a id="sec-10-1-2"></a> <!-- 📄 Page 1559 --> <!-- 📄 Page 1560 -->
+<!-- 📄 Page 1561 --></p>
 <h3
-id="1012-page-request-interface-extension---1012-页请求接口扩展-">10.1.2
-Page Request Interface Extension § | 10.1.2 页请求接口扩展 §</h3>
-<p>table&gt;</p>
+id="1012-page-request-interface-extension--1012-页请求接口扩展">10.1.2
+Page Request Interface Extension | 10.1.2 页请求接口扩展</h3>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -459,7 +1271,13 @@ independent ATC implementations.</li>
 <blockquote>
 <p><strong>Figure 10-3.</strong> Example Multi-Function Device with ATC
 per Function
-<img src="figures/chapter_10/fig_1562_1.png" width="700"></p>
+<img src="figures/chapter_10/fig_1562_1_tight.png" width="700">
+<strong>图 10-3.</strong> Example Multi-Function Device 含 ATC per
+Function</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1562_1_tight.png" width="700">
+
 </blockquote>
 <p>Independent of the number of Functions within a Device, the following
 are required:</p>
@@ -475,14 +1293,14 @@ a Root Complex to require Untranslated Requests for interrupt behavior
 <td style="background-color:#e8e8e8">
 
 <p>可以推断,ATS 转换请求和转换完成的处理在概念上类似于 PCIe
-读请求和读完成处理,在许多方面完全相同。这是有意为之,以降低设计复杂度,并简化
+读请求和读完成处理，在许多方面完全相同。这是有意为之，以降低设计复杂度，并简化
 ATS 集成到现有和新的基于 PCIe 的解决方案中。牢记这一点,ATS 要求如下:</p>
 <ul>
 <li>支持 ATS 的组件必须与符合 [PCIe-1.1] 的组件互操作。</li>
 <li>通过一个新的 Capability 和相关配置结构启用 ATS。要启用
 ATS,软件必须检测该 Capability 并使该功能能够发出 ATS
-TLP。如果某个功能未被启用,则该功能不得发出 ATS 转换请求,且必须将所有 DMA
-读和写请求的 TLP AT 字段设置为"untranslated"。</li>
+TLP。如果某个功能未被启用，则该功能不得发出 ATS 转换请求，且必须将所有
+DMA 读和写请求的 TLP AT 字段设置为"untranslated"。</li>
 <li>ATS TLP 通过基于地址或基于 ID 的路由进行路由。</li>
 <li>ATS TLP 必须使用本规范中指定的相同排序规则。</li>
 <li>ATS TLP 必须不经修改地流经符合 [PCIe-1.1] 的交换机 (Switch)。</li>
@@ -491,7 +1309,7 @@ TLP。如果某个功能未被启用,则该功能不得发出 ATS 转换请求,�
 当前定义用途之外的任何附加信息。</li>
 </ul>
 <p>与前面的示例不同,§ 图 10-3
-展示了一个多功能设备的示例。在此示例设备中,有三个功能。需要注意 § 图
+展示了一个多功能设备的示例。在此示例设备中，有三个功能。需要注意 § 图
 10-3 中的关键点:</p>
 <ul>
 <li>每个 ATC 与单个功能相关联。每个支持 ATS
@@ -499,33 +1317,34 @@ TLP。如果某个功能未被启用,则该功能不得发出 ATS 转换请求,�
 <li>每个 ATC
 按功能粒度进行配置和访问。并不要求多功能设备在每个功能上都实现
 ATS。</li>
-<li>如果 ATC 实现在一组功能之间共享资源,则其逻辑行为必须与完全独立的 ATC
-实现一致。</li>
+<li>如果 ATC 实现在一组功能之间共享资源，则其逻辑行为必须与完全独立的
+ATC 实现一致。</li>
 </ul>
-<p>无论设备内的功能数量如何,以下要求都必须满足:</p>
+<p>无论设备内的功能数量如何，以下要求都必须满足:</p>
 <blockquote>
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong> <strong>地址范围重叠
 (ADDRESS RANGE OVERLAP)</strong>
-虽然预计会有大量重叠,但系统不要求在所有地址范围内都使未转换和转换/已转换序列可互换。例如,允许根复合体对中断行为(MSI/MSI-X)要求使用未转换请求。</p>
+虽然预计会有大量重叠，但系统不要求在所有地址范围内都使未转换和转换/已转换序列可互换。例如，允许根复合体对中断行为(MSI/MSI-X)要求使用未转换请求。</p>
 </blockquote>
+<img src="figures/chapter_10/fig_1562_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-1-2-cont"></a></p>
 <h3
-id="1012-page-request-interface-extension-continued---1012-页请求接口扩展-续-">10.1.2
-Page Request Interface Extension (continued) § | 10.1.2 页请求接口扩展
-(续) §</h3>
+id="1012-page-request-interface-extension-continued--1012-页请求接口扩展-续">10.1.2
+Page Request Interface Extension (continued) | 10.1.2 页请求接口扩展
+(续)</h3>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -588,7 +1407,7 @@ Completions.</li>
 
 <ul>
 <li>除非 TLP 中的地址是通过 ATS
-转换请求和转换完成协议获得的,否则功能不得发出任何 AT 字段已设置的
+转换请求和转换完成协议获得的，否则功能不得发出任何 AT 字段已设置的
 TLP。</li>
 <li>每个 ATC 必须仅通过 ATS 协议填充;即,ATC
 中的每个条目必须通过响应该功能对给定地址发出的 ATS 转换请求的 ATS
@@ -597,7 +1416,7 @@ TLP。</li>
 <ul>
 <li>主机系统软件不得通过本规范中定义的协议以外的方式修改 ATC,只能使 ATC
 中一个或多个转换无效。设备或功能复位是软件用来更改 ATC
-内容的操作示例,但复位只能用于使条目无效,而不能修改其内容。</li>
+内容的操作示例，但复位只能用于使条目无效，而不能修改其内容。</li>
 <li>不允许主机系统软件利用设备上执行的软件来修改 ATC。</li>
 </ul></li>
 </ul>
@@ -606,16 +1425,16 @@ TLP。</li>
 <p>正如 § 图 10-4 所示,ATS 无效化协议基本上包含三个步骤:</p>
 <ol type="1">
 <li>系统软件更新 TA 所使用表中的一个条目。表变更后,TA 确定应在某个 ATC
-中使一个转换无效,并启动一个无效化请求 TLP,该 TLP 从 RP
+中使一个转换无效，并启动一个无效化请求 TLP,该 TLP 从 RP
 发送到示例单功能设备。无效化请求传达一个未转换地址范围、TC,以及一个 RP
-唯一标签,该标签用于将无效化完成与无效化请求相关联。</li>
+唯一标签，该标签用于将无效化完成与无效化请求相关联。</li>
 <li>功能收到无效化请求并使所有匹配的 ATC
-条目无效。功能无需在收到无效化请求时立即刷新所有挂起的请求。如果事务正在队列中等待发送,即使这些事务使用的地址正在被无效化,功能也无需从队列中删除这些请求。
+条目无效。功能无需在收到无效化请求时立即刷新所有挂起的请求。如果事务正在队列中等待发送，即使这些事务使用的地址正在被无效化，功能也无需从队列中删除这些请求。
 a.
-功能在引用关联已转换地址的所有未完成读请求或转换请求已被退役或作废之前,不得声明无效化已完成。
+功能在引用关联已转换地址的所有未完成读请求或转换请求已被退役或作废之前，不得声明无效化已完成。
 b. 功能必须确保发往 RC
 的无效化完成指示将在使用"过期"地址的任何先前发布的写入之后到达 RC。</li>
-<li>当功能确认转换地址的所有使用均已完成时,它发出一个或多个 ATS
+<li>当功能确认转换地址的所有使用均已完成时，它发出一个或多个 ATS
 无效化完成。</li>
 </ol>
 </td>
@@ -626,22 +1445,28 @@ b. 功能必须确保发往 RC
 <blockquote>
 <p><strong>Figure 10-4.</strong> Invalidation Protocol with a Single
 Invalidation Request and Completion
-<img src="figures/chapter_10/fig_1563_1.png" width="700"></p>
+<img src="figures/chapter_10/fig_1563_1_tight.png" width="700">
+<strong>图 10-4.</strong> Invalidation Protocol 含 Single Invalidation
+Request 与 Completion</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1563_1_tight.png" width="700">
+
 </blockquote>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-1-2-cont2"></a></p>
 <h3
-id="1012-page-request-interface-extension-continued-2---1012-页请求接口扩展-续二-">10.1.2
-Page Request Interface Extension (continued 2) § | 10.1.2 页请求接口扩展
-(续二) §</h3>
-<p>table&gt;</p>
+id="1012-page-request-interface-extension-continued-2--1012-页请求接口扩展-续二">10.1.2
+Page Request Interface Extension (continued 2) | 10.1.2 页请求接口扩展
+(续二)</h3>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -663,7 +1488,13 @@ enable the RC to correlate Invalidate Requests and Completions.</p>
 <blockquote>
 <p><strong>Figure 10-5.</strong> Single Invalidate Request with Multiple
 Invalidate Completions
-<img src="figures/chapter_10/fig_1564_1.png" width="700"></p>
+<img src="figures/chapter_10/fig_1564_1_tight.png" width="700">
+<strong>图 10-5.</strong> Single Invalidate Request 含 Multiple
+Invalidate Completions</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1564_1_tight.png" width="700">
+
 </blockquote>
 <p>ATS improves the behavior of DMA based data movement. An associated
 Page Request Interface (PRI) provides additional advantages by allowing
@@ -702,46 +1533,46 @@ hints about how to manage pages mapped</p>
 <td style="background-color:#e8e8e8">
 
 <p>a. 对于可能引用了被无效化范围的每个
-TC,都发出一个无效化完成。这些完成充当一种刷新机制,以确保层级中清除所有可能包含对已转换地址引用的在途事务。
+TC,都发出一个无效化完成。这些完成充当一种刷新机制，以确保层级中清除所有可能包含对已转换地址引用的在途事务。
 i. 所需完成数在每个无效化完成中传达。TA 或 RC
-实现可以维护一个计数器,以确保在考虑转换不再使用之前已收到所有无效化完成。
-ii. 如果发送了多个无效化完成,则在每个 TC 中发送的无效化完成在 § 第
+实现可以维护一个计数器，以确保在考虑转换不再使用之前已收到所有无效化完成。
+ii. 如果发送了多个无效化完成，则在每个 TC 中发送的无效化完成在 § 第
 10.3.2 节中详述的字段上必须相同。 b. 无效化完成包含来自无效化请求的
 ITAG,以使 RC 能够将无效化请求和完成相关联。</p>
 <p>ATS 改善了基于 DMA 的数据移动行为。关联的页请求接口 (Page Request
-Interface, PRI) 提供了额外优势,允许启动 DMA
+Interface, PRI) 提供了额外优势，允许启动 DMA
 操作而无需要求所有要移入或移出系统内存的数据都被钉住
 (pinned)。<sup>190</sup>
-与钉住内存相关的开销可能不大,但将大块内存从可分页池中移除对系统性能的负面影响可能很显著。</p>
-<p>PRI 在功能上独立于 ATS 的其他方面。即,支持 ATS 的设备无需支持 PRI,但
+与钉住内存相关的开销可能不大，但将大块内存从可分页池中移除对系统性能的负面影响可能很显著。</p>
+<p>PRI 在功能上独立于 ATS 的其他方面。即，支持 ATS 的设备无需支持 PRI,但
 PRI 依赖于 ATS 的能力。</p>
 <p>智能 I/O
-设备可以构建为更好地利用更动态的内存接口。从设备的角度看,钉住始终具有最佳的性能特征——它想要访问的所有内存保证存在。然而,保证设备可能访问的所有内存驻留可能存在问题,并迫使主机对设备的感知处于次优水平。<sup>191</sup>
+设备可以构建为更好地利用更动态的内存接口。从设备的角度看，钉住始终具有最佳的性能特征——它想要访问的所有内存保证存在。然而，保证设备可能访问的所有内存驻留可能存在问题，并迫使主机对设备的感知处于次优水平。<sup>191</sup>
 允许设备更独立地运行(在需要不在场的内存资源时触发缺页)提供了设备和主机之间更优的耦合。</p>
-<p>利用页请求接口的机制非常特定于设备。作为此类接口可以改善整体系统性能的模型示例,让我们考察一个高速
+<p>利用页请求接口的机制非常特定于设备。作为此类接口可以改善整体系统性能的模型示例，让我们考察一个高速
 LAN
-设备。这样的设备知道其突发速率,只需拥有足够容纳其在某个量程内能接收的入站数据的物理缓冲区空间。一组未钉住的虚拟内存页可供设备使用,设备根据需要请求这些页以维持其突发窗口。这最小化了设备所需的内存占用,并简化了与主机的接口,同时不会对性能产生负面影响。</p>
+设备。这样的设备知道其突发速率，只需拥有足够容纳其在某个量程内能接收的入站数据的物理缓冲区空间。一组未钉住的虚拟内存页可供设备使用，设备根据需要请求这些页以维持其突发窗口。这最小化了设备所需的内存占用，并简化了与主机的接口，同时不会对性能产生负面影响。</p>
 <p>分页的能力引出了页表状态标志管理的问题。典型 TA
 会为每个未转换地址关联标志(例如 dirty 和 access
 指示)。在没有关于如何管理映射到功能的页的额外提示时,</p>
+<img src="figures/chapter_10/fig_1564_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-1-3"></a></p>
 <h3
-id="1013-process-address-space-id-pasid---1013-进程地址空间-id-pasid-">10.1.3
-Process Address Space ID (PASID) § | 10.1.3 进程地址空间 ID (PASID)
-§</h3>
+id="1013-process-address-space-id-pasid--1013-进程地址空间-id-pasid">10.1.3
+Process Address Space ID (PASID) | 10.1.3 进程地址空间 ID (PASID)</h3>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -824,23 +1655,23 @@ behavior is undefined.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<p><sup>190</sup> 锁定在适当位置,以使其不能被系统的动态分页机制换出。
+<p><sup>190</sup> 锁定在适当位置，以使其不能被系统的动态分页机制换出。
 <sup>191</sup>
-另一种方法是在设备及其驱动程序之间使用一个私有接口来传达设备状态,以便驱动程序可以确保钉住内存资源的可用性。</p>
+另一种方法是在设备及其驱动程序之间使用一个私有接口来传达设备状态，以便驱动程序可以确保钉住内存资源的可用性。</p>
 <p>这些 TA
-必须保守地假设:当它们授予某个功能对页的读或写权限时,该功能将使用该权限。在将转换后的地址提供给该功能之前,这些可写页必须被标记为
+必须保守地假设:当它们授予某个功能对页的读或写权限时，该功能将使用该权限。在将转换后的地址提供给该功能之前，这些可写页必须被标记为
 dirty。</p>
-<p>对于不支持分页的功能(其页被钉住,且很少付出将干净页保存到内存的代价)而言,这种在授予写权限时即标记为
+<p>对于不支持分页的功能(其页被钉住，且很少付出将干净页保存到内存的代价)而言，这种在授予写权限时即标记为
 dirty
-的保守行为通常不是大问题。但是,对于支持页请求接口的功能,如果所有可写页都被视为
-dirty,则可能付出显著代价,因为这些功能在不钉住其可访问内存占用区的情况下运行,并且可能为性能而发出推测性页请求。在此类系统中保存干净页(而不是直接丢弃)的成本会削弱分页技术原本的价值。这可能导致显著的性能问题,并在某些情形下(例如
+的保守行为通常不是大问题。但是，对于支持页请求接口的功能，如果所有可写页都被视为
+dirty,则可能付出显著代价，因为这些功能在不钉住其可访问内存占用区的情况下运行，并且可能为性能而发出推测性页请求。在此类系统中保存干净页(而不是直接丢弃)的成本会削弱分页技术原本的价值。这可能导致显著的性能问题，并在某些情形下(例如
 CD-ROM 无法写入其后备存储时)存在功能性问题。</p>
 <p>No Write 标志(转换请求中的 NW
-标志)表示功能愿意将其使用限制为仅读取该页,无论本应被授予的访问权限如何。</p>
+标志)表示功能愿意将其使用限制为仅读取该页，无论本应被授予的访问权限如何。</p>
 <p>如果设备通过发出 NW
-标志置位的转换请求来仅请求读访问,并随后确定需要写入该页,则设备必须发出一个新的转换请求。</p>
+标志置位的转换请求来仅请求读访问，并随后确定需要写入该页，则设备必须发出一个新的转换请求。</p>
 <p>当收到 NW 标志清零的转换请求时,TA 允许将关联页标记为
-dirty。除非功能已被授予明确的写权限,否则功能 <strong>MUST@FLIT</strong>
+dirty。除非功能已被授予明确的写权限，否则功能 <strong>MUST@FLIT</strong>
 不发出此类请求。写权限的一个示例是主机向功能发出命令以从存储设备加载数据并将该数据写入内存。</p>
 <p>某些 TLP 可选择性地与进程地址空间 ID (Process Address Space ID,
 PASID) 关联。该值通过 PASID TLP Prefix(NFM)或 OHC-A(FM)传递。PASID TLP
@@ -857,35 +1688,35 @@ Prefix 在 § 第 6.20 节中定义。</p>
 </ul>
 <p>未转换内存请求的 PASID 使用在 § 第 6.20 节中定义。本节描述其余 TLP 的
 PASID 用法。</p>
-<p>每个功能具有独立的 PASID 值集合。PASID 字段宽度为 20 位,尽管活动
+<p>每个功能具有独立的 PASID 值集合。PASID 字段宽度为 20 位，尽管活动
 PASID 值的数量通常远小于 2^20。PASID 值可以稀疏分配。如果可用宽度受 TA
-或 ATC 限制,则 PASID 值未使用的高位必须为 0b。所有 2^usable_width 个
+或 ATC 限制，则 PASID 值未使用的高位必须为 0b。所有 2^usable_width 个
 PASID 值都可用。不允许功能硬件假设存在"保留"PASID 值。</p>
 <p>ATC 可选择性地支持带 PASID 的已转换请求。当 Translated Requests with
-PASID Enable 位置位时,启用带 PASID 的已转换请求功能。启用后,如果 ATC
+PASID Enable 位置位时，启用带 PASID 的已转换请求功能。启用后，如果 ATC
 通过带 PASID
-的转换请求获得转换,则对应的已转换请求必须携带与转换请求相同的
+的转换请求获得转换，则对应的已转换请求必须携带与转换请求相同的
 PASID,Privileged Mode Requested 位必须与转换响应中的 Privileged Mode
 Access 位匹配,Execute Requested 位仅在转换响应中 Execute Permitted
-位置位时才允许置位。类似地,如果 ATC 通过不带 PASID
-的转换请求获得转换,则对应的已转换请求不得携带
-PASID。如果不遵守这些规则,由此产生的系统行为未定义。</p>
+位置位时才允许置位。类似地，如果 ATC 通过不带 PASID
+的转换请求获得转换，则对应的已转换请求不得携带
+PASID。如果不遵守这些规则，由此产生的系统行为未定义。</p>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-1-4"></a></p>
-<h3 id="1014-ats-memory-attributes---1014-ats-内存属性-">10.1.4 ATS
-Memory Attributes § | 10.1.4 ATS 内存属性 §</h3>
-<p>table&gt;</p>
+<h3 id="1014-ats-memory-attributes--1014-ats-内存属性">10.1.4 ATS Memory
+Attributes | 10.1.4 ATS 内存属性</h3>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -923,38 +1754,38 @@ this specification.</p>
 
 <p>ATS 内存属性 (ATS Memory Attributes, AMA)
 为执行内存操作(如缓存管理)提供提示。AMA
-可以由转换完成提供给端点设备,并存储在 ATC 中。如果 ATS Memory Attributes
-Enable 位置位,则端点功能从 ATC 检索 AMA,并允许使用 TPH TLP Prefix
-在内存读/写 TLP 中提供 AMA。这作为一种性能优化,避免了 TA
-必须执行查找。TA 和 ATC 允许支持 AMA。如果 ATC 不支持 AMA 而 TA 支持,则
+可以由转换完成提供给端点设备，并存储在 ATC 中。如果 ATS Memory
+Attributes Enable 位置位，则端点功能从 ATC 检索 AMA,并允许使用 TPH TLP
+Prefix 在内存读/写 TLP 中提供 AMA。这作为一种性能优化，避免了 TA
+必须执行查找。TA 和 ATC 允许支持 AMA。如果 ATC 不支持 AMA 而 TA 支持，则
 TA 在处理从端点设备接收的内存读/写 TLP 时允许执行查找以获取 AMA。支持
 AMA 的 TA 允许始终在发送给所有端点的所有 ATS 转换完成中返回 AMA。</p>
 <p>TA 执行转换。ATC 可以缓存这些转换。如果 ATC 与 TA 之间通过 PCIe
-隔离,则来自 ATC
-的内存请求需要能够指示事务中的地址是否已转换。本节描述对内存事务的修改,以及用于在远程
+隔离，则来自 ATC
+的内存请求需要能够指示事务中的地址是否已转换。本节描述对内存事务的修改，以及用于在远程
 ATC 和中央 TA 之间传达转换的事务。</p>
 <p>当启用影子功能 (Shadow Function) 时,TA
 必须以相同方式处理来自"主"功能及其影子的所有请求(参见第 7.9.21
 节)。这通常涉及确保系统软件配置 TA
-使用的转换表,为"主"功能及其影子提供相同的答案。根据特定 TA
-的架构,可能需要做更多的工作(例如管理 dirty
+使用的转换表，为"主"功能及其影子提供相同的答案。根据特定 TA
+的架构，可能需要做更多的工作(例如管理 dirty
 位、确保缓存一致性等)。此类工作不在本规范范围内。</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2"></a></p>
-<h2 id="102-ats-translation-services---102-ats-转换服务-">10.2 ATS
-Translation Services § | 10.2 ATS 转换服务 §</h2>
+<h2 id="102-ats-translation-services--102-ats-转换服务">10.2 ATS
+Translation Services | 10.2 ATS 转换服务</h2>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -977,7 +1808,7 @@ field as listed in § Table 10-1.</p>
 <p>带 ATC 的功能可以发送包含已转换或未转换地址的内存请求。地址类型
 (Address Type, AT) 字段用于指示请求头中存在的地址类型(参见 § 图 10-6、§
 图 10-7、§ 图 10-8 和 § 图 10-9)。</p>
-<p>在 NFM 中,请求中的 AT
+<p>在 NFM 中，请求中的 AT
 字段是对本规范早期版本中保留字段的重新定义。未实现 ATC 的功能将继续把 AT
 字段设置为其定义的保留值(00b)。实现 ATC 的功能将按 § 表 10-1 所列设置 AT
 字段。</p>
@@ -989,42 +1820,129 @@ field as listed in § Table 10-1.</p>
 <blockquote>
 <p><strong>Figure 10-6.</strong> Memory Request Header with 64-bit
 Address Highlighting AT field
-<img src="figures/chapter_10/fig_1566_1.png" width="700"></p>
+<img src="figures/chapter_10/fig_1566_1_tight.png" width="700"></p>
 </blockquote>
 <blockquote>
 <p><strong>Figure 10-7.</strong> Memory Request Header with 32-bit
 Address Highlighting AT field
-<img src="figures/chapter_10/fig_1567_1.png" width="700"></p>
+<img src="figures/chapter_10/fig_1567_1_tight.png" width="700"></p>
 </blockquote>
 <blockquote>
 <p><strong>Figure 10-8.</strong> Memory Request Header with 64-bit
-Address Highlighting AT field - FLIT Mode
-<img src="figures/chapter_10/fig_1568_1.png" width="700"></p>
+Address Highlighting AT field - FLIT Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1567_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1568_1_tight.png" width="700">
+**图 10-6.** Memory Request 包头 含 64-bit Address: AT field
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1566_1_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-7.</strong> Memory Request Header with 32-bit
+Address Highlighting AT field
+<img src="figures/chapter_10/fig_1567_1_tight.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-8.</strong> Memory Request Header with 64-bit
+Address Highlighting AT field - FLIT Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1567_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1568_1_tight.png" width="700">
+
 </blockquote>
 <blockquote>
 <p><strong>Figure 10-9.</strong> Memory Request Header with 32-bit
-Address Highlighting AT field - FLIT Mode
-<img src="figures/chapter_10/fig_1569_1.png" width="700"></p>
+Address Highlighting AT field - FLIT Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1567_3_tight.png" width="700">
+**图 10-7.** Memory Request 包头 含 32-bit Address: AT field
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1567_1_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-8.</strong> Memory Request Header with 64-bit
+Address Highlighting AT field - FLIT Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1567_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1568_1_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-9.</strong> Memory Request Header with 32-bit
+Address Highlighting AT field - FLIT Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1567_3_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1569_1_tight.png" width="700">
+**图 10-9.** Memory Request 包头 含 32-bit Address: AT field - Flit 模式
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1567_3_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1569_1_tight.png" width="700">
+**图 10-8.** Memory Request 包头 含 64-bit Address: AT field - Flit 模式
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1567_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1568_1_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-9.</strong> Memory Request Header with 32-bit
+Address Highlighting AT field - FLIT Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1567_3_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1569_1_tight.png" width="700">
+
 </blockquote>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1562</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1563</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1564</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1565</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1566</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1567</p>
-<p><a id="sec-10-2-1"></a></p>
+<p><a id="sec-10-2-1"></a> <!-- 📄 Page 1562 --> <!-- 📄 Page 1563 -->
+<!-- 📄 Page 1564 --> <!-- 📄 Page 1565 --> <!-- 📄 Page 1566 -->
+<!-- 📄 Page 1567 --></p>
 <h3
-id="1021-memory-requests-with-address-type---1021-带地址类型的内存请求-">10.2.1
-Memory Requests with Address Type § | 10.2.1 带地址类型的内存请求 §</h3>
-<p>table&gt;</p>
+id="1021-memory-requests-with-address-type--1021-带地址类型的内存请求">10.2.1
+Memory Requests with Address Type | 10.2.1 带地址类型的内存请求</h3>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1115,8 +2033,8 @@ TLP,将发出 Unsupported Request (UR) 信号。</td>
 <td>Translated</td>
 <td>已转换</td>
 <td>事务中的地址已由 ATC 转换。如果与 SourceID
-关联的功能被允许向系统内存呈现物理地址,则 TA
-可能不会转换此地址。如果该功能不被允许呈现物理地址,则 TA 可以将其视为
+关联的功能被允许向系统内存呈现物理地址，则 TA
+可能不会转换此地址。如果该功能不被允许呈现物理地址，则 TA 可以将其视为
 UR。</td>
 </tr>
 <tr>
@@ -1135,17 +2053,17 @@ TLP,该字段仍为保留。</p>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-2"></a></p>
-<h3 id="1022-translation-requests---1022-转换请求-">10.2.2 Translation
-Requests § | 10.2.2 转换请求 §</h3>
+<h3 id="1022-translation-requests--1022-转换请求">10.2.2 Translation
+Requests | 10.2.2 转换请求</h3>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1178,12 +2096,12 @@ bit is located in OHC-A1.</p>
 
 <p>转换请求的格式在 FM 或 NFM 中均类似于内存读<sup>192</sup>(MRd TLP
 类型)。AT 字段必须设置为"Translation
-Request"所定义的值,以将转换请求与普通内存读区分开(参见 § 图 10-10、§ 图
-10-11、§ 图 10-12 和 § 图 10-13)。在 Flit 模式下,必须包含 OHC-A1,且 No
+Request"所定义的值，以将转换请求与普通内存读区分开(参见 § 图 10-10、§ 图
+10-11、§ 图 10-12 和 § 图 10-13)。在 Flit 模式下，必须包含 OHC-A1,且 No
 Write (NW 标志)包含在 OHC-A1 中。</p>
 <p>转换请求的完成超时间隔与读请求相同。</p>
 <p>对于转换请求,Relaxed Ordering (RO)
-位适用并允许置位,此时它会影响其关联的转换完成的排序。Attr
+位适用并允许置位，此时它会影响其关联的转换完成的排序。Attr
 字段的其余部分保留。转换请求的请求者不得依赖 TA
 来保证转换完成与任何其他请求或完成之间的任何特定排序关系。转换请求没有排序要求。TA
 可以相对于任何其他请求重新排序转换请求。</p>
@@ -1201,21 +2119,54 @@ Address - Flit Mode
 </blockquote>
 <blockquote>
 <p><strong>Figure 10-13.</strong> Translation Request with 32-bit
-Address - Flit Mode
-<img src="figures/chapter_10/fig_1573_1.png" width="700"></p>
+Address - Flit Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1569_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1573_1_tight.png" width="700">
+**图 10-13.** Translation Request 含 32-bit Address - Flit 模式
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1569_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1573_1_tight.png" width="700">
+**图 10-12.** Translation Request 含 64-bit Address - Flit 模式
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1572_1.png" width="700">
+
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-13.</strong> Translation Request with 32-bit
+Address - Flit Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1569_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1573_1_tight.png" width="700">
+
 </blockquote>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-2-1"></a></p>
-<h4 id="10221-attribute-field---10221-属性字段-">10.2.2.1 Attribute
-Field § | 10.2.2.1 属性字段 §</h4>
-<p>table&gt;</p>
+<h4 id="10221-attribute-field--10221-属性字段">10.2.2.1 Attribute Field
+| 10.2.2.1 属性字段</h4>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1271,11 +2222,11 @@ make an effective flushing/ordering primitive.</p>
 <td style="background-color:#e8e8e8">
 
 <p>Length 字段设置以指示可作为此请求的响应返回的转换数。每个转换长度为 8
-字节,表示一个或多个 STU(最小转换单元,Smallest Translation Unit)。Length
+字节，表示一个或多个 STU(最小转换单元,Smallest Translation Unit)。Length
 字段的最大设置值为根端口的 RCB,由链路控制寄存器中的读完成边界 (Read
 Completion Boundary, RCB) 决定。转换请求中的 Length
-字段必须始终表示偶数个 DWORD。如果 Length 设置为大于允许值的值,或 Length
-字段的最低有效位非零,则 TA 对此的处理未定义。<sup>195</sup></p>
+字段必须始终表示偶数个 DWORD。如果 Length 设置为大于允许值的值，或
+Length 字段的最低有效位非零，则 TA 对此的处理未定义。<sup>195</sup></p>
 <p>如果 Length 字段的值大于 2,则功能正在为大于单个 STU
 的内存范围请求转换。额外转换(若提供)假定为从请求地址开始的、顺序递增的、等大小、STU
 对齐的区域。</p>
@@ -1283,37 +2234,38 @@ Completion Boundary, RCB) 决定。转换请求中的 Length
 <p>转换请求包含 32 位或 64
 位的未转换地址字段。该字段指示要转换的地址。TA
 将根据转换请求中的地址对请求的有效性做出判断。TA
-允许返回少于请求数量的转换,但不会返回更多。</p>
-<p>当请求多个转换时,如果某个转换的范围与转换请求的隐含范围不重叠(这仅适用于初始值之后的转换),TA
+允许返回少于请求数量的转换，但不会返回更多。</p>
+<p>当请求多个转换时，如果某个转换的范围与转换请求的隐含范围不重叠(这仅适用于初始值之后的转换),TA
 不会返回该转换。转换请求的隐含范围为 [2^STU+12 * (Length/2)] 字节。</p>
-<p>转换请求中的未转换地址字段是第一个 STU 范围内任意地址。地址位 11:0
-不出现在转换请求中,隐含为零。如果请求者的 Page Aligned Request
-已设置(参见 § 第 7.8.9.2 节),则必须确保位 11:2 为零。如果请求者的 Page
-Aligned Request 已清零,则允许为位 11:2 提供任意值。<sup>196</sup> TA
-必须忽略位 11:2 以及确定转换不需要的任何低位。</p>
-<p>例如,对于 Page Aligned Request 位置位且 STU 编程为 1(即 8192
-字节页)的功能使用 64 位寻址时,位 63:13 有效,位 12 被 TA 忽略,位 11:0
-隐含为零。</p>
+<p>转换请求中的未转换地址字段是第一个 STU 范围内任意地址。地址 Bits 11:0
+不出现在转换请求中，隐含为零。如果请求者的 Page Aligned Request
+已设置(参见 § 第 7.8.9.2 节)，则必须确保 Bits 11:2 为零。如果请求者的
+Page Aligned Request 已清零，则允许为 Bits 11:2
+提供任意值。<sup>196</sup> TA 必须忽略 Bits 11:2
+以及确定转换不需要的任何低位。</p>
+<p>例如，对于 Page Aligned Request 位置位且 STU 编程为 1(即 8192
+字节页)的功能使用 64 位寻址时，Bits 63:13 有效，位 12 被 TA 忽略，Bits
+11:0 隐含为零。</p>
 <blockquote>
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong> <strong>转换请求排序
 (TRANSLATION REQUEST ORDERING)</strong>
-由于在转换请求与其他类型请求之间无法假设任何排序关系,转换请求并不构成有效的刷新/排序原语。</p>
+由于在转换请求与其他类型请求之间无法假设任何排序关系，转换请求并不构成有效的刷新/排序原语。</p>
 </blockquote>
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-2-2"></a></p>
-<h4 id="10222-length-field---10222-length-字段-">10.2.2.2 Length Field §
-| 10.2.2.2 Length 字段 §</h4>
+<h4 id="10222-length-field--10222-length-字段">10.2.2.2 Length Field |
+10.2.2.2 Length 字段</h4>
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1328,7 +2280,7 @@ Revision 1.1 of the ATS Specification.</p>
 <td style="background-color:#e8e8e8">
 
 <p><sup>195</sup>
-由于本规范早期版本中含糊的措辞,应假设可能发生不可恢复的错误情况。
+由于本规范早期版本中含糊的措辞，应假设可能发生不可恢复的错误情况。
 <sup>196</sup> 注:Page Aligned Request 位在 ATS 规范第 1.1
 版中新增。</p>
 </td>
@@ -1336,21 +2288,18 @@ Revision 1.1 of the ATS Specification.</p>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1568</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1569</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1570</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1571</p>
-<p><a id="sec-10-2-2-3"></a></p>
-<h4 id="10223-tag-field---10223-tag-字段-">10.2.2.3 Tag Field § |
-10.2.2.3 Tag 字段 §</h4>
+<p><a id="sec-10-2-2-3"></a> <!-- 📄 Page 1568 --> <!-- 📄 Page 1569 -->
+<!-- 📄 Page 1570 --> <!-- 📄 Page 1571 --></p>
+<h4 id="10223-tag-field--10223-tag-字段">10.2.2.3 Tag Field | 10.2.2.3
+Tag 字段</h4>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1394,21 +2343,21 @@ make an effective flushing/ordering primitive.</p>
 <p>转换请求包含 32 位或 64
 位的未转换地址字段。该字段指示要转换的地址。TA
 将根据转换请求中的地址对请求的有效性做出判断。TA
-允许返回少于请求数量的转换,但不会返回更多。</p>
-<p>当请求多个转换时,如果某个转换的范围与转换请求的隐含范围不重叠(这仅适用于初始值之后的转换),TA
+允许返回少于请求数量的转换，但不会返回更多。</p>
+<p>当请求多个转换时，如果某个转换的范围与转换请求的隐含范围不重叠(这仅适用于初始值之后的转换),TA
 不会返回该转换。转换请求的隐含范围为 [2^STU+12 * (Length/2)] 字节。</p>
-<p>转换请求中的未转换地址字段是第一个 STU 范围内任意地址。地址位 11:0
-不出现在转换请求中,隐含为零。如果请求者的 Page Aligned Request
-已设置(参见 § 第 7.8.9.2 节),则必须确保位 11:2 为零。如果请求者的 Page
-Aligned Request 已清零,则允许为位 11:2 提供任意值。TA 必须忽略位 11:2
-以及确定转换不需要的任何低位。</p>
-<p>例如,对于 Page Aligned Request 位置位且 STU 编程为 1(即 8192
-字节页)的功能使用 64 位寻址时,位 63:13 有效,位 12 被 TA 忽略,位 11:0
-隐含为零。</p>
+<p>转换请求中的未转换地址字段是第一个 STU 范围内任意地址。地址 Bits 11:0
+不出现在转换请求中，隐含为零。如果请求者的 Page Aligned Request
+已设置(参见 § 第 7.8.9.2 节)，则必须确保 Bits 11:2 为零。如果请求者的
+Page Aligned Request 已清零，则允许为 Bits 11:2 提供任意值。TA 必须忽略
+Bits 11:2 以及确定转换不需要的任何低位。</p>
+<p>例如，对于 Page Aligned Request 位置位且 STU 编程为 1(即 8192
+字节页)的功能使用 64 位寻址时，Bits 63:13 有效，位 12 被 TA 忽略，Bits
+11:0 隐含为零。</p>
 <blockquote>
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong> <strong>转换请求排序
 (TRANSLATION REQUEST ORDERING)</strong>
-由于在转换请求与其他类型请求之间无法假设任何排序关系,转换请求并不构成有效的刷新/排序原语。</p>
+由于在转换请求与其他类型请求之间无法假设任何排序关系，转换请求并不构成有效的刷新/排序原语。</p>
 </blockquote>
 </td>
 </tr>
@@ -1416,17 +2365,16 @@ Aligned Request 已清零,则允许为位 11:2 提供任意值。TA 必须忽略
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-2-4"></a></p>
-<h4
-id="10224-untranslated-address-field---10224-未转换地址字段-">10.2.2.4
-Untranslated Address Field § | 10.2.2.4 未转换地址字段 §</h4>
-<p>table&gt;</p>
+<h4 id="10224-untranslated-address-field--10224-未转换地址字段">10.2.2.4
+Untranslated Address Field | 10.2.2.4 未转换地址字段</h4>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1450,13 +2398,13 @@ permission.</p>
 <td style="background-color:#e8e8e8">
 
 <p>当 No Write
-标志置位时,表示该功能正在为该转换请求只读访问权限。<sup>197</sup></p>
-<p>TA 可以忽略 No Write 标志;然而,如果 TA
-以标记为只读的转换响应,则该功能不得使用该转换发出内存写事务。在这种情况下,该功能可以发出另一个
-No Write 标志清零的转换请求,该请求可能产生带有或不带
+标志置位时，表示该功能正在为该转换请求只读访问权限。<sup>197</sup></p>
+<p>TA 可以忽略 No Write 标志;然而，如果 TA
+以标记为只读的转换响应，则该功能不得使用该转换发出内存写事务。在这种情况下，该功能可以发出另一个
+No Write 标志清零的转换请求，该请求可能产生带有或不带
 W(写)位置位的新转换完成。</p>
 <p>当收到 NW 标志清零的转换请求时,TA 允许将关联页标记为
-dirty。除非功能已被授予明确的写权限,否则功能 <strong>MUST@FLIT</strong>
+dirty。除非功能已被授予明确的写权限，否则功能 <strong>MUST@FLIT</strong>
 不发出此类请求。</p>
 <p>在 Flit 模式下,NW 位是 OHC-A1 的一部分。</p>
 </td>
@@ -1464,17 +2412,17 @@ dirty。除非功能已被授予明确的写权限,否则功能 <strong>MUST@FLI
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-2-5"></a></p>
-<h4 id="10225-no-write-nw-flag---10225-no-write-nw-标志-">10.2.2.5 No
-Write (NW) Flag § | 10.2.2.5 No Write (NW) 标志 §</h4>
+<h4 id="10225-no-write-nw-flag--10225-no-write-nw-标志">10.2.2.5 No
+Write (NW) Flag | 10.2.2.5 No Write (NW) 标志</h4>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1500,27 +2448,27 @@ is Reserved.</p>
 <p>如果转换请求具有 PASID,则未转换地址字段是 PASID
 字段所指示的进程地址空间内的地址。</p>
 <p>如果转换请求具有 PASID 且 Privileged Mode Requested 或 Execute
-Requested 位置位,则可使用这些位来构造转换完成数据条目。</p>
+Requested 位置位，则可使用这些位来构造转换完成数据条目。</p>
 <p>PASID Extended Capability 指示功能是否支持并已启用以发送和接收带
 PASID 的 TLP。</p>
-<p>此位分配给 [CXL] 使用。在非 CXL 系统中,该位保留。</p>
+<p>此位分配给 [CXL] 使用。在非 CXL 系统中，该位保留。</p>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-2-6"></a></p>
 <h4
-id="10226-pasid-on-translation-request---10226-转换请求中的-pasid-">10.2.2.6
-PASID on Translation Request § | 10.2.2.6 转换请求中的 PASID §</h4>
-<p>table&gt;</p>
+id="10226-pasid-on-translation-request--10226-转换请求中的-pasid">10.2.2.6
+PASID on Translation Request | 10.2.2.6 转换请求中的 PASID</h4>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1544,27 +2492,27 @@ error.</p>
 
 <p>TA 为每个转换请求发送一个转换完成(Cpl 或
 CplD)。本规范描述转换完成中字段的含义。本章未定义的字段具有第 2
-章中为读完成规定的相同含义。对于转换完成,如果对应转换请求的 RO
-位已设置,则 Relaxed Ordering (RO) 位适用并允许置位。Attr
+章中为读完成规定的相同含义。对于转换完成，如果对应转换请求的 RO
+位已设置，则 Relaxed Ordering (RO) 位适用并允许置位。Attr
 字段的其余部分保留。</p>
-<p>如果 TA 无法执行所请求的转换,则必须返回无数据完成 (Cpl)。</p>
-<p>完成状态字段的值和含义列于 § 表 10-2 中,除 Success
+<p>如果 TA 无法执行所请求的转换，则必须返回无数据完成 (Cpl)。</p>
+<p>完成状态字段的值和含义列于 § 表 10-2 中，除 Success
 外的返回值均表示错误。</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-2-7"></a></p>
-<h4 id="10227-cxl-src---10227-cxl-src-">10.2.2.7 CXL Src § | 10.2.2.7
-CXL Src §</h4>
+<h4 id="10227-cxl-src--10227-cxl-src">10.2.2.7 CXL Src | 10.2.2.7 CXL
+Src</h4>
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1585,26 +2533,26 @@ Completion with no data (Cpl) must be returned.</p>
 
 <p>TA 为每个转换请求发送一个转换完成(Cpl 或
 CplD)。本规范描述转换完成中字段的含义。本章未定义的字段具有第 2
-章中为读完成规定的相同含义。对于转换完成,如果对应转换请求的 RO
-位已设置,则 Relaxed Ordering (RO) 位适用并允许置位。Attr
+章中为读完成规定的相同含义。对于转换完成，如果对应转换请求的 RO
+位已设置，则 Relaxed Ordering (RO) 位适用并允许置位。Attr
 字段的其余部分保留。</p>
-<p>如果 TA 无法执行所请求的转换,则必须返回无数据完成 (Cpl)。</p>
+<p>如果 TA 无法执行所请求的转换，则必须返回无数据完成 (Cpl)。</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-3"></a></p>
-<h3 id="1023-translation-completion---1023-转换完成-">10.2.3 Translation
-Completion § | 10.2.3 转换完成 §</h3>
+<h3 id="1023-translation-completion--1023-转换完成">10.2.3 Translation
+Completion | 10.2.3 转换完成</h3>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1727,7 +2675,7 @@ the data payload are shown in § Figure 10-14.</p>
 <tr>
 <td>001b</td>
 <td>Unsupported Request (UR,不支持的请求)</td>
-<td>表示存在问题(可能由系统软件纠正),阻止 TA
+<td>表示存在问题(可能由系统软件纠正)，阻止 TA
 返回任何转换完成条目。允许收到此完成代码的功能禁用其
 ATC,并在使用已转换地址发送请求之前不重新启用
 ATC。功能收到此代码时报告此情况所采用的机制不在本规范范围内。检测到此错误的
@@ -1737,7 +2685,7 @@ TA 是"发送带有 UR/CA 状态完成的完成者",应按本规范定义的方�
 <td>010b</td>
 <td>RRS</td>
 <td>此值不允许出现在由 PCI Express
-功能发起的转换请求的任何完成中。如果功能接收到,可将其作为格式错误的 TLP
+功能发起的转换请求的任何完成中。如果功能接收到，可将其作为格式错误的 TLP
 处理。</td>
 </tr>
 <tr>
@@ -1758,32 +2706,32 @@ TA 是"发送带有 UR/CA 状态完成的完成者",应按本规范定义的方�
 <p>完成头字段必须按照 § 第 2.2.9 节和 § 第 2.3 节进行设置。</p>
 <p>转换完成必须使用与转换请求相同的 TC
 发送。功能无需验证是否使用了相同的 TC。TA 可以选择将转换请求的 RO
-位复制到转换完成中,具体规则遵循 § 第 2.2.9
-节中完成属性字段的规定。强烈建议 TA 复制 RO 位。但是,如果 TA
-不将转换请求的 RO 位复制到转换完成,则 TA 必须将转换完成中的 RO
+位复制到转换完成中，具体规则遵循 § 第 2.2.9
+节中完成属性字段的规定。强烈建议 TA 复制 RO 位。但是，如果 TA
+不将转换请求的 RO 位复制到转换完成，则 TA 必须将转换完成中的 RO
 位清零。</p>
 <p>RO 位置位的转换完成必须遵循 § 第 2.4.1 节中规定的 Relaxed Ordered
 完成的排序规则。发起转换请求时 RO 位置位但收到关联转换完成 RO
-位清零的功能,允许将关联的转换完成排序如同 RO 位置位一样。</p>
-<p>发起转换请求时 RO 位置位的功能,如果关联的转换完成的 RO
-位清零,不得报告错误。</p>
+位清零的功能，允许将关联的转换完成排序如同 RO 位置位一样。</p>
+<p>发起转换请求时 RO 位置位的功能，如果关联的转换完成的 RO
+位清零，不得报告错误。</p>
 <blockquote>
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong>
 <strong>无数据不成功转换完成的字节计数字段 (BYTE COUNT FIELD FOR
 UNSUCCESSFUL TRANSLATION COMPLETIONS WITH NO DATA)</strong>
-本规范的早期版本指出,对于无数据的不成功转换完成,Byte Count 和 Lower
+本规范的早期版本指出，对于无数据的不成功转换完成,Byte Count 和 Lower
 Address 字段应为 0000 0000
 0000b。强烈建议实现不要依赖无数据的不成功转换完成中 Byte Count 和 Lower
-Address 字段设置为任何特定值。 注:在 Flit 模式下,不存在 Byte Count 和
+Address 字段设置为任何特定值。 注:在 Flit 模式下，不存在 Byte Count 和
 Lower Address 字段。</p>
 </blockquote>
-<p>Lower Address 字段包含一个计算值,使报文与 RCB
-语义一致。如果结果在单个报文中返回,则 Lower Address 包含 RCB 减去 Byte
-Count。如果结果在两个报文中返回,则第一个报文的 Lower Address 包含 RCB
-减去(总完成长度 * 4),后续报文的 Lower Address 包含 000
-0000b。有关多报文完成的其他要求,见 § 第 10.2.4 节。</p>
+<p>Lower Address 字段包含一个计算值，使报文与 RCB
+语义一致。如果结果在单个报文中返回，则 Lower Address 包含 RCB 减去 Byte
+Count。如果结果在两个报文中返回，则第一个报文的 Lower Address 包含 RCB
+减去(总完成长度 * 4)，后续报文的 Lower Address 包含 000
+0000b。有关多报文完成的其他要求，见 § 第 10.2.4 节。</p>
 <p>如果完成状态字段为
-000b,则转换成功,头之后将跟随数据有效负载。数据有效负载的内容如 § 图
+000b,则转换成功，头之后将跟随数据有效负载。数据有效负载的内容如 § 图
 10-14 所示。</p>
 </td>
 </tr>
@@ -1791,17 +2739,17 @@ Count。如果结果在两个报文中返回,则第一个报文的 Lower Address
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-3-data"></a></p>
 <h3
-id="1023-translation-completion-data-fields---1023-转换完成数据字段-">10.2.3
-Translation Completion Data Fields § | 10.2.3 转换完成数据字段 §</h3>
-<p>table&gt;</p>
+id="1023-translation-completion-data-fields--1023-转换完成数据字段">10.2.3
+Translation Completion Data Fields | 10.2.3 转换完成数据字段</h3>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -1935,7 +2883,7 @@ of this specification are expected to deprecate the U bit.</td>
 <tbody>
 <tr>
 <td>S</td>
-<td>转换大小 - 如果转换适用于 4096 字节的内存范围,则此字段为
+<td>转换大小 - 如果转换适用于 4096 字节的内存范围，则此字段为
 0b。如果此字段为 1b,则转换适用于大于 4096 字节的内存范围(参见 § 第
 10.2.3.1 节)。</td>
 </tr>
@@ -1947,12 +2895,12 @@ of this specification are expected to deprecate the U bit.</td>
 </tr>
 <tr>
 <td>CXL.io</td>
-<td>此位分配给 [CXL] 使用。在非 CXL 系统中,该位保留。</td>
+<td>此位分配给 [CXL] 使用。在非 CXL 系统中，该位保留。</td>
 </tr>
 <tr>
 <td>AMA</td>
 <td>ATS 内存属性 (AMAs) – 如果 ATS Memory Attributes Supported
-位置位,则允许 ATC 缓存此 AMA 值。</td>
+位置位，则允许 ATC 缓存此 AMA 值。</td>
 </tr>
 </tbody>
 </table>
@@ -1960,15 +2908,15 @@ of this specification are expected to deprecate the U bit.</td>
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong>
 <strong>转换完成中属性字段的兼容性 (ATTRIBUTE FIELD COMPATIBILITY IN
 TRANSLATION COMPLETIONS)</strong> 某些 TA 实现可能不会按照 § 第 2.2.9
-节的要求将属性字段从请求复制到完成,因为 Attr
-字段在本规范的早期版本中定义为保留。因此,可能出现以下情况并按如下方式处理:</p>
+节的要求将属性字段从请求复制到完成，因为 Attr
+字段在本规范的早期版本中定义为保留。因此，可能出现以下情况并按如下方式处理:</p>
 <ul>
-<li>不复制 RO 位(如 § 第 2.2.9 节所示,完成通常如此)的 TA 通过强制将 RO
-置 0 与符合本规范的功能耦合,该功能允许在请求中置位 RO。功能将接受 RO
-清零的转换完成,并且不记录错误。</li>
+<li>不复制 RO 位(如 § 第 2.2.9 节所示，完成通常如此)的 TA 通过强制将 RO
+置 0 与符合本规范的功能耦合，该功能允许在请求中置位 RO。功能将接受 RO
+清零的转换完成，并且不记录错误。</li>
 <li>符合 Attr 复制规则(在 § 第 2.2.9 节中)的 TA 与不支持转换请求中 RO
 的功能耦合。转换完成将按功能的预期返回 RO 清零。 因此,RO
-的使用完全向后兼容。但是,强烈建议 TA 支持符合 § 第 2.2.9 节规则的 RO
+的使用完全向后兼容。但是，强烈建议 TA 支持符合 § 第 2.2.9 节规则的 RO
 位复制。</li>
 </ul>
 </blockquote>
@@ -1990,34 +2938,34 @@ TRANSLATION COMPLETIONS)</strong> 某些 TA 实现可能不会按照 § 第 2.2.
 <tr>
 <td>-</td>
 <td>Global</td>
-<td>全局映射 - 如果此位置位,则允许 ATC 在所有 PASID
-中缓存此映射条目。如果清零,则仅允许 ATC 在与请求 PASID 关联的 PASID
-中缓存此映射条目。仅当关联的转换请求具有 PASID 时,此位才可置位。</td>
+<td>全局映射 - 如果此位置位，则允许 ATC 在所有 PASID
+中缓存此映射条目。如果清零，则仅允许 ATC 在与请求 PASID 关联的 PASID
+中缓存此映射条目。仅当关联的转换请求具有 PASID 时，此位才可置位。</td>
 </tr>
 <tr>
 <td>-</td>
 <td>Exe</td>
 <td>允许执行 -
-如果此位置位,则请求功能被允许执行关联内存范围内包含的代码。仅当关联的转换请求中
-Execute Requested 位置位时,此位才可置位。如果此位置位,则 R
+如果此位置位，则请求功能被允许执行关联内存范围内包含的代码。仅当关联的转换请求中
+Execute Requested 位置位时，此位才可置位。如果此位置位，则 R
 也必须置位。</td>
 </tr>
 <tr>
 <td>-</td>
 <td>Priv</td>
-<td>特权模式访问 - 如果此位置位,则 R、W 和 Exe
-指的是与特权模式实体关联的权限。如果此位清零,则 R、W 和 Exe
+<td>特权模式访问 - 如果此位置位，则 R、W 和 Exe
+指的是与特权模式实体关联的权限。如果此位清零，则 R、W 和 Exe
 指的是与非特权模式实体关联的权限。仅当关联的转换请求中 Privileged Mode
-Requested 位置位时,此位才可置位。</td>
+Requested 位置位时，此位才可置位。</td>
 </tr>
 <tr>
 <td>-</td>
 <td>U</td>
 <td>仅未转换访问 -
-当此字段置位时,所指示的范围只能使用未转换地址访问,并且此转换完成数据条目的
+当此字段置位时，所指示的范围只能使用未转换地址访问，并且此转换完成数据条目的
 Translated Address 字段不能用于后续 AT 设置为 Translated
-的读/写请求。如果 R 或 W 置位,则可缓存此值。本规范的后续版本预计将弃用 U
-位。</td>
+的读/写请求。如果 R 或 W 置位，则可缓存此值。本规范的后续版本预计将弃用
+U 位。</td>
 </tr>
 </tbody>
 </table>
@@ -2026,17 +2974,17 @@ Translated Address 字段不能用于后续 AT 设置为 Translated
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-3-1"></a></p>
-<h4 id="10231-translated-address-field---10231-已转换地址字段-">10.2.3.1
-Translated Address Field § | 10.2.3.1 已转换地址字段 §</h4>
+<h4 id="10231-translated-address-field--10231-已转换地址字段">10.2.3.1
+Translated Address Field | 10.2.3.1 已转换地址字段</h4>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2067,37 +3015,36 @@ be invalidated when the E field is Set or ignored and not used.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<p>如果 R 和 W 字段均清零,或 U 置位,则该功能不得出于任何目的使用
+<p>如果 R 和 W 字段均清零，或 U 置位，则该功能不得出于任何目的使用
 Translated Address 字段。</p>
-<p>如果 R 或 W 字段之一置位,且 U 字段清零,则 Translated Address
-字段包含一个地址,该功能可在 AT 字段设置为 Translated
-的内存请求中使用该地址,并且该功能可以缓存此已转换地址。缓存时,R 和 W
+<p>如果 R 或 W 字段之一置位，且 U 字段清零，则 Translated Address
+字段包含一个地址，该功能可在 AT 字段设置为 Translated
+的内存请求中使用该地址，并且该功能可以缓存此已转换地址。缓存时,R 和 W
 字段必须与转换完成条目的值相同存储。所缓存的地址必须是转换完成中指示的地址范围的子集(子集可以包括整个范围)。</p>
 <p>在 Translated Address 缓存在功能的 ATC
-中时,功能不得修改该条目,只能将其删除。当收到其指示范围与所缓存地址的任何部分重叠的无效化请求时,必须从
+中时，功能不得修改该条目，只能将其删除。当收到其指示范围与所缓存地址的任何部分重叠的无效化请求时，必须从
 ATC 中删除该条目。</p>
 <p>除非条目位于转换完成中且 ATS Capability 中的
-E(Enable)字段已置位,否则功能不允许向其 ATC 写入条目。在 E
+E(Enable)字段已置位，否则功能不允许向其 ATC 写入条目。在 E
 字段置位之前写入 ATC 缓存的条目不得用于内存请求。必须在 E
-字段置位时使其无效,或忽略并不予使用。</p>
+字段置位时使其无效，或忽略并不予使用。</p>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-3-2"></a></p>
 <h4
-id="10232-translation-range-size-s-field---10232-转换范围大小-s-字段-">10.2.3.2
-Translation Range Size (S) Field § | 10.2.3.2 转换范围大小 (S) 字段
-§</h4>
-<p>table&gt;</p>
+id="10232-translation-range-size-s-field--10232-转换范围大小-s-字段">10.2.3.2
+Translation Range Size (S) Field | 10.2.3.2 转换范围大小 (S) 字段</h4>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2184,12 +3131,12 @@ treat the Translation Completion as if it had Completion Status UR.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<p>如果 S 置位,则转换适用于大于 4096 字节的范围。如果 S = 1b,则使用
+<p>如果 S 置位，则转换适用于大于 4096 字节的范围。如果 S = 1b,则使用
 Translated Address 的第 12 位指示范围是否大于 8192 字节。如果第 12 位为
-0b,则范围大小为 8192 字节,但如果置位则大于 8192 字节。如果 S = 1b 且第
+0b,则范围大小为 8192 字节，但如果置位则大于 8192 字节。如果 S = 1b 且第
 12 位 = 1b,则使用第 13 位确定范围是否大于 16384 字节。如果第 13 位为
-0b,则范围大小为 16384 字节,但如果置位则大于 16384 字节。</p>
-<p>低位地址位按顺序使用,以指示与转换关联的范围大小。注:此编码方法也用于指示正在无效化的内存范围的大小。</p>
+0b,则范围大小为 16384 字节，但如果置位则大于 16384 字节。</p>
+<p>低位地址位按顺序使用，以指示与转换关联的范围大小。注:此编码方法也用于指示正在无效化的内存范围的大小。</p>
 <p>不同转换大小的示例如 § 表 10-5 所示。</p>
 <p><strong>Table 10-5. Examples of Translation Size Using S Field | 表
 10-5 使用 S 字段的转换大小示例</strong></p>
@@ -2241,30 +3188,30 @@ Translated Address 的第 12 位指示范围是否大于 8192 字节。如果第
 </table>
 <p>* 高位地址位用于指示大于 4 GB 范围的大小。</p>
 <p>无论 STU 设置如何,size 字段均设置为以 4096
-字节的倍数表示范围大小。例如,如果 STU 设置为指示最小转换为 8192
-字节,则在转换完成中返回的所有转换以及所有无效化请求中,S 都应置位。如果
-STU 设置为指示 16384 字节的最小值,则 S 和位 12
+字节的倍数表示范围大小。例如，如果 STU 设置为指示最小转换为 8192
+字节，则在转换完成中返回的所有转换以及所有无效化请求中,S 都应置位。如果
+STU 设置为指示 16384 字节的最小值，则 S 和位 12
 在所有转换和无效化范围中都应置位。</p>
-<p>如果 S 置位且位 63:12 全部为 1b,则行为未定义。如果 S 置位且位 63 为
-0b,且位 62:12 全部为 1b,则该请求为使所有转换无效。</p>
-<p>如果功能收到转换完成,其中转换大小字段小于该功能编程的 STU
-值,则应将该转换完成视为完成状态为 UR。</p>
+<p>如果 S 置位且 Bits 63:12 全部为 1b,则行为未定义。如果 S 置位且位 63
+为 0b,且 Bits 62:12 全部为 1b,则该请求为使所有转换无效。</p>
+<p>如果功能收到转换完成，其中转换大小字段小于该功能编程的 STU
+值，则应将该转换完成视为完成状态为 UR。</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-3-3"></a></p>
-<h4 id="10233-non-snooped-n-field---10233-非监听-n-字段-">10.2.3.3
-Non-snooped (N) Field § | 10.2.3.3 非监听 (N) 字段 §</h4>
+<h4 id="10233-non-snooped-n-field--10233-非监听-n-字段">10.2.3.3
+Non-snooped (N) Field | 10.2.3.3 非监听 (N) 字段</h4>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2290,13 +3237,13 @@ U bit.</p>
 <td style="background-color:#e8e8e8">
 
 <p>此字段置位以指示针对此转换范围内内存的读和写请求必须将请求头中的 No
-Snoop 属性位清零。当此字段为 0b 时,允许该功能以功能特定的方式置位 No
+Snoop 属性位清零。当此字段为 0b 时，允许该功能以功能特定的方式置位 No
 Snoop 属性位。</p>
-<p>注:当此字段清零时,如果 Device Control 寄存器中的 Enable No Snoop
-字段被清零,则该功能不允许在内存请求中置位 No Snoop。</p>
+<p>注:当此字段清零时，如果 Device Control 寄存器中的 Enable No Snoop
+字段被清零，则该功能不允许在内存请求中置位 No Snoop。</p>
 <p>如果 R 或 W 置位,ATC 可缓存 N 位。</p>
-<p>当 U 置位时,此字段的含义未定义,TA 可将此字段设置为任何值。转换对 N
-字段具有单一值,该值不受特权级别影响。允许 ATC 缓存 N 字段,无论 Priv
+<p>当 U 置位时，此字段的含义未定义,TA 可将此字段设置为任何值。转换对 N
+字段具有单一值，该值不受特权级别影响。允许 ATC 缓存 N 字段，无论 Priv
 位的值如何。</p>
 <p>本规范的后续版本预计将弃用 U 位。</p>
 </td>
@@ -2305,18 +3252,17 @@ Snoop 属性位。</p>
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-3-4"></a></p>
 <h4
-id="10234-untranslated-access-only-u-field---10234-仅未转换访问-u-字段-">10.2.3.4
-Untranslated Access Only (U) Field § | 10.2.3.4 仅未转换访问 (U) 字段
-§</h4>
-<p>table&gt;</p>
+id="10234-untranslated-access-only-u-field--10234-仅未转换访问-u-字段">10.2.3.4
+Untranslated Access Only (U) Field | 10.2.3.4 仅未转换访问 (U) 字段</h4>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2355,36 +3301,36 @@ Invalidation Request is required if these values change.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<p>当不允许该功能使用已转换地址访问隐含的内存范围(该范围由转换请求中的未转换地址和转换完成中转换的偏移量隐含)时,此字段置位。只要访问被
-R 和 W 字段允许,该功能可以使用未转换地址访问该范围。如果 R 或 W
-置位,该功能可以缓存此转换值。如果 U 字段置位,则转换中的 Translated
-Address 字段不一定是有效的内存地址,并且该功能不得在 AT 设置为 Translated
-的读或写请求中使用该值。</p>
-<p>注:此字段的一种可能用途是避免不必要的无效化。如果某个功能对内存的某些部分使用已转换请求,而对其他部分不使用,则可以在不使用已转换请求的部分上使用
-U 字段。当转换更改时,如果 U 字段置位,则不必向该功能发送 Invalidate
-请求。此用法的一个示例是具有用于命令的环形缓冲区的功能。环形缓冲区可能被分配较长一段时间并具有非常高的重用(局部性)。因此,该功能使用已转换地址在其针对命令缓冲区的内存请求中是有用的。同一功能可能访问局部性较差且重用率低的数据缓冲区。对数据缓冲区的访问最好通过使用未转换请求来处理。为数据缓冲区转换设置
+<p>当不允许该功能使用已转换地址访问隐含的内存范围(该范围由转换请求中的未转换地址和转换完成中转换的偏移量隐含)时，此字段置位。只要访问被
+R 和 W 字段允许，该功能可以使用未转换地址访问该范围。如果 R 或 W
+置位，该功能可以缓存此转换值。如果 U 字段置位，则转换中的 Translated
+Address 字段不一定是有效的内存地址，并且该功能不得在 AT 设置为
+Translated 的读或写请求中使用该值。</p>
+<p>注:此字段的一种可能用途是避免不必要的无效化。如果某个功能对内存的某些部分使用已转换请求，而对其他部分不使用，则可以在不使用已转换请求的部分上使用
+U 字段。当转换更改时，如果 U 字段置位，则不必向该功能发送 Invalidate
+请求。此用法的一个示例是具有用于命令的环形缓冲区的功能。环形缓冲区可能被分配较长一段时间并具有非常高的重用(局部性)。因此，该功能使用已转换地址在其针对命令缓冲区的内存请求中是有用的。同一功能可能访问局部性较差且重用率低的数据缓冲区。对数据缓冲区的访问最好通过使用未转换请求来处理。为数据缓冲区转换设置
 U
-字段可确保该功能不会尝试使用已转换值访问数据缓冲区,因此当数据缓冲区映射更改时,不需要无效化请求。当
+字段可确保该功能不会尝试使用已转换值访问数据缓冲区，因此当数据缓冲区映射更改时，不需要无效化请求。当
 U 置位且 R 或 W 之一置位时,ATC 允许缓存 U、R、W、Exe 和
 Priv,以及转换范围大小(参见 § 第 10.2.3.2
-节)。如果这些值发生更改,则需要无效化请求。</p>
+节)。如果这些值发生更改，则需要无效化请求。</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-3-5"></a></p>
 <h4
-id="10235-read-r-and-write-w-fields---10235-读-r-和写-w-字段-">10.2.3.5
-Read (R) and Write (W) Fields § | 10.2.3.5 读 (R) 和写 (W) 字段 §</h4>
+id="10235-read-r-and-write-w-fields--10235-读-r-和写-w-字段">10.2.3.5
+Read (R) and Write (W) Fields | 10.2.3.5 读 (R) 和写 (W) 字段</h4>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2450,39 +3396,40 @@ permissions associated with a translation.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<p>这些字段指示返回的转换值是否可用于读或写内存请求。如果 R 字段清零,则
-ATC 不得使用该转换值发出非零长度读请求。如果 W 字段清零,则 ATC
-不得使用该转换值发出写请求。如果 R 和 W 字段均未置位,则 ATC
+<p>这些字段指示返回的转换值是否可用于读或写内存请求。如果 R 字段清零，则
+ATC 不得使用该转换值发出非零长度读请求。如果 W 字段清零，则 ATC
+不得使用该转换值发出写请求。如果 R 和 W 字段均未置位，则 ATC
 不得使用该转换值发出任何类型的请求。如果 R 和 W
-字段均清零,则仍指示转换范围,但转换中其他值的含义未定义。</p>
+字段均清零，则仍指示转换范围，但转换中其他值的含义未定义。</p>
 <p>注:即使 R = W =
-0b,也会指示转换条目的范围,以允许在转换完成中留出"空隙"。例如,如果转换请求的
+0b,也会指示转换条目的范围，以允许在转换完成中留出"空隙"。例如，如果转换请求的
 Length 为 6 个
 DW,则转换完成中最多可包含三个转换。第一个和第三个转换可以具有置位的 R 或
-W,但第二个可以具有 R = W = 0b。为避免关于所指示空隙大小的不明确性,即使 R
-= W = 0b,空隙的范围也会在转换完成中指示。</p>
+W,但第二个可以具有 R = W = 0b。为避免关于所指示空隙大小的不明确性，即使
+R = W = 0b,空隙的范围也会在转换完成中指示。</p>
 <p>R = 0b、W = 0b 状态用于指示 ATC
 不得使用转换中的地址字段为后续请求形成已转换地址值。</p>
-<p>当主机将 TA 中的转换从无效更改为有效时,主机不需要向 ATC
-发送无效化指示。因此,ATC 不会收到此类更改的通知,从而 ATC 不得缓存 R = W
+<p>当主机将 TA 中的转换从无效更改为有效时，主机不需要向 ATC
+发送无效化指示。因此,ATC 不会收到此类更改的通知，从而 ATC 不得缓存 R = W
 = 0b 的转换值。</p>
-<p>当主机更改 TA 中与转换关联的权限以授予额外权限(例如,从 R = 1,W = 0b
-更改为 R = W = 1b)时,主机不需要向 ATC 发送无效化指示。因此,ATC
+<p>当主机更改 TA 中与转换关联的权限以授予额外权限(例如，从 R = 1,W = 0b
+更改为 R = W = 1b)时，主机不需要向 ATC 发送无效化指示。因此,ATC
 不会收到此类更改的通知。当 ATC 需要超过缓存 ATC 条目所具有的权限时,ATC
 允许请求新的转换。</p>
-<p>当主机更改 TA 中与转换关联的权限以移除权限(例如,从 R = W = 1b 更改为
-R = 1b,W = 0b)时,主机必须向 ATC 发送无效化指示。随后的无效化完成告诉主机
-ATC 已停止使用先前授予的权限。</p>
-<p>如果未找到所请求地址的表条目,则 TA 必须返回包含 R = W = 0b
+<p>当主机更改 TA 中与转换关联的权限以移除权限(例如，从 R = W = 1b 更改为
+R = 1b,W = 0b)时，主机必须向 ATC
+发送无效化指示。随后的无效化完成告诉主机 ATC
+已停止使用先前授予的权限。</p>
+<p>如果未找到所请求地址的表条目，则 TA 必须返回包含 R = W = 0b
 的单个转换值的 CplD。</p>
 <p>注:实现不应假设收到 R 或 W 位置位(与 U
-位的值无关)的转换响应意味着使用相同未转换地址的后续读或写请求将会成功。虽然设备和其控制软件可以确保此属性,但实现此属性的方法不在本规范范围内。</p>
+位的值无关)的转换响应意味着使用相同未转换地址的后续读或写请求将会成功。虽然设备和其控制软件可以确保此属性，但实现此属性的方法不在本规范范围内。</p>
 <p>当启用 ACS Direct Translated P2P
-时,已转换和未转换请求在请求者和完成者之间可能采用不同路径。因此,不保证已转换和未转换请求之间的
+时，已转换和未转换请求在请求者和完成者之间可能采用不同路径。因此，不保证已转换和未转换请求之间的
 PCI Express
-排序。对于需要排序的事务序列,功能应避免混合使用已转换和未转换请求。</p>
-<p>Priv 位用于限定 R 和 W。如果 Priv 置位,则 R 和 W
-表示授予该功能中特权模式实体的权限。如果 Priv 清零,则 R 和 W
+排序。对于需要排序的事务序列，功能应避免混合使用已转换和未转换请求。</p>
+<p>Priv 位用于限定 R 和 W。如果 Priv 置位，则 R 和 W
+表示授予该功能中特权模式实体的权限。如果 Priv 清零，则 R 和 W
 表示授予该功能中非特权模式实体的权限。两个特权级别的 R 和 W
 值是独立的。ATC
 不得假设与转换关联的特权模式和非特权模式权限之间存在任何相关性。</p>
@@ -2492,22 +3439,18 @@ PCI Express
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1572</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1573</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1574</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1575</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1576</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1577</p>
-<p><a id="sec-10-2-3-6"></a></p>
-<h4 id="10236-execute-permitted-exe---10236-允许执行-exe-">10.2.3.6
-Execute Permitted (Exe) § | 10.2.3.6 允许执行 (Exe) §</h4>
-<p>table&gt;</p>
+<p><a id="sec-10-2-3-6"></a> <!-- 📄 Page 1572 --> <!-- 📄 Page 1573 -->
+<!-- 📄 Page 1574 --> <!-- 📄 Page 1575 --> <!-- 📄 Page 1576 -->
+<!-- 📄 Page 1577 --></p>
+<h4 id="10236-execute-permitted-exe--10236-允许执行-exe">10.2.3.6
+Execute Permitted (Exe) | 10.2.3.6 允许执行 (Exe)</h4>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2530,30 +3473,30 @@ Completion Data Entry. Otherwise, the Exe bit must be Clear.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<p>如果 Exe 置位,则请求功能被允许在隐含的内存范围内执行代码。如果 Exe
-清零,则请求功能不被允许在隐含的内存范围内执行代码。</p>
-<p>关于"功能执行代码"含义的定义不在本规范范围内。各种系统组件可能具有不同的指令集。当请求功能尝试执行此位不允许的代码时,请求功能内的行为不在本规范范围内。</p>
+<p>如果 Exe 置位，则请求功能被允许在隐含的内存范围内执行代码。如果 Exe
+清零，则请求功能不被允许在隐含的内存范围内执行代码。</p>
+<p>关于"功能执行代码"含义的定义不在本规范范围内。各种系统组件可能具有不同的指令集。当请求功能尝试执行此位不允许的代码时，请求功能内的行为不在本规范范围内。</p>
 <p>仅当 TA 支持执行权限、关联的转换请求中 Execute Requested 位的有效值为
 1b<sup>198</sup>且 Translation Completion Data Entry 中 R 置位时,Exe
 位才可置位。否则,Exe 位必须清零。</p>
-<p>如果 R 置位,则此值可被缓存。</p>
+<p>如果 R 置位，则此值可被缓存。</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-3-7"></a></p>
 <h4
-id="10237-privileged-mode-access-priv---10237-特权模式访问-priv-">10.2.3.7
-Privileged Mode Access (Priv) § | 10.2.3.7 特权模式访问 (Priv) §</h4>
+id="10237-privileged-mode-access-priv--10237-特权模式访问-priv">10.2.3.7
+Privileged Mode Access (Priv) | 10.2.3.7 特权模式访问 (Priv)</h4>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2610,38 +3553,38 @@ optional check fails, the Function shall signal Unexpected Completion
 </td>
 <td style="background-color:#e8e8e8">
 
-<p>Priv 位用于限定 Exe 位。如果 Priv 置位,则 Exe
-位表示授予该功能中特权模式实体的权限。如果 Priv 清零,则 Exe
+<p>Priv 位用于限定 Exe 位。如果 Priv 置位，则 Exe
+位表示授予该功能中特权模式实体的权限。如果 Priv 清零，则 Exe
 位表示授予该功能中非特权模式实体的权限。两个特权级别的 Exe
 位值是独立的。ATC
 不得假设与转换关联的特权模式和非特权模式权限之间存在任何相关性。</p>
 <p>功能可选择性地检查以下条件:</p>
 <ul>
-<li>如果转换请求中 Execute Requested 位清零,则关联的转换完成数据条目中
+<li>如果转换请求中 Execute Requested 位清零，则关联的转换完成数据条目中
 Exe 位也清零。</li>
-<li>如果 Exe 置位,则 R 也置位。</li>
+<li>如果 Exe 置位，则 R 也置位。</li>
 </ul>
-<p>如果任一可选检查失败,则该功能应发出 Unexpected Completion (UC)
+<p>如果任一可选检查失败，则该功能应发出 Unexpected Completion (UC)
 信号。这些检查彼此独立可选。</p>
-<p>如果 Priv 置位,则 R、W 和 Exe
-指的是授予请求功能中以特权模式运行的实体的权限。如果 Priv 清零,则 R、W
+<p>如果 Priv 置位，则 R、W 和 Exe
+指的是授予请求功能中以特权模式运行的实体的权限。如果 Priv 清零，则 R、W
 和 Exe 指的是授予请求功能中以非特权模式运行的实体的权限。</p>
-<p>特权模式和非特权模式的含义,以及实体以特权模式或非特权模式运行的含义,取决于系统的保护模型,不在本规范范围内。</p>
-<p>当请求功能中的实体尝试访问其不被允许访问的内存时,其行为不在本规范范围内。</p>
+<p>特权模式和非特权模式的含义，以及实体以特权模式或非特权模式运行的含义，取决于系统的保护模型，不在本规范范围内。</p>
+<p>当请求功能中的实体尝试访问其不被允许访问的内存时，其行为不在本规范范围内。</p>
 <p>仅当 TA 支持特权模式且关联的转换请求具有 PASID TLP Prefix(NFM)或
 OHC-A1,其 Privileged Mode Requested<sup>199</sup> 位的有效值为 1b
 时,Priv 位才可置位。否则,Priv 位必须清零。</p>
 <p>R、W 和 Exe 的特权和非特权模式版本是独立的。ATC 可以缓存 R、W 和 Exe
 的任一版本或两者。ATC 在一个特权级别收到 R=W=0b
-的转换时,不得假设其在另一特权级别可能收到什么。</p>
-<p>如果 R 或 W 置位,则此值可被缓存。当对应的 R、W 或 Exe
-值被缓存时,此值必须被缓存。</p>
+的转换时，不得假设其在另一特权级别可能收到什么。</p>
+<p>如果 R 或 W 置位，则此值可被缓存。当对应的 R、W 或 Exe
+值被缓存时，此值必须被缓存。</p>
 <p>注:由于 Priv 位仅在请求功能置位 Privileged Mode Requested
-位时才置位,因此永不复位该位的功能应始终收到 Priv
-位清零,因此不需要缓存该位。</p>
+位时才置位，因此永不复位该位的功能应始终收到 Priv
+位清零，因此不需要缓存该位。</p>
 <p>功能可选择性地检查:当转换请求中 Privileged Mode Requested
-位清零时,关联的转换完成数据条目中 Priv
-位也清零。如果此可选检查失败,则该功能应发出 Unexpected Completion (UC)
+位清零时，关联的转换完成数据条目中 Priv
+位也清零。如果此可选检查失败，则该功能应发出 Unexpected Completion (UC)
 信号。</p>
 </td>
 </tr>
@@ -2649,16 +3592,16 @@ OHC-A1,其 Privileged Mode Requested<sup>199</sup> 位的有效值为 1b
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-3-8"></a></p>
-<h4 id="10238-global-mapping-global---10238-全局映射-global-">10.2.3.8
-Global Mapping (Global) § | 10.2.3.8 全局映射 (Global) §</h4>
-<p>table&gt;</p>
+<h4 id="10238-global-mapping-global--10238-全局映射-global">10.2.3.8
+Global Mapping (Global) | 10.2.3.8 全局映射 (Global)</h4>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2688,11 +3631,11 @@ implements the protection checks indicated by the Exe and Priv bits.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<p>如果 Global 置位,则请求功能被允许为此转换在 ATC
-中创建全局映射条目。如果 Global 清零,则请求功能不被允许为此转换在 ATC
+<p>如果 Global 置位，则请求功能被允许为此转换在 ATC
+中创建全局映射条目。如果 Global 清零，则请求功能不被允许为此转换在 ATC
 中创建全局映射条目。全局映射条目适用于该功能的所有 PASID。它们允许 ATC
-减少所需的转换请求数量,并减少缓存结果所需的内存。</p>
-<p>允许功能忽略此位,并始终在 ATC 中创建非全局映射条目。这可能导致在不同
+减少所需的转换请求数量，并减少缓存结果所需的内存。</p>
+<p>允许功能忽略此位，并始终在 ATC 中创建非全局映射条目。这可能导致在不同
 PASID 下为同一未转换地址请求多个转换。</p>
 <p>使用此位的功能还必须将 Global Invalidate Supported 位置位(参见 § 第
 10.5.1.2 节)。</p>
@@ -2700,7 +3643,7 @@ PASID 下为同一未转换地址请求多个转换。</p>
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong>
 <strong>执行权限和特权模式强制 (EXECUTE PERMISSION AND PRIVILEGE MODE
 ENFORCEMENT)</strong>
-请求功能决定特定内存请求是否需要执行权限,或是否与特权模式或非特权模式实体关联。ATC
+请求功能决定特定内存请求是否需要执行权限，或是否与特权模式或非特权模式实体关联。ATC
 实现由 Exe 和 Priv 位指示的保护检查。</p>
 </blockquote>
 </td>
@@ -2708,17 +3651,17 @@ ENFORCEMENT)</strong>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-3-9"></a></p>
-<h4 id="10239-ats-memory-attributes---10239-ats-内存属性-">10.2.3.9 ATS
-Memory Attributes § | 10.2.3.9 ATS 内存属性 §</h4>
+<h4 id="10239-ats-memory-attributes--10239-ats-内存属性">10.2.3.9 ATS
+Memory Attributes | 10.2.3.9 ATS 内存属性</h4>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2767,33 +3710,33 @@ Completion Data Entries can be sent in a single Completion TLP.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<p>AMA 值与完成者关联,且是实现特定的。AMA 值对请求者、请求者的 ATC 和 TA
-是不透明的。</p>
+<p>AMA 值与完成者关联，且是实现特定的。AMA 值对请求者、请求者的 ATC 和
+TA 是不透明的。</p>
 <p>检测 TA 中 AMA
 机制支持与否以及启用该机制的方法是实现特定的。当请求者和 TA 均未启用 AMA
-机制时,默认 AMA 值为 000b。此情况下完成者的行为是实现特定的。</p>
+机制时，默认 AMA 值为 000b。此情况下完成者的行为是实现特定的。</p>
 <blockquote>
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong>
 <strong>转换请求完成的 TLP 长度、地址和字节偏移值 (TLP LENGTH, ADDRESS,
 AND BYTE OFFSET VALUES FOR TRANSLATION REQUEST COMPLETIONS)</strong>
 包含多个转换的转换完成规则背后的意图是使 TLP 看起来与内存读完成中包含的
-TLP 相似。 对于单 TLP 转换完成,目标是使完成看起来像在 RCB
+TLP 相似。 对于单 TLP 转换完成，目标是使完成看起来像在 RCB
 处结束的内存读完成。因此,Length 和 Byte Count 指示相同的值,Lower Address
-包含使 TLP 看起来在 RCB 处结束的值。 对于中间组件(不跟踪该事务)而言,该
+包含使 TLP 看起来在 RCB 处结束的值。 对于中间组件(不跟踪该事务)而言，该
 TLP 将与在 RCB 处结束的内存读完成无法区分。 对于由两个 TLP
-组成的转换完成,目标是使完成看起来像跨越 RCB
-的内存读完成。因此,第一个完成 TLP 将包含使 TLP 看起来在 RCB 处结束的
+组成的转换完成，目标是使完成看起来像跨越 RCB
+的内存读完成。因此，第一个完成 TLP 将包含使 TLP 看起来在 RCB 处结束的
 Lower Address 和 Length 值。第一个 TLP 的 Byte Count
 将指示此事务中发送的所有转换完成的总长度。对于第二个 TLP,Length 和 Byte
 Count 字段指示相同的值,Lower Address 值为 0。</p>
 </blockquote>
-<p>对于中间组件(不跟踪该事务)而言,该完成事务将与跨越 RCB
+<p>对于中间组件(不跟踪该事务)而言，该完成事务将与跨越 RCB
 的内存读完成无法区分。</p>
-<p>请注意,Length 字段以 DWORD 为单位,而 Lower Address 和 Byte Offset
+<p>请注意,Length 字段以 DWORD 为单位，而 Lower Address 和 Byte Offset
 字段以字节为单位。</p>
 <p>在 TLP 格式正确的前提下,TA 可以选择在任意 2
 个转换完成数据条目之间分割转换完成。由于 ATC 不能请求超过单个 RCB
-可容纳的转换数,因此单个完成 TLP
+可容纳的转换数，因此单个完成 TLP
 中可发送的转换完成数据条目的架构最大数量。</p>
 </td>
 </tr>
@@ -2802,26 +3745,39 @@ Count 字段指示相同的值,Lower Address 值为 0。</p>
 
 <blockquote>
 <p><strong>Figure 10-15.</strong> Example Translation Completion with 1
-TLP <img src="figures/chapter_10/fig_1580_1.png" width="700"></p>
+TLP <img src="figures/chapter_10/fig_1580_1_tight.png" width="700"></p>
 </blockquote>
 <blockquote>
 <p><strong>Figure 10-16.</strong> Example Translation Completion with 2
-TLPs <img src="figures/chapter_10/fig_1581_1.png" width="700"></p>
+TLPs <img src="figures/chapter_10/fig_1581_1_tight.png" width="700">
+<strong>图 10-16.</strong> Example Translation Completion 含 2 TLPs</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1581_1_tight.png" width="700">
+**图 10-15.** Example Translation Completion 含 1 TLP
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1580_1_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-16.</strong> Example Translation Completion with 2
+TLPs <img src="figures/chapter_10/fig_1581_1_tight.png" width="700"></p>
 </blockquote>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-2-4"></a></p>
 <h3
-id="1024-completions-with-multiple-translations---1024-包含多个转换的完成-">10.2.4
-Completions with Multiple Translations § | 10.2.4 包含多个转换的完成
-§</h3>
-<p>table&gt;</p>
+id="1024-completions-with-multiple-translations--1024-包含多个转换的完成">10.2.4
+Completions with Multiple Translations | 10.2.4 包含多个转换的完成</h3>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2900,15 +3856,15 @@ memory.</p>
 
 <p>支持 AMA 的 ATC 缓存 AMA 值以及其他 ATC
 信息(已转换地址、读、写权限等)。如果对于可能缓存在 ATC 中的页,AMA
-值发生变化,则软件必须发出覆盖该页的 ATS 无效化操作,以确保 ATC 清除过期的
-AMA 值。</p>
+值发生变化，则软件必须发出覆盖该页的 ATS 无效化操作，以确保 ATC
+清除过期的 AMA 值。</p>
 <p>ATC 允许请求 TA 为虚拟连续的地址范围提供转换。它通过将转换请求中的
-Length 字段设置为请求转换数的两倍来实现,前提是请求大小(总完成长度 *
+Length 字段设置为请求转换数的两倍来实现，前提是请求大小(总完成长度 *
 4)不大于链路控制寄存器中的读完成边界 (RCB)。</p>
 <p>如果请求多个转换,TA
-可以返回一个或多个转换,只要转换数不超过请求的转换数。TA
-返回的转换少于请求数不算错误,并且除非访问数据时出错,否则不会发送错误指示。</p>
-<p>如果转换完成包含多个转换,则所有转换必须具有相同指示的大小。此外,后续转换必须适用于与同一完成中前一个转换相邻的虚拟地址范围。</p>
+可以返回一个或多个转换，只要转换数不超过请求的转换数。TA
+返回的转换少于请求数不算错误，并且除非访问数据时出错，否则不会发送错误指示。</p>
+<p>如果转换完成包含多个转换，则所有转换必须具有相同指示的大小。此外，后续转换必须适用于与同一完成中前一个转换相邻的虚拟地址范围。</p>
 <p>如果某个转换同时具有 R = 0b 和 W = 0b,则 TA 必须仍将 Size
 字段和用于编码完成大小的 Translated Address 字段低位设置为适当的值。</p>
 <p>转换完成中的每个转换将与转换请求的隐含内存范围存在某种重叠(参见 § 第
@@ -2917,44 +3873,44 @@ Length 字段设置为请求转换数的两倍来实现,前提是请求大小(�
 必须包含整数个转换(即,Length 必须是 2 的倍数)。</p>
 <p>允许 TA 选择:</p>
 <ul>
-<li>它为每个转换请求返回的转换数(例如,第一个或唯一 CplD 的 Byte
+<li>它为每个转换请求返回的转换数(例如，第一个或唯一 CplD 的 Byte
 Count)</li>
-<li>如果它返回多个转换,则使用一个还是两个 CplD</li>
+<li>如果它返回多个转换，则使用一个还是两个 CplD</li>
 <li>如果它返回两个 CplD,则每个 CplD 中返回多少转换</li>
 </ul>
 <p>每个 CplD 中的 Byte Count 和 Length 字段用于向 ATC 传达这些选择。ATC
 应不需要 Lower Address 字段(其值按第 10.2.3 节定义计算以满足 RCB
-规则,但该字段不传达其他附加信息)。</p>
+规则，但该字段不传达其他附加信息)。</p>
 <ul>
 <li>如果转换完成 CplD 的 Byte Count 大于 Length
-字段的四倍,则这是该事务的两个 CplD 中的第一个。</li>
+字段的四倍，则这是该事务的两个 CplD 中的第一个。</li>
 <li>如果转换完成 CplD 的 Byte Count 等于 Length
-字段的四倍,则这是该请求的第二个或唯一 CplD。</li>
+字段的四倍，则这是该请求的第二个或唯一 CplD。</li>
 </ul>
 <p>注:TA
-可能截断完成结果的原因有多种。例如,请求可能要求一个地址范围,其中并非所有地址都已定义。如果第一个转换有效但位于转换页的末尾,则可能发生这种情况。TA
-在查找下一页转换时,可能发现该页无效,因此地址无效。将返回有效地址范围,且不指示错误。在截断转换完成时,TA
+可能截断完成结果的原因有多种。例如，请求可能要求一个地址范围，其中并非所有地址都已定义。如果第一个转换有效但位于转换页的末尾，则可能发生这种情况。TA
+在查找下一页转换时，可能发现该页无效，因此地址无效。将返回有效地址范围，且不指示错误。在截断转换完成时,TA
 不允许用无效条目(R = 0b,W = 0b)填充响应。</p>
 <p>注:TA 可能将转换完成拆分为多个 TLP
-的原因有多种。例如,如果转换完成的虚拟地址解析为跨越实现特定地址边界的表访问,则对
-TA 的完成可能拆分为两个完成。与其要求 TA 累积结果,不如允许 TA
+的原因有多种。例如，如果转换完成的虚拟地址解析为跨越实现特定地址边界的表访问，则对
+TA 的完成可能拆分为两个完成。与其要求 TA 累积结果，不如允许 TA
 在从内存接收到转换完成的每个部分时将其发送给功能。</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-3"></a></p>
-<h2 id="103-ats-invalidation---103-ats-无效化-">10.3 ATS Invalidation §
-| 10.3 ATS 无效化 §</h2>
+<h2 id="103-ats-invalidation--103-ats-无效化">10.3 ATS Invalidation |
+10.3 ATS 无效化</h2>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -2994,7 +3950,7 @@ Set<sup>200</sup>.</li>
 <p>ATS 使用本节所示的消息维持 TA 与 ATC 之间的一致性。本规范假设每个 ATC
 关联一个 TA。TA(连同其关联软件)必须通过发出 Invalidate 请求来确保缓存在
 ATC 中的地址转换不会过期。</p>
-<p>当 TA 中的转换发生更改,且该转换可能包含在某个功能的 ATC
+<p>当 TA 中的转换发生更改，且该转换可能包含在某个功能的 ATC
 中时,TA(连同其关联软件)必须向 ATC 发送 Invalidate 请求以保持 ATPT 与 ATC
 之间的正确同步。Invalidate 请求用于从 ATC
 中清除地址范围的特定子集。Invalidate 请求被限制为覆盖 2 的幂倍数个 4096
@@ -3004,10 +3960,10 @@ ATC 中的地址转换不会过期。</p>
 请求消息可在任意 TC 中发送。</p>
 <p>无效化请求消息可选地包含 PASID(参见 § 第 10.3.8 节)</p>
 <ul>
-<li>在非 Flit 模式下,当存在 PASID TLP Prefix 时包含 PASID。该 PASID TLP
+<li>在非 Flit 模式下，当存在 PASID TLP Prefix 时包含 PASID。该 PASID TLP
 Prefix 中的 Execute Requested 和 Privileged Mode Requested 位保留。</li>
-<li>在 Flit 模式下,当 OHC-A4 存在且 PV 置位时包含 PASID。如果 OHC-A4
-不存在或 PV 清零,则不包含 PASID。如果 DSV 置位,OHC-A4
+<li>在 Flit 模式下，当 OHC-A4 存在且 PV 置位时包含 PASID。如果 OHC-A4
+不存在或 PV 清零，则不包含 PASID。如果 DSV 置位,OHC-A4
 还包含目标段<sup>200</sup>。</li>
 </ul>
 </td>
@@ -3020,21 +3976,55 @@ Prefix 中的 Execute Requested 和 Privileged Mode Requested 位保留。</li>
 Mode <img src="figures/chapter_10/fig_1584_1.png" width="700"></p>
 </blockquote>
 <blockquote>
-<p><strong>Figure 10-19.</strong> Invalidate Request Message - Flit Mode
-<img src="figures/chapter_10/fig_1585_1.png" width="700"></p>
+<p><strong>Figure 10-19.</strong> Invalidate Request Message - Flit
+Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1585_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1585_1_tight.png" width="700">
+**图 10-19.** Invalidate Request Message - Flit 模式
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1585_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1585_1_tight.png" width="700">
+**图 10-18.** Invalidate Request Message - 非 Flit 模式
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1584_1.png" width="700">
+
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-19.</strong> Invalidate Request Message - Flit
+Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1585_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1585_1_tight.png" width="700">
+
 </blockquote>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-3-1"></a></p>
-<h3 id="1031-invalidate-request---1031-无效化请求-">10.3.1 Invalidate
-Request § | 10.3.1 无效化请求 §</h3>
-<p>table&gt;</p>
+<h3 id="1031-invalidate-request--1031-无效化请求">10.3.1 Invalidate
+Request | 10.3.1 无效化请求</h3>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3064,7 +4054,12 @@ the STU.</p>
 invalidated. The payload format is shown in § Figure 10-20.</p>
 <blockquote>
 <p><strong>Figure 10-20.</strong> Invalidate Request Message Body
-<img src="figures/chapter_10/fig_1586_1.png" width="700"></p>
+<img src="figures/chapter_10/fig_1586_1_tight.png" width="700">
+<strong>图 10-20.</strong> Invalidate Request Message Body</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1586_1_tight.png" width="700">
+
 </blockquote>
 <p>The S field is used to indicate if the range being invalidated is
 greater than 4096 bytes. Its meaning is the same as for the Translation
@@ -3087,16 +4082,16 @@ this specification.</p>
 <td style="background-color:#e8e8e8">
 
 <p><sup>200</sup> 无效化请求消息由 TA 通过特定 RP 发出。由于给定 RP
-以下的所有内容都属于同一段,因此消息中的目标段字段不是必需的,除非 RC
+以下的所有内容都属于同一段，因此消息中的目标段字段不是必需的，除非 RC
 需要它来确定适当的 RP。</p>
 <p>ITag 字段由 TA 用于唯一标识其发出的 Invalidate 请求。TA
 必须确保一旦使用了某个 ITag,在通过相应 Invalidate
-完成或供应商特定的超时机制(见下文)释放之前,不会针对同一目标 ID
+完成或供应商特定的超时机制(见下文)释放之前，不会针对同一目标 ID
 重复使用它。TA 允许将同一 ITag 值用于针对不同目标 ID 的 Invalidate
 请求。其他注意事项请参见 ATS Extended Capability 中的 Invalidation Queue
 Depth 字段。</p>
 <p>Invalidate 请求中指定的地址范围可跨越一个或多个 STU 4096
-字节页。无效化范围必须自然对齐,且不应小于 STU 4096
+字节页。无效化范围必须自然对齐，且不应小于 STU 4096
 字节页。在收到范围小于 STU 的 Invalidate 请求时,ATC 可以(1)发出
 Unsupported Request 信号(不推荐)或(2)将请求范围向上舍入为大于或等于 STU
 的值。</p>
@@ -3107,7 +4102,7 @@ Unsupported Request 信号(不推荐)或(2)将请求范围向上舍入为大于�
 节)。</p>
 <p>Global Invalidate 位指示无效化请求消息影响所有 PASID 值(参见 § 第
 10.3.8 节)。除非无效化请求具有 PASID,否则此位保留。如果 Global
-Invalidate Supported 位清零,则 ATC 忽略此位(参见 § 第 10.3.8 节)。</p>
+Invalidate Supported 位清零，则 ATC 忽略此位(参见 § 第 10.3.8 节)。</p>
 <blockquote>
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong>
 <strong>无效化完成超时 (INVALIDATE COMPLETION TIMEOUT)</strong> 设备应在
@@ -3116,31 +4111,26 @@ Invalidate 完成超时并重用关联的 ITag 值。ATPT
 设计是实现特定的。因此,Invalidate
 完成超时及其关联的错误处理不在本规范范围内。</p>
 </blockquote>
+<img src="figures/chapter_10/fig_1586_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1578</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1579</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1580</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1581</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1582</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1583</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1584</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1585</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1586</p>
-<p><a id="sec-10-3-2"></a></p>
-<h3 id="1032-invalidate-completion---1032-无效化完成-">10.3.2 Invalidate
-Completion § | 10.3.2 无效化完成 §</h3>
+<p><a id="sec-10-3-2"></a> <!-- 📄 Page 1578 --> <!-- 📄 Page 1579 -->
+<!-- 📄 Page 1580 --> <!-- 📄 Page 1581 --> <!-- 📄 Page 1582 -->
+<!-- 📄 Page 1583 --> <!-- 📄 Page 1584 --> <!-- 📄 Page 1585 -->
+<!-- 📄 Page 1586 --></p>
+<h3 id="1032-invalidate-completion--1032-无效化完成">10.3.2 Invalidate
+Completion | 10.3.2 无效化完成</h3>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3226,8 +4216,8 @@ UR.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<p>当功能完成 Invalidate 操作时,它将向 TA 发送一个或多个 Invalidate
-完成消息。这些消息必须使用从 Invalidate 请求中提取的信息标记,以使 TA
+<p>当功能完成 Invalidate 操作时，它将向 TA 发送一个或多个 Invalidate
+完成消息。这些消息必须使用从 Invalidate 请求中提取的信息标记，以使 TA
 能够将 Invalidate 完成与 Invalidate 请求相关联。</p>
 <p>Invalidate 完成消息的格式如 § 图 10-21 和 § 图 10-22 所示。</p>
 <blockquote>
@@ -3235,33 +4225,34 @@ UR.</p>
 <strong>无效化请求与功能级复位及设备电源状态转换 (INVALIDATION REQUESTS
 AND FUNCTION LEVEL RESET &amp; DEVICE POWER STATE TRANSITIONS)</strong>
 在功能正在执行功能级复位或处于(或正在转换到)非 D0
-设备状态时收到的无效化请求可能被该功能丢弃。类似地,在收到启动 FLR 或 D
+设备状态时收到的无效化请求可能被该功能丢弃。类似地，在收到启动 FLR 或 D
 状态转换请求时已经收到但挂起的无效化请求也可能被该功能丢弃。
 系统软件可以通过多种方式避免在功能级复位和设备电源状态转换时出现 ATS
 无效化竞争条件。例如:</p>
 <ol type="1">
-<li>在功能上禁用 ATS 时,系统软件使对该功能的 ATS
-无效化静默(即,要么已收到对该功能发出的所有无效化请求的响应,要么对该功能的任何挂起无效化请求已超时)。</li>
-<li>软件确保在功能的 ATS 功能被禁用时,不会向该功能发出无效化。</li>
-<li>在启动 FLR(或设备电源状态转换)之前,软件按上述第 1 项所述禁用
+<li>在功能上禁用 ATS 时，系统软件使对该功能的 ATS
+无效化静默(即，要么已收到对该功能发出的所有无效化请求的响应，要么对该功能的任何挂起无效化请求已超时)。</li>
+<li>软件确保在功能的 ATS 功能被禁用时，不会向该功能发出无效化。</li>
+<li>在启动 FLR(或设备电源状态转换)之前，软件按上述第 1 项所述禁用
 ATS。</li>
 </ol>
 </blockquote>
 <p>Invalidate 完成消息是由 ID 路由的 Msg 事务。Invalidate 完成消息的
 Requester ID 字段设置为包含 ATC 的功能的 Requester ID。Invalidate 完成的
 Device ID 字段设置为 TA 的 Requester ID。ATC 可以从相应 Invalidate
-请求的 Requester ID 字段导出 TA 的 Requester ID。或者,由于 ATC 仅与单个
+请求的 Requester ID 字段导出 TA 的 Requester ID。或者，由于 ATC 仅与单个
 TA 关联,ATC 可以在 Fundamental Reset 或 FLR 之后从第一个 Invalidate
 请求中采样并存储 Requester ID。后续 Invalidate
 完成消息可以使用此值来设置 Invalidate 完成消息的 Device ID 字段。</p>
-<p>在 Flit 模式下,当需要目标段时(例如,TA 和 ATC 处于不同段),Invalidation
-完成消息可选地包含 OHC-A4。PASID 保留。PV 必须为 0b。</p>
+<p>在 Flit 模式下，当需要目标段时(例如,TA 和 ATC
+处于不同段),Invalidation 完成消息可选地包含 OHC-A4。PASID 保留。PV
+必须为 0b。</p>
 <p>完成计数 (Completion Count, CC) 字段指示关联的 Invalidate
 请求必须发送的单个 Invalidate 完成消息的数量。将 CC 字段设置为 0
 指示必须发送八个响应。TA 负责在考虑相应 Invalidate
 请求完成之前收集与给定 Tag 关联的所有响应。</p>
-<p>Invalidate 完成消息可在任意 TC 上发送,与发起 Invalidate 请求接收的 TC
-无关。这使实现能够利用 Invalidate 完成将未完成事务推送到
+<p>Invalidate 完成消息可在任意 TC 上发送，与发起 Invalidate 请求接收的
+TC 无关。这使实现能够利用 Invalidate 完成将未完成事务推送到
 TA,以保证满足所需的无效化语义。使用单个上游 TC 的实现需要在所使用的 TC
 中发送单个 Invalidate 完成。</p>
 <p>ITag Vector 字段用于指示哪个 Invalidate 请求已完成。Invalidation
@@ -3270,7 +4261,7 @@ TA,以保证满足所需的无效化语义。使用单个上游 TC 的实现需�
 图 10-22 中 Invalidate 完成消息示意图表示中最右边的位)对应于 ITag 字段值
 0。ITag Vector 字段的最高有效位(位 31)对应于 ITag 字段值
 31。允许实现通过在单个消息中设置多个 ITag Vector 位来合并多个 Invalidate
-完成,前提是满足以下条件:</p>
+完成，前提是满足以下条件:</p>
 <ul>
 <li>Invalidate 完成在同一 TC 中流动。</li>
 <li>Invalidate 完成具有相同的 CC 值。</li>
@@ -3278,7 +4269,7 @@ TA,以保证满足所需的无效化语义。使用单个上游 TC 的实现需�
 Vector 字段。</li>
 </ul>
 <p>TA 如果收到针对某个没有未完成 Invalidation 请求的 ITag 的
-Invalidation 完成,则应使用实现特定的机制报告此错误。一种可能的机制是将
+Invalidation 完成，则应使用实现特定的机制报告此错误。一种可能的机制是将
 Invalidation 完成报告为 Unexpected Completion (UC)。</p>
 <p>不支持 ATS 的功能会将 Invalidate 请求视为 UR。</p>
 </td>
@@ -3289,25 +4280,39 @@ Invalidation 完成报告为 Unexpected Completion (UC)。</p>
 <blockquote>
 <p><strong>Figure 10-21.</strong> Invalidate Completion Message Format -
 Non-Flit Mode
-<img src="figures/chapter_10/fig_1587_1.png" width="700"></p>
+<img src="figures/chapter_10/fig_1587_1_tight.png" width="700"></p>
 </blockquote>
 <blockquote>
 <p><strong>Figure 10-22.</strong> Invalidate Completion Message - Flit
-Mode <img src="figures/chapter_10/fig_1588_1.png" width="700"></p>
+Mode <img src="figures/chapter_10/fig_1588_1_tight.png" width="700">
+<strong>图 10-22.</strong> Invalidate Completion Message - Flit 模式</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1588_1_tight.png" width="700">
+**图 10-21.** Invalidate Completion Message 格式 - 非 Flit 模式
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1587_1_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-22.</strong> Invalidate Completion Message - Flit
+Mode <img src="figures/chapter_10/fig_1588_1_tight.png" width="700"></p>
 </blockquote>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-3-3"></a></p>
 <h3
-id="1033-invalidate-completion-semantics---1033-无效化完成语义-">10.3.3
-Invalidate Completion Semantics § | 10.3.3 无效化完成语义 §</h3>
-<p>table&gt;</p>
+id="1033-invalidate-completion-semantics--1033-无效化完成语义">10.3.3
+Invalidate Completion Semantics | 10.3.3 无效化完成语义</h3>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3376,11 +4381,11 @@ complete.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<p>支持 ATS 的功能需要响应 Invalidate 请求发送 Invalidate 完成,无论 Bus
-Master Enable 位是否置位。请注意,即使 Bus Master Enable
-清零,也必须满足上述条件。设备实现此目的的方法依赖于实现。</p>
+<p>支持 ATS 的功能需要响应 Invalidate 请求发送 Invalidate 完成，无论 Bus
+Master Enable 位是否置位。请注意，即使 Bus Master Enable
+清零，也必须满足上述条件。设备实现此目的方法依赖于实现。</p>
 <p>在 ATC 可以针对给定 Invalidate 请求返回 Invalidate
-完成之前,它必须确保关于过期地址的以下条件得到满足:</p>
+完成之前，它必须确保关于过期地址的以下条件得到满足:</p>
 <ul>
 <li>由该功能(或其影子)发起的所有新的已转换内存请求将不使用过期的地址转换。</li>
 <li>必须接收由该功能(或其影子)发起且引用过期地址的已转换内存请求的所有预期完成。</li>
@@ -3389,28 +4394,28 @@ Master Enable 位是否置位。请注意,即使 Bus Master Enable
 Posted 已转换内存请求已在关联 Invalidate 完成之前发送。</li>
 </ul>
 <p>ATC 必须在已发出但尚未知是否已通过 TA 推送到 Fabric 可观察性的每个 TC
-中发送一份 Invalidate 完成消息副本,其中已发出非 UIO Posted
+中发送一份 Invalidate 完成消息副本，其中已发出非 UIO Posted
 已转换内存请求。CC 字段必须在每份 Invalidate
-完成消息副本中设置为相同值,以指示已发送的副本数。TA
+完成消息副本中设置为相同值，以指示已发送的副本数。TA
 负责在考虑无效化完成之前收集所有已发送的响应。</p>
 <p>ATC 必须至少发送一个 Invalidation 完成消息。</p>
 <p>ATC 不得在 UIO VC 中发送 Invalidation 完成消息副本(UIO VC 未定义
 Posted 消息 TLP)。当受 ATS Invalidation 请求影响的所有流量均为 UIO
 时,ATC 选择用于 Invalidation 完成消息的非 UIO TC
 的方式是实现特定的。</p>
-<p>TA 必须确保请求的前进进度,而不依赖于接收 Invalidation 完成。</p>
+<p>TA 必须确保请求的前进进度，而不依赖于接收 Invalidation 完成。</p>
 <p>Invalidate 完成消息必须包含关联 Invalidate 请求中使用的 Requester
 ID。</p>
-<p>启用影子功能时,只需发出针对该功能或其中一个影子的单个 Invalidate
+<p>启用影子功能时，只需发出针对该功能或其中一个影子的单个 Invalidate
 请求消息即可。建议系统软件向"主"功能而不是影子功能发出 Invalidate
-请求消息。由于 IDO 清零,来自该 Invalidation 请求的 Invalidation
+请求消息。由于 IDO 清零，来自该 Invalidation 请求的 Invalidation
 完成将把该功能及其影子的任何早期 Posted 写入推送到 TA。</p>
 <p>Invalidation 完成行为独立于关联的 Invalidate
 请求是发给该功能还是其影子之一。</p>
 <blockquote>
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong>
 <strong>总线主控使能更改 (BUS MASTER ENABLE CHANGE)</strong> 当 Bus
-Master Enable 从置位更改为清零时,不应再排队更多内存请求。BME
+Master Enable 从置位更改为清零时，不应再排队更多内存请求。BME
 清零时可能存在已排队的写请求。这些请求可能会阻塞 Invalidate
 完成。这些请求必须被发送或丢弃。这将确保可能依赖于未完成无效化的所有未完成写事务已完成。</p>
 </blockquote>
@@ -3419,17 +4424,17 @@ Master Enable 从置位更改为清零时,不应再排队更多内存请求。BM
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-3-4"></a></p>
-<h3 id="1034-request-acceptance-rules---1034-请求接受规则-">10.3.4
-Request Acceptance Rules § | 10.3.4 请求接受规则 §</h3>
+<h3 id="1034-request-acceptance-rules--1034-请求接受规则">10.3.4 Request
+Acceptance Rules | 10.3.4 请求接受规则</h3>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3471,22 +4476,21 @@ least one Invalidation Completion.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<p>根据本节列举的请求接受规则,功能不得创建这样一个依赖关系:已发布事务的接受依赖于已发布事务的发送。鉴于
-Invalidate 请求和 Invalidate 完成均为已发布事务,功能不得将 Invalidate
-请求的接受依赖于 Invalidate
-完成的发送。实现此目的的方法是实现特定的。</p>
+<p>根据本节列举的请求接受规则，功能不得创建这样一个依赖关系:已发布事务的接受依赖于已发布事务的发送。鉴于
+Invalidate 请求和 Invalidate 完成均为已发布事务，功能不得将 Invalidate
+请求的接受依赖于 Invalidate 完成的发送。实现此目的方法是实现特定的。</p>
 <p>其配置空间中具有 ATS 功能的功能必须能够接受 Invalidate 请求并发送
-Invalidate 完成,即使 ATS 未启用。</p>
-<p>由于各种缓存架构和排队策略的差异,实现可能在无效化延迟和吞吐率方面差异很大。可能存在
+Invalidate 完成，即使 ATS 未启用。</p>
+<p>由于各种缓存架构和排队策略的差异，实现可能在无效化延迟和吞吐量方面差异很大。可能存在
 TA 以超过平均 ATC 服务速率的速率生成 Invalidate
-请求的情况。当发生这种情况时,基于信用的流控机制将限制 TA
-的发出速率。这的一个副作用是拥塞通过基于信用的流控机制扩散到其他通道和链路。取决于此拥塞的频率和持续时间,性能可能受到影响。强烈建议
+请求的情况。当发生这种情况时，基于信用的流控机制将限制 TA
+的发出速率。这的一个副作用是拥塞通过基于信用的流控机制扩散到其他通道和链路。取决于此拥塞的频率和持续时间，性能可能受到影响。强烈建议
 TA 及其关联软件实现更高级别的流控机制。</p>
 <blockquote>
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong> <strong>隐含 TC 刷新
 (IMPLIED TC FLUSHING)</strong> 在决定将 Invalidate 完成发送到哪个 TC
 时,ATC 可以以实现特定的方式推断已发出的 posted 写入已被推送到
-TA。例如,已向上 TA 之上目标发送读事务并收到相应响应的功能可以推断在同一
+TA。例如，已向上 TA 之上目标发送读事务并收到相应响应的功能可以推断在同一
 TC 中发出的任何先前 posted 写入已被推送到 TA。 独立于此优化,ATC
 必须至少发送一个 Invalidation 完成。</p>
 </blockquote>
@@ -3496,16 +4500,16 @@ TC 中发出的任何先前 posted 写入已被推送到 TA。 独立于此优�
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-3-5"></a></p>
-<h3 id="1035-invalidate-flow-control---1035-无效化流控-">10.3.5
-Invalidate Flow Control § | 10.3.5 无效化流控 §</h3>
-<p>table&gt;</p>
+<h3 id="1035-invalidate-flow-control--1035-无效化流控">10.3.5 Invalidate
+Flow Control | 10.3.5 无效化流控</h3>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3554,18 +4558,18 @@ Invalidate Queue Depth field.</p>
 ATC 有效的未完成 Invalidation 请求数为 32。为避免 post-to-post 依赖,ATC
 必须接受最多 32 个 Invalidation 请求。 ATC 可以选择实现容纳 Invalidate
 请求的最大输入队列。或者,ATC 可以选择实现容纳 Invalidate
-完成的最大输出队列。请注意,对 Invalidate
-完成进行排队所需的每个条目状态显著少于输入队列缓冲,因此可能比输入队列缓冲更高效。
-请注意,选择实现输入排队还是输出排队(或两者的混合)对确保无死锁行为没有影响。但排队相关的实现选择可能会对性能产生重大影响(参见
+完成的最大输出队列。请注意，对 Invalidate
+完成进行排队所需的每个条目状态显著少于输入队列缓冲，因此可能比输入队列缓冲更高效。
+请注意，选择实现输入排队还是输出排队(或两者的混合)对确保无死锁行为没有影响。但排队相关的实现选择可能会对性能产生重大影响(参见
 § 第 10.3.5 节)。</p>
 </blockquote>
 <p>为辅助实现 Invalidate 流控,ATC 必须发布其在反压链路之前可缓冲的
 Invalidate
-请求数。此字段适用于该功能服务的所有无效化,与无效化的大小无关。该值通过
+请求数。此字段适用于该功能服务的所有无效化，与无效化的大小无关。该值通过
 ATS 能力结构中的 Invalidate Queue Depth 字段传达(参见 § 第 7.8.9 节)。值
 0 0000b 指示此功能不需要无效化流控。</p>
-<p>每个功能必须实现足够的排队,以确保其可以容纳来自 TA 的最大未完成
-Invalidation 请求数(使用输入或输出排队)。但是,对于 SR-IOV 设备,与 PF
+<p>每个功能必须实现足够的排队，以确保其可以容纳来自 TA 的最大未完成
+Invalidation 请求数(使用输入或输出排队)。但是，对于 SR-IOV 设备，与 PF
 关联的所有 VF 共享 PF 中的单个 Invalidation 请求队列。为实现
 Invalidation 流控,TA 必须确保针对共享 PF 队列的未完成 Invalidate
 请求总数不超过 PF 的 Invalidate Queue Depth 字段中的值。</p>
@@ -3574,18 +4578,17 @@ Invalidation 流控,TA 必须确保针对共享 PF 队列的未完成 Invalidate
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-3-6"></a></p>
-<h3
-id="1036-invalidate-ordering-semantics---1036-无效化排序语义-">10.3.6
-Invalidate Ordering Semantics § | 10.3.6 无效化排序语义 §</h3>
+<h3 id="1036-invalidate-ordering-semantics--1036-无效化排序语义">10.3.6
+Invalidate Ordering Semantics | 10.3.6 无效化排序语义</h3>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3627,25 +4630,25 @@ invalidations without back pressuring the Link.</li>
 <td style="background-color:#e8e8e8">
 
 <p>Invalidate 请求和转换完成可以使用不同的 TC
-发送,因此(从链路的角度)彼此无序。ATC 必须确保在 Invalidate
-请求绕过转换完成到达重叠区域时,保持正确的无效化行为。</p>
+发送，因此(从链路的角度)彼此无序。ATC 必须确保在 Invalidate
+请求绕过转换完成到达重叠区域时，保持正确的无效化行为。</p>
 <p>ATC 必须针对所有到达的 Invalidate
 请求"监听"其未完成转换请求队列。在监听 N*STU 大小转换的请求时(N 为 2
-的幂),ATC 必须监听从包含指定地址的 STU 对齐区域开始,到 (N-1) 个 STU
+的幂),ATC 必须监听从包含指定地址的 STU 对齐区域开始，到 (N-1) 个 STU
 大小页之后结束的地址范围。</p>
 <p>如果 Invalidate
-请求与未完成转换请求中的地址范围重叠,则必须将转换请求标记为无效,并且必须在发送
+请求与未完成转换请求中的地址范围重叠，则必须将转换请求标记为无效，并且必须在发送
 Invalidate 完成之前丢弃其对应转换响应的结果。如果在发送 Invalidate
-完成之前收到转换响应,则只要满足 Invalidate 完成语义(参见 § 第 10.3.3
-节),实现可以自由地使用转换结果发出请求。</p>
+完成之前收到转换响应，则只要满足 Invalidate 完成语义(参见 § 第 10.3.3
+节)，实现可以自由地使用转换结果发出请求。</p>
 <blockquote>
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong> <strong>无效化流控
 (INVALIDATE FLOW CONTROL)</strong>
-当以下一项或多项为真时,功能可指示不需要无效化流控:</p>
+当以下一项或多项为真时，功能可指示不需要无效化流控:</p>
 <ol type="1">
 <li>该功能可以以 Invalidate 请求的最大到达速率处理无效化。</li>
 <li>该功能不会或极少引起链路反压(性能损失可忽略)。</li>
-<li>该功能可以完全缓冲最大数量的传入无效化,而不反压链路。</li>
+<li>该功能可以完全缓冲最大数量的传入无效化，而不反压链路。</li>
 </ol>
 </blockquote>
 </td>
@@ -3654,16 +4657,16 @@ Invalidate 完成之前丢弃其对应转换响应的结果。如果在发送 In
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-3-7"></a></p>
-<h3 id="1037-implicit-invalidation-events---1037-隐式无效化事件-">10.3.7
-Implicit Invalidation Events § | 10.3.7 隐式无效化事件 §</h3>
-<p>table&gt;</p>
+<h3 id="1037-implicit-invalidation-events--1037-隐式无效化事件">10.3.7
+Implicit Invalidation Events | 10.3.7 隐式无效化事件</h3>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3724,23 +4727,23 @@ the Translation Requests into aligned requests is not a requirement.</p>
 <ul>
 <li>按照本规范定义停止使用 PASID。</li>
 </ul>
-<p>发生这些隐式无效化事件时,不会发送显式的 Invalidate 完成消息。</p>
+<p>发生这些隐式无效化事件时，不会发送显式的 Invalidate 完成消息。</p>
 <blockquote>
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong>
 <strong>无效化中请求范围重叠 (REQUEST RANGE OVERLAP IN
 INVALIDATIONS)</strong> 在上述描述中,N 是转换请求中请求的 STU
 大小转换数。这等于(转换请求中的 Length 字段)/2。 示例: STU 为 00
 0010b,表示 16384 字节页。 一个未完成的转换请求的 Length 字段为 00 0000
-0100b,表示两个转换,覆盖 32768 字节范围。 转换请求的高 48 位为 0000 0FFF
+0100b,表示两个转换，覆盖 32768 字节范围。 转换请求的高 48 位为 0000 0FFF
 FFFFh。 请求中地址的低 16 位为 11xx xxxx xxxx
-xxxxb,表示转换请求覆盖的范围与 32768 字节边界重叠(实际上,该请求跨越
-16-TB 边界)。 如果返回两个转换,它们将覆盖 0000 0FFF FFFF C000h 和 0000
-1000 0000 0000h 处的两个 STU 大小区域。 收到 Invalidate 请求,其高 48
+xxxxb,表示转换请求覆盖的范围与 32768 字节边界重叠(实际上，该请求跨越
+16-TB 边界)。 如果返回两个转换，它们将覆盖 0000 0FFF FFFF C000h 和 0000
+1000 0000 0000h 处的两个 STU 大小区域。 收到 Invalidate 请求，其高 48
 位为 0000 1000 0000h,低 16 位为 0001 1xxx xxxx xxxxb。 ATC
-必须检测到与转换请求一部分关联的转换现已无效,并且必须丢弃与无效区域关联的转换完成(为简化起见,允许
-ATC 丢弃所有转换完成)。 应当注意,如果转换请求不跨越请求的对齐边界,则
+必须检测到与转换请求一部分关联的转换现已无效，并且必须丢弃与无效区域关联的转换完成(为简化起见，允许
+ATC 丢弃所有转换完成)。 应当注意，如果转换请求不跨越请求的对齐边界，则
 Invalidate 请求的处理将被简化。上例中的转换请求未与 32768
-字节边界对齐。如果将其拆分为两个请求,则将 Invalidate
+字节边界对齐。如果将其拆分为两个请求，则将 Invalidate
 请求的范围与转换请求中的地址相关联将更简单。将转换请求拆分为对齐请求不是必需的。</p>
 </blockquote>
 </td>
@@ -3748,18 +4751,18 @@ Invalidate 请求的处理将被简化。上例中的转换请求未与 32768
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-3-8"></a></p>
 <h3
-id="1038-pasid-and-global-invalidate---1038-pasid-与全局无效化-">10.3.8
-PASID and Global Invalidate § | 10.3.8 PASID 与全局无效化 §</h3>
+id="1038-pasid-and-global-invalidate--1038-pasid-与全局无效化">10.3.8
+PASID and Global Invalidate | 10.3.8 PASID 与全局无效化</h3>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3817,22 +4820,23 @@ an associated PASID value.</p>
 <ul>
 <li>如果关联 PASID 值大于或等于 2^Max PASID Width,则可选地发出
 Unsupported Request (UR) 信号。即使 PASID
-值被忽略(见下文),只要存在超出范围的 PASID 值,也可以随时发出此错误。</li>
-<li>如果 PASID Enable 清零,则返回 Invalidation 完成。</li>
+值被忽略(见下文)，只要存在超出范围的 PASID
+值，也可以随时发出此错误。</li>
+<li>如果 PASID Enable 清零，则返回 Invalidation 完成。</li>
 <li>如果该功能支持 Global Invalidate(参见 § 第 7.8.9.2 节):
 <ul>
-<li>如果请求中的 Global Invalidate 位置位,则使 ATC 中与任何 PASID
-值关联的指示内存范围内的全局和非全局映射条目无效,并返回 Invalidation
+<li>如果请求中的 Global Invalidate 位置位，则使 ATC 中与任何 PASID
+值关联的指示内存范围内的全局和非全局映射条目无效，并返回 Invalidation
 完成。PASID 中的 PASID 值被忽略。</li>
-<li>如果请求中的 Global Invalidate 位清零,则仅使 ATC 中使用关联 PASID
-值请求的指示内存范围内的非全局映射条目无效,并返回 Invalidation
+<li>如果请求中的 Global Invalidate 位清零，则仅使 ATC 中使用关联 PASID
+值请求的指示内存范围内的非全局映射条目无效，并返回 Invalidation
 完成。</li>
 </ul></li>
 <li>可以在 ATC 中针对指示内存范围的部分或全部保留全局映射条目。</li>
-<li>如果该功能不支持 Global Invalidate(参见 § 第 7.8.9.2 节),则使 ATC
-中使用关联 PASID 值请求的指示内存范围内的条目无效,并返回 Invalidation
+<li>如果该功能不支持 Global Invalidate(参见 § 第 7.8.9.2 节)，则使 ATC
+中使用关联 PASID 值请求的指示内存范围内的条目无效，并返回 Invalidation
 完成。</li>
-<li>如果 ATC 中没有匹配的条目,则不使任何 ATC 条目无效,并返回
+<li>如果 ATC 中没有匹配的条目，则不使任何 ATC 条目无效，并返回
 Invalidation 完成。</li>
 </ul>
 <p>对于没有 PASID 的 Invalidation 请求,ATC 应:</p>
@@ -3843,7 +4847,7 @@ Invalidation 完成。</li>
 <blockquote>
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong> <strong>隐式无效化与
 PASID (IMPLICIT INVALIDATION AND PASID)</strong> 当 ATS Capability 中的
-E 字段已置位时,软件不得更改任何 PASID 使能位。软件置位 E
+E 字段已置位时，软件不得更改任何 PASID 使能位。软件置位 E
 字段时发生的无效化也会使具有关联 PASID 值的 ATC 条目无效。</p>
 </blockquote>
 </td>
@@ -3852,22 +4856,18 @@ E 字段已置位时,软件不得更改任何 PASID 使能位。软件置位 E
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1587</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1588</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1589</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1590</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1591</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1592</p>
-<p><a id="sec-10-4"></a></p>
-<h2 id="104-page-request-services---104-页请求服务-">10.4 Page Request
-Services § | 10.4 页请求服务 §</h2>
-<p>table&gt;</p>
+<p><a id="sec-10-4"></a> <!-- 📄 Page 1587 --> <!-- 📄 Page 1588 -->
+<!-- 📄 Page 1589 --> <!-- 📄 Page 1590 --> <!-- 📄 Page 1591 -->
+<!-- 📄 Page 1592 --></p>
+<h2 id="104-page-request-services--104-页请求服务">10.4 Page Request
+Services | 10.4 页请求服务</h2>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -3957,60 +4957,60 @@ PRGs to request the same page.</p>
 
 <p>页请求的一般模型如下:</p>
 <ol type="1">
-<li>功能确定它需要对某个页的访问权限,而该页没有可用的 ATS 转换。</li>
+<li>功能确定它需要对某个页的访问权限，而该页没有可用的 ATS 转换。</li>
 <li>功能使关联的页请求接口向其 RC
 发送页请求消息。页请求消息包含页地址和页请求组 (PRG) 索引。PRG
-索引用于标识事务,并用于将请求与响应进行匹配。</li>
+索引用于标识事务，并用于将请求与响应进行匹配。</li>
 <li>当 RC
-决定其对请求的响应(通常将是使所请求的页驻留)时,它会向请求功能回送一个
+决定其对请求的响应(通常将是使所请求的页驻留)时，它会向请求功能回送一个
 PRG 响应消息。</li>
-<li>然后,该功能可以使用 ATS 请求所请求页的转换。</li>
+<li>然后，该功能可以使用 ATS 请求所请求页的转换。</li>
 </ol>
-<p>页请求消息是路由到根复合体的 PCIe 消息请求,其消息代码为 4(0000
+<p>页请求消息是路由到根复合体的 PCIe 消息请求，其消息代码为 4(0000
 0100b)。RC 用于缓冲请求的机制是实现特定的。唯一的要求是 RC
 不得静默丢弃请求。</p>
 <p>所有页请求消息和 PRG 响应消息均在 PCIe 流量类 0 中传输。流量类不为 0
 的页请求消息或 PRG 响应消息应由接收它的 RC 或端点视为格式错误的
-TLP。中间路由元素(例如,交换机)不应检测此错误。</p>
+TLP。中间路由元素(例如，交换机)不应检测此错误。</p>
 <p>页请求消息和 PRG 响应消息的 Attr 字段中的 Relaxed Ordering 和基于 ID
 的排序位可以使用。Attr 字段中的 No Snoop 位保留。</p>
 <p>页请求服务允许将页请求分组为页请求组 (PRG)。一个 PRG
 可以包含一个或多个页请求。PRG 中的所有页均由主机一次性响应。PRG
-中的各个页通过独立的页请求消息请求,并通过共享同一 PRG
+中的各个页通过独立的页请求消息请求，并通过共享同一 PRG
 索引被识别为属于同一 PRG。PRG
 的最后一个请求在其页请求消息中标记为最后一个。每个页请求消耗一个请求信用(而非每个
 PRG)。</p>
 <p>PRG 响应消息是由 ID 路由回请求功能的 PCIe
 消息请求。系统软件使用它来通知功能与相应 PRG
-关联的页请求已得到满足。页请求机制不保证任何请求完成顺序,所有请求本质上独立于所有其他并发未完成请求。如果功能要求特定请求在另一请求之前完成,则必须在发出后续请求之前完成初始请求。功能可以在未确定驻留状态的情况下推测性地请求页,和/或对同一页发出多个并发未完成请求,这是有效的。</p>
+关联的页请求已得到满足。页请求机制不保证任何请求完成顺序，所有请求本质上独立于所有其他并发未完成请求。如果功能要求特定请求在另一请求之前完成，则必须在发出后续请求之前完成初始请求。功能可以在未确定驻留状态的情况下推测性地请求页，和/或对同一页发出多个并发未完成请求，这是有效的。</p>
 <p>页请求接口被分配特定数量的页请求消息信用。RC(系统软件)可以以任何认为合适的方式划分可用信用。主机选择采用任何措施来确保页请求接口正确计量信用(页请求接口未使用超过其分配的信用)是一种实现选择。页请求接口不得超额订阅可用请求数(这样做可能导致在根处超过缓冲区限制时页请求机制被禁用)。</p>
-<p>页请求接口的页请求分配是静态的。它在页请求接口被启用时确定,只能通过先禁用再重新启用接口来更改。</p>
+<p>页请求接口的页请求分配是静态的。它在页请求接口被启用时确定，只能通过先禁用再重新启用接口来更改。</p>
 <p>功能使用页请求消息向其关联主机发送页请求。页请求指示功能所需的页。与功能关联的页请求接口被赋予特定的页请求分配。页请求接口不得发出超过其页请求分配的页请求。</p>
 <p>页请求包含所需页的未转换地址、该页所需的访问权限以及 PRG 索引。PRG
-索引是由功能分配的 9 位标量,用于标识关联的页请求。可以使用单个 PRG
-索引请求多个页。当多个页与给定 PRG 关联时,除与给定 PRG
-关联的最后一个请求外,所有请求的页请求记录中的 Last
+索引是由功能分配的 9 位标量，用于标识关联的页请求。可以使用单个 PRG
+索引请求多个页。当多个页与给定 PRG 关联时，除与给定 PRG
+关联的最后一个请求外，所有请求的页请求记录中的 Last
 标志清零(在最后一个请求中该标志置位)。页请求被一次性响应。除非已收到 PRG
-的最后一个请求,否则无法进行响应(Response Failure
+的最后一个请求，否则无法进行响应(Response Failure
 错误除外)。功能在任何给定时间可以拥有的未完成 PRG
-数量小于或等于关联页请求接口的未完成页请求分配。请求组可以包含对同一页的多个请求,多个未完成
-PRG 可以请求同一页,这是有效的。</p>
+数量小于或等于关联页请求接口的未完成页请求分配。请求组可以包含对同一页的多个请求，多个未完成
+PRG 可以请求同一页，这是有效的。</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-4-1"></a></p>
-<h3 id="1041-page-request-message---1041-页请求消息-">10.4.1 Page
-Request Message § | 10.4.1 页请求消息 §</h3>
+<h3 id="1041-page-request-message--1041-页请求消息">10.4.1 Page Request
+Message | 10.4.1 页请求消息</h3>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4067,7 +5067,7 @@ Marker (see § Section 10.4.1.2.1).</td>
 <p>页请求接口适用于"主"功能及其已启用的影子功能(其中"主"是同时包含 Page
 Request Extended Capability 和 Shadow Function Extended Capability
 的功能)。单个 PRG 的所有页请求消息必须具有相同的 Requester
-ID。启用影子功能时,建议页请求消息使用"主"功能的 Requester ID。</p>
+ID。启用影子功能时，建议页请求消息使用"主"功能的 Requester ID。</p>
 <p>页请求消息的前两个 DW 包含标准 PCIe 消息头。消息的后两个 DW
 包含页请求特定的数据字段。</p>
 <p><strong>Table 10-6. Page Request Message Data Fields | 表 10-6
@@ -4083,17 +5083,17 @@ ID。启用影子功能时,建议页请求消息使用"主"功能的 Requester I
 <tr>
 <td>R</td>
 <td>读访问请求 -
-此字段置位时,表示请求功能寻求对关联页的读访问。清零时,表示请求功能将不读取关联页。对于具有
+此字段置位时，表示请求功能寻求对关联页的读访问。清零时，表示请求功能将不读取关联页。对于具有
 PASID 且 Execute Requested 位置位的页请求,R 字段必须置位。如果 R 和 W
-均清零且 L 置位,则为停止标记(参见 § 第 10.4.1.2.1 节)。</td>
+均清零且 L 置位，则为停止标记(参见 § 第 10.4.1.2.1 节)。</td>
 </tr>
 <tr>
 <td>W</td>
 <td>写访问请求 -
-此字段置位时,表示请求功能寻求对关联页的写访问和/或零长度读访问。清零时,表示请求功能将不写入关联页。在收到
-W 字段置位的页请求消息时,主机允许将关联页标记为
-dirty。因此,除非功能已被授予明确的写权限,否则功能不得发出此类请求。如果
-R 和 W 均清零且 L 置位,则为停止标记(参见 § 第 10.4.1.2.1 节)。</td>
+此字段置位时，表示请求功能寻求对关联页的写访问和/或零长度读访问。清零时，表示请求功能将不写入关联页。在收到
+W 字段置位的页请求消息时，主机允许将关联页标记为
+dirty。因此，除非功能已被授予明确的写权限，否则功能不得发出此类请求。如果
+R 和 W 均清零且 L 置位，则为停止标记(参见 § 第 10.4.1.2.1 节)。</td>
 </tr>
 </tbody>
 </table>
@@ -4107,21 +5107,53 @@ R 和 W 均清零且 L 置位,则为停止标记(参见 § 第 10.4.1.2.1 节)�
 <img src="figures/chapter_10/fig_1594_1.png" width="700"></p>
 </blockquote>
 <blockquote>
-<p><strong>Figure 10-24.</strong> Page Request Message - Flit Mode
-<img src="figures/chapter_10/fig_1595_1.png" width="700"></p>
+<p><strong>Figure 10-24.</strong> Page Request Message - Flit Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1595_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1595_1_tight.png" width="700">
+**图 10-24.** 页请求 (Page Request) Message - Flit 模式
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1595_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1595_1_tight.png" width="700">
+**图 10-23.** 页请求 (Page Request) Message - 非 Flit 模式
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1594_1.png" width="700">
+
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-24.</strong> Page Request Message - Flit Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1595_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1595_1_tight.png" width="700">
+
 </blockquote>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-4-1-1"></a></p>
-<h4 id="10411-pasid-usage---10411-pasid-使用-">10.4.1.1 PASID Usage § |
-10.4.1.1 PASID 使用 §</h4>
-<p>table&gt;</p>
+<h4 id="10411-pasid-usage--10411-pasid-使用">10.4.1.1 PASID Usage |
+10.4.1.1 PASID 使用</h4>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4184,44 +5216,44 @@ bit set to any value.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<p>| L | PRG 中最后一个请求 - 此字段置位时,表示关联页请求是关联 PRG
-的最后一个请求。PRG 可以具有单个条目,在这种情况下,PRG
-由单个请求组成,且此字段已置位。清零时,此字段表示将使用此记录的 PRG
-索引发布其他页请求。如果 R 和 W 均清零且 L 置位,则为停止标记(参见 § 第
+<p>| L | PRG 中最后一个请求 - 此字段置位时，表示关联页请求是关联 PRG
+的最后一个请求。PRG 可以具有单个条目，在这种情况下,PRG
+由单个请求组成，且此字段已置位。清零时，此字段表示将使用此记录的 PRG
+索引发布其他页请求。如果 R 和 W 均清零且 L 置位，则为停止标记(参见 § 第
 10.4.1.2.1 节)。 | | Page Request Group Index | 页请求组索引 -
 此字段包含功能为关联页请求提供的标识符。功能无需使用 PRG
 索引值的整个可用范围。除非在发出 Response Failure
 时主机无需在错误响应中保留关联请求的 PRG
-索引值,否则主机不得以未由功能先前发出且当前不是未完成请求 PRG 索引的 PRG
-索引进行响应。 | | Page Address | 页地址 -
+索引值，否则主机不得以未由功能先前发出且当前不是未完成请求 PRG 索引的
+PRG 索引进行响应。 | | Page Address | 页地址 -
 此字段包含要加载的页的未转换地址。对于大于 4096
-字节的页,此字段的最低有效位被忽略。例如,在请求 8192
-字节页时,此字段的最低有效位被忽略。 |</p>
+字节的页，此字段的最低有效位被忽略。例如，在请求 8192
+字节页时，此字段的最低有效位被忽略。 |</p>
 <p>PASID Extended Capability 指示功能是否支持 PASID TLP Prefix(NFM)或带
-PASID 的 OHC-A1(FM),以及是否已启用以发送和接收它们。</p>
+PASID 的 OHC-A1(FM)，以及是否已启用以发送和接收它们。</p>
 <p>支持 PASID 的功能允许在页请求消息上发送 PASID。PASID
 字段包含所请求页的进程地址空间,Execute Requested 和 Privileged Mode
 Requested 位指示所请求的访问。在 FM 中,OHC-A1 中的 NW 位和 Last DW BW /
 1st DW BE 字段保留。</p>
 <p>如果 PRG 中的一个页请求消息具有 PASID,则该 PRG
 中的所有页请求消息必须包含相同的 PASID 值。当 PASID
-值不一致时,行为未定义。</p>
+值不一致时，行为未定义。</p>
 <p>支持 PASID 且 PRG Response PASID Required 位置位(参见 § 第 10.5.2.3
-节)的功能,期望在关联的页请求消息具有 PASID 时,PRG 响应消息将包含
+节)的功能，期望在关联的页请求消息具有 PASID 时,PRG 响应消息将包含
 PASID。对于此类 PRG 响应消息,Execute Requested 和 Privileged Mode
 Requested 位保留,PASID 字段包含来自关联页请求消息的 PASID。</p>
 <p>存在停止和开始使用 PASID 的规则。</p>
 <p>本节描述适用于已在正在停止的 PASID
 中发出页请求消息的功能的附加规则。对于为 PASID
-启动页请求接口的使用,不需要其他规则。</p>
-<p>停止使用特定 PASID 时,可以可选地使用停止标记消息 (Stop Marker
-Message),以避免在功能指示特定 PASID 的停止请求已完成之前等待 PRG
+启动页请求接口的使用，不需要其他规则。</p>
+<p>停止使用特定 PASID 时，可以可选地使用停止标记消息 (Stop Marker
+Message)，以避免在功能指示特定 PASID 的停止请求已完成之前等待 PRG
 响应消息。</p>
 <blockquote>
 <p><strong>实现说明 (IMPLEMENTATION NOTE):</strong> <strong>LAST 位与
 RELAXED ORDERING (LAST BIT AND RELAXED ORDERING)</strong>
-如果多个页请求与单个 PRG 索引关联,则 PRG 的最后一个页请求应将 Relaxed
-Ordering 属性位清零,以及将 Last 标志置位。所有其他页请求消息可以将
+如果多个页请求与单个 PRG 索引关联，则 PRG 的最后一个页请求应将 Relaxed
+Ordering 属性位清零，以及将 Last 标志置位。所有其他页请求消息可以将
 Relaxed Ordering 属性位设置为任何值。</p>
 </blockquote>
 </td>
@@ -4229,19 +5261,19 @@ Relaxed Ordering 属性位设置为任何值。</p>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-4-1-2"></a></p>
 <h4
-id="10412-managing-pasid-usage-on-prg-requests---10412-在-prg-请求上管理-pasid-使用-">10.4.1.2
-Managing PASID Usage on PRG Requests § | 10.4.1.2 在 PRG 请求上管理
-PASID 使用 §</h4>
+id="10412-managing-pasid-usage-on-prg-requests--10412-在-prg-请求上管理-pasid-使用">10.4.1.2
+Managing PASID Usage on PRG Requests | 10.4.1.2 在 PRG 请求上管理 PASID
+使用</h4>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4280,23 +5312,23 @@ parallel.</p>
 </td>
 <td style="background-color:#e8e8e8">
 
-<p>要不使用停止标记消息停止,功能应:</p>
+<p>要不使用停止标记消息停止，功能应:</p>
 <ol type="1">
 <li>停止为此 PASID 排队新的页请求消息。</li>
-<li>完成此 PASID 的任何多页页请求消息的发送(即,发送 L
+<li>完成此 PASID 的任何多页页请求消息的发送(即，发送 L
 位置位的页请求消息)。</li>
 <li>等待与此 PASID 的任何未完成页请求消息关联的 PRG 响应消息。</li>
 <li>使用设备特定机制指示 PASID
 已停止使用。此机制必须指示不会生成停止标记消息。</li>
 </ol>
-<p>要使用停止标记消息停止,功能应:</p>
+<p>要使用停止标记消息停止，功能应:</p>
 <ol type="1">
 <li>停止为此 PASID 排队新的页请求消息。</li>
-<li>完成此 PASID 的任何多页页请求消息的发送(即,发送 L
+<li>完成此 PASID 的任何多页页请求消息的发送(即，发送 L
 位置位的页请求消息)。</li>
 <li>在内部将此 PASID 的所有未完成页请求消息标记为过期。与这些请求关联的
 PRG 响应消息将返回页请求分配信用和 PRG
-索引值,但除此之外将被忽略。<sup>201</sup></li>
+索引值，但除此之外将被忽略。<sup>201</sup></li>
 <li>使用设备特定机制指示 PASID
 已停止使用。此机制必须指示将生成停止标记消息。</li>
 <li>发送停止标记消息以向主机指示此 PASID 的所有后续页请求消息用于该
@@ -4309,16 +5341,16 @@ PASID 值的新用途。</li>
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-4-1-2-1"></a></p>
-<h5 id="104121-stop-marker-messages---104121-停止标记消息-">10.4.1.2.1
-Stop Marker Messages § | 10.4.1.2.1 停止标记消息 §</h5>
-<p>table&gt;</p>
+<h5 id="104121-stop-marker-messages--104121-停止标记消息">10.4.1.2.1
+Stop Marker Messages | 10.4.1.2.1 停止标记消息</h5>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4343,8 +5375,40 @@ Index and do not consume Page Request allocation (see § Section
 <img src="figures/chapter_10/fig_1597_1.png" width="700"></p>
 </blockquote>
 <blockquote>
-<p><strong>Figure 10-26.</strong> Stop Marker Message - Flit Mode
-<img src="figures/chapter_10/fig_1598_1.png" width="700"></p>
+<p><strong>Figure 10-26.</strong> Stop Marker Message - Flit Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1598_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1598_1_tight.png" width="700">
+**图 10-26.** 停止标记 (Stop Marker) Message - Flit 模式
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1598_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1598_1_tight.png" width="700">
+**图 10-25.** 停止标记 (Stop Marker) Message - 非 Flit 模式
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1597_1.png" width="700">
+
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-26.</strong> Stop Marker Message - Flit Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1598_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1598_1_tight.png" width="700">
+
 </blockquote>
 <p>A Stop Marker Message is encoded as a Page Request Message for
 which:</p>
@@ -4377,18 +5441,18 @@ Message did not have the L bit Set).</li>
 <td style="background-color:#e8e8e8">
 
 <p>停止标记消息 (Stop Marker Message)
-指示功能已停止使用页请求接口,并已发送针对特定 PASID
-的所有挂起页请求消息。停止标记消息相对于页请求消息是强排序的,并用于将页请求消息推送到主机。当主机收到停止标记消息时,这表示与正在停止的
-PASID 关联的所有页请求消息均已传送,并且具有相同 PASID
+指示功能已停止使用页请求接口，并已发送针对特定 PASID
+的所有挂起页请求消息。停止标记消息相对于页请求消息是强排序的，并用于将页请求消息推送到主机。当主机收到停止标记消息时，这表示与正在停止的
+PASID 关联的所有页请求消息均已传送，并且具有相同 PASID
 值的任何后续页请求消息与该 PASID 值的新实例相关联。</p>
-<p>停止标记消息没有响应。它们没有 PRG 索引,不消耗页请求分配(参见 § 第
+<p>停止标记消息没有响应。它们没有 PRG 索引，不消耗页请求分配(参见 § 第
 10.5.2.5 节)。</p>
 <p>停止标记消息的位布局如 § 图 10-25 所示。</p>
-<p>停止标记消息编码为页请求消息,其中:</p>
+<p>停止标记消息编码为页请求消息，其中:</p>
 <ul>
-<li>在 NFM 中,包括 PASID TLP Prefix。Execute Requested 和 Privileged
+<li>在 NFM 中，包括 PASID TLP Prefix。Execute Requested 和 Privileged
 Mode Requested 位保留。</li>
-<li>在 FM 中,包括带 PASID 的 OHC-A1。OHC-A1 中的 Execute Requested
+<li>在 FM 中，包括带 PASID 的 OHC-A1。OHC-A1 中的 Execute Requested
 位、Privileged Mode Requested 位和 Last DW BW / 1st DW BE
 字段保留。</li>
 <li>L、W 和 R 字段分别包含 1b、0b 和 0b。</li>
@@ -4398,37 +5462,34 @@ Mode Requested 位保留。</li>
 <li>Relaxed Ordering 属性位必须清零。</li>
 <li>基于 ID 的排序属性位可置位。</li>
 </ul>
-<p>如果收到停止标记消息且以下任一为真,则行为未定义:</p>
+<p>如果收到停止标记消息且以下任一为真，则行为未定义:</p>
 <ul>
 <li>Marker Type 不等于 0 0000b。</li>
 <li>不存在 PASID TLP Prefix(NFM)。</li>
 <li>PASID 值与未完成停止请求不匹配。</li>
-<li>PASID 的未完成页请求消息不完整(即,对于某些 PRG
-索引,最近收到的页请求消息未设置 L 位)。</li>
+<li>PASID 的未完成页请求消息不完整(即，对于某些 PRG
+索引，最近收到的页请求消息未设置 L 位)。</li>
 </ul>
+<img src="figures/chapter_10/fig_1597_1.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1593</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1594</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1595</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1596</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1597</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1598</p>
-<p><a id="sec-10-4-2"></a></p>
+<p><a id="sec-10-4-2"></a> <!-- 📄 Page 1593 --> <!-- 📄 Page 1594 -->
+<!-- 📄 Page 1595 --> <!-- 📄 Page 1596 --> <!-- 📄 Page 1597 -->
+<!-- 📄 Page 1598 --></p>
 <h3
-id="1042-page-request-group-response-message---1042-页请求组响应消息-">10.4.2
-Page Request Group Response Message § | 10.4.2 页请求组响应消息 §</h3>
+id="1042-page-request-group-response-message--1042-页请求组响应消息">10.4.2
+Page Request Group Response Message | 10.4.2 页请求组响应消息</h3>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4531,40 +5592,41 @@ associated PRG. The encodings are presented in § Section 10.4.2.1.</td>
 
 <p>系统硬件和/或软件通过 PRG 响应消息与功能的页请求接口通信。主机使用
 PRG 响应消息来发出 PRG 完成或接口灾难性失败的信号。针对 PRG 发出单个 PRG
-响应消息,与该 PRG
+响应消息，与该 PRG
 关联的页请求数量无关。没有任何机制用于指示部分请求完成或部分请求失败。如果与给定
-PRG 关联的任何页无法满足,则认为该请求已失败,且失败原因在 PRG
-响应消息中提供。主机没有义务部分满足多页请求。如果所请求的页之一无法驻留,则整个请求可以(但不必)被丢弃。即,与失败的页请求共享
+PRG 关联的任何页无法满足，则认为该请求已失败，且失败原因在 PRG
+响应消息中提供。主机没有义务部分满足多页请求。如果所请求的页之一无法驻留，则整个请求可以(但不必)被丢弃。即，与失败的页请求共享
 PRG 但与失败无关的页的驻留从功能的角度看是不确定的。</p>
 <p>存在四种可能的页请求失败:</p>
 <ol type="1">
 <li>所请求的页不是有效的未转换地址。</li>
-<li>存在 PASID 支持,页请求具有 PASID,且以下任一为真:此请求未启用 PASID
-使用,PASID 值无效,或当 R 清零时 Execute Requested
+<li>存在 PASID 支持，页请求具有 PASID,且以下任一为真:此请求未启用 PASID
+使用,PASID 值无效，或当 R 清零时 Execute Requested
 位置位。<sup>202</sup></li>
 <li>所请求的页不具有所请求的访问属性(包括 Execute
-权限和/或特权模式访问,当这些位存在时)。</li>
-<li>系统因未指定的原因无法响应该请求。此响应是终态的(主机不再响应任何页请求,且在功能的页请求接口被重置之前不再向该功能提供任何进一步回复)。例如,违反功能的已分配请求限制或使
+权限和/或特权模式访问，当这些位存在时)。</li>
+<li>系统因未指定的原因无法响应该请求。此响应是终态的(主机不再响应任何页请求，且在功能的页请求接口被复位之前不再向该功能提供任何进一步回复)。例如，违反功能的已分配请求限制或使
 RC 缓冲能力溢出的请求可能导致此类失败。</li>
 </ol>
 <p>功能对上述页请求失败情况 1、2 和 3
-的响应依赖于实现。失败不一定是持久的,即,失败的请求在某些情况下如果重新发出可能会成功。可能性范围排除通用化失败行为的精确规范,但在逐功能的基础上,对失败的响应将是依赖于实现的行为。</p>
+的响应依赖于实现。失败不一定是持久的，即,失败的请求在某些情况下如果重新发出可能会成功。可能性范围排除通用化失败行为的精确规范，但在逐功能的基础上，对失败的响应将是依赖于实现的行为。</p>
 <p>所有响应均通过 PRG
-响应消息发送给其关联功能。功能必须能够接收多个连续消息而不会丢失任何信息。为避免死锁,功能必须能够处理该功能所有未完成页请求消息的
-PRG 响应消息,而不依赖于该功能发送或接收任何其他 TLP。<sup>203</sup> PRG
+响应消息发送给其关联功能。功能必须能够接收多个连续消息而不会丢失任何信息。为避免死锁，功能必须能够处理该功能所有未完成页请求消息的
+PRG 响应消息，而不依赖于该功能发送或接收任何其他 TLP。<sup>203</sup> PRG
 响应消息是 ID 路由的 PCIe 消息。此消息中仅有的页请求接口特定字段是
 Response Code 和 PRG。所有其他字段均为标准 PCIe
 消息字段。(注:这些消息根据字节 8 和 9 中的 ID 进行路由;字节 4 和 5
 包含主机的 Requester ID。)</p>
-<p>如果收到 PRG 响应消息,其包含的 PRG
-索引在功能处当前不是未完成的,则应在 TLP 本身无误的条件下,在 Page Request
-Extended Capability 中设置 UPRGI
-标志。由于本规范早期版本中含糊的措辞,允许(但不鼓励)由包含 Page Request
+<p>如果收到 PRG 响应消息，其包含的 PRG
+索引在功能处当前不是未完成的，则应在 TLP 本身无误的条件下，在 Page
+Request Extended Capability 中设置 UPRGI
+标志。由于本规范早期版本中含糊的措辞，允许(但不鼓励)由包含 Page Request
 Extended Capability 的功能将此情况作为 Unsupported Request (UR) 或
-Unexpected Completion (UC) 处理,但除此之外不允许记录或发出其他错误。</p>
-<p>为防止溢出,建议适当调整页请求队列的大小,使其在预期行为下不会溢出。如果发生溢出情况,允许按如下方式恢复和重新同步页请求计数:</p>
+Unexpected Completion (UC)
+处理，但除此之外不允许记录或发出其他错误。</p>
+<p>为防止溢出，建议适当调整页请求队列的大小，使其在预期行为下不会溢出。如果发生溢出情况，允许按如下方式恢复和重新同步页请求计数:</p>
 <ul>
-<li>TA 在检测到溢出情况时,停止接受队列的所有传入页请求,并为 L=1
+<li>TA 在检测到溢出情况时，停止接受队列的所有传入页请求，并为 L=1
 的页请求生成 Response Code 为 Success 的页请求组响应。</li>
 </ul>
 <p><strong>Table 10-7. PRG Response Message Data Fields | 表 10-7 PRG
@@ -4597,7 +5659,21 @@ Unexpected Completion (UC) 处理,但除此之外不允许记录或发出其他�
 
 <blockquote>
 <p><strong>Figure 10-27.</strong> PRG Response Message - Non-Flit Mode
-<img src="figures/chapter_10/fig_1600_1.png" width="700"></p>
+<img src="figures/chapter_10/fig_1600_1_tight.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-28.</strong> PRG Response Message - FLIT Mode
+<img src="figures/chapter_10/fig_1601_1.png" width="700"> <strong>图
+10-28.</strong> PRG Response Message - Flit 模式</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1601_1.png" width="700">
+**图 10-27.** PRG Response Message - 非 Flit 模式
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1600_1_tight.png" width="700">
+
 </blockquote>
 <blockquote>
 <p><strong>Figure 10-28.</strong> PRG Response Message - FLIT Mode
@@ -4605,16 +5681,16 @@ Unexpected Completion (UC) 处理,但除此之外不允许记录或发出其他�
 </blockquote>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-4-2-1"></a></p>
-<h4 id="10421-response-code-field---10421-响应代码字段-">10.4.2.1
-Response Code Field § | 10.4.2.1 响应代码字段 §</h4>
-<p>table&gt;</p>
+<h4 id="10421-response-code-field--10421-响应代码字段">10.4.2.1 Response
+Code Field | 10.4.2.1 响应代码字段</h4>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4697,48 +5773,48 @@ value is copied from the PASID value of the Page Request.</p>
 <td>0001b</td>
 <td>Invalid Request(无效请求)</td>
 <td>关联 PRG
-中的一个或多个页不存在,或请求无法授予的访问权限。除非与该功能关联的页映射被更改,否则重新发出关联请求永远不会成功。</td>
+中的一个或多个页不存在，或请求无法授予的访问权限。除非与该功能关联的页映射被更改，否则重新发出关联请求永远不会成功。</td>
 </tr>
 <tr>
 <td>1110b:0010b</td>
 <td>Unused(未使用)</td>
 <td>未使用的 Response Code 值。收到此类消息的功能应将其视为包含 Response
-Code 为 Response Failure 的消息进行处理。</td>
+Code 为 Response Failure 的消息处理。</td>
 </tr>
 <tr>
 <td>1111b</td>
 <td>Response Failure(响应失败)</td>
 <td>关联请求组中的一个或多个页遇到/导致灾难性错误。此响应禁用该功能的页请求接口。其他
 PRG 的任何挂起页请求将由主机自行决定满足。功能应忽略任何后续 PRG
-响应消息,等待页请求接口重新启用。</td>
+响应消息，等待页请求接口重新启用。</td>
 </tr>
 </tbody>
 </table>
 <p>如果页请求具有 PASID,则对应的 PRG 响应消息也可以可选地包含一个。</p>
-<p>如果 PRG Response PASID Required 位清零,则 PRG 响应消息没有
+<p>如果 PRG Response PASID Required 位清零，则 PRG 响应消息没有
 PASID。</p>
-<p>如果 PRG Response PASID Required 位置位,则当页请求也具有 PASID 时,PRG
-响应消息具有 PASID。允许该功能使用来自 Prefix 的 PASID 值与 PRG
+<p>如果 PRG Response PASID Required 位置位，则当页请求也具有 PASID
+时,PRG 响应消息具有 PASID。允许该功能使用来自 Prefix 的 PASID 值与 PRG
 索引一起匹配请求和响应。</p>
 <p>当 PASID 附加到 PRG 响应消息时,Execute Requested 和 Privileged Mode
-Requested 位保留,且 PASID 值从页请求的 PASID 值复制。</p>
+Requested 位保留，且 PASID 值从页请求的 PASID 值复制。</p>
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-4-2-2"></a></p>
 <h4
-id="10422-pasid-usage-on-prg-responses---10422-prg-响应中的-pasid-使用-">10.4.2.2
-PASID Usage on PRG Responses § | 10.4.2.2 PRG 响应中的 PASID 使用 §</h4>
+id="10422-pasid-usage-on-prg-responses--10422-prg-响应中的-pasid-使用">10.4.2.2
+PASID Usage on PRG Responses | 10.4.2.2 PRG 响应中的 PASID 使用</h4>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4759,7 +5835,7 @@ Extended Capability structure.</p>
 
 <p>每个支持 ATS(能够生成转换请求)的功能必须在其扩展配置空间中具有 ATS
 Extended Capability 结构。允许由端点功能或 RCiEP 实现。SR-IOV
-设备中可选支持 ATS。如果 VF 实现 ATS 能力,则其关联的 PF 必须实现 ATS
+设备中可选支持 ATS。如果 VF 实现 ATS 能力，则其关联的 PF 必须实现 ATS
 能力。VF 及其关联 PF 中的 ATS Capability 允许独立启用。</p>
 <p>§ 图 10-29 详述了 ATS Extended Capability
 结构中寄存器字段的分配。</p>
@@ -4769,16 +5845,16 @@ Extended Capability 结构。允许由端点功能或 RCiEP 实现。SR-IOV
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-5"></a></p>
-<h2 id="105-ats-configuration---105-ats-配置-">10.5 ATS Configuration §
-| 10.5 ATS 配置 §</h2>
-<p>table&gt;</p>
+<h2 id="105-ats-configuration--105-ats-配置">10.5 ATS Configuration |
+10.5 ATS 配置</h2>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -4787,7 +5863,12 @@ Extended Capability 结构。允许由端点功能或 RCiEP 实现。SR-IOV
 
 <blockquote>
 <p><strong>Figure 10-30.</strong> ATS Extended Capability Header
-<img src="figures/chapter_10/fig_1602_1.png" width="700"></p>
+<img src="figures/chapter_10/fig_1602_1_tight.png" width="700">
+<strong>图 10-30.</strong> ATS Extended Capability 包头</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1602_1_tight.png" width="700">
+
 </blockquote>
 <p><strong>Table 10-9. ATS Extended Capability Header | 表 10-9 ATS
 Extended Capability 头</strong></p>
@@ -4867,14 +5948,14 @@ Capability 结构。</td>
 </tr>
 <tr>
 <td>19:16</td>
-<td>Capability Version - 此字段是 PCI-SIG 定义的版本号,指示存在的
-Capability 结构的版本。对于本规范的此版本,必须为 "1h"。</td>
+<td>Capability Version - 此字段是 PCI-SIG 定义的版本号，指示存在的
+Capability 结构的版本。对于本规范的此版本，必须为 "1h"。</td>
 <td>RO</td>
 </tr>
 <tr>
 <td>31:20</td>
 <td>Next Capability Offset - 下一个 PCI Extended Capability
-结构的偏移量,或 000h(如果链接的 capability 列表中没有其他项)。</td>
+结构的偏移量，或 000h(如果链接的 capability 列表中没有其他项)。</td>
 <td>RO</td>
 </tr>
 </tbody>
@@ -4899,23 +5980,24 @@ Invalidate 请求数。非 VF 功能中的零值表示它可以接受 32 个 Inv
 </tr>
 </tbody>
 </table>
+<img src="figures/chapter_10/fig_1602_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-5-1"></a></p>
 <h3
-id="1051-ats-extended-capability---1051-ats-extended-capability-">10.5.1
-ATS Extended Capability § | 10.5.1 ATS Extended Capability §</h3>
+id="1051-ats-extended-capability--1051-ats-extended-capability">10.5.1
+ATS Extended Capability | 10.5.1 ATS Extended Capability</h3>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5021,15 +6103,15 @@ TB total)</td>
 </tr>
 <tr>
 <td>5</td>
-<td>Page Aligned Request - 置位时,指示 Untranslated Address 始终与 4096
-字节边界对齐。此字段允许软件区分与本规范兼容的实现和与本规范早期版本(其中允许请求者提供位
-[11:2] 中的任何值)兼容的实现。强烈建议置位此位。</td>
+<td>Page Aligned Request - 置位时，指示 Untranslated Address 始终与 4096
+字节边界对齐。此字段允许软件区分与本规范兼容的实现和与本规范早期版本(其中允许请求者提供
+Bits [11:2] 中的任何值)兼容的实现。强烈建议置位此位。</td>
 <td>RO</td>
 </tr>
 <tr>
 <td>6</td>
-<td>Global Invalidate Supported - 置位时,该功能支持具有 Global
-Invalidate 位置位的 Invalidation 请求。清零时,该功能忽略所有 Invalidate
+<td>Global Invalidate Supported - 置位时，该功能支持具有 Global
+Invalidate 位置位的 Invalidation 请求。清零时，该功能忽略所有 Invalidate
 请求中的 Global Invalidate 位(参见 § 第 10.3.8
 节)。强烈建议清零此位。如果该功能不支持
 PASID,则此位必须硬连线为零。</td>
@@ -5037,15 +6119,15 @@ PASID,则此位必须硬连线为零。</td>
 </tr>
 <tr>
 <td>7</td>
-<td>Relaxed Ordering Supported - 置位时,指示当 Enable Relaxed Ordering
-位置位时,允许该功能在转换请求中置位 RO 位。</td>
+<td>Relaxed Ordering Supported - 置位时，指示当 Enable Relaxed Ordering
+位置位时，允许该功能在转换请求中置位 RO 位。</td>
 <td>RO</td>
 </tr>
 <tr>
 <td>8</td>
-<td>ATS Memory Attributes Supported – 置位时,该功能支持在功能 ATC
-中使用来自 ATS 转换完成的 AMA 值。清零时,该功能忽略 ATS 转换完成中的 AMA
-字段。</td>
+<td>ATS Memory Attributes Supported – 置位时，该功能支持在功能 ATC
+中使用来自 ATS 转换完成的 AMA 值。清零时，该功能忽略 ATS 转换完成中的
+AMA 字段。</td>
 <td>RO</td>
 </tr>
 </tbody>
@@ -5064,8 +6146,8 @@ PASID,则此位必须硬连线为零。</td>
 <tr>
 <td>4:0</td>
 <td>Smallest Translation Unit (STU) - 此值向功能指示在转换完成或
-Invalidate 请求中指示的最小 4096 字节块数。这是 2 的幂乘数,块数为
-2^STU。值 0 0000b 指示一个块,值 1 1111b 指示 2^31 块(即总共 8 TB)</td>
+Invalidate 请求中指示的最小 4096 字节块数。这是 2 的幂乘数，块数为
+2^STU。值 0 0000b 指示一个块，值 1 1111b 指示 2^31 块(即总共 8 TB)</td>
 <td>RW, VF ROZ</td>
 </tr>
 </tbody>
@@ -5077,22 +6159,28 @@ Invalidate 请求中指示的最小 4096 字节块数。这是 2 的幂乘数,�
 
 <blockquote>
 <p><strong>Figure 10-32.</strong> ATS Capability Register (Offset 04h) -
-continued <img src="figures/chapter_10/fig_1603_1.png" width="700"></p>
+continued <img src="figures/chapter_10/fig_1603_1.png" width="700">
+<strong>图 10-32.</strong> ATS Capability Register (Offset 04h) -
+continued</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1603_1.png" width="700">
+
 </blockquote>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-5-1-1"></a></p>
 <h4
-id="10511-ats-extended-capability-header-offset-00h---10511-ats-extended-capability-头-offset-00h-">10.5.1.1
-ATS Extended Capability Header (Offset 00h) § | 10.5.1.1 ATS Extended
-Capability 头 (Offset 00h) §</h4>
-<p>table&gt;</p>
+id="10511-ats-extended-capability-header-offset-00h--10511-ats-extended-capability-头-offset-00h">10.5.1.1
+ATS Extended Capability Header (Offset 00h) | 10.5.1.1 ATS Extended
+Capability 头 (Offset 00h)</h4>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5166,24 +6254,24 @@ Control 寄存器</strong></p>
 </tr>
 <tr>
 <td>13:11</td>
-<td>ATS Memory Attributes Default (AMAD) – 置位时,作为性能优化,且当 AMAE
-置位时,允许请求者使用 TPH TLP Prefix 在请求中仅提供非默认 AMA 值。AMAD
-值为 000b-111b。如果 ATS Memory Attributes Supported
-清零,则允许将此字段硬连线为 000b。默认值为 000b。</td>
+<td>ATS Memory Attributes Default (AMAD) – 置位时，作为性能优化，且当
+AMAE 置位时，允许请求者使用 TPH TLP Prefix 在请求中仅提供非默认 AMA
+值。AMAD 值为 000b-111b。如果 ATS Memory Attributes Supported
+清零，则允许将此字段硬连线为 000b。默认值为 000b。</td>
 <td>RW/RO</td>
 </tr>
 <tr>
 <td>14</td>
-<td>ATS Memory Attributes Enable (AMAE) - 置位时,允许请求者使用 TPH TLP
+<td>ATS Memory Attributes Enable (AMAE) - 置位时，允许请求者使用 TPH TLP
 Prefix 在请求中提供 AMA 值。如果 ATS Memory Attributes Supported
-位清零,则允许将此位硬连线为 0b。默认值为 0b。</td>
+位清零，则允许将此位硬连线为 0b。默认值为 0b。</td>
 <td>RW/RO</td>
 </tr>
 <tr>
 <td>15</td>
-<td>Enable (E) - 置位时,该功能被启用以缓存转换。如果此端点功能支持
+<td>Enable (E) - 置位时，该功能被启用以缓存转换。如果此端点功能支持
 PASID、此位置位且关联 PASID Control 寄存器中的任何位被更改(参见 § 第
-7.8.9.3 节),则行为未定义。默认值为 0b。</td>
+7.8.9.3 节)，则行为未定义。默认值为 0b。</td>
 <td>RW</td>
 </tr>
 </tbody>
@@ -5193,19 +6281,19 @@ PASID、此位置位且关联 PASID Control 寄存器中的任何位被更改(�
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-5-1-2"></a></p>
 <h4
-id="10512-ats-capability-register-offset-04h---10512-ats-capability-寄存器-offset-04h-">10.5.1.2
-ATS Capability Register (Offset 04h) § | 10.5.1.2 ATS Capability 寄存器
-(Offset 04h) §</h4>
+id="10512-ats-capability-register-offset-04h--10512-ats-capability-寄存器-offset-04h">10.5.1.2
+ATS Capability Register (Offset 04h) | 10.5.1.2 ATS Capability 寄存器
+(Offset 04h)</h4>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5304,12 +6392,12 @@ Reads of this field return 0b</td>
 <p>Page Request Extended Capability Structure
 用于配置页请求接口机制。多功能设备或 RCiEP
 设备可以在设备内的任何端点功能上实现页请求接口和关联能力。对于 SR-IOV
-设备,允许为 PF 设置单个页请求接口,并由 PF 及其关联 VF
-共享,在这种情况下,PF 实现此能力,其 VF
+设备，允许为 PF 设置单个页请求接口，并由 PF 及其关联 VF
+共享，在这种情况下,PF 实现此能力，其 VF
 不得实现。每个页请求接口机制独立操作。</p>
-<p>对于 SR-IOV 设备,即使页请求接口由其 PF 和 VF
-共享,它也会在页请求消息的 Requester ID 字段中发送请求功能的 ID(PF 或
-VF),并且请求功能的 ID 必须位于结果 PRG 响应消息的 Destination Device ID
+<p>对于 SR-IOV 设备，即使页请求接口由其 PF 和 VF
+共享，它也会在页请求消息的 Requester ID 字段中发送请求功能的 ID(PF 或
+VF)，并且请求功能的 ID 必须位于结果 PRG 响应消息的 Destination Device ID
 字段中。</p>
 <p><strong>Table 10-13. Page Request Extended Capability Header | 表
 10-13 页请求扩展能力头</strong></p>
@@ -5331,14 +6419,14 @@ Request Extended Capability。此字段必须返回 Capability ID 为
 </tr>
 <tr>
 <td>19:16</td>
-<td>Capability Version - 此字段是 PCI-SIG 定义的版本号,指示存在的
-Capability 结构的版本。对于本规范的此版本,必须为 "1h"。</td>
+<td>Capability Version - 此字段是 PCI-SIG 定义的版本号，指示存在的
+Capability 结构的版本。对于本规范的此版本，必须为 "1h"。</td>
 <td>RO</td>
 </tr>
 <tr>
 <td>31:20</td>
 <td>Next Capability Offset - 下一个 PCI Extended Capability
-结构的偏移量,或 000h(如果链接的 capability 列表中没有其他项)。</td>
+结构的偏移量，或 000h(如果链接的 capability 列表中没有其他项)。</td>
 <td>RO</td>
 </tr>
 </tbody>
@@ -5357,9 +6445,9 @@ Capability 结构的版本。对于本规范的此版本,必须为 "1h"。</td>
 <tr>
 <td>0</td>
 <td>Enable (E) -
-此字段置位时,指示允许页请求接口发出页请求。如果此字段清零,则不允许页请求接口发出页请求。如果此字段和
+此字段置位时，指示允许页请求接口发出页请求。如果此字段清零，则不允许页请求接口发出页请求。如果此字段和
 Stopped
-字段均清零,则页请求接口将不发出新的页请求,但具有已发送或排队等待发送的未完成页请求。当页请求接口从未启用转换到已启用时,其状态标志(Stopped、Response
+字段均清零，则页请求接口将不发出新的页请求，但具有已发送或排队等待发送的未完成页请求。当页请求接口从未启用转换到已启用时，其状态标志(Stopped、Response
 Failure 和 Unexpected Page Request Group Index (UPRGI)
 标志)被清除。启用尚未成功 Stopped 的页请求接口具有不确定的结果。默认值为
 0b。</td>
@@ -5368,10 +6456,10 @@ Failure 和 Unexpected Page Request Group Index (UPRGI)
 <tr>
 <td>1</td>
 <td>Reset (R) - 当 Enable
-字段清零,或正在与置位此字段的同一寄存器更新中清零时,向此字段写入 1b
+字段清零，或正在与置位此字段的同一寄存器更新中清零时，向此字段写入 1b
 会清除关联的依赖于实现的页请求信用计数器和关联页请求接口的挂起请求状态。如果此字段被写入
 0b,或在 Enable
-字段已置位时使用任何值写入此字段,则不启动任何操作。读取此字段返回
+字段已置位时使用任何值写入此字段，则不启动任何操作。读取此字段返回
 0b</td>
 <td>RW</td>
 </tr>
@@ -5384,30 +6472,96 @@ Failure 和 Unexpected Page Request Group Index (UPRGI)
 
 <blockquote>
 <p><strong>Figure 10-34.</strong> Page Request Extended Capability
-Structure <img src="figures/chapter_10/fig_1604_1.png" width="700"></p>
+Structure</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1605_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1604_1.png" width="700">
+
 </blockquote>
 <blockquote>
 <p><strong>Figure 10-35.</strong> Page Request Extended Capability
-Header <img src="figures/chapter_10/fig_1605_1.png" width="700"></p>
+Header
+<img src="figures/chapter_10/fig_1605_1_tight.png" width="700"></p>
 </blockquote>
 <blockquote>
-<p><strong>Figure 10-36.</strong> Page Request Control Register
-<img src="figures/chapter_10/fig_1606_1.png" width="700"></p>
+<p><strong>Figure 10-36.</strong> Page Request Control Register</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1606_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1606_1_tight.png" width="700">
+**图 10-36.** 页请求 (Page Request) Control Register
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1606_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1606_1_tight.png" width="700">
+**图 10-35.** 页请求 (Page Request) Extended Capability 包头
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1605_1_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-36.</strong> Page Request Control Register</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1606_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1606_1_tight.png" width="700">
+**图 10-34.** 页请求 (Page Request) Extended Capability Structure
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1605_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1604_1.png" width="700">
+
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-35.</strong> Page Request Extended Capability
+Header
+<img src="figures/chapter_10/fig_1605_1_tight.png" width="700"></p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-36.</strong> Page Request Control Register</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1606_2_tight.png" width="700">
+
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1606_1_tight.png" width="700">
+
 </blockquote>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-5-1-3"></a></p>
 <h4
-id="10513-ats-control-register-offset-06h---10513-ats-control-寄存器-offset-06h-">10.5.1.3
-ATS Control Register (Offset 06h) § | 10.5.1.3 ATS Control 寄存器
-(Offset 06h) §</h4>
-<p>table&gt;</p>
+id="10513-ats-control-register-offset-06h--10513-ats-control-寄存器-offset-06h">10.5.1.3
+ATS Control Register (Offset 06h) | 10.5.1.3 ATS Control 寄存器 (Offset
+06h)</h4>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5499,43 +6653,43 @@ This bit is RsvdZ if the Function does not support PASID.</td>
 <tbody>
 <tr>
 <td>0</td>
-<td>Response Failure (RF) - 此字段置位时,指示该功能已收到指示 Response
+<td>Response Failure (RF) - 此字段置位时，指示该功能已收到指示 Response
 Failure 的 PRG
-响应消息。该功能预期不再有来自主机的响应(任何收到的都将被忽略)。此字段由功能置位,并在向该字段写入
+响应消息。该功能预期不再有来自主机的响应(任何收到的都将被忽略)。此字段由功能置位，并在向该字段写入
 1 时清零。对于 SR-IOV,如果任何关联功能(PF 或 VF)收到指示 Response
-Failure 的 PRG 响应消息,则此字段在 PF 中置位。默认值为 0b。</td>
+Failure 的 PRG 响应消息，则此字段在 PF 中置位。默认值为 0b。</td>
 <td>RW1C</td>
 </tr>
 <tr>
 <td>1</td>
 <td>Unexpected Page Request Group Index (UPRGI) -
-此字段置位时,指示该功能已收到包含无匹配请求的 PRG 索引的 PRG
-响应消息。此字段由功能置位,并在向该字段写入 1 时清零。对于
+此字段置位时，指示该功能已收到包含无匹配请求的 PRG 索引的 PRG
+响应消息。此字段由功能置位，并在向该字段写入 1 时清零。对于
 SR-IOV,如果任何关联功能(PF 或 VF)收到没有匹配请求的 PRG
-响应消息,则此字段在 PF 中置位。默认值为 0b。</td>
+响应消息，则此字段在 PF 中置位。默认值为 0b。</td>
 <td>RW1C</td>
 </tr>
 <tr>
 <td>8</td>
 <td>Stopped (S) -
-此字段置位时,关联的页请求接口已停止发出额外页请求,且所有先前发出的页请求已完成。当此字段清零时,关联的页请求接口尚未停止,或已停止发出新页请求但有未完成页请求。仅当
-Enable 清零时,此字段才有意义。如果 Enable 置位,则此字段未定义。当 Enable
-字段在之前已置位之后被清零时,接口转换到 stopping
-状态并清零此字段。在功能处当前未完成的所有页请求完成之后,此字段被置位,接口进入
-disabled 状态。如果没有未完成的页请求,则此字段可以在 Enable
-清零时立即置位。重置接口将导致立即转换到 disabled 状态。在 stopping
-状态下,收到 Response Failure 消息将导致立即转换到 disabled
+此字段置位时，关联的页请求接口已停止发出额外页请求，且所有先前发出的页请求已完成。当此字段清零时，关联的页请求接口尚未停止，或已停止发出新页请求但有未完成页请求。仅当
+Enable 清零时，此字段才有意义。如果 Enable 置位，则此字段未定义。当
+Enable 字段在之前已置位之后被清零时，接口转换到 stopping
+状态并清零此字段。在功能处当前未完成的所有页请求完成之后，此字段被置位，接口进入
+disabled 状态。如果没有未完成的页请求，则此字段可以在 Enable
+清零时立即置位。复位接口将导致立即转换到 disabled 状态。在 stopping
+状态下，收到 Response Failure 消息将导致立即转换到 disabled
 状态(置位此字段)。对于 SR-IOV,仅当所有关联功能(PF 和
-VF)已停止发出页请求时,才置位此字段。默认值为 1b。</td>
+VF)已停止发出页请求时，才置位此字段。默认值为 1b。</td>
 <td>RO</td>
 </tr>
 <tr>
 <td>15</td>
-<td>PRG Response PASID Required - 置位时,当对应页请求具有 PASID
-时,该功能期望 PRG 响应消息上具有 PASID。清零时,该功能不期望任何 PRG
+<td>PRG Response PASID Required - 置位时，当对应页请求具有 PASID
+时，该功能期望 PRG 响应消息上具有 PASID。清零时，该功能不期望任何 PRG
 响应消息上具有 PASID。如果此位清零且该功能收到带 PASID 的 PRG
-响应消息,则功能行为未定义。如果此位置位且该功能在对应页请求具有 PASID
-时收到无 PASID 的 PRG 响应消息,则功能行为未定义。如果该功能不支持
+响应消息，则功能行为未定义。如果此位置位且该功能在对应页请求具有 PASID
+时收到无 PASID 的 PRG 响应消息，则功能行为未定义。如果该功能不支持
 PASID,则此位为 RsvdZ。</td>
 <td>RO</td>
 </tr>
@@ -5546,19 +6700,19 @@ PASID,则此位为 RsvdZ。</td>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-5-2"></a></p>
 <h3
-id="1052-page-request-extended-capability-structure---1052-页请求扩展能力结构-">10.5.2
-Page Request Extended Capability Structure § | 10.5.2 页请求扩展能力结构
-§</h3>
+id="1052-page-request-extended-capability-structure--1052-页请求扩展能力结构">10.5.2
+Page Request Extended Capability Structure | 10.5.2
+页请求扩展能力结构</h3>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5609,42 +6763,42 @@ buffering.</p>
 <p>此寄存器为只读。</p>
 <p>此寄存器包含关联页请求接口被允许发出(在任意给定实例具有未完成)的未完成页请求消息数。</p>
 <p>页请求接口具有的未完成 PRG
-数小于或等于其已发出的请求消息数。例如,如果系统软件为页请求接口分配 1000
-条消息,则单个 PRG 可以使用全部 1000 个可能的请求。反之,每个 PRG
-一个请求,页请求接口将在消耗其所有页请求信用之前耗尽 PRG 索引(只有 512
+数小于或等于其已发出的请求消息数。例如，如果系统软件为页请求接口分配
+1000 条消息，则单个 PRG 可以使用全部 1000 个可能的请求。反之，每个 PRG
+一个请求，页请求接口将在消耗其所有页请求信用之前耗尽 PRG 索引(只有 512
 个)。页请求接口必须为其任何给定 PRG
-预分配其请求可用性,即,在发出任何请求之前,给定 PRG
+预分配其请求可用性，即,在发出任何请求之前，给定 PRG
 所需的所有请求必须可用。</p>
-<p>启用影子功能时,此分配适用于包含此能力的功能及其已启用的影子功能(参见第
+<p>启用影子功能时，此分配适用于包含此能力的功能及其已启用的影子功能(参见第
 7.9.21 节)。</p>
 <p>此寄存器为读/写。如果在 Enable
-标志置位时更改此寄存器,则行为未定义。如果此寄存器写入的值大于
+标志置位时更改此寄存器，则行为未定义。如果此寄存器写入的值大于
 Outstanding Page Request Capacity,则行为未定义。默认值为 0。</p>
 <p>支持 PASID 时,Request Allocation
-仍与功能关联,并在功能以及该功能的所有 PASID 之间共享。</p>
+仍与功能关联，并在功能以及该功能的所有 PASID 之间共享。</p>
 <p>停止 PASID 不会影响该 PASID 使用的任何分配。系统应继续以 PRG
-响应消息进行响应,以将页请求和 PRG 索引资源返回给功能(参见 § 第 10.4.2.1
+响应消息进行响应，以将页请求和 PRG 索引资源返回给功能(参见 § 第 10.4.2.1
 节)。</p>
-<p>停止标记消息消耗缓冲,但不包含在此分配中(参见 § 第 10.4.1.2.1
-节)。系统应为停止标记消息提供额外的缓冲,并应限制未完成停止标记消息的数量,以避免超出此额外缓冲。</p>
+<p>停止标记消息消耗缓冲，但不包含在此分配中(参见 § 第 10.4.1.2.1
+节)。系统应为停止标记消息提供额外的缓冲，并应限制未完成停止标记消息的数量，以避免超出此额外缓冲。</p>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-5-2-1"></a></p>
 <h4
-id="10521-page-request-extended-capability-header-offset-00h---10521-页请求扩展能力头-offset-00h-">10.5.2.1
-Page Request Extended Capability Header (Offset 00h) § | 10.5.2.1
-页请求扩展能力头 (Offset 00h) §</h4>
-<p>table&gt;</p>
+id="10521-page-request-extended-capability-header-offset-00h--10521-页请求扩展能力头-offset-00h">10.5.2.1
+Page Request Extended Capability Header (Offset 00h) | 10.5.2.1
+页请求扩展能力头 (Offset 00h)</h4>
+<table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5654,7 +6808,13 @@ Page Request Extended Capability Header (Offset 00h) § | 10.5.2.1
 <blockquote>
 <p><strong>Figure 10-38.</strong> Page Request Extended Capability
 Structure (registers continued)
-<img src="figures/chapter_10/fig_1607_1.png" width="700"></p>
+<img src="figures/chapter_10/fig_1607_1.png" width="700"> <strong>图
+10-38.</strong> 页请求 (Page Request) Extended Capability Structure
+(registers continued)</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1607_1.png" width="700">
+
 </blockquote>
 <p>This section describes the Outstanding Page Request Capacity and
 Outstanding Page Request Allocation registers of the Page Request
@@ -5706,42 +6866,43 @@ Outstanding Page Request Allocation 寄存器。</p>
 <p>Outstanding Page Request Allocation 寄存器(Offset
 0Ch)包含关联页请求接口被允许发出的未完成页请求消息数。</p>
 <p>页请求接口具有的未完成 PRG
-数小于或等于其已发出的请求消息数。例如,如果系统软件为页请求接口分配 1000
-条消息,则单个 PRG 可以使用全部 1000 个可能的请求。反之,每个 PRG
-一个请求,页请求接口将在消耗其所有页请求信用之前耗尽 PRG 索引(只有 512
+数小于或等于其已发出的请求消息数。例如，如果系统软件为页请求接口分配
+1000 条消息，则单个 PRG 可以使用全部 1000 个可能的请求。反之，每个 PRG
+一个请求，页请求接口将在消耗其所有页请求信用之前耗尽 PRG 索引(只有 512
 个)。页请求接口必须为其任何给定 PRG
-预分配其请求可用性,即,在发出任何请求之前,给定 PRG
+预分配其请求可用性，即,在发出任何请求之前，给定 PRG
 所需的所有请求必须可用。</p>
-<p>启用影子功能时,此分配适用于包含此能力的功能及其已启用的影子功能(参见第
+<p>启用影子功能时，此分配适用于包含此能力的功能及其已启用的影子功能(参见第
 7.9.21 节)。</p>
 <p>此寄存器为读/写。如果在 Enable
-标志置位时更改此寄存器,则行为未定义。如果此寄存器写入的值大于
+标志置位时更改此寄存器，则行为未定义。如果此寄存器写入的值大于
 Outstanding Page Request Capacity,则行为未定义。默认值为 0。</p>
 <p>支持 PASID 时,Request Allocation
-仍与功能关联,并在功能以及该功能的所有 PASID 之间共享。</p>
+仍与功能关联，并在功能以及该功能的所有 PASID 之间共享。</p>
 <p>停止 PASID 不会影响该 PASID 使用的任何分配。系统应继续以 PRG
-响应消息进行响应,以将页请求和 PRG 索引资源返回给功能(参见 § 第 10.4.2.1
+响应消息进行响应，以将页请求和 PRG 索引资源返回给功能(参见 § 第 10.4.2.1
 节)。</p>
-<p>停止标记消息消耗缓冲,但不包含在此分配中(参见 § 第 10.4.1.2.1
-节)。系统应为停止标记消息提供额外的缓冲,并应限制未完成停止标记消息的数量,以避免超出此额外缓冲。</p>
+<p>停止标记消息消耗缓冲，但不包含在此分配中(参见 § 第 10.4.1.2.1
+节)。系统应为停止标记消息提供额外的缓冲，并应限制未完成停止标记消息的数量，以避免超出此额外缓冲。</p>
+<img src="figures/chapter_10/fig_1607_1.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-5-2-2"></a></p>
 <h4
-id="10522-page-request-control-register-offset-04h---10522-页请求控制寄存器-offset-04h-">10.5.2.2
-Page Request Control Register (Offset 04h) § | 10.5.2.2 页请求控制寄存器
-(Offset 04h) §</h4>
+id="10522-page-request-control-register-offset-04h--10522-页请求控制寄存器-offset-04h">10.5.2.2
+Page Request Control Register (Offset 04h) | 10.5.2.2 页请求控制寄存器
+(Offset 04h)</h4>
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🇨🇳 中文</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
 </tr>
 </thead>
 <tbody>
@@ -5784,23 +6945,23 @@ of the resulting PRG Response Message.</p>
 <td style="background-color:#e8e8e8">
 
 <p>停止标记消息的位布局如 § 图 10-25 所示(参见 § 第 10.4.1.2.1 节)。</p>
-<p>停止使用特定 PASID 时,可以可选地使用停止标记消息 (Stop Marker
-Message),以避免在功能指示特定 PASID 的停止请求已完成之前等待 PRG
+<p>停止使用特定 PASID 时，可以可选地使用停止标记消息 (Stop Marker
+Message)，以避免在功能指示特定 PASID 的停止请求已完成之前等待 PRG
 响应消息。</p>
 <p>功能使用页请求消息向其关联主机发送页请求。页请求指示功能所需的页。</p>
 <p>页请求接口适用于"主"功能及其已启用的影子功能(其中"主"是同时包含 Page
 Request Extended Capability 和 Shadow Function Extended Capability
 的功能)。单个 PRG 的所有页请求消息必须具有相同的 Requester
-ID。启用影子功能时,建议页请求消息使用"主"功能的 Requester ID。</p>
+ID。启用影子功能时，建议页请求消息使用"主"功能的 Requester ID。</p>
 <p>PRG 响应消息是由 ID 路由回请求功能的 PCIe
 消息请求。系统软件使用它来通知功能与相应 PRG
-关联的页请求已得到满足。页请求机制不保证任何请求完成顺序,所有请求本质上独立于所有其他并发未完成请求。</p>
-<p>当功能完成 Invalidate 操作时,它将向 TA 发送一个或多个 Invalidate
-完成消息。这些消息必须使用从 Invalidate 请求中提取的信息标记,以使 TA
+关联的页请求已得到满足。页请求机制不保证任何请求完成顺序，所有请求本质上独立于所有其他并发未完成请求。</p>
+<p>当功能完成 Invalidate 操作时，它将向 TA 发送一个或多个 Invalidate
+完成消息。这些消息必须使用从 Invalidate 请求中提取的信息标记，以使 TA
 能够将 Invalidate 完成与 Invalidate 请求相关联。</p>
-<p>对于 SR-IOV 设备,即使页请求接口由其 PF 和 VF
-共享,它也会在页请求消息的 Requester ID 字段中发送请求功能的 ID(PF 或
-VF),并且请求功能的 ID 必须位于结果 PRG 响应消息的 Destination Device ID
+<p>对于 SR-IOV 设备，即使页请求接口由其 PF 和 VF
+共享，它也会在页请求消息的 Requester ID 字段中发送请求功能的 ID(PF 或
+VF)，并且请求功能的 ID 必须位于结果 PRG 响应消息的 Destination Device ID
 字段中。</p>
 </td>
 </tr>
@@ -5809,26 +6970,24 @@ VF),并且请求功能的 ID 必须位于结果 PRG 响应消息的 Destination 
 
 <blockquote>
 <p><strong>Figure 10-39.</strong> Stop Marker Message - Flit Mode
-(reference)
-<img src="figures/chapter_10/fig_1608_1.png" width="700"></p>
+(reference) <img src="figures/chapter_10/fig_1608_1.png" width="700">
+<strong>图 10-39.</strong> 停止标记 (Stop Marker) Message - Flit 模式
+(reference)</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1608_1.png" width="700">
+
 </blockquote>
 </div>
 
-<p><a href="#-本章目录-table-of-contents">⬆️ 返回目录</a></p>
+<p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1599</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1600</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1601</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1602</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1603</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1604</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1605</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1606</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1607</p>
-<p>&lt;&lt;&lt;PAGE_BREAK&gt;&gt;&gt; page_1608</p>
-<hr />
-<h2 id="bookmark_tabs-本章目录-table-of-contents--auto-generated">📑
-本章目录 (Table of Contents) — Auto-Generated</h2>
+<h2
+id="bookmark_tabs-本章目录-table-of-contents--auto-generated----------">📑
+本章目录 (Table of Contents) — Auto-Generated <!-- 📄 Page 1599 -->
+<!-- 📄 Page 1600 --> <!-- 📄 Page 1601 --> <!-- 📄 Page 1602 -->
+<!-- 📄 Page 1603 --> <!-- 📄 Page 1604 --> <!-- 📄 Page 1605 -->
+<!-- 📄 Page 1606 --> <!-- 📄 Page 1607 --> <!-- 📄 Page 1608 --></h2>
 <ul>
 <li><a href="#sec-10-1">10.1 ATS Architectural Overview § | 10.1 ATS
 架构概述 §</a></li>

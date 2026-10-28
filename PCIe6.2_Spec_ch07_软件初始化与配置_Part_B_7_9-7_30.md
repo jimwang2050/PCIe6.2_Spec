@@ -1,4 +1,4 @@
-<a id="sec-7-9-0"></a>
+<a id="sec-7-9"></a>
 ## 7.9 Additional PCI and PCIe Capabilities | 7.9 其他 PCI 和 PCIe 能力
 
 <table>
@@ -24,7 +24,7 @@ This section, contains a description of additional PCI and PCIe capabilities tha
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -58,14 +58,11 @@ The Virtual Channel Extended Capability (VC Extended Capability) is an optional 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1264 -->
----
-
-<table>
+<table> <!-- 📄 Page 1264 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -108,7 +105,7 @@ VC 扩展能力结构允许出现在所有单 Function 设备的扩展配置空�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -237,7 +234,7 @@ Port Arbitration Table (n)(端口仲裁表 (n))
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -268,7 +265,7 @@ Refer to § Section 7.6.3 for a description of the PCI Express Extended Capabili
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -317,15 +314,14 @@ Next Capability Offset(下一能力偏移量)
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
 7.9.1.1 Virtual Channel Extended Capability Header (Offset 00h) §
 §
-§
+§ <!-- 📄 Page 1265 -->
 
-<!-- 📄 Page 1265 -->
 ---
 
 **Table 7-201. Virtual Channel Extended Capability Header | 表 7-201 虚通道扩展能力头**
@@ -385,7 +381,7 @@ RO
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -417,14 +413,11 @@ Port VC Capability Register 1 描述与 PCI Express Port 关联的虚通道的�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1266 -->
----
-
-**Figure 7-223. Port VC Capability Register 1 | 图 7-223 Port VC 能力寄存器 1**
+**Figure 7-223. Port VC Capability Register 1 | 图 7-223 Port VC 能力寄存器 1** <!-- 📄 Page 1266 -->
 
 <table>
 <thead>
@@ -487,7 +480,7 @@ RsvdP(保留，保留置位)
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -542,7 +535,7 @@ RO
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -615,7 +608,7 @@ RO
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -642,7 +635,7 @@ Port VC Capability Register 2 提供有关与 PCI Express Port 关联的虚通�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -689,7 +682,7 @@ VC Arbitration Table Offset(VC 仲裁表偏移量)
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -738,18 +731,11 @@ RO
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-
----
-
----
-<!-- 📄 Page 1267 -->
----
-
-<a id="sec-7-9-1-3"></a>
+<a id="sec-7-9-1-3"></a> <!-- 📄 Page 1267 -->
 ## 7.9.1.3 Port VC Capability Register 2 (Offset 08h) | 端口 VC 能力寄存器 2 (偏移量 08h)
 
 <table>
@@ -849,7 +835,7 @@ RsvdP
 | 3:1 | VC Arbitration Select (VC 仲裁选择) — 软件通过选择 Port VC Capability Register 2 中 VC Arbitration Capability 字段所指示的支持的 VC 仲裁方案之一来配置 VC 仲裁。该字段对所有 Function 有效。<br>该字段的允许值是与 VC Arbitration Capability 字段中置位位之一相对应的数字。<br>当 LPVC 组中启用的 VC 多于一个时,该字段不可修改。 | RW |
 | 4 | All VCs Enabled (使能所有 VC) — 置位该位表示将被端口使用的所有 VC 均已启用。置位该位允许硬件在已启用的 VC 之间分配已分配的缓冲区资源。 | RW |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -875,6 +861,42 @@ Attributes
 Setting this bit is optional. If this bit remains Clear and some VC Resources are never enabled, performance may be affected but the Link and all enabled VCs must operate correctly.
 Behavior is undefined if this bit is Set and any VC Enable bit in this capability changes value.
 Default value of this bit is 0b.
+
+
+</td>
+<td style="background-color:#e8e8e8">
+
+位位置
+寄存器描述
+属性
+置位该位是可选的。如果该位保持清除状态且某些 VC 资源永远不被启用，则性能可能受到影响，但链路 (Link) 和所有已启用的 VC 必须正确运行。
+如果该位置位且此能力中的任何 VC Enable 位改变了值，则行为未定义。
+该位的默认值为 0b。
+
+
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<a id="sec-7-9-1-4-table"></a>
+
+<a id="sec-7-9-1-5"></a>
+## 7.9.1.5 Port VC Status Register (Offset 0Eh) | 端口 VC 状态寄存器 (偏移量 0Eh)
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
 The Port VC Status Register provides status of the configuration of Virtual Channels associated with a Port. § Figure 7-226 details allocation of register fields in the Port VC Status Register; § Table 7-205 provides the respective bit definitions.
 
 0
@@ -888,12 +910,6 @@ Figure 7-226 Port VC Status Register
 </td>
 <td style="background-color:#e8e8e8">
 
-位位置
-寄存器描述
-属性
-置位该位是可选的。如果该位保持清除状态且某些 VC 资源永远不被启用，则性能可能受到影响，但链路 (Link) 和所有已启用的 VC 必须正确运行。
-如果该位置位且此能力中的任何 VC Enable 位改变了值，则行为未定义。
-该位的默认值为 0b。
 Port VC Status Register (端口 VC 状态寄存器) 提供与端口关联的虚通道 (Virtual Channels) 配置的状态。§ 图 7-226 详细说明了 Port VC Status Register 中各寄存器字段的分配;§ 表 7-205 给出了相应的位定义。
 
 0
@@ -908,10 +924,6 @@ RsvdZ
 </tr>
 </tbody>
 </table>
-</div>
-
-
-<a id="sec-7-9-1-4-table"></a>
 
 **Table 7-205 Port VC Status Register | 表 7-205 端口 VC 状态寄存器**
 
@@ -927,21 +939,11 @@ The VC Resource Capability Register describes the capabilities and configuration
 
 VC Resource Capability Register (VC 资源能力寄存器) 描述特定虚通道资源的能力和配置。§ 图 7-227 详细说明了 VC Resource Capability Register 中各寄存器字段的分配;§ 表 7-206 给出了相应的位定义。
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1268 -->
----
-
----
-<!-- 📄 Page 1269 -->
----
-
-<a id="sec-7-9-1-5"></a>
-## 7.9.1.5 Port VC Status Register (Offset 0Eh) | 端口 VC 状态寄存器 (偏移量 0Eh)
-
-<a id="sec-7-9-1-6"></a>
+<a id="sec-7-9-1-6"></a> <!-- 📄 Page 1268 --> <!-- 📄 Page 1269 -->
 ## 7.9.1.6 VC Resource Capability Register | VC 资源能力寄存器
 
 <table>
@@ -1037,15 +1039,12 @@ Port Arbitration Table Offset (端口仲裁表偏移量)
 | 15 | Reject Snoop Transactions (拒绝探测事务) — 当清除时,在 TLP (事务层包) Header 中设置了或未设置 No Snoop 位的事务都允许在该 VC 上传输。当置位时,对于任何 No Snoop 属性适用但 TLP Header 中未设置该属性的事务,允许作为 Unsupported Request (不支持的请求) 拒绝。<br>有关 No Snoop 属性适用位置的信息,请参阅 § Section 2.2.6.5。该位对 Root Port 和 RCRB 有效;对 Endpoint 或 Switch Port 无效。 | HwInit |
 | 22:16 | Maximum Time Slots (最大时间槽数) — 指示当 VC 资源被配置用于基于时间的 WRR 端口仲裁时,所支持的最大时间槽数 (减一)。例如,该字段中值为 000 0000b 表示支持的最大时间槽数为 1,值为 111 1111b 表示支持的最大时间槽数为 128。该字段对所有 Switch Port、支持点对点流量的 Root Port 和 RCRB 有效,但对不支持点对点流量的 Endpoint 或 Root Port 无效。此外,仅当 Port Arbitration Capability 字段指示 VC 资源支持基于时间的 WRR 端口仲裁时,该字段才有效。 | HwInit |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1270 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1270 -->
 <table>
 <thead>
 <tr>
@@ -1158,14 +1157,11 @@ VC Enable (VC 使能)
 | 7:0 | TC/VC Map (TC/VC 映射) — 该字段指示映射到该 VC 资源的 TC (流量类, Traffic Class)。该字段对所有 Function 有效。<br>该字段内的位位置对应 TC 值。例如,当该字段中位 7 置位时,TC7 被映射到该 VC 资源。当该字段中有多个位置位时,表示有多个 TC 被映射到该 VC 资源。<br>为了从已启用 VC 的 TC/VC 映射中移除一个或多个 TC,软件必须确保没有新的或未完成的使用这些 TC 标签的事务被定向到给定的 Link。<br>该字段的默认值为第一个 VC 资源的 FFh,以及其他 VC 资源的 00h。<br>注意:<br>该字段的位 0 是只读的。对于默认 VC0 必须置位,对于所有其他已启用 VC 必须清除。 | RW (参见注释中的例外) |
 | 16 | Load Port Arbitration Table (加载端口仲裁表) — 当置位时,该位从 VC 资源的 Port Arbitration Table 更新端口仲裁逻辑。该位对所有 Switch Port、支持点对点流量的 Root Port 和 RCRB 有效,但对不支持点对点流量的 Endpoint 或 Root Port 无效。此外,该位仅当所选端口仲裁方案使用端口仲裁表时 (即 Port Arbitration Select 所选 Port Arbitration Capability 字段中的位置位) 才有效。<br>软件置位该位以通知硬件使用 Port Arbitration Table 中存储的新值更新端口仲裁逻辑;清除该位无效。软件通过 Port Arbitration Table Status 位来确认 Port Arbitration Table 的新值是否已被仲裁逻辑完全锁存。<br>读该位时始终返回 0b。<br>该位的默认值为 0b。 | RW |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1271 -->
----
-
-<table>
+<table> <!-- 📄 Page 1271 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -1278,15 +1274,12 @@ RW / RO / RsvdP
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1272 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1272 -->
 <table>
 <thead>
 <tr>
@@ -1377,14 +1370,11 @@ RsvdZ
 | 0 | Port Arbitration Table Status (端口仲裁表状态) — 该位指示与 VC 资源关联的端口仲裁表的一致性状态。该位对 RCRB、支持点对点流量的 Root Port 和 Switch Port 有效,但对不支持点对点流量的 Endpoint 或 Root Port 无效。此外,该位仅当所选端口仲裁为该 VC 资源使用端口仲裁表时才有效。<br>当端口仲裁表的任何条目被软件写入时,该位由硬件置位。在软件置位 Load Port Arbitration Table 位之后,当硬件完成加载端口仲裁表中存储的值时,该位由硬件清除。<br>该位的默认值为 0b。 | RO |
 | 1 | VC Negotiation Pending (VC 协商挂起) — 该位指示虚通道协商 (初始化或禁用) 是否处于挂起状态。该位对所有 Function 有效。<br>该位的值仅在 Link 处于 DL_Active 状态且虚通道已启用 (其 VC Enable 位置位) 时才有定义。<br>当该位由硬件置位时,表示 VC 资源尚未完成协商过程。该位在 VC 协商完成后 (从 FC_INIT2 状态退出时) 由硬件清除。对于 VC0,允许将该位硬连线为 0b。<br>在使用虚通道之前,软件必须检查链路上两个组件中该虚通道的 VC Negotiation Pending 位是否都已清除。 | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1273 -->
----
-
-The VC Arbitration Table is a read-write register array that is used to store the arbitration table for VC Arbitration. This register array is valid for all Functions when the selected VC Arbitration uses a WRR table. Functions that do not support WRR VC arbitration are not required to implement a VC Arbitration Table. If it exists, the VC Arbitration Table is located by the VC Arbitration Table Offset field.
+The VC Arbitration Table is a read-write register array that is used to store the arbitration table for VC Arbitration. This register array is valid for all Functions when the selected VC Arbitration uses a WRR table. Functions that do not support WRR VC arbitration are not required to implement a VC Arbitration Table. If it exists, the VC Arbitration Table is located by the VC Arbitration Table Offset field. <!-- 📄 Page 1273 -->
 
 The VC Arbitration Table is a register array with fixed-size entries of 4 bits. § Figure 7-230 depicts the table structure of an example VC Arbitration Table with 32 phases. Each 4-bit table entry corresponds to a phase within a WRR arbitration period. The definition of table entry is depicted in § Table 7-209. The lower 3 bits (bits 0-2) contain the VC ID value, indicating that the corresponding phase within the WRR arbitration period is assigned to the Virtual Channel indicated by the VC ID (must be a valid VC ID that corresponds to an enabled VC).
 
@@ -1421,14 +1411,11 @@ VC Arbitration Table 是一个固定大小为 4 位条目的寄存器数组。§
 <a id="sec-7-9-1-9"></a>
 ## 7.9.1.9 VC Arbitration Table | VC 仲裁表
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1274 -->
----
-
-**Table 7-210 Length of the VC Arbitration Table | 表 7-210 VC 仲裁表的长度**
+**Table 7-210 Length of the VC Arbitration Table | 表 7-210 VC 仲裁表的长度** <!-- 📄 Page 1274 -->
 
 | VC Arbitration Select | VC Arbitration Table Length |
 |-----------------------|-----------------------------|
@@ -1473,14 +1460,11 @@ Port Arbitration Table 表示一个端口仲裁周期。§ 图 7-231 展示了�
 <a id="sec-7-9-1-10"></a>
 ## 7.9.1.10 Port Arbitration Table | 端口仲裁表
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1275 -->
----
-
-> **Figure 7-231.** Example Port Arbitration Table with 128 Phases and 2-bit Table Entries
+> **Figure 7-231.** Example Port Arbitration Table with 128 Phases and 2-bit Table Entries <!-- 📄 Page 1275 -->
 > **图 7-231.** 具有 128 个阶段和 2 位表项的端口仲裁表示例
 > <img src="figures/chapter_07/fig_1275_1_tight.png" width="700">
 
@@ -1519,14 +1503,11 @@ Multi-Function Virtual Channel Extended Capability (多功能虚通道扩展能�
 <a id="sec-7-9-2"></a>
 ## 7.9.2 Multi-Function Virtual Channel Extended Capability | 多功能虚通道扩展能力
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1276 -->
----
-
-> **Figure 7-232.** MFVC Capability Structure
+> **Figure 7-232.** MFVC Capability Structure <!-- 📄 Page 1276 -->
 > **图 7-232.** MFVC 能力结构
 > <img src="figures/chapter_07/fig_1276_1_tight.png" width="700">
 
@@ -1558,9 +1539,7 @@ Refer to § Section 7.6.3 for a description of the PCI Express Extended Capabili
 | 19:16 | Capability Version (能力版本) — 该字段是 PCI-SIG 定义的版本号,用于指示所表示能力结构的版本。<br>对于本版本的规范,必须为 1h。 | RO |
 | 31:20 | Next Capability Offset (下一能力偏移量) — 该字段包含到下一个 PCI Express Capability structure 的偏移量;如果链表中不存在其他项,则为 000h。<br>对于在配置空间中实现的扩展能力,该偏移量相对于 PCI 兼容配置空间 (PCI-compatible Configuration Space) 的起始处,因此必须始终为 000h (用于终止能力列表) 或大于 0FFh。 | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
-
----
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -1580,7 +1559,7 @@ Refer to § Section 7.6.3 for a description of the PCI Express Extended Capabili
 
 The MFVC Port VC Capability Register 1 describes the configuration of the Virtual Channels associated with a PCI Express Port of the Multi-Function Device. Figure 7-234 details allocation of register fields in the MFVC Port VC Capability Register 1; Table 7-213 provides the respective bit definitions.
 
-```
+<pre>
  0
  2
  Extended VC Count
@@ -1600,7 +1579,7 @@ The MFVC Port VC Capability Register 1 describes the configuration of the Virtua
  12
  31
  RsvdP
-```
+</pre>
 
 Figure 7-234 MFVC Port VC Capability Register 1
 
@@ -1609,7 +1588,7 @@ Figure 7-234 MFVC Port VC Capability Register 1
 
 MFVC Port VC Capability Register 1 (MFVC 端口 VC 能力寄存器 1) 描述与多功能设备 (Multi-Function Device) 的 PCI Express 端口相关联的虚通道 (Virtual Channels) 的配置。图 7-234 详细说明了 MFVC Port VC Capability Register 1 中各寄存器字段的分配;表 7-213 给出了相应的位定义。
 
-```
+<pre>
  0
  2
  Extended VC Count (扩展 VC 计数)
@@ -1629,7 +1608,7 @@ MFVC Port VC Capability Register 1 (MFVC 端口 VC 能力寄存器 1) 描述与�
  12
  31
  RsvdP
-```
+</pre>
 
 图 7-234 MFVC Port VC Capability Register 1 (MFVC 端口 VC 能力寄存器 1)
 
@@ -1656,14 +1635,11 @@ MFVC Port VC Capability Register 1 (MFVC 端口 VC 能力寄存器 1) 描述与�
 | 9:8 | Reference Clock (参考时钟) — 指示支持基于时间的 WRR Function 仲裁的虚通道的参考时钟。<br>已定义的编码为:<br>00b = 100 ns 参考时钟<br>01b - 11b = 保留 | RO |
 | 11:10 | Function Arbitration Table Entry Size (Function 仲裁表条目大小) — 指示设备中 Function 仲裁表条目的大小(以位为单位)。<br>已定义的编码为:<br>00b = Function 仲裁表条目大小为 1 位<br>01b = Function 仲裁表条目大小为 2 位<br>10b = Function 仲裁表条目大小为 4 位<br>11b = Function 仲裁表条目大小为 8 位 | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1277 -->
----
-
-<a id="sec-7-9-2-2"></a>
+<a id="sec-7-9-2-2"></a> <!-- 📄 Page 1277 -->
 ## 7.9.2.2 MFVC Port VC Capability Register 1 (Offset 04h) | MFVC 端口 VC 能力寄存器 1 (偏移量 04h)
 
 
@@ -1681,7 +1657,7 @@ MFVC Port VC Capability Register 1 (MFVC 端口 VC 能力寄存器 1) 描述与�
 
 The MFVC Port VC Capability Register 2 provides further information about the configuration of the Virtual Channels associated with a PCI Express Port of the Multi-Function Device. Figure 7-235 details allocation of register fields in the MFVC Port VC Capability Register 2; Table 7-214 provides the respective bit definitions.
 
-```
+<pre>
  0
  7
  VC Arbitration Capability
@@ -1691,7 +1667,7 @@ The MFVC Port VC Capability Register 2 provides further information about the co
  24
  31
  VC Arbitration Table Offset
-```
+</pre>
 
 Figure 7-235 MFVC Port VC Capability Register 2
 
@@ -1700,7 +1676,7 @@ Figure 7-235 MFVC Port VC Capability Register 2
 
 MFVC Port VC Capability Register 2 (MFVC 端口 VC 能力寄存器 2) 提供关于与多功能设备的 PCI Express 端口相关联的虚通道配置的更多信息。图 7-235 详细说明了 MFVC Port VC Capability Register 2 中各寄存器字段的分配;表 7-214 给出了相应的位定义。
 
-```
+<pre>
  0
  7
  VC Arbitration Capability (VC 仲裁能力)
@@ -1710,7 +1686,7 @@ MFVC Port VC Capability Register 2 (MFVC 端口 VC 能力寄存器 2) 提供关�
  24
  31
  VC Arbitration Table Offset (VC 仲裁表偏移量)
-```
+</pre>
 
 图 7-235 MFVC Port VC Capability Register 2 (MFVC 端口 VC 能力寄存器 2)
 
@@ -1735,14 +1711,11 @@ MFVC Port VC Capability Register 2 (MFVC 端口 VC 能力寄存器 2) 提供关�
 | 7:0 | VC Arbitration Capability (VC 仲裁能力) — 指示设备针对 LPVC 组所支持的 VC 仲裁类型。该字段对所有报告 Low Priority Extended VC Count 大于 0 的设备有效。<br>该字段中的每个位位置对应于下文定义的一种 VC 仲裁能力。当该字段中有多于 1 位置位时,指示该设备可被配置为提供不同的 VC 仲裁服务。<br>已定义的位位置为:<br>位 0 = 硬件固定仲裁方案,例如轮询 (Round Robin)<br>位 1 = 加权轮询 (WRR) 仲裁,32 个相位<br>位 2 = WRR 仲裁,64 个相位<br>位 3 = WRR 仲裁,128 个相位<br>位 4-7 = 保留 | RO |
 | 31:24 | VC Arbitration Table Offset (VC 仲裁表偏移量) — 指示 MFVC VC Arbitration Table (MFVC VC 仲裁表) 的位置。<br>该字段包含以 DQWORD (16 字节) 为单位的表相对于 MFVC 扩展能力结构 (MFVC Extended Capability structure) 基址的零基偏移量。值为 00h 表示该表不存在。 | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1278 -->
----
-
-<a id="sec-7-9-2-3"></a>
+<a id="sec-7-9-2-3"></a> <!-- 📄 Page 1278 -->
 ## 7.9.2.3 MFVC Port VC Capability Register 2 (Offset 08h) | MFVC 端口 VC 能力寄存器 2 (偏移量 08h)
 
 <table>
@@ -1758,7 +1731,7 @@ MFVC Port VC Capability Register 2 (MFVC 端口 VC 能力寄存器 2) 提供关�
 
 Figure 7-236 details allocation of register fields in the Port VC Control register; Table 7-215 provides the respective bit definitions.
 
-```
+<pre>
  0
  Load VC Arbitration Table
  1
@@ -1769,7 +1742,7 @@ Figure 7-236 details allocation of register fields in the Port VC Control regist
  5
  15
  RsvdP
-```
+</pre>
 
 Figure 7-236 MFVC Port VC Control Register
 
@@ -1778,7 +1751,7 @@ Figure 7-236 MFVC Port VC Control Register
 
 图 7-236 详细说明了 Port VC Control Register (端口 VC 控制寄存器) 中各寄存器字段的分配;表 7-215 给出了相应的位定义。
 
-```
+<pre>
  0
  Load VC Arbitration Table (加载 VC 仲裁表)
  1
@@ -1789,7 +1762,7 @@ Figure 7-236 MFVC Port VC Control Register
  5
  15
  RsvdP
-```
+</pre>
 
 图 7-236 MFVC Port VC Control Register (MFVC 端口 VC 控制寄存器)
 
@@ -1798,7 +1771,7 @@ Figure 7-236 MFVC Port VC Control Register
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -1844,14 +1817,11 @@ MFVC Port VC Status Register (MFVC 端口 VC 状态寄存器) 提供与多功能
 | 3:1 | VC Arbitration Select (VC 仲裁选择) — 软件通过选择 MFVC Port VC Capability Register 2 中 VC Arbitration Capability 字段所指示的支持的 VC 仲裁方案之一来配置 VC 仲裁。<br>该字段的允许值是与 VC Arbitration Capability 字段中置位位之一相对应的数字。<br>当 LPVC 组中启用的 VC 多于一个时,该字段不可修改。 | RW |
 | 4 | All VCs Enabled (使能所有 VC) — 置位该位表示将被端口使用的所有 VC 均已启用。置位该位允许硬件在已启用的 VC 之间分配已分配的缓冲区资源。<br>置位该位是可选的。如果该位保持清除状态且某些 VC 资源永远不被启用,则性能可能受到影响,但链路 (Link) 和所有已启用的 VC 必须正确运行。<br>如果该位置位且此能力中的任何 VC Enable 位改变了值,则行为未定义。<br>该位的默认值为 0b。 | RW |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1279 -->
----
-
-<a id="sec-7-9-2-5"></a>
+<a id="sec-7-9-2-5"></a> <!-- 📄 Page 1279 -->
 ## 7.9.2.5 MFVC Port VC Status Register (Offset 0Eh) | MFVC 端口 VC 状态寄存器 (偏移量 0Eh)
 
 <table>
@@ -1865,26 +1835,26 @@ MFVC Port VC Status Register (MFVC 端口 VC 状态寄存器) 提供与多功能
 <tr>
 <td>
 
-```
+<pre>
  0
  VC Arbitration Table Status
  1
  15
  RsvdZ
-```
+</pre>
 
 Figure 7-237 MFVC Port VC Status Register
 
 </td>
 <td style="background-color:#e8e8e8">
 
-```
+<pre>
  0
  VC Arbitration Table Status (VC 仲裁表状态)
  1
  15
  RsvdZ
-```
+</pre>
 
 图 7-237 MFVC Port VC Status Register (MFVC 端口 VC 状态寄存器)
 
@@ -1905,14 +1875,11 @@ Figure 7-237 MFVC Port VC Status Register
 |--------|------------|------|
 | 0 | VC Arbitration Table Status (VC 仲裁表状态) — 指示 MFVC VC Arbitration Table 的一致性状态。当所选 VC 使用 MFVC VC Arbitration Table 时,该位有效。<br>当 MFVC VC 仲裁表的任何条目被软件写入时,该位由硬件置位。在软件置位 MFVC Port VC Control Register 中的 Load VC Arbitration Table 位之后,当硬件完成加载 MFVC VC 仲裁表中存储的值时,该位由硬件清除。<br>该位的默认值为 0b。 | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1280 -->
----
-
-<a id="sec-7-9-2-6"></a>
+<a id="sec-7-9-2-6"></a> <!-- 📄 Page 1280 -->
 ## 7.9.2.6 MFVC VC Resource Capability Register | MFVC VC 资源能力寄存器
 
 
@@ -1930,7 +1897,7 @@ Figure 7-237 MFVC Port VC Status Register
 
 The MFVC VC Resource Capability Register describes the capabilities and configuration of a particular Virtual Channel resource. Figure 7-238 details allocation of register fields in the MFVC VC Resource Capability Register; Table 7-217 provides the respective bit definitions.
 
-```
+<pre>
  0
  7
  Function Arbitration Capability
@@ -1945,7 +1912,7 @@ The MFVC VC Resource Capability Register describes the capabilities and configur
  24
  31
  Function Arbitration Table Offset
-```
+</pre>
 
 Figure 7-238 MFVC VC Resource Capability Register
 
@@ -1954,7 +1921,7 @@ Figure 7-238 MFVC VC Resource Capability Register
 
 MFVC VC Resource Capability Register (MFVC VC 资源能力寄存器) 描述特定虚通道资源的能力和配置。图 7-238 详细说明了 MFVC VC Resource Capability Register 中各寄存器字段的分配;表 7-217 给出了相应的位定义。
 
-```
+<pre>
  0
  7
  Function Arbitration Capability (Function 仲裁能力)
@@ -1969,7 +1936,7 @@ MFVC VC Resource Capability Register (MFVC VC 资源能力寄存器) 描述特�
  24
  31
  Function Arbitration Table Offset (Function 仲裁表偏移量)
-```
+</pre>
 
 图 7-238 MFVC VC Resource Capability Register (MFVC VC 资源能力寄存器)
 
@@ -1996,14 +1963,11 @@ MFVC VC Resource Capability Register (MFVC VC 资源能力寄存器) 描述特�
 | 22:16 | Maximum Time Slots (最大时隙数) — 指示 VC 资源配置为基于时间的 WRR Function 仲裁时能够支持的最大时隙数(减 1)。例如,该字段值为 000 0000b 表示所支持的最大时隙数为 1,值为 111 1111b 表示所支持的最大时隙数为 128。<br>仅当 Function Arbitration Capability 指示 VC 资源支持基于时间的 WRR Function 仲裁时,该字段才有效。 | HwInit |
 | 31:24 | Function Arbitration Table Offset (Function 仲裁表偏移量) — 指示与 VC 资源相关联的 Function Arbitration Table (Function 仲裁表) 的位置。<br>该字段包含以 DQWORD (16 字节) 为单位的表相对于 MFVC 扩展能力结构 (MFVC Extended Capability structure) 基址的零基偏移量。值为 00h 表示该表不存在。 | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1281 -->
----
-
-<a id="sec-7-9-2-7"></a>
+<a id="sec-7-9-2-7"></a> <!-- 📄 Page 1281 -->
 ## 7.9.2.7 MFVC VC Resource Control Register | MFVC VC 资源控制寄存器
 
 <table>
@@ -2019,7 +1983,7 @@ MFVC VC Resource Capability Register (MFVC VC 资源能力寄存器) 描述特�
 
 Figure 7-239 details allocation of register fields in the MFVC VC Resource Control Register; Table 7-218 provides the respective bit definitions.
 
-```
+<pre>
  0
  7
  TC/VC Map
@@ -2044,7 +2008,7 @@ Figure 7-239 details allocation of register fields in the MFVC VC Resource Contr
  Shared Flow Control Usage Limit Enable
  31
  VC Enable
-```
+</pre>
 
 Figure 7-239 MFVC VC Resource Control Register
 
@@ -2053,7 +2017,7 @@ Figure 7-239 MFVC VC Resource Control Register
 
 图 7-239 详细说明了 MFVC VC Resource Control Register (MFVC VC 资源控制寄存器) 中各寄存器字段的分配;表 7-218 给出了相应的位定义。
 
-```
+<pre>
  0
  7
  TC/VC Map (TC/VC 映射)
@@ -2078,7 +2042,7 @@ Figure 7-239 MFVC VC Resource Control Register
  Shared Flow Control Usage Limit Enable (共享流控使用限制使能)
  31
  VC Enable (VC 使能)
-```
+</pre>
 
 图 7-239 MFVC VC Resource Control Register (MFVC VC 资源控制寄存器)
 
@@ -2107,14 +2071,11 @@ Figure 7-239 MFVC VC Resource Control Register
 | 26:24 | VC ID — 该字段为 VC 资源分配一个 VC ID(例外情况参见注释)。<br>当 VC 已启用时,该字段不可修改。<br>注:对于第一个 VC 资源(默认 VC),该字段为只读字段,必须硬连线为 000b。 | RW |
 | 29:27 | Shared Flow Control Usage Limit (共享流控使用限制) — 该字段控制允许给定 FC/VC 消耗的可用共享流控 (Shared Flow Control) 百分比。<br>该限制针对每种流控 (Flow Control) 信用 (Credit) 类型独立应用。例如,如果该字段包含 101b 且 Shared Flow Control Usage Limit Enable 置位,则 Posted TLP (有数据,无完成) 在通过 Tx Gate 时可能不被允许,如果这样做将导致该 VC 消耗超过 62.5% 的可用共享 Posted Header 信用,或导致该 VC 消耗超过 62.5% 的可用共享 Data 信用。<br>如果 Shared Flow Control Usage Limit Enable 清除,则该字段被忽略,且该 VC 被允许消耗所有共享信用。<br>当 Shared Flow Control Usage Limit Enable 置位且该字段包含 000b 时,该 VC 不被允许消耗任何共享信用。<br>当所有 VC 都将 Shared Flow Control Usage Limit Enable 置位且所有 VC 的 Shared Flow Control Limit 值之和小于 100% 时,行为未定义。<br>编码为:<br>000b = 0%<br>001b = 12.5%<br>010b = 25%<br>011b = 37.5%<br>100b = 50%<br>101b = 62.5%<br>110b = 75%<br>111b = 87.5% | RW / RO / RsvdP |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1282 -->
----
-
-<a id="sec-7-9-2-7-continued"></a>
+<a id="sec-7-9-2-7-continued"></a> <!-- 📄 Page 1282 -->
 ## 7.9.2.7 MFVC VC Resource Control Register (continued) | MFVC VC 资源控制寄存器(续)
 
 
@@ -2232,14 +2193,11 @@ Figure 7-240 details allocation of register fields in the MFVC VC Resource Statu
 
 Figure 7-240 MFVC VC Resource Status Register
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1283 -->
----
-
-<a id="sec-7-9-2-8"></a>
+<a id="sec-7-9-2-8"></a> <!-- 📄 Page 1283 -->
 ## 7.9.2.8 MFVC VC Resource Status Register | MFVC VC 资源状态寄存器
 
 <table>
@@ -2250,12 +2208,7 @@ Figure 7-240 MFVC VC Resource Status Register
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -2273,14 +2226,11 @@ Figure 7-240 MFVC VC Resource Status Register
 | 0 | Function Arbitration Table Status (Function 仲裁表状态) — 该位指示与 VC 资源相关联的 Function Arbitration Table 的一致性状态。仅当所选 Function 仲裁使用该 VC 资源的 Function Arbitration Table 时,该位才有效。<br>当 Function Arbitration Table 的任何条目被软件写入时,该位由硬件置位。在软件置位 Load Function Arbitration Table 位之后,当硬件完成加载 Function Arbitration Table 中存储的值时,该位由硬件清除。<br>该位的默认值为 0b。 | RO |
 | 1 | VC Negotiation Pending (VC 协商挂起) — 该位指示虚通道协商(初始化或禁用)是否处于挂起状态。<br>当该位由硬件置位时,指示该 VC 资源仍处于协商过程中。该位在 VC 协商完成后由硬件清除。对于非默认虚通道,软件可在启用或禁用 VC 时使用该位。对于默认 VC,该位指示流控 (Flow Control) 初始化过程的状态。<br>在使用虚通道之前,软件必须检查该虚通道在链路两端组件中的 VC Negotiation Pending 位是否均已清除。 | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1284 -->
----
-
-<a id="sec-7-9-2-9"></a>
+<a id="sec-7-9-2-9"></a> <!-- 📄 Page 1284 -->
 ## 7.9.2.9 MFVC VC Arbitration Table | MFVC VC 仲裁表
 
 <table>
@@ -2306,7 +2256,7 @@ MFVC 扩展能力结构中 MFVC VC Arbitration Table (MFVC VC 仲裁表) 的定�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -2360,14 +2310,11 @@ Function Arbitration Table 表示一个 Function 仲裁周期。包含 Function 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1285 -->
----
-
-<a id="sec-7-9-2-10-continued"></a>
+<a id="sec-7-9-2-10-continued"></a> <!-- 📄 Page 1285 -->
 ## 7.9.2.10 Function Arbitration Table (continued) | Function 仲裁表(续)
 
 <table>
@@ -2433,15 +2380,11 @@ MFVC Port VC Capability Register 1 中的 Function Arbitration Table Entry Size 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1290 -->
----
-
-<a id="sec-7-9-3-2"></a>
-## 7.9.3 Device Serial Number Extended Capability | 设备序列号扩展能力
+## 7.9.3 Device Serial Number Extended Capability | 设备序列号扩展能力 <!-- 📄 Page 1290 -->
 
 <table>
 <thead>
@@ -2470,15 +2413,11 @@ Device Serial Number Extended Capability (设备序列号扩展能力) 是一种
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
-
----
-
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
 <a id="sec-7-9-3"></a>
-## 7.9.3 Device Serial Number Extended Capability | 设备序列号扩展能力
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2533,10 +2472,7 @@ RCiEP 可以根据自身情况决定是否实现此能力，而无需考虑其�
 
 ---
 
-<!-- 📄 Page 1286 -->
----
-
-<a id="sec-7-9-3-fig"></a>
+<a id="sec-7-9-3-fig"></a> <!-- 📄 Page 1286 -->
 
 > **Figure 7-241.** Device Serial Number Extended Capability Structure
 > <img src="figures/chapter_07/fig_1286_1_tight.png" width="700">
@@ -2627,10 +2563,7 @@ Figure 7-241 Device Serial Number Extended Capability Structure
 
 ---
 
-<!-- 📄 Page 1287 -->
----
-
-<table>
+<table> <!-- 📄 Page 1287 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -2672,6 +2605,7 @@ The Serial Number register is a 64-bit field that contains the IEEE defined 64-b
 
 ---
 
+<a id="sec-7-9-3-2"></a>
 ## 7.9.3.2 Serial Number Register (Offset 04h) | 序列号寄存器(偏移 04h)
 
 <table>
@@ -2739,10 +2673,7 @@ A single PCI Express Function is permitted to contain multiple VSEC structures.
 
 ---
 
-<!-- 📄 Page 1288 -->
----
-
-> **Figure 7-244.** Vendor-Specific Capability
+> **Figure 7-244.** Vendor-Specific Capability <!-- 📄 Page 1288 -->
 > <img src="figures/chapter_07/fig_1288_1.png" width="700">
 
 > **图 7-244.** 厂商特定能力
@@ -2806,10 +2737,7 @@ With a PCI Express Function, the structure and definition of the vendor-specific
 
 ---
 
-<!-- 📄 Page 1289 -->
----
-
-> **Figure 7-245.** VSEC Capability Structure
+> **Figure 7-245.** VSEC Capability Structure <!-- 📄 Page 1289 -->
 > <img src="figures/chapter_07/fig_1289_1_tight.png" width="700">
 
 > **图 7-245.** VSEC 能力结构
@@ -2894,10 +2822,7 @@ With a PCI Express Function, the structure and definition of the vendor-specific
 
 ---
 
-<!-- 📄 Page 1290 -->
----
-
-<table>
+<table> <!-- 📄 Page 1290 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3017,10 +2942,7 @@ DVSEC 厂商特定寄存器区域从偏移 0Ah 处开始。
 
 ---
 
-<!-- 📄 Page 1291 -->
----
-
-> **Figure 7-248.** Designated Vendor-Specific Extended Capability
+> **Figure 7-248.** Designated Vendor-Specific Extended Capability <!-- 📄 Page 1291 -->
 > <img src="figures/chapter_07/fig_1291_1_tight.png" width="700">
 
 > **图 7-248.** 指定厂商特定扩展能力
@@ -3105,10 +3027,7 @@ DVSEC 厂商特定寄存器区域从偏移 0Ah 处开始。
 
 ---
 
-<!-- 📄 Page 1292 -->
----
-
-<table>
+<table> <!-- 📄 Page 1292 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -3212,10 +3131,7 @@ Vendor-specific software must qualify the DVSEC Vendor ID before attempting to i
 
 ---
 
-><!-- 📄 Page 1293 -->
----
-
-> **Figure 7-251.** Designated Vendor-Specific Header 2
+> **Figure 7-251.** Designated Vendor-Specific Header 2 <!-- 📄 Page 1293 -->
 > <img src="figures/chapter_07/fig_1293_1_tight.png" width="700">
 
 > **图 7-251.** 指定厂商特定包头 2
@@ -3227,6 +3143,9 @@ Vendor-specific software must qualify the DVSEC Vendor ID before attempting to i
 | 15:0 | DVSEC ID - This field is a vendor-defined ID that indicates the nature and format of the DVSEC structure. Software must qualify the DVSEC Vendor ID before interpreting this field. | RO |
 
 ---
+
+<a id="sec-7-9-7"></a>
+## 7.9.7 RCRB Header Extended Capability | RCRB 头扩展能力
 
 <table>
 <thead>
@@ -3258,6 +3177,13 @@ PCI Express RCRB Header 扩展能力是一种可选的扩展能力，可以在 R
 
 > **图 7-252.** RCRB Header 扩展能力结构
 
+
+---
+
+<a id="sec-7-9-7-1-2"></a>
+<a id="sec-7-9-7-1"></a>
+### 7.9.7.1 RCRB Header Extended Capability Header (Offset 00h) | RCRB 头扩展能力头（偏移 00h）
+
 <table>
 <thead>
 <tr>
@@ -3281,47 +3207,10 @@ PCI Express RCRB Header 扩展能力是一种可选的扩展能力，可以在 R
 </tbody>
 </table>
 
----
-
 > **Figure 7-253.** RCRB Header Extended Capability Header
+> **图 7-253.** RCRB Header 扩展能力包头
 > <img src="figures/chapter_07/fig_1293_1.png" width="700">
 
-> **图 7-253.** RCRB Header 扩展能力包头
-
----
-
----
-
-<a id="sec-7-9-7"></a>
-## 7.9.7 RCRB Header Extended Capability | RCRB 头扩展能力
-
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-<a id="sec-7-9-7-1-2"></a>
-### 7.9.7.1 RCRB Header Extended Capability Header (Offset 00h)
-
-</td>
-<td style="background-color:#e8e8e8">
-
-<a id="sec-7-9-7-1"></a>
-### 7.9.7.1 RCRB 头扩展能力头（偏移 00h）
-
-</td>
-</tr>
-</tbody>
-</table>
-
-<!-- 📄 Page 1294 -->
----
 
 **Table 7-229. RCRB Header Extended Capability Header | 表 7-229. RCRB 头扩展能力头**
 
@@ -3337,6 +3226,11 @@ PCI Express RCRB Header 扩展能力是一种可选的扩展能力，可以在 R
 | 19:16 | Capability Version（能力版本）— 该字段是 PCI-SIG 定义的版本号，用于指示当前 Capability 结构的版本。本规范版本必须为 1h。 | RO |
 | 31:20 | Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express Capability 结构的偏移，若能力列表中不存在其他项，则为 000h。对于在配置空间中实现的扩展能力，该偏移相对于 PCI 兼容配置空间的起始位置，因此必须为 000h（表示能力列表终止）或大于 0FFh。 | RO |
 
+
+<a id="sec-7-9-7-2-2"></a>
+<a id="sec-7-9-7-2"></a>
+### 7.9.7.2 RCRB Vendor ID and Device ID register (Offset 04h) | RCRB Vendor ID 和 Device ID 寄存器（偏移 04h）
+
 Figure 7-254 details allocation of register fields in the RCRB Vendor ID and Device ID register; Table 7-230 provides the respective bit definitions.
 
 图 7-254 详细说明了 RCRB Vendor ID and Device ID 寄存器中寄存器字段的分配；表 7-230 给出了相应的位定义。
@@ -3349,14 +3243,10 @@ Figure 7-254 details allocation of register fields in the RCRB Vendor ID and Dev
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
+
 
 > **Figure 7-254.** RCRB Vendor ID and Device ID register
 > **图 7-254.** RCRB Vendor ID 和 Device ID 寄存器
@@ -3375,37 +3265,13 @@ Figure 7-254 details allocation of register fields in the RCRB Vendor ID and Dev
 | 15:0 | Vendor ID（供应商 ID）— 由 PCI-SIG 分配。类似于 PCI 兼容配置空间中的相应字段。该字段提供将 RCRB 与特定供应商相关联的方式。 | RO |
 | 31:16 | Device ID（设备 ID）— 由供应商分配。类似于 PCI 兼容配置空间中的相应字段。该字段为供应商提供对特定 RCRB 进行分类的方式。 | RO |
 
+
+### 7.9.7.3 RCRB Capabilities register (Offset 08h) | RCRB Capabilities 寄存器（偏移 08h）
+
 Figure 7-255 details allocation of register fields in the RCRB Capabilities register; Table 7-231 provides the respective bit definitions.
 
 图 7-255 详细说明了 RCRB Capabilities 寄存器中寄存器字段的分配；表 7-231 给出了相应的位定义。
 
-<a id="sec-7-9-7-2-2"></a>
-### 7.9.7.2 RCRB Vendor ID and Device ID register (Offset 04h)
-### 7.9.7.3 RCRB Capabilities register (Offset 08h)
-
-<a id="sec-7-9-7-2"></a>
-### 7.9.7.2 RCRB Vendor ID and Device ID 寄存器（偏移 04h）
-### 7.9.7.3 RCRB Capabilities 寄存器（偏移 08h）
-
-<!-- 📄 Page 1295 -->
----
-
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
-
-</td>
-</tr>
-</tbody>
-</table>
 
 > **Figure 7-255.** RCRB Capabilities register
 > **图 7-255.** RCRB 能力寄存器
@@ -3422,6 +3288,11 @@ Figure 7-255 details allocation of register fields in the RCRB Capabilities regi
 |---|---|---|
 | 0 | Configuration RRS Software Visibility（配置 RRS 软件可见性）— 置位时，该位表示根复合体（Root Complex）能够针对与该 RCRB 关联的所有根端口（Root Port）和集成设备的配置请求（Configuration Request）返回 Request Retry Status (RRS) 完成状态（参见第 2.3.1 节）。 | RO |
 
+
+<a id="sec-7-9-7-4-2"></a>
+<a id="sec-7-9-7-4"></a>
+### 7.9.7.4 RCRB Control register (Offset 0Ch) | RCRB Control 寄存器（偏移 0Ch）
+
 Figure 7-256 details allocation of register fields in the RCRB Control register; Table 7-232 provides the respective bit definitions.
 
 图 7-256 详细说明了 RCRB Control 寄存器中寄存器字段的分配；表 7-232 给出了相应的位定义。
@@ -3434,14 +3305,10 @@ Figure 7-256 details allocation of register fields in the RCRB Control register;
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
+
 
 > **Figure 7-256.** RCRB Control register
 > **图 7-256.** RCRB 控制寄存器
@@ -3457,6 +3324,10 @@ Figure 7-256 details allocation of register fields in the RCRB Control register;
 |---|---|---|
 | 0 | Configuration RRS Software Visibility Enable（配置 RRS 软件可见性使能）— 置位时，该位使根复合体能够针对与该 RCRB 关联的所有根端口和集成设备的配置请求返回 Request Retry Status (RRS) 完成状态（参见第 2.3.1 节）。未实现此能力的 RCRB 必须将该位硬连线为 0b。该位的默认值为 0b。 | RW |
 
+
+<a id="sec-7-9-8"></a>
+## 7.9.8 Root Complex Link Declaration Extended Capability | 根复合体链路声明扩展能力
+
 The Root Complex Link Declaration Extended Capability is an optional Capability that is permitted to be implemented by Root Ports, RCiEPs, or RCRBs to declare a Root Complex's internal topology.
 
 Root Complex Link Declaration Extended Capability 是一种可选能力，允许由根端口、RCiEP 或 RCRB 实现，以声明根复合体的内部拓扑。
@@ -3471,19 +3342,10 @@ A Root Complex consists of one or more following elements:
 
 - PCI Express 根端口
 - 默认系统出口端口或内部汇聚单元（例如内存，由 RCRB 表示）
-- 内部数据路径/链路（由内部链路任一侧的 RCRB 表示）
+- 内部数据路径/链路（由内部链路任一侧的 RCRB 表示） <!-- 📄 Page 1296 -->
 
-<a id="sec-7-9-7-4-2"></a>
-### 7.9.7.4 RCRB Control register (Offset 0Ch)
-<a id="sec-7-9-8-2"></a>
-## 7.9.8 Root Complex Link Declaration Extended Capability
 
-<a id="sec-7-9-7-4"></a>
-### 7.9.7.4 RCRB Control 寄存器（偏移 0Ch）
-<a id="sec-7-9-8"></a>
-## 7.9.8 Root Complex Link Declaration Extended Capability（根复合体链路声明扩展能力）
 
-<!-- 📄 Page 1296 -->
 ---
 
 <table>
@@ -3543,9 +3405,8 @@ Topologies that create more than one data path between any two Root Complex elem
 
 The description of how traffic is routed through such a topology is implementation specific, meaning that general purpose-operating systems may not have enough information about such a topology to correctly support bandwidth allocation. In order to circumvent this problem, these operating systems may require that a single RCRB element (of type Internal Link) not declare more than one Link to a Root Complex Component other than the one containing the RCRB element itself.
 
-关于流量如何通过此类拓扑路由的描述是特定于实现的，这意味着通用操作系统可能没有足够的信息来正确支持带宽分配。为了规避此问题，这些操作系统可能要求单个 RCRB 元素（类型为 Internal Link）不向除包含该 RCRB 元素本身的根复合体组件之外的多个根复合体组件声明多于一条链路。
+关于流量如何通过此类拓扑路由的描述是特定于实现的，这意味着通用操作系统可能没有足够的信息来正确支持带宽分配。为了规避此问题，这些操作系统可能要求单个 RCRB 元素（类型为 Internal Link）不向除包含该 RCRB 元素本身的根复合体组件之外的多个根复合体组件声明多于一条链路。 <!-- 📄 Page 1297 -->
 
-<!-- 📄 Page 1297 -->
 ---
 
 <table>
@@ -3584,12 +3445,7 @@ Root Complex Link Declaration Extended Capability 的扩展能力 ID 为 0005h�
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -3599,12 +3455,10 @@ Root Complex Link Declaration Extended Capability 的扩展能力 ID 为 0005h�
 
 
 <a id="sec-7-9-8-1-2"></a>
-### 7.9.8.1 Root Complex Link Declaration Extended Capability Header (Offset 00h)
 
 <a id="sec-7-9-8-1"></a>
-### 7.9.8.1 Root Complex Link Declaration Extended Capability Header（偏移 00h）
+### 7.9.8.1 Root Complex Link Declaration Extended Capability Header (Offset 00h) | Root Complex Link Declaration Extended Capability Header（偏移 00h） <!-- 📄 Page 1298 -->
 
-<!-- 📄 Page 1298 -->
 ---
 
 **Table 7-233. Root Complex Link Declaration Extended Capability Header | 表 7-233. Root Complex Link Declaration Extended Capability Header**
@@ -3633,12 +3487,7 @@ Element Self Description 寄存器提供关于包含 Root Complex Link Declarati
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -3662,11 +3511,10 @@ Element Self Description 寄存器提供关于包含 Root Complex Link Declarati
 | 23:16 | Component ID（组件 ID）— 该字段标识包含此根复合体元素的根复合体组件。Component ID 必须从 01h 开始，因为值 00h 为保留值。 | HwInit |
 
 <a id="sec-7-9-8-2-2"></a>
-### 7.9.8.2 Element Self Description Register (Offset 04h)
+<a id="sec-7-9-8-2"></a>
 
-### 7.9.8.2 Element Self Description 寄存器（偏移 04h）
+### 7.9.8.2 Element Self Description Register (Offset 04h) | Element Self Description 寄存器（偏移 04h） <!-- 📄 Page 1299 -->
 
-<!-- 📄 Page 1299 -->
 ---
 
 **Table 7-234 (cont.). Element Self Description Register | 表 7-234（续）. Element Self Description 寄存器**
@@ -3679,9 +3527,39 @@ Element Self Description 寄存器提供关于包含 Root Complex Link Declarati
 |---|---|---|
 | 31:24 | Port Number（端口号）— 该字段指定与此元素关联的端口号，相对于包含此元素的根复合体组件。Port Number 为 00h 的元素表示对配置软件的默认出口端口（Egress Port）。 | HwInit |
 
+<a id="sec-7-9-8-3"></a>
+### 7.9.8.3 Link Entries | 链路条目
+
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
 Link Entries start at offset 10h of the Root Complex Link Declaration Extended Capability structure. Each Link Entry consists of a Link description followed by a 64-bit Link Address at offset 08h from the start of Link Entry identifying the target element for the declared Link. A Link Entry declares an internal Link to another Root Complex Element.
 
+</td>
+<td style="background-color:#e8e8e8">
+
 链路条目从 Root Complex Link Declaration Extended Capability 结构的偏移 10h 开始。每个 Link Entry 由一个 Link description 组成，后跟位于 Link Entry 起始处偏移 08h 处的 64 位 Link Address，用于标识所声明链路的目标元素。Link Entry 声明到另一个根复合体元素的内部链路。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+> **Figure 7-260.** Link Entry
+> **图 7-260.** Link Entry 结构
+> <img src="figures/chapter_07/fig_1299_1_tight.png" width="700">
+
+<a id="sec-7-9-8-3-1-2"></a>
+<a id="sec-7-9-8-3-1"></a>
+#### 7.9.8.3.1 Link Description Register | Link Description 寄存器
 
 <table>
 <thead>
@@ -3706,32 +3584,9 @@ Link Description 寄存器位于 Link Entry 起始处的偏移 00h 处，定义�
 </tbody>
 </table>
 
-> **Figure 7-260.** Link Entry
-> **图 7-260.** Link Entry 0 寄存器
-> <img src="figures/chapter_07/fig_1299_1_tight.png" width="700">
-
-
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
-
-</td>
-</tr>
-</tbody>
-</table>
-
 > **Figure 7-261.** Link Description Register
-> **图 7-261.** Link Entry 1 寄存器
+> **图 7-261.** Link Description 寄存器
 > <img src="figures/chapter_07/fig_1299_2_tight.png" width="700">
-
 
 **Table 7-235. Link Description Register | 表 7-235. Link Description 寄存器**
 
@@ -3745,20 +3600,11 @@ Link Description 寄存器位于 Link Entry 起始处的偏移 00h 处，定义�
 | 0 | Link Valid（链路有效）— 置位时，该位表示 Link Entry 指定有效链路。未设置该位或 Associate RCRB Header 位（或两者均未设置）的 Link Entries 将被软件忽略。 | HwInit |
 | 1 | Link Type（链路类型）— 该位指示链路的目标类型，并定义 Link Address 字段的格式。已定义的 Link Type 值为： | HwInit |
 
-<a id="sec-7-9-8-3-2"></a>
-### 7.9.8.3 Link Entries
-<a id="sec-7-9-8-3-1-2"></a>
-#### 7.9.8.3.1 Link Description Register
 
-<a id="sec-7-9-8-3"></a>
-### 7.9.8.3 Link Entries（链路条目）
-<a id="sec-7-9-8-3-1"></a>
-#### 7.9.8.3.1 Link Description 寄存器
 
-<!-- 📄 Page 1300 -->
 ---
 
-**Table 7-235 (cont.). Link Description Register | 表 7-235（续）. Link Description 寄存器**
+**Table 7-235 (cont.). Link Description Register | 表 7-235（续）. Link Description 寄存器** <!-- 📄 Page 1300 -->
 
 | Bit Location | Register Description | Attributes |
 |---|---|---|
@@ -3792,12 +3638,7 @@ For a Link pointing to a memory-mapped RCRB (Link Type bit = 0), the first DWORD
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -3809,6 +3650,7 @@ For a Link pointing to a memory-mapped RCRB (Link Type bit = 0), the first DWORD
 For a Link pointing to the Configuration Space of a Root Complex element (Link Type bit = 1), bits in the first DWORD specify the Bus, Device, and Function Number of the target element. As shown in Figure 7-263, bits 2:0 (N) encode the number of bits n associated with the Bus Number, with N = 000b specifying n = 8 and all other encodings specifying
 
 <a id="sec-7-9-8-3-2-2"></a>
+<a id="sec-7-9-8-3-2"></a>
 #### 7.9.8.3.2 Link Address
 <a id="sec-7-9-8-3-2-1-2"></a>
 ##### 7.9.8.3.2.1 Link Address for Link Type 0
@@ -3823,9 +3665,8 @@ For a Link pointing to the Configuration Space of a Root Complex element (Link T
 ##### 7.9.8.3.2.2 Link Type 1 的 Link Address
 
 > 183. The memory-mapped space for accessing an RCRB is not the same as Memory Space, and must not overlap with Memory Space.
-> 183. 用于访问 RCRB 的内存映射空间与 Memory Space 不同，且不得与 Memory Space 重叠。
+> 183. 用于访问 RCRB 的内存映射空间与 Memory Space 不同，且不得与 Memory Space 重叠。 <!-- 📄 Page 1301 -->
 
-<!-- 📄 Page 1301 -->
 ---
 
 
@@ -3919,13 +3760,10 @@ The Root Complex Internal Link Control Extended Capability structure is defined 
 
 Root Complex Internal Link Control Extended Capability 结构定义如图 7-264 所示。
 
-<a id="sec-7-9-9-2"></a>
-## 7.9.9 Root Complex Internal Link Control Extended Capability
 
 <a id="sec-7-9-9"></a>
-## 7.9.9 Root Complex Internal Link Control Extended Capability（根复合体内部链路控制扩展能力）
+## 7.9.9 Root Complex Internal Link Control Extended Capability | Root Complex Internal Link Control Extended Capability（根复合体内部链路控制扩展能力） <!-- 📄 Page 1302 -->
 
-<!-- 📄 Page 1302 -->
 ---
 
 <table>
@@ -3964,12 +3802,7 @@ Root Complex Internal Link Control Extended Capability 的扩展能力 ID 为 00
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -4026,6 +3859,7 @@ Root Complex Internal Link Control Extended Capability Header
 
 ---
 
+<a id="sec-7-9-9-2"></a>
 ## 7.9.9.2 Root Complex Link Capabilities Register (Offset 04h) | 根复合体链路能力寄存器(偏移量 04h)
 
 
@@ -4208,10 +4042,7 @@ RO
 
 ---
 
-<!-- 📄 Page 1304 -->
----
-
-<table>
+<table> <!-- 📄 Page 1304 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -4362,11 +4193,8 @@ RO
 
 ---
 
-<!-- 📄 Page 1305 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1305 -->
 <table>
 <thead>
 <tr>
@@ -4601,11 +4429,8 @@ Root Complex Link Status Register(根复合体链路状态寄存器)提供有关
 
 ---
 
-<!-- 📄 Page 1307 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1307 -->
 <table>
 <thead>
 <tr>
@@ -4773,11 +4598,8 @@ Root Complex Event Collector Endpoint Association Extended Capability(根复合�
 
 ---
 
-<!-- 📄 Page 1308 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1308 -->
 <table>
 <thead>
 <tr>
@@ -4984,10 +4806,7 @@ RO
 
 ---
 
-<!-- 📄 Page 1309 -->
----
-
-<a id="sec-7-9-10-2"></a>
+<a id="sec-7-9-10-2"></a> <!-- 📄 Page 1309 -->
 ## 7.9.10.2 Association Bitmap for RCiEPs (Offset 04h) | RCiEP 关联位图(偏移量 04h)
 
 <table>
@@ -5109,10 +4928,7 @@ HwInit
 
 ---
 
-<!-- 📄 Page 1310 -->
----
-
-<table>
+<table> <!-- 📄 Page 1310 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5192,10 +5008,7 @@ SR-IOV(单根 I/O 虚拟化)设备中的 Multicast 支持是可选的。如果 V
 
 ---
 
-<!-- 📄 Page 1311 -->
----
-
-<table>
+<table> <!-- 📄 Page 1311 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5420,10 +5233,7 @@ RO
 
 ---
 
-<!-- 📄 Page 1312 -->
----
-
-<table>
+<table> <!-- 📄 Page 1312 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -5519,10 +5329,7 @@ RO/RsvdP
 
 ---
 
-<!-- 📄 Page 1313 -->
----
-
-<a id="sec-7-9-11-2"></a>
+<a id="sec-7-9-11-2"></a> <!-- 📄 Page 1313 -->
 ## 7.9.11.2 Multicast Capability Register (Offset 04h) | 组播能力寄存器(偏移量 04h)
 
 
@@ -5642,9 +5449,6 @@ VF RsvdP
 
 ---
 
-
----
-
 <a id="sec-7-9-11-3"></a>
 ## 7.9.11.3 Multicast Control Register (Offset 06h) | 多播控制寄存器（偏移 06h）
 
@@ -5697,9 +5501,8 @@ VF RsvdP
 </td>
 </tr>
 </tbody>
-</table>
+</table> <!-- 📄 Page 1314 -->
 
-<!-- 📄 Page 1314 -->
 ---
 
 <table>
@@ -5888,9 +5691,8 @@ MC_Block_All 寄存器提供一个位向量，用于指示该 Function 应阻止
 </td>
 </tr>
 </tbody>
-</table>
+</table> <!-- 📄 Page 1315 -->
 
-<!-- 📄 Page 1315 -->
 ---
 
 **Table 7-248. MC_Block_All Register | 表 7-248. MC_Block_All 寄存器**
@@ -6034,9 +5836,8 @@ MC_Overlay_BAR 用于指定单播（unicast）地址空间中一个窗口的基�
 </td>
 </tr>
 </tbody>
-</table>
+</table> <!-- 📄 Page 1316 -->
 
-<!-- 📄 Page 1316 -->
 ---
 
 <table>
@@ -6047,12 +5848,7 @@ MC_Overlay_BAR 用于指定单播（unicast）地址空间中一个窗口的基�
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -6104,10 +5900,9 @@ DPA Capability 结构如 § 图 7-281 所示。
 
 > **Figure 7-281.** Dynamic Power Allocation Extended Capability Structure
 > **图 7-281.** Root Complex Event Collector Event Source 寄存器（续）
-> <img src="figures/chapter_07/fig_1316_2_tight.png" width="700">
+> <img src="figures/chapter_07/fig_1316_2_tight.png" width="700"> <!-- 📄 Page 1317 -->
 
 
-<!-- 📄 Page 1317 -->
 ---
 
 <a id="sec-7-9-12-1"></a>
@@ -6192,11 +5987,10 @@ DPA Capability 结构如 § 图 7-281 所示。
 |--------------|----------------------|------------|
 | 4:0 | Substate_Max - Value indicates the maximum substate number, which is the total number of supported substates minus one. A value of 0 0000b indicates support for one substate. | RO |
 
-<!-- 📄 Page 1318 -->
 ---
 
 
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1318 -->
 <table>
 <thead>
 <tr>
@@ -6273,10 +6067,9 @@ DPA Capability 结构如 § 图 7-281 所示。
 |--------------|----------------------|------------|
 | 31:0 | Transition Latency Indicator Bits - Each bit indicates which Transition Latency Value is associated with the corresponding substate. A value of 0b indicates Transition Latency Value 0; a value of 1b indicates Transition Latency Value 1. Only bits [Substate_Max:0] are defined. Bits above Substate_Max are RsvdP. | RO |
 
-<!-- 📄 Page 1319 -->
 ---
 
-<a id="sec-7-9-12-4"></a>
+<a id="sec-7-9-12-4"></a> <!-- 📄 Page 1319 -->
 ## 7.9.12.4 DPA Status Register (Offset 0Ch) | DPA 状态寄存器（偏移 0Ch）
 
 <table>
@@ -6357,10 +6150,9 @@ DPA Capability 结构如 § 图 7-281 所示。
 |--------------|----------------------|------------|
 | 4:0 | Substate Control - Used by software to configure the Function substate. Software writes the substate value in this field to initiate a substate transition. When the Substate Control Enabled bit in the DPA Status Register is Set, this field determines the Function substate. When the Substate Control Enabled bit in the DPA Status Register is Clear, this field has no effect on the Function substate. | RW |
 
-<!-- 📄 Page 1320 -->
 ---
 
-<table>
+<table> <!-- 📄 Page 1320 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6474,10 +6266,9 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 </tr>
 </tbody>
 </table>
-</div>
+</div> <!-- 📄 Page 1321 -->
 
 
-<!-- 📄 Page 1321 -->
 ---
 
 <table>
@@ -6558,9 +6349,7 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 
 ---
 
-[⬆️ 返回目录](#sec-7-9-0)
-
----
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -6592,10 +6381,7 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 
 ---
 
-<!-- 📄 Page 1322 -->
----
-
-**Table 7-258. TPH Requester Capability Register | 表 7-258. TPH 请求者能力寄存器**
+**Table 7-258. TPH Requester Capability Register | 表 7-258. TPH 请求者能力寄存器** <!-- 📄 Page 1322 -->
 
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
@@ -6614,12 +6400,7 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -6658,10 +6439,7 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 
 ---
 
-<!-- 📄 Page 1323 -->
----
-
-**Table 7-259. TPH Requester Control Register | 表 7-259. TPH 请求者控制寄存器**
+**Table 7-259. TPH Requester Control Register | 表 7-259. TPH 请求者控制寄存器** <!-- 📄 Page 1323 -->
 
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
@@ -6730,10 +6508,7 @@ The TPH ST Table must be implemented in the TPH Requester Extended Capability st
 
 ---
 
-<!-- 📄 Page 1324 -->
----
-
-<table>
+<table> <!-- 📄 Page 1324 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6741,12 +6516,7 @@ The TPH ST Table must be implemented in the TPH Requester Extended Capability st
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -6808,10 +6578,7 @@ The various RP PIO registers must be implemented only by Root Ports that support
 
 ---
 
-<!-- 📄 Page 1325 -->
----
-
-<table>
+<table> <!-- 📄 Page 1325 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6839,10 +6606,7 @@ The various RP PIO registers must be implemented only by Root Ports that support
 
 ---
 
-<!-- 📄 Page 1326 -->
----
-
-<table>
+<table> <!-- 📄 Page 1326 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6850,12 +6614,7 @@ The various RP PIO registers must be implemented only by Root Ports that support
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -6866,10 +6625,7 @@ The various RP PIO registers must be implemented only by Root Ports that support
 
 ---
 
-<!-- 📄 Page 1327 -->
----
-
-<table>
+<table> <!-- 📄 Page 1327 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -6877,12 +6633,7 @@ The various RP PIO registers must be implemented only by Root Ports that support
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -6907,12 +6658,7 @@ The various RP PIO registers must be implemented only by Root Ports that support
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -6979,10 +6725,7 @@ The various RP PIO registers must be implemented only by Root Ports that support
 
 ---
 
-<!-- 📄 Page 1328 -->
----
-
-**Table 7-262. DPC Capability Register | 表 7-262. DPC 能力寄存器**
+**Table 7-262. DPC Capability Register | 表 7-262. DPC 能力寄存器** <!-- 📄 Page 1328 -->
 
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
@@ -6996,10 +6739,7 @@ The various RP PIO registers must be implemented only by Root Ports that support
 
 ---
 
-<!-- 📄 Page 1329 -->
----
-
-<table>
+<table> <!-- 📄 Page 1329 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7007,12 +6747,7 @@ The various RP PIO registers must be implemented only by Root Ports that support
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -7060,10 +6795,7 @@ The various RP PIO registers must be implemented only by Root Ports that support
 
 ---
 
-<!-- 📄 Page 1330 -->
----
-
-**Table 7-263 (cont.). DPC Control Register | 表 7-263（续）. DPC 控制寄存器**
+**Table 7-263 (cont.). DPC Control Register | 表 7-263（续）. DPC 控制寄存器** <!-- 📄 Page 1330 -->
 
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
@@ -7074,10 +6806,7 @@ The various RP PIO registers must be implemented only by Root Ports that support
 
 ---
 
-<!-- 📄 Page 1331 -->
----
-
-<table>
+<table> <!-- 📄 Page 1331 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7085,12 +6814,7 @@ The various RP PIO registers must be implemented only by Root Ports that support
 </tr>
 </thead>
 <tbody>
-<tr>
-<td></td>
-<td style="background-color:#e8e8e8">
 
-</td>
-</tr>
 </tbody>
 </table>
 
@@ -7139,10 +6863,7 @@ The various RP PIO registers must be implemented only by Root Ports that support
 
 ---
 
-<!-- 📄 Page 1332 -->
----
-
-**Table 7-264 (cont.). DPC Status Register | 表 7-264（续）. DPC 状态寄存器**
+**Table 7-264 (cont.). DPC Status Register | 表 7-264（续）. DPC 状态寄存器** <!-- 📄 Page 1332 -->
 
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
@@ -7186,10 +6907,7 @@ The various RP PIO registers must be implemented only by Root Ports that support
 
 ---
 
-<!-- 📄 Page 1333 -->
----
-
-**Table 7-265. DPC Error Source ID Register | 表 7-265. DPC 错误源 ID 寄存器**
+**Table 7-265. DPC Error Source ID Register | 表 7-265. DPC 错误源 ID 寄存器** <!-- 📄 Page 1333 -->
 
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
@@ -7270,10 +6988,7 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 
 ---
 
-<!-- 📄 Page 1334 -->
----
-
-<table>
+<table> <!-- 📄 Page 1334 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -7296,17 +7011,39 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 </tbody>
 </table>
 
-> **Figure 7-303.** RP PIO Mask Register
-> **图 7-303.** RP PIO 掩码寄存器
-> <img src="figures/chapter_07/fig_1334_1_tight.png" width="700">
 
 
 ---
 
-**Table 7-267. RP PIO Mask Register | 表 7-267. RP PIO 屏蔽寄存器**
+[⬆️ 返回目录](#sec-7-9)
+
+---
+
+<a id="sec-7-9-14-7"></a>
+## 7.9.14.7 RP PIO Mask Register (Offset 10h) | RP PIO 屏蔽寄存器 (偏移 10h) <!-- 📄 Page 1335 -->
+
+---
+
+<div style="overflow-x: auto; max-width: 100%;">
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+**Figure 7-303 RP PIO Mask Register**
+
+> <img src="figures/chapter_07/fig_1334_1_tight.png" width="700">
+
+**Table 7-267 RP PIO Mask Register**
 
 | Bit Location | Register Description | Attributes | Default |
-|--------------|----------------------|------------|---------|
+|---|---|---|---|
 | 0 | Cfg UR Cpl - Configuration Request received UR Completion | RWS | 1b |
 | 1 | Cfg CA Cpl - Configuration Request received CA Completion | RWS | 1b |
 | 2 | Cfg CTO - Configuration Request Completion Timeout | RWS | 1b |
@@ -7317,67 +7054,37 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 | 17 | Mem CA Cpl - Memory Request received CA Completion | RWS | 1b |
 | 18 | Mem CTO - Memory Request Completion Timeout | RWS | 1b |
 
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
 This register is present only in Root Ports that support RP Extensions for DPC. See § Section 6.2.11.3.
 
 </td>
 <td style="background-color:#e8e8e8">
 
-此寄存器仅在支持 DPC RP 扩展（RP Extensions for DPC）的根端口中存在。参见 § Section 6.2.11.3。
+**图 7-303 RP PIO 屏蔽寄存器**
 
+**表 7-267 RP PIO 屏蔽寄存器**
+
+| 位位置 | 寄存器描述 | 属性 | 默认值 |
+|---|---|---|---|
+| 0 | Cfg UR Cpl —— 配置请求接收到 UR 完成报文 | RWS | 1b |
+| 1 | Cfg CA Cpl —— 配置请求接收到 CA 完成报文 | RWS | 1b |
+| 2 | Cfg CTO —— 配置请求完成超时 | RWS | 1b |
+| 8 | I/O UR Cpl —— I/O 请求接收到 UR 完成报文 | RWS | 1b |
+| 9 | I/O CA Cpl —— I/O 请求接收到 CA 完成报文 | RWS | 1b |
+| 10 | I/O CTO —— I/O 请求完成超时 | RWS | 1b |
+| 16 | Mem UR Cpl —— 内存请求接收到 UR 完成报文 | RWS | 1b |
+| 17 | Mem CA Cpl —— 内存请求接收到 CA 完成报文 | RWS | 1b |
+| 18 | Mem CTO —— 内存请求完成超时 | RWS | 1b |
+
+此寄存器仅存在于支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中。参见 § 第 6.2.11.3 节。
+
+<img src="figures/chapter_07/fig_1334_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+</div>
 
----
-
-[⬆️ 返回目录](#sec-7-9-0)
-
----
-
----
-
-<a id="sec-7-9-14-7"></a>
-## 7.9.14.7 RP PIO Mask Register (Offset 10h) | RP PIO 屏蔽寄存器 (偏移 10h)
-
-<!-- 📄 Page 1335 -->
----
-
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
-Reserved for future definition.
-
-</td>
-<td style="background-color:#e8e8e8">
-
-保留供未来定义使用。
-
-</td>
-</tr>
-</tbody>
-</table>
-
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -7447,14 +7154,13 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
 <a id="sec-7-9-14-9"></a>
-## 7.9.14.9 RP PIO SysError Register (Offset 18h) | RP PIO 系统错误寄存器 (偏移 18h)
+## 7.9.14.9 RP PIO SysError Register (Offset 18h) | RP PIO 系统错误寄存器 (偏移 18h) <!-- 📄 Page 1336 -->
 
-<!-- 📄 Page 1336 -->
 ---
 
 <table>
@@ -7516,14 +7222,13 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
 <a id="sec-7-9-14-10"></a>
-## 7.9.14.10 RP PIO Exception Register (Offset 1Ch) | RP PIO 异常寄存器 (偏移 1Ch)
+## 7.9.14.10 RP PIO Exception Register (Offset 1Ch) | RP PIO 异常寄存器 (偏移 1Ch) <!-- 📄 Page 1337 -->
 
-<!-- 📄 Page 1337 -->
 ---
 
 
@@ -7589,14 +7294,13 @@ This register is implemented only in Root Ports that support RP Extensions for D
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
 <a id="sec-7-9-14-11"></a>
-## 7.9.14.11 RP PIO Header Log Register (Offset 20h) | RP PIO Header Log 寄存器 (偏移 20h)
+## 7.9.14.11 RP PIO Header Log Register (Offset 20h) | RP PIO Header Log 寄存器 (偏移 20h) <!-- 📄 Page 1338 -->
 
-<!-- 📄 Page 1338 -->
 ---
 
 <table>
@@ -7672,7 +7376,7 @@ In Flit Mode, the RP PIO TLP Prefix Log Register does not exist and this configr
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -7702,13 +7406,12 @@ See § Section 7.9.14.11 above for the register description.
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<a id="sec-7-9-14-13"></a>
+<a id="sec-7-9-14-13"></a> <!-- 📄 Page 1339 -->
 
-<!-- 📄 Page 1339 -->
 ---
 
 ## 7.9.14.13 RP PIO TLP Prefix Log Register (Offset 34h) | RP PIO TLP Prefix Log 寄存器 (偏移 34h)
@@ -7764,13 +7467,12 @@ This register is formatted identically to the TLP Prefix Log register in AER, al
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<a id="sec-7-9-15"></a>
+<a id="sec-7-9-15"></a> <!-- 📄 Page 1340 -->
 
-<!-- 📄 Page 1340 -->
 ---
 
 ## 7.9.15 Precision Time Measurement Extended Capability (PTM Extended Capability) | 精确时间测量扩展能力 (PTM Extended Capability)
@@ -7833,7 +7535,7 @@ For Switches, a single instance of this Capability controls behavior for the ent
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -7863,13 +7565,12 @@ See § Section 7.9.15 above and § Figure 7-311 / § Table 7-274 for the registe
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<a id="sec-7-9-15-2"></a>
+<a id="sec-7-9-15-2"></a> <!-- 📄 Page 1341 -->
 
-<!-- 📄 Page 1341 -->
 ---
 
 ## 7.9.15.2 PTM Capability Register (Offset 04h) | PTM 能力寄存器 (偏移 04h)
@@ -7931,13 +7632,12 @@ This register describes a Function's support for Precision Time Measurement. Not
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<a id="sec-7-9-15-3"></a>
+<a id="sec-7-9-15-3"></a> <!-- 📄 Page 1342 -->
 
-<!-- 📄 Page 1342 -->
 ---
 
 ## 7.9.15.3 PTM Control Register (Offset 08h) | PTM 控制寄存器 (偏移 08h)
@@ -7997,13 +7697,12 @@ This register controls a Function's participation in the Precision Time Measurem
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<a id="sec-7-9-16"></a>
+<a id="sec-7-9-16"></a> <!-- 📄 Page 1343 -->
 
-<!-- 📄 Page 1343 -->
 ---
 
 ## 7.9.16 Readiness Time Reporting Extended Capability | 就绪时间报告扩展能力
@@ -8083,13 +7782,12 @@ When Immediate_Readiness_on_Return_to_D0 is Clear, a Function must be Configurat
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<a id="sec-7-9-16-1"></a>
+<a id="sec-7-9-16-1"></a> <!-- 📄 Page 1344 -->
 
-<!-- 📄 Page 1344 -->
 ---
 
 ## 7.9.16.1 Readiness Time Reporting Extended Capability Header (Offset 00h) | 就绪时间报告扩展能力包头 (偏移 00h)
@@ -8117,9 +7815,8 @@ Registers and fields in the Readiness Time Reporting Extended Capability are sho
 
 **Figure 7-315 Readiness Time Encoding**
 
-> <img src="figures/chapter_07/fig_1344_2_tight.png" width="700">
+> <img src="figures/chapter_07/fig_1344_2_tight.png" width="700"> <!-- 📄 Page 1345 -->
 
-<!-- 📄 Page 1345 -->
 ---
 
 § Figure 7-316 and § Table 7-278 detail allocation of fields in the Extended Capability header.
@@ -8170,7 +7867,7 @@ Registers and fields in the Readiness Time Reporting Extended Capability are sho
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -8202,9 +7899,8 @@ Registers and fields in the Readiness Time Reporting Extended Capability are sho
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1346 -->
 
-<!-- 📄 Page 1346 -->
 ---
 
 | Bit Location | Register Description | Attributes |
@@ -8215,9 +7911,8 @@ Registers and fields in the Readiness Time Reporting Extended Capability are sho
 Figure 7-318 and Table 7-280 detail allocation of fields in the Readiness Time Reporting 2 Register.
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1346 -->
 
-<!-- 📄 Page 1346 -->
 ---
 
 | 比特位置 | 寄存器描述 | 属性 |
@@ -8234,7 +7929,7 @@ Figure 7-318 and Table 7-280 detail allocation of fields in the Readiness Time R
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -8252,26 +7947,26 @@ Figure 7-318 and Table 7-280 detail allocation of fields in the Readiness Time R
 <tr>
 <td>
 
-```
+<pre>
  0          11        23       31
 +-----------+---------+--------+
 |  FLR Time | D3Hot to| RsvdP  |
 |           | D0 Time |        |
 +-----------+---------+--------+
-```
+</pre>
 
 **Figure 7-318 Readiness Time Reporting 2 Register**
 
 </td>
 <td style="background-color:#e8e8e8">
 
-```
+<pre>
  0          11        23       31
 +-----------+---------+--------+
 |  FLR Time | D3Hot to| 保留   |
 |           | D0 Time |        |
 +-----------+---------+--------+
-```
+</pre>
 
 **图 7-318 就绪时间报告 2 寄存器**
 
@@ -8280,7 +7975,7 @@ Figure 7-318 and Table 7-280 detail allocation of fields in the Readiness Time R
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -8324,7 +8019,7 @@ Figure 7-318 and Table 7-280 detail allocation of fields in the Readiness Time R
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -8340,9 +8035,8 @@ Figure 7-318 and Table 7-280 detail allocation of fields in the Readiness Time R
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1347 -->
 
-<!-- 📄 Page 1347 -->
 ---
 
 The Hierarchy ID Extended Capability provides an optional mechanism for passing a unique identifier to Functions within a Hierarchy. At most one instance of this capability is permitted in a Function. This capability is not applicable to Bridges, Root Complex Event Collectors, and RCRBs.
@@ -8376,9 +8070,8 @@ This capability takes three forms:
 Figure 7-319 details the layout of the Hierarchy ID Extended Capability.
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1347 -->
 
-<!-- 📄 Page 1347 -->
 ---
 
 层级 ID 扩展能力（Hierarchy ID Extended Capability）提供了一种可选机制，用于将唯一标识符传递给层级（Hierarchy）内的 Function。每个 Function 中最多允许此能力的一个实例。该能力不适用于桥（Bridge）、根复合体事件收集器（Root Complex Event Collector）以及 RCRB。
@@ -8416,7 +8109,7 @@ Figure 7-319 details the layout of the Hierarchy ID Extended Capability.
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -8436,7 +8129,7 @@ Figure 7-319 details the layout of the Hierarchy ID Extended Capability.
 <tr>
 <td>
 
-```
+<pre>
 Byte Offset   0               3
               +---------------+
 +000h         | PCI Express Extended Capability Header |
@@ -8455,7 +8148,7 @@ Byte Offset   0               3
               +---------------+
 +01Ch         | Hierarchy ID GUID 5 Register            |
               +---------------+
-```
+</pre>
 
 **Figure 7-319 Hierarchy ID Extended Capability**
 
@@ -8464,7 +8157,7 @@ Figure 7-320 and Table 7-281 detail allocation of fields in the Hierarchy ID Ext
 </td>
 <td style="background-color:#e8e8e8">
 
-```
+<pre>
 字节偏移     0               3
               +---------------+
 +000h         | PCI Express 扩展能力头                  |
@@ -8483,7 +8176,7 @@ Figure 7-320 and Table 7-281 detail allocation of fields in the Hierarchy ID Ext
               +---------------+
 +01Ch         | 层级 ID GUID 5 寄存器                   |
               +---------------+
-```
+</pre>
 
 **图 7-319 层级 ID 扩展能力**
 
@@ -8499,7 +8192,7 @@ Figure 7-320 and Table 7-281 detail allocation of fields in the Hierarchy ID Ext
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -8515,19 +8208,18 @@ Figure 7-320 and Table 7-281 detail allocation of fields in the Hierarchy ID Ext
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1348 -->
 
-<!-- 📄 Page 1348 -->
 ---
 
-```
+<pre>
  0           15  16      19  20              31
 +-------------+---+-------+------------------+
 | Extended    |   | Cap.  | Next Capability  |
 | Capability  |   | Vers. | Offset           |
 | ID          |   |       |                  |
 +-------------+---+-------+------------------+
-```
+</pre>
 
 **Figure 7-320 Hierarchy ID Extended Capability Header**
 
@@ -8540,18 +8232,17 @@ Figure 7-320 and Table 7-281 detail allocation of fields in the Hierarchy ID Ext
 | 31:20 | **Next Capability Offset** - This field contains the offset to the next PCI Express Extended Capability structure or 000h if no other items exist in the linked list of Capabilities. For Extended Capabilities in configuration space, this offset is relative to the beginning of PCI-compatible Configuration Space and thus must always be either 000h (for terminating the list of Capabilities) or greater than 0FFh. | RO |
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1348 -->
 
-<!-- 📄 Page 1348 -->
 ---
 
-```
+<pre>
  0           15  16      19  20              31
 +-------------+---+-------+------------------+
 | 扩展能力    |   | 能力  | 下一能力偏移     |
 | ID          |   | 版本  |                  |
 +-------------+---+-------+------------------+
-```
+</pre>
 
 **图 7-320 层级 ID 扩展能力头**
 
@@ -8571,7 +8262,7 @@ Figure 7-320 and Table 7-281 detail allocation of fields in the Hierarchy ID Ext
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -8601,7 +8292,7 @@ Refer to Figure 7-320 and Table 7-281 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -8619,12 +8310,11 @@ Refer to Figure 7-320 and Table 7-281 for field allocation details of the Hierar
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1349 -->
 
-<!-- 📄 Page 1349 -->
 ---
 
-```
+<pre>
  0           15  16      27  28  29             30   31
 +-------------+---+-------+----+----------------+----+
 | Message     |   | RsvdZ |    | Hierarchy ID   | H  | H
@@ -8633,7 +8323,7 @@ Refer to Figure 7-320 and Table 7-281 for field allocation details of the Hierar
 |             |   |       |    |                | C  |   |
 |             |   |       |    |                |    | V  |
 +-------------+---+-------+----+----------------+----+
-```
+</pre>
 
 **Figure 7-321 Hierarchy ID Status Register**
 
@@ -8647,12 +8337,11 @@ Refer to Figure 7-320 and Table 7-281 for field allocation details of the Hierar
 | 30 | **Hierarchy ID Pending** - In Downstream Ports this requests the transmittion of a Hierarchy ID Message. Setting it requests transmission of a message based on the Hierarchy Data and GUID registers in this capability. This bit is cleared when either the transmit request is satisfied or the Link enters DL_Down. <br>Behavior is undefined if the Hierarchy Data or GUID registers in this capability are written while this bit is Set. <br>In Downstream Ports, this bit is Read / Write defaulting to 0b. <br>In all other Functions, this bit is RsvdZ. | RW/RsvdZ |
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1349 -->
 
-<!-- 📄 Page 1349 -->
 ---
 
-```
+<pre>
  0           15  16      27  28  29             30   31
 +-------------+---+-------+----+----------------+----+
 | Message     |   | 保留  |    | 层级 ID        | H  | H
@@ -8661,7 +8350,7 @@ Refer to Figure 7-320 and Table 7-281 for field allocation details of the Hierar
 |             |   |       |    |                | C  |   |
 |             |   |       |    |                |    | V  |
 +-------------+---+-------+----+----------------+----+
-```
+</pre>
 
 **图 7-321 层级 ID 状态寄存器**
 
@@ -8684,7 +8373,7 @@ Refer to Figure 7-320 and Table 7-281 for field allocation details of the Hierar
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -8714,7 +8403,7 @@ Refer to Figure 7-321 and Table 7-282 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -8732,9 +8421,8 @@ Refer to Figure 7-321 and Table 7-282 for field allocation details of the Hierar
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1350 -->
 
-<!-- 📄 Page 1350 -->
 ---
 
 | Bit Location | Description | Attributes |
@@ -8743,14 +8431,14 @@ Refer to Figure 7-321 and Table 7-282 for field allocation details of the Hierar
 
 Figure 7-322 and Table 7-283 detail allocation of fields in the Hierarchy ID Data Register.
 
-```
+<pre>
  0           7   8        15  16              31
 +-------------+---+-------+------------------+
 | System GUID |   | RsvdP | Hierarchy ID     |
 | Authority   |   |       |                  |
 | ID          |   |       |                  |
 +-------------+---+-------+------------------+
-```
+</pre>
 
 **Figure 7-322 Hierarchy ID Data Register**
 
@@ -8762,9 +8450,8 @@ Figure 7-322 and Table 7-283 detail allocation of fields in the Hierarchy ID Dat
 | 31:16 | **Hierarchy ID** - This field corresponds to the Hierarchy ID field in the Hierarchy ID Message. See § Section 6.25 for details. <br>This field is meaningful only if Hierarchy ID Valid is 1b. <br>If Hierarchy ID Writeable is Set, this field is read-write and contains the value programmed by software. <br>If Hierarchy ID Writeable is Clear, this field is read only. The value is determined using the rules defined in § Section 7.9.17. <br>This field defaults to 0000h. | RO/RW |
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1350 -->
 
-<!-- 📄 Page 1350 -->
 ---
 
 | 比特位置 | 描述 | 属性 |
@@ -8773,14 +8460,14 @@ Figure 7-322 and Table 7-283 detail allocation of fields in the Hierarchy ID Dat
 
 图 7-322 和表 7-283 详细说明了层级 ID 数据寄存器中各字段的分配。
 
-```
+<pre>
  0           7   8        15  16              31
 +-------------+---+-------+------------------+
 | System GUID |   | 保留  | 层级 ID          |
 | Authority   |   |       |                  |
 | ID          |   |       |                  |
 +-------------+---+-------+------------------+
-```
+</pre>
 
 **图 7-322 层级 ID 数据寄存器**
 
@@ -8801,7 +8488,7 @@ Figure 7-322 and Table 7-283 detail allocation of fields in the Hierarchy ID Dat
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -8831,7 +8518,7 @@ Refer to Figure 7-322 and Table 7-283 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -8849,18 +8536,17 @@ Refer to Figure 7-322 and Table 7-283 for field allocation details of the Hierar
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1351 -->
 
-<!-- 📄 Page 1351 -->
 ---
 
-```
+<pre>
  0           15  16              31
 +-------------+---+---------------+
 | System      |   |  RsvdP        |
 | GUID 1      |   |               |
 +-------------+---+---------------+
-```
+</pre>
 
 **Figure 7-323 Hierarchy ID GUID 1 Register**
 
@@ -8871,18 +8557,17 @@ Refer to Figure 7-322 and Table 7-283 for field allocation details of the Hierar
 | 15:0 | **System GUID 1** - This field corresponds to bits [143:128] of the System GUID in the Hierarchy ID Message. See § Section 6.25 for details. <br>This field is meaningful only if Hierarchy ID Valid is 1b. <br>If Hierarchy ID Writeable is Set, this field is read-write and contains the value programmed by software. <br>If Hierarchy ID Writeable is Clear, this field is read only. The value is determined using the rules defined in § Section 7.9.17. <br>This field defaults to 0000h. | RO/RW |
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1351 -->
 
-<!-- 📄 Page 1351 -->
 ---
 
-```
+<pre>
  0           15  16              31
 +-------------+---+---------------+
 | System      |   |  保留         |
 | GUID 1      |   |               |
 +-------------+---+---------------+
-```
+</pre>
 
 **图 7-323 层级 ID GUID 1 寄存器**
 
@@ -8899,7 +8584,7 @@ Refer to Figure 7-322 and Table 7-283 for field allocation details of the Hierar
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -8917,12 +8602,12 @@ Refer to Figure 7-322 and Table 7-283 for field allocation details of the Hierar
 <tr>
 <td>
 
-```
+<pre>
  0                       31
 +-------------------------+
 |       System GUID 2     |
 +-------------------------+
-```
+</pre>
 
 **Figure 7-324 Hierarchy ID GUID 2 Register**
 
@@ -8935,12 +8620,12 @@ Refer to Figure 7-322 and Table 7-283 for field allocation details of the Hierar
 </td>
 <td style="background-color:#e8e8e8">
 
-```
+<pre>
  0                       31
 +-------------------------+
 |       System GUID 2     |
 +-------------------------+
-```
+</pre>
 
 **图 7-324 层级 ID GUID 2 寄存器**
 
@@ -8955,7 +8640,7 @@ Refer to Figure 7-322 and Table 7-283 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -8985,7 +8670,7 @@ Refer to Figure 7-323 and Table 7-284 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9015,7 +8700,7 @@ Refer to Figure 7-324 and Table 7-285 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9033,17 +8718,16 @@ Refer to Figure 7-324 and Table 7-285 for field allocation details of the Hierar
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1352 -->
 
-<!-- 📄 Page 1352 -->
 ---
 
-```
+<pre>
  0                       31
 +-------------------------+
 |       System GUID 3     |
 +-------------------------+
-```
+</pre>
 
 **Figure 7-325 Hierarchy ID GUID 3 Register**
 
@@ -9054,17 +8738,16 @@ Refer to Figure 7-324 and Table 7-285 for field allocation details of the Hierar
 | 31:0 | **System GUID 3** - This field corresponds to bits [95:64] of the System GUID field in the Hierarchy ID Message. See § Section 6.25 for details. <br>This field is meaningful only if Hierarchy ID Valid is 1b. <br>If Hierarchy ID Writeable is Set, this field is read-write and contains the value programmed by software. <br>If Hierarchy ID Writeable is Clear, this field is read only. The value is determined using the rules defined in § Section 7.9.17. <br>This field defaults to 0000 0000h. | RO/RW |
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1352 -->
 
-<!-- 📄 Page 1352 -->
 ---
 
-```
+<pre>
  0                       31
 +-------------------------+
 |       System GUID 3     |
 +-------------------------+
-```
+</pre>
 
 **图 7-325 层级 ID GUID 3 寄存器**
 
@@ -9081,7 +8764,7 @@ Refer to Figure 7-324 and Table 7-285 for field allocation details of the Hierar
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9099,12 +8782,12 @@ Refer to Figure 7-324 and Table 7-285 for field allocation details of the Hierar
 <tr>
 <td>
 
-```
+<pre>
  0                       31
 +-------------------------+
 |       System GUID 4     |
 +-------------------------+
-```
+</pre>
 
 **Figure 7-326 Hierarchy ID GUID 4 Register**
 
@@ -9117,12 +8800,12 @@ Refer to Figure 7-324 and Table 7-285 for field allocation details of the Hierar
 </td>
 <td style="background-color:#e8e8e8">
 
-```
+<pre>
  0                       31
 +-------------------------+
 |       System GUID 4     |
 +-------------------------+
-```
+</pre>
 
 **图 7-326 层级 ID GUID 4 寄存器**
 
@@ -9137,7 +8820,7 @@ Refer to Figure 7-324 and Table 7-285 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9167,7 +8850,7 @@ Refer to Figure 7-325 and Table 7-286 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9197,7 +8880,7 @@ Refer to Figure 7-326 and Table 7-287 for field allocation details of the Hierar
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9215,17 +8898,16 @@ Refer to Figure 7-326 and Table 7-287 for field allocation details of the Hierar
 </thead>
 <tbody>
 <tr>
-<td>
+<td> <!-- 📄 Page 1353 -->
 
-<!-- 📄 Page 1353 -->
 ---
 
-```
+<pre>
  0                       31
 +-------------------------+
 |       System GUID 5     |
 +-------------------------+
-```
+</pre>
 
 **Figure 7-327 Hierarchy ID GUID 5 Register**
 
@@ -9236,17 +8918,16 @@ Refer to Figure 7-326 and Table 7-287 for field allocation details of the Hierar
 | 31:0 | **System GUID 5** - This field corresponds to bits [31:0] of the System GUID field in the Hierarchy ID Message. See § Section 6.25 for details. <br>This field is meaningful only if Hierarchy ID Valid is 1b. <br>If Hierarchy ID Writeable is Set, this field is read-write and contains the value programmed by software. <br>If Hierarchy ID Writeable is Clear, this field is read only. The value is determined using the rules defined in § Section 7.9.17. <br>This field defaults to 0000 0000h. | RO/RW |
 
 </td>
-<td style="background-color:#e8e8e8">
+<td style="background-color:#e8e8e8"> <!-- 📄 Page 1353 -->
 
-<!-- 📄 Page 1353 -->
 ---
 
-```
+<pre>
  0                       31
 +-------------------------+
 |       System GUID 5     |
 +-------------------------+
-```
+</pre>
 
 **图 7-327 层级 ID GUID 5 寄存器**
 
@@ -9263,7 +8944,7 @@ Refer to Figure 7-326 and Table 7-287 for field allocation details of the Hierar
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9309,10 +8990,7 @@ VPD 数据的详细信息在 § 第 6.27 节中定义。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
-
----
-
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9342,7 +9020,7 @@ VPD 数据的详细信息在 § 第 6.27 节中定义。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9376,14 +9054,11 @@ VPD 数据的详细信息在 § 第 6.27 节中定义。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1354 -->
----
-
-<table>
+<table> <!-- 📄 Page 1354 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9484,7 +9159,7 @@ VPD Data 寄存器
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9549,7 +9224,7 @@ VPD Address 寄存器用于请求对 VPD 存储组件进行读或写。
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9581,14 +9256,11 @@ VPD Address 寄存器用于请求对 VPD 存储组件进行读或写。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1355 -->
----
-
-<table>
+<table> <!-- 📄 Page 1355 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9624,7 +9296,7 @@ F
 > <img src="figures/chapter_07/fig_1355_1_tight.png" width="700">
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9635,7 +9307,7 @@ F
 | 14:0 | VPD Address - DWORD-aligned byte address of the VPD to be accessed. Behavior is undefined if the lowest 2 bits of this field are non-zero. The lowest two bits of the field must be either RW, or RO with a value of 00b. The remaining bits of the field must be RW.<br>Default is implementation specific. | RW/RO (see description) |
 | 15 | F - The F bit is always written along with VPD Address. The value of F indicates the direction of transfer being requested (0b = read, 1b = write). When the transfer is complete, the F bit value changes to indicate completion (1b = read complete, 0b = write complete).<br>Default is implementation specific. | RW |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9670,7 +9342,7 @@ VPD Data
 > **图 7-330.** VPD 数据寄存器
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9680,7 +9352,7 @@ VPD Data
 |--------------|-------------|------------|
 | 31:0 | VPD Data - VPD Data can be read through this register. The least significant byte of this register (at offset 04h in this capability structure) corresponds to the byte of VPD at the address specified by VPD Address. Behavior is undefined for any read or write of this register with Byte Enables other than 1111b.<br>Default is implementation specific. | RW |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9707,7 +9379,7 @@ The Native PCIe Enclosure Management Extended (NPEM) Capability is an optional e
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9737,7 +9409,7 @@ The Native PCIe Enclosure Management Extended (NPEM) Capability is an optional e
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9775,14 +9447,11 @@ The Native PCIe Enclosure Management Extended (NPEM) Capability is an optional e
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1356 -->
----
-
-<table>
+<table> <!-- 📄 Page 1356 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -9890,7 +9559,7 @@ NPEM Status 寄存器
 > <img src="figures/chapter_07/fig_1356_1_tight.png" width="700">
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9940,7 +9609,7 @@ PCI Express 扩展能力 ID (Extended Capability ID)
 > <img src="figures/chapter_07/fig_1356_2_tight.png" width="700">
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9952,7 +9621,7 @@ PCI Express 扩展能力 ID (Extended Capability ID)
 | 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the capability structure present. Must be 1h for this version of the specification. | RO |
 | 31:20 | Next Capability Offset - This field contains the offset to the next PCI Express Extended Capability structure or 000h if no other items exist in the linked list of capabilities. | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -9979,7 +9648,7 @@ NPEM Capability 寄存器包含一个总的 NPEM Capable 位，以及实现所�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10009,7 +9678,7 @@ NPEM Capability 寄存器包含一个总的 NPEM Capable 位，以及实现所�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10045,15 +9714,12 @@ NPEM Capability 寄存器包含一个总的 NPEM Capable 位，以及实现所�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1357 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1357 -->
 <table>
 <thead>
 <tr>
@@ -10142,7 +9808,7 @@ Enclosure-specific Capabilities(机框专用能力)
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10164,21 +9830,18 @@ Enclosure-specific Capabilities(机框专用能力)
 | § | | |
 | § | | |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1358 -->
----
-
-**Table 7-292. NPEM Capability Register (continued) | 表 7-292. NPEM Capability 寄存器 (续)**
+**Table 7-292. NPEM Capability Register (continued) | 表 7-292. NPEM Capability 寄存器 (续)** <!-- 📄 Page 1358 -->
 
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
 | 11 | NPEM Disabled Capable - When Set, this bit indicates that enclosure has the ability to indicate the NPEM_Disabled state. This capability is independently optional. | HwInit |
 | 31:24 | Enclosure-specific Capabilities - The definition of enclosure-specific bits is outside the scope of this specification. | HwInit |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10213,7 +9876,7 @@ NPEM Control 寄存器包含一个总的 NPEM Enable 位，以及软件所控制
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10310,7 +9973,7 @@ Enclosure-specific Controls(机框专用控制)
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10322,7 +9985,7 @@ Enclosure-specific Controls(机框专用控制)
 | 1 | NPEM Initiate Reset - If NPEM Reset Capable bit is 1b, then a write of 1b to this bit initiates NPEM Reset. If NPEM Reset Capable bit is 0b, then this bit is permitted to be read-only with a value of 0b.<br>The value read by software from this bit must always be 0b. | RW/RO |
 | 2 | NPEM OK Control - When Set, this bit specifies that the NPEM OK indication be turned ON. When Clear, this bit specifies that the NPEM OK indication be turned OFF. | RW/RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10356,14 +10019,11 @@ Enclosure-specific Controls(机框专用控制)
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1359 -->
----
-
-**Table 7-293. NPEM Control Register (continued) | 表 7-293. NPEM Control 寄存器 (续)**
+**Table 7-293. NPEM Control Register (continued) | 表 7-293. NPEM Control 寄存器 (续)** <!-- 📄 Page 1359 -->
 
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
@@ -10377,14 +10037,11 @@ Enclosure-specific Controls(机框专用控制)
 | 9 | NPEM In A Failed Array Control - When Set, this bit specifies that the NPEM In A Failed Array indication be turned ON. When Clear, this bit specifies that the NPEM In A Failed Array indication be turned OFF.<br>If NPEM In A Failed Array Capable bit in NPEM Capability Register is 0b, this bit is permitted to be read-only with a value of 0b. Default value of this bit is 0b. | RW/RO |
 | 10 | NPEM Invalid Device Type Control - When Set, this bit specifies that the NPEM Invaild Device Type indication be turned ON. When Clear, this bit specifies that the NPEM Invalid Device Type indication be turned OFF. | RW/RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1360 -->
----
-
-**Table 7-293. NPEM Control Register (continued) | 表 7-293. NPEM Control 寄存器 (续)**
+**Table 7-293. NPEM Control Register (continued) | 表 7-293. NPEM Control 寄存器 (续)** <!-- 📄 Page 1360 -->
 
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
@@ -10392,7 +10049,7 @@ Enclosure-specific Controls(机框专用控制)
 | 11 | NPEM Disabled Control - When Set, this bit specifies that the NPEM Disabled indication be turned ON. When Clear, this bit specifies that the NPEM Disabled indication be turned OFF.<br>If NPEM Disabled Capable bit in NPEM Capability Register is 0b, this bit is permitted to be read-only with a value of 0b. Default value of this bit is 0b. | RW/RO |
 | 31:24 | Enclosure-specific Controls - The definition of enclosure-specific bits is outside the scope of this specification. Enclosure-specific software is permitted to change the value of this field. Other software must preserve the existing value when writing this register. Default value of this field is 00h. | RW/RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10438,7 +10095,7 @@ Enclosure-specific Status(机框专用状态)
 > <img src="figures/chapter_07/fig_1360_1.png" width="700">
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10449,7 +10106,7 @@ Enclosure-specific Status(机框专用状态)
 | 0 | NPEM Command Completed - This bit is Set when an NPEM command has completed, and the NPEM controller is ready to accept a subsequent command.<br>This bit is permitted to be hardwired to 1b if the enclosure is able to accept writes that update any portion of the NPEM Control register without any delay between successive writes.<br>Default value of this bit is 0b.<br>Software must wait for an NPEM command to complete before issuing the next NPEM command. However, if this bit is not set within 1 second limit on command execution, software is permitted to repeat the NPEM command or issue the next NPEM command. If software issues a write before the Port has completed processing of the previous command and before the 1 second time limit has expired, the Port is permitted to either accept or discard the write. Such a write is considered a programming error, and could result in a discrepancy between the NPEM Control Register and the enclosure element state. To recover from such a programming error and return the enclosure to a consistent state, software must issue a write to the NPEM Control Register which conforms to the NPEM command completion rules. | RW1C / RO |
 | 31:24 | Enclosure-specific Status - The definition of enclosure specific bits is outside the scope of this specification. Enclosure specific software is permitted to write non-zero values to this field. Other software must write 00h to this field. | RsvdZ/RO/RW1C |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10483,14 +10140,11 @@ Enclosure-specific Status(机框专用状态)
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1361 -->
----
-
-<table>
+<table> <!-- 📄 Page 1361 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -10525,7 +10179,7 @@ Alternate Protocol 扩展能力结构在实现了 Alternate Protocol Negotiation
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10555,7 +10209,7 @@ Alternate Protocol 扩展能力结构在实现了 Alternate Protocol Negotiation
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10591,7 +10245,7 @@ Alternate Protocol 扩展能力结构在实现了 Alternate Protocol Negotiation
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10711,7 +10365,7 @@ Alternate Protocol Data 2 寄存器
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10762,7 +10416,7 @@ PCI Express 扩展能力 ID (Extended Capability ID)
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10772,14 +10426,11 @@ PCI Express 扩展能力 ID (Extended Capability ID)
 |--------------|----------------------|------------|
 | 15:0 | PCI Express Extended Capability ID - This field is a PCI-SIG defined ID number that indicates the nature and format of the Extended Capability. | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1362 -->
----
-
-**Table 7-295. Alternate Protocol Extended Capability Header (continued) | 表 7-295. Alternate Protocol 扩展能力头 (续)**
+**Table 7-295. Alternate Protocol Extended Capability Header (continued) | 表 7-295. Alternate Protocol 扩展能力头 (续)** <!-- 📄 Page 1362 -->
 
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
@@ -10787,7 +10438,7 @@ PCI Express 扩展能力 ID (Extended Capability ID)
 | 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. Must be 1h for this version of the specification. | RO |
 | 31:20 | Next Capability Offset - This field contains the offset to the next PCI Express Capability structure or 000h if no other items exist in the linked list of Capabilities. For Extended Capabilities implemented in Configuration Space, this offset is relative to the beginning of PCI-compatible Configuration Space and thus must always be either 000h (for terminating list of Capabilities) or greater than 0FFh. | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10833,7 +10484,7 @@ RsvdP
 > <img src="figures/chapter_07/fig_1362_1_tight.png" width="700">
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10844,7 +10495,7 @@ RsvdP
 | 7:0 | Alternate Protocol Count - Indicates the number of Alternate Protocols or protocols that support Training Set Messages on one or more Lanes of this Link.<br>The value of this field must be greater than or equal to 0. | HwInit |
 | 8 | Alternate Protocol Selective Enable Supported - If Set, the Alternate Protocol Selective Enable Mask Register is present. If Clear, the Alternate Protocol Selective Enable Mask Register is not present and Alternate Protocol Negotiation is controlled soley by the Alternate Protocol Negotiation Global Enable bit.<br>In Upstream Ports, this bit is hardwired to 0b.<br>In Downstream Ports, this bit is HwInit with an implementation specific default value. | RO/HwInit |
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10890,7 +10541,7 @@ RsvdP
 > <img src="figures/chapter_07/fig_1362_2_tight.png" width="700">
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10920,9 +10571,7 @@ RsvdP
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
-
----
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -10958,9 +10607,8 @@ RsvdP
 </td>
 </tr>
 </tbody>
-</table>
+</table> <!-- 📄 Page 1363 -->
 
-<!-- 📄 Page 1363 -->
 ---
 
 **Table 7-297. Alternate Protocol Control Register | 表 7-297. 替代协议控制寄存器**
@@ -11002,9 +10650,8 @@ RsvdP
 </td>
 </tr>
 </tbody>
-</table>
+</table> <!-- 📄 Page 1364 -->
 
-<!-- 📄 Page 1364 -->
 ---
 
 > **Figure 7-340. Alternate Protocol Data 1 Register | 替代协议数据 1 寄存器**
@@ -11088,9 +10735,8 @@ RsvdP
 </td>
 </tr>
 </tbody>
-</table>
+</table> <!-- 📄 Page 1365 -->
 
-<!-- 📄 Page 1365 -->
 ---
 
 This register is present if Alternate Protocol Selective Enable Supported is Set.
@@ -11180,9 +10826,8 @@ Note: Due to document production limitations, this figure shows an 8 byte capabi
 </td>
 </tr>
 </tbody>
-</table>
+</table> <!-- 📄 Page 1366 -->
 
-<!-- 📄 Page 1366 -->
 ---
 
 > **Figure 7-344. Advanced Features Capability Header | 高级功能能力结构头部**
@@ -11268,9 +10913,8 @@ Note: Due to document production limitations, this figure shows an 8 byte capabi
 </td>
 </tr>
 </tbody>
-</table>
+</table> <!-- 📄 Page 1367 -->
 
-<!-- 📄 Page 1367 -->
 ---
 
 > **Figure 7-346. Conventional PCI Advanced Features Control Register | Conventional PCI 高级功能控制寄存器**
@@ -11346,9 +10990,8 @@ Note: Due to document production limitations, this figure shows an 8 byte capabi
 </td>
 </tr>
 </tbody>
-</table>
+</table> <!-- 📄 Page 1368 -->
 
-<!-- 📄 Page 1368 -->
 ---
 
 The SFI (System Firmware Intermediary) Extended Capability is an optional capability that provides system firmware with enhanced control over primarily hot-plug mechanisms, and enables system firmware to operate as an intermediary between certain events and the operating system (see § Section 6.7.4). This capability may be implemented by a Root Port or a Switch Downstream Port. It is not applicable to any other Device/Port type.
@@ -11392,9 +11035,8 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 </tbody>
 </table>
 
-§ Figure 7-349 and § Table 7-305 detail allocation of fields in the Extended Capability header.
+§ Figure 7-349 and § Table 7-305 detail allocation of fields in the Extended Capability header. <!-- 📄 Page 1369 -->
 
-<!-- 📄 Page 1369 -->
 ---
 
 > **Figure 7-349. SFI Extended Capability Header | SFI 扩展能力结构头部**
@@ -11479,9 +11121,8 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 </td>
 </tr>
 </tbody>
-</table>
+</table> <!-- 📄 Page 1370 -->
 
-<!-- 📄 Page 1370 -->
 ---
 
 > **Figure 7-351. SFI Control Register | SFI 控制寄存器**
@@ -11502,14 +11143,13 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 | 9 | SFI DRS Trigger - If the SFI DRS Mask bit is Clear, when software writes a 1b to this bit, the Downstream Port must behave as if a DRS Message was received. Otherwise, software writing a 1b to this bit has no effect. | RW |
 | 15:10 | RsvdP | |
 
-<!-- 📄 Page 1371 -->
 ---
 
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
 | (continued) | It is permitted to write 1b to this bit while simultaneously writing updated values to other fields in this register, notably the SFI DRS Mask bit. For this case, the SFI DRS Trigger semantics are based on the updated value of the SFI DRS Mask bit. This bit always returns 0b when read. | |
 
-> **Figure 7-352. SFI Status Register | SFI 状态寄存器**
+> **Figure 7-352. SFI Status Register | SFI 状态寄存器** <!-- 📄 Page 1371 -->
 > <img src="figures/chapter_07/fig_1371_1_tight.png" width="700">
 
 **Table 7-308. SFI Status Register | 表 7-308. SFI 状态寄存器**
@@ -11556,14 +11196,11 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1372 -->
----
-
-<table>
+<table> <!-- 📄 Page 1372 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11588,7 +11225,7 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -11625,7 +11262,7 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -11666,7 +11303,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -11696,7 +11333,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -11726,7 +11363,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -11764,14 +11401,11 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1373 -->
----
-
-<table>
+<table> <!-- 📄 Page 1373 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11796,7 +11430,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -11825,7 +11459,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -11862,7 +11496,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -11899,7 +11533,7 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -11939,14 +11573,11 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1374 -->
----
-
-<table>
+<table> <!-- 📄 Page 1374 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -11973,7 +11604,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12002,7 +11633,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12031,7 +11662,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12069,7 +11700,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12105,14 +11736,11 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1375 -->
----
-
-<table>
+<table> <!-- 📄 Page 1375 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12137,7 +11765,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12181,14 +11809,11 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1376 -->
----
-
-<table>
+<table> <!-- 📄 Page 1376 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12213,7 +11838,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12258,14 +11883,11 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1377 -->
----
-
-<table>
+<table> <!-- 📄 Page 1377 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12290,7 +11912,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12336,15 +11958,12 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1378 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1378 -->
 <table>
 <thead>
 <tr>
@@ -12376,7 +11995,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12405,7 +12024,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12441,7 +12060,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12477,14 +12096,11 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1379 -->
----
-
-<table>
+<table> <!-- 📄 Page 1379 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12509,7 +12125,7 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12554,7 +12170,7 @@ The Shadow Function Number field in the Shadow Function Instance register entry 
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12597,11 +12213,10 @@ Additional requirements for implementing Shadow Functions are:
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<a id="sec-7-9-25-2"></a>
 ## 7.9.25 Shadow Functions Extended Capability | Shadow Functions 扩展能力
 
 <table>
@@ -12629,15 +12244,12 @@ Additional requirements for implementing Shadow Functions are:
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1380 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1380 -->
 <table>
 <thead>
 <tr>
@@ -12675,7 +12287,7 @@ Additional requirements for implementing Shadow Functions are:
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12706,7 +12318,7 @@ Multiple Shadow Functions for a Function are permitted to be assigned by this Ca
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12739,14 +12351,11 @@ Multiple Shadow Functions for a Function are permitted to be assigned by this Ca
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
-<!-- 📄 Page 1381 -->
----
-
-<table>
+<table> <!-- 📄 Page 1381 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -12769,7 +12378,7 @@ N = Number of Shadow Functions 字段的值。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12798,7 +12407,7 @@ N = Number of Shadow Functions 字段的值。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12825,7 +12434,7 @@ N = Number of Shadow Functions 字段的值。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12854,7 +12463,7 @@ N = Number of Shadow Functions 字段的值。
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12866,10 +12475,7 @@ N = Number of Shadow Functions 字段的值。
 | 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. Must be 1h for this version of the specification. | RO |
 | 31:20 | Next Capability Offset - The offset to the next PCI Extended Capability structure or 000h if no other items exist in the linked list of capabilities. | RO |
 
-[⬆️ 返回目录](#sec-7-9-0)
-
----
-
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12899,7 +12505,7 @@ Shadow Functions 扩展能力头（偏移 00h）
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12944,7 +12550,7 @@ Figure 7-367 details the allocation of register bits of the Shadow Functions Cap
 
 [figures/chapter_07/fig_1382_1.png](figures/chapter_07/fig_1382_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -12982,10 +12588,11 @@ Figure 7-368 details the allocation of register bits of the Shadow Functions Con
 
 [figures/chapter_07/fig_1382_1.png](figures/chapter_07/fig_1382_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
+<a id="sec-7-9-25-2"></a>
 ## 7.9.25.2 Shadow Functions Capability Register (Offset 04h) | Shadow Functions 能力寄存器（偏移 04h）
 
 <table>
@@ -13011,7 +12618,7 @@ Shadow Functions 能力寄存器（偏移 04h）
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13041,7 +12648,7 @@ Shadow Functions 控制寄存器（偏移 08h）
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13082,7 +12689,7 @@ Figure 7-369 details the allocation of register bits of the Shadow Functions Con
 
 [figures/chapter_07/fig_1382_1.png](figures/chapter_07/fig_1382_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13124,7 +12731,7 @@ It is permitted to implement this extended capability in Functions associated wi
 
 [figures/chapter_07/fig_1383_1.png](figures/chapter_07/fig_1383_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13166,7 +12773,7 @@ The Extended Capability ID for the Integrity and Data Encryption (IDE) Exchange 
 
 [figures/chapter_07/fig_1383_1.png](figures/chapter_07/fig_1383_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13218,7 +12825,7 @@ Figure 7-372 details the allocation of register bits of the IDE Capability Regis
 
 [figures/chapter_07/fig_1385_1.png](figures/chapter_07/fig_1385_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13259,7 +12866,7 @@ Figure 7-373 details the allocation of register bits of the IDE Control Register
 
 [figures/chapter_07/fig_1387_1.png](figures/chapter_07/fig_1387_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13289,7 +12896,7 @@ Link IDE 寄存器块必须由一个 Link IDE Stream Control 寄存器和一个 
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13337,7 +12944,7 @@ Figure 7-374 details the allocation of register bits of the Link IDE Stream Cont
 
 [figures/chapter_07/fig_1387_1.png](figures/chapter_07/fig_1387_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13379,7 +12986,7 @@ Figure 7-375 details the allocation of register bits of the Link IDE Stream Stat
 
 [figures/chapter_07/fig_1389_1.png](figures/chapter_07/fig_1389_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13424,7 +13031,7 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 
 [figures/chapter_07/fig_1390_1.png](figures/chapter_07/fig_1390_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13432,10 +13039,7 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 
 [figures/chapter_07/fig_1390_1.png](figures/chapter_07/fig_1390_1.png)
 
-[⬆️ 返回目录](#sec-7-9-0)
-
----
-
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13465,14 +13069,13 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
 <a id="sec-7-9-26-5-2"></a>
-## 7.9.26.5.2 Selective IDE Stream Control Register | 选择性 IDE 流控制寄存器
+## 7.9.26.5.2 Selective IDE Stream Control Register | 选择性 IDE 流控制寄存器 <!-- 📄 Page 1391 -->
 
-<!-- 📄 Page 1391 -->
 ---
 
 
@@ -13516,14 +13119,13 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
 <a id="sec-7-9-26-5-2-cont"></a>
-## 7.9.26.5.2 Selective IDE Stream Control Register (continued) | 选择性 IDE 流控制寄存器(续)
+## 7.9.26.5.2 Selective IDE Stream Control Register (continued) | 选择性 IDE 流控制寄存器(续) <!-- 📄 Page 1392 -->
 
-<!-- 📄 Page 1392 -->
 ---
 
 <table>
@@ -13569,14 +13171,13 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
 <a id="sec-7-9-26-5-2-finish"></a>
-## 7.9.26.5.2 Selective IDE Stream Control Register (continued) | 选择性 IDE 流控制寄存器(续)
+## 7.9.26.5.2 Selective IDE Stream Control Register (continued) | 选择性 IDE 流控制寄存器(续) <!-- 📄 Page 1393 -->
 
-<!-- 📄 Page 1393 -->
 ---
 
 
@@ -13616,7 +13217,7 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13674,14 +13275,13 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
 <a id="sec-7-9-26-5-4"></a>
-## 7.9.26.5.4 Selective IDE RID Association Register Block | 选择性 IDE RID 关联寄存器块
+## 7.9.26.5.4 Selective IDE RID Association Register Block | 选择性 IDE RID 关联寄存器块 <!-- 📄 Page 1394 -->
 
-<!-- 📄 Page 1394 -->
 ---
 
 <table>
@@ -13707,7 +13307,7 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13766,7 +13366,7 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13824,14 +13424,13 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
 <a id="sec-7-9-26-5-5"></a>
-## 7.9.26.5.5 Selective IDE Address Association Register Block | 选择性 IDE 地址关联寄存器块
+## 7.9.26.5.5 Selective IDE Address Association Register Block | 选择性 IDE 地址关联寄存器块 <!-- 📄 Page 1395 -->
 
-<!-- 📄 Page 1395 -->
 ---
 
 <table>
@@ -13857,7 +13456,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13920,7 +13519,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -13971,7 +13570,7 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
@@ -14030,14 +13629,13 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
 <a id="sec-7-9-27"></a>
-## 7.9.27 Null Capability | 空能力
+## 7.9.27 Null Capability | 空能力 <!-- 📄 Page 1396 -->
 
-<!-- 📄 Page 1396 -->
 ---
 
 <table>
@@ -14100,14 +13698,13 @@ Null Capability 不包含任何寄存器。该能力出现在链表(Next Capabil
 </tbody>
 </table>
 
-[⬆️ 返回目录](#sec-7-9-0)
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
 <a id="sec-7-9-28"></a>
-## 7.9.28 Null Extended Capability | 空扩展能力
+## 7.9.28 Null Extended Capability | 空扩展能力 <!-- 📄 Page 1397 -->
 
-<!-- 📄 Page 1397 -->
 ---
 
 
@@ -14190,17 +13787,14 @@ UIO 要求使用 SVC 能力，且 VC 或 MFVC 能力不支持 UIO。UIO 仅在 F
 </div>
 
 
-[⬆️ 返回目录](#sec-7-9-0)
-
----
+[⬆️ 返回目录](#sec-7-9)
 
 ---
 
 7.9.29 Streamlined Virtual Channel Extended Capability (SVC) §
 §
-§
+§ <!-- 📄 Page 1398 -->
 
-<!-- 📄 Page 1398 -->
 ---
 
 <a id="sec-7-9-29"></a>
@@ -14372,6 +13966,32 @@ Table 7-340 details allocation of register fields in the SVC Port Control Regist
 <a id="sec-7-9-29-3"></a>
 ## 7.9.29.3 SVC Port Capability Register 2 (Offset 08h) | SVC 端口能力寄存器 2 (偏移量 08h)
 
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+This register is RsvdP.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+此寄存器为 RsvdP（保留，由特权软件决定其值）。
+
+</td>
+</tr>
+</tbody>
+</table>
+
+> ✅ **来源批注**：本节正文在 6.2 PDF 文本抽取结果（raw/chapter_07_raw.md）中缺失，已依据 PCIe 6.2 原版 PDF 第 1399 页补录。原文本节仅一句 "This register is RsvdP."，因此本寄存器无位域定义（RsvdP 即 Reserved for future use, Preserved value）。
+
+
 <a id="sec-7-9-29-4"></a>
 ## 7.9.29.4 SVC Port Control Register (Offset 0Ch) | SVC 端口控制寄存器 (偏移量 0Ch)
 
@@ -14418,10 +14038,7 @@ Table 7-341 details allocation of register fields in the SVC Port Status Registe
 
 ---
 
-<!-- 📄 Page 1400 -->
----
-
-**Figure 7-390. SVC Port Status Register | 图 7-390. SVC 端口状态寄存器**
+**Figure 7-390. SVC Port Status Register | 图 7-390. SVC 端口状态寄存器** <!-- 📄 Page 1400 -->
 
 ```
 0                       1                                                         31
@@ -14489,10 +14106,7 @@ SVC VC Protocols Supported 字段的编码值:
 
 ---
 
-<!-- 📄 Page 1401 -->
----
-
-<a id="sec-7-9-29-6"></a>
+<a id="sec-7-9-29-6"></a> <!-- 📄 Page 1401 -->
 ## 7.9.29.6 SVC Resource Capability Register | SVC 资源能力寄存器
 
 **Figure 7-391. SVC Resource Capability Register | 图 7-391. SVC 资源能力寄存器**
@@ -14562,10 +14176,7 @@ Figure 7-392 details allocation of register fields in the SVC Resource Control R
 
 ---
 
-<!-- 📄 Page 1402 -->
----
-
-<table>
+<table> <!-- 📄 Page 1402 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -14590,10 +14201,7 @@ Table 7-344 details allocation of register fields in the VC Resource Status Regi
 
 ---
 
-<!-- 📄 Page 1403 -->
----
-
-<a id="sec-7-9-29-8"></a>
+<a id="sec-7-9-29-8"></a> <!-- 📄 Page 1403 -->
 ## 7.9.29.8 SVC Resource Status Register | SVC 资源状态寄存器
 
 **Figure 7-393. SVC Resource Status Register | 图 7-393. SVC 资源状态寄存器**
@@ -14603,9 +14211,8 @@ Table 7-344 details allocation of register fields in the VC Resource Status Regi
 +-----------------------+----------------------------------------------------------+
 |       RsvdP           |        SVC VC Negotiation Pending          |    RsvdP   |
 +-----------------------+----------------------------------------------------------+
-```
+``` <!-- 📄 Page 1404 -->
 
-<!-- 📄 Page 1404 -->
 ---
 
 **Table 7-344. SVC Resource Status Register | 表 7-344. SVC 资源状态寄存器**
@@ -14700,10 +14307,7 @@ Figure 7-395 details allocation of register fields in the MRBL Extended Capabili
 
 ---
 
-<!-- 📄 Page 1405 -->
----
-
-<a id="sec-7-9-30-1"></a>
+<a id="sec-7-9-30-1"></a> <!-- 📄 Page 1405 -->
 ## 7.9.30.1 MRBL Extended Capability Header (Offset 00h) | MRBL 扩展能力头 (偏移量 00h)
 
 **Figure 7-395. MRBL Extended Capability Header | 图 7-395. MRBL 扩展能力头**
@@ -14763,9 +14367,8 @@ Figure 7-396 details allocation of register fields in the MRBL Capabilities Regi
 +--------------------------------------------------------------------------------------------------------+
 |                              MRBL Structure Length                                                     |
 +--------------------------------------------------------------------------------------------------------+
-```
+``` <!-- 📄 Page 1406 -->
 
-<!-- 📄 Page 1406 -->
 ---
 
 **Table 7-346. MRBL Capabilities Register | 表 7-346. MRBL 能力寄存器**
@@ -14826,10 +14429,7 @@ Figure 7-397 details allocation of register fields in the MRBL Locator Register;
 
 ---
 
-<!-- 📄 Page 1407 -->
----
-
-<table>
+<table> <!-- 📄 Page 1407 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -14855,244 +14455,239 @@ Figure 7-397 details allocation of register fields in the MRBL Locator Register;
 
 ---
 
-<!-- 📄 Page 1408 -->
----
+## 📑 本章目录 (Table of Contents) — Auto-Generated <!-- 📄 Page 1408 -->
 
----
-
-## 📑 本章目录 (Table of Contents) — Auto-Generated
-
-- [7. Software Initialization and Configuration § | 7. 软件初始化与配置 §](#sec-7)
-- [7.1 Configuration Topology § | 7.1 配置拓扑 §](#sec-7-1)
-- [7.2 PCI Express Configuration Mechanisms § | 7.2 PCI Express 配置机制 §](#sec-7-2)
-- [7.2.1 PCI-compatible Configuration Mechanism § | 7.2.1 PCI 兼容配置机制 §](#sec-7-2-1)
-- [7.2.2 PCI Express Enhanced Configuration Access Mechanism (ECAM) § | 7.2.2 PCI Express 增强配置访问机制 (ECAM) §](#sec-7-2-2)
-- [7.2.2.1 Host Bridge Requirements § | 7.2.2.1 主桥 (Host Bridge) 要求 §](#sec-7-2-2-1)
-- [7.2.2.2 PCI Express Device Requirements § | 7.2.2.2 PCI Express 设备要求 §](#sec-7-2-2-2)
-- [7.2.3 Root Complex Register Block (RCRB) § | 7.2.3 根复合体寄存器块 (RCRB) §](#sec-7-2-3)
-- [7.3 Configuration Transaction Rules § | 7.3 配置事务规则 §](#sec-7-3)
-- [7.3.1 Device Number § | 7.3.1 设备号 (Device Number) §](#sec-7-3-1)
-- [7.3.2 Configuration Transaction Addressing | 配置事务寻址](#sec-7-3-2)
-- [7.3.3 Configuration Request Routing Rules | 配置请求路由规则](#sec-7-3-3)
-- [7.3.4 PCI Special Cycles | PCI 特殊周期](#sec-7-3-4)
-- [7.4 Configuration Register Types | 配置寄存器类型](#sec-7-4)
-- [7.5 PCI and PCIe Capabilities Required by the Base Spec for all Ports | 基础规范要求所有端口支持的 PCI 和 PCIe 能力](#sec-7-5)
-- [7.5.1 PCI-Compatible Configuration Registers | PCI 兼容配置寄存器](#sec-7-5-1)
-- [7.5.1.1 Type 0/1 Common Configuration Space | Type 0/1 公共配置空间](#sec-7-5-1-1)
-- [7.5.1.1.1 Vendor ID Register (Offset 00h) | Vendor ID 寄存器（偏移 00h）](#sec-7-5-1-1-1)
-- [7.5.1.1.2 Device ID Register (Offset 02h) | Device ID 寄存器（偏移 02h）](#sec-7-5-1-1-2)
-- [7.5.1.1.3 Command Register (Offset 04h) | Command 寄存器（偏移 04h）](#sec-7-5-1-1-3)
-- [7.5.1.1.4 Status Register (Offset 06h) | Status 寄存器（偏移 06h）](#sec-7-5-1-1-4)
-- [7.5.1.1.4 Status Register (Offset 06h) | 状态寄存器（偏移量 06h）](#sec-7-5-1-1-4)
-- [7.5.1.1.5 Revision ID Register (Offset 08h) | 修订版本 ID 寄存器（偏移量 08h）](#sec-7-5-1-1-5)
-- [7.5.1.1.6 Class Code Register (Offset 09h) | 类别代码寄存器（偏移量 09h）](#sec-7-5-1-1-6)
-- [7.5.1.1.7 Cache Line Size Register (Offset 0Ch) | Cache 行大小寄存器（偏移量 0Ch）](#sec-7-5-1-1-7)
-- [7.5.1.1.8 Latency Timer Register (Offset 0Dh) | 延迟定时器寄存器（偏移量 0Dh）](#sec-7-5-1-1-8)
-- [7.5.1.1.9 Header Type Register (Offset 0Eh) | 头类型寄存器（偏移量 0Eh）](#sec-7-5-1-1-9)
-- [7.5.1.1.10 BIST Register (Offset 0Fh) | BIST 寄存器（偏移量 0Fh）](#sec-7-5-1-1-10)
-- [7.5.1.1.11 Capabilities Pointer (Offset 34h) | 能力指针（偏移量 34h）](#sec-7-5-1-1-11)
-- [7.5.1.1.12 Interrupt Line Register (Offset 3Ch) | 中断线寄存器（偏移量 3Ch）](#sec-7-5-1-1-12)
-- [7.5.1.1.13 Interrupt Pin Register (Offset 3Dh) | 中断引脚寄存器（偏移量 3Dh）](#sec-7-5-1-1-13)
-- [7.5.1.1.14 Error Control/Status Register Summary | 错误控制/状态寄存器总结](#sec-7-5-1-1-14)
-- [7.5.1.1.14 Error Registers | 错误寄存器](#sec-7-5-1-1-14)
-- [7.5.1.2 Type 0 Configuration Space Header | Type 0 配置空间头](#sec-7-5-1-2)
-- [7.5.1.2.1 Base Address Registers (Offset 10h - 24h) | 基址寄存器 (BAR) (偏移 10h - 24h)](#sec-7-5-1-2-1)
-- [7.5.1.2.2 Cardbus CIS Pointer Register (Offset 28h) | Cardbus CIS 指针寄存器 (偏移 28h)](#sec-7-5-1-2-2)
-- [7.5.1.2.3 Subsystem Vendor ID Register/Subsystem ID Register (Offset 2Ch/2Eh) | 子系统供应商 ID 寄存器/子系统 ID 寄存器 (偏移 2Ch/2Eh)](#sec-7-5-1-2-3)
-- [7.5.1.2.4 Expansion ROM Base Address Register (Offset 30h) | 扩展 ROM 基址寄存器 (偏移 30h)](#sec-7-5-1-2-4)
-- [7.5.1.2.5 Min_Gnt Register/Max_Lat Register (Offset 3Eh/3Fh) | Min_Gnt 寄存器/Max_Lat 寄存器 (偏移 3Eh/3Fh)](#sec-7-5-1-2-5)
-- [7.5.1.3 Type 1 Configuration Space Header | Type 1 配置空间头](#sec-7-5-1-3)
-- [7.5.1.3.1 Type 1 Base Address Registers (Offset 10h-14h) | Type 1 基址寄存器 (偏移 10h-14h)](#sec-7-5-1-3-1)
-- [7.5.1.3.7 Secondary Status Register (Offset 1Eh) | Secondary Status 寄存器 (偏移 1Eh)](#sec-7-5-1-3-7)
-- [7.5.1.3.8 Memory Base Register/Memory Limit Register (Offset 20h/22h) | Memory Base 寄存器 / Memory Limit 寄存器 (偏移 20h/22h)](#sec-7-5-1-3-8)
-- [7.5.1.3.10 Prefetchable Base Upper 32 Bits/Prefetchable Limit Upper 32 Bits Registers (Offset 28h/2Ch) | Prefetchable Base Upper 32 Bits / Prefetchable Limit Upper 32 Bits 寄存器 (偏移 28h/2Ch)](#sec-7-5-1-3-10)
-- [7.5.1.3.11 I/O Base Upper 16 Bits/I/O Limit Upper 16 Bits Registers (Offset 30h/32h) | I/O Base Upper 16 Bits / I/O Limit Upper 16 Bits 寄存器 (偏移 30h/32h)](#sec-7-5-1-3-11)
-- [7.5.1.3.12 Expansion ROM Base Address Register (Offset 38h) | Expansion ROM 基址寄存器 (偏移 38h)](#sec-7-5-1-3-12)
-- [7.5.1.3.13 Bridge Control Register (Offset 3Eh) | Bridge Control 寄存器 (偏移 3Eh)](#sec-7-5-1-3-13)
-- [7.5.1.4 PCI Power Management Capability Structure | PCI 电源管理能力结构](#sec-7-5-1-4)
-- [7.5.2 PCI Power Management Capability Structure | PCI 电源管理能力结构](#sec-7-5-2)
-- [7.5.2.1 Power Management Capabilities Register (Offset 00h) | 电源管理能力寄存器（偏移量 00h）](#sec-7-5-2-1)
-- [7.5.2.2 Power Management Control/Status Register (Offset 04h) | 电源管理控制/状态寄存器（偏移量 04h）](#sec-7-5-2-2)
-- [7.5.2.3 Power Management Data Register (Offset 07h) | 电源管理数据寄存器（偏移量 07h）](#sec-7-5-2-3)
-- [7.5.3 PCI Express Capability Structure | PCI Express 能力结构](#sec-7-5-3)
-- [7.5.3.1 PCI Express Capability List Register (Offset 00h) | PCI Express 能力列表寄存器（偏移量 00h）](#sec-7-5-3-1)
-- [7.5.3.2 PCI Express Capabilities Register (Offset 02h) | PCI Express 能力寄存器（偏移量 02h）](#sec-7-5-3-2)
-- [7.5.3.3 Device Capabilities Register (Offset 04h) | 设备能力寄存器 (Device Capabilities Register) (偏移量 04h)](#sec-7-5-3-3)
-- [7.5.3.4 Device Control Register (Offset 08h) | 设备控制寄存器 (Device Control Register) (偏移量 08h)](#sec-7-5-3-4)
-- [7.5.3.5 Device Status Register (Offset 0Ah) | 设备状态寄存器 (Device Status Register) (偏移量 0Ah)](#sec-7-5-3-5)
-- [7.5.3.6 Link Capabilities Register (Offset 0Ch) | 链路能力寄存器 (Link Capabilities Register) (偏移量 0Ch)](#sec-7-5-3-6)
-- [7.5.3.7 Link Control Register (Offset 10h) | 链路控制寄存器（偏移 10h）](#sec-7-5-3-7)
-- [7.5.3.8 Link Status Register (Offset 12h) | 链路状态寄存器（偏移 12h）](#sec-7-5-3-8)
-- [7.5.3.9 Slot Capabilities Register (Offset 14h) | 插槽能力寄存器（偏移 14h）](#sec-7-5-3-9)
-- [7.5.3.10 Slot Control Register | 插槽控制寄存器 (Offset 18h)](#sec-7-5-3-10)
-- [7.5.3.11 Slot Status Register | 插槽状态寄存器 (Offset 1Ah)](#sec-7-5-3-11)
-- [7.5.3.12 Root Control Register | 根复合体控制寄存器 (Offset 1Ch)](#sec-7-5-3-12)
-- [7.5.3.13 Root Capabilities Register | 根复合体能力寄存器 (Offset 1Eh)](#sec-7-5-3-13)
-- [7.5.3.14 Root Status Register | 根复合体状态寄存器 (Offset 20h)](#sec-7-5-3-14)
-- [7.5.3.15 Device Capabilities 2 Register | 设备能力 2 寄存器 (Offset 24h)](#sec-7-5-3-15)
-- [7.5.3.16 Device Control 2 Register (Offset 28h) | Device Control 2 寄存器(偏移 28h)](#sec-7-5-3-16)
-- [7.5.3.17 Device Status 2 Register (Offset 2Ah) | Device Status 2 寄存器(偏移 2Ah)](#sec-7-5-3-17)
-- [7.5.3.18 Link Capabilities 2 Register (Offset 2Ch) | Link Capabilities 2 寄存器(偏移 2Ch)](#sec-7-5-3-18)
-- [7.5.3.19 Link Control 2 Register (Offset 30h) | Link Control 2 寄存器(偏移 30h)](#sec-7-5-3-19)
-- [7.5.3.20 Link Status 2 Register (Offset 32h) | Link Status 2 寄存器(偏移 32h)](#sec-7-5-3-20)
-- [7.5.3.21 Slot Capabilities 2 Register (Offset 34h) | Slot Capabilities 2 寄存器 (偏移 34h)](#sec-7-5-3-21)
-- [7.6 PCI Express Extended Capabilities | PCI Express 扩展能力](#sec-7-6)
-- [7.6.1 Extended Capabilities in Configuration Space | 配置空间中的扩展能力](#sec-7-6-1)
-- [7.6.2 Extended Capabilities in the Root Complex Register Block | 根复合体寄存器块中的扩展能力](#sec-7-6-2)
-- [7.6.3 PCI Express Extended Capability Header | PCI Express 扩展能力头](#sec-7-6-3)
-- [7.7 PCI and PCIe Capabilities Required by the Base Spec in Some Situations | 基础规范在某些情况下要求的 PCI 和 PCIe 能力](#sec-7-7)
-- [7.7.1 MSI Capability Structures | MSI 能力结构](#sec-7-7-1)
-- [7.7.1.1 MSI Capability Header (Offset 00h) | MSI 能力头 (偏移 00h)](#sec-7-7-1-1)
-- [7.7.1.2 Message Control Register for MSI (Offset 02h) | MSI 的消息控制寄存器 (偏移 02h)](#sec-7-7-1-2)
-- [7.7.1.3 Message Address Register for MSI (Offset 04h) | MSI 的消息地址寄存器 (偏移 04h)](#sec-7-7-1-3)
-- [7.7.1.4 Message Upper Address Register for MSI (Offset 08h) | MSI 的消息高地址寄存器 (偏移 08h)](#sec-7-7-1-4)
-- [7.7.1.5 Message Data Register for MSI (Offset 08h or 0Ch) | MSI 的消息数据寄存器 (偏移 08h 或 0Ch)](#sec-7-7-1-5)
-- [7.7.1.6 Extended Message Data Register for MSI (Optional) | MSI 扩展消息数据寄存器(可选)](#sec-7-7-1-6)
-- [7.7.1.7 Mask Bits Register for MSI (Offset 0Ch or 10h) | MSI Mask Bits 寄存器(偏移 0Ch 或 10h)](#sec-7-7-1-7)
-- [7.7.1.8 Pending Bits Register for MSI (Offset 10h or 14h) | MSI Pending Bits 寄存器(偏移 10h 或 14h)](#sec-7-7-1-8)
-- [7.7.2 MSI-X Capability and Table Structure | MSI-X 能力结构与表结构](#sec-7-7-2)
-- [7.7.2.1 MSI-X Capability Header (Offset 00h) | MSI-X Capability Header(偏移 00h)](#sec-7-7-2-1)
-- [7.7.2.2 Message Control Register for MSI-X (Offset 02h) | MSI-X Message Control 寄存器(偏移 02h)](#sec-7-7-2-2)
-- [7.7.2.3 Table Offset/Table BIR Register for MSI-X (Offset 04h) | MSI-X Table Offset/Table BIR 寄存器(偏移 04h)](#sec-7-7-2-3)
-- [7.7.2.4 PBA Offset/PBA BIR Register for MSI-X (Offset 08h) | MSI-X PBA Offset/PBA BIR 寄存器(偏移 08h)](#sec-7-7-2-4)
-- [7.7.2.5 Message Address Register for MSI-X Table Entries | MSI-X Table 条目 Message Address 寄存器](#sec-7-7-2-5)
-- [7.7.2.6 Message Upper Address Register for MSI-X Table Entries | MSI-X Table 条目 Message Upper Address 寄存器](#sec-7-7-2-6)
-- [7.7.2.7 Message Data Register for MSI-X Table Entries | MSI-X 表条目的消息数据寄存器](#sec-7-7-2-7)
-- [7.7.2.8 Vector Control Register for MSI-X Table Entries | MSI-X 表条目的向量控制寄存器](#sec-7-7-2-8)
-- [7.7.2.9 Pending Bits Register for MSI-X PBA Entries | MSI-X PBA 条目的挂起位寄存器](#sec-7-7-2-9)
-- [7.7.3 Secondary PCI Express Extended Capability | 次级 PCI Express 扩展能力](#sec-7-7-3)
-- [7.7.3.1 Secondary PCI Express Extended Capability Header (Offset 00h) | 次级 PCI Express 扩展能力头（偏移 00h）](#sec-7-7-3-1)
-- [7.7.3.2 Link Control 3 Register (Offset 04h) | 链路控制 3 寄存器（偏移 04h）](#sec-7-7-3-2)
-- [7.7.3.3 Lane Error Status Register (Offset 08h) | 通道错误状态寄存器（偏移 08h）](#sec-7-7-3-3)
-- [7.7.3.4 Lane Equalization Control Register (Offset 0Ch) | 通道均衡控制寄存器（偏移 0Ch）](#sec-7-7-3-4)
-- [7.7.4 Data Link Feature Extended Capability | 数据链路特性扩展能力](#sec-7-7-4)
-- [7.7.4.1 Data Link Feature Extended Capability Header (Offset 00h) | 数据链路特性扩展能力头（偏移 00h）](#sec-7-7-4-1)
-- [7.7.4.2 Data Link Feature Capabilities Register (Offset 04h) | 数据链路特性能力寄存器（偏移 04h）](#sec-7-7-4-2)
-- [7.7.4.3 Data Link Feature Status Register (Offset 08h) | 数据链路特性状态寄存器(偏移量 08h)](#sec-7-7-4-3)
-- [7.7.5 Physical Layer 16.0 GT/s Extended Capability | 物理层 16.0 GT/s 扩展能力结构](#sec-7-7-5)
-- [7.7.5.1 Physical Layer 16.0 GT/s Extended Capability Header (Offset 00h) | 物理层 16.0 GT/s 扩展能力结构头(偏移量 00h)](#sec-7-7-5-1)
-- [7.7.5.2 16.0 GT/s Capabilities Register (Offset 04h) | 16.0 GT/s 能力寄存器(偏移量 04h)](#sec-7-7-5-2)
-- [7.7.5.3 16.0 GT/s Control Register (Offset 08h) | 16.0 GT/s 控制寄存器(偏移量 08h)](#sec-7-7-5-3)
-- [7.7.5.4 16.0 GT/s Status Register (Offset 0Ch) | 16.0 GT/s 状态寄存器(偏移量 0Ch)](#sec-7-7-5-4)
-- [7.7.5.5 16.0 GT/s Local Data Parity Mismatch Status Register (Offset 10h) | 16.0 GT/s 本地数据奇偶校验不匹配状态寄存器(偏移量 10h)](#sec-7-7-5-5)
-- [7.7.5.6 16.0 GT/s First Retimer Data Parity Mismatch Status Register (Offset 14h) | 16.0 GT/s 第一个重定时器数据奇偶校验不匹配状态寄存器(偏移量 14h)](#sec-7-7-5-6)
-- [7.7.5.7 16.0 GT/s Second Retimer Data Parity Mismatch Status Register (Offset 18h) | 16.0 GT/s 第二个重定时器数据奇偶校验不匹配状态寄存器(偏移量 18h)](#sec-7-7-5-7)
-- [7.7.5.8 Physical Layer 16.0 GT/s Reserved (Offset 1Ch) | 物理层 16.0 GT/s 保留(偏移量 1Ch)](#sec-7-7-5-8)
-- [7.7.5.9 16.0 GT/s Lane Equalization Control Register (Offsets 20h to 3Ch) | 16.0 GT/s 通道均衡控制寄存器(偏移量 20h 至 3Ch)](#sec-7-7-5-9)
-- [7.7.6 Physical Layer 32.0 GT/s Extended Capability | 物理层 32.0 GT/s 扩展能力](#sec-7-7-6)
-- [7.7.6.1 Physical Layer 32.0 GT/s Extended Capability Header (Offset 00h) | 物理层 32.0 GT/s 扩展能力头（偏移 00h）](#sec-7-7-6-1)
-- [7.7.6.2 32.0 GT/s Capabilities Register (Offset 04h) | 32.0 GT/s 能力寄存器（偏移 04h）](#sec-7-7-6-2)
-- [7.7.6.3 32.0 GT/s Control Register (Offset 08h) | 32.0 GT/s 控制寄存器（偏移 08h）](#sec-7-7-6-3)
-- [7.7.6.4 32.0 GT/s Status Register (Offset 0Ch) | 32.0 GT/s 状态寄存器（偏移 0Ch）](#sec-7-7-6-4)
-- [7.7.6.5 Received Modified TS Data 1 Register (Offset 10h) | 接收 Modified TS 数据 1 寄存器（偏移 10h）](#sec-7-7-6-5)
-- [7.7.6.6 Received Modified TS Data 2 Register (Offset 14h) | 接收 Modified TS 数据 2 寄存器（偏移 14h）](#sec-7-7-6-6)
-- [7.7.6.7 Transmitted Modified TS Data 1 Register (Offset 18h) | 发送 Modified TS 数据 1 寄存器（偏移 18h）](#sec-7-7-6-7)
-- [7.7.6.8 Transmitted Modified TS Data 2 Register (Offset 1Ch) | 发送 Modified TS 数据 2 寄存器（偏移 1Ch）](#sec-7-7-6-8)
-- [7.7.6.9 32.0 GT/s Lane Equalization Control Register (Offset 20h) | 32.0 GT/s 通道均衡控制寄存器(偏移 20h)](#sec-7-7-6-9)
-- [7.7.7 Physical Layer 64.0 GT/s Extended Capability | 7.7.7 物理层 64.0 GT/s 扩展能力](#sec-7-7-7)
-- [7.7.7.1 Physical Layer 64.0 GT/s Extended Capability Header (Offset 00h) | 7.7.7.1 物理层 64.0 GT/s 扩展能力 Header(偏移 00h)](#sec-7-7-7-1)
-- [7.7.7.2 64.0 GT/s Capabilities Register (Offset 04h) | 7.7.7.2 64.0 GT/s 能力寄存器(偏移 04h)](#sec-7-7-7-2)
-- [7.7.7.3 64.0 GT/s Control Register (Offset 08h) | 7.7.7.3 64.0 GT/s 控制寄存器(偏移 08h)](#sec-7-7-7-3)
-- [7.7.7.4 64.0 GT/s Status Register (Offset 0Ch) | 7.7.7.4 64.0 GT/s 状态寄存器(偏移 0Ch)](#sec-7-7-7-4)
-- [7.7.7.5 64.0 GT/s Lane Equalization Control Register (Offset 10h) | 7.7.7.5 64.0 GT/s 通道均衡控制寄存器(偏移 10h)](#sec-7-7-7-5)
-- [7.7.8 Flit Logging Extended Capability | 7.7.8 Flit 日志扩展能力](#sec-7-7-8)
-- [7.7.8.1 Flit Logging Extended Capability Header (Offset 00h) | 7.7.8.1 Flit 日志扩展能力 Header(偏移 00h)](#sec-7-7-8-1)
-- [7.7.8.2 Flit Error Log 1 Register (Offset 04h) | 7.7.8.2 Flit 错误日志 1 寄存器(偏移 04h)](#sec-7-7-8-2)
-- [7.7.8.3 Flit Error Log 2 Register (Offset 08h) | Flit 错误日志 2 寄存器（偏移 08h）](#sec-7-7-8-3)
-- [7.7.8.4 Flit Error Counter Control Register (Offset 0Ch) | Flit 错误计数控制寄存器（偏移 0Ch）](#sec-7-7-8-4)
-- [7.7.8.5 Flit Error Counter Status Register (Offset 0Eh) | Flit 错误计数状态寄存器（偏移 0Eh）](#sec-7-7-8-5)
-- [7.7.8.6 FBER Measurement Control Register (Offset 10h) | FBER 测量控制寄存器（偏移 10h）](#sec-7-7-8-6)
-- [7.7.8.7 FBER Measurement Status 1 Register (Offset 14h) | FBER 测量状态 1 寄存器（偏移 14h）](#sec-7-7-8-7)
-- [7.7.8.8 FBER Measurement Status 2 Register (Offset 18h) | FBER 测量状态 2 寄存器（偏移 18h）](#sec-7-7-8-8)
-- [7.7.8.9 FBER Measurement Status 3 Register (Offset 1Ch) | FBER 测量状态 3 寄存器（偏移 1Ch）](#sec-7-7-8-9)
-- [7.7.8.10 FBER Measurement Status 4 Register (Offset 20h) | FBER 测量状态 4 寄存器（偏移 20h）](#sec-7-7-8-10)
-- [7.7.8.11 FBER Measurement Status 5 Register (Offset 24h) | FBER 测量状态 5 寄存器（偏移 24h）](#sec-7-7-8-11)
-- [7.7.8.12 FBER Measurement Status 6 Register (Offset 28h) | FBER 测量状态 6 寄存器（偏移 28h）](#sec-7-7-8-12)
-- [7.7.8.13 FBER Measurement Status 7 Register (Offset 2Ch) | FBER 测量状态 7 寄存器（偏移 2Ch）](#sec-7-7-8-13)
-- [7.7.8.14 FBER Measurement Status 8 Register (Offset 30h) | FBER 测量状态 8 寄存器（偏移 30h）](#sec-7-7-8-14)
-- [7.7.8.15 FBER Measurement Status 9 Register (Offset 34h) | FBER 测量状态 9 寄存器（偏移 34h）](#sec-7-7-8-15)
-- [7.7.8.16 FBER Measurement Status 10 Register (Offset 38h) | FBER 测量状态 10 寄存器（偏移 38h）](#sec-7-7-8-16)
-- [7.7.9 Device 3 Extended Capability Structure | Device 3 扩展能力结构](#sec-7-7-9)
-- [7.7.9.2 Device Capabilities 3 Register (Offset 04h) | Device 能力 3 寄存器 (偏移 04h)](#sec-7-7-9-2)
-- [7.7.9.3 Device Control 3 Register (Offset 08h) | Device 控制 3 寄存器 (偏移 08h)](#sec-7-7-9-3)
-- [7.7.9.4 Device Status 3 Register (Offset 0Ch) | Device 状态 3 寄存器 (偏移 0Ch)](#sec-7-7-9-4)
-- [7.7.10 Lane Margining at the Receiver Extended Capability | 接收器通道裕度扩展能力 (Lane Margining at the Receiver Extended Capability)](#sec-7-7-10)
-- [7.7.10.1 Lane Margining at the Receiver Extended Capability Header (Offset 00h) | 接收器通道裕度扩展能力头 (偏移 00h)](#sec-7-7-10-1)
-- [7.7.10.2 Margining Port Capabilities Register (Offset 04h) | 裕度端口能力寄存器 (偏移 04h)](#sec-7-7-10-2)
-- [7.7.10.3 Margining Port Status Register (Offset 06h) | 裕度端口状态寄存器 (偏移 06h)](#sec-7-7-10-3)
-- [7.7.10.4 Margining Lane Control Register (Offset 08h) | Margining Lane 控制寄存器（偏移 08h）](#sec-7-7-10-4)
-- [7.7.10.5 Margining Lane Status Register (Offset 0Ah) | Margining Lane 状态寄存器（偏移 0Ah）](#sec-7-7-10-5)
-- [7.7.11 ACS Extended Capability | ACS 扩展能力（Access Control Services）](#sec-7-7-11)
-- [7.7.11.1 ACS Extended Capability Header (Offset 00h) | ACS 扩展能力头（偏移 00h）](#sec-7-7-11-1)
-- [7.7.11.2 ACS Capability Register (Offset 04h) | ACS 能力寄存器（偏移 04h）](#sec-7-7-11-2)
-- [7.7.11.3 ACS Control Register (Offset 06h) | ACS 控制寄存器（偏移 06h）](#sec-7-7-11-3)
-- [7.7.11.4 Egress Control Vector Register (Offset 08h) | Egress Control Vector 寄存器（偏移 08h）](#sec-7-7-11-4)
-- [7.8 Common PCI and PCIe Capabilities | 通用 PCI 与 PCIe 能力](#sec-7-8)
-- [7.8.1 Power Budgeting Extended Capability | 功耗预算（Power Budgeting）扩展能力](#sec-7-8-1)
-- [7.8.1.1 Power Budgeting Extended Capability Header (Offset 00h) | 功耗预算扩展能力头(偏移 00h)](#sec-7-8-1-1)
-- [7.8.1.2 Power Budgeting Data Select Register (Offset 04h) | 功耗预算数据选择寄存器(偏移 04h)](#sec-7-8-1-2)
-- [7.8.1.3 Power Budgeting Control Register (Offset 06h) | 功耗预算控制寄存器(偏移 06h)](#sec-7-8-1-3)
-- [7.8.1.4 Power Budgeting Data Register (Offset 08h) | 功耗预算数据寄存器(偏移 08h)](#sec-7-8-1-4)
-- [7.8.1.5 Power Budgeting Capability Register (Offset 0Ch) | 功耗预算能力寄存器(偏移 0Ch)](#sec-7-8-1-5)
-- [7.8.1.6 Power Budgeting Sense Detect Register (Offset 0Dh) | 功耗预算感应检测寄存器(偏移 0Dh)](#sec-7-8-1-6)
-- [7.8.2 Latency Tolerance Reporting (LTR) Extended Capability | 延迟容忍报告 (LTR) 扩展能力](#sec-7-8-2)
-- [7.8.2.1 LTR Extended Capability Header (Offset 00h) | LTR 扩展能力头(偏移 00h)](#sec-7-8-2-1)
-- [7.8.2.2 Max Snoop Latency Register (Offset 04h) | 最大监听延迟寄存器(偏移 04h)](#sec-7-8-2-2)
-- [7.8.2.3 Max No-Snoop Latency Register (Offset 06h) | 最大非监听延迟寄存器(偏移 06h)](#sec-7-8-2-3)
-- [7.8.3 L1 PM Substates Extended Capability | L1 PM 子状态扩展能力](#sec-7-8-3)
-- [7.8.3.1 L1 PM Substates Extended Capability Header (Offset 00h) | L1 PM 子状态扩展能力头(偏移 00h)](#sec-7-8-3-1)
-- [7.8.3.2 L1 PM Substates Capabilities Register (Offset 04h) | L1 PM 子状态能力寄存器(偏移 04h)](#sec-7-8-3-2)
-- [7.8.3.3 L1 PM Substates Control 1 Register (Offset 08h) | L1 PM 子状态控制 1 寄存器(偏移 08h)](#sec-7-8-3-3)
-- [7.8.3.4 L1 PM Substates Control 2 Register (Offset 0Ch) | L1 PM 子状态控制 2 寄存器(偏移 0Ch)](#sec-7-8-3-4)
-- [7.8.3.5 L1 PM Substates Status Register (Offset 10h) | L1 PM 子状态寄存器(偏移 10h)](#sec-7-8-3-5)
-- [7.8.4 Advanced Error Reporting Extended Capability | 高级错误报告扩展能力](#sec-7-8-4)
-- [7.8.4.1 Advanced Error Reporting Extended Capability Header (Offset 00h) | 高级错误报告扩展能力头(偏移 00h)](#sec-7-8-4-1)
-- [7.8.4.2 Uncorrectable Error Status Register (Offset 04h) | 不可纠正错误状态寄存器（偏移 04h）](#sec-7-8-4-2)
-- [7.8.4.9 Root Error Command Register (Offset 2Ch) | 根错误命令寄存器（偏移 2Ch）](#sec-7-8-4-9)
-- [7.8.4.10 Root Error Status Register (Offset 30h) | 根错误状态寄存器（偏移 30h）](#sec-7-8-4-10)
-- [7.8.4.11 Error Source Identification Register (Offset 34h) | 错误源标识寄存器（偏移 34h）](#sec-7-8-4-11)
-- [7.8.4.12 TLP Prefix Log Register (Offset 38h) | TLP 前缀日志寄存器（偏移 38h）](#sec-7-8-4-12)
-- [7.8.5 Enhanced Allocation Capability Structure (EA) | 增强分配能力结构（EA）](#sec-7-8-5)
-- [7.8.5.1 Enhanced Allocation Capability First DW (Offset 00h) | 增强分配能力首 DW（偏移 00h）](#sec-7-8-5-1)
-- [7.8.5.2 Enhanced Allocation Capability Second DW (Offset 04h) [Type 1 Functions Only] | 增强分配能力第二 DW（偏移 04h）[仅 Type 1 功能]](#sec-7-8-5-2)
-- [7.8.5.3 Enhanced Allocation Per-Entry Format (Offset 04h or 08h) | 增强分配逐条目格式（偏移 04h 或 08h）](#sec-7-8-5-3)
-- [7.8.6 Resizable BAR Extended Capability | 可调整 BAR 扩展能力（Resizable BAR Extended Capability）](#sec-7-8-6)
-- [7.8.6.1 Resizable BAR Extended Capability Header (Offset 00h) | 可变大小 BAR 扩展能力头（偏移 00h）](#sec-7-8-6-1)
-- [7.8.6.2 Resizable BAR Capability Register | 可变大小 BAR 能力寄存器](#sec-7-8-6-2)
-- [7.8.6.3 Resizable BAR Control Register | 可变大小 BAR 控制寄存器](#sec-7-8-6-3)
-- [7.8.7 VF Resizable BAR Extended Capability | VF 可变大小 BAR 扩展能力](#sec-7-8-7)
-- [7.8.7.1 VF Resizable BAR Extended Capability Header (Offset 00h) | VF 可变大小 BAR 扩展能力头（偏移 00h）](#sec-7-8-7-1)
-- [7.8.7.2 VF Resizable BAR Capability Register (Offset 04h) | VF 可变大小 BAR 能力寄存器（偏移 04h）](#sec-7-8-7-2)
-- [7.8.7.3 VF Resizable BAR Control Register (Offset 08h) | VF 可变大小 BAR 控制寄存器（偏移 08h）](#sec-7-8-7-3)
-- [7.8.8 ARI Extended Capability | ARI 扩展能力](#sec-7-8-8)
-- [7.8.8.1 ARI Extended Capability Header (Offset 00h) | ARI 扩展能力头（偏移 00h）](#sec-7-8-8-1)
-- [7.8.8.2 ARI Capability Register (Offset 04h) | ARI 能力寄存器（偏移 04h）](#sec-7-8-8-2)
-- [7.8.8.3 ARI Control Register (Offset 06h) | ARI 控制寄存器（偏移 06h）](#sec-7-8-8-3)
-- [7.8.9 PASID Extended Capability Structure | PASID 扩展能力结构](#sec-7-8-9)
-- [7.8.9.1 PASID Extended Capability Header (Offset 00h) | PASID 扩展能力头（偏移 00h）](#sec-7-8-9-1)
-- [7.8.9.2 PASID Capability Register (Offset 04h) | PASID 能力寄存器（偏移 04h）](#sec-7-8-9-2)
-- [7.8.9.3 PASID Control Register (Offset 06h) | PASID 控制寄存器（偏移 06h）](#sec-7-8-9-3)
-- [7.8.10 FRS Queueing Extended Capability | FRS 排队扩展能力](#sec-7-8-10)
-- [7.8.10.1 FRS Queueing Extended Capability Header (Offset 00h) | FRS 排队扩展能力头（偏移 00h）](#sec-7-8-10-1)
-- [7.8.10.2 FRS Queueing Capability Register (Offset 04h) | FRS 排队能力寄存器（偏移 04h）](#sec-7-8-10-2)
-- [7.8.10.3 FRS Queueing Status Register (Offset 08h) | FRS 排队状态寄存器（偏移 08h）](#sec-7-8-10-3)
-- [7.8.10.4 FRS Queueing Control Register (Offset 0Ah) | FRS 排队控制寄存器 (Offset 0Ah)](#sec-7-8-10-4)
-- [7.8.10.5 FRS Message Queue Register (Offset 0Ch) | FRS 报文队列寄存器 (Offset 0Ch)](#sec-7-8-10-5)
-- [7.8.11 Flattening Portal Bridge (FPB) Capability | 7.8.11 扁平化门户桥 (FPB) 能力](#sec-7-8-11)
-- [7.8.11.1 FPB Capability Header (Offset 00h) | 7.8.11.1 FPB 能力头 (Offset 00h)](#sec-7-8-11-1)
-- [7.8.11.2 FPB Capabilities Register (Offset 04h) | 7.8.11.2 FPB 能力寄存器 (Offset 04h)](#sec-7-8-11-2)
-- [7.8.11.3 FPB RID Vector Control 1 Register (Offset 08h) | 7.8.11.3 FPB RID 向量控制 1 寄存器 (Offset 08h)](#sec-7-8-11-3)
-- [7.8.11.4 FPB RID Vector Control 2 Register (Offset 0Ch) | 7.8.11.4 FPB RID 向量控制 2 寄存器 (Offset 0Ch)](#sec-7-8-11-4)
-- [7.8.11.5 FPB MEM Low Vector Control Register (Offset 10h) | 7.8.11.5 FPB MEM Low 向量控制寄存器 (Offset 10h)](#sec-7-8-11-5)
-- [7.8.11.6 FPB MEM High Vector Control 1 Register (Offset 14h) | 7.8.11.6 FPB MEM High 向量控制 1 寄存器 (Offset 14h)](#sec-7-8-11-6)
-- [7.8.11.7 FPB MEM High Vector Control 2 Register (Offset 18h) | 7.8.11.7 FPB MEM High 向量控制 2 寄存器 (Offset 18h)](#sec-7-8-11-7)
-- [7.8.11.8 FPB Vector Access Control Register (Offset 1Ch) | 7.8.11.8 FPB 向量访问控制寄存器 (Offset 1Ch)](#sec-7-8-11-8)
-- [7.8.11.9 FPB Vector Access Data Register (Offset 20h) | 7.8.11.9 FPB 向量访问数据寄存器 (Offset 20h)](#sec-7-8-11-9)
-- [7.8.12 Flit Performance Measurement Extended Capability | Flit 性能测量扩展能力](#sec-7-8-12)
-- [7.8.12.1 Flit Performance Measurement Extended Capability Header (Offset 00h) | Flit 性能测量扩展能力头（偏移 00h）](#sec-7-8-12-1)
-- [7.8.12.2 Flit Performance Measurement Capability Register (Offset 04h) | Flit 性能测量能力寄存器（偏移 04h）](#sec-7-8-12-2)
-- [7.8.12.3 Flit Performance Measurement Control Register (Offset 08h) | Flit 性能测量控制寄存器（偏移 08h）](#sec-7-8-12-3)
-- [7.8.13 Flit Error Injection Extended Capability | Flit 错误注入扩展能力](#sec-7-8-13)
+- [7. Software Initialization and Configuration § | 7. 软件初始化与配置 §](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7)
+- [7.1 Configuration Topology § | 7.1 配置拓扑 §](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-1)
+- [7.2 PCI Express Configuration Mechanisms § | 7.2 PCI Express 配置机制 §](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-2)
+- [7.2.1 PCI-compatible Configuration Mechanism § | 7.2.1 PCI 兼容配置机制 §](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-2-1)
+- [7.2.2 PCI Express Enhanced Configuration Access Mechanism (ECAM) § | 7.2.2 PCI Express 增强配置访问机制 (ECAM) §](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-2-2)
+- [7.2.2.1 Host Bridge Requirements § | 7.2.2.1 主桥 (Host Bridge) 要求 §](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-2-2-1)
+- [7.2.2.2 PCI Express Device Requirements § | 7.2.2.2 PCI Express 设备要求 §](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-2-2-2)
+- [7.2.3 Root Complex Register Block (RCRB) § | 7.2.3 根复合体寄存器块 (RCRB) §](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-2-3)
+- [7.3 Configuration Transaction Rules § | 7.3 配置事务规则 §](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-3)
+- [7.3.1 Device Number § | 7.3.1 设备号 (Device Number) §](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-3-1)
+- [7.3.2 Configuration Transaction Addressing | 配置事务寻址](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-3-2)
+- [7.3.3 Configuration Request Routing Rules | 配置请求路由规则](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-3-3)
+- [7.3.4 PCI Special Cycles | PCI 特殊周期](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-3-4)
+- [7.4 Configuration Register Types | 配置寄存器类型](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-4)
+- [7.5 PCI and PCIe Capabilities Required by the Base Spec for all Ports | 基础规范要求所有端口支持的 PCI 和 PCIe 能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5)
+- [7.5.1 PCI-Compatible Configuration Registers | PCI 兼容配置寄存器](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1)
+- [7.5.1.1 Type 0/1 Common Configuration Space | Type 0/1 公共配置空间](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1)
+- [7.5.1.1.1 Vendor ID Register (Offset 00h) | Vendor ID 寄存器（偏移 00h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-1)
+- [7.5.1.1.2 Device ID Register (Offset 02h) | Device ID 寄存器（偏移 02h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-2)
+- [7.5.1.1.3 Command Register (Offset 04h) | Command 寄存器（偏移 04h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-3)
+- [7.5.1.1.4 Status Register (Offset 06h) | Status 寄存器（偏移 06h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-4)
+- [7.5.1.1.4 Status Register (Offset 06h) | 状态寄存器（偏移量 06h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-4)
+- [7.5.1.1.5 Revision ID Register (Offset 08h) | 修订版本 ID 寄存器（偏移量 08h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-5)
+- [7.5.1.1.6 Class Code Register (Offset 09h) | 类别代码寄存器（偏移量 09h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-6)
+- [7.5.1.1.7 Cache Line Size Register (Offset 0Ch) | Cache 行大小寄存器（偏移量 0Ch）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-7)
+- [7.5.1.1.8 Latency Timer Register (Offset 0Dh) | 延迟定时器寄存器（偏移量 0Dh）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-8)
+- [7.5.1.1.9 Header Type Register (Offset 0Eh) | 头类型寄存器（偏移量 0Eh）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-9)
+- [7.5.1.1.10 BIST Register (Offset 0Fh) | BIST 寄存器（偏移量 0Fh）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-10)
+- [7.5.1.1.11 Capabilities Pointer (Offset 34h) | 能力指针（偏移量 34h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-11)
+- [7.5.1.1.12 Interrupt Line Register (Offset 3Ch) | 中断线寄存器（偏移量 3Ch）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-12)
+- [7.5.1.1.13 Interrupt Pin Register (Offset 3Dh) | 中断引脚寄存器（偏移量 3Dh）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-13)
+- [7.5.1.1.14 Error Control/Status Register Summary | 错误控制/状态寄存器总结](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-14)
+- [7.5.1.1.14 Error Registers | 错误寄存器](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-1-14)
+- [7.5.1.2 Type 0 Configuration Space Header | Type 0 配置空间头](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-2)
+- [7.5.1.2.1 Base Address Registers (Offset 10h - 24h) | 基址寄存器 (BAR) (偏移 10h - 24h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-2-1)
+- [7.5.1.2.2 Cardbus CIS Pointer Register (Offset 28h) | Cardbus CIS 指针寄存器 (偏移 28h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-2-2)
+- [7.5.1.2.3 Subsystem Vendor ID Register/Subsystem ID Register (Offset 2Ch/2Eh) | 子系统供应商 ID 寄存器/子系统 ID 寄存器 (偏移 2Ch/2Eh)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-2-3)
+- [7.5.1.2.4 Expansion ROM Base Address Register (Offset 30h) | 扩展 ROM 基址寄存器 (偏移 30h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-2-4)
+- [7.5.1.2.5 Min_Gnt Register/Max_Lat Register (Offset 3Eh/3Fh) | Min_Gnt 寄存器/Max_Lat 寄存器 (偏移 3Eh/3Fh)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-2-5)
+- [7.5.1.3 Type 1 Configuration Space Header | Type 1 配置空间头](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-3)
+- [7.5.1.3.1 Type 1 Base Address Registers (Offset 10h-14h) | Type 1 基址寄存器 (偏移 10h-14h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-3-1)
+- [7.5.1.3.7 Secondary Status Register (Offset 1Eh) | Secondary Status 寄存器 (偏移 1Eh)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-3-7)
+- [7.5.1.3.8 Memory Base Register/Memory Limit Register (Offset 20h/22h) | Memory Base 寄存器 / Memory Limit 寄存器 (偏移 20h/22h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-3-8)
+- [7.5.1.3.10 Prefetchable Base Upper 32 Bits/Prefetchable Limit Upper 32 Bits Registers (Offset 28h/2Ch) | Prefetchable Base Upper 32 Bits / Prefetchable Limit Upper 32 Bits 寄存器 (偏移 28h/2Ch)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-3-10)
+- [7.5.1.3.11 I/O Base Upper 16 Bits/I/O Limit Upper 16 Bits Registers (Offset 30h/32h) | I/O Base Upper 16 Bits / I/O Limit Upper 16 Bits 寄存器 (偏移 30h/32h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-3-11)
+- [7.5.1.3.12 Expansion ROM Base Address Register (Offset 38h) | Expansion ROM 基址寄存器 (偏移 38h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-3-12)
+- [7.5.1.3.13 Bridge Control Register (Offset 3Eh) | Bridge Control 寄存器 (偏移 3Eh)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-3-13)
+- [7.5.1.4 PCI Power Management Capability Structure | PCI 电源管理能力结构](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-1-4)
+- [7.5.2 PCI Power Management Capability Structure | PCI 电源管理能力结构](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-2)
+- [7.5.2.1 Power Management Capabilities Register (Offset 00h) | 电源管理能力寄存器（偏移量 00h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-2-1)
+- [7.5.2.2 Power Management Control/Status Register (Offset 04h) | 电源管理控制/状态寄存器（偏移量 04h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-2-2)
+- [7.5.2.3 Power Management Data Register (Offset 07h) | 电源管理数据寄存器（偏移量 07h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-2-3)
+- [7.5.3 PCI Express Capability Structure | PCI Express 能力结构](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3)
+- [7.5.3.1 PCI Express Capability List Register (Offset 00h) | PCI Express 能力列表寄存器（偏移量 00h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-1)
+- [7.5.3.2 PCI Express Capabilities Register (Offset 02h) | PCI Express 能力寄存器（偏移量 02h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-2)
+- [7.5.3.3 Device Capabilities Register (Offset 04h) | 设备能力寄存器 (Device Capabilities Register) (偏移量 04h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-3)
+- [7.5.3.4 Device Control Register (Offset 08h) | 设备控制寄存器 (Device Control Register) (偏移量 08h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-4)
+- [7.5.3.5 Device Status Register (Offset 0Ah) | 设备状态寄存器 (Device Status Register) (偏移量 0Ah)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-5)
+- [7.5.3.6 Link Capabilities Register (Offset 0Ch) | 链路能力寄存器 (Link Capabilities Register) (偏移量 0Ch)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-6)
+- [7.5.3.7 Link Control Register (Offset 10h) | 链路控制寄存器（偏移 10h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-7)
+- [7.5.3.8 Link Status Register (Offset 12h) | 链路状态寄存器（偏移 12h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-8)
+- [7.5.3.9 Slot Capabilities Register (Offset 14h) | 插槽能力寄存器（偏移 14h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-9)
+- [7.5.3.10 Slot Control Register | 插槽控制寄存器 (Offset 18h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-10)
+- [7.5.3.11 Slot Status Register | 插槽状态寄存器 (Offset 1Ah)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-11)
+- [7.5.3.12 Root Control Register | 根复合体控制寄存器 (Offset 1Ch)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-12)
+- [7.5.3.13 Root Capabilities Register | 根复合体能力寄存器 (Offset 1Eh)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-13)
+- [7.5.3.14 Root Status Register | 根复合体状态寄存器 (Offset 20h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-14)
+- [7.5.3.15 Device Capabilities 2 Register | 设备能力 2 寄存器 (Offset 24h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-15)
+- [7.5.3.16 Device Control 2 Register (Offset 28h) | Device Control 2 寄存器(偏移 28h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-16)
+- [7.5.3.17 Device Status 2 Register (Offset 2Ah) | Device Status 2 寄存器(偏移 2Ah)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-17)
+- [7.5.3.18 Link Capabilities 2 Register (Offset 2Ch) | Link Capabilities 2 寄存器(偏移 2Ch)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-18)
+- [7.5.3.19 Link Control 2 Register (Offset 30h) | Link Control 2 寄存器(偏移 30h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-19)
+- [7.5.3.20 Link Status 2 Register (Offset 32h) | Link Status 2 寄存器(偏移 32h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-20)
+- [7.5.3.21 Slot Capabilities 2 Register (Offset 34h) | Slot Capabilities 2 寄存器 (偏移 34h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-5-3-21)
+- [7.6 PCI Express Extended Capabilities | PCI Express 扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-6)
+- [7.6.1 Extended Capabilities in Configuration Space | 配置空间中的扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-6-1)
+- [7.6.2 Extended Capabilities in the Root Complex Register Block | 根复合体寄存器块中的扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-6-2)
+- [7.6.3 PCI Express Extended Capability Header | PCI Express 扩展能力头](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-6-3)
+- [7.7 PCI and PCIe Capabilities Required by the Base Spec in Some Situations | 基础规范在某些情况下要求的 PCI 和 PCIe 能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7)
+- [7.7.1 MSI Capability Structures | MSI 能力结构](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-1)
+- [7.7.1.1 MSI Capability Header (Offset 00h) | MSI 能力头 (偏移 00h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-1-1)
+- [7.7.1.2 Message Control Register for MSI (Offset 02h) | MSI 的消息控制寄存器 (偏移 02h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-1-2)
+- [7.7.1.3 Message Address Register for MSI (Offset 04h) | MSI 的消息地址寄存器 (偏移 04h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-1-3)
+- [7.7.1.4 Message Upper Address Register for MSI (Offset 08h) | MSI 的消息高地址寄存器 (偏移 08h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-1-4)
+- [7.7.1.5 Message Data Register for MSI (Offset 08h or 0Ch) | MSI 的消息数据寄存器 (偏移 08h 或 0Ch)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-1-5)
+- [7.7.1.6 Extended Message Data Register for MSI (Optional) | MSI 扩展消息数据寄存器(可选)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-1-6)
+- [7.7.1.7 Mask Bits Register for MSI (Offset 0Ch or 10h) | MSI Mask Bits 寄存器(偏移 0Ch 或 10h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-1-7)
+- [7.7.1.8 Pending Bits Register for MSI (Offset 10h or 14h) | MSI Pending Bits 寄存器(偏移 10h 或 14h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-1-8)
+- [7.7.2 MSI-X Capability and Table Structure | MSI-X 能力结构与表结构](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-2)
+- [7.7.2.1 MSI-X Capability Header (Offset 00h) | MSI-X Capability Header(偏移 00h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-2-1)
+- [7.7.2.2 Message Control Register for MSI-X (Offset 02h) | MSI-X Message Control 寄存器(偏移 02h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-2-2)
+- [7.7.2.3 Table Offset/Table BIR Register for MSI-X (Offset 04h) | MSI-X Table Offset/Table BIR 寄存器(偏移 04h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-2-3)
+- [7.7.2.4 PBA Offset/PBA BIR Register for MSI-X (Offset 08h) | MSI-X PBA Offset/PBA BIR 寄存器(偏移 08h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-2-4)
+- [7.7.2.5 Message Address Register for MSI-X Table Entries | MSI-X Table 条目 Message Address 寄存器](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-2-5)
+- [7.7.2.6 Message Upper Address Register for MSI-X Table Entries | MSI-X Table 条目 Message Upper Address 寄存器](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-2-6)
+- [7.7.2.7 Message Data Register for MSI-X Table Entries | MSI-X 表条目的消息数据寄存器](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-2-7)
+- [7.7.2.8 Vector Control Register for MSI-X Table Entries | MSI-X 表条目的向量控制寄存器](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-2-8)
+- [7.7.2.9 Pending Bits Register for MSI-X PBA Entries | MSI-X PBA 条目的挂起位寄存器](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-2-9)
+- [7.7.3 Secondary PCI Express Extended Capability | 次级 PCI Express 扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-3)
+- [7.7.3.1 Secondary PCI Express Extended Capability Header (Offset 00h) | 次级 PCI Express 扩展能力头（偏移 00h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-3-1)
+- [7.7.3.2 Link Control 3 Register (Offset 04h) | 链路控制 3 寄存器（偏移 04h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-3-2)
+- [7.7.3.3 Lane Error Status Register (Offset 08h) | 通道错误状态寄存器（偏移 08h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-3-3)
+- [7.7.3.4 Lane Equalization Control Register (Offset 0Ch) | 通道均衡控制寄存器（偏移 0Ch）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-3-4)
+- [7.7.4 Data Link Feature Extended Capability | 数据链路特性扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-4)
+- [7.7.4.1 Data Link Feature Extended Capability Header (Offset 00h) | 数据链路特性扩展能力头（偏移 00h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-4-1)
+- [7.7.4.2 Data Link Feature Capabilities Register (Offset 04h) | 数据链路特性能力寄存器（偏移 04h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-4-2)
+- [7.7.4.3 Data Link Feature Status Register (Offset 08h) | 数据链路特性状态寄存器(偏移量 08h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-4-3)
+- [7.7.5 Physical Layer 16.0 GT/s Extended Capability | 物理层 16.0 GT/s 扩展能力结构](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-5)
+- [7.7.5.1 Physical Layer 16.0 GT/s Extended Capability Header (Offset 00h) | 物理层 16.0 GT/s 扩展能力结构头(偏移量 00h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-5-1)
+- [7.7.5.2 16.0 GT/s Capabilities Register (Offset 04h) | 16.0 GT/s 能力寄存器(偏移量 04h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-5-2)
+- [7.7.5.3 16.0 GT/s Control Register (Offset 08h) | 16.0 GT/s 控制寄存器(偏移量 08h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-5-3)
+- [7.7.5.4 16.0 GT/s Status Register (Offset 0Ch) | 16.0 GT/s 状态寄存器(偏移量 0Ch)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-5-4)
+- [7.7.5.5 16.0 GT/s Local Data Parity Mismatch Status Register (Offset 10h) | 16.0 GT/s 本地数据奇偶校验不匹配状态寄存器(偏移量 10h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-5-5)
+- [7.7.5.6 16.0 GT/s First Retimer Data Parity Mismatch Status Register (Offset 14h) | 16.0 GT/s 第一个重定时器数据奇偶校验不匹配状态寄存器(偏移量 14h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-5-6)
+- [7.7.5.7 16.0 GT/s Second Retimer Data Parity Mismatch Status Register (Offset 18h) | 16.0 GT/s 第二个重定时器数据奇偶校验不匹配状态寄存器(偏移量 18h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-5-7)
+- [7.7.5.8 Physical Layer 16.0 GT/s Reserved (Offset 1Ch) | 物理层 16.0 GT/s 保留(偏移量 1Ch)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-5-8)
+- [7.7.5.9 16.0 GT/s Lane Equalization Control Register (Offsets 20h to 3Ch) | 16.0 GT/s 通道均衡控制寄存器(偏移量 20h 至 3Ch)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-5-9)
+- [7.7.6 Physical Layer 32.0 GT/s Extended Capability | 物理层 32.0 GT/s 扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-6)
+- [7.7.6.1 Physical Layer 32.0 GT/s Extended Capability Header (Offset 00h) | 物理层 32.0 GT/s 扩展能力头（偏移 00h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-6-1)
+- [7.7.6.2 32.0 GT/s Capabilities Register (Offset 04h) | 32.0 GT/s 能力寄存器（偏移 04h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-6-2)
+- [7.7.6.3 32.0 GT/s Control Register (Offset 08h) | 32.0 GT/s 控制寄存器（偏移 08h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-6-3)
+- [7.7.6.4 32.0 GT/s Status Register (Offset 0Ch) | 32.0 GT/s 状态寄存器（偏移 0Ch）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-6-4)
+- [7.7.6.5 Received Modified TS Data 1 Register (Offset 10h) | 接收 Modified TS 数据 1 寄存器（偏移 10h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-6-5)
+- [7.7.6.6 Received Modified TS Data 2 Register (Offset 14h) | 接收 Modified TS 数据 2 寄存器（偏移 14h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-6-6)
+- [7.7.6.7 Transmitted Modified TS Data 1 Register (Offset 18h) | 发送 Modified TS 数据 1 寄存器（偏移 18h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-6-7)
+- [7.7.6.8 Transmitted Modified TS Data 2 Register (Offset 1Ch) | 发送 Modified TS 数据 2 寄存器（偏移 1Ch）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-6-8)
+- [7.7.6.9 32.0 GT/s Lane Equalization Control Register (Offset 20h) | 32.0 GT/s 通道均衡控制寄存器(偏移 20h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-6-9)
+- [7.7.7 Physical Layer 64.0 GT/s Extended Capability | 7.7.7 物理层 64.0 GT/s 扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-7)
+- [7.7.7.1 Physical Layer 64.0 GT/s Extended Capability Header (Offset 00h) | 7.7.7.1 物理层 64.0 GT/s 扩展能力 Header(偏移 00h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-7-1)
+- [7.7.7.2 64.0 GT/s Capabilities Register (Offset 04h) | 7.7.7.2 64.0 GT/s 能力寄存器(偏移 04h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-7-2)
+- [7.7.7.3 64.0 GT/s Control Register (Offset 08h) | 7.7.7.3 64.0 GT/s 控制寄存器(偏移 08h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-7-3)
+- [7.7.7.4 64.0 GT/s Status Register (Offset 0Ch) | 7.7.7.4 64.0 GT/s 状态寄存器(偏移 0Ch)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-7-4)
+- [7.7.7.5 64.0 GT/s Lane Equalization Control Register (Offset 10h) | 7.7.7.5 64.0 GT/s 通道均衡控制寄存器(偏移 10h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-7-5)
+- [7.7.8 Flit Logging Extended Capability | 7.7.8 Flit 日志扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8)
+- [7.7.8.1 Flit Logging Extended Capability Header (Offset 00h) | 7.7.8.1 Flit 日志扩展能力 Header(偏移 00h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-1)
+- [7.7.8.2 Flit Error Log 1 Register (Offset 04h) | 7.7.8.2 Flit 错误日志 1 寄存器(偏移 04h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-2)
+- [7.7.8.3 Flit Error Log 2 Register (Offset 08h) | Flit 错误日志 2 寄存器（偏移 08h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-3)
+- [7.7.8.4 Flit Error Counter Control Register (Offset 0Ch) | Flit 错误计数控制寄存器（偏移 0Ch）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-4)
+- [7.7.8.5 Flit Error Counter Status Register (Offset 0Eh) | Flit 错误计数状态寄存器（偏移 0Eh）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-5)
+- [7.7.8.6 FBER Measurement Control Register (Offset 10h) | FBER 测量控制寄存器（偏移 10h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-6)
+- [7.7.8.7 FBER Measurement Status 1 Register (Offset 14h) | FBER 测量状态 1 寄存器（偏移 14h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-7)
+- [7.7.8.8 FBER Measurement Status 2 Register (Offset 18h) | FBER 测量状态 2 寄存器（偏移 18h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-8)
+- [7.7.8.9 FBER Measurement Status 3 Register (Offset 1Ch) | FBER 测量状态 3 寄存器（偏移 1Ch）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-9)
+- [7.7.8.10 FBER Measurement Status 4 Register (Offset 20h) | FBER 测量状态 4 寄存器（偏移 20h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-10)
+- [7.7.8.11 FBER Measurement Status 5 Register (Offset 24h) | FBER 测量状态 5 寄存器（偏移 24h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-11)
+- [7.7.8.12 FBER Measurement Status 6 Register (Offset 28h) | FBER 测量状态 6 寄存器（偏移 28h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-12)
+- [7.7.8.13 FBER Measurement Status 7 Register (Offset 2Ch) | FBER 测量状态 7 寄存器（偏移 2Ch）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-13)
+- [7.7.8.14 FBER Measurement Status 8 Register (Offset 30h) | FBER 测量状态 8 寄存器（偏移 30h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-14)
+- [7.7.8.15 FBER Measurement Status 9 Register (Offset 34h) | FBER 测量状态 9 寄存器（偏移 34h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-15)
+- [7.7.8.16 FBER Measurement Status 10 Register (Offset 38h) | FBER 测量状态 10 寄存器（偏移 38h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-8-16)
+- [7.7.9 Device 3 Extended Capability Structure | Device 3 扩展能力结构](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-9)
+- [7.7.9.2 Device Capabilities 3 Register (Offset 04h) | Device 能力 3 寄存器 (偏移 04h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-9-2)
+- [7.7.9.3 Device Control 3 Register (Offset 08h) | Device 控制 3 寄存器 (偏移 08h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-9-3)
+- [7.7.9.4 Device Status 3 Register (Offset 0Ch) | Device 状态 3 寄存器 (偏移 0Ch)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-9-4)
+- [7.7.10 Lane Margining at the Receiver Extended Capability | 接收器通道裕度扩展能力 (Lane Margining at the Receiver Extended Capability)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-10)
+- [7.7.10.1 Lane Margining at the Receiver Extended Capability Header (Offset 00h) | 接收器通道裕度扩展能力头 (偏移 00h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-10-1)
+- [7.7.10.2 Margining Port Capabilities Register (Offset 04h) | 裕度端口能力寄存器 (偏移 04h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-10-2)
+- [7.7.10.3 Margining Port Status Register (Offset 06h) | 裕度端口状态寄存器 (偏移 06h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-10-3)
+- [7.7.10.4 Margining Lane Control Register (Offset 08h) | Margining Lane 控制寄存器（偏移 08h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-10-4)
+- [7.7.10.5 Margining Lane Status Register (Offset 0Ah) | Margining Lane 状态寄存器（偏移 0Ah）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-10-5)
+- [7.7.11 ACS Extended Capability | ACS 扩展能力（Access Control Services）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-11)
+- [7.7.11.1 ACS Extended Capability Header (Offset 00h) | ACS 扩展能力头（偏移 00h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-11-1)
+- [7.7.11.2 ACS Capability Register (Offset 04h) | ACS 能力寄存器（偏移 04h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-11-2)
+- [7.7.11.3 ACS Control Register (Offset 06h) | ACS 控制寄存器（偏移 06h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-11-3)
+- [7.7.11.4 Egress Control Vector Register (Offset 08h) | Egress Control Vector 寄存器（偏移 08h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-7-11-4)
+- [7.8 Common PCI and PCIe Capabilities | 通用 PCI 与 PCIe 能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8)
+- [7.8.1 Power Budgeting Extended Capability | 功耗预算（Power Budgeting）扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-1)
+- [7.8.1.1 Power Budgeting Extended Capability Header (Offset 00h) | 功耗预算扩展能力头(偏移 00h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-1-1)
+- [7.8.1.2 Power Budgeting Data Select Register (Offset 04h) | 功耗预算数据选择寄存器(偏移 04h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-1-2)
+- [7.8.1.3 Power Budgeting Control Register (Offset 06h) | 功耗预算控制寄存器(偏移 06h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-1-3)
+- [7.8.1.4 Power Budgeting Data Register (Offset 08h) | 功耗预算数据寄存器(偏移 08h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-1-4)
+- [7.8.1.5 Power Budgeting Capability Register (Offset 0Ch) | 功耗预算能力寄存器(偏移 0Ch)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-1-5)
+- [7.8.1.6 Power Budgeting Sense Detect Register (Offset 0Dh) | 功耗预算感应检测寄存器(偏移 0Dh)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-1-6)
+- [7.8.2 Latency Tolerance Reporting (LTR) Extended Capability | 延迟容忍报告 (LTR) 扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-2)
+- [7.8.2.1 LTR Extended Capability Header (Offset 00h) | LTR 扩展能力头(偏移 00h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-2-1)
+- [7.8.2.2 Max Snoop Latency Register (Offset 04h) | 最大监听延迟寄存器(偏移 04h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-2-2)
+- [7.8.2.3 Max No-Snoop Latency Register (Offset 06h) | 最大非监听延迟寄存器(偏移 06h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-2-3)
+- [7.8.3 L1 PM Substates Extended Capability | L1 PM 子状态扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-3)
+- [7.8.3.1 L1 PM Substates Extended Capability Header (Offset 00h) | L1 PM 子状态扩展能力头(偏移 00h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-3-1)
+- [7.8.3.2 L1 PM Substates Capabilities Register (Offset 04h) | L1 PM 子状态能力寄存器(偏移 04h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-3-2)
+- [7.8.3.3 L1 PM Substates Control 1 Register (Offset 08h) | L1 PM 子状态控制 1 寄存器(偏移 08h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-3-3)
+- [7.8.3.4 L1 PM Substates Control 2 Register (Offset 0Ch) | L1 PM 子状态控制 2 寄存器(偏移 0Ch)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-3-4)
+- [7.8.3.5 L1 PM Substates Status Register (Offset 10h) | L1 PM 子状态寄存器(偏移 10h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-3-5)
+- [7.8.4 Advanced Error Reporting Extended Capability | 高级错误报告扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-4)
+- [7.8.4.1 Advanced Error Reporting Extended Capability Header (Offset 00h) | 高级错误报告扩展能力头(偏移 00h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-4-1)
+- [7.8.4.2 Uncorrectable Error Status Register (Offset 04h) | 不可纠正错误状态寄存器（偏移 04h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-4-2)
+- [7.8.4.9 Root Error Command Register (Offset 2Ch) | 根错误命令寄存器（偏移 2Ch）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-4-9)
+- [7.8.4.10 Root Error Status Register (Offset 30h) | 根错误状态寄存器（偏移 30h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-4-10)
+- [7.8.4.11 Error Source Identification Register (Offset 34h) | 错误源标识寄存器（偏移 34h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-4-11)
+- [7.8.4.12 TLP Prefix Log Register (Offset 38h) | TLP 前缀日志寄存器（偏移 38h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-4-12)
+- [7.8.5 Enhanced Allocation Capability Structure (EA) | 增强分配能力结构（EA）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-5)
+- [7.8.5.1 Enhanced Allocation Capability First DW (Offset 00h) | 增强分配能力首 DW（偏移 00h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-5-1)
+- [7.8.5.2 Enhanced Allocation Capability Second DW (Offset 04h) [Type 1 Functions Only] | 增强分配能力第二 DW（偏移 04h）[仅 Type 1 功能]](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-5-2)
+- [7.8.5.3 Enhanced Allocation Per-Entry Format (Offset 04h or 08h) | 增强分配逐条目格式（偏移 04h 或 08h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-5-3)
+- [7.8.6 Resizable BAR Extended Capability | 可调整 BAR 扩展能力（Resizable BAR Extended Capability）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-6)
+- [7.8.6.1 Resizable BAR Extended Capability Header (Offset 00h) | 可变大小 BAR 扩展能力头（偏移 00h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-6-1)
+- [7.8.6.2 Resizable BAR Capability Register | 可变大小 BAR 能力寄存器](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-6-2)
+- [7.8.6.3 Resizable BAR Control Register | 可变大小 BAR 控制寄存器](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-6-3)
+- [7.8.7 VF Resizable BAR Extended Capability | VF 可变大小 BAR 扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-7)
+- [7.8.7.1 VF Resizable BAR Extended Capability Header (Offset 00h) | VF 可变大小 BAR 扩展能力头（偏移 00h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-7-1)
+- [7.8.7.2 VF Resizable BAR Capability Register (Offset 04h) | VF 可变大小 BAR 能力寄存器（偏移 04h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-7-2)
+- [7.8.7.3 VF Resizable BAR Control Register (Offset 08h) | VF 可变大小 BAR 控制寄存器（偏移 08h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-7-3)
+- [7.8.8 ARI Extended Capability | ARI 扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-8)
+- [7.8.8.1 ARI Extended Capability Header (Offset 00h) | ARI 扩展能力头（偏移 00h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-8-1)
+- [7.8.8.2 ARI Capability Register (Offset 04h) | ARI 能力寄存器（偏移 04h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-8-2)
+- [7.8.8.3 ARI Control Register (Offset 06h) | ARI 控制寄存器（偏移 06h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-8-3)
+- [7.8.9 PASID Extended Capability Structure | PASID 扩展能力结构](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-9)
+- [7.8.9.1 PASID Extended Capability Header (Offset 00h) | PASID 扩展能力头（偏移 00h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-9-1)
+- [7.8.9.2 PASID Capability Register (Offset 04h) | PASID 能力寄存器（偏移 04h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-9-2)
+- [7.8.9.3 PASID Control Register (Offset 06h) | PASID 控制寄存器（偏移 06h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-9-3)
+- [7.8.10 FRS Queueing Extended Capability | FRS 排队扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-10)
+- [7.8.10.1 FRS Queueing Extended Capability Header (Offset 00h) | FRS 排队扩展能力头（偏移 00h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-10-1)
+- [7.8.10.2 FRS Queueing Capability Register (Offset 04h) | FRS 排队能力寄存器（偏移 04h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-10-2)
+- [7.8.10.3 FRS Queueing Status Register (Offset 08h) | FRS 排队状态寄存器（偏移 08h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-10-3)
+- [7.8.10.4 FRS Queueing Control Register (Offset 0Ah) | FRS 排队控制寄存器 (Offset 0Ah)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-10-4)
+- [7.8.10.5 FRS Message Queue Register (Offset 0Ch) | FRS 报文队列寄存器 (Offset 0Ch)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-10-5)
+- [7.8.11 Flattening Portal Bridge (FPB) Capability | 7.8.11 扁平化门户桥 (FPB) 能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-11)
+- [7.8.11.1 FPB Capability Header (Offset 00h) | 7.8.11.1 FPB 能力头 (Offset 00h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-11-1)
+- [7.8.11.2 FPB Capabilities Register (Offset 04h) | 7.8.11.2 FPB 能力寄存器 (Offset 04h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-11-2)
+- [7.8.11.3 FPB RID Vector Control 1 Register (Offset 08h) | 7.8.11.3 FPB RID 向量控制 1 寄存器 (Offset 08h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-11-3)
+- [7.8.11.4 FPB RID Vector Control 2 Register (Offset 0Ch) | 7.8.11.4 FPB RID 向量控制 2 寄存器 (Offset 0Ch)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-11-4)
+- [7.8.11.5 FPB MEM Low Vector Control Register (Offset 10h) | 7.8.11.5 FPB MEM Low 向量控制寄存器 (Offset 10h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-11-5)
+- [7.8.11.6 FPB MEM High Vector Control 1 Register (Offset 14h) | 7.8.11.6 FPB MEM High 向量控制 1 寄存器 (Offset 14h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-11-6)
+- [7.8.11.7 FPB MEM High Vector Control 2 Register (Offset 18h) | 7.8.11.7 FPB MEM High 向量控制 2 寄存器 (Offset 18h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-11-7)
+- [7.8.11.8 FPB Vector Access Control Register (Offset 1Ch) | 7.8.11.8 FPB 向量访问控制寄存器 (Offset 1Ch)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-11-8)
+- [7.8.11.9 FPB Vector Access Data Register (Offset 20h) | 7.8.11.9 FPB 向量访问数据寄存器 (Offset 20h)](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-11-9)
+- [7.8.12 Flit Performance Measurement Extended Capability | Flit 性能测量扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-12)
+- [7.8.12.1 Flit Performance Measurement Extended Capability Header (Offset 00h) | Flit 性能测量扩展能力头（偏移 00h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-12-1)
+- [7.8.12.2 Flit Performance Measurement Capability Register (Offset 04h) | Flit 性能测量能力寄存器（偏移 04h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-12-2)
+- [7.8.12.3 Flit Performance Measurement Control Register (Offset 08h) | Flit 性能测量控制寄存器（偏移 08h）](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-12-3)
+- [7.8.13 Flit Error Injection Extended Capability | Flit 错误注入扩展能力](PCIe6.2_Spec_ch07_软件初始化与配置_Part_A_7_1-7_8.md#sec-7-8-13)
 - [7.9 Additional PCI and PCIe Capabilities | 7.9 其他 PCI 和 PCIe 能力](#sec-7-9)
 - [7.9.1 Virtual Channel Extended Capability | 7.9.1 虚通道扩展能力](#sec-7-9-1)
 - [7.9.1.3 Port VC Capability Register 2 (Offset 08h) | 端口 VC 能力寄存器 2 (偏移量 08h)](#sec-7-9-1-3)

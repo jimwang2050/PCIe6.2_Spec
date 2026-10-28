@@ -76,10 +76,6 @@
 
 ---
 
----
-
----
-
 # 📘 第 3 章　Data Link Layer Specification (数据链路层规范)
 
 > 📄 **Source pages**: 309–350 | 📁 **File**: `chapter_03.md`
@@ -87,10 +83,7 @@
 
 ---
 
-<!-- 📄 Page 309 -->
----
-
-<a id="sec-3-0"></a>
+<a id="sec-3-0"></a> <!-- 📄 Page 309 -->
 ## 3. Data Link Layer Specification | 数据链路层规范
 
 <table>
@@ -184,10 +177,7 @@ The Data Link Layer is responsible for reliably conveying TLPs supplied by the T
 
 ---
 
-<!-- 📄 Page 310 -->
----
-
-<table>
+<table> <!-- 📄 Page 310 -->
 <thead>
 <tr>
 <th width="50%">🇬🇧 English</th>
@@ -264,12 +254,7 @@ DLLP 以点对点方式在一对链路的两个组件之间发送。TLP 则从�
 
 ---
 
-<!-- 📄 Page 311 -->
----
-<!-- 📄 Page 312 -->
----
-
-<a id="sec-3-2"></a>
+<a id="sec-3-2"></a> <!-- 📄 Page 311 --> <!-- 📄 Page 312 -->
 ## 3.2 Data Link Control and Management State Machine | 数据链路控制与管理状态机
 
 
@@ -415,11 +400,8 @@ Rules per state:
 
 ---
 
-<!-- 📄 Page 313 -->
----
 
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 313 -->
 <table>
 <thead>
 <tr>
@@ -863,32 +845,8 @@ VC 初始化流程中有两个状态:
 
 ---
 
-<!-- 📄 Page 314 -->
----
-<!-- 📄 Page 315 -->
----
 
-<!-- 📄 Page 316 -->
----
-<!-- 📄 Page 317 -->
----
-<!-- 📄 Page 318 -->
----
-<!-- 📄 Page 319 -->
----
-
-<!-- 📄 Page 320 -->
----
-<!-- 📄 Page 321 -->
----
-
----
-
-<!-- 📄 Page 322 -->
----
-
-
-<div style="overflow-x: auto; max-width: 100%;">
+<div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 314 --> <!-- 📄 Page 315 --> <!-- 📄 Page 316 --> <!-- 📄 Page 317 --> <!-- 📄 Page 318 --> <!-- 📄 Page 319 --> <!-- 📄 Page 320 --> <!-- 📄 Page 321 --> <!-- 📄 Page 322 -->
 <table>
 <thead>
 <tr>
@@ -1009,30 +967,7 @@ VC 初始化流程中有两个状态:
 
 ---
 
-<!-- 📄 Page 323 -->
----
-<!-- 📄 Page 324 -->
----
-<!-- 📄 Page 325 -->
----
-<!-- 📄 Page 326 -->
----
-<!-- 📄 Page 327 -->
----
-<!-- 📄 Page 328 -->
----
-<!-- 📄 Page 329 -->
----
-<!-- 📄 Page 330 -->
----
-<!-- 📄 Page 331 -->
----
-<!-- 📄 Page 332 -->
----
-<!-- 📄 Page 333 -->
----
-
-> **Figure 3-3.** VC0 Flow Control Initialization Example with 8b/10b Encoding-based Framing
+> **Figure 3-3.** VC0 Flow Control Initialization Example with 8b/10b Encoding-based Framing <!-- 📄 Page 323 --> <!-- 📄 Page 324 --> <!-- 📄 Page 325 --> <!-- 📄 Page 326 --> <!-- 📄 Page 327 --> <!-- 📄 Page 328 --> <!-- 📄 Page 329 --> <!-- 📄 Page 330 --> <!-- 📄 Page 331 --> <!-- 📄 Page 332 --> <!-- 📄 Page 333 -->
 > <img src="figures/chapter_03/fig_0323_1_tight.png" width="700">
 > **图 3-3.** VC0 流控 (流 Control) Initialization Example 含 8b/10b 编码 Encoding-based Framing
 
@@ -1605,38 +1540,7 @@ The following are the characteristics and rules associated with Data Link Layer 
 
 ---
 
-<!-- 📄 Page 334 -->
----
-<!-- 📄 Page 335 -->
----
-<!-- 📄 Page 336 -->
----
-<!-- 📄 Page 337 -->
----
-<!-- 📄 Page 338 -->
----
-<!-- 📄 Page 339 -->
----
-<!-- 📄 Page 340 -->
----
-<!-- 📄 Page 341 -->
----
-<!-- 📄 Page 342 -->
----
-<!-- 📄 Page 343 -->
----
-<!-- 📄 Page 344 -->
----
-<!-- 📄 Page 345 -->
----
-<!-- 📄 Page 346 -->
----
-<!-- 📄 Page 347 -->
----
-<!-- 📄 Page 348 -->
----
-
-> **Figure 3-16.** Diagram of CRC Calculation for DLLPs
+> **Figure 3-16.** Diagram of CRC Calculation for DLLPs <!-- 📄 Page 334 --> <!-- 📄 Page 335 --> <!-- 📄 Page 336 --> <!-- 📄 Page 337 --> <!-- 📄 Page 338 --> <!-- 📄 Page 339 --> <!-- 📄 Page 340 --> <!-- 📄 Page 341 --> <!-- 📄 Page 342 --> <!-- 📄 Page 343 --> <!-- 📄 Page 344 --> <!-- 📄 Page 345 --> <!-- 📄 Page 346 --> <!-- 📄 Page 347 --> <!-- 📄 Page 348 -->
 > <img src="figures/chapter_03/fig_0334_1_tight.png" width="700">
 > **图 3-16.** CRC 计算 DLLPs
 
@@ -2685,10 +2589,7 @@ TLP 接收器不需要根据 L0s 退出延迟或 Extended Synch 位的值来调�
 
 ---
 
-<!-- 📄 Page 349 -->
----
-
-**IMPLEMENTATION NOTE:**
+**IMPLEMENTATION NOTE:** <!-- 📄 Page 349 -->
 **RETRY BUFFER SIZING**
 The Retry Buffer should be large enough to ensure that under normal operating conditions, transmission is never throttled because the retry buffer is full. In determining the optimal buffer size, one must consider the Ack Latency value, Ack delay caused by the Receiver already transmitting another TLP or DLLP, the delays caused by the physical Link interconnect, and the time required to process the received Ack DLLP.
 
@@ -2711,25 +2612,7 @@ Retimers add latency (see § Section 4.3.8 ) and operating in SRIS can add laten
 
 ---
 
-<!-- 📄 Page 350 -->
----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
----
-
-## 📑 本章目录 (Table of Contents) — Auto-Generated
+## 📑 本章目录 (Table of Contents) — Auto-Generated <!-- 📄 Page 350 -->
 
 - [3. Data Link Layer Specification | 数据链路层规范](#sec-3-0)
 - [3.1 Data Link Layer Overview | 数据链路层概述](#sec-3-1)
