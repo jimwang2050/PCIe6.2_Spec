@@ -113456,13 +113456,6 @@ Direct probing at a Transmitter's pins is not generally feasible, so data is ins
 
 ---
 
-# 📘 第 8 章　Electrical Sub-Block (电气子块)
-
-> 📄 **Source pages**: 1428–1440 | 📁 **File**: `chapter_08_ac.md`
-> 🎨 **Format**: 中英对照双语 · 图表原始保留 · 中文背景色灰色 · GitHub Flavored Markdown
-
----
-
 <a id="sec-8-3-5"></a>
 ## 8.3.5 Tx Jitter Parameters | Tx 抖动参数
 
@@ -123151,7 +123144,7 @@ SR-IOV usage of PCI Express Extended Capabilities is described in § Table 9-10.
 ---
 
 <a id="sec-10-0"></a>
-# 10. Address Translation Services (ATS) § | 10. 地址转换服务 (ATS) §
+# 10. Address Translation Services (ATS) | 10. 地址转换服务 (ATS)
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -126794,7 +126787,7 @@ PRG 响应消息是由 ID 路由回请求功能的 PCIe 消息请求。系统软
 ---
 
 <a id="sec-11-0"></a>
-# 11. TEE Device Interface Security Protocol (TDISP) § | 11. TEE 设备接口安全协议 (TDISP) §
+# 11. TEE Device Interface Security Protocol (TDISP) | 11. TEE 设备接口安全协议 (TDISP)
 
 
 <div style="overflow-x: auto; max-width: 100%;">

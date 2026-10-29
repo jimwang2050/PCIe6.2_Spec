@@ -144,9 +144,15 @@ def lint_file(path: Path, siblings: dict[str, set[str]]) -> FileStat:
             stat.add('error', 'broken_link', f'#{target} 无对应锚点', line)
 
     # 3) 标题尾部 §
-    for lineno, line in collect_headings(lines, '2,4'):
+    for lineno, line in collect_headings(lines, '1,4'):
         if line.rstrip().endswith('§'):
             stat.add('warning', 'heading_trailing_sect', line.strip()[:90], lineno)
+
+    # 3.1) 章标题（# 📘）超过 2 个：分块合并残留的块头
+    book_h1 = [i + 1 for i, ln in enumerate(lines) if ln.startswith('# 📘')]
+    if len(book_h1) > 2:
+        stat.add('warning', 'chapter_header_extra',
+                 f'章标题出现 {len(book_h1)} 次（正常 2 次），疑似分块块头残留', book_h1[2])
 
     # 4) 图/表标题格式混用
     fig_single = CAPTION_FIG_SINGLE.findall(text)

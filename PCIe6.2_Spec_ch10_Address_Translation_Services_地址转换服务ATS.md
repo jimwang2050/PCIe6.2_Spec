@@ -138,7 +138,7 @@
 ---
 
 <a id="sec-10-0"></a>
-# 10. Address Translation Services (ATS) § | 10. 地址转换服务 (ATS) §
+# 10. Address Translation Services (ATS) | 10. 地址转换服务 (ATS)
 
 
 <div style="overflow-x: auto; max-width: 100%;">

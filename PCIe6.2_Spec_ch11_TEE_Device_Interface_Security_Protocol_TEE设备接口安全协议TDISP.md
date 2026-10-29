@@ -53,7 +53,7 @@
 ---
 
 <a id="sec-11-0"></a>
-# 11. TEE Device Interface Security Protocol (TDISP) § | 11. TEE 设备接口安全协议 (TDISP) §
+# 11. TEE Device Interface Security Protocol (TDISP) | 11. TEE 设备接口安全协议 (TDISP)
 
 
 <div style="overflow-x: auto; max-width: 100%;">

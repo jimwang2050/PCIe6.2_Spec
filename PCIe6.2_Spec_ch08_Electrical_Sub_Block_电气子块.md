@@ -2043,13 +2043,6 @@ Direct probing at a Transmitter's pins is not generally feasible, so data is ins
 
 ---
 
-# 📘 第 8 章　Electrical Sub-Block (电气子块)
-
-> 📄 **Source pages**: 1428–1440 | 📁 **File**: `chapter_08_ac.md`
-> 🎨 **Format**: 中英对照双语 · 图表原始保留 · 中文背景色灰色 · GitHub Flavored Markdown
-
----
-
 <a id="sec-8-3-5"></a>
 ## 8.3.5 Tx Jitter Parameters | Tx 抖动参数
 
