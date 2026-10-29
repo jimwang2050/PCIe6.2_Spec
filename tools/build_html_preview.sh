@@ -40,6 +40,17 @@ for md in PCIe6.2_Spec_ch*.md; do
     printf "  %-90s %8d bytes\n" "$name.html" "$size"
 done
 
+# Cross-file links between ch07 Part A / Part B point to sibling .md files;
+# in the preview directory the siblings are generated .html files.
+echo "=== Rewriting cross-file .md links to .html in preview ==="
+for html in preview/PCIe6.2_Spec_ch*.html; do
+    n=$(grep -c 'href="PCIe6\.2_Spec_[^"]*\.md#' "$html" 2>/dev/null || true)
+    if [ "${n:-0}" -gt 0 ]; then
+        sed -i '' -E 's/(href="PCIe6\.2_Spec_[^"]*)\.md#/\1.html#/g' "$html"
+        printf "  %-90s %8d link(s)\n" "$(basename "$html")" "$n"
+    fi
+done
+
 # 2. Combined book.md (concatenate all chapters)
 echo ""
 echo "=== Building combined book.md ==="
@@ -56,8 +67,13 @@ cat > book.md <<'HEADER'
 
 HEADER
 
+# Chapter 7 is split into Part A / Part B for reading convenience, but the
+# full-chapter file already contains both parts. Skip the split files in the
+# combined book to avoid tripled content and duplicated anchors.
+BOOK_MDS=$(ls PCIe6.2_Spec_ch*.md | sort | grep -v '_Part_[AB]_')
+
 # Build TOC with links
-for md in $(ls PCIe6.2_Spec_ch*.md | sort); do
+for md in $BOOK_MDS; do
     name=$(basename "$md" .md)
     # Extract H1 title (first line)
     title=$(grep -m1 "^# " "$md" | sed 's/^# //' | sed 's/"/\\"/g')
@@ -69,7 +85,7 @@ echo "---" >> book.md
 echo "" >> book.md
 
 # Append each chapter
-for md in $(ls PCIe6.2_Spec_ch*.md | sort); do
+for md in $BOOK_MDS; do
     name=$(basename "$md" .md)
     echo "" >> book.md
     echo "<a id=\"${name}\"></a>" >> book.md

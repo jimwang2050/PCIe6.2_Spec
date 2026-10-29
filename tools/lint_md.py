@@ -180,6 +180,12 @@ def lint_file(path: Path, siblings: dict[str, set[str]]) -> FileStat:
         stat.add('warning', 'code_block_in_table_cell', 'td 内使用 fenced code block',
                  text[:m.start()].count('\n') + 1)
 
+    # 6.1) 围栏行带尾随内容（闭合围栏失效，后续整段被当作代码）
+    for i, ln in enumerate(lines):
+        if ln.startswith('```') and ln.strip() != '```':
+            stat.add('error', 'fence_line_trailing_text',
+                     f'围栏行带尾随内容：{ln.strip()[:60]}', i + 1)
+
     # 7) 图片：缺失、宽度、引用块（按文件汇总，避免刷屏）
     missing_imgs, width_imgs, unquoted_imgs = [], [], []
     td_depth, td_lines = 0, set()

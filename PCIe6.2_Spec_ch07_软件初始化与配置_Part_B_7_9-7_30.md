@@ -14211,11 +14211,11 @@ Table 7-344 details allocation of register fields in the VC Resource Status Regi
 +-----------------------+----------------------------------------------------------+
 |       RsvdP           |        SVC VC Negotiation Pending          |    RsvdP   |
 +-----------------------+----------------------------------------------------------+
-``` <!-- 📄 Page 1404 -->
+```
 
 ---
 
-**Table 7-344. SVC Resource Status Register | 表 7-344. SVC 资源状态寄存器**
+**Table 7-344. SVC Resource Status Register | 表 7-344. SVC 资源状态寄存器** <!-- 📄 Page 1404 -->
 
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
@@ -14367,11 +14367,11 @@ Figure 7-396 details allocation of register fields in the MRBL Capabilities Regi
 +--------------------------------------------------------------------------------------------------------+
 |                              MRBL Structure Length                                                     |
 +--------------------------------------------------------------------------------------------------------+
-``` <!-- 📄 Page 1406 -->
+```
 
 ---
 
-**Table 7-346. MRBL Capabilities Register | 表 7-346. MRBL 能力寄存器**
+**Table 7-346. MRBL Capabilities Register | 表 7-346. MRBL 能力寄存器** <!-- 📄 Page 1406 -->
 
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
