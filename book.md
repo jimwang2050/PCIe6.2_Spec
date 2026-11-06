@@ -42375,6 +42375,17 @@ PCI Express-PM 定义以下链路电源管理状态:
 > **图 5-1.** 链路电源管理状态流程图
 > <img src="figures/chapter_05/fig_0654_1_tight.png" width="700">
 
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
 The L1 and L2/L3 Ready entry negotiations happen while in the L0 state. L1 and L2/L3 Ready are entered only after the negotiation completes. Link Power Management remains in L0 until the negotiation process is completed, unless LDn occurs. Note that these states and state transitions do not correspond directly to the actions of the Physical Layer LTSSM. For example in § Figure 5-1, L0 encompasses the LTSSM L0, Recovery, and, during LinkUp, Configuration states. Also, the LTSSM is typically powered by main power (not Vaux), so LTSSM will not be powered in either the L2 or the L3 state.
 
 The following example sequence illustrates the multi-step Link state transition process leading up to entering a system sleep state:
@@ -42401,6 +42412,40 @@ The L1 entry negotiation (whether invoked via PCI-PM or ASPM mechanisms) and the
 
 A "Yes" entry indicates that support is required (unless otherwise noted). "On" and "Off" entries indicate the required clocking and power delivery. "On/Off" indicates an optional design choice.
 
+</td>
+<td style="background-color:#e8e8e8">
+
+L1 与 L2/L3 Ready 的进入协商均在 L0 状态下进行。只有在协商完成之后才会进入 L1 与 L2/L3 Ready。除非发生 LDn，否则链路电源管理在协商过程完成之前一直保持在 L0。注意，这些状态与状态转换并不直接对应物理层 LTSSM 的动作。例如，在 § 图 5-1 中，L0 涵盖了 LTSSM 的 L0、Recovery 以及 LinkUp 期间的 Configuration 状态。此外，LTSSM 通常由主电源（而非 Vaux）供电，因此在 L2 与 L3 状态下 LTSSM 都不会被供电。
+
+以下示例序列说明了进入系统睡眠状态之前的多步骤链路状态转换过程：
+
+1. 系统软件指示下游组件的所有 Function 进入 D3Hot。
+2. 随后，下游组件按需启动链路到 L1 的转换。
+3. 然后，系统软件使根复合体广播 PME_Turn_Off 报文，为移除主电源做准备。
+4. 该报文使相关链路转换回 L0，以便发送该报文，并使下游组件能够以 PME_TO_Ack 响应。
+5. 发送 PME_TO_Ack 之后，下游组件启动 L2/L3 Ready 转换协议。
+
+`L0 →L1 →L0 →L2/L3 Ready`
+
+如下例所示，也可以在没有先将所有 Function 置入 D3Hot 的情况下移除电源：
+
+1. 系统软件使根复合体广播 PME_Turn_Off 报文，为移除主电源做准备。
+2. 下游组件以 PME_TO_Ack 响应。
+3. 发送 PME_TO_Ack 之后，下游组件启动 L2/L3 Ready 转换协议。
+
+`L0 →L2/L3 Ready`
+
+L1 进入协商（无论通过 PCI-PM 还是 ASPM 机制发起）与 L2/L3 Ready 进入协商都映射到同一个状态机，该状态机对应本章后文所述的动作。此状态机复位后处于空闲（idle）状态。对于下游组件，状态机离开空闲状态后执行的第一个动作，是根据协商类型开始发送相应的进入 DLLP。如果协商被中断（例如因经过 Recovery 状态），则两个组件中的状态机都会复位回空闲状态。上游组件必须始终进入空闲状态并等待接收进入 DLLP。下游组件必须始终进入空闲状态，并且必须始终继续发送进入 DLLP 以重新开始协商。
+
+§ 表 5-1 汇总了每个 L 状态，说明其使用时机以及各自对应的平台与组件行为。
+
+条目为 “Yes” 表示必须支持（另有说明者除外）。条目为 “On” 与 “Off” 分别表示所需的时钟与供电。条目为 “On/Off” 表示可由设计者选择。
+
+</td>
+</tr>
+<tr>
+<td>
+
 **Table 5-1. Summary of PCI Express Link Power Management States | 表 5-1. PCI Express 链路电源管理状态汇总**
 
 | L-State | Description | Used by S/W Directed PM | Used by ASPM | Platform Reference Clocks | Platform Main Power | Component Internal PLL | Platform Vaux |
@@ -42422,17 +42467,73 @@ Notes:
 5. L2 is distinguished from the L3 state only by the presence and use of Vaux. After the completion of the L2/L3 Ready state transition protocol and before main power has been removed, the Link has indicated its readiness for main power removal.
 6. Low-power mobile or handheld devices may reduce power by clock gating the reference clock(s) via the "clock request" (CLKREQ#) mechanism. As a result, components targeting these devices should be tolerant of the additional delays required to re-energize the reference clock during the low-power state exit.
 
+</td>
+<td style="background-color:#e8e8e8">
+
+**表 5-1. PCI Express 链路电源管理状态汇总**
+
+| L 状态 | 描述 | 由软件定向 PM 使用 | 由 ASPM 使用 | 平台参考时钟 | 平台主电源 | 组件内部 PLL | 平台 Vaux |
+|---------|-------------|------------------------|--------------|--------------------------|---------------------|------------------------|---------------|
+| L0 / L0p | 完全活动的链路 | 是 (D0) | 是 (D0) | 开 | 开 | 开 | 开/关 |
+| L0s | 待机状态 | 否 | 是¹ (可选, D0) | 开 | 开 | 开 | 开/关 |
+| L1 | 较低功耗待机 | 是 (D1-D3Hot) | 是 (可选, D0) | 开/关⁶ | 开 | 开/关² | 开/关 |
+| L2/L3 Ready (伪状态) | 移除电源前的暂驻点 | 是³ | 否 | 开/关⁶ | 开 | 开/关 | 开/关 |
+| L2 | 低功耗睡眠状态 (所有时钟关闭、主电源断开) | 是⁴ | 否 | 关 | 关 | 关 | 开⁵ |
+| L3 | 关闭 (零功耗) | 不适用 | 不适用 | 关 | 关 | 关 | 关 |
+| LDn (伪状态) | L0 之前的过渡状态 | 是 | 不适用 | 开 | 开 | 开/关 | 开/关 |
+
+注释：
+
+1. 当链路两端的组件使用相互独立的参考时钟输入（而非公共的分布式参考时钟）时，L0s 退出延迟最大。
+2. 对于在该状态下内部关闭 PLL 的组件，L1 退出延迟最大。
+3. L2/L3 Ready 进入序列在 PME_Turn_Off/PME_TO_Ack 协议握手完成时启动。它与 D 状态转换或按 ASPM 策略与规程进行的转换均无直接关联。
+4. 依平台实现而定，系统睡眠状态可能使用 L2 状态、转换到完全关闭 (L3)，也可能将链路保持在 L2/L3 Ready 状态。L2/L3 Ready 状态转换协议由下游组件在接收到 PME_Turn_Off TLP 报文并确认（acknowledge）该 TLP 之后启动。平台对 L2 睡眠状态配置的支持是可选的（取决于 Vaux 是否可用），但组件必须支持将链路转换到 L2/L3 Ready 状态的协议。
+5. L2 与 L3 状态的唯一区别在于 Vaux 的存在与使用。在 L2/L3 Ready 状态转换协议完成之后、主电源被移除之前，链路已表明其已准备好移除主电源。
+6. 低功耗移动或手持设备可通过 “时钟请求”（CLKREQ#）机制对参考时钟进行时钟门控来降低功耗。因此，面向此类设备的组件应能容忍在退出低功耗状态期间重新激活参考时钟所需的额外延迟。
+
+</td>
+</tr>
+</tbody>
+</table>
+
 [⬆️ 返回目录](#sec-5-0)
 
 ---
 
-While the concept of these power states is universal for all Functions in the system, the meaning, or intended functional behavior when transitioned to a given power management state, is dependent upon the type (or class) of the Function. <!-- 📄 Page 656 -->
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+While the concept of these power states is universal for all Functions in the system, the meaning, or intended functional behavior when transitioned to a given power management state, is dependent upon the type (or class) of the Function.
 
 The D0 power management state is the normal operation state of the Function. Other states are various levels of reduced power, where the Function is either not operating or supports a limited set of operations. D1 and D2 are intermediate states that are intended to afford the system designer more flexibility in balancing power savings, restore time, and low power feature availability tradeoffs for a given device class. The D1 state could, for example, be supported as a slightly more power consuming state than D2, however one that yields a quicker restore time than could be realized from D2.
 
 The D3 power management state constitutes a special category of power management state in that a Function could be transitioned into D3 either by software or by physically removing its power. In that sense, the two D3 variants have been designated as D3Hot and D3Cold where the subscript refers to the presence or absence of main power respectively. Functions in D3Hot are permitted to be transitioned to the D0 state via software by writing to the Function's PMCSR register. Functions in the D3Cold state are permitted to be transitioned to the D0uninitialized state by reapplying main power and asserting Fundamental Reset.
 
 All Functions must support the D0 and D3 states (both D3Hot and D3Cold). The D1 and D2 states are optional.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+虽然这些电源状态的概念对系统中的所有 Function 都是通用的，但转换到某个电源管理状态时的含义（即预期的功能行为）取决于 Function 的类型（或类别）。
+
+D0 电源管理状态是 Function 的正常工作状态。其他状态都是不同程度的降功耗状态，此时 Function 要么不工作，要么仅支持有限的一组操作。D1 与 D2 是中间状态，旨在为系统设计者在功耗节省、恢复时间与低功耗特性可用性之间的权衡提供更大的灵活性，以适配特定设备类别。例如，D1 状态可以设计为比 D2 略高的功耗，但恢复时间比 D2 更短。
+
+D3 电源管理状态属于一类特殊的电源管理状态：Function 既可以由软件转换到 D3，也可以通过物理移除其电源进入 D3。因此，两种 D3 变体分别称为 D3Hot 与 D3Cold，其下标分别表示主电源的存在与不存在。处于 D3Hot 的 Function 允许通过软件写其 PMCSR 寄存器转换到 D0 状态。处于 D3Cold 状态的 Function 允许通过重新施加主电源并断言基本复位（Fundamental Reset）转换到 D0uninitialized 状态。
+
+所有 Function 都必须支持 D0 与 D3 状态（D3Hot 与 D3Cold 两者）。D1 与 D2 状态是可选的。
+
+</td>
+</tr>
+</tbody>
+</table>
 
 <a id="sec-5-3"></a>
 ## 5.3 PCI-PM Software Compatible Mechanisms | PCI-PM 软件兼容机制
@@ -44649,7 +44750,18 @@ Power management software, using the latency information reported by all compone
 
 ---
 
-**Table 5-8. Encoding of the Endpoint L0s Acceptable Latency Field | 表 5-8. Endpoint L0s Acceptable Latency 字段的编码** <!-- 📄 Page 686 -->
+<table>
+<thead>
+<tr>
+<th width="50%">🇬🇧 English</th>
+<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+**Table 5-8. Encoding of the Endpoint L0s Acceptable Latency Field | 表 5-8. Endpoint L0s Acceptable Latency 字段的编码**
 
 | Field | Description |
 |-------|-------------|
@@ -44661,6 +44773,27 @@ Power management software, using the latency information reported by all compone
 | 101b | Maximum of 2 μs |
 | 110b | Maximum of 4 μs |
 | 111b | No limit |
+
+</td>
+<td style="background-color:#e8e8e8">
+
+**表 5-8. Endpoint L0s Acceptable Latency 字段的编码**
+
+| 字段 | 描述 |
+|-------|-------------|
+| 000b | 最大 64 ns |
+| 001b | 最大 128 ns |
+| 010b | 最大 256 ns |
+| 011b | 最大 512 ns |
+| 100b | 最大 1 μs |
+| 101b | 最大 2 μs |
+| 110b | 最大 4 μs |
+| 111b | 无限制 |
+
+</td>
+</tr>
+<tr>
+<td>
 
 **Table 5-9. Encoding of the Endpoint L1 Acceptable Latency Field | 表 5-9. Endpoint L1 Acceptable Latency 字段的编码**
 
@@ -44675,7 +44808,38 @@ Power management software, using the latency information reported by all compone
 | 110b | Maximum of 64 μs |
 | 111b | No limit |
 
+</td>
+<td style="background-color:#e8e8e8">
+
+**表 5-9. Endpoint L1 Acceptable Latency 字段的编码**
+
+| 字段 | 描述 |
+|-------|-------------|
+| 000b | 最大 1 μs |
+| 001b | 最大 2 μs |
+| 010b | 最大 4 μs |
+| 011b | 最大 8 μs |
+| 100b | 最大 16 μs |
+| 101b | 最大 32 μs |
+| 110b | 最大 64 μs |
+| 111b | 无限制 |
+
+</td>
+</tr>
+<tr>
+<td>
+
 Power management software enables or disables ASPM in each component by programming the ASPM Control field.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+电源管理软件通过编程 ASPM Control 字段来启用或禁用每个组件中的 ASPM。
+
+</td>
+</tr>
+<tr>
+<td>
 
 **Table 5-10. Encoding of the ASPM Control | 表 5-10. ASPM Control 的编码**
 
@@ -44702,6 +44866,40 @@ Power management software enables or disables ASPM in each component by programm
   - Port must bring a Link into the L0s state if all conditions are met.
   - Ports connected to the Downstream end of the Link may issue PM_Active_State_Request_L1 DLLPs.
   - Ports connected to the Upstream end of the Link must respond with positive acknowledgement to a L1 request and transition into L1 if the conditions for the Root Complex Root Port or Switch Downstream Port in § Section 5.4.1.3.1 are met.
+
+</td>
+<td style="background-color:#e8e8e8">
+
+**表 5-10. ASPM Control 的编码**
+
+| 字段 | 字段 | 描述 |
+|-------|-------|-------------|
+| 00b | ASPM Control | 禁用 |
+| 01b | | 允许进入 L0s |
+| 10b | | 允许进入 L1 |
+| 11b | | 允许进入 L0s 与 L1 |
+
+- **ASPM Control = 00b**
+  - 端口的发送器不得进入 L0s。
+  - 连接到该链路下游端的端口不得在其上游链路上发出 PM_Active_State_Request_L1 DLLP。
+  - 连接到该链路上游端的端口在收到 L1 请求时必须给出否定确认（negative acknowledgement）。
+- **ASPM Control = 01b**
+  - 若满足所有条件，端口必须将链路带入 L0s 状态。
+  - 连接到该链路下游端的端口不得在其上游链路上发出 PM_Active_State_Request_L1 DLLP。
+  - 连接到该链路上游端的端口在收到 L1 请求时必须给出否定确认。
+- **ASPM Control = 10b**
+  - 端口的发送器不得进入 L0s。
+  - 连接到该链路下游端的端口可以发出 PM_Active_State_Request_L1 DLLP。
+  - 连接到该链路上游端的端口必须对 L1 请求给出肯定确认（positive acknowledgement），并在满足 § 第 5.4.1.3.1 节中根复合体根端口或交换机下游端口条件时转换到 L1。
+- **ASPM Control = 11b**
+  - 若满足所有条件，端口必须将链路带入 L0s 状态。
+  - 连接到该链路下游端的端口可以发出 PM_Active_State_Request_L1 DLLP。
+  - 连接到该链路上游端的端口必须对 L1 请求给出肯定确认，并在满足 § 第 5.4.1.3.1 节中根复合体根端口或交换机下游端口条件时转换到 L1。
+
+</td>
+</tr>
+</tbody>
+</table>
 
 [⬆️ 返回目录](#sec-5-0)
 
