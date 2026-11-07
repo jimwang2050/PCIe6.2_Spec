@@ -14843,8 +14843,6 @@ The Data Link Layer acts as an intermediate stage between the Transaction Layer 
 > <img src="figures/chapter_03/fig_0309_1_tight.png" width="700">
 > **图 3-1.** Layering 图: 数据链路层
 
-> <img src="figures/chapter_03/fig_0309_1_tight.png" width="700">
-
 [⬆️ 返回目录](#sec-3-0)
 
 ---
@@ -15037,8 +15035,6 @@ DLLP 以点对点方式在一对链路的两个组件之间发送。TLP 则从�
 > **Figure 3-2.** Data Link Control and Management State Machine
 > <img src="figures/chapter_03/fig_0311_1_tight.png" width="700">
 > **图 3-2.** Data Link Control 与 Management State Machine
-
-> <img src="figures/chapter_03/fig_0311_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -15697,8 +15693,6 @@ VC 初始化流程中有两个状态:
 > <img src="figures/chapter_03/fig_0323_1_tight.png" width="700">
 > **图 3-3.** VC0 流控 (流 Control) Initialization Example 含 8b/10b 编码 Encoding-based Framing
 
-> <img src="figures/chapter_03/fig_0323_1_tight.png" width="700">
-
 In this example, the Endpoint enters the initialization sequence for VC0 first, followed shortly by the Switch. After the Switch receives a complete set of InitFC1 DLLPs, it transitions to FC_INIT2... Both components have now received at least one InitFC2 DLLP, and the initialization sequence is complete.
 
 All DLLP field values shown are in hexadecimal.
@@ -15866,12 +15860,9 @@ See § Figure 3-4 and § Figure 3-5 below.
 > <img src="figures/chapter_03/fig_0325_1_tight.png" width="700">
 > **图 3-4.** DLLP Type 与 CRC Fields (非 Flit 模式)
 
-> <img src="figures/chapter_03/fig_0325_1_tight.png" width="700">
-
 > **Figure 3-5.** DLLP Type Field (Flit Mode)
+> <img src="figures/chapter_03/fig_0325_2_tight.png" width="700">
 > **图 3-5.** DLLP Type Field (Flit 模式)
-
-<!-- 📍 Figure 3-5 原图未单独抽取，位于 Fig 3-4 同一页面 -->
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -16067,132 +16058,43 @@ In § Figure 3-6 through § Figure 3-15 the 16-bit CRC is not shown. In Non-Flit
 
 > **Figure 3-6.** Data Link Layer Packet Format for Ack and Nak (Non-Flit Mode)
 > <img src="figures/chapter_03/fig_0329_1_tight.png" width="700">
-
-> **Figure 3-7.** Data Link Layer Packet Format for NOP
-> <img src="figures/chapter_03/fig_0329_2_tight.png" width="700">
-
-> **Figure 3-8.** Data Link Layer Packet Format for NOP2 (Flit Mode)
-> <img src="figures/chapter_03/fig_0329_3_tight.png" width="700">
-
-> **Figure 3-9.** Data Link Layer Packet Format for InitFC1
-> <img src="figures/chapter_03/fig_0330_1_tight.png" width="700">
 > **图 3-6.** 数据链路层包 (DLLP) 格式 Ack 与 Nak (非 Flit 模式)
 
-> <img src="figures/chapter_03/fig_0329_1_tight.png" width="700">
-
 > **Figure 3-7.** Data Link Layer Packet Format for NOP
 > <img src="figures/chapter_03/fig_0329_2_tight.png" width="700">
-
-> **Figure 3-8.** Data Link Layer Packet Format for NOP2 (Flit Mode)
-> <img src="figures/chapter_03/fig_0329_3_tight.png" width="700">
-
-> **Figure 3-9.** Data Link Layer Packet Format for InitFC1
-> <img src="figures/chapter_03/fig_0330_1_tight.png" width="700">
-
-> **Figure 3-10.** Data Link Layer Packet Format for InitFC2
-> <img src="figures/chapter_03/fig_0330_2_tight.png" width="700">
 > **图 3-7.** 数据链路层包 (DLLP) 格式 NOP
 
-> <img src="figures/chapter_03/fig_0329_2_tight.png" width="700">
-
 > **Figure 3-8.** Data Link Layer Packet Format for NOP2 (Flit Mode)
 > <img src="figures/chapter_03/fig_0329_3_tight.png" width="700">
-
-> **Figure 3-9.** Data Link Layer Packet Format for InitFC1
-> <img src="figures/chapter_03/fig_0330_1_tight.png" width="700">
-
-> **Figure 3-10.** Data Link Layer Packet Format for InitFC2
-> <img src="figures/chapter_03/fig_0330_2_tight.png" width="700">
-
-> **Figure 3-11.** Data Link Layer Packet Format for UpdateFC
-> <img src="figures/chapter_03/fig_0331_1_tight.png" width="700">
 > **图 3-8.** 数据链路层包 (DLLP) 格式 NOP2 (Flit 模式)
 
-> <img src="figures/chapter_03/fig_0329_3_tight.png" width="700">
-
 > **Figure 3-9.** Data Link Layer Packet Format for InitFC1
 > <img src="figures/chapter_03/fig_0330_1_tight.png" width="700">
-
-> **Figure 3-10.** Data Link Layer Packet Format for InitFC2
-> <img src="figures/chapter_03/fig_0330_2_tight.png" width="700">
-
-> **Figure 3-11.** Data Link Layer Packet Format for UpdateFC
-> <img src="figures/chapter_03/fig_0331_1_tight.png" width="700">
-
-> **Figure 3-12.** Data Link Layer Packet Format for Power Management
-> <img src="figures/chapter_03/fig_0331_2_tight.png" width="700">
-> **图 3-10.** 数据链路层包 (DLLP) 格式 InitFC2
-
-> <img src="figures/chapter_03/fig_0330_2_tight.png" width="700">
-
-> **Figure 3-11.** Data Link Layer Packet Format for UpdateFC
-> <img src="figures/chapter_03/fig_0331_1_tight.png" width="700">
-
-> **Figure 3-12.** Data Link Layer Packet Format for Power Management
-> <img src="figures/chapter_03/fig_0331_2_tight.png" width="700">
 > **图 3-9.** 数据链路层包 (DLLP) 格式 InitFC1
 
-> <img src="figures/chapter_03/fig_0330_1_tight.png" width="700">
-
 > **Figure 3-10.** Data Link Layer Packet Format for InitFC2
 > <img src="figures/chapter_03/fig_0330_2_tight.png" width="700">
+> **图 3-10.** 数据链路层包 (DLLP) 格式 InitFC2
 
 > **Figure 3-11.** Data Link Layer Packet Format for UpdateFC
 > <img src="figures/chapter_03/fig_0331_1_tight.png" width="700">
-
-> **Figure 3-12.** Data Link Layer Packet Format for Power Management
-> <img src="figures/chapter_03/fig_0331_2_tight.png" width="700">
-
-> **Figure 3-13.** Data Link Layer Packet Format for Vendor-Specific
-<!-- 📍 Figure 3-13 原图未单独抽取 -->
-
-> **Figure 3-14.** Data Link Layer Packet Format for Data Link Feature DLLP
-> <img src="figures/chapter_03/fig_0332_1_tight.png" width="700">
 > **图 3-11.** 数据链路层包 (DLLP) 格式 UpdateFC
 
-> <img src="figures/chapter_03/fig_0331_1_tight.png" width="700">
-
 > **Figure 3-12.** Data Link Layer Packet Format for Power Management
 > <img src="figures/chapter_03/fig_0331_2_tight.png" width="700">
+> **图 3-12.** 数据链路层包 (DLLP) 格式 电源管理 (Power Management)
 
 > **Figure 3-13.** Data Link Layer Packet Format for Vendor-Specific
-<!-- 📍 Figure 3-13 原图未单独抽取 -->
+> <img src="figures/chapter_03/fig_0331_3_tight.png" width="700">
+> **图 3-13.** 数据链路层包 (DLLP) 格式 Vendor-Specific
 
 > **Figure 3-14.** Data Link Layer Packet Format for Data Link Feature DLLP
 > <img src="figures/chapter_03/fig_0332_1_tight.png" width="700">
+> **图 3-14.** 数据链路层包 (DLLP) 格式 Data Link Feature DLLP
 
 > **Figure 3-15.** Data Packet Layer Format for Link Management (Flit Mode)
 > <img src="figures/chapter_03/fig_0332_2_tight.png" width="700">
 > **图 3-15.** Data Packet Layer 格式 Link Management (Flit 模式)
-
-> <img src="figures/chapter_03/fig_0332_2_tight.png" width="700">
-> **图 3-14.** 数据链路层包 (DLLP) 格式 Data Link Feature DLLP
-
-> <img src="figures/chapter_03/fig_0332_1_tight.png" width="700">
-
-> **Figure 3-15.** Data Packet Layer Format for Link Management (Flit Mode)
-> <img src="figures/chapter_03/fig_0332_2_tight.png" width="700">
-> **图 3-13.** 数据链路层包 (DLLP) 格式 Vendor-Specific
-
-<!-- 📍 Figure 3-13 原图未单独抽取 -->
-
-> **Figure 3-14.** Data Link Layer Packet Format for Data Link Feature DLLP
-> <img src="figures/chapter_03/fig_0332_1_tight.png" width="700">
-
-> **Figure 3-15.** Data Packet Layer Format for Link Management (Flit Mode)
-> <img src="figures/chapter_03/fig_0332_2_tight.png" width="700">
-> **图 3-12.** 数据链路层包 (DLLP) 格式 电源管理 (Power Management)
-
-> <img src="figures/chapter_03/fig_0331_2_tight.png" width="700">
-
-> **Figure 3-13.** Data Link Layer Packet Format for Vendor-Specific
-<!-- 📍 Figure 3-13 原图未单独抽取 -->
-
-> **Figure 3-14.** Data Link Layer Packet Format for Data Link Feature DLLP
-> <img src="figures/chapter_03/fig_0332_1_tight.png" width="700">
-
-> **Figure 3-15.** Data Packet Layer Format for Link Management (Flit Mode)
-> <img src="figures/chapter_03/fig_0332_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -16269,8 +16171,6 @@ The following are the characteristics and rules associated with Data Link Layer 
 > **Figure 3-16.** Diagram of CRC Calculation for DLLPs <!-- 📄 Page 334 --> <!-- 📄 Page 335 --> <!-- 📄 Page 336 --> <!-- 📄 Page 337 --> <!-- 📄 Page 338 --> <!-- 📄 Page 339 --> <!-- 📄 Page 340 --> <!-- 📄 Page 341 --> <!-- 📄 Page 342 --> <!-- 📄 Page 343 --> <!-- 📄 Page 344 --> <!-- 📄 Page 345 --> <!-- 📄 Page 346 --> <!-- 📄 Page 347 --> <!-- 📄 Page 348 -->
 > <img src="figures/chapter_03/fig_0334_1_tight.png" width="700">
 > **图 3-16.** CRC 计算 DLLPs
-
-> <img src="figures/chapter_03/fig_0334_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -16406,8 +16306,6 @@ TLP 通过数据链路层的发送路径(§ Figure 3-1 中标记为 1 和 3 的�
 > <img src="figures/chapter_03/fig_0335_1.png" width="700">
 > **图 3-17.** TLP 含 LCRC 与 TLP 序列号 (序列 Number) Applied - 非 Flit 模式
 
-> <img src="figures/chapter_03/fig_0335_1.png" width="700">
-
 [⬆️ 返回目录](#sec-3-0)
 
 ---
@@ -16487,8 +16385,6 @@ The following rules describe how a TLP is prepared for transmission before being
 > **Figure 3-18.** TLP Following Application of TLP Sequence Number and 4 Bits
 > <img src="figures/chapter_03/fig_0337_1.png" width="700">
 > **图 3-18.** TLP Following Application TLP 序列号 (序列 Number) 与 4 Bits
-
-> <img src="figures/chapter_03/fig_0337_1.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -16579,8 +16475,6 @@ The following rules describe how a TLP is prepared for transmission before being
 > **Figure 3-19.** Calculation of LCRC
 > <img src="figures/chapter_03/fig_0339_1_tight.png" width="700">
 > **图 3-19.** 计算 LCRC
-
-> <img src="figures/chapter_03/fig_0339_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -16861,8 +16755,6 @@ Since Ack/Nak and Flow Control DLLPs affect TLPs flowing in the opposite directi
 > <img src="figures/chapter_03/fig_0343_1_tight.png" width="700">
 > **图 3-20.** Received DLLP Error Check 流程图
 
-> <img src="figures/chapter_03/fig_0343_1_tight.png" width="700">
-
 [⬆️ 返回目录](#sec-3-0)
 
 ---
@@ -16929,8 +16821,6 @@ Since Ack/Nak and Flow Control DLLPs affect TLPs flowing in the opposite directi
 > **Figure 3-21.** Ack/Nak DLLP Processing Flowchart
 > <img src="figures/chapter_03/fig_0344_1_tight.png" width="700">
 > **图 3-21.** Ack/NAK DLLP (否认 DLLP) Processing 流程图
-
-> <img src="figures/chapter_03/fig_0344_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -17193,8 +17083,6 @@ The following rules are applied in sequence to describe how received TLPs are pr
 > **Figure 3-22.** Receive Data Link Layer Handling of TLPs Flowchart
 > <img src="figures/chapter_03/fig_0347_1_tight.png" width="700">
 > **图 3-22.** Receive 数据链路层 Handling TLPs 流程图
-
-> <img src="figures/chapter_03/fig_0347_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
