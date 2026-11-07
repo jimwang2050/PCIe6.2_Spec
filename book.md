@@ -43022,8 +43022,6 @@ The following text provides additional detail for the Link state transition proc
 
 > <img src="figures/chapter_05/fig_0662_1_tight.png" width="700">
 
-> <img src="figures/chapter_05/fig_0661_1.png" width="700">
-
 </div>
 
 
@@ -43404,8 +43402,6 @@ Switch 必须在收到每个下游端口的 PME_TO_Ack 报文后才能报告"聚
 
 > <img src="figures/chapter_05/fig_0667_1_tight.png" width="700">
 
-> <img src="figures/chapter_05/fig_0666_1.png" width="700">
-
 </div>
 
 
@@ -43623,8 +43619,6 @@ The following diagram conceptually outlines the PM_PME delivery control state ma
 > **图 5-5.** 概念性 PME 控制状态机
 
 > <img src="figures/chapter_05/fig_0670_1_tight.png" width="700">
-
-> <img src="figures/chapter_05/fig_0669_1.png" width="700">
 
 **Communicating State:**
 
@@ -44468,6 +44462,8 @@ Notes:
 > **Figure 5-7.** L1 Successful Transition Sequence
 > **图 5-7.** L1 成功转换序列
 
+> <img src="figures/chapter_05/fig_0682_1_tight.png" width="700">
+
 </div>
 
 
@@ -44517,8 +44513,6 @@ Therefore, among Links 1, 2, and 3, the Link to complete the transition to the L
 > **图 5-8.** L1 退出延迟计算示例
 
 > <img src="figures/chapter_05/fig_0683_1_tight.png" width="700">
-
-> <img src="figures/chapter_05/fig_0682_1_tight.png" width="700">
 
 Switches are not required to initiate an L1 exit transition on any other of their Downstream Port Links.
 
@@ -45034,8 +45028,6 @@ L1 PM Substates 建立了一种链路电源管理机制，它创建了 L1 链路
 
 > <img src="figures/chapter_05/fig_0689_1_tight.png" width="700">
 
-> <img src="figures/chapter_05/fig_0688_1.png" width="700">
-
 </div>
 
 
@@ -45194,6 +45186,8 @@ If either the Upstream or Downstream Port needs to initiate exit from L1.1, it m
 
 > **Figure 5-13.** Example: L1.1 Waveforms Illustrating Downstream Port Initiated Exit
 > **图 5-13.** 示例：说明由下行端口发起退出的 L1.1 波形
+
+> <img src="figures/chapter_05/fig_0693_2.png" width="700">
 
 </div>
 
@@ -45415,8 +45409,6 @@ The following rules apply for L1.2.Exit using the CLKREQ#-based mechanism:
 > **图 5-16.** 示例：说明由上游端口发起退出的 L1.2 波形
 
 > <img src="figures/chapter_05/fig_0697_1_tight.png" width="700">
-
-> <img src="figures/chapter_05/fig_0696_1_tight.png" width="700">
 
 > **Figure 5-17.** Example: L1.2 Waveforms Illustrating Downstream Port Initiated Exit
 > **图 5-17.** 示例：说明由下行端口发起退出的 L1.2 波形
@@ -45889,8 +45881,6 @@ All PCI-PM power management state changes are explicitly controlled by software 
 
 > <img src="figures/chapter_05/fig_0702_1_tight.png" width="700">
 
-> <img src="figures/chapter_05/fig_0701_1.png" width="700">
-
 </div>
 
 
@@ -46150,8 +46140,6 @@ The shaded regions in § Figure 5-19 illustrate what is discussed in this sectio
 > **图 5-19.** PCI Express 桥接电源管理图
 
 > <img src="figures/chapter_05/fig_0705_1_tight.png" width="700">
-
-> <img src="figures/chapter_05/fig_0704_1.png" width="700">
 
 As can be seen from § Figure 5-19, the PCI Express Bridge behavior described in this chapter is common, from the perspective of the operating system, to host bridges, Switches, and PCI Express to PCI bridges.
 
