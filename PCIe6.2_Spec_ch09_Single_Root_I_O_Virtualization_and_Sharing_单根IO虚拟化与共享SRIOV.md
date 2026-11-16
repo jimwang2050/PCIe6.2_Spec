@@ -220,10 +220,10 @@ The generic platform configuration is composed of the following components:
 </table>
 
 > **Figure 9-1.** Generic Platform Configuration
+
 > <img src="figures/chapter_09/fig_1523_1_tight.png" width="700">
 > **图 9-1.** Generic Platform Configuration
 
-> <img src="figures/chapter_09/fig_1523_1_tight.png" width="700">
 
 </div>
 
@@ -254,11 +254,7 @@ The generic platform configuration is composed of the following components:
 
 In order to increase the effective hardware resource utilization without requiring hardware modifications, multiple SI can be executed. Software termed a Virtualization Intermediary (VI) is interposed between the hardware and the SI as illustrated in § Figure 9-2.
 
-> **Figure 9-2.** Generic Platform Configuration with a VI and Multiple SI
-> <img src="figures/chapter_09/fig_1524_1_tight.png" width="700">
-> **图 9-2.** Generic Platform Configuration 含 VI 与 Multiple SI
 
-> <img src="figures/chapter_09/fig_1524_1_tight.png" width="700">
 
 The VI takes sole ownership of the underlying hardware. Using a variety of methods outside of the scope of this specification, the VI abstracts the hardware to present each SI with its own virtual system. The actual hardware resources available to each SI can vary based on workload or customer-specific policies. While this approach works well for many environments, I/O intensive workloads can suffer significant performance degradation. Each I/O operation - inbound or outbound - must be intercepted and processed by the VI adding significant platform resource overhead.
 
@@ -275,11 +271,16 @@ The VI takes sole ownership of the underlying hardware. Using a variety of metho
 
 VI 独占底层硬件的所有权。VI 使用本规范范围之外的各种方法抽象硬件，为每个 SI 提供其自己的虚拟系统。可供每个 SI 使用的实际硬件资源可以根据工作负载或客户特定策略而有所不同。虽然此方法在许多环境中效果良好，但 I/O 密集型工作负载可能会遭受显著的性能下降。每个 I/O 操作(入站或出站)都必须由 VI 拦截并处理，这会增加显著的平台资源开销。
 
-<img src="figures/chapter_09/fig_1524_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-2.** Generic Platform Configuration with a VI and Multiple SI
+>
+> **图 9-2.** Generic Platform Configuration 含 VI 与 Multiple SI
+
+> <img src="figures/chapter_09/fig_1524_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-9-0)
 
@@ -330,10 +331,10 @@ SR-IOV 提供了减少这些平台资源开销的工具。SR-IOV 的好处包括
 </table>
 
 > **Figure 9-3.** Generic Platform Configuration with SR-IOV and IOV Enablers
+
 > <img src="figures/chapter_09/fig_1526_1_tight.png" width="700">
 > **图 9-3.** Generic Platform Configuration 含 SR-IOV 与 IOV Enablers
 
-> <img src="figures/chapter_09/fig_1526_1_tight.png" width="700">
 
 </div>
 
@@ -450,11 +451,7 @@ To compare and contrast a PCIe Device with a PCIe SR-IOV capable device, examine
 <tr>
 <td>
 
-> **Figure 9-4.** Example Multi-Function Device
-> <img src="figures/chapter_09/fig_1528_1_tight.png" width="700">
-> **图 9-4.** Example Multi-Function Device
 
-> <img src="figures/chapter_09/fig_1528_1_tight.png" width="700">
 
 This figure illustrates an example multi-Function PCIe Device with the following characteristics:
 
@@ -481,11 +478,16 @@ As this figure illustrates, the hardware resources scale with the number of Func
 
 如图所示，硬件资源随所配置的功能数量而扩展。根据设备的复杂性和大小，每个功能的增量成本会有所不同。为了降低增量硬件成本，可以使用 SR-IOV 构造一个设备，以支持单个 PF 和多个 VF,如图 § Figure 9-5 所示。
 
-<img src="figures/chapter_09/fig_1528_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-4.** Example Multi-Function Device
+>
+> **图 9-4.** Example Multi-Function Device
+
+> <img src="figures/chapter_09/fig_1528_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-9-0)
 
@@ -542,10 +544,10 @@ The example in § Figure 9-5 illustrates a single PF with N VFs. Key observation
 </table>
 
 > **Figure 9-5.** Example SR-IOV Single PF Capable Device
+
 > <img src="figures/chapter_09/fig_1529_1_tight.png" width="700">
 > **图 9-5.** Example SR-IOV Single PF Capable Device
 
-> <img src="figures/chapter_09/fig_1529_1_tight.png" width="700">
 
 </div>
 
@@ -645,10 +647,10 @@ Key observations to note:
 </table>
 
 > **Figure 9-6.** Example SR-IOV Multi-PF Capable Device
+
 > <img src="figures/chapter_09/fig_1531_1_tight.png" width="700">
 > **图 9-6.** Example SR-IOV Multi-PF Capable Device
 
-> <img src="figures/chapter_09/fig_1531_1_tight.png" width="700">
 
 </div>
 
@@ -734,10 +736,10 @@ In this last example, § Figure 9-8, a device implementation may mix any number 
 </table>
 
 > **Figure 9-7.** Example SR-IOV Device with Multiple Bus Numbers
+
 > <img src="figures/chapter_09/fig_1533_1_tight.png" width="700">
 > **图 9-7.** Example SR-IOV Device 含 Multiple Bus Numbers
 
-> <img src="figures/chapter_09/fig_1533_1_tight.png" width="700">
 
 
 [⬆️ 返回目录](#sec-9-0)
@@ -783,10 +785,10 @@ Key observations to note:
 </table>
 
 > **Figure 9-8.** Example SR-IOV Device with a Mixture of Function Types
+
 > <img src="figures/chapter_09/fig_1534_1_tight.png" width="700">
 > **图 9-8.** Example SR-IOV Device 含 Mixture Function Types
 
-> <img src="figures/chapter_09/fig_1534_1_tight.png" width="700">
 
 </div>
 
@@ -950,10 +952,10 @@ SR-IOV 扩展能力结构中的 First VF Offset 和 VF Stride 字段是 16 位�
 </table>
 
 > **Figure 9-9.** BAR Space Example for Single BAR Device
+
 > <img src="figures/chapter_09/fig_1536_1.png" width="700">
 > **图 9-9.** BAR Space Example Single BAR Device
 
-> <img src="figures/chapter_09/fig_1536_1.png" width="700">
 
 </div>
 
@@ -1330,11 +1332,7 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 <tr>
 <td>
 
-> **Figure 9-10.** SR-IOV Extended Capability
-> <img src="figures/chapter_09/fig_1541_1_tight.png" width="700">
-> **图 9-10.** SR-IOV Extended Capability
 
-> <img src="figures/chapter_09/fig_1541_1_tight.png" width="700">
 
 § Table 9-2 defines the SR-IOV Extended Capability header. The Capability ID for the SR-IOV Extended Capability is 0010h.
 
@@ -1349,11 +1347,16 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 <a id="sec-9-3-3-1-cn"></a>
 #### 9.3.3.1 SR-IOV 扩展能力结构头部(偏移 00h)
 
-<img src="figures/chapter_09/fig_1541_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-10.** SR-IOV Extended Capability
+>
+> **图 9-10.** SR-IOV Extended Capability
+
+> <img src="figures/chapter_09/fig_1541_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-9-0)
 
@@ -1410,10 +1413,10 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 </table>
 
 > **Figure 9-12.** SR-IOV Capabilities Register
+
 > <img src="figures/chapter_09/fig_1542_1_tight.png" width="700">
 > **图 9-12.** SR-IOV 能力寄存器 (Capabilities Register)
 
-> <img src="figures/chapter_09/fig_1542_1_tight.png" width="700">
 
 </div>
 
@@ -1665,10 +1668,10 @@ VF 迁移与现已弃用的 MR-IOV 关联。新设计应将此字段硬连线为
 </table>
 
 > **Figure 9-13.** SR-IOV Control Register
+
 > <img src="figures/chapter_09/fig_1545_1.png" width="700">
 > **图 9-13.** SR-IOV Control Register
 
-> <img src="figures/chapter_09/fig_1545_1.png" width="700">
 
 </div>
 
@@ -1967,11 +1970,7 @@ ARI Capable Hierarchy 不适用于 RCiEP。
 
 § Table 9-5 defines the layout of the SR-IOV Status field.
 
-> **Figure 9-14.** SR-IOV Status
-> <img src="figures/chapter_09/fig_1549_1.png" width="700">
-> **图 9-14.** SR-IOV Status
 
-> <img src="figures/chapter_09/fig_1549_1.png" width="700">
 
 **Table 9-5. SR-IOV Status | 表 9-5. SR-IOV 状态**
 
@@ -2050,11 +2049,16 @@ NumVFs 的初始值未定义。
 <a id="sec-9-3-3-7-cn"></a>
 #### 9.3.3.7 NumVFs(偏移 10h)
 
-<img src="figures/chapter_09/fig_1549_1.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-14.** SR-IOV Status
+>
+> **图 9-14.** SR-IOV Status
+
+> <img src="figures/chapter_09/fig_1549_1.png" width="700">
 
 [⬆️ 返回目录](#sec-9-0)
 

@@ -1004,16 +1004,6 @@ Devices and PCIe Root Complex Integrated Endpoints (RCiEPs).</p>
 along with a set of PCIe Devices and RC Integrated Endpoints with
 integrated ATC. A TA and an ATPT are implementation specific and can be
 distinct or integrated components within a given system design.</p>
-<blockquote>
-<p><strong>Figure 10-1.</strong> Example Illustrating a Platform with
-TA, ATPT, and ATC Elements
-<img src="figures/chapter_10/fig_1559_1.png" width="700"> <strong>图
-10-1.</strong> 示例 Platform 含 TA, ATPT, 与 ATC Elements</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1559_1.png" width="700">
-
-</blockquote>
 <p>The ATS chapter provides a new set of TLP and associated semantics.
 ATS uses a request-completion protocol between a Device and a Root
 Complex (RC) to provide translation services. In addition, a new AT
@@ -1022,18 +1012,6 @@ field enables an RC to determine whether a given request has been
 translated or not via the ATS protocol.</p>
 <p>§ Figure 10-2 illustrates the basic flow of an ATS Translation
 Request operation.</p>
-<blockquote>
-<p><strong>Figure 10-2.</strong> Example ATS Translation
-Request/Completion Exchange</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1560_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1560_1_tight.png" width="700">
-
-</blockquote>
 <p>In this example, a Function-specific work request is received by a
 single-Function PCIe Device. The Function determines through an
 implementation specific method that caching a translation within its ATC
@@ -1058,11 +1036,6 @@ RC 集成端点的示例平台。TA 和 ATPT
 TLP 中定义了一个新的 AT 字段。新的 AT 字段使 RC 能够通过 ATS
 协议确定给定请求是否已经被转换。</p>
 <p>§ 图 10-2 展示了 ATS 转换请求操作的基本流程。</p>
-<blockquote>
-<p><strong>图 10-2.</strong> ATS 转换请求/完成交换示例
-<img src="figures/chapter_10/fig_1560_2_tight.png" width="700">
-<img src="figures/chapter_10/fig_1560_1_tight.png" width="700"></p>
-</blockquote>
 <p>在此示例中，单功能 PCIe
 设备收到一个功能特定的工作请求。该功能通过某种实现特定的方法判断，在其
 ATC
@@ -1075,6 +1048,25 @@ ATC
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 10-1.</strong> Example Illustrating a Platform with
+TA, ATPT, and ATC Elements</p>
+<p><strong>图 10-1.</strong> 示例 Platform 含 TA, ATPT, 与 ATC
+Elements</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1559_1.png" width="700">
+
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-2.</strong> Example ATS Translation
+Request/Completion Exchange</p>
+<p><strong>图 10-2.</strong> ATS 转换请求/完成交换示例</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1560_2_tight.png" width="700">
+
+</blockquote>
 <p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-1-1"></a></p>
@@ -1268,17 +1260,6 @@ Function.</li>
 then the logical behavior is required to be consistent with fully
 independent ATC implementations.</li>
 </ul>
-<blockquote>
-<p><strong>Figure 10-3.</strong> Example Multi-Function Device with ATC
-per Function
-<img src="figures/chapter_10/fig_1562_1_tight.png" width="700">
-<strong>图 10-3.</strong> Example Multi-Function Device 含 ATC per
-Function</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1562_1_tight.png" width="700">
-
-</blockquote>
 <p>Independent of the number of Functions within a Device, the following
 are required:</p>
 <blockquote>
@@ -1326,12 +1307,21 @@ ATC 实现一致。</li>
 (ADDRESS RANGE OVERLAP)</strong>
 虽然预计会有大量重叠，但系统不要求在所有地址范围内都使未转换和转换/已转换序列可互换。例如，允许根复合体对中断行为(MSI/MSI-X)要求使用未转换请求。</p>
 </blockquote>
-<img src="figures/chapter_10/fig_1562_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 10-3.</strong> Example Multi-Function Device with ATC
+per Function</p>
+<p><strong>图 10-3.</strong> Example Multi-Function Device 含 ATC per
+Function</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1562_1_tight.png" width="700">
+
+</blockquote>
 <p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-1-2-cont"></a></p>
@@ -1444,13 +1434,11 @@ b. 功能必须确保发往 RC
 
 <blockquote>
 <p><strong>Figure 10-4.</strong> Invalidation Protocol with a Single
-Invalidation Request and Completion
-<img src="figures/chapter_10/fig_1563_1_tight.png" width="700">
-<strong>图 10-4.</strong> Invalidation Protocol 含 Single Invalidation
-Request 与 Completion</p>
+Invalidation Request and Completion</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1563_1_tight.png" width="700">
+**图 10-4.** Invalidation Protocol 含 Single Invalidation Request 与 Completion
 
 </blockquote>
 </div>
@@ -1485,17 +1473,6 @@ Invalidation Complete is sent, the Invalidate Completion sent in each TC
 must be identical in the fields detailed in § Section 10.3.2. b. An
 Invalidate Completion contains the ITAG from Invalidate Request to
 enable the RC to correlate Invalidate Requests and Completions.</p>
-<blockquote>
-<p><strong>Figure 10-5.</strong> Single Invalidate Request with Multiple
-Invalidate Completions
-<img src="figures/chapter_10/fig_1564_1_tight.png" width="700">
-<strong>图 10-5.</strong> Single Invalidate Request 含 Multiple
-Invalidate Completions</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1564_1_tight.png" width="700">
-
-</blockquote>
 <p>ATS improves the behavior of DMA based data movement. An associated
 Page Request Interface (PRI) provides additional advantages by allowing
 DMA operations to be initiated without requiring that all the data to be
@@ -1555,12 +1532,21 @@ LAN
 <p>分页的能力引出了页表状态标志管理的问题。典型 TA
 会为每个未转换地址关联标志(例如 dirty 和 access
 指示)。在没有关于如何管理映射到功能的页的额外提示时,</p>
-<img src="figures/chapter_10/fig_1564_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 10-5.</strong> Single Invalidate Request with Multiple
+Invalidate Completions</p>
+<p><strong>图 10-5.</strong> Single Invalidate Request 含 Multiple
+Invalidate Completions</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1564_1_tight.png" width="700">
+
+</blockquote>
 <p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-1-3"></a></p>
@@ -1819,26 +1805,7 @@ field as listed in § Table 10-1.</p>
 
 <blockquote>
 <p><strong>Figure 10-6.</strong> Memory Request Header with 64-bit
-Address Highlighting AT field
-<img src="figures/chapter_10/fig_1566_1_tight.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-7.</strong> Memory Request Header with 32-bit
-Address Highlighting AT field
-<img src="figures/chapter_10/fig_1567_1_tight.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-8.</strong> Memory Request Header with 64-bit
-Address Highlighting AT field - FLIT Mode</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1567_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1568_1_tight.png" width="700">
-**图 10-6.** Memory Request 包头 含 64-bit Address: AT field
-
+Address Highlighting AT field</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1566_1_tight.png" width="700">
@@ -1846,29 +1813,7 @@ Address Highlighting AT field - FLIT Mode</p>
 </blockquote>
 <blockquote>
 <p><strong>Figure 10-7.</strong> Memory Request Header with 32-bit
-Address Highlighting AT field
-<img src="figures/chapter_10/fig_1567_1_tight.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-8.</strong> Memory Request Header with 64-bit
-Address Highlighting AT field - FLIT Mode</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1567_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1568_1_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-9.</strong> Memory Request Header with 32-bit
-Address Highlighting AT field - FLIT Mode</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1567_3_tight.png" width="700">
-**图 10-7.** Memory Request 包头 含 32-bit Address: AT field
-
+Address Highlighting AT field</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1567_1_tight.png" width="700">
@@ -1884,7 +1829,16 @@ Address Highlighting AT field - FLIT Mode</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1568_1_tight.png" width="700">
+**图 10-6.** Memory Request 包头 含 64-bit Address: AT field
 
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-7.</strong> Memory Request Header with 32-bit
+Address Highlighting AT field</p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-8.</strong> Memory Request Header with 64-bit
+Address Highlighting AT field - FLIT Mode</p>
 </blockquote>
 <blockquote>
 <p><strong>Figure 10-9.</strong> Memory Request Header with 32-bit
@@ -1892,7 +1846,16 @@ Address Highlighting AT field - FLIT Mode</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1567_3_tight.png" width="700">
+**图 10-7.** Memory Request 包头 含 32-bit Address: AT field
 
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-8.</strong> Memory Request Header with 64-bit
+Address Highlighting AT field - FLIT Mode</p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-9.</strong> Memory Request Header with 32-bit
+Address Highlighting AT field - FLIT Mode</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1569_1_tight.png" width="700">
@@ -1900,33 +1863,12 @@ Address Highlighting AT field - FLIT Mode</p>
 
 </blockquote>
 <blockquote>
-<img src="figures/chapter_10/fig_1567_3_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1569_1_tight.png" width="700">
-**图 10-8.** Memory Request 包头 含 64-bit Address: AT field - Flit 模式
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1567_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1568_1_tight.png" width="700">
-
+<p><strong>图 10-8.</strong> Memory Request 包头 含 64-bit Address: AT
+field - Flit 模式</p>
 </blockquote>
 <blockquote>
 <p><strong>Figure 10-9.</strong> Memory Request Header with 32-bit
 Address Highlighting AT field - FLIT Mode</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1567_3_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1569_1_tight.png" width="700">
-
 </blockquote>
 </div>
 
@@ -2114,30 +2056,7 @@ Write (NW 标志)包含在 OHC-A1 中。</p>
 
 <blockquote>
 <p><strong>Figure 10-12.</strong> Translation Request with 64-bit
-Address - Flit Mode
-<img src="figures/chapter_10/fig_1572_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-13.</strong> Translation Request with 32-bit
 Address - Flit Mode</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1569_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1573_1_tight.png" width="700">
-**图 10-13.** Translation Request 含 32-bit Address - Flit 模式
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1569_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1573_1_tight.png" width="700">
-**图 10-12.** Translation Request 含 64-bit Address - Flit 模式
-
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1572_1.png" width="700">
@@ -2153,7 +2072,16 @@ Address - Flit Mode</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1573_1_tight.png" width="700">
+**图 10-13.** Translation Request 含 32-bit Address - Flit 模式
 
+</blockquote>
+<blockquote>
+<p><strong>图 10-12.</strong> Translation Request 含 64-bit Address -
+Flit 模式</p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-13.</strong> Translation Request with 32-bit
+Address - Flit Mode</p>
 </blockquote>
 </div>
 
@@ -3745,17 +3673,7 @@ Count 字段指示相同的值,Lower Address 值为 0。</p>
 
 <blockquote>
 <p><strong>Figure 10-15.</strong> Example Translation Completion with 1
-TLP <img src="figures/chapter_10/fig_1580_1_tight.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-16.</strong> Example Translation Completion with 2
-TLPs <img src="figures/chapter_10/fig_1581_1_tight.png" width="700">
-<strong>图 10-16.</strong> Example Translation Completion 含 2 TLPs</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1581_1_tight.png" width="700">
-**图 10-15.** Example Translation Completion 含 1 TLP
-
+TLP</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1580_1_tight.png" width="700">
@@ -3763,7 +3681,20 @@ TLPs <img src="figures/chapter_10/fig_1581_1_tight.png" width="700">
 </blockquote>
 <blockquote>
 <p><strong>Figure 10-16.</strong> Example Translation Completion with 2
-TLPs <img src="figures/chapter_10/fig_1581_1_tight.png" width="700"></p>
+TLPs</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1581_1_tight.png" width="700">
+**图 10-16.** Example Translation Completion 含 2 TLPs
+
+</blockquote>
+<blockquote>
+<p><strong>图 10-15.</strong> Example Translation Completion 含 1
+TLP</p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-16.</strong> Example Translation Completion with 2
+TLPs</p>
 </blockquote>
 </div>
 
@@ -3973,29 +3904,7 @@ Prefix 中的 Execute Requested 和 Privileged Mode Requested 位保留。</li>
 
 <blockquote>
 <p><strong>Figure 10-18.</strong> Invalidate Request Message - Non-Flit
-Mode <img src="figures/chapter_10/fig_1584_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-19.</strong> Invalidate Request Message - Flit
 Mode</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1585_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1585_1_tight.png" width="700">
-**图 10-19.** Invalidate Request Message - Flit 模式
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1585_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1585_1_tight.png" width="700">
-**图 10-18.** Invalidate Request Message - 非 Flit 模式
-
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1584_1.png" width="700">
@@ -4011,7 +3920,16 @@ Mode</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1585_1_tight.png" width="700">
+**图 10-19.** Invalidate Request Message - Flit 模式
 
+</blockquote>
+<blockquote>
+<p><strong>图 10-18.</strong> Invalidate Request Message - 非 Flit
+模式</p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-19.</strong> Invalidate Request Message - Flit
+Mode</p>
 </blockquote>
 </div>
 
@@ -4052,15 +3970,6 @@ round the range of the request up to a value greater than or equal to
 the STU.</p>
 <p>The content of the payload is the untranslated address range to be
 invalidated. The payload format is shown in § Figure 10-20.</p>
-<blockquote>
-<p><strong>Figure 10-20.</strong> Invalidate Request Message Body
-<img src="figures/chapter_10/fig_1586_1_tight.png" width="700">
-<strong>图 10-20.</strong> Invalidate Request Message Body</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1586_1_tight.png" width="700">
-
-</blockquote>
 <p>The S field is used to indicate if the range being invalidated is
 greater than 4096 bytes. Its meaning is the same as for the Translation
 Completion (see § Section 10.2.3.1 and § Section 10.2.3.2).</p>
@@ -4111,12 +4020,19 @@ Invalidate 完成超时并重用关联的 ITag 值。ATPT
 设计是实现特定的。因此,Invalidate
 完成超时及其关联的错误处理不在本规范范围内。</p>
 </blockquote>
-<img src="figures/chapter_10/fig_1586_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 10-20.</strong> Invalidate Request Message Body</p>
+<p><strong>图 10-20.</strong> Invalidate Request Message Body</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1586_1_tight.png" width="700">
+
+</blockquote>
 <p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-3-2"></a> <!-- 📄 Page 1578 --> <!-- 📄 Page 1579 -->
@@ -4279,18 +4195,7 @@ Invalidation 完成报告为 Unexpected Completion (UC)。</p>
 
 <blockquote>
 <p><strong>Figure 10-21.</strong> Invalidate Completion Message Format -
-Non-Flit Mode
-<img src="figures/chapter_10/fig_1587_1_tight.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-22.</strong> Invalidate Completion Message - Flit
-Mode <img src="figures/chapter_10/fig_1588_1_tight.png" width="700">
-<strong>图 10-22.</strong> Invalidate Completion Message - Flit 模式</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1588_1_tight.png" width="700">
-**图 10-21.** Invalidate Completion Message 格式 - 非 Flit 模式
-
+Non-Flit Mode</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1587_1_tight.png" width="700">
@@ -4298,7 +4203,20 @@ Mode <img src="figures/chapter_10/fig_1588_1_tight.png" width="700">
 </blockquote>
 <blockquote>
 <p><strong>Figure 10-22.</strong> Invalidate Completion Message - Flit
-Mode <img src="figures/chapter_10/fig_1588_1_tight.png" width="700"></p>
+Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1588_1_tight.png" width="700">
+**图 10-22.** Invalidate Completion Message - Flit 模式
+
+</blockquote>
+<blockquote>
+<p><strong>图 10-21.</strong> Invalidate Completion Message 格式 - 非
+Flit 模式</p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-22.</strong> Invalidate Completion Message - Flit
+Mode</p>
 </blockquote>
 </div>
 
@@ -5103,29 +5021,8 @@ R 和 W 均清零且 L 置位，则为停止标记(参见 § 第 10.4.1.2.1 节)
 </table>
 
 <blockquote>
-<p><strong>Figure 10-23.</strong> Page Request Message - Non-Flit Mode
-<img src="figures/chapter_10/fig_1594_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-24.</strong> Page Request Message - Flit Mode</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1595_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1595_1_tight.png" width="700">
-**图 10-24.** 页请求 (Page Request) Message - Flit 模式
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1595_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1595_1_tight.png" width="700">
-**图 10-23.** 页请求 (Page Request) Message - 非 Flit 模式
-
+<p><strong>Figure 10-23.</strong> Page Request Message - Non-Flit
+Mode</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1594_1.png" width="700">
@@ -5140,7 +5037,15 @@ R 和 W 均清零且 L 置位，则为停止标记(参见 § 第 10.4.1.2.1 节)
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1595_1_tight.png" width="700">
+**图 10-24.** 页请求 (Page Request) Message - Flit 模式
 
+</blockquote>
+<blockquote>
+<p><strong>图 10-23.</strong> 页请求 (Page Request) Message - 非 Flit
+模式</p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-24.</strong> Page Request Message - Flit Mode</p>
 </blockquote>
 </div>
 
@@ -5370,46 +5275,6 @@ incarnation of that PASID value.</p>
 Index and do not consume Page Request allocation (see § Section
 10.5.2.5).</p>
 <p>The Stop Marker Message bit layout is shown in § Figure 10-25.</p>
-<blockquote>
-<p><strong>Figure 10-25.</strong> Stop Marker Message - Non-Flit Mode
-<img src="figures/chapter_10/fig_1597_1.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-26.</strong> Stop Marker Message - Flit Mode</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1598_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1598_1_tight.png" width="700">
-**图 10-26.** 停止标记 (Stop Marker) Message - Flit 模式
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1598_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1598_1_tight.png" width="700">
-**图 10-25.** 停止标记 (Stop Marker) Message - 非 Flit 模式
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1597_1.png" width="700">
-
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-26.</strong> Stop Marker Message - Flit Mode</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1598_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1598_1_tight.png" width="700">
-
-</blockquote>
 <p>A Stop Marker Message is encoded as a Page Request Message for
 which:</p>
 <ul>
@@ -5470,12 +5335,30 @@ Mode Requested 位保留。</li>
 <li>PASID 的未完成页请求消息不完整(即，对于某些 PRG
 索引，最近收到的页请求消息未设置 L 位)。</li>
 </ul>
-<img src="figures/chapter_10/fig_1597_1.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 10-25.</strong> Stop Marker Message - Non-Flit
+Mode</p>
+<p><strong>图 10-25.</strong> 停止标记 (Stop Marker) Message - 非 Flit
+模式</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1597_1.png" width="700">
+
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-26.</strong> Stop Marker Message - Flit Mode</p>
+<p><strong>图 10-26.</strong> 停止标记 (Stop Marker) Message - Flit
+模式</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1598_2_tight.png" width="700">
+
+</blockquote>
 <p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-4-2"></a> <!-- 📄 Page 1593 --> <!-- 📄 Page 1594 -->
@@ -5658,26 +5541,26 @@ Unexpected Completion (UC)
 </table>
 
 <blockquote>
-<p><strong>Figure 10-27.</strong> PRG Response Message - Non-Flit Mode
-<img src="figures/chapter_10/fig_1600_1_tight.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-28.</strong> PRG Response Message - FLIT Mode
-<img src="figures/chapter_10/fig_1601_1.png" width="700"> <strong>图
-10-28.</strong> PRG Response Message - Flit 模式</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1601_1.png" width="700">
-**图 10-27.** PRG Response Message - 非 Flit 模式
-
+<p><strong>Figure 10-27.</strong> PRG Response Message - Non-Flit
+Mode</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1600_1_tight.png" width="700">
 
 </blockquote>
 <blockquote>
-<p><strong>Figure 10-28.</strong> PRG Response Message - FLIT Mode
-<img src="figures/chapter_10/fig_1601_1.png" width="700"></p>
+<p><strong>Figure 10-28.</strong> PRG Response Message - FLIT Mode</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1601_1.png" width="700">
+**图 10-28.** PRG Response Message - Flit 模式
+
+</blockquote>
+<blockquote>
+<p><strong>图 10-27.</strong> PRG Response Message - 非 Flit 模式</p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-28.</strong> PRG Response Message - FLIT Mode</p>
 </blockquote>
 </div>
 
@@ -5861,15 +5744,6 @@ Extended Capability 结构。允许由端点功能或 RCiEP 实现。SR-IOV
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 10-30.</strong> ATS Extended Capability Header
-<img src="figures/chapter_10/fig_1602_1_tight.png" width="700">
-<strong>图 10-30.</strong> ATS Extended Capability 包头</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1602_1_tight.png" width="700">
-
-</blockquote>
 <p><strong>Table 10-9. ATS Extended Capability Header | 表 10-9 ATS
 Extended Capability 头</strong></p>
 <table>
@@ -5980,12 +5854,19 @@ Invalidate 请求数。非 VF 功能中的零值表示它可以接受 32 个 Inv
 </tr>
 </tbody>
 </table>
-<img src="figures/chapter_10/fig_1602_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 10-30.</strong> ATS Extended Capability Header</p>
+<p><strong>图 10-30.</strong> ATS Extended Capability 包头</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1602_1_tight.png" width="700">
+
+</blockquote>
 <p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-5-1"></a></p>
@@ -6159,12 +6040,11 @@ Invalidate 请求中指示的最小 4096 字节块数。这是 2 的幂乘数，
 
 <blockquote>
 <p><strong>Figure 10-32.</strong> ATS Capability Register (Offset 04h) -
-continued <img src="figures/chapter_10/fig_1603_1.png" width="700">
-<strong>图 10-32.</strong> ATS Capability Register (Offset 04h) -
 continued</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1603_1.png" width="700">
+**图 10-32.** ATS Capability Register (Offset 04h) - continued
 
 </blockquote>
 </div>
@@ -6484,29 +6364,7 @@ Structure</p>
 </blockquote>
 <blockquote>
 <p><strong>Figure 10-35.</strong> Page Request Extended Capability
-Header
-<img src="figures/chapter_10/fig_1605_1_tight.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-36.</strong> Page Request Control Register</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1606_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1606_1_tight.png" width="700">
-**图 10-36.** 页请求 (Page Request) Control Register
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1606_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1606_1_tight.png" width="700">
-**图 10-35.** 页请求 (Page Request) Extended Capability 包头
-
+Header</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1605_1_tight.png" width="700">
@@ -6521,32 +6379,26 @@ Header
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1606_1_tight.png" width="700">
-**图 10-34.** 页请求 (Page Request) Extended Capability Structure
+**图 10-36.** 页请求 (Page Request) Control Register
 
 </blockquote>
 <blockquote>
-<img src="figures/chapter_10/fig_1605_2_tight.png" width="700">
-
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1604_1.png" width="700">
-
-</blockquote>
-<blockquote>
-<p><strong>Figure 10-35.</strong> Page Request Extended Capability
-Header
-<img src="figures/chapter_10/fig_1605_1_tight.png" width="700"></p>
+<p><strong>图 10-35.</strong> 页请求 (Page Request) Extended Capability
+包头</p>
 </blockquote>
 <blockquote>
 <p><strong>Figure 10-36.</strong> Page Request Control Register</p>
 </blockquote>
 <blockquote>
-<img src="figures/chapter_10/fig_1606_2_tight.png" width="700">
-
+<p><strong>图 10-34.</strong> 页请求 (Page Request) Extended Capability
+Structure</p>
 </blockquote>
 <blockquote>
-<img src="figures/chapter_10/fig_1606_1_tight.png" width="700">
-
+<p><strong>Figure 10-35.</strong> Page Request Extended Capability
+Header</p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 10-36.</strong> Page Request Control Register</p>
 </blockquote>
 </div>
 
@@ -6805,17 +6657,6 @@ Page Request Extended Capability Header (Offset 00h) | 10.5.2.1
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 10-38.</strong> Page Request Extended Capability
-Structure (registers continued)
-<img src="figures/chapter_10/fig_1607_1.png" width="700"> <strong>图
-10-38.</strong> 页请求 (Page Request) Extended Capability Structure
-(registers continued)</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_10/fig_1607_1.png" width="700">
-
-</blockquote>
 <p>This section describes the Outstanding Page Request Capacity and
 Outstanding Page Request Allocation registers of the Page Request
 Extended Capability structure.</p>
@@ -6884,12 +6725,21 @@ Outstanding Page Request Capacity,则行为未定义。默认值为 0。</p>
 节)。</p>
 <p>停止标记消息消耗缓冲，但不包含在此分配中(参见 § 第 10.4.1.2.1
 节)。系统应为停止标记消息提供额外的缓冲，并应限制未完成停止标记消息的数量，以避免超出此额外缓冲。</p>
-<img src="figures/chapter_10/fig_1607_1.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 10-38.</strong> Page Request Extended Capability
+Structure (registers continued)</p>
+<p><strong>图 10-38.</strong> 页请求 (Page Request) Extended Capability
+Structure (registers continued)</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_10/fig_1607_1.png" width="700">
+
+</blockquote>
 <p><a href="#sec-10-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-10-5-2-2"></a></p>
@@ -6970,12 +6820,11 @@ VF)，并且请求功能的 ID 必须位于结果 PRG 响应消息的 Destinatio
 
 <blockquote>
 <p><strong>Figure 10-39.</strong> Stop Marker Message - Flit Mode
-(reference) <img src="figures/chapter_10/fig_1608_1.png" width="700">
-<strong>图 10-39.</strong> 停止标记 (Stop Marker) Message - Flit 模式
 (reference)</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_10/fig_1608_1.png" width="700">
+**图 10-39.** 停止标记 (Stop Marker) Message - Flit 模式 (reference)
 
 </blockquote>
 </div>

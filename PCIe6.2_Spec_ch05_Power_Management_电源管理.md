@@ -384,6 +384,7 @@ PCI Express-PM 定义以下链路电源管理状态:
 
 > **Figure 5-1.** Link Power Management State Flow Diagram <!-- 📄 Page 654 -->
 > **图 5-1.** 链路电源管理状态流程图
+
 > <img src="figures/chapter_05/fig_0654_1_tight.png" width="700">
 
 <table>
@@ -1185,6 +1186,7 @@ Sequence of events:
 
 > **Figure 5-3.** Exit from L1 Link State Initiated by Upstream Component
 > **图 5-3.** 由上游组件发起的 L1 链路状态退出
+
 > <img src="figures/chapter_05/fig_0664_1_tight.png" width="700">
 
 </div>
@@ -1626,10 +1628,7 @@ If after 100 ms (+50%/-5%), the PME_Status bit of a requesting agent has not yet
 
 The following diagram conceptually outlines the PM_PME delivery control state machine. This state machine determines the ability of a Link to service PME events by issuing PM_PME immediately vs. requiring Link wakeup.
 
-> **Figure 5-5.** A Conceptual PME Control State Machine
-> **图 5-5.** 概念性 PME 控制状态机
 
-> <img src="figures/chapter_05/fig_0670_1_tight.png" width="700">
 
 **Communicating State:**
 
@@ -1681,11 +1680,16 @@ At initial power-up and associated reset, the Upstream Link enters the Communica
 
 - 在电源和时钟恢复以及相关复位之后，链路恢复为可处理事务的状态。设备在必要时清零唤醒信令，并向上游发出 PM_PME,然后转换到 PME Sent 状态。
 
-<img src="figures/chapter_05/fig_0670_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-5.** A Conceptual PME Control State Machine
+>
+> **图 5-5.** 概念性 PME 控制状态机
+
+> <img src="figures/chapter_05/fig_0670_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-5-0)
 
@@ -2468,6 +2472,7 @@ Notes:
 
 > **Figure 5-6.** L1 Transition Sequence Ending with a Rejection (L0s Enabled) §
 > **图 5-6.** 以拒绝结束的 L1 转换序列（L0s 已启用）
+
 > <img src="figures/chapter_05/fig_0681_1_tight.png" width="700">
 
 > **Figure 5-7.** L1 Successful Transition Sequence
@@ -2520,10 +2525,7 @@ Following along as above, Link 2 will complete its transition to the L0 state at
 
 Therefore, among Links 1, 2, and 3, the Link to complete the transition to the L0 state last is Link 1 with a 34 μs delay. This is the delay experienced by the packet that initiated the transition in Endpoint C.
 
-> **Figure 5-8.** Example of L1 Exit Latency Computation
-> **图 5-8.** L1 退出延迟计算示例
 
-> <img src="figures/chapter_05/fig_0683_1_tight.png" width="700">
 
 Switches are not required to initiate an L1 exit transition on any other of their Downstream Port Links.
 
@@ -2573,11 +2575,16 @@ Switch 不需要在其任何其他下游端口链路上启动 L1 退出转换。
 
 Switch 需要在其上游端口上开始 L1 状态转换后，不超过 1 μs 的时间在其当前处于 L1 的所有下游端口链路上启动 L1 状态转换。有关 L1 退出期间物理层信令的详细信息，请参见 § 第 4.2 节。已经处于 L0 状态的下游端口链路不参与退出转换。下游组件处于低功耗 D 状态 (D1-D3Hot) 的下游端口链路也不受 L1 退出转换的影响 (即不得将这些链路转换到 L0 状态)。
 
-<img src="figures/chapter_05/fig_0683_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-8.** Example of L1 Exit Latency Computation
+>
+> **图 5-8.** L1 退出延迟计算示例
+
+> <img src="figures/chapter_05/fig_0683_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-5-0)
 
@@ -3052,6 +3059,7 @@ L1 PM Substates 建立了一种链路电源管理机制，它创建了 L1 链路
 
 > **Figure 5-10.** Downstream Port with a Single PLL
 > **图 5-10.** 带单个 PLL 的下行端口
+
 > <img src="figures/chapter_05/fig_0690_1_tight.png" width="700">
 
 > Example 2: Upstream component with multiple Downstream Ports, with a common shared PLL, connected to separate Downstream components (see § Figure 5-11).
@@ -3193,6 +3201,7 @@ If either the Upstream or Downstream Port needs to initiate exit from L1.1, it m
 
 > **Figure 5-12.** Example: L1.1 Waveforms Illustrating Upstream Port Initiated Exit
 > **图 5-12.** 示例：说明由上游端口发起退出的 L1.1 波形
+
 > <img src="figures/chapter_05/fig_0693_1.png" width="700">
 
 > **Figure 5-13.** Example: L1.1 Waveforms Illustrating Downstream Port Initiated Exit
@@ -3291,6 +3300,7 @@ L1.2.Entry 是进入 L1.2 时的过渡状态，以允许 Refclk 关闭的时间�
 
 > **Figure 5-14.** L1.2 Substates
 > **图 5-14.** L1.2 子状态
+
 > <img src="figures/chapter_05/fig_0694_1_tight.png" width="700">
 
 </div>
@@ -3314,9 +3324,6 @@ L1.2.Entry 是进入 L1.2 时的过渡状态，以允许 Refclk 关闭的时间�
 <tr>
 <td>
 
-> **Figure 5-15.** Example: Illustration of Boundary Condition due to Different Sampling of CLKREQ#
-> **图 5-15.** 示例：CLKREQ# 不同采样导致的边界条件图示
-> <img src="figures/chapter_05/fig_0695_1_tight.png" width="700">
 
 When requirements for the entry into L1.2.Idle state (see § Section 5.5.1) have been satisfied then the Ports enter the L1.2.Idle substate. The following rules apply in L1.2.Idle:
 
@@ -3358,11 +3365,16 @@ This is a transitional state on exit from L1.2 to allow time for both devices to
 - 上下游端口的 PHY 必须上电。
 - 不得假设已保持共模。
 
-<img src="figures/chapter_05/fig_0695_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-15.** Example: Illustration of Boundary Condition due to Different Sampling of CLKREQ#
+>
+> **图 5-15.** 示例：CLKREQ# 不同采样导致的边界条件图示
+
+> <img src="figures/chapter_05/fig_0695_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-5-0)
 
@@ -4147,10 +4159,7 @@ The shaded regions in § Figure 5-19 illustrate what is discussed in this sectio
 <tr>
 <td>
 
-> **Figure 5-19.** PCI Express Bridge Power Management Diagram
-> **图 5-19.** PCI Express 桥接电源管理图
 
-> <img src="figures/chapter_05/fig_0705_1_tight.png" width="700">
 
 As can be seen from § Figure 5-19, the PCI Express Bridge behavior described in this chapter is common, from the perspective of the operating system, to host bridges, Switches, and PCI Express to PCI bridges.
 
@@ -4202,11 +4211,16 @@ PME 生成事件用于向系统标识请求打开电源的 Function。
 
 在 PCI Express 中，在主电源已恢复且链路已训练之后，启动唤醒的 Function (即断言 WAKE# 的 Function) 向根复合体发送 PM_PME 报文。PM_PME 报文向根复合体提供请求 Function 的标识，而不需要软件轮询 PME_Status 位是否被置位。
 
-<img src="figures/chapter_05/fig_0705_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-19.** PCI Express Bridge Power Management Diagram
+>
+> **图 5-19.** PCI Express 桥接电源管理图
+
+> <img src="figures/chapter_05/fig_0705_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-5-0)
 

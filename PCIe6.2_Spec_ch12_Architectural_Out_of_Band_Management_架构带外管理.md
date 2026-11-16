@@ -501,10 +501,10 @@ Flex I/O 接口引脚允许默认为:
 ---
 
 > **Figure 12-1.** Example PESTI Application
+
 > <img src="figures/chapter_12/fig_1665_1_tight.png" width="700">
 > **图 12-1.** Example PESTI Application
 
-> <img src="figures/chapter_12/fig_1665_1_tight.png" width="700">
 
 ---
 
@@ -900,10 +900,10 @@ PESTI 利用 UART 帧格式，直接在 3.3 V 逻辑电平下运行，是单线�
 ---
 
 > **Figure 12-2.** UART Data Framing
+
 > <img src="figures/chapter_12/fig_1665_2_tight.png" width="700">
 > **图 12-2.** UART Data Framing
 
-> <img src="figures/chapter_12/fig_1665_2_tight.png" width="700">
 
 ---
 
@@ -974,10 +974,10 @@ minimum nominal value of 200 ohm -5% tolerance.
 ---
 
 > **Figure 12-3.** PESTI Circuit Diagram
+
 > <img src="figures/chapter_12/fig_1666_1_tight.png" width="700">
 > **图 12-3.** PESTI Circuit 图
 
-> <img src="figures/chapter_12/fig_1666_1_tight.png" width="700">
 
 ---
 
@@ -1355,10 +1355,10 @@ must support broadcast of a Power Brake event.
 ---
 
 > **Figure 12-4.** PESTI Broadcast Command
+
 > <img src="figures/chapter_12/fig_1669_1_tight.png" width="700">
 > **图 12-4.** PESTI Broadcast Command
 
-> <img src="figures/chapter_12/fig_1669_1_tight.png" width="700">
 
 ---
 
@@ -1548,23 +1548,22 @@ requirements.
 ---
 
 > **Figure 12-5.** PESTI Protocol Phases
+
 > <img src="figures/chapter_12/fig_1671_1_tight.png" width="700">
 
 ---
 
 > **Figure 12-6.** PESTI Discovery Command and Response Format
+
 > <img src="figures/chapter_12/fig_1673_1_tight.png" width="700">
 > **图 12-6.** PESTI Discovery Command 与 Response 格式
 
-> <img src="figures/chapter_12/fig_1673_1_tight.png" width="700">
 > **图 12-5.** PESTI Protocol Phases
 
-> <img src="figures/chapter_12/fig_1671_1_tight.png" width="700">
 
 ---
 
 > **Figure 12-6.** PESTI Discovery Command and Response Format
-> <img src="figures/chapter_12/fig_1673_1_tight.png" width="700">
 
 ---
 
@@ -1672,23 +1671,22 @@ re-entry to the discovery phase.
 ---
 
 > **Figure 12-7.** Single Byte PESTI Virtual Wire Exchange
+
 > <img src="figures/chapter_12/fig_1675_1_tight.png" width="700">
 
 ---
 
 > **Figure 12-8.** Multi-byte PESTI Virtual Wire Exchange
+
 > <img src="figures/chapter_12/fig_1675_2_tight.png" width="700">
 > **图 12-8.** Multi-byte PESTI Virtual Wire Exchange
 
-> <img src="figures/chapter_12/fig_1675_2_tight.png" width="700">
 > **图 12-7.** Single Byte PESTI Virtual Wire Exchange
 
-> <img src="figures/chapter_12/fig_1675_1_tight.png" width="700">
 
 ---
 
 > **Figure 12-8.** Multi-byte PESTI Virtual Wire Exchange
-> <img src="figures/chapter_12/fig_1675_2_tight.png" width="700">
 
 ---
 
@@ -1914,10 +1912,10 @@ Example MUX Select commands are permitted to include:
 ---
 
 > **Figure 12-9.** PESTI Fan-out Methods
+
 > <img src="figures/chapter_12/fig_1679_1.png" width="700">
 > **图 12-9.** PESTI Fan-out Methods
 
-> <img src="figures/chapter_12/fig_1679_1.png" width="700">
 
 ---
 
@@ -1956,10 +1954,10 @@ downstream sub-channel so that the PESTI initiator can choose to not close a sus
 - **RSVD**: Reserved for Future Use.
 
 > **Figure 12-10.** PESTI Mux Switch Control Format
+
 > <img src="figures/chapter_12/fig_1680_1_tight.png" width="700">
 > **图 12-10.** PESTI Mux 交换机 Control 格式
 
-> <img src="figures/chapter_12/fig_1680_1_tight.png" width="700">
 
 ---
 
@@ -2089,10 +2087,10 @@ USB 2.0 作为即插即用、带外管理接口有许多用例，例如:
 ---
 
 > **Figure 12-11.** [CEM] form factor example circuit for repurposing legacy JTAG to USB 2.0 mode
+
 > <img src="figures/chapter_12/fig_1682_1_tight.png" width="700">
 > **图 12-11.** [CEM] 外形规格 (Form Factor) example circuit repurposing legacy JTAG USB 2.0 mode
 
-> <img src="figures/chapter_12/fig_1682_1_tight.png" width="700">
 
 ---
 
@@ -2283,10 +2281,10 @@ Interposer discovery details are left to the implementer, with designer care nee
 ---
 
 > **Figure 12-12.** Example of 2-wire, 8-bit addressing for a card carrier with N end form factors in SMBus mode <!-- 📄 Page 1677 -->
+
 > <img src="figures/chapter_12/fig_1685_1.png" width="700">
 > **图 12-12.** 示例 两线制, 8-bit addressing 卡 carrier 含 N end 外形规格 (Form Factor)s in SMBus (系统管理总线) mode
 
-> <img src="figures/chapter_12/fig_1685_1.png" width="700">
 
 ---
 
@@ -2465,10 +2463,10 @@ d. 使用卸载功能(例如 SMBus 代理)发送和接收异步 SMBus 消息，�
 ---
 
 > **Figure 12-13.** Example of 2-wire Hub Use <!-- 📄 Page 1678 -->
+
 > <img src="figures/chapter_12/fig_1687_1_tight.png" width="700">
 > **图 12-13.** 示例 两线制 Hub Use
 
-> <img src="figures/chapter_12/fig_1687_1_tight.png" width="700">
 
 ---
 
@@ -2646,9 +2644,7 @@ resets the I3C Basic interface but does not impact the signaling voltage. See §
 > **图 12-14.** SMBus (系统管理总线) I3C Transition 流
 
 
-> <img src="figures/chapter_12/fig_1690_1_tight.png" width="700">
 
-> <img src="figures/chapter_12/fig_1689_1.png" width="700">
 
 ---
 
@@ -2681,10 +2677,10 @@ devices on the bus. The host can use this to determine whether to use I3C Basic 
 </table>
 
 > **Figure 12-15.** Component Timing Diagram for Transition to I3C Signaling Voltage
+
 > <img src="figures/chapter_12/fig_1692_1_tight.png" width="700">
 > **图 12-15.** Component Timing 图 Transition I3C Signaling Voltage
 
-> <img src="figures/chapter_12/fig_1692_1_tight.png" width="700">
 
 ---
 
@@ -2942,23 +2938,22 @@ write transactions.
 ---
 
 > **Figure 12-16.** SMBus/I2C-based FRU Information Device Writes with Two-Byte Addressing <!-- 📄 Page 1682 -->
+
 > <img src="figures/chapter_12/fig_1694_1_tight.png" width="700">
 
 ---
 
 > **Figure 12-17.** FRU Information Device Reads with Two-Byte Addressing
+
 > <img src="figures/chapter_12/fig_1694_2_tight.png" width="700">
 > **图 12-17.** FRU Information Device Reads 含 Two-Byte Addressing
 
-> <img src="figures/chapter_12/fig_1694_2_tight.png" width="700">
 > **图 12-16.** SMBus/I2C-based FRU Information Device Writes 含 Two-Byte Addressing
 
-> <img src="figures/chapter_12/fig_1694_1_tight.png" width="700">
 
 ---
 
 > **Figure 12-17.** FRU Information Device Reads with Two-Byte Addressing
-> <img src="figures/chapter_12/fig_1694_2_tight.png" width="700">
 
 ---
 
@@ -3410,10 +3405,10 @@ Internal Cable Management guidance is defined for usage with [CopprLink].
 ---
 
 > **Figure 12-18.** Example Tiers Involving Sidebands
+
 > <img src="figures/chapter_12/fig_1701_1_tight.png" width="700">
 > **图 12-18.** Example Tiers Involving Sidebands
 
-> <img src="figures/chapter_12/fig_1701_1_tight.png" width="700">
 
 ---
 

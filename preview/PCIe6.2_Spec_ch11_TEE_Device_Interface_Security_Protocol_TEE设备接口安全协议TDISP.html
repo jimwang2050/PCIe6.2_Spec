@@ -363,12 +363,14 @@ Execution Environment VMs, TVM)。所有不是 TVM 的 VM 统称为传统 VM
 </div>
 
 <blockquote>
-<p><strong>Figure 11-1.</strong> TEE-I/O Conceptual Architecture
-<img src="figures/chapter_11/fig_1609_1.png" width="700"></p>
+<p><strong>Figure 11-1.</strong> TEE-I/O Conceptual Architecture</p>
 </blockquote>
 <blockquote>
-<p><strong>图 11-1.</strong> TEE-I/O 概念性架构
-<img src="figures/chapter_11/fig_1609_1.png" width="700"></p>
+<img src="figures/chapter_11/fig_1609_1.png" width="700">
+
+</blockquote>
+<blockquote>
+<p><strong>图 11-1.</strong> TEE-I/O 概念性架构</p>
 </blockquote>
 <p><a href="#sec-11-0">⬆️ 返回目录</a></p>
 <hr />
@@ -631,12 +633,11 @@ TCB 中。VMM 使用 PF 来配置要分配给 TVM 的 TDI。TEE-I/O
 
 <blockquote>
 <p><strong>Figure 11-2.</strong> TDISP Host/Device Reference
-Architecture
-<img src="figures/chapter_11/fig_1613_1_tight.png" width="700">
-<strong>图 11-2.</strong> TDISP Host/Device Reference 架构</p>
+Architecture</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_11/fig_1613_1_tight.png" width="700">
+**图 11-2.** TDISP Host/Device Reference 架构
 
 </blockquote>
 </div>
@@ -908,15 +909,6 @@ state associated with the TDIs assigned to TVMs.</p>
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 11-3.</strong> Identification of Requests
-<img src="figures/chapter_11/fig_1616_1_tight.png" width="700">
-<strong>图 11-3.</strong> Identification Requests</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_11/fig_1616_1_tight.png" width="700">
-
-</blockquote>
 <p>As illustrated in § Figure 11-3, a TDI is managed by a specific DSM,
 and within the domain of that DSM it is necessary for each TDI to have a
 unique identifier, called an INTERFACE_ID, that is used in all TSM/DSM
@@ -949,12 +941,19 @@ Device Number 由设备/DSM 分配。Bus Number 和 Segment Number
 不得更改 (见下文)。如果设备知道 Segment Number,且 Requester Segment
 Valid 被置位，则 Requester Segment 值必须与设备的 Segment Number
 匹配。DSM 必须确保只寻址有效的 TDI。</p>
-<img src="figures/chapter_11/fig_1616_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 11-3.</strong> Identification of Requests</p>
+<p><strong>图 11-3.</strong> Identification Requests</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_11/fig_1616_1_tight.png" width="700">
+
+</blockquote>
 <p><a href="#sec-11-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-11-2-1"></a> <!-- 📄 Page 1617 --></p>
@@ -1053,26 +1052,25 @@ Valid、Reserved</td>
 </table>
 
 <blockquote>
-<p><strong>Figure 11-4.</strong> TDI Identifier – INTERFACE_ID
-<img src="figures/chapter_11/fig_1617_1_tight.png" width="700"></p>
-</blockquote>
-<blockquote>
-<p><strong>Figure 11-5.</strong> TDISP State Machine
-<img src="figures/chapter_11/fig_1617_2_tight.png" width="700">
-<strong>图 11-5.</strong> TDISP State Machine</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_11/fig_1617_2_tight.png" width="700">
-**图 11-4.** TDI Identifier – INTERFACE_ID
-
+<p><strong>Figure 11-4.</strong> TDI Identifier – INTERFACE_ID</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_11/fig_1617_1_tight.png" width="700">
 
 </blockquote>
 <blockquote>
-<p><strong>Figure 11-5.</strong> TDISP State Machine
-<img src="figures/chapter_11/fig_1617_2_tight.png" width="700"></p>
+<p><strong>Figure 11-5.</strong> TDISP State Machine</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_11/fig_1617_2_tight.png" width="700">
+**图 11-5.** TDISP State Machine
+
+</blockquote>
+<blockquote>
+<p><strong>图 11-4.</strong> TDI Identifier – INTERFACE_ID</p>
+</blockquote>
+<blockquote>
+<p><strong>Figure 11-5.</strong> TDISP State Machine</p>
 </blockquote>
 </div>
 
@@ -1672,15 +1670,6 @@ VendorDefinedReqPayload or VendorDefinedRespPayload, respectively.</li>
 the Application Data field of a Secured Message per [Secured SPDM].</li>
 </ul>
 <p>The encapsulation is as illustrated in § Figure 11-6:</p>
-<blockquote>
-<p><strong>Figure 11-6.</strong> TDISP Request/Response Encapsulation
-<img src="figures/chapter_11/fig_1622_1_tight.png" width="700">
-<strong>图 11-6.</strong> TDISP Request/Response Encapsulation</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_11/fig_1622_1_tight.png" width="700">
-
-</blockquote>
 <p>If a TDISP message is received that has not been transferred securely
 per [Secured SPDM], the received TDISP message must not be used, and
 must not result in a response.</p>
@@ -1729,12 +1718,20 @@ TDISP 消息，且不得产生响应。</p>
 <li>收到来自传输层的请求消息传输失败的通知。</li>
 </ol>
 <p>请求方允许同时向不同的响应方发送请求消息。</p>
-<img src="figures/chapter_11/fig_1622_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 11-6.</strong> TDISP Request/Response
+Encapsulation</p>
+<p><strong>图 11-6.</strong> TDISP Request/Response Encapsulation</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_11/fig_1622_1_tight.png" width="700">
+
+</blockquote>
 <p><a href="#sec-11-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-11-2-3"></a> <!-- 📄 Page 1623 --></p>
@@ -4641,13 +4638,11 @@ ERROR,以停止错误的消耗和传播。</p>
 
 <blockquote>
 <p><strong>Figure 11-7.</strong> Example Flow Where DSM is Unable to
-Return Full Length Report
-<img src="figures/chapter_11/fig_1636_1_tight.png" width="700">
-<strong>图 11-7.</strong> Example 流 Where DSM is Unable Return Full
-Length 字段 (长度) Report</p>
+Return Full Length Report</p>
 </blockquote>
 <blockquote>
 <img src="figures/chapter_11/fig_1636_1_tight.png" width="700">
+**图 11-7.** Example 流 Where DSM is Unable Return Full Length 字段 (长度) Report
 
 </blockquote>
 </div>

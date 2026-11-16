@@ -275,12 +275,11 @@ PCI Express 链路的主要属性如下：
 </table>
 
 > **Figure 1-1.** PCI Express Link
+
 > <img src="figures/chapter_01/fig_0128_1_tight.png" width="700">
 > <img src="figures/chapter_01/fig_0127_1.png" width="700">
 
 > **图 1-1.** PCI Express 链路
-> <img src="figures/chapter_01/fig_0128_1_tight.png" width="700">
-> <img src="figures/chapter_01/fig_0127_1.png" width="700">
 
 [⬆️ 返回目录](#sec-1-0)
 
@@ -301,21 +300,23 @@ PCI Express 链路的主要属性如下：
 
 A fabric is defined as a set of point-to-point Links that interconnect a set of components - an example fabric topology is shown in § Figure 1-2. This figure illustrates a single fabric instance with two Hierarchies composed of a Root Complex (RC), multiple Endpoints, and multiple Switches, interconnected via PCI Express Links.
 
-> **Figure 1-2.** Example PCI Express Topology
-> <img src="figures/chapter_01/fig_0130_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
 Fabric (互连网络) 定义为一组点对点链路，它们互连一组组件——一个 Fabric 拓扑示例如图 1-2 所示。该图展示了一个由根复合体 (Root Complex, RC)、多个端点 (Endpoint) 与多个交换机 (Switch) 组成、包含两个层级 (Hierarchy) 并通过 PCI Express 链路互连的 Fabric 实例。
 
-> **图 1-2.** 示例 PCI Express 拓扑
-> <img src="figures/chapter_01/fig_0130_1_tight.png" width="700">
 
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 1-2.** Example PCI Express Topology
+>
+> **图 1-2.** 示例 PCI Express 拓扑
+
+> <img src="figures/chapter_01/fig_0130_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-1-0)
 
@@ -539,11 +540,7 @@ Endpoint refers to a type of Function that can be the Requester or Completer of 
 
 A Switch is defined as a logical assembly of multiple virtual PCI-to-PCI Bridge devices as illustrated in § Figure 1-3. All Switches are governed by the following base rules.
 
-> **Figure 1-3.** Logical Block Diagram of a Switch
-> <img src="figures/chapter_01/fig_0133_1_tight.png" width="700">
-> **图 1-3.** Logical Block 交换机
 
-> <img src="figures/chapter_01/fig_0133_1_tight.png" width="700">
 
 - Switches appear to configuration software as two or more logical PCI-to-PCI Bridges.
 - A Switch forwards transactions using PCI Bridge mechanisms; e.g., address-based routing except when engaged in a Multicast, as defined in § Section 6.14.
@@ -562,11 +559,16 @@ A Switch is defined as a logical assembly of multiple virtual PCI-to-PCI Bridge 
 - 锁定请求必须按 § 6.5 节的规定得到支持。交换机不要求将下游端口 (Downstream Port) 作为发起端口支持锁定请求。
 - 每个已启用的交换机端口必须遵循本文档中的流控 (Flow Control) 规范。
 
-> <img src="figures/chapter_01/fig_0133_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 1-3.** Logical Block Diagram of a Switch
+>
+> **图 1-3.** Logical Block 交换机
+
+> <img src="figures/chapter_01/fig_0133_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-1-0)
 
@@ -713,8 +715,6 @@ This document specifies the architecture in terms of three discrete logical laye
 
 The fundamental goal of this layering definition is to facilitate the reader's understanding of the specification. Note that this layering does not imply a particular PCI Express implementation.
 
-> **Figure 1-4.** High-Level Layering Diagram
-> <img src="figures/chapter_01/fig_0135_1_tight.png" width="700">
 
 PCI Express uses packets to communicate information between components. Packets are formed in the Transaction and Data Link Layers to carry the information from the transmitting component to the receiving component. As the transmitted packets flow through the other layers, they are extended with additional information necessary to handle packets at those layers. At the receiving side the reverse process occurs and packets get transformed from their Physical Layer representation to the Data Link Layer representation and finally (for Transaction Layer Packets) to the form that can be processed by the Transaction Layer of the receiving device. § Figure 1-5 shows the conceptual flow of transaction level packet information through the layers.
 
@@ -738,12 +738,16 @@ PCI Express 使用报文在组件之间传递信息。报文在事务层和数�
 
 <!-- 📍 图 1-5 原图未单独抽取，相关内容见 Figure 1-4 分层图 -->
 
-> **图 1-4.** 分层概述图
-> <img src="figures/chapter_01/fig_0135_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 1-4.** High-Level Layering Diagram
+>
+> **图 1-4.** 分层概述图
+
+> <img src="figures/chapter_01/fig_0135_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-1-0)
 
@@ -1880,23 +1884,22 @@ TLP 前缀、TLP 包头和 TLP 摘要的详细布局 (以 § 图 2-3 中的通�
 ---
 
 > **Figure 2-2.** Serial View of a TLP
+
 > <img src="figures/chapter_02/fig_0142_1.png" width="700"> <!-- 📄 Page 143 -->
 
 ---
 
 > **Figure 2-3.** Generic TLP Format - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0143_1.png" width="700">
 > **图 2-3.** Generic TLP 格式 - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0143_1.png" width="700">
 > **图 2-2.** Serial View TLP
 
-> <img src="figures/chapter_02/fig_0142_1.png" width="700"> <!-- 📄 Page 143 -->
 
 ---
 
 > **Figure 2-3.** Generic TLP Format - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0143_1.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -1958,10 +1961,10 @@ TLP 内的数据负载以最低地址字节 (§ 图 2-3 中的字节 J) 显示�
 ---
 
 > **Figure 2-3.** Generic TLP Format - Non-Flit Mode (continued) <!-- 📄 Page 144 -->
+
 > <img src="figures/chapter_02/fig_0144_1_tight.png" width="700">
 > **图 2-3.** Generic TLP 格式 - 非 Flit 模式 (continued)
 
-> <img src="figures/chapter_02/fig_0144_1_tight.png" width="700"> <!-- 📄 Page 145 -->
 
 ---
 
@@ -2048,10 +2051,10 @@ All TLP prefixes and headers contain the following fields (see § Figure 2-4):
 ---
 
 > **Figure 2-4.** Fields Present in All TLPs
+
 > <img src="figures/chapter_02/fig_0145_1_tight.png" width="700">
 > **图 2-4.** Fields Present in All TLPs
 
-> <img src="figures/chapter_02/fig_0145_1_tight.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2123,10 +2126,10 @@ TLP 包头的 Fmt、Type、TD 和 Length 字段包含确定 TLP 非前缀部分�
 ---
 
 > **Figure 2-5.** Fields Present in All Non-Flit Mode TLP Headers <!-- 📄 Page 146 -->
+
 > <img src="figures/chapter_02/fig_0146_1_tight.png" width="700">
 > **图 2-5.** Fields Present in All 非 Flit 模式 TLP Headers
 
-> <img src="figures/chapter_02/fig_0146_1_tight.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2351,10 +2354,10 @@ All Flit Mode TLPs contain the same fields in the first DW of the Header Base (s
 ---
 
 > **Figure 2-6.** First DW of Header Base
+
 > <img src="figures/chapter_02/fig_0148_1_tight.png" width="700">
 > **图 2-6.** First DW 包头 Base
 
-> <img src="figures/chapter_02/fig_0148_1_tight.png" width="700"> <!-- 📄 Page 149 -->
 
 ---
 
@@ -2659,10 +2662,10 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 ---
 
 > **Figure 2-7.** OHC-A1 <!-- 📄 Page 161 -->
+
 > <img src="figures/chapter_02/fig_0161_1_tight.png" width="700">
 > **图 2-7.** OHC-A1
 
-> <img src="figures/chapter_02/fig_0161_1_tight.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -2710,10 +2713,10 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 ---
 
 > **Figure 2-8.** OHC-A2
+
 > <img src="figures/chapter_02/fig_0161_2_tight.png" width="700">
 > **图 2-8.** OHC-A2
 
-> <img src="figures/chapter_02/fig_0161_2_tight.png" width="700">
 
 <table>
 <thead>
@@ -2747,10 +2750,10 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 ---
 
 > **Figure 2-9.** OHC-A3
+
 > <img src="figures/chapter_02/fig_0161_3_tight.png" width="700">
 > **图 2-9.** OHC-A3
 
-> <img src="figures/chapter_02/fig_0161_3_tight.png" width="700">
 
 <table>
 <thead>
@@ -2786,10 +2789,10 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 ---
 
 > **Figure 2-10.** OHC-A4 <!-- 📄 Page 162 -->
+
 > <img src="figures/chapter_02/fig_0162_1_tight.png" width="700">
 > **图 2-10.** OHC-A4
 
-> <img src="figures/chapter_02/fig_0162_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -2829,10 +2832,10 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 ---
 
 > **Figure 2-11.** OHC-A5
+
 > <img src="figures/chapter_02/fig_0162_2_tight.png" width="700">
 > **图 2-11.** OHC-A5
 
-> <img src="figures/chapter_02/fig_0162_2_tight.png" width="700">
 
 <table>
 <thead>
@@ -2870,10 +2873,10 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 ---
 
 > **Figure 2-12.** OHC-B
+
 > <img src="figures/chapter_02/fig_0162_3_tight.png" width="700">
 > **图 2-12.** OHC-B
 
-> <img src="figures/chapter_02/fig_0162_3_tight.png" width="700">
 
 <table>
 <thead>
@@ -2948,10 +2951,10 @@ OHC[4:0] 字段指示"正交包头内容" (Orthogonal Header Content, OHC) 的�
 ---
 
 > **Figure 2-13.** OHC-C
+
 > <img src="figures/chapter_02/fig_0163_1.png" width="700">
 > **图 2-13.** OHC-C
 
-> <img src="figures/chapter_02/fig_0163_1.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -3119,10 +3122,10 @@ Segment 字段的第二个用途是改进错误日志记录。当 FM TLP 包头�
 ---
 
 > **Figure 2-14.** Example Topology Illustrating Multiple Segments and NFM Subtrees <!-- 📄 Page 166 -->
+
 > <img src="figures/chapter_02/fig_0166_1_tight.png" width="700">
 > **图 2-14.** Example 拓扑: Multiple Segments 与 NFM Subtrees
 
-> <img src="figures/chapter_02/fig_0166_1_tight.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -3613,10 +3616,10 @@ Each Switch exists entirely within a single Hierarchy by definition. However, Sw
 </table>
 
 > **Figure 2-15.** Examples of Completer Target Memory Access for FetchAdd
+
 > <img src="figures/chapter_02/fig_0173_1_tight.png" width="700">
 > **图 2-15.** Examples Completer Target Memory Access FetchAdd
 
-> <img src="figures/chapter_02/fig_0173_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
@@ -3791,6 +3794,7 @@ TLP 路由主要有三种机制:地址路由、ID 路由和隐式路由。本节
 
 
 > **Figure 2-16.** 32-bit Address Routing - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0175_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
@@ -3798,20 +3802,18 @@ TLP 路由主要有三种机制:地址路由、ID 路由和隐式路由。本节
 ---
 
 > **Figure 2-17.** 64-bit Address Routing - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0175_2_tight.png" width="700">
 > **图 2-17.** 64-bit Address Routing - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0175_2_tight.png" width="700">
 > **图 2-16.** 32-bit Address Routing - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0175_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
 ---
 
 > **Figure 2-17.** 64-bit Address Routing - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0175_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
@@ -3874,6 +3876,7 @@ TLP 路由主要有三种机制:地址路由、ID 路由和隐式路由。本节
 </table>
 
 > **Figure 2-18.** 32-bit Address Routing - Flit Mode
+
 > <img src="figures/chapter_02/fig_0176_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
@@ -3881,6 +3884,7 @@ TLP 路由主要有三种机制:地址路由、ID 路由和隐式路由。本节
 ---
 
 > **Figure 2-19.** 64-bit Address Routing - Flit Mode
+
 > <img src="figures/chapter_02/fig_0176_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
@@ -3888,37 +3892,32 @@ TLP 路由主要有三种机制:地址路由、ID 路由和隐式路由。本节
 ---
 
 > **Figure 2-20.** 64-bit Address Routing - Flit Mode - 5 DW
+
 > <img src="figures/chapter_02/fig_0176_3_tight.png" width="700">
 > **图 2-20.** 64-bit Address Routing - Flit 模式 - 5 DW
 
-> <img src="figures/chapter_02/fig_0176_3_tight.png" width="700">
 > **图 2-19.** 64-bit Address Routing - Flit 模式
 
-> <img src="figures/chapter_02/fig_0176_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
 ---
 
 > **Figure 2-20.** 64-bit Address Routing - Flit Mode - 5 DW
-> <img src="figures/chapter_02/fig_0176_3_tight.png" width="700">
 > **图 2-18.** 32-bit Address Routing - Flit 模式
 
-> <img src="figures/chapter_02/fig_0176_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
 ---
 
 > **Figure 2-19.** 64-bit Address Routing - Flit Mode
-> <img src="figures/chapter_02/fig_0176_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
 ---
 
 > **Figure 2-20.** 64-bit Address Routing - Flit Mode - 5 DW
-> <img src="figures/chapter_02/fig_0176_3_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
@@ -3951,6 +3950,7 @@ TLP 路由主要有三种机制:地址路由、ID 路由和隐式路由。本节
 </table>
 
 > **Figure 2-21.** 64-bit Address Routing - Flit Mode - 6 DW
+
 > <img src="figures/chapter_02/fig_0177_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
@@ -3958,20 +3958,18 @@ TLP 路由主要有三种机制:地址路由、ID 路由和隐式路由。本节
 ---
 
 > **Figure 2-22.** 64-bit Address Routing - Flit Mode - 7 DW
+
 > <img src="figures/chapter_02/fig_0177_2_tight.png" width="700">
 > **图 2-22.** 64-bit Address Routing - Flit 模式 - 7 DW
 
-> <img src="figures/chapter_02/fig_0177_2_tight.png" width="700">
 > **图 2-21.** 64-bit Address Routing - Flit 模式 - 6 DW
 
-> <img src="figures/chapter_02/fig_0177_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
 ---
 
 > **Figure 2-22.** 64-bit Address Routing - Flit Mode - 7 DW
-> <img src="figures/chapter_02/fig_0177_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
@@ -4190,10 +4188,10 @@ For correct software operation, full address decoding is required even in system
 
 
 > **Figure 2-23.** Non-ARI ID Routing with 4 DW Header - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0179_1_tight.png" width="700">
 > **图 2-23.** Non-ARI ID Routing 含 4 DW 包头 - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0179_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
@@ -4226,6 +4224,7 @@ For correct software operation, full address decoding is required even in system
 </table>
 
 > **Figure 2-24.** ARI ID Routing with 4 DW Header - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0180_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
@@ -4233,6 +4232,7 @@ For correct software operation, full address decoding is required even in system
 ---
 
 > **Figure 2-25.** Non-ARI ID Routing with 3 DW Header - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0180_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
@@ -4240,61 +4240,54 @@ For correct software operation, full address decoding is required even in system
 ---
 
 > **Figure 2-26.** ARI ID Routing with 3 DW Header - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0180_3_tight.png" width="700">
 > **图 2-24.** ARI ID Routing 含 4 DW 包头 - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0180_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
 ---
 
 > **Figure 2-25.** Non-ARI ID Routing with 3 DW Header - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0180_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
 ---
 
 > **Figure 2-26.** ARI ID Routing with 3 DW Header - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0180_3_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
 ---
 
 > **Figure 2-27.** ID Routing with 3 DW Header - Flit Mode
+
 > <img src="figures/chapter_02/fig_0180_4_tight.png" width="700">
 > **图 2-27.** ID Routing 含 3 DW 包头 - Flit 模式
 
-> <img src="figures/chapter_02/fig_0180_4_tight.png" width="700">
 > **图 2-26.** ARI ID Routing 含 3 DW 包头 - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0180_3_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
 ---
 
 > **Figure 2-27.** ID Routing with 3 DW Header - Flit Mode
-> <img src="figures/chapter_02/fig_0180_4_tight.png" width="700">
 > **图 2-25.** Non-ARI ID Routing 含 3 DW 包头 - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0180_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
 ---
 
 > **Figure 2-26.** ARI ID Routing with 3 DW Header - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0180_3_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
 ---
 
 > **Figure 2-27.** ID Routing with 3 DW Header - Flit Mode
-> <img src="figures/chapter_02/fig_0180_4_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
@@ -4327,6 +4320,7 @@ For correct software operation, full address decoding is required even in system
 </table>
 
 > **Figure 2-28.** ID Routing with 4 DW Header - Flit Mode
+
 > <img src="figures/chapter_02/fig_0181_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
@@ -4334,6 +4328,7 @@ For correct software operation, full address decoding is required even in system
 ---
 
 > **Figure 2-29.** ID Routing with 5 DW Header - Flit Mode
+
 > <img src="figures/chapter_02/fig_0181_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
@@ -4341,37 +4336,32 @@ For correct software operation, full address decoding is required even in system
 ---
 
 > **Figure 2-30.** ID Routing with 6 DW Header - Flit Mode
+
 > <img src="figures/chapter_02/fig_0181_3_tight.png" width="700">
 > **图 2-30.** ID Routing 含 6 DW 包头 - Flit 模式
 
-> <img src="figures/chapter_02/fig_0181_3_tight.png" width="700">
 > **图 2-29.** ID Routing 含 5 DW 包头 - Flit 模式
 
-> <img src="figures/chapter_02/fig_0181_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
 ---
 
 > **Figure 2-30.** ID Routing with 6 DW Header - Flit Mode
-> <img src="figures/chapter_02/fig_0181_3_tight.png" width="700">
 > **图 2-28.** ID Routing 含 4 DW 包头 - Flit 模式
 
-> <img src="figures/chapter_02/fig_0181_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
 ---
 
 > **Figure 2-29.** ID Routing with 5 DW Header - Flit Mode
-> <img src="figures/chapter_02/fig_0181_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
 ---
 
 > **Figure 2-30.** ID Routing with 6 DW Header - Flit Mode
-> <img src="figures/chapter_02/fig_0181_3_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
@@ -4404,10 +4394,10 @@ For correct software operation, full address decoding is required even in system
 </table>
 
 > **Figure 2-31.** ID Routing with 7 DW Header - Flit Mode
+
 > <img src="figures/chapter_02/fig_0182_1_tight.png" width="700">
 > **图 2-31.** ID Routing 含 7 DW 包头 - Flit 模式
 
-> <img src="figures/chapter_02/fig_0182_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
@@ -4545,17 +4535,19 @@ As a best practice, it is strongly recommended that devices receiving non-enable
 <td>
 
 > **Figure 2-32 Location of Byte Enables in TLP Header - Non-Flit Mode**
-> <img src="figures/chapter_02/fig_0183_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 2-32.** 非 Flit 模式下 TLP 包头中字节使能的位置
-> <img src="figures/chapter_02/fig_0183_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+
+> **图 2-32.** 非 Flit 模式下 TLP 包头中字节使能的位置
+
+> <img src="figures/chapter_02/fig_0183_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
@@ -4918,17 +4910,19 @@ A Memory Read Request of 1 DW with no bytes enabled, or "zero-length Read," may 
 <td>
 
 > **Figure 2-33 Transaction Descriptor**
-> <img src="figures/chapter_02/fig_0186_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 2-33.** 事务描述符
-> <img src="figures/chapter_02/fig_0186_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+
+> **图 2-33.** 事务描述符
+
+> <img src="figures/chapter_02/fig_0186_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
@@ -4951,7 +4945,6 @@ A Memory Read Request of 1 DW with no bytes enabled, or "zero-length Read," may 
 <td>
 
 > **Figure 2-34 Transaction ID**
-> <img src="figures/chapter_02/fig_0186_2_tight.png" width="700">
 
 In some cases (defined below) the Traffic Class (TC) is also included in the Transaction ID.
 
@@ -4985,11 +4978,13 @@ Transaction ID 用于将完成报文与请求关联起来。共有三组请求/�
   - Transaction ID 由 TC[2:0]、Requester ID[15:0] 和 Tag[13:0] 组成。
   - Requester 必须为 Tag 赋值，使得第 III 组内所有未完成请求的 Transaction ID 唯一。
 
-<img src="figures/chapter_02/fig_0186_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_02/fig_0186_2_tight.png" width="700">
+
 </div>
 
 
@@ -5545,18 +5540,19 @@ Similar implementation approaches for 14-Bit Tags are possible, and they are str
 <td>
 
 > **Figure 2-35 Attributes Field of Transaction Descriptor**
-> <img src="figures/chapter_02/fig_0194_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
 > **图 2-35 事务描述符的 Attributes 字段**
-> <img src="figures/chapter_02/fig_0194_1_tight.png" width="700">
 
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_02/fig_0194_1_tight.png" width="700">
+
 
 [⬆️ 返回目录](#sec-2-0)
 
@@ -5950,10 +5946,10 @@ Memory, I/O, and Configuration Request Rules
 
 
 > **Figure 2-36.** Request Header Format for 64-bit Addressing of Memory
+
 > <img src="figures/chapter_02/fig_0196_1.png" width="700">
 > **图 2-36.** Request 包头 格式 64-bit Addressing Memory
 
-> <img src="figures/chapter_02/fig_0196_1.png" width="700">
 
 <table>
 <thead>
@@ -6086,10 +6082,10 @@ For I/O Requests, the following rules apply:
 
 
 > **Figure 2-38.** Request Header Format for I/O Transactions - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0197_1_tight.png" width="700">
 > **图 2-38.** Request 包头 格式 I/O Transactions - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0197_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -6195,10 +6191,10 @@ For Configuration Requests, the following rules apply:
 </table>
 
 > **Figure 2-39.** Request Header Format for Configuration Transactions - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0198_1_tight.png" width="700">
 > **图 2-39.** Request 包头 格式 Configuration Transactions - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0198_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -6262,9 +6258,7 @@ MSI/MSI-X 机制使用内存写请求来表示中断消息（见 § 6.1.4 节）
 > **图 2-40.** TPH TLP Prefix
 
 
-> <img src="figures/chapter_02/fig_0199_2_tight.png" width="700">
 
-> <img src="figures/chapter_02/fig_0198_1.png" width="700">
 
 <table>
 <thead>
@@ -6404,10 +6398,10 @@ TPH 规则
 
 
 > **Figure 2-41.** Location of PH[1:0] in a 4 DW Request Header - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0199_1_tight.png" width="700">
 > **图 2-41.** Location PH[1:0] in 4 DW Request 包头 - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0199_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -6435,10 +6429,10 @@ Figure 2-41: 4 DW Request Header layout in Non-Flit Mode, showing the location o
 ---
 
 > **Figure 2-42.** Location of PH[1:0] in a 3 DW Request Header - Non-Flit Mode <!-- 📄 Page 200 -->
+
 > <img src="figures/chapter_02/fig_0200_1_tight.png" width="700">
 > **图 2-42.** Location PH[1:0] in 3 DW Request 包头 - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0200_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -6532,9 +6526,7 @@ Steering Tag (ST) 字段在 TLP 包头中的映射见 § 图 2-43、§ 图 2-44 
 > **图 2-43.** Location ST[7:0] in Memory Write Request 包头 - 非 Flit 模式
 
 
-> <img src="figures/chapter_02/fig_0201_2_tight.png" width="700">
 
-> <img src="figures/chapter_02/fig_0200_1.png" width="700">
 
 <table>
 <thead>
@@ -6562,10 +6554,10 @@ Figure 2-43: Non-Flit Mode Memory Write Request header (3 DW) showing the locati
 ---
 
 > **Figure 2-44.** Location of ST[7:0] in Memory Read, DMWr, and AtomicOp Request Headers - Non-Flit Mode <!-- 📄 Page 201 -->
+
 > <img src="figures/chapter_02/fig_0201_1_tight.png" width="700">
 > **图 2-44.** Location ST[7:0] in Memory Read, DMWr, 与 AtomicOp Request Headers - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0201_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -6717,10 +6709,10 @@ Flit 模式
 </table>
 
 > **Figure 2-45.** Flit Mode Mem64 Request
+
 > <img src="figures/chapter_02/fig_0202_1.png" width="700">
 > **图 2-45.** Flit 模式 Mem64 Request
 
-> <img src="figures/chapter_02/fig_0202_1.png" width="700">
 
 <table>
 <thead>
@@ -6751,7 +6743,6 @@ Figure 2-45: Flit Mode 64-bit Memory Request (4 DW). Byte 0: Type. Bytes 4-7: AT
 > **图 2-46.** Flit 模式 Mem32 Request
 
 
-> <img src="figures/chapter_02/fig_0203_2_tight.png" width="700">
 
 
 <table>
@@ -6783,7 +6774,6 @@ Figure 2-46: Flit Mode 32-bit Memory Request (3 DW). Byte 0: Type. Bytes 4-7: AT
 > **图 2-47.** Flit 模式 IO Request
 
 
-> <img src="figures/chapter_02/fig_0203_3_tight.png" width="700">
 
 
 <table>
@@ -6812,10 +6802,10 @@ Figure 2-47: Flit Mode I/O Request (3 DW). Byte 0: Type=IO. Bytes 4-7: R, Addres
 ---
 
 > **Figure 2-48.** Flit Mode Configuration Request <!-- 📄 Page 203 -->
+
 > <img src="figures/chapter_02/fig_0203_1_tight.png" width="700">
 > **图 2-48.** Flit 模式 配置请求 (Configuration Request)
 
-> <img src="figures/chapter_02/fig_0203_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -6973,9 +6963,7 @@ Many types of Messages, including Vendor-Defined Messages, are potentially usabl
 > **图 2-49.** Message Request 包头 - 非 Flit 模式
 
 
-> <img src="figures/chapter_02/fig_0205_1_tight.png" width="700">
 
-> <img src="figures/chapter_02/fig_0204_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -7006,7 +6994,6 @@ Figure 2-49: Non-Flit Mode Message Request Header (4 DW). Byte 0: Fmt=10r2r1r0b,
 > **图 2-50.** Message Request 包头 - Flit 模式
 
 
-> <img src="figures/chapter_02/fig_0205_2_tight.png" width="700">
 
 
 <table>
@@ -7531,17 +7518,13 @@ The initiator of the Message is identified with the Requester ID of the Message 
 > **图 2-52.** ERR_COR Message - Flit 模式
 
 
-> <img src="figures/chapter_02/fig_0212_2_tight.png" width="700">
 > **图 2-51.** ERR_COR Message - 非 Flit 模式
 
 
-> <img src="figures/chapter_02/fig_0212_1_tight.png" width="700">
 
-> <img src="figures/chapter_02/fig_0211_1.png" width="700">
 
 > **Figure 2-52.** ERR_COR Message - Flit Mode
 
-> <img src="figures/chapter_02/fig_0212_2_tight.png" width="700">
 
 
 
@@ -7819,19 +7802,18 @@ The Vendor-Defined Messages allow expansion of PCI Express messaging capabilitie
 ---
 
 > **Figure 2-53.** Header for Vendor-Defined Messages - Non-Flit Mode <!-- 📄 Page 215 -->
+
 > <img src="figures/chapter_02/fig_0215_1_tight.png" width="700">
 
 > **Figure 2-54.** Header for Vendor-Defined Messages - Flit Mode
+
 > <img src="figures/chapter_02/fig_0215_2_tight.png" width="700">
 > **图 2-54.** 包头 Vendor-Defined Messages - Flit 模式
 
-> <img src="figures/chapter_02/fig_0215_2_tight.png" width="700">
 > **图 2-53.** 包头 Vendor-Defined Messages - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0215_1_tight.png" width="700">
 
 > **Figure 2-54.** Header for Vendor-Defined Messages - Flit Mode
-> <img src="figures/chapter_02/fig_0215_2_tight.png" width="700">
 
 
 
@@ -7904,20 +7886,10 @@ Beyond the rules for other Vendor-Defined Type 1 Messages, the following rules a
 - The Vendor ID must be 0001h, which is assigned to the PCI-SIG.
 - The Subtype field distinguishes the specific PCI-SIG-Defined VDMs. See § Appendix F for a list of PCI-SIG-Defined VDMs.
 
-> **Figure 2-55.** Header for PCI-SIG-Defined VDMs - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0216_1_tight.png" width="700">
 
-> **Figure 2-56.** Header for PCI-SIG-Defined VDMs - Flit Mode
-> <img src="figures/chapter_02/fig_0216_2_tight.png" width="700">
-> **图 2-56.** 包头 PCI-SIG-Defined VDMs - Flit 模式
 
-> <img src="figures/chapter_02/fig_0216_2_tight.png" width="700">
-> **图 2-55.** 包头 PCI-SIG-Defined VDMs - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0216_1_tight.png" width="700">
 
-> **Figure 2-56.** Header for PCI-SIG-Defined VDMs - Flit Mode
-> <img src="figures/chapter_02/fig_0216_2_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -7934,11 +7906,22 @@ PCI-SIG 定义的 VDM (PCI-SIG-Defined VDMs) 是使用 PCI-SIG® Vendor ID (0001
 - Vendor ID 必须为 0001h，分配给 PCI-SIG。
 - Subtype 字段用于区分具体的 PCI-SIG 定义的 VDM。有关 PCI-SIG 定义的 VDM 列表，请参见 § 附录 F。
 
-<img src="figures/chapter_02/fig_0216_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 2-55.** Header for PCI-SIG-Defined VDMs - Non-Flit Mode
+>
+> **图 2-55.** 包头 PCI-SIG-Defined VDMs - 非 Flit 模式
+
+> <img src="figures/chapter_02/fig_0216_1_tight.png" width="700">
+
+> **Figure 2-56.** Header for PCI-SIG-Defined VDMs - Flit Mode
+>
+> **图 2-56.** 包头 PCI-SIG-Defined VDMs - Flit 模式
+
+> <img src="figures/chapter_02/fig_0216_2_tight.png" width="700">
 
 ---
 
@@ -8019,22 +8002,23 @@ Receivers may optionally check for violations of these rules (but must not check
 
 The format of the DRS Message is shown in § Figure 2-57 below:
 
-> **Figure 2-57.** DRS Message - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0217_1_tight.png" width="700">
-> **图 2-57.** DRS Message - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0217_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
 DRS 消息的格式见下方 § 图 2-57：
 
-<img src="figures/chapter_02/fig_0217_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 2-57.** DRS Message - Non-Flit Mode
+>
+> **图 2-57.** DRS Message - 非 Flit 模式
+
+> <img src="figures/chapter_02/fig_0217_1_tight.png" width="700">
 
 ---
 
@@ -8117,10 +8101,10 @@ Beyond the rules for other PCI-SIG-Defined VDMs, the following rules apply to th
 </table>
 
 > **Figure 2-58.** DRS Message - Flit Mode
+
 > <img src="figures/chapter_02/fig_0218_1_tight.png" width="700">
 > **图 2-58.** DRS Message - Flit 模式
 
-> <img src="figures/chapter_02/fig_0218_1_tight.png" width="700">
 
 </div>
 
@@ -8197,19 +8181,18 @@ FRS 消息的格式见下方 § 图 2-59 和 § 图 2-60：
 </table>
 
 > **Figure 2-59.** FRS Message - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0219_1_tight.png" width="700">
 
 > **Figure 2-60.** FRS Message - Flit Mode
+
 > <img src="figures/chapter_02/fig_0219_2_tight.png" width="700">
 > **图 2-60.** FRS Message - Flit 模式
 
-> <img src="figures/chapter_02/fig_0219_2_tight.png" width="700">
 > **图 2-59.** FRS Message - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0219_1_tight.png" width="700">
 
 > **Figure 2-60.** FRS Message - Flit Mode
-> <img src="figures/chapter_02/fig_0219_2_tight.png" width="700">
 
 
 ---
@@ -8303,31 +8286,32 @@ For details of the Hierarchy ID, GUID Authority ID, and System GUID fields see �
 
 The format of the Hierarchy ID Message is shown in § Figure 2-61 and § Figure 2-62 below:
 
-> **Figure 2-61.** Hierarchy ID Message - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0221_1_tight.png" width="700">
 
-> **Figure 2-62.** Hierarchy ID Message - Flit Mode
-> <img src="figures/chapter_02/fig_0221_2_tight.png" width="700">
-> **图 2-62.** Hierarchy ID Message - Flit 模式
 
-> <img src="figures/chapter_02/fig_0221_2_tight.png" width="700">
-> **图 2-61.** Hierarchy ID Message - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0221_1_tight.png" width="700">
 
-> **Figure 2-62.** Hierarchy ID Message - Flit Mode
-> <img src="figures/chapter_02/fig_0221_2_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
 层级 ID 消息的格式见下方 § 图 2-61 和 § 图 2-62：
 
-<img src="figures/chapter_02/fig_0221_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 2-61.** Hierarchy ID Message - Non-Flit Mode
+>
+> **图 2-61.** Hierarchy ID Message - 非 Flit 模式
+
+> <img src="figures/chapter_02/fig_0221_1_tight.png" width="700">
+
+> **Figure 2-62.** Hierarchy ID Message - Flit Mode
+>
+> **图 2-62.** Hierarchy ID Message - Flit 模式
+
+> <img src="figures/chapter_02/fig_0221_2_tight.png" width="700">
 
 <table>
 <thead>
@@ -8459,10 +8443,10 @@ LTR 消息可选地用于上报设备对读/写服务延迟的容忍行为。有
 ---
 
 > **Figure 2-63.** LTR Message - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0223_1_tight.png" width="700">
 > **图 2-63.** LTR Message - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0223_1_tight.png" width="700"> <!-- 📄 Page 223 -->
 
 ---
 
@@ -8527,10 +8511,10 @@ OBFF 消息可选地用于将平台中心资源状态上报给端点 (Endpoint)�
 ---
 
 > **Figure 2-65.** OBFF Message - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0224_1_tight.png" width="700">
 > **图 2-65.** OBFF Message - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0224_1_tight.png" width="700"> <!-- 📄 Page 224 -->
 
 ---
 
@@ -8598,10 +8582,10 @@ a Malformed TLP.
 ---
 
 > **Figure 2-67.** PTM Request/Response Message - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0225_1_tight.png" width="700">
 > **图 2-67.** PTM Request/Response Message - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0225_1_tight.png" width="700"> <!-- 📄 Page 225 -->
 
 ---
 
@@ -8655,10 +8639,10 @@ IDE 消息与可选的完整性与数据加密 (Integrity and Data Encryption, I
 </table>
 
 > **Figure 2-68.** PTM ResponseD Message - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0226_1_tight.png" width="700">
 > **图 2-68.** PTM ResponseD Message - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0226_1_tight.png" width="700">
 
 </div>
 
@@ -8738,37 +8722,34 @@ IDE 消息与可选的完整性与数据加密 (Integrity and Data Encryption, I
 ---
 
 > **Figure 2-71.** IDE Sync Message for Link IDE Stream - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0228_1_tight.png" width="700"> <!-- 📄 Page 227 -->
 
 ---
 
 
 > **Figure 2-73.** IDE Sync Message for Selective IDE Stream - Non-Flit Mode
+
 > <img src="figures/chapter_02/fig_0229_1_tight.png" width="700">
 
 > **Figure 2-76.** IDE Fail Message for Link IDE Stream - Flit Mode
+
 > <img src="figures/chapter_02/fig_0230_1_tight.png" width="700">
 > **图 2-76.** IDE Fail Message Link IDE 流 - Flit 模式
 
-> <img src="figures/chapter_02/fig_0230_1_tight.png" width="700">
 > **图 2-73.** IDE Sync Message Selective IDE 流 - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0229_1_tight.png" width="700">
 
 > **Figure 2-76.** IDE Fail Message for Link IDE Stream - Flit Mode
-> <img src="figures/chapter_02/fig_0230_1_tight.png" width="700">
 > **图 2-71.** IDE Sync Message Link IDE 流 - 非 Flit 模式
 
-> <img src="figures/chapter_02/fig_0228_1_tight.png" width="700"> <!-- 📄 Page 227 -->
 
 ---
 
 
 > **Figure 2-73.** IDE Sync Message for Selective IDE Stream - Non-Flit Mode
-> <img src="figures/chapter_02/fig_0229_1_tight.png" width="700">
 
 > **Figure 2-76.** IDE Fail Message for Link IDE Stream - Flit Mode
-> <img src="figures/chapter_02/fig_0230_1_tight.png" width="700"> <!-- 📄 Page 228 -->
 
 
 
@@ -8891,6 +8872,7 @@ check for violations of this rule. See § Section 2.3.2 , second bullet, for det
 </table>
 
 > **Figure 2-80 (Non-ARI) Completer ID**
+
 > <img src="figures/chapter_02/fig_0231_1_tight.png" width="700">
 
 
@@ -9021,9 +9003,7 @@ Reserved Completions (as indicated in § Table 2-5), are ID Routed TLPs as defin
 > **图 2-82.** Completion 包头 Base 格式 - Flit 模式
 
 
-> <img src="figures/chapter_02/fig_0234_1_tight.png" width="700">
 
-> <img src="figures/chapter_02/fig_0233_1.png" width="700"> <!-- 📄 Page 231 -->
 
 ---
 
@@ -9360,11 +9340,7 @@ As described in § Table 2-38, Types VendPrefixL0 and VendPrefixL1 are defined f
 
 This prefix (see § Figure 2-85) is only permitted when operating in Flit Mode.
 
-> **Figure 2-85.** Flit Mode Local TLP Prefix
-> <img src="figures/chapter_02/fig_0237_1_tight.png" width="700">
-> **图 2-85.** Flit 模式 Local TLP Prefix
 
-> <img src="figures/chapter_02/fig_0237_1_tight.png" width="700">
 
 | Byte | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 |------|---|---|---|---|---|---|---|---|
@@ -9389,11 +9365,16 @@ Flit Mode Local TLP Prefix: 1 0 0 0 1 1 0 1 (Byte 0)
 
 Flit 模式本地 TLP Prefix: 1 0 0 0 1 1 0 1(字节 0)
 
-<img src="figures/chapter_02/fig_0237_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 2-85.** Flit Mode Local TLP Prefix
+>
+> **图 2-85.** Flit 模式 Local TLP Prefix
+
+> <img src="figures/chapter_02/fig_0237_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
@@ -9663,10 +9644,10 @@ RC 不需要支持所有 End-End TLP Prefix Supported 位置位的根端口对�
 </table>
 
 > **Figure 2-86.** OHC-E1
+
 > <img src="figures/chapter_02/fig_0240_1_tight.png" width="700">
 > **图 2-86.** OHC-E1
 
-> <img src="figures/chapter_02/fig_0240_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -9706,10 +9687,10 @@ OHC-E DW 0(字节 0)
 </table>
 
 > **Figure 2-87.** OHC-E2
+
 > <img src="figures/chapter_02/fig_0240_2_tight.png" width="700">
 > **图 2-87.** OHC-E2
 
-> <img src="figures/chapter_02/fig_0240_2_tight.png" width="700">
 
 <table>
 <thead>
@@ -9833,10 +9814,10 @@ OHC-E DW 3、OHC-E DW 2、OHC-E DW 1、OHC-E DW 0(字节 0、字节 4、字节 8
 </table>
 
 > **Figure 2-88.** OHC-E4
+
 > <img src="figures/chapter_02/fig_0241_1.png" width="700">
 > **图 2-88.** OHC-E4
 
-> <img src="figures/chapter_02/fig_0241_1.png" width="700">
 
 </div>
 
@@ -9994,10 +9975,10 @@ This is a reported error associated with the Receiving Port (see § Section 6.2)
 ---
 
 > **Figure 2-89.** Flowchart for Handling of Received TLPs <!-- 📄 Page 243 -->
+
 > <img src="figures/chapter_02/fig_0243_1.png" width="700">
 > **图 2-89.** 流程图 Handling Received TLPs
 
-> <img src="figures/chapter_02/fig_0243_1.png" width="700">
 
 
 <div style="overflow-x: auto; max-width: 100%;">
@@ -10135,10 +10116,10 @@ Switches must process both TLPs that address resources within the Switch as well
 ---
 
 > **Figure 2-90.** Flowchart for Switch Handling of TLPs <!-- 📄 Page 245 -->
+
 > <img src="figures/chapter_02/fig_0245_1_tight.png" width="700">
 > **图 2-90.** 流程图 交换机 Handling TLPs
 
-> <img src="figures/chapter_02/fig_0245_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -10498,10 +10479,10 @@ Request 既不会被软件也不会被其他设备发起到端点。
 ---
 
 > **Figure 2-91.** Flowchart for Handling of Received Request <!-- 📄 Page 250 -->
+
 > <img src="figures/chapter_02/fig_0250_1_tight.png" width="700">
 > **图 2-91.** 流程图 Handling Received Request
 
-> <img src="figures/chapter_02/fig_0250_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -10750,11 +10731,7 @@ Flowchart steps (OM13773):
 - All the Completion Data bytes, including those with undefined content, are included in all CRC calculations.
 - § Figure 2-92 presents an example of the above. The example assumes a single Completion TLP is returned.
 
-> **Figure 2-92.** Example Completion Data when some Byte Enables are 0b
-> <img src="figures/chapter_02/fig_0253_1_tight.png" width="700">
-> **图 2-92.** Example Completion Data when some 字节使能 (Byte Enable)s are 0b
 
-> <img src="figures/chapter_02/fig_0253_1_tight.png" width="700">
 
 > **IMPLEMENTATION NOTE: BCM BIT USAGE**
 > To satisfy certain PCI-X protocol constraints, a PCI-X Bridge or PCI-X Completer for a PCI-X burst read in some cases will set the Byte Count field in the first PCI-X transaction of the Split Completion sequence to indicate the size of just that first transaction instead of the entire burst read. When this occurs, the PCI-X Bridge/PCI-X Completer will also Set the BCM bit in that first PCI-X transaction, to indicate that the Byte Count field has been modified from its normal usage. Refer to the [PCI-X] for further details.
@@ -10778,11 +10755,16 @@ Flowchart steps (OM13773):
 > PCI Express 完成者永远不会置位 BCM 位。
 > 在 Flit 模式下不存在 BCM 位。
 
-<img src="figures/chapter_02/fig_0253_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 2-92.** Example Completion Data when some Byte Enables are 0b
+>
+> **图 2-92.** Example Completion Data when some 字节使能 (Byte Enable)s are 0b
+
+> <img src="figures/chapter_02/fig_0253_1_tight.png" width="700">
 
 ---
 
@@ -11524,10 +11506,10 @@ Non-Posted Request 是 Read Request 或 NPR with Data。
 ---
 
 > **Figure 2-93.** Deadlock Examples with Intersystem Interconnects <!-- 📄 Page 264 -->
+
 > <img src="figures/chapter_02/fig_0264_1_tight.png" width="700">
 > **图 2-93.** Deadlock Examples 含 Intersystem Interconnects
 
-> <img src="figures/chapter_02/fig_0264_1_tight.png" width="700">
 
 
 ---
@@ -12089,9 +12071,7 @@ TC7/VC7 保留
 > **图 2-94.** 虚通道 (VC, Virtual Channel) Concept - Illustration
 
 
-> <img src="figures/chapter_02/fig_0271_1_tight.png" width="700">
 
-> <img src="figures/chapter_02/fig_0270_1.png" width="700">
 
 
 <a id="sec-2-5-1"></a>
@@ -12110,13 +12090,9 @@ TC7/VC7 保留
 
 Internal to the Switch, every Virtual Channel requires dedicated physical resources (queues/buffers and control logic) that support independent traffic flows inside the Switch. § Figure 2-95 shows conceptually the VC resources within the Switch (shown in § Figure 2-94) that are required to support traffic flow in the Upstream direction.
 
-> **Figure 2-95.** Virtual Channel Concept - Switch Internals (Upstream Flow)
-
-> <img src="figures/chapter_02/fig_0271_2_tight.png" width="700">
-> **图 2-95.** 虚通道 (VC, Virtual Channel) Concept - 交换机 Internals (Upstream 流)
 
 
-> <img src="figures/chapter_02/fig_0271_2_tight.png" width="700">
+
 
 
 
@@ -12156,11 +12132,16 @@ PCI Express 端口可支持 1 到 8 个虚通道 – 每个端口独立配置/�
 - 允许实现仅支持特定协议和/或使用模型的 VC
   - 如果软件以与其协议/使用模型要求不兼容的方式映射此类 VC,则由此产生的硬件行为未定义
 
-<img src="figures/chapter_02/fig_0271_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 2-95.** Virtual Channel Concept - Switch Internals (Upstream Flow)
+>
+> **图 2-95.** 虚通道 (VC, Virtual Channel) Concept - 交换机 Internals (Upstream 流)
+
+> <img src="figures/chapter_02/fig_0271_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
@@ -12259,9 +12240,7 @@ The number of VCs supported, and the associated buffering per VC per Port, are n
 > **图 2-96.** 示例 TC/VC Configurations
 
 
-> <img src="figures/chapter_02/fig_0274_1_tight.png" width="700">
 
-> <img src="figures/chapter_02/fig_0273_1.png" width="700">
 
 
 ---
@@ -12374,11 +12353,7 @@ For more details on the VC and TC mechanisms, including configuration, mapping, 
 
 Flow Control (FC) is used to prevent overflow of Receiver buffers and to enable compliance with the ordering rules defined in § Section 2.4. Note that the Flow Control mechanism is used by the Requester to track the queue/buffer space available in the agent across the Link as shown in § Figure 2-97. That is, Flow Control is point-to-point (across a Link) and not end-to-end. Flow Control does not imply that a Request has reached its ultimate Completer.
 
-> **Figure 2-97.** Relationship Between Requester and Ultimate Completer
-> <img src="figures/chapter_02/fig_0275_1_tight.png" width="700">
-> **图 2-97.** Relationship Requester 与 Ultimate Completer
 
-> <img src="figures/chapter_02/fig_0275_1_tight.png" width="700">
 
 Flow Control is orthogonal to the data integrity mechanisms used to implement reliable information exchange between Transmitter and Receiver. Flow Control can treat the flow of TLP information from Transmitter to Receiver as perfect, since the data integrity mechanisms ensure that corrupted and lost TLPs are corrected through retransmission (see § Section 3.6).
 
@@ -12401,11 +12376,16 @@ Flow Control mechanisms used internally within an MFD are outside the scope of t
 
 MFD 内部使用的流控机制不在本规范范围内。
 
-<img src="figures/chapter_02/fig_0275_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 2-97.** Relationship Between Requester and Ultimate Completer
+>
+> **图 2-97.** Relationship Requester 与 Ultimate Completer
+
+> <img src="figures/chapter_02/fig_0275_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-2-0)
 
@@ -14072,10 +14052,10 @@ Beyond the stated error reporting semantics contained elsewhere in this specific
 ---
 
 > **Figure 2-99.** Calculation of 32-bit ECRC for TLP End to End Data Integrity Protection <!-- 📄 Page 301 -->
+
 > <img src="figures/chapter_02/fig_0301_1_tight.png" width="700">
 > **图 2-99.** 计算 32-bit ECRC TLP End End Data Integrity Protection
 
-> <img src="figures/chapter_02/fig_0301_1_tight.png" width="700">
 
 
 ---
@@ -14840,8 +14820,10 @@ The Data Link Layer acts as an intermediate stage between the Transaction Layer 
 ---
 
 > **Figure 3-1.** Layering Diagram Highlighting the Data Link Layer
-> <img src="figures/chapter_03/fig_0309_1_tight.png" width="700">
+>
 > **图 3-1.** Layering 图: 数据链路层
+
+> <img src="figures/chapter_03/fig_0309_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -15033,8 +15015,10 @@ DLLP 以点对点方式在一对链路的两个组件之间发送。TLP 则从�
 ---
 
 > **Figure 3-2.** Data Link Control and Management State Machine
-> <img src="figures/chapter_03/fig_0311_1_tight.png" width="700">
+>
 > **图 3-2.** Data Link Control 与 Management State Machine
+
+> <img src="figures/chapter_03/fig_0311_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -15689,9 +15673,11 @@ VC 初始化流程中有两个状态:
 
 ---
 
-> **Figure 3-3.** VC0 Flow Control Initialization Example with 8b/10b Encoding-based Framing <!-- 📄 Page 323 --> <!-- 📄 Page 324 --> <!-- 📄 Page 325 --> <!-- 📄 Page 326 --> <!-- 📄 Page 327 --> <!-- 📄 Page 328 --> <!-- 📄 Page 329 --> <!-- 📄 Page 330 --> <!-- 📄 Page 331 --> <!-- 📄 Page 332 --> <!-- 📄 Page 333 -->
-> <img src="figures/chapter_03/fig_0323_1_tight.png" width="700">
+> **Figure 3-3.** VC0 Flow Control Initialization Example with 8b/10b Encoding-based Framing
+>
 > **图 3-3.** VC0 流控 (流 Control) Initialization Example 含 8b/10b 编码 Encoding-based Framing
+
+> <img src="figures/chapter_03/fig_0323_1_tight.png" width="700">
 
 In this example, the Endpoint enters the initialization sequence for VC0 first, followed shortly by the Switch. After the Switch receives a complete set of InitFC1 DLLPs, it transitions to FC_INIT2... Both components have now received at least one InitFC2 DLLP, and the initialization sequence is complete.
 
@@ -15857,12 +15843,16 @@ See § Figure 3-4 and § Figure 3-5 below.
 ---
 
 > **Figure 3-4.** DLLP Type and CRC Fields (Non-Flit Mode)
-> <img src="figures/chapter_03/fig_0325_1_tight.png" width="700">
+>
 > **图 3-4.** DLLP Type 与 CRC Fields (非 Flit 模式)
 
+> <img src="figures/chapter_03/fig_0325_1_tight.png" width="700">
+
 > **Figure 3-5.** DLLP Type Field (Flit Mode)
-> <img src="figures/chapter_03/fig_0325_2_tight.png" width="700">
+>
 > **图 3-5.** DLLP Type Field (Flit 模式)
+
+> <img src="figures/chapter_03/fig_0325_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -16057,44 +16047,64 @@ In § Figure 3-6 through § Figure 3-15 the 16-bit CRC is not shown. In Non-Flit
 ---
 
 > **Figure 3-6.** Data Link Layer Packet Format for Ack and Nak (Non-Flit Mode)
-> <img src="figures/chapter_03/fig_0329_1_tight.png" width="700">
+>
 > **图 3-6.** 数据链路层包 (DLLP) 格式 Ack 与 Nak (非 Flit 模式)
 
+> <img src="figures/chapter_03/fig_0329_1_tight.png" width="700">
+
 > **Figure 3-7.** Data Link Layer Packet Format for NOP
-> <img src="figures/chapter_03/fig_0329_2_tight.png" width="700">
+>
 > **图 3-7.** 数据链路层包 (DLLP) 格式 NOP
 
+> <img src="figures/chapter_03/fig_0329_2_tight.png" width="700">
+
 > **Figure 3-8.** Data Link Layer Packet Format for NOP2 (Flit Mode)
-> <img src="figures/chapter_03/fig_0329_3_tight.png" width="700">
+>
 > **图 3-8.** 数据链路层包 (DLLP) 格式 NOP2 (Flit 模式)
 
+> <img src="figures/chapter_03/fig_0329_3_tight.png" width="700">
+
 > **Figure 3-9.** Data Link Layer Packet Format for InitFC1
-> <img src="figures/chapter_03/fig_0330_1_tight.png" width="700">
+>
 > **图 3-9.** 数据链路层包 (DLLP) 格式 InitFC1
 
+> <img src="figures/chapter_03/fig_0330_1_tight.png" width="700">
+
 > **Figure 3-10.** Data Link Layer Packet Format for InitFC2
-> <img src="figures/chapter_03/fig_0330_2_tight.png" width="700">
+>
 > **图 3-10.** 数据链路层包 (DLLP) 格式 InitFC2
 
+> <img src="figures/chapter_03/fig_0330_2_tight.png" width="700">
+
 > **Figure 3-11.** Data Link Layer Packet Format for UpdateFC
-> <img src="figures/chapter_03/fig_0331_1_tight.png" width="700">
+>
 > **图 3-11.** 数据链路层包 (DLLP) 格式 UpdateFC
 
+> <img src="figures/chapter_03/fig_0331_1_tight.png" width="700">
+
 > **Figure 3-12.** Data Link Layer Packet Format for Power Management
-> <img src="figures/chapter_03/fig_0331_2_tight.png" width="700">
+>
 > **图 3-12.** 数据链路层包 (DLLP) 格式 电源管理 (Power Management)
 
+> <img src="figures/chapter_03/fig_0331_2_tight.png" width="700">
+
 > **Figure 3-13.** Data Link Layer Packet Format for Vendor-Specific
-> <img src="figures/chapter_03/fig_0331_3_tight.png" width="700">
+>
 > **图 3-13.** 数据链路层包 (DLLP) 格式 Vendor-Specific
 
+> <img src="figures/chapter_03/fig_0331_3_tight.png" width="700">
+
 > **Figure 3-14.** Data Link Layer Packet Format for Data Link Feature DLLP
-> <img src="figures/chapter_03/fig_0332_1_tight.png" width="700">
+>
 > **图 3-14.** 数据链路层包 (DLLP) 格式 Data Link Feature DLLP
 
+> <img src="figures/chapter_03/fig_0332_1_tight.png" width="700">
+
 > **Figure 3-15.** Data Packet Layer Format for Link Management (Flit Mode)
-> <img src="figures/chapter_03/fig_0332_2_tight.png" width="700">
+>
 > **图 3-15.** Data Packet Layer 格式 Link Management (Flit 模式)
+
+> <img src="figures/chapter_03/fig_0332_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -16168,9 +16178,11 @@ The following are the characteristics and rules associated with Data Link Layer 
 
 ---
 
-> **Figure 3-16.** Diagram of CRC Calculation for DLLPs <!-- 📄 Page 334 --> <!-- 📄 Page 335 --> <!-- 📄 Page 336 --> <!-- 📄 Page 337 --> <!-- 📄 Page 338 --> <!-- 📄 Page 339 --> <!-- 📄 Page 340 --> <!-- 📄 Page 341 --> <!-- 📄 Page 342 --> <!-- 📄 Page 343 --> <!-- 📄 Page 344 --> <!-- 📄 Page 345 --> <!-- 📄 Page 346 --> <!-- 📄 Page 347 --> <!-- 📄 Page 348 -->
-> <img src="figures/chapter_03/fig_0334_1_tight.png" width="700">
+> **Figure 3-16.** Diagram of CRC Calculation for DLLPs
+>
 > **图 3-16.** CRC 计算 DLLPs
+
+> <img src="figures/chapter_03/fig_0334_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -16303,8 +16315,10 @@ TLP 通过数据链路层的发送路径(§ Figure 3-1 中标记为 1 和 3 的�
 ---
 
 > **Figure 3-17.** TLP with LCRC and TLP Sequence Number Applied - Non-Flit Mode
-> <img src="figures/chapter_03/fig_0335_1.png" width="700">
+>
 > **图 3-17.** TLP 含 LCRC 与 TLP 序列号 (序列 Number) Applied - 非 Flit 模式
+
+> <img src="figures/chapter_03/fig_0335_1.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -16383,8 +16397,10 @@ The following rules describe how a TLP is prepared for transmission before being
 ---
 
 > **Figure 3-18.** TLP Following Application of TLP Sequence Number and 4 Bits
-> <img src="figures/chapter_03/fig_0337_1.png" width="700">
+>
 > **图 3-18.** TLP Following Application TLP 序列号 (序列 Number) 与 4 Bits
+
+> <img src="figures/chapter_03/fig_0337_1.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -16473,8 +16489,10 @@ The following rules describe how a TLP is prepared for transmission before being
 ---
 
 > **Figure 3-19.** Calculation of LCRC
-> <img src="figures/chapter_03/fig_0339_1_tight.png" width="700">
+>
 > **图 3-19.** 计算 LCRC
+
+> <img src="figures/chapter_03/fig_0339_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -16752,8 +16770,10 @@ Since Ack/Nak and Flow Control DLLPs affect TLPs flowing in the opposite directi
 ---
 
 > **Figure 3-20.** Received DLLP Error Check Flowchart
-> <img src="figures/chapter_03/fig_0343_1_tight.png" width="700">
+>
 > **图 3-20.** Received DLLP Error Check 流程图
+
+> <img src="figures/chapter_03/fig_0343_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -16819,8 +16839,10 @@ Since Ack/Nak and Flow Control DLLPs affect TLPs flowing in the opposite directi
 ---
 
 > **Figure 3-21.** Ack/Nak DLLP Processing Flowchart
-> <img src="figures/chapter_03/fig_0344_1_tight.png" width="700">
+>
 > **图 3-21.** Ack/NAK DLLP (否认 DLLP) Processing 流程图
+
+> <img src="figures/chapter_03/fig_0344_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -17081,8 +17103,10 @@ The following rules are applied in sequence to describe how received TLPs are pr
 ---
 
 > **Figure 3-22.** Receive Data Link Layer Handling of TLPs Flowchart
-> <img src="figures/chapter_03/fig_0347_1_tight.png" width="700">
+>
 > **图 3-22.** Receive 数据链路层 Handling TLPs 流程图
+
+> <img src="figures/chapter_03/fig_0347_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-3-0)
 
@@ -17666,10 +17690,10 @@ PCI Express 使用三种编码 (8b/10b 编码、128b/130b 编码 与 1b/1b 编�
 </table>
 
 > **Figure 4-1.** Layering Diagram Highlighting Physical Layer
+
 > <img src="figures/chapter_04/fig_0351_1_tight.png" width="700">
 > **图 4-1.** Layering 图: 物理层
 
-> <img src="figures/chapter_04/fig_0351_1_tight.png" width="700">
 
 </div>
 
@@ -17869,10 +17893,10 @@ The bits of a Symbol are placed on a Lane starting with bit "a" and ending with 
 </table>
 
 > **Figure 4-2.** Character to Symbol Mapping
+
 > <img src="figures/chapter_04/fig_0354_1_tight.png" width="700">
 > **图 4-2.** Character Symbol 映射
 
-> <img src="figures/chapter_04/fig_0354_1_tight.png" width="700">
 
 
 [⬆️ 返回目录](#sec-4-0)
@@ -17954,23 +17978,22 @@ The Symbol tables for the valid 8b/10b codes are given in Appendix B. These tabl
 </table>
 
 > **Figure 4-3.** Bit Transmission Order on Physical Lanes - x1 Example
+
 > <img src="figures/chapter_04/fig_0354_2_tight.png" width="700">
 
 **Figure 4-3 | 图 4-3**: 物理通道上的比特传输顺序 - x1 示例 (Bit Transmission Order on Physical Lanes - x1 Example)
 
 > **Figure 4-4.** Bit Transmission Order on Physical Lanes - x4 Example
+
 > <img src="figures/chapter_04/fig_0355_1_tight.png" width="700">
 > **图 4-4.** Bit Transmission Order on Physical Lanes - x4 Example
 
-> <img src="figures/chapter_04/fig_0355_1_tight.png" width="700">
 > **图 4-3.** Bit Transmission Order on Physical Lanes - x1 Example
 
-> <img src="figures/chapter_04/fig_0354_2_tight.png" width="700">
 
 **Figure 4-3 | 图 4-3**: 物理通道上的比特传输顺序 - x1 示例 (Bit Transmission Order on Physical Lanes - x1 Example)
 
 > **Figure 4-4.** Bit Transmission Order on Physical Lanes - x4 Example
-> <img src="figures/chapter_04/fig_0355_1_tight.png" width="700">
 
 </div>
 
@@ -18170,54 +18193,48 @@ For the following rules, "placed" is defined to mean a requirement on the Transm
 </table>
 
 > **Figure 4-5.** TLP with Framing Symbols Applied
+
 > <img src="figures/chapter_04/fig_0358_1_tight.png" width="700">
 
 > **Figure 4-6.** DLLP with Framing Symbols Applied
+
 > <img src="figures/chapter_04/fig_0359_1_tight.png" width="700">
 
 > **Figure 4-7.** Framed TLP on a x1 Link
+
 > <img src="figures/chapter_04/fig_0359_2_tight.png" width="700">
 
 **Figure 4-7 | 图 4-7**: x1 链路上成帧后的 TLP (Framed TLP on a x1 Link)
 
 > **Figure 4-8.** Framed TLP on a x2 Link
+
 > <img src="figures/chapter_04/fig_0360_1_tight.png" width="700">
 > **图 4-8.** Framed TLP on x2 Link
 
-> <img src="figures/chapter_04/fig_0360_1_tight.png" width="700">
 > **图 4-7.** Framed TLP on x1 Link
 
-> <img src="figures/chapter_04/fig_0359_2_tight.png" width="700">
 
 **Figure 4-7 | 图 4-7**: x1 链路上成帧后的 TLP (Framed TLP on a x1 Link)
 
 > **Figure 4-8.** Framed TLP on a x2 Link
-> <img src="figures/chapter_04/fig_0360_1_tight.png" width="700">
 > **图 4-6.** DLLP 含 Framing Symbols Applied
 
-> <img src="figures/chapter_04/fig_0359_1_tight.png" width="700">
 
 > **Figure 4-7.** Framed TLP on a x1 Link
-> <img src="figures/chapter_04/fig_0359_2_tight.png" width="700">
 
 **Figure 4-7 | 图 4-7**: x1 链路上成帧后的 TLP (Framed TLP on a x1 Link)
 
 > **Figure 4-8.** Framed TLP on a x2 Link
-> <img src="figures/chapter_04/fig_0360_1_tight.png" width="700">
 > **图 4-5.** TLP 含 Framing Symbols Applied
 
-> <img src="figures/chapter_04/fig_0358_1_tight.png" width="700">
 
 > **Figure 4-6.** DLLP with Framing Symbols Applied
-> <img src="figures/chapter_04/fig_0359_1_tight.png" width="700">
 
 > **Figure 4-7.** Framed TLP on a x1 Link
-> <img src="figures/chapter_04/fig_0359_2_tight.png" width="700">
 
 **Figure 4-7 | 图 4-7**: x1 链路上成帧后的 TLP (Framed TLP on a x1 Link)
 
 > **Figure 4-8.** Framed TLP on a x2 Link
-> <img src="figures/chapter_04/fig_0360_1_tight.png" width="700">
 
 **Figure 4-8 | 图 4-8**: x2 链路上成帧后的 TLP (Framed TLP on a x2 Link)
 
@@ -18324,10 +18341,10 @@ For more information on scrambling, see § Appendix C.
 </table>
 
 > **Figure 4-10.** LFSR with 8b/10b Scrambling Polynomial
+
 > <img src="figures/chapter_04/fig_0361_1_tight.png" width="700">
 > **图 4-10.** LFSR 含 8b/10b 编码 加扰 Polynomial
 
-> <img src="figures/chapter_04/fig_0361_1_tight.png" width="700">
 
 </div>
 
@@ -18371,11 +18388,7 @@ All Lanes of a multi-Lane Link must transmit Blocks with the same Sync Header si
 
 The bit transmission order is as follows. A Sync Header represented as 'H1H0' is placed on a Lane starting with 'H0' and ending with 'H1'. A Symbol, represented as 'S7S6S5S4S3S2S1S0', is placed on a Lane starting with 'S0' and ending with 'S7'. In the diagrams that show a time scale, bits represent the transmission order. In layout diagrams, bits are arranged in little-endian format, consistent with packet layout diagrams in other chapters of this specification.
 
-> **Figure 4-11.** Example of Bit Transmission Order in a x1 Link Showing 130 Bits of a Block
-> <img src="figures/chapter_04/fig_0362_1_tight.png" width="700">
-> **图 4-11.** 示例 Bit Transmission Order in x1 Link: 130 Bits Block
 
-> <img src="figures/chapter_04/fig_0362_1_tight.png" width="700">
 
 > **IMPLEMENTATION NOTE:**
 > **SYMBOL IN 128B/130B ENCODING SCHEME**
@@ -18410,11 +18423,16 @@ The bit transmission order is as follows. A Sync Header represented as 'H1H0' is
 > **128b/130b 编码方案中的符号 (SYMBOL IN 128B/130B ENCODING SCHEME)**
 > 在 128b/130b 编码方案中，符号长度为 1 字节，与 8b/10b 编码中的 10 位符号类似。
 
-> <img src="figures/chapter_04/fig_0362_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-11.** Example of Bit Transmission Order in a x1 Link Showing 130 Bits of a Block
+>
+> **图 4-11.** 示例 Bit Transmission Order in x1 Link: 130 Bits Block
+
+> <img src="figures/chapter_04/fig_0362_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-4-0)
 
@@ -18477,10 +18495,10 @@ Receivers must not adjust their Block alignment while in this phase. The Data St
 </table>
 
 > **Figure 4-12.** Example of Bit Placement in a x4 Link with One Block per Lane
+
 > <img src="figures/chapter_04/fig_0363_1_tight.png" width="700">
 > **图 4-12.** 示例 Bit Placement in x4 Link 含 One Block per 通道
 
-> <img src="figures/chapter_04/fig_0363_1_tight.png" width="700">
 
 </div>
 
@@ -18682,19 +18700,18 @@ The Physical Layer DLLP layout is shown in § Figure 4-14. Symbols 0 and 1 are t
 </table>
 
 > **Figure 4-13.** Layout of Framing Tokens
+
 > <img src="figures/chapter_04/fig_0366_1_tight.png" width="700">
 
 > **Figure 4-14.** TLP and DLLP Layout
+
 > <img src="figures/chapter_04/fig_0368_1_tight.png" width="700">
 > **图 4-14.** TLP 与 DLLP Layout
 
-> <img src="figures/chapter_04/fig_0368_1_tight.png" width="700">
 > **图 4-13.** Layout Framing Tokens
 
-> <img src="figures/chapter_04/fig_0366_1_tight.png" width="700">
 
 > **Figure 4-14.** TLP and DLLP Layout
-> <img src="figures/chapter_04/fig_0368_1_tight.png" width="700">
 
 
 [⬆️ 返回目录](#sec-4-0)
@@ -18805,27 +18822,31 @@ TLP Length 字段值在 1152 到 1535(含)之间的报文保留供未来标准�
 
 § Figure 4-17 shows an example of TLPs, DLLPs, IDLs, and an EDS Token followed by a SKP Ordered Set. SKP Ordered Sets are defined in § Section 4.2.8.2 .
 
-> **Figure 4-15.** Packet Transmission in a x8 Link
-> <img src="figures/chapter_04/fig_0368_2_tight.png" width="700">
 
-> **Figure 4-16.** Nullified TLP Layout in a x8 Link with Other Packets
-> <img src="figures/chapter_04/fig_0368_3_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
 § 图 4-17 显示了在 x8 链路上发送的 TLP、DLLP、IDL 以及一个 EDS Token 之后跟随一个 SKP 有序集的示例。SKP 有序集的定义见 § 4.2.8.2。
 
-> **图 4-15.** x8 链路中的数据包传输
-> <img src="figures/chapter_04/fig_0368_2_tight.png" width="700">
 
-> **图 4-16.** 含其他数据包的 x8 链路中被作废 TLP 的布局
-> <img src="figures/chapter_04/fig_0368_3_tight.png" width="700">
 
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-15.** Packet Transmission in a x8 Link
+>
+> **图 4-15.** x8 链路中的数据包传输
+
+> <img src="figures/chapter_04/fig_0368_2_tight.png" width="700">
+
+> **Figure 4-16.** Nullified TLP Layout in a x8 Link with Other Packets
+>
+> **图 4-16.** 含其他数据包的 x8 链路中被作废 TLP 的布局
+
+> <img src="figures/chapter_04/fig_0368_3_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-4-0)
 
@@ -18846,10 +18867,10 @@ TLP Length 字段值在 1152 到 1535(含)之间的报文保留供未来标准�
 </table>
 
 > **Figure 4-17.** SKP Ordered Set of Length 66-bit in a x8 Link
+
 > <img src="figures/chapter_04/fig_0369_1_tight.png" width="700">
 > **图 4-17.** SKP Ordered Set Length 字段 (长度) 66-bit in x8 Link
 
-> <img src="figures/chapter_04/fig_0369_1_tight.png" width="700">
 
 
 [⬆️ 返回目录](#sec-4-0)
@@ -19553,10 +19574,10 @@ The pseudo-code for the scrambler along with examples are provided in § Section
 ---
 
 > **Figure 4-18.** LFSR with Scrambling Polynomial in 8.0 GT/s and Above Data Rate <!-- 📄 Page 376 -->
+
 > <img src="figures/chapter_04/fig_0376_1_tight.png" width="700">
 > **图 4-18.** LFSR 含 加扰 Polynomial in 8.0 GT/s 与 Above Data Rate
 
-> <img src="figures/chapter_04/fig_0376_1_tight.png" width="700">
 
 **Figure 4-18 | 图 4-18**: 8.0 GT/s 及以上数据速率下带加扰多项式的 LFSR (LFSR with Scrambling Polynomial in 8.0 GT/s and Above Data Rate)
 
@@ -19598,10 +19619,10 @@ Implementations may choose to implement one LFSR and take different tap points a
 ---
 
 > **Figure 4-19.** Alternate Implementation of the LFSR for Descrambling <!-- 📄 Page 378 -->
+
 > <img src="figures/chapter_04/fig_0378_1_tight.png" width="700">
 > **图 4-19.** Alternate Implementation LFSR Descrambling
 
-> <img src="figures/chapter_04/fig_0378_1_tight.png" width="700">
 
 **Figure 4-19 | 图 4-19**: 用于解扰的 LFSR 替代实现 (Alternate Implementation of the LFSR for Descrambling)
 
@@ -19784,10 +19805,10 @@ When precoding is on at 32.0 GT/s, the following rules apply (see § Figure 4-20
 </table>
 
 > **Figure 4-20.** Precoding working the scrambler / de-scrambler
+
 > <img src="figures/chapter_04/fig_0380_1_tight.png" width="700">
 > **图 4-20.** Precoding working scrambler / de-scrambler
 
-> <img src="figures/chapter_04/fig_0380_1_tight.png" width="700">
 
 **Figure 4-20 | 图 4-20**: 预编码与加扰器/解扰器协同工作 (Precoding working the scrambler/de-scrambler)
 
@@ -20015,10 +20036,10 @@ When the PCI Express Link is operating at 64.0 GT/s or higher Data Rates, it use
 ---
 
 > **Figure 4-21.** Example of Symbol placement in a x4 Link with 1b/1b encoding <!-- 📄 Page 383 -->
+
 > <img src="figures/chapter_04/fig_0383_1_tight.png" width="700">
 > **图 4-21.** 示例 Symbol placement in x4 Link 含 1b/1b 编码
 
-> <img src="figures/chapter_04/fig_0383_1_tight.png" width="700">
 
 **Figure 4-21 | 图 4-21**: 使用 1b/1b 编码时 x4 链路上的符号放置示例 (Example of Symbol placement in a x4 Link with 1b/1b encoding)
 
@@ -20065,10 +20086,10 @@ At a Flit level, on the Transmit side, CRC is first applied followed by FEC gene
 ---
 
 > **Figure 4-22.** Transmit side at 64.0 GT/s <!-- 📄 Page 384 -->
+
 > <img src="figures/chapter_04/fig_0384_1_tight.png" width="700">
 > **图 4-22.** Transmit side at 64.0 GT/s
 
-> <img src="figures/chapter_04/fig_0384_1_tight.png" width="700">
 
 **Figure 4-22 | 图 4-22**: 64.0 GT/s 下的发送侧 (Transmit side at 64.0 GT/s)
 
@@ -20115,10 +20136,10 @@ The Receive side is similar to the Transmit side in the opposite direction. Afte
 ---
 
 > **Figure 4-23.** Receive side at 64.0 GT/s
+
 > <img src="figures/chapter_04/fig_0384_2_tight.png" width="700">
 > **图 4-23.** Receive side at 64.0 GT/s
 
-> <img src="figures/chapter_04/fig_0384_2_tight.png" width="700">
 
 **Figure 4-23 | 图 4-23**: 64.0 GT/s 下的接收侧 (Receive side at 64.0 GT/s)
 
@@ -20176,10 +20197,10 @@ PAM4 stands for Pulse Amplitude Modulation 4-levels. It is a signaling mechanism
 > PAM4 即四电平脉冲幅度调制（Pulse Amplitude Modulation 4-levels）。它是一种信令机制，在同一单位间隔（UI）内编码 4 个电平（2 比特），形成 3 个眼图，如 § 图 4-24 所示。它仅用于 64.0 GT/s 及更高的数据速率。如 § 第 8 章 所述，PAM4 有助于应对信道损耗，因为对于 64.0 GT/s 数据速率，PAM4 与 32.0 GT/s 具有相同的奈奎斯特频率。四个电压电平 0、1、2、3 分别标称映射为 -400 mV、-133 mV、+133 mV 和 +400 mV，相应的格雷编码值分别为 00b、01b、11b、10b（采用小端比特顺序），如 § 图 4-24 所示。在设计有序集以满足直流平衡（DC Balance）需求时所使用的对应直流平衡值也在 § 图 4-24 中示出。降低的电压幅度（眼高 EH，即 Eye Height）和眼宽（EW，即 Eye Width）会增加误码敏感性。格雷编码（Gray Coding）用于在 UI 范围内尽量减少电压电平所产生的误码。
 
 > **Figure 4-24.** PAM4 Signaling at UI level: Voltage levels, 2-bit encoding, and their corresponding DC balance values
+
 > <img src="figures/chapter_04/fig_0385_1_tight.png" width="700">
 > **图 4-24.** PAM4 Signaling at UI level: Voltage levels, 2-bit 编码, 与 their corresponding DC balance values
 
-> <img src="figures/chapter_04/fig_0385_1_tight.png" width="700">
 
 **Figure 4-24 | 图 4-24**: UI 级别的 PAM4 信令：电压电平、2 比特编码及其对应的直流平衡值 (PAM4 Signaling at UI level: Voltage levels, 2-bit encoding, and their corresponding DC balance values)
 
@@ -20446,10 +20467,10 @@ Flit
 </div>
 
 > **Figure 4-25.** The Sequence of Gray Coding, Precoding, and PAM4 voltage translation on an aligned 2-bit boundary on a per Lane
+
 > <img src="figures/chapter_04/fig_0386_1_tight.png" width="700">
 > **图 4-25.** 序列 Gray Coding, Precoding, 与 PAM4 voltage translation on aligned 2-bit boundary on per 通道
 
-> <img src="figures/chapter_04/fig_0386_1_tight.png" width="700">
 >
 > *Note: 该图位于第 386 页底部（4.2.3.1.2 与 4.2.3.1.3 之间）。fig_0386_1.png 为该页文本截图，已包含 § 4-25 图标题，但流程图主体未单独抽取。请以原始 PDF 第 386 页 Figure 4-25 流程图为准（详见 Figure 4-25 在 4.2.3.1.2 末尾的描述）。*
 
@@ -21016,6 +21037,7 @@ FEC 采用 3 路交织的 ECC，每路 ECC 码可纠正 1 字节错误。进行�
 **Table 4-10 Flit Layout in a x16 Link | 表 4-10 x16 链路中的 Flit 布局**
 
 > **Figure 4-26 Processing of Ordered Sets during or at the end of a Data Stream in Flit mode at 64.0 GT/s Data Rate**
+
 > <img src="figures/chapter_04/fig_0393_1_tight.png" width="700">
 
 | Description | Lane 0 | Lane 1 | Lane 2 | Lane 3 | Lane 4 | Lane 5 | Lane 6 | Lane 7 | Lane 8 | Lane 9 | Lane 10 | Lane 11 | Lane 12 | Lane 13 | Lane 14 | Lane 15 |
@@ -21129,7 +21151,6 @@ FEC 采用 3 路交织的 ECC，每路 ECC 码可纠正 1 字节错误。进行�
 A conceptual representation of the processing of Symbols in the Flit Mode for the 64.0 GT/s Data Rate on the Transmit and the Receive side is demonstrated in § Figure 4-21, § Figure 4-22, and § Figure 4-25. A conceptual representation of the Flit Mode and Non-Flit Mode processing with 8b/10b encoding for 2.5 GT/s and 5.0 GT/s as well as with 128b/130b encoding for 8.0 GT/s, 16.0 GT/s, and 32.0 GT/s for the Transmit and Receive side is shown in § Figure 4-27 and § Figure 4-28 respectively.
 
 > **Figure 4-27 Flit Mode and Non-Flit Mode processing with 8b/10b and 128b/130b encoding on the Transmit side**
-> <img src="figures/chapter_04/fig_0399_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -21137,7 +21158,6 @@ A conceptual representation of the processing of Symbols in the Flit Mode for th
 在发送端和接收端，64.0 GT/s 数据速率下 Flit 模式中符号处理的概念性表示见 § 图 4-21、§ 图 4-22 和 § 图 4-25。发送端和接收端在 2.5 GT/s 和 5.0 GT/s 下使用 8b/10b 编码、在 8.0 GT/s、16.0 GT/s 和 32.0 GT/s 下使用 128b/130b 编码时，Flit 模式与非 Flit 模式处理的概念性表示分别示于 § 图 4-27 (发送) 和 § 图 4-28 (接收)。
 
 > **图 4-27** 发送端 8b/10b 与 128b/130b 编码下的 Flit 模式与非 Flit 模式处理
-> <img src="figures/chapter_04/fig_0399_1_tight.png" width="700">
 
 </td>
 </tr>
@@ -21145,13 +21165,11 @@ A conceptual representation of the processing of Symbols in the Flit Mode for th
 <td>
 
 > **Figure 4-28 Flit Mode and Non-Flit Mode processing with 8b/10b and 128b/130b encoding on the Receive side**
-> <img src="figures/chapter_04/fig_0400_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
 > **图 4-28** 接收端 8b/10b 与 128b/130b 编码下的 Flit 模式与非 Flit 模式处理
-> <img src="figures/chapter_04/fig_0400_1_tight.png" width="700">
 
 </td>
 </tr>
@@ -21199,6 +21217,12 @@ Flit 中的 TLP 字节承载事务层 TLP。由于 Flit 模式不支持 STP（St
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_04/fig_0399_1_tight.png" width="700">
+
+
+> <img src="figures/chapter_04/fig_0400_1_tight.png" width="700">
+
 
 ---
 
@@ -21380,6 +21404,7 @@ FEC 不可纠正错误是指在 FEC 校正后由 CRC 检测到的 Flit 错误，
 **Figure 4-29 DLP Byte to Bit Number Assignment | 图 4-29 DLP 字节到位号分配** <!-- 📄 Page 404 -->
 
 > **Figure 4-29.** DLP Byte to Bit Number Assignment
+
 > <img src="figures/chapter_04/fig_0404_1_tight.png" width="700">
 
 | Bit Range | DLP Byte |
@@ -21399,13 +21424,12 @@ FEC 不可纠正错误是指在 FEC 校正后由 CRC 检测到的 Flit 错误，
 **Figure 4-30 DLP Bit usage | 图 4-30 DLP 位使用**
 
 > **Figure 4-30.** DLP Bit usage
+
 > <img src="figures/chapter_04/fig_0404_2_tight.png" width="700">
 > **图 4-30.** DLP Bit usage
 
-> <img src="figures/chapter_04/fig_0404_2_tight.png" width="700">
 > **图 4-29.** DLP Byte Bit Number Assignment
 
-> <img src="figures/chapter_04/fig_0404_1_tight.png" width="700">
 
 | Bit Range | DLP Byte |
 |---|---|
@@ -21424,7 +21448,6 @@ FEC 不可纠正错误是指在 FEC 校正后由 CRC 检测到的 Flit 错误，
 **Figure 4-30 DLP Bit usage | 图 4-30 DLP 位使用**
 
 > **Figure 4-30.** DLP Bit usage
-> <img src="figures/chapter_04/fig_0404_2_tight.png" width="700">
 
 | Bit Range | Field |
 |---|---|
@@ -21463,10 +21486,10 @@ FEC 不可纠正错误是指在 FEC 校正后由 CRC 检测到的 Flit 错误，
 **Figure 4-31 Optimized_Update_FC | 图 4-31 Optimized_Update_FC** <!-- 📄 Page 405 -->
 
 > **Figure 4-31.** Optimized_Update_FC
+
 > <img src="figures/chapter_04/fig_0405_1_tight.png" width="700">
 > **图 4-31.** Optimized_Update_FC
 
-> <img src="figures/chapter_04/fig_0405_1_tight.png" width="700">
 
 | Bit Range | Field |
 |---|---|
@@ -21491,10 +21514,10 @@ FEC 不可纠正错误是指在 FEC 校正后由 CRC 检测到的 Flit 错误，
 **Figure 4-32 Flit_Marker | 图 4-32 Flit_Marker** <!-- 📄 Page 406 -->
 
 > **Figure 4-32.** Flit_Marker
+
 > <img src="figures/chapter_04/fig_0406_1_tight.png" width="700">
 > **图 4-32.** Flit_Marker
 
-> <img src="figures/chapter_04/fig_0406_1_tight.png" width="700">
 
 | Bit Range | Field |
 |---|---|
@@ -23396,10 +23419,10 @@ def selective_nak_procedure() {
 ---
 
 > **Figure 4-33.** Flit Ack, Nak, and Discard Rules Flow Chart (Zoom-In to View) <!-- 📄 Page 424 -->
+
 > <img src="figures/chapter_04/fig_0424_1_tight.png" width="700">
 > **图 4-33.** Flit Ack, Nak, 与 Discard Rules 流 Chart (Zoom-In View)
 
-> <img src="figures/chapter_04/fig_0424_1_tight.png" width="700">
 
 <a id="sec-4-2-3-4-2-1-5-flowchart"></a>
 ## Ack, Nak, and Discard Rules Flow Chart | Ack、Nak 与丢弃规则流程图
@@ -23842,10 +23865,10 @@ Consider two devices A and B connected through a Retimer, as shown in § Figure 
 ---
 
 > **Figure 4-34.** Flit Ack/Nak/Replay Example <!-- 📄 Page 429 -->
+
 > <img src="figures/chapter_04/fig_0429_1_tight.png" width="700">
 > **图 4-34.** Flit Ack/Nak/Replay Example
 
-> <img src="figures/chapter_04/fig_0429_1_tight.png" width="700">
 
 | Time | Device A → Retimer → Device B | Flit Usage | Prior Flit | Replay Cmd | Valid/Invalid |
 |------|------------------------------|------------|------------|------------|---------------|
@@ -23973,10 +23996,10 @@ FEC 的示例 RTL 代码见 § Appendix J。本节其余部分描述 FEC 码的�
 ---
 
 > **Figure 4-35.** CRC generation/ checking in Flit
+
 > <img src="figures/chapter_04/fig_0431_1_tight.png" width="700">
 > **图 4-35.** CRC generation/ checking in Flit
 
-> <img src="figures/chapter_04/fig_0431_1_tight.png" width="700">
 
 *[Figure caption: Bytes 0-241 form the input a(x) whereas B0-B7 represent CRC0-crc7]*
 
@@ -24095,13 +24118,13 @@ f8: 1b  f9: 36  fa: 6c  fb: d8  fc: ad  fd: 47  fe: 8e  ff: 01
 
 **图 4-36 FEC 表:i 到 α^i**
 
-> <img src="figures/chapter_04/fig_0354_2_tight.png" width="700">
 
 
 </td>
 </tr>
 </tbody>
 </table>
+
 </div>
 
 
@@ -24424,10 +24447,10 @@ The Receive side check is as follows on the 256B flit (as shown in Figure 4-41).
 </table>
 
 > **Figure 4-40.** ECC Decoder function
+
 > <img src="figures/chapter_04/fig_0436_1_tight.png" width="700">
 > **图 4-40.** ECC Decoder function
 
-> <img src="figures/chapter_04/fig_0436_1_tight.png" width="700">
 
 
 [⬆️ 返回目录](#sec-4-0)
@@ -24481,10 +24504,10 @@ For Data Rates of 8.0 GT/s and above, the following rules apply:
 </table>
 
 > **Figure 4-41.** 3-way ECC decode followed by CRC check of flit on the Receive side
+
 > <img src="figures/chapter_04/fig_0437_1_tight.png" width="700">
 > **图 4-41.** 3-way ECC decode followed by CRC check flit on Receive side
 
-> <img src="figures/chapter_04/fig_0437_1_tight.png" width="700">
 
 </div>
 
@@ -25088,6 +25111,7 @@ In the Loopback state, the Loopback Lead is responsible for communicating the Tr
 </table>
 
 > **Figure 4-42.** 8.0 GT/s Equalization Flow
+
 > <img src="figures/chapter_04/fig_0448_1_tight.png" width="700">
 
 > **Figure 4-43.** 16.0 GT/s Equalization Flow
@@ -25096,14 +25120,11 @@ In the Loopback state, the Loopback Lead is responsible for communicating the Tr
 > **图 4-43.** 16.0 GT/s 均衡 流
 
 
-> <img src="figures/chapter_04/fig_0448_2_tight.png" width="700">
 > **图 4-42.** 8.0 GT/s 均衡 流
 
-> <img src="figures/chapter_04/fig_0448_1_tight.png" width="700">
 
 > **Figure 4-43.** 16.0 GT/s Equalization Flow
 
-> <img src="figures/chapter_04/fig_0448_2_tight.png" width="700">
 
 >
 > *Note: 源图提取时 16.0 GT/s 专用流程图未单独抽取（仅 fig_0448_1.png 可用），此处暂用 8.0 GT/s 流程图占位。请以原始规范第 4-43 图为准。*
@@ -25129,11 +25150,7 @@ In the Loopback state, the Loopback Lead is responsible for communicating the Tr
 <tr>
 <td>
 
-> **Figure 4-44.** 64.0 GT/s Equalization Flow
-> <img src="figures/chapter_04/fig_0449_1_tight.png" width="700">
-> **图 4-44.** 64.0 GT/s 均衡 流
 
-> <img src="figures/chapter_04/fig_0449_1_tight.png" width="700">
 
 **Description of Figure 4-44 (64.0 GT/s Equalization Flow):**
 
@@ -25193,11 +25210,16 @@ In the Loopback state, the Loopback Lead is responsible for communicating the Tr
 *TS1:EC = 00,Value C2"(Upstream Port)*
 *TS2 之后跟随 IDLE Flits*
 
-> <img src="figures/chapter_04/fig_0449_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-44.** 64.0 GT/s Equalization Flow
+>
+> **图 4-44.** 64.0 GT/s 均衡 流
+
+> <img src="figures/chapter_04/fig_0449_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-4-0)
 
@@ -25256,10 +25278,10 @@ The explanation of the coefficients and the FIR filter it represents are provide
 </table>
 
 > **Figure 4-45.** Equalization Bypass Example
+
 > <img src="figures/chapter_04/fig_0450_1_tight.png" width="700">
 > **图 4-45.** 均衡 Bypass Example
 
-> <img src="figures/chapter_04/fig_0450_1_tight.png" width="700">
 
 </div>
 
@@ -25899,10 +25921,10 @@ The following diagram represents the states where alternate protocol and equaliz
 </table>
 
 > **Figure 4-46.** Alternate Protocol Negotiation with Equalization Bypass LTSSM States
+
 > <img src="figures/chapter_04/fig_0474_1_tight.png" width="700">
 > **图 4-46.** Alternate Protocol 协商 含 均衡 Bypass LTSSM States
 
-> <img src="figures/chapter_04/fig_0474_1_tight.png" width="700">
 
 
 <a id="sec-4-2-5-2-body"></a>
@@ -26129,6 +26151,7 @@ After transmitting the last Symbol of the last Electrical Idle Ordered Set, the 
 
 > **Figure 4-47.** Electrical Idle Exit Ordered Set for 8.0 GT/s to 32.0 GT/s Data Rates (EIEOS)
 >
+
 > <img src="figures/chapter_04/fig_0478_1_tight.png" width="700">
 
 > **图 4-47.** 8.0 GT/s 至 32.0 GT/s 数据速率的电气空闲退出有序集 (EIEOS)
@@ -28076,9 +28099,7 @@ L0p 流程示例:§ Figure 4-48 演示了 x16 链路中的 L0p 流程。
 > **图 4-48.** 示例 L0p 流 in x16 Link | x16 链路中 L0p 流程示例
 
 
-> <img src="figures/chapter_04/fig_0497_1_tight.png" width="700">
 
-> <img src="figures/chapter_04/fig_0496_1_tight.png" width="700">
 
 ---
 
@@ -28495,10 +28516,10 @@ With 1b/1b encoding, the Link and Lane numbers are not sent explicitly in the TS
 ---
 
 > **Figure 4-49.** Main State Diagram for Link Training and Status State Machine
+
 > <img src="figures/chapter_04/fig_0500_1_tight.png" width="700">
 > **图 4-49.** Main State 图 链路训练与状态机 (LTSSM)
 
-> <img src="figures/chapter_04/fig_0500_1_tight.png" width="700">
 
 
 ---
@@ -28702,10 +28723,10 @@ Detect 子状态机如 § Figure 4-50 所示。
 ---
 
 > **Figure 4-50.** Detect Substate Machine
+
 > <img src="figures/chapter_04/fig_0502_1_tight.png" width="700">
 > **图 4-50.** Detect (检测) Substate Machine
 
-> <img src="figures/chapter_04/fig_0502_1_tight.png" width="700">
 
 
 ---
@@ -29438,7 +29459,6 @@ This state is unreachable given that the Link comes up to L0 in 2.5 GT/s data ra
 <td>
 
 > **Figure 4-51. Polling Substate Machine**
-> <img src="figures/chapter_04/fig_0510_1_tight.png" width="700">
 >
 > The Configuration substate machine is shown in § Figure 4-52.
 >
@@ -29460,11 +29480,13 @@ This state is unreachable given that the Link comes up to L0 in 2.5 GT/s data ra
 > 即使链路双方均具备高于 2.5 GT/s 的工作能力，链路最初也会以 2.5 GT/s 的数据速率训练到 L0 状态。所支持的更高数据速率在 TS (训练序列) 有序集中进行通告。对端的速度能力在 Configuration.Complete 子状态期间被记录。基于双方共同支持的最高数据速率，任一方可通过转入 Recovery 状态来发起从 L0 状态的速度切换。
 > §
 
-> <img src="figures/chapter_04/fig_0510_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_04/fig_0510_1_tight.png" width="700">
+
 </div>
 
 
@@ -30845,11 +30867,7 @@ consecutively received TS2 Ordered Sets then the Two Retimers Presence Detected 
 <tr>
 <td>
 
-> **Figure 4-52.** Configuration Substate Machine
-> <img src="figures/chapter_04/fig_0528_1_tight.png" width="700">
-> **图 4-52.** Configuration Substate Machine
 
-> <img src="figures/chapter_04/fig_0528_1_tight.png" width="700">
 
 State transitions for Configuration substate machine:
 
@@ -30880,6 +30898,12 @@ OM13802C
 </tr>
 </tbody>
 </table> <!-- 📄 Page 529 -->
+
+> **Figure 4-52.** Configuration Substate Machine
+>
+> **图 4-52.** Configuration Substate Machine
+
+> <img src="figures/chapter_04/fig_0528_1_tight.png" width="700">
 
 ---
 
@@ -34317,10 +34341,10 @@ A Transmitter must implement L0s if its Port advertises support for L0s, as indi
 ---
 
 > **Figure 4-54.** L0s Substate Machine <!-- 📄 Page 566 -->
+
 > <img src="figures/chapter_04/fig_0566_1_tight.png" width="700">
 > **图 4-54.** L0s Substate Machine
 
-> <img src="figures/chapter_04/fig_0566_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -34506,10 +34530,10 @@ Ports that meet the ZRX-DC specification for 2.5 GT/s while in the L1.Idle state
 ---
 
 > **Figure 4-55.** L1 Substate Machine / 图 4-55 L1 子状态机 <!-- 📄 Page 568 -->
+
 > <img src="figures/chapter_04/fig_0568_1_tight.png" width="700">
 > **图 4-55.** L1 Substate Machine / 图 4-55 L1 子状态机
 
-> <img src="figures/chapter_04/fig_0568_1_tight.png" width="700">
 
 <a id="sec-4-2-7-8"></a>
 ## 4.2.7.8 L2 | L2
@@ -34614,10 +34638,10 @@ L2 子状态机如 § Figure 4-56 所示。
 ---
 
 > **Figure 4-56.** L2 Substate Machine / 图 4-56 L2 子状态机 <!-- 📄 Page 569 -->
+
 > <img src="figures/chapter_04/fig_0569_1_tight.png" width="700">
 > **图 4-56.** L2 Substate Machine / 图 4-56 L2 子状态机
 
-> <img src="figures/chapter_04/fig_0569_1_tight.png" width="700">
 
 <a id="sec-4-2-7-8-2"></a>
 ## 4.2.7.8.2 L2.TransmitWake | L2.TransmitWake
@@ -35022,10 +35046,10 @@ If the current data rate uses 128b/130b 编码 encoding and Lane numbers have no
 ---
 
 > **Figure 4-57.** Loopback Substate Machine / 图 4-57 Loopback 子状态机 <!-- 📄 Page 577 -->
+
 > <img src="figures/chapter_04/fig_0577_1_tight.png" width="700">
 > **图 4-57.** Loopback (回环) Substate Machine / 图 4-57 Loopback (回环) 子状态机
 
-> <img src="figures/chapter_04/fig_0577_1_tight.png" width="700">
 
 
 ---
@@ -38094,11 +38118,7 @@ Retimer 在各高层运行模式下的行为如下:
 <tr>
 <td>
 
-> **Figure 4-62.** Supported Retimer Topologies
-> <img src="figures/chapter_04/fig_0617_1_tight.png" width="700">
-> **图 4-62.** Supported Retimer (重定时器) Topologies
 
-> <img src="figures/chapter_04/fig_0617_1_tight.png" width="700">
 
 Diagram contents:
 - Upstream Component (RC or Switch)
@@ -38130,6 +38150,12 @@ Diagram contents:
 </tr>
 </tbody>
 </table> <!-- 📄 Page 617 -->
+
+> **Figure 4-62.** Supported Retimer Topologies
+>
+> **图 4-62.** Supported Retimer (重定时器) Topologies
+
+> <img src="figures/chapter_04/fig_0617_1_tight.png" width="700">
 
 ---
 
@@ -41447,6 +41473,7 @@ CLKREQC#
 
 
 > **Figure 4-63. Retimer CLKREQ# Connection Topology | Retimer CLKREQ# 连接拓扑**
+
 > <img src="figures/chapter_04/fig_0647_1_tight.png" width="700">
 
 <a id="sec-4-3-11"></a>
@@ -42261,6 +42288,7 @@ PCI Express-PM 定义以下链路电源管理状态:
 
 > **Figure 5-1.** Link Power Management State Flow Diagram <!-- 📄 Page 654 -->
 > **图 5-1.** 链路电源管理状态流程图
+
 > <img src="figures/chapter_05/fig_0654_1_tight.png" width="700">
 
 <table>
@@ -43062,6 +43090,7 @@ Sequence of events:
 
 > **Figure 5-3.** Exit from L1 Link State Initiated by Upstream Component
 > **图 5-3.** 由上游组件发起的 L1 链路状态退出
+
 > <img src="figures/chapter_05/fig_0664_1_tight.png" width="700">
 
 </div>
@@ -43503,10 +43532,7 @@ If after 100 ms (+50%/-5%), the PME_Status bit of a requesting agent has not yet
 
 The following diagram conceptually outlines the PM_PME delivery control state machine. This state machine determines the ability of a Link to service PME events by issuing PM_PME immediately vs. requiring Link wakeup.
 
-> **Figure 5-5.** A Conceptual PME Control State Machine
-> **图 5-5.** 概念性 PME 控制状态机
 
-> <img src="figures/chapter_05/fig_0670_1_tight.png" width="700">
 
 **Communicating State:**
 
@@ -43558,11 +43584,16 @@ At initial power-up and associated reset, the Upstream Link enters the Communica
 
 - 在电源和时钟恢复以及相关复位之后，链路恢复为可处理事务的状态。设备在必要时清零唤醒信令，并向上游发出 PM_PME,然后转换到 PME Sent 状态。
 
-<img src="figures/chapter_05/fig_0670_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-5.** A Conceptual PME Control State Machine
+>
+> **图 5-5.** 概念性 PME 控制状态机
+
+> <img src="figures/chapter_05/fig_0670_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-5-0)
 
@@ -44345,6 +44376,7 @@ Notes:
 
 > **Figure 5-6.** L1 Transition Sequence Ending with a Rejection (L0s Enabled) §
 > **图 5-6.** 以拒绝结束的 L1 转换序列（L0s 已启用）
+
 > <img src="figures/chapter_05/fig_0681_1_tight.png" width="700">
 
 > **Figure 5-7.** L1 Successful Transition Sequence
@@ -44397,10 +44429,7 @@ Following along as above, Link 2 will complete its transition to the L0 state at
 
 Therefore, among Links 1, 2, and 3, the Link to complete the transition to the L0 state last is Link 1 with a 34 μs delay. This is the delay experienced by the packet that initiated the transition in Endpoint C.
 
-> **Figure 5-8.** Example of L1 Exit Latency Computation
-> **图 5-8.** L1 退出延迟计算示例
 
-> <img src="figures/chapter_05/fig_0683_1_tight.png" width="700">
 
 Switches are not required to initiate an L1 exit transition on any other of their Downstream Port Links.
 
@@ -44450,11 +44479,16 @@ Switch 不需要在其任何其他下游端口链路上启动 L1 退出转换。
 
 Switch 需要在其上游端口上开始 L1 状态转换后，不超过 1 μs 的时间在其当前处于 L1 的所有下游端口链路上启动 L1 状态转换。有关 L1 退出期间物理层信令的详细信息，请参见 § 第 4.2 节。已经处于 L0 状态的下游端口链路不参与退出转换。下游组件处于低功耗 D 状态 (D1-D3Hot) 的下游端口链路也不受 L1 退出转换的影响 (即不得将这些链路转换到 L0 状态)。
 
-<img src="figures/chapter_05/fig_0683_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-8.** Example of L1 Exit Latency Computation
+>
+> **图 5-8.** L1 退出延迟计算示例
+
+> <img src="figures/chapter_05/fig_0683_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-5-0)
 
@@ -44929,6 +44963,7 @@ L1 PM Substates 建立了一种链路电源管理机制，它创建了 L1 链路
 
 > **Figure 5-10.** Downstream Port with a Single PLL
 > **图 5-10.** 带单个 PLL 的下行端口
+
 > <img src="figures/chapter_05/fig_0690_1_tight.png" width="700">
 
 > Example 2: Upstream component with multiple Downstream Ports, with a common shared PLL, connected to separate Downstream components (see § Figure 5-11).
@@ -45070,6 +45105,7 @@ If either the Upstream or Downstream Port needs to initiate exit from L1.1, it m
 
 > **Figure 5-12.** Example: L1.1 Waveforms Illustrating Upstream Port Initiated Exit
 > **图 5-12.** 示例：说明由上游端口发起退出的 L1.1 波形
+
 > <img src="figures/chapter_05/fig_0693_1.png" width="700">
 
 > **Figure 5-13.** Example: L1.1 Waveforms Illustrating Downstream Port Initiated Exit
@@ -45168,6 +45204,7 @@ L1.2.Entry 是进入 L1.2 时的过渡状态，以允许 Refclk 关闭的时间�
 
 > **Figure 5-14.** L1.2 Substates
 > **图 5-14.** L1.2 子状态
+
 > <img src="figures/chapter_05/fig_0694_1_tight.png" width="700">
 
 </div>
@@ -45191,9 +45228,6 @@ L1.2.Entry 是进入 L1.2 时的过渡状态，以允许 Refclk 关闭的时间�
 <tr>
 <td>
 
-> **Figure 5-15.** Example: Illustration of Boundary Condition due to Different Sampling of CLKREQ#
-> **图 5-15.** 示例：CLKREQ# 不同采样导致的边界条件图示
-> <img src="figures/chapter_05/fig_0695_1_tight.png" width="700">
 
 When requirements for the entry into L1.2.Idle state (see § Section 5.5.1) have been satisfied then the Ports enter the L1.2.Idle substate. The following rules apply in L1.2.Idle:
 
@@ -45235,11 +45269,16 @@ This is a transitional state on exit from L1.2 to allow time for both devices to
 - 上下游端口的 PHY 必须上电。
 - 不得假设已保持共模。
 
-<img src="figures/chapter_05/fig_0695_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-15.** Example: Illustration of Boundary Condition due to Different Sampling of CLKREQ#
+>
+> **图 5-15.** 示例：CLKREQ# 不同采样导致的边界条件图示
+
+> <img src="figures/chapter_05/fig_0695_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-5-0)
 
@@ -46024,10 +46063,7 @@ The shaded regions in § Figure 5-19 illustrate what is discussed in this sectio
 <tr>
 <td>
 
-> **Figure 5-19.** PCI Express Bridge Power Management Diagram
-> **图 5-19.** PCI Express 桥接电源管理图
 
-> <img src="figures/chapter_05/fig_0705_1_tight.png" width="700">
 
 As can be seen from § Figure 5-19, the PCI Express Bridge behavior described in this chapter is common, from the perspective of the operating system, to host bridges, Switches, and PCI Express to PCI bridges.
 
@@ -46079,11 +46115,16 @@ PME 生成事件用于向系统标识请求打开电源的 Function。
 
 在 PCI Express 中，在主电源已恢复且链路已训练之后，启动唤醒的 Function (即断言 WAKE# 的 Function) 向根复合体发送 PM_PME 报文。PM_PME 报文向根复合体提供请求 Function 的标识，而不需要软件轮询 PME_Status 位是否被置位。
 
-<img src="figures/chapter_05/fig_0705_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 5-19.** PCI Express Bridge Power Management Diagram
+>
+> **图 5-19.** PCI Express 桥接电源管理图
+
+> <img src="figures/chapter_05/fig_0705_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-5-0)
 
@@ -46157,7 +46198,6 @@ PME 生成事件用于向系统标识请求打开电源的 Function。
 > 📚 **Template**: CXL 3.2 Spec translation (CXL_zh/)
 
 ---
-
 
 ## 📑 章节索引 (Sections)
 
@@ -46619,7 +46659,6 @@ PME 生成事件用于向系统标识请求打开电源的 Function。
 <a id="sec-6-0"></a>
 # 6. System Architecture | 6. 系统架构
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -46686,7 +46725,6 @@ PCI Express 在中断支持方面采用从 PCI 演进而来的方法。
 </table>
 </div>
 
-
 <a id="sec-6-1"></a>
 ## 6.1 Interrupt and PME Support | 中断与 PME 支持
 
@@ -46719,7 +46757,6 @@ PCI Express 在中断支持方面采用从 PCI 演进而来的方法。
 
 <a id="sec-6-1-2"></a> <!-- 📄 Page 708 -->
 ## 6.1.2 PCI-compatible INTx Emulation | PCI 兼容的 INTx 仿真
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -46754,7 +46791,6 @@ PCI Express 仿真 PCI 中断机制，包括 PCI 设备功能（Function）的 P
 </table>
 </div>
 
-
 <a id="sec-6-1-3"></a>
 ## 6.1.3 INTx Emulation Software Model | INTx 仿真的软件模型
 
@@ -46787,7 +46823,6 @@ Note that similarly to physical interrupt signals, the INTx emulation mechanism 
 
 <a id="sec-6-1-4"></a>
 ## 6.1.4 MSI and MSI-X Operation | MSI 与 MSI-X 操作
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -46829,7 +46864,6 @@ MSI-X 定义了基本 MSI 功能的另一种可选扩展。与 MSI 相比，MSI-
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -46932,7 +46966,6 @@ MSI/MSI-X 事务的请求者（Requester）必须将事务描述符的 No Snoop 
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 710 -->
 <table>
 <thead>
@@ -46969,7 +47002,6 @@ If the Extended Message Data Capable bit is Set and system software supports 32-
 </tbody>
 </table>
 </div>
-
 
 <a id="sec-6-1-4-2"></a>
 ### 6.1.4.2 MSI-X Configuration | MSI-X 配置
@@ -47024,7 +47056,6 @@ For each MSI-X Table entry that will be used, software fills in the Message Addr
 [⬆️ 返回目录](#sec-6-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 711 -->
 <table>
@@ -47083,7 +47114,6 @@ To maintain backward compatibility, the MSI Enable bit in the Message Control Re
 </table>
 </div>
 
-
 <a id="sec-6-1-4-3"></a>
 ### 6.1.4.3 Enabling Operation | 启用操作
 
@@ -47102,7 +47132,6 @@ To maintain backward compatibility, the MSI Enable bit in the Message Control Re
 [⬆️ 返回目录](#sec-6-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 712 -->
 <table>
@@ -47145,7 +47174,6 @@ How a Function uses multiple vectors (when allocated) is device dependent. A Fun
 </table>
 </div>
 
-
 <a id="sec-6-1-4-4"></a>
 ### 6.1.4.4 Sending Messages | 发送消息
 
@@ -47163,7 +47191,6 @@ How a Function uses multiple vectors (when allocated) is device dependent. A Fun
 
 <a id="sec-6-1-4-5"></a>
 ### 6.1.4.5 Per-vector Masking and Function Masking | 每向量屏蔽与功能屏蔽
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -47213,7 +47240,6 @@ MSI-X 中的 PVM 由每个 MSI-X Table 表项中的 Mask 位控制。虽然更�
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -47299,7 +47325,6 @@ If a Function sends messages with the same vector multiple times before being ac
 <a id="sec-impl-note-msi-msix-servicing"></a> <!-- 📄 Page 714 -->
 ### IMPLEMENTATION NOTE: SERVICING MSI AND MSI-X INTERRUPTS | 实现说明：MSI 与 MSI-X 中断服务
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -47344,7 +47369,6 @@ This alternative has the potential side effect of one vector's interrupt service
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -47421,7 +47445,6 @@ PCI Express 支持来自原生（native）PCI Express 设备以及支持 PME 的
 <a id="sec-6-1-6"></a>
 ## 6.1.6 Native PME Software Model | 原生 PME 软件模型
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -47460,7 +47483,6 @@ Note that all other interrupt sources within the same Function will assert the s
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -47519,7 +47541,6 @@ Root Complex Event Collectors provide support for the above described functional
 <a id="sec-6-1-7"></a>
 ## 6.1.7 Legacy PME Software Model | 传统 PME 软件模型
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -47552,7 +47573,6 @@ In order to maintain compatibility with non-PCI Express-aware system software, s
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -47621,7 +47641,6 @@ If the PME# signal from a PCI or PCI-X device is routed directly to the Root Com
 <a id="sec-6-1-9-cont"></a> <!-- 📄 Page 717 -->
 ### 6.1.9 PME Routing Between PCI Express and PCI Hierarchies (cont.) | PCI Express 与 PCI 层级之间的 PME 路由（续）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -47650,7 +47669,6 @@ Since RCiEPs are not contained in any of the hierarchy domains originated by Roo
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -47739,7 +47757,6 @@ In this document, errors which must be checked and errors which may optionally b
 <a id="sec-6-2-2"></a>
 ## 6.2.2 Error Classification | 错误分类
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -47815,7 +47832,6 @@ ERR_NONFATAL
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -47873,7 +47889,6 @@ Note that it is the responsibility of the agent detecting the error to signal th
 <a id="sec-6-2-2-2"></a> <!-- 📄 Page 719 -->
 ## 6.2.2.2 Uncorrectable Errors | 不可纠正错误
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -47902,7 +47917,6 @@ Error Messages are sent to the Root Complex for reporting the detection of error
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -48009,7 +48023,6 @@ Note that it is the responsibility of the agent detecting the error to signal th
 <a id="sec-6-2-3-1"></a>
 ## 6.2.3.1 Completion Status | 完成状态
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -48034,7 +48047,6 @@ The Completion Status field (when status is not Successful Completion) in the Co
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -48072,7 +48084,6 @@ Error Messages are sent to the Root Complex for reporting the detection of error
 
 <a id="sec-6-2-3-2-body"></a> <!-- 📄 Page 720 -->
 ## 6.2.3.2 Error Messages (continued) | 错误报文(续)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -48147,7 +48158,6 @@ Software should recognize that a single transaction can be signaled by multiple 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -48228,7 +48238,6 @@ If an individual error is masked when it is detected, its error status bit is st
 <a id="sec-6-2-3-2-3"></a>
 ## 6.2.3.2.3 Error Pollution | 错误污染
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -48271,7 +48280,6 @@ For errors detected in the Transaction layer and Uncorrectable Internal Errors, 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -48368,7 +48376,6 @@ handle this case as an Advisory Non-Fatal Error.
 <a id="sec-6-2-3-2-4"></a>
 ## 6.2.3.2.4 Advisory Non-Fatal Error Cases | 建议性非致命错误情形
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -48405,7 +48412,6 @@ This section covers Advisory Non-Fatal Error handling for errors managed by the 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -48453,7 +48459,6 @@ handle this case as an Advisory Non-Fatal Error.
 
 <a id="sec-6-2-3-2-4-1-cont"></a> <!-- 📄 Page 723 -->
 ## 6.2.3.2.4.1 Completer Sending a Completion with UR/CA Status (continued) | 完成者发送带有 UR/CA 状态的完成报文(续)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -48520,7 +48525,6 @@ A Receiver must not handle this case as an Advisory Non-Fatal Error if either of
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -48570,7 +48574,6 @@ A Receiver must not handle this case as an Advisory Non-Fatal Error if either of
 <a id="sec-6-2-3-2-4-3"></a>
 ## 6.2.3.2.4.3 Ultimate PCI Express Receiver of a Poisoned TLP or IDE TLP with PCRC Check Failed | 6.2.3.2.4.3 接收到中毒 TLP 或 PCRC 检查失败的 IDE TLP 的最终 PCI Express 接收方
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -48615,7 +48618,6 @@ This section applies to Requesters other than Root Ports performing programmed I
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -48662,7 +48664,6 @@ Note that automatic recovery by the Requester from a Completion Timeout is gener
 <a id="sec-6-2-3-2-4-5"></a>
 ## 6.2.3.2.4.5 Receiver of an Unexpected Completion | 6.2.3.2.4.5 意外完成报文的接收方
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -48691,7 +48692,6 @@ If the unexpected Completion was a result of misrouting, the Completion Timeout 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -48738,7 +48738,6 @@ If the Requester needs to report the error, the Requester must do so solely thro
 <a id="sec-6-2-3-3"></a>
 ## 6.2.3.3 Error Forwarding (Data Poisoning) | 6.2.3.3 错误转发 (数据中毒)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -48763,7 +48762,6 @@ Error Forwarding, also known as data poisoning, is indicated by setting the EP b
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -48809,7 +48807,6 @@ Unless otherwise specified, implementation specific criteria are used in determi
 
 <a id="sec-6-2-4"></a> <!-- 📄 Page 725 -->
 ## 6.2.4 Error Logging | 6.2.4 错误日志记录
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -48879,7 +48876,6 @@ The following PCI Express errors are not Function-specific:
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -48960,7 +48956,6 @@ The Root Error Command register allows further control of Root Complex response 
 <a id="sec-6-2-4-1-2"></a>
 ## 6.2.4.1.2 Interrupt Generation | 6.2.4.1.2 中断生成
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -49009,7 +49004,6 @@ Note that Advanced Error Reporting MSI/MSI-X interrupts always use the vector in
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -49094,7 +49088,6 @@ If multiple header recording is supported and enabled, and the First Error Point
 <a id="sec-6-2-4-2-continued"></a>
 ## 6.2.4.2 Multiple Error Handling (continued) | 6.2.4.2 多错误处理 (续)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -49136,7 +49129,6 @@ The setting of Multiple Header Recording Capable and the checking for Header Log
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -49173,7 +49165,6 @@ The setting of Multiple Header Recording Capable and the checking for Header Log
 
 <a id="sec-6-2-4-3-vf-pf-header-log"></a>
 ## Header Log Space for PF/VF and IMPLEMENTATION NOTE | 物理功能/虚拟功能的包头日志空间及实现说明
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -49247,7 +49238,6 @@ If hardware relies on this definition of the FEP being valid to determine when i
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -49324,7 +49314,6 @@ AER 仅记录端到端 TLP 前缀 (End-End TLP Prefix)。本地 TLP 前缀 (Loca
 <a id="sec-6-2-4-3"></a>
 ## 6.2.4.3 Advisory Non-Fatal Error Logging | 咨询性非致命错误日志记录
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -49358,7 +49347,6 @@ End-End TLP Prefixes are logged in the TLP Prefix Log register. The underlying T
 </table>
 </div>
 
-
 ---
 
 <a id="sec-6-2-4-4"></a>
@@ -49391,7 +49379,6 @@ End-End TLP Prefixes are logged in the TLP Prefix Log register. The underlying T
 
 <a id="sec-6-2-5"></a>
 ## 6.2.5 Sequence of Device Error Signaling and Logging Operations | 设备错误上报与日志记录操作顺序
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -49529,10 +49516,10 @@ Abbreviations:
 
 > **Figure 6-2.** Flowchart Showing Sequence of Device Error Signaling and Logging Operations
 > **图 6-2.** 设备错误信令与记录操作流程顺序图
+
 > <img src="figures/chapter_06/fig_0732_1_tight.png" width="700">
 
 </div>
-
 
 ---
 
@@ -49551,10 +49538,6 @@ Abbreviations:
 <td>
 
 Error Messages have a complex set of associated control and status bits. § Figure 6-3 provides a high-level summary in the form of a pseudo logic diagram for how error Messages are generated, logged, forwarded, and ultimately notified to the system. Not all control and status bits are shown. The logic gates shown in this diagram are intended for conveying general concepts, and not for direct implementation.
-
-> **Figure 6-3.** Pseudo Logic Diagram for Selected Error Message Control and Status Bits
-> **图 6-3.** 选定错误消息控制与状态位的伪逻辑图
-> <img src="figures/chapter_06/fig_0733_1_tight.png" width="700">
 
 The diagram covers:
 
@@ -49619,17 +49602,21 @@ The diagram covers:
   - 不受 DPC 遏制 (Not contained by DPC)
   - 平台特定 (System Specific)
 
-<img src="figures/chapter_06/fig_0733_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+> **Figure 6-3.** Pseudo Logic Diagram for Selected Error Message Control and Status Bits
+>
+> **图 6-3.** 选定错误消息控制与状态位的伪逻辑图
+
+> <img src="figures/chapter_06/fig_0733_1_tight.png" width="700">
+
 ---
 
 <a id="sec-6-2-7"></a> <!-- 📄 Page 734 -->
 ## 6.2.7 Error Listing and Rules | 错误列表与规则
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -49730,7 +49717,6 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 </table>
 </div>
 
-
 ---
 
 <a id="sec-6-2-7-table-6-5"></a> <!-- 📄 Page 735 -->
@@ -49788,7 +49774,6 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 <a id="sec-6-2-7-table-6-5-2"></a> <!-- 📄 Page 736 -->
 ## 6.2.7 Error Listing and Rules (Table 6-5, cont.) | 错误列表与规则(表 6-5,续)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -49829,7 +49814,6 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -49882,7 +49866,6 @@ The detecting agent action for Downstream Ports that implement Downstream Port C
 <a id="sec-6-2-7-table-6-5-4"></a> <!-- 📄 Page 738 -->
 ## 6.2.7 Error Listing and Rules (Table 6-5, cont. 3) | 错误列表与规则(表 6-5,续 3)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -49930,7 +49913,6 @@ For all errors listed above, the appropriate status bit(s) must be set upon dete
 </table>
 </div>
 
-
 ---
 
 <a id="sec-6-2-7-1"></a> <!-- 📄 Page 739 -->
@@ -49971,7 +49953,6 @@ PCI Command 寄存器中包含用于控制 PCI 错误上报的位。但是,PCI C
 
 <a id="sec-6-2-8"></a>
 ## 6.2.8 Virtual PCI Bridge Error Handling | 虚拟 PCI 桥错误处理
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -50029,7 +50010,6 @@ With software/firmware that sets the SERR# Enable bit but leaves the Unsupported
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -50096,7 +50076,6 @@ With software/firmware that sets the SERR# Enable bit but leaves the Unsupported
 <a id="sec-6-2-8-1-continued"></a> <!-- 📄 Page 740 -->
 ## 6.2.8.1 Error Message Forwarding and PCI Mapping for Bridge - Rules (cont.) | 桥的错误报文转发与 PCI 映射 — 规则(续)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -50137,7 +50116,6 @@ The following error handling control bits are only implemented in the PF. They a
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -50212,7 +50190,6 @@ Each VF must use its own Routing ID when signaling errors.
 <a id="sec-6-2-10"></a>
 ## 6.2.10 Internal Errors | 内部错误
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -50253,7 +50230,6 @@ Corrected Internal Errors 与 Uncorrectable Internal Errors 的上报是彼此�
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -50329,7 +50305,6 @@ DPC 默认禁用，除非由软件通过 DPC Trigger Enable 字段使能，否�
 
 <a id="sec-6-2-11-dpc-npr"></a> <!-- 📄 Page 742 -->
 ## 6.2.11 DPC 续 | DPC(续):Non-Posted Request 响应选择与触发条件
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -50407,7 +50382,6 @@ DPC 默认禁用，除非由软件通过 DPC Trigger Enable 字段使能，否�
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -50506,7 +50480,6 @@ The Port may optionally send an interrupt message if interrupt generation has be
 <a id="sec-6-2-11-2"></a> <!-- 📄 Page 744 -->
 ## 6.2.11.2 DPC ERR_COR Signaling | DPC ERR_COR 信令
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -50554,7 +50527,6 @@ For a given DPC trigger event, if a Port is going to send both an ERR_COR Messag
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -50595,7 +50567,6 @@ RP PIO 错误控制寄存器可对 Root Port 所追踪的 Non-Posted Requests �
 
 <a id="sec-6-2-11-3-continued"></a> <!-- 📄 Page 746 -->
 ## 6.2.11.3 RP PIO Error Controls (续) | RP PIO 错误控制(续)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -50655,7 +50626,6 @@ RP PIO Status、Mask 和 Severity 寄存器的行为与 AER 中的 Uncorrectable
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -50744,7 +50714,6 @@ RP PIO Exception 寄存器提供了一种在某些由处理器指令产生的、
 <a id="sec-6-2-11-4"></a> <!-- 📄 Page 748 -->
 ## 6.2.11.4 Software Triggering of DPC | DPC 的软件触发
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -50811,7 +50780,6 @@ Root Port 对所追踪的、除接收 UR 和 CA Completions 之外发生错误�
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -50906,7 +50874,6 @@ It is recommended that operating systems use Data Link Layer State Changed inter
 <a id="sec-6-3"></a> <!-- 📄 Page 750 -->
 ## 6.3 Virtual Channel Support | 虚通道（VC）支持
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -50949,7 +50916,6 @@ This section covers VC mechanisms from the system perspective. It addresses the 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -51002,7 +50968,6 @@ Some examples to illustrate:
 <a id="sec-6-3-2"></a>
 ## 6.3.2 TC/VC Mapping and Example Usage | TC/VC 映射与使用示例
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -51035,7 +51000,6 @@ TC 过滤的图形示例如 § 图 6-4 所示，其中 TC(2:6) 未被映射到�
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -51115,7 +51079,6 @@ TC[0:1] / TC7
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -51169,15 +51132,13 @@ TC[0:6] / TC7
 
 **图 6-5 TC 到 VC 映射示例**
 
-> <img src="figures/chapter_06/fig_0751_2_tight.png" width="700">
-
-
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_06/fig_0751_2_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -51246,7 +51207,6 @@ PCI Express 链路 RX
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -51279,7 +51239,6 @@ In a simple configuration, where only VC0 is supported, traffic differentiation 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -51317,6 +51276,7 @@ The following set of figures (§ Figure 6-7 and § Figure 6-8) illustrates traff
 
 > **Figure 6-7.** An Example of Differentiated Traffic Flow Through a Switch | 流经交换机的差异化流量流示例
 > **图 6-7.** 流经交换机的差异化流量流示例
+
 > <img src="figures/chapter_06/fig_0752_1_tight.png" width="700">
 
 <table>
@@ -51383,7 +51343,6 @@ OM14284
 <a id="sec-6-3-3-1"></a>
 ## 6.3.3.1 Traffic Flow and Switch Arbitration Model | 流量流与交换机仲裁模型
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -51416,7 +51375,6 @@ Switch arbitration model defines a required arbitration infrastructure and funct
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -51515,7 +51473,6 @@ The following two steps conceptually describe routing of traffic received by the
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 754 -->
 <table>
 <thead>
@@ -51593,15 +51550,13 @@ VC 0 / 第 1 个 VC / 低
 
 **图 6-9 VC ID 与优先级顺序——示例**
 
-> <img src="figures/chapter_06/fig_0754_1_tight.png" width="700">
-
-
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_06/fig_0754_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -51648,7 +51603,6 @@ Flow control credits are exchanged between two Ports connected to the same Link.
 
 <a id="sec-6-3-3-2"></a> <!-- 📄 Page 755 -->
 ## 6.3.3.2 VC Arbitration - Arbitration Between VCs | VC 仲裁——VC 之间的仲裁
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -51705,7 +51659,6 @@ WRR 方案的一个关键使用模型是支持 QoS 策略——通过使用不�
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -51759,7 +51712,6 @@ WRR 方案的一个关键使用模型是支持 QoS 策略——通过使用不�
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 756 -->
 <table>
 <thead>
@@ -51811,7 +51763,6 @@ The multi-Function arbitration model defines an optional arbitration infrastruct
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -51823,8 +51774,8 @@ The multi-Function arbitration model defines an optional arbitration infrastruct
 
 > **Figure 6-10.** Multi-Function Arbitration Model
 > **图 6-10.** 多功能仲裁模型
-> <img src="figures/chapter_06/fig_0757_1_tight.png" width="700">
 
+> <img src="figures/chapter_06/fig_0757_1_tight.png" width="700">
 
 <a id="sec-6-3-3-3"></a>
 ## 6.3.3.3 Port Arbitration - Arbitration Within VC | 端口仲裁 - VC 内部仲裁
@@ -51941,7 +51892,6 @@ Finally, if the MFVC Extended Capability structure supports VC Arbitration, this
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -52007,7 +51957,6 @@ However, as stated in this specification, if a Multi-Function Device supports TC
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -52054,7 +52003,6 @@ However, as stated in this specification, if a Multi-Function Device supports TC
 
 <a id="sec-6-3-4-1"></a>
 ## 6.3.4.1 Rules for Software Configuration | 软件配置规则
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -52128,7 +52076,6 @@ A Multi-Function Device that includes an MFVC Extended Capability structure prov
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -52205,7 +52152,6 @@ SVC 能力与 VC/MFVC 能力不兼容，且硬件机制确保对于给定的 Por
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 761 -->
 <table>
 <thead>
@@ -52270,7 +52216,6 @@ Transactions Pending 位 (事务挂起位) 提供了一种在每个 Function 基
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -52359,7 +52304,6 @@ Locked transaction sequences are generated by the Host CPU(s) as one or more rea
 <a id="sec-6-5-2"></a>
 ## 6.5.2 Initiation and Propagation of Locked Transactions - Rules | 锁定事务的发起和传播 — 规则
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -52412,7 +52356,6 @@ Note: This sort of split-lock access is not supported by PCI Express and softwar
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -52481,7 +52424,6 @@ A Root Complex is permitted to support locked transactions as a Requester. If lo
 <a id="sec-6-5-5"></a>
 ## 6.5.5 Root Complex and Lock - Rules | 根复合体与锁 — 规则
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -52531,7 +52473,6 @@ Note that this requirement applies to all possible sources of Requests within th
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -52569,7 +52510,6 @@ PCI Express 端点不支持锁。PCI Express 端点必须将 MRdLk 请求视为"
 <a id="sec-6-5-7"></a>
 ## 6.5.7 PCI Express Endpoints | PCI Express 端点
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -52598,7 +52538,6 @@ Conventional Reset includes all reset mechanisms other than Function Level Reset
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -52648,7 +52587,6 @@ In all form factors and system硬件 configurations, there must, at some level, 
 
 <a id="sec-6-6-1"></a>
 ## 6.6.1 Conventional Reset | 常规复位
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -52714,7 +52652,6 @@ The first set of rules addresses requirements for components and devices:
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -52791,7 +52728,6 @@ Note: This delay is analogous to the Trhfa parameter specified for PCI/PCI-X, an
 <a id="sec-6-6-1-cont2"></a>
 ## 6.6.1 Conventional Reset (continued) | 常规复位(续)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -52842,7 +52778,6 @@ begin Link training immediately after its hot reset completes. This behavior is 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -52910,7 +52845,6 @@ Additional parameters may be specified.
 
 <a id="sec-6-6-2"></a>
 ## 6.6.2 Function Level Reset (FLR) | 功能级复位 (FLR)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -53035,7 +52969,6 @@ FLR 按如下方式修改本规范所描述的功能状态: <!-- 📄 Page 769 -
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -53093,7 +53026,6 @@ Note that upon receipt of an FLR, a device Function may either clear all transac
 <a id="sec-6-6-2-cont2"></a>
 ## 6.6.2 Function Level Reset (FLR) (continued) | 功能级复位 (FLR) (续)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -53130,7 +53062,6 @@ Since FLR modifies Function state not described by this specification (in additi
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -53191,7 +53122,6 @@ PCI Express 架构旨在原生支持电缆、插卡 (add-in cards) 和模块的�
 <a id="sec-impl-note-stale-completions"></a>
 ## IMPLEMENTATION NOTE: AVOIDING DATA CORRUPTION FROM STALE COMPLETIONS | 实现说明:避免陈旧完成报文导致的数据损坏
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -53234,7 +53164,6 @@ FLR 会导致功能丢失对所有未完成 (outstanding) 非 Posted 请求的�
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -53342,7 +53271,6 @@ The Downstream Port must not change the state of an indicator unless commanded t
 
 <a id="sec-6-7-1"></a>
 ## 6.7.1 Elements of Hot-Plug | 热插拔 (Hot-Plug) 元素
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -53494,7 +53422,6 @@ The Power Indicator, which must be green in color, indicates the power state of 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -53665,7 +53592,6 @@ MRL（手动保持闩锁，Manually-operated Retention Latch）是一种手动�
 <a id="sec-6-7-1-3"></a>
 ## 6.7.1.3 MRL Sensor | MRL 传感器
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -53729,7 +53655,6 @@ If an MRL Sensor is implemented without a corresponding MRL Sensor input on the 
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -53773,7 +53698,6 @@ The current state of the electromechanical interlock must be reflected at all ti
 <a id="sec-6-7-1-5"></a>
 ## 6.7.1.5 Attention Button | 注意按钮
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -53810,7 +53734,6 @@ If an operation initiated by an Attention Button fails for any reason, it is rec
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -53867,7 +53790,6 @@ using either the software user interface or the Attention Button while a hot-plu
 <a id="sec-6-7-1-7"></a>
 ## 6.7.1.7 Slot Numbering | 插槽编号
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -53914,7 +53836,6 @@ The Slot Numbering Capability, as defined in the PCI-to-PCI Bridge Specification
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -54479,7 +54400,6 @@ Refer to the following register field descriptions for Hot-Plug Interrupt Contro
 <a id="sec-6-7-3"></a>
 ## 6.7.3 PCI Express Hot-Plug Events | PCI Express 热插拔事件
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -54541,7 +54461,6 @@ If enabled through the associated enable field, slot events must generate a soft
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -54582,7 +54501,6 @@ Refer to § Section 6.7.2 for the list of slot events and their associated regis
 
 <a id="sec-6-7-3-2"></a>
 ## 6.7.3.2 Command Completed Events | 命令完成事件
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -54637,7 +54555,6 @@ If enabled through the associated enable field, the completion of a command must
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -54686,7 +54603,6 @@ The Data Link Layer State Changed event must occur within 1 second of the event 
 
 <a id="sec-6-7-3-4-2"></a>
 ## 6.7.3.4 Software Notification of Hot-Plug Events | 热插拔事件的软件通知
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -54776,7 +54692,6 @@ Note that the Hot-Plug Controller generates the wakeup on behalf of the hot-plug
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -54883,7 +54798,6 @@ SFI Capability 能够屏蔽已接收的设备就绪状态 (Device Readiness Stat
 <a id="sec-6-7-4-1"></a>
 ### 6.7.4.1 SFI ERR_COR Event Signaling | SFI ERR_COR 事件信令
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -54918,7 +54832,6 @@ DPC 为 DL_Active 实现 ERR_COR 信令，而 SFI 为 SFI DLL State Changed 实�
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -54987,7 +54900,6 @@ SFI 配置访问方法 (Configuration Access Method, CAM) 提供了一种手段�
 <a id="sec-6-7-4-3"></a>
 ### 6.7.4.3 SFI CAM | SFI CAM
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -55030,7 +54942,6 @@ SFI Capability 能够屏蔽已接收的设备就绪状态 (Device Readiness Stat
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -55090,7 +55001,6 @@ When Configuration RRS Software Visibility is enabled, the SFI CAM still works c
 
 <a id="sec-6-7-4-5"></a>
 ### 6.7.4.5 SFI Suppression of Hot-Plug Surprise Functionality | SFI 对热插拔意外功能的抑制
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -55161,7 +55071,6 @@ Although SFI is not intended to be used by operating system software, it is reco
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -55198,7 +55107,6 @@ Some systems that include hot-plug capable Root Ports and Switches that are rele
 
 <a id="sec-6-7-6"></a>
 ### 6.7.6 Async Removal | 异步移除
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -55258,7 +55166,6 @@ Requester 可能会因已被接受但永远不会由被移除的 Completer 完�
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -55337,7 +55244,6 @@ DPC provides a robust mechanism for supporting async removal. The TLP stream cle
 
 §
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -55391,7 +55297,6 @@ DPC 提供了一种支持异步移除的健壮机制。TLP 流在触发 DPC 的�
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -55472,7 +55377,6 @@ add-in card 不得消耗超过系统所授予的功率。定义了六种向 add-
 <a id="sec-6-8-2"></a>
 ## 6.8.2 Device Power Considerations | 设备电源考量
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -55501,7 +55405,6 @@ The Power Limit mechanism is optional. Support is indicated by the Power Limit S
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -55560,7 +55463,6 @@ Out of Band Power Limit Enable 和 Out of Band Power Limit PM Sub State 值使�
 <a id="sec-6-9"></a> <!-- 📄 Page 790 -->
 ## 6.9 Slot Power Limit Control | 插槽电源限制控制
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -55597,7 +55499,6 @@ PCI Express 提供了一种机制，用于软件控制适配器 (adapter)（与�
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -55659,7 +55560,6 @@ The following rules cover the Slot Power Limit control mechanism:
 </table>
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 792 -->
 <table>
@@ -55744,7 +55644,6 @@ The following rules cover the Slot Power Limit control mechanism:
 </table>
 </div>
 
-
 ---
 
 <table> <!-- 📄 Page 793 -->
@@ -55795,7 +55694,6 @@ The following rules cover the Slot Power Limit control mechanism:
 <a id="sec-6-10"></a>
 ## 6.10 Root Complex Topology Discovery | 根复合体拓扑发现
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -55827,11 +55725,11 @@ A Root Complex may present one of the following topologies to configuration soft
 </table>
 </div>
 
-
 ---
 
 > **Figure 6-11.** Root Complex Represented as a Single Component | 根复合体表示为单一组件 <!-- 📄 Page 794 -->
 > **图 6-11.** 根复合体表示为单一组件
+
 > <img src="figures/chapter_06/fig_0794_1_tight.png" width="700">
 
 <table>
@@ -55883,13 +55781,13 @@ In order for software to correctly program arbitration and other control paramet
 
 > **Figure 6-12.** Root Complex Represented as Multiple Components | 根复合体表示为多个组件
 > **图 6-12.** 根复合体表示为多个组件
+
 > <img src="figures/chapter_06/fig_0794_2_tight.png" width="700">
 
 ---
 
 <a id="sec-6-11"></a> <!-- 📄 Page 795 -->
 ## 6.11 Link Speed Management | 链路速度管理
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -55948,7 +55846,6 @@ Note that this will take the Link to a DL_Down state and therefore cannot be don
 </table>
 </div>
 
-
 ---
 
 <a id="sec-6-12"></a>
@@ -55984,7 +55881,6 @@ RCiEP 中 ACS 的实现是允许的，但不是必需的。明确允许在单个
 </table>
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 796 -->
 <table>
@@ -56051,7 +55947,6 @@ ACS 绝不适用于 PCI Express-PCI 桥 Function 或根复合体事件收集器 
 </table>
 </div>
 
-
 ---
 
 <a id="sec-6-12-1"></a>
@@ -56096,7 +55991,6 @@ When enabled, the Downstream Port tests the Bus Number from the Requester ID of 
 
 <a id="sec-6-12-1-1"></a>
 ## 6.12.1.1 ACS Downstream Ports | ACS 下游端口
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -56167,7 +56061,6 @@ ACS P2P Request Redirect 与 ACS P2P Egress Control 和 ACS Direct Translated P2
 </table>
 </div>
 
-
 ---
 
 <table> <!-- 📄 Page 797 -->
@@ -56212,7 +56105,6 @@ ACS P2P Completion Redirect 不与控制请求的 ACS 控件交互。
 </table>
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 798 -->
 <table>
@@ -56290,7 +56182,6 @@ ACS P2P Egress Control 与 ACS P2P Request Redirect 和 ACS Direct Translated P2
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -56403,7 +56294,6 @@ This section applies to Multi-Function Device ACS Functions, with the exception 
 <a id="sec-6-12-1-2"></a> <!-- 📄 Page 800 -->
 ### 6.12.1.2 ACS Functions in SR-IOV Capable and Multi-Function Devices | SR-IOV 与多功能设备中的 ACS 功能
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -56515,7 +56405,6 @@ ACS P2P Egress Control 与 ACS P2P Request Redirect 和 ACS Direct Translated P2
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -56565,7 +56454,6 @@ No ACS capabilities are applicable, and the Function must not implement an ACS E
 <a id="sec-6-12-2"></a> <!-- 📄 Page 801 -->
 ### 6.12.2 Interoperability | 互操作性
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -56610,7 +56498,6 @@ If ACS Direct Translated P2P is enabled in a Port/Function, peer-to-peer Memory 
 </tbody>
 </table>
 </div>
-
 
 135. Not applicable for ACS Redirect between Functions of a multi-Function Root Complex Integrated Endpoint.
 
@@ -56726,7 +56613,6 @@ ACS Enhanced Capability 是一组额外的 ACS 控制机制，旨在提升 ACS �
 <a id="sec-6-12-5"></a> <!-- 📄 Page 804 -->
 ### 6.12.5 ACS Violation Error Handling | ACS 违规错误处理
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -56792,7 +56678,6 @@ ACS Enhanced Capability 引入的重定向机制可处理更多情况。带重�
 </table>
 </div>
 
-
 136. In all cases but one, the ACS component that detects the ACS Violation also operates as the Completer. The exception case is when Root Complex Redirected Request Validation logic disallows a redirected Request. If the redirected Request came through a Root Port, that Root Port must operate as the Completer. If the redirected Request came from a Root Complex Integrated Endpoint, the associated Root Complex Event Collector must operate as the Completer.
 
 [⬆️ 返回目录](#sec-6-0)
@@ -56834,7 +56719,6 @@ ACS Enhanced Capability 引入的重定向机制可处理更多情况。带重�
 <a id="sec-6-12-6"></a>
 ### 6.12.6 ACS Redirection Impacts on Ordering Rules | ACS 重定向对排序规则的影响
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -56875,7 +56759,6 @@ If ACS P2P Request Redirect and RC P2P Request Retargeting are not being used, t
 </tbody>
 </table>
 </div>
-
 
 138. In this section, "non-RO" is an abbreviation characterizing TLPs whose Relaxed Ordering Attribute field is not set.
 
@@ -56970,7 +56853,6 @@ If software enables ACS P2P Request Redirect, RC P2P Request Retargeting, or bot
 <a id="sec-6-13"></a> <!-- 📄 Page 807 -->
 ## 6.13 Alternative Routing-ID Interpretation (ARI) | 替代路由 ID 解释 (ARI)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -57009,7 +56891,6 @@ ARI 由一组新的可选能力和控制寄存器位控制。这些位提供：
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -57065,7 +56946,6 @@ ACS Direct Translated P2P 的目的是在使用地址转换服务 (ATS, Address 
 
 <a id="sec-6-13-cont"></a> <!-- 📄 Page 808 -->
 ## 6.13 Alternative Routing-ID Interpretation (ARI) — continued | 替代路由 ID 解释 (ARI) — 续
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -57138,7 +57018,6 @@ With an ARI Device, the Phantom Functions Supported field within each Function's
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -57179,7 +57058,6 @@ Extended Tag Field Enable 位、10-Bit Tag Requester Enable 位和 14-Bit Tag Re
 
 ### IMPLEMENTATION NOTE: ARI FORWARDING ENABLE BEING SET INAPPROPRIATELY | 实现说明：不恰当地设置 ARI Forwarding Enable
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -57208,7 +57086,6 @@ Following a hot-plug event below a Downstream Port, it is strongly recommended t
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -57246,7 +57123,6 @@ It is strongly recommended that firmware not have the ARI Forwarding Enable bit 
 <a id="sec-6-14"></a> <!-- 📄 Page 810 -->
 ## 6.14 Multicast Operations | 多播 (Multicast) 操作
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -57271,7 +57147,6 @@ Multicast Capability 结构定义了一个多播地址范围，将该范围划�
 </tbody>
 </table>
 </div>
-
 
 > **Figure 6-14.** Segmentation of the Multicast Address Range | 多播地址范围的划分
 > **图 6-14.** 多播地址范围的划分
@@ -57351,7 +57226,6 @@ The Multicast Group is extracted from the address in the TLP using any Function'
 <a id="sec-6-14-1-cont"></a> <!-- 📄 Page 811 -->
 ## 6.14.1 Multicast TLP Processing — continued | 多播 TLP 处理 — 续
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -57380,7 +57254,6 @@ Components next check the MC_Block_All and the MC_Block_Untranslated bits corres
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -57427,7 +57300,6 @@ For similar reasons, with Multicast-capable Switch components where the Upstream
 
 ### IMPLEMENTATION NOTE: MULTICAST WINDOW SIZE | 实现说明：多播窗口大小
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -57456,7 +57328,6 @@ Unless available address space is limited, resource allocation software may be a
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -57506,7 +57377,6 @@ No new ordering rules are defined for processing Multicast TLPs. All Multicast T
 
 ### IMPLEMENTATION NOTE: MULTICAST, ATS, AND REDIRECTION | 实现说明：多播、ATS 与重定向
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -57539,7 +57409,6 @@ ACS P2P Request Redirect 和 ACS Direct Translated P2P 机制提供了一种方�
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -57616,7 +57485,6 @@ For Multi-Function Upstream Switch Ports Multicast TLPs received by one Switch o
 <a id="sec-6-14-4"></a>
 ## 6.14.4 MC Blocked TLP Processing | MC Blocked TLP 处理
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -57657,7 +57525,6 @@ Downstream Port 的 MC_Overlay 机制适用于离开该 Port 的 TLP。Upstream 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -57746,7 +57613,6 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 <a id="sec-6-14-5-imp-1"></a> <!-- 📄 Page 815 -->
 ## Implementation Note: Multicast to Endpoints Without Multicast Capability | 实现注意事项:多播到不具备多播能力的端点
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -57781,7 +57647,6 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -57822,7 +57687,6 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 <a id="sec-6-14-5-imp-3"></a>
 ## Implementation Note: Multicast and Multi-Function Devices | 实现注意事项:多播与多功能设备
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -57853,7 +57717,6 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -57902,7 +57765,6 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 <a id="sec-6-14-5-imp-5"></a>
 ## Implementation Note: The Host as a Multicast Recipient | 实现注意事项:主机作为多播接收方
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -57937,7 +57799,6 @@ If the TLP with modified address contains the optional ECRC, the unmodified ECRC
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -58042,7 +57903,6 @@ AtomicOp 还支持无锁的统计计数器，例如设备可以原子地递增�
 <a id="sec-6-15-1"></a>
 ## 6.15.1 AtomicOp Use Models and Benefits | 6.15.1 AtomicOp 的使用模型与优势
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -58112,7 +57972,6 @@ Detailed protocol rules and requirements for AtomicOps are distributed throughou
 </table>
 </div>
 
-
 ---
 
 <a id="sec-6-15-2"></a>
@@ -58165,7 +58024,6 @@ As with other PCI Express Transactions, the support for peer-to-peer routing of 
 
 <a id="sec-6-15-3"></a> <!-- 📄 Page 820 -->
 ## 6.15.3 Root Complex Support for AtomicOps | 6.15.3 根复合体对 AtomicOp 的支持
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -58224,7 +58082,6 @@ If a Switch supports AtomicOp routing capability for any of its Ports, it must d
 </table>
 </div>
 
-
 ---
 
 <a id="sec-6-15-3-3"></a>
@@ -58278,7 +58135,6 @@ The RC register-based mechanism offers the advantage of working for all AtomicOp
 <a id="sec-6-15-4"></a>
 ## 6.15.4 Switch Support for AtomicOps | 交换机对 AtomicOp 的支持
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -58311,7 +58167,6 @@ DPA 定义了一组功率子状态 (power substate)，每个子状态都有一�
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -58381,7 +58236,6 @@ Function 初始化时，将在子状态 0 所关联的功率分配范围内运�
 <a id="sec-6-16"></a>
 ## 6.16 Dynamic Power Allocation (DPA) Capability | 动态功率分配 (DPA) 能力
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -58406,7 +58260,6 @@ Due to the variety of applications and the wide range of maximum power required 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -58445,7 +58298,6 @@ Power allocation for VFs is managed using their associated PF's DPA Capability, 
 
 <a id="sec-6-16-1"></a>
 ## 6.16.1 DPA Capability with Multi-Function Devices | 多功能设备的 DPA Capability
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -58492,7 +58344,6 @@ TLP 处理提示 (TLP Processing Hints, TPH) 是一种可选特性，它在 Requ
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -58530,7 +58381,6 @@ Functions that intend to target a TLP towards a specific processing resource suc
 <a id="sec-6-17-1"></a>
 ## 6.17.1 Processing Hints | 处理提示
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -58567,7 +58417,6 @@ TPH Requester Extended Capability 结构中的 ST Table Location 字段指示 Fu
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -58637,7 +58486,6 @@ TPH 能力是可选的规范性要求。每个能够生成带 TPH 的 Request TL
 <a id="sec-6-17-3"></a>
 ## 6.17.3 ST Modes of Operation | ST 操作模式
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -58670,7 +58518,6 @@ In the Device Specific Mode of operation, the assignment of the Steering Tags to
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -58722,7 +58569,6 @@ TPH 仅提供额外信息以实现针对内存空间 (Memory Space) 的 Request 
 <a id="sec-6-18"></a>
 ## 6.18 Latency Tolerance Reporting (LTR) Mechanism | 延迟容忍度报告 (LTR) 机制
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -58764,13 +58610,13 @@ LTR 支持通过 § 第 7 章 所述的报告寄存器和控制寄存器进行�
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
 
 > **Figure 6-15.** Latency Fields Format for LTR Messages | LTR 消息的延迟字段格式 <!-- 📄 Page 825 -->
 > **图 6-15.** LTR 消息的延迟字段格式
+
 > <img src="figures/chapter_06/fig_0825_1_tight.png" width="700">
 
 <table>
@@ -58807,7 +58653,6 @@ No-Snoop Latency（无窥探延迟）与 Snoop Latency（窥探延迟）：如 �
 [⬆️ 返回目录](#sec-6-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -58873,7 +58718,6 @@ It is strongly recommended that Endpoints send no more than two LTR Messages wit
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -58962,7 +58806,6 @@ The RC is permitted to delay processing of device Request TLPs provided it satis
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 827 -->
 <table>
 <thead>
@@ -58998,13 +58841,13 @@ Typically, the Link will be in ASPM L1, and, if Clock Power Management (Clock PM
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
 
 > **Figure 6-16.** CLKREQ# and Clock Power Management | CLKREQ# 与时钟电源管理
 > **图 6-16.** CLKREQ# 与时钟电源管理
+
 > <img src="figures/chapter_06/fig_0827_1.png" width="700">
 
 <table>
@@ -59063,7 +58906,6 @@ LTR 延迟语义反映了设备所看到的可容忍延迟，按以下一种或�
 
 > <img src="figures/chapter_06/fig_0828_1_tight.png" width="700">
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -59112,7 +58954,6 @@ Note that LTR may be enabled in environments where not all Endpoints support LTR
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -59180,8 +59021,8 @@ OBFF 消息使用消息路由 (Message Routing) 100b,即"Local - Terminate at Re
 
 > **Figure 6-18.** Codes and Equivalent WAKE# Patterns | 代码与等效 WAKE# 模式
 > **图 6-18.** 代码与等效 WAKE# 模式
-> <img src="figures/chapter_06/fig_0830_1_tight.png" width="700">
 
+> <img src="figures/chapter_06/fig_0830_1_tight.png" width="700">
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -59216,7 +59057,6 @@ OBFF 指示反映中央资源电源管理 (Power Management) 状态的转换:当
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -59250,8 +59090,8 @@ It is recommended that Endpoints not assume CPU Active or OBFF windows will rema
 
 > **Figure 6-19.** Example Platform Topology Showing a Link Where OBFF is Carried by Messages | 展示 OBFF 由消息承载的链路的示例平台拓扑
 > **图 6-19.** 展示 OBFF 由消息承载的链路的示例平台拓扑
-> <img src="figures/chapter_06/fig_0831_1_tight.png" width="700">
 
+> <img src="figures/chapter_06/fig_0831_1_tight.png" width="700">
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -59302,7 +59142,6 @@ When a Switch is propagating OBFF indications Downstream, it is strongly encoura
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -59341,7 +59180,6 @@ Downstream Ports can be configured to transmit OBFF Messages in two ways, which 
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 832 -->
 <table>
 <thead>
@@ -59374,7 +59212,6 @@ When enabling Ports for OBFF, it is recommended that all Upstream Ports be enabl
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -59419,7 +59256,6 @@ When enabling Ports for OBFF, it is recommended that all Upstream Ports be enabl
 
 <a id="sec-6-20"></a>
 ## 6.20 PASID | PASID (进程地址空间标识符)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -59471,7 +59307,6 @@ PASID 的使用仅在明确使能时方可进行。
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -59589,6 +59424,7 @@ A TLP may contain at most one PASID TLP Prefix.
 
 > **Figure 6-20.** PASID TLP Prefix | PASID TLP Prefix <!-- 📄 Page 834 -->
 > **图 6-20.** PASID TLP Prefix
+
 > <img src="figures/chapter_06/fig_0834_1_tight.png" width="700">
 
 **Table 6-15. PASID TLP Prefix | 表 6-15. PASID TLP Prefix**
@@ -59601,7 +59437,6 @@ A TLP may contain at most one PASID TLP Prefix.
 | Byte 1 bit 7 | Privileged Mode Requested - If Set indicates a Privileged Mode entity in the Endpoint is issuing the Request, If Clear, indicates a Non-Privileged Mode entity in the Endpoint is issuing the Request. Usage of this bit is specified in § Section 6.20.2.4. |
 | Byte 1 bit 6 | Execute Requested - If Set indicates the Endpoint is requesting Execute Permission. If Clear, indicates the Endpoint is not requesting Execute Permission. Usage of this bit is specified in § Section 6.20.2.3. |
 | Byte 1 bit 3 : Byte 3 bit 0 | Process Address Space ID (PASID) - This field contains the PASID value associated with the TLP. Usage of this field is defined in § Section 6.20.2.2. |
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -59647,7 +59482,6 @@ PASID 字段宽度为 20 位。端点 (Endpoint) 和根复合体 (Root Complex) 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -59711,7 +59545,6 @@ For address translation related TLPs, usage of this field is defined in Address 
 <a id="sec-6-20-2-3"></a>
 ## 6.20.2.3 Execute Requested | Execute Requested (请求执行权限)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -59744,7 +59577,6 @@ For Root Complexes, the following rules apply:
 </tbody>
 </table>
 </div>
-
 
 <table>
 <thead>
@@ -59790,7 +59622,6 @@ For Root Complexes, the following rules apply:
 [⬆️ 返回目录](#sec-6-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 836 -->
 <table>
@@ -59838,7 +59669,6 @@ For address translation related TLPs, usage of this bit is defined in Address Tr
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -59940,7 +59770,6 @@ For address translation related TLPs, usage of this bit is defined in Address Tr
 <a id="sec-6-21-1"></a>
 ### 6.21.1 Introduction | 概述
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -60009,7 +59838,6 @@ PTM 定义了以下角色：
 </table>
 </div>
 
-
 >>> **Figure 6-21.** Example System Topologies using PTM
 > **图 6-21.** 使用 PTM 的示例系统拓扑
 >>> <img src="figures/chapter_06/fig_0838_1_tight.png" width="700"> <!-- 📄 Page 838 -->
@@ -60063,7 +59891,6 @@ sends PTM Requests to the Downstream Port on the same Link, which acts on behalf
 >>> **Figure 6-22.** Precision Time Measurement Link Protocol
 > **图 6-22.** 精确时间测量链路协议
 >>> <img src="figures/chapter_06/fig_0839_1_tight.png" width="700">
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -60134,7 +59961,6 @@ t1、t2、t3、t4 和 t2' 表示在 PTM 对话期间采集的时间戳，如图 
 </table>
 </div> <!-- 📄 Page 840 -->
 
-
 ---
 
 <table>
@@ -60168,7 +59994,6 @@ specific.
 </table> <!-- 📄 Page 841 -->
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -60236,7 +60061,6 @@ to software.
 </tbody>
 </table>
 </div>
-
 
 >>> **Figure 6-23.** Precision Time Measurement Example
 > **图 6-23.** 精确时间测量示例
@@ -60365,7 +60189,6 @@ Data Byte 3 contains Propagation Delay [7:0] (least significant byte)
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -60428,7 +60251,6 @@ compatibly interpret the Propagation Delay value.
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -60522,7 +60344,6 @@ successive PTM dialogs have been completed successfully and without replays.
 > **图 6-24.** PTM 请求者操作
 >>> <img src="figures/chapter_06/fig_0844_1_tight.png" width="700">
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -60570,7 +60391,6 @@ successive PTM dialogs have been completed successfully and without replays.
 </tbody>
 </table>
 </div> <!-- 📄 Page 845 -->
-
 
 ---
 
@@ -60721,7 +60541,6 @@ Responder must not exceed that reported in the Local Clock Granularity field of 
 <a id="sec-6-21-3-3"></a>
 #### 6.21.3.3 PTM Time Source Role - Rules Specific to Switches | PTM 时间源角色 — 交换机特定规则
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -60789,7 +60608,6 @@ granularity of this clock as defined in the PTM Capabilities structure (§ Secti
 </table>
 </div> <!-- 📄 Page 847 -->
 
-
 ---
 
 <table>
@@ -60849,7 +60667,6 @@ a particular physical event if timestamps are captured in the higher layers.
 <a id="sec-6-22"></a>
 ## 6.22 Readiness Notifications (RN) | 就绪通知 (RN)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -60889,7 +60706,6 @@ however such software/firmware mechanisms are outside the scope of this specific
 </tbody>
 </table>
 </div> <!-- 📄 Page 848 -->
-
 
 ---
 
@@ -61008,7 +60824,6 @@ below it, then this hybrid approach for determining Configuration Ready is recom
 </table> <!-- 📄 Page 849 -->
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -61135,7 +60950,6 @@ DRS 消息协议要求包括以下内容：
 </table>
 </div> <!-- 📄 Page 850 -->
 
-
 ---
 
 <a id="sec-6-22-1"></a>
@@ -61245,7 +61059,6 @@ Functions are permitted to transmit DRS Messages before they have been assigned 
 <a id="sec-6-22-3"></a>
 ## 6.22.3 FRS Queuing | FRS 队列
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -61293,7 +61106,6 @@ FRS 报文队列必须满足以下要求:
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -61315,10 +61127,6 @@ It is only permitted to apply EA to certain functions, based on the hierarchical
 <tbody>
 <tr>
 <td>
-
-> **Figure 6-26.** Example Illustrating Application of Enhanced Allocation
-> **图 6-26.** 增强分配应用示例
-> <img src="figures/chapter_06/fig_0853_1_tight.png" width="700">
 
 Figure 6-26 illustrates an example topology that shows where Enhanced Allocation is permitted to be used:
 
@@ -61345,7 +61153,6 @@ Key (with colors):
 </td>
 <td style="background-color:#e8e8e8">
 
-
 图 6-26 给出了一个示例拓扑，说明在哪些位置允许使用增强分配 (Enhanced Allocation):
 
 - Si component A:Type 0 Function、Type 0 Function,桥在配置空间中未暴露
@@ -61368,11 +61175,16 @@ Key (with colors):
 - 此方框内的 Function 必须永久连接到主桥 (Host Bridge)
 - 桥 Function 在其 Secondary 侧具有非 EA Function 的情况下，允许在其 Primary Bus 上使用 EA,但不允许在 Secondary Bus 上使用 EA
 
-<img src="figures/chapter_06/fig_0853_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-26.** Example Illustrating Application of Enhanced Allocation
+>
+> **图 6-26.** 增强分配应用示例
+
+> <img src="figures/chapter_06/fig_0853_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -61396,7 +61208,6 @@ Any resource allocated using EA must not overlap with any other resource allocat
 
 <a id="sec-6-24"></a>
 ## 6.24 Emergency Power Reduction State | 紧急降功耗状态
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -61430,7 +61241,6 @@ Function 进入或退出此状态既可以是自主 (autonomously) 的，也可�
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -61490,6 +61300,7 @@ When software initializes a PCI Hierarchy, it assigns unique Bus and Device numb
 
 > **Figure 6-27.** Emergency Power Reduction State: Example Add-in Card
 > **图 6-27.** 紧急降功耗状态：附加卡示例
+
 > <img src="figures/chapter_06/fig_0857_1_tight.png" width="700">
 
 § Figure 6-27 shows an example multi-Device add-in card supporting Emergency Power Reduction. Note that Device C does not support the Emergency Power Reduction State. Device C might be a Switch that fans out to Devices A and B.
@@ -61624,7 +61435,6 @@ In mechanism 5, VF information is configured by software (probably the VI). Both
 <a id="sec-6-26"></a>
 ## 6.26 Flattening Portal Bridge (FPB) | 扁平化门户桥 (FPB)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -61658,7 +61468,6 @@ For ARI Functions associated with an Upstream Port, the Routing ID consists of a
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -61679,38 +61488,41 @@ For ARI Functions associated with an Upstream Port, the Routing ID consists of a
 
 A bridge that implements the FPB Capability can itself also be referred to as an FPB. The FPB Capability can be applied to any logical bridge, as illustrated in § Figure 6-28.
 
-> **Figure 6-28.** FPB High Level Diagram and Example Topology
-> **图 6-28.** FPB 高层框图与示例拓扑
-> <img src="figures/chapter_06/fig_0862_1_tight.png" width="700">
-
 FPB changes the way Bus Numbers are consumed by Switches to reduce waste, by "flattening" the way Bus Numbers are used inside of Switches and by Downstream Ports (see § Figure 6-29).
 
-> **Figure 6-29.** Example Illustrating "Flattening" of a Switch
-> **图 6-29.** 交换机“扁平化”示例
-> <img src="figures/chapter_06/fig_0863_1_tight.png" width="700">
-
 FPB defines mechanisms for system software to allocate Routing IDs and Memory Space resources in non-contiguous ranges, enabling system software to assign pools of these resources from which it can allocate "bins" to Functions below the FPB. This is done using a bit vector where each bit when Set assigns a corresponding range of resources to the Secondary Side of the bridge (see § Figure 6-30).
-
-> **Figure 6-30.** Vector Mechanism for Address Range Decoding
-> **图 6-30.** 地址范围解码的向量机制
-> <img src="figures/chapter_06/fig_0864_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
 实现 FPB Capability 的桥本身也可称为 FPB。FPB Capability 可应用于任何逻辑桥，如图 6-28 所示。
 
-
 FPB 通过"扁平化"交换机 (Switch) 内部以及下游端口 (Downstream Port) 使用 Bus Number 的方式来减少 Switch 对 Bus Number 的浪费(参见图 6-29)。
-
 
 FPB 定义了系统软件在不连续范围内分配 Routing ID 和 Memory Space 资源的机制，使系统软件可以分配这些资源的资源池，并从中将"桶 (bins)"分配给 FPB 下方的 Function。这是通过使用一个位向量 (bit vector) 实现的，其中每一位被置位时，会将相应的资源范围分配给桥的 Secondary 侧(参见图 6-30)。
 
-<img src="figures/chapter_06/fig_0862_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-28.** FPB High Level Diagram and Example Topology
+>
+> **图 6-28.** FPB 高层框图与示例拓扑
+
+> <img src="figures/chapter_06/fig_0862_1_tight.png" width="700">
+
+> **Figure 6-29.** Example Illustrating "Flattening" of a Switch
+>
+> **图 6-29.** 交换机“扁平化”示例
+
+> <img src="figures/chapter_06/fig_0863_1_tight.png" width="700">
+
+> **Figure 6-30.** Vector Mechanism for Address Range Decoding
+>
+> **图 6-30.** 地址范围解码的向量机制
+
+> <img src="figures/chapter_06/fig_0864_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -61722,6 +61534,7 @@ FPB is defined to allow both the non-FPB and FPB mechanisms to operate simultane
 
 > **Figure 6-31.** Relationship between FPB and non-FPB Decode Mechanisms
 > **图 6-31.** FPB 与非 FPB 解码机制的关系
+
 > <img src="figures/chapter_06/fig_0865_1_tight.png" width="700">
 
 It is important to recognize that, although FPB adds additional ways for a specific bridge to decode a given TLP, FPB does not change anything about the fundamental ways that bridges operate within the Switch and Root Complex architectural structures. FPB uses the same architectural concepts to provide management mechanisms for three different resource types:
@@ -61744,7 +61557,6 @@ The following rules apply when any of the FPB mechanisms are used:
 
 <a id="sec-6-26-2"></a> <!-- 📄 Page 851 --> <!-- 📄 Page 852 --> <!-- 📄 Page 853 --> <!-- 📄 Page 854 --> <!-- 📄 Page 855 --> <!-- 📄 Page 856 --> <!-- 📄 Page 857 --> <!-- 📄 Page 858 --> <!-- 📄 Page 859 --> <!-- 📄 Page 860 --> <!-- 📄 Page 861 --> <!-- 📄 Page 862 --> <!-- 📄 Page 863 --> <!-- 📄 Page 864 --> <!-- 📄 Page 865 -->
 ## 6.26.2 Hardware and Software Requirements | 硬件与软件要求
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -61794,7 +61606,6 @@ The following rules apply when any of the FPB mechanisms are used:
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -61856,6 +61667,7 @@ When ARI is not enabled, the FPB RID mechanism can be applied with different gra
 
 > **Figure 6-32.** Routing IDs (RIDs) and Supported Granularities
 > **图 6-32.** Routing ID（RID）与支持的粒度
+
 > <img src="figures/chapter_06/fig_0867_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
@@ -61864,7 +61676,6 @@ When ARI is not enabled, the FPB RID mechanism can be applied with different gra
 
 <a id="sec-6-26-2-fpb-switch"></a> <!-- 📄 Page 868 -->
 ## 6.26.2 (续) Switch 上游端口相关 FPB 规则 | FPB Rules for Switch Upstream Ports
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -61918,7 +61729,6 @@ This is a special case, but the concept is not unique to FPB, and is a reflectio
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -61982,6 +61792,7 @@ FPB MEM Low 机制可以以不同的粒度应用，粒度可由系统软件通�
 
 > **Figure 6-33.** Addresses in Memory Below 4 GB and Effect of Granularity
 > **图 6-33.** 4 GB 以下内存地址及粒度的影响
+
 > <img src="figures/chapter_06/fig_0869_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
@@ -61990,7 +61801,6 @@ FPB MEM Low 机制可以以不同的粒度应用，粒度可由系统软件通�
 
 <a id="sec-6-26-2-fpb-mem-high"></a> <!-- 📄 Page 870 -->
 ## 6.26.2 (续) FPB MEM High 机制规则 | FPB MEM High Mechanism Rules
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -62042,7 +61852,6 @@ The following rules apply to the FPB MEM High mechanism:
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -62125,7 +61934,6 @@ FPB 使用位向量机制来解码路由 ID (Routing ID) 范围以及 4 GB 以�
 <a id="sec-6-26-2-impl-note-hw-sw"></a> <!-- 📄 Page 872 -->
 ## 6.26.2 (续) 实现说明:FPB 的硬件与软件考量 | IMPLEMENTATION NOTE: HARDWARE AND SOFTWARE CONSIDERATIONS FOR FPB
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -62180,7 +61988,6 @@ FPB 包含为 Requester ID 和内存空间启用不连续资源范围分配/再�
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -62256,7 +62063,6 @@ PCI Express 的 VPD 与 [PCI-3.0] 中的定义一致。该定义反过来又基�
 <a id="sec-6-27-vpd-intro"></a>
 ## 6.27 (续) VPD 标签与示例 | VPD Tags and Example
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -62297,7 +62103,6 @@ A small example of the resource data type tags used in a typical VPD is shown in
 </tbody>
 </table>
 </div>
-
 
 **Table 6-21. Resource Data Type Flags for a Typical VPD | 表 6-21. 典型 VPD 的资源数据类型标志**
 
@@ -62372,6 +62177,7 @@ VPD 关键字分为两类:只读字段和读/写字段。除非另有说明，�
 
 > **Figure 6-34.** VPD Format
 > **图 6-34.** VPD 格式
+
 > <img src="figures/chapter_06/fig_0874_1_tight.png" width="700">
 
 **Table 6-22. Example of Add-in Card Serial Number | 表 6-22. 插卡序列号示例**
@@ -62452,7 +62258,6 @@ VPD 包含在四种类型的大型和小型 Resource Data Tag 中。以下标签
 <a id="sec-6-27-2-1"></a>
 ### 6.27.2.1 VPD Large and Small Resource Data Tags | VPD 大资源和小资源数据标签
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -62493,7 +62298,6 @@ VPD 包含在四种类型的大型和小型 Resource Data Tag 中。以下标签
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -62569,7 +62373,6 @@ The following is an example of a typical VPD.
 
 <a id="sec-6-27-2-4"></a>
 ### 6.27.2.4 VPD Example | VPD 示例
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -62668,7 +62471,6 @@ The following is an example of a typical VPD.
 </table>
 </div>
 
-
 ---
 
 <a id="sec-6-28"></a> <!-- 📄 Page 878 -->
@@ -62715,6 +62517,7 @@ An enclosure is any platform, box, rack, or set of boxes that contain one or mor
 
 > **Figure 6-35.** Example NPEM Configuration using a Downstream Port
 > **图 6-35.** 使用下行端口的 NPEM 配置示例
+
 > <img src="figures/chapter_06/fig_0879_1_tight.png" width="700">
 
 <table>
@@ -62742,8 +62545,8 @@ Figure 6-36 shows an example configuration with the NPEM capability located in t
 
 > **Figure 6-36.** Example NPEM Configuration using an Upstream Port
 > **图 6-36.** 使用上行端口的 NPEM 配置示例
-> <img src="figures/chapter_06/fig_0880_1_tight.png" width="700">
 
+> <img src="figures/chapter_06/fig_0880_1_tight.png" width="700">
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -62774,9 +62577,9 @@ This specification defines the software interface provided by the NPEM capabilit
 </table>
 </div>
 
-
 > **Figure 6-37.** NPEM Command Flow
 > **图 6-37.** NPEM 命令流程
+
 > <img src="figures/chapter_06/fig_0881_1.png" width="700">
 
 <table>
@@ -62867,7 +62670,6 @@ Table 6-27 shows an example of NPEM states and a possible meaning that some encl
 
 >>> **IMPLEMENTATION NOTE:** 软件轮询 NPEM 命令完成 (SOFTWARE POLLING OF NPEM COMMAND COMPLETED)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -62900,7 +62702,6 @@ For the case where an NPEM command has not completed when software polls the bit
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -62972,7 +62773,6 @@ FLR 启动后，Function 必须在 100 ms 内完成 FLR。如果软件在 Transa
 
 > **IMPLEMENTATION NOTE:** AVOIDING ISSUES WITH PENDING TRANSACTIONS <!-- 📄 Page 884 -->
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -63030,7 +62830,6 @@ When an FLR is initiated, the targeted Function must behave as follows:
 </table>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -63057,7 +62856,6 @@ The Transactions Pending (TP) bit indicates that the Function has issued one or 
 ---
 
 >>> **IMPLEMENTATION NOTE:** AVOIDING ISSUES WITH PENDING TRANSACTIONS
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -63101,7 +62899,6 @@ FLR 会导致 Function 失去对任何挂起 (outstanding non-posted) 事务的�
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -63167,7 +62964,6 @@ It is permitted to use DOE when a Function is in non-D0 states, although it is p
 
 > **IMPLEMENTATION NOTE:** SUPPORTING MULTIPLE HARDWARE/SOFTWARE BINDINGS <!-- 📄 Page 885 --> <!-- 📄 Page 886 --> <!-- 📄 Page 887 -->
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -63205,9 +63001,9 @@ Alternatively, for CMA/SPDM and related use cases, the optional Connection ID me
 </table>
 </div>
 
-
 > **Figure 6-38.** Stack Diagram Illustration of Multiple Sessions and Connections
 > **图 6-38.** 多会话与连接的分层结构示意图
+
 > <img src="figures/chapter_06/fig_0887_1_tight.png" width="700">
 
 <table>
@@ -63235,6 +63031,7 @@ In each case, two distinct SPDM uses are shown, A and B, and within each group, 
 
 > **Figure 6-39.** Example Showing Relationships of Software and Hardware Elements
 > **图 6-39.** 软件与硬件要素关系示例
+
 > <img src="figures/chapter_06/fig_0888_1_tight.png" width="700">
 
 ---
@@ -63267,6 +63064,7 @@ Data objects must consist of 2 DW to 256K DW, as shown in Figure 6-40.
 
 > **Figure 6-40.** DOE Data Object Format
 > **图 6-40.** DOE 数据对象格式
+
 > <img src="figures/chapter_06/fig_0889_1_tight.png" width="700">
 
 <table>
@@ -63294,6 +63092,7 @@ The first DW of a data object must be formatted as defined in Table 6-28 and ill
 
 > **Figure 6-41.** DOE Data Object Header 1
 > **图 6-41.** DOE 数据对象头 1
+
 > <img src="figures/chapter_06/fig_0889_2_tight.png" width="700">
 
 **Table 6-28 DOE Data Object Header 1**
@@ -63335,6 +63134,7 @@ The Second DW of a data object must be formatted as defined in Table 6-29 and il
 
 > **Figure 6-42.** DOE Data Object Header 2
 > **图 6-42.** DOE 数据对象头 2
+
 > <img src="figures/chapter_06/fig_0889_1.png" width="700">
 
 ---
@@ -63352,7 +63152,6 @@ The Second DW of a data object must be formatted as defined in Table 6-29 and il
 |--------------|-------------|
 | 17:0 | Length — 所传输数据对象的长度，以 DW 为单位，包括数据对象头的 2 DW。编码方式为：值 0 0002h 表示 2 DW，值 0 0000h 表示 2^18 DW。值 0 0001h 不允许。 |
 | 29:18 | Connection ID — 对于使用 Connection ID 的数据对象类型，此字段包含 Connection ID。对于所有其他数据对象类型，此字段为保留 (Reserved)。 |
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -63405,9 +63204,9 @@ The DOE Discovery feature must be implemented, and provides a means for software
 </table>
 </div>
 
-
 > **Figure 6-43.** DOE Discovery Request Data Object Contents (3rd DW)
 > **图 6-43.** DOE Discovery 请求数据对象内容（第 3 个 DW）
+
 > <img src="figures/chapter_06/fig_0890_1_tight.png" width="700">
 
 **Table 6-30 DOE Discovery Request Data Object Contents (3rd DW)**
@@ -63440,10 +63239,6 @@ The DOE Discovery feature must be implemented, and provides a means for software
 <tr>
 <td>
 
-> **Figure 6-44.** DOE Discovery Response Data Object Contents (3rd DW)
-> **图 6-44.** DOE Discovery 响应数据对象内容（第 3 个 DW）
-> <img src="figures/chapter_06/fig_0891_1_tight.png" width="700">
-
 **Table 6-31. DOE Discovery Response Data Object Contents (3rd DW) | 表 6-31. DOE 发现响应数据对象内容（第 3 个 DW）**
 
 | Bit Location | Description |
@@ -63465,11 +63260,16 @@ The DOE Discovery feature must be implemented, and provides a means for software
 | 23:16 | Data Object Type（数据对象类型） – 标识与 DOE 发现请求中所提供 Index 值相关联的数据对象类型的身份。<br>PCI-SIG 定义的 DOE Discovery 数据对象类型必须在索引 00h 处实现。<br>用于其他数据对象类型的索引值是实现特定的，本规范未定义其含义。<br>当 Vendor ID 值为 FFFFh 时未定义。 |
 | 31:24 | Next Index（下一索引） – 指示下一个 DOE Discovery 索引值。如果响应的 DOE 实例支持索引大于所接收到的 DOE Discovery Request 中所指示索引的条目，则必须将所查询的索引加 1 并将结果值返回到本字段中。<br>必须为 00h 以指示最后一个条目。<br>当 Vendor ID 值为 FFFFh 时未定义。 |
 
-<img src="figures/chapter_06/fig_0891_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-44.** DOE Discovery Response Data Object Contents (3rd DW)
+>
+> **图 6-44.** DOE Discovery 响应数据对象内容（第 3 个 DW）
+
+> <img src="figures/chapter_06/fig_0891_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -63477,7 +63277,6 @@ The DOE Discovery feature must be implemented, and provides a means for software
 
 <a id="sec-6-30-1-1-4dw"></a> <!-- 📄 Page 892 -->
 ## 6.30.1.1 DOE Discovery Feature (4th DW) | DOE 发现功能（第 4 个 DW）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -63549,7 +63348,6 @@ PCI-SIG 定义的数据对象类型在 § Table 6-33 中定义。
 > <img src="figures/chapter_06/fig_0892_1.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -63640,7 +63438,6 @@ DOE 实例必须仅在接收到 Async Message GET 后才返回 Async Message REQ
 <a id="sec-6-30-2"></a> <!-- 📄 Page 894 -->
 ## 6.30.2 Operation | 运行
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -63722,7 +63519,6 @@ DOE 错误涵盖 DOE 自身运行中的错误，但如下所述，不包括与�
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -63790,7 +63586,6 @@ DOE Busy 位可用于指示 DOE 响应者暂时无法接受数据对象。DOE �
 <a id="sec-6-30-3"></a> <!-- 📄 Page 896 -->
 ## 6.30.3 Interrupt Generation | 中断生成
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -63824,7 +63619,6 @@ DOE 实例被允许支持 DOE 中断的生成，这由 DOE Capabilities 寄存�
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -63842,13 +63636,6 @@ DOE 实例被允许支持 DOE 中断的生成，这由 DOE Capabilities 寄存�
 <tbody>
 <tr>
 <td>
-
-> **Figure 6-46.** CMA-SPDM as Part of a Layered Architecture
-> **图 6-46.** 作为分层架构组成部分的 CMA-SPDM
-
-> <img src="figures/chapter_06/fig_0898_1_tight.png" width="700">
-
-> <img src="figures/chapter_06/fig_0897_1.png" width="700">
 
 Component Measurement and Authentication/SPDM (CMA-SPDM) defines optional security features based on the adaptation of the data objects and underlying protocol defined in [SPDM]. These provide mechanisms to perform security exchanges (where this term is used generically to refer to all defined capabilities of [SPDM]) with a component, or Device/Function. It is intended that CMA-SPDM inherit all new capabilities of [SPDM] as that specification is enhanced, and identifiable by the versioning mechanisms defined for [SPDM]. CMA-SPDM is part of a layered architecture intended to support a consistent and structured approach to security (see § Figure 6-46).
 
@@ -63889,11 +63676,16 @@ CMA-SPDM 可在多种场景下使用，例如：
 
 CMA-SPDM 安全特性的高级概述及其相关 PCIe 特定要求将在以下各节中给出，而 CMA-SPDM 所用安全交换的基础架构、协议及消息定义在 [SPDM] 中定义。CMA-SPDM 安全特性中在请求者和响应者之间交换的消息被称为 CMA-SPDM 消息。
 
-<img src="figures/chapter_06/fig_0898_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-46.** CMA-SPDM as Part of a Layered Architecture
+>
+> **图 6-46.** 作为分层架构组成部分的 CMA-SPDM
+
+> <img src="figures/chapter_06/fig_0898_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -63901,7 +63693,6 @@ CMA-SPDM 安全特性的高级概述及其相关 PCIe 特定要求将在以下�
 
 <a id="sec-6-31-impl-note-1"></a> <!-- 📄 Page 898 -->
 ### IMPLEMENTATION NOTE: UNDERSTANDING AND IMPLEMENTING CMA-SPDM | 实现说明：理解与实现 CMA-SPDM
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -63991,14 +63782,15 @@ CMA/SPDM 的应用众多且多样化。对于复杂环境，安全身份供应�
 
 > **Figure 6-47.** Example System Showing Multiple Access Mechanisms
 > **图 6-47.** 展示多种访问机制的示例系统
+
 > <img src="figures/chapter_06/fig_0900_1.png" width="700">
 
 > **Figure 6-48.** Example Add-In-Card Supporting CMA-SPDM
 > **图 6-48.** 支持 CMA-SPDM 的附加卡示例
+
 > <img src="figures/chapter_06/fig_0901_1_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -64173,7 +63965,6 @@ Removed
 <a id="sec-6-31-3"></a>
 ## 6.31.3 CMA-SPDM Rules | CMA-SPDM 规则
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -64240,10 +64031,10 @@ Some components provide a debug mode where a debugger is granted access to hardw
 
 > **Figure 6-49.** Byte Mapping of SPDM Messages Including Example Payload
 > **图 6-49.** SPDM 消息的字节映射（含示例有效负载）
+
 > <img src="figures/chapter_06/fig_0904_1_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -64281,11 +64072,6 @@ An FLR to a Function for which there is an established secure session must not c
 
 For the Secured CMA-SPDM data object type or Secured CMA-SPDM with connection ID data object type, the Secured CMA-SPDM message payloads must start from "Data Object DW 0". The Secured CMA-SPDM message payloads must follow the Secured CMA-SPDM specification Secure Message fields definition, starting with Session ID. "Sequence Number" field must be absent (S=0). "Random Data" field must be absent (R=0). The "Application Data" field must be the in-session SPDM message. The Byte mapping of Secured CMA-SPDM Messages is shown in § Figure 6-50. If required, Secured CMA-SPDM Message payloads must be padded with 0's to maintain DW alignment, when using DOE.
 
-> **Figure 6-50.** Byte Mapping of Secured CMA-SPDM Messages Including Example Payload
-
-> <img src="figures/chapter_06/fig_0905_1_tight.png" width="700">
-
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -64299,18 +64085,20 @@ For the Secured CMA-SPDM data object type or Secured CMA-SPDM with connection ID
 
 对于安全 CMA-SPDM 数据对象类型或带连接 ID 的安全 CMA-SPDM 数据对象类型，安全 CMA-SPDM 消息有效负载必须从"Data Object DW 0"开始。安全 CMA-SPDM 消息有效负载必须遵循安全 CMA-SPDM 规范的安全消息字段定义，从 Session ID 开始。"Sequence Number"字段必须不存在(S=0)。"Random Data"字段必须不存在(R=0)。"Application Data"字段必须是会话内 SPDM 消息。安全 CMA-SPDM 消息的字节映射如 § Figure 6-50 所示。如有需要，在使用 DOE 时，安全 CMA-SPDM 消息有效负载必须用 0 填充以保持 DW 对齐。
 
-> **图 6-50.** 安全 CMA-SPDM 消息的字节映射（含示例有效负载）
-
-<img src="figures/chapter_06/fig_0905_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+> **Figure 6-50.** Byte Mapping of Secured CMA-SPDM Messages Including Example Payload
+>
+> **图 6-50.** 安全 CMA-SPDM 消息的字节映射（含示例有效负载）
+
+> <img src="figures/chapter_06/fig_0905_1_tight.png" width="700">
+
 [⬆️ 返回目录](#sec-6-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 906 -->
 <table>
@@ -64373,7 +64161,6 @@ For the Secured CMA-SPDM data object type or Secured CMA-SPDM with connection ID
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -64415,7 +64202,6 @@ As with AtomicOps (See § Section 6.15), the use model for DMWr requires that, f
 [⬆️ 返回目录](#sec-6-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 907 -->
 <table>
@@ -64483,7 +64269,6 @@ DMWr 请求的目标如果不是 DMWr Completer(即 DMWr Completer Supported 位
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -64562,7 +64347,6 @@ The following requirements apply to Root Complexes and Switches that support DMW
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 909 -->
 <table>
 <thead>
@@ -64604,7 +64388,6 @@ The following requirements apply to DMWr Requesters:
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -64627,10 +64410,6 @@ The intended use model for the Deferrable Memory Write (DMWr) is to implement ef
 Users of DMWr must understand the functional implications of transaction ordering. A DMWr Request is a Non-Posted Request with Data, which means that Posted Requests are permitted to pass DMWr Requests. Additionally, there is no guaranteed ordering among all types of Non-Posted Requests (see Table 2-4, entries B3, B4, C3 & C4).
 
 As with all types of "control" mechanisms, it is necessary for all participants to comprehend the specific requirements placed by the particular mechanism, and these will vary between different systems and different device types. In many cases it will be necessary to distinguish Requests issued from different software environments (e.g., from multiple Virtual Machine guests where the guests use different drivers) all sharing the same work queue. PASID is one mechanism that can be used for this purpose, although there are many alternatives (e.g., different ranges of addresses could be assigned to each environment that would be mapped to the same resources in the Completer). In some systems, system and application level software is capable of generating DMWr Requests according to a specific template (§ Figure 6-51), where bits 31:0 are defined by the system architecture, the P bit at bit 31 indicates if user (0b) or supervisor (1b) code triggered the Request, and bits 19:0 of the payload include the PASID to indicate the context in which the Request was generated.
-
-> **Figure 6-51.** Example DMWr Data Payload Template
-> **图 6-51.** DMWr 数据有效负载模板示例
-> <img src="figures/chapter_06/fig_0910_1_tight.png" width="700">
 
 For performance reasons it is not recommended that DMWr be used for sending bulk data.
 
@@ -64663,11 +64442,16 @@ DMWr 的使用者必须理解事务排序的功能影响。DMWr 请求是带数�
 
 包括反馈机制或 Function 向软件指示队列状态的信号，或一个在完成状态为 RRS 后延迟 DMWr 请求的定时器。DMWr 机制本身不提供针对软件实体以足够高频率发出请求(无论是恶意还是无意)而导致访问单一共享工作队列的其他软件实体出现问题的保护。此类机制和编程模型的细节不在本规范范围内。
 
-<img src="figures/chapter_06/fig_0910_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-51.** Example DMWr Data Payload Template
+>
+> **图 6-51.** DMWr 数据有效负载模板示例
+
+> <img src="figures/chapter_06/fig_0910_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -64675,7 +64459,6 @@ DMWr 的使用者必须理解事务排序的功能影响。DMWr 请求是带数�
 
 <a id="sec-6-33"></a> <!-- 📄 Page 911 -->
 ## 6.33 Integrity & Data Encryption (IDE) | 完整性与数据加密 (IDE)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -64710,7 +64493,6 @@ IDE 在两个端口之间建立 IDE 流（IDE Stream）(见 § Figure 6-52)。ID
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -64726,10 +64508,6 @@ IDE 在两个端口之间建立 IDE 流（IDE Stream）(见 § Figure 6-52)。ID
 <tr>
 <td>
 
-> **Figure 6-52.** IDE Secures TLPs Between Ports
-> **图 6-52.** IDE 保护端口间的 TLP
-> <img src="figures/chapter_06/fig_0912_1_tight.png" width="700">
-
 In addition to the in-line securing of TLPs, as a "data plane" capability, IDE defines interoperable mechanisms for establishing Streams and programming keys, as a "control plane" capability, based on industry specifications. For example, for an Endpoint connected directly to the Root Complex (A to B above), one way to establish IDE is to use IDE Key Management (IDE_KM – see § Section 6.33.3) via DOE to allow host Firmware/Software to configure the Ports, including securely programming the IDE keys into both Ports. In another example, for two Endpoints communicating peer to peer (G to H above), the two Endpoints can implement communication directly via [MCTP-VDM] and [Secured-MCTP], where one will take the Requester role and the other the Responder role, and then applying the IDE_KM flow for secure key establishment. In an alternate example, it is also possible for some kind of management controller to apply IDE_KM over a sideband management connection, to program IDE keys in Ports throughout a system. The mechanisms for a management controller to program keys into a Root Complex are outside the scope of this document.
 
 Policies for establishing trust between elements in a platform are outside the scope of IDE. It is strongly recommended that a platform-appropriate policy be implemented via platform-specific means. It is not necessary that this policy be applied prior to establishing IDE Streams, and in some cases it may be preferable to establish IDE first, and subsequently
@@ -64741,11 +64519,16 @@ Policies for establishing trust between elements in a platform are outside the s
 
 平台中各元素间信任建立策略不在 IDE 范围内。强烈建议通过平台特定的方式实施适合平台的安全策略。无需在建立 IDE 流之前应用此策略，在某些情况下，可能首选先建立 IDE,随后
 
-<img src="figures/chapter_06/fig_0912_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-52.** IDE Secures TLPs Between Ports
+>
+> **图 6-52.** IDE 保护端口间的 TLP
+
+> <img src="figures/chapter_06/fig_0912_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -64777,7 +64560,6 @@ apply security policy mechanisms, or to apply some policy mechanisms prior to es
 [⬆️ 返回目录](#sec-6-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 914 -->
 <table>
@@ -64856,7 +64638,6 @@ IDE 在两个端口之间保护 TLP 流量。TLP 内容在通过终端 Partner �
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -64919,7 +64700,6 @@ TEE 的实现可能非常复杂，强烈建议具有适当安全专业知识的�
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 916 -->
 <table>
 <thead>
@@ -64964,10 +64744,10 @@ A trusted execution environment (TEE) using IDE must prevent the transmission of
 
 > **Figure 6-53.** IDE Stream State Machine
 > **图 6-53.** IDE 流状态机
+
 > <img src="figures/chapter_06/fig_0916_1_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -64983,10 +64763,6 @@ A trusted execution environment (TEE) using IDE must prevent the transmission of
 <tbody>
 <tr>
 <td>
-
-> **Figure 6-54.** IDE Stream State Machine
-> **图 6-54.** IDE 流状态机
-> <img src="figures/chapter_06/fig_0917_1_tight.png" width="700">
 
 TDISP (see § Chapter 11.) defines specific requirements that extend the following rules, that apply broadly to all TEEs using IDE:
 
@@ -65013,11 +64789,16 @@ TDISP(见 § Chapter 11.)定义了扩展以下规则的具体要求，这些规�
 
 为了基于本规范可互操作地建立 IDE 流，系统固件/软件充当中央机构，创建密钥并将其编程到两个 Partner 端口中。以下规则适用:
 
-<img src="figures/chapter_06/fig_0917_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-54.** IDE Stream State Machine
+>
+> **图 6-54.** IDE 流状态机
+
+> <img src="figures/chapter_06/fig_0917_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -65028,7 +64809,6 @@ TDISP(见 § Chapter 11.)定义了扩展以下规则的具体要求，这些规�
 ---
 
 ## 6.33.2 IDE Stream Establishment | IDE 流建立
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -65083,7 +64863,6 @@ IDE 密钥管理 (IDE Key Management, IDE_KM) 基于 [SPDM] 和 [Secured-SPDM],�
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -65103,10 +64882,6 @@ IDE 密钥管理 (IDE Key Management, IDE_KM) 基于 [SPDM] 和 [Secured-SPDM],�
 <td>
 
 **6.33.3 IDE Key Management (IDE_KM)**
-
-> **Figure 6-55.** IDE Key Management (IDE_KM) and Related Specifications & Capabilities
-> **图 6-55.** IDE 密钥管理（IDE_KM）及相关规范与能力
-> <img src="figures/chapter_06/fig_0919_1_tight.png" width="700">
 
 | Legend | Source |
 |--------|--------|
@@ -65141,7 +64916,6 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
 
 **6.33.3 IDE 密钥管理 (IDE_KM)**
 
-
 | 图例 | 来源 |
 |--------|--------|
 | Security Protocol and Data Model – SPDM (DSP0274) | DMTF |
@@ -65168,16 +64942,20 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
   - VendorDefinedReqPayload/VendorDefinedRespPayload 的大小必须与下文定义的数据对象的大小匹配。
     - 如果大小不匹配，则该收到的数据对象不得用于密钥管理;若该对象是请求，则不得产生响应。
 
-<img src="figures/chapter_06/fig_0919_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+> **Figure 6-55.** IDE Key Management (IDE_KM) and Related Specifications & Capabilities
+>
+> **图 6-55.** IDE 密钥管理（IDE_KM）及相关规范与能力
+
+> <img src="figures/chapter_06/fig_0919_1_tight.png" width="700">
+
 [⬆️ 返回目录](#sec-6-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -65247,7 +65025,6 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -65323,7 +65100,6 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
 [⬆️ 返回目录](#sec-6-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -65404,7 +65180,6 @@ The following rules define the IDE key management (IDE_KM) protocol, and must be
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -65458,10 +65233,6 @@ An IDE error condition will occur if system software fails to ensure the correct
   - While the secure [SPDM] session that was used for initial key programming remains open, all QUERY and/or KEY_PROG requests that are received through a different secure [SPDM] session must be discarded by the Responder, and must not result in a response.
   - If the secure [SPDM] session that was used for initial key programming is closed, any subsequent QUERY and/or KEY_PROG requests received through a different secure [SPDM] session must first cause the responder to invalidate and render unreadable all keys must for the IDE Stream, then transition that IDE Stream to the Insecure state, and only then respond to the QUERY/KEY_PROG request, unless it can be ensured through implementation specific means that the new session has been established with the same requester as performed the initial key programming.
 
-> **Figure 6-56.** Query (QUERY) Data Object
-> **图 6-56.** Query（QUERY）数据对象
-> <img src="figures/chapter_06/fig_0924_1.png" width="700"> <!-- 📄 Page 924 -->
-
 ---
 
 </td> <!-- 📄 Page 925 -->
@@ -65505,65 +65276,54 @@ An IDE error condition will occur if system software fails to ensure the correct
   - 在用于初始密钥编程的安全 [SPDM] 会话保持打开期间，通过不同安全 [SPDM] 会话收到的所有 QUERY 和/或 KEY_PROG 请求必须由应答者丢弃，且不得产生响应。
   - 如果用于初始密钥编程的安全 [SPDM] 会话已关闭，则通过不同安全 [SPDM] 会话收到的任何后续 QUERY 和/或 KEY_PROG 请求必须首先使应答者使该 IDE 流的所有密钥无效且不可读，然后将该 IDE 流转为不安全状态，只有之后才能响应 QUERY/KEY_PROG 请求，除非通过实现特定手段可以确保新会话已与执行初始密钥编程的同一请求者建立。
 
-<img src="figures/chapter_06/fig_0924_1.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 6-56.** Query (QUERY) Data Object
+>
+> **图 6-56.** Query（QUERY）数据对象
+
+> <img src="figures/chapter_06/fig_0924_1.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td> <!-- 📄 Page 926 -->
-
----
-
-</td> <!-- 📄 Page 927 -->
-<td style="background-color:#e8e8e8">
-
-</td>
-</tr>
-</tbody>
-</table>
 
 > **Figure 6-57.** Query Response (QUERY_RESP) Data Object
 > **图 6-57.** Query Response（QUERY_RESP）数据对象
+
 > <img src="figures/chapter_06/fig_0925_1_tight.png" width="700">
 
 > **Figure 6-58.** Key Programming (KEY_PROG) Data Object with Example 256b Key
 > **图 6-58.** Key Programming（KEY_PROG）数据对象（含 256 位密钥示例）
+
 > <img src="figures/chapter_06/fig_0925_2_tight.png" width="700">
 
 > **Figure 6-59.** Key Programming Acknowledgement (KP_ACK) Data Object
 > **图 6-59.** Key Programming Acknowledgement（KP_ACK）数据对象
+
 > <img src="figures/chapter_06/fig_0926_1_tight.png" width="700">
 
 > **Figure 6-60.** Key Set Go (K_SET_GO) Data Object
 > **图 6-60.** Key Set Go（K_SET_GO）数据对象
+
 > <img src="figures/chapter_06/fig_0926_2_tight.png" width="700">
 
 > **Figure 6-61.** Key Set Stop (K_SET_STOP) Data Object
 > **图 6-61.** Key Set Stop（K_SET_STOP）数据对象
+
 > <img src="figures/chapter_06/fig_0926_3_tight.png" width="700">
 
 > **Figure 6-62.** Key Set Go/Stop Acknowledgement (K_GOSTOP_ACK) Data Object
 > **图 6-62.** Key Set Go/Stop Acknowledgement（K_GOSTOP_ACK）数据对象
+
 > <img src="figures/chapter_06/fig_0926_4_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -65623,7 +65383,6 @@ Rules related to keys:
 [⬆️ 返回目录](#sec-6-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -65699,10 +65458,10 @@ TLPs secured by IDE are called IDE TLPs. In Non-Flit Mode, all IDE TLPs must use
 
 > **Figure 6-63.** IDE_KM Example
 > **图 6-63.** IDE_KM 示例
+
 > <img src="figures/chapter_06/fig_0928_1_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -65723,10 +65482,6 @@ TLPs secured by IDE are called IDE TLPs. In Non-Flit Mode, all IDE TLPs must use
 <td>
 
 **6.33.4 IDE TLPs**
-
-> **Figure 6-64.** IDE TLP Prefix (NFM)
-> **图 6-64.** IDE TLP 前缀（NFM）
-> <img src="figures/chapter_06/fig_0929_1.png" width="700">
 
 The IDE Prefix (NFM) includes:
 
@@ -65760,7 +65515,6 @@ In Flit Mode:
 
 **6.33.4 IDE TLP**
 
-
 IDE 前缀 (NFM) 包括:
 
 - M 位 – 置位时，表示此 TLP 包含 MAC
@@ -65786,16 +65540,20 @@ IDE 前缀 (NFM) 包括:
 - MAC 和/或 PCRC 的存在通过 TS 字段指示。
 - K 位、T 位、Sub-Stream、Stream_ID 和 PR_Sent_Counter 包含在 OHC-C 中，其含义与 IDE 前缀中相同。
 
-<img src="figures/chapter_06/fig_0929_1.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+> **Figure 6-64.** IDE TLP Prefix (NFM)
+>
+> **图 6-64.** IDE TLP 前缀（NFM）
+
+> <img src="figures/chapter_06/fig_0929_1.png" width="700">
+
 [⬆️ 返回目录](#sec-6-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -65841,64 +65599,41 @@ IDE 使用 [AES-GCM] 中定义的伽罗瓦/计数器模式 (Galois/Counter Mode,
 
 > **Figure 6-65.** MAC Layout
 > **图 6-65.** MAC 布局
+
 > <img src="figures/chapter_06/fig_0930_1_tight.png" width="700">
 
 > **Figure 6-66.** Example of IDE TLP for a Link IDE Stream without Aggregation (Non-Flit Mode)
 > **图 6-66.** 链路 IDE 流无聚合的 IDE TLP 示例（非 Flit 模式）
+
 > <img src="figures/chapter_06/fig_0930_2_tight.png" width="700">
 
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
 
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
 > **Figure 6-67.** IDE TLP – Example Showing Aggregation of Two TLPs for a Link IDE Stream (Non-Flit Mode)
+>
+> **图 6-67.** IDE TLP —— 链路 IDE 流聚合两个 TLP 的示例（非 Flit 模式）
+
 > <img src="figures/chapter_06/fig_0931_1_tight.png" width="700">
 
 > **Figure 6-68.** IDE TLP – Example of IDE TLP for a Selective IDE Stream without Aggregation (Non-Flit Mode)
+>
+> **图 6-68.** IDE TLP —— 选择性 IDE 流无聚合的 IDE TLP 示例（非 Flit 模式）
+
 > <img src="figures/chapter_06/fig_0931_2_tight.png" width="700">
 
 > **Figure 6-69.** IDE TLP – Example Showing Aggregation of Two TLPs for a Selective IDE Stream (Non-Flit Mode)
-> <img src="figures/chapter_06/fig_0931_3_tight.png" width="700"> <!-- 📄 Page 932 -->
-
----
-
-</td>
-<td style="background-color:#e8e8e8">
-
-> **图 6-67.** IDE TLP —— 链路 IDE 流聚合两个 TLP 的示例（非 Flit 模式）
-> <img src="figures/chapter_06/fig_0931_1_tight.png" width="700">
-
-> **图 6-68.** IDE TLP —— 选择性 IDE 流无聚合的 IDE TLP 示例（非 Flit 模式）
-> <img src="figures/chapter_06/fig_0931_2_tight.png" width="700">
-
+>
 > **图 6-69.** IDE TLP —— 选择性 IDE 流聚合两个 TLP 的示例（非 Flit 模式）
-> <img src="figures/chapter_06/fig_0931_3_tight.png" width="700"> <!-- 📄 Page 932 -->
 
----
-
-</td>
-</tr>
-</tbody>
-</table>
+> <img src="figures/chapter_06/fig_0931_3_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -65934,26 +65669,30 @@ Partial header encryption provides the ability to reduce potential exposure to s
 
 > **Figure 6-70.** Example of IDE TLP for a Link IDE Stream without Aggregation (Flit Mode)
 > **图 6-70.** 链路 IDE 流无聚合的 IDE TLP 示例（Flit 模式）
+
 > <img src="figures/chapter_06/fig_0932_1_tight.png" width="700">
 
 > **Figure 6-71.** IDE TLP – Example Showing Aggregation of Two TLPs for a Link IDE Stream (Flit Mode)
 > **图 6-71.** IDE TLP —— 链路 IDE 流聚合两个 TLP 的示例（Flit 模式）
+
 > <img src="figures/chapter_06/fig_0932_2_tight.png" width="700">
 
 > **Figure 6-72.** IDE TLP – Example of IDE TLP for a Selective IDE Stream without Aggregation (Flit Mode)
 > **图 6-72.** IDE TLP —— 选择性 IDE 流无聚合的 IDE TLP 示例（Flit 模式）
+
 > <img src="figures/chapter_06/fig_0933_1_tight.png" width="700">
 
 > **Figure 6-73.** IDE TLP – Example Showing Aggregation of Two TLPs for a Selective IDE Stream (Flit Mode)
 > **图 6-73.** IDE TLP —— 选择性 IDE 流聚合两个 TLP 的示例（Flit 模式）
+
 > <img src="figures/chapter_06/fig_0933_2_tight.png" width="700">
 
 > **Figure 6-74.** High Level Flow For Partial Header Encryption
 > **图 6-74.** 部分包头加密的高层流程
+
 > <img src="figures/chapter_06/fig_0934_1_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -66008,26 +65747,6 @@ Rules for partial header encryption:
 
 ---
 
-> **Figure 6-75.** Partial Header Encryption in NFM with Byte Enables
-> <img src="figures/chapter_06/fig_0936_1.png" width="700"> <!-- 📄 Page 936 -->
-
----
-
-> **Figure 6-76.** Partial Header Encryption in NFM without Byte Enables
-> <img src="figures/chapter_06/fig_0937_1_tight.png" width="700"> <!-- 📄 Page 937 -->
-
----
-
-> **Figure 6-77.** Partial Header Encryption in FM with OHC-A1
-> <img src="figures/chapter_06/fig_0938_1_tight.png" width="700"> <!-- 📄 Page 938 -->
-
----
-
-> **Figure 6-78.** Partial Header Encryption in FM without OHC-A1
-> <img src="figures/chapter_06/fig_0939_1_tight.png" width="700"> <!-- 📄 Page 939 -->
-
----
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -66067,27 +65786,38 @@ Rules for partial header encryption:
 
 § 图 6-75 至 § 图 6-78 说明了部分包头加密的应用。
 
-> **图 6-75.** NFM 中使用字节使能的部分包头加密
-> <img src="figures/chapter_06/fig_0936_1.png" width="700">
-
-> **图 6-76.** NFM 中不使用字节使能的部分包头加密
-> <img src="figures/chapter_06/fig_0937_1_tight.png" width="700">
-
-> **图 6-77.** FM 中使用 OHC-A1 的部分包头加密
-> <img src="figures/chapter_06/fig_0938_1_tight.png" width="700">
-
-> **图 6-78.** FM 中不使用 OHC-A1 的部分包头加密
-> <img src="figures/chapter_06/fig_0939_1_tight.png" width="700">
-
 </td>
 </tr>
 </tbody>
 </table>
 
+> **Figure 6-75.** Partial Header Encryption in NFM with Byte Enables
+>
+> **图 6-75.** NFM 中使用字节使能的部分包头加密
+
+> <img src="figures/chapter_06/fig_0936_1.png" width="700">
+
+> **Figure 6-76.** Partial Header Encryption in NFM without Byte Enables
+>
+> **图 6-76.** NFM 中不使用字节使能的部分包头加密
+
+> <img src="figures/chapter_06/fig_0937_1_tight.png" width="700">
+
+> **Figure 6-77.** Partial Header Encryption in FM with OHC-A1
+>
+> **图 6-77.** FM 中使用 OHC-A1 的部分包头加密
+
+> <img src="figures/chapter_06/fig_0938_1_tight.png" width="700">
+
+> **Figure 6-78.** Partial Header Encryption in FM without OHC-A1
+>
+> **图 6-78.** FM 中不使用 OHC-A1 的部分包头加密
+
+> <img src="figures/chapter_06/fig_0939_1_tight.png" width="700">
+
 [⬆️ 返回目录](#sec-6-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -66155,10 +65885,10 @@ IDE 前缀 (NFM) 必须包含在 A 中。所有 OHC 内容 (FM) 必须包含在 
 
 > **Figure 6-79.** Example Illustrating PCRC Application to Two Aggregated IDE TLPs for a Link IDE Stream (NFM)
 > **图 6-79.** 链路 IDE 流（NFM）中对两个聚合 IDE TLP 应用 PCRC 的示例
+
 > <img src="figures/chapter_06/fig_0940_1_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -66221,7 +65951,6 @@ IDE 前缀 (NFM) 必须包含在 A 中。所有 OHC 内容 (FM) 必须包含在 
 
 **Table 6-35. TLP Types for Selective IDE Streams | 表 6-35. 选择性 IDE 流的 TLP 类型**
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -66256,7 +65985,6 @@ IDE 前缀 (NFM) 必须包含在 A 中。所有 OHC 内容 (FM) 必须包含在 
 </tbody>
 </table>
 </div>
-
 
 <sub>145. Routed to Root Complex is permitted only when the Partner Port is a Root Port, as indicated by the Default Stream bit being Set.</sub>
 <sub>146. Routed to Root Complex is permitted only when the Partner Port is a Root Port, as indicated by the Default Stream bit being Set.</sub> <!-- 📄 Page 942 -->
@@ -66360,7 +66088,6 @@ These rules apply to Selective IDE Stream TLPs:
 
 <sub>147. As with the Base/Limit address routing mechanism for Type 1 (Bridge) Functions, the IDE Address Association mechanism does not consider the value of the AT field to determine TLP routing.</sub>
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -66450,7 +66177,6 @@ These rules apply to TLPs other than IDE Fail Messages:
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -66524,7 +66250,6 @@ With [AES-GCM] it is desirable to maintain TLPs in-order so that the Transmitter
 
 <a id="sec-6-33-5"></a>
 ## 6.33.5 IDE TLP Sub-Streams | IDE TLP 子流
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -66734,18 +66459,20 @@ The following rules relate to aggregation (see § Figure 6-67 and § Figure 6-69
 
 > **Figure 6-80.** Example – Posted Requests Allowed to Bypass Non-Posted Requests | 示例——允许 Posted Request 越过 Non-Posted Request
 > **图 6-80.** 示例——允许 Posted Request 越过 Non-Posted Request
+
 > <img src="figures/chapter_06/fig_0948_1_tight.png" width="700">
 
 > **Figure 6-81.** Example – Non-Posted Requests Never Allowed to Bypass Posted Requests | 示例——Non-Posted Request 绝不允许越过 Posted Request
 > **图 6-81.** 示例——Non-Posted Request 绝不允许越过 Posted Request
+
 > <img src="figures/chapter_06/fig_0949_1_tight.png" width="700">
 
 > **Figure 6-82.** Example – Secure Non-Posted Request Reordering Not Allowed Over PCIe Fabric | 示例——PCIe Fabric 上不允许 Secure Non-Posted Request 重排序
 > **图 6-82.** 示例——PCIe Fabric 上不允许 Secure Non-Posted Request 重排序
+
 > <img src="figures/chapter_06/fig_0949_2_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -66820,7 +66547,6 @@ Although Switches/RCs must not reorder IDE TLPs within a Flow-Through IDE Stream
 <a id="sec-6-33-7"></a>
 ## 6.33.7 Flow-Through Selective IDE Streams | Flow-Through Selective IDE Stream
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -66869,14 +66595,12 @@ Because hardware used with IDE will typically be required to satisfy platform-le
 
 IDE Sync Message 与所有其他 Message 一样，是一种 Posted Request。IDE 协议依赖于 IDE Sync Message 与给定 IDE Stream 的所有其他 Posted Request 进行排序。
 
-
 | 行通过列? | Posted Request (Col 2) | Non-Posted Read Request (Col 3) | NPR with Data (Col 4) | Completion (Col 5) |
 |---|---|---|---|---|
 | Posted Request (Row A) | No | Yes | Yes | a) Y/N b) Yes |
 | Non-Posted Read Request (Row B) | No | No | No | Y/N |
 | NPR with Data (Row C) | No | No | No | Y/N |
 | Completion (Row D) | No | Yes | Yes | No |
-
 
 | 行通过列? | UIO PR-FC TLP (Col U1) | UIO NPR-FC TLP (Col U2) | UIO Completion (Col U3) |
 |---|---|---|---|
@@ -66901,7 +66625,6 @@ Switch/RC 只能将 IDE TLP 通过 Flow-Through IDE Stream Enabled 位置 1 的 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -67098,7 +66821,6 @@ UIO 使硬件能够保持与 PCI/PCIe producer-consumer 模型的完全向后兼
 <a id="sec-6-34"></a>
 ## 6.34 Unordered IO (UIO) | 无序 IO (UIO)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -67150,7 +66872,6 @@ UIO 允许非树形拓扑与多路径支持。
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-6-0)
 
 ---
@@ -67187,7 +66908,6 @@ UIO 允许非树形拓扑与多路径支持。
 
 <a id="sec-6-35"></a>
 ## 6.35 MMIO Register Blocks | MMIO 寄存器块
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -67226,8 +66946,8 @@ MMIO 寄存器块通过 MMIO 寄存器块定位器 (MRBL) 扩展能力 (Extended
 </table>
 </div>
 
-
 > **Figure 6-83. MMIO Register Blocks | MMIO 寄存器块**
+
 > <img src="figures/chapter_06/fig_0957_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
@@ -67255,7 +66975,6 @@ The MCAP Register Block is discovered using the MMIO Register Block Locator Exte
 § Figure 6-84 illustrates the MCAP Register Block.
 
 > **Figure 6-84. MCAP Register Block | MCAP 寄存器块**
-> <img src="figures/chapter_06/fig_0958_1.png" width="700">
 
 § Figure 6-85 detail allocation of register fields in the MCAP Array Register Block.
 
@@ -67270,11 +66989,12 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 
 § Figure 6-85 详细描述了 MCAP Array Register Block 中各寄存器字段的分配。
 
-<img src="figures/chapter_06/fig_0958_1.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_06/fig_0958_1.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -67282,7 +67002,6 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 
 <a id="sec-6-35-1-1"></a>
 ## 6.35.1.1 MCAP Array Register (Offset 00h) | MCAP 数组寄存器 (偏移 00h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -67297,12 +67016,10 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 <td>
 
 > **Figure 6-85. MCAP Array Register Block | MCAP 数组寄存器块**
-> <img src="figures/chapter_06/fig_0959_1_tight.png" width="700">
 
 § Figure 6-86 and § Figure 6-87 detail allocation of register fields registers that form the MCAP Array Register Block; § Table 6-38 and § Table 6-39 provide the respective bit definitions.
 
 > **Figure 6-86. MCAP Array Register 1 | MCAP 数组寄存器 1**
-> <img src="figures/chapter_06/fig_0959_2_tight.png" width="700">
 
 **Table 6-38. MCAP Array Register 1 | 表 6-38. MCAP 数组寄存器 1**
 
@@ -67313,7 +67030,6 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 | 27:24 | MCAP Type – Defines the type associated with any type-specific capabilities (MCAP IDs in the range 4000h-7FFFh) in the MCAP Register Block.<br>Encodings are:<br>0h = The type is inferred from the 24-bit value corresponding to the Class Code of the Function. If the Class Code is not associated with any type-specific capabilities, then no type-specific capabilities shall be present.<br>01h = Reserved.<br>1h-7h = Reserved – Allocated for [CXL].<br>Others = All other encodings are reserved. | RO |
 
 > **Figure 6-87. MCAP Array Register 2 | MCAP 数组寄存器 2**
-> <img src="figures/chapter_06/fig_0960_1_tight.png" width="700">
 
 **Table 6-39. MCAP Array Register 2 | 表 6-39. MCAP 数组寄存器 2**
 
@@ -67340,13 +67056,18 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 |---|---|---|
 | 15:0 | MCAP Count – MCAP 寄存器块中能力的数量，不包括 MCAP 数组寄存器。每个 MCAP Header Register(参见 § Section 6.35.1.2)与前一个 MCAP Header Register 相邻。 | RO |
 
-<img src="figures/chapter_06/fig_0959_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_06/fig_0959_1_tight.png" width="700">
+
+> <img src="figures/chapter_06/fig_0959_2_tight.png" width="700">
+
+> <img src="figures/chapter_06/fig_0960_1_tight.png" width="700">
+
+</div>
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -67369,12 +67090,10 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 § Figure 6-88 details allocation of register fields in the MCAP Header Register Block.
 
 > **Figure 6-88. MCAP Header Register Block | MCAP 头寄存器块**
-> <img src="figures/chapter_06/fig_0960_2_tight.png" width="700">
 
 § Figure 6-89 through § Figure 6-92 detail allocation of register fields in the MCAP Header Register Block; § Table 6-40 through § Table 6-43 provides the respective bit definitions.
 
 > **Figure 6-89. MCAP Header Register 1 | MCAP 头寄存器 1**
-> <img src="figures/chapter_06/fig_0960_1.png" width="700">
 
 **Table 6-40. MCAP Header Register 1 | 表 6-40. MCAP 头寄存器 1**
 
@@ -67384,7 +67103,6 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 | 23:16 | MCAP Version – Defines the version of the capability register structure.<br>The MCAP Version is incremented whenever the capability register structure is extended to add more functionality. Backward compatibility shall be maintained during this process. For all values of n, version n+1 may extend version n by replacing fields that are marked as reserved in version n but must not redefine the meaning of existing fields. Software that was written for a lower version may continue to operate on capability structures with a higher version but will not be able to take advantage of new functionality. If backwards compatibility cannot be maintained, a new MCAP ID shall be created. Each field in a capability register structure is assumed to be introduced in version 1 of that structure unless specified otherwise in the field's definition. | RO |
 
 > **Figure 6-90. MCAP Header Register 2 | MCAP 头寄存器 2**
-> <img src="figures/chapter_06/fig_0961_1_tight.png" width="700">
 
 **Table 6-41. MCAP Header Register 2 | 表 6-41. MCAP 头寄存器 2**
 
@@ -67393,7 +67111,6 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 | 31:0 | MCAP Offset – Offset of the capability register structure from the start of the MCAP Register Block in bytes. The offset of performance sensitive MCAPs and security sensitive MCAPs shall be 4 KB aligned within Memory Space. | RO |
 
 > **Figure 6-91. MCAP Header Register 3 | MCAP 头寄存器 3**
-> <img src="figures/chapter_06/fig_0961_2_tight.png" width="700">
 
 **Table 6-42. MCAP Header Register 3 | 表 6-42. MCAP 头寄存器 3**
 
@@ -67402,7 +67119,6 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 | 31:0 | MCAP Length – Size of the capability register structure in bytes. | RO |
 
 > **Figure 6-92. MCAP Header Register 4 | MCAP 头寄存器 4**
-> <img src="figures/chapter_06/fig_0962_1_tight.png" width="700">
 
 **Table 6-43. MCAP Header Register 4 | 表 6-43. MCAP 头寄存器 4**
 
@@ -67442,11 +67158,20 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 |---|---|---|
 | 15:0 | MCAP Vendor ID – 定义能力寄存器结构的实体所对应的由 PCI-SIG 分配的 Vendor ID。该字段值 0000h 仅用于与已有 [CXL] 定义的寄存器结构进行遗留兼容性保留。 | RO |
 
-<img src="figures/chapter_06/fig_0960_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_06/fig_0960_2_tight.png" width="700">
+
+> <img src="figures/chapter_06/fig_0960_1.png" width="700">
+
+> <img src="figures/chapter_06/fig_0961_1_tight.png" width="700">
+
+> <img src="figures/chapter_06/fig_0961_2_tight.png" width="700">
+
+> <img src="figures/chapter_06/fig_0962_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -67467,7 +67192,6 @@ MCAP 寄存器块通过 MMIO 寄存器块定位器扩展能力 (MRBL)(参见 § 
 
 <a id="sec-6-35-1-3"></a>
 ## 6.35.1.3 MMIO Mailbox Capability (MMB) (Offset: Varies) | MMIO 邮箱能力 (MMB) (偏移: 可变)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -67517,7 +67241,6 @@ MMB 命令不会跨越常规复位 (Conventional Reset) 继续执行。FLR 不�
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -67610,18 +67333,18 @@ The flow for executing a command is described below. The term "caller" represent
 § Figure 6-93 illustrates the MMB Registers structure.
 
 > **Figure 6-93. MMB Registers | MMB 寄存器**
-> <img src="figures/chapter_06/fig_0964_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
 § Figure 6-93 展示了 MMB 寄存器的结构。
 
-<img src="figures/chapter_06/fig_0964_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_06/fig_0964_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -67629,7 +67352,6 @@ The flow for executing a command is described below. The term "caller" represent
 
 <a id="sec-6-35-1-3-2-1"></a>
 ## 6.35.1.3.2.1 MMB Capabilities Register (Offset 00h) | MMB 能力寄存器 (偏移 00h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -67646,7 +67368,6 @@ The flow for executing a command is described below. The term "caller" represent
 § Figure 6-94 details allocation of register fields in the MMB Capabilities Register; § Table 6-45 provides the respective bit definitions.
 
 > **Figure 6-94. MMB Capabilities Register | MMB 能力寄存器**
-> <img src="figures/chapter_06/fig_0965_1_tight.png" width="700">
 
 **Table 6-45. MMB Capabilities Register | 表 6-45. MMB 能力寄存器**
 
@@ -67677,13 +67398,14 @@ The flow for executing a command is described below. The term "caller" represent
 | 22:19 | Type – 该字段标识 MMB 所支持的类型特定命令。<br>类型由功能 (Function) 的 Class Code 对应的 24 位值推断。如果 Class Code 未与任何类型特定命令关联，则不存在类型特定命令。<br>0h = 类型由 Class Code 推断。<br>1h-7h = 保留 – 分配给 [CXL]。<br>其他 = 所有其他编码均保留。 | HWInit |
 | 23 | MMB Attention Mechanism Capable – 该字段指示 MMB 是否支持可选的 MMB Attention Mechanism(注意机制)。<br>0b = 不支持<br>1b = 支持 | HWInit |
 
-<img src="figures/chapter_06/fig_0965_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_06/fig_0965_1_tight.png" width="700">
+
+</div>
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -67706,7 +67428,6 @@ The flow for executing a command is described below. The term "caller" represent
 § Figure 6-95 details allocation of register fields in the MMB Control Register; § Table 6-46 provides the respective bit definitions.
 
 > **Figure 6-95. MMB Control Register | MMB 控制寄存器**
-> <img src="figures/chapter_06/fig_0966_1_tight.png" width="700">
 
 **Table 6-46. MMB Control Register | 表 6-46. MMB 控制寄存器**
 
@@ -67731,11 +67452,12 @@ The flow for executing a command is described below. The term "caller" represent
 | 2 | Reserved for CXL – 该字段分配给 [CXL] 使用。在非 CXL 上下文中，该字段为保留。 | RsvdP |
 | 3 | MMB Attention Not Needed – 若 MMB Attention Mechanism Capable 被置起，该位置起后将允许 MMB 进入并保持不可立即使用的状态。当该位被清除时,MMB 必须保持响应状态。 | RW/RsvdP |
 
-<img src="figures/chapter_06/fig_0966_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_06/fig_0966_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-6-0)
 
@@ -67810,10 +67532,10 @@ MMB 命令寄存器只能在 MMB 控制寄存器（见 § 6.35.1.3.2.2 ）中的
 </table>
 
 > **Figure 6-96. MMB Command Register | MMB 命令寄存器**
+
 > <img src="figures/chapter_06/fig_0967_1_tight.png" width="700">
 
 **Table 6-47. MMB Command Register | 表 6-47. MMB 命令寄存器**
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -67868,7 +67590,6 @@ RW
 </table>
 </div>
 
-
 ---
 
 <a id="sec-6-35-1-3-2-4"></a> <!-- 📄 Page 968 -->
@@ -67900,10 +67621,10 @@ Reports information about the state of the MMB and the last command executed sin
 </table>
 
 > **Figure 6-97. MMB Status Register | MMB 状态寄存器**
+
 > <img src="figures/chapter_06/fig_0968_1.png" width="700">
 
 **Table 6-48. MMB Status Register | 表 6-48. MMB 状态寄存器**
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -67972,7 +67693,6 @@ RO
 </table>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -68004,7 +67724,6 @@ For legacy compatibility with OS software, platform firmware should clear the MM
 
 <a id="sec-6-35-1-3-2-4-1"></a> <!-- 📄 Page 969 -->
 ## 6.35.1.3.2.4.1 MMB Command Return Codes | MMB 命令返回代码
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -68042,7 +67761,6 @@ PCI-SIG 定义的命令返回代码仅对 PCI-SIG 定义的命令有效。
 </tbody>
 </table>
 </div>
-
 
 **Table 6-49. MMB PCI-SIG Defined Command Return Codes (Vendor ID = 0001h) | 表 6-49. MMB PCI-SIG 已定义命令返回代码（供应商 ID = 0001h）**
 
@@ -68101,6 +67819,7 @@ MMB Payload Registers 由调用方在置位 MMB Control Register（见 § 6.35.1
 ---
 
 > **Figure 6-98. MMB Payload Registers | MMB 有效负载寄存器** <!-- 📄 Page 970 -->
+
 > <img src="figures/chapter_06/fig_0970_1_tight.png" width="700">
 
 ---
@@ -68140,6 +67859,7 @@ Management Message Passthrough（MMPT）能力结构对于支持 MMPT 命令集�
 </table>
 
 > **Figure 6-99. MMPT Registers | MMPT 寄存器**
+
 > <img src="figures/chapter_06/fig_0970_2_tight.png" width="700">
 
 ---
@@ -68176,10 +67896,10 @@ Management Message Passthrough（MMPT）能力结构对于支持 MMPT 命令集�
 ## 6.35.1.4.1.1 MMPT Capabilities Register (Offset 00h) | MMPT 能力寄存器（偏移量 00h）
 
 > **Figure 6-100. MMPT Capabilities Register | MMPT 能力寄存器**
+
 > <img src="figures/chapter_06/fig_0971_1_tight.png" width="700">
 
 **Table 6-50. MMPT Capabilities Register | 表 6-50. MMPT 能力寄存器**
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -68238,7 +67958,6 @@ RO/RsvdP
 </table>
 </div>
 
-
 ---
 
 <a id="sec-6-35-1-4-1-2"></a> <!-- 📄 Page 971 -->
@@ -68268,6 +67987,7 @@ RO/RsvdP
 </table>
 
 > **Figure 6-101. MMPT Control Register | MMPT 控制寄存器**
+
 > <img src="figures/chapter_06/fig_0971_1.png" width="700">
 
 ---
@@ -68342,10 +68062,10 @@ RW/RsvdP
 </table>
 
 > **Figure 6-102. MMPT Receive Message Notification Register | MMPT 接收消息通知寄存器**
+
 > <img src="figures/chapter_06/fig_0972_1_tight.png" width="700">
 
 **Table 6-52. MMPT Receive Message Notification Register | 表 6-52. MMPT 接收消息通知寄存器**
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -68394,7 +68114,6 @@ RO
 </table>
 </div>
 
-
 ---
 
 <a id="sec-6-35-2"></a> <!-- 📄 Page 973 -->
@@ -68424,6 +68143,7 @@ MMIO Designated Vendor-Specific Register Block（MDVS）允许通过使用 MRBL 
 </table>
 
 > **Figure 6-103. MDVS Register Block | MDVS 寄存器块**
+
 > <img src="figures/chapter_06/fig_0973_1_tight.png" width="700">
 
 ---
@@ -68544,6 +68264,7 @@ RO
 </table>
 
 > **Figure 6-105. MDVS Register Block Header Register 2 | MDVS 寄存器块头寄存器 2**
+
 > <img src="figures/chapter_06/fig_0974_1_tight.png" width="700">
 
 **Table 6-54. MDVS Register Block Header Register 2 | 表 6-54. MDVS 寄存器块头寄存器 2**
@@ -68607,6 +68328,7 @@ RO
 </table>
 
 > **Figure 6-106. MDVS Register Block Header Register 3 | MDVS 寄存器块头寄存器 3**
+
 > <img src="figures/chapter_06/fig_0974_2_tight.png" width="700">
 
 **Table 6-55. MDVS Register Block Header Register 3 | 表 6-55. MDVS 寄存器块头寄存器 3**
@@ -68643,7 +68365,6 @@ RO
 </tr>
 </tbody>
 </table>
-
 
 ---
 
@@ -68716,7 +68437,6 @@ RO
 <a id="sec-6-36"></a>
 ## 6.36 MMB Command Interface | MMB 命令接口
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -68741,7 +68461,6 @@ MMB 命令通过 MMB 命令操作码（MMB Command Opcode）进行标识。MMB �
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -68845,7 +68564,6 @@ Bits[2:0]
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -68874,7 +68592,6 @@ If the management message transfer is interrupted by a Conventional Reset, error
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -69017,7 +68734,6 @@ Bits[31:3]
 | 0Ch | 04h | Reserved |
 | 10h | variable | Message Data – The management message data, formatted according to the MMPT Message Type specification. |
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -69064,7 +68780,6 @@ Table 6-57 fields (Chinese description):
 </table>
 </div>
 
-
 ---
 
 **Table 6-58. MMPT Send Message Output Payload | 表 6-58. MMPT 发送消息输出有效负载**
@@ -69104,7 +68819,6 @@ The flow for transferring a management message from the host to the Function is 
 
 <a id="sec-6-36-1-1-1"></a>
 ## 6.36.1.1.1 MMPT Send Message Operation | MMPT 发送消息操作
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -69146,7 +68860,6 @@ The flow for transferring a management message from the host to the Function is 
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -69259,7 +68972,6 @@ Possible MMB Command Return Code values (§ Section 6.35.1.3.2.4.1 ):
 | 08h | 04h | Offset – The Byte Offset in the message data to return in the output payload. |
 | 0Ch | 04h | Message Length – The Length in Bytes of the message data to return in the output payload. |
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -69304,7 +69016,6 @@ Table 6-59 fields (Chinese description):
 </table>
 </div>
 
-
 ---
 
 **Table 6-60. MMPT Receive Message Output Payload | 表 6-60. MMPT 接收消息输出有效负载**
@@ -69346,7 +69057,6 @@ Table 6-59 fields (Chinese description):
 
 <a id="sec-6-36-1-2-1"></a>
 ## 6.36.1.2.1 MMPT Receive Message Operation | MMPT 接收消息操作
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -69394,7 +69104,6 @@ The flow for transferring a management message asynchronously from the Function 
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -69625,7 +69334,6 @@ The flow for transferring a management message asynchronously from the Function 
 > 📚 **Template**: CXL 3.2 Spec translation (CXL_zh/)
 
 ---
-
 
 ## 📑 章节索引 (Sections)
 
@@ -70544,7 +70252,6 @@ The flow for transferring a management message asynchronously from the Function 
 <a id="sec-7-0"></a>
 ## 7. Software Initialization and Configuration | 7. 软件初始化与配置
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -70598,7 +70305,6 @@ PCI Express 端点 (Endpoint) 在配置空间中映射为设备 (Device) 中的�
 </tr>
 </tbody>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -70620,14 +70326,15 @@ PCI Express 端点 (Endpoint) 在配置空间中映射为设备 (Device) 中的�
 
 > **Figure 7-1.** PCI Express Root Complex Device Mapping
 > **图 7-1.** PCI Express 根复合体设备映射
+
 > <img src="figures/chapter_07/fig_0981_1_tight.png" width="700">
 
 > **Figure 7-2.** PCI Express Switch Device Mapping
 > **图 7-2.** PCI Express 交换机设备映射
+
 > <img src="figures/chapter_07/fig_0982_1_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -70649,10 +70356,6 @@ PCI Express 端点 (Endpoint) 在配置空间中映射为设备 (Device) 中的�
 
 PCI Express extends the Configuration Space to 4096 bytes per Function as compared to 256 bytes allowed by [PCI]. PCI Express Configuration Space is divided into a PCI-compatible region, which consists of the first 256 bytes of a Function's Configuration Space, and a PCI Express Extended Configuration Space which consists of the remaining Configuration Space (see § Figure 7-3). The PCI-compatible Configuration Space can be accessed using either the mechanism defined in § Section 7.2.1 or § Section 7.2.2 . Accesses made using either access mechanism are equivalent. The PCI Express Extended Configuration Space can only be accessed by using the ECAM mechanism defined in § Section 7.2.2 .
 
-> **Figure 7-3.** PCI Express Configuration Space Layout
-> **图 7-3.** PCI Express 配置空间布局
-> <img src="figures/chapter_07/fig_0983_1_tight.png" width="700">
-
 The PCI-compatible PCI Express Configuration Mechanism supports the PCI Configuration Space programming model defined in the [PCI]. By adhering to this model, systems incorporating PCI Express interfaces remain compliant with conventional PCI bus enumeration and configuration software.
 
 In the same manner as PCI device Functions, PCI Express device Functions are required to provide a Configuration Space for software-driven initialization and configuration. Except for the differences described in this chapter, the PCI Express Configuration Space headers are organized to correspond with the format and behavior defined in the [PCI] (Section 6.1).
@@ -70670,11 +70373,16 @@ PCI 兼容的 PCI Express 配置机制支持 [PCI] 中定义的 PCI 配置空间
 
 PCI 兼容配置访问机制使用与 ECAM 相同的请求格式。对于 PCI 兼容配置请求，扩展寄存器地址 (Extended Register Address) 字段必须全部为零。
 
-<img src="figures/chapter_07/fig_0983_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-3.** PCI Express Configuration Space Layout
+>
+> **图 7-3.** PCI Express 配置空间布局
+
+> <img src="figures/chapter_07/fig_0983_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -70682,7 +70390,6 @@ PCI 兼容配置访问机制使用与 ECAM 相同的请求格式。对于 PCI �
 
 <a id="sec-7-2-1"></a> <!-- 📄 Page 983 -->
 ## 7.2.1 PCI-compatible Configuration Mechanism | 7.2.1 PCI 兼容配置机制
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -70740,7 +70447,6 @@ PCI 兼容配置访问机制使用与 ECAM 相同的请求格式。对于 PCI �
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -70862,7 +70568,6 @@ The system hardware must provide a method for the system software to guarantee t
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 986 -->
 <table>
 <thead>
@@ -70920,7 +70625,6 @@ The system hardware must provide a method for the system software to guarantee t
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -70957,7 +70661,6 @@ For those systems that implement the ECAM, the PCI Express Host Bridge is requir
 
 <a id="sec-7-2-2-2"></a>
 ## 7.2.2.2 PCI Express Device Requirements | 7.2.2.2 PCI Express 设备要求
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -71016,7 +70719,6 @@ Devices must support an additional 4 bits for decoding configuration register ac
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -71072,7 +70774,6 @@ A Root Complex implementation is not required to support accesses to an RCRB tha
 <a id="sec-7-3"></a>
 ## 7.3 Configuration Transaction Rules | 7.3 配置事务规则
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -71112,7 +70813,6 @@ Except when FPB Routing ID mechanisms are used (see § Section 6.26 ), Downstrea
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -71138,7 +70838,6 @@ Except when FPB Routing ID mechanisms are used (see § Section 6.26 ), Downstrea
 
 <a id="sec-7-3-1-cont"></a> <!-- 📄 Page 989 -->
 ## 7.3.1 Device Number (continued) | 7.3.1 设备号 (Device Number)（续）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -71207,7 +70906,6 @@ PCI Express 配置请求使用以下地址字段:
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -71273,7 +70971,6 @@ Hardware Initialized - Register bits are permitted, as an implementation option,
 </tbody>
 </table>
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -71306,7 +71003,6 @@ If the optional feature that would Set the bits is not implemented, the bits mus
 </tbody>
 </table>
 </div>
-
 
 <table>
 <thead>
@@ -71372,7 +71068,6 @@ If the optional feature that would Set the bit is not implemented, the bit must 
 
 <a id="sec-7-3-3"></a>
 ## 7.3.3 Configuration Request Routing Rules | 配置请求路由规则
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -71489,7 +71184,6 @@ Additional rule specific to Root Complexes:
 </table>
 </div> <!-- 📄 Page 990 -->
 
-
 ---
 
 <table>
@@ -71531,7 +71225,6 @@ PCI Express 不直接支持 PCI Special Cycles（PCI 特殊周期，详见 [PCI]
 </tbody>
 </table>
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -71570,7 +71263,6 @@ PCI Express 不直接支持 PCI Special Cycles（PCI 特殊周期，详见 [PCI]
 </tbody>
 </table>
 </div>
-
 
 <a id="sec-7-3-4"></a>
 ## 7.3.4 PCI Special Cycles | PCI 特殊周期
@@ -71628,7 +71320,6 @@ Configuration register fields are assigned one of the attributes described in §
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 991 -->
 <table>
 <thead>
@@ -71674,7 +71365,6 @@ To provide a clear, consolidated, and concise indication of PF and VF attribute 
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -71708,7 +71398,6 @@ This section describes the PCI and PCI Express capabilities required by the Base
 <a id="sec-7-5-1"></a>
 ## 7.5.1 PCI-Compatible Configuration Registers | PCI 兼容配置寄存器
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -71741,7 +71430,6 @@ Layout of the Configuration Space and format of individual configuration registe
 </tbody>
 </table>
 </div>
-
 
 >>> **Figure 7-4.** Common Configuration Space Header
 > **图 7-4.** 公共配置空间头部 (Common Configuration Space Header)
@@ -71784,7 +71472,6 @@ These registers are defined for both Type 0 and Type 1 Configuration Space Heade
 <a id="sec-7-5-1-1-1"></a>
 ## 7.5.1.1.1 Vendor ID Register (Offset 00h) | Vendor ID 寄存器（偏移 00h）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -71813,7 +71500,6 @@ For VFs, this field must return FFFFh when read. VI software should return the V
 </tbody>
 </table>
 </div> <!-- 📄 Page 995 -->
-
 
 ---
 
@@ -71889,7 +71575,6 @@ Returning FFFFh for Device ID and Vendor ID values allows some legacy software t
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -71928,7 +71613,6 @@ Returning FFFFh for Device ID and Vendor ID values allows some legacy software t
 </tbody>
 </table>
 </div> <!-- 📄 Page 997 -->
-
 
 ---
 
@@ -72007,7 +71691,6 @@ Returning FFFFh for Device ID and Vendor ID values allows some legacy software t
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -72042,7 +71725,6 @@ Returning FFFFh for Device ID and Vendor ID values allows some legacy software t
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -72089,7 +71771,6 @@ This bit does not apply to VFs and must be hardwired to Zero.
 </tr>
 </tbody>
 </table>
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -72193,7 +71874,6 @@ Functions with a Type 0 Configuration Space Header that do not make Non-Posted R
 </tbody>
 </table>
 </div> <!-- 📄 Page 1000 -->
-
 
 ---
 
@@ -72333,7 +72013,10 @@ PF 及其关联 VF 中的字段在被读取时必须返回相同的值。
 
 ---
 
-> **Figure 7-7. Class Code Register | 类别代码寄存器**
+> **Figure 7-7.** Class Code Register
+>
+> **图 7-7.** 类别代码寄存器
+
 > <img src="figures/chapter_07/fig_1001_1.png" width="700">
 
 **Table 7-6. Class Code Register | 表 7-6 类别代码寄存器**
@@ -72358,7 +72041,6 @@ PF 及其关联 VF 中的字段在被读取时必须返回相同的值。
 
 <a id="sec-7-5-1-1-7"></a>
 ## 7.5.1.1.7 Cache Line Size Register (Offset 0Ch) | Cache 行大小寄存器（偏移量 0Ch）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -72388,7 +72070,6 @@ Cache Line Size 寄存器由系统固件或操作系统编程为系统 cache 行
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -72460,7 +72141,10 @@ This entire register does not apply to VFs and must be hardwired to Zero.
 
 ---
 
-> **Figure 7-8. Header Type Register | 头类型寄存器**
+> **Figure 7-8.** Header Type Register
+>
+> **图 7-8.** 头类型寄存器
+
 > <img src="figures/chapter_07/fig_1002_1_tight.png" width="700">
 
 **Table 7-7. Header Type Register | 表 7-7 头类型寄存器**
@@ -72513,7 +72197,10 @@ For an SR-IOV device, if the VF Enable bit is Set in any PF, then software shoul
 
 ---
 
-> **Figure 7-9. BIST Register | BIST 寄存器**
+> **Figure 7-9.** BIST Register
+>
+> **图 7-9.** BIST 寄存器
+
 > <img src="figures/chapter_07/fig_1003_1_tight.png" width="700">
 
 **Table 7-8. BIST Register | 表 7-8 BIST 寄存器**
@@ -72624,7 +72311,6 @@ For VFs, this register does not apply and must be hardwired to Zero.
 <a id="sec-7-5-1-1-13"></a>
 ## 7.5.1.1.13 Interrupt Pin Register (Offset 3Dh) | 中断引脚寄存器（偏移量 3Dh）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -72661,7 +72347,6 @@ PCI Express 为单 Function 设备定义一条传统中断消息，为多功能�
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -72734,7 +72419,6 @@ Command 寄存器和 Status 寄存器中的错误控制/状态寄存器位（分
 <a id="sec-7-5-1-1-14"></a>
 ## 7.5.1.1.14 Error Registers | 错误寄存器
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -72769,10 +72453,10 @@ System software must build a consistent address map before booting the machine t
 
 > **Figure 7-10.** Type 0 Configuration Space Header
 > **图 7-10.** Type 0 配置空间头部
+
 > <img src="figures/chapter_07/fig_1005_1_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -72814,7 +72498,6 @@ System software must build a consistent address map before booting the machine t
 
 <a id="sec-7-5-1-2-1"></a>
 ## 7.5.1.2.1 Base Address Registers (Offset 10h - 24h) | 基址寄存器 (BAR) (偏移 10h - 24h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -72862,14 +72545,15 @@ Base Address registers that map into Memory Space can be 32 bits or 64 bits wide
 
 > **Figure 7-11.** Base Address Register for Memory
 > **图 7-11.** Memory Base Address 寄存器
+
 > <img src="figures/chapter_07/fig_1006_1_tight.png" width="700">
 
 > **Figure 7-12.** Base Address Register for I/O
 > **图 7-12.** I/O Base Address 寄存器
+
 > <img src="figures/chapter_07/fig_1006_2_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -72984,7 +72668,6 @@ Type 0 配置空间头 (Type 0 Configuration Space Header) 在配置空间 (Conf
 <a id="sec-7-5-1-2-1-pf"></a>
 ## 7.5.1.2.1 Prefetchable Bit Guidance | 可预取位指导
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -73052,7 +72735,6 @@ A PCI Express Function requesting Memory Space through a BAR must set the BAR's 
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -73093,7 +72775,6 @@ This register was originally described in the [PC-Card]. This register does not 
 
 <a id="sec-7-5-1-2-3"></a>
 ## 7.5.1.2.3 Subsystem Vendor ID Register/Subsystem ID Register (Offset 2Ch/2Eh) | 子系统供应商 ID 寄存器/子系统 ID 寄存器 (偏移 2Ch/2Eh)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -73154,7 +72835,6 @@ PF 中的子系统 ID (Subsystem ID) 寄存器及其关联的 VF 在读取时允
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -73181,10 +72861,6 @@ For VFs, the Expansion ROM Base Address register is not supported and must be ha
 
 Functions that support an expansion ROM must allow that ROM to be accessed with any combination of byte enables.
 
-> **Figure 7-13.** Expansion ROM Base Address Register
-> **图 7-13.** Type 0 配置空间—Subsystem Vendor ID 和 Subsystem ID
-> <img src="figures/chapter_07/fig_1010_1_tight.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8"> <!-- 📄 Page 1010 -->
 
@@ -73196,11 +72872,16 @@ Functions that support an expansion ROM must allow that ROM to be accessed with 
 
 支持扩展 ROM 的功能 (Function) 必须允许使用任何字节使能 (Byte Enable) 组合来访问该 ROM。
 
-<img src="figures/chapter_07/fig_1010_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-13.** Expansion ROM Base Address Register
+>
+> **图 7-13.** Type 0 配置空间—Subsystem Vendor ID 和 Subsystem ID
+
+> <img src="figures/chapter_07/fig_1010_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -73243,7 +72924,6 @@ Functions that support an expansion ROM must allow that ROM to be accessed with 
 | 111b | Warning Pass Validation Passed with implementation specific warning. Valid and trusted contents / 警告通过：验证通过但带有实现特定的警告。内容有效且受信任 |
 
 **Table 7-10 Bit 3:1 (Details). Expansion ROM Validation Status | 表 7-10 Bits 3:1（详细）扩展 ROM 验证状态**
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -73317,7 +72997,6 @@ Defined encodings are:
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -73449,7 +73128,6 @@ These registers do not apply to PCI Express and must be hardwired to Zero.
 <a id="sec-7-5-1-3-fig"></a>
 ## 7.5.1.3 Type 1 Configuration Space Header (Figure) | Type 1 配置空间头（图表）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -73488,10 +73166,10 @@ These registers are defined in § Section 7.5.1.2.1. However the number of BARs 
 
 > **Figure 7-14.** Type 1 Configuration Space Header
 > **图 7-14.** Type 0 配置空间—扩展 ROM Base Address 寄存器
+
 > <img src="figures/chapter_07/fig_1013_1_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -73576,7 +73254,6 @@ I/O Base 和 I/O Limit 寄存器是可选的，用于定义一个地址范围，
 <a id="sec-7-5-1-3-1-cont"></a> <!-- 📄 Page 1014 -->
 ## 7.5.1.3.1 Type 1 Base Address Registers (Offset 10h-14h) (continued) | Type 1 基址寄存器 (偏移 10h-14h) (续)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -73638,7 +73315,6 @@ I/O Base 和 I/O Limit 寄存器的低 4 位均为只读，包含相同的值，
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-5-1-3-7"></a> <!-- 📄 Page 1015 -->
@@ -73669,12 +73345,6 @@ I/O Base 和 I/O Limit 寄存器的低 4 位均为只读，包含相同的值，
 | 14  | Received System Error |
 | 15  | Detected Parity Error |
 
-> **Figure 7-15.** Secondary Status Register
-> **图 7-15.** Type 0 配置空间—Capabilities Pointer 寄存器
-
-> <img src="figures/chapter_07/fig_1016_1_tight.png" width="700">
-
-
 Table 7-12 Secondary Status Register
 
 | Bit Location | Register Description | Attributes |
@@ -73703,9 +73373,6 @@ Table 7-12 Secondary Status Register
 | 14  | Received System Error |
 | 15  | Detected Parity Error |
 
-> **Figure 7-15.** Secondary Status 寄存器
-> **图 7-15.** Type 0 配置空间—Capabilities Pointer 寄存器
-
 **Table 7-12 Secondary Status 寄存器 | 表 7-12 Secondary Status 寄存器**
 
 | Bit Location | 寄存器描述 | 属性 |
@@ -73717,17 +73384,21 @@ Table 7-12 Secondary Status Register
 | 11 | Signaled Target Abort — 见 § Section 7.5.1.1.14 。当 Type 1 配置空间头 Function 的 Secondary 侧 (针对由 Type 1 头 Function 自身完成的请求) 以 Completer Abort 错误完成一个 Posted 或 Non-Posted 请求时，此位被置位。此位的默认值为 0b。 | RW1C |
 | 12 | Received Target Abort — 见 § Section 7.5.1.1.14 。当 Type 1 配置空间头 Function 的 Secondary 侧 (针对由 Type 1 头 Function 自身发起的请求) 收到一个完成状态 (Completion Status) 为 Completer Abort 的 Completion 时，此位被置位。 | RW1C |
 
-<img src="figures/chapter_07/fig_1016_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+> **Figure 7-15.** Secondary Status 寄存器
+>
+> **图 7-15.** Type 0 配置空间—Capabilities Pointer 寄存器
+
+> <img src="figures/chapter_07/fig_1016_1_tight.png" width="700">
+
 ---
 
 <a id="sec-7-5-1-3-7-cont"></a> <!-- 📄 Page 1016 -->
 ## 7.5.1.3.7 Secondary Status Register (continued) | Secondary Status 寄存器 (续)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -73763,7 +73434,6 @@ Table 7-12 Secondary Status Register
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -73834,7 +73504,6 @@ Prefetchable Memory Base 和 Prefetchable Memory Limit 寄存器定义一个可�
 <a id="sec-7-5-1-3-9-cont"></a> <!-- 📄 Page 1018 -->
 ## 7.5.1.3.9 Prefetchable Memory Base/Prefetchable Memory Limit Registers (continued) | Prefetchable Memory Base / Prefetchable Memory Limit 寄存器 (续)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -73876,7 +73545,6 @@ Prefetchable Memory Base 和 Prefetchable Memory Limit 寄存器的低 4 位均�
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-5-1-3-10"></a>
@@ -73913,7 +73581,6 @@ These registers must be initialized by configuration software, so default states
 
 <a id="sec-7-5-1-3-11"></a>
 ## 7.5.1.3.11 I/O Base Upper 16 Bits/I/O Limit Upper 16 Bits Registers (Offset 30h/32h) | I/O Base Upper 16 Bits / I/O Limit Upper 16 Bits 寄存器 (偏移 30h/32h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -73960,7 +73627,6 @@ I/O Base Upper 16 Bits 和 I/O Limit Upper 16 Bits 寄存器是 I/O Base 和 I/O
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-5-1-3-12"></a> <!-- 📄 Page 1019 -->
@@ -73994,7 +73660,6 @@ This register is defined in § Section 7.5.1.2.4 . However the offset of the reg
 <a id="sec-7-5-1-3-13"></a>
 ## 7.5.1.3.13 Bridge Control Register (Offset 3Eh) | Bridge Control 寄存器 (偏移 3Eh)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -74026,12 +73691,6 @@ The Bridge Control Register provides extensions to the Command Register that are
 | 10  | Discard Timer Status |
 | 11  | Discard Timer SERR# Enable |
 | 12-15 | RsvdP |
-
-> **Figure 7-16.** Bridge Control Register
-> **图 7-16.** Type 1 配置空间头部
-
-> <img src="figures/chapter_07/fig_1019_1_tight.png" width="700">
-
 
 Table 7-13 Bridge Control Register
 
@@ -74067,9 +73726,6 @@ Bridge Control 寄存器提供 Command 寄存器的扩展，这些扩展特定�
 | 11  | Discard Timer SERR# Enable |
 | 12-15 | RsvdP |
 
-> **Figure 7-16.** Bridge Control 寄存器
-> **图 7-16.** Type 1 配置空间头部
-
 **Table 7-13 Bridge Control 寄存器 | 表 7-13 Bridge Control 寄存器**
 
 | Bit 位置 | 寄存器描述 | 属性 |
@@ -74081,13 +73737,17 @@ Bridge Control 寄存器提供 Command 寄存器的扩展，这些扩展特定�
 
 7.5.1.3.13 Bridge Control 寄存器 (偏移 3Eh) §
 
-<img src="figures/chapter_07/fig_1019_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> **Figure 7-16.** Bridge Control 寄存器
+>
+> **图 7-16.** Type 1 配置空间头部
+
+> <img src="figures/chapter_07/fig_1019_1_tight.png" width="700">
+</div>
 
 ---
 
@@ -74160,7 +73820,6 @@ Bridge Control 寄存器提供 Command 寄存器的扩展，这些扩展特定�
 <a id="sec-7-5-1-3-13-cont2"></a> <!-- 📄 Page 1021 -->
 ## 7.5.1.3.13 Bridge Control Register (continued) | Bridge Control 寄存器 (续)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -74208,7 +73867,6 @@ Bridge Control 寄存器提供 Command 寄存器的扩展，这些扩展特定�
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-5-1-4"></a>
@@ -74228,10 +73886,6 @@ Bridge Control 寄存器提供 Command 寄存器的扩展，这些扩展特定�
 This section describes the registers making up the PCI Power Management Interface structure.
 
 § Figure 7-17 illustrates the organization of the PCI Power Management Capability structure. This structure is required for all PCI Express Functions.
-
-> **Figure 7-17.** PCI Power Management Capability Structure
-> **图 7-17.** Type 1 配置空间—Bus Number 寄存器
-> <img src="figures/chapter_07/fig_1021_1_tight.png" width="700">
 
 | Byte Offset | Register |
 |-------------|----------|
@@ -74266,11 +73920,16 @@ PCI Express device Functions are required to support D0 and D3 device states; PC
 
 PCI Express 设备 Function 必须支持 D0 和 D3 设备状态;对于 § Section 7.1 中描述的、表示 PCI Express 端口 (Port) 的 PCI-PCI 桥结构，鉴于 PCI Express 中 PME 消息 (Message) 的带内 (in-band) 性质，必须指示 PME Message 传递能力。
 
-<img src="figures/chapter_07/fig_1021_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-17.** PCI Power Management Capability Structure
+>
+> **图 7-17.** Type 1 配置空间—Bus Number 寄存器
+
+> <img src="figures/chapter_07/fig_1021_1_tight.png" width="700">
 
 ---
 
@@ -74306,6 +73965,7 @@ The PME_Status bit for the PCI-PCI Bridge structure representing PCI Express Por
 
 > **Figure 7-18.** Power Management Capabilities Register
 > **图 7-18.** Type 1 配置空间—Subordinate Bus Number 和 Secondary Latency Timer 寄存器
+
 > <img src="figures/chapter_07/fig_1022_1_tight.png" width="700">
 
 **Table 7-14. Power Management Capabilities Register | 表 7-14. 电源管理能力寄存器**
@@ -74325,7 +73985,6 @@ The PME_Status bit for the PCI-PCI Bridge structure representing PCI Express Por
 
 <a id="sec-7-5-2-1"></a>
 ## 7.5.2.1 Power Management Capabilities Register (Offset 00h) | 电源管理能力寄存器（偏移量 00h）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -74396,7 +74055,6 @@ For encoding 000b, when the add-in card is self powered (e.g., it contains a bat
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -74448,6 +74106,7 @@ PME 上下文 (PME Context) 包括 PME_Status 和 PME_En 位的值、在 D3<sub>
 
 > **Figure 7-19.** Power Management Control/Status Register
 > **图 7-19.** Type 1 配置空间—I/O Base 和 I/O Limit 寄存器
+
 > <img src="figures/chapter_07/fig_1024_1_tight.png" width="700">
 
 **Table 7-15. Power Management Control/Status Register | 表 7-15. 电源管理控制/状态寄存器**
@@ -74462,7 +74121,6 @@ PME 上下文 (PME Context) 包括 PME_Status 和 PME_En 位的值、在 D3<sub>
 
 <a id="sec-7-5-2-2"></a>
 ## 7.5.2.2 Power Management Control/Status Register (Offset 04h) | 电源管理控制/状态寄存器（偏移量 04h）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -74523,7 +74181,6 @@ Default value of this field is 00b.
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -74567,6 +74224,7 @@ Software may check for the presence of the Power Management Data Register by wri
 
 > **Figure 7-20.** Power Management Data Register
 > **图 7-20.** Type 1 配置空间—Memory Base 和 Memory Limit 寄存器
+
 > <img src="figures/chapter_07/fig_1026_1_tight.png" width="700">
 
 **Table 7-16. Power Management Data Register | 表 7-16. 电源管理数据寄存器**
@@ -74581,7 +74239,6 @@ Software may check for the presence of the Power Management Data Register by wri
 
 <a id="sec-7-5-2-3"></a>
 ## 7.5.2.3 Power Management Data Register (Offset 07h) | 电源管理数据寄存器（偏移量 07h）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -74664,7 +74321,6 @@ Power Budgeting Extended Capability 和 PCI Power Management Capability 都报�
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -74717,6 +74373,7 @@ Slot Capabilities、Slot Status 和 Slot Control 寄存器在某些交换机下�
 
 > **Figure 7-21.** PCI Express Capability Structure
 > **图 7-21.** Type 1 配置空间—Prefetchable Memory Base 和 Prefetchable Memory Limit 寄存器
+
 > <img src="figures/chapter_07/fig_1028_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
@@ -74751,6 +74408,7 @@ PCI Express 能力列表寄存器 (PCI Express Capability List Register) 在 PCI
 
 > **Figure 7-22.** PCI Express Capability List Register
 > **图 7-22.** Type 1 配置空间—Prefetchable Base Upper 32 Bits 和 Prefetchable Limit Upper 32 Bits 寄存器
+
 > <img src="figures/chapter_07/fig_1029_1_tight.png" width="700">
 
 **Table 7-18. PCI Express Capability List Register | 表 7-18. PCI Express 能力列表寄存器**
@@ -74792,6 +74450,7 @@ PCI Express 能力寄存器 (PCI Express Capabilities Register) 用于标识 PCI
 
 > **Figure 7-23.** PCI Express Capabilities Register
 > **图 7-23.** Type 1 配置空间—I/O Base Upper 16 Bits 和 I/O Limit Upper 16 Bits 寄存器
+
 > <img src="figures/chapter_07/fig_1029_2_tight.png" width="700">
 
 **Table 7-19. PCI Express Capabilities Register | 表 7-19. PCI Express 能力寄存器**
@@ -74805,7 +74464,6 @@ PCI Express 能力寄存器 (PCI Express Capabilities Register) 用于标识 PCI
 
 <sup>163</sup>. This field would be better named 'Function Type' but for historical reasons is named Device/Port Type.
 
-
 | 位位置 | 寄存器描述 | 属性 |
 |--------------|----------------------|------------|
 | 3:0 | **Capability Version** — 指示由 PCI-SIG 定义的 PCI Express 能力结构版本号。规范的某个版本如果以其他方式无法识别的方式（例如，通过新的 Capability 字段）更改了 PCI Express 能力结构，则允许递增该字段。对 PCI Express 能力结构的所有此类更改必须保持软件兼容性。软件必须检查 Capability 版本号是否大于或等于编写该软件时所定义的最高编号，因为报告任何此类 Capability 版本号的功能将包含与该软件兼容的 PCI Express 能力结构。对于符合本规范的功能，必须硬连线为 2h。 | RO |
@@ -74815,13 +74473,11 @@ PCI Express 能力寄存器 (PCI Express Capabilities Register) 用于标识 PCI
 
 <sup>163</sup>. 该字段本应更好地命名为 "Function Type"，但出于历史原因被命名为 Device/Port Type。
 
-
 </table>
 
 [⬆️ 返回目录](#sec-7-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1031 -->
 <table>
@@ -74856,9 +74512,9 @@ The Device Capabilities Register identifies PCI Express device Function specific
 </table>
 </div>
 
-
 > **Figure 7-24.** Device Capabilities Register
 > **图 7-24.** Type 1 配置空间—Capability Pointer 寄存器
+
 > <img src="figures/chapter_07/fig_1031_1_tight.png" width="700">
 
 **Table 7-20. Device Capabilities Register | 表 7-20. 设备能力寄存器**
@@ -74908,7 +74564,6 @@ The Device Capabilities Register identifies PCI Express device Function specific
 [⬆️ 返回目录](#sec-7-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -74969,7 +74624,6 @@ The Functions of a Multi-Function Device are permitted to report different value
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -75023,7 +74677,6 @@ Note that 8-bit Tag field generation must be enabled by the Extended Tag Field E
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1034 -->
 <table>
 <thead>
@@ -75072,7 +74725,6 @@ Note that 8-bit Tag field generation must be enabled by the Extended Tag Field E
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -75127,9 +74779,6 @@ For VF fields indicated as RsvdP, the PF setting applies to the VF.
 
 **图 7-25 设备控制寄存器 (Device Control Register)**
 
-> <img src="figures/chapter_07/fig_1035_1_tight.png" width="700">
-
-
 | 位 | 字段 |
 |----|------|
 | 0 | Correctable Error Reporting Enable (可纠正错误报告使能) |
@@ -75150,13 +74799,14 @@ For VF fields indicated as RsvdP, the PF setting applies to the VF.
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1035_1_tight.png" width="700">
+
 [⬆️ 返回目录](#sec-7-0)
 
 ---
 
 <a id="sec-7-5-3-4"></a>
 ## 7.5.3.4 Device Control Register (Offset 08h) | 设备控制寄存器 (Device Control Register) (偏移量 08h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -75190,7 +74840,6 @@ For VF fields indicated as RsvdP, the PF setting applies to the VF.
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -75239,7 +74888,6 @@ For VF fields indicated as RsvdP, the PF setting applies to the VF.
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1037 -->
 <table>
 <thead>
@@ -75280,7 +74928,6 @@ For VF fields indicated as RsvdP, the PF setting applies to the VF.
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -75329,7 +74976,6 @@ Default value of this bit is 1b.
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1039 -->
 <table>
 <thead>
@@ -75372,7 +75018,6 @@ Default value of this bit is 1b.
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -75441,7 +75086,6 @@ Default value of this bit is 1b.
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1041 -->
 <table>
 <thead>
@@ -75478,7 +75122,6 @@ Default value of this bit is 1b.
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -75526,7 +75169,6 @@ Default value of this bit is 1b.
 <a id="sec-7-5-3-5"></a> <!-- 📄 Page 1042 -->
 ## 7.5.3.5 Device Status Register (Offset 0Ah) | 设备状态寄存器 (Device Status Register) (偏移量 0Ah)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -75569,9 +75211,6 @@ The Device Status Register provides information about PCI Express device (Functi
 
 **图 7-26 设备状态寄存器 (Device Status Register)**
 
-> <img src="figures/chapter_07/fig_1042_1_tight.png" width="700">
-
-
 | 位 | 字段 |
 |----|------|
 | 0 | Correctable Error Detected (检测到可纠正错误) |
@@ -75595,8 +75234,9 @@ The Device Status Register provides information about PCI Express device (Functi
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1042_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -75632,7 +75272,6 @@ The Device Status Register provides information about PCI Express device (Functi
 [⬆️ 返回目录](#sec-7-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1043 -->
 <table>
@@ -75674,7 +75313,6 @@ The Device Status Register provides information about PCI Express device (Functi
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -75728,9 +75366,6 @@ The Link Capabilities Register identifies PCI Express Link specific capabilities
 
 **图 7-27 链路能力寄存器 (Link Capabilities Register)**
 
-> <img src="figures/chapter_07/fig_1044_1_tight.png" width="700">
-
-
 | 位 | 字段 |
 |----|------|
 | 0–3 | Max Link Speed (最大链路速率) |
@@ -75759,10 +75394,11 @@ The Link Capabilities Register identifies PCI Express Link specific capabilities
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1044_1_tight.png" width="700">
+
 [⬆️ 返回目录](#sec-7-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1044 --> <!-- 📄 Page 1045 -->
 <table>
@@ -75796,7 +75432,6 @@ The Link Capabilities Register identifies PCI Express Link specific capabilities
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -75849,7 +75484,6 @@ The Link Capabilities Register identifies PCI Express Link specific capabilities
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1047 -->
 <table>
 <thead>
@@ -75899,7 +75533,6 @@ For VF fields indicated as RsvdP, the associated PF's setting applies to the VF.
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -75947,9 +75580,6 @@ For VF fields indicated as RsvdP, the associated PF's setting applies to the VF.
 
 **图 7-28 链路控制寄存器**
 
-> <img src="figures/chapter_07/fig_1048_1_tight.png" width="700">
-
-
 | 位 | 字段 |
 |-----|------|
 | 1:0 | ASPM Control (ASPM 控制) |
@@ -75977,8 +75607,9 @@ For VF fields indicated as RsvdP, the associated PF's setting applies to the VF.
 </tbody>
 </table> <!-- 📄 Page 1048 -->
 
----
+> <img src="figures/chapter_07/fig_1048_1_tight.png" width="700">
 
+---
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -76047,7 +75678,6 @@ Default value of this field is 00b unless otherwise required by a particular for
 </table>
 </div>
 
-
 ---
 
 <table> <!-- 📄 Page 1049 -->
@@ -76100,7 +75730,6 @@ Default value of this field is 00b unless otherwise required by a particular for
 </table>
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1050 -->
 <table>
@@ -76158,7 +75787,6 @@ This bit always returns 0b when read. **RW**
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -76252,7 +75880,6 @@ CLKREQ# 信号也可通过 L1 PM Substates 机制进行控制。该控制不受�
 </table>
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1052 -->
 <table>
@@ -76371,7 +75998,6 @@ For Functions associated with an Upstream Port, this bit is optionally implement
 </table>
 </div>
 
-
 ---
 
 <table> <!-- 📄 Page 1053 -->
@@ -76447,7 +76073,6 @@ Link Capabilities 2 寄存器中 DRS Supported 位为 0 的下游端口必须将
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -76490,7 +76115,6 @@ Link Capabilities 2 寄存器中 DRS Supported 位为 0 的下游端口必须将
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -76540,7 +76164,6 @@ Link Capabilities 2 寄存器中 DRS Supported 位为 0 的下游端口必须将
 </table>
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1055 -->
 <table>
@@ -76597,7 +76220,6 @@ Link Status 寄存器提供 PCI Express 链路相关参数的信息。§ 图 7-2
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-5-3-8"></a>
@@ -76637,9 +76259,6 @@ Link Status 寄存器提供 PCI Express 链路相关参数的信息。§ 图 7-2
 
 **图 7-29 链路状态寄存器**
 
-> <img src="figures/chapter_07/fig_1055_1_tight.png" width="700">
-
-
 | 位 | 字段 |
 |-----|------|
 | 3:0 | Current Link Speed (当前链路速度) |
@@ -76661,8 +76280,9 @@ Link Status 寄存器提供 PCI Express 链路相关参数的信息。§ 图 7-2
 </tbody>
 </table>
 
----
+> <img src="figures/chapter_07/fig_1055_1_tight.png" width="700">
 
+---
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1056 -->
 <table>
@@ -76742,7 +76362,6 @@ All other encodings are Reserved. The value in this field is undefined when the 
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -76852,7 +76471,6 @@ The default value of this bit is 0b. **RW1C, VF RsvdZ**
 <a id="sec-7-5-3-9"></a>
 ## 7.5.3.9 Slot Capabilities Register (Offset 14h) | 插槽能力寄存器（偏移 14h）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -76911,9 +76529,6 @@ Slot Capabilities 寄存器标识 PCI Express 插槽特有的能力。§ 图 7-3
 
 **图 7-30 插槽能力寄存器**
 
-> <img src="figures/chapter_07/fig_1057_1_tight.png" width="700">
-
-
 | 位 | 字段 |
 |-----|------|
 | 0 | Attention Button Present (存在 Attention 按钮) |
@@ -76949,8 +76564,9 @@ Slot Capabilities 寄存器标识 PCI Express 插槽特有的能力。§ 图 7-3
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1057_1_tight.png" width="700">
+</div>
 
 ---
 
@@ -77079,7 +76695,6 @@ The default value prior to hardware/firmware initialization is 00b. **HwInit**
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1059 -->
 <table>
 <thead>
@@ -77128,7 +76743,6 @@ Slot Control 寄存器的 Attention Indicator Control、Power Indicator Control 
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -77193,9 +76807,6 @@ Bit | Description
 
 **图 7-31 插槽控制寄存器 (Slot Control Register)**
 
-> <img src="figures/chapter_07/fig_1060_1_tight.png" width="700">
-
-
 **表 7-28 插槽控制寄存器 (Slot Control Register)**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -77207,8 +76818,9 @@ Bit | Description
 </tbody>
 </table> <!-- 📄 Page 1060 -->
 
----
+> <img src="figures/chapter_07/fig_1060_1_tight.png" width="700">
 
+---
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -77242,7 +76854,6 @@ Bit | Description
 </tbody>
 </table>
 </div> <!-- 📄 Page 1061 -->
-
 
 ---
 
@@ -77282,7 +76893,6 @@ Bit | Description
 </table> <!-- 📄 Page 1062 -->
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -77328,7 +76938,6 @@ If this register is implemented but the Slot Implemented bit is Clear, the field
 </tbody>
 </table>
 </div>
-
 
 <a id="sec-7-5-3-11"></a>
 ## 7.5.3.11 Slot Status Register | 插槽状态寄存器 (Offset 1Ah)
@@ -77389,9 +76998,6 @@ Bit | Description
 
 **图 7-32 插槽状态寄存器 (Slot Status Register)**
 
-> <img src="figures/chapter_07/fig_1063_1_tight.png" width="700">
-
-
 **表 7-29 插槽状态寄存器 (Slot Status Register)**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -77409,8 +77015,9 @@ Bit | Description
 </tbody>
 </table> <!-- 📄 Page 1063 -->
 
----
+> <img src="figures/chapter_07/fig_1063_1_tight.png" width="700">
 
+---
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -77454,7 +77061,6 @@ The Root Control Register controls PCI Express Root Complex specific parameters.
 </tbody>
 </table>
 </div> <!-- 📄 Page 1064 -->
-
 
 ---
 
@@ -77509,9 +77115,6 @@ Bit | Description
 
 **图 7-33 根复合体控制寄存器 (Root Control Register)**
 
-> <img src="figures/chapter_07/fig_1065_1_tight.png" width="700">
-
-
 **表 7-30 根复合体控制寄存器 (Root Control Register)**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -77527,8 +77130,9 @@ Bit | Description
 </tbody>
 </table> <!-- 📄 Page 1065 -->
 
----
+> <img src="figures/chapter_07/fig_1065_1_tight.png" width="700">
 
+---
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -77546,8 +77150,6 @@ Bit | Description
 |---|---|---|
 | 5 | No NFM Subtree Below This Root Port - When Clear, indicates that the RC must take ownership of non-UIO Non-Posted Requests passing peer-to-peer through the RC targeting this RP as the Egress Port.<br>It is strongly recommended that system software Set this bit if it is determined that no NFM subtree(s) exist below this Root Port. RC implementations are strongly recommended to avoid taking ownership when not required to do so.<br>Root Ports must handle the Clearing of this bit without disruption to Non-Posted Requests the RC has taken ownership of.<br>Root Ports that do not implement this capability must hardwire this bit to 0b.<br>Default value of this bit is 0b. | RW |
 
-
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -77555,14 +77157,11 @@ Bit | Description
 |---|---|---|
 | 5 | 此根端口下无 NFM 子树 (No NFM Subtree Below This Root Port) — 清零时，指示 RC 必须接管通过 RC 对等穿越、以此 RP 作为出口端口 (Egress Port) 的非 UIO Non-Posted 请求 (Non-Posted Request)。<br>如果确定此根端口下不存在 NFM 子树，强烈建议系统软件置位该位。强烈建议 RC 实现在不要求时不接管所有权。<br>根端口必须能够处理该位的清零，且不会中断 RC 已接管所有权的 Non-Posted 请求。<br>未实现此能力的根端口必须将该位硬连线为 0b。<br>该位的默认值为 0b。 | RW |
 
-
-
 </td>
 </tr>
 </tbody>
 </table>
 </div> <!-- 📄 Page 1066 -->
-
 
 ---
 
@@ -77665,9 +77264,6 @@ Bit | Description
 
 **图 7-35 根复合体状态寄存器 (Root Status Register)**
 
-> <img src="figures/chapter_07/fig_1067_1_tight.png" width="700">
-
-
 **表 7-32 根复合体状态寄存器 (Root Status Register)**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -77681,11 +77277,12 @@ Bit | Description
 </tbody>
 </table> <!-- 📄 Page 1067 -->
 
+> <img src="figures/chapter_07/fig_1067_1_tight.png" width="700">
+
 ---
 
 <a id="sec-7-5-3-15"></a>
 ## 7.5.3.15 Device Capabilities 2 Register | 设备能力 2 寄存器 (Offset 24h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -77764,9 +77361,6 @@ Bit | Description
 
 **图 7-36 设备能力 2 寄存器 (Device Capabilities 2 Register)**
 
-> <img src="figures/chapter_07/fig_1068_1_tight.png" width="700">
-
-
 **表 7-33 设备能力 2 寄存器 (Device Capabilities 2 Register)**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -77777,8 +77371,9 @@ Bit | Description
 </tr>
 </tbody>
 </table>
-</div> <!-- 📄 Page 1068 -->
 
+> <img src="figures/chapter_07/fig_1068_1_tight.png" width="700">
+</div> <!-- 📄 Page 1068 -->
 
 ---
 
@@ -77827,7 +77422,6 @@ Bit | Description
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -77867,7 +77461,6 @@ Bit | Description
 </table>
 </div> <!-- 📄 Page 1070 -->
 
-
 ---
 
 <table>
@@ -77905,7 +77498,6 @@ Bit | Description
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -77942,7 +77534,6 @@ Bit | Description
 </tbody>
 </table>
 </div> <!-- 📄 Page 1072 -->
-
 
 ---
 
@@ -78004,9 +77595,6 @@ Bit | Description
 
 **图 7-37 设备控制 2 寄存器 (Device Control 2 Register)**
 
-> <img src="figures/chapter_07/fig_1073_1_tight.png" width="700">
-
-
 **表 7-34 设备控制 2 寄存器 (Device Control 2 Register)**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -78022,11 +77610,12 @@ Bit | Description
 </tbody>
 </table> <!-- 📄 Page 1073 -->
 
+> <img src="figures/chapter_07/fig_1073_1_tight.png" width="700">
+
 ---
 
 <a id="sec-7-5-3-16"></a>
 ## 7.5.3.16 Device Control 2 Register (Offset 28h) | Device Control 2 寄存器(偏移 28h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -78096,7 +77685,6 @@ The default value for this field is 0000b.
 </tbody>
 </table>
 </div> <!-- 📄 Page 1074 -->
-
 
 ---
 
@@ -78180,7 +77768,6 @@ Applicable only to Endpoints and Root Ports; must be hardwired to 0b for other F
 </table> <!-- 📄 Page 1075 -->
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -78354,7 +77941,6 @@ Default is 0b.
 </tbody>
 </table>
 </div> <!-- 📄 Page 1076 -->
-
 
 ---
 
@@ -78556,7 +78142,6 @@ This register must be treated by software as RsvdZ.
 
 **Table 7-35. Link Capabilities 2 Register | 表 7-35. Link Capabilities 2 寄存器**
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -78673,7 +78258,6 @@ Bit definitions within this field are:
 </tbody>
 </table>
 </div> <!-- 📄 Page 1078 -->
-
 
 ---
 
@@ -78818,7 +78402,6 @@ Multi-Function Devices associated with an Upstream Port must report the same val
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -78909,7 +78492,6 @@ When Set, indicates support for the optional Device Readiness Status (DRS) capab
 </tbody>
 </table>
 </div> <!-- 📄 Page 1080 -->
-
 
 ---
 
@@ -79016,7 +78598,6 @@ Components that support only the 2.5 GT/s speed are permitted to hardwire this f
 </table> <!-- 📄 Page 1081 -->
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -79160,7 +78741,6 @@ For a Multi-Function Device associated with an Upstream Port, the field in Funct
 </tbody>
 </table>
 </div> <!-- 📄 Page 1082 -->
-
 
 ---
 
@@ -79348,7 +78928,6 @@ This field is intended for debug and compliance testing purposes. System firmwar
 
 **Table 7-37. Link Status 2 Register | 表 7-37. Link Status 2 寄存器**
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -79407,7 +78986,6 @@ For VFs, the associated PF's value applies, and this field must be RsvdZ. Otherw
 </tbody>
 </table>
 </div> <!-- 📄 Page 1084 -->
-
 
 ---
 
@@ -79588,7 +79166,6 @@ Retimer Presence Detect Supported 位为 0b 的端口可将该位硬连线为 0b
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -79739,7 +79316,6 @@ This field indicates the presence and DRS status for the Downstream Component, i
 </tbody>
 </table>
 </div> <!-- 📄 Page 1086 -->
-
 
 ---
 
@@ -79932,7 +79508,6 @@ This register must be treated by software as RsvdZ.
 <a id="sec-7-6"></a>
 ## 7.6 PCI Express Extended Capabilities | PCI Express 扩展能力
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -79967,10 +79542,10 @@ PCI Express Extended Capability 结构使用可选或必需的 PCI Express Exten
 
 > **Figure 7-42.** PCI Express Extended Configuration Space Layout
 > **图 7-42.** Link Status 寄存器
+
 > <img src="figures/chapter_07/fig_1087_1_tight.png" width="700">
 
 </div>
-
 
 ---
 
@@ -80041,7 +79616,6 @@ Extended Capabilities in a Root Complex Register Block always begin at offset 00
 <a id="sec-7-6-3"></a>
 ## 7.6.3 PCI Express Extended Capability Header | PCI Express 扩展能力头
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -80092,10 +79666,10 @@ All PCI Express device Functions that are capable of generating interrupts must 
 
 > **Figure 7-43.** PCI Express Extended Capability Header
 > **图 7-43.** Link Status 2 寄存器
+
 > <img src="figures/chapter_07/fig_1088_1_tight.png" width="700">
 
 </div>
-
 
 ---
 
@@ -80130,7 +79704,6 @@ All PCI Express device Functions that are capable of generating interrupts must 
 <a id="sec-7-7-1"></a>
 ## 7.7.1 MSI Capability Structures | MSI 能力结构
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -80161,10 +79734,10 @@ MSI 能力结构如图 § 7-44 和 § 7-45 所示。支持 MSI 的每个设备 F
 
 > **Figure 7-44.** MSI Capability Structure for 32-bit Message Address
 > **图 7-44.** Slot Capabilities 寄存器
+
 > <img src="figures/chapter_07/fig_1089_1_tight.png" width="700">
 
 </div>
-
 
 ---
 
@@ -80181,13 +79754,6 @@ MSI 能力结构如图 § 7-44 和 § 7-45 所示。支持 MSI 的每个设备 F
 <tbody>
 <tr>
 <td>
-
-> **Figure 7-46.** MSI Capability Structure for 32-bit Message Address and PVM
-> **图 7-46.** Slot Status 寄存器
-
-> <img src="figures/chapter_07/fig_1089_3_tight.png" width="700">
-
-> <img src="figures/chapter_07/fig_1090_1_tight.png" width="700">
 
 To request service, an MSI Function writes the contents of the Message Data Register for MSI, and if enabled, the Extended Message Data Register for MSI, to the address specified by the contents of the Message Address Register for MSI (and, optionally, when 64-bit message addresses are used, the Message Upper Address Register for MSI). A read of the address specified by the contents of the Message Address register produces undefined results.
 
@@ -80212,17 +79778,21 @@ MSI Capability Header 在 PCI 配置空间 Capability 列表中枚举 MSI Capabi
 
 7.7.1.1 MSI Capability Header (偏移 00h) §
 
-<img src="figures/chapter_07/fig_1089_3_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+> **Figure 7-46.** MSI Capability Structure for 32-bit Message Address and PVM
+>
+> **图 7-46.** Slot Status 寄存器
+
+> <img src="figures/chapter_07/fig_1089_3_tight.png" width="700">
+
 ---
 
 <a id="sec-7-7-1-1"></a>
 ## 7.7.1.1 MSI Capability Header (Offset 00h) | MSI 能力头 (偏移 00h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -80282,10 +79852,10 @@ This register provides system software control over MSI. By default, MSI is disa
 
 > **Figure 7-49.** Message Control Register for MSI
 > **图 7-49.** Root Status 寄存器
+
 > <img src="figures/chapter_07/fig_1091_1_tight.png" width="700">
 
 </div>
-
 
 ---
 
@@ -80338,7 +79908,6 @@ This register provides system software control over MSI. By default, MSI is disa
 <a id="sec-7-7-1-3"></a>
 ## 7.7.1.3 Message Address Register for MSI (Offset 04h) | MSI 的消息地址寄存器 (偏移 04h)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -80379,10 +79948,10 @@ This register provides system software control over MSI. By default, MSI is disa
 
 > **Figure 7-50.** Message Address Register for MSI
 > **图 7-50.** Device Capabilities 2 寄存器（续）
+
 > <img src="figures/chapter_07/fig_1093_1_tight.png" width="700">
 
 </div>
-
 
 ---
 
@@ -80424,7 +79993,6 @@ This register provides system software control over MSI. By default, MSI is disa
 
 <a id="sec-7-7-1-5"></a>
 ## 7.7.1.5 Message Data Register for MSI (Offset 08h or 0Ch) | MSI 的消息数据寄存器 (偏移 08h 或 0Ch)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -80472,10 +80040,10 @@ This register provides system software control over MSI. By default, MSI is disa
 
 > **Figure 7-52.** Message Data Register for MSI
 > **图 7-52.** Link Control 2 寄存器（续）
+
 > <img src="figures/chapter_07/fig_1094_1_tight.png" width="700">
 
 </div>
-
 
 ---
 
@@ -80493,8 +80061,6 @@ This register provides system software control over MSI. By default, MSI is disa
 <tr>
 <td>
 
-[figures/chapter_07/fig_1095_1.png]
-
 **Table 7-45 Extended Message Data Register for MSI**
 
 | Bit Location | Register Description | Attributes |
@@ -80502,13 +80068,8 @@ This register provides system software control over MSI. By default, MSI is disa
 | 31:0 | Extended Message Data - For MSI messages that use 32 bits of data, the contents of this field from the MSI Capability structure specify the lower 32 bits of data to be used in the Memory Write transaction. The upper 32 bits of the data are Reserved.<br><br>For MSI messages that use 64 bits of data, the contents of this field from the MSI Capability structure specify the upper 32 bits of data to be used in the Memory Write transaction. The lower 32 bits of data are specified by the Message Data Register. | RO |
 | | Default value of this field is 0000h. | |
 
-
-
-
 </td>
 <td style="background-color:#e8e8e8">
-
-[figures/chapter_07/fig_1095_1.png]
 
 **表 7-45 MSI 扩展消息数据寄存器**
 
@@ -80516,9 +80077,6 @@ This register provides system software control over MSI. By default, MSI is disa
 |---|---|---|
 | 31:0 | 扩展消息数据(Extended Message Data) — 对于使用 32 位数据的 MSI 消息,MSI 能力结构中此字段的内容指定 Memory Write 事务中要使用的数据的低 32 位。数据的高 32 位为保留位。<br><br>对于使用 64 位数据的 MSI 消息,MSI 能力结构中此字段的内容指定 Memory Write 事务中要使用的数据的高 32 位。数据的低 32 位由消息数据寄存器指定。 | RO |
 | | 此字段的默认值为 0000h。 | |
-
-
-
 
 </td>
 </tr>
@@ -80551,8 +80109,6 @@ The Multiple Message Capable field indicates how many vectors (with associated M
 
 The Multiple Message Enable field controls how many vectors are allocated for use. The value of each implemented Mask bit and Pending bit that is currently not allocated must be ignored by hardware; i.e., the value must not affect the generation of interrupts.
 
-[figures/chapter_07/fig_1095_2.png]
-
 **Figure 7-54 Mask Bits Register for MSI**
 
 **Table 7-46 Mask Bits Register for MSI**
@@ -80578,12 +80134,7 @@ Multiple Message Capable 字段指示实现了多少个向量(及其关联的 Ma
 
 Multiple Message Enable 字段控制分配使用的向量数。当前未分配的各已实现 Mask 位和 Pending 位的值必须被硬件忽略;即，该值不得影响中断的生成。
 
-[figures/chapter_07/fig_1095_2.png]
-
 **图 7-54 MSI Mask Bits 寄存器**
-
-> <img src="figures/chapter_07/fig_1095_1_tight.png" width="700">
-
 
 **表 7-46 MSI Mask Bits 寄存器**
 
@@ -80600,9 +80151,10 @@ Multiple Message Enable 字段控制分配使用的向量数。当前未分配�
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1095_1_tight.png" width="700">
+
 <a id="sec-7-7-1-8"></a>
 ## 7.7.1.8 Pending Bits Register for MSI (Offset 10h or 14h) | MSI Pending Bits 寄存器(偏移 10h 或 14h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -80615,8 +80167,6 @@ Multiple Message Enable 字段控制分配使用的向量数。当前未分配�
 <tbody>
 <tr>
 <td>
-
-[figures/chapter_07/fig_1096_1.png]
 
 **Figure 7-55 Pending Bits Register for MSI**
 
@@ -80636,19 +80186,12 @@ The MSI-X Table structure, illustrated in § Figure 7-57, typically contains mul
 
 The Pending Bit Array (PBA) structure, illustrated in § Figure 7-58, contains the Function's Pending Bits, one per Table entry, organized as a packed array of bits within QWORDs. The last QWORD will not necessarily be fully populated.
 
-[figures/chapter_07/fig_1096_2.png]
-
 **Figure 7-56 MSI-X Capability Structure**
 
 </td>
 <td style="background-color:#e8e8e8">
 
-[figures/chapter_07/fig_1096_1.png]
-
 **图 7-55 MSI Pending Bits 寄存器**
-
-> <img src="figures/chapter_07/fig_1096_1_tight.png" width="700">
-
 
 **表 7-47 MSI Pending Bits 寄存器**
 
@@ -80666,19 +80209,17 @@ MSI-X Table 结构(见 § 图 7-57)通常包含多个条目，每个条目由多
 
 挂起位数组(Pending Bit Array, PBA)结构(见 § 图 7-58)包含 Function 的 Pending 位，每个 Table 条目对应一位，以 QWORD 中的位数组形式组织。最后一个 QWORD 不一定会被完全填充。
 
-[figures/chapter_07/fig_1096_2.png]
-
 **图 7-56 MSI-X 能力结构**
-
-> <img src="figures/chapter_07/fig_1096_2_tight.png" width="700">
-
 
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1096_1_tight.png" width="700">
+
+> <img src="figures/chapter_07/fig_1096_2_tight.png" width="700">
+</div>
 
 ---
 
@@ -80696,11 +80237,7 @@ MSI-X Table 结构(见 § 图 7-57)通常包含多个条目，每个条目由多
 <tr>
 <td>
 
-[figures/chapter_07/fig_1097_1.png]
-
 **Figure 7-57 MSI-X Table Structure**
-
-[figures/chapter_07/fig_1097_2.png]
 
 **Figure 7-58 MSI-X PBA Structure**
 
@@ -80709,19 +80246,9 @@ To request service using a given MSI-X Table entry, a Function performs a DWORD 
 </td>
 <td style="background-color:#e8e8e8">
 
-[figures/chapter_07/fig_1097_1.png]
-
 **图 7-57 MSI-X Table 结构**
 
-> <img src="figures/chapter_07/fig_1097_1_tight.png" width="700">
-
-
-[figures/chapter_07/fig_1097_2.png]
-
 **图 7-58 MSI-X PBA 结构**
-
-> <img src="figures/chapter_07/fig_1097_2_tight.png" width="700">
-
 
 若要使用某个给定的 MSI-X Table 条目来请求服务,Function 执行一次 DWORD Memory Write 事务，其中:数据使用 Message Data 字段条目的内容，地址的高 32 位使用 Message Upper Address 字段条目的内容，地址的低 32 位使用 Message Address 字段条目的内容。对 MSI-X 消息所寻址的地址执行内存读事务将产生未定义的结果。
 
@@ -80730,8 +80257,11 @@ To request service using a given MSI-X Table entry, a Function performs a DWORD 
 </tbody>
 </table>
 
----
+> <img src="figures/chapter_07/fig_1097_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1097_2_tight.png" width="700">
+
+---
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -80810,7 +80340,6 @@ MSI-X Table 条目和 Pending 位均编号为 0 到 N-1,其中 N-1 由 MSI-X Mes
 </table>
 </div>
 
-
 ---
 
 <table>
@@ -80854,8 +80383,6 @@ Within the MSI-X Capability structure, Reserved registers and bits always return
 
 The MSI-X Capability Header enumerates the MSI-X Capability structure in the PCI Configuration Space Capability list. § Figure 7-56 details allocation of register fields in the MSI-X Capability Header; § Table 7-48 provides the respective bit definitions.
 
-[figures/chapter_07/fig_1099_1.png]
-
 **Figure 7-59 MSI-X Capability Header**
 
 </td>
@@ -80891,23 +80418,19 @@ MSI-X Capability、MSI-X Table 和 MSI-X PBA 结构中的每个字段将在后�
 
 MSI-X Capability Header 在 PCI Configuration Space 能力列表中登记 MSI-X 能力结构。§ 图 7-56 详细说明了 MSI-X Capability Header 中寄存器字段的分配;§ 表 7-48 给出了相应的位定义。
 
-[figures/chapter_07/fig_1099_1.png]
-
 **图 7-59 MSI-X Capability Header**
-
-> <img src="figures/chapter_07/fig_1099_1_tight.png" width="700">
-
 
 </td>
 </tr>
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1099_1_tight.png" width="700">
+
 ---
 
 <a id="sec-7-7-2-1"></a>
 ## 7.7.2.1 MSI-X Capability Header (Offset 00h) | MSI-X Capability Header(偏移 00h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -80929,8 +80452,6 @@ MSI-X Capability Header 在 PCI Configuration Space 能力列表中登记 MSI-X 
 | 15:8 | Next Capability Pointer - This field contains the offset to the next PCI Capability structure or 00h if no other items exist in the linked list of Capabilities. | RO |
 
 By default, MSI-X is disabled. If MSI and MSI-X are both disabled, the Function requests servicing via INTx interrupts (if supported). System software can enable MSI-X by Setting bit 15 of this register. System software is permitted to modify the Message Control register's read-write bits and fields. A device driver is not permitted to modify the Message Control register's read-write bits and fields.
-
-[figures/chapter_07/fig_1100_1.png]
 
 **Figure 7-60 Message Control Register for MSI-X**
 
@@ -80955,8 +80476,6 @@ By default, MSI-X is disabled. If MSI and MSI-X are both disabled, the Function 
 
 默认情况下,MSI-X 处于禁用状态。如果 MSI 和 MSI-X 均被禁用，则 Function 通过 INTx 中断(若支持)请求服务。系统软件可通过置位此寄存器的第 15 位来启用 MSI-X。系统软件允许修改 Message Control 寄存器的可读写位和字段。设备驱动程序不允许修改 Message Control 寄存器的可读写位和字段。
 
-[figures/chapter_07/fig_1100_1.png]
-
 **图 7-60 MSI-X Message Control 寄存器**
 
 **表 7-49 MSI-X Message Control 寄存器**
@@ -80974,38 +80493,16 @@ By default, MSI-X is disabled. If MSI and MSI-X are both disabled, the Function 
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-7-2-2"></a>
 ## 7.7.2.2 Message Control Register for MSI-X (Offset 02h) | MSI-X Message Control 寄存器(偏移 02h)
 
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
+> **Figure 7-60.** Message Control Register for MSI-X
+>
+> **图 7-60.** MSI-X Message Control 寄存器
 
-[figures/chapter_07/fig_1101_1.png]
-
-
-
-</td>
-<td style="background-color:#e8e8e8">
-
-[figures/chapter_07/fig_1101_1.png]
-
-
-
-</td>
-</tr>
-</tbody>
-</table>
+> <img src="figures/chapter_07/fig_1101_1_tight.png" width="700">
 
 ---
 
@@ -81037,9 +80534,6 @@ By default, MSI-X is disabled. If MSI and MSI-X are both disabled, the Function 
 
 **图 7-61 MSI-X Table Offset/Table BIR 寄存器**
 
-> <img src="figures/chapter_07/fig_1101_1_tight.png" width="700">
-
-
 **表 7-50 MSI-X Table Offset/Table BIR 寄存器**
 
 | 位位置 | 寄存器说明 | 属性 |
@@ -81051,6 +80545,8 @@ By default, MSI-X is disabled. If MSI and MSI-X are both disabled, the Function 
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1101_1_tight.png" width="700">
 
 <a id="sec-7-7-2-4"></a>
 ## 7.7.2.4 PBA Offset/PBA BIR Register for MSI-X (Offset 08h) | MSI-X PBA Offset/PBA BIR 寄存器(偏移 08h)
@@ -81066,23 +80562,19 @@ By default, MSI-X is disabled. If MSI and MSI-X are both disabled, the Function 
 <tr>
 <td>
 
-[figures/chapter_07/fig_1101_2.png]
-
 **Figure 7-62 PBA Offset/PBA BIR Register for MSI-X**
 
 </td>
 <td style="background-color:#e8e8e8">
 
-[figures/chapter_07/fig_1101_2.png]
-
 **图 7-62 MSI-X PBA Offset/PBA BIR 寄存器**
-
-> <img src="figures/chapter_07/fig_1101_2_tight.png" width="700">
 
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1101_2_tight.png" width="700">
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -81103,8 +80595,6 @@ By default, MSI-X is disabled. If MSI and MSI-X are both disabled, the Function 
 | 2:0 | PBA BIR - Indicates which one of a Function's Base Address Registers, located beginning at 10h in Configuration Space, or entry in the Enhanced Allocation capability with a matching BEI, is used to map the Function's MSI-X PBA into Memory Space.<br>The PBA BIR value definitions are identical to those for the Table BIR. | RO |
 | 31:3 | PBA Offset - Used as an offset from the address contained by one of the Function's Base Address Registers to point to the base of the MSI-X PBA. The lower 3 PBA BIR bits are masked off (set to zero) by software to form a 32-bit QWORD-aligned offset.<br>For VFs, the PBA Offset value is relative to the VF's Memory address space. | RO |
 
-[figures/chapter_07/fig_1102_1.png]
-
 **Figure 7-63 Message Address Register for MSI-X Table Entries**
 
 **Table 7-52 Message Address Register for MSI-X Table Entries**
@@ -81124,12 +80614,7 @@ By default, MSI-X is disabled. If MSI and MSI-X are both disabled, the Function 
 | 2:0 | PBA BIR — 指示使用 Function 的哪一个基址寄存器(BAR)(位于配置空间 10h 处开始)或 Enhanced Allocation 能力中具有匹配 BEI 的条目，将该 Function 的 MSI-X PBA 映射到内存空间。<br>PBA BIR 的值定义与 Table BIR 相同。 | RO |
 | 31:3 | PBA Offset — 用作 Function 某个基址寄存器所含地址的偏移量，以指向 MSI-X PBA 的基址。PBA BIR 的低 3 位被软件屏蔽(置零)，以形成 32 位 QWORD 对齐的偏移量。<br>对于 VF,PBA Offset 值相对于 VF 的内存地址空间。 | RO |
 
-[figures/chapter_07/fig_1102_1.png]
-
 **图 7-63 MSI-X Table 条目 Message Address 寄存器**
-
-> <img src="figures/chapter_07/fig_1102_1_tight.png" width="700">
-
 
 **表 7-52 MSI-X Table 条目 Message Address 寄存器**
 
@@ -81142,8 +80627,9 @@ By default, MSI-X is disabled. If MSI and MSI-X are both disabled, the Function 
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1102_1_tight.png" width="700">
+</div>
 
 ---
 
@@ -81161,8 +80647,6 @@ By default, MSI-X is disabled. If MSI and MSI-X are both disabled, the Function 
 <tr>
 <td>
 
-[figures/chapter_07/fig_1103_1.png]
-
 **Figure 7-64 Message Upper Address Register for MSI-X Table Entries**
 
 **Table 7-53 Message Upper Address Register for MSI-X Table Entries**
@@ -81170,8 +80654,6 @@ By default, MSI-X is disabled. If MSI and MSI-X are both disabled, the Function 
 | Bit Location | Register Description | Attributes |
 |---|---|---|
 | 31:0 | Message Upper Address - System-specified message upper address bits.<br>If this field is zero, 32-bit address messages are used. If this field is non-zero, 64-bit address messages are used.<br>Default value of this field is undefined. | RW |
-
-[figures/chapter_07/fig_1103_2.png]
 
 **Figure 7-65 Message Data Register for MSI-X Table Entries**
 
@@ -81186,8 +80668,6 @@ If a Function implements a TPH Requester Extended Capability structure and an MS
 </td>
 <td style="background-color:#e8e8e8">
 
-[figures/chapter_07/fig_1103_1.png]
-
 **图 7-64 MSI-X Table 条目 Message Upper Address 寄存器**
 
 **表 7-53 MSI-X Table 条目 Message Upper Address 寄存器**
@@ -81195,8 +80675,6 @@ If a Function implements a TPH Requester Extended Capability structure and an MS
 | 位位置 | 寄存器说明 | 属性 |
 |---|---|---|
 | 31:0 | Message Upper Address — 系统指定的消息高位地址位。<br>如果此字段为零，则使用 32 位地址消息;如果此字段非零，则使用 64 位地址消息。<br>此字段的默认值未定义。 | RW |
-
-[figures/chapter_07/fig_1103_2.png]
 
 **图 7-65 MSI-X Table 条目 Message Data 寄存器**
 
@@ -81218,7 +80696,6 @@ If a Function implements a TPH Requester Extended Capability structure and an MS
 <a id="sec-7-7-2-6"></a>
 ## 7.7.2.6 Message Upper Address Register for MSI-X Table Entries | MSI-X Table 条目 Message Upper Address 寄存器
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -81231,8 +80708,6 @@ If a Function implements a TPH Requester Extended Capability structure and an MS
 <tr>
 <td>
 
-[figures/chapter_07/fig_1103_1.png]
-
 **Figure 7-64 Message Upper Address Register for MSI-X Table Entries**
 
 **Table 7-53 Message Upper Address Register for MSI-X Table Entries**
@@ -81240,8 +80715,6 @@ If a Function implements a TPH Requester Extended Capability structure and an MS
 | Bit Location | Register Description | Attributes |
 |---|---|---|
 | 31:0 | Message Upper Address - System-specified message upper address bits.<br>If this field is zero, 32-bit address messages are used. If this field is non-zero, 64-bit address messages are used.<br>Default value of this field is undefined. | RW |
-
-[figures/chapter_07/fig_1103_2.png]
 
 **Figure 7-65 Message Data Register for MSI-X Table Entries**
 
@@ -81256,8 +80729,6 @@ If a Function implements a TPH Requester Extended Capability structure and an MS
 </td>
 <td style="background-color:#e8e8e8">
 
-[figures/chapter_07/fig_1103_1.png]
-
 **图 7-64 MSI-X Table 条目 Message Upper Address 寄存器**
 
 **表 7-53 MSI-X Table 条目 Message Upper Address 寄存器**
@@ -81265,8 +80736,6 @@ If a Function implements a TPH Requester Extended Capability structure and an MS
 | 位位置 | 寄存器说明 | 属性 |
 |---|---|---|
 | 31:0 | Message Upper Address — 系统指定的消息高位地址位。<br>如果此字段为零，则使用 32 位地址消息;如果此字段非零，则使用 64 位地址消息。<br>此字段的默认值未定义。 | RW |
-
-[figures/chapter_07/fig_1103_2.png]
 
 **图 7-65 MSI-X Table 条目 Message Data 寄存器**
 
@@ -81283,7 +80752,6 @@ If a Function implements a TPH Requester Extended Capability structure and an MS
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -81351,6 +80819,7 @@ If a Function implements a TPH Requester Extended Capability structure and an MS
 
 > **Figure 7-66.** Vector Control Register for MSI-X Table Entries | MSI-X 表条目的向量控制寄存器
 > **图 7-66.** MSI-X 表条目的向量控制寄存器
+
 > <img src="figures/chapter_07/fig_1104_1_tight.png" width="700">
 
 **Table 7-55. Vector Control Register for MSI-X Table Entries | 表 7-55. MSI-X 表条目的向量控制寄存器**
@@ -81361,7 +80830,6 @@ If a Function implements a TPH Requester Extended Capability structure and an MS
 | 15:1 | Reserved<br>Reserved - By default, the value of these bits must be 0. However, for potential future use, software must preserve the value of these Reserved bits when modifying the value of other Vector Control bits. If software modifies the value of these Reserved bits, the result is undefined.<br>These bits are permitted to be RsvdP or read-write. | RW or RsvdP |
 | 23:16 | ST Lower - If the Function implements a TPH Requester Extended Capability structure, and the ST Table Location indicates a value of 10b, then this field contains the lower 8 bits of a Steering Tag and must be read-write.<br>Otherwise, this field is permitted to be read-write or RsvdP, and for potential future use, software must preserve the value of these Reserved bits when modifying the value of other Vector Control bits, or the result is undefined.<br>Default value of this field is 00h. | RW/RsvdP |
 | 31:24 | ST Upper - If the Function implements a TPH Requester Extended Capability structure, and the ST Table Location indicates a value of 10b, and the Extended TPH Requester Supported bit is Set, then this field contains the upper 8 bits of a Steering Tag and must be read-write.<br>Otherwise, this field is permitted to be read-write or RsvdP, and for potential future use, software must preserve the value of these Reserved bits when modifying the value of other Vector Control bits, or the result is undefined.<br>Default value of this field is 00h. | RW/RsvdP |
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -81405,7 +80873,6 @@ If a Function implements a TPH Requester Extended Capability structure and an MS
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -81488,7 +80955,6 @@ If a Function implements a TPH Requester Extended Capability structure and an MS
 <a id="sec-7-7-3"></a>
 ## 7.7.3 Secondary PCI Express Extended Capability | 次级 PCI Express 扩展能力
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -81534,7 +81000,6 @@ For a Multi-Function Device associated with an Upstream Port, this capability is
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -81543,6 +81008,7 @@ For a Multi-Function Device associated with an Upstream Port, this capability is
 
 > **Figure 7-68.** Secondary PCI Express Extended Capability Structure | 次级 PCI Express 扩展能力结构
 > **图 7-68.** 次级 PCI Express 扩展能力结构
+
 > <img src="figures/chapter_07/fig_1106_1.png" width="700">
 
 <table>
@@ -81626,6 +81092,7 @@ The Secondary PCI Express Extended Capability structure layout:
 
 > **Figure 7-69.** Secondary PCI Express Extended Capability Header | 次级 PCI Express 扩展能力头
 > **图 7-69.** 次级 PCI Express 扩展能力头
+
 > <img src="figures/chapter_07/fig_1107_1_tight.png" width="700">
 
 <a id="sec-7-7-3-1"></a>
@@ -81727,7 +81194,6 @@ The Secondary PCI Express Extended Capability structure layout:
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1108 -->
 <table>
 <thead>
@@ -81782,7 +81248,6 @@ The Secondary PCI Express Extended Capability structure layout:
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -81873,7 +81338,6 @@ Lane Error Status Register (通道错误状态寄存器) 由一个 32 位的向�
 <a id="sec-7-7-3-4"></a>
 ## 7.7.3.4 Lane Equalization Control Register (Offset 0Ch) | 通道均衡控制寄存器（偏移 0Ch）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -81906,7 +81370,6 @@ Lane Equalization Control Register (通道均衡控制寄存器) 包含每通道
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -82014,7 +81477,6 @@ Lane Equalization Control Register (通道均衡控制寄存器) 包含每通道
 <a id="sec-7-7-4"></a>
 ## 7.7.4 Data Link Feature Extended Capability | 数据链路特性扩展能力
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -82044,7 +81506,6 @@ Data Link Feature Capability (数据链路特性能力) 是一种可选的 Exten
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -82053,6 +81514,7 @@ Data Link Feature Capability (数据链路特性能力) 是一种可选的 Exten
 
 > **Figure 7-74.** Data Link Feature Extended Capability | 数据链路特性扩展能力
 > **图 7-74.** 数据链路特性扩展能力
+
 > <img src="figures/chapter_07/fig_1112_1_tight.png" width="700">
 
 <table>
@@ -82222,6 +81684,7 @@ When this Port sends a Data Link Feature DLLP, the Feature Support field in Symb
 
 > **Figure 7-76.** Data Link Feature Capabilities Register | 数据链路特性能力寄存器
 > **图 7-76.** 数据链路特性能力寄存器
+
 > <img src="figures/chapter_07/fig_1113_1.png" width="700">
 
 **Table 7-64. Data Link Feature Capabilities Register | 表 7-64. 数据链路特性能力寄存器**
@@ -82237,7 +81700,6 @@ When this Port sends a Data Link Feature DLLP, the Feature Support field in Symb
 | 22:8 (continued) | Defined encodings for Bits 22:8 are:<br>- 000b: Less than 1μs<br>- 001b: 1 μs to less than 2 μs<br>- 010b: 2 μs to less than 4 μs<br>- 011b: 4 μs to less than 8 μs<br>- 100b: 8 μs to less than 16 μs<br>- 101b: 16 μs to less than 32 μs<br>- 110b: 32 μs-64 μs<br>- 111b: More than 64 μs<br>Bit 0 corresponds to Local Scaled Flow Control Supported.<br>Bit 1 corresponds to Local Immediate Readiness.<br>This field is meaningful in Flit Mode. In Non-Flit Mode, this field must be zero.<br>Other bits in this field are RsvdP. | RsvdP |
 | 23:30 | RsvdP | RsvdP |
 | 31 | Data Link Feature Exchange is Enabled - If Set, indicates that this Port will enter the DL_Feature negotiation state (see Section 3.2.1). | HwInit |
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1114 -->
 <table>
@@ -82296,7 +81758,6 @@ When this Port sends a Data Link Feature DLLP, the Feature Support field in Symb
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -82305,6 +81766,7 @@ When this Port sends a Data Link Feature DLLP, the Feature Support field in Symb
 
 > **Figure 7-77.** Data Link Feature Status Register | 数据链路特性状态寄存器
 > **图 7-77.** 数据链路特性状态寄存器
+
 > <img src="figures/chapter_07/fig_1114_1_tight.png" width="700">
 
 **Table 7-65. Data Link Feature Status Register | 表 7-65. 数据链路特性状态寄存器**
@@ -82356,7 +81818,6 @@ Figure 7-77 details allocation of register fields in the Data Link Feature Statu
 
 <a id="sec-7-7-4-3"></a>
 ## 7.7.4.3 Data Link Feature Status Register (Offset 08h) | 数据链路特性状态寄存器(偏移量 08h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -82485,7 +81946,6 @@ Bits 22:8
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -82514,10 +81974,6 @@ This capability is permitted to be implemented in any of the Functions listed ab
 
 § Figure 7-79 details allocation of register fields in the Physical Layer 16.0 GT/s Extended Capability structure.
 
-> **Figure 7-78.** Physical Layer 16.0 GT/s Extended Capability
-> **图 7-78.** Physical Layer 16.0 GT/s Extended Capability
-> <img src="figures/chapter_07/fig_1116_1_tight.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -82531,11 +81987,16 @@ This capability is permitted to be implemented in any of the Functions listed ab
 
 § Figure 7-79 详细说明了物理层 16.0 GT/s 扩展能力结构中各寄存器的字段分配。
 
-<img src="figures/chapter_07/fig_1116_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-78.** Physical Layer 16.0 GT/s Extended Capability
+>
+> **图 7-78.** Physical Layer 16.0 GT/s Extended Capability
+
+> <img src="figures/chapter_07/fig_1116_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -82543,7 +82004,6 @@ This capability is permitted to be implemented in any of the Functions listed ab
 
 <a id="sec-7-7-5-1"></a> <!-- 📄 Page 1117 -->
 ## 7.7.5.1 Physical Layer 16.0 GT/s Extended Capability Header (Offset 00h) | 物理层 16.0 GT/s 扩展能力结构头(偏移量 00h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -82567,9 +82027,6 @@ This capability is permitted to be implemented in any of the Functions listed ab
 </pre>
 
 **Figure 7-79.** Physical Layer 16.0 GT/s Extended Capability Header
-
-> <img src="figures/chapter_07/fig_1117_1_tight.png" width="700">
-
 
 **Table 7-66.** Physical Layer 16.0 GT/s Extended Capability Header
 
@@ -82601,13 +82058,14 @@ This capability is permitted to be implemented in any of the Functions listed ab
 | 19:16 | 能力版本 (Capability Version) —— 该字段是由 PCI-SIG 定义的版本号，用于指示当前所实现的能力结构的版本。在本规范的本版本中，该字段必须为 1h。 | RO |
 | 31:20 | 下一能力偏移 (Next Capability Offset) —— 该字段包含指向下一个 PCI Express 能力结构的偏移量;如果链表中不存在其他项，则该字段为 000h。对于在配置空间中实现的扩展能力，该偏移是相对于 PCI 兼容配置空间起点的偏移，因此必须始终为 000h(用于终止能力链表)或大于 0FFh。 | RO |
 
-<img src="figures/chapter_07/fig_1117_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1117_1_tight.png" width="700">
+
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -82636,9 +82094,6 @@ This capability is permitted to be implemented in any of the Functions listed ab
 
 **Figure 7-80.** 16.0 GT/s Capabilities Register
 
-> <img src="figures/chapter_07/fig_1117_2_tight.png" width="700">
-
-
 **Table 7-67.** 16.0 GT/s Capabilities Register
 
 | Bit Location | Register Description | Attributes |
@@ -82663,11 +82118,12 @@ This capability is permitted to be implemented in any of the Functions listed ab
 |--------------|----------------------|------------|
 | 31:0 | 保留 (RsvdP) | RsvdP |
 
-<img src="figures/chapter_07/fig_1117_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1117_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -82696,9 +82152,6 @@ This capability is permitted to be implemented in any of the Functions listed ab
 
 **Figure 7-81.** 16.0 GT/s Control Register
 
-> <img src="figures/chapter_07/fig_1118_1_tight.png" width="700">
-
-
 **Table 7-68.** 16.0 GT/s Control Register
 
 | Bit Location | Register Description | Attributes |
@@ -82723,11 +82176,12 @@ This capability is permitted to be implemented in any of the Functions listed ab
 |--------------|----------------------|------------|
 | 31:0 | 保留 (RsvdP) | RsvdP |
 
-<img src="figures/chapter_07/fig_1118_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1118_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -82735,7 +82189,6 @@ This capability is permitted to be implemented in any of the Functions listed ab
 
 <a id="sec-7-7-5-4"></a>
 ## 7.7.5.4 16.0 GT/s Status Register (Offset 0Ch) | 16.0 GT/s 状态寄存器(偏移量 0Ch)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -82758,9 +82211,6 @@ This capability is permitted to be implemented in any of the Functions listed ab
 </pre>
 
 **Figure 7-82.** 16.0 GT/s Status Register
-
-> <img src="figures/chapter_07/fig_1118_2_tight.png" width="700">
-
 
 **Table 7-69.** 16.0 GT/s Status Register
 
@@ -82789,13 +82239,14 @@ This capability is permitted to be implemented in any of the Functions listed ab
 | 0 | **16.0 GT/s 均衡完成 (Equalization 16.0 GT/s Complete)** —— 当置位时，该位表示 16.0 GT/s 发送器均衡 (Transmitter Equalization) 流程已完成。有关发送器均衡过程的详细信息以及何时将该位置为 1b,请参见 § Section 4.2.7.4.2。该位的默认值为 0b。对于多功能上游端口 (Multi-Function Upstream Port)，该位必须在 Function 0 中实现，并在其他 Function 中实现为 RsvdZ。 | ROS/RsvdZ |
 | 1 | **16.0 GT/s Phase 1 均衡成功 (Equalization 16.0 GT/s Phase 1 Successful)** —— 当设置为 1b 时，该位表示 16.0 GT/s 发送器均衡流程的 Phase 1 已成功完成。有关发送器均衡过程的详细信息以及何时将该位置为 1b,请参见 § Section 4.2.7.4.2。该位的默认值为 0b。对于多功能上游端口，该位必须在 Function 0 中实现，并在其他 Function 中实现为 RsvdZ。 | ROS/RsvdZ |
 
-<img src="figures/chapter_07/fig_1118_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1118_2_tight.png" width="700">
+
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -82838,7 +82289,6 @@ This capability is permitted to be implemented in any of the Functions listed ab
 
 <a id="sec-7-7-5-5"></a>
 ## 7.7.5.5 16.0 GT/s Local Data Parity Mismatch Status Register (Offset 10h) | 16.0 GT/s 本地数据奇偶校验不匹配状态寄存器(偏移量 10h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -82901,7 +82351,6 @@ This register collects parity errors for 16.0 GT/s and higher data rates as well
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -82934,9 +82383,6 @@ This register collects parity errors for 16.0 GT/s and higher data rates as well
 
 **Figure 7-84.** 16.0 GT/s First Retimer Data Parity Mismatch Status Register
 
-> <img src="figures/chapter_07/fig_1120_1_tight.png" width="700">
-
-
 **Table 7-71.** 16.0 GT/s First Retimer Data Parity Mismatch Status Register
 
 | Bit Location | Register Description | Attributes |
@@ -82956,9 +82402,6 @@ This register collects parity errors for 16.0 GT/s and higher data rates as well
 </pre>
 
 **Figure 7-85.** 16.0 GT/s Second Retimer Data Parity Mismatch Status Register
-
-> <img src="figures/chapter_07/fig_1120_2_tight.png" width="700">
-
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -82997,11 +82440,14 @@ This register collects parity errors for 16.0 GT/s and higher data rates as well
 
 **图 7-85.** 16.0 GT/s 第二个重定时器数据奇偶校验不匹配状态寄存器
 
-<img src="figures/chapter_07/fig_1120_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1120_1_tight.png" width="700">
+
+> <img src="figures/chapter_07/fig_1120_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -83009,7 +82455,6 @@ This register collects parity errors for 16.0 GT/s and higher data rates as well
 
 <a id="sec-7-7-5-7"></a>
 ## 7.7.5.7 16.0 GT/s Second Retimer Data Parity Mismatch Status Register (Offset 18h) | 16.0 GT/s 第二个重定时器数据奇偶校验不匹配状态寄存器(偏移量 18h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -83043,7 +82488,6 @@ This register collects parity errors for 16.0 GT/s and higher data rates as well
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -83082,7 +82526,6 @@ This register is RsvdP.
 <a id="sec-7-7-5-9"></a>
 ## 7.7.5.9 16.0 GT/s Lane Equalization Control Register (Offsets 20h to 3Ch) | 16.0 GT/s 通道均衡控制寄存器(偏移量 20h 至 3Ch)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -83108,9 +82551,6 @@ Each entry contains the values for the Lane with the corresponding default Lane 
 </pre>
 
 **Figure 7-86.** 16.0 GT/s Lane Equalization Control Register Entry
-
-> <img src="figures/chapter_07/fig_1121_1_tight.png" width="700">
-
 
 **Table 7-73.** 16.0 GT/s Lane Equalization Control Register Entry
 
@@ -83142,13 +82582,14 @@ Each entry contains the values for the Lane with the corresponding default Lane 
 |--------------|----------------------|------------|
 | 3:0 | **下游端口 16.0 GT/s 发送器预设 (Downstream Port 16.0 GT/s Transmitter Preset)** —— 当该端口作为下游端口 (Downstream Port) 运行时，此字段为该端口用于 16.0 GT/s 均衡的发送器预设 (Transmitter Preset)。当端口作为上游端口 (Upstream Port) 运行时，该字段被忽略。有关详细信息，请参见 § Chapter 8。该字段的编码在 § Section 4.2.4.2 中定义。对于上游端口，如果 Crosslink Supported 为 0b,则该字段为 RsvdP;否则，该字段为 HwInit。参见 § Section 7.5.3.18。默认值为 1111b。 | HwInit/RsvdP(参见描述) |
 
-<img src="figures/chapter_07/fig_1121_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1121_1_tight.png" width="700">
+
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -83252,7 +82693,6 @@ When implemented, this structure must be implemented in:
 <a id="sec-7-7-6"></a>
 ## 7.7.6 Physical Layer 32.0 GT/s Extended Capability | 物理层 32.0 GT/s 扩展能力
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -83295,7 +82735,6 @@ Note that parity errors for 32.0 GT/s are recorded in 16.0 GT/s Local Data Parit
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -83411,7 +82850,6 @@ Bit layout of the register:
 <a id="sec-7-7-6-2"></a>
 ## 7.7.6.2 32.0 GT/s Capabilities Register (Offset 04h) | 32.0 GT/s 能力寄存器（偏移 04h）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -83458,7 +82896,6 @@ Bit layout of the register:
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -83555,7 +82992,6 @@ Bit layout of the register:
 <a id="sec-7-7-6-4"></a>
 ## 7.7.6.4 32.0 GT/s Status Register (Offset 0Ch) | 32.0 GT/s 状态寄存器（偏移 0Ch）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -83608,7 +83044,6 @@ Bit layout of the register:
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -83717,7 +83152,6 @@ Bit layout of the register:
 <a id="sec-7-7-6-6"></a>
 ## 7.7.6.6 Received Modified TS Data 2 Register (Offset 14h) | 接收 Modified TS 数据 2 寄存器（偏移 14h）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -83774,7 +83208,6 @@ Alternate Protocol Negotiation Status 编码：
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -83867,7 +83300,6 @@ Bit layout of the register:
 <a id="sec-7-7-6-8"></a>
 ## 7.7.6.8 Transmitted Modified TS Data 2 Register (Offset 1Ch) | 发送 Modified TS 数据 2 寄存器（偏移 1Ch）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -83928,7 +83360,6 @@ Alternate Protocol Negotiation Status 编码：
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -84021,7 +83452,6 @@ Each entry contains the values for the Lane with the corresponding default Lane 
 <a id="sec-7-7-6-9-cont"></a> <!-- 📄 Page 1133 -->
 ## 7.7.6.9 (continued) | 7.7.6.9 (续)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -84111,7 +83541,6 @@ Note that parity errors for 64.0 GT/s are recorded in 16.0 GT/s Local Data Parit
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-7-7"></a>
@@ -84129,7 +83558,6 @@ Note that parity errors for 64.0 GT/s are recorded in 16.0 GT/s Local Data Parit
 <td>
 
 > **Figure 7-97** Physical Layer 64.0 GT/s Extended Capability
-> <img src="figures/chapter_07/fig_1133_1.png" width="700">
 
 | Bits 0-15 | Bits 16-19 | Bits 20-31 |
 |---|---|---|
@@ -84142,15 +83570,11 @@ Note that parity errors for 64.0 GT/s are recorded in 16.0 GT/s Local Data Parit
 </td>
 <td style="background-color:#e8e8e8">
 
-
 | 位 0-15 | 位 16-19 | 位 20-31 |
 |---|---|---|
 | PCI Express Extended Capability ID = 0031h | Capability Version | Next Capability Offset |
 
 **图 7-98 物理层 64.0 GT/s 扩展能力 Header**
-
-> <img src="figures/chapter_07/fig_1134_1_tight.png" width="700">
-
 
 **表 7-85 物理层 64.0 GT/s 扩展能力 Header**
 
@@ -84159,11 +83583,14 @@ Note that parity errors for 64.0 GT/s are recorded in 16.0 GT/s Local Data Parit
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1133_1.png" width="700">
+
+> <img src="figures/chapter_07/fig_1134_1_tight.png" width="700">
+
 ---
 
 <a id="sec-7-7-7-1"></a> <!-- 📄 Page 1134 -->
 ## 7.7.7.1 Physical Layer 64.0 GT/s Extended Capability Header (Offset 00h) | 7.7.7.1 物理层 64.0 GT/s 扩展能力 Header(偏移 00h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -84197,7 +83624,6 @@ Note that parity errors for 64.0 GT/s are recorded in 16.0 GT/s Local Data Parit
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -84236,9 +83662,6 @@ Note that parity errors for 64.0 GT/s are recorded in 16.0 GT/s Local Data Parit
 
 **图 7-99 64.0 GT/s 能力寄存器**
 
-> <img src="figures/chapter_07/fig_1134_2_tight.png" width="700">
-
-
 **表 7-86 64.0 GT/s 能力寄存器**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -84249,6 +83672,8 @@ Note that parity errors for 64.0 GT/s are recorded in 16.0 GT/s Local Data Parit
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1134_2_tight.png" width="700">
 
 ---
 
@@ -84287,9 +83712,6 @@ Note that parity errors for 64.0 GT/s are recorded in 16.0 GT/s Local Data Parit
 
 **图 7-100 64.0 GT/s 控制寄存器**
 
-> <img src="figures/chapter_07/fig_1135_1_tight.png" width="700">
-
-
 **表 7-87 64.0 GT/s 控制寄存器**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -84301,11 +83723,12 @@ Note that parity errors for 64.0 GT/s are recorded in 16.0 GT/s Local Data Parit
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1135_1_tight.png" width="700">
+
 ---
 
 <a id="sec-7-7-7-4"></a>
 ## 7.7.7.4 64.0 GT/s Status Register (Offset 0Ch) | 7.7.7.4 64.0 GT/s 状态寄存器(偏移 0Ch)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -84360,7 +83783,6 @@ Note that parity errors for 64.0 GT/s are recorded in 16.0 GT/s Local Data Parit
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-7-7-4-fields"></a> <!-- 📄 Page 1136 -->
@@ -84414,7 +83836,6 @@ Note that parity errors for 64.0 GT/s are recorded in 16.0 GT/s Local Data Parit
 <a id="sec-7-7-7-5"></a>
 ## 7.7.7.5 64.0 GT/s Lane Equalization Control Register (Offset 10h) | 7.7.7.5 64.0 GT/s 通道均衡控制寄存器(偏移 10h)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -84461,7 +83882,6 @@ Each entry contains the values for the Lane with the corresponding default Lane 
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -84521,7 +83941,6 @@ The default value is 1111b.
 
 <a id="sec-7-7-8"></a> <!-- 📄 Page 1138 -->
 ## 7.7.8 Flit Logging Extended Capability | 7.7.8 Flit 日志扩展能力
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -84594,17 +84013,15 @@ This capability is only used in Flit Mode. The capability has no effect in Non-F
 
 **图 7-103 Flit 日志扩展能力结构**
 
-> <img src="figures/chapter_07/fig_1138_1_tight.png" width="700">
-
-
 § 图 7-104 详细说明了 Flit 日志扩展能力 Header 中寄存器字段的分配;§ 表 7-91 给出了相应的位定义。
 
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1138_1_tight.png" width="700">
+</div>
 
 ---
 
@@ -84639,9 +84056,6 @@ This capability is only used in Flit Mode. The capability has no effect in Non-F
 
 **图 7-104 Flit 日志扩展能力 Header**
 
-> <img src="figures/chapter_07/fig_1139_1_tight.png" width="700">
-
-
 **表 7-91 Flit 日志扩展能力 Header**
 
 </td>
@@ -84649,11 +84063,12 @@ This capability is only used in Flit Mode. The capability has no effect in Non-F
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1139_1_tight.png" width="700">
+
 ---
 
 <a id="sec-7-7-8-1-fields"></a> <!-- 📄 Page 1139 -->
 ## 7.7.8.1 Flit Logging Extended Capability Header - Field Definitions | 7.7.8.1 Flit 日志扩展能力 Header — 字段定义
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -84687,7 +84102,6 @@ This capability is only used in Flit Mode. The capability has no effect in Non-F
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -84740,19 +84154,17 @@ Flit 错误日志 1 寄存器和 Flit 错误日志 2 寄存器是链路级 (Link
 
 **图 7-105 Flit 错误日志 1 寄存器**
 
-> <img src="figures/chapter_07/fig_1139_2_tight.png" width="700">
-
-
 </td>
 </tr>
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1139_2_tight.png" width="700">
+
 ---
 
 <a id="sec-7-7-8-2-fields"></a> <!-- 📄 Page 1140 -->
 ## 7.7.8.2 Flit Error Log 1 Register - Field Definitions | 7.7.8.2 Flit 错误日志 1 寄存器 — 字段定义
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -84810,7 +84222,6 @@ Flit 错误日志 1 寄存器和 Flit 错误日志 2 寄存器是链路级 (Link
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -84883,9 +84294,6 @@ Flit 错误日志 1 寄存器和 Flit 错误日志 2 寄存器是链路级寄存
 
 **图 7-106 Flit 错误日志 2 寄存器**
 
-> <img src="figures/chapter_07/fig_1141_1_tight.png" width="700">
-
-
 **表 7-93 Flit 错误日志 2 寄存器**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -84896,6 +84304,8 @@ Flit 错误日志 1 寄存器和 Flit 错误日志 2 寄存器是链路级寄存
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1141_1_tight.png" width="700">
 
 ---
 
@@ -84935,7 +84345,6 @@ Flit 错误日志 1 寄存器和 Flit 错误日志 2 寄存器是链路级寄存
 
 <a id="sec-7-7-8-4"></a> <!-- 📄 Page 1142 -->
 ## 7.7.8.4 Flit Error Counter Control Register (Offset 0Ch) | Flit 错误计数控制寄存器（偏移 0Ch）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -84981,9 +84390,6 @@ Flit 错误计数寄存器是链路级（Link wide）寄存器，用于统计工
 
 **图 7-107 Flit 错误计数控制寄存器**
 
-> <img src="figures/chapter_07/fig_1142_1_tight.png" width="700">
-
-
 - 位 0：Flit 错误计数器使能（Flit Error Counter Enable）
 - 位 1：Flit 错误计数器中断使能（Flit Error Counter Interrupt Enable）
 - Bits 3:2：统计事件（Events to count）
@@ -85009,8 +84415,9 @@ Flit 错误计数寄存器是链路级（Link wide）寄存器，用于统计工
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1142_1_tight.png" width="700">
+</div>
 
 ---
 
@@ -85083,9 +84490,6 @@ Flit 错误计数寄存器是链路级（Link wide）寄存器，用于统计工
 
 **图 7-108 Flit 错误计数状态寄存器**
 
-> <img src="figures/chapter_07/fig_1143_1_tight.png" width="700">
-
-
 - Bits 2:0：错误计数器启动时的链路宽度（Link Width when Error Counter Started）
 - 位 3：基于触发事件计数已生成中断（Interrupt Generated based on Trigger Event Count）
 - Bits 7:4：RsvdZ
@@ -85111,11 +84515,12 @@ Flit 错误计数寄存器是链路级（Link wide）寄存器，用于统计工
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1143_1_tight.png" width="700">
+
 ---
 
 <a id="sec-7-7-8-5"></a> <!-- 📄 Page 1144 -->
 ## 7.7.8.5 Flit Error Counter Status Register (Offset 0Eh) | Flit 错误计数状态寄存器（偏移 0Eh）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -85192,9 +84597,6 @@ FBER 测量控制寄存器使能直接的 FBER（Flit Bit Error Rate，Flit 误�
 
 **图 7-109 FBER 测量控制寄存器**
 
-> <img src="figures/chapter_07/fig_1144_1_tight.png" width="700">
-
-
 - 位 0：FBER 测量使能（FBER Measurement Enable）
 - 位 1：清除 FBER 计数器（Clear FBER Counters）
 - Bits 3:2：上报的逐通道错误粒度（Granularity of per-Lane Error reported）
@@ -85219,8 +84621,9 @@ FBER 测量控制寄存器使能直接的 FBER（Flit Bit Error Rate，Flit 误�
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1144_1_tight.png" width="700">
+</div>
 
 ---
 
@@ -85286,9 +84689,6 @@ FBER 测量状态 1 寄存器至 FBER 测量状态 10 寄存器包含一组逐�
 
 **图 7-110 FBER 测量状态 1 寄存器**
 
-> <img src="figures/chapter_07/fig_1145_1_tight.png" width="700">
-
-
 - Bits 31:0：Flit 计数器（Flit Counter）
 
 **表 7-97 FBER 测量状态 1 寄存器**
@@ -85299,9 +84699,6 @@ FBER 测量状态 1 寄存器至 FBER 测量状态 10 寄存器包含一组逐�
 
 **图 7-111 FBER 测量状态 2 寄存器**
 
-> <img src="figures/chapter_07/fig_1145_2_tight.png" width="700">
-
-
 - Bits 15:0：无效 Flit 计数器（Invalid Flit Counter）
 - Bits 31:16：RsvdZ
 
@@ -85309,6 +84706,10 @@ FBER 测量状态 1 寄存器至 FBER 测量状态 10 寄存器包含一组逐�
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1145_1_tight.png" width="700">
+
+> <img src="figures/chapter_07/fig_1145_2_tight.png" width="700">
 
 ---
 
@@ -85346,7 +84747,6 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 
 <a id="sec-7-7-8-8"></a>
 ## 7.7.8.8 FBER Measurement Status 2 Register (Offset 18h) | FBER 测量状态 2 寄存器（偏移 18h）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -85405,7 +84805,6 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-7-8-9"></a> <!-- 📄 Page 1147 -->
@@ -85438,7 +84837,6 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 
 <a id="sec-7-7-8-10"></a>
 ## 7.7.8.10 FBER Measurement Status 4 Register (Offset 20h) | FBER 测量状态 4 寄存器（偏移 20h）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -85495,7 +84893,6 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-7-8-11"></a>
@@ -85549,7 +84946,6 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 <a id="sec-7-7-8-12"></a> <!-- 📄 Page 1148 -->
 ## 7.7.8.12 FBER Measurement Status 6 Register (Offset 28h) | FBER 测量状态 6 寄存器（偏移 28h）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -85586,9 +84982,6 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 
 **图 7-116 FBER 测量状态 7 寄存器**
 
-> <img src="figures/chapter_07/fig_1147_1_tight.png" width="700">
-
-
 - Bits 15:0：通道 #8 可纠正计数器（Lane #8 Correctable Counter）
 - Bits 31:16：通道 #9 可纠正计数器（Lane #9 Correctable Counter）
 
@@ -85596,8 +84989,9 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1147_1_tight.png" width="700">
+</div>
 
 ---
 
@@ -85652,7 +85046,6 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 <a id="sec-7-7-8-14"></a> <!-- 📄 Page 1149 -->
 ## 7.7.8.14 FBER Measurement Status 8 Register (Offset 30h) | FBER 测量状态 8 寄存器（偏移 30h）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -85696,9 +85089,6 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 
 **图 7-118 FBER 测量状态 9 寄存器**
 
-> <img src="figures/chapter_07/fig_1148_1_tight.png" width="700">
-
-
 - Bits 15:0：通道 #12 可纠正计数器（Lane #12 Correctable Counter）
 - Bits 31:16：通道 #13 可纠正计数器（Lane #13 Correctable Counter）
 
@@ -85713,8 +85103,9 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1148_1_tight.png" width="700">
+</div>
 
 ---
 
@@ -85769,7 +85160,6 @@ This section formally registers the FBER Measurement Status 1 Register at Offset
 <a id="sec-7-7-8-16"></a>
 ## 7.7.8.16 FBER Measurement Status 10 Register (Offset 38h) | FBER 测量状态 10 寄存器（偏移 38h）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -85804,9 +85194,6 @@ The Device 3 Extended Capability structure must be implemented in any Function o
 
 **图 7-120 Device 3 扩展能力结构**
 
-> <img src="figures/chapter_07/fig_1149_1_tight.png" width="700">
-
-
 - 字节 0–3（+000h）：PCI Express 扩展能力头（PCI Express Extended Capability Header）
 - 字节 4–7（+004h）：Device Capabilities 3 寄存器
 - 字节 8–11（+008h）：Device Control 3 寄存器
@@ -85818,8 +85205,9 @@ The Device 3 Extended Capability structure must be implemented in any Function o
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1149_1_tight.png" width="700">
+</div>
 
 ---
 
@@ -85872,7 +85260,6 @@ The Device 3 Extended Capability structure must be implemented in any Function o
 <a id="sec-7-7-9-fig-7-121"></a> <!-- 📄 Page 1150 -->
 ### Figure 7-121 / Table 7-107: Device 3 Extended Capability Header | Device 3 扩展能力头
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -85921,7 +85308,6 @@ Table 7-107 Device 3 Extended Capability Header
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -86020,7 +85406,6 @@ Table 7-108 Device Capabilities 3 Register
 <a id="sec-7-7-9-2-cont"></a> <!-- 📄 Page 1151 -->
 ### Device Capabilities 3 Register (cont.) | Device 能力 3 寄存器(续)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -86061,7 +85446,6 @@ Table 7-108 Device Capabilities 3 Register (continued)
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -86116,7 +85500,6 @@ Table 7-108 Device Capabilities 3 Register (continued)
 <a id="sec-7-7-9-3"></a>
 ## 7.7.9.3 Device Control 3 Register (Offset 08h) | Device 控制 3 寄存器 (偏移 08h)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -86161,7 +85544,6 @@ UIO 旨在适合将其请求直接路由到内存控制器。对于支持交叉 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -86248,7 +85630,6 @@ Table 7-109 Device Control 3 Register
 <a id="sec-7-7-9-3-cont-2"></a> <!-- 📄 Page 1154 -->
 ### Device Control 3 Register (cont.) | Device 控制 3 寄存器(续)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -86293,7 +85674,6 @@ Table 7-109 Device Control 3 Register (continued)
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -86404,7 +85784,6 @@ The Lane Margining at the Receiver Extended Capability structure must be impleme
 <a id="sec-7-7-10-cont"></a> <!-- 📄 Page 1156 -->
 ### Lane Margining at the Receiver Extended Capability (cont.) | 接收器通道裕度扩展能力(续)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -86445,7 +85824,6 @@ Each per-Lane entry contains the values for that Lane. Lane numbering uses the d
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -86562,7 +85940,6 @@ Figure 7-125 Lane Margining at the Receiver Extended Capability
 <a id="sec-7-7-10-1"></a> <!-- 📄 Page 1158 -->
 ## 7.7.10.1 Lane Margining at the Receiver Extended Capability Header (Offset 00h) | 接收器通道裕度扩展能力头 (偏移 00h)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -86611,7 +85988,6 @@ Table 7-111 Lane Margining at the Receiver Extended Capability Header
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -86696,7 +86072,6 @@ Table 7-112 Margining Port Capabilities Register
 <a id="sec-7-7-10-2-cont"></a> <!-- 📄 Page 1159 -->
 ### Margining Port Capabilities Register (cont.) | 裕度端口能力寄存器(续)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -86760,7 +86135,6 @@ Table 7-113 Margining Port Status Register
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -86810,7 +86184,6 @@ See § Section 4.2.8.2 for details of this register.
 <a id="sec-7-7-10-4"></a>
 ## 7.7.10.4 Margining Lane Control Register (Offset 08h) | Margining Lane 控制寄存器（偏移 08h）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -86822,10 +86195,6 @@ See § Section 4.2.8.2 for details of this register.
 <tbody>
 <tr>
 <td>
-
-> **Figure 7-129.** Lane N: Margining Control Register Entry
-
-> <img src="figures/chapter_07/fig_1160_1_tight.png" width="700">
 
 >
 > Bit fields:
@@ -86849,7 +86218,6 @@ The Margining Lane Status register consists of status fields required for per-La
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-129.** 通道 N：Margining 控制寄存器条目
 >
 > 位字段：
 > - Bits [2:0] 接收器编号（Receiver Number）
@@ -86869,13 +86237,17 @@ The Margining Lane Status register consists of status fields required for per-La
 
 Margining Lane Status 寄存器由 per-Lane margining 所需的状态字段组成。该寄存器中的条目数由 Maximum Link Width 决定（见 § 第 7.5.3.6 节）。有关该寄存器的详细信息，请参阅 § 第 4.2.8.2 节。
 
-<img src="figures/chapter_07/fig_1160_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> **Figure 7-129.** Lane N: Margining Control Register Entry
+>
+> **图 7-129.** 通道 N：Margining 控制寄存器条目
+
+> <img src="figures/chapter_07/fig_1160_1_tight.png" width="700">
+</div>
 
 ---
 
@@ -86894,10 +86266,6 @@ Margining Lane Status 寄存器由 per-Lane margining 所需的状态字段组�
 <td> <!-- 📄 Page 1161 -->
 
 ---
-
-> **Figure 7-130.** Lane N: Margining Lane Status Register Entry
-
-> <img src="figures/chapter_07/fig_1161_1_tight.png" width="700">
 
 >
 > Bit fields:
@@ -86921,7 +86289,6 @@ Margining Lane Status 寄存器由 per-Lane margining 所需的状态字段组�
 
 ---
 
-> **图 7-130.** 通道 N：Margining Lane 状态寄存器条目
 >
 > 位字段：
 > - Bits [2:0] 接收器编号状态（Receiver Number Status）
@@ -86939,17 +86306,21 @@ Margining Lane Status 寄存器由 per-Lane margining 所需的状态字段组�
 | 6 | 使用模式状态（Usage Model Status）- 详见 § 第 4.2.18.1 节。默认值为 0b。如果端口进入 DL_Down 状态，此字段必须复位为默认值。 | RO（见描述） |
 | 15:8 | Margin 负载状态（Margin Payload Status）- 详见 § 第 4.2.18.1 节。仅当 Margin Type 为除"No Command"之外的已定义编码时，此字段才有意义。默认值为 00h。如果端口进入 DL_Down 状态，此字段必须复位为默认值。 | RO（见描述） |
 
-<img src="figures/chapter_07/fig_1161_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+> **Figure 7-130.** Lane N: Margining Lane Status Register Entry
+>
+> **图 7-130.** 通道 N：Margining Lane 状态寄存器条目
+
+> <img src="figures/chapter_07/fig_1161_1_tight.png" width="700">
+
 ---
 
 <a id="sec-7-7-11"></a>
 ## 7.7.11 ACS Extended Capability | ACS 扩展能力（Access Control Services）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -86984,7 +86355,6 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-7-11-1"></a>
@@ -87003,10 +86373,6 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 
 ---
 
-> **Figure 7-131.** ACS Extended Capability
-
-> <img src="figures/chapter_07/fig_1162_1_tight.png" width="700">
-
 >
 > Register layout (Byte Offset / Register):
 > - +000h: PCI Express Extended Capability Header
@@ -87014,10 +86380,6 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 > - +006h: ACS Control Register
 > - +008h: Egress Control Vector (if required)
 > - +00Ch and beyond: (additional Egress Control Vector DWORDs if required)
-
-> **Figure 7-132.** ACS Extended Capability Header
-
-> <img src="figures/chapter_07/fig_1162_2_tight.png" width="700">
 
 >
 > Bit fields:
@@ -87038,7 +86400,6 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 
 ---
 
-> **图 7-131.** ACS 扩展能力
 >
 > 寄存器布局（字节偏移 / 寄存器）：
 > - +000h：PCI Express 扩展能力头（PCI Express Extended Capability Header）
@@ -87047,7 +86408,6 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 > - +008h：Egress Control Vector（如需要）
 > - +00Ch 及之后：（额外的 Egress Control Vector DWORD，如需要）
 
-> **图 7-132.** ACS 扩展能力头
 >
 > 位字段：
 > - Bits [15:0] PCI Express 扩展能力 ID = 000Dh
@@ -87062,17 +86422,27 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 | 19:16 | 能力版本（Capability Version）- 此字段是由 PCI-SIG 定义的版本号，用于指示当前存在的能力结构版本。对于本版本的规范，必须为 1h。 | RO |
 | 31:20 | 下一能力偏移（Next Capability Offset）- 此字段包含下一个 PCI Express 扩展能力结构的偏移量，若能力链表不存在其他条目则为 000h。 | RO |
 
-<img src="figures/chapter_07/fig_1162_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+> **Figure 7-131.** ACS Extended Capability
+>
+> **图 7-131.** ACS 扩展能力
+
+> <img src="figures/chapter_07/fig_1162_1_tight.png" width="700">
+
+> **Figure 7-132.** ACS Extended Capability Header
+>
+> **图 7-132.** ACS 扩展能力头
+
+> <img src="figures/chapter_07/fig_1162_2_tight.png" width="700">
+
 ---
 
 <a id="sec-7-7-11-2"></a>
 ## 7.7.11.2 ACS Capability Register (Offset 04h) | ACS 能力寄存器（偏移 04h）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -87088,7 +86458,6 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 
 ---
 
-> **Figure 7-133.** ACS Capability Register
 >
 > Bit fields:
 > - Bit [0] ACS Source Validation
@@ -87118,7 +86487,6 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 
 ---
 
-> **图 7-133.** ACS 能力寄存器
 >
 > 位字段：
 > - 位 [0] ACS 源验证（ACS Source Validation）
@@ -87148,7 +86516,6 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 </tbody>
 </table>
 </div>
-
 
 <table>
 <thead>
@@ -87192,7 +86559,6 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 <a id="sec-7-7-11-3"></a>
 ## 7.7.11.3 ACS Control Register (Offset 06h) | ACS 控制寄存器（偏移 06h）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -87204,10 +86570,6 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 <tbody>
 <tr>
 <td>
-
-> **Figure 7-134.** ACS Control Register
-
-> <img src="figures/chapter_07/fig_1164_1_tight.png" width="700">
 
 >
 > Bit fields:
@@ -87240,7 +86602,6 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-134.** ACS 控制寄存器
 >
 > 位字段：
 > - 位 [0] ACS 源验证使能（ACS Source Validation Enable）
@@ -87271,13 +86632,17 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 
 > <sup>167</sup> 这包括读完成（Read Completions）、AtomicOp 完成以及带或不带数据的其他完成报文。
 
-<img src="figures/chapter_07/fig_1164_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> **Figure 7-134.** ACS Control Register
+>
+> **图 7-134.** ACS 控制寄存器
+
+> <img src="figures/chapter_07/fig_1164_1_tight.png" width="700">
+</div>
 
 <table>
 <thead>
@@ -87322,7 +86687,6 @@ RCiEP 中实现 ACS 是允许的，但不是必需的。明确允许在单个根
 
 <a id="sec-7-7-11-4"></a>
 ## 7.7.11.4 Egress Control Vector Register (Offset 08h) | Egress Control Vector 寄存器（偏移 08h）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -87377,7 +86741,6 @@ DWORD 中超出 Egress Control Vector Size 字段所规定位数的位为 RsvdP�
 </table>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -87398,10 +86761,6 @@ If ACS Function Groups are enabled in an ARI Device (ACS Function Groups Enable 
 Independent of whether an ARI Device implements ACS Function Groups, its Egress Control Vector Size is not required to cover the entire Function Number range of all Functions implemented by the Device. If ACS Function Groups are not enabled, Function Numbers are mapped to implemented Egress Control Vector bits by taking the modulo of the Egress Control Vector Size, which is constrained to be a power-of-2.
 
 With RCs, some Port Numbers may refer to internal Ports instead of Root Ports. For Root Ports in such RCs, each bit in the bit-array that corresponds to an internal Port must be hardwired to 0b.
-
-> **Figure 7-135.** Egress Control Vector Register
-
-> <img src="figures/chapter_07/fig_1167_1_tight.png" width="700">
 
 >
 > Bit fields:
@@ -87433,7 +86792,6 @@ The following examples illustrate how the vector might be configured:
 
 对于 RC，某些端口号可能引用内部端口而非根端口。对于此类 RC 中的根端口，位数组中对应内部端口的每一位必须硬连线为 0b。
 
-> **图 7-135.** Egress Control Vector 寄存器
 >
 > 位字段：
 > - Bits [31:0] Egress Control Vector
@@ -87451,11 +86809,16 @@ The following examples illustrate how the vector might be configured:
   - 端口 2 允许与端口 3、5 和 7 通信，可配置为：`0101 0010b`。
 - 对于 4 功能设备，每个功能都有一个单独的向量，用于指示其可将请求转发到哪些功能。
 
-<img src="figures/chapter_07/fig_1167_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-135.** Egress Control Vector Register
+>
+> **图 7-135.** Egress Control Vector 寄存器
+
+> <img src="figures/chapter_07/fig_1167_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -87519,7 +86882,6 @@ This section, contains a description of common PCI and PCIe capabilities that ar
 <a id="sec-7-8-1"></a>
 ## 7.8.1 Power Budgeting Extended Capability | 功耗预算（Power Budgeting）扩展能力
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -87537,10 +86899,6 @@ The Power Budgeting Extended Capability allows the system to allocate power to d
 Implementation of the Power Budgeting Extended Capability is optional for PCI Express devices that are implemented either in a form-factor which does not require Hot-Plug support, or that are integrated on the system board. PCI Express form-factor specifications may require support for power budgeting. Power Budgeting reports device power consumption assuming the device is given appropriate permission (e.g., from Set_Slot_Power_Limit message) and that the external power connections for the device are operating.
 
 The Power Budgeting Extended Capability is permitted to be present in PFs, but VFs must not implement it. If a PF contains the capability, it must report values that cover all associated VFs.
-
-> **Figure 7-136.** Power Budgeting Extended Capability
-
-> <img src="figures/chapter_07/fig_1168_1_tight.png" width="700">
 
 >
 > Register layout (Byte Offset / Register):
@@ -87565,7 +86923,6 @@ Figure 7-137 details allocation of register fields in the Power Budgeting Extend
 
 允许在 PF（物理功能，Physical Function）中实现功耗预算扩展能力，但 VF（虚拟功能，Virtual Function）不得实现。若 PF 包含此能力，则必须上报覆盖所有关联 VF 的数值。
 
-> **图 7-136.** 功耗预算扩展能力
 >
 > 寄存器布局（字节偏移 / 寄存器）：
 > - +000h：PCI Express 扩展能力头（PCI Express Extended Capability Header）
@@ -87580,13 +86937,17 @@ Figure 7-137 details allocation of register fields in the Power Budgeting Extend
 
 图 7-137 详细说明了功耗预算扩展能力头中寄存器字段的分配；表 7-120 提供了相应的位定义。有关 PCI Express 扩展能力头的描述，请参阅 § 第 7.6.3 节。功耗预算扩展能力的扩展能力 ID 为 0004h。
 
-<img src="figures/chapter_07/fig_1168_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> **Figure 7-136.** Power Budgeting Extended Capability
+>
+> **图 7-136.** 功耗预算扩展能力
+
+> <img src="figures/chapter_07/fig_1168_1_tight.png" width="700">
+</div>
 
 ---
 
@@ -87604,7 +86965,7 @@ Figure 7-137 details allocation of register fields in the Power Budgeting Extend
 <tr>
 <td>
 
-> **Figure 7-137. Power Budgeting Extended Capability Header | 功耗预算扩展能力头**
+>
 
 | Bits 0-15 | Bits 16-19 | Bits 20-31 |
 |-----------|-----------|-----------|
@@ -87627,9 +86988,6 @@ The Power Budgeting Control Register permits system software to enable extended 
 
 > **图 7-137. 功耗预算扩展能力头 (Power Budgeting Extended Capability Header)**
 
-> <img src="figures/chapter_07/fig_1169_1_tight.png" width="700">
-
-
 | 位 0-15 | 位 16-19 | 位 20-31 |
 |-----------|-----------|-----------|
 | PCI Express 扩展能力 ID (0004h) | Capability Version(能力版本) | Next Capability Offset(下一能力偏移) |
@@ -87650,6 +87008,12 @@ Power Budgeting Control Register(功耗预算控制寄存器)允许系统软件�
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-137.** Power Budgeting Extended Capability Header
+>
+> **图 7-137.** 功耗预算扩展能力头
+
+> <img src="figures/chapter_07/fig_1169_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -87688,7 +87052,6 @@ Refer to § 7.8.1.1 for the description of this register.
 <a id="sec-7-8-1-3"></a>
 ## 7.8.1.3 Power Budgeting Control Register (Offset 06h) | 功耗预算控制寄存器(偏移 06h)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -87703,7 +87066,7 @@ Refer to § 7.8.1.1 for the description of this register.
 
 § Figure 7-138 details allocation of register fields in the Aux Power Control register; § Table 7-121 provides the respective bit definitions.
 
-> **Figure 7-138. Power Budgeting Control Register | 功耗预算控制寄存器**
+>
 
 | Bit 0 | Bit 1 | Bits 2-4 | Bit 5 | Bits 6-8 | Bits 9-15 |
 |---|---|---|---|---|---|
@@ -87726,9 +87089,6 @@ Refer to § 7.8.1.1 for the description of this register.
 
 > **图 7-138. 功耗预算控制寄存器 (Power Budgeting Control Register)**
 
-> <img src="figures/chapter_07/fig_1170_1_tight.png" width="700">
-
-
 | 位 0 | 位 1 | 位 2-4 | 位 5 | 位 6-8 | 位 9-15 |
 |---|---|---|---|---|---|
 | Extended Power Budgeting Enable(扩展功耗预算使能) | Power Limit Enable(功率限制使能) | Power Limit PM Sub State(功率限制 PM 子状态) | Out of Band Power Limit Enable(带外功率限制使能) | Out of Band Power Limit PM Sub State(带外功率限制 PM 子状态) | RsvdP(保留) |
@@ -87747,8 +87107,13 @@ Refer to § 7.8.1.1 for the description of this register.
 </tr>
 </tbody>
 </table>
-</div>
 
+> **Figure 7-138.** Power Budgeting Control Register
+>
+> **图 7-138.** 功耗预算控制寄存器
+
+> <img src="figures/chapter_07/fig_1170_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -87777,7 +87142,7 @@ In earlier versions of this specification, bits 31:21 of this register were Rsvd
 
 The Base Power and Data Scale fields describe the power usage of the device; the Power Rail, Type, PM State, and PM Sub State fields describe the conditions under which the device has this power usage.
 
-> **Figure 7-139. Power Budgeting Data Register | 功耗预算数据寄存器**
+>
 
 | Bits 0-7 | Bits 8-9 | Bits 10-12 | Bits 13-14 | Bits 15-17 | Bits 18-20 | Bit 21 | Bits 22-24 | Bits 25-30 | Bit 31 |
 |---|---|---|---|---|---|---|---|---|---|
@@ -87836,9 +87201,6 @@ Base Power(基础功率)和 Data Scale(数据比例)字段描述设备的功率�
 
 > **图 7-139. 功耗预算数据寄存器 (Power Budgeting Data Register)**
 
-> <img src="figures/chapter_07/fig_1172_1_tight.png" width="700">
-
-
 | 位 0-7 | 位 8-9 | 位 10-12 | 位 13-14 | 位 15-17 | 位 18-20 | 位 21 | 位 22-24 | 位 25-30 | 位 31 |
 |---|---|---|---|---|---|---|---|---|---|
 | Base Power(基础功率) | Data Scale[1:0](数据比例[1:0]) | PM Sub State(PM 子状态) | PM State(PM 状态) | Type(类型) | Power Rail(电源轨) | Data Scale[2](数据比例[2]) | Connector Number(连接器编号) | Connector Type(连接器类型) | Extended Power Budgeting Present(存在扩展功耗预算) |
@@ -87887,13 +87249,18 @@ Base Power(基础功率)和 Data Scale(数据比例)字段描述设备的功率�
 </tbody>
 </table>
 
+> **Figure 7-139.** Power Budgeting Data Register
+>
+> **图 7-139.** 功耗预算数据寄存器
+
+> <img src="figures/chapter_07/fig_1172_1_tight.png" width="700">
+
 [⬆️ 返回目录](#sec-7-0)
 
 ---
 
 <a id="sec-7-8-1-5"></a>
 ## 7.8.1.5 Power Budgeting Capability Register (Offset 0Ch) | 功耗预算能力寄存器(偏移 0Ch)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -87908,8 +87275,6 @@ Base Power(基础功率)和 Data Scale(数据比例)字段描述设备的功率�
 <td>
 
 This register indicates the power budgeting capabilities of a device. § Figure 7-140 details allocation of register fields in the Power Budgeting Capability Register; § Table 7-123 provides the respective bit definitions.
-
-> **Figure 7-140. Power Budgeting Capability Register | 功耗预算能力寄存器**
 
 | Bit 0 | Bit 1 | Bit 2 | Bit 3 | Bits 4-5 | Bits 6-7 |
 |---|---|---|---|---|---|
@@ -87952,8 +87317,12 @@ This register indicates the power budgeting capabilities of a device. § Figure 
 </tr>
 </tbody>
 </table>
-</div>
 
+> **Figure 7-140.** Power Budgeting Capability Register
+>
+> **图 7-140.** 功耗预算能力寄存器
+
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -87983,7 +87352,7 @@ This register is only meaningful in the lowest numbered Function that contains t
 
 § Figure 7-141 details allocation of register fields in the Power Budgeting Sense Detect Register; § Table 7-124 provides the respective bit definitions. § Table 7-125 defines the encodings based on Connector Type values.
 
-> **Figure 7-141. Power Budgeting Sense Detect Register | 功耗预算感应检测寄存器**
+>
 
 | Bits 0-2 | Bits 3-5 | Bits 6-8 | Bits 9-11 | Bits 12-14 | Bits 15-17 | Bits 18-20 | Bits 21-23 |
 |---|---|---|---|---|---|---|---|
@@ -88033,9 +87402,6 @@ This register is only meaningful in the lowest numbered Function that contains t
 
 > **图 7-141. 功耗预算感应检测寄存器 (Power Budgeting Sense Detect Register)**
 
-> <img src="figures/chapter_07/fig_1178_1_tight.png" width="700">
-
-
 | 位 0-2 | 位 3-5 | 位 6-8 | 位 9-11 | 位 12-14 | 位 15-17 | 位 18-20 | 位 21-23 |
 |---|---|---|---|---|---|---|---|
 | Connector Number 0 Sense Data(连接器 0 感应数据) | Connector Number 1 Sense Data(连接器 1 感应数据) | Connector Number 2 Sense Data(连接器 2 感应数据) | Connector Number 3 Sense Data(连接器 3 感应数据) | Connector Number 4 Sense Data(连接器 4 感应数据) | Connector Number 5 Sense Data(连接器 5 感应数据) | Connector Number 6 Sense Data(连接器 6 感应数据) | Connector Number 7 Sense Data(连接器 7 感应数据) |
@@ -88074,13 +87440,18 @@ This register is only meaningful in the lowest numbered Function that contains t
 </tbody>
 </table>
 
+> **Figure 7-141.** Power Budgeting Sense Detect Register
+>
+> **图 7-141.** 功耗预算感应检测寄存器
+
+> <img src="figures/chapter_07/fig_1178_1_tight.png" width="700">
+
 [⬆️ 返回目录](#sec-7-0)
 
 ---
 
 <a id="sec-7-8-2"></a>
 ## 7.8.2 Latency Tolerance Reporting (LTR) Extended Capability | 延迟容忍报告 (LTR) 扩展能力
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -88100,14 +87471,14 @@ For a Multi-Function Device associated with the Upstream Port of a component tha
 
 RCiEPs implemented as Multi-Function Devices are permitted to implement this Capability structure in more than one Function of the Multi-Function Device.
 
-> **Figure 7-142. LTR Extended Capability Structure | LTR 扩展能力结构**
+>
 
 | Byte Offset | 31 … 16 | 15 … 0 |
 |---|---|---|
 | +000h | PCI Express Extended Capability Header | |
 | +004h | Max Snoop Latency Register | Max No-Snoop Latency Register |
 
-> **Figure 7-143. LTR Extended Capability Header | LTR 扩展能力头**
+>
 
 | Bits 0-15 | Bits 16-19 | Bits 20-31 |
 |---|---|---|
@@ -88121,7 +87492,7 @@ RCiEPs implemented as Multi-Function Devices are permitted to implement this Cap
 | 19:16 | Capability Version - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. Must be 1h for this version of the specification. | RO |
 | 31:20 | Next Capability Offset - This field contains the offset to the next PCI Express Extended Capability structure or 000h if no other items exist in the linked list of Capabilities. | RO |
 
-> **Figure 7-144. Max Snoop Latency Register | 最大 Snoop 延迟寄存器**
+>
 
 | Bits 0-9 | Bits 10-12 | Bits 13-15 |
 |---|---|---|
@@ -88138,18 +87509,12 @@ PCI Express Latency Tolerance Reporting (LTR) 扩展能力是一种可选的扩�
 
 > **图 7-142. LTR 扩展能力结构 (LTR Extended Capability Structure)**
 
-> <img src="figures/chapter_07/fig_1181_1_tight.png" width="700">
-
-
 | 字节偏移 | 31 … 16 | 15 … 0 |
 |---|---|---|
 | +000h | PCI Express 扩展能力头 | |
 | +004h | Max Snoop Latency Register(最大 Snoop 延迟寄存器) | Max No-Snoop Latency Register(最大 No-Snoop 延迟寄存器) |
 
 > **图 7-143. LTR 扩展能力头 (LTR Extended Capability Header)**
-
-> <img src="figures/chapter_07/fig_1181_2_tight.png" width="700">
-
 
 | 位 0-15 | 位 16-19 | 位 20-31 |
 |---|---|---|
@@ -88165,9 +87530,6 @@ PCI Express Latency Tolerance Reporting (LTR) 扩展能力是一种可选的扩�
 
 > **图 7-144. Max Snoop Latency Register(最大 Snoop 延迟寄存器)**
 
-> <img src="figures/chapter_07/fig_1181_3_tight.png" width="700">
-
-
 | 位 0-9 | 位 10-12 | 位 13-15 |
 |---|---|---|
 | Max Snoop Latency Value(最大 Snoop 延迟值) | Max Snoop Latency Scale(最大 Snoop 延迟比例) | RsvdP(保留) |
@@ -88176,8 +87538,25 @@ PCI Express Latency Tolerance Reporting (LTR) 扩展能力是一种可选的扩�
 </tr>
 </tbody>
 </table>
-</div>
 
+> **Figure 7-142.** LTR Extended Capability Structure
+>
+> **图 7-142.** LTR 扩展能力结构
+
+> **Figure 7-143.** LTR Extended Capability Header
+>
+> **图 7-143.** LTR 扩展能力头
+
+> **Figure 7-144.** Max Snoop Latency Register
+>
+> **图 7-144.** 最大 Snoop 延迟寄存器
+
+> <img src="figures/chapter_07/fig_1181_1_tight.png" width="700">
+
+> <img src="figures/chapter_07/fig_1181_2_tight.png" width="700">
+
+> <img src="figures/chapter_07/fig_1181_3_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -88327,7 +87706,6 @@ For a Multi-Function Device associated with an Upstream Port implementing L1 PM 
 
 > <img src="figures/chapter_07/fig_1183_1_tight.png" width="700">
 
-
 | Byte Offset | Register |
 |-------------|----------|
 | +000h | PCI Express Extended Capability Header |
@@ -88346,7 +87724,6 @@ For a Multi-Function Device associated with an Upstream Port implementing L1 PM 
 > **图 7-147.** L1 PM Substates Extended Capability 头部
 
 > <img src="figures/chapter_07/fig_1183_2_tight.png" width="700">
-
 
 **Table 7-129. L1 PM Substates Extended Capability Header | 表 7-129. L1 PM 子状态扩展能力头**
 
@@ -88413,7 +87790,6 @@ For a Multi-Function Device associated with an Upstream Port implementing L1 PM 
 
 > <img src="figures/chapter_07/fig_1184_1_tight.png" width="700">
 
-
 **Table 7-130. L1 PM Substates Capabilities Register | 表 7-130. L1 PM 子状态能力寄存器**
 
 | Bit Location | Register Description | Attributes |
@@ -88479,7 +87855,6 @@ For a Multi-Function Device associated with an Upstream Port implementing L1 PM 
 > **图 7-149.** L1 PM Substates 控制 1 寄存器
 
 > <img src="figures/chapter_07/fig_1185_1_tight.png" width="700">
-
 
 **Table 7-131. L1 PM Substates Control 1 Register | 表 7-131. L1 PM 子状态控制 1 寄存器**
 
@@ -88551,7 +87926,6 @@ For a Multi-Function Device associated with an Upstream Port implementing L1 PM 
 
 > <img src="figures/chapter_07/fig_1187_1_tight.png" width="700">
 
-
 **Table 7-132. L1 PM Substates Control 2 Register | 表 7-132. L1 PM 子状态控制 2 寄存器**
 
 | Bit Location | Register Description | Attributes |
@@ -88599,7 +87973,6 @@ Hardware must implement this register if the Capability Version in the L1 PM Sub
 
 > <img src="figures/chapter_07/fig_1188_1_tight.png" width="700">
 
-
 **Table 7-133. L1 PM Substates Status Register | 表 7-133. L1 PM 子状态寄存器**
 
 | Bit Location | Register Description | Attributes |
@@ -88636,7 +88009,6 @@ Hardware must implement this register if the Capability Version in the L1 PM Sub
 
 <a id="sec-7-8-4"></a>
 ## 7.8.4 Advanced Error Reporting Extended Capability | 高级错误报告扩展能力
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -88679,7 +88051,6 @@ PCI Express 高级错误报告 (AER, Advanced Error Reporting) 能力是一项�
 </table>
 </div>
 
-
 ---
 
 7.8.3.5 L1 PM Substates Status Register (Offset 10h) §
@@ -88691,7 +88062,6 @@ PCI Express 高级错误报告 (AER, Advanced Error Reporting) 能力是一项�
 > **图 7-152.** 配置从属端口的链路控制
 
 > <img src="figures/chapter_07/fig_1189_1_tight.png" width="700">
-
 
 | Byte Offset | Register |
 |-------------|----------|
@@ -88762,7 +88132,6 @@ Refer to § Section 7.6.3 for a description of the PCI Express Extended Capabili
 > **图 7-154.** 集成设备—A 系列配置寄存器映射
 
 > <img src="figures/chapter_07/fig_1191_1_tight.png" width="700">
-
 
 **Table 7-134. Advanced Error Reporting Extended Capability Header | 表 7-134. 高级错误报告扩展能力头**
 
@@ -88835,7 +88204,6 @@ For SR-IOV devices, applicable errors categorized as non-Function-specific must 
 <a id="sec-7-8-4-2-fig-7-155"></a>
 ## Figure 7-155 / Table 7-135 Uncorrectable Error Status Register | 不可纠正错误状态寄存器
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -88898,9 +88266,6 @@ Switch Port, or Function 0 Endpoint Functions, so for VFs their intended attribu
 
 **图 7-155 不可纠正错误状态寄存器**
 
-> <img src="figures/chapter_07/fig_1192_1_tight.png" width="700">
-
-
 | 位 | 描述 |
 |-----|------|
 | 0 | 未定义 |
@@ -88944,8 +88309,9 @@ Switch Port, or Function 0 Endpoint Functions, so for VFs their intended attribu
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1192_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -89060,7 +88426,6 @@ Switch Port, or Function 0 Endpoint Functions, so for VFs their intended attribu
 <a id="sec-7-8-4-3-intro"></a>
 ## 7.8.4.3 Uncorrectable Error Mask Register — Introduction | 7.8.4.3 不可纠正错误屏蔽寄存器 — 引言
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -89093,7 +88458,6 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -89161,9 +88525,6 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 
 **图 7-156 不可纠正错误屏蔽寄存器**
 
-> <img src="figures/chapter_07/fig_1194_1_tight.png" width="700">
-
-
 | 位 | 描述 |
 |-----|------|
 | 0 | 未定义 |
@@ -89210,13 +88571,14 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1194_1_tight.png" width="700">
+
 [⬆️ 返回目录](#sec-7-0)
 
 ---
 
 <a id="sec-7-8-4-3-tbl-7-136-cont"></a> <!-- 📄 Page 1196 -->
 ## Table 7-136 Uncorrectable Error Mask Register (continued) | 表 7-136 不可纠正错误屏蔽寄存器（续）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -89297,7 +88659,6 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -89342,7 +88703,6 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 
 <a id="sec-7-8-4-4-fig-7-157"></a>
 ## Figure 7-157 / Table 7-137 Uncorrectable Error Severity Register | 图 7-157 / 表 7-137 不可纠正错误严重性寄存器
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -89404,9 +88764,6 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 
 **图 7-157 不可纠正错误严重性寄存器**
 
-> <img src="figures/chapter_07/fig_1197_1_tight.png" width="700">
-
-
 | 位 | 描述 |
 |-----|------|
 | 0 | 未定义 |
@@ -89452,8 +88809,9 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1197_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -89530,7 +88888,6 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 <a id="sec-7-8-4-4-tbl-7-137-cont2"></a> <!-- 📄 Page 1199 -->
 ## Table 7-137 (continued) and Notes | 表 7-137（续）以及注释
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -89569,7 +88926,6 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -89616,7 +88972,6 @@ For SR-IOV devices, errors categorized as non-Function-specific must be logged i
 <a id="sec-7-8-4-5-fig-7-158"></a>
 ## Figure 7-158 / Table 7-138 Correctable Error Status Register | 图 7-158 / 表 7-138 可纠正错误状态寄存器
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -89658,9 +89013,6 @@ For SR-IOV devices, errors categorized as non-Function-specific must be logged i
 
 **图 7-158 可纠正错误状态寄存器**
 
-> <img src="figures/chapter_07/fig_1199_1_tight.png" width="700">
-
-
 | 位 | 描述 |
 |-----|------|
 | 0 | 接收器错误状态 |
@@ -89687,8 +89039,9 @@ For SR-IOV devices, errors categorized as non-Function-specific must be logged i
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1199_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -89743,7 +89096,6 @@ For SR-IOV devices, errors categorized as non-Function-specific must be logged i
 <a id="sec-7-8-4-6-intro"></a>
 ## 7.8.4.6 Correctable Error Mask Register — Introduction | 7.8.4.6 可纠正错误屏蔽寄存器 — 引言
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -89776,7 +89128,6 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -89832,9 +89183,6 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 
 **图 7-159 可纠正错误屏蔽寄存器**
 
-> <img src="figures/chapter_07/fig_1200_1_tight.png" width="700">
-
-
 | 位 | 描述 |
 |-----|------|
 | 0 | 接收器错误屏蔽 |
@@ -89868,6 +89216,8 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1200_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -89913,7 +89263,6 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 
 <a id="sec-7-8-4-7-fig-7-160"></a>
 ## Figure 7-160 / Table 7-140 Advanced Error Capabilities and Control Register | 图 7-160 / 表 7-140 高级错误能力与控制寄存器
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -89963,9 +89312,6 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 
 **图 7-160 高级错误能力与控制寄存器**
 
-> <img src="figures/chapter_07/fig_1202_1_tight.png" width="700">
-
-
 | 位 | 描述 |
 |-----|------|
 | 0:4 | 首次错误指针 |
@@ -89999,8 +89345,9 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1202_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -90051,7 +89398,6 @@ For VF fields marked as VF RsvdP, the associated PF's setting applies to the VF.
 <a id="sec-7-8-4-8-intro"></a>
 ## 7.8.4.8 Header Log Register — Introduction | 7.8.4.8 包头日志寄存器 — 引言
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -90101,7 +89447,6 @@ When Flit Mode Supported is Set and the link is operating in Flit Mode, the Head
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -90150,9 +89495,6 @@ When the link is operating in Non-Flit Mode, End-End TLP Prefixes are logged in 
 
 **图 7-161 包头日志寄存器**（OM14549A）
 
-> <img src="figures/chapter_07/fig_1204_1_tight.png" width="700">
-
-
 | 31:24 | 23:16 | 15:8 | 7:0 |
 |-------|-------|------|-----|
 | 包头字节 0 | 包头字节 4 | 包头字节 8 | 包头字节 12 |
@@ -90173,13 +89515,14 @@ When the link is operating in Non-Flit Mode, End-End TLP Prefixes are logged in 
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1204_1_tight.png" width="700">
+
 [⬆️ 返回目录](#sec-7-0)
 
 ---
 
 <a id="sec-root-error-cmd-intro"></a>
 ## Root Error Command Register — Introduction | 根错误命令寄存器 — 引言
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -90213,7 +89556,6 @@ For Functions other than Root Ports and Root Complex Event Collectors: when End-
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -90286,7 +89628,6 @@ System error generation in response to PCI Express error Messages may be turned 
 <a id="sec-7-8-4-10"></a>
 ## 7.8.4.10 Root Error Status Register (Offset 30h) | 根错误状态寄存器（偏移 30h）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -90356,9 +89697,6 @@ For Functions other than Root Ports and Root Complex Event Collectors: when End-
 
 **图 7-163 根错误状态寄存器（Root Error Status Register）**
 
-> <img src="figures/chapter_07/fig_1206_1_tight.png" width="700">
-
-
 **表 7-143 根错误状态寄存器（Root Error Status Register）**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -90377,8 +89715,9 @@ For Functions other than Root Ports and Root Complex Event Collectors: when End-
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1206_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -90448,7 +89787,6 @@ For Functions other than Root Ports and Root Complex Event Collectors: when End-
 
 <a id="sec-7-8-4-12"></a>
 ## 7.8.4.12 TLP Prefix Log Register (Offset 38h) | TLP 前缀日志寄存器（偏移 38h）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -90533,7 +89871,6 @@ TLP 前缀按如下方式捕获：当使用 DW（双字）访问读取时，TLP 
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -90574,7 +89911,6 @@ Each field is defined in the following sections. Reserved registers must return 
 
 <a id="sec-7-8-5-1"></a>
 ## 7.8.5.1 Enhanced Allocation Capability First DW (Offset 00h) | 增强分配能力首 DW（偏移 00h）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -90635,7 +89971,6 @@ The first DW of the Enhanced Allocation capability is illustrated in § Figure 7
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -90684,9 +90019,6 @@ For Type 1 Functions only, there is a second DW in the capability, preceding the
 
 **图 7-167 增强分配能力的第二 DW（Second DW of Enhanced Allocation Capability）**
 
-> <img src="figures/chapter_07/fig_1210_1_tight.png" width="700">
-
-
 **表 7-147 增强分配能力的第二 DW（Second DW of Enhanced Allocation Capability）**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -90699,13 +90031,14 @@ For Type 1 Functions only, there is a second DW in the capability, preceding the
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1210_1_tight.png" width="700">
+
 [⬆️ 返回目录](#sec-7-0)
 
 ---
 
 <a id="sec-7-8-5-3"></a>
 ## 7.8.5.3 Enhanced Allocation Per-Entry Format (Offset 04h or 08h) | 增强分配逐条目格式（偏移 04h 或 08h）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -90791,9 +90124,6 @@ BEI Value descriptions:
 
 **图 7-168 增强分配能力中每个条目的首 DW（First DW of Each Entry for Enhanced Allocation Capability）**
 
-> <img src="figures/chapter_07/fig_1211_1_tight.png" width="700">
-
-
 **表 7-148 增强分配能力中每个条目的首 DW（First DW of Each Entry for Enhanced Allocation Capability）**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -90825,8 +90155,9 @@ BEI 值描述：
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1211_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -90911,7 +90242,6 @@ BEI 字段使用规则：
 
 <a id="sec-7-8-6"></a> <!-- 📄 Page 1216 -->
 ## 7.8.6 Resizable BAR Extended Capability | 可调整 BAR 扩展能力（Resizable BAR Extended Capability）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -91007,9 +90337,6 @@ Resizable BAR Capability 结构定义了一个 PCI Express 扩展能力（PCI Ex
 
 **图 7-174 可调整 BAR 扩展能力（Resizable BAR Extended Capability）**
 
-> <img src="figures/chapter_07/fig_1217_1_tight.png" width="700">
-
-
 > **实现注意（IMPLEMENTATION NOTE）：**
 > **在资源分配过程中使用该能力（USING THE CAPABILITY DURING RESOURCE ALLOCATION）**
 >
@@ -91029,9 +90356,6 @@ Resizable BAR Capability 结构定义了一个 PCI Express 扩展能力（PCI Ex
 
 **图 7-175 可调整 BAR 扩展能力头（Resizable BAR Extended Capability Header）**
 
-> <img src="figures/chapter_07/fig_1218_1_tight.png" width="700">
-
-
 **表 7-151 可调整 BAR 扩展能力头（Resizable BAR Extended Capability Header）**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -91046,8 +90370,11 @@ Resizable BAR Capability 结构定义了一个 PCI Express 扩展能力（PCI Ex
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1217_1_tight.png" width="700">
+
+> <img src="figures/chapter_07/fig_1218_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -91085,7 +90412,6 @@ Resizable BAR Capability 结构定义了一个 PCI Express 扩展能力（PCI Ex
 
 <a id="sec-7-8-6-2"></a>
 ## 7.8.6.2 Resizable BAR Capability Register | 可变大小 BAR 能力寄存器
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -91137,9 +90463,6 @@ Bit 31:     Function supports 128 TB BAR
 <td style="background-color:#e8e8e8">
 
 **图 7-176 可变大小 BAR 能力寄存器**
-
-> <img src="figures/chapter_07/fig_1219_1_tight.png" width="700">
-
 
 <pre>
 位 0-3：    RsvdP
@@ -91205,8 +90528,9 @@ Bit 31:     Function supports 128 TB BAR
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1219_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -91281,7 +90605,6 @@ Bit 31:     Function supports 128 TB BAR
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1221 -->
 <table>
 <thead>
@@ -91352,9 +90675,6 @@ Bit 31:     Function supports 8 EB BAR
 <td style="background-color:#e8e8e8">
 
 **图 7-177 可变大小 BAR 控制寄存器**
-
-> <img src="figures/chapter_07/fig_1221_1_tight.png" width="700">
-
 
 <pre>
 位 0-2：    BAR Index（BAR 索引）
@@ -91436,8 +90756,9 @@ This value indicates which BAR supports a negotiable size.
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1221_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -91493,7 +90814,6 @@ This value indicates which BAR supports a negotiable size.
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1223 -->
 <table>
 <thead>
@@ -91547,7 +90867,6 @@ This value indicates which BAR supports a negotiable size.
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -91585,7 +90904,6 @@ VF 可变大小 BAR 扩展能力是一种可选能力，允许 PF 调整其 VF �
 [⬆️ 返回目录](#sec-7-0)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1224 -->
 <table>
@@ -91628,9 +90946,6 @@ VF 可变大小 BAR 扩展能力结构定义了一个位于 PCI Express Extended
 
 **图 7-178 VF 可变大小 BAR 扩展能力**
 
-> <img src="figures/chapter_07/fig_1224_1_tight.png" width="700">
-
-
 <pre>
 字节偏移：       0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
 +000h：          PCI Express 扩展能力头
@@ -91667,8 +90982,9 @@ VF 可变大小 BAR 扩展能力结构定义了一个位于 PCI Express Extended
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1224_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -91709,9 +91025,6 @@ Bit 20-31:   Next Capability Offset
 
 **图 7-179 VF 可变大小 BAR 扩展能力头**
 
-> <img src="figures/chapter_07/fig_1225_1_tight.png" width="700">
-
-
 <pre>
 位 0-15：    PCI Express 扩展能力 ID = 0024h
 位 16-19：   Capability Version（能力版本）
@@ -91730,6 +91043,8 @@ Bit 20-31:   Next Capability Offset
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1225_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -91767,7 +91082,6 @@ VF 可变大小 BAR 能力寄存器的字段描述与 § 表 7-152 中可变大�
 
 <a id="sec-7-8-7-3"></a>
 ## 7.8.7.3 VF Resizable BAR Control Register (Offset 08h) | VF 可变大小 BAR 控制寄存器（偏移 08h）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -91823,9 +91137,6 @@ VF 可变大小 BAR 控制寄存器的 31:16 位定义与 § 表 7-153 中可变
 
 **图 7-180 VF 可变大小 BAR 控制寄存器**
 
-> <img src="figures/chapter_07/fig_1226_1_tight.png" width="700">
-
-
 <pre>
 位 0-2：    VF BAR Index（VF BAR 索引）
 位 3-4：    RsvdP
@@ -91879,8 +91190,9 @@ VF 可变大小 BAR 控制寄存器的 31:16 位定义与 § 表 7-153 中可变
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1226_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -91920,7 +91232,6 @@ VF 可变大小 BAR 控制寄存器的 31:16 位定义与 § 表 7-153 中可变
 <a id="sec-7-8-8"></a>
 ## 7.8.8 ARI Extended Capability | ARI 扩展能力
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -91946,8 +91257,6 @@ Byte Offset:    0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 2
 +008h:          ARI Control Register
 </pre>
 
-
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -91957,9 +91266,6 @@ ARI（替代路由 ID 解释，Alternative Routing ID Interpretation）是一种
 
 **图 7-181 ARI 扩展能力**
 
-> <img src="figures/chapter_07/fig_1227_1_tight.png" width="700">
-
-
 <pre>
 字节偏移：      0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
 +000h：         PCI Express 扩展能力头
@@ -91967,14 +91273,13 @@ ARI（替代路由 ID 解释，Alternative Routing ID Interpretation）是一种
 +008h：         ARI 控制寄存器
 </pre>
 
-
-
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1227_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -92015,9 +91320,6 @@ Bit 20-31:   Next Capability Offset
 
 **图 7-182 ARI 扩展能力头**
 
-> <img src="figures/chapter_07/fig_1227_2_tight.png" width="700">
-
-
 <pre>
 位 0-15：    PCI Express 扩展能力 ID = 000Eh
 位 16-19：   Capability Version（能力版本）
@@ -92037,10 +91339,10 @@ Bit 20-31:   Next Capability Offset
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1227_2_tight.png" width="700">
+
 <a id="sec-7-8-8-2"></a>
 ## 7.8.8.2 ARI Capability Register (Offset 04h) | ARI 能力寄存器（偏移 04h）
-
-### Figure 7-183 ARI Capability Register | 图 7-183 ARI 能力寄存器
 
 **Figure 7-183. ARI Capability Register | 图 7-183. ARI 能力寄存器**
 
@@ -92092,8 +91394,6 @@ Bit 20-31:   Next Capability Offset
 <a id="sec-7-8-8-3"></a> <!-- 📄 Page 1229 -->
 ## 7.8.8.3 ARI Control Register (Offset 06h) | ARI 控制寄存器（偏移 06h）
 
-### Figure 7-184 ARI Control Register | 图 7-184 ARI 控制寄存器
-
 **Figure 7-184. ARI Control Register | 图 7-184. ARI 控制寄存器**
 
 <table>
@@ -92135,7 +91435,6 @@ Bit 20-31:   Next Capability Offset
 | 1 | **ACS Function Groups Enable (A)** - Applicable only for Function 0; must be hardwired to 0b for all other Functions. When set, each Function in the ARI Device must associate bits within its Egress Control Vector with Function Group Numbers rather than Function Numbers.<br>Default value of this bit is 0b. Must be hardwired to 0b if the ACS Function Groups Capability bit is 0b. | RW |
 | 6:4 | **Function Group** - Assigns a Function Group Number to this Function.<br>Default value of this field is 000b. Must be hardwired to 000b if in Function 0, the MFVC Function Groups Capability bit and ACS Function Groups Capability bit are both 0b. | RW |
 
-
 | 位位置 | 寄存器说明 | 属性 |
 |--------|-----------|------|
 | 0 | **MFVC Function Groups Enable (M)** —— 仅适用于 Function 0；其他所有 Function 必须硬连线为 0b。置 1 时，ARI 设备必须将其 Function Arbitration Table 中的条目解释为 Function Group Number，而非 Function Number。<br>此位默认值为 0b。如果 MFVC Function Groups Capability 位为 0b，则必须硬连线为 0b。 | RW |
@@ -92144,7 +91443,6 @@ Bit 20-31:   Next Capability Offset
 
 <a id="sec-7-8-9"></a>
 ## 7.8.9 PASID Extended Capability Structure | PASID 扩展能力结构
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -92185,7 +91483,6 @@ In earlier revisions of this specification, it was ambiguous whether a single PA
 </table>
 </div>
 
-
 ---
 
 <table> <!-- 📄 Page 1230 -->
@@ -92223,8 +91520,6 @@ This capability is independent of both the ATS and PRI features defined in § Ch
 </tbody>
 </table>
 
-### Figure 7-185 PASID Extended Capability Structure | 图 7-185 PASID 扩展能力结构
-
 **Figure 7-185. PASID Extended Capability Structure | 图 7-185. PASID 扩展能力结构**
 
 | Byte Offset | Register |
@@ -92259,8 +91554,6 @@ This capability is independent of both the ATS and PRI features defined in § Ch
 </tr>
 </tbody>
 </table>
-
-### Figure 7-186 PASID Extended Capability Header | 图 7-186 PASID 扩展能力头
 
 **Figure 7-186. PASID Extended Capability Header | 图 7-186. PASID 扩展能力头**
 
@@ -92298,7 +91591,6 @@ This capability is independent of both the ATS and PRI features defined in § Ch
 | 15:0 | **PASID Extended Capability ID** - Indicates the PASID Extended Capability structure. This field must return a Capability ID of 001Bh indicating that this is a PASID Extended Capability structure. | RO |
 | 19:16 | **Capability Version** - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present.<br>Must be 1h for this version of the specification. | RO |
 | 31:20 | **Next Capability Offset** - The offset to the next PCI Extended Capability structure or 000h if no other items exist in the linked list of capabilities. | RO |
-
 
 | 位位置 | 寄存器说明 | 属性 |
 |--------|-----------|------|
@@ -92362,8 +91654,6 @@ Refer to the PASID Extended Capability Header description above.
 </tbody>
 </table>
 
-### Figure 7-187 PASID Capability Register | 图 7-187 PASID 能力寄存器
-
 **Figure 7-187. PASID Capability Register | 图 7-187. PASID 能力寄存器**
 
 <table>
@@ -92414,7 +91704,6 @@ Refer to the PASID Extended Capability Header description above.
 | 3 | **Translated Requests with PASID Supported** – If Set, indicates that an applicable Endpoint Function supports Translated Requests with PASID (see § Section 10.1.3). This bit is only permitted to be Set if the Endpoint Function supports ATS. | RO |
 | 12:8 | **Max PASID Width** - Indicates the width of the PASID field supported by an applicable Endpoint Function.<br>The value n indicates support for PASID values 0 through 2n-1 (inclusive). The value 0 indicates support for a single PASID (0). The value 20 indicates support for all PASID values (20 bits). This field must be between 0 and 20 (inclusive). | RO |
 
-
 | 位位置 | 寄存器说明 | 属性 |
 |--------|-----------|------|
 | 1 | **Execute Permission Supported** —— 置 1 表示适用的 Endpoint Function 支持发送 Execute Requested 位置 1 的 TLP。<br>清 0 时，Endpoint Function 永远不会置 1 Execute Requested 位。<br>强烈建议将此位硬连线为 0b。 | RO |
@@ -92451,8 +91740,6 @@ Refer to the PASID Extended Capability Header description above.
 </table>
 
 ---
-
-### Figure 7-188 PASID Control Register | 图 7-188 PASID 控制寄存器 <!-- 📄 Page 1232 -->
 
 **Figure 7-188. PASID Control Register | 图 7-188. PASID 控制寄存器**
 
@@ -92496,7 +91783,6 @@ Refer to the PASID Extended Capability Header description above.
 | 2 | **Privileged Mode Enable** - If Set, an applicable Endpoint Function is permitted to send Requests that have the Privileged Mode Requested bit Set. If Clear, the Endpoint Function is not permitted to do so.<br>Behavior is undefined if an applicable Endpoint Function supports ATS and this bit changes value when the Enable bit in that Function's ATS Control Register is Set (see § Section 10.5.1.3).<br>If Privileged Mode Supported is Clear, this bit is RsvdP.<br>Default is 0b. | RW/RsvdP (see description) |
 | 3 | **Translated Requests with PASID Enable** – When Set, the ATC associated with an applicable Endpoint Function is permitted to issue Translated Requests with a PASID TLP Prefix. If the ATC obtained a translation using a Translation Request with PASID, the corresponding Translated Request must carry a PASID that matches the PASID used to obtain the translation. Similarly, if the ATC obtained a translation using a Translation Request without a PASID, the corresponding Translated Request must not carry a PASID.<br>When Clear, the ATC associated with the Endpoint Function is prohibited from issuing Translated Requests with a PASID.<br>Behavior is undefined if an applicable Endpoint Function supports ATS this bit changes value when the Enable (E) bit in that Function's ATS Control Register is Set (see § Section 10.5.1.3).<br>If Translated Requests with PASID Supported bit is Clear, this bit is RsvdP. See (see § Section 10.1.3) for details.<br>Default is 0b. | RW/RsvdP (see description) |
 
-
 | 位位置 | 寄存器说明 | 属性 |
 |--------|-----------|------|
 | 0 | **PASID Enable** —— 置 1 时，允许适用的 Endpoint Function 发送和接收包含 PASID TLP Prefix 的 TLP。清 0 时，Endpoint Function 不允许这样做。<br>如果适用的 Endpoint Function 支持 ATS 且此位在该 Function 的 ATS Control Register 的 Enable（E）位置 1 时发生改变，则行为未定义（参见 § 10.5.1.3 节）。<br>默认为 0b。 | RW |
@@ -92535,8 +91821,6 @@ FRS Queueing 扩展能力对于支持可选规范性 FRS Queueing 能力的 Root
 </tr>
 </tbody>
 </table>
-
-### Figure 7-189 FRS Queueing Extended Capability | 图 7-189 FRS 排队扩展能力
 
 **Figure 7-189. FRS Queueing Extended Capability | 图 7-189. FRS 排队扩展能力**
 
@@ -92578,8 +91862,6 @@ FRS Queueing 扩展能力对于支持可选规范性 FRS Queueing 能力的 Root
 </tbody>
 </table>
 
-### Figure 7-190 FRS Queueing Extended Capability Header | 图 7-190 FRS 排队扩展能力头
-
 **Figure 7-190. FRS Queueing Extended Capability Header | 图 7-190. FRS 排队扩展能力头**
 
 <table>
@@ -92617,7 +91899,6 @@ FRS Queueing 扩展能力对于支持可选规范性 FRS Queueing 能力的 Root
 | 19:16 | **Capability Version** - This field is a PCI-SIG defined version number that indicates the version of the capability structure present.<br>Must be 1h for this version of the specification. | RO |
 | 31:20 | **Next Capability Offset** - This field contains the offset to the next PCI Express Extended Capability structure or 000h if no other items exist in the linked list of capabilities. | RO |
 
-
 | 位位置 | 寄存器说明 | 属性 |
 |--------|-----------|------|
 | 15:0 | **PCI Express Extended Capability ID** —— 此字段是 PCI-SIG 定义的 ID 号，用于指示扩展能力的性质和格式。<br>FRS 排队扩展能力的 PCI Express Extended Capability ID 为 0021h。 | RO |
@@ -92651,8 +91932,6 @@ FRS Queueing 扩展能力对于支持可选规范性 FRS Queueing 能力的 Root
 </tr>
 </tbody>
 </table>
-
-### Figure 7-191 FRS Queueing Capability Register | 图 7-191 FRS 排队能力寄存器
 
 **Figure 7-191. FRS Queueing Capability Register | 图 7-191. FRS 排队能力寄存器**
 
@@ -92690,7 +91969,6 @@ FRS Queueing 扩展能力对于支持可选规范性 FRS Queueing 能力的 Root
 | 11:0 | **FRS Queue Max Depth** - Indicates the implemented queue depth, with valid values ranging from 001h (queue depth of 1) to FFFh (queue depth of 4095).<br>The value of FRS Message Queue Depth must not exceed this value.<br>The value 000h is Reserved. | HwInit |
 | 20:16 | **FRS Interrupt Message Number** - This register indicates which MSI/MSI-X vector is used for the interrupt message generated in association with FRS Message Received or FRS Message Overflow.<br>For MSI, the value in this register indicates the offset between the base Message Data and the interrupt message that is generated. Hardware is required to update this field so that it is correct if the number of MSI Messages assigned to the Function changes when software writes to the Multiple Message Enable field in the Message Control Register for MSI.<br>For MSI-X, the value in this register indicates which MSI-X Table entry is used to generate the interrupt message. The entry must be one of the first 32 entries even if the Function implements more than 32 entries. For a given MSI-X implementation, the entry must remain constant.<br>If both MSI and MSI-X are implemented, they are permitted to use different vectors, though software is permitted to enable only one mechanism at a time. If MSI-X is enabled, the value in this register must indicate the vector for MSI-X. If MSI is enabled or neither is enabled, the value in this register must indicate the vector for MSI. If software enables both MSI and MSI-X at the same time, the value in this register is undefined. | RO |
 
-
 | 位位置 | 寄存器说明 | 属性 |
 |--------|-----------|------|
 | 11:0 | **FRS Queue Max Depth** —— 指示已实现的队列深度，有效值范围为 001h（队列深度 1）到 FFFh（队列深度 4095）。<br>FRS Message Queue Depth 的值不得超过此值。<br>值 000h 为保留。 | HwInit |
@@ -92723,8 +92001,6 @@ FRS Queueing 扩展能力对于支持可选规范性 FRS Queueing 能力的 Root
 </tr>
 </tbody>
 </table>
-
-### Figure 7-192 FRS Queueing Status Register | 图 7-192 FRS 排队状态寄存器
 
 **Figure 7-192. FRS Queueing Status Register | 图 7-192. FRS 排队状态寄存器**
 
@@ -92760,7 +92036,6 @@ FRS Queueing 扩展能力对于支持可选规范性 FRS Queueing 能力的 Root
 | 0 | **FRS Message Received** - This bit is Set when a new FRS Message is Received or generated by this Root Port or Root Complex Event Collector.<br>Root Ports must Clear this bit when the Link is DL_Down.<br>Default value of this bit is 0b. | RW1C |
 | 1 | **FRS Message Overflow** - This bit is Set if the FRS Message queue is full and a new FRS Message is received or generated by this Root Port or Root Complex Event Collector.<br>Root Ports must Clear this bit when the Link is DL_Down.<br>Default value of this bit is 0b. | RW1C |
 
-
 | 位位置 | 寄存器说明 | 属性 |
 |--------|-----------|------|
 | 0 | **FRS Message Received** —— 当此 Root Port 或 Root Complex Event Collector 接收或生成新的 FRS Message 时，该位置 1。<br>Root Port 必须在 Link 为 DL_Down 时清 0 此位。<br>此位默认值为 0b。 | RW1C |
@@ -92770,8 +92045,6 @@ FRS Queueing 扩展能力对于支持可选规范性 FRS Queueing 能力的 Root
 
 <a id="sec-7-8-10-4"></a>
 ## 7.8.10.4 FRS Queueing Control Register (Offset 0Ah) | FRS 排队控制寄存器（偏移 0Ah）
-
-### Figure 7-193 FRS Queueing Control Register | 图 7-193 FRS 排队控制寄存器
 
 **Figure 7-193. FRS Queueing Control Register | 图 7-193. FRS 排队控制寄存器**
 
@@ -92799,7 +92072,6 @@ FRS Queueing 扩展能力对于支持可选规范性 FRS Queueing 能力的 Root
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
 | 0 | **FRS Interrupt Enable** - When Set and MSI or MSI-X is enabled, the Port must issue an MSI/MSI-X interrupt to indicate the 0b to 1b transition of either the FRS Message Received or the FRS Message Overflow bits.<br>Default value of this bit is 0b. | RW |
-
 
 | 位位置 | 寄存器说明 | 属性 |
 |--------|-----------|------|
@@ -92837,8 +92109,6 @@ FRS Message Queue Register 包含队列中最旧 FRS message 的字段。它还�
 </tbody>
 </table>
 
-### Figure 7-194 FRS Message Queue Register | 图 7-194 FRS 消息队列寄存器
-
 **Figure 7-194. FRS Message Queue Register | 图 7-194. FRS 消息队列寄存器**
 
 <table>
@@ -92873,7 +92143,6 @@ FRS Message Queue Register 包含队列中最旧 FRS message 的字段。它还�
 | 15:0 | FRS Message Queue Function ID - Recorded from the Requester ID of the oldest FRS Message Received or generated by this Root Port or Root Complex Event Collector and still in the queue. Undefined if FRS Message Queue Depth is 000h. | RO |
 | 19:16 | FRS Message Queue Reason - Recorded from the FRS Reason of the oldest FRS Message Received or generated by this Root Port or Root Complex Event Collector and still in the queue. Undefined if FRS Message Queue Depth is 000h. | RO |
 | 31:20 | FRS Message Queue Depth - indicates the current number of FRS Messages in the queue. The value of 000h indicates an empty queue. Default value of this field is 000h. | RO |
-
 
 | 位位置 | 寄存器描述 | 属性 |
 |--------|-----------|------|
@@ -92921,8 +92190,8 @@ If a Switch implements FPB then each of its Ports of the Switch must implement a
 
 > **Figure 7-195.** FPB Capability Structure
 > **图 7-195.** FPB 能力结构
-> <img src="figures/chapter_07/fig_1236_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1236_1_tight.png" width="700">
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -92973,7 +92242,6 @@ If a Switch implements FPB then each of its Ports of the Switch must implement a
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -92985,6 +92253,7 @@ If a Switch implements FPB then each of its Ports of the Switch must implement a
 
 > **Figure 7-196.** FPB Capability Header
 > **图 7-196.** FPB 能力头部
+
 > <img src="figures/chapter_07/fig_1237_1_tight.png" width="700">
 
 <table>
@@ -93088,8 +92357,8 @@ If a Switch implements FPB then each of its Ports of the Switch must implement a
 
 > **Figure 7-197.** FPB Capabilities Register
 > **图 7-197.** FPB 能力寄存器
-> <img src="figures/chapter_07/fig_1237_2_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1237_2_tight.png" width="700">
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -93119,7 +92388,6 @@ If a Switch implements FPB then each of its Ports of the Switch must implement a
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -93166,7 +92434,6 @@ If a Switch implements FPB then each of its Ports of the Switch must implement a
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1238 -->
 <table>
 <thead>
@@ -93201,7 +92468,6 @@ If a Switch implements FPB then each of its Ports of the Switch must implement a
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -93267,6 +92533,7 @@ If the FPB MEM High Decode Mechanism Supported bit is Clear, then the value in t
 
 > **Figure 7-198.** FPB RID Vector Control 1 Register
 > **图 7-198.** FPB RID Vector 控制 1 寄存器
+
 > <img src="figures/chapter_07/fig_1239_1_tight.png" width="700">
 
 <table>
@@ -93300,7 +92567,6 @@ If the FPB MEM High Decode Mechanism Supported bit is Clear, then the value in t
 
 **Table 7-172 FPB RID Vector Control 1 Register | 表 7-172 FPB RID 向量控制 1 寄存器**
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -93331,7 +92597,6 @@ If the FPB MEM High Decode Mechanism Supported bit is Clear, then the value in t
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -93430,6 +92695,7 @@ Default value for this field is 0000 0000 0000 0b. | RW/RO |
 
 > **Figure 7-199.** FPB RID Vector Control 2 Register
 > **图 7-199.** FPB RID Vector 控制 2 寄存器
+
 > <img src="figures/chapter_07/fig_1241_1_tight.png" width="700">
 
 <table>
@@ -93463,7 +92729,6 @@ Default value for this field is 0000 0000 0000 0b. | RW/RO |
 
 **Table 7-175 FPB RID Vector Control 2 Register | 表 7-175 FPB RID 向量控制 2 寄存器**
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -93492,7 +92757,6 @@ Default value for this field is 0000 0000 0000 0b. | RW/RO |
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -93530,6 +92794,7 @@ Default value for this field is 0000 0000 0000 0b. | RW/RO |
 
 > **Figure 7-200.** FPB MEM Low Vector Control Register
 > **图 7-200.** FPB RID Vector 控制 3 寄存器
+
 > <img src="figures/chapter_07/fig_1241_2_tight.png" width="700">
 
 <table>
@@ -93563,7 +92828,6 @@ Default value for this field is 0000 0000 0000 0b. | RW/RO |
 
 **Table 7-176 FPB MEM Low Vector Control Register | 表 7-176 FPB MEM Low 向量控制寄存器**
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -93594,7 +92858,6 @@ Default value for this field is 0000 0000 0000 0b. | RW/RO |
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -93709,6 +92972,7 @@ Default value for this field is 000h. | RW/RO |
 
 > **Figure 7-201.** FPB MEM High Vector Control 1 Register
 > **图 7-201.** FPB Vector 控制 1 寄存器
+
 > <img src="figures/chapter_07/fig_1243_1_tight.png" width="700">
 
 <table>
@@ -93741,7 +93005,6 @@ Default value for this field is 000h. | RW/RO |
 ---
 
 **Table 7-179 FPB MEM High Vector Control 1 Register | 表 7-179 FPB MEM High 向量控制 1 寄存器**
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -93807,7 +93070,6 @@ Default value for this field is 0000b. | RW/RO |
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -93877,6 +93139,7 @@ Default value for this field is 0h.
 
 > **Figure 7-202.** FPB MEM High Vector Control 2 Register
 > **图 7-202.** FPB Vector 控制 2 寄存器
+
 > <img src="figures/chapter_07/fig_1244_1.png" width="700">
 
 <table>
@@ -93939,7 +93202,6 @@ Default value for this field is 0h.
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1245 -->
 <table>
 <thead>
@@ -93999,7 +93261,6 @@ Default value for this field is 0000 0000h.
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-8-11-8"></a>
@@ -94009,6 +93270,7 @@ Default value for this field is 0000 0000h.
 
 > **Figure 7-203.** FPB Vector Access Control Register
 > **图 7-203.** FPB Vector 控制 3 寄存器
+
 > <img src="figures/chapter_07/fig_1245_1_tight.png" width="700">
 
 <table>
@@ -94042,7 +93304,6 @@ Default value for this field is 0000 0000h.
 
 **Table 7-184 FPB Vector Access Control Register | 表 7-184 FPB 向量访问控制寄存器**
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -94071,7 +93332,6 @@ Default value for this field is 0000 0000h.
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -94194,6 +93454,7 @@ Default value for this field is 00b. | RW |
 
 > **Figure 7-204.** FPB Vector Access Data Register
 > **图 7-204.** FPB Vector 控制 4 寄存器
+
 > <img src="figures/chapter_07/fig_1246_1_tight.png" width="700">
 
 <table>
@@ -94287,7 +93548,6 @@ Default value for this field is 0000 0000h.
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -94321,13 +93581,13 @@ LTSSM 性能测量状态 1 寄存器至 LTSSM 性能测量状态 5 寄存器为�
 </table>
 </div>
 
-
 ---
 
 **Figure 7-205 Flit Performance Measurement Extended Capability Structure | 图 7-205 Flit 性能测量扩展能力结构**
 
 > **Figure 7-205.** Flit Performance Measurement Extended Capability Structure
 > **图 7-205.** FPB Vector 控制 5 寄存器
+
 > <img src="figures/chapter_07/fig_1247_1.png" width="700">
 
 <table>
@@ -94461,7 +93721,6 @@ LTSSM 性能测量状态 1 寄存器至 LTSSM 性能测量状态 5 寄存器为�
 <a id="sec-7-8-12-1-fig-7-206"></a> <!-- 📄 Page 1248 -->
 ## Figure 7-206 Flit Performance Measurement Extended Capability Header | 图 7-206 Flit 性能测量扩展能力头
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -94501,9 +93760,6 @@ LTSSM 性能测量状态 1 寄存器至 LTSSM 性能测量状态 5 寄存器为�
 
 **图 7-206 Flit 性能测量扩展能力头**
 
-> <img src="figures/chapter_07/fig_1248_1_tight.png" width="700">
-
-
 **表 7-187 Flit 性能测量扩展能力头**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -94516,8 +93772,9 @@ LTSSM 性能测量状态 1 寄存器至 LTSSM 性能测量状态 5 寄存器为�
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1248_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -94563,9 +93820,6 @@ LTSSM 性能测量状态 1 寄存器至 LTSSM 性能测量状态 5 寄存器为�
 
 **图 7-207 Flit 性能测量能力寄存器**
 
-> <img src="figures/chapter_07/fig_1248_2_tight.png" width="700">
-
-
 **表 7-188 Flit 性能测量能力寄存器**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -94577,6 +93831,8 @@ LTSSM 性能测量状态 1 寄存器至 LTSSM 性能测量状态 5 寄存器为�
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1248_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -94612,7 +93868,6 @@ LTSSM 性能测量状态 1 寄存器至 LTSSM 性能测量状态 5 寄存器为�
 
 <a id="sec-7-8-12-3"></a> <!-- 📄 Page 1249 -->
 ## 7.8.12.3 Flit Performance Measurement Control Register (Offset 08h) | Flit 性能测量控制寄存器（偏移 08h）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -94673,7 +93928,6 @@ Behavior is undefined if bits 31:1 of this register are changed while Flit Laten
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -94706,9 +93960,6 @@ Behavior is undefined if bits 31:1 of this register are changed while Flit Laten
 
 **图 7-208 Flit 性能测量控制寄存器**
 
-> <img src="figures/chapter_07/fig_1249_1_tight.png" width="700">
-
-
 **表 7-189 Flit 性能测量控制寄存器**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -94721,13 +93972,14 @@ Behavior is undefined if bits 31:1 of this register are changed while Flit Laten
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1249_1_tight.png" width="700">
+
 [⬆️ 返回目录](#sec-7-0)
 
 ---
 
 <a id="sec-7-8-12-3-tbl-7-189-cont"></a> <!-- 📄 Page 1250 -->
 ## Table 7-189 Flit Performance Measurement Control Register (continued) | 表 7-189 Flit 性能测量控制寄存器（续）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -94771,7 +94023,6 @@ Behavior is undefined if bits 31:1 of this register are changed while Flit Laten
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -94836,9 +94087,6 @@ Behavior is undefined if bits 31:1 of this register are changed while Flit Laten
 
 **图 7-209 Flit 性能测量状态寄存器**
 
-> <img src="figures/chapter_07/fig_1251_1_tight.png" width="700">
-
-
 **表 7-190 Flit 性能测量状态寄存器**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -94854,13 +94102,14 @@ Behavior is undefined if bits 31:1 of this register are changed while Flit Laten
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1251_1_tight.png" width="700">
+
 [⬆️ 返回目录](#sec-7-0)
 
 ---
 
 <a id="sec-7-8-12-4-tbl-7-190-cont"></a> <!-- 📄 Page 1252 -->
 ## Table 7-190 Flit Performance Measurement Status Register (continued) | 表 7-190 Flit 性能测量状态寄存器（续）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -94926,9 +94175,6 @@ Flit Performance Measurement allows software to measure the Link Latency for the
 
 **图 7-210 LTSSM 性能测量状态寄存器**
 
-> <img src="figures/chapter_07/fig_1252_1_tight.png" width="700">
-
-
 **表 7-191 LTSSM 性能测量状态寄存器**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -94946,8 +94192,9 @@ Flit 性能测量允许软件测量所选 Flit 类型的链路延迟。这些测
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1252_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -95040,7 +94287,6 @@ Figure 7-211 details allocation of the register bits in the Flit Error Injection
 <a id="sec-7-8-13-fig-7-211"></a> <!-- 📄 Page 1254 -->
 ## Figure 7-211 Flit Error Injection Extended Capability Structure | 图 7-211 Flit 错误注入扩展能力结构
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -95103,9 +94349,6 @@ Figure 7-212 details allocation of the register fields in the Flit Error Injecti
 
 **图 7-211 Flit 错误注入扩展能力结构**
 
-> <img src="figures/chapter_07/fig_1254_1_tight.png" width="700">
-
-
 图 7-212 详细说明了 Flit 错误注入扩展能力头中寄存器字段的分配;表 7-192 提供了相应的位定义。
 
 | 位 | 描述 |
@@ -95115,9 +94358,6 @@ Figure 7-212 details allocation of the register fields in the Flit Error Injecti
 | 31:20 | 下一能力偏移 |
 
 **图 7-212 Flit 错误注入扩展能力头**
-
-> <img src="figures/chapter_07/fig_1254_2_tight.png" width="700">
-
 
 **表 7-192 Flit 错误注入扩展能力头**
 
@@ -95132,8 +94372,11 @@ Figure 7-212 details allocation of the register fields in the Flit Error Injecti
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1254_1_tight.png" width="700">
+
+> <img src="figures/chapter_07/fig_1254_2_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -95209,9 +94452,6 @@ Link level, optional register, both on Tx side as well as Rx side. Behavior is u
 
 **图 7-213 Flit 错误注入能力寄存器**
 
-> <img src="figures/chapter_07/fig_1255_1_tight.png" width="700">
-
-
 **表 7-193 Flit 错误注入能力寄存器**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -95232,9 +94472,6 @@ Link level, optional register, both on Tx side as well as Rx side. Behavior is u
 
 **图 7-214 Flit 错误注入控制 1 寄存器**
 
-> <img src="figures/chapter_07/fig_1255_2_tight.png" width="700">
-
-
 **表 7-194 Flit 错误注入控制 1 寄存器**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -95249,13 +94486,16 @@ Link level, optional register, both on Tx side as well as Rx side. Behavior is u
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1255_1_tight.png" width="700">
+
+> <img src="figures/chapter_07/fig_1255_2_tight.png" width="700">
+
 [⬆️ 返回目录](#sec-7-0)
 
 ---
 
 <a id="sec-7-8-13-3-tbl-7-194-cont"></a> <!-- 📄 Page 1256 -->
 ## Table 7-194 Flit Error Injection Control 1 Register (continued) | 表 7-194 Flit 错误注入控制 1 寄存器（续）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -95299,7 +94539,6 @@ Link level, optional register, both on Tx side as well as Rx side. Behavior is u
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -95366,9 +94605,6 @@ Link level, optional register, both on Tx side as well as Rx side. Behavior is u
 
 **图 7-215 Flit 错误注入控制 2 寄存器**
 
-> <img src="figures/chapter_07/fig_1257_1_tight.png" width="700">
-
-
 **表 7-195 Flit 错误注入控制 2 寄存器**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -95382,6 +94618,8 @@ Link level, optional register, both on Tx side as well as Rx side. Behavior is u
 </tbody>
 </table>
 
+> <img src="figures/chapter_07/fig_1257_1_tight.png" width="700">
+
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -95391,7 +94629,6 @@ Link level, optional register, both on Tx side as well as Rx side. Behavior is u
 § <!-- 📄 Page 1258 -->
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -95458,7 +94695,6 @@ RW
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -95511,7 +94747,6 @@ RsvdZ(保留，置零)
 ---
 
 **Table 7-196. Flit Error Injection Status Register | 表 7-196 Flit 错误注入状态寄存器**
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -95577,7 +94812,6 @@ RO
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -95733,7 +94967,6 @@ Figure 7-217 Ordered Set Error Injection Control 1 Register
 
 **Table 7-197. Ordered Set Error Injection Control 1 Register | 表 7-197 Ordered Set 错误注入控制 1 寄存器**
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -95792,7 +95025,6 @@ RWS
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -95981,7 +95213,6 @@ Lane Number for Error Injection(错误注入的 Lane 号)
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -96032,7 +95263,6 @@ RWS
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -96161,7 +95391,6 @@ RsvdZ(保留，置零)
 
 **Table 7-199. Ordered Set Tx Error Injection Status Register | 表 7-199 Ordered Set Tx 错误注入状态寄存器**
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -96214,7 +95443,6 @@ ROS
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -96331,7 +95559,6 @@ ROS
 ---
 
 **Figure 7-220. Ordered Set Rx Error Injection Status Register | 图 7-220 Ordered Set Rx 错误注入状态寄存器**
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -96450,7 +95677,6 @@ RsvdZ(保留，置零)
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -96499,7 +95725,6 @@ ROS
 § <!-- 📄 Page 1263 -->
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -96628,7 +95853,6 @@ ROS
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -96666,7 +95890,6 @@ This section, contains a description of additional PCI and PCIe capabilities tha
 <a id="sec-7-9-1"></a>
 ## 7.9.1 Virtual Channel Extended Capability | 7.9.1 虚通道扩展能力
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -96691,7 +95914,6 @@ The Virtual Channel Extended Capability (VC Extended Capability) is an optional 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -96745,7 +95967,6 @@ VC 扩展能力结构允许出现在所有单 Function 设备的扩展配置空�
 ---
 
 **Figure 7-221. Virtual Channel Extended Capability Structure | 图 7-221 虚通道扩展能力结构**
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -96868,7 +96089,6 @@ Port Arbitration Table (n)(端口仲裁表 (n))
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -96961,7 +96181,6 @@ Next Capability Offset(下一能力偏移量)
 
 **Table 7-201. Virtual Channel Extended Capability Header | 表 7-201 虚通道扩展能力头**
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -97014,7 +96233,6 @@ RO
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -97121,7 +96339,6 @@ RsvdP(保留，保留置位)
 
 **Table 7-202. Port VC Capability Register 1 | 表 7-202 Port VC 能力寄存器 1**
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -97168,7 +96385,6 @@ RO
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -97323,7 +96539,6 @@ VC Arbitration Table Offset(VC 仲裁表偏移量)
 
 **Table 7-203. Port VC Capability Register 2 | 表 7-203 Port VC 能力寄存器 2**
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -97364,7 +96579,6 @@ RO
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -97477,7 +96691,6 @@ RsvdP
 <a id="sec-7-9-1-4"></a>
 ## 7.9.1.4 Port VC Control Register (Offset 0Ch) | 端口 VC 控制寄存器 (偏移量 0Ch)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -97497,7 +96710,6 @@ Setting this bit is optional. If this bit remains Clear and some VC Resources ar
 Behavior is undefined if this bit is Set and any VC Enable bit in this capability changes value.
 Default value of this bit is 0b.
 
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -97508,13 +96720,11 @@ Default value of this bit is 0b.
 如果该位置位且此能力中的任何 VC Enable 位改变了值，则行为未定义。
 该位的默认值为 0b。
 
-
 </td>
 </tr>
 </tbody>
 </table>
 </div>
-
 
 <a id="sec-7-9-1-4-table"></a>
 
@@ -97678,7 +96888,6 @@ Port Arbitration Table Offset (端口仲裁表偏移量)
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1270 -->
 <table>
 <thead>
@@ -97773,7 +96982,6 @@ VC Enable (VC 使能)
 </tbody>
 </table>
 </div>
-
 
 <a id="sec-7-9-1-7"></a>
 ## 7.9.1.7 VC Resource Control Register | VC 资源控制寄存器
@@ -97913,7 +97121,6 @@ RW / RO / RsvdP
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1272 -->
 <table>
 <thead>
@@ -97987,7 +97194,6 @@ RsvdZ
 </table>
 </div>
 
-
 <a id="sec-7-9-1-8"></a>
 ## 7.9.1.8 VC Resource Status Register | VC 资源状态寄存器
 
@@ -98027,6 +97233,7 @@ VC Arbitration Table 是一个固定大小为 4 位条目的寄存器数组。§
 
 > **Figure 7-230.** Example VC Arbitration Table with 32 Phases
 > **图 7-230.** 具有 32 个阶段的 VC 仲裁表示例
+
 > <img src="figures/chapter_07/fig_1273_1_tight.png" width="700">
 
 <a id="sec-7-9-1-9-table"></a>
@@ -98101,6 +97308,7 @@ Port Arbitration Table 表示一个端口仲裁周期。§ 图 7-231 展示了�
 
 > **Figure 7-231.** Example Port Arbitration Table with 128 Phases and 2-bit Table Entries <!-- 📄 Page 1275 -->
 > **图 7-231.** 具有 128 个阶段和 2 位表项的端口仲裁表示例
+
 > <img src="figures/chapter_07/fig_1275_1_tight.png" width="700">
 
 <a id="sec-7-9-1-10-table"></a>
@@ -98144,6 +97352,7 @@ Multi-Function Virtual Channel Extended Capability (多功能虚通道扩展能�
 
 > **Figure 7-232.** MFVC Capability Structure <!-- 📄 Page 1276 -->
 > **图 7-232.** MFVC 能力结构
+
 > <img src="figures/chapter_07/fig_1276_1_tight.png" width="700">
 
 The following sections describe the registers/fields of the MFVC Extended Capability structure.
@@ -98156,6 +97365,7 @@ Refer to § Section 7.6.3 for a description of the PCI Express Extended Capabili
 
 > **Figure 7-233.** MFVC Extended Capability Header
 > **图 7-233.** MFVC Extended Capability 头部
+
 > <img src="figures/chapter_07/fig_1276_2_tight.png" width="700">
 
 <a id="sec-7-9-2-table"></a>
@@ -98277,7 +97487,6 @@ MFVC Port VC Capability Register 1 (MFVC 端口 VC 能力寄存器 1) 描述与�
 <a id="sec-7-9-2-2"></a> <!-- 📄 Page 1277 -->
 ## 7.9.2.2 MFVC Port VC Capability Register 1 (Offset 04h) | MFVC 端口 VC 能力寄存器 1 (偏移量 04h)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -98330,7 +97539,6 @@ MFVC Port VC Capability Register 2 (MFVC 端口 VC 能力寄存器 2) 提供关�
 </tbody>
 </table>
 </div>
-
 
 <a id="sec-7-9-2-2-table"></a>
 
@@ -98517,7 +97725,6 @@ Figure 7-237 MFVC Port VC Status Register
 <a id="sec-7-9-2-6"></a> <!-- 📄 Page 1280 -->
 ## 7.9.2.6 MFVC VC Resource Capability Register | MFVC VC 资源能力寄存器
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -98580,7 +97787,6 @@ MFVC VC Resource Capability Register (MFVC VC 资源能力寄存器) 描述特�
 </tbody>
 </table>
 </div>
-
 
 <a id="sec-7-9-2-6-table"></a>
 
@@ -98713,7 +97919,6 @@ Figure 7-239 MFVC VC Resource Control Register
 <a id="sec-7-9-2-7-continued"></a> <!-- 📄 Page 1282 -->
 ## 7.9.2.7 MFVC VC Resource Control Register (continued) | MFVC VC 资源控制寄存器(续)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -98813,7 +98018,6 @@ When this bit is forced to be RO with a value of 0b due to the Use VC/MFVC bit b
 </table>
 </div>
 
-
 Figure 7-240 details allocation of register fields in the MFVC VC Resource Status Register; Table 7-219 provides the respective bit definitions.
 
 ```
@@ -98898,7 +98102,6 @@ MFVC 扩展能力结构中 MFVC VC Arbitration Table (MFVC VC 仲裁表) 的定�
 <a id="sec-7-9-2-10"></a>
 ## 7.9.2.10 Function Arbitration Table | Function 仲裁表
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -98943,7 +98146,6 @@ Function Arbitration Table 表示一个 Function 仲裁周期。包含 Function 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -99054,7 +98256,6 @@ Device Serial Number Extended Capability (设备序列号扩展能力) 是一种
 
 <a id="sec-7-9-3"></a>
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -99104,12 +98305,12 @@ RCiEP 可以根据自身情况决定是否实现此能力，而无需考虑其�
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-9-3-fig"></a> <!-- 📄 Page 1286 -->
 
 > **Figure 7-241.** Device Serial Number Extended Capability Structure
+
 > <img src="figures/chapter_07/fig_1286_1_tight.png" width="700">
 
 > **图 7-241.** 设备序列号扩展能力结构
@@ -99144,6 +98345,7 @@ Figure 7-241 Device Serial Number Extended Capability Structure
 ---
 
 > **Figure 7-242.** Device Serial Number Extended Capability Header
+
 > <img src="figures/chapter_07/fig_1286_2_tight.png" width="700">
 
 > **图 7-242.** 设备序列号扩展能力包头
@@ -99228,6 +98430,7 @@ The Serial Number register is a 64-bit field that contains the IEEE defined 64-b
 ---
 
 > **Figure 7-243.** Serial Number Register
+
 > <img src="figures/chapter_07/fig_1287_1_tight.png" width="700">
 
 > **图 7-243.** 序列号寄存器
@@ -99239,7 +98442,6 @@ The Serial Number register is a 64-bit field that contains the IEEE defined 64-b
 | 63:0 | PCI Express Device Serial Number - This field contains the IEEE defined 64-bit Extended Unique Identifier [EUI-64]. This identifier includes a 24-bit company id value assigned by IEEE registration authority and a 40-bit extension identifier assigned by the manufacturer.<br>PCI Express Device Serial Number[07:00] = EUI[63:56]<br>PCI Express Device Serial Number[15:08] = EUI[55:48]<br>PCI Express Device Serial Number[23:16] = EUI[47:40]<br>PCI Express Device Serial Number[31:24] = EUI[39:32]<br>PCI Express Device Serial Number[39:32] = EUI[31:24]<br>PCI Express Device Serial Number[47:40] = EUI[23:16]<br>PCI Express Device Serial Number[55:48] = EUI[15:08]<br>PCI Express Device Serial Number[63:56] = EUI[07:00] | RO |
 
 ---
-
 
 <a id="sec-7-9-3-2"></a>
 ## 7.9.3.2 Serial Number Register (Offset 04h) | 序列号寄存器(偏移 04h)
@@ -99310,6 +98512,7 @@ A single PCI Express Function is permitted to contain multiple VSEC structures.
 ---
 
 > **Figure 7-244.** Vendor-Specific Capability <!-- 📄 Page 1288 -->
+
 > <img src="figures/chapter_07/fig_1288_1.png" width="700">
 
 > **图 7-244.** 厂商特定能力
@@ -99327,7 +98530,6 @@ A single PCI Express Function is permitted to contain multiple VSEC structures.
 
 <a id="sec-7-9-5"></a>
 ## 7.9.5 Vendor-Specific Extended Capability | 厂商特定扩展能力
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -99370,10 +98572,10 @@ With a PCI Express Function, the structure and definition of the vendor-specific
 </table>
 </div>
 
-
 ---
 
 > **Figure 7-245.** VSEC Capability Structure <!-- 📄 Page 1289 -->
+
 > <img src="figures/chapter_07/fig_1289_1_tight.png" width="700">
 
 > **图 7-245.** VSEC 能力结构
@@ -99404,6 +98606,7 @@ With a PCI Express Function, the structure and definition of the vendor-specific
 ---
 
 > **Figure 7-246.** Vendor-Specific Extended Capability Header
+
 > <img src="figures/chapter_07/fig_1289_2_tight.png" width="700">
 
 > **图 7-246.** 厂商特定扩展能力包头
@@ -99488,6 +98691,7 @@ Vendor-specific software must qualify the associated Vendor ID of the PCI Expres
 ---
 
 > **Figure 7-247.** Vendor-Specific Header
+
 > <img src="figures/chapter_07/fig_1290_1_tight.png" width="700">
 
 > **图 7-247.** 厂商特定包头
@@ -99533,7 +98737,6 @@ Vendor-specific software must qualify the associated Vendor ID of the PCI Expres
 <a id="sec-7-9-6"></a>
 ## 7.9.6 Designated Vendor-Specific Extended Capability (DVSEC) | 指定厂商特定扩展能力 (DVSEC)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -99575,10 +98778,10 @@ DVSEC 厂商特定寄存器区域从偏移 0Ah 处开始。
 </table>
 </div>
 
-
 ---
 
 > **Figure 7-248.** Designated Vendor-Specific Extended Capability <!-- 📄 Page 1291 -->
+
 > <img src="figures/chapter_07/fig_1291_1_tight.png" width="700">
 
 > **图 7-248.** 指定厂商特定扩展能力
@@ -99609,6 +98812,7 @@ DVSEC 厂商特定寄存器区域从偏移 0Ah 处开始。
 ---
 
 > **Figure 7-249.** Designated Vendor-Specific Extended Capability Header
+
 > <img src="figures/chapter_07/fig_1291_2_tight.png" width="700">
 
 > **图 7-249.** 指定厂商特定扩展能力包头
@@ -99693,6 +98897,7 @@ Vendor-specific software must qualify the DVSEC Vendor ID before attempting to i
 ---
 
 > **Figure 7-250.** Designated Vendor-Specific Header 1
+
 > <img src="figures/chapter_07/fig_1292_1_tight.png" width="700">
 
 > **图 7-250.** 指定厂商特定包头 1
@@ -99768,6 +98973,7 @@ Vendor-specific software must qualify the DVSEC Vendor ID before attempting to i
 ---
 
 > **Figure 7-251.** Designated Vendor-Specific Header 2 <!-- 📄 Page 1293 -->
+
 > <img src="figures/chapter_07/fig_1293_1_tight.png" width="700">
 
 > **图 7-251.** 指定厂商特定包头 2
@@ -99809,10 +99015,10 @@ PCI Express RCRB Header 扩展能力是一种可选的扩展能力，可以在 R
 ---
 
 > **Figure 7-252.** RCRB Header Extended Capability Structure
+
 > <img src="figures/chapter_07/fig_1293_2_tight.png" width="700">
 
 > **图 7-252.** RCRB Header 扩展能力结构
-
 
 ---
 
@@ -99845,8 +99051,8 @@ PCI Express RCRB Header 扩展能力是一种可选的扩展能力，可以在 R
 
 > **Figure 7-253.** RCRB Header Extended Capability Header
 > **图 7-253.** RCRB Header 扩展能力包头
-> <img src="figures/chapter_07/fig_1293_1.png" width="700">
 
+> <img src="figures/chapter_07/fig_1293_1.png" width="700">
 
 **Table 7-229. RCRB Header Extended Capability Header | 表 7-229. RCRB 头扩展能力头**
 
@@ -99861,7 +99067,6 @@ PCI Express RCRB Header 扩展能力是一种可选的扩展能力，可以在 R
 | 15:0 | PCI Express Extended Capability ID（PCI Express 扩展能力 ID）— 该字段是 PCI-SIG 定义的 ID 编号，用于指示扩展能力的性质和格式。RCRB Header Extended Capability 的扩展能力 ID 为 000Ah。 | RO |
 | 19:16 | Capability Version（能力版本）— 该字段是 PCI-SIG 定义的版本号，用于指示当前 Capability 结构的版本。本规范版本必须为 1h。 | RO |
 | 31:20 | Next Capability Offset（下一能力偏移）— 该字段包含指向下一个 PCI Express Capability 结构的偏移，若能力列表中不存在其他项，则为 000h。对于在配置空间中实现的扩展能力，该偏移相对于 PCI 兼容配置空间的起始位置，因此必须为 000h（表示能力列表终止）或大于 0FFh。 | RO |
-
 
 <a id="sec-7-9-7-2-2"></a>
 <a id="sec-7-9-7-2"></a>
@@ -99883,11 +99088,10 @@ Figure 7-254 details allocation of register fields in the RCRB Vendor ID and Dev
 </tbody>
 </table>
 
-
 > **Figure 7-254.** RCRB Vendor ID and Device ID register
 > **图 7-254.** RCRB Vendor ID 和 Device ID 寄存器
-> <img src="figures/chapter_07/fig_1294_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1294_1_tight.png" width="700">
 
 **Table 7-230. RCRB Vendor ID and Device ID register | 表 7-230. RCRB Vendor ID and Device ID 寄存器**
 
@@ -99901,18 +99105,16 @@ Figure 7-254 details allocation of register fields in the RCRB Vendor ID and Dev
 | 15:0 | Vendor ID（供应商 ID）— 由 PCI-SIG 分配。类似于 PCI 兼容配置空间中的相应字段。该字段提供将 RCRB 与特定供应商相关联的方式。 | RO |
 | 31:16 | Device ID（设备 ID）— 由供应商分配。类似于 PCI 兼容配置空间中的相应字段。该字段为供应商提供对特定 RCRB 进行分类的方式。 | RO |
 
-
 ### 7.9.7.3 RCRB Capabilities register (Offset 08h) | RCRB Capabilities 寄存器（偏移 08h）
 
 Figure 7-255 details allocation of register fields in the RCRB Capabilities register; Table 7-231 provides the respective bit definitions.
 
 图 7-255 详细说明了 RCRB Capabilities 寄存器中寄存器字段的分配；表 7-231 给出了相应的位定义。
 
-
 > **Figure 7-255.** RCRB Capabilities register
 > **图 7-255.** RCRB 能力寄存器
-> <img src="figures/chapter_07/fig_1295_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1295_1_tight.png" width="700">
 
 **Table 7-231. RCRB Capabilities register | 表 7-231. RCRB Capabilities 寄存器**
 
@@ -99923,7 +99125,6 @@ Figure 7-255 details allocation of register fields in the RCRB Capabilities regi
 | Bit Location | 寄存器描述 | 属性 |
 |---|---|---|
 | 0 | Configuration RRS Software Visibility（配置 RRS 软件可见性）— 置位时，该位表示根复合体（Root Complex）能够针对与该 RCRB 关联的所有根端口（Root Port）和集成设备的配置请求（Configuration Request）返回 Request Retry Status (RRS) 完成状态（参见第 2.3.1 节）。 | RO |
-
 
 <a id="sec-7-9-7-4-2"></a>
 <a id="sec-7-9-7-4"></a>
@@ -99945,10 +99146,8 @@ Figure 7-256 details allocation of register fields in the RCRB Control register;
 </tbody>
 </table>
 
-
 > **Figure 7-256.** RCRB Control register
 > **图 7-256.** RCRB 控制寄存器
-
 
 **Table 7-232. RCRB Control register | 表 7-232. RCRB Control 寄存器**
 
@@ -99959,7 +99158,6 @@ Figure 7-256 details allocation of register fields in the RCRB Control register;
 | Bit Location | 寄存器描述 | 属性 |
 |---|---|---|
 | 0 | Configuration RRS Software Visibility Enable（配置 RRS 软件可见性使能）— 置位时，该位使根复合体能够针对与该 RCRB 关联的所有根端口和集成设备的配置请求返回 Request Retry Status (RRS) 完成状态（参见第 2.3.1 节）。未实现此能力的 RCRB 必须将该位硬连线为 0b。该位的默认值为 0b。 | RW |
-
 
 <a id="sec-7-9-8"></a>
 ## 7.9.8 Root Complex Link Declaration Extended Capability | 根复合体链路声明扩展能力
@@ -99979,8 +99177,6 @@ A Root Complex consists of one or more following elements:
 - PCI Express 根端口
 - 默认系统出口端口或内部汇聚单元（例如内存，由 RCRB 表示）
 - 内部数据路径/链路（由内部链路任一侧的 RCRB 表示） <!-- 📄 Page 1296 -->
-
-
 
 ---
 
@@ -100070,8 +99266,8 @@ Root Complex Link Declaration Extended Capability 的扩展能力 ID 为 0005h�
 
 > **Figure 7-257.** Root Complex Link Declaration Extended Capability
 > **图 7-257.** Root Complex Link Declaration Extended Capability
-> <img src="figures/chapter_07/fig_1297_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1297_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -100087,8 +99283,8 @@ Root Complex Link Declaration Extended Capability 的扩展能力 ID 为 0005h�
 
 > **Figure 7-258.** Root Complex Link Declaration Extended Capability Header
 > **图 7-258.** Root Complex Link Declaration Extended Capability 头部
-> <img src="figures/chapter_07/fig_1297_2_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1297_2_tight.png" width="700">
 
 <a id="sec-7-9-8-1-2"></a>
 
@@ -100129,8 +99325,8 @@ Element Self Description 寄存器提供关于包含 Root Complex Link Declarati
 
 > **Figure 7-259.** Element Self Description Register
 > **图 7-259.** Element Self Description 寄存器
-> <img src="figures/chapter_07/fig_1298_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1298_1_tight.png" width="700">
 
 **Table 7-234. Element Self Description Register | 表 7-234. Element Self Description 寄存器**
 
@@ -100148,7 +99344,6 @@ Element Self Description 寄存器提供关于包含 Root Complex Link Declarati
 
 <a id="sec-7-9-8-2-2"></a>
 <a id="sec-7-9-8-2"></a>
-
 
 ### 7.9.8.2 Element Self Description Register (Offset 04h) | Element Self Description 寄存器（偏移 04h） <!-- 📄 Page 1299 -->
 
@@ -100192,6 +99387,7 @@ Link Entries start at offset 10h of the Root Complex Link Declaration Extended C
 
 > **Figure 7-260.** Link Entry
 > **图 7-260.** Link Entry 结构
+
 > <img src="figures/chapter_07/fig_1299_1_tight.png" width="700">
 
 <a id="sec-7-9-8-3-1-2"></a>
@@ -100223,6 +99419,7 @@ Link Description 寄存器位于 Link Entry 起始处的偏移 00h 处，定义�
 
 > **Figure 7-261.** Link Description Register
 > **图 7-261.** Link Description 寄存器
+
 > <img src="figures/chapter_07/fig_1299_2_tight.png" width="700">
 
 **Table 7-235. Link Description Register | 表 7-235. Link Description 寄存器**
@@ -100236,8 +99433,6 @@ Link Description 寄存器位于 Link Entry 起始处的偏移 00h 处，定义�
 |---|---|---|
 | 0 | Link Valid（链路有效）— 置位时，该位表示 Link Entry 指定有效链路。未设置该位或 Associate RCRB Header 位（或两者均未设置）的 Link Entries 将被软件忽略。 | HwInit |
 | 1 | Link Type（链路类型）— 该位指示链路的目标类型，并定义 Link Address 字段的格式。已定义的 Link Type 值为： | HwInit |
-
-
 
 ---
 
@@ -100281,8 +99476,8 @@ For a Link pointing to a memory-mapped RCRB (Link Type bit = 0), the first DWORD
 
 > **Figure 7-262.** Link Address for Link Type 0
 > **图 7-262.** Link Entry 2 寄存器
-> <img src="figures/chapter_07/fig_1300_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1300_1_tight.png" width="700">
 
 For a Link pointing to the Configuration Space of a Root Complex element (Link Type bit = 1), bits in the first DWORD specify the Bus, Device, and Function Number of the target element. As shown in Figure 7-263, bits 2:0 (N) encode the number of bits n associated with the Bus Number, with N = 000b specifying n = 8 and all other encodings specifying
 
@@ -100296,7 +99491,6 @@ For a Link pointing to the Configuration Space of a Root Complex element (Link T
 
 对于指向根复合体元素配置空间的链路（Link Type 位 = 1），第一个 DWORD 中的位指定目标元素的 Bus、Device 和 Function Number。如图 7-263 所示，Bits 2:0（N）编码与 Bus Number 关联的位数 n，其中 N = 000b 指定 n = 8，所有其他编码指定
 
-
 #### 7.9.8.3.2 Link Address（链路地址）
 <a id="sec-7-9-8-3-2-1"></a>
 ##### 7.9.8.3.2.1 Link Type 0 的 Link Address
@@ -100307,7 +99501,6 @@ For a Link pointing to the Configuration Space of a Root Complex element (Link T
 > 183. 用于访问 RCRB 的内存映射空间与 Memory Space 不同，且不得与 Memory Space 重叠。 <!-- 📄 Page 1301 -->
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -100346,31 +99539,11 @@ n = <N 的值>。Bits 11:3 为保留位，硬连线为 0。Bits 14:12 指定 Fun
 </table>
 </div>
 
-
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
 > **Figure 7-263.** Link Address for Link Type 1
+>
 > **图 7-263.** Link Address 寄存器
-> <img src="figures/chapter_07/fig_1301_1_tight.png" width="700">
 
-</td>
-<td style="background-color:#e8e8e8">
-
-> **图 7-263.** Link Address 寄存器
 > <img src="figures/chapter_07/fig_1301_1_tight.png" width="700">
-</td>
-</tr>
-</tbody>
-</table>
 
 **Table 7-236. Link Address for Link Type 1 | 表 7-236. Link Type 1 的 Link Address**
 
@@ -100397,7 +99570,6 @@ Root Complex Internal Link Control Extended Capability 是一种可选能力，�
 The Root Complex Internal Link Control Extended Capability structure is defined as shown in Figure 7-264.
 
 Root Complex Internal Link Control Extended Capability 结构定义如图 7-264 所示。
-
 
 <a id="sec-7-9-9"></a>
 ## 7.9.9 Root Complex Internal Link Control Extended Capability | Root Complex Internal Link Control Extended Capability（根复合体内部链路控制扩展能力） <!-- 📄 Page 1302 -->
@@ -100429,8 +99601,8 @@ Root Complex Internal Link Control Extended Capability 的扩展能力 ID 为 00
 
 > **Figure 7-264.** Root Complex Internal Link Control Extended Capability
 > **图 7-264.** Root Complex Internal Link Control Extended Capability
-> <img src="figures/chapter_07/fig_1302_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1302_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -100446,8 +99618,8 @@ Root Complex Internal Link Control Extended Capability 的扩展能力 ID 为 00
 
 > **Figure 7-265.** Root Complex Internal Link Control Extended Capability Header
 > **图 7-265.** Root Complex Internal Link Control Extended Capability 头部
-> <img src="figures/chapter_07/fig_1302_2_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1302_2_tight.png" width="700">
 
 **Table 7-237. Root Complex Internal Link Control Extended Capability Header | 表 7-237. Root Complex Internal Link Control Extended Capability Header**
 
@@ -100497,10 +99669,8 @@ Root Complex Internal Link Control Extended Capability Header
 
 ---
 
-
 <a id="sec-7-9-9-2"></a>
 ## 7.9.9.2 Root Complex Link Capabilities Register (Offset 04h) | 根复合体链路能力寄存器(偏移量 04h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -100678,7 +99848,6 @@ RO
 </table>
 </div>
 
-
 ---
 
 <table> <!-- 📄 Page 1304 -->
@@ -100832,7 +100001,6 @@ RO
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1305 -->
 <table>
 <thead>
@@ -100904,7 +100072,6 @@ RsvdP
 </table>
 </div>
 
-
 ---
 
 <table>
@@ -100942,7 +100109,6 @@ slower speeds.
 
 <a id="sec-7-9-9-3"></a>
 ## 7.9.9.3 Root Complex Link Control Register (Offset 08h) | 根复合体链路控制寄存器(偏移量 08h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -101037,7 +100203,6 @@ RW
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-9-9-4"></a>
@@ -101067,7 +100232,6 @@ Root Complex Link Status Register(根复合体链路状态寄存器)提供有关
 </table>
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1307 -->
 <table>
@@ -101197,7 +100361,6 @@ RO
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-9-10"></a>
@@ -101236,7 +100399,6 @@ Root Complex Event Collector Endpoint Association Extended Capability(根复合�
 </table>
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1308 -->
 <table>
@@ -101396,7 +100558,6 @@ RO
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-9-10-1"></a>
@@ -101477,7 +100638,6 @@ Association Bitmap for RCiEPs(RCiEP 关联位图)是一个只读寄存器，用�
 
 <a id="sec-7-9-10-3"></a>
 ## 7.9.10.3 RCEC Associated Bus Numbers Register (Offset 08h) | RCEC 关联总线号寄存器(偏移量 08h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -101564,7 +100724,6 @@ HwInit
 </table>
 </div>
 
-
 ---
 
 <table> <!-- 📄 Page 1310 -->
@@ -101604,7 +100763,6 @@ determine association.
 <a id="sec-7-9-11"></a>
 ## 7.9.11 Multicast Extended Capability | 组播扩展能力
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -101643,7 +100801,6 @@ SR-IOV(单根 I/O 虚拟化)设备中的 Multicast 支持是可选的。如果 V
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -101821,7 +100978,6 @@ RO
 <a id="sec-7-9-11-1"></a>
 ## 7.9.11.1 Multicast Extended Capability Header (Offset 00h) | 组播扩展能力头(偏移量 00h)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -101868,7 +101024,6 @@ RO
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -101970,7 +101125,6 @@ RO/RsvdP
 
 <a id="sec-7-9-11-2"></a> <!-- 📄 Page 1313 -->
 ## 7.9.11.2 Multicast Capability Register (Offset 04h) | 组播能力寄存器(偏移量 04h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -102085,7 +101239,6 @@ VF RsvdP
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-9-11-3"></a>
@@ -102197,7 +101350,6 @@ VF RsvdP
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -102228,10 +101380,10 @@ MC_Receive 寄存器提供一个位向量，用于指示该 Function 应接受�
 
 > **Figure 7-277.** MC_Receive Register
 > **图 7-277.** Root Complex Event Collector 能力寄存器
+
 > <img src="figures/chapter_07/fig_1314_1_tight.png" width="700">
 
 </div>
-
 
 ---
 
@@ -102259,10 +101411,6 @@ The MC_Block_All Register provides a bit vector denoting which Multicast groups 
 
 § Figure 7-278 details allocation of the fields in the MC_Block_All Register and § Table 7-248 provides the respective bit definitions.
 
-> **Figure 7-278.** MC_Block_All Register
-> **图 7-278.** Root Complex Event Collector 控制寄存器
-> <img src="figures/chapter_07/fig_1314_2_tight.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -102270,11 +101418,16 @@ MC_Block_All 寄存器提供一个位向量，用于指示该 Function 应阻止
 
 § 图 7-278 详述了 MC_Block_All 寄存器中各字段的分配，§ 表 7-248 给出了相应的位定义。
 
-<img src="figures/chapter_07/fig_1314_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-278.** MC_Block_All Register
+>
+> **图 7-278.** Root Complex Event Collector 控制寄存器
+
+> <img src="figures/chapter_07/fig_1314_2_tight.png" width="700">
 
 ---
 
@@ -102343,7 +101496,6 @@ MC_Block_All 寄存器提供一个位向量，用于指示该 Function 应阻止
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -102374,10 +101526,10 @@ MC_Block_Untranslated 寄存器用于确定是否应阻止包含未转换地址�
 
 > **Figure 7-279.** MC_Block_Untranslated Register
 > **图 7-279.** Root Complex Event Collector 状态寄存器
+
 > <img src="figures/chapter_07/fig_1315_1_tight.png" width="700">
 
 </div>
-
 
 ---
 
@@ -102493,8 +101645,8 @@ MC_Overlay_BAR 用于指定单播（unicast）地址空间中一个窗口的基�
 
 > **Figure 7-280.** MC_Overlay_BAR Register
 > **图 7-280.** Root Complex Event Collector Event Source 寄存器
-> <img src="figures/chapter_07/fig_1316_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1316_1_tight.png" width="700">
 
 ---
 
@@ -102539,8 +101691,8 @@ DPA Capability 结构如 § 图 7-281 所示。
 
 > **Figure 7-281.** Dynamic Power Allocation Extended Capability Structure
 > **图 7-281.** Root Complex Event Collector Event Source 寄存器（续）
-> <img src="figures/chapter_07/fig_1316_2_tight.png" width="700"> <!-- 📄 Page 1317 -->
 
+> <img src="figures/chapter_07/fig_1316_2_tight.png" width="700"> <!-- 📄 Page 1317 -->
 
 ---
 
@@ -102572,8 +101724,8 @@ DPA Capability 结构如 § 图 7-281 所示。
 
 > **Figure 7-282.** DPA Extended Capability Header
 > **图 7-282.** Root Complex Event Collector Event Source 寄存器（续）
-> <img src="figures/chapter_07/fig_1317_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1317_1_tight.png" width="700">
 
 ---
 
@@ -102615,8 +101767,8 @@ DPA Capability 结构如 § 图 7-281 所示。
 
 > **Figure 7-283.** DPA Capability Register
 > **图 7-283.** Root Complex Event Collector Event Source 寄存器（续）
-> <img src="figures/chapter_07/fig_1317_2_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1317_2_tight.png" width="700">
 
 ---
 
@@ -102627,7 +101779,6 @@ DPA Capability 结构如 § 图 7-281 所示。
 | 4:0 | Substate_Max - Value indicates the maximum substate number, which is the total number of supported substates minus one. A value of 0 0000b indicates support for one substate. | RO |
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1318 -->
 <table>
@@ -102664,7 +101815,6 @@ DPA Capability 结构如 § 图 7-281 所示。
 </table>
 </div>
 
-
 ---
 
 <a id="sec-7-9-12-3"></a>
@@ -102683,20 +101833,21 @@ DPA Capability 结构如 § 图 7-281 所示。
 
 7.9.12.3 DPA Latency Indicator Register (Offset 08h)
 
-> **Figure 7-284.** DPA Latency Indicator Register
-> **图 7-284.** 集成设备—寄存器映射
-> <img src="figures/chapter_07/fig_1318_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
 7.9.12.3 DPA 延迟指示寄存器（偏移 08h）
 
-<img src="figures/chapter_07/fig_1318_1.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-284.** DPA Latency Indicator Register
+>
+> **图 7-284.** 集成设备—寄存器映射
+
+> <img src="figures/chapter_07/fig_1318_1.png" width="700">
 
 ---
 
@@ -102736,8 +101887,8 @@ DPA Capability 结构如 § 图 7-281 所示。
 
 > **Figure 7-285.** DPA Status Register
 > **图 7-285.** 集成设备配置头部
-> <img src="figures/chapter_07/fig_1319_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1319_1_tight.png" width="700">
 
 ---
 
@@ -102778,8 +101929,8 @@ DPA Capability 结构如 § 图 7-281 所示。
 
 > **Figure 7-286.** DPA Control Register
 > **图 7-286.** 集成设备 A 系列寄存器映射
-> <img src="figures/chapter_07/fig_1319_2_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1319_2_tight.png" width="700">
 
 ---
 
@@ -102816,8 +101967,8 @@ Default value is 0 0000b.
 
 > **Figure 7-287.** DPA Power Allocation Array
 > **图 7-287.** 集成设备 B 系列寄存器映射
-> <img src="figures/chapter_07/fig_1320_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1320_1_tight.png" width="700">
 
 ---
 
@@ -102853,8 +102004,8 @@ Each Substate Power Allocation register indicates the power allocation value for
 
 > **Figure 7-288.** Substate Power Allocation Register (0 to Substate_Max)
 > **图 7-288.** 集成设备 C 系列寄存器映射
-> <img src="figures/chapter_07/fig_1320_2_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1320_2_tight.png" width="700">
 
 ---
 
@@ -102868,7 +102019,6 @@ Each Substate Power Allocation register indicates the power allocation value for
 
 <a id="sec-7-9-13"></a>
 ## 7.9.13 TPH Requester Extended Capability | TPH 请求者扩展能力
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -102907,40 +102057,19 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 </table>
 </div> <!-- 📄 Page 1321 -->
 
-
 ---
 
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
 > **Figure 7-289.** TPH Extended Capability Structure
+>
 > **图 7-289.** TPH 扩展能力结构
+
 > <img src="figures/chapter_07/fig_1321_1_tight.png" width="700">
 
 > **Figure 7-290.** TPH Requester Extended Capability Header
+>
 > **图 7-290.** TPH Requester 扩展能力头部
+
 > <img src="figures/chapter_07/fig_1321_2_tight.png" width="700">
-
-</td>
-<td style="background-color:#e8e8e8">
-
-> **图 7-289.** TPH 扩展能力结构
-> <img src="figures/chapter_07/fig_1321_1_tight.png" width="700">
-
-> **图 7-290.** TPH Requester 扩展能力头部
-> <img src="figures/chapter_07/fig_1321_2_tight.png" width="700">
-</td>
-</tr>
-</tbody>
-</table>
 
 ---
 
@@ -102982,8 +102111,8 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 
 > **Figure 7-291.** TPH Requester Capability Register
 > **图 7-291.** TPH Requester 能力寄存器
-> <img src="figures/chapter_07/fig_1321_3_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1321_3_tight.png" width="700">
 
 ---
 
@@ -103044,8 +102173,8 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 
 > **Figure 7-292.** TPH Requester Control Register
 > **图 7-292.** TPH Requester 控制寄存器
-> <img src="figures/chapter_07/fig_1322_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1322_1_tight.png" width="700">
 
 ---
 
@@ -103084,7 +102213,6 @@ For fields in the TPH Requester Capability Register (offset 04h), all VFs associ
 | 2:0 | ST Mode Select - selects the ST Mode of operation. Defined encodings are: 000b = No ST Mode; 001b = Interrupt Vector Mode; 010b = Device Specific Mode; others = reserved for future use. Functions that support only the No ST Mode of operation must hardwire this field to 000b. Function operation is undefined if software enables a mode of operation that does not correspond to a mode supported by the Function. The default value of this field is 000b. See § Section 6.17.3 for details on ST modes of operation. | RW |
 | 9:8 | TPH Requester Enable - Controls the ability to issue Request TLPs using either TPH or Extended TPH. Defined encodings are: 00b = Function operating as a Requester is not permitted to issue Requests with TPH or Extended TPH; 01b = Function operating as a Requester is permitted to issue Requests with TPH and is not permitted to issue Requests with Extended TPH; 10b = Reserved; 11b = Function operating as a Requester is permitted to issue Requests with TPH and Extended TPH. Functions that advertise that they do not support Extended TPH are permitted to hardwire bit 9 of this field to 0b. The default value of this field is 00b. | RW |
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -103111,10 +102239,10 @@ The TPH ST Table must be implemented in the TPH Requester Extended Capability st
 
 > **Figure 7-293.** TPH ST Table
 > **图 7-293.** TPH ST 表
+
 > <img src="figures/chapter_07/fig_1323_1.png" width="700">
 
 </div>
-
 
 ---
 
@@ -103160,8 +102288,8 @@ The TPH ST Table must be implemented in the TPH Requester Extended Capability st
 
 > **Figure 7-294.** TPH ST Table Entry
 > **图 7-294.** TPH ST 表项
-> <img src="figures/chapter_07/fig_1324_1.png" width="700">
 
+> <img src="figures/chapter_07/fig_1324_1.png" width="700">
 
 **Table 7-260. TPH ST Table Entry | 表 7-260. TPH ST 表条目**
 
@@ -103174,7 +102302,6 @@ The TPH ST Table must be implemented in the TPH Requester Extended Capability st
 
 <a id="sec-7-9-14"></a>
 ## 7.9.14 DPC Extended Capability | DPC 扩展能力
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -103213,33 +102340,13 @@ The various RP PIO registers must be implemented only by Root Ports that support
 </table>
 </div>
 
-
 ---
 
-<table> <!-- 📄 Page 1325 -->
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
 > **Figure 7-295.** DPC Extended Capability – Non-Flit Mode
+>
 > **图 7-295.** DPC 扩展能力 – 非 Flit 模式
-> <img src="figures/chapter_07/fig_1325_1_tight.png" width="700">
 
-</td>
-<td style="background-color:#e8e8e8">
-
-> **图 7-295.** DPC 扩展能力 – 非 Flit 模式
 > <img src="figures/chapter_07/fig_1325_1_tight.png" width="700">
-</td>
-</tr>
-</tbody>
-</table>
 
 ---
 
@@ -103257,8 +102364,8 @@ The various RP PIO registers must be implemented only by Root Ports that support
 
 > **Figure 7-296.** DPC Extended Capability – Flit Mode
 > **图 7-296.** DPC 扩展能力 – Flit 模式
-> <img src="figures/chapter_07/fig_1326_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1326_1_tight.png" width="700">
 
 ---
 
@@ -103276,8 +102383,8 @@ The various RP PIO registers must be implemented only by Root Ports that support
 
 > **Figure 7-297.** DPC Extended Capability Header
 > **图 7-297.** DPC 扩展能力头部
-> <img src="figures/chapter_07/fig_1327_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1327_1_tight.png" width="700">
 
 **Table 7-261. DPC Extended Capability Header | 表 7-261. DPC 扩展能力头**
 
@@ -103301,8 +102408,8 @@ The various RP PIO registers must be implemented only by Root Ports that support
 
 > **Figure 7-298.** DPC Capability Register
 > **图 7-298.** DPC 能力寄存器
-> <img src="figures/chapter_07/fig_1327_2_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1327_2_tight.png" width="700">
 
 ---
 
@@ -103390,8 +102497,8 @@ The various RP PIO registers must be implemented only by Root Ports that support
 
 > **Figure 7-299.** DPC Control Register
 > **图 7-299.** DPC 控制寄存器
-> <img src="figures/chapter_07/fig_1329_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1329_1_tight.png" width="700">
 
 **Table 7-263. DPC Control Register | 表 7-263. DPC 控制寄存器**
 
@@ -103457,8 +102564,8 @@ The various RP PIO registers must be implemented only by Root Ports that support
 
 > **Figure 7-300.** DPC Status Register
 > **图 7-300.** DPC 状态寄存器
-> <img src="figures/chapter_07/fig_1331_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1331_1_tight.png" width="700">
 
 ---
 
@@ -103539,8 +102646,8 @@ The various RP PIO registers must be implemented only by Root Ports that support
 
 > **Figure 7-301.** DPC Error Source ID Register
 > **图 7-301.** DPC 错误源 ID 寄存器
-> <img src="figures/chapter_07/fig_1332_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1332_1_tight.png" width="700">
 
 ---
 
@@ -103575,8 +102682,8 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 
 > **Figure 7-302.** RP PIO Status Register
 > **图 7-302.** RP PIO 状态寄存器
-> <img src="figures/chapter_07/fig_1333_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1333_1_tight.png" width="700">
 
 ---
 
@@ -103648,8 +102755,6 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 </tbody>
 </table>
 
-
-
 ---
 
 [⬆️ 返回目录](#sec-7-0)
@@ -103674,8 +102779,6 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 <td>
 
 **Figure 7-303 RP PIO Mask Register**
-
-> <img src="figures/chapter_07/fig_1334_1_tight.png" width="700">
 
 **Table 7-267 RP PIO Mask Register**
 
@@ -103714,11 +102817,13 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 
 此寄存器仅存在于支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中。参见 § 第 6.2.11.3 节。
 
-<img src="figures/chapter_07/fig_1334_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1334_1_tight.png" width="700">
+
 </div>
 
 [⬆️ 返回目录](#sec-7-0)
@@ -103727,7 +102832,6 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 
 <a id="sec-7-9-14-8"></a>
 ## 7.9.14.8 RP PIO Severity Register (Offset 14h) | RP PIO 严重程度寄存器 (偏移 14h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -103742,8 +102846,6 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 <td>
 
 **Figure 7-304 RP PIO Severity Register**
-
-> <img src="figures/chapter_07/fig_1335_1_tight.png" width="700">
 
 **Table 7-268 RP PIO Severity Register**
 
@@ -103766,7 +102868,6 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 
 **图 7-304 RP PIO 严重程度寄存器**
 
-
 **表 7-268 RP PIO 严重程度寄存器**
 
 | 位位置 | 寄存器描述 | 属性 | 默认值 |
@@ -103783,13 +102884,14 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 
 此寄存器仅存在于支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中。参见 § 第 6.2.11.3 节。
 
-<img src="figures/chapter_07/fig_1335_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1335_1_tight.png" width="700">
+
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -103813,8 +102915,6 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 
 **Figure 7-305 RP PIO SysError Register**
 
-> <img src="figures/chapter_07/fig_1336_1_tight.png" width="700">
-
 **Table 7-269 RP PIO SysError Register**
 
 | Bit Location | Register Description | Attributes | Default |
@@ -103836,7 +102936,6 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 
 **图 7-305 RP PIO 系统错误寄存器**
 
-
 **表 7-269 RP PIO 系统错误寄存器**
 
 | 位位置 | 寄存器描述 | 属性 | 默认值 |
@@ -103853,11 +102952,12 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 
 此寄存器仅存在于支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中。参见 § 第 6.2.11.3 节。
 
-<img src="figures/chapter_07/fig_1336_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1336_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -103867,7 +102967,6 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 ## 7.9.14.10 RP PIO Exception Register (Offset 1Ch) | RP PIO 异常寄存器 (偏移 1Ch) <!-- 📄 Page 1337 -->
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -103882,8 +102981,6 @@ This register is present only in Root Ports that support RP Extensions for DPC. 
 <td>
 
 **Figure 7-306 RP PIO Exception Register**
-
-> <img src="figures/chapter_07/fig_1337_1_tight.png" width="700">
 
 **Table 7-270 RP PIO Exception Register**
 
@@ -103906,7 +103003,6 @@ This register is implemented only in Root Ports that support RP Extensions for D
 
 **图 7-306 RP PIO 异常寄存器**
 
-
 **表 7-270 RP PIO 异常寄存器**
 
 | 位位置 | 寄存器描述 | 属性 | 默认值 |
@@ -103923,13 +103019,14 @@ This register is implemented only in Root Ports that support RP Extensions for D
 
 此寄存器仅在支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中实现。RP PIO Header Log 寄存器包含与所记录的 RP PIO 错误相关联的请求 TLP (Request TLP) 的包头 (Header)。详见 § 第 6.2.11.3 节。在非 Flit 模式 (Non-Flit Mode) 下，此寄存器为 16 字节。在 Flit 模式 (Flit Mode) 下，此寄存器大小介于 52 与 76 字节之间，并被拆分为偏移 20h 和偏移 34h 两部分。在 Flit 模式和非 Flit 模式下，此寄存器的格式与 AER 中的 Header Log 寄存器完全相同。参见 § 第 7.8.4.8 节。
 
-<img src="figures/chapter_07/fig_1337_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1337_1_tight.png" width="700">
+
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -103953,8 +103050,6 @@ This register is implemented only in Root Ports that support RP Extensions for D
 
 **Figure 7-307 RP PIO Header Log Register**
 
-> <img src="figures/chapter_07/fig_1338_1_tight.png" width="700">
-
 **Table 7-271 RP PIO Header Log Register**
 
 | Bit Location | Register Description | Attributes | Default |
@@ -103964,7 +103059,6 @@ This register is implemented only in Root Ports that support RP Extensions for D
 This register is permitted to be implemented only in Root Ports that support RP Extensions for DPC. The RP PIO ImpSpec Log Register, if implemented, contains implementation specific information associated with the recorded error, e.g., indicating the source of the Request TLP. Space is allocated for this register if the value of the RP PIO Log Size field is 5 or greater. If space is allocated for the register, but the register is not implemented, the bits must be hardwired to 0b.
 
 **Figure 7-308 RP PIO ImpSpec Log Register**
-
 
 **Table 7-272 RP PIO ImpSpec Log Register**
 
@@ -103983,7 +103077,6 @@ In Flit Mode, the RP PIO TLP Prefix Log Register does not exist and this configr
 
 **图 7-307 RP PIO Header Log 寄存器**
 
-
 **表 7-271 RP PIO Header Log 寄存器**
 
 | 位位置 | 寄存器描述 | 属性 | 默认值 |
@@ -103993,7 +103086,6 @@ In Flit Mode, the RP PIO TLP Prefix Log Register does not exist and this configr
 此寄存器仅允许在支持 DPC 的 RP 扩展 (RP Extensions for DPC) 的根端口 (Root Port) 中实现。如果实现 RP PIO ImpSpec Log 寄存器，则其包含与所记录错误相关的实现特定信息，例如指明请求 TLP (Request TLP) 的来源。当 RP PIO Log Size 字段的值大于等于 5 时，会为此寄存器分配空间。如果已为此寄存器分配空间但未实现，则这些位必须硬连线 (hardwired) 为 0b。
 
 **图 7-308 RP PIO ImpSpec Log 寄存器**
-
 
 **表 7-272 RP PIO ImpSpec Log 寄存器**
 
@@ -104007,11 +103099,12 @@ In Flit Mode, the RP PIO TLP Prefix Log Register does not exist and this configr
 
 在 Flit 模式 (Flit Mode) 下，不存在 RP PIO TLP Prefix Log 寄存器，该配置空间是 RP PIO TLP Header Log 寄存器的延续。
 
-<img src="figures/chapter_07/fig_1338_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1338_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -104053,7 +103146,6 @@ See § Section 7.9.14.11 above for the register description.
 
 ## 7.9.14.13 RP PIO TLP Prefix Log Register (Offset 34h) | RP PIO TLP Prefix Log 寄存器 (偏移 34h)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -104072,8 +103164,6 @@ This register is formatted identically to the TLP Prefix Log register in AER, al
 
 **Figure 7-309 RP PIO TLP Prefix Log Register**
 
-> <img src="figures/chapter_07/fig_1339_1_tight.png" width="700">
-
 **Table 7-273 RP PIO TLP Prefix Log Register**
 
 | Bit Location | Register Description | Attributes | Default |
@@ -104089,20 +103179,20 @@ This register is formatted identically to the TLP Prefix Log register in AER, al
 
 **图 7-309 RP PIO TLP Prefix Log 寄存器**
 
-
 **表 7-273 RP PIO TLP Prefix Log 寄存器**
 
 | 位位置 | 寄存器描述 | 属性 | 默认值 |
 |---|---|---|---|
 | 127:0 | RP PIO TLP Prefix Log | ROS | 0 |
 
-<img src="figures/chapter_07/fig_1339_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1339_1_tight.png" width="700">
+
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -104131,11 +103221,7 @@ For Switches, a single instance of this Capability controls behavior for the ent
 
 **Figure 7-310 PTM Extended Capability Structure**
 
-> <img src="figures/chapter_07/fig_1340_1_tight.png" width="700">
-
 **Figure 7-311 PTM Extended Capability Header**
-
-> <img src="figures/chapter_07/fig_1340_2_tight.png" width="700">
 
 **Table 7-274 PTM Extended Capability Header**
 
@@ -104154,9 +103240,7 @@ For Switches, a single instance of this Capability controls behavior for the ent
 
 **图 7-310 PTM 扩展能力结构**
 
-
 **图 7-311 PTM 扩展能力包头**
-
 
 **表 7-274 PTM 扩展能力包头**
 
@@ -104166,11 +103250,14 @@ For Switches, a single instance of this Capability controls behavior for the ent
 | 19:16 | Capability Version —— 该字段是由 PCI-SIG 定义的版本号，用于指示所存在能力结构的版本。对于本版本的规范，必须为 1h。 | RO |
 | 31:20 | Next Capability Offset —— 该字段包含指向下一个 PCI Express 扩展能力结构的偏移地址;如果链表中的能力已无其他项，则为 000h。 | RO |
 
-<img src="figures/chapter_07/fig_1340_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1340_1_tight.png" width="700">
+
+> <img src="figures/chapter_07/fig_1340_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -104212,7 +103299,6 @@ See § Section 7.9.15 above and § Figure 7-311 / § Table 7-274 for the registe
 
 ## 7.9.15.2 PTM Capability Register (Offset 04h) | PTM 能力寄存器 (偏移 04h)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -104228,8 +103314,6 @@ See § Section 7.9.15 above and § Figure 7-311 / § Table 7-274 for the registe
 This register describes a Function's support for Precision Time Measurement. Not all fields within this register apply to all Functions capable of implementing PTM.
 
 **Figure 7-312 PTM Capability Register**
-
-> <img src="figures/chapter_07/fig_1341_1_tight.png" width="700">
 
 **Table 7-275 PTM Capability Register**
 
@@ -104249,7 +103333,6 @@ This register describes a Function's support for Precision Time Measurement. Not
 
 **图 7-312 PTM 能力寄存器**
 
-
 **表 7-275 PTM 能力寄存器**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -104261,13 +103344,14 @@ This register describes a Function's support for Precision Time Measurement. Not
 | 4 | PTM Propagation Delay Adaptation Capable —— 置位 (Set) 时，该字段指示端口 (Port) 支持 PTM 传播延迟适配能力 (PTM Propagation Delay Adaptation Capability)，该能力通过 Link Control 寄存器中的 PTM Propagation Delay Adaptation Interpretation B 位进行控制。对于交换机 (Switch)，在其上游端口 (Switch Upstream Port) 中置位 (Set) 时，指示该上游端口 (Upstream Port) 和交换机的所有下游端口 (Downstream Port) 均支持 PTM 传播延迟适配能力，该能力通过每个端口 (Port) 的 Link Control 寄存器中的 PTM Propagation Delay Adaptation Interpretation B 位按端口 (Port) 进行控制。 | HwInit |
 | 15:8 | Local Clock Granularity —— 编码方式如下: <br/> 0000 0000b:时间源 (Time Source) 未实现本地时钟，仅在响应 PTM 请求消息时转发从 PTM 层级 (PTM Hierarchy) 中更上游获取的定时信息。 <br/> 0000 0001b 至 1111 1110b:指示该时间源 (Time Source) 的本地时钟周期(单位:ns)。 <br/> 1111 1111b:指示该时间源 (Time Source) 的本地时钟周期大于 254 ns。 | HwInit/RsvdP |
 
-<img src="figures/chapter_07/fig_1341_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1341_1_tight.png" width="700">
+
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -104298,8 +103382,6 @@ This register controls a Function's participation in the Precision Time Measurem
 
 **Figure 7-313 PTM Control Register**
 
-> <img src="figures/chapter_07/fig_1342_1_tight.png" width="700">
-
 **Table 7-276 PTM Control Register**
 
 | Bit Location | Register Description | Attributes |
@@ -104319,7 +103401,6 @@ This register controls a Function's participation in the Precision Time Measurem
 
 **图 7-313 PTM 控制寄存器**
 
-
 **表 7-276 PTM 控制寄存器**
 
 | 位位置 | 寄存器描述 | 属性 |
@@ -104328,11 +103409,12 @@ This register controls a Function's participation in the Precision Time Measurem
 | 1 | Root Select —— 置位 (Set) 时，如果 PTM Enable 位也被置位 (Set)，则该时间源 (Time Source) 为 PTM Root。在每个 PTM 层级 (PTM Hierarchy) 中，建议系统软件仅选择最上游的时间源 (Time Source) 作为 PTM Root。默认值为 0b。如果 PTM Root Capable 位的值为 0b,则允许将此位硬连线 (hardwired) 为 0b。 | RW/RO |
 | 15:8 | Effective Granularity —— 对于实现 PTM Requester 角色的 Function,该字段提供与 PTM 时钟预期精度相关的信息，但不会以其他方式影响 PTM 机制。 <br/> 对于端点 (Endpoint)，系统软件必须将该字段编程为由 PTM Root 及所有中间 PTM 时间源 (Time Source) 所报告的最大本地时钟粒度 (Local Clock Granularity) 所对应的值。 <br/> 对于 RCiEP,系统软件必须将该字段设置为关联的 PTM 时间源 (Time Source) 在 Local Clock Granularity 字段中报告的值。 <br/> 允许值: <br/> 0000 0000b:未知 PTM 粒度 —— 该 Function 与 PTM Root 之间的一个或多个交换机 (Switch) 报告了 Local Clock Granularity 值为 0000 0000b。 <br/> 0000 0001b 至 1111 1110b:指示有效 PTM 粒度(单位:ns)。 <br/> 1111 1111b:指示有效 PTM 粒度大于 254 ns。 <br/> 默认值为 0000 0000b。如果 PTM Requester Capable 为清零 (Clear)，则允许将该字段硬连线 (hardwired) 为 0000 0000b。 | RW/RO |
 
-<img src="figures/chapter_07/fig_1342_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1342_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -104343,7 +103425,6 @@ This register controls a Function's participation in the Precision Time Measurem
 ---
 
 ## 7.9.16 Readiness Time Reporting Extended Capability | 就绪时间报告扩展能力
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -104418,7 +103499,6 @@ When Immediate_Readiness_on_Return_to_D0 is Clear, a Function must be Configurat
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -104448,19 +103528,13 @@ Registers and fields in the Readiness Time Reporting Extended Capability are sho
 
 **Figure 7-314 Readiness Time Reporting Extended Capability**
 
-> <img src="figures/chapter_07/fig_1344_1_tight.png" width="700">
-
 **Figure 7-315 Readiness Time Encoding**
-
-> <img src="figures/chapter_07/fig_1344_2_tight.png" width="700"> <!-- 📄 Page 1345 -->
 
 ---
 
 § Figure 7-316 and § Table 7-278 detail allocation of fields in the Extended Capability header.
 
 **Figure 7-316 Readiness Time Reporting Extended Capability Header**
-
-> <img src="figures/chapter_07/fig_1345_1_tight.png" width="700">
 
 **Table 7-278 Readiness Time Reporting Extended Capability Header**
 
@@ -104481,14 +103555,11 @@ Registers and fields in the Readiness Time Reporting Extended Capability are sho
 
 **图 7-314 就绪时间报告扩展能力**
 
-
 **图 7-315 就绪时间编码**
-
 
 § 图 7-316 和 § 表 7-278 详细说明了扩展能力包头中字段的分配。
 
 **图 7-316 就绪时间报告扩展能力包头**
-
 
 **表 7-278 就绪时间报告扩展能力包头**
 
@@ -104498,11 +103569,16 @@ Registers and fields in the Readiness Time Reporting Extended Capability are sho
 | 19:16 | Capability Version —— 该字段是由 PCI-SIG 定义的版本号，用于指示所存在能力结构的版本。对于本版本的规范，必须为 1h。 | RO |
 | 31:20 | Next Capability Offset —— 该字段包含指向下一个 PCI Express 能力结构的偏移地址;如果链表中的能力已无其他项，则为 000h。对于在配置空间 (Configuration Space) 中实现的扩展能力，该偏移地址相对于 PCI 兼容配置空间 (PCI-compatible Configuration Space) 的起始位置，因此必须始终为 000h (用于终止能力链表) 或大于 0FFh。 | RO |
 
-<img src="figures/chapter_07/fig_1344_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1344_1_tight.png" width="700">
+
+> <img src="figures/chapter_07/fig_1344_2_tight.png" width="700">
+
+> <img src="figures/chapter_07/fig_1345_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -104524,7 +103600,6 @@ Registers and fields in the Readiness Time Reporting Extended Capability are sho
 
 <a id="sec-7-9-16-2"></a>
 ## 7.9.16.2 Readiness Time Reporting 1 Register (Offset 04h) | 就绪时间报告 1 寄存器（偏移 04h）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -104564,7 +103639,6 @@ Figure 7-318 and Table 7-280 detail allocation of fields in the Readiness Time R
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -104619,7 +103693,6 @@ Figure 7-318 and Table 7-280 detail allocation of fields in the Readiness Time R
 <a id="sec-7-9-16-3"></a>
 ## 7.9.16.3 Readiness Time Reporting 2 Register (Offset 08h) | 就绪时间报告 2 寄存器（偏移 08h）
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -104654,7 +103727,6 @@ Figure 7-318 and Table 7-280 detail allocation of fields in the Readiness Time R
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -104753,7 +103825,6 @@ Figure 7-319 details the layout of the Hierarchy ID Extended Capability.
 <a id="sec-7-9-17-fig-319"></a>
 ## Figure 7-319. Hierarchy ID Extended Capability | 图 7-319. 层级 ID 扩展能力
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -104817,17 +103888,15 @@ Figure 7-320 and Table 7-281 detail allocation of fields in the Hierarchy ID Ext
 
 **图 7-319 层级 ID 扩展能力**
 
-> <img src="figures/chapter_07/fig_1348_1_tight.png" width="700">
-
-
 图 7-320 和表 7-281 详细说明了层级 ID 扩展能力头中各字段的分配。
 
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1348_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -104883,9 +103952,6 @@ Figure 7-320 and Table 7-281 detail allocation of fields in the Hierarchy ID Ext
 
 **图 7-320 层级 ID 扩展能力头**
 
-> <img src="figures/chapter_07/fig_1348_2_tight.png" width="700">
-
-
 **表 7-281 层级 ID 扩展能力头**
 
 | 比特位置 | 描述 | 属性 |
@@ -104898,6 +103964,8 @@ Figure 7-320 and Table 7-281 detail allocation of fields in the Hierarchy ID Ext
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1348_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -104935,7 +104003,6 @@ Refer to Figure 7-320 and Table 7-281 for field allocation details of the Hierar
 
 <a id="sec-7-9-17-fig-321"></a>
 ## Figure 7-321. Hierarchy ID Status Register | 图 7-321. 层级 ID 状态寄存器
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -104991,9 +104058,6 @@ Refer to Figure 7-320 and Table 7-281 for field allocation details of the Hierar
 
 **图 7-321 层级 ID 状态寄存器**
 
-> <img src="figures/chapter_07/fig_1349_1_tight.png" width="700">
-
-
 **表 7-282 层级 ID 状态寄存器**
 
 | 比特位置 | 描述 | 属性 |
@@ -105007,8 +104071,9 @@ Refer to Figure 7-320 and Table 7-281 for field allocation details of the Hierar
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1349_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -105046,7 +104111,6 @@ Refer to Figure 7-321 and Table 7-282 for field allocation details of the Hierar
 
 <a id="sec-7-9-17-fig-322"></a>
 ## Figure 7-322. Hierarchy ID Data Register (continued) | 图 7-322. 层级 ID 数据寄存器（续）
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -105108,9 +104172,6 @@ Figure 7-322 and Table 7-283 detail allocation of fields in the Hierarchy ID Dat
 
 **图 7-322 层级 ID 数据寄存器**
 
-> <img src="figures/chapter_07/fig_1350_1_tight.png" width="700">
-
-
 **表 7-283 层级 ID 数据寄存器**
 
 | 比特位置 | 描述 | 属性 |
@@ -105122,8 +104183,9 @@ Figure 7-322 and Table 7-283 detail allocation of fields in the Hierarchy ID Dat
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_07/fig_1350_1_tight.png" width="700">
+</div>
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -105161,7 +104223,6 @@ Refer to Figure 7-322 and Table 7-283 for field allocation details of the Hierar
 
 <a id="sec-7-9-17-fig-323"></a>
 ## Figure 7-323. Hierarchy ID GUID 1 Register | 图 7-323. 层级 ID GUID 1 寄存器
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -105219,7 +104280,6 @@ Refer to Figure 7-322 and Table 7-283 for field allocation details of the Hierar
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -105344,7 +104404,6 @@ Refer to Figure 7-324 and Table 7-285 for field allocation details of the Hierar
 <a id="sec-7-9-17-fig-325"></a>
 ## Figure 7-325. Hierarchy ID GUID 3 Register | 图 7-325. 层级 ID GUID 3 寄存器
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -105399,7 +104458,6 @@ Refer to Figure 7-324 and Table 7-285 for field allocation details of the Hierar
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -105524,7 +104582,6 @@ Refer to Figure 7-326 and Table 7-287 for field allocation details of the Hierar
 <a id="sec-7-9-17-fig-327"></a>
 ## Figure 7-327. Hierarchy ID GUID 5 Register | 图 7-327. 层级 ID GUID 5 寄存器
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -105579,7 +104636,6 @@ Refer to Figure 7-326 and Table 7-287 for field allocation details of the Hierar
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -105800,7 +104856,6 @@ VPD Data 寄存器
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -105859,7 +104914,6 @@ VPD Address 寄存器用于请求对 VPD 存储组件进行读或写。
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -105930,8 +104984,8 @@ F
 
 > **Figure 7-329.** VPD Address Register
 > **图 7-329.** VPD 地址寄存器
-> <img src="figures/chapter_07/fig_1355_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1355_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -105977,7 +105031,6 @@ VPD Data
 
 > **Figure 7-330.** VPD Data Register
 > **图 7-330.** VPD 数据寄存器
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -106193,8 +105246,8 @@ NPEM Status 寄存器
 
 > **Figure 7-331.** NPEM Extended Capability
 > **图 7-331.** NPEM 扩展能力
-> <img src="figures/chapter_07/fig_1356_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1356_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -106243,8 +105296,8 @@ PCI Express 扩展能力 ID (Extended Capability ID)
 
 > **Figure 7-332.** NPEM Extended Capability Header
 > **图 7-332.** NPEM 扩展能力头部
-> <img src="figures/chapter_07/fig_1356_2_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1356_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -106355,7 +105408,6 @@ NPEM Capability 寄存器包含一个总的 NPEM Capable 位，以及实现所�
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1357 -->
 <table>
 <thead>
@@ -106440,10 +105492,10 @@ Enclosure-specific Capabilities(机框专用能力)
 
 > **Figure 7-333.** NPEM Capability Register
 > **图 7-333.** NPEM 能力寄存器
+
 > <img src="figures/chapter_07/fig_1357_1_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -106519,7 +105571,6 @@ NPEM Control 寄存器包含一个总的 NPEM Enable 位，以及软件所控制
 
 <a id="sec-7-9-19-3"></a>
 ## 7.9.19.3 NPEM Control Register (Offset 08h) | NPEM Control 寄存器 (偏移 08h)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -106605,10 +105656,10 @@ Enclosure-specific Controls(机框专用控制)
 
 > **Figure 7-334.** NPEM Control Register
 > **图 7-334.** NPEM 控制寄存器
+
 > <img src="figures/chapter_07/fig_1358_1_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -106729,8 +105780,8 @@ Enclosure-specific Status(机框专用状态)
 
 > **Figure 7-335.** NPEM Status Register
 > **图 7-335.** NPEM 状态寄存器
-> <img src="figures/chapter_07/fig_1360_1.png" width="700">
 
+> <img src="figures/chapter_07/fig_1360_1.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -106886,7 +105937,6 @@ Alternate Protocol 扩展能力结构在实现了 Alternate Protocol Negotiation
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -106997,10 +106047,10 @@ Alternate Protocol Data 2 寄存器
 
 > **Figure 7-336.** Alternate Protocol Extended Capability
 > **图 7-336.** Alternate Protocol 扩展能力
+
 > <img src="figures/chapter_07/fig_1361_1_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -107017,10 +106067,6 @@ Alternate Protocol Data 2 寄存器
 <tr>
 <td>
 
-> **Figure 7-337.** Alternate Protocol Extended Capability Header
-> **图 7-337.** Alternate Protocol 扩展能力头部
-> <img src="figures/chapter_07/fig_1361_2_tight.png" width="700">
-
 0
 15
 PCI Express Extended Capability ID
@@ -107035,7 +106081,6 @@ Next Capability Offset
 </td>
 <td style="background-color:#e8e8e8">
 
-
 0
 15
 PCI Express 扩展能力 ID (Extended Capability ID)
@@ -107047,11 +106092,16 @@ PCI Express 扩展能力 ID (Extended Capability ID)
 31
 下一能力偏移 (Next Capability Offset)
 
-<img src="figures/chapter_07/fig_1361_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-337.** Alternate Protocol Extended Capability Header
+>
+> **图 7-337.** Alternate Protocol 扩展能力头部
+
+> <img src="figures/chapter_07/fig_1361_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -107118,8 +106168,8 @@ RsvdP
 
 > **Figure 7-338.** Alternate Protocol Capabilities Register
 > **图 7-338.** Alternate Protocol 能力寄存器
-> <img src="figures/chapter_07/fig_1362_1_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1362_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -107175,8 +106225,8 @@ RsvdP
 
 > **Figure 7-339.** Alternate Protocol Control Register
 > **图 7-339.** Alternate Protocol 控制寄存器
-> <img src="figures/chapter_07/fig_1362_2_tight.png" width="700">
 
+> <img src="figures/chapter_07/fig_1362_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -107291,7 +106341,10 @@ RsvdP
 
 ---
 
-> **Figure 7-340. Alternate Protocol Data 1 Register | 替代协议数据 1 寄存器**
+> **Figure 7-340.** Alternate Protocol Data 1 Register
+>
+> **图 7-340.** 替代协议数据 1 寄存器
+
 > <img src="figures/chapter_07/fig_1364_1.png" width="700">
 
 **Table 7-298. Alternate Protocol Data 1 Register | 表 7-298. 替代协议数据 1 寄存器**
@@ -107328,7 +106381,9 @@ RsvdP
 </tbody>
 </table>
 
-> **Figure 7-341. Alternate Protocol Data 2 Register | 替代协议数据 2 寄存器**
+> **Figure 7-341.** Alternate Protocol Data 2 Register
+>
+> **图 7-341.** 替代协议数据 2 寄存器
 
 **Table 7-299. Alternate Protocol Data 2 Register | 表 7-299. 替代协议数据 2 寄存器**
 
@@ -107384,7 +106439,10 @@ When Alternate Protocol Negotiation Global Enable is Set, a particular bit in th
 
 Changes to this field will affect the next Alternate Protocol negotiation and have no effect on current operation of the Link (regardless of current protocol).
 
-> **Figure 7-342. Alternate Protocol Selective Enable Mask Register | 替代协议选择性使能掩码寄存器**
+> **Figure 7-342.** Alternate Protocol Selective Enable Mask Register
+>
+> **图 7-342.** 替代协议选择性使能掩码寄存器
+
 > <img src="figures/chapter_07/fig_1365_1_tight.png" width="700">
 
 **Table 7-300. Alternate Protocol Selective Enable Mask Register | 表 7-300. 替代协议选择性使能掩码寄存器**
@@ -107428,7 +106486,10 @@ Note: Due to document production limitations, this figure shows an 8 byte capabi
 </tbody>
 </table>
 
-> **Figure 7-343. Conventional PCI Advanced Features Capability (AF) | Conventional PCI 高级功能能力结构 (AF)**
+> **Figure 7-343.** Conventional PCI Advanced Features Capability (AF)
+>
+> **图 7-343.** Conventional PCI 高级功能能力结构 (AF)
+
 > <img src="figures/chapter_07/fig_1365_2_tight.png" width="700">
 
 <a id="sec-7-9-21-1"></a>
@@ -107467,7 +106528,10 @@ Note: Due to document production limitations, this figure shows an 8 byte capabi
 
 ---
 
-> **Figure 7-344. Advanced Features Capability Header | 高级功能能力结构头部**
+> **Figure 7-344.** Advanced Features Capability Header
+>
+> **图 7-344.** 高级功能能力结构头部
+
 > <img src="figures/chapter_07/fig_1366_1.png" width="700">
 
 **Table 7-301. Advanced Features Capability Header | 表 7-301. 高级功能能力结构头部**
@@ -107504,7 +106568,9 @@ Note: Due to document production limitations, this figure shows an 8 byte capabi
 </tbody>
 </table>
 
-> **Figure 7-345. AF Capabilities Register | AF 能力寄存器**
+> **Figure 7-345.** AF Capabilities Register
+>
+> **图 7-345.** AF 能力寄存器
 
 **Table 7-302. AF Capabilities Register | 表 7-302. AF 能力寄存器**
 
@@ -107554,7 +106620,10 @@ Note: Due to document production limitations, this figure shows an 8 byte capabi
 
 ---
 
-> **Figure 7-346. Conventional PCI Advanced Features Control Register | Conventional PCI 高级功能控制寄存器**
+> **Figure 7-346.** Conventional PCI Advanced Features Control Register
+>
+> **图 7-346.** Conventional PCI 高级功能控制寄存器
+
 > <img src="figures/chapter_07/fig_1367_1_tight.png" width="700">
 
 **Table 7-303. Conventional PCI Advanced Features Control Register | 表 7-303. Conventional PCI 高级功能控制寄存器**
@@ -107590,7 +106659,9 @@ Note: Due to document production limitations, this figure shows an 8 byte capabi
 </tbody>
 </table>
 
-> **Figure 7-347. AF Status Register | AF 状态寄存器**
+> **Figure 7-347.** AF Status Register
+>
+> **图 7-347.** AF 状态寄存器
 
 **Table 7-304. AF Status Register | 表 7-304. AF 状态寄存器**
 
@@ -107635,7 +106706,10 @@ The SFI (System Firmware Intermediary) Extended Capability is an optional capabi
 
 If a Downstream Port implements the SFI Extended Capability, that Port must support ERR_COR Subclass capability, and indicate so by Setting the ERR_COR Subclass Capable bit in the Device Capabilities Register. See see § Section 7.5.3.3.
 
-> **Figure 7-348. SFI Extended Capability | SFI 扩展能力结构**
+> **Figure 7-348.** SFI Extended Capability
+>
+> **图 7-348.** SFI 扩展能力结构
+
 > <img src="figures/chapter_07/fig_1368_1_tight.png" width="700">
 
 <a id="sec-7-9-22-1"></a>
@@ -107676,7 +106750,10 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 
 ---
 
-> **Figure 7-349. SFI Extended Capability Header | SFI 扩展能力结构头部**
+> **Figure 7-349.** SFI Extended Capability Header
+>
+> **图 7-349.** SFI 扩展能力结构头部
+
 > <img src="figures/chapter_07/fig_1369_1_tight.png" width="700">
 
 **Table 7-305. SFI Extended Capability Header | 表 7-305. SFI 扩展能力结构头部**
@@ -107713,7 +106790,9 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 </tbody>
 </table>
 
-> **Figure 7-350. SFI Capability Register | SFI 能力寄存器**
+> **Figure 7-350.** SFI Capability Register
+>
+> **图 7-350.** SFI 能力寄存器
 
 **Table 7-306. SFI Capability Register | 表 7-306. SFI 能力寄存器**
 
@@ -107762,7 +106841,10 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 
 ---
 
-> **Figure 7-351. SFI Control Register | SFI 控制寄存器**
+> **Figure 7-351.** SFI Control Register
+>
+> **图 7-351.** SFI 控制寄存器
+
 > <img src="figures/chapter_07/fig_1370_1.png" width="700">
 
 **Table 7-307. SFI Control Register | 表 7-307. SFI 控制寄存器**
@@ -107786,7 +106868,10 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 |--------------|----------------------|------------|
 | (continued) | It is permitted to write 1b to this bit while simultaneously writing updated values to other fields in this register, notably the SFI DRS Mask bit. For this case, the SFI DRS Trigger semantics are based on the updated value of the SFI DRS Mask bit. This bit always returns 0b when read. | |
 
-> **Figure 7-352. SFI Status Register | SFI 状态寄存器** <!-- 📄 Page 1371 -->
+> **Figure 7-352.** SFI Status Register
+>
+> **图 7-352.** SFI 状态寄存器
+
 > <img src="figures/chapter_07/fig_1371_1_tight.png" width="700">
 
 **Table 7-308. SFI Status Register | 表 7-308. SFI 状态寄存器**
@@ -107849,17 +106934,18 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 <td>
 
 > **Figure 7-353. SFI CAM Address Register**
-> <img src="figures/chapter_07/fig_1372_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-353.** SFI CAM 地址寄存器
-> <img src="figures/chapter_07/fig_1372_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **图 7-353.** SFI CAM 地址寄存器
+
+> <img src="figures/chapter_07/fig_1372_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -107890,7 +106976,6 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-354.** SFI CAM 数据寄存器
 > （原图未单独抽取，可参考整页图 `figures/chapter_07/fig_1372_1.png`）
 
 </td>
@@ -107907,7 +106992,6 @@ If a Downstream Port implements the SFI Extended Capability, that Port must supp
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
 | 31:0 | SFI CAM Data - When this field is read, the SFI CAM generates and transmits a Configuration Read Request on the Link below this Port. When this field is written, the SFI CAM generates and transmits a Configuration Write Request on the Link below this Port. In both cases, the target of the Configuration Request is determined by the value of the SFI CAM Address Register. See § Section 6.7.4.3 . | RW |
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -107937,7 +107021,6 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -108053,17 +107136,18 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 <td>
 
 > **Figure 7-355. Subsystem ID and Subsystem Vendor ID Capability**
-> <img src="figures/chapter_07/fig_1373_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-355.** 子系统 ID 与子系统供应商 ID 能力
-> <img src="figures/chapter_07/fig_1373_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **图 7-355.** 子系统 ID 与子系统供应商 ID 能力
+
+> <img src="figures/chapter_07/fig_1373_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -108081,17 +107165,18 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 <td>
 
 > **Figure 7-356. Subsystem ID and Subsystem Vendor ID Capability Header**
-> <img src="figures/chapter_07/fig_1373_2_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-356.** 子系统 ID 与子系统供应商 ID 能力头部
-> <img src="figures/chapter_07/fig_1373_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **图 7-356.** 子系统 ID 与子系统供应商 ID 能力头部
+
+> <img src="figures/chapter_07/fig_1373_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -108117,17 +107202,18 @@ Subsystem ID 和 Subsystem Vendor ID Capability(子系统 ID 与子系统厂商 
 <td>
 
 > **Figure 7-357. Subsystem ID and Subsystem Vendor ID Capability Data**
-> <img src="figures/chapter_07/fig_1373_3_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-357.** 子系统 ID 与子系统供应商 ID 能力数据
-> <img src="figures/chapter_07/fig_1373_3_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **图 7-357.** 子系统 ID 与子系统供应商 ID 能力数据
+
+> <img src="figures/chapter_07/fig_1373_3_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -108253,17 +107339,18 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 <td>
 
 > **Figure 7-358. Data Object Exchange Extended Capability**
-> <img src="figures/chapter_07/fig_1374_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-358.** 数据对象交换 (DOE) 扩展能力
-> <img src="figures/chapter_07/fig_1374_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **图 7-358.** 数据对象交换 (DOE) 扩展能力
+
+> <img src="figures/chapter_07/fig_1374_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -108281,17 +107368,18 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 <td>
 
 > **Figure 7-359. DOE Extended Capability Header**
-> <img src="figures/chapter_07/fig_1374_2_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-359.** DOE 扩展能力头部
-> <img src="figures/chapter_07/fig_1374_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **图 7-359.** DOE 扩展能力头部
+
+> <img src="figures/chapter_07/fig_1374_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -108383,17 +107471,18 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 <td>
 
 > **Figure 7-360. DOE Capabilities Register**
-> <img src="figures/chapter_07/fig_1375_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-360.** DOE 能力寄存器
-> <img src="figures/chapter_07/fig_1375_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **图 7-360.** DOE 能力寄存器
+
+> <img src="figures/chapter_07/fig_1375_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -108455,17 +107544,18 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 <td>
 
 > **Figure 7-361. DOE Control Register**
-> <img src="figures/chapter_07/fig_1376_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-361.** DOE 控制寄存器
-> <img src="figures/chapter_07/fig_1376_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **图 7-361.** DOE 控制寄存器
+
+> <img src="figures/chapter_07/fig_1376_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -108528,17 +107618,18 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 <td>
 
 > **Figure 7-362. DOE Status Register**
-> <img src="figures/chapter_07/fig_1377_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-362.** DOE 状态寄存器
-> <img src="figures/chapter_07/fig_1377_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **图 7-362.** DOE 状态寄存器
+
+> <img src="figures/chapter_07/fig_1377_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -108590,7 +107681,6 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1378 -->
 <table>
 <thead>
@@ -108622,7 +107712,6 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -108639,17 +107728,18 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 <td>
 
 > **Figure 7-363. DOE Write Data Mailbox Register**
-> <img src="figures/chapter_07/fig_1378_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-363.** DOE 写数据邮箱寄存器
-> <img src="figures/chapter_07/fig_1378_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **图 7-363.** DOE 写数据邮箱寄存器
+
+> <img src="figures/chapter_07/fig_1378_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -108739,17 +107829,18 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 <td>
 
 > **Figure 7-364. DOE Read Data Mailbox Register**
-> <img src="figures/chapter_07/fig_1379_1.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-364.** DOE 读数据邮箱寄存器
-> <img src="figures/chapter_07/fig_1379_1.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **图 7-364.** DOE 读数据邮箱寄存器
+
+> <img src="figures/chapter_07/fig_1379_1.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -108760,7 +107851,6 @@ Data Object Exchange (DOE, 数据对象交换)扩展能力是一种可选的扩�
 | Bit Location | Register Description | Attributes |
 |--------------|----------------------|------------|
 | 31:0 | DOE Read Data Mailbox – If the Data Object Ready bit is Set, a read of this register returns the current DW of the data object. A write of any value to this register indicates a successful transfer of the current data object DW, and the DOE instance must return the next DW in the data object upon the next read of this register as long as the Data Object Ready bit remains Set. It is permitted for multiple data objects to be read from this register back-to-back. When this scenario occurs, the Data Object Ready bit will remain Set until this register is written after the final DW is read. A write of any value to this register when the Data Object Ready bit is Clear must have no effect. The value read from this register when the Data Object Ready bit is Clear must be 0000 0000h. | RW (see description) |
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -108794,7 +107884,6 @@ The Shadow Function Number field in the Shadow Function Instance register entry 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -108874,7 +107963,6 @@ Additional requirements for implementing Shadow Functions are:
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1380 -->
 <table>
 <thead>
@@ -108911,7 +107999,6 @@ Additional requirements for implementing Shadow Functions are:
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -109020,17 +108107,18 @@ N = Number of Shadow Functions 字段的值。
 <td>
 
 > **Figure 7-365. Shadow Functions Extended Capability Structure**
-> <img src="figures/chapter_07/fig_1381_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-365.** 影子功能扩展能力结构
-> <img src="figures/chapter_07/fig_1381_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **图 7-365.** 影子功能扩展能力结构
+
+> <img src="figures/chapter_07/fig_1381_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -109075,17 +108163,18 @@ N = Number of Shadow Functions 字段的值。
 <td>
 
 > **Figure 7-366. Shadow Functions Extended Capability Header**
-> <img src="figures/chapter_07/fig_1381_2_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
-> **图 7-366.** 影子功能扩展能力头部
-> <img src="figures/chapter_07/fig_1381_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **图 7-366.** 影子功能扩展能力头部
+
+> <img src="figures/chapter_07/fig_1381_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -109147,14 +108236,10 @@ Shadow Functions 扩展能力头（偏移 00h）
 <tr>
 <td>
 
-[figures/chapter_07/fig_1382_1.png]
-
 Figure 7-367 details the allocation of register bits of the Shadow Functions Capability register; Table 7-320 provides the respective bit definitions.
 
 </td>
 <td style="background-color:#e8e8e8">
-
-[figures/chapter_07/fig_1382_1.png]
 
 图 7-367 详述了 Shadow Functions Capability 寄存器的位分配；表 7-320 给出了相应的位定义。
 
@@ -109172,7 +108257,7 @@ Figure 7-367 details the allocation of register bits of the Shadow Functions Cap
 | 7:0 | Number of Shadow Functions – This is one less than the number of Shadow Functions implemented by this Function. This defines the number of Shadow Function Instance register entries that are in the Capability, and therefore the length of the Capability structure.<br>The default value for this field is 00h. | HwInit |
 | 31:8 | RsvdP | RsvdP |
 
-[figures/chapter_07/fig_1382_1.png](figures/chapter_07/fig_1382_1.png)
+(figures/chapter_07/fig_1382_1.png)
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -109210,12 +108295,11 @@ Figure 7-368 details the allocation of register bits of the Shadow Functions Con
 | 0 | Shadow Functions Enable - When Set, permits the Requester to generate Requests using the Transaction ID resources of all of the Shadow Functions defined by this Capability. See Section 7.9.25 for limitations on the type of Requests permitted.<br>When Clear, the Requester is not permitted to generate Requests using the Transaction ID resources of any of the Shadow Functions defined by this Capability.<br>Behavior is undefined when this bit is Set in Functions with the Phantom Functions Enabled bit Set.<br>Behavior is undefined if the value of this bit is changed while the Function has outstanding Non-Posted Requests.<br>Default is 0b. | RW |
 | 31:1 | RsvdP | RsvdP |
 
-[figures/chapter_07/fig_1382_1.png](figures/chapter_07/fig_1382_1.png)
+(figures/chapter_07/fig_1382_1.png)
 
 [⬆️ 返回目录](#sec-7-0)
 
 ---
-
 
 <a id="sec-7-9-25-2"></a>
 ## 7.9.25.2 Shadow Functions Capability Register (Offset 04h) | Shadow Functions 能力寄存器（偏移 04h）
@@ -109312,7 +108396,7 @@ Figure 7-369 details the allocation of register bits of the Shadow Functions Con
 | 15:0 | Shadow Function Number - This is the Bus/Device/Function offset (Bus/Function offset for ARI Devices) of the Shadow Function. Add this value to BDF of the Function with this capability using unsigned, 16-bit arithmetic, ignoring any carry. | HwInit |
 | 31:16 | RsvdP | RsvdP |
 
-[figures/chapter_07/fig_1382_1.png](figures/chapter_07/fig_1382_1.png)
+(figures/chapter_07/fig_1382_1.png)
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -109320,7 +108404,6 @@ Figure 7-369 details the allocation of register bits of the Shadow Functions Con
 
 <a id="sec-7-9-26"></a>
 ## 7.9.26 IDE Extended Capability | IDE 扩展能力
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -109351,10 +108434,9 @@ It is permitted to implement this extended capability in Functions associated wi
 </table>
 </div>
 
-
 **Figure 7-370. IDE Extended Capability Structure | 图 7-370. IDE 扩展能力结构**
 
-[figures/chapter_07/fig_1383_1.png](figures/chapter_07/fig_1383_1.png)
+(figures/chapter_07/fig_1383_1.png)
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -109396,7 +108478,7 @@ The Extended Capability ID for the Integrity and Data Encryption (IDE) Exchange 
 | 19:16 | Capability Version – This field is a PCI-SIG defined version number that indicates the version of the Capability structure present.<br>Must be 1h for this version of the specification. | HwInit |
 | 31:20 | Next Capability Offset – This field contains the offset to the next PCI Express Extended Capability structure or 000h if no other items exist in the linked list of Capabilities. | HwInit |
 
-[figures/chapter_07/fig_1383_1.png](figures/chapter_07/fig_1383_1.png)
+(figures/chapter_07/fig_1383_1.png)
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -109448,7 +108530,7 @@ Figure 7-372 details the allocation of register bits of the IDE Capability Regis
 | 24 | TEE-Limited Stream Supported – When Set, indicates that the TEE-Limited Stream control mechanism is supported.<br>If Selective IDE Streams Supported is Clear, this bit is Reserved. | HwInit / RsvdP |
 | 31:25 | RsvdP | RsvdP |
 
-[figures/chapter_07/fig_1385_1.png](figures/chapter_07/fig_1385_1.png)
+(figures/chapter_07/fig_1385_1.png)
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -109489,7 +108571,7 @@ Figure 7-373 details the allocation of register bits of the IDE Control Register
 | 2 | Flow-Through IDE Stream Enabled – For Switch Ports and Root Ports, Enables the Port for flow-through operation of TLPs associated with Selective IDE Streams.<br>Reserved for Upstream Ports associated with Endpoints. | RW / RsvdP |
 | 31:3 | RsvdP | RsvdP |
 
-[figures/chapter_07/fig_1387_1.png](figures/chapter_07/fig_1387_1.png)
+(figures/chapter_07/fig_1387_1.png)
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -109567,7 +108649,7 @@ Figure 7-374 details the allocation of register bits of the Link IDE Stream Cont
 | 21:19 | TC – System firmware/software must program this field to indicate the TC associated with this Link IDE Register block.<br>Default value is 000b | RW / RsvdP |
 | 31:24 | Stream ID – Indicates the Stream ID associated with this Link IDE Stream. Software must program the same Stream ID into both Ports associated with a given Link IDE Stream. Default value is 00h. | RW |
 
-[figures/chapter_07/fig_1387_1.png](figures/chapter_07/fig_1387_1.png)
+(figures/chapter_07/fig_1387_1.png)
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -109609,7 +108691,7 @@ Figure 7-375 details the allocation of register bits of the Link IDE Stream Stat
 | 30:4 | RsvdZ | RsvdZ |
 | 31 | Received IDE Fail Message – When Set, indicates that one or more IDE Fail Message(s) have been Received for this Stream. | RW1C |
 
-[figures/chapter_07/fig_1389_1.png](figures/chapter_07/fig_1389_1.png)
+(figures/chapter_07/fig_1389_1.png)
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -109617,7 +108699,6 @@ Figure 7-375 details the allocation of register bits of the Link IDE Stream Stat
 
 <a id="sec-7-9-26-5"></a>
 ## 7.9.26.5 Selective IDE Stream Register Block | Selective IDE Stream 寄存器块
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -109644,7 +108725,6 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 </table>
 </div>
 
-
 **Figure 7-376. Selective IDE Stream Capability Register | 图 7-376. Selective IDE Stream 能力寄存器**
 
 **Table 7-328. Selective IDE Stream Capability Register | 表 7-328. Selective IDE Stream 能力寄存器**
@@ -109654,7 +108734,7 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 | 3:0 | Number of Address Association Register Blocks – Indicates the number of Selective IDE Address Association register blocks for this Selective IDE Stream.<br>The number of Selective IDE Address Association register blocks for a given IDE Stream is hardware implementation specific, and is permitted to be any number between 0 and 15. | RO |
 | 31:4 | RsvdP | RsvdP |
 
-[figures/chapter_07/fig_1390_1.png](figures/chapter_07/fig_1390_1.png)
+(figures/chapter_07/fig_1390_1.png)
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -109662,7 +108742,7 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 
 **Figure 7-377. Selective IDE Stream Control Register | 图 7-377. Selective IDE Stream 控制寄存器**
 
-[figures/chapter_07/fig_1390_1.png](figures/chapter_07/fig_1390_1.png)
+(figures/chapter_07/fig_1390_1.png)
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -109703,7 +108783,6 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -109742,7 +108821,6 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -109805,7 +108883,6 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -109841,7 +108918,6 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -109860,10 +108936,6 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 <tr>
 <td>
 
-> **Figure 7-378.** Selective IDE Stream Status Register
-> **图 7-378.** 选择性 IDE Stream 状态寄存器
-> <img src="figures/chapter_07/fig_1393_1_tight.png" width="700">
-
 > **Figure 7-378 (Register Layout).** Selective IDE Stream Status Register
 >
 > | Bits 31 | Bits 30:4 | Bits 3:0 |
@@ -109880,7 +108952,6 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 </td>
 <td style="background-color:#e8e8e8">
 
-
 > **图 7-378(寄存器布局)。** 选择性 IDE 流状态寄存器
 >
 > | 位 31 | Bits 30:4 | Bits 3:0 |
@@ -109894,11 +108965,16 @@ Selective IDE Stream 寄存器块必须由一个 Selective IDE Stream Capability
 | 3:0 | Selective IDE Stream State(选择性 IDE 流状态)— 当 Selective IDE Stream Enable 置 1 时，此字段指示端口的状态。编码:<br>0000b — Insecure(不安全)<br>0001b — Secure(安全)<br>0010b — 保留 — 软件必须将保留值视为指示未知状态<br>Others — 保留 — 软件必须将保留值视为指示未知状态<br>当 Selective IDE Stream Enable 为 0 时，此字段的值必须为 0000b。 | RO |
 | 31 | Received IDE Fail Message(已接收 IDE 失败消息)— 置 1 时，指示已为此流接收到一条或多条 IDE Fail Message。 | RW1C |
 
-<img src="figures/chapter_07/fig_1393_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 7-378.** Selective IDE Stream Status Register
+>
+> **图 7-378.** 选择性 IDE Stream 状态寄存器
+
+> <img src="figures/chapter_07/fig_1393_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -109938,7 +109014,6 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 
 <a id="sec-7-9-26-5-4-1"></a>
 ## 7.9.26.5.4.1 IDE RID Association Register 1 | IDE RID 关联寄存器 1
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -109986,10 +109061,10 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 
 > **Figure 7-379.** IDE RID Association Register 1 (Offset +00h)
 > **图 7-379.** IDE RID 关联寄存器 1（偏移 +00h）
+
 > <img src="figures/chapter_07/fig_1394_1_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -110026,10 +109101,7 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 </td>
 <td style="background-color:#e8e8e8">
 
-
 > **图 7-380(寄存器布局)。** IDE RID 关联寄存器 2 (Offset +04h)
-
-> <img src="figures/chapter_07/fig_1077_1_tight.png" width="700">
 
 >
 > | Bits 31:24 | Bits 23:8 | Bits 7:1 | 位 0 |
@@ -110048,6 +109120,8 @@ A Selective IDE RID Association register must consist of one IDE RID Association
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_07/fig_1077_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -110087,7 +109161,6 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 <a id="sec-7-9-26-5-5-1"></a>
 ## 7.9.26.5.5.1 IDE Address Association Register 1 | IDE 地址关联寄存器 1
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -110139,10 +109212,10 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 > **Figure 7-381.** IDE Address Association Register 1 (Offset +00h)
 > **图 7-381.** IDE 地址关联寄存器 1（偏移 +00h）
+
 > <img src="figures/chapter_07/fig_1395_1.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -110177,7 +109250,6 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 </td>
 <td style="background-color:#e8e8e8">
 
-
 > **图 7-382(寄存器布局)。** IDE 地址关联寄存器 2 (Offset +04h)
 >
 > | Bits 31:0 |
@@ -110201,7 +109273,6 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 <a id="sec-7-9-26-5-5-3"></a>
 ## 7.9.26.5.5.3 IDE Address Association Register 3 | IDE 地址关联寄存器 3
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -110249,10 +109320,10 @@ A Selective IDE Address Association register must consist of one IDE Address Ass
 
 > **Figure 7-383.** IDE Address Association Register 3 (Offset +04h)
 > **图 7-383.** IDE 地址关联寄存器 3（偏移 +04h）
+
 > <img src="figures/chapter_07/fig_1396_1_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -110302,9 +109373,6 @@ Null Capability 不包含任何寄存器。该能力出现在链表(Next Capabil
 
 允许单个 PCI Express Function(功能)包含多个 Null Capability 结构。
 
-> **图 7-384.** 空能力 (Null Capability)
-> <img src="figures/chapter_07/fig_1396_1_tight.png" width="700">
-
 > **图 7-384(寄存器布局)。** 空能力
 >
 > | Bits 15:8 | Bits 7:0 |
@@ -110323,6 +109391,8 @@ Null Capability 不包含任何寄存器。该能力出现在链表(Next Capabil
 </tbody>
 </table>
 
+> **图 7-384.** 空能力 (Null Capability)
+
 [⬆️ 返回目录](#sec-7-0)
 
 ---
@@ -110331,7 +109401,6 @@ Null Capability 不包含任何寄存器。该能力出现在链表(Next Capabil
 ## 7.9.28 Null Extended Capability | 空扩展能力 <!-- 📄 Page 1397 -->
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -110407,10 +109476,10 @@ UIO 要求使用 SVC 能力，且 VC 或 MFVC 能力不支持 UIO。UIO 仅在 F
 
 > **Figure 7-385.** Null Extended Capability
 > **图 7-385.** 空扩展能力 (Null Extended Capability)
+
 > <img src="figures/chapter_07/fig_1397_1_tight.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-7-0)
 
@@ -110506,7 +109575,6 @@ Figure 7-387 details allocation of register fields in the Streamlined Virtual Ch
 | 19:16 | **Capability Version** - This field is a PCI-SIG defined version number that indicates the version of the Capability structure present. Must be 1h for this version of the specification. | RO |
 | 31:20 | **Next Capability Offset** - This field contains the offset to the next PCI Express Capability structure or 000h if no other items exist in the linked list of Capabilities. | RO |
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -110539,7 +109607,6 @@ SVC Port Capability Register 1 描述与一个 PCI Express 端口 (Port) 关联�
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -110616,7 +109683,6 @@ This register is RsvdP.
 
 > ✅ **来源批注**：本节正文在 6.2 PDF 文本抽取结果（raw/chapter_07_raw.md）中缺失，已依据 PCIe 6.2 原版 PDF 第 1399 页补录。原文本节仅一句 "This register is RsvdP."，因此本寄存器无位域定义（RsvdP 即 Reserved for future use, Preserved value）。
 
-
 <a id="sec-7-9-29-4"></a>
 ## 7.9.29.4 SVC Port Control Register (Offset 0Ch) | SVC 端口控制寄存器 (偏移量 0Ch)
 
@@ -110684,7 +109750,6 @@ Table 7-341 details allocation of register fields in the SVC Port Status Registe
 <a id="sec-7-9-29-5"></a>
 ## 7.9.29.5 SVC Port Status Register (Offset 10h) | SVC 端口状态寄存器 (偏移量 10h)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -110727,7 +109792,6 @@ SVC VC Protocols Supported 字段的编码值:
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -110851,7 +109915,6 @@ Table 7-344 details allocation of register fields in the VC Resource Status Regi
 <a id="sec-7-9-30"></a>
 ## 7.9.30 MMIO Register Block Locator Extended Capability (MRBL) | MMIO 寄存器块定位器扩展能力 (MRBL)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -110888,7 +109951,6 @@ MRBL 结构中包含的寄存器块数量在 MRBL Capabilities Register 中描�
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -111076,7 +110138,6 @@ Figure 7-397 details allocation of register fields in the MRBL Locator Register;
 </tr>
 </tbody>
 </table>
-
 
 ---
 
@@ -111495,7 +110556,6 @@ Figure 7-397 details allocation of register fields in the MRBL Locator Register;
 
 ---
 
-
 ## 📑 章节索引 (Sections)
 
 | # | Section | 小节 | Page |
@@ -111745,7 +110805,6 @@ Figure 7-397 details allocation of register fields in the MRBL Locator Register;
 <a id="sec-8-0"></a>
 ## 8. 电气子块 (Electrical Sub-Block)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -111790,7 +110849,6 @@ Key attributes of the Electrical Specification Include:
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -111922,7 +110980,6 @@ PCIe 支持两种 Refclk 数据架构:公共 Refclk (Common Refclk) 和独立 Re
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1410 -->
 <table>
 <thead>
@@ -111956,11 +111013,11 @@ PCI Express 电气规范将所有测量都参照设备的引脚 (Pin)。然而�
 </table>
 </div>
 
-
 ---
 
 > **Figure 8-1.** Tx Test Board for Non-Embedded Refclk
 > **图 8-1.** 非嵌入式参考时钟的发送端测试板
+
 > <img src="figures/chapter_08/fig_1410_1_tight.png" width="700">
 >
 > 图 8-1. 非嵌入式 Refclk 下的 Tx 测试板
@@ -111992,6 +111049,7 @@ Tx 规范的 6.0 版本还明确支持采用嵌入式 Refclk 的发送器 (Trans
 
 > **Figure 8-2.** Tx Test board for Embedded Refclk
 > **图 8-2.** 嵌入式参考时钟的发送端测试板
+
 > <img src="figures/chapter_08/fig_1410_2_tight.png" width="700">
 >
 > 图 8-2. 嵌入式 Refclk 下的 Tx 测试板
@@ -112003,7 +111061,6 @@ Tx 规范的 6.0 版本还明确支持采用嵌入式 Refclk 的发送器 (Trans
 ### 8.3.1 发送器特性测量设置 (Measurement Setup for Characterizing Transmitters)
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1411 -->
 <table>
@@ -112039,7 +111096,6 @@ In order to specify a Transmitter with a uniform set of Tx parameters it is nece
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -112127,6 +111183,7 @@ An example waveform is shown in (§ Figure 8-3). In this waveform the differenti
 
 > **Figure 8-3.** Single-ended and Differential Levels
 > **图 8-3.** 单端与差分电平
+
 > <img src="figures/chapter_08/fig_1412_1_tight.png" width="700">
 >
 > 图 8-3. 单端和差分电平
@@ -112135,7 +111192,6 @@ An example waveform is shown in (§ Figure 8-3). In this waveform the differenti
 
 <a id="sec-8-3-3"></a>
 ### 8.3.3 Tx 电压参数 (Tx Voltage Parameters)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -112178,7 +111234,6 @@ Tx 电压参数包括均衡 (Equalization) 系数、均衡预设 (Preset) 和最
 </table>
 </div>
 
-
 ---
 
 <a id="sec-8-3-3-1"></a>
@@ -112216,6 +111271,7 @@ Tx equalization coefficients for 64.0 GT/s are based on the following FIR filter
 
 > **Figure 8-4.** Tx Equalization FIR Representation for 8.0, 16.0, and 32.0 GT/s
 > **图 8-4.** 8.0、16.0 和 32.0 GT/s 的发送端均衡 FIR 表示
+
 > <img src="figures/chapter_08/fig_1413_1_tight.png" width="700">
 >
 > 图 8-4. 8.0、16.0 和 32.0 GT/s 的 Tx 均衡 FIR 表示
@@ -112224,6 +111280,7 @@ Tx equalization coefficients for 64.0 GT/s are based on the following FIR filter
 
 > **Figure 8-5.** Tx Equalization FIR Representation for 64.0 GT/s <!-- 📄 Page 1414 -->
 > **图 8-5.** 64.0 GT/s 的发送端均衡 FIR 表示
+
 > <img src="figures/chapter_08/fig_1414_1_tight.png" width="700">
 >
 > 图 8-5. 64.0 GT/s 的 Tx 均衡 FIR 表示
@@ -112232,7 +111289,6 @@ Tx equalization coefficients for 64.0 GT/s are based on the following FIR filter
 
 <a id="sec-8-3-3-3"></a>
 #### 8.3.3.3 8.0、16.0、32.0 和 64.0 GT/s 的 Tx 均衡预设 (Tx Equalization Presets for 8.0, 16.0, 32.0, and 64.0 GT/s)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -112263,11 +111319,11 @@ The presets defined in (§ Table 8-1) and (§ Table 8-2) are numbered to match t
 </table>
 </div>
 
-
 ---
 
 > **Figure 8-6.** Definition of Tx Voltage Levels and Equalization Ratios <!-- 📄 Page 1415 -->
 > **图 8-6.** 发送端电压电平与均衡比的定义
+
 > <img src="figures/chapter_08/fig_1415_1_tight.png" width="700">
 >
 > 图 8-6. Tx 电压电平和均衡比定义
@@ -112317,7 +111373,6 @@ The presets defined in (§ Table 8-1) and (§ Table 8-2) are numbered to match t
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1416 -->
 <table>
 <thead>
@@ -112354,7 +111409,6 @@ The presets defined in (§ Table 8-1) and (§ Table 8-2) are numbered to match t
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -112425,7 +111479,6 @@ Tx equalization de-emphasis values at 2.5 and 5.0 GT/s are measured using the av
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1417 -->
 <table>
 <thead>
@@ -112451,11 +111504,11 @@ equalized Compliance Pattern is captured by a real-time oscilloscope and the pos
 </table>
 </div>
 
-
 ---
 
 > **Figure 8-7.** Methodology for measuring Tx equalization coefficients and presets
 > **图 8-7.** 测量发送端均衡系数和预置的方法
+
 > <img src="figures/chapter_08/fig_1417_1_tight.png" width="700">
 >
 > 图 8-7. Tx 均衡系数和预设的测量方法
@@ -112572,8 +111625,8 @@ The range for a Transmitter's output voltage swing, (specified by Vd) with no eq
 
 > **Figure 8-8.** VTX-DIFF-PP and VTX-DIFF-PP-LOW Measurement
 > **图 8-8.** VTX-DIFF-PP 和 VTX-DIFF-PP-LOW 测量
-> <img src="figures/chapter_08/fig_1418_1_tight.png" width="700">
 
+> <img src="figures/chapter_08/fig_1418_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -112581,7 +111634,6 @@ The range for a Transmitter's output voltage swing, (specified by Vd) with no eq
 
 <a id="sec-8-3-3-7-constraints"></a>
 ## Coefficient Constraints for 8.0, 16.0, 32.0, and 64.0 GT/s | 8.0、16.0、32.0 和 64.0 GT/s 的系数约束
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -112622,7 +111674,6 @@ When the above constraints are applied the resulting coefficient space for 8.0, 
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-8-0)
 
 ---
@@ -112660,7 +111711,6 @@ When the above constraints are applied the resulting coefficient space for 8.0, 
 <a id="fig-8-9"></a> <!-- 📄 Page 1419 -->
 ## Figure 8-9 Transmit Equalization Coefficient Space Triangular Matrix Example for 8.0, 16.0, and 32.0 GT/s | 图 8-9 8.0、16.0 和 32.0 GT/s 发送均衡系数空间三角矩阵示例
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -112689,10 +111739,10 @@ When the above constraints are applied the resulting coefficient space for 8.0, 
 
 > **Figure 8-9.** Transmit Equalization Coefficient Space Triangular Matrix Example for 8.0, 16.0, and 32.0 GT/s
 > **图 8-9.** 8.0、16.0 和 32.0 GT/s 的发送端均衡系数空间三角矩阵示例
+
 > <img src="figures/chapter_08/fig_1419_1.png" width="700">
 
 </div>
-
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -112758,8 +111808,8 @@ The coefficient space for 64.0 GT/s with each pre-shoot2 coefficient may be mapp
 
 > **Figure 8-10.** Transmit Equalization Coefficient Space Triangular Matrix Example for 64.0 GT/s
 > **图 8-10.** 64.0 GT/s 的发送端均衡系数空间三角矩阵示例
-> <img src="figures/chapter_08/fig_1420_1.png" width="700">
 
+> <img src="figures/chapter_08/fig_1420_1.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -112767,7 +111817,6 @@ The coefficient space for 64.0 GT/s with each pre-shoot2 coefficient may be mapp
 
 <a id="sec-8-3-3-9"></a> <!-- 📄 Page 1421 -->
 ## 8.3.3.9 EIEOS and VTX-EIEOS-FS and VTX-EIEOS-RS Limits | EIEOS 与 VTX-EIEOS-FS、VTX-EIEOS-RS 限制
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -112810,7 +111859,6 @@ EIEOS 信号仅在 5.0、8.0、16.0、32.0 和 64.0 GT/s 速率下定义。在 5
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-8-0)
 
 ---
@@ -112818,30 +111866,11 @@ EIEOS 信号仅在 5.0、8.0、16.0、32.0 和 64.0 GT/s 速率下定义。在 5
 <a id="fig-8-11"></a> <!-- 📄 Page 1422 -->
 ## Figure 8-11 Measuring VTX-EIEOS-FS and VTX-EIEOS-RS at 8.0 GT/s | 图 8-11 在 8.0 GT/s 下测量 VTX-EIEOS-FS 和 VTX-EIEOS-RS
 
-<table>
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
 > **Figure 8-11.** Measuring VTX-EIEOS-FS and VTX-EIEOS-RS at 8.0 GT/s
-> <img src="figures/chapter_08/fig_1422_1_tight.png" width="700">
-
-</td>
-<td style="background-color:#e8e8e8">
-
+>
 > **图 8-11.** 8.0 GT/s 时测量 VTX-EIEOS-FS 和 VTX-EIEOS-RS
-> <img src="figures/chapter_08/fig_1422_1_tight.png" width="700">
 
-</td>
-</tr>
-</tbody>
-</table>
+> <img src="figures/chapter_08/fig_1422_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -112849,7 +111878,6 @@ EIEOS 信号仅在 5.0、8.0、16.0、32.0 和 64.0 GT/s 速率下定义。在 5
 
 <a id="sec-8-3-3-10"></a>
 ## 8.3.3.10 Reduced Swing Signaling | 缩减摆幅信号
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -112879,7 +111907,6 @@ PCI Express 发送器可选择性地支持缩减摆幅 (Reduced Swing) 信号。
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -112918,7 +111945,6 @@ Package loss (including silicon driver bandwidth) is represented by the ps21TX p
 <a id="sec-8-3-3-11-root"></a> <!-- 📄 Page 1423 -->
 ## Root Package vs Non-Root Package ps21TX at 16.0 and 32.0 GT/s | 16.0 和 32.0 GT/s 下 Root Package 与 Non-Root Package 的 ps21TX
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -112947,7 +111973,6 @@ The ps21TX parameter is informative for 16.0 GT/s Root Package devices and for N
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -113019,8 +112044,8 @@ Package loss is measured by comparing the 64-zeros/64-ones voltage swing (V111) 
 
 > **Figure 8-12.** Compliance Pattern and Resulting Package Loss Test Waveform
 > **图 8-12.** 接收端测试板
-> <img src="figures/chapter_08/fig_1423_1.png" width="700">
 
+> <img src="figures/chapter_08/fig_1423_1.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -113028,7 +112053,6 @@ Package loss is measured by comparing the 64-zeros/64-ones voltage swing (V111) 
 
 <a id="sec-8-3-3-11-measurement"></a> <!-- 📄 Page 1424 -->
 ## V101 and V111 Measurement Procedure | V101 与 V111 的测量流程
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -113068,7 +112092,6 @@ V101 与 V111 的测量在每个区间末端进行，以最小化码间干扰 (I
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -113413,7 +112436,6 @@ $$V_L = \frac{\sum_{i=1}^{8} \mu_{L,i}}{8}$$
 <a id="sec-8-3-4"></a>
 ## 8.3.4 Transmitter Margining | 发送器余量 (Margining)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -113443,7 +112465,6 @@ There are 8 encoded values for transmit margin from 000b to 111b. Encoding 000b 
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-8-0)
 
 ---
@@ -113462,9 +112483,6 @@ There are 8 encoded values for transmit margin from 000b to 111b. Encoding 000b 
 <tr>
 <td>
 
-> **Figure 8-13.** 2.5 and 5.0 GT/s Transmitter Margining Voltage Levels and Codes
-> **图 8-13.** 合规性/接收端校准—32.0 GT/s
-> <img src="figures/chapter_08/fig_1427_1_tight.png" width="700">
 >
 > *Margining codes (4 codes: 001, 010, 011, i where i ≥ 3) with corresponding voltage levels:*
 > - *Full Swing (A-0574A): 2.5 GT/s at -3.5 dB, 5.0 GT/s at -3.5 dB, 5.0 GT/s at -6 dB — voltage levels at 1200 mV (outside of eye), 800 mV (inside of eye), 400 mV (outside of eye), 200 mV (inside of eye).*
@@ -113478,11 +112496,16 @@ There are 8 encoded values for transmit margin from 000b to 111b. Encoding 000b 
 > - *满摆幅 (Full Swing, A-0574A):2.5 GT/s -3.5 dB、5.0 GT/s -3.5 dB、5.0 GT/s -6 dB — 电压电平为 1200 mV(眼图外)、800 mV(眼图内)、400 mV(眼图外)、200 mV(眼图内)。*
 > - *缩减摆幅 (Reduced Swing):2.5 GT/s 0 dB、5.0 GT/s 0 dB — 电压电平为 700 mV(眼图外)、400 mV(眼图内)、200 mV(眼图外)、100 mV(眼图内)。*
 
-<img src="figures/chapter_08/fig_1427_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 8-13.** 2.5 and 5.0 GT/s Transmitter Margining Voltage Levels and Codes
+>
+> **图 8-13.** 合规性/接收端校准—32.0 GT/s
+
+> <img src="figures/chapter_08/fig_1427_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -113490,7 +112513,6 @@ There are 8 encoded values for transmit margin from 000b to 111b. Encoding 000b 
 
 <a id="sec-8-3-4-jitter"></a>
 ## Transmitter Jitter Measurement (preliminary for 8.3.5) | 发送器抖动测量(8.3.5 前的预备内容)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -113524,7 +112546,6 @@ Direct probing at a Transmitter's pins is not generally feasible, so data is ins
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -113615,7 +112636,6 @@ A Transmitter may operate in the Independent Refclk (IR) mode, in which case the
 <a id="sec-8-3-5-3-cont"></a> <!-- 📄 Page 1428 -->
 ## 8.3.5.3 Independent Refclk Measurement and Post Processing (cont.) | 独立 Refclk 测量与后处理 (续)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -113683,7 +112703,6 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-8-0)
 
 ---
@@ -113703,7 +112722,6 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 <td>
 
 > **Figure 8-14. First Order CC Behavioral CDR Transfer Functions | 一阶 CC 行为 CDR 传递函数**
-> <img src="figures/chapter_08/fig_1430_1_tight.png" width="700">
 
 § Figure 8-15 illustrates second order CDR transfer functions corresponding to 2.5 GT/s and 5.0 GT/s. These functions are defined by a ζ of 0.707 and an f3dB of 1.5 MHz and 5.0 MHz, respectively. Behavioral transfer functions for 8.0 GT/s, 16.0 GT/s, 32.0 GT/s, and 64.0 GT/s approximate the piecewise linear sinusoidal jitter (Sj) masks shown in § Section 8.4.2.2.1. SRIS capable Transmitters must be evaluated using these behavioral transfer functions.
 
@@ -113716,11 +112734,12 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 
 **注:** 共同时钟 (Common Clock, CC) 和独立参考时钟 (Independent Reference Clock, IR) 架构之间不可互操作 — 尽管可以设计出同时满足两套电气要求的单一接收器 (Receiver)。
 
-<img src="figures/chapter_08/fig_1430_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_08/fig_1430_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -113741,18 +112760,18 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 <td>
 
 > **Figure 8-15. 2nd Order Behavioral SRIS CDR Transfer Functions for 2.5 GT/s and 5.0 GT/s | 2.5 GT/s 与 5.0 GT/s 的二阶行为 SRIS CDR 传递函数**
-> <img src="figures/chapter_08/fig_1431_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
-
-> **图 8-15.** 2.5 GT/s 与 5.0 GT/s 的二阶行为 SRIS CDR 传递函数
-> <img src="figures/chapter_08/fig_1431_1_tight.png" width="700">
 
 </td>
 </tr>
 </tbody>
 </table>
+
+> **图 8-15.** 2.5 GT/s 与 5.0 GT/s 的二阶行为 SRIS CDR 传递函数
+
+> <img src="figures/chapter_08/fig_1431_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -113760,7 +112779,6 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 
 <a id="sec-8-3-5-5-fig-8-16"></a> <!-- 📄 Page 1431 -->
 ## 8.3.5.5 Behavioral CDR Characteristics — Figure 8-16 & Equation 8-10/8-11 | 行为 CDR 特性 — 图 8-16 与公式 8-10/8-11
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -113775,7 +112793,6 @@ A behavioral CDR filter is applied to reject low frequency jitter that would nor
 <td>
 
 > **Figure 8-16. Behavioral SRIS CDR Function for 8.0 GT/s, and SRIS and CC CDR for 16.0 and 32.0 GT/s | 8.0 GT/s 行为 SRIS CDR,以及 16.0/32.0 GT/s 的 SRIS 和 CC CDR**
-> <img src="figures/chapter_08/fig_1432_1_tight.png" width="700">
 
 **H(s) =**
 
@@ -113793,7 +112810,6 @@ $$H(s) = \frac{s^2}{s^2 + sA + B} \times \frac{s^2 + 2\zeta_2 \omega_0 s + \omeg
 
 **Equation 8-11. SRIS Behavioral CDR Parameters at 8.0 GT/s | 8.0 GT/s 的 SRIS 行为 CDR 参数**
 
-<img src="figures/chapter_08/fig_1432_1_tight.png" width="700">
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -113817,8 +112833,10 @@ $$H(s) = \frac{s^2}{s^2 + sA + B} \times \frac{s^2 + 2\zeta_2 \omega_0 s + \omeg
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_08/fig_1432_1_tight.png" width="700">
+
+</div>
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -113843,9 +112861,7 @@ $$H(s) = \frac{s^2}{s^2 + sA + B} \times \frac{s^2 + 2\zeta_2 \omega_0 s + \omeg
 
 **Equation 8-12. SRIS and CC Behavioral CDR Parameters at 16.0 GT/s | 16.0 GT/s 的 SRIS 和 CC 行为 CDR 参数**
 
-<img src="figures/chapter_08/fig_1433_1_tight.png" width="700">
 > **Figure 8-17. Behavioral SRIS and CC CDR for 64.0 GT/s | 64.0 GT/s 的行为 SRIS 和 CC CDR**
-> <img src="figures/chapter_08/fig_1433_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -113860,13 +112876,14 @@ $$H(s) = \frac{s^2}{s^2 + sA + B} \times \frac{s^2 + 2\zeta_2 \omega_0 s + \omeg
 </tbody>
 </table>
 
+> <img src="figures/chapter_08/fig_1433_1_tight.png" width="700">
+
 [⬆️ 返回目录](#sec-8-0)
 
 ---
 
 <a id="sec-8-3-5-5-eq-8-13"></a> <!-- 📄 Page 1433 -->
 ## 8.3.5.5 Behavioral CDR Characteristics — Equation 8-13 | 行为 CDR 特性 — 公式 8-13
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -113926,7 +112943,6 @@ $$H(s) = \frac{s^2}{(s + \omega_0)(s + \omega_1)} \times \frac{s^2 + 2\zeta_2 \o
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -113983,7 +112999,6 @@ While DDJ is not explicitly defined as a parameter in the specification, it is n
 <a id="sec-8-3-5-7-fig-8-18"></a> <!-- 📄 Page 1435 -->
 ## 8.3.5.7 Data Dependent Jitter — Figure 8-18 / 8.3.5.8/9/10 | 数据相关抖动 — 图 8-18
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -114004,7 +113019,6 @@ While DDJ is not explicitly defined as a parameter in the specification, it is n
 - DDJ1, DDJ2, DDJ3
 
 > **Figure 8-18. Relation Between Data Edge PDFs and Recovered Data Clock | 数据边沿 PDF 与恢复数据时钟之间的关系**
-> <img src="figures/chapter_08/fig_1435_1_tight.png" width="700">
 
 Uncorrelated Total Jitter (UTJ) and uncorrelated deterministic jitter (Dual Dirac model) (UDJDD) are referenced to a recovered data clock generated by means of a CDR tracking function. Uncorrelated jitter may be derived after removing the DDJ component from each PDF and combining the PDFs for all edges in the pattern. By appropriately converting the PDF to a Q-scale it is possible to obtain the graphical relation shown in § Figure 8-19, from which TTX-UTJ and TTX-UDJDD may be derived. In § Figure 8-19 note that the two PDF curves are identical but that the fitted slopes, defined by 1/RJLH and 1/RJRH, may differ.
 
@@ -114019,7 +113033,6 @@ Uncorrelated Total Jitter (UTJ) and uncorrelated deterministic jitter (Dual Dira
 - 1/RJRH
 
 > **Figure 8-19. Derivation of TTX-UTJ and TTX-UDJDD | TTX-UTJ 与 TTX-UDJDD 的推导**
-> <img src="figures/chapter_08/fig_1435_2_tight.png" width="700">
 
 Random jitter is uncorrelated with respect to data dependent jitter. TTX-RJ may be obtained by subtracting TTX-UDJDD from TTX-UTJ and is included in the specification as an informative parameter only. It is typically used as a benchmark to characterize PLL performance.
 
@@ -114059,13 +113072,16 @@ Pulse width jitter is defined as an edge to edge phenomenon on consecutive edges
 ### 8.3.5.9 随机抖动 (TTX-RJ) (信息性)
 ### 8.3.5.10 非相关总 PWJ 与确定性 PWJ (TTX-UPW-TJ 与 TTX-UPW-DJDD)
 
-<img src="figures/chapter_08/fig_1435_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_08/fig_1435_1_tight.png" width="700">
+
+> <img src="figures/chapter_08/fig_1435_2_tight.png" width="700">
+
+</div>
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -114088,7 +113104,6 @@ Pulse width jitter is defined as an edge to edge phenomenon on consecutive edges
 An equivalent description of PWJ may be obtained by referencing to a fixed leading edge and having jitter contributions from both edges appear at the trailing edge. This approach yields a single PDF as shown below. Each 1 UI wide pulse in the pattern will have a different median for this PDF which is caused by ISI and F/2 jitter. The average of the medians for 1 UI wide pulses at odd and even UI numbers within the pattern are calculated, and the odd and even PDF's are normalized to the appropriate average of medians and summed to form an odd UI PDF and an even UI PDF. The final PDF is calculated from the sum of the summed odd and even UI PDFs. The key idea here is that the final PDF for uncorrelated PWJ should include F/2 or odd/even UI jitter
 
 > **Figure 8-20. PWJ Relative to Consecutive Edges 1 UI Apart | 相对于间隔 1 UI 的相邻边沿的 PWJ**
-> <img src="figures/chapter_08/fig_1436_1_tight.png" width="700">
 
 The PDF of jitter around each non-jittered edge may be converted into the Q-scale (see § Figure 8-21) from which TTX-UPW-TJ and TTX-UPW-DJDD may be derived in a manner analogous to TTX-UTJ and TTX-UDJDD. Note that the PDF may not be symmetric, and the tail of interest is RJLH, since it represents pulse compression.
 
@@ -114101,7 +113116,6 @@ The PDF of jitter around each non-jittered edge may be converted into the Q-scal
 - 1 UI – TTX-UPW-TJ/2
 
 > **Figure 8-21. Definition of TTX-UPW-DJDD and TTX-UPW-TJ Data Rate Dependent Transmitter Parameters | TTX-UPW-DJDD 与 TTX-UPW-TJ 的定义 — 速率相关发送器参数**
-> <img src="figures/chapter_08/fig_1436_2_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -114118,11 +113132,14 @@ PWJ 的等价描述可通过参考固定的引导边 (leading edge) 并将两个
 - TTX-UPW-TJ
 - 1 UI – TTX-UPW-TJ/2
 
-<img src="figures/chapter_08/fig_1436_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_08/fig_1436_1_tight.png" width="700">
+
+> <img src="figures/chapter_08/fig_1436_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -114130,7 +113147,6 @@ PWJ 的等价描述可通过参考固定的引导边 (leading edge) 并将两个
 
 <a id="sec-8-3-6"></a> <!-- 📄 Page 1437 -->
 ## 8.3.6 Data Rate Dependent Parameters | 速率相关参数
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -114160,7 +113176,6 @@ For 5.0 GT/s a similar removal of DDj must be performed to obtain UTj. However, 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -114239,7 +113254,6 @@ For 5.0 GT/s a similar removal of DDj must be performed to obtain UTj. However, 
 <a id="sec-8-3-6-cont-2"></a> <!-- 📄 Page 1439 -->
 ## 8.3.6 Data Rate Dependent Parameters (cont.) — Table 8-6 (cont. 2) | 速率相关参数 (续) — 表 8-6 (续 2)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -114292,7 +113306,6 @@ For 5.0 GT/s a similar removal of DDj must be performed to obtain UTj. However, 
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -114398,6 +113411,7 @@ channel's contribution to RL be de-embedded, thereby associating the return loss
 
 > **Figure 8-22.** Tx, Rx Differential Return Loss Mask with 50 Ohm Reference
 > **图 8-22.** COM 中的发送端均衡器建模
+
 > <img src="figures/chapter_08/fig_1441_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
@@ -114436,6 +113450,7 @@ Microprobing the package may be required to measure RL accurately. §
 
 > **Figure 8-23.** Tx, Rx Common Mode Return Loss Mask with 50 Ohm Reference
 > **图 8-23.** COM 中的封装效应建模
+
 > <img src="figures/chapter_08/fig_1442_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
@@ -114470,6 +113485,7 @@ Microprobing the package may be required to measure RL accurately. §
 
 > **Figure 8-24.** 64.0 GT/s Tx, Rx Differential Return Loss Mask with 50 Ohm Reference
 > **图 8-24.** COM 模型端口定义
+
 > <img src="figures/chapter_08/fig_1443_1_tight.png" width="700">
 
 <table>
@@ -114497,6 +113513,7 @@ Microprobing the package may be required to measure RL accurately. §
 
 > **Figure 8-25.** 64.0 GT/s Tx, Rx Common Mode Return Loss Mask with 50 Ohm Reference
 > **图 8-25.** 32.0 GT/s 参考均衡器
+
 > <img src="figures/chapter_08/fig_1444_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
@@ -114532,7 +113549,6 @@ PLL 带宽和峰值在发送器 (Transmitter) 和接收器 (Receiver) 两侧都�
 <a id="sec-8-3-9-1"></a>
 ### 8.3.9.1 2.5 GT/s 和 5.0 GT/s Tx PLL 带宽与峰值 (2.5 GT/s and 5.0 GT/s Tx PLL Bandwidth and Peaking)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -114561,7 +113577,6 @@ Two sets of bandwidth and peaking are defined for 5.0 GT/s: 8-16 MHz with 3 dB o
 </tbody>
 </table>
 </div>
-
 
 <a id="sec-8-3-9-2"></a>
 ### 8.3.9.2 8.0 GT/s、16.0 GT/s、32.0 GT/s 和 64.0 GT/s Tx PLL 带宽与峰值 (8.0 GT/s, 16.0 GT/s, 32.0 GT/s, and 64.0 GT/s Tx PLL Bandwidth and Peaking)
@@ -114592,7 +113607,6 @@ The Tx and Rx PLL bandwidth for 8.0 and 16.0 GT/s is 0.5-5 MHz with 1.0 dB of pe
 <a id="sec-8-3-9-3"></a>
 ### 8.3.9.3 串联电容 (Series Capacitors)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -114617,7 +113631,6 @@ PCI Express 要求使用串联电容以在 Tx 和 Rx 之间提供直流阻断 (D
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -114743,7 +113756,6 @@ All Receiver speeds are tested by means of a stressed eye applied over a calibra
 <a id="sec-8-4-1"></a>
 ### 8.4.1 接收器压力眼图规范 (Receiver Stressed Eye Specification)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -114768,7 +113780,6 @@ The closest practical measurement points to the Rx DUT are the coaxial connector
 </tbody>
 </table>
 </div>
-
 
 <a id="sec-8-4-1-1"></a>
 #### 8.4.1.1 引出通道与复制通道 (Breakout and Replica Channels)
@@ -114798,6 +113809,7 @@ In § Figure 8-26 the stressed eye is observed at TP2 with the signal sources co
 
 > **Figure 8-26.** Rx Test board Topology for 16.0 and 32.0 GT/s
 > **图 8-26.** 64.0 GT/s 参考均衡器
+
 > <img src="figures/chapter_08/fig_1447_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
@@ -114806,7 +113818,6 @@ In § Figure 8-26 the stressed eye is observed at TP2 with the signal sources co
 
 <a id="sec-8-4-1-2"></a>
 #### 8.4.1.2 校准通道插入损耗特性 (Calibration Channel Insertion Loss Characteristics)
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -114833,9 +113844,9 @@ Calibration channels, each with a specified differential insertion loss at one o
 </table>
 </div>
 
-
 > **Figure 8-27.** Example Calibration Channel IL Mask Excluding Rx Package for 8.0 GT/s
 > **图 8-27.** 参考接收器
+
 > <img src="figures/chapter_08/fig_1448_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
@@ -114930,7 +113941,6 @@ Rx 容差互连环境的阻抗目标为:对于 2.5、5.0 和 8.0 GT/s 通道，�
 </tbody>
 </table>
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -114955,7 +113965,6 @@ A calibration channel consists of a differential pair of PCB traces terminated a
 </tbody>
 </table>
 </div>
-
 
 <table>
 <thead>
@@ -115010,7 +114019,6 @@ This section gives an example of a 16.0 GT/s calibration channel that was built 
 </tbody>
 </table>
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -115060,9 +114068,9 @@ Sixteen differential pairs (85 Ohm Nominal Impedance) routed from SMA connectors
 </table>
 </div>
 
-
 > **Figure 8-28.** Example 16.0 GT/s Calibration Channel
 > **图 8-28.** 64.0 GT/s 参考接收器
+
 > <img src="figures/chapter_08/fig_1452_1_tight.png" width="700">
 
 <table>
@@ -115094,14 +114102,17 @@ CEM 连接器钻孔的焊盘叠层 (pad stack) 如 § Figure 8-30 所示,SMA 钻
 
 > **Figure 8-29.** Stackup for Example 16.0 GT/s Calibration Channel
 > **图 8-29.** 参考接收器参数
+
 > <img src="figures/chapter_08/fig_1452_2_tight.png" width="700">
 
 > **Figure 8-30.** CEM Connector Drill Hole Pad Stack
 > **图 8-30.** 32.0 GT/s 参考通道 IL 和 ILD
+
 > <img src="figures/chapter_08/fig_1453_1_tight.png" width="700">
 
 > **Figure 8-31.** Pad Stack for SMA Drill Holes
 > **图 8-31.** 32.0 GT/s 的参考通道参数
+
 > <img src="figures/chapter_08/fig_1454_1.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
@@ -115133,7 +114144,6 @@ This section gives an example of a 32.0 GT/s calibration channel that was built 
 </tr>
 </tbody>
 </table>
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -115188,9 +114198,9 @@ Sixteen differential pairs (85 Ohm Nominal Impedance) routed on a Megtron-6 PCB 
 </table>
 </div>
 
-
 > **Figure 8-32.** Example 32.0 GT/s Calibration Channel
 > **图 8-32.** 32.0 GT/s 的参考串扰通道 IL
+
 > <img src="figures/chapter_08/fig_1456_1_tight.png" width="700">
 
 <table>
@@ -115218,6 +114228,7 @@ The stack-up for both 85 Ohm boards is shown in § Figure 8-33 where 65% is the 
 
 > **Figure 8-33.** Stack-up for Example 32.0 GT/s Calibration Channel
 > **图 8-33.** 32.0 GT/s IB 和 OB 串扰通道的 FEXT 和 ICN 模型
+
 > <img src="figures/chapter_08/fig_1456_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
@@ -115250,7 +114261,6 @@ The Receiver test requires that the stressed eye characteristics be measured at 
 </tbody>
 </table>
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -115276,7 +114286,6 @@ Behavioral Rx package models are included as part of the post processing to allo
 </table>
 </div>
 
-
 <table>
 <thead>
 <tr>
@@ -115299,7 +114308,6 @@ The 8.0, 32.0, and 64.0 GT/s stressed eye test for all devices and the 16.0 GT/s
 </tr>
 </tbody>
 </table>
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -115329,7 +114337,6 @@ Post processing shall include a behavioral CDR model with a data rate dependent 
 </tbody>
 </table>
 </div>
-
 
 <table>
 <thead>
@@ -115488,7 +114495,6 @@ CTLE 和 DFE 的 Rx 均衡算法仅用作在校准通道 ISI 及其他信号损�
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1458 -->
 <table>
 <thead>
@@ -115558,33 +114564,13 @@ Figure 8-34 8.0 GT/s 行为级 CTLE 的传递函数
 </table>
 </div>
 
-
 ---
 
-<table> <!-- 📄 Page 1459 -->
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
 > **Figure 8-35.** Loss Curves for 8.0 GT/s Behavioral CTLE
-> <img src="figures/chapter_08/fig_1459_1_tight.png" width="700">
-
-</td>
-<td style="background-color:#e8e8e8">
-
+>
 > **图 8-35.** 8.0 GT/s 行为 CTLE 损耗曲线
-> <img src="figures/chapter_08/fig_1459_1_tight.png" width="700">
 
-</td>
-</tr>
-</tbody>
-</table>
+> <img src="figures/chapter_08/fig_1459_1_tight.png" width="700">
 
 ---
 
@@ -115602,8 +114588,8 @@ Figure 8-34 8.0 GT/s 行为级 CTLE 的传递函数
 
 > **Figure 8-36.** Loss Curves for 16.0 GT/s Behavioral CTLE
 > **图 8-36.** 64.0 GT/s 的参考通道参数
-> <img src="figures/chapter_08/fig_1459_2_tight.png" width="700">
 
+> <img src="figures/chapter_08/fig_1459_2_tight.png" width="700">
 
 ---
 
@@ -115635,7 +114621,6 @@ Figure 8-34 8.0 GT/s 行为级 CTLE 的传递函数
 </table>
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1460 -->
 <table>
@@ -115730,33 +114715,13 @@ FZ2 = |直流增益| × FP2
 </table>
 </div>
 
-
 ---
 
-<table> <!-- 📄 Page 1461 -->
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
 > **Figure 8-37.** Loss Curves for 32.0 GT/s Behavioral CTLE
-> <img src="figures/chapter_08/fig_1461_1.png" width="700">
-
-</td>
-<td style="background-color:#e8e8e8">
-
+>
 > **图 8-37.** 32.0 GT/s 行为 CTLE 损耗曲线
-> <img src="figures/chapter_08/fig_1461_1.png" width="700">
 
-</td>
-</tr>
-</tbody>
-</table>
+> <img src="figures/chapter_08/fig_1461_1.png" width="700">
 
 ---
 
@@ -115888,11 +114853,10 @@ FZ3 = 7.7 GHz
 
 > **Figure 8-38.** Loss Curves for 64.0 GT/s Behavioral CTLE
 > **图 8-38.** 64.0 GT/s 的参考串扰通道参数
+
 > <img src="figures/chapter_08/fig_1463_1_tight.png" width="700">
 
-
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -115927,33 +114891,13 @@ At 8.0 GT/s the combination of a 1st order CTLE and a one-tap DFE algorithm is r
 </table>
 </div>
 
-
 ---
 
-<table> <!-- 📄 Page 1464 -->
-<thead>
-<tr>
-<th width="50%">🇬🇧 English</th>
-<th width="50%" style="background-color:#e8e8e8">🏆 中文</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>
-
 > **Figure 8-39.** Variables Definition and Diagram for 1-tap DFE
-> <img src="figures/chapter_08/fig_1464_1_tight.png" width="700">
-
-</td>
-<td style="background-color:#e8e8e8">
-
+>
 > **图 8-39.** 1-tap DFE 的变量定义与示意图
-> <img src="figures/chapter_08/fig_1464_1_tight.png" width="700">
 
-</td>
-</tr>
-</tbody>
-</table>
+> <img src="figures/chapter_08/fig_1464_1_tight.png" width="700">
 
 ---
 
@@ -115996,11 +114940,10 @@ At 8.0 GT/s the combination of a 1st order CTLE and a one-tap DFE algorithm is r
 
 > **Figure 8-40.** Diagram for 2-tap DFE
 > **图 8-40.** 封装 COM 模型
+
 > <img src="figures/chapter_08/fig_1464_1.png" width="700">
 
-
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -116034,7 +114977,6 @@ For 64.0 GT/s, the feedback signal yk* can take values of -1, -1/3, +1/3 and +1.
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -116090,7 +115032,6 @@ EH/EW 定义的参考点对应于 8.0、16.0、32.0 和 64.0 GT/s 下接收器�
 </table>
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1466 -->
 <table>
@@ -116197,7 +115138,6 @@ For all EH, EW and eye area measurements performed in receiver calibration the A
 </table>
 </div>
 
-
 ---
 
 <table> <!-- 📄 Page 1467 -->
@@ -116293,7 +115233,6 @@ Note that because the first tiebreaker is highest loss - most approaches will st
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1468 -->
 <table>
 <thead>
@@ -116323,7 +115262,6 @@ Based upon the data rate at which the Rx is being tested, Rj or Sj and different
 </table>
 </div>
 
-
 ---
 
 <table>
@@ -116336,10 +115274,6 @@ Based upon the data rate at which the Rx is being tested, Rj or Sj and different
 <tbody>
 <tr>
 <td>
-
-> **Figure 8-41.** Layout for Calibrating the Stressed Jitter Eye at 8.0 GT/s
-> **图 8-41.** 发送端封装模型参数
-> <img src="figures/chapter_08/fig_1468_1_tight.png" width="700">
 
 Layout (TP1 → TP5/TP4 flow):
 
@@ -116366,11 +115300,16 @@ Layout (TP1 → TP5/TP4 flow):
 - TP2P:10^-12 BER 下的 EH/EW (EH 调整)
 - TP5、TP4
 
-<img src="figures/chapter_08/fig_1468_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 8-41.** Layout for Calibrating the Stressed Jitter Eye at 8.0 GT/s
+>
+> **图 8-41.** 发送端封装模型参数
+
+> <img src="figures/chapter_08/fig_1468_1_tight.png" width="700">
 
 ---
 
@@ -116402,7 +115341,6 @@ Layout (TP1 → TP5/TP4 flow):
 </table>
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1469 -->
 <table>
@@ -116448,10 +115386,10 @@ Layout (TP1 → TP5/TP4 flow):
 
 > **Figure 8-42.** Layout for Calibrating the Stressed Jitter Eye at 16.0, 32.0, and 64.0 GT/s
 > **图 8-42.** 接收端封装模型参数
+
 > <img src="figures/chapter_08/fig_1469_1_tight.png" width="700">
 
 </div>
-
 
 ---
 
@@ -116552,7 +115490,6 @@ Layout (TP1 → TP5/TP4 flow):
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -116593,7 +115530,6 @@ A waveform post processing tool or a channel compliance methodology tool may be 
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -116692,6 +115628,7 @@ Receivers operating at 8.0 GT/s in the IR mode use the Sj mask profile shown in 
 
 > **Figure 8-43.** Sj Mask for Receivers Operating in IR mode at 8.0 GT/s
 > **图 8-43.** RX 封装差分插入损耗 (IL) 模板
+
 > <img src="figures/chapter_08/fig_1472_1_tight.png" width="700">
 
 ---
@@ -116722,7 +115659,6 @@ Receivers operating at 16.0 GT/s in the Independent Refclk (IR) mode use the Sj 
 </table>
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -116755,9 +115691,9 @@ Receivers operating at 16.0 GT/s in the Common Clock (CC) Refclk mode use the Sj
 </table>
 </div>
 
-
 > **Figure 8-45.** Sj Mask for Receivers Operating in CC mode at 16.0 GT/s
 > **图 8-45.** 发送端 EQ 系数映射
+
 > <img src="figures/chapter_08/fig_1473_1_tight.png" width="700">
 
 ---
@@ -116793,6 +115729,7 @@ Receivers operating at 32.0 GT/s in the IR mode use the Sj mask profile shown in
 
 > **Figure 8-46.** Sj Mask for Receivers Operating in SRIS mode at 32.0 GT/s
 > **图 8-46.** PAM4 抖动拟合流程
+
 > <img src="figures/chapter_08/fig_1474_1_tight.png" width="700">
 
 ---
@@ -116828,6 +115765,7 @@ Receivers operating at 32.0 GT/s in the CC Refclk mode use the Sj mask profile s
 
 > **Figure 8-47.** Sj Mask for Receivers Operating in CC mode at 32.0 GT/s
 > **图 8-47.** 32.0 GT/s 参考 PLL
+
 > <img src="figures/chapter_08/fig_1475_1_tight.png" width="700">
 
 ---
@@ -116863,6 +115801,7 @@ Receivers operating at 64.0 GT/s in the IR mode use the Sj mask profile shown in
 
 > **Figure 8-48.** Sj Mask for Receivers Operating in SRIS mode at 64.0 GT/s
 > **图 8-48.** 64.0 GT/s 参考 PLL
+
 > <img src="figures/chapter_08/fig_1476_1_tight.png" width="700">
 
 ---
@@ -116898,10 +115837,10 @@ Receivers operating at 64.0 GT/s in the CC Refclk mode use the Sj mask profile s
 
 > **Figure 8-49.** Sj Mask for Receivers Operating in CC mode at 64.0 GT/s
 > **图 8-49.** 参考通道（32.0 GT/s）
+
 > <img src="figures/chapter_08/fig_1477_1_tight.png" width="700">
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -116934,9 +115873,9 @@ Receivers operating in the CC Refclk mode at 8.0 GT/s shall utilize the Sj profi
 </table>
 </div>
 
-
 > **Figure 8-50.** Sj Masks for Receivers Operating in CC Mode at 8.0 GT/s
 > **图 8-50.** 参考通道插入损耗和 ILD（32.0 GT/s）
+
 > <img src="figures/chapter_08/fig_1478_1_tight.png" width="700">
 
 ---
@@ -116998,6 +115937,7 @@ A Rx is permitted to support one or both of two clock modes: CC and IR although 
 
 > **Figure 8-51.** Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 > **图 8-51.** TP1 处与频率相关的 IL 和 RL 模板
+
 > <img src="figures/chapter_08/fig_1479_1_tight.png" width="700">
 
 ---
@@ -117116,7 +116056,6 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -117158,7 +116097,6 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 </table>
 </div>
 
-
 ---
 
 <table>
@@ -117193,7 +116131,6 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 </table>
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -117232,7 +116169,6 @@ Figure 8-51 Layout for Jitter Testing Common Refclk Rx at 16.0 GT/s
 </table>
 </div>
 
-
 ---
 
 <table>
@@ -117260,6 +116196,7 @@ EFI 检测电路的能力难以随数据速率按比例缩放，因此 5.0、8.0
 
 > **Figure 8-53.** Exit from Idle Voltage and Time Margins
 > **图 8-53.** TP1a 处与频率相关的 IL 和 RL 模板
+
 > <img src="figures/chapter_08/fig_1483_1_tight.png" width="700">
 
 ---
@@ -117295,7 +116232,6 @@ The measurement methodology and frequency binning for differential and common mo
 <a id="sec-8-4-3-2"></a>
 ## 8.4.3.2 Receiver Return Loss | 接收器回损
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -117320,7 +116256,6 @@ PCI Express components including Retimers that support the 16.0 GT/s or higher r
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -117356,6 +116291,7 @@ For simplicity, the margin commands and requirements described in § Section 4.2
 
 > **Figure 8-54.** Allowed Ranges for Maximum NRZ Timing and Voltage Margin
 > **图 8-54.** TP1a 处与频率相关的 IL 模板值
+
 > <img src="figures/chapter_08/fig_1484_1_tight.png" width="700">
 
 ---
@@ -117391,10 +116327,10 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 
 > **Figure 8-55.** Allowed Ranges for Maximum PAM4 Timing and Voltage Margins
 > **图 8-55.** 系统主板 IL 设计目标
+
 > <img src="figures/chapter_08/fig_1485_1_tight.png" width="700">
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -117432,7 +116368,6 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -117491,7 +116426,6 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -117531,7 +116465,6 @@ For PAM4 (3 eyes): 0.35 UI (max), 0.1 UI (min), -0.1 UI (min), -0.35 UI (max), 1
 </table>
 </div>
 
-
 ---
 
 <a id="sec-8-4-5"></a>
@@ -117565,7 +116498,6 @@ All PCI Express signal and power supply pins must be tested for ESD protection l
 <a id="sec-8-4-5-1"></a>
 ## 8.4.5.1 ESD Standards | ESD 标准
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -117594,7 +116526,6 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -117628,7 +116559,6 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 
 <a id="sec-8-4-5-3"></a>
 ## 8.4.5.3 Short Circuit Requirements | 短路要求
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -117667,7 +116597,6 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 </table>
 </div>
 
-
 ---
 
 <a id="sec-8-4-5-4"></a> <!-- 📄 Page 1488 -->
@@ -117700,7 +116629,6 @@ PCI Express 链路的每条通道 (Lane) 必须进行 AC 耦合。电容的最�
 
 <a id="sec-8-4-5-5"></a>
 ## 8.4.5.5 Electrical Idle | 电气空闲
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -117755,7 +116683,6 @@ EIOS 的成功接收依据《Physical Layer Logical Block》一章中定义的�
 </table>
 </div>
 
-
 ---
 
 <a id="sec-8-4-5-6"></a>
@@ -117796,7 +116723,6 @@ Transmitter DC common mode voltage is held at the same value during all states u
 
 <a id="sec-8-4-5-7"></a> <!-- 📄 Page 1489 -->
 ## 8.4.5.7 Receiver Detection | 接收器检测
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -117854,7 +116780,6 @@ b. 若发送器端电压的充电速率由发送器阻抗、串联电容、互�
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -117924,6 +116849,7 @@ The key components and processes of channel tolerancing are illustrated in § Fi
 
 > **Figure 8-56.** Flow Diagram for Channel Tolerancing at 2.5 and 5.0 GT/s <!-- 📄 Page 1490 -->
 > **图 8-56.** 系统主板 IL 设计目标系数
+
 > <img src="figures/chapter_08/fig_1490_1_tight.png" width="700">
 
 **Table 8-56.** Flow Diagram for Channel Tolerancing at 2.5 and 5.0 GT/s | 表 8-56. 2.5 GT/s 与 5.0 GT/s 通道容差流程图
@@ -117955,10 +116881,10 @@ The basic channel compliance approach is to first acquire the channel's characte
 
 > **Figure 8-57.** Flow Diagram for Channel Tolerancing at 8.0 and 16.0 GT/s
 > **图 8-57.** 测试负载
+
 > <img src="figures/chapter_08/fig_1490_2_tight.png" width="700">
 
 **Table 8-57.** Flow Diagram for Channel Tolerancing at 8.0 and 16.0 GT/s | 表 8-57. 8.0 GT/s 与 16.0 GT/s 通道容差流程图
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -117995,7 +116921,6 @@ For 8.0, 16.0, 32.0, and 64.0 GT/s testing the simulation process must properly 
 </table>
 </div>
 
-
 ---
 
 <table> <!-- 📄 Page 1491 -->
@@ -118018,10 +116943,6 @@ A separate pair of package models are defined for 8.0, 16.0, 32.0, and 64.0 GT/s
 
 The package models are included with the specification as design collateral. Each model for 8.0 and 16.0 GT/s comprehends CPIN and CPAD parasitic capacitances plus a differential t-line element as illustrated in § Figure 8-58.
 
-> **Figure 8-58.** Tx/Rx Behavioral Package Models
-> **图 8-58.** 32.0 GT/s 发送端抖动模板
-> <img src="figures/chapter_08/fig_1491_1_tight.png" width="700">
-
 The CPIN and CPAD values used in the package model generation are provided for informative purposes only.
 
 </td>
@@ -118038,11 +116959,16 @@ The CPIN and CPAD values used in the package model generation are provided for i
 
 用于生成封装模型的 CPIN 与 CPAD 值仅供参考。
 
-<img src="figures/chapter_08/fig_1491_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 8-58.** Tx/Rx Behavioral Package Models
+>
+> **图 8-58.** 32.0 GT/s 发送端抖动模板
+
+> <img src="figures/chapter_08/fig_1491_1_tight.png" width="700">
 
 ---
 
@@ -118108,10 +117034,12 @@ For ease of incorporation into the post processing flow the 8.0 and 16.0 behavio
 
 > **Figure 8-59.** Behavioral Tx and Rx S-Port Designation for 8.0 and 16.0 GT/s Packages <!-- 📄 Page 1492 -->
 > **图 8-59.** 64.0 GT/s 发送端抖动模板
+
 > <img src="figures/chapter_08/fig_1492_1_tight.png" width="700">
 
 > **Figure 8-60.** SDD21 Plots for Root and Non-Root Packages for 16.0 GT/s
 > **图 8-60.** 32.0 GT/s 接收端抖动模板
+
 > <img src="figures/chapter_08/fig_1492_2_tight.png" width="700">
 
 <table>
@@ -118143,7 +117071,6 @@ For 32.0 GT/s, reference package models the die capacitive loads are included in
 
 ---
 
-
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1493 -->
 <table>
 <thead>
@@ -118170,6 +117097,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 > **Figure 8-61.** Insertion Loss for Root Reference Package for 32.0 GT/s
 > **图 8-61.** 64.0 GT/s 接收端抖动模板
+
 > <img src="figures/chapter_08/fig_1493_1.png" width="700">
 
 > **Figure 8-62.** Return Loss for Root Reference Package for 32.0 GT/s
@@ -118177,11 +117105,11 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 </div>
 
-
 ---
 
 > **Figure 8-63.** NEXT for Root Reference Package (Worst-Case) for 32.0 GT/s <!-- 📄 Page 1494 -->
 > **图 8-63.** 64.0 GT/s 参考 DFE 误码率浴盆曲线
+
 > <img src="figures/chapter_08/fig_1494_1.png" width="700">
 
 > **Figure 8-64.** FEXT for Root Reference Package (Worst-Case) for 32.0 GT/s
@@ -118191,6 +117119,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 > **Figure 8-65.** Insertion Loss for Non-Root Reference Package for 32.0 GT/s <!-- 📄 Page 1495 -->
 > **图 8-65.** 参考通道 IL 模板参数（64.0 GT/s）
+
 > <img src="figures/chapter_08/fig_1495_1.png" width="700">
 
 > **Figure 8-66.** Return Loss for Non-Root Reference Package for 32.0 GT/s
@@ -118200,6 +117129,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 > **Figure 8-67.** NEXT for Non-Root Reference Package (Worst-Case) for 32.0 GT/s <!-- 📄 Page 1496 -->
 > **图 8-67.** 参考 EBR 介质（64.0 GT/s）
+
 > <img src="figures/chapter_08/fig_1496_1.png" width="700">
 
 > **Figure 8-68.** FEXT for Non-Root Reference Package (Worst-Case) for 32.0 GT/s
@@ -118209,6 +117139,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 > **Figure 8-69.** Insertion Loss for Root Reference Package for 64.0 GT/s <!-- 📄 Page 1497 -->
 > **图 8-69.** 参考封装交叉耦合（64.0 GT/s）
+
 > <img src="figures/chapter_08/fig_1497_1.png" width="700">
 
 > **Figure 8-70.** Return Loss for Root Reference Package for 64.0 GT/s
@@ -118218,6 +117149,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 > **Figure 8-71.** NEXT for Root Reference Package (Worst Case) for 64.0 GT/s <!-- 📄 Page 1498 -->
 > **图 8-71.** COM PB 测试负载返回损耗模板
+
 > <img src="figures/chapter_08/fig_1498_1.png" width="700">
 
 > **Figure 8-72.** FEXT for Root Reference Package (Worst Case) for 64.0 GT/s
@@ -118227,6 +117159,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 > **Figure 8-73.** Insertion Loss for Non-Root Reference Package for 64.0 GT/s <!-- 📄 Page 1499 -->
 > **图 8-73.** 32.0 GT/s 通道 IL 模板参数
+
 > <img src="figures/chapter_08/fig_1499_1.png" width="700">
 
 > **Figure 8-74.** Return Loss for Non-Root Reference Package for 64.0 GT/s
@@ -118236,6 +117169,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 > **Figure 8-75.** NEXT for Non-Root Reference Package (Worst Case) for 64.0 GT/s <!-- 📄 Page 1500 -->
 > **图 8-75.** 64.0 GT/s 封装 RLR 参数
+
 > <img src="figures/chapter_08/fig_1500_1.png" width="700">
 
 > **Figure 8-76.** FEXT for Non-Root Reference Package (Worst Case) for 64.0 GT/s
@@ -118245,6 +117179,7 @@ return loss characteristics of on-die pad for a typical design. The reference im
 
 > **Figure 8-77.** 32.0 and 64.0 GT/s Reference Package Port Connections for Pin to Pin Channel Evaluation <!-- 📄 Page 1501 -->
 > **图 8-77.** 32.0 GT/s 回波损耗参数
+
 > <img src="figures/chapter_08/fig_1501_1_tight.png" width="700">
 
 <table>
@@ -118275,7 +117210,6 @@ return loss characteristics of on-die pad for a typical design. The reference im
 <a id="sec-8-5-1-2"></a>
 ## 8.5.1.2 Measuring Package Performance (16.0 GT/s only) | 封装性能测量(仅适用于 16.0 GT/s)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -118304,7 +117238,6 @@ Package insertion loss at 16.0 GT/s is an informative spec parameter. Some imple
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -118339,7 +117272,6 @@ Channel tolerancing is implemented by means of simulation, where the pass/fail c
 </table>
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;"> <!-- 📄 Page 1502 -->
 <table>
@@ -118393,7 +117325,6 @@ Output eye parameters: The simulator shall generate a statistically defined outp
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -118548,7 +117479,6 @@ An open source simulation tool shall be provided with the specification as desig
 <a id="sec-8-5-1-4-1"></a>
 ## 8.5.1.4.1 Deriving Voltage and Jitter Parameters | 电压与抖动参数推导
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -118584,7 +117514,6 @@ This section is for informative purposes. The voltage and jitter parameters may 
 </table>
 </div>
 
-
 ---
 
 **A-0840A**
@@ -118599,6 +117528,7 @@ TTX-CH-UDJDD = TTX-UDJ-DD – (TTXUPWJ-DJDD)/2 = 7.00ps
 
 > **Figure 8-78.** Example Derivation of 8.0 GT/s Jitter Parameters for § Table 8-15
 > **图 8-78.** 64.0 GT/s 系统主板插入损耗设计目标
+
 > <img src="figures/chapter_08/fig_1503_1.png" width="700">
 
 ---
@@ -118626,7 +117556,6 @@ A channel must be tested at all data rates, with the corresponding Tx jitter par
 <td style="background-color:#e8e8e8">
 
 通道必须在正常运行期间所支持的所有数据速率下、使用对应的 Tx 抖动参数进行测试。例如，旨在支持最高 8.0 GT/s 数据速率的通道，必须在 2.5、5.0 和 8.0 GT/s 下进行测试。
-
 
 | 符号 (Symbol) | 参数 (Parameter) | 数值 (Value) | 单位 (Units) | 备注 (Notes) |
 |--------|-----------|-------|-------|-------|
@@ -118756,7 +117685,6 @@ The behavioral receiver selects the combination of Transmitter Equalization, CTL
 <a id="sec-8-5-1-4-3"></a>
 ## 8.5.1.4.3 Pass/Fail Eye Characteristics | Pass/Fail 眼图特性
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -118786,13 +117714,13 @@ The output of the simulation tool shall be in the form of pass/fail characterist
 </table>
 </div>
 
-
 ---
 
 > **A-0841A** <!-- 📄 Page 1506 -->
 >
 > **Figure 8-79.** EH, EW Mask
 > **图 8-79.** 64.0 GT/s 系统主板 IL 设计目标系数
+
 > <img src="figures/chapter_08/fig_1506_1.png" width="700">
 >
 > Eye Width ± 0.1 UI
@@ -118825,7 +117753,6 @@ Note that the pass/fail EH and EW limits shown in § Figure 8-79 are identical t
 <td style="background-color:#e8e8e8">
 
 注意,§ Figure 8-79 中所示的 Pass/Fail EH 与 EW 限值与 § Table 8-11 中为 8.0 与 16.0 GT/s Rx 测试所定义的限值完全相同。对于 32.0 和 64.0 GT/s,Pass/Fail EH 与 EW 限值仍然相同，但它们在最佳采样位置处计算。对于 2.5 和 5.0 GT/s,Rx 测试的限值以封装引脚为参考点;而本表中通道容差测试的限值，在施加了与 8.0 GT/s 通道容差测试所用的相同参考封装后，以接收器焊盘为参考点。
-
 
 </td>
 </tr>
@@ -118921,7 +117848,6 @@ Note that the pass/fail EH and EW limits shown in § Figure 8-79 are identical t
 <a id="sec-8-5-1-4-4"></a>
 ## 8.5.1.4.4 Characterizing Channel Common Mode Noise | 通道共模噪声特性
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -118954,7 +117880,6 @@ Note that the Tx and channel CM noise parameters cannot simply be added to obtai
 </tbody>
 </table>
 </div>
-
 
 ---
 
@@ -119007,7 +117932,6 @@ VCH-IDLE-DET-DIFF-pp 的定义旨在保证:当发送器 (Transmitter) 发出 EIE
 <a id="sec-8-6"></a>
 ## 8.6 Refclk Specifications | Refclk 规范
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -119041,7 +117965,6 @@ Refclk 的测试设置假设仅有 Refclk 发生器本身存在。测试设置�
 </table>
 </div>
 
-
 ---
 
 <a id="sec-8-6-1"></a>
@@ -119074,6 +117997,7 @@ Refclk 的测试设置假设仅有 Refclk 发生器本身存在。测试设置�
 
 > **Figure 8-80.** Oscilloscope Refclk Test Setup for All Cases Except Jitter at 32.0 and 64.0 GT/s <!-- 📄 Page 1510 -->
 > **图 8-80.** TP1a 的 64.0 GT/s 回波损耗模板
+
 > <img src="figures/chapter_08/fig_1510_1_tight.png" width="700">
 
 ---
@@ -119206,36 +118130,42 @@ All specifications in § Table 8-18 are to be measured using a test configuratio
 
 > **Figure 8-81.** Single-Ended Measurement Points for Absolute Cross Point and Swing
 > **图 8-81.** 64.0 GT/s 回波损耗参数
+
 > <img src="figures/chapter_08/fig_1512_1_tight.png" width="700">
 
 ---
 
 > **Figure 8-82.** Single-Ended Measurement Points for Delta Cross Point
 > **图 8-82.** 64.0 GT/s 的 COM 中频响应
+
 > <img src="figures/chapter_08/fig_1512_2_tight.png" width="700">
 
 ---
 
 > **Figure 8-83.** Single-Ended Measurement Points for Rise and Fall Time Matching <!-- 📄 Page 1513 -->
 > **图 8-83.** 32.0 GT/s COM 的 EBR 与 IL
+
 > <img src="figures/chapter_08/fig_1513_1_tight.png" width="700">
 
 ---
 
 > **Figure 8-84.** Differential Measurement Points for Duty Cycle and Period
 > **图 8-84.** 64.0 GT/s M951 串扰 FEXT 参数
+
 > <img src="figures/chapter_08/fig_1513_2_tight.png" width="700">
 
 ---
 
 > **Figure 8-85.** Differential Measurement Points for Rise and Fall Time
 > **图 8-85.** 64.0 GT/s M951 串扰 IL
+
 > <img src="figures/chapter_08/fig_1513_3_tight.png" width="700">
 
 ---
 
 > **Figure 8-86.** Differential Measurement Points for Ringback <!-- 📄 Page 1514 -->
 > **图 8-86.** 参考 RL 目标
+
 > <img src="figures/chapter_08/fig_1514_1_tight.png" width="700">
 
 ---
@@ -119284,7 +118214,6 @@ A number of Refclk parameters are data rate independent and are listed in the ta
 **注释(中文):**
 1. 该参数仅与 Common Refclk 架构相关。
 2. 测量在 0.5 μs 时间窗口内进行,使用一阶 LPF,其截止频率 fc 为调制频率的 60 倍。
-
 
 ---
 
@@ -119348,8 +118277,6 @@ Refclks supporting SSC must meet an additional jitter limit over a range of low 
 
 **Figure 8-87.** Limits for phase jitter from the Reference with 5000 ppm SSC
 
-<img src="figures/chapter_08/fig_1515_1_tight.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -119357,11 +118284,12 @@ Refclks supporting SSC must meet an additional jitter limit over a range of low 
 
 **图 8-87.** 参考时钟在 5000 ppm SSC 下的相位抖动限值
 
-<img src="figures/chapter_08/fig_1515_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_08/fig_1515_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -119369,7 +118297,6 @@ Refclks supporting SSC must meet an additional jitter limit over a range of low 
 
 <a id="sec-8-6-4"></a>
 ## 8.6.4 Refclk Architectures Supported | 支持的 Refclk 架构
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -119395,7 +118322,6 @@ Two Refclk architectures are supported: Common Refclk (CC) and Independent Refcl
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -119440,7 +118366,6 @@ Note that the PLL and CDR filter functions represent minimally capable approxima
 <a id="sec-8-6-5-1"></a>
 ## 8.6.5.1 PLL Filter Transfer Function Example | PLL 滤波传递函数示例
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -119482,7 +118407,6 @@ $$\frac{\omega_{3dB}}{\omega_n} = \sqrt{\sqrt{\frac{2\zeta^2 + 1}{2}} + 1} + 2\z
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-8-0)
 
 ---
@@ -119503,18 +118427,17 @@ $$\frac{\omega_{3dB}}{\omega_n} = \sqrt{\sqrt{\frac{2\zeta^2 + 1}{2}} + 1} + 2\z
 
 **Figure 8-88.** 5 MHz PLL Transfer Function Example
 
-<img src="figures/chapter_08/fig_1517_1_tight.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
 **图 8-88.** 5 MHz PLL 传递函数示例
 
-<img src="figures/chapter_08/fig_1517_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_08/fig_1517_1_tight.png" width="700">
 
 ---
 
@@ -119557,7 +118480,6 @@ For behavioral CDR functions refer to § Section 8.3.5.5
 <a id="sec-8-6-6"></a>
 ## 8.6.6 Common Refclk Rx Architecture (CC) | 共参考时钟接收器架构 (CC)
 
-
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
 <thead>
@@ -119583,7 +118505,6 @@ This architecture utilizes a single Refclk source that is distributed to both th
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-8-0)
 
 ---
@@ -119604,18 +118525,17 @@ This architecture utilizes a single Refclk source that is distributed to both th
 
 **Figure 8-89.** Common Refclk Rx Architecture for all Data Rates Except 32.0 and 64.0 GT/s
 
-<img src="figures/chapter_08/fig_1518_1_tight.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
 **图 8-89.** 除 32.0 和 64.0 GT/s 外所有数据速率的共参考时钟接收器架构
 
-<img src="figures/chapter_08/fig_1518_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_08/fig_1518_1_tight.png" width="700">
 
 ---
 
@@ -119623,7 +118543,6 @@ This architecture utilizes a single Refclk source that is distributed to both th
 ## 8.6.6.1 Determining the Number of PLL BW and Peaking Combinations | 确定 PLL 带宽和峰化组合数 <!-- 📄 Page 1518 -->
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -119662,7 +118581,6 @@ At 5.0 GT/s and higher data rates, two possible sets of limits of PLL bandwidth 
 </table>
 </div>
 
-
 [⬆️ 返回目录](#sec-8-0)
 
 ---
@@ -119693,13 +118611,9 @@ The minimum peaking for 2.5 and 5.0 GT/s has been reduced to 0.01 dB to bring it
 
 **Figure 8-90.** Common Refclk PLL and CDR Characteristics for 2.5 GT/s
 
-<img src="figures/chapter_08/fig_1519_1_tight.png" width="700">
-
 PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield a larger number of possible combinations because two sets of PLL BW and peaking limits are given. This choice to support two sets of BW and peaking was made to give designers as much latitude as possible when designing PLL circuits.
 
 **Figure 8-91.** Common Refclk PLL and CDR Characteristics for 5.0 GT/s
-
-<img src="figures/chapter_08/fig_1519_2_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -119714,16 +118628,18 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 
 **图 8-90.** 2.5 GT/s 的共参考时钟 PLL 与 CDR 特性
 
-
 5.0、8.0 和 16.0 GT/s 的 PLL 与 CDR 抖动和峰化特性由于提供两组 PLL 带宽和峰化限值，因而产生更多可能的组合。提供两组带宽和峰化限值是为了在设计 PLL 电路时给予设计者尽可能大的灵活度。
 
 **图 8-91.** 5.0 GT/s 的共参考时钟 PLL 与 CDR 特性
 
-<img src="figures/chapter_08/fig_1519_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_08/fig_1519_1_tight.png" width="700">
+
+> <img src="figures/chapter_08/fig_1519_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -119747,24 +118663,22 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 
 **Figure 8-92.** Common Refclk PLL and CDR Characteristics for 8.0 and 16.0 GT/s
 
-<img src="figures/chapter_08/fig_1520_1_tight.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
 **图 8-92.** 8.0 和 16.0 GT/s 的共参考时钟 PLL 与 CDR 特性
 
-<img src="figures/chapter_08/fig_1520_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+> <img src="figures/chapter_08/fig_1520_1_tight.png" width="700">
+
 ---
 
 <a id="fig-8-93"></a>
 ### Figure 8-93 | 图 8-93
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -119792,8 +118706,6 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 | 32.0 GT/s CC CDR | 16 combinations |
 | 32.0 GT/s |  |
 
-<img src="figures/chapter_08/fig_1520_2_tight.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -119811,13 +118723,14 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 | 32.0 GT/s CC CDR | 16 种组合 |
 | 32.0 GT/s |  |
 
-<img src="figures/chapter_08/fig_1520_2_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
-</div>
 
+> <img src="figures/chapter_08/fig_1520_2_tight.png" width="700">
+
+</div>
 
 ---
 
@@ -119849,8 +118762,6 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 | 64.0 GT/s CC CDR | 16 combinations |
 | 64.0 GT/s |  |
 
-<img src="figures/chapter_08/fig_1520_1.png" width="700">
-
 </td>
 <td style="background-color:#e8e8e8">
 
@@ -119868,17 +118779,17 @@ PLL and CDR jitter and peaking characteristics for 5.0, 8.0, and 16.0 GT/s yield
 | 64.0 GT/s CC CDR | 16 种组合 |
 | 64.0 GT/s |  |
 
-<img src="figures/chapter_08/fig_1520_1.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+> <img src="figures/chapter_08/fig_1520_1.png" width="700">
+
 ---
 
 <a id="sec-8-6-7"></a>
 ## 8.6.7 Jitter Limits for Refclk Architectures | Refclk 架构的抖动限值
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -119926,7 +118837,6 @@ For 5.0, 8.0, and 16.0 GT/s, jitter is specified as an RMS (Rj) value. These sig
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -119996,7 +118906,6 @@ For 5.0, 8.0, and 16.0 GT/s, jitter is specified as an RMS (Rj) value. These sig
 ## 8.6.8 Form Factor Requirements for RefClock Architectures | 外形规格对 RefClock 架构的要求 <!-- 📄 Page 1522 -->
 
 ---
-
 
 <div style="overflow-x: auto; max-width: 100%;">
 <table>
@@ -120110,7 +119019,6 @@ If a form factor has clocking requirements that cannot be provided in this simpl
 </tbody>
 </table>
 </div>
-
 
 [⬆️ 返回目录](#sec-8-0)
 
@@ -120409,10 +119317,10 @@ The generic platform configuration is composed of the following components:
 </table>
 
 > **Figure 9-1.** Generic Platform Configuration
+
 > <img src="figures/chapter_09/fig_1523_1_tight.png" width="700">
 > **图 9-1.** Generic Platform Configuration
 
-> <img src="figures/chapter_09/fig_1523_1_tight.png" width="700">
 
 </div>
 
@@ -120443,11 +119351,7 @@ The generic platform configuration is composed of the following components:
 
 In order to increase the effective hardware resource utilization without requiring hardware modifications, multiple SI can be executed. Software termed a Virtualization Intermediary (VI) is interposed between the hardware and the SI as illustrated in § Figure 9-2.
 
-> **Figure 9-2.** Generic Platform Configuration with a VI and Multiple SI
-> <img src="figures/chapter_09/fig_1524_1_tight.png" width="700">
-> **图 9-2.** Generic Platform Configuration 含 VI 与 Multiple SI
 
-> <img src="figures/chapter_09/fig_1524_1_tight.png" width="700">
 
 The VI takes sole ownership of the underlying hardware. Using a variety of methods outside of the scope of this specification, the VI abstracts the hardware to present each SI with its own virtual system. The actual hardware resources available to each SI can vary based on workload or customer-specific policies. While this approach works well for many environments, I/O intensive workloads can suffer significant performance degradation. Each I/O operation - inbound or outbound - must be intercepted and processed by the VI adding significant platform resource overhead.
 
@@ -120464,11 +119368,16 @@ The VI takes sole ownership of the underlying hardware. Using a variety of metho
 
 VI 独占底层硬件的所有权。VI 使用本规范范围之外的各种方法抽象硬件，为每个 SI 提供其自己的虚拟系统。可供每个 SI 使用的实际硬件资源可以根据工作负载或客户特定策略而有所不同。虽然此方法在许多环境中效果良好，但 I/O 密集型工作负载可能会遭受显著的性能下降。每个 I/O 操作(入站或出站)都必须由 VI 拦截并处理，这会增加显著的平台资源开销。
 
-<img src="figures/chapter_09/fig_1524_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-2.** Generic Platform Configuration with a VI and Multiple SI
+>
+> **图 9-2.** Generic Platform Configuration 含 VI 与 Multiple SI
+
+> <img src="figures/chapter_09/fig_1524_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-9-0)
 
@@ -120519,10 +119428,10 @@ SR-IOV 提供了减少这些平台资源开销的工具。SR-IOV 的好处包括
 </table>
 
 > **Figure 9-3.** Generic Platform Configuration with SR-IOV and IOV Enablers
+
 > <img src="figures/chapter_09/fig_1526_1_tight.png" width="700">
 > **图 9-3.** Generic Platform Configuration 含 SR-IOV 与 IOV Enablers
 
-> <img src="figures/chapter_09/fig_1526_1_tight.png" width="700">
 
 </div>
 
@@ -120639,11 +119548,7 @@ To compare and contrast a PCIe Device with a PCIe SR-IOV capable device, examine
 <tr>
 <td>
 
-> **Figure 9-4.** Example Multi-Function Device
-> <img src="figures/chapter_09/fig_1528_1_tight.png" width="700">
-> **图 9-4.** Example Multi-Function Device
 
-> <img src="figures/chapter_09/fig_1528_1_tight.png" width="700">
 
 This figure illustrates an example multi-Function PCIe Device with the following characteristics:
 
@@ -120670,11 +119575,16 @@ As this figure illustrates, the hardware resources scale with the number of Func
 
 如图所示，硬件资源随所配置的功能数量而扩展。根据设备的复杂性和大小，每个功能的增量成本会有所不同。为了降低增量硬件成本，可以使用 SR-IOV 构造一个设备，以支持单个 PF 和多个 VF,如图 § Figure 9-5 所示。
 
-<img src="figures/chapter_09/fig_1528_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-4.** Example Multi-Function Device
+>
+> **图 9-4.** Example Multi-Function Device
+
+> <img src="figures/chapter_09/fig_1528_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-9-0)
 
@@ -120731,10 +119641,10 @@ The example in § Figure 9-5 illustrates a single PF with N VFs. Key observation
 </table>
 
 > **Figure 9-5.** Example SR-IOV Single PF Capable Device
+
 > <img src="figures/chapter_09/fig_1529_1_tight.png" width="700">
 > **图 9-5.** Example SR-IOV Single PF Capable Device
 
-> <img src="figures/chapter_09/fig_1529_1_tight.png" width="700">
 
 </div>
 
@@ -120834,10 +119744,10 @@ Key observations to note:
 </table>
 
 > **Figure 9-6.** Example SR-IOV Multi-PF Capable Device
+
 > <img src="figures/chapter_09/fig_1531_1_tight.png" width="700">
 > **图 9-6.** Example SR-IOV Multi-PF Capable Device
 
-> <img src="figures/chapter_09/fig_1531_1_tight.png" width="700">
 
 </div>
 
@@ -120923,10 +119833,10 @@ In this last example, § Figure 9-8, a device implementation may mix any number 
 </table>
 
 > **Figure 9-7.** Example SR-IOV Device with Multiple Bus Numbers
+
 > <img src="figures/chapter_09/fig_1533_1_tight.png" width="700">
 > **图 9-7.** Example SR-IOV Device 含 Multiple Bus Numbers
 
-> <img src="figures/chapter_09/fig_1533_1_tight.png" width="700">
 
 
 [⬆️ 返回目录](#sec-9-0)
@@ -120972,10 +119882,10 @@ Key observations to note:
 </table>
 
 > **Figure 9-8.** Example SR-IOV Device with a Mixture of Function Types
+
 > <img src="figures/chapter_09/fig_1534_1_tight.png" width="700">
 > **图 9-8.** Example SR-IOV Device 含 Mixture Function Types
 
-> <img src="figures/chapter_09/fig_1534_1_tight.png" width="700">
 
 </div>
 
@@ -121139,10 +120049,10 @@ SR-IOV 扩展能力结构中的 First VF Offset 和 VF Stride 字段是 16 位�
 </table>
 
 > **Figure 9-9.** BAR Space Example for Single BAR Device
+
 > <img src="figures/chapter_09/fig_1536_1.png" width="700">
 > **图 9-9.** BAR Space Example Single BAR Device
 
-> <img src="figures/chapter_09/fig_1536_1.png" width="700">
 
 </div>
 
@@ -121519,11 +120429,7 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 <tr>
 <td>
 
-> **Figure 9-10.** SR-IOV Extended Capability
-> <img src="figures/chapter_09/fig_1541_1_tight.png" width="700">
-> **图 9-10.** SR-IOV Extended Capability
 
-> <img src="figures/chapter_09/fig_1541_1_tight.png" width="700">
 
 § Table 9-2 defines the SR-IOV Extended Capability header. The Capability ID for the SR-IOV Extended Capability is 0010h.
 
@@ -121538,11 +120444,16 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 <a id="sec-9-3-3-1-cn"></a>
 #### 9.3.3.1 SR-IOV 扩展能力结构头部(偏移 00h)
 
-<img src="figures/chapter_09/fig_1541_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-10.** SR-IOV Extended Capability
+>
+> **图 9-10.** SR-IOV Extended Capability
+
+> <img src="figures/chapter_09/fig_1541_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-9-0)
 
@@ -121599,10 +120510,10 @@ For Multi-Function Devices, each PF that supports SR-IOV shall provide the Capab
 </table>
 
 > **Figure 9-12.** SR-IOV Capabilities Register
+
 > <img src="figures/chapter_09/fig_1542_1_tight.png" width="700">
 > **图 9-12.** SR-IOV 能力寄存器 (Capabilities Register)
 
-> <img src="figures/chapter_09/fig_1542_1_tight.png" width="700">
 
 </div>
 
@@ -121854,10 +120765,10 @@ VF 迁移与现已弃用的 MR-IOV 关联。新设计应将此字段硬连线为
 </table>
 
 > **Figure 9-13.** SR-IOV Control Register
+
 > <img src="figures/chapter_09/fig_1545_1.png" width="700">
 > **图 9-13.** SR-IOV Control Register
 
-> <img src="figures/chapter_09/fig_1545_1.png" width="700">
 
 </div>
 
@@ -122156,11 +121067,7 @@ ARI Capable Hierarchy 不适用于 RCiEP。
 
 § Table 9-5 defines the layout of the SR-IOV Status field.
 
-> **Figure 9-14.** SR-IOV Status
-> <img src="figures/chapter_09/fig_1549_1.png" width="700">
-> **图 9-14.** SR-IOV Status
 
-> <img src="figures/chapter_09/fig_1549_1.png" width="700">
 
 **Table 9-5. SR-IOV Status | 表 9-5. SR-IOV 状态**
 
@@ -122239,11 +121146,16 @@ NumVFs 的初始值未定义。
 <a id="sec-9-3-3-7-cn"></a>
 #### 9.3.3.7 NumVFs(偏移 10h)
 
-<img src="figures/chapter_09/fig_1549_1.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 9-14.** SR-IOV Status
+>
+> **图 9-14.** SR-IOV Status
+
+> <img src="figures/chapter_09/fig_1549_1.png" width="700">
 
 [⬆️ 返回目录](#sec-9-0)
 
@@ -123313,21 +122225,14 @@ scope of this specification. While it may be possible to implement ATS within ot
 
 § Figure 10-1 illustrates an example platform with a TA and ATPT, along with a set of PCIe Devices and RC Integrated Endpoints with integrated ATC. A TA and an ATPT are implementation specific and can be distinct or integrated components within a given system design.
 
-> **Figure 10-1.** Example Illustrating a Platform with TA, ATPT, and ATC Elements
-> <img src="figures/chapter_10/fig_1559_1.png" width="700">
-> **图 10-1.** 示例 Platform 含 TA, ATPT, 与 ATC Elements
 
-> <img src="figures/chapter_10/fig_1559_1.png" width="700">
 
 The ATS chapter provides a new set of TLP and associated semantics. ATS uses a request-completion protocol between a Device and a Root Complex (RC) to provide translation services. In addition, a new AT field is defined within the Memory Read and Memory Write TLP. The new AT field enables an RC to determine whether a given request has been translated or not via the ATS protocol.
 
 § Figure 10-2 illustrates the basic flow of an ATS Translation Request operation.
 
-> **Figure 10-2.** Example ATS Translation Request/Completion Exchange
 
-> <img src="figures/chapter_10/fig_1560_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1560_1_tight.png" width="700">
 
 In this example, a Function-specific work request is received by a single-Function PCIe Device. The Function determines through an implementation specific method that caching a translation within its ATC would be beneficial. There are a number of considerations a Function or software can use in making such a determination; for example:
 - Memory address ranges that will be frequently accessed over an extended period of time or whose associated buffer content is subject to a significant update rate
@@ -123343,9 +122248,6 @@ ATS 章节引入了一组新的 TLP 及相关语义。ATS 使用设备与根复�
 
 § 图 10-2 展示了 ATS 转换请求操作的基本流程。
 
-> **图 10-2.** ATS 转换请求/完成交换示例
-> <img src="figures/chapter_10/fig_1560_2_tight.png" width="700">
-> <img src="figures/chapter_10/fig_1560_1_tight.png" width="700">
 
 在此示例中，单功能 PCIe 设备收到一个功能特定的工作请求。该功能通过某种实现特定的方法判断，在其 ATC 中缓存一个转换是有益的。功能或软件在进行这种判断时可以考虑多种因素;例如:
 - 长时间内频繁访问的内存地址范围，或相关缓冲区内容更新速率较高的地址范围
@@ -123353,6 +122255,18 @@ ATS 章节引入了一组新的 TLP 及相关语义。ATS 使用设备与根复�
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-1.** Example Illustrating a Platform with TA, ATPT, and ATC Elements
+>
+> **图 10-1.** 示例 Platform 含 TA, ATPT, 与 ATC Elements
+
+> <img src="figures/chapter_10/fig_1559_1.png" width="700">
+
+> **Figure 10-2.** Example ATS Translation Request/Completion Exchange
+>
+> **图 10-2.** ATS 转换请求/完成交换示例
+
+> <img src="figures/chapter_10/fig_1560_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-10-0)
 
@@ -123470,11 +122384,7 @@ In contrast to the prior example, § Figure 10-3 illustrates an example Multi-Fu
 - Each ATC is configured and accessed on a per Function basis. A Multi-Function Device is not required to implement ATS on every Function.
 - If the ATC implementation shares resources among a set of Functions, then the logical behavior is required to be consistent with fully independent ATC implementations.
 
-> **Figure 10-3.** Example Multi-Function Device with ATC per Function
-> <img src="figures/chapter_10/fig_1562_1_tight.png" width="700">
-> **图 10-3.** Example Multi-Function Device 含 ATC per Function
 
-> <img src="figures/chapter_10/fig_1562_1_tight.png" width="700">
 
 Independent of the number of Functions within a Device, the following are required:
 
@@ -123505,11 +122415,16 @@ Independent of the number of Functions within a Device, the following are requir
 > **地址范围重叠 (ADDRESS RANGE OVERLAP)**
 > 虽然预计会有大量重叠，但系统不要求在所有地址范围内都使未转换和转换/已转换序列可互换。例如，允许根复合体对中断行为(MSI/MSI-X)要求使用未转换请求。
 
-<img src="figures/chapter_10/fig_1562_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-3.** Example Multi-Function Device with ATC per Function
+>
+> **图 10-3.** Example Multi-Function Device 含 ATC per Function
+
+> <img src="figures/chapter_10/fig_1562_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-10-0)
 
@@ -123570,10 +122485,10 @@ As § Figure 10-4 illustrates, there are essentially three steps in the ATS Inva
 </table>
 
 > **Figure 10-4.** Invalidation Protocol with a Single Invalidation Request and Completion
+
 > <img src="figures/chapter_10/fig_1563_1_tight.png" width="700">
 > **图 10-4.** Invalidation Protocol 含 Single Invalidation Request 与 Completion
 
-> <img src="figures/chapter_10/fig_1563_1_tight.png" width="700">
 
 </div>
 
@@ -123601,11 +122516,7 @@ a. An Invalidate Completion is issued for each TC that may have referenced the r
    ii. If more than one Invalidation Complete is sent, the Invalidate Completion sent in each TC must be identical in the fields detailed in § Section 10.3.2.
 b. An Invalidate Completion contains the ITAG from Invalidate Request to enable the RC to correlate Invalidate Requests and Completions.
 
-> **Figure 10-5.** Single Invalidate Request with Multiple Invalidate Completions
-> <img src="figures/chapter_10/fig_1564_1_tight.png" width="700">
-> **图 10-5.** Single Invalidate Request 含 Multiple Invalidate Completions
 
-> <img src="figures/chapter_10/fig_1564_1_tight.png" width="700">
 
 ATS improves the behavior of DMA based data movement. An associated Page Request Interface (PRI) provides additional advantages by allowing DMA operations to be initiated without requiring that all the data to be moved into or out of system memory be pinned.<sup>190</sup> The overhead associated with pinning memory may be modest, but the negative impact on system performance of removing large portions of memory from the pageable pool can be significant.
 
@@ -123635,11 +122546,16 @@ PRI 在功能上独立于 ATS 的其他方面。即，支持 ATS 的设备无需
 
 分页的能力引出了页表状态标志管理的问题。典型 TA 会为每个未转换地址关联标志(例如 dirty 和 access 指示)。在没有关于如何管理映射到功能的页的额外提示时,
 
-<img src="figures/chapter_10/fig_1564_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-5.** Single Invalidate Request with Multiple Invalidate Completions
+>
+> **图 10-5.** Single Invalidate Request 含 Multiple Invalidate Completions
+
+> <img src="figures/chapter_10/fig_1564_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-10-0)
 
@@ -123804,9 +122720,11 @@ In NFM, the AT field in the Requests is a redefinition of a reserved field in ea
 </table>
 
 > **Figure 10-6.** Memory Request Header with 64-bit Address Highlighting AT field
+
 > <img src="figures/chapter_10/fig_1566_1_tight.png" width="700">
 
 > **Figure 10-7.** Memory Request Header with 32-bit Address Highlighting AT field
+
 > <img src="figures/chapter_10/fig_1567_1_tight.png" width="700">
 
 > **Figure 10-8.** Memory Request Header with 64-bit Address Highlighting AT field - FLIT Mode
@@ -123816,53 +122734,39 @@ In NFM, the AT field in the Requests is a redefinition of a reserved field in ea
 > <img src="figures/chapter_10/fig_1568_1_tight.png" width="700">
 > **图 10-6.** Memory Request 包头 含 64-bit Address: AT field
 
-> <img src="figures/chapter_10/fig_1566_1_tight.png" width="700">
 
 > **Figure 10-7.** Memory Request Header with 32-bit Address Highlighting AT field
-> <img src="figures/chapter_10/fig_1567_1_tight.png" width="700">
 
 > **Figure 10-8.** Memory Request Header with 64-bit Address Highlighting AT field - FLIT Mode
 
-> <img src="figures/chapter_10/fig_1567_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1568_1_tight.png" width="700">
 
 > **Figure 10-9.** Memory Request Header with 32-bit Address Highlighting AT field - FLIT Mode
 
 > <img src="figures/chapter_10/fig_1567_3_tight.png" width="700">
 > **图 10-7.** Memory Request 包头 含 32-bit Address: AT field
 
-> <img src="figures/chapter_10/fig_1567_1_tight.png" width="700">
 
 > **Figure 10-8.** Memory Request Header with 64-bit Address Highlighting AT field - FLIT Mode
 
-> <img src="figures/chapter_10/fig_1567_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1568_1_tight.png" width="700">
 
 > **Figure 10-9.** Memory Request Header with 32-bit Address Highlighting AT field - FLIT Mode
 
-> <img src="figures/chapter_10/fig_1567_3_tight.png" width="700">
 
 > <img src="figures/chapter_10/fig_1569_1_tight.png" width="700">
 > **图 10-9.** Memory Request 包头 含 32-bit Address: AT field - Flit 模式
 
 
-> <img src="figures/chapter_10/fig_1567_3_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1569_1_tight.png" width="700">
 > **图 10-8.** Memory Request 包头 含 64-bit Address: AT field - Flit 模式
 
 
-> <img src="figures/chapter_10/fig_1567_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1568_1_tight.png" width="700">
 
 > **Figure 10-9.** Memory Request Header with 32-bit Address Highlighting AT field - FLIT Mode
 
-> <img src="figures/chapter_10/fig_1567_3_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1569_1_tight.png" width="700">
 
 </div>
 
@@ -123966,6 +122870,7 @@ For a Translation Request, the Relaxed Ordering (RO) bit is applicable and permi
 </table>
 
 > **Figure 10-12.** Translation Request with 64-bit Address - Flit Mode
+
 > <img src="figures/chapter_10/fig_1572_1.png" width="700">
 
 > **Figure 10-13.** Translation Request with 32-bit Address - Flit Mode
@@ -123976,18 +122881,13 @@ For a Translation Request, the Relaxed Ordering (RO) bit is applicable and permi
 > **图 10-13.** Translation Request 含 32-bit Address - Flit 模式
 
 
-> <img src="figures/chapter_10/fig_1569_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1573_1_tight.png" width="700">
 > **图 10-12.** Translation Request 含 64-bit Address - Flit 模式
 
-> <img src="figures/chapter_10/fig_1572_1.png" width="700">
 
 > **Figure 10-13.** Translation Request with 32-bit Address - Flit Mode
 
-> <img src="figures/chapter_10/fig_1569_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1573_1_tight.png" width="700">
 
 </div>
 
@@ -124977,19 +123877,18 @@ AMA 值与完成者关联，且是实现特定的。AMA 值对请求者、请求
 </table>
 
 > **Figure 10-15.** Example Translation Completion with 1 TLP
+
 > <img src="figures/chapter_10/fig_1580_1_tight.png" width="700">
 
 > **Figure 10-16.** Example Translation Completion with 2 TLPs
+
 > <img src="figures/chapter_10/fig_1581_1_tight.png" width="700">
 > **图 10-16.** Example Translation Completion 含 2 TLPs
 
-> <img src="figures/chapter_10/fig_1581_1_tight.png" width="700">
 > **图 10-15.** Example Translation Completion 含 1 TLP
 
-> <img src="figures/chapter_10/fig_1580_1_tight.png" width="700">
 
 > **Figure 10-16.** Example Translation Completion with 2 TLPs
-> <img src="figures/chapter_10/fig_1581_1_tight.png" width="700">
 
 </div>
 
@@ -125127,6 +124026,7 @@ Invalidate 请求是带 64 位数据的 MsgD 事务。Invalidate 请求消息可
 </table>
 
 > **Figure 10-18.** Invalidate Request Message - Non-Flit Mode
+
 > <img src="figures/chapter_10/fig_1584_1.png" width="700">
 
 > **Figure 10-19.** Invalidate Request Message - Flit Mode
@@ -125137,18 +124037,13 @@ Invalidate 请求是带 64 位数据的 MsgD 事务。Invalidate 请求消息可
 > **图 10-19.** Invalidate Request Message - Flit 模式
 
 
-> <img src="figures/chapter_10/fig_1585_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1585_1_tight.png" width="700">
 > **图 10-18.** Invalidate Request Message - 非 Flit 模式
 
-> <img src="figures/chapter_10/fig_1584_1.png" width="700">
 
 > **Figure 10-19.** Invalidate Request Message - Flit Mode
 
-> <img src="figures/chapter_10/fig_1585_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1585_1_tight.png" width="700">
 
 </div>
 
@@ -125179,11 +124074,7 @@ The address range specified in an Invalidate Request may span one or more STU 40
 
 The content of the payload is the untranslated address range to be invalidated. The payload format is shown in § Figure 10-20.
 
-> **Figure 10-20.** Invalidate Request Message Body
-> <img src="figures/chapter_10/fig_1586_1_tight.png" width="700">
-> **图 10-20.** Invalidate Request Message Body
 
-> <img src="figures/chapter_10/fig_1586_1_tight.png" width="700">
 
 The S field is used to indicate if the range being invalidated is greater than 4096 bytes. Its meaning is the same as for the Translation Completion (see § Section 10.2.3.1 and § Section 10.2.3.2).
 
@@ -125212,11 +124103,16 @@ Global Invalidate 位指示无效化请求消息影响所有 PASID 值(参见 §
 > **无效化完成超时 (INVALIDATE COMPLETION TIMEOUT)**
 > 设备应在 1 分钟(+50% -0%)内响应 Invalidate 请求。具有有界时间允许 ATPT 实现 Invalidate 完成超时并重用关联的 ITag 值。ATPT 设计是实现特定的。因此,Invalidate 完成超时及其关联的错误处理不在本规范范围内。
 
-<img src="figures/chapter_10/fig_1586_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-20.** Invalidate Request Message Body
+>
+> **图 10-20.** Invalidate Request Message Body
+
+> <img src="figures/chapter_10/fig_1586_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-10-0)
 
@@ -125305,19 +124201,18 @@ TA 如果收到针对某个没有未完成 Invalidation 请求的 ITag 的 Inval
 </table>
 
 > **Figure 10-21.** Invalidate Completion Message Format - Non-Flit Mode
+
 > <img src="figures/chapter_10/fig_1587_1_tight.png" width="700">
 
 > **Figure 10-22.** Invalidate Completion Message - Flit Mode
+
 > <img src="figures/chapter_10/fig_1588_1_tight.png" width="700">
 > **图 10-22.** Invalidate Completion Message - Flit 模式
 
-> <img src="figures/chapter_10/fig_1588_1_tight.png" width="700">
 > **图 10-21.** Invalidate Completion Message 格式 - 非 Flit 模式
 
-> <img src="figures/chapter_10/fig_1587_1_tight.png" width="700">
 
 > **Figure 10-22.** Invalidate Completion Message - Flit Mode
-> <img src="figures/chapter_10/fig_1588_1_tight.png" width="700">
 
 </div>
 
@@ -125817,6 +124712,7 @@ The first two DWs of a Page Request Message contain a standard PCIe message head
 </table>
 
 > **Figure 10-23.** Page Request Message - Non-Flit Mode
+
 > <img src="figures/chapter_10/fig_1594_1.png" width="700">
 
 > **Figure 10-24.** Page Request Message - Flit Mode
@@ -125827,18 +124723,13 @@ The first two DWs of a Page Request Message contain a standard PCIe message head
 > **图 10-24.** 页请求 (Page Request) Message - Flit 模式
 
 
-> <img src="figures/chapter_10/fig_1595_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1595_1_tight.png" width="700">
 > **图 10-23.** 页请求 (Page Request) Message - 非 Flit 模式
 
-> <img src="figures/chapter_10/fig_1594_1.png" width="700">
 
 > **Figure 10-24.** Page Request Message - Flit Mode
 
-> <img src="figures/chapter_10/fig_1595_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1595_1_tight.png" width="700">
 
 </div>
 
@@ -125997,29 +124888,16 @@ Stop Marker Messages do not have a response. They do not have a PRG Index and do
 
 The Stop Marker Message bit layout is shown in § Figure 10-25.
 
-> **Figure 10-25.** Stop Marker Message - Non-Flit Mode
-> <img src="figures/chapter_10/fig_1597_1.png" width="700">
-
-> **Figure 10-26.** Stop Marker Message - Flit Mode
-
-> <img src="figures/chapter_10/fig_1598_2_tight.png" width="700">
-
-> <img src="figures/chapter_10/fig_1598_1_tight.png" width="700">
-> **图 10-26.** 停止标记 (Stop Marker) Message - Flit 模式
 
 
-> <img src="figures/chapter_10/fig_1598_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1598_1_tight.png" width="700">
-> **图 10-25.** 停止标记 (Stop Marker) Message - 非 Flit 模式
 
-> <img src="figures/chapter_10/fig_1597_1.png" width="700">
 
-> **Figure 10-26.** Stop Marker Message - Flit Mode
 
-> <img src="figures/chapter_10/fig_1598_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1598_1_tight.png" width="700">
+
+
+
 
 A Stop Marker Message is encoded as a Page Request Message for which:
 - In NFM, includes a PASID TLP Prefix. The Execute Requested and Privileged Mode Requested bits are Reserved.
@@ -126062,11 +124940,22 @@ Behavior is undefined if a Stop Marker Message is received and any of the follow
 - PASID 值与未完成停止请求不匹配。
 - PASID 的未完成页请求消息不完整(即，对于某些 PRG 索引，最近收到的页请求消息未设置 L 位)。
 
-<img src="figures/chapter_10/fig_1597_1.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-25.** Stop Marker Message - Non-Flit Mode
+>
+> **图 10-25.** 停止标记 (Stop Marker) Message - 非 Flit 模式
+
+> <img src="figures/chapter_10/fig_1597_1.png" width="700">
+
+> **Figure 10-26.** Stop Marker Message - Flit Mode
+>
+> **图 10-26.** 停止标记 (Stop Marker) Message - Flit 模式
+
+> <img src="figures/chapter_10/fig_1598_2_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-10-0)
 
@@ -126145,19 +125034,18 @@ In order to prevent overflow, it is recommended to size Page Request queuing app
 </table>
 
 > **Figure 10-27.** PRG Response Message - Non-Flit Mode
+
 > <img src="figures/chapter_10/fig_1600_1_tight.png" width="700">
 
 > **Figure 10-28.** PRG Response Message - FLIT Mode
+
 > <img src="figures/chapter_10/fig_1601_1.png" width="700">
 > **图 10-28.** PRG Response Message - Flit 模式
 
-> <img src="figures/chapter_10/fig_1601_1.png" width="700">
 > **图 10-27.** PRG Response Message - 非 Flit 模式
 
-> <img src="figures/chapter_10/fig_1600_1_tight.png" width="700">
 
 > **Figure 10-28.** PRG Response Message - FLIT Mode
-> <img src="figures/chapter_10/fig_1601_1.png" width="700">
 
 </div>
 
@@ -126278,11 +125166,7 @@ Each Function that supports ATS (capable of generating Translation Requests) mus
 <tr>
 <td>
 
-> **Figure 10-30.** ATS Extended Capability Header
-> <img src="figures/chapter_10/fig_1602_1_tight.png" width="700">
-> **图 10-30.** ATS Extended Capability 包头
 
-> <img src="figures/chapter_10/fig_1602_1_tight.png" width="700">
 
 **Table 10-9. ATS Extended Capability Header | 表 10-9 ATS Extended Capability 头**
 
@@ -126315,11 +125199,16 @@ Each Function that supports ATS (capable of generating Translation Requests) mus
 |--------------|----------------------|------------|
 | 4:0 | Invalidate Queue Depth - 功能在上游连接上产生反压之前可以接受的 Invalidate 请求数。非 VF 功能中的零值表示它可以接受 32 个 Invalidate 请求。 | RO, VF ROZ |
 
-<img src="figures/chapter_10/fig_1602_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-30.** ATS Extended Capability Header
+>
+> **图 10-30.** ATS Extended Capability 包头
+
+> <img src="figures/chapter_10/fig_1602_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-10-0)
 
@@ -126382,10 +125271,10 @@ Each Function that supports ATS (capable of generating Translation Requests) mus
 </table>
 
 > **Figure 10-32.** ATS Capability Register (Offset 04h) - continued
+
 > <img src="figures/chapter_10/fig_1603_1.png" width="700">
 > **图 10-32.** ATS Capability Register (Offset 04h) - continued
 
-> <img src="figures/chapter_10/fig_1603_1.png" width="700">
 
 </div>
 
@@ -126507,6 +125396,7 @@ Page Request Extended Capability Structure 用于配置页请求接口机制。�
 > <img src="figures/chapter_10/fig_1604_1.png" width="700">
 
 > **Figure 10-35.** Page Request Extended Capability Header
+
 > <img src="figures/chapter_10/fig_1605_1_tight.png" width="700">
 
 > **Figure 10-36.** Page Request Control Register
@@ -126517,33 +125407,23 @@ Page Request Extended Capability Structure 用于配置页请求接口机制。�
 > **图 10-36.** 页请求 (Page Request) Control Register
 
 
-> <img src="figures/chapter_10/fig_1606_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1606_1_tight.png" width="700">
 > **图 10-35.** 页请求 (Page Request) Extended Capability 包头
 
-> <img src="figures/chapter_10/fig_1605_1_tight.png" width="700">
 
 > **Figure 10-36.** Page Request Control Register
 
-> <img src="figures/chapter_10/fig_1606_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1606_1_tight.png" width="700">
 > **图 10-34.** 页请求 (Page Request) Extended Capability Structure
 
 
-> <img src="figures/chapter_10/fig_1605_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1604_1.png" width="700">
 
 > **Figure 10-35.** Page Request Extended Capability Header
-> <img src="figures/chapter_10/fig_1605_1_tight.png" width="700">
 
 > **Figure 10-36.** Page Request Control Register
 
-> <img src="figures/chapter_10/fig_1606_2_tight.png" width="700">
 
-> <img src="figures/chapter_10/fig_1606_1_tight.png" width="700">
 
 </div>
 
@@ -126676,11 +125556,7 @@ Stop Marker Messages consume buffering but are not included in this allocation (
 <tr>
 <td>
 
-> **Figure 10-38.** Page Request Extended Capability Structure (registers continued)
-> <img src="figures/chapter_10/fig_1607_1.png" width="700">
-> **图 10-38.** 页请求 (Page Request) Extended Capability Structure (registers continued)
 
-> <img src="figures/chapter_10/fig_1607_1.png" width="700">
 
 This section describes the Outstanding Page Request Capacity and Outstanding Page Request Allocation registers of the Page Request Extended Capability structure.
 
@@ -126721,11 +125597,16 @@ Outstanding Page Request Allocation 寄存器(Offset 0Ch)包含关联页请求�
 
 停止标记消息消耗缓冲，但不包含在此分配中(参见 § 第 10.4.1.2.1 节)。系统应为停止标记消息提供额外的缓冲，并应限制未完成停止标记消息的数量，以避免超出此额外缓冲。
 
-<img src="figures/chapter_10/fig_1607_1.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 10-38.** Page Request Extended Capability Structure (registers continued)
+>
+> **图 10-38.** 页请求 (Page Request) Extended Capability Structure (registers continued)
+
+> <img src="figures/chapter_10/fig_1607_1.png" width="700">
 
 [⬆️ 返回目录](#sec-10-0)
 
@@ -126784,10 +125665,10 @@ PRG 响应消息是由 ID 路由回请求功能的 PCIe 消息请求。系统软
 </table>
 
 > **Figure 10-39.** Stop Marker Message - Flit Mode (reference)
+
 > <img src="figures/chapter_10/fig_1608_1.png" width="700">
 > **图 10-39.** 停止标记 (Stop Marker) Message - Flit 模式 (reference)
 
-> <img src="figures/chapter_10/fig_1608_1.png" width="700">
 
 </div>
 
@@ -126894,10 +125775,10 @@ TEE-I/O 构建于已有的能力之上，例如用于将设备直接分配给 VM
 </div>
 
 > **Figure 11-1.** TEE-I/O Conceptual Architecture
+
 > <img src="figures/chapter_11/fig_1609_1.png" width="700">
 
 > **图 11-1.** TEE-I/O 概念性架构
-> <img src="figures/chapter_11/fig_1609_1.png" width="700">
 
 [⬆️ 返回目录](#sec-11-0)
 
@@ -127026,10 +125907,10 @@ There are a variety of additional elements of the reference architecture. Softwa
 </table>
 
 > **Figure 11-2.** TDISP Host/Device Reference Architecture
+
 > <img src="figures/chapter_11/fig_1613_1_tight.png" width="700">
 > **图 11-2.** TDISP Host/Device Reference 架构
 
-> <img src="figures/chapter_11/fig_1613_1_tight.png" width="700">
 
 </div>
 
@@ -127186,11 +126067,7 @@ DSM 必须跟踪用于为 IDE 流建立 IDE 密钥的 SPDM 会话。为了使 ID
 <tr>
 <td>
 
-> **Figure 11-3.** Identification of Requests
-> <img src="figures/chapter_11/fig_1616_1_tight.png" width="700">
-> **图 11-3.** Identification Requests
 
-> <img src="figures/chapter_11/fig_1616_1_tight.png" width="700">
 
 As illustrated in § Figure 11-3, a TDI is managed by a specific DSM, and within the domain of that DSM it is necessary for each TDI to have a unique identifier, called an INTERFACE_ID, that is used in all TSM/DSM messages to indicate the applicable TDI. MMIO requests originated from the TVM are translated by the host and directed to appropriate TDI based on the HPA. Requests generated by the TDI contain the Requester ID (RID) of the function hosting the TDI, and may also have a PASID.
 
@@ -127204,11 +126081,16 @@ The INTERFACE_ID is composed of a FUNCTION_ID field that identifies the function
 
 INTERFACE_ID 由 FUNCTION_ID 字段和为未来扩展保留的 Reserved 字段组成 (见 § Figure 11-4 和 § Table 11-1)。在 FUNCTION_ID 中,Function Number 和 Device Number 由设备/DSM 分配。Bus Number 和 Segment Number 在系统枚举期间分配，并且对于处于 CONFIG_LOCKED 和 RUN 状态的 TDI 不得更改 (见下文)。如果设备知道 Segment Number,且 Requester Segment Valid 被置位，则 Requester Segment 值必须与设备的 Segment Number 匹配。DSM 必须确保只寻址有效的 TDI。
 
-<img src="figures/chapter_11/fig_1616_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 11-3.** Identification of Requests
+>
+> **图 11-3.** Identification Requests
+
+> <img src="figures/chapter_11/fig_1616_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-11-0)
 
@@ -127259,19 +126141,18 @@ Each TDI in the device is associated with a TDISP state machine (see § Figure 1
 </table>
 
 > **Figure 11-4.** TDI Identifier – INTERFACE_ID
+
 > <img src="figures/chapter_11/fig_1617_1_tight.png" width="700">
 
 > **Figure 11-5.** TDISP State Machine
+
 > <img src="figures/chapter_11/fig_1617_2_tight.png" width="700">
 > **图 11-5.** TDISP State Machine
 
-> <img src="figures/chapter_11/fig_1617_2_tight.png" width="700">
 > **图 11-4.** TDI Identifier – INTERFACE_ID
 
-> <img src="figures/chapter_11/fig_1617_1_tight.png" width="700">
 
 > **Figure 11-5.** TDISP State Machine
-> <img src="figures/chapter_11/fig_1617_2_tight.png" width="700">
 
 </div>
 
@@ -127627,11 +126508,7 @@ TDISP 消息的传输方式如下:
 
 The encapsulation is as illustrated in § Figure 11-6:
 
-> **Figure 11-6.** TDISP Request/Response Encapsulation
-> <img src="figures/chapter_11/fig_1622_1_tight.png" width="700">
-> **图 11-6.** TDISP Request/Response Encapsulation
 
-> <img src="figures/chapter_11/fig_1622_1_tight.png" width="700">
 
 If a TDISP message is received that has not been transferred securely per [Secured SPDM], the received TDISP message must not be used, and must not result in a response.
 
@@ -127664,11 +126541,16 @@ A Requester is permitted to send simultaneous request messages to different Resp
 
 请求方允许同时向不同的响应方发送请求消息。
 
-<img src="figures/chapter_11/fig_1622_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 11-6.** TDISP Request/Response Encapsulation
+>
+> **图 11-6.** TDISP Request/Response Encapsulation
+
+> <img src="figures/chapter_11/fig_1622_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-11-0)
 
@@ -128758,10 +127640,10 @@ TEE-I/O 兼容设备必须在绑定到这些接口的 IDE 流转换为 Insecure 
 </table>
 
 > **Figure 11-7.** Example Flow Where DSM is Unable to Return Full Length Report
+
 > <img src="figures/chapter_11/fig_1636_1_tight.png" width="700">
 > **图 11-7.** Example 流 Where DSM is Unable Return Full Length 字段 (长度) Report
 
-> <img src="figures/chapter_11/fig_1636_1_tight.png" width="700">
 
 </div>
 
@@ -129908,10 +128790,10 @@ Flex I/O 接口引脚允许默认为:
 ---
 
 > **Figure 12-1.** Example PESTI Application
+
 > <img src="figures/chapter_12/fig_1665_1_tight.png" width="700">
 > **图 12-1.** Example PESTI Application
 
-> <img src="figures/chapter_12/fig_1665_1_tight.png" width="700">
 
 ---
 
@@ -130307,10 +129189,10 @@ PESTI 利用 UART 帧格式，直接在 3.3 V 逻辑电平下运行，是单线�
 ---
 
 > **Figure 12-2.** UART Data Framing
+
 > <img src="figures/chapter_12/fig_1665_2_tight.png" width="700">
 > **图 12-2.** UART Data Framing
 
-> <img src="figures/chapter_12/fig_1665_2_tight.png" width="700">
 
 ---
 
@@ -130381,10 +129263,10 @@ minimum nominal value of 200 ohm -5% tolerance.
 ---
 
 > **Figure 12-3.** PESTI Circuit Diagram
+
 > <img src="figures/chapter_12/fig_1666_1_tight.png" width="700">
 > **图 12-3.** PESTI Circuit 图
 
-> <img src="figures/chapter_12/fig_1666_1_tight.png" width="700">
 
 ---
 
@@ -130762,10 +129644,10 @@ must support broadcast of a Power Brake event.
 ---
 
 > **Figure 12-4.** PESTI Broadcast Command
+
 > <img src="figures/chapter_12/fig_1669_1_tight.png" width="700">
 > **图 12-4.** PESTI Broadcast Command
 
-> <img src="figures/chapter_12/fig_1669_1_tight.png" width="700">
 
 ---
 
@@ -130955,23 +129837,22 @@ requirements.
 ---
 
 > **Figure 12-5.** PESTI Protocol Phases
+
 > <img src="figures/chapter_12/fig_1671_1_tight.png" width="700">
 
 ---
 
 > **Figure 12-6.** PESTI Discovery Command and Response Format
+
 > <img src="figures/chapter_12/fig_1673_1_tight.png" width="700">
 > **图 12-6.** PESTI Discovery Command 与 Response 格式
 
-> <img src="figures/chapter_12/fig_1673_1_tight.png" width="700">
 > **图 12-5.** PESTI Protocol Phases
 
-> <img src="figures/chapter_12/fig_1671_1_tight.png" width="700">
 
 ---
 
 > **Figure 12-6.** PESTI Discovery Command and Response Format
-> <img src="figures/chapter_12/fig_1673_1_tight.png" width="700">
 
 ---
 
@@ -131079,23 +129960,22 @@ re-entry to the discovery phase.
 ---
 
 > **Figure 12-7.** Single Byte PESTI Virtual Wire Exchange
+
 > <img src="figures/chapter_12/fig_1675_1_tight.png" width="700">
 
 ---
 
 > **Figure 12-8.** Multi-byte PESTI Virtual Wire Exchange
+
 > <img src="figures/chapter_12/fig_1675_2_tight.png" width="700">
 > **图 12-8.** Multi-byte PESTI Virtual Wire Exchange
 
-> <img src="figures/chapter_12/fig_1675_2_tight.png" width="700">
 > **图 12-7.** Single Byte PESTI Virtual Wire Exchange
 
-> <img src="figures/chapter_12/fig_1675_1_tight.png" width="700">
 
 ---
 
 > **Figure 12-8.** Multi-byte PESTI Virtual Wire Exchange
-> <img src="figures/chapter_12/fig_1675_2_tight.png" width="700">
 
 ---
 
@@ -131321,10 +130201,10 @@ Example MUX Select commands are permitted to include:
 ---
 
 > **Figure 12-9.** PESTI Fan-out Methods
+
 > <img src="figures/chapter_12/fig_1679_1.png" width="700">
 > **图 12-9.** PESTI Fan-out Methods
 
-> <img src="figures/chapter_12/fig_1679_1.png" width="700">
 
 ---
 
@@ -131363,10 +130243,10 @@ downstream sub-channel so that the PESTI initiator can choose to not close a sus
 - **RSVD**: Reserved for Future Use.
 
 > **Figure 12-10.** PESTI Mux Switch Control Format
+
 > <img src="figures/chapter_12/fig_1680_1_tight.png" width="700">
 > **图 12-10.** PESTI Mux 交换机 Control 格式
 
-> <img src="figures/chapter_12/fig_1680_1_tight.png" width="700">
 
 ---
 
@@ -131496,10 +130376,10 @@ USB 2.0 作为即插即用、带外管理接口有许多用例，例如:
 ---
 
 > **Figure 12-11.** [CEM] form factor example circuit for repurposing legacy JTAG to USB 2.0 mode
+
 > <img src="figures/chapter_12/fig_1682_1_tight.png" width="700">
 > **图 12-11.** [CEM] 外形规格 (Form Factor) example circuit repurposing legacy JTAG USB 2.0 mode
 
-> <img src="figures/chapter_12/fig_1682_1_tight.png" width="700">
 
 ---
 
@@ -131690,10 +130570,10 @@ Interposer discovery details are left to the implementer, with designer care nee
 ---
 
 > **Figure 12-12.** Example of 2-wire, 8-bit addressing for a card carrier with N end form factors in SMBus mode <!-- 📄 Page 1677 -->
+
 > <img src="figures/chapter_12/fig_1685_1.png" width="700">
 > **图 12-12.** 示例 两线制, 8-bit addressing 卡 carrier 含 N end 外形规格 (Form Factor)s in SMBus (系统管理总线) mode
 
-> <img src="figures/chapter_12/fig_1685_1.png" width="700">
 
 ---
 
@@ -131872,10 +130752,10 @@ d. 使用卸载功能(例如 SMBus 代理)发送和接收异步 SMBus 消息，�
 ---
 
 > **Figure 12-13.** Example of 2-wire Hub Use <!-- 📄 Page 1678 -->
+
 > <img src="figures/chapter_12/fig_1687_1_tight.png" width="700">
 > **图 12-13.** 示例 两线制 Hub Use
 
-> <img src="figures/chapter_12/fig_1687_1_tight.png" width="700">
 
 ---
 
@@ -132053,9 +130933,7 @@ resets the I3C Basic interface but does not impact the signaling voltage. See §
 > **图 12-14.** SMBus (系统管理总线) I3C Transition 流
 
 
-> <img src="figures/chapter_12/fig_1690_1_tight.png" width="700">
 
-> <img src="figures/chapter_12/fig_1689_1.png" width="700">
 
 ---
 
@@ -132088,10 +130966,10 @@ devices on the bus. The host can use this to determine whether to use I3C Basic 
 </table>
 
 > **Figure 12-15.** Component Timing Diagram for Transition to I3C Signaling Voltage
+
 > <img src="figures/chapter_12/fig_1692_1_tight.png" width="700">
 > **图 12-15.** Component Timing 图 Transition I3C Signaling Voltage
 
-> <img src="figures/chapter_12/fig_1692_1_tight.png" width="700">
 
 ---
 
@@ -132349,23 +131227,22 @@ write transactions.
 ---
 
 > **Figure 12-16.** SMBus/I2C-based FRU Information Device Writes with Two-Byte Addressing <!-- 📄 Page 1682 -->
+
 > <img src="figures/chapter_12/fig_1694_1_tight.png" width="700">
 
 ---
 
 > **Figure 12-17.** FRU Information Device Reads with Two-Byte Addressing
+
 > <img src="figures/chapter_12/fig_1694_2_tight.png" width="700">
 > **图 12-17.** FRU Information Device Reads 含 Two-Byte Addressing
 
-> <img src="figures/chapter_12/fig_1694_2_tight.png" width="700">
 > **图 12-16.** SMBus/I2C-based FRU Information Device Writes 含 Two-Byte Addressing
 
-> <img src="figures/chapter_12/fig_1694_1_tight.png" width="700">
 
 ---
 
 > **Figure 12-17.** FRU Information Device Reads with Two-Byte Addressing
-> <img src="figures/chapter_12/fig_1694_2_tight.png" width="700">
 
 ---
 
@@ -132817,10 +131694,10 @@ Internal Cable Management guidance is defined for usage with [CopprLink].
 ---
 
 > **Figure 12-18.** Example Tiers Involving Sidebands
+
 > <img src="figures/chapter_12/fig_1701_1_tight.png" width="700">
 > **图 12-18.** Example Tiers Involving Sidebands
 
-> <img src="figures/chapter_12/fig_1701_1_tight.png" width="700">
 
 ---
 

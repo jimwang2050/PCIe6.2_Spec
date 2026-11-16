@@ -247,12 +247,11 @@ PCI Express 链路的主要属性如下：
 </table>
 
 > **Figure 1-1.** PCI Express Link
+
 > <img src="figures/chapter_01/fig_0128_1_tight.png" width="700">
 > <img src="figures/chapter_01/fig_0127_1.png" width="700">
 
 > **图 1-1.** PCI Express 链路
-> <img src="figures/chapter_01/fig_0128_1_tight.png" width="700">
-> <img src="figures/chapter_01/fig_0127_1.png" width="700">
 
 [⬆️ 返回目录](#sec-1-0)
 
@@ -273,21 +272,23 @@ PCI Express 链路的主要属性如下：
 
 A fabric is defined as a set of point-to-point Links that interconnect a set of components - an example fabric topology is shown in § Figure 1-2. This figure illustrates a single fabric instance with two Hierarchies composed of a Root Complex (RC), multiple Endpoints, and multiple Switches, interconnected via PCI Express Links.
 
-> **Figure 1-2.** Example PCI Express Topology
-> <img src="figures/chapter_01/fig_0130_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
 Fabric (互连网络) 定义为一组点对点链路，它们互连一组组件——一个 Fabric 拓扑示例如图 1-2 所示。该图展示了一个由根复合体 (Root Complex, RC)、多个端点 (Endpoint) 与多个交换机 (Switch) 组成、包含两个层级 (Hierarchy) 并通过 PCI Express 链路互连的 Fabric 实例。
 
-> **图 1-2.** 示例 PCI Express 拓扑
-> <img src="figures/chapter_01/fig_0130_1_tight.png" width="700">
 
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 1-2.** Example PCI Express Topology
+>
+> **图 1-2.** 示例 PCI Express 拓扑
+
+> <img src="figures/chapter_01/fig_0130_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-1-0)
 
@@ -511,11 +512,7 @@ Endpoint refers to a type of Function that can be the Requester or Completer of 
 
 A Switch is defined as a logical assembly of multiple virtual PCI-to-PCI Bridge devices as illustrated in § Figure 1-3. All Switches are governed by the following base rules.
 
-> **Figure 1-3.** Logical Block Diagram of a Switch
-> <img src="figures/chapter_01/fig_0133_1_tight.png" width="700">
-> **图 1-3.** Logical Block 交换机
 
-> <img src="figures/chapter_01/fig_0133_1_tight.png" width="700">
 
 - Switches appear to configuration software as two or more logical PCI-to-PCI Bridges.
 - A Switch forwards transactions using PCI Bridge mechanisms; e.g., address-based routing except when engaged in a Multicast, as defined in § Section 6.14.
@@ -534,11 +531,16 @@ A Switch is defined as a logical assembly of multiple virtual PCI-to-PCI Bridge 
 - 锁定请求必须按 § 6.5 节的规定得到支持。交换机不要求将下游端口 (Downstream Port) 作为发起端口支持锁定请求。
 - 每个已启用的交换机端口必须遵循本文档中的流控 (Flow Control) 规范。
 
-> <img src="figures/chapter_01/fig_0133_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 1-3.** Logical Block Diagram of a Switch
+>
+> **图 1-3.** Logical Block 交换机
+
+> <img src="figures/chapter_01/fig_0133_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-1-0)
 
@@ -685,8 +687,6 @@ This document specifies the architecture in terms of three discrete logical laye
 
 The fundamental goal of this layering definition is to facilitate the reader's understanding of the specification. Note that this layering does not imply a particular PCI Express implementation.
 
-> **Figure 1-4.** High-Level Layering Diagram
-> <img src="figures/chapter_01/fig_0135_1_tight.png" width="700">
 
 PCI Express uses packets to communicate information between components. Packets are formed in the Transaction and Data Link Layers to carry the information from the transmitting component to the receiving component. As the transmitted packets flow through the other layers, they are extended with additional information necessary to handle packets at those layers. At the receiving side the reverse process occurs and packets get transformed from their Physical Layer representation to the Data Link Layer representation and finally (for Transaction Layer Packets) to the form that can be processed by the Transaction Layer of the receiving device. § Figure 1-5 shows the conceptual flow of transaction level packet information through the layers.
 
@@ -710,12 +710,16 @@ PCI Express 使用报文在组件之间传递信息。报文在事务层和数�
 
 <!-- 📍 图 1-5 原图未单独抽取，相关内容见 Figure 1-4 分层图 -->
 
-> **图 1-4.** 分层概述图
-> <img src="figures/chapter_01/fig_0135_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 1-4.** High-Level Layering Diagram
+>
+> **图 1-4.** 分层概述图
+
+> <img src="figures/chapter_01/fig_0135_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-1-0)
 

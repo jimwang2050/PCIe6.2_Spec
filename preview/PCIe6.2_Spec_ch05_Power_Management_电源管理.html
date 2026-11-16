@@ -1163,8 +1163,11 @@ LTSSM 保持活动。</p>
 <hr />
 <blockquote>
 <p><strong>Figure 5-1.</strong> Link Power Management State Flow Diagram
-<!-- 📄 Page 654 --> <strong>图 5-1.</strong> 链路电源管理状态流程图
-<img src="figures/chapter_05/fig_0654_1_tight.png" width="700"></p>
+<!-- 📄 Page 654 --> <strong>图 5-1.</strong> 链路电源管理状态流程图</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_05/fig_0654_1_tight.png" width="700">
+
 </blockquote>
 <table>
 <thead>
@@ -2635,8 +2638,11 @@ L0 状态的转换。</p></li>
 <blockquote>
 <p><strong>Figure 5-3.</strong> Exit from L1 Link State Initiated by
 Upstream Component <strong>图 5-3.</strong> 由上游组件发起的 L1
-链路状态退出
-<img src="figures/chapter_05/fig_0664_1_tight.png" width="700"></p>
+链路状态退出</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_05/fig_0664_1_tight.png" width="700">
+
 </blockquote>
 </div>
 
@@ -3320,14 +3326,6 @@ PM_PME Delivery State Machine | 5.3.3.5 PM_PME 传递状态机</h3>
 control state machine. This state machine determines the ability of a
 Link to service PME events by issuing PM_PME immediately vs. requiring
 Link wakeup.</p>
-<blockquote>
-<p><strong>Figure 5-5.</strong> A Conceptual PME Control State Machine
-<strong>图 5-5.</strong> 概念性 PME 控制状态机</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_05/fig_0670_1_tight.png" width="700">
-
-</blockquote>
 <p><strong>Communicating State:</strong></p>
 <p>At initial power-up and associated reset, the Upstream Link enters
 the Communicating state</p>
@@ -3401,12 +3399,20 @@ PM_PME 报文。有关超时机制的说明，请参见 § 第 5.3.3.3.1 节。<
 <li>在电源和时钟恢复以及相关复位之后，链路恢复为可处理事务的状态。设备在必要时清零唤醒信令，并向上游发出
 PM_PME,然后转换到 PME Sent 状态。</li>
 </ul>
-<img src="figures/chapter_05/fig_0670_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 5-5.</strong> A Conceptual PME Control State
+Machine</p>
+<p><strong>图 5-5.</strong> 概念性 PME 控制状态机</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_05/fig_0670_1_tight.png" width="700">
+
+</blockquote>
 <p><a href="#sec-5-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-5-4"></a> <!-- 📄 Page 671 --></p>
@@ -4785,8 +4791,11 @@ PM_Active_State_Request_L1 DLLP,禁用 DLLP、TLP 发送，并将其发送 Lane
 <blockquote>
 <p><strong>Figure 5-6.</strong> L1 Transition Sequence Ending with a
 Rejection (L0s Enabled) § <strong>图 5-6.</strong> 以拒绝结束的 L1
-转换序列（L0s 已启用）
-<img src="figures/chapter_05/fig_0681_1_tight.png" width="700"></p>
+转换序列（L0s 已启用）</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_05/fig_0681_1_tight.png" width="700">
+
 </blockquote>
 <blockquote>
 <p><strong>Figure 5-7.</strong> L1 Successful Transition Sequence
@@ -4863,14 +4872,6 @@ it started at time T+2).</p>
 transition to the L0 state last is Link 1 with a 34 μs delay. This is
 the delay experienced by the packet that initiated the transition in
 Endpoint C.</p>
-<blockquote>
-<p><strong>Figure 5-8.</strong> Example of L1 Exit Latency Computation
-<strong>图 5-8.</strong> L1 退出延迟计算示例</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_05/fig_0683_1_tight.png" width="700">
-
-</blockquote>
 <p>Switches are not required to initiate an L1 exit transition on any
 other of their Downstream Port Links.</p>
 <p><strong>Upstream Component Initiated Exit</strong></p>
@@ -4951,12 +4952,20 @@ Switch 传输的报文将在每个 Switch 中经历累积的延迟。</p>
 状态的下游端口链路不参与退出转换。下游组件处于低功耗 D 状态 (D1-D3Hot)
 的下游端口链路也不受 L1 退出转换的影响 (即不得将这些链路转换到 L0
 状态)。</p>
-<img src="figures/chapter_05/fig_0683_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 5-8.</strong> Example of L1 Exit Latency
+Computation</p>
+<p><strong>图 5-8.</strong> L1 退出延迟计算示例</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_05/fig_0683_1_tight.png" width="700">
+
+</blockquote>
 <p><a href="#sec-5-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-5-4-1-4"></a> <!-- 📄 Page 684 --></p>
@@ -5994,8 +6003,11 @@ signal whenever it requires a reference clock.</p>
 </blockquote>
 <blockquote>
 <p><strong>Figure 5-10.</strong> Downstream Port with a Single PLL
-<strong>图 5-10.</strong> 带单个 PLL 的下行端口
-<img src="figures/chapter_05/fig_0690_1_tight.png" width="700"></p>
+<strong>图 5-10.</strong> 带单个 PLL 的下行端口</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_05/fig_0690_1_tight.png" width="700">
+
 </blockquote>
 <blockquote>
 <p>Example 2: Upstream component with multiple Downstream Ports, with a
@@ -6222,8 +6234,11 @@ CLKREQ#,并必须继续断言 CLKREQ#,直到下一次进入 L1 或允许取消�
 <blockquote>
 <p><strong>Figure 5-12.</strong> Example: L1.1 Waveforms Illustrating
 Upstream Port Initiated Exit <strong>图 5-12.</strong>
-示例：说明由上游端口发起退出的 L1.1 波形
-<img src="figures/chapter_05/fig_0693_1.png" width="700"></p>
+示例：说明由上游端口发起退出的 L1.1 波形</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_05/fig_0693_1.png" width="700">
+
 </blockquote>
 <blockquote>
 <p><strong>Figure 5-13.</strong> Example: L1.1 Waveforms Illustrating
@@ -6335,8 +6350,11 @@ L1.2.Entry:</p>
 
 <blockquote>
 <p><strong>Figure 5-14.</strong> L1.2 Substates <strong>图
-5-14.</strong> L1.2 子状态
-<img src="figures/chapter_05/fig_0694_1_tight.png" width="700"></p>
+5-14.</strong> L1.2 子状态</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_05/fig_0694_1_tight.png" width="700">
+
 </blockquote>
 </div>
 
@@ -6356,12 +6374,6 @@ L1.2.Entry</h4>
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 5-15.</strong> Example: Illustration of Boundary
-Condition due to Different Sampling of CLKREQ# <strong>图 5-15.</strong>
-示例：CLKREQ# 不同采样导致的边界条件图示
-<img src="figures/chapter_05/fig_0695_1_tight.png" width="700"></p>
-</blockquote>
 <p>When requirements for the entry into L1.2.Idle state (see § Section
 5.5.1) have been satisfied then the Ports enter the L1.2.Idle substate.
 The following rules apply in L1.2.Idle:</p>
@@ -6421,12 +6433,21 @@ CLKREQ#,直到下一次进入 L1 或允许取消断言 CLKREQ# 的其他状态�
 <li>上下游端口的 PHY 必须上电。</li>
 <li>不得假设已保持共模。</li>
 </ul>
-<img src="figures/chapter_05/fig_0695_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 5-15.</strong> Example: Illustration of Boundary
+Condition due to Different Sampling of CLKREQ#</p>
+<p><strong>图 5-15.</strong> 示例：CLKREQ#
+不同采样导致的边界条件图示</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_05/fig_0695_1_tight.png" width="700">
+
+</blockquote>
 <p><a href="#sec-5-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-5-5-3-2"></a></p>
@@ -7690,14 +7711,6 @@ PCI Bridges and Power Management | 5.11 PCI 桥与电源管理</h2>
 <tr>
 <td>
 
-<blockquote>
-<p><strong>Figure 5-19.</strong> PCI Express Bridge Power Management
-Diagram <strong>图 5-19.</strong> PCI Express 桥接电源管理图</p>
-</blockquote>
-<blockquote>
-<img src="figures/chapter_05/fig_0705_1_tight.png" width="700">
-
-</blockquote>
 <p>As can be seen from § Figure 5-19, the PCI Express Bridge behavior
 described in this chapter is common, from the perspective of the
 operating system, to host bridges, Switches, and PCI Express to PCI
@@ -7766,12 +7779,20 @@ Function 定义的策略相同。</p>
 Function (即断言 WAKE# 的 Function) 向根复合体发送 PM_PME 报文。PM_PME
 报文向根复合体提供请求 Function 的标识，而不需要软件轮询 PME_Status
 位是否被置位。</p>
-<img src="figures/chapter_05/fig_0705_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
 
+<blockquote>
+<p><strong>Figure 5-19.</strong> PCI Express Bridge Power Management
+Diagram</p>
+<p><strong>图 5-19.</strong> PCI Express 桥接电源管理图</p>
+</blockquote>
+<blockquote>
+<img src="figures/chapter_05/fig_0705_1_tight.png" width="700">
+
+</blockquote>
 <p><a href="#sec-5-0">⬆️ 返回目录</a></p>
 <hr />
 <p><a id="sec-5-11-1"></a></p>

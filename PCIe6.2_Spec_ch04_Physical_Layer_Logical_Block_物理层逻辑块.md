@@ -415,10 +415,10 @@ PCI Express 使用三种编码 (8b/10b 编码、128b/130b 编码 与 1b/1b 编�
 </table>
 
 > **Figure 4-1.** Layering Diagram Highlighting Physical Layer
+
 > <img src="figures/chapter_04/fig_0351_1_tight.png" width="700">
 > **图 4-1.** Layering 图: 物理层
 
-> <img src="figures/chapter_04/fig_0351_1_tight.png" width="700">
 
 </div>
 
@@ -618,10 +618,10 @@ The bits of a Symbol are placed on a Lane starting with bit "a" and ending with 
 </table>
 
 > **Figure 4-2.** Character to Symbol Mapping
+
 > <img src="figures/chapter_04/fig_0354_1_tight.png" width="700">
 > **图 4-2.** Character Symbol 映射
 
-> <img src="figures/chapter_04/fig_0354_1_tight.png" width="700">
 
 
 [⬆️ 返回目录](#sec-4-0)
@@ -703,23 +703,22 @@ The Symbol tables for the valid 8b/10b codes are given in Appendix B. These tabl
 </table>
 
 > **Figure 4-3.** Bit Transmission Order on Physical Lanes - x1 Example
+
 > <img src="figures/chapter_04/fig_0354_2_tight.png" width="700">
 
 **Figure 4-3 | 图 4-3**: 物理通道上的比特传输顺序 - x1 示例 (Bit Transmission Order on Physical Lanes - x1 Example)
 
 > **Figure 4-4.** Bit Transmission Order on Physical Lanes - x4 Example
+
 > <img src="figures/chapter_04/fig_0355_1_tight.png" width="700">
 > **图 4-4.** Bit Transmission Order on Physical Lanes - x4 Example
 
-> <img src="figures/chapter_04/fig_0355_1_tight.png" width="700">
 > **图 4-3.** Bit Transmission Order on Physical Lanes - x1 Example
 
-> <img src="figures/chapter_04/fig_0354_2_tight.png" width="700">
 
 **Figure 4-3 | 图 4-3**: 物理通道上的比特传输顺序 - x1 示例 (Bit Transmission Order on Physical Lanes - x1 Example)
 
 > **Figure 4-4.** Bit Transmission Order on Physical Lanes - x4 Example
-> <img src="figures/chapter_04/fig_0355_1_tight.png" width="700">
 
 </div>
 
@@ -919,54 +918,48 @@ For the following rules, "placed" is defined to mean a requirement on the Transm
 </table>
 
 > **Figure 4-5.** TLP with Framing Symbols Applied
+
 > <img src="figures/chapter_04/fig_0358_1_tight.png" width="700">
 
 > **Figure 4-6.** DLLP with Framing Symbols Applied
+
 > <img src="figures/chapter_04/fig_0359_1_tight.png" width="700">
 
 > **Figure 4-7.** Framed TLP on a x1 Link
+
 > <img src="figures/chapter_04/fig_0359_2_tight.png" width="700">
 
 **Figure 4-7 | 图 4-7**: x1 链路上成帧后的 TLP (Framed TLP on a x1 Link)
 
 > **Figure 4-8.** Framed TLP on a x2 Link
+
 > <img src="figures/chapter_04/fig_0360_1_tight.png" width="700">
 > **图 4-8.** Framed TLP on x2 Link
 
-> <img src="figures/chapter_04/fig_0360_1_tight.png" width="700">
 > **图 4-7.** Framed TLP on x1 Link
 
-> <img src="figures/chapter_04/fig_0359_2_tight.png" width="700">
 
 **Figure 4-7 | 图 4-7**: x1 链路上成帧后的 TLP (Framed TLP on a x1 Link)
 
 > **Figure 4-8.** Framed TLP on a x2 Link
-> <img src="figures/chapter_04/fig_0360_1_tight.png" width="700">
 > **图 4-6.** DLLP 含 Framing Symbols Applied
 
-> <img src="figures/chapter_04/fig_0359_1_tight.png" width="700">
 
 > **Figure 4-7.** Framed TLP on a x1 Link
-> <img src="figures/chapter_04/fig_0359_2_tight.png" width="700">
 
 **Figure 4-7 | 图 4-7**: x1 链路上成帧后的 TLP (Framed TLP on a x1 Link)
 
 > **Figure 4-8.** Framed TLP on a x2 Link
-> <img src="figures/chapter_04/fig_0360_1_tight.png" width="700">
 > **图 4-5.** TLP 含 Framing Symbols Applied
 
-> <img src="figures/chapter_04/fig_0358_1_tight.png" width="700">
 
 > **Figure 4-6.** DLLP with Framing Symbols Applied
-> <img src="figures/chapter_04/fig_0359_1_tight.png" width="700">
 
 > **Figure 4-7.** Framed TLP on a x1 Link
-> <img src="figures/chapter_04/fig_0359_2_tight.png" width="700">
 
 **Figure 4-7 | 图 4-7**: x1 链路上成帧后的 TLP (Framed TLP on a x1 Link)
 
 > **Figure 4-8.** Framed TLP on a x2 Link
-> <img src="figures/chapter_04/fig_0360_1_tight.png" width="700">
 
 **Figure 4-8 | 图 4-8**: x2 链路上成帧后的 TLP (Framed TLP on a x2 Link)
 
@@ -1073,10 +1066,10 @@ For more information on scrambling, see § Appendix C.
 </table>
 
 > **Figure 4-10.** LFSR with 8b/10b Scrambling Polynomial
+
 > <img src="figures/chapter_04/fig_0361_1_tight.png" width="700">
 > **图 4-10.** LFSR 含 8b/10b 编码 加扰 Polynomial
 
-> <img src="figures/chapter_04/fig_0361_1_tight.png" width="700">
 
 </div>
 
@@ -1120,11 +1113,7 @@ All Lanes of a multi-Lane Link must transmit Blocks with the same Sync Header si
 
 The bit transmission order is as follows. A Sync Header represented as 'H1H0' is placed on a Lane starting with 'H0' and ending with 'H1'. A Symbol, represented as 'S7S6S5S4S3S2S1S0', is placed on a Lane starting with 'S0' and ending with 'S7'. In the diagrams that show a time scale, bits represent the transmission order. In layout diagrams, bits are arranged in little-endian format, consistent with packet layout diagrams in other chapters of this specification.
 
-> **Figure 4-11.** Example of Bit Transmission Order in a x1 Link Showing 130 Bits of a Block
-> <img src="figures/chapter_04/fig_0362_1_tight.png" width="700">
-> **图 4-11.** 示例 Bit Transmission Order in x1 Link: 130 Bits Block
 
-> <img src="figures/chapter_04/fig_0362_1_tight.png" width="700">
 
 > **IMPLEMENTATION NOTE:**
 > **SYMBOL IN 128B/130B ENCODING SCHEME**
@@ -1159,11 +1148,16 @@ The bit transmission order is as follows. A Sync Header represented as 'H1H0' is
 > **128b/130b 编码方案中的符号 (SYMBOL IN 128B/130B ENCODING SCHEME)**
 > 在 128b/130b 编码方案中，符号长度为 1 字节，与 8b/10b 编码中的 10 位符号类似。
 
-> <img src="figures/chapter_04/fig_0362_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-11.** Example of Bit Transmission Order in a x1 Link Showing 130 Bits of a Block
+>
+> **图 4-11.** 示例 Bit Transmission Order in x1 Link: 130 Bits Block
+
+> <img src="figures/chapter_04/fig_0362_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-4-0)
 
@@ -1226,10 +1220,10 @@ Receivers must not adjust their Block alignment while in this phase. The Data St
 </table>
 
 > **Figure 4-12.** Example of Bit Placement in a x4 Link with One Block per Lane
+
 > <img src="figures/chapter_04/fig_0363_1_tight.png" width="700">
 > **图 4-12.** 示例 Bit Placement in x4 Link 含 One Block per 通道
 
-> <img src="figures/chapter_04/fig_0363_1_tight.png" width="700">
 
 </div>
 
@@ -1431,19 +1425,18 @@ The Physical Layer DLLP layout is shown in § Figure 4-14. Symbols 0 and 1 are t
 </table>
 
 > **Figure 4-13.** Layout of Framing Tokens
+
 > <img src="figures/chapter_04/fig_0366_1_tight.png" width="700">
 
 > **Figure 4-14.** TLP and DLLP Layout
+
 > <img src="figures/chapter_04/fig_0368_1_tight.png" width="700">
 > **图 4-14.** TLP 与 DLLP Layout
 
-> <img src="figures/chapter_04/fig_0368_1_tight.png" width="700">
 > **图 4-13.** Layout Framing Tokens
 
-> <img src="figures/chapter_04/fig_0366_1_tight.png" width="700">
 
 > **Figure 4-14.** TLP and DLLP Layout
-> <img src="figures/chapter_04/fig_0368_1_tight.png" width="700">
 
 
 [⬆️ 返回目录](#sec-4-0)
@@ -1554,27 +1547,31 @@ TLP Length 字段值在 1152 到 1535(含)之间的报文保留供未来标准�
 
 § Figure 4-17 shows an example of TLPs, DLLPs, IDLs, and an EDS Token followed by a SKP Ordered Set. SKP Ordered Sets are defined in § Section 4.2.8.2 .
 
-> **Figure 4-15.** Packet Transmission in a x8 Link
-> <img src="figures/chapter_04/fig_0368_2_tight.png" width="700">
 
-> **Figure 4-16.** Nullified TLP Layout in a x8 Link with Other Packets
-> <img src="figures/chapter_04/fig_0368_3_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
 § 图 4-17 显示了在 x8 链路上发送的 TLP、DLLP、IDL 以及一个 EDS Token 之后跟随一个 SKP 有序集的示例。SKP 有序集的定义见 § 4.2.8.2。
 
-> **图 4-15.** x8 链路中的数据包传输
-> <img src="figures/chapter_04/fig_0368_2_tight.png" width="700">
 
-> **图 4-16.** 含其他数据包的 x8 链路中被作废 TLP 的布局
-> <img src="figures/chapter_04/fig_0368_3_tight.png" width="700">
 
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-15.** Packet Transmission in a x8 Link
+>
+> **图 4-15.** x8 链路中的数据包传输
+
+> <img src="figures/chapter_04/fig_0368_2_tight.png" width="700">
+
+> **Figure 4-16.** Nullified TLP Layout in a x8 Link with Other Packets
+>
+> **图 4-16.** 含其他数据包的 x8 链路中被作废 TLP 的布局
+
+> <img src="figures/chapter_04/fig_0368_3_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-4-0)
 
@@ -1595,10 +1592,10 @@ TLP Length 字段值在 1152 到 1535(含)之间的报文保留供未来标准�
 </table>
 
 > **Figure 4-17.** SKP Ordered Set of Length 66-bit in a x8 Link
+
 > <img src="figures/chapter_04/fig_0369_1_tight.png" width="700">
 > **图 4-17.** SKP Ordered Set Length 字段 (长度) 66-bit in x8 Link
 
-> <img src="figures/chapter_04/fig_0369_1_tight.png" width="700">
 
 
 [⬆️ 返回目录](#sec-4-0)
@@ -2302,10 +2299,10 @@ The pseudo-code for the scrambler along with examples are provided in § Section
 ---
 
 > **Figure 4-18.** LFSR with Scrambling Polynomial in 8.0 GT/s and Above Data Rate <!-- 📄 Page 376 -->
+
 > <img src="figures/chapter_04/fig_0376_1_tight.png" width="700">
 > **图 4-18.** LFSR 含 加扰 Polynomial in 8.0 GT/s 与 Above Data Rate
 
-> <img src="figures/chapter_04/fig_0376_1_tight.png" width="700">
 
 **Figure 4-18 | 图 4-18**: 8.0 GT/s 及以上数据速率下带加扰多项式的 LFSR (LFSR with Scrambling Polynomial in 8.0 GT/s and Above Data Rate)
 
@@ -2347,10 +2344,10 @@ Implementations may choose to implement one LFSR and take different tap points a
 ---
 
 > **Figure 4-19.** Alternate Implementation of the LFSR for Descrambling <!-- 📄 Page 378 -->
+
 > <img src="figures/chapter_04/fig_0378_1_tight.png" width="700">
 > **图 4-19.** Alternate Implementation LFSR Descrambling
 
-> <img src="figures/chapter_04/fig_0378_1_tight.png" width="700">
 
 **Figure 4-19 | 图 4-19**: 用于解扰的 LFSR 替代实现 (Alternate Implementation of the LFSR for Descrambling)
 
@@ -2533,10 +2530,10 @@ When precoding is on at 32.0 GT/s, the following rules apply (see § Figure 4-20
 </table>
 
 > **Figure 4-20.** Precoding working the scrambler / de-scrambler
+
 > <img src="figures/chapter_04/fig_0380_1_tight.png" width="700">
 > **图 4-20.** Precoding working scrambler / de-scrambler
 
-> <img src="figures/chapter_04/fig_0380_1_tight.png" width="700">
 
 **Figure 4-20 | 图 4-20**: 预编码与加扰器/解扰器协同工作 (Precoding working the scrambler/de-scrambler)
 
@@ -2764,10 +2761,10 @@ When the PCI Express Link is operating at 64.0 GT/s or higher Data Rates, it use
 ---
 
 > **Figure 4-21.** Example of Symbol placement in a x4 Link with 1b/1b encoding <!-- 📄 Page 383 -->
+
 > <img src="figures/chapter_04/fig_0383_1_tight.png" width="700">
 > **图 4-21.** 示例 Symbol placement in x4 Link 含 1b/1b 编码
 
-> <img src="figures/chapter_04/fig_0383_1_tight.png" width="700">
 
 **Figure 4-21 | 图 4-21**: 使用 1b/1b 编码时 x4 链路上的符号放置示例 (Example of Symbol placement in a x4 Link with 1b/1b encoding)
 
@@ -2814,10 +2811,10 @@ At a Flit level, on the Transmit side, CRC is first applied followed by FEC gene
 ---
 
 > **Figure 4-22.** Transmit side at 64.0 GT/s <!-- 📄 Page 384 -->
+
 > <img src="figures/chapter_04/fig_0384_1_tight.png" width="700">
 > **图 4-22.** Transmit side at 64.0 GT/s
 
-> <img src="figures/chapter_04/fig_0384_1_tight.png" width="700">
 
 **Figure 4-22 | 图 4-22**: 64.0 GT/s 下的发送侧 (Transmit side at 64.0 GT/s)
 
@@ -2864,10 +2861,10 @@ The Receive side is similar to the Transmit side in the opposite direction. Afte
 ---
 
 > **Figure 4-23.** Receive side at 64.0 GT/s
+
 > <img src="figures/chapter_04/fig_0384_2_tight.png" width="700">
 > **图 4-23.** Receive side at 64.0 GT/s
 
-> <img src="figures/chapter_04/fig_0384_2_tight.png" width="700">
 
 **Figure 4-23 | 图 4-23**: 64.0 GT/s 下的接收侧 (Receive side at 64.0 GT/s)
 
@@ -2925,10 +2922,10 @@ PAM4 stands for Pulse Amplitude Modulation 4-levels. It is a signaling mechanism
 > PAM4 即四电平脉冲幅度调制（Pulse Amplitude Modulation 4-levels）。它是一种信令机制，在同一单位间隔（UI）内编码 4 个电平（2 比特），形成 3 个眼图，如 § 图 4-24 所示。它仅用于 64.0 GT/s 及更高的数据速率。如 § 第 8 章 所述，PAM4 有助于应对信道损耗，因为对于 64.0 GT/s 数据速率，PAM4 与 32.0 GT/s 具有相同的奈奎斯特频率。四个电压电平 0、1、2、3 分别标称映射为 -400 mV、-133 mV、+133 mV 和 +400 mV，相应的格雷编码值分别为 00b、01b、11b、10b（采用小端比特顺序），如 § 图 4-24 所示。在设计有序集以满足直流平衡（DC Balance）需求时所使用的对应直流平衡值也在 § 图 4-24 中示出。降低的电压幅度（眼高 EH，即 Eye Height）和眼宽（EW，即 Eye Width）会增加误码敏感性。格雷编码（Gray Coding）用于在 UI 范围内尽量减少电压电平所产生的误码。
 
 > **Figure 4-24.** PAM4 Signaling at UI level: Voltage levels, 2-bit encoding, and their corresponding DC balance values
+
 > <img src="figures/chapter_04/fig_0385_1_tight.png" width="700">
 > **图 4-24.** PAM4 Signaling at UI level: Voltage levels, 2-bit 编码, 与 their corresponding DC balance values
 
-> <img src="figures/chapter_04/fig_0385_1_tight.png" width="700">
 
 **Figure 4-24 | 图 4-24**: UI 级别的 PAM4 信令：电压电平、2 比特编码及其对应的直流平衡值 (PAM4 Signaling at UI level: Voltage levels, 2-bit encoding, and their corresponding DC balance values)
 
@@ -3195,10 +3192,10 @@ Flit
 </div>
 
 > **Figure 4-25.** The Sequence of Gray Coding, Precoding, and PAM4 voltage translation on an aligned 2-bit boundary on a per Lane
+
 > <img src="figures/chapter_04/fig_0386_1_tight.png" width="700">
 > **图 4-25.** 序列 Gray Coding, Precoding, 与 PAM4 voltage translation on aligned 2-bit boundary on per 通道
 
-> <img src="figures/chapter_04/fig_0386_1_tight.png" width="700">
 >
 > *Note: 该图位于第 386 页底部（4.2.3.1.2 与 4.2.3.1.3 之间）。fig_0386_1.png 为该页文本截图，已包含 § 4-25 图标题，但流程图主体未单独抽取。请以原始 PDF 第 386 页 Figure 4-25 流程图为准（详见 Figure 4-25 在 4.2.3.1.2 末尾的描述）。*
 
@@ -3765,6 +3762,7 @@ FEC 采用 3 路交织的 ECC，每路 ECC 码可纠正 1 字节错误。进行�
 **Table 4-10 Flit Layout in a x16 Link | 表 4-10 x16 链路中的 Flit 布局**
 
 > **Figure 4-26 Processing of Ordered Sets during or at the end of a Data Stream in Flit mode at 64.0 GT/s Data Rate**
+
 > <img src="figures/chapter_04/fig_0393_1_tight.png" width="700">
 
 | Description | Lane 0 | Lane 1 | Lane 2 | Lane 3 | Lane 4 | Lane 5 | Lane 6 | Lane 7 | Lane 8 | Lane 9 | Lane 10 | Lane 11 | Lane 12 | Lane 13 | Lane 14 | Lane 15 |
@@ -3878,7 +3876,6 @@ FEC 采用 3 路交织的 ECC，每路 ECC 码可纠正 1 字节错误。进行�
 A conceptual representation of the processing of Symbols in the Flit Mode for the 64.0 GT/s Data Rate on the Transmit and the Receive side is demonstrated in § Figure 4-21, § Figure 4-22, and § Figure 4-25. A conceptual representation of the Flit Mode and Non-Flit Mode processing with 8b/10b encoding for 2.5 GT/s and 5.0 GT/s as well as with 128b/130b encoding for 8.0 GT/s, 16.0 GT/s, and 32.0 GT/s for the Transmit and Receive side is shown in § Figure 4-27 and § Figure 4-28 respectively.
 
 > **Figure 4-27 Flit Mode and Non-Flit Mode processing with 8b/10b and 128b/130b encoding on the Transmit side**
-> <img src="figures/chapter_04/fig_0399_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
@@ -3886,7 +3883,6 @@ A conceptual representation of the processing of Symbols in the Flit Mode for th
 在发送端和接收端，64.0 GT/s 数据速率下 Flit 模式中符号处理的概念性表示见 § 图 4-21、§ 图 4-22 和 § 图 4-25。发送端和接收端在 2.5 GT/s 和 5.0 GT/s 下使用 8b/10b 编码、在 8.0 GT/s、16.0 GT/s 和 32.0 GT/s 下使用 128b/130b 编码时，Flit 模式与非 Flit 模式处理的概念性表示分别示于 § 图 4-27 (发送) 和 § 图 4-28 (接收)。
 
 > **图 4-27** 发送端 8b/10b 与 128b/130b 编码下的 Flit 模式与非 Flit 模式处理
-> <img src="figures/chapter_04/fig_0399_1_tight.png" width="700">
 
 </td>
 </tr>
@@ -3894,13 +3890,11 @@ A conceptual representation of the processing of Symbols in the Flit Mode for th
 <td>
 
 > **Figure 4-28 Flit Mode and Non-Flit Mode processing with 8b/10b and 128b/130b encoding on the Receive side**
-> <img src="figures/chapter_04/fig_0400_1_tight.png" width="700">
 
 </td>
 <td style="background-color:#e8e8e8">
 
 > **图 4-28** 接收端 8b/10b 与 128b/130b 编码下的 Flit 模式与非 Flit 模式处理
-> <img src="figures/chapter_04/fig_0400_1_tight.png" width="700">
 
 </td>
 </tr>
@@ -3948,6 +3942,12 @@ Flit 中的 TLP 字节承载事务层 TLP。由于 Flit 模式不支持 STP（St
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_04/fig_0399_1_tight.png" width="700">
+
+
+> <img src="figures/chapter_04/fig_0400_1_tight.png" width="700">
+
 
 ---
 
@@ -4129,6 +4129,7 @@ FEC 不可纠正错误是指在 FEC 校正后由 CRC 检测到的 Flit 错误，
 **Figure 4-29 DLP Byte to Bit Number Assignment | 图 4-29 DLP 字节到位号分配** <!-- 📄 Page 404 -->
 
 > **Figure 4-29.** DLP Byte to Bit Number Assignment
+
 > <img src="figures/chapter_04/fig_0404_1_tight.png" width="700">
 
 | Bit Range | DLP Byte |
@@ -4148,13 +4149,12 @@ FEC 不可纠正错误是指在 FEC 校正后由 CRC 检测到的 Flit 错误，
 **Figure 4-30 DLP Bit usage | 图 4-30 DLP 位使用**
 
 > **Figure 4-30.** DLP Bit usage
+
 > <img src="figures/chapter_04/fig_0404_2_tight.png" width="700">
 > **图 4-30.** DLP Bit usage
 
-> <img src="figures/chapter_04/fig_0404_2_tight.png" width="700">
 > **图 4-29.** DLP Byte Bit Number Assignment
 
-> <img src="figures/chapter_04/fig_0404_1_tight.png" width="700">
 
 | Bit Range | DLP Byte |
 |---|---|
@@ -4173,7 +4173,6 @@ FEC 不可纠正错误是指在 FEC 校正后由 CRC 检测到的 Flit 错误，
 **Figure 4-30 DLP Bit usage | 图 4-30 DLP 位使用**
 
 > **Figure 4-30.** DLP Bit usage
-> <img src="figures/chapter_04/fig_0404_2_tight.png" width="700">
 
 | Bit Range | Field |
 |---|---|
@@ -4212,10 +4211,10 @@ FEC 不可纠正错误是指在 FEC 校正后由 CRC 检测到的 Flit 错误，
 **Figure 4-31 Optimized_Update_FC | 图 4-31 Optimized_Update_FC** <!-- 📄 Page 405 -->
 
 > **Figure 4-31.** Optimized_Update_FC
+
 > <img src="figures/chapter_04/fig_0405_1_tight.png" width="700">
 > **图 4-31.** Optimized_Update_FC
 
-> <img src="figures/chapter_04/fig_0405_1_tight.png" width="700">
 
 | Bit Range | Field |
 |---|---|
@@ -4240,10 +4239,10 @@ FEC 不可纠正错误是指在 FEC 校正后由 CRC 检测到的 Flit 错误，
 **Figure 4-32 Flit_Marker | 图 4-32 Flit_Marker** <!-- 📄 Page 406 -->
 
 > **Figure 4-32.** Flit_Marker
+
 > <img src="figures/chapter_04/fig_0406_1_tight.png" width="700">
 > **图 4-32.** Flit_Marker
 
-> <img src="figures/chapter_04/fig_0406_1_tight.png" width="700">
 
 | Bit Range | Field |
 |---|---|
@@ -6145,10 +6144,10 @@ def selective_nak_procedure() {
 ---
 
 > **Figure 4-33.** Flit Ack, Nak, and Discard Rules Flow Chart (Zoom-In to View) <!-- 📄 Page 424 -->
+
 > <img src="figures/chapter_04/fig_0424_1_tight.png" width="700">
 > **图 4-33.** Flit Ack, Nak, 与 Discard Rules 流 Chart (Zoom-In View)
 
-> <img src="figures/chapter_04/fig_0424_1_tight.png" width="700">
 
 <a id="sec-4-2-3-4-2-1-5-flowchart"></a>
 ## Ack, Nak, and Discard Rules Flow Chart | Ack、Nak 与丢弃规则流程图
@@ -6591,10 +6590,10 @@ Consider two devices A and B connected through a Retimer, as shown in § Figure 
 ---
 
 > **Figure 4-34.** Flit Ack/Nak/Replay Example <!-- 📄 Page 429 -->
+
 > <img src="figures/chapter_04/fig_0429_1_tight.png" width="700">
 > **图 4-34.** Flit Ack/Nak/Replay Example
 
-> <img src="figures/chapter_04/fig_0429_1_tight.png" width="700">
 
 | Time | Device A → Retimer → Device B | Flit Usage | Prior Flit | Replay Cmd | Valid/Invalid |
 |------|------------------------------|------------|------------|------------|---------------|
@@ -6722,10 +6721,10 @@ FEC 的示例 RTL 代码见 § Appendix J。本节其余部分描述 FEC 码的�
 ---
 
 > **Figure 4-35.** CRC generation/ checking in Flit
+
 > <img src="figures/chapter_04/fig_0431_1_tight.png" width="700">
 > **图 4-35.** CRC generation/ checking in Flit
 
-> <img src="figures/chapter_04/fig_0431_1_tight.png" width="700">
 
 *[Figure caption: Bytes 0-241 form the input a(x) whereas B0-B7 represent CRC0-crc7]*
 
@@ -6844,13 +6843,13 @@ f8: 1b  f9: 36  fa: 6c  fb: d8  fc: ad  fd: 47  fe: 8e  ff: 01
 
 **图 4-36 FEC 表:i 到 α^i**
 
-> <img src="figures/chapter_04/fig_0354_2_tight.png" width="700">
 
 
 </td>
 </tr>
 </tbody>
 </table>
+
 </div>
 
 
@@ -7173,10 +7172,10 @@ The Receive side check is as follows on the 256B flit (as shown in Figure 4-41).
 </table>
 
 > **Figure 4-40.** ECC Decoder function
+
 > <img src="figures/chapter_04/fig_0436_1_tight.png" width="700">
 > **图 4-40.** ECC Decoder function
 
-> <img src="figures/chapter_04/fig_0436_1_tight.png" width="700">
 
 
 [⬆️ 返回目录](#sec-4-0)
@@ -7230,10 +7229,10 @@ For Data Rates of 8.0 GT/s and above, the following rules apply:
 </table>
 
 > **Figure 4-41.** 3-way ECC decode followed by CRC check of flit on the Receive side
+
 > <img src="figures/chapter_04/fig_0437_1_tight.png" width="700">
 > **图 4-41.** 3-way ECC decode followed by CRC check flit on Receive side
 
-> <img src="figures/chapter_04/fig_0437_1_tight.png" width="700">
 
 </div>
 
@@ -7837,6 +7836,7 @@ In the Loopback state, the Loopback Lead is responsible for communicating the Tr
 </table>
 
 > **Figure 4-42.** 8.0 GT/s Equalization Flow
+
 > <img src="figures/chapter_04/fig_0448_1_tight.png" width="700">
 
 > **Figure 4-43.** 16.0 GT/s Equalization Flow
@@ -7845,14 +7845,11 @@ In the Loopback state, the Loopback Lead is responsible for communicating the Tr
 > **图 4-43.** 16.0 GT/s 均衡 流
 
 
-> <img src="figures/chapter_04/fig_0448_2_tight.png" width="700">
 > **图 4-42.** 8.0 GT/s 均衡 流
 
-> <img src="figures/chapter_04/fig_0448_1_tight.png" width="700">
 
 > **Figure 4-43.** 16.0 GT/s Equalization Flow
 
-> <img src="figures/chapter_04/fig_0448_2_tight.png" width="700">
 
 >
 > *Note: 源图提取时 16.0 GT/s 专用流程图未单独抽取（仅 fig_0448_1.png 可用），此处暂用 8.0 GT/s 流程图占位。请以原始规范第 4-43 图为准。*
@@ -7878,11 +7875,7 @@ In the Loopback state, the Loopback Lead is responsible for communicating the Tr
 <tr>
 <td>
 
-> **Figure 4-44.** 64.0 GT/s Equalization Flow
-> <img src="figures/chapter_04/fig_0449_1_tight.png" width="700">
-> **图 4-44.** 64.0 GT/s 均衡 流
 
-> <img src="figures/chapter_04/fig_0449_1_tight.png" width="700">
 
 **Description of Figure 4-44 (64.0 GT/s Equalization Flow):**
 
@@ -7942,11 +7935,16 @@ In the Loopback state, the Loopback Lead is responsible for communicating the Tr
 *TS1:EC = 00,Value C2"(Upstream Port)*
 *TS2 之后跟随 IDLE Flits*
 
-> <img src="figures/chapter_04/fig_0449_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> **Figure 4-44.** 64.0 GT/s Equalization Flow
+>
+> **图 4-44.** 64.0 GT/s 均衡 流
+
+> <img src="figures/chapter_04/fig_0449_1_tight.png" width="700">
 
 [⬆️ 返回目录](#sec-4-0)
 
@@ -8005,10 +8003,10 @@ The explanation of the coefficients and the FIR filter it represents are provide
 </table>
 
 > **Figure 4-45.** Equalization Bypass Example
+
 > <img src="figures/chapter_04/fig_0450_1_tight.png" width="700">
 > **图 4-45.** 均衡 Bypass Example
 
-> <img src="figures/chapter_04/fig_0450_1_tight.png" width="700">
 
 </div>
 
@@ -8648,10 +8646,10 @@ The following diagram represents the states where alternate protocol and equaliz
 </table>
 
 > **Figure 4-46.** Alternate Protocol Negotiation with Equalization Bypass LTSSM States
+
 > <img src="figures/chapter_04/fig_0474_1_tight.png" width="700">
 > **图 4-46.** Alternate Protocol 协商 含 均衡 Bypass LTSSM States
 
-> <img src="figures/chapter_04/fig_0474_1_tight.png" width="700">
 
 
 <a id="sec-4-2-5-2-body"></a>
@@ -8878,6 +8876,7 @@ After transmitting the last Symbol of the last Electrical Idle Ordered Set, the 
 
 > **Figure 4-47.** Electrical Idle Exit Ordered Set for 8.0 GT/s to 32.0 GT/s Data Rates (EIEOS)
 >
+
 > <img src="figures/chapter_04/fig_0478_1_tight.png" width="700">
 
 > **图 4-47.** 8.0 GT/s 至 32.0 GT/s 数据速率的电气空闲退出有序集 (EIEOS)
@@ -10825,9 +10824,7 @@ L0p 流程示例:§ Figure 4-48 演示了 x16 链路中的 L0p 流程。
 > **图 4-48.** 示例 L0p 流 in x16 Link | x16 链路中 L0p 流程示例
 
 
-> <img src="figures/chapter_04/fig_0497_1_tight.png" width="700">
 
-> <img src="figures/chapter_04/fig_0496_1_tight.png" width="700">
 
 ---
 
@@ -11244,10 +11241,10 @@ With 1b/1b encoding, the Link and Lane numbers are not sent explicitly in the TS
 ---
 
 > **Figure 4-49.** Main State Diagram for Link Training and Status State Machine
+
 > <img src="figures/chapter_04/fig_0500_1_tight.png" width="700">
 > **图 4-49.** Main State 图 链路训练与状态机 (LTSSM)
 
-> <img src="figures/chapter_04/fig_0500_1_tight.png" width="700">
 
 
 ---
@@ -11451,10 +11448,10 @@ Detect 子状态机如 § Figure 4-50 所示。
 ---
 
 > **Figure 4-50.** Detect Substate Machine
+
 > <img src="figures/chapter_04/fig_0502_1_tight.png" width="700">
 > **图 4-50.** Detect (检测) Substate Machine
 
-> <img src="figures/chapter_04/fig_0502_1_tight.png" width="700">
 
 
 ---
@@ -12187,7 +12184,6 @@ This state is unreachable given that the Link comes up to L0 in 2.5 GT/s data ra
 <td>
 
 > **Figure 4-51. Polling Substate Machine**
-> <img src="figures/chapter_04/fig_0510_1_tight.png" width="700">
 >
 > The Configuration substate machine is shown in § Figure 4-52.
 >
@@ -12209,11 +12205,13 @@ This state is unreachable given that the Link comes up to L0 in 2.5 GT/s data ra
 > 即使链路双方均具备高于 2.5 GT/s 的工作能力，链路最初也会以 2.5 GT/s 的数据速率训练到 L0 状态。所支持的更高数据速率在 TS (训练序列) 有序集中进行通告。对端的速度能力在 Configuration.Complete 子状态期间被记录。基于双方共同支持的最高数据速率，任一方可通过转入 Recovery 状态来发起从 L0 状态的速度切换。
 > §
 
-> <img src="figures/chapter_04/fig_0510_1_tight.png" width="700">
 </td>
 </tr>
 </tbody>
 </table>
+
+> <img src="figures/chapter_04/fig_0510_1_tight.png" width="700">
+
 </div>
 
 
@@ -13594,11 +13592,7 @@ consecutively received TS2 Ordered Sets then the Two Retimers Presence Detected 
 <tr>
 <td>
 
-> **Figure 4-52.** Configuration Substate Machine
-> <img src="figures/chapter_04/fig_0528_1_tight.png" width="700">
-> **图 4-52.** Configuration Substate Machine
 
-> <img src="figures/chapter_04/fig_0528_1_tight.png" width="700">
 
 State transitions for Configuration substate machine:
 
@@ -13629,6 +13623,12 @@ OM13802C
 </tr>
 </tbody>
 </table> <!-- 📄 Page 529 -->
+
+> **Figure 4-52.** Configuration Substate Machine
+>
+> **图 4-52.** Configuration Substate Machine
+
+> <img src="figures/chapter_04/fig_0528_1_tight.png" width="700">
 
 ---
 
@@ -17066,10 +17066,10 @@ A Transmitter must implement L0s if its Port advertises support for L0s, as indi
 ---
 
 > **Figure 4-54.** L0s Substate Machine <!-- 📄 Page 566 -->
+
 > <img src="figures/chapter_04/fig_0566_1_tight.png" width="700">
 > **图 4-54.** L0s Substate Machine
 
-> <img src="figures/chapter_04/fig_0566_1_tight.png" width="700">
 
 <table>
 <thead>
@@ -17255,10 +17255,10 @@ Ports that meet the ZRX-DC specification for 2.5 GT/s while in the L1.Idle state
 ---
 
 > **Figure 4-55.** L1 Substate Machine / 图 4-55 L1 子状态机 <!-- 📄 Page 568 -->
+
 > <img src="figures/chapter_04/fig_0568_1_tight.png" width="700">
 > **图 4-55.** L1 Substate Machine / 图 4-55 L1 子状态机
 
-> <img src="figures/chapter_04/fig_0568_1_tight.png" width="700">
 
 <a id="sec-4-2-7-8"></a>
 ## 4.2.7.8 L2 | L2
@@ -17363,10 +17363,10 @@ L2 子状态机如 § Figure 4-56 所示。
 ---
 
 > **Figure 4-56.** L2 Substate Machine / 图 4-56 L2 子状态机 <!-- 📄 Page 569 -->
+
 > <img src="figures/chapter_04/fig_0569_1_tight.png" width="700">
 > **图 4-56.** L2 Substate Machine / 图 4-56 L2 子状态机
 
-> <img src="figures/chapter_04/fig_0569_1_tight.png" width="700">
 
 <a id="sec-4-2-7-8-2"></a>
 ## 4.2.7.8.2 L2.TransmitWake | L2.TransmitWake
@@ -17771,10 +17771,10 @@ If the current data rate uses 128b/130b 编码 encoding and Lane numbers have no
 ---
 
 > **Figure 4-57.** Loopback Substate Machine / 图 4-57 Loopback 子状态机 <!-- 📄 Page 577 -->
+
 > <img src="figures/chapter_04/fig_0577_1_tight.png" width="700">
 > **图 4-57.** Loopback (回环) Substate Machine / 图 4-57 Loopback (回环) 子状态机
 
-> <img src="figures/chapter_04/fig_0577_1_tight.png" width="700">
 
 
 ---
@@ -20843,11 +20843,7 @@ Retimer 在各高层运行模式下的行为如下:
 <tr>
 <td>
 
-> **Figure 4-62.** Supported Retimer Topologies
-> <img src="figures/chapter_04/fig_0617_1_tight.png" width="700">
-> **图 4-62.** Supported Retimer (重定时器) Topologies
 
-> <img src="figures/chapter_04/fig_0617_1_tight.png" width="700">
 
 Diagram contents:
 - Upstream Component (RC or Switch)
@@ -20879,6 +20875,12 @@ Diagram contents:
 </tr>
 </tbody>
 </table> <!-- 📄 Page 617 -->
+
+> **Figure 4-62.** Supported Retimer Topologies
+>
+> **图 4-62.** Supported Retimer (重定时器) Topologies
+
+> <img src="figures/chapter_04/fig_0617_1_tight.png" width="700">
 
 ---
 
@@ -24196,6 +24198,7 @@ CLKREQC#
 
 
 > **Figure 4-63. Retimer CLKREQ# Connection Topology | Retimer CLKREQ# 连接拓扑**
+
 > <img src="figures/chapter_04/fig_0647_1_tight.png" width="700">
 
 <a id="sec-4-3-11"></a>
